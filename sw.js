@@ -1,5 +1,5 @@
 /* Historiapp service worker: app shell cached on install; data and images cached as they are used. */
-const VERSION = "historiapp-v3";
+const VERSION = "historiapp-v4";
 const SHELL = ["./", "./index.html", "./manifest.json", "./data/temas.json", "./icons/icon-192.png", "./icons/icon-512.png", "./fonts/Carlito-Regular.woff2", "./fonts/Carlito-Bold.woff2", "./fonts/Carlito-Italic.woff2", "./fonts/Carlito-BoldItalic.woff2"];
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));

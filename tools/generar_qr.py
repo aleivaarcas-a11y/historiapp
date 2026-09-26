@@ -12,10 +12,14 @@ from PIL import Image, ImageDraw, ImageFont
 base, tema_path, out = sys.argv[1].rstrip("/") + "/", sys.argv[2], sys.argv[3]
 os.makedirs(out, exist_ok=True)
 tema = json.load(open(tema_path))
-try:
-    font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 44)
-    small = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 26)
-except Exception:
+font = small = None
+for cand in ["/Library/Fonts/Microsoft/Calibri.ttf", "/Applications/Microsoft PowerPoint.app/Contents/Resources/DFonts/Calibri.ttf",
+             "/usr/share/fonts/truetype/crosextra/Carlito-Bold.ttf", "/System/Library/Fonts/Supplemental/Arial Bold.ttf", "/System/Library/Fonts/Helvetica.ttc"]:
+    try:
+        font = ImageFont.truetype(cand, 48); small = ImageFont.truetype(cand, 26); break
+    except Exception:
+        continue
+if font is None:
     font = small = ImageFont.load_default()
 rows = []
 for f in tema["fichas"]:

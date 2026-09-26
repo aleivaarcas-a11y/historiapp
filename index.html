@@ -257,7 +257,7 @@ const I18N = {
     version:"Contenido actualizado", offline:"Sin conexión: se muestran los datos guardados", loadError:"No se ha podido cargar el contenido. Comprueba la conexión.",
     author:"Historia del Deporte · Grado en CAFD · UCAM",
     fichasSearch:"Buscar en las fichas…", fichasEsOnly:"", practice:"Practicar este apartado", slideText:"En la diapositiva", refsL:"Fuentes", essayL:"Para el ensayo",
-    prevF:"Anterior", nextF:"Siguiente", secOnly:"Apartado {s}", allSec:"Todo el tema", fichaIntro:"Presentación del tema", secIntro:"Por qué este apartado", fichaXP:"Ficha leída", noResults:"Sin resultados", fichasOf:"{n} fichas", codeL:"Código"
+    prevF:"Anterior", nextF:"Siguiente", secOnly:"Apartado {s}", allSec:"Todo el tema", fichaIntro:"Presentación del tema", secIntro:"Por qué este apartado", fichaXP:"Ficha leída", noResults:"Sin resultados", fichasOf:"{n} fichas", codeL:"Código", paras:"párrafos", img1:"imagen", imgN:"imágenes"
   },
   en: {
     appName:"Historiapp", tagline:"Get ready for the History of Sport exam on your phone, at your own pace.",
@@ -282,7 +282,7 @@ const I18N = {
     version:"Content updated", offline:"Offline: showing saved data", loadError:"Could not load the content. Check your connection.",
     author:"History of Sport · Sport Sciences degree · UCAM",
     fichasSearch:"Search the sheets…", fichasEsOnly:"Some sheets of this unit are not yet available in English and are shown in Spanish.", practice:"Practise this section", slideText:"On the slide", refsL:"Sources", essayL:"For the essay",
-    prevF:"Previous", nextF:"Next", secOnly:"Section {s}", allSec:"Whole unit", fichaIntro:"About this unit", secIntro:"Why this section", fichaXP:"Sheet read", noResults:"No results", fichasOf:"{n} sheets", codeL:"Code"
+    prevF:"Previous", nextF:"Next", secOnly:"Section {s}", allSec:"Whole unit", fichaIntro:"About this unit", secIntro:"Why this section", fichaXP:"Sheet read", noResults:"No results", fichasOf:"{n} sheets", codeL:"Code", paras:"paragraphs", img1:"image", imgN:"images"
   }
 };
 const MODE_ICONS={fichas:"📖",cards:"🖼️",glossary:"🔤",timeline:"⏳",sources:"📜",match:"🔗",myths:"🧨",quiz:"⚡",videos:"🎬"};
@@ -408,16 +408,17 @@ async function renderHome(){
       <div class="info"><div class="name">${esc(t("levels")[lvl])}</div>
       <div class="bar"><i style="width:${pct}%"></i></div>
       <div class="meta"><span>${S.prog.xp} ${t("xp")}${LEVEL_XP[lvl+1]?` · ${nextXP-S.prog.xp} ${t("toNext")}`:""}</span><span>🔥 ${S.prog.streak} ${t("days")}</span></div></div></div>
-    <div class="section-title">${t("temas")}</div><div id="temaList"><div class="empty">…</div></div>
+    <div id="temaList"><div class="empty">…</div></div>
     <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:10px">${t("author")}</p></main>`;
   bindHeader();
   try{
-    const idx=await getIndex(); const list=document.getElementById("temaList"); list.innerHTML="";
+    const idx=await getIndex(); const list=document.getElementById("temaList"); list.innerHTML=""; let lastUnit="";
     for(const m of idx.temas){
+      const u=m.unit?L(m.unit):""; if(u && u!==lastUnit){ const h=document.createElement("div"); h.className="section-title"; h.style.marginTop="14px"; h.textContent=u; list.appendChild(h); lastUnit=u; }
       const b=document.createElement("button"); b.className="tema"+(m.available?"":" locked");
       let pctT="";
       if(m.available){ const tm=S.temaCache[m.num]; if(tm){ pctT=Math.round(MODES.filter(x=>x!=="videos").reduce((a,x)=>a+modePct(tm,x),0)/(MODES.length-1))+"%"; } }
-      b.innerHTML=`<div class="num">${m.num}</div><div class="t"><b>${esc(L(m.title))||t("tema")+" "+m.num}</b><span>${m.available?t("tema")+" "+m.num:t("soon")}</span></div>${m.available?`<div class="pct">${pctT}</div>`:`<div>🔒</div>`}`;
+      b.innerHTML=`<div class="num">${m.num}</div><div class="t"><b>${esc(L(m.title))||t("tema")+" "+m.num}</b><span>${t("tema")} ${m.num}${m.available?"":" · "+t("soon")}</span></div>${m.available?`<div class="pct">${pctT}</div>`:`<div>🔒</div>`}`;
       b.onclick=()=>{ if(m.available) nav({name:"tema",num:m.num}); else toast(t("locked"),2200); };
       list.appendChild(b);
       if(m.available && !S.temaCache[m.num]) getTema(m.num).then(()=>{ if(S.view.name==="home") renderHome(); }).catch(()=>{});
@@ -499,7 +500,7 @@ function pickRound(tema,mode,idxs,n){
 
 /* --- swipe (cards & myths) --- */
 function modeSwipe(tema,mode,m){
-  const items=tema[mode]; const order=pickRound(tema,mode,modeIdxs(tema,mode),10); let pos=0, correct=0;
+  const items=tema[mode]; const idxs=modeIdxs(tema,mode); const order=pickRound(tema,mode,idxs,idxs.length); let pos=0, correct=0;
   m.innerHTML=`<div class="counter" id="cnt"></div><div class="progress"><i id="pr"></i></div><div class="deck" id="deck"></div>
     <div class="swipe-btns"><button class="no" id="bNo">✗<small>${t("falseL").toUpperCase()}</small></button><button class="yes" id="bYes">✓<small>${t("trueL").toUpperCase()}</small></button></div>
     <div class="swipe-hint">${t("swipeHint")}</div>`;
@@ -541,7 +542,7 @@ function modeSwipe(tema,mode,m){
 
 /* --- multiple choice (sources & quiz) --- */
 function modeChoice(tema,mode,m){
-  const items=tema[mode]; const order=pickRound(tema,mode,modeIdxs(tema,mode),mode==="quiz"?10:8); let pos=0,correct=0,timer=null;
+  const items=tema[mode]; const idxs=modeIdxs(tema,mode); const order=pickRound(tema,mode,idxs,mode==="quiz"?Math.min(10,idxs.length):idxs.length); let pos=0,correct=0,timer=null;
   function draw(){
     const it=items[order[pos]]; const opts=shuffle(it.options.map((o,i)=>({o,i})));
     m.innerHTML=`<div class="counter">${t("seen",{a:pos+1,b:order.length})}</div><div class="progress"><i style="width:${pos/order.length*100}%"></i></div>
@@ -612,7 +613,7 @@ function modeMatch(tema,mode,m){
 
 /* --- glossary (Leitner) --- */
 function modeGlossary(tema,mode,m){
-  const g=tema.glossary; const pool=modeIdxs(tema,"glossary"); const n=Math.min(10,pool.length);
+  const g=tema.glossary; const pool=modeIdxs(tema,"glossary"); const n=pool.length;
   // weight by box: lower boxes first
   const idxs=pool.slice().sort((a,b)=>(glBox(tema.id,a)-glBox(tema.id,b))||(Math.random()-.5)).slice(0,n);
   const order=shuffle(idxs); let pos=0, correct=0;
@@ -671,7 +672,7 @@ function modeFichas(tema,m,v){
       const h=document.createElement("div"); h.className="sec-h"+(major?" major":""); h.innerHTML=`<span class="code">${esc(code)}</span><b>${esc(sec?L(sec.title):"")}</b>`; list.appendChild(h);
       if(sec && sec.intro && LL(sec.intro).length && !qq){ const d=document.createElement("details"); d.className="sec-intro"; d.innerHTML=`<summary>${t("secIntro")}</summary><div style="margin-top:6px">${LL(sec.intro).map(p=>`<p style="margin-bottom:6px">${md(p)}</p>`).join("")}</div>`; list.appendChild(d); }
       for(const i of idxs){ const f=fs[i]; const b=document.createElement("button"); b.className="frow";
-        b.innerHTML=`<div class="th" ${f.images[0]?`style="background-image:url('${f.images[0].src}')"`:""}>${f.images[0]?"":"📄"}</div><div class="t"><b>${esc(L(f.title))}</b><span>${esc(f.code)} · ${LL(f.body).length} ¶${f.images.length?` · ${f.images.length} 🖼`:""}</span></div>${seen[i]?`<span class="chk">✓</span>`:""}`;
+        b.innerHTML=`<div class="th" ${f.images[0]?`style="background-image:url('${f.images[0].src}')"`:""}>${f.images[0]?"":"📄"}</div><div class="t"><b>${esc(L(f.title))}</b><span>${esc(f.code)} · ${LL(f.body).length} ${t("paras")}${f.images.length?` · ${f.images.length} ${f.images.length===1?t("img1"):t("imgN")}`:""}</span></div>${seen[i]?`<span class="chk">✓</span>`:""}`;
         b.onclick=()=>nav({name:"mode",num:tema.num,mode:"fichas",f:f.id}); list.appendChild(b); }
     }
     document.getElementById("fcount").textContent = shown? t("fichasOf",{n:shown}) : t("noResults");
