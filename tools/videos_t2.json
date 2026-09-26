@@ -1,0 +1,114 @@
+[
+ {
+  "id": "t2_01", "sec": "2.1",
+  "title": {"es": "El faraón atleta", "en": "The athlete pharaoh"},
+  "src": {"es": "videos/t2/t2_01_es.mp4", "en": "videos/t2/t2_01_en.mp4"},
+  "poster": {"es": "videos/t2/t2_01_es.jpg", "en": "videos/t2/t2_01_en.jpg"},
+  "more": {
+   "es": "Erik Hornung acuñó en 1982 el concepto de *Pharao ludens* para describir a un soberano cuya función se ejerce, en parte, jugando. Si bien el faraón exhibía su fuerza a menudo, el tabú afectaba solo a las competiciones de resultado incierto (Decker, 2021, p. 33), puesto que una derrota habría vulnerado el ma'at. La inscripción de Medamud, junto a Luxor, en la que los cortesanos de Amenofis II intentan sin éxito atravesar la diana, es la única excepción documentada en tres milenios y, a la postre, confirma el dogma. Decker y Klauck (1974) reprodujeron el tiro contra planchas de cobre con arcos modernos y las flechas apenas penetraron unos milímetros.",
+   "en": "Erik Hornung coined the concept of *Pharao ludens* in 1982 to describe a ruler whose office is exercised, in part, through play. Although the pharaoh often displayed his strength, the taboo applied only to contests of uncertain outcome (Decker, 2021, p. 33), since a defeat would have violated ma'at. The Medamud inscription, near Luxor, in which Amenhotep II's courtiers try and fail to pierce the target, is the only documented exception in three millennia and ultimately confirms the dogma. Decker and Klauck (1974) reproduced the shot against copper plates with modern bows, and the arrows went in only a few millimetres."
+  },
+  "q": {
+   "es": {"q": "¿Por qué el faraón no competía contra otros atletas?", "opts": ["Porque no entrenaba.", "Porque una derrota vulneraría el ma'at.", "Porque el deporte estaba prohibido en la corte.", "Porque no existían competiciones."], "a": 1},
+   "en": {"q": "Why did the pharaoh not compete against other athletes?", "opts": ["Because he did not train.", "Because a defeat would violate ma'at.", "Because sport was forbidden at court.", "Because there were no competitions."], "a": 1}
+  }
+ },
+ {
+  "id": "t2_02", "sec": "2.1",
+  "title": {"es": "La carrera que devolvía el trono", "en": "The run that gave back the throne"},
+  "src": {"es": "videos/t2/t2_02_es.mp4", "en": "videos/t2/t2_02_en.mp4"},
+  "poster": {"es": "videos/t2/t2_02_es.jpg", "en": "videos/t2/t2_02_en.jpg"},
+  "more": {
+   "es": "El Heb-Sed está documentado en 314 ocasiones a lo largo de la historia egipcia. Ramsés II, que reinó entre 1279 y 1213 a. C., celebró trece jubileos y posiblemente catorce, lo cual se explica por la duración de su reinado. Hatshepsut lo celebró en el año 16 de su reinado (h. 1485 a. C.), sumando a la cuenta sus años como regente, y la escena en la que corre junto al toro Apis se conserva en la capilla roja de Karnak (Decker, 1992; Flammini, 2003; Camilo, 2024).",
+   "en": "The Heb-Sed is documented on 314 occasions throughout Egyptian history. Ramesses II, who reigned from 1279 to 1213 BC, held thirteen jubilees and possibly fourteen, which is explained by the length of his reign. Hatshepsut celebrated it in the sixteenth year of her reign (c. 1485 BC), counting her years as regent, and the scene in which she runs beside the Apis bull survives in the Red Chapel at Karnak (Decker, 1992; Flammini, 2003; Camilo, 2024)."
+  },
+  "q": {
+   "es": {"q": "¿Cada cuánto se repetía el Heb-Sed tras el primer jubileo?", "opts": ["Cada año.", "Cada diez años.", "Cada tres años.", "Cada treinta años."], "a": 2},
+   "en": {"q": "How often was the Heb-Sed repeated after the first jubilee?", "opts": ["Every year.", "Every ten years.", "Every three years.", "Every thirty years."], "a": 2}
+  }
+ },
+ {
+  "id": "t2_03", "sec": "2.2",
+  "title": {"es": "Un imperio entrenado a caballo", "en": "An empire trained on horseback"},
+  "src": {"es": "videos/t2/t2_03_es.mp4", "en": "videos/t2/t2_03_en.mp4"},
+  "poster": {"es": "videos/t2/t2_03_es.jpg", "en": "videos/t2/t2_03_en.jpg"},
+  "more": {
+   "es": "Del chovgan se conocen partidos de cinco jinetes por bando en el siglo XVI y de quince a veinte en el XVII (Chehabi y Guttmann, 2002). El jereed, por su parte, se jugaba con jabalinas de madera sin punta y en equipos de ocho a diez jinetes (Ubaidulloev, 2015). El buzkashi, a pesar de carecer de campo, equipos y árbitro, se sostiene sobre un juramento de juego limpio, y lo organiza un patrón que corre con los gastos y gana prestigio con ello (Azoy, 2011).",
+   "en": "Chovgan matches are known with five riders a side in the 16th century and fifteen to twenty in the 17th (Chehabi & Guttmann, 2002). Jereed, for its part, was played with blunt wooden javelins and in teams of eight to ten riders (Ubaidulloev, 2015). Buzkashi, despite having no field, no teams and no referee, rests on an oath of fair play, and it is organised by a patron who pays the costs and gains prestige by doing so (Azoy, 2011)."
+  },
+  "q": {
+   "es": {"q": "¿Quién construyó la plaza Naqsh-e Jahán de Isfahán como campo de chovgan?", "opts": ["Abbás I, en 1598.", "Ciro II, en el 550 a. C.", "Darío I.", "Rostam."], "a": 0},
+   "en": {"q": "Who built the Naqsh-e Jahan square in Isfahan as a chovgan field?", "opts": ["Abbas I, in 1598.", "Cyrus II, in 550 BC.", "Darius I.", "Rostam."], "a": 0}
+  }
+ },
+ {
+  "id": "t2_04", "sec": "2.1",
+  "title": {"es": "Cien kilómetros en una noche", "en": "A hundred kilometres in one night"},
+  "src": {"es": "videos/t2/t2_04_es.mp4", "en": "videos/t2/t2_04_en.mp4"},
+  "poster": {"es": "videos/t2/t2_04_es.jpg", "en": "videos/t2/t2_04_en.jpg"},
+  "more": {
+   "es": "El ejército permanente egipcio surge tras la expulsión de los hicsos, en el Imperio Nuevo (1550-1069 a. C.), con levas campesinas, campamentos de hasta 5.000 hombres y tierras como recompensa (Spalinger, 2005). Decker (1992) ordena los combates en tres contextos, la guerra, la ceremonia y el culto. La estela de Taharqa la estudia Pruett (2026), y el boxeo, del que solo se conservan las seis parejas de la tumba de Kheruef, Poliakoff (1987).",
+   "en": "Egypt's standing army emerged after the expulsion of the Hyksos, in the New Kingdom (1550-1069 BC), with peasant levies, camps of up to 5,000 men and land as a reward (Spalinger, 2005). Decker (1992) arranges the bouts in three contexts: war, ceremony and cult. The Taharqa stela is studied by Pruett (2026), and boxing, of which only the six pairs in the tomb of Kheruef survive, by Poliakoff (1987)."
+  },
+  "q": {
+   "es": {"q": "¿Cuáles son las tres modalidades de combate egipcias?", "opts": ["Lucha, esgrima con espada y tiro.", "Boxeo, pancracio y lucha.", "Tahtib, jereed y buzkashi.", "Lucha, tahtib y boxeo."], "a": 3},
+   "en": {"q": "What are the three Egyptian combat disciplines?", "opts": ["Wrestling, sword fencing and archery.", "Boxing, pankration and wrestling.", "Tahtib, jereed and buzkashi.", "Wrestling, tahtib and boxing."], "a": 3}
+  }
+ },
+ {
+  "id": "t2_05", "sec": "2.1",
+  "title": {"es": "Tirar al rival al agua", "en": "Knocking your rival into the water"},
+  "src": {"es": "videos/t2/t2_05_es.mp4", "en": "videos/t2/t2_05_en.mp4"},
+  "poster": {"es": "videos/t2/t2_05_es.jpg", "en": "videos/t2/t2_05_en.jpg"},
+  "more": {
+   "es": "En la justa de pescadores cada canoa llevaba una tripulación de tres a seis hombres, y el juego admitía el agarre directo, de modo que resultaba muy violento (Guttmann, 2004). El relieve de la calzada de Sahure (h. 2490 a. C.) reúne cuatro modalidades, con collares de oro como premio (Decker y Förster, 2011). Sobre la danza, la acrobacia y el juego de pelota, en buena medida en manos de mujeres, puede consultarse Elhosary (2025).",
+   "en": "In the fishermen's joust each canoe carried a crew of three to six men, and the game allowed direct grappling, so it was very violent (Guttmann, 2004). The relief on Sahure's causeway (c. 2490 BC) brings together four disciplines, with gold collars as prizes (Decker & Förster, 2011). On dance, acrobatics and ball games, largely in the hands of women, see Elhosary (2025)."
+  },
+  "q": {
+   "es": {"q": "¿Qué recoge el relieve de la calzada de Sahure en Abusir?", "opts": ["La carrera del Heb-Sed.", "Una partida de senet.", "Tiro con arco, esgrima, lucha y regata de obreros y soldados.", "Una justa de pescadores."], "a": 2},
+   "en": {"q": "What does the relief on Sahure's causeway at Abusir show?", "opts": ["The Heb-Sed run.", "A game of senet.", "Archery, fencing, wrestling and rowing by workers and soldiers.", "A fishermen's joust."], "a": 2}
+  }
+ },
+ {
+  "id": "t2_06", "sec": "2.2",
+  "title": {"es": "El gimnasio de la puerta baja", "en": "The gym with the low door"},
+  "src": {"es": "videos/t2/t2_06_es.mp4", "en": "videos/t2/t2_06_en.mp4"},
+  "poster": {"es": "videos/t2/t2_06_es.jpg", "en": "videos/t2/t2_06_en.jpg"},
+  "more": {
+   "es": "Alejandro acabó con los aqueménidas en el 330 a. C. y los sasánidas cayeron en el 651, de modo que el pahlavan surge en una Persia sin monarquía propia. La puerta baja, la ubicación escondida en el bazar y la ausencia de fachada han alimentado la leyenda de un origen clandestino del zurkhaneh como forma de resistencia a las invasiones, si bien esa hipótesis no está demostrada (Chehabi, 2003; Krawietz, 2013; Mohammadi et al., 2023).",
+   "en": "Alexander ended the Achaemenids in 330 BC and the Sasanians fell in 651, so the pahlavan emerges in a Persia without a monarchy of its own. The low door, the hidden location in the bazaar and the lack of a façade have fed the legend of a clandestine origin of the zurkhaneh as a form of resistance to invasions, although that hypothesis has not been proven (Chehabi, 2003; Krawietz, 2013; Mohammadi et al., 2023)."
+  },
+  "q": {
+   "es": {"q": "¿Qué es el zurkhaneh?", "opts": ["Un campo de chovgan.", "Un templo del fuego.", "Una escuela de arqueros.", "Un gimnasio abovedado con foso central, en el bazar."], "a": 3},
+   "en": {"q": "What is the zurkhaneh?", "opts": ["A chovgan field.", "A fire temple.", "A school for archers.", "A domed gym with a central pit, in the bazaar."], "a": 3}
+  }
+ },
+ {
+  "id": "t2_07", "sec": "2.2",
+  "title": {"es": "Adelantarse al rey", "en": "Getting ahead of the king"},
+  "src": {"es": "videos/t2/t2_07_es.mp4", "en": "videos/t2/t2_07_en.mp4"},
+  "poster": {"es": "videos/t2/t2_07_es.jpg", "en": "videos/t2/t2_07_en.jpg"},
+  "more": {
+   "es": "La frase de Darío I (522-486 a. C.) procede de su inscripción funeraria de Naqsh-e Rostam. Los paradeisos heredan la caza del león asiria, y en ellos se cazaba varias veces al mes con arco, espada corta, escudo y dos lanzas (Almagor, 2021). El episodio de Megabizo lo transmite Ctesias en el resumen de Focio (Pérsica, F14 §43): Artajerjes I ordenó decapitarlo, las súplicas de Amestris, Amitis y otros le salvaron la vida y fue desterrado a Cirta, junto al mar Rojo; cinco años después huyó y el rey acabó perdonándolo. Sobre la educación de los jóvenes persas, Heródoto (1.136) y Estrabón (15.3.18); véase también Kyle (2015).",
+   "en": "Darius I's phrase (522-486 BC) comes from his funerary inscription at Naqsh-e Rostam. The paradeisoi inherited the Assyrian lion hunt, and in them the king hunted several times a month with bow, short sword, shield and two spears (Almagor, 2021). The Megabyzus episode is transmitted by Ctesias in Photius' epitome (Persica, F14 §43): Artaxerxes I ordered him beheaded, the pleas of Amestris, Amytis and others saved his life and he was exiled to Kyrta, by the Red Sea; five years later he fled and the king eventually pardoned him. On the education of young Persians, see Herodotus (1.136) and Strabo (15.3.18), and also Kyle (2015)."
+  },
+  "q": {
+   "es": {"q": "¿De dónde procede la palabra «paraíso»?", "opts": ["Del iranio antiguo pairidaeza, a través del griego paradeisos: parque de caza cercado.", "Del egipcio ma'at.", "Del fenicio Qart-ḥadašt.", "Del griego agón."], "a": 0},
+   "en": {"q": "Where does the word 'paradise' come from?", "opts": ["From Old Iranian pairidaeza, through Greek paradeisos: a fenced hunting park.", "From Egyptian ma'at.", "From Phoenician Qart-ḥadašt.", "From Greek agon."], "a": 0}
+  }
+ },
+ {
+  "id": "t2_08", "sec": "2.3",
+  "title": {"es": "Dos barcos fenicios a cuarenta minutos", "en": "Two Phoenician ships forty minutes away"},
+  "src": {"es": "videos/t2/t2_08_es.mp4", "en": "videos/t2/t2_08_en.mp4"},
+  "poster": {"es": "videos/t2/t2_08_es.jpg", "en": "videos/t2/t2_08_en.jpg"},
+  "more": {
+   "es": "Fenicia fue un conjunto de ciudades-estado independientes, como Biblos, Sidón y Tiro, cuya expansión se extiende entre el 1200 y el 539 a. C. (López-Ruiz, 2022), y casi todo lo que sabemos de ella pasa por el filtro de las fuentes griegas y romanas (Quinn, 2019). En Mazarrón, el pecio 1, hallado en 1988, conserva la quilla, y el 2, hallado en 1995, el casco (De Juan y Sabio, 2025). En Kharayeb se han recuperado 16.400 fragmentos de figuritas, de los que un 35 % representa a niños y un 22 % a mujeres (Castiglione, 2020); asimismo, las mujeres aparecen como músicas y bailarinas en contextos funerarios (López-Bertran y Garcia-Ventura, 2012).",
+   "en": "Phoenicia was a set of independent city-states, such as Byblos, Sidon and Tyre, whose expansion spans from 1200 to 539 BC (López-Ruiz, 2022), and almost everything we know about it passes through the filter of Greek and Roman sources (Quinn, 2019). At Mazarrón, wreck 1, found in 1988, preserves the keel, and wreck 2, found in 1995, the hull (De Juan & Sabio, 2025). At Kharayeb 16,400 figurine fragments have been recovered, 35% of which depict children and 22% women (Castiglione, 2020); women also appear as musicians and dancers in funerary contexts (López-Bertran & Garcia-Ventura, 2012)."
+  },
+  "q": {
+   "es": {"q": "¿Por qué apenas hay fuentes sobre el deporte fenicio?", "opts": ["Porque no practicaban actividad física.", "Porque no hubo un Estado unificado ni reyes que dejaran constancia de proezas físicas.", "Porque los romanos destruyeron los archivos.", "Porque no tenían escritura."], "a": 1},
+   "en": {"q": "Why are there hardly any sources on Phoenician sport?", "opts": ["Because they did no physical activity.", "Because there was no unified state and no kings recording physical feats.", "Because the Romans destroyed the archives.", "Because they had no writing."], "a": 1}
+  }
+ }
+]

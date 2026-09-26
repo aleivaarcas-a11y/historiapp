@@ -58,7 +58,9 @@ main{flex:1;padding:16px 16px calc(24px + var(--safe-bottom));display:flex;flex-
 
 /* cards / lists */
 .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
-.hero{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;border-radius:var(--radius);padding:18px;display:flex;gap:14px;align-items:center;box-shadow:var(--shadow)}
+.hero{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;border-radius:var(--radius);padding:18px;display:flex;gap:14px;align-items:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-10px;top:-10px;width:150px;height:150px;background:url("icons/emblema_oro.png") center/contain no-repeat;opacity:.22;pointer-events:none}
+.hero>*{position:relative}
 .hero .lvl{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;font-size:22px;line-height:1}
 .hero .lvl small{font-size:10px;font-weight:600;opacity:.85;letter-spacing:.06em}
 .hero .info{flex:1;min-width:0}
@@ -184,9 +186,19 @@ main{flex:1;padding:16px 16px calc(24px + var(--safe-bottom));display:flex;flex-
 .badges{display:flex;flex-wrap:wrap;gap:8px}
 .badges .b{background:var(--paper);border-radius:12px;padding:8px 10px;font-size:12px;font-weight:600;box-shadow:var(--shadow);display:flex;align-items:center;gap:6px}
 .badges .b.off{opacity:.35;filter:grayscale(1)}
-.video{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
-.video iframe{width:100%;aspect-ratio:9/16;border:0;display:block;max-height:70vh}
-.video .vt{padding:12px 14px;font-weight:700;font-size:14px}
+.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.vcard{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;text-align:left;padding:0;display:flex;flex-direction:column}
+.vcard img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 58%;display:block;background:#0a0806}
+.vcard .vt{padding:10px 12px;font-weight:700;font-size:13px;line-height:1.3;flex:1}
+.vcard .vs{padding:0 12px 10px;font-size:12px;color:var(--muted)}
+.vcard .vs.on{color:var(--primary);font-weight:700}
+.vplayer{background:#0a0806;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.vplayer video{width:100%;aspect-ratio:9/16;max-height:72vh;display:block;background:#0a0806}
+.vmore{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px 16px;font-size:14.5px;line-height:1.55}
+.vmore h3,.vtest h3{margin:0 0 8px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.vtest{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px 16px}
+.vtest .qq{font-weight:700;font-size:15px;margin-bottom:12px;line-height:1.35}
+.vwrap{display:flex;flex-direction:column;gap:12px}
 .empty{text-align:center;color:var(--muted);padding:40px 20px;font-size:15px;line-height:1.5}
 .empty .ic{font-size:44px;margin-bottom:10px}
 
@@ -253,11 +265,13 @@ const I18N = {
     badgeHow:"Completa cada sección de un tema para ganar su insignia.",
     levelUp:"¡Nivel {n}: {name}!", complete:"Completado",
     levels:["Aprendiz","Paleolítico","Neolítico","Escriba","Pahlavan","Hoplita","Gladiador","Caballero","Gentleman","Catedrático"],
-    noVideos:"Todavía no hay vídeos para este tema.", install:"Añade Historiapp a tu pantalla de inicio: en Safari, botón Compartir y «Añadir a pantalla de inicio»; en Chrome, menú y «Instalar aplicación».",
+    noVideos:"Todavía no hay vídeos para este tema.", vMore:"Saber más", vTest:"Pon a prueba lo que has visto", vSeen:"✓ Visto", vNew:"Sin ver", vAll:"Todos los vídeos", vOk:"Correcto. +{n} XP", vKo:"La respuesta correcta está marcada", install:"Añade Historiapp a tu pantalla de inicio: en Safari, botón Compartir y «Añadir a pantalla de inicio»; en Chrome, menú y «Instalar aplicación».",
     version:"Contenido actualizado", offline:"Sin conexión: se muestran los datos guardados", loadError:"No se ha podido cargar el contenido. Comprueba la conexión.",
     author:"Historia del Deporte · Grado en CAFD · UCAM",
     fichasSearch:"Buscar en las fichas…", fichasEsOnly:"", practice:"Practicar este apartado", slideText:"En la diapositiva", refsL:"Fuentes", essayL:"Para el ensayo",
-    prevF:"Anterior", nextF:"Siguiente", secOnly:"Apartado {s}", allSec:"Todo el tema", fichaIntro:"Presentación del tema", secIntro:"Por qué este apartado", fichaXP:"Ficha leída", noResults:"Sin resultados", fichasOf:"{n} fichas", codeL:"Código", paras:"párrafos", img1:"imagen", imgN:"imágenes"
+    prevF:"Anterior", nextF:"Siguiente", secOnly:"Apartado {s}", allSec:"Todo el tema", fichaIntro:"Presentación del tema", secIntro:"Por qué este apartado", fichaXP:"Ficha leída", noResults:"Sin resultados", fichasOf:"{n} fichas", codeL:"Código", paras:"párrafos", img1:"imagen", imgN:"imágenes",
+    daily:"Reto del día", dailySub:"Una prueba de cada tipo, distinta cada día, con el doble de XP", dailyStart:"Empezar el reto", dailyDone:"Reto de hoy completado", dailyScore:"{a} de {b} aciertos hoy", dailyBack:"Volver mañana para un reto nuevo", dailyStep:"Prueba {a} de {b}", dailyTitle:"Reto del día · {d}",
+    installBtn:"Instalar en el móvil", installIos:"En iPhone o iPad: pulsa el botón Compartir (el cuadrado con la flecha hacia arriba, abajo en Safari) y elige «Añadir a pantalla de inicio».", installAndroid:"En Android: abre el menú de Chrome (tres puntos) y elige «Instalar aplicación» o «Añadir a pantalla de inicio».", installDesktop:"Abre esta dirección en el móvil para instalarla; en el ordenador funciona igual desde el navegador.", installed:"La app ya está instalada.", close:"Cerrar"
   },
   en: {
     appName:"Historiapp", tagline:"Get ready for the History of Sport exam on your phone, at your own pace.",
@@ -278,11 +292,13 @@ const I18N = {
     badgeHow:"Complete each section of a unit to earn its badge.",
     levelUp:"Level {n}: {name}!", complete:"Completed",
     levels:["Apprentice","Palaeolithic","Neolithic","Scribe","Pahlavan","Hoplite","Gladiator","Knight","Gentleman","Professor"],
-    noVideos:"No videos for this unit yet.", install:"Add Historiapp to your home screen: in Safari, tap Share and 'Add to Home Screen'; in Chrome, open the menu and 'Install app'.",
+    noVideos:"No videos for this unit yet.", vMore:"Learn more", vTest:"Test what you have seen", vSeen:"✓ Watched", vNew:"Not watched", vAll:"All videos", vOk:"Correct. +{n} XP", vKo:"The right answer is marked", install:"Add Historiapp to your home screen: in Safari, tap Share and 'Add to Home Screen'; in Chrome, open the menu and 'Install app'.",
     version:"Content updated", offline:"Offline: showing saved data", loadError:"Could not load the content. Check your connection.",
     author:"History of Sport · Sport Sciences degree · UCAM",
     fichasSearch:"Search the sheets…", fichasEsOnly:"Some sheets of this unit are not yet available in English and are shown in Spanish.", practice:"Practise this section", slideText:"On the slide", refsL:"Sources", essayL:"For the essay",
-    prevF:"Previous", nextF:"Next", secOnly:"Section {s}", allSec:"Whole unit", fichaIntro:"About this unit", secIntro:"Why this section", fichaXP:"Sheet read", noResults:"No results", fichasOf:"{n} sheets", codeL:"Code", paras:"paragraphs", img1:"image", imgN:"images"
+    prevF:"Previous", nextF:"Next", secOnly:"Section {s}", allSec:"Whole unit", fichaIntro:"About this unit", secIntro:"Why this section", fichaXP:"Sheet read", noResults:"No results", fichasOf:"{n} sheets", codeL:"Code", paras:"paragraphs", img1:"image", imgN:"images",
+    daily:"Daily challenge", dailySub:"One task of each kind, new every day, double XP", dailyStart:"Start the challenge", dailyDone:"Today's challenge completed", dailyScore:"{a} of {b} correct today", dailyBack:"Come back tomorrow for a new one", dailyStep:"Task {a} of {b}", dailyTitle:"Daily challenge · {d}",
+    installBtn:"Install on your phone", installIos:"On iPhone or iPad: tap the Share button (the square with the upward arrow, at the bottom in Safari) and choose 'Add to Home Screen'.", installAndroid:"On Android: open the Chrome menu (three dots) and choose 'Install app' or 'Add to Home screen'.", installDesktop:"Open this address on your phone to install it; on a computer it works from the browser.", installed:"The app is already installed.", close:"Close"
   }
 };
 const MODE_ICONS={fichas:"📖",cards:"🖼️",glossary:"🔤",timeline:"⏳",sources:"📜",match:"🔗",myths:"🧨",quiz:"⚡",videos:"🎬"};
@@ -292,7 +308,7 @@ const LEVEL_XP=[0,100,250,450,700,1000,1400,1900,2500,3300];
 /* ============ state ============ */
 const S = {
   lang:null, temasIndex:null, temaCache:{}, view:{name:"gate"},
-  prog: load("historiapp.progress", {xp:0, streak:0, lastDay:null, seen:{}, badges:{}, gl:{}})
+  prog: load("historiapp.progress", {xp:0, streak:0, lastDay:null, seen:{}, badges:{}, gl:{}, daily:{}})
 };
 function load(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
 function save(){try{localStorage.setItem("historiapp.progress",JSON.stringify(S.prog));}catch(e){}}
@@ -302,7 +318,7 @@ function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor
 function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]))}
 function levelOf(xp){let l=0;for(let i=0;i<LEVEL_XP.length;i++) if(xp>=LEVEL_XP[i]) l=i;return l}
 function addXP(n){
-  const before=levelOf(S.prog.xp); S.prog.xp+=n;
+  n=n*(S.xpMult||1); const before=levelOf(S.prog.xp); S.prog.xp+=n;
   const today=new Date().toISOString().slice(0,10);
   if(S.prog.lastDay!==today){
     const y=new Date(Date.now()-864e5).toISOString().slice(0,10);
@@ -357,9 +373,9 @@ async function getTema(num){
 
 /* ============ rendering ============ */
 const app=document.getElementById("app");
-function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="tema") return "t"+v.num;
+function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="daily") return "reto"; if(v.name==="tema") return "t"+v.num;
   if(v.name==="mode"){ if(v.mode==="fichas") return v.f?`t${v.num}/f/${v.f}`:`t${v.num}/fichas`; return `t${v.num}/${v.mode}`+(v.sec?"/"+v.sec:""); } return ""; }
-function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"};
+function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="reto") return {name:"daily"};
   const p=h.split("/"); const mt=/^t(\d+)$/.exec(p[0]); if(!mt) return {name:"home"}; const num=+mt[1];
   if(p.length===1) return {name:"tema",num}; if(p[1]==="f"&&p[2]) return {name:"mode",num,mode:"fichas",f:decodeURIComponent(p[2])};
   if(MODES.includes(p[1])) return {name:"mode",num,mode:p[1],sec:p[2]||undefined}; return {name:"tema",num}; }
@@ -371,10 +387,11 @@ function render(){
   if(v.name==="home") return renderHome();
   if(v.name==="tema") return renderTema(v.num);
   if(v.name==="settings") return renderSettings();
+  if(v.name==="daily") return renderDaily();
   if(v.name==="mode") return renderMode(v.num,v.mode);
 }
 function header(title,back,extra=""){
-  return `<div class="top">${back?`<button class="back" id="hBack">‹</button>`:`<div style="width:4px"></div>`}
+  return `<div class="top">${back?`<button class="back" id="hBack">‹</button>`:`<img src="icons/emblema_blanco.png" alt="" style="width:40px;height:40px;object-fit:contain">`}
     <div class="ttl">${esc(title)}</div><div class="xp" id="hXP"></div>
     <button class="gear" id="hGear">⚙︎</button></div>`;
 }
@@ -387,14 +404,16 @@ function renderXP(){ const e=document.getElementById("hXP"); if(e) e.textContent
 
 function renderGate(){
   app.innerHTML=`<div class="gate">
-    <div class="logo">🏛️</div>
-    <div><h1>Historiapp</h1><p style="margin-top:8px">Historia del Deporte · History of Sport</p></div>
+    <img src="icons/logo_oro.png" alt="Historiapp" style="width:min(72vw,340px);height:auto">
+    <div><p>Historia del Deporte · History of Sport</p></div>
     <p>Elige tu idioma · Choose your language</p>
     <div class="langs">
       <button id="lEs">Castellano<small>Historia del Deporte</small></button>
       <button id="lEn">English<small>History of Sport</small></button>
     </div>
+    <button id="gInstall" style="background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:10px 18px;font-weight:700;font-size:14px">📲 Instalar en el móvil · Install on your phone</button>
     <div class="foot">UCAM · Grado en CAFD</div></div>`;
+  document.getElementById("gInstall").onclick=()=>{ S.lang=S.lang||"es"; installApp(); };
   document.getElementById("lEs").onclick=()=>setLang("es");
   document.getElementById("lEn").onclick=()=>setLang("en");
 }
@@ -408,9 +427,12 @@ async function renderHome(){
       <div class="info"><div class="name">${esc(t("levels")[lvl])}</div>
       <div class="bar"><i style="width:${pct}%"></i></div>
       <div class="meta"><span>${S.prog.xp} ${t("xp")}${LEVEL_XP[lvl+1]?` · ${nextXP-S.prog.xp} ${t("toNext")}`:""}</span><span>🔥 ${S.prog.streak} ${t("days")}</span></div></div></div>
+    <button class="tema" id="dailyBtn" style="border:2px solid var(--accent);background:#fff8e1"><div class="num">☀️</div><div class="t"><b>${t("daily")}</b><span id="dailySub">${t("dailySub")}</span></div><div class="pct" id="dailyPct"></div></button>
     <div id="temaList"><div class="empty">…</div></div>
     <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:10px">${t("author")}</p></main>`;
   bindHeader();
+  { const d=S.prog.daily||{}; const done=d.date===todayKey()&&d.done; document.getElementById("dailyBtn").onclick=()=>nav({name:"daily"});
+    if(done){ document.getElementById("dailySub").textContent=t("dailyScore",{a:d.correct,b:d.total}); document.getElementById("dailyPct").textContent="✓"; } else document.getElementById("dailyPct").textContent="×2"; }
   try{
     const idx=await getIndex(); const list=document.getElementById("temaList"); list.innerHTML=""; let lastUnit="";
     for(const m of idx.temas){
@@ -459,10 +481,11 @@ function renderSettings(){
       <div class="set-row"><span>${t("xp")}</span><b>${S.prog.xp}</b></div>
       <div class="set-row"><span>${t("streak")}</span><b>🔥 ${S.prog.streak}</b></div>
     </div>
-    <div class="card"><p style="font-size:14px;line-height:1.5;color:var(--muted)">📲 ${t("install")}</p></div>
+    <button class="btn" id="sInstall">📲 ${t("installBtn")}</button>
     <button class="btn sec" id="sReset" style="border-color:var(--ko);color:var(--ko)">${t("reset")}</button>
     <p style="font-size:12px;color:var(--muted);text-align:center">${t("version")}: ${S.temasIndex?esc(S.temasIndex.version):"–"} · ${t("author")}</p></main>`;
   bindHeader(()=>nav(from));
+  document.getElementById("sInstall").onclick=installApp;
   document.getElementById("sEs").onclick=()=>{setLang("es");nav({name:"settings",from})};
   document.getElementById("sEn").onclick=()=>{setLang("en");nav({name:"settings",from})};
   document.getElementById("sReset").onclick=()=>{ if(confirm(t("resetConfirm"))){ S.prog={xp:0,streak:0,lastDay:null,seen:{},badges:{},gl:{}}; save(); toast(t("resetDone")); nav({name:"home"}); } };
@@ -480,6 +503,7 @@ async function renderMode(num,mode){
   if(!items.length){ m.innerHTML=`<div class="empty"><div class="ic">${MODE_ICONS[mode]}</div>${mode==="videos"?t("noVideos"):t("soon")}</div>`; return; }
   ({cards:modeSwipe,myths:modeSwipe,glossary:modeGlossary,timeline:modeTimeline,sources:modeChoice,quiz:modeChoice,match:modeMatch,videos:modeVideos})[mode](tema,mode,m);
 }
+function finishRound(m,tema,mode,correct,total,again,opts){ if(opts&&opts.onDone) return opts.onDone(correct,total); resultScreen(m,tema,mode,correct,total,again); }
 function resultScreen(m,tema,mode,correct,total,again){
   checkBadge(tema,mode);
   const pct=modePct(tema,mode);
@@ -499,8 +523,8 @@ function pickRound(tema,mode,idxs,n){
 }
 
 /* --- swipe (cards & myths) --- */
-function modeSwipe(tema,mode,m){
-  const items=tema[mode]; const idxs=modeIdxs(tema,mode); const order=pickRound(tema,mode,idxs,idxs.length); let pos=0, correct=0;
+function modeSwipe(tema,mode,m,opts={}){
+  const items=tema[mode]; const idxs=modeIdxs(tema,mode); const order=opts.order||pickRound(tema,mode,idxs,idxs.length); let pos=0, correct=0;
   m.innerHTML=`<div class="counter" id="cnt"></div><div class="progress"><i id="pr"></i></div><div class="deck" id="deck"></div>
     <div class="swipe-btns"><button class="no" id="bNo">✗<small>${t("falseL").toUpperCase()}</small></button><button class="yes" id="bYes">✓<small>${t("trueL").toUpperCase()}</small></button></div>
     <div class="swipe-hint">${t("swipeHint")}</div>`;
@@ -533,7 +557,7 @@ function modeSwipe(tema,mode,m){
     const it=items[order[pos]]; const ok=(val===it.answer);
     if(c){ c.style.transition="transform .35s ease, opacity .35s"; c.style.transform=`translate(${val?600:-600}px,-40px) rotate(${val?30:-30}deg)`; c.style.opacity=0; }
     markSeen(tema.id,mode,order[pos]); const xp=ok?10:2; addXP(xp); if(ok) correct++;
-    sheet(ok, ok?t("correct"):t("wrong")+` · ${it.answer?t("trueL"):t("falseL")}`, L(it.explain), xp, ()=>{ pos++; if(pos>=order.length) resultScreen(m,tema,mode,correct,order.length,()=>modeSwipe(tema,mode,m)); else draw(); });
+    sheet(ok, ok?t("correct"):t("wrong")+` · ${it.answer?t("trueL"):t("falseL")}`, L(it.explain), xp, ()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeSwipe(tema,mode,m),opts); else draw(); });
   }
   document.getElementById("bNo").onclick=()=>answer(false,deck.lastElementChild);
   document.getElementById("bYes").onclick=()=>answer(true,deck.lastElementChild);
@@ -541,19 +565,19 @@ function modeSwipe(tema,mode,m){
 }
 
 /* --- multiple choice (sources & quiz) --- */
-function modeChoice(tema,mode,m){
-  const items=tema[mode]; const idxs=modeIdxs(tema,mode); const order=pickRound(tema,mode,idxs,mode==="quiz"?Math.min(10,idxs.length):idxs.length); let pos=0,correct=0,timer=null;
+function modeChoice(tema,mode,m,opts={}){
+  const items=tema[mode]; const idxs=modeIdxs(tema,mode); const order=opts.order||pickRound(tema,mode,idxs,mode==="quiz"?Math.min(10,idxs.length):idxs.length); let pos=0,correct=0,timer=null;
   function draw(){
-    const it=items[order[pos]]; const opts=shuffle(it.options.map((o,i)=>({o,i})));
+    const it=items[order[pos]]; const choices=shuffle(it.options.map((o,i)=>({o,i})));
     m.innerHTML=`<div class="counter">${t("seen",{a:pos+1,b:order.length})}</div><div class="progress"><i style="width:${pos/order.length*100}%"></i></div>
       ${mode==="quiz"?`<div class="timer"><i id="tm"></i></div>`:""}
       ${mode==="sources"?`<div class="quote">${esc(L(it.text))}</div><div class="qtext">${esc(L(it.question))}</div>`:`<div class="card qtext">${esc(L(it.q))}</div>`}
-      <div class="opts">${opts.map((x,k)=>`<button class="opt" data-i="${x.i}"><span class="k">${"ABCD"[k]}</span><span>${esc(L(x.o))}</span></button>`).join("")}</div>`;
+      <div class="opts">${choices.map((x,k)=>`<button class="opt" data-i="${x.i}"><span class="k">${"ABCD"[k]}</span><span>${esc(L(x.o))}</span></button>`).join("")}</div>`;
     let done=false;
     const finish=(chosen)=>{ if(done) return; done=true; clearInterval(timer);
       const ok=chosen===it.answer; m.querySelectorAll(".opt").forEach(b=>{ b.disabled=true; const i=+b.dataset.i; if(i===it.answer) b.classList.add("ok"); else if(i===chosen) b.classList.add("ko"); });
       markSeen(tema.id,mode,order[pos]); const xp=ok?(mode==="quiz"?15:10):2; addXP(xp); if(ok) correct++;
-      sheet(ok, ok?t("correct"):(chosen===-1?t("timeUp"):t("wrong")), L(it.explain), xp, ()=>{ pos++; if(pos>=order.length) resultScreen(m,tema,mode,correct,order.length,()=>modeChoice(tema,mode,m)); else draw(); }); };
+      sheet(ok, ok?t("correct"):(chosen===-1?t("timeUp"):t("wrong")), L(it.explain), xp, ()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeChoice(tema,mode,m),opts); else draw(); }); };
     m.querySelectorAll(".opt").forEach(b=>b.onclick=()=>finish(+b.dataset.i));
     if(mode==="quiz"){ let left=20; const bar=document.getElementById("tm"); bar.style.width="100%";
       timer=setInterval(()=>{ left--; bar.style.width=(left/20*100)+"%"; if(left<=0) finish(-1); },1000); }
@@ -562,8 +586,8 @@ function modeChoice(tema,mode,m){
 }
 
 /* --- timeline --- */
-function modeTimeline(tema,mode,m){
-  const sets=tema.timeline; const order=pickRound(tema,mode,modeIdxs(tema,mode),sets.length); let pos=0, correct=0;
+function modeTimeline(tema,mode,m,opts={}){
+  const sets=tema.timeline; const order=opts.order||pickRound(tema,mode,modeIdxs(tema,mode),sets.length); let pos=0, correct=0;
   function draw(){
     const set=sets[order[pos]]; let cur=shuffle(set.items.map((it,i)=>i));
     if(cur.every((v,i)=>i===0||set.items[cur[i-1]].year<=set.items[v].year)) cur=cur.reverse();
@@ -588,15 +612,15 @@ function modeTimeline(tema,mode,m){
       let wrong=0; [...tl.children].forEach((row,i)=>{ const okRow=(set.items[cur[i]].year===set.items[sorted[i]].year); row.classList.add(okRow?"ok":"ko"); if(!okRow) wrong++; });
       tl.classList.add("revealed"); markSeen(tema.id,mode,order[pos]); const ok=wrong===0; const xp=ok?20:Math.max(2,10-wrong*2); addXP(xp); if(ok) correct++;
       const expl=sorted.map((i,k)=>`${k+1}. ${L(set.items[i].label)} (${L(set.items[i].date)})`).join("\n");
-      sheet(ok, ok?t("tlOk"):t("tlKo",{n:wrong}), expl, xp, ()=>{ pos++; if(pos>=order.length) resultScreen(m,tema,mode,correct,order.length,()=>modeTimeline(tema,mode,m)); else draw(); });
+      sheet(ok, ok?t("tlOk"):t("tlKo",{n:wrong}), expl, xp, ()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeTimeline(tema,mode,m),opts); else draw(); });
     };
   }
   draw();
 }
 
 /* --- match --- */
-function modeMatch(tema,mode,m){
-  const sets=tema.match; const order=pickRound(tema,mode,modeIdxs(tema,mode),sets.length); let pos=0, correct=0;
+function modeMatch(tema,mode,m,opts={}){
+  const sets=tema.match; const order=opts.order||pickRound(tema,mode,modeIdxs(tema,mode),sets.length); let pos=0, correct=0;
   function draw(){
     const set=sets[order[pos]]; const n=set.pairs.length; let left=shuffle(set.pairs.map((p,i)=>i)), right=shuffle(set.pairs.map((p,i)=>i)); let sel=null, matched=0, errors=0;
     m.innerHTML=`<div class="counter">${t("seen",{a:pos+1,b:order.length})}</div><div class="card" style="padding:12px 16px"><b>${esc(L(set.title))}</b><p style="font-size:12px;color:var(--muted);margin-top:4px">${t("matchHint")}</p></div>
@@ -605,18 +629,18 @@ function modeMatch(tema,mode,m){
     left.forEach(i=>{ const b=document.createElement("button"); b.className="mtile"; b.dataset.i=i; b.textContent=L(set.pairs[i].a); b.onclick=()=>{ cl.querySelectorAll(".mtile").forEach(x=>x.classList.remove("sel")); b.classList.add("sel"); sel=i; }; cl.appendChild(b); });
     right.forEach(i=>{ const b=document.createElement("button"); b.className="mtile"; b.dataset.i=i; b.textContent=L(set.pairs[i].b); b.onclick=()=>{ if(sel==null) return; const lb=cl.querySelector(`.mtile[data-i="${sel}"]`);
       if(sel===i){ b.classList.add("ok"); lb.classList.add("ok"); lb.classList.remove("sel"); sel=null; matched++; addXP(5);
-        if(matched===n){ markSeen(tema.id,mode,order[pos]); const ok=errors===0; if(ok) correct++; sheet(ok,t("matchDone"),set.pairs.map(p=>`${L(p.a)} → ${L(p.b)}`).join("\n"),0,()=>{ pos++; if(pos>=order.length) resultScreen(m,tema,mode,correct,order.length,()=>modeMatch(tema,mode,m)); else draw(); }); } }
+        if(matched===n){ markSeen(tema.id,mode,order[pos]); const ok=errors===0; if(ok) correct++; sheet(ok,t("matchDone"),set.pairs.map(p=>`${L(p.a)} → ${L(p.b)}`).join("\n"),0,()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeMatch(tema,mode,m),opts); else draw(); }); } }
       else { errors++; b.classList.add("ko"); lb.classList.add("ko"); setTimeout(()=>{b.classList.remove("ko");lb.classList.remove("ko")},500); } }; cr.appendChild(b); });
   }
   draw();
 }
 
 /* --- glossary (Leitner) --- */
-function modeGlossary(tema,mode,m){
+function modeGlossary(tema,mode,m,opts={}){
   const g=tema.glossary; const pool=modeIdxs(tema,"glossary"); const n=pool.length;
   // weight by box: lower boxes first
   const idxs=pool.slice().sort((a,b)=>(glBox(tema.id,a)-glBox(tema.id,b))||(Math.random()-.5)).slice(0,n);
-  const order=shuffle(idxs); let pos=0, correct=0;
+  const order=opts.order||shuffle(idxs); let pos=0, correct=0;
   function draw(){
     const i=order[pos], it=g[i]; const box=glBox(tema.id,i);
     const kind = pos%3===2 ? "match" : (box%2===0 ? "term2def" : "def2term");
@@ -630,20 +654,20 @@ function modeGlossary(tema,mode,m){
       left.forEach(k=>{ const b=document.createElement("button"); b.className="mtile"; b.dataset.i=k; b.textContent=L(set.pairs[k].a); b.onclick=()=>{cl.querySelectorAll(".mtile").forEach(x=>x.classList.remove("sel")); b.classList.add("sel"); sel=k;}; cl.appendChild(b); });
       right.forEach(k=>{ const b=document.createElement("button"); b.className="mtile"; b.style.fontSize="12px"; b.dataset.i=k; b.textContent=L(set.pairs[k].b); b.onclick=()=>{ if(sel==null) return; const lb=cl.querySelector(`.mtile[data-i="${sel}"]`);
         if(sel===k){ b.classList.add("ok"); lb.classList.add("ok"); const gi=set.pairs[k].k; glSet(tema.id,gi,glBox(tema.id,gi)+(errs[k]?0:1)); sel=null; matched++; addXP(errs[k]?2:5);
-          if(matched===4){ correct++; setTimeout(()=>{ pos++; if(pos>=order.length) resultScreen(m,tema,mode,correct,order.length,()=>modeGlossary(tema,mode,m)); else draw(); },500); } }
+          if(matched===4){ correct++; setTimeout(()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeGlossary(tema,mode,m),opts); else draw(); },500); } }
         else { errs[sel]=1; b.classList.add("ko"); lb.classList.add("ko"); setTimeout(()=>{b.classList.remove("ko");lb.classList.remove("ko")},500); } }; cr.appendChild(b); });
       return;
     }
-    const distract=shuffle(g.map((x,k)=>k).filter(k=>k!==i)).slice(0,3); const opts=shuffle(distract.concat([i]));
+    const distract=shuffle(g.map((x,k)=>k).filter(k=>k!==i)).slice(0,3); const choices=shuffle(distract.concat([i]));
     const ask = kind==="term2def";
     m.innerHTML=head+`<div class="gl-term"><div class="k">${ask?t("glTerm"):t("glDefL")}</div><div class="v ${ask?"":"def"}">${esc(ask?L(it.term):L(it.def))}</div>
       <div class="boxes" style="margin-top:12px">${[0,1,2,3,4].map(b=>`<span class="${b<=box&&box>0?"on":""}">${b+1}</span>`).join("")}</div></div>
       <div class="qtext" style="font-size:15px">${ask?t("glDef"):t("glWhich")}</div>
-      <div class="opts">${opts.map((k,q)=>`<button class="opt" data-i="${k}"><span class="k">${"ABCD"[q]}</span><span style="${ask?"font-size:14px":""}">${esc(ask?L(g[k].def):L(g[k].term))}</span></button>`).join("")}</div>`;
+      <div class="opts">${choices.map((k,q)=>`<button class="opt" data-i="${k}"><span class="k">${"ABCD"[q]}</span><span style="${ask?"font-size:14px":""}">${esc(ask?L(g[k].def):L(g[k].term))}</span></button>`).join("")}</div>`;
     m.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ const k=+b.dataset.i; const ok=k===i;
       m.querySelectorAll(".opt").forEach(x=>{x.disabled=true; if(+x.dataset.i===i) x.classList.add("ok"); else if(+x.dataset.i===k) x.classList.add("ko");});
       glSet(tema.id,i, ok?box+1:Math.max(0,box-1)); const xp=ok?8:2; addXP(xp); if(ok) correct++;
-      sheet(ok, ok?t("correct"):t("wrong"), `${L(it.term)}: ${L(it.def)}`, xp, ()=>{ pos++; if(pos>=order.length) resultScreen(m,tema,mode,correct,order.length,()=>modeGlossary(tema,mode,m)); else draw(); }); });
+      sheet(ok, ok?t("correct"):t("wrong"), `${L(it.term)}: ${L(it.def)}`, xp, ()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeGlossary(tema,mode,m),opts); else draw(); }); });
   }
   draw();
 }
@@ -701,9 +725,83 @@ function renderFicha(tema,m,k){
   document.getElementById("fNext").onclick=()=>nav({name:"mode",num:tema.num,mode:"fichas",f:fs[k+1].id});
 }
 
+
+/* --- reto del día --- */
+function todayKey(){ return new Date().toISOString().slice(0,10); }
+function seededRandom(str){ let h=1779033703^str.length; for(let i=0;i<str.length;i++){ h=Math.imul(h^str.charCodeAt(i),3432918353); h=h<<13|h>>>19; }
+  return function(){ h=Math.imul(h^(h>>>16),2246822507); h=Math.imul(h^(h>>>13),3266489909); h^=h>>>16; return (h>>>0)/4294967296; }; }
+async function buildDaily(){
+  const idx=await getIndex(); const temas=[]; for(const m of idx.temas){ if(m.available){ try{ temas.push(await getTema(m.num)); }catch(e){} } }
+  if(!temas.length) return [];
+  const rnd=seededRandom("historiapp-"+todayKey()); const pick=a=>a[Math.floor(rnd()*a.length)];
+  const steps=[];
+  for(const mode of ["cards","quiz","glossary","myths","sources","timeline","match"]){
+    const cand=temas.filter(tm=>(tm[mode]||[]).length); if(!cand.length) continue;
+    const tm=pick(cand); const i=Math.floor(rnd()*tm[mode].length); steps.push({tema:tm,mode,i});
+  }
+  return steps;
+}
+async function renderDaily(){
+  app.innerHTML=header(t("daily"),true)+`<main id="m"><div class="empty">…</div></main>`;
+  bindHeader(()=>nav({name:"home"}));
+  const m=document.getElementById("m"); const steps=await buildDaily(); if(!steps.length){ m.innerHTML=`<div class="empty">${t("soon")}</div>`; return; }
+  const d=S.prog.daily||{}; if(d.date===todayKey() && d.done){ return dailyResult(m,d.correct,d.total); }
+  let k=0, correct=0; S.xpMult=2;
+  function step(){
+    if(k>=steps.length){ S.xpMult=1; S.prog.daily={date:todayKey(),done:true,correct,total:steps.length}; save(); return dailyResult(m,correct,steps.length); }
+    const st=steps[k]; const fn={cards:modeSwipe,myths:modeSwipe,quiz:modeChoice,sources:modeChoice,glossary:modeGlossary,timeline:modeTimeline,match:modeMatch}[st.mode];
+    document.querySelector(".top .ttl").textContent=`${t("daily")} · ${t("dailyStep",{a:k+1,b:steps.length})} · ${t("modes."+st.mode)} · ${t("tema")} ${st.tema.num}`;
+    S.view.sec=undefined; m.innerHTML="";
+    fn(st.tema,st.mode,m,{order:[st.i],onDone:(c)=>{ correct+=c; k++; step(); }});
+  }
+  step();
+}
+function dailyResult(m,correct,total){
+  S.xpMult=1;
+  m.innerHTML=`<div class="card result"><div class="big">${correct/total>=.8?"🏆":correct/total>=.5?"👍":"📚"}</div><h2>${t("dailyDone")}</h2><div class="score">${correct}/${total}</div><p>${t("dailyScore",{a:correct,b:total})}</p><p style="color:var(--muted);font-size:13px">${t("dailyBack")}</p></div><button class="btn" id="dHome">${t("home")}</button>`;
+  document.getElementById("dHome").onclick=()=>nav({name:"home"});
+}
+
+/* --- instalación --- */
+let deferredInstall=null;
+window.addEventListener("beforeinstallprompt",e=>{ e.preventDefault(); deferredInstall=e; });
+function isStandalone(){ return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone===true; }
+function isIOS(){ return /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform==="MacIntel" && navigator.maxTouchPoints>1); }
+async function installApp(){
+  if(isStandalone()){ toast(t("installed")); return; }
+  if(deferredInstall){ deferredInstall.prompt(); try{ await deferredInstall.userChoice; }catch(e){} deferredInstall=null; return; }
+  const msg = isIOS()? t("installIos") : (/Android/i.test(navigator.userAgent)? t("installAndroid") : t("installDesktop"));
+  const el=document.getElementById("sheet"), inn=document.getElementById("sheetIn"); el.className="sheet ok";
+  inn.innerHTML=`<div class="verdict"><span class="dot">📲</span>${t("installBtn")}</div><div class="exp">${esc(msg)}</div><button class="btn" id="sheetNext">${t("close")}</button>`;
+  requestAnimationFrame(()=>el.classList.add("show")); document.getElementById("sheetNext").onclick=()=>el.classList.remove("show");
+}
+
 /* --- videos --- */
 function modeVideos(tema,mode,m){
-  m.innerHTML=tema.videos.map(v=>`<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${esc(v.id)}?rel=0&playsinline=1" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="vt">${esc(L(v.title))}</div></div>`).join("");
+  const idxs=modeIdxs(tema,mode), vs=tema.videos, seen=S.prog.seen[tema.id+".videos"]||{};
+  const list=()=>{
+    m.innerHTML=`<div class="vlist">${idxs.map(i=>{const v=vs[i];return `<button class="vcard" data-i="${i}"><img loading="lazy" src="${esc(L(v.poster))}" alt=""><div class="vt">${esc(L(v.title))}</div><div class="vs ${seen[v.id]?"on":""}">${seen[v.id]?t("vSeen"):t("vNew")}</div></button>`}).join("")}</div>`;
+    m.querySelectorAll(".vcard").forEach(b=>b.onclick=()=>open(+b.dataset.i));
+  };
+  const open=i=>{
+    const v=vs[i], q=L(v.q);
+    m.innerHTML=`<div class="vwrap"><div class="vplayer"><video controls playsinline preload="metadata" poster="${esc(L(v.poster))}" src="${esc(L(v.src))}"></video></div>
+      <div class="vmore"><h3>${t("vMore")}</h3>${md(L(v.more))}</div>
+      ${q&&q.q?`<div class="vtest"><h3>${t("vTest")}</h3><div class="qq">${esc(q.q)}</div><div class="opts">${q.opts.map((o,k)=>`<button class="opt" data-k="${k}"><span class="k">${"ABCD"[k]}</span><span>${esc(o)}</span></button>`).join("")}</div></div>`:""}
+      <button class="btn ghost" id="vBack">${t("vAll")}</button></div>`;
+    const vid=m.querySelector("video"); vid.play().catch(()=>{});
+    vid.addEventListener("ended",()=>{ if(!seen[v.id]){ markSeen(tema.id,"videos",v.id); seen[v.id]=1; } });
+    m.querySelectorAll(".vtest .opt").forEach(b=>b.onclick=()=>{
+      const k=+b.dataset.k, ok=k===q.a;
+      m.querySelectorAll(".vtest .opt").forEach(x=>{ x.disabled=true; const j=+x.dataset.k; if(j===q.a) x.classList.add("ok"); else if(j===k) x.classList.add("ko"); });
+      const first=!S.prog.seen[tema.id+".videoq"]||!S.prog.seen[tema.id+".videoq"][v.id];
+      if(ok&&first){ addXP(10); markSeen(tema.id,"videoq",v.id); toast(t("vOk",{n:10*(S.xpMult||1)})); } else if(!ok) toast(t("vKo"));
+      if(!seen[v.id]){ markSeen(tema.id,"videos",v.id); seen[v.id]=1; }
+    });
+    m.querySelector("#vBack").onclick=()=>{ vid.pause(); list(); window.scrollTo(0,0); };
+    window.scrollTo(0,0);
+  };
+  list();
 }
 
 /* ============ boot ============ */
