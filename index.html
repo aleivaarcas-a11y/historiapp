@@ -570,7 +570,8 @@ async function renderMode(num,mode){
   const m=document.getElementById("m");
   if(mode==="fichas") return modeFichas(tema,m,v);
   if(mode==="mapa") return modeMapa(tema,m,v);
-  const items=modeIdxs(tema,mode);
+  let items=modeIdxs(tema,mode);
+  if(!items.length && v.sec){ let sec=v.sec; while(!items.length && sec.split(".").length>2){ sec=sec.split(".").slice(0,-1).join("."); v.sec=sec; items=modeIdxs(tema,mode); } if(!items.length){ v.sec=undefined; items=modeIdxs(tema,mode); } }
   if(!items.length){ m.innerHTML=`<div class="empty"><div class="ic">${MODE_ICONS[mode]}</div>${mode==="videos"?t("noVideos"):t("soon")}</div>`; return; }
   ({cards:modeSwipe,myths:modeSwipe,glossary:modeGlossary,timeline:modeTimeline,sources:modeChoice,quiz:modeChoice,match:modeMatch,videos:modeVideos})[mode](tema,mode,m);
 }
@@ -866,7 +867,12 @@ function modeMapa(tema,m,v){
   m.querySelectorAll(".nodo>.nh").forEach(b=>b.onclick=()=>{ const n=b.parentElement; n.classList.toggle("open");
     const k=n.dataset.k; if(!seen[k]){ seen[k]=1; markSeen(tema.id,"mapa",k); n.classList.add("seen"); addXP(2); checkBadge(tema,"mapa"); } });
   m.querySelectorAll(".nd [data-f]").forEach(b=>b.onclick=()=>nav({name:"mode",num:tema.num,mode:"fichas",f:b.dataset.f,back:{name:"mode",num:tema.num,mode:"mapa"}}));
-  m.querySelectorAll(".nd [data-s]").forEach(b=>b.onclick=()=>nav({name:"mode",num:tema.num,mode:"quiz",sec:b.dataset.s,back:{name:"mode",num:tema.num,mode:"mapa"}}));
+  const has=(md,sec)=>(tema[md]||[]).some(x=>secMatch(x.sec,sec));
+  const bestMode=sec=>["quiz","cards","myths","sources","glossary"].find(md=>has(md,sec));
+  m.querySelectorAll(".nd [data-s]").forEach(b=>b.onclick=()=>{ let sec=b.dataset.s, md=bestMode(sec);
+    while(!md && sec.includes(".") && sec.split(".").length>2){ sec=sec.split(".").slice(0,-1).join("."); md=bestMode(sec); }
+    if(!md){ md="quiz"; sec=undefined; }
+    nav({name:"mode",num:tema.num,mode:md,sec,back:{name:"mode",num:tema.num,mode:"mapa"}}); });
   document.getElementById("mAll").onclick=()=>m.querySelectorAll(".rama").forEach(r=>r.classList.add("open"));
   document.getElementById("mNone").onclick=()=>m.querySelectorAll(".rama,.nodo").forEach(r=>r.classList.remove("open"));
 }
