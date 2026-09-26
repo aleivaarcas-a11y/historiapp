@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Historiapp</title>
+<meta name="description" content="Historiapp: prepara el examen de Historia del Deporte (UCAM)">
+<meta name="theme-color" content="#004379">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Historiapp">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<style>
+:root{
+  /* Paleta de la plantilla UCAM: azul 004379, azul oscuro 002060, naranja EDAB00 / FBAE40, texto 383838, blanco */
+  --bg:#ffffff; --paper:#ffffff; --ink:#383838; --muted:#656565;
+  --primary:#004379; --primary-2:#002060; --accent:#EDAB00; --accent-2:#FBAE40;
+  --ok:#004379; --ok-bg:#e3edf6; --ko:#e8710a; --ko-bg:#fdebdd;
+  --line:#e6e6e6; --radius:18px; --shadow:0 4px 18px rgba(0,32,96,.10);
+  --safe-top:env(safe-area-inset-top,0px); --safe-bottom:env(safe-area-inset-bottom,0px);
+}
+@font-face{font-family:"Carlito";src:url("fonts/Carlito-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Carlito";src:url("fonts/Carlito-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Carlito";src:url("fonts/Carlito-Italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Carlito";src:url("fonts/Carlito-BoldItalic.woff2") format("woff2");font-weight:700;font-style:italic;font-display:swap}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--ink);
+  font-family:Calibri,"Carlito",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;overscroll-behavior:none}
+body{display:flex;justify-content:center}
+#app{width:100%;max-width:520px;min-height:100vh;display:flex;flex-direction:column;position:relative}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+.hidden{display:none!important}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:var(--primary);color:#fff;
+  padding:calc(10px + var(--safe-top)) 16px 10px;display:flex;align-items:center;gap:10px;min-height:56px}
+.top .back{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);font-size:20px}
+.top .ttl{flex:1;font-weight:700;font-size:17px;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.top .xp{font-size:13px;background:rgba(255,255,255,.14);padding:6px 10px;border-radius:999px;white-space:nowrap}
+.top .gear{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;background:rgba(255,255,255,.12)}
+main{flex:1;padding:16px 16px calc(24px + var(--safe-bottom));display:flex;flex-direction:column;gap:14px}
+
+/* language gate */
+.gate{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:32px 24px;text-align:center;
+  background:radial-gradient(120% 80% at 50% 0%,#0b5a9a 0%,#004379 55%,#002060 100%);color:#fff}
+.gate .logo{width:112px;height:112px;border-radius:28px;background:var(--paper);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);font-size:56px}
+.gate h1{font-size:38px;letter-spacing:-.02em}
+.gate p{opacity:.85;max-width:320px;line-height:1.45}
+.gate .langs{display:flex;gap:14px;width:100%;max-width:340px}
+.gate .langs button{flex:1;padding:18px 12px;border-radius:16px;background:var(--paper);color:var(--primary);font-weight:700;font-size:18px;box-shadow:var(--shadow)}
+.gate .langs button small{display:block;font-weight:500;color:var(--muted);font-size:13px;margin-top:2px}
+.gate .foot{font-size:12px;opacity:.6}
+
+/* cards / lists */
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
+.hero{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;border-radius:var(--radius);padding:18px;display:flex;gap:14px;align-items:center;box-shadow:var(--shadow)}
+.hero .lvl{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;font-size:22px;line-height:1}
+.hero .lvl small{font-size:10px;font-weight:600;opacity:.85;letter-spacing:.06em}
+.hero .info{flex:1;min-width:0}
+.hero .info .name{font-weight:700;font-size:17px}
+.hero .bar{height:8px;background:rgba(255,255,255,.2);border-radius:99px;margin-top:8px;overflow:hidden}
+.hero .bar i{display:block;height:100%;background:var(--accent-2);border-radius:99px;transition:width .4s}
+.hero .meta{display:flex;gap:12px;font-size:12px;opacity:.9;margin-top:6px}
+.section-title{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700;margin:6px 4px 0}
+.tema{display:flex;align-items:center;gap:14px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow);text-align:left;width:100%}
+.tema .num{width:46px;height:46px;border-radius:14px;background:var(--accent);color:var(--primary-2);font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.tema.locked .num{background:#cfc7b8}
+.tema .t{flex:1;min-width:0}
+.tema .t b{display:block;font-size:15px;line-height:1.25}
+.tema .t span{display:block;font-size:12px;color:var(--muted);margin-top:3px}
+.tema .pct{font-size:12px;font-weight:700;color:var(--primary)}
+.tema.locked{opacity:.6}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mode{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:16px 14px;box-shadow:var(--shadow);text-align:left;display:flex;flex-direction:column;gap:8px;min-height:120px;position:relative}
+.mode .ic{font-size:28px}
+.mode b{font-size:15px;line-height:1.2}
+.mode span{font-size:12px;color:var(--muted)}
+.mode .prog{height:5px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:auto}
+.mode .prog i{display:block;height:100%;background:var(--ok);border-radius:99px}
+.mode .done{position:absolute;top:10px;right:10px;font-size:16px}
+.pill{display:inline-block;padding:4px 10px;border-radius:999px;background:var(--line);font-size:12px;font-weight:600;color:var(--ink)}
+.btn{display:block;width:100%;padding:15px;border-radius:14px;background:var(--primary);color:#fff;font-weight:700;font-size:16px;text-align:center}
+.btn.sec{background:var(--paper);color:var(--primary);border:2px solid var(--primary)}
+.btn.ghost{background:transparent;color:var(--muted);font-weight:600}
+.btn:disabled{opacity:.5}
+.row{display:flex;gap:10px}
+.row .btn{flex:1}
+.counter{font-size:13px;color:var(--muted);text-align:center;font-weight:600}
+.progress{height:6px;background:var(--line);border-radius:99px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .3s}
+
+/* swipe deck */
+.deck{position:relative;height:calc(100vh - 262px);min-height:400px;max-height:620px}
+.scard{position:absolute;inset:0;background:var(--paper);border:1px solid var(--line);border-radius:22px;box-shadow:0 10px 30px rgba(30,36,48,.16);overflow:hidden;display:flex;flex-direction:column;touch-action:none;user-select:none;will-change:transform}
+.scard.behind{transform:scale(.95) translateY(14px);opacity:.7}
+.scard .img{flex:1;background:#f3f5f8 center/contain no-repeat;min-height:160px}
+.scard .img.text{display:flex;align-items:center;justify-content:center;padding:28px;font-size:22px;line-height:1.35;font-weight:600;text-align:center;background:linear-gradient(160deg,#fff8e1,#fde9bf);color:var(--primary-2)}
+.scard .cap{font-size:11px;color:var(--muted);padding:8px 14px 0;text-align:center}
+.scard .q{padding:12px 16px 16px;font-size:17px;font-weight:600;line-height:1.35;text-align:center}
+.scard .stamp{position:absolute;top:22px;padding:8px 14px;border:4px solid;border-radius:10px;font-weight:900;font-size:26px;letter-spacing:.05em;opacity:0;transform:rotate(-12deg);background:rgba(255,255,255,.85)}
+.scard .stamp.yes{right:18px;color:var(--ok);border-color:var(--ok);transform:rotate(12deg)}
+.scard .stamp.no{left:18px;color:var(--ko);border-color:var(--ko)}
+.swipe-btns{display:flex;justify-content:center;gap:22px}
+.swipe-btns button{width:74px;height:74px;border-radius:50%;background:var(--paper);box-shadow:var(--shadow);font-size:26px;font-weight:800;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.swipe-btns button small{font-size:10px;font-weight:700;letter-spacing:.06em;margin-top:2px}
+.swipe-btns .no{color:var(--ko)} .swipe-btns .yes{color:var(--ok)}
+.swipe-hint{text-align:center;font-size:12px;color:var(--muted)}
+
+/* feedback sheet */
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:center;pointer-events:none}
+.sheet .in{width:100%;max-width:520px;background:var(--paper);border-radius:22px 22px 0 0;box-shadow:0 -10px 40px rgba(0,0,0,.18);padding:18px 18px calc(18px + var(--safe-bottom));transform:translateY(110%);transition:transform .28s cubic-bezier(.2,.8,.2,1);pointer-events:auto;max-height:70vh;overflow:auto}
+.sheet.show .in{transform:none}
+.sheet .verdict{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;margin-bottom:8px}
+.sheet .verdict .dot{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px}
+.sheet.ok .dot{background:var(--ok)} .sheet.ko .dot{background:var(--ko)}
+.sheet.ok .verdict{color:var(--ok)} .sheet.ko .verdict{color:var(--ko)}
+.sheet .exp{font-size:15px;line-height:1.5;margin-bottom:14px;white-space:pre-line}
+.sheet .xpgain{font-size:13px;color:var(--accent);font-weight:700;margin-bottom:10px}
+
+/* options */
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{background:var(--paper);border:2px solid var(--line);border-radius:14px;padding:14px;text-align:left;font-size:15px;line-height:1.35;display:flex;gap:10px;align-items:center}
+.opt .k{width:26px;height:26px;border-radius:8px;background:var(--line);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex-shrink:0}
+.opt.ok{border-color:var(--ok);background:var(--ok-bg)} .opt.ok .k{background:var(--ok);color:#fff}
+.opt.ko{border-color:var(--ko);background:var(--ko-bg)} .opt.ko .k{background:var(--ko);color:#fff}
+.opt:disabled{opacity:.9}
+.quote{background:linear-gradient(160deg,#fff8e1,#fde9bf);border-radius:var(--radius);padding:20px;font-size:17px;line-height:1.5;font-style:italic;box-shadow:var(--shadow);position:relative}
+.quote:before{content:"\201C";position:absolute;top:-6px;left:12px;font-size:64px;color:var(--accent);opacity:.35;font-style:normal}
+.qtext{font-size:17px;font-weight:700;line-height:1.35}
+.timer{height:6px;background:var(--line);border-radius:99px;overflow:hidden}
+.timer i{display:block;height:100%;background:var(--ko);width:100%;transition:width 1s linear}
+
+/* timeline */
+.tl{display:flex;flex-direction:column;gap:10px}
+.tl .it{background:var(--paper);border-radius:14px;padding:12px 12px 12px 14px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;font-size:15px;line-height:1.3;touch-action:none;position:relative;transition:transform .15s}
+.tl .it.drag{opacity:.55;transform:scale(1.02)}
+.tl .it .n{width:26px;height:26px;border-radius:50%;background:var(--line);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex-shrink:0}
+.tl .it .lbl{flex:1}
+.tl .it .mv{display:flex;flex-direction:column;gap:4px}
+.tl .it .mv button{width:34px;height:26px;border-radius:8px;background:var(--line);font-size:13px;font-weight:800}
+.tl .it.ok{border-left:6px solid var(--ok)} .tl .it.ko{border-left:6px solid var(--ko)}
+.tl .it .date{font-size:12px;color:var(--muted);display:none}
+.tl.revealed .it .date{display:block} .tl.revealed .it .mv{display:none}
+
+/* match */
+.mcols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mcols .col{display:flex;flex-direction:column;gap:10px}
+.mtile{background:var(--paper);border:2px solid var(--line);border-radius:14px;padding:12px 10px;font-size:13px;line-height:1.3;min-height:64px;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:var(--shadow);transition:all .15s}
+.mtile.sel{border-color:var(--accent);background:#fff8e1}
+.mtile.ok{border-color:var(--ok);background:var(--ok-bg);opacity:.55;pointer-events:none}
+.mtile.ko{border-color:var(--ko);background:var(--ko-bg)}
+
+/* glossary */
+.gl-term{background:linear-gradient(160deg,#fff8e1,#fde9bf);border-radius:var(--radius);padding:22px 18px;text-align:center;box-shadow:var(--shadow)}
+.gl-term .k{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.gl-term .v{font-size:22px;font-weight:800;margin-top:6px;line-height:1.25}
+.gl-term .v.def{font-size:16px;font-weight:600;line-height:1.45}
+.boxes{display:flex;gap:6px;justify-content:center}
+.boxes span{font-size:11px;padding:3px 8px;border-radius:99px;background:var(--line);color:var(--muted);font-weight:700}
+.boxes span.on{background:var(--ok);color:#fff}
+
+/* results */
+.result{text-align:center;padding:26px 18px;display:flex;flex-direction:column;gap:12px;align-items:center}
+.result .big{font-size:52px}
+.result h2{font-size:24px}
+.result .score{font-size:40px;font-weight:900;color:var(--primary)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff8e1;border:2px solid var(--accent);border-radius:999px;padding:8px 14px;font-weight:700;font-size:14px;color:var(--primary-2)}
+
+/* toast / level up */
+.toast{position:fixed;top:calc(70px + var(--safe-top));left:50%;transform:translateX(-50%) translateY(-20px);background:var(--ink);color:#fff;padding:12px 18px;border-radius:14px;font-weight:700;font-size:14px;opacity:0;transition:all .3s;z-index:60;pointer-events:none;white-space:nowrap;box-shadow:var(--shadow)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* settings */
+.set-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.set-row:last-child{border-bottom:0}
+.seg{display:flex;background:var(--line);border-radius:12px;padding:3px}
+.seg button{padding:7px 14px;border-radius:10px;font-weight:700;font-size:13px}
+.seg button.on{background:var(--paper);color:var(--primary);box-shadow:var(--shadow)}
+.badges{display:flex;flex-wrap:wrap;gap:8px}
+.badges .b{background:var(--paper);border-radius:12px;padding:8px 10px;font-size:12px;font-weight:600;box-shadow:var(--shadow);display:flex;align-items:center;gap:6px}
+.badges .b.off{opacity:.35;filter:grayscale(1)}
+.video{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.video iframe{width:100%;aspect-ratio:9/16;border:0;display:block;max-height:70vh}
+.video .vt{padding:12px 14px;font-weight:700;font-size:14px}
+.empty{text-align:center;color:var(--muted);padding:40px 20px;font-size:15px;line-height:1.5}
+.empty .ic{font-size:44px;margin-bottom:10px}
+
+/* fichas */
+.search{width:100%;padding:13px 14px;border-radius:14px;border:2px solid var(--line);background:var(--paper);font:inherit;font-size:15px;color:var(--ink);outline:none}
+.search:focus{border-color:var(--primary)}
+.sec-h{display:flex;align-items:baseline;gap:10px;margin:8px 4px 0}
+.sec-h .code{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.04em}
+.sec-h b{font-size:15px}
+.sec-h.major b{font-size:17px;color:var(--primary)}
+.sec-intro{font-size:13px;line-height:1.5;color:var(--muted);margin:0 4px}
+.sec-intro summary{cursor:pointer;font-weight:700;color:var(--primary);font-size:12px}
+.frow{display:flex;align-items:center;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px 12px;box-shadow:var(--shadow);text-align:left;width:100%}
+.frow .th{width:54px;height:54px;border-radius:10px;background:#f3f5f8 center/cover no-repeat;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:22px}
+.frow .t{flex:1;min-width:0}
+.frow .t b{display:block;font-size:14px;line-height:1.25}
+.frow .t span{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+.frow .chk{font-size:16px;color:var(--ok)}
+.ficha h2{font-size:22px;line-height:1.2}
+.ficha .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.ficha .body p{font-size:15.5px;line-height:1.6;margin:0 0 12px}
+.ficha .body em{font-style:italic}
+.fimg{background:var(--paper);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.fimg img{display:block;width:100%;max-height:300px;object-fit:contain;background:#f3f5f8}
+.fimg .cap{font-size:12px;color:var(--muted);padding:8px 12px}
+.essay{background:#fff8e1;border-left:4px solid var(--accent);border-radius:10px;padding:12px 14px;font-size:14px;line-height:1.5}
+.essay b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--primary-2);margin-bottom:4px}
+.refs{font-size:12.5px;line-height:1.5;color:var(--muted)}
+.refs li{margin-bottom:6px;word-break:break-word}
+details.slide summary{cursor:pointer;font-weight:700;font-size:13px;color:var(--primary)}
+details.slide li{font-size:13.5px;line-height:1.5;margin-bottom:6px}
+.pbtns{display:flex;flex-wrap:wrap;gap:8px}
+.pbtns button{background:var(--paper);border:2px solid var(--line);border-radius:999px;padding:8px 12px;font-size:13px;font-weight:700;color:var(--primary)}
+.lightbox{position:fixed;inset:0;background:rgba(10,12,18,.94);z-index:80;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px}
+.lightbox img{max-width:100%;max-height:80vh;object-fit:contain}
+.lightbox .cap{color:#ddd;font-size:13px;margin-top:12px;text-align:center}
+@media (min-width:600px){ .deck{max-height:600px} }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div class="toast" id="toast"></div>
+<div class="sheet" id="sheet"><div class="in" id="sheetIn"></div></div>
+
+<script>
+/* ============ i18n ============ */
+const I18N = {
+  es: {
+    appName:"Historiapp", tagline:"Prepara el examen de Historia del Deporte en el móvil, a tu ritmo.",
+    choose:"Elige tu idioma", es:"Castellano", en:"English", esSub:"Historia del Deporte", enSub:"History of Sport",
+    home:"Inicio", temas:"Temas", tema:"Tema", soon:"Próximamente", locked:"Este tema se publicará cuando esté listo en clase.",
+    level:"Nivel", xp:"XP", streak:"Racha", days:"días", toNext:"para el siguiente nivel",
+    modes:{fichas:"Fichas",cards:"Tarjetas",glossary:"Glosario",timeline:"Cronología",sources:"Fuentes",match:"Relaciona",myths:"Mitos",quiz:"Preguntas rápidas",videos:"Vídeos"},
+    modesSub:{fichas:"El manual de bolsillo, por apartados",cards:"¿Verdadero o falso? Desliza",glossary:"Términos clave con repaso espaciado",timeline:"Ordena los hechos",sources:"¿De dónde procede este texto?",match:"Empareja práctica, grupo y función",myths:"Tópicos que hay que desmontar",quiz:"Test con tiempo",videos:"Píldoras en vídeo"},
+    yes:"SÍ", no:"NO", trueL:"Verdadero", falseL:"Falso", swipeHint:"Desliza a la derecha si es verdadero y a la izquierda si es falso",
+    correct:"Correcto", wrong:"No es así", next:"Siguiente", check:"Comprobar", again:"Otra ronda", back:"Volver al tema", continueL:"Continuar",
+    gained:"+{n} XP", seen:"{a} de {b}", roundDone:"Ronda terminada", score:"{a} de {b} aciertos", timeUp:"Se acabó el tiempo",
+    tlHint:"Arrastra o usa las flechas para ordenar del más antiguo al más reciente", tlOk:"Orden correcto", tlKo:"{n} en posición incorrecta",
+    matchHint:"Toca un elemento de la izquierda y su pareja de la derecha", matchDone:"Todas las parejas emparejadas",
+    glWhich:"¿Qué término corresponde a esta definición?", glDef:"¿Cuál es la definición de este término?", glTerm:"Término", glDefL:"Definición",
+    glBoxes:"Caja de repaso", glMastered:"dominados", glSession:"Sesión de {n} términos",
+    settings:"Ajustes", language:"Idioma", reset:"Borrar mi progreso", resetConfirm:"Se borrarán XP, niveles y progreso de todos los temas. ¿Seguro?", resetDone:"Progreso borrado",
+    badges:"Insignias", badgeName:{fichas:"Lector",cards:"Ojo de arqueólogo",glossary:"Léxico",timeline:"Cronista",sources:"Lector de fuentes",match:"Sociólogo",myths:"Cazamitos",quiz:"Relámpago"},
+    badgeHow:"Completa cada sección de un tema para ganar su insignia.",
+    levelUp:"¡Nivel {n}: {name}!", complete:"Completado",
+    levels:["Aprendiz","Paleolítico","Neolítico","Escriba","Pahlavan","Hoplita","Gladiador","Caballero","Gentleman","Catedrático"],
+    noVideos:"Todavía no hay vídeos para este tema.", install:"Añade Historiapp a tu pantalla de inicio: en Safari, botón Compartir y «Añadir a pantalla de inicio»; en Chrome, menú y «Instalar aplicación».",
+    version:"Contenido actualizado", offline:"Sin conexión: se muestran los datos guardados", loadError:"No se ha podido cargar el contenido. Comprueba la conexión.",
+    author:"Historia del Deporte · Grado en CAFD · UCAM",
+    fichasSearch:"Buscar en las fichas…", fichasEsOnly:"", practice:"Practicar este apartado", slideText:"En la diapositiva", refsL:"Fuentes", essayL:"Para el ensayo",
+    prevF:"Anterior", nextF:"Siguiente", secOnly:"Apartado {s}", allSec:"Todo el tema", fichaIntro:"Presentación del tema", secIntro:"Por qué este apartado", fichaXP:"Ficha leída", noResults:"Sin resultados", fichasOf:"{n} fichas", codeL:"Código"
+  },
+  en: {
+    appName:"Historiapp", tagline:"Get ready for the History of Sport exam on your phone, at your own pace.",
+    choose:"Choose your language", es:"Castellano", en:"English", esSub:"Historia del Deporte", enSub:"History of Sport",
+    home:"Home", temas:"Units", tema:"Unit", soon:"Coming soon", locked:"This unit will be published once it is ready in class.",
+    level:"Level", xp:"XP", streak:"Streak", days:"days", toNext:"to next level",
+    modes:{fichas:"Study sheets",cards:"Cards",glossary:"Glossary",timeline:"Timeline",sources:"Sources",match:"Match",myths:"Myths",quiz:"Quick quiz",videos:"Videos"},
+    modesSub:{fichas:"The pocket manual, by section",cards:"True or false? Swipe",glossary:"Key terms with spaced review",timeline:"Put the events in order",sources:"Where does this text come from?",match:"Pair practice, group and function",myths:"Clichés to take apart",quiz:"Timed test",videos:"Video bites"},
+    yes:"YES", no:"NO", trueL:"True", falseL:"False", swipeHint:"Swipe right if true, left if false",
+    correct:"Correct", wrong:"Not quite", next:"Next", check:"Check", again:"Another round", back:"Back to unit", continueL:"Continue",
+    gained:"+{n} XP", seen:"{a} of {b}", roundDone:"Round finished", score:"{a} of {b} correct", timeUp:"Time is up",
+    tlHint:"Drag or use the arrows to order from oldest to most recent", tlOk:"Correct order", tlKo:"{n} in the wrong position",
+    matchHint:"Tap an item on the left and its pair on the right", matchDone:"All pairs matched",
+    glWhich:"Which term matches this definition?", glDef:"What is the definition of this term?", glTerm:"Term", glDefL:"Definition",
+    glBoxes:"Review box", glMastered:"mastered", glSession:"Session of {n} terms",
+    settings:"Settings", language:"Language", reset:"Erase my progress", resetConfirm:"XP, levels and progress for all units will be erased. Are you sure?", resetDone:"Progress erased",
+    badges:"Badges", badgeName:{fichas:"Reader",cards:"Archaeologist's eye",glossary:"Lexicon",timeline:"Chronicler",sources:"Source reader",match:"Sociologist",myths:"Myth hunter",quiz:"Lightning"},
+    badgeHow:"Complete each section of a unit to earn its badge.",
+    levelUp:"Level {n}: {name}!", complete:"Completed",
+    levels:["Apprentice","Palaeolithic","Neolithic","Scribe","Pahlavan","Hoplite","Gladiator","Knight","Gentleman","Professor"],
+    noVideos:"No videos for this unit yet.", install:"Add Historiapp to your home screen: in Safari, tap Share and 'Add to Home Screen'; in Chrome, open the menu and 'Install app'.",
+    version:"Content updated", offline:"Offline: showing saved data", loadError:"Could not load the content. Check your connection.",
+    author:"History of Sport · Sport Sciences degree · UCAM",
+    fichasSearch:"Search the sheets…", fichasEsOnly:"Some sheets of this unit are not yet available in English and are shown in Spanish.", practice:"Practise this section", slideText:"On the slide", refsL:"Sources", essayL:"For the essay",
+    prevF:"Previous", nextF:"Next", secOnly:"Section {s}", allSec:"Whole unit", fichaIntro:"About this unit", secIntro:"Why this section", fichaXP:"Sheet read", noResults:"No results", fichasOf:"{n} sheets", codeL:"Code"
+  }
+};
+const MODE_ICONS={fichas:"📖",cards:"🖼️",glossary:"🔤",timeline:"⏳",sources:"📜",match:"🔗",myths:"🧨",quiz:"⚡",videos:"🎬"};
+const MODES=["fichas","cards","glossary","timeline","sources","match","myths","quiz","videos"];
+const LEVEL_XP=[0,100,250,450,700,1000,1400,1900,2500,3300];
+
+/* ============ state ============ */
+const S = {
+  lang:null, temasIndex:null, temaCache:{}, view:{name:"gate"},
+  prog: load("historiapp.progress", {xp:0, streak:0, lastDay:null, seen:{}, badges:{}, gl:{}})
+};
+function load(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
+function save(){try{localStorage.setItem("historiapp.progress",JSON.stringify(S.prog));}catch(e){}}
+function t(key,vars){ let s=key.split(".").reduce((o,k)=>o&&o[k],I18N[S.lang||"es"]); if(s==null) s=key; if(vars) for(const k in vars) s=s.replace("{"+k+"}",vars[k]); return s; }
+function L(obj){ return obj ? (obj[S.lang] || obj.es || "") : ""; }
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]))}
+function levelOf(xp){let l=0;for(let i=0;i<LEVEL_XP.length;i++) if(xp>=LEVEL_XP[i]) l=i;return l}
+function addXP(n){
+  const before=levelOf(S.prog.xp); S.prog.xp+=n;
+  const today=new Date().toISOString().slice(0,10);
+  if(S.prog.lastDay!==today){
+    const y=new Date(Date.now()-864e5).toISOString().slice(0,10);
+    S.prog.streak = (S.prog.lastDay===y) ? S.prog.streak+1 : 1; S.prog.lastDay=today;
+  }
+  save(); const after=levelOf(S.prog.xp);
+  if(after>before) setTimeout(()=>toast(t("levelUp",{n:after+1,name:t("levels")[after]}),2600),350);
+  renderXP();
+}
+function markSeen(temaId,mode,key){ const k=temaId+"."+mode; S.prog.seen[k]=S.prog.seen[k]||{}; S.prog.seen[k][key]=1; save(); }
+function seenCount(temaId,mode){ const k=temaId+"."+mode; return Object.keys(S.prog.seen[k]||{}).length; }
+function modeTotal(tema,mode){ if(mode==="glossary") return tema.glossary.length; const a=tema[mode]; return a?a.length:0; }
+function secMatch(a,b){ if(!a||!b) return !b; return a===b || a.startsWith(b+".") || b.startsWith(a+"."); }
+function modeIdxs(tema,mode){ const a=tema[mode]||[]; const sec=S.view.sec; return a.map((it,i)=>i).filter(i=>!sec || secMatch(a[i].sec,sec)); }
+function md(s){ return esc(s).replace(/\*([^*]+)\*/g,"<em>$1</em>").replace(/(https?:\/\/[^\s<)]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>'); }
+function LL(o){ if(!o) return []; const a=o[S.lang]; return (a&&a.length)?a:(o.es||[]); }
+function norm(s){ return String(s).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase(); }
+function modePct(tema,mode){ const tot=modeTotal(tema,mode); if(!tot) return 0; if(mode==="glossary"){ const m=tema.glossary.filter((g,i)=>glBox(tema.id,i)>=3).length; return Math.min(100,Math.round(m/tot*100)); } return Math.min(100,Math.round(seenCount(tema.id,mode)/tot*100)); }
+function checkBadge(tema,mode){ if(mode==="videos") return; if(modePct(tema,mode)>=100 && !S.prog.badges[tema.id+"."+mode]){ S.prog.badges[tema.id+"."+mode]=1; save(); setTimeout(()=>toast("🏅 "+t("badgeName."+mode)+" · "+t("tema")+" "+tema.num,2600),900); } }
+function glBox(temaId,i){ return (S.prog.gl[temaId]||{})[i]||0; }
+function glSet(temaId,i,v){ S.prog.gl[temaId]=S.prog.gl[temaId]||{}; S.prog.gl[temaId][i]=Math.max(0,Math.min(4,v)); save(); }
+
+let toastT; function toast(msg,ms=1800){const e=document.getElementById("toast");e.textContent=msg;e.classList.add("show");clearTimeout(toastT);toastT=setTimeout(()=>e.classList.remove("show"),ms)}
+function sheet(ok,title,explain,xp,onNext){
+  const el=document.getElementById("sheet"), inn=document.getElementById("sheetIn");
+  el.className="sheet "+(ok?"ok":"ko");
+  inn.innerHTML=`<div class="verdict"><span class="dot">${ok?"✓":"✗"}</span>${esc(title)}</div>
+    <div class="exp">${esc(explain)}</div>${xp?`<div class="xpgain">${t("gained",{n:xp})}</div>`:""}
+    <button class="btn" id="sheetNext">${t("next")}</button>`;
+  requestAnimationFrame(()=>el.classList.add("show"));
+  document.getElementById("sheetNext").onclick=()=>{ el.classList.remove("show"); setTimeout(onNext,200); };
+}
+function closeSheet(){document.getElementById("sheet").classList.remove("show")}
+
+/* ============ data ============ */
+async function fetchJSON(url){
+  const r=await fetch(url,{cache:"no-cache"}); if(!r.ok) throw new Error(r.status); return r.json();
+}
+async function getIndex(){
+  if(S.temasIndex) return S.temasIndex;
+  try{ S.temasIndex=await fetchJSON("data/temas.json"); localStorage.setItem("historiapp.index",JSON.stringify(S.temasIndex)); }
+  catch(e){ const c=load("historiapp.index",null); if(c){S.temasIndex=c; toast(t("offline"));} else throw e; }
+  return S.temasIndex;
+}
+async function getTema(num){
+  if(S.temaCache[num]) return S.temaCache[num];
+  const idx=await getIndex(); const meta=idx.temas.find(x=>x.num===num);
+  let d; try{ d=await fetchJSON(meta.file); localStorage.setItem("historiapp.tema."+num,JSON.stringify(d)); }
+  catch(e){ d=load("historiapp.tema."+num,null); if(!d) throw e; }
+  S.temaCache[num]=d; return d;
+}
+
+/* ============ rendering ============ */
+const app=document.getElementById("app");
+function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="tema") return "t"+v.num;
+  if(v.name==="mode"){ if(v.mode==="fichas") return v.f?`t${v.num}/f/${v.f}`:`t${v.num}/fichas`; return `t${v.num}/${v.mode}`+(v.sec?"/"+v.sec:""); } return ""; }
+function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"};
+  const p=h.split("/"); const mt=/^t(\d+)$/.exec(p[0]); if(!mt) return {name:"home"}; const num=+mt[1];
+  if(p.length===1) return {name:"tema",num}; if(p[1]==="f"&&p[2]) return {name:"mode",num,mode:"fichas",f:decodeURIComponent(p[2])};
+  if(MODES.includes(p[1])) return {name:"mode",num,mode:p[1],sec:p[2]||undefined}; return {name:"tema",num}; }
+function nav(view){ S.view=view; closeSheet(); window.scrollTo(0,0); const h=viewToHash(view); if(location.hash.replace(/^#/,"")!==h){ S.silent=true; if(h) location.hash=h; else history.replaceState(null,"",location.pathname+location.search); } render(); }
+window.addEventListener("hashchange",()=>{ if(S.silent){ S.silent=false; return; } if(!S.lang){ S.pending=location.hash; return; } const v=hashToView(location.hash); S.view=v; closeSheet(); render(); });
+function render(){
+  const v=S.view;
+  if(v.name==="gate") return renderGate();
+  if(v.name==="home") return renderHome();
+  if(v.name==="tema") return renderTema(v.num);
+  if(v.name==="settings") return renderSettings();
+  if(v.name==="mode") return renderMode(v.num,v.mode);
+}
+function header(title,back,extra=""){
+  return `<div class="top">${back?`<button class="back" id="hBack">‹</button>`:`<div style="width:4px"></div>`}
+    <div class="ttl">${esc(title)}</div><div class="xp" id="hXP"></div>
+    <button class="gear" id="hGear">⚙︎</button></div>`;
+}
+function bindHeader(back){
+  const b=document.getElementById("hBack"); if(b) b.onclick=back;
+  const g=document.getElementById("hGear"); if(g) g.onclick=()=>nav({name:"settings",from:S.view});
+  renderXP();
+}
+function renderXP(){ const e=document.getElementById("hXP"); if(e) e.textContent=`${S.prog.xp} ${t("xp")} · ${t("level")} ${levelOf(S.prog.xp)+1}`; }
+
+function renderGate(){
+  app.innerHTML=`<div class="gate">
+    <div class="logo">🏛️</div>
+    <div><h1>Historiapp</h1><p style="margin-top:8px">Historia del Deporte · History of Sport</p></div>
+    <p>Elige tu idioma · Choose your language</p>
+    <div class="langs">
+      <button id="lEs">Castellano<small>Historia del Deporte</small></button>
+      <button id="lEn">English<small>History of Sport</small></button>
+    </div>
+    <div class="foot">UCAM · Grado en CAFD</div></div>`;
+  document.getElementById("lEs").onclick=()=>setLang("es");
+  document.getElementById("lEn").onclick=()=>setLang("en");
+}
+function setLang(l){ S.lang=l; try{localStorage.setItem("historiapp.lang",l)}catch(e){} document.documentElement.lang=l; const pend=S.pending; S.pending=null; nav(pend?hashToView(pend):{name:"home"}); }
+
+async function renderHome(){
+  const lvl=levelOf(S.prog.xp), nextXP=LEVEL_XP[lvl+1]||LEVEL_XP[lvl], prevXP=LEVEL_XP[lvl];
+  const pct=LEVEL_XP[lvl+1]?Math.round((S.prog.xp-prevXP)/(nextXP-prevXP)*100):100;
+  app.innerHTML=header("Historiapp",false)+`<main>
+    <div class="hero"><div class="lvl">${lvl+1}<small>${t("level").toUpperCase()}</small></div>
+      <div class="info"><div class="name">${esc(t("levels")[lvl])}</div>
+      <div class="bar"><i style="width:${pct}%"></i></div>
+      <div class="meta"><span>${S.prog.xp} ${t("xp")}${LEVEL_XP[lvl+1]?` · ${nextXP-S.prog.xp} ${t("toNext")}`:""}</span><span>🔥 ${S.prog.streak} ${t("days")}</span></div></div></div>
+    <div class="section-title">${t("temas")}</div><div id="temaList"><div class="empty">…</div></div>
+    <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:10px">${t("author")}</p></main>`;
+  bindHeader();
+  try{
+    const idx=await getIndex(); const list=document.getElementById("temaList"); list.innerHTML="";
+    for(const m of idx.temas){
+      const b=document.createElement("button"); b.className="tema"+(m.available?"":" locked");
+      let pctT="";
+      if(m.available){ const tm=S.temaCache[m.num]; if(tm){ pctT=Math.round(MODES.filter(x=>x!=="videos").reduce((a,x)=>a+modePct(tm,x),0)/(MODES.length-1))+"%"; } }
+      b.innerHTML=`<div class="num">${m.num}</div><div class="t"><b>${esc(L(m.title))||t("tema")+" "+m.num}</b><span>${m.available?t("tema")+" "+m.num:t("soon")}</span></div>${m.available?`<div class="pct">${pctT}</div>`:`<div>🔒</div>`}`;
+      b.onclick=()=>{ if(m.available) nav({name:"tema",num:m.num}); else toast(t("locked"),2200); };
+      list.appendChild(b);
+      if(m.available && !S.temaCache[m.num]) getTema(m.num).then(()=>{ if(S.view.name==="home") renderHome(); }).catch(()=>{});
+    }
+  }catch(e){ document.getElementById("temaList").innerHTML=`<div class="empty">${t("loadError")}</div>`; }
+}
+
+async function renderTema(num){
+  app.innerHTML=header(t("tema")+" "+num,true)+`<main><div class="empty">…</div></main>`;
+  bindHeader(()=>nav({name:"home"}));
+  let tema; try{ tema=await getTema(num); }catch(e){ app.querySelector("main").innerHTML=`<div class="empty">${t("loadError")}</div>`; return; }
+  const main=app.querySelector("main");
+  main.innerHTML=`<div class="card" style="padding:14px 16px"><div style="font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.06em">${esc(L(tema.unit))}</div><h2 style="font-size:20px;margin-top:4px">${esc(L(tema.title))}</h2>
+    ${tema.intro&&LL(tema.intro).length?`<details style="margin-top:10px"><summary style="font-size:13px;font-weight:700;color:var(--primary);cursor:pointer">${t("fichaIntro")}</summary><div style="font-size:14px;line-height:1.55;margin-top:8px">${LL(tema.intro).map(p=>`<p style="margin-bottom:8px">${md(p)}</p>`).join("")}</div></details>`:""}</div>
+    <div class="grid" id="modes"></div>
+    <div class="section-title">${t("badges")}</div><div class="badges" id="bd"></div>
+    <p style="font-size:12px;color:var(--muted);margin:0 4px">${t("badgeHow")}</p></main>`;
+  const g=document.getElementById("modes");
+  for(const m of MODES){
+    const tot=modeTotal(tema,m), pct=modePct(tema,m);
+    const b=document.createElement("button"); b.className="mode";
+    b.innerHTML=`<div class="ic">${MODE_ICONS[m]}</div><b>${t("modes."+m)}</b><span>${t("modesSub."+m)}</span>
+      ${m==="videos"?`<span class="pill" style="margin-top:auto">${tot}</span>`:`<div class="prog"><i style="width:${pct}%"></i></div>`}
+      ${pct>=100&&m!=="videos"?`<div class="done">🏅</div>`:""}`;
+    b.onclick=()=>nav({name:"mode",num,mode:m});
+    if(!tot) b.style.opacity=.5;
+    g.appendChild(b);
+  }
+  const bd=document.getElementById("bd");
+  bd.innerHTML=MODES.filter(x=>x!=="videos").map(m=>`<div class="b ${S.prog.badges[tema.id+"."+m]?"":"off"}">🏅 ${t("badgeName."+m)}</div>`).join("");
+}
+
+function renderSettings(){
+  const from=S.view.from||{name:"home"};
+  app.innerHTML=header(t("settings"),true)+`<main>
+    <div class="card">
+      <div class="set-row"><span>${t("language")}</span><div class="seg"><button id="sEs" class="${S.lang==="es"?"on":""}">ES</button><button id="sEn" class="${S.lang==="en"?"on":""}">EN</button></div></div>
+      <div class="set-row"><span>${t("xp")}</span><b>${S.prog.xp}</b></div>
+      <div class="set-row"><span>${t("streak")}</span><b>🔥 ${S.prog.streak}</b></div>
+    </div>
+    <div class="card"><p style="font-size:14px;line-height:1.5;color:var(--muted)">📲 ${t("install")}</p></div>
+    <button class="btn sec" id="sReset" style="border-color:var(--ko);color:var(--ko)">${t("reset")}</button>
+    <p style="font-size:12px;color:var(--muted);text-align:center">${t("version")}: ${S.temasIndex?esc(S.temasIndex.version):"–"} · ${t("author")}</p></main>`;
+  bindHeader(()=>nav(from));
+  document.getElementById("sEs").onclick=()=>{setLang("es");nav({name:"settings",from})};
+  document.getElementById("sEn").onclick=()=>{setLang("en");nav({name:"settings",from})};
+  document.getElementById("sReset").onclick=()=>{ if(confirm(t("resetConfirm"))){ S.prog={xp:0,streak:0,lastDay:null,seen:{},badges:{},gl:{}}; save(); toast(t("resetDone")); nav({name:"home"}); } };
+}
+
+/* ============ modes ============ */
+async function renderMode(num,mode){
+  const tema=await getTema(num); const v=S.view;
+  const ttl = mode==="fichas" ? (v.f?t("modes.fichas"):t("modes.fichas")+" · "+t("tema")+" "+num) : t("modes."+mode)+" · "+(v.sec?t("secOnly",{s:v.sec}):t("tema")+" "+num);
+  app.innerHTML=header(ttl,true)+`<main id="m"></main>`;
+  bindHeader(()=>nav(v.back || (mode==="fichas"&&v.f ? {name:"mode",num,mode:"fichas"} : {name:"tema",num})));
+  const m=document.getElementById("m");
+  if(mode==="fichas") return modeFichas(tema,m,v);
+  const items=modeIdxs(tema,mode);
+  if(!items.length){ m.innerHTML=`<div class="empty"><div class="ic">${MODE_ICONS[mode]}</div>${mode==="videos"?t("noVideos"):t("soon")}</div>`; return; }
+  ({cards:modeSwipe,myths:modeSwipe,glossary:modeGlossary,timeline:modeTimeline,sources:modeChoice,quiz:modeChoice,match:modeMatch,videos:modeVideos})[mode](tema,mode,m);
+}
+function resultScreen(m,tema,mode,correct,total,again){
+  checkBadge(tema,mode);
+  const pct=modePct(tema,mode);
+  m.innerHTML=`<div class="card result"><div class="big">${correct/total>=.8?"🏆":correct/total>=.5?"👍":"📚"}</div>
+    <h2>${t("roundDone")}</h2><div class="score">${correct}/${total}</div><p>${t("score",{a:correct,b:total})}</p>
+    <p style="color:var(--muted);font-size:13px">${t("modes."+mode)}: ${pct}% ${t("complete").toLowerCase()}</p>
+    ${pct>=100?`<div class="badge">🏅 ${t("badgeName."+mode)}</div>`:""}
+    </div><button class="btn" id="rAgain">${t("again")}</button><button class="btn ghost" id="rBack">${t("back")}</button>`;
+  document.getElementById("rAgain").onclick=again; document.getElementById("rBack").onclick=()=>nav(S.view.back||{name:"tema",num:tema.num});
+}
+function pickRound(tema,mode,idxs,n){
+  // prioritise unseen items, then fill randomly
+  const k=tema.id+"."+mode, seen=S.prog.seen[k]||{};
+  const unseen=idxs.filter(i=>!seen[i]);
+  const rest=idxs.filter(i=>seen[i]);
+  return shuffle(unseen).concat(shuffle(rest)).slice(0,n);
+}
+
+/* --- swipe (cards & myths) --- */
+function modeSwipe(tema,mode,m){
+  const items=tema[mode]; const order=pickRound(tema,mode,modeIdxs(tema,mode),10); let pos=0, correct=0;
+  m.innerHTML=`<div class="counter" id="cnt"></div><div class="progress"><i id="pr"></i></div><div class="deck" id="deck"></div>
+    <div class="swipe-btns"><button class="no" id="bNo">✗<small>${t("falseL").toUpperCase()}</small></button><button class="yes" id="bYes">✓<small>${t("trueL").toUpperCase()}</small></button></div>
+    <div class="swipe-hint">${t("swipeHint")}</div>`;
+  const deck=document.getElementById("deck");
+  function mk(it,behind){
+    const c=document.createElement("div"); c.className="scard"+(behind?" behind":"");
+    const imgHtml = it.img ? `<div class="img" style="background-image:url('${it.img}')"></div><div class="cap">${esc(L(it.caption))}</div>`
+                           : `<div class="img text">${esc(L(it.claim))}</div>`;
+    c.innerHTML=`${imgHtml}${it.img?`<div class="q">${esc(L(it.claim))}</div>`:`<div class="q" style="color:var(--muted);font-weight:500;font-size:14px">${S.lang==="es"?"¿":""}${t("trueL")} ${S.lang==="es"?"o":"or"} ${t("falseL").toLowerCase()}?</div>`}
+      <div class="stamp yes">${t("yes")}</div><div class="stamp no">${t("no")}</div>`;
+    return c;
+  }
+  function draw(){
+    document.getElementById("cnt").textContent=t("seen",{a:Math.min(pos+1,order.length),b:order.length});
+    document.getElementById("pr").style.width=(pos/order.length*100)+"%";
+    deck.innerHTML="";
+    if(order[pos+1]!=null) deck.appendChild(mk(items[order[pos+1]],true));
+    const top=mk(items[order[pos]],false); deck.appendChild(top); attachDrag(top);
+  }
+  function attachDrag(c){
+    let sx=0,sy=0,dx=0,active=false;
+    const yes=c.querySelector(".stamp.yes"), no=c.querySelector(".stamp.no");
+    c.addEventListener("pointerdown",e=>{active=true;sx=e.clientX;sy=e.clientY;dx=0;c.setPointerCapture(e.pointerId);c.style.transition="none"});
+    c.addEventListener("pointermove",e=>{ if(!active) return; dx=e.clientX-sx; const dy=e.clientY-sy;
+      c.style.transform=`translate(${dx}px,${dy*0.3}px) rotate(${dx/18}deg)`; yes.style.opacity=Math.min(1,Math.max(0,dx/80)); no.style.opacity=Math.min(1,Math.max(0,-dx/80)); });
+    const end=()=>{ if(!active) return; active=false; if(Math.abs(dx)>100) answer(dx>0,c); else { c.style.transition="transform .25s"; c.style.transform=""; yes.style.opacity=0; no.style.opacity=0; } };
+    c.addEventListener("pointerup",end); c.addEventListener("pointercancel",end);
+  }
+  function answer(val,c){
+    const it=items[order[pos]]; const ok=(val===it.answer);
+    if(c){ c.style.transition="transform .35s ease, opacity .35s"; c.style.transform=`translate(${val?600:-600}px,-40px) rotate(${val?30:-30}deg)`; c.style.opacity=0; }
+    markSeen(tema.id,mode,order[pos]); const xp=ok?10:2; addXP(xp); if(ok) correct++;
+    sheet(ok, ok?t("correct"):t("wrong")+` · ${it.answer?t("trueL"):t("falseL")}`, L(it.explain), xp, ()=>{ pos++; if(pos>=order.length) resultScreen(m,tema,mode,correct,order.length,()=>modeSwipe(tema,mode,m)); else draw(); });
+  }
+  document.getElementById("bNo").onclick=()=>answer(false,deck.lastElementChild);
+  document.getElementById("bYes").onclick=()=>answer(true,deck.lastElementChild);
+  draw();
+}
+
+/* --- multiple choice (sources & quiz) --- */
+function modeChoice(tema,mode,m){
+  const items=tema[mode]; const order=pickRound(tema,mode,modeIdxs(tema,mode),mode==="quiz"?10:8); let pos=0,correct=0,timer=null;
+  function draw(){
+    const it=items[order[pos]]; const opts=shuffle(it.options.map((o,i)=>({o,i})));
+    m.innerHTML=`<div class="counter">${t("seen",{a:pos+1,b:order.length})}</div><div class="progress"><i style="width:${pos/order.length*100}%"></i></div>
+      ${mode==="quiz"?`<div class="timer"><i id="tm"></i></div>`:""}
+      ${mode==="sources"?`<div class="quote">${esc(L(it.text))}</div><div class="qtext">${esc(L(it.question))}</div>`:`<div class="card qtext">${esc(L(it.q))}</div>`}
+      <div class="opts">${opts.map((x,k)=>`<button class="opt" data-i="${x.i}"><span class="k">${"ABCD"[k]}</span><span>${esc(L(x.o))}</span></button>`).join("")}</div>`;
+    let done=false;
+    const finish=(chosen)=>{ if(done) return; done=true; clearInterval(timer);
+      const ok=chosen===it.answer; m.querySelectorAll(".opt").forEach(b=>{ b.disabled=true; const i=+b.dataset.i; if(i===it.answer) b.classList.add("ok"); else if(i===chosen) b.classList.add("ko"); });
+      markSeen(tema.id,mode,order[pos]); const xp=ok?(mode==="quiz"?15:10):2; addXP(xp); if(ok) correct++;
+      sheet(ok, ok?t("correct"):(chosen===-1?t("timeUp"):t("wrong")), L(it.explain), xp, ()=>{ pos++; if(pos>=order.length) resultScreen(m,tema,mode,correct,order.length,()=>modeChoice(tema,mode,m)); else draw(); }); };
+    m.querySelectorAll(".opt").forEach(b=>b.onclick=()=>finish(+b.dataset.i));
+    if(mode==="quiz"){ let left=20; const bar=document.getElementById("tm"); bar.style.width="100%";
+      timer=setInterval(()=>{ left--; bar.style.width=(left/20*100)+"%"; if(left<=0) finish(-1); },1000); }
+  }
+  draw();
+}
+
+/* --- timeline --- */
+function modeTimeline(tema,mode,m){
+  const sets=tema.timeline; const order=pickRound(tema,mode,modeIdxs(tema,mode),sets.length); let pos=0, correct=0;
+  function draw(){
+    const set=sets[order[pos]]; let cur=shuffle(set.items.map((it,i)=>i));
+    if(cur.every((v,i)=>i===0||set.items[cur[i-1]].year<=set.items[v].year)) cur=cur.reverse();
+    m.innerHTML=`<div class="counter">${t("seen",{a:pos+1,b:order.length})}</div><div class="card" style="padding:12px 16px"><b>${esc(L(set.title))}</b><p style="font-size:12px;color:var(--muted);margin-top:4px">${t("tlHint")}</p></div>
+      <div class="tl" id="tl"></div><button class="btn" id="tlCheck">${t("check")}</button>`;
+    const tl=document.getElementById("tl");
+    function paint(){ tl.innerHTML=""; cur.forEach((idx,i)=>{ const it=set.items[idx]; const d=document.createElement("div"); d.className="it"; d.dataset.i=i;
+      d.innerHTML=`<span class="n">${i+1}</span><div class="lbl">${esc(L(it.label))}<div class="date">${esc(L(it.date))}</div></div><div class="mv"><button data-d="-1">▲</button><button data-d="1">▼</button></div>`;
+      d.querySelectorAll(".mv button").forEach(b=>b.onclick=(e)=>{e.stopPropagation(); const j=i+(+b.dataset.d); if(j<0||j>=cur.length) return; [cur[i],cur[j]]=[cur[j],cur[i]]; paint();});
+      attachDrag(d,i); tl.appendChild(d); }); }
+    function attachDrag(el,i){
+      let active=false, startY=0, ghostIdx=i;
+      el.addEventListener("pointerdown",e=>{ if(e.target.closest(".mv")) return; active=true; startY=e.clientY; el.setPointerCapture(e.pointerId); el.classList.add("drag"); });
+      el.addEventListener("pointermove",e=>{ if(!active) return; const dy=e.clientY-startY; el.style.transform=`translateY(${dy}px) scale(1.02)`;
+        const rows=[...tl.children]; const h=el.offsetHeight+10; const target=Math.max(0,Math.min(cur.length-1,i+Math.round(dy/h))); ghostIdx=target; });
+      const end=()=>{ if(!active) return; active=false; el.classList.remove("drag"); el.style.transform=""; if(ghostIdx!==i){ const v=cur.splice(i,1)[0]; cur.splice(ghostIdx,0,v); } paint(); };
+      el.addEventListener("pointerup",end); el.addEventListener("pointercancel",end);
+    }
+    paint();
+    document.getElementById("tlCheck").onclick=()=>{
+      const sorted=set.items.map((it,i)=>i).sort((a,b)=>set.items[a].year-set.items[b].year);
+      let wrong=0; [...tl.children].forEach((row,i)=>{ const okRow=(set.items[cur[i]].year===set.items[sorted[i]].year); row.classList.add(okRow?"ok":"ko"); if(!okRow) wrong++; });
+      tl.classList.add("revealed"); markSeen(tema.id,mode,order[pos]); const ok=wrong===0; const xp=ok?20:Math.max(2,10-wrong*2); addXP(xp); if(ok) correct++;
+      const expl=sorted.map((i,k)=>`${k+1}. ${L(set.items[i].label)} (${L(set.items[i].date)})`).join("\n");
+      sheet(ok, ok?t("tlOk"):t("tlKo",{n:wrong}), expl, xp, ()=>{ pos++; if(pos>=order.length) resultScreen(m,tema,mode,correct,order.length,()=>modeTimeline(tema,mode,m)); else draw(); });
+    };
+  }
+  draw();
+}
+
+/* --- match --- */
+function modeMatch(tema,mode,m){
+  const sets=tema.match; const order=pickRound(tema,mode,modeIdxs(tema,mode),sets.length); let pos=0, correct=0;
+  function draw(){
+    const set=sets[order[pos]]; const n=set.pairs.length; let left=shuffle(set.pairs.map((p,i)=>i)), right=shuffle(set.pairs.map((p,i)=>i)); let sel=null, matched=0, errors=0;
+    m.innerHTML=`<div class="counter">${t("seen",{a:pos+1,b:order.length})}</div><div class="card" style="padding:12px 16px"><b>${esc(L(set.title))}</b><p style="font-size:12px;color:var(--muted);margin-top:4px">${t("matchHint")}</p></div>
+      <div class="mcols"><div class="col" id="cl"></div><div class="col" id="cr"></div></div>`;
+    const cl=document.getElementById("cl"), cr=document.getElementById("cr");
+    left.forEach(i=>{ const b=document.createElement("button"); b.className="mtile"; b.dataset.i=i; b.textContent=L(set.pairs[i].a); b.onclick=()=>{ cl.querySelectorAll(".mtile").forEach(x=>x.classList.remove("sel")); b.classList.add("sel"); sel=i; }; cl.appendChild(b); });
+    right.forEach(i=>{ const b=document.createElement("button"); b.className="mtile"; b.dataset.i=i; b.textContent=L(set.pairs[i].b); b.onclick=()=>{ if(sel==null) return; const lb=cl.querySelector(`.mtile[data-i="${sel}"]`);
+      if(sel===i){ b.classList.add("ok"); lb.classList.add("ok"); lb.classList.remove("sel"); sel=null; matched++; addXP(5);
+        if(matched===n){ markSeen(tema.id,mode,order[pos]); const ok=errors===0; if(ok) correct++; sheet(ok,t("matchDone"),set.pairs.map(p=>`${L(p.a)} → ${L(p.b)}`).join("\n"),0,()=>{ pos++; if(pos>=order.length) resultScreen(m,tema,mode,correct,order.length,()=>modeMatch(tema,mode,m)); else draw(); }); } }
+      else { errors++; b.classList.add("ko"); lb.classList.add("ko"); setTimeout(()=>{b.classList.remove("ko");lb.classList.remove("ko")},500); } }; cr.appendChild(b); });
+  }
+  draw();
+}
+
+/* --- glossary (Leitner) --- */
+function modeGlossary(tema,mode,m){
+  const g=tema.glossary; const pool=modeIdxs(tema,"glossary"); const n=Math.min(10,pool.length);
+  // weight by box: lower boxes first
+  const idxs=pool.slice().sort((a,b)=>(glBox(tema.id,a)-glBox(tema.id,b))||(Math.random()-.5)).slice(0,n);
+  const order=shuffle(idxs); let pos=0, correct=0;
+  function draw(){
+    const i=order[pos], it=g[i]; const box=glBox(tema.id,i);
+    const kind = pos%3===2 ? "match" : (box%2===0 ? "term2def" : "def2term");
+    const mastered=g.filter((x,k)=>glBox(tema.id,k)>=3).length;
+    const head=`<div class="counter">${t("glSession",{n:order.length})} · ${t("seen",{a:pos+1,b:order.length})} · ${mastered}/${g.length} ${t("glMastered")}</div><div class="progress"><i style="width:${pos/order.length*100}%"></i></div>`;
+    if(kind==="match"){
+      const pool=shuffle(g.map((x,k)=>k).filter(k=>k!==i)).slice(0,3).concat([i]); const set={title:{es:t("modes.glossary"),en:t("modes.glossary")},pairs:pool.map(k=>({a:g[k].term,b:g[k].def,k}))};
+      let left=shuffle(set.pairs.map((p,k)=>k)), right=shuffle(set.pairs.map((p,k)=>k)); let sel=null, matched=0, errs={};
+      m.innerHTML=head+`<div class="card" style="padding:12px 16px;font-size:13px;color:var(--muted)">${t("matchHint")}</div><div class="mcols"><div class="col" id="cl"></div><div class="col" id="cr"></div></div>`;
+      const cl=document.getElementById("cl"), cr=document.getElementById("cr");
+      left.forEach(k=>{ const b=document.createElement("button"); b.className="mtile"; b.dataset.i=k; b.textContent=L(set.pairs[k].a); b.onclick=()=>{cl.querySelectorAll(".mtile").forEach(x=>x.classList.remove("sel")); b.classList.add("sel"); sel=k;}; cl.appendChild(b); });
+      right.forEach(k=>{ const b=document.createElement("button"); b.className="mtile"; b.style.fontSize="12px"; b.dataset.i=k; b.textContent=L(set.pairs[k].b); b.onclick=()=>{ if(sel==null) return; const lb=cl.querySelector(`.mtile[data-i="${sel}"]`);
+        if(sel===k){ b.classList.add("ok"); lb.classList.add("ok"); const gi=set.pairs[k].k; glSet(tema.id,gi,glBox(tema.id,gi)+(errs[k]?0:1)); sel=null; matched++; addXP(errs[k]?2:5);
+          if(matched===4){ correct++; setTimeout(()=>{ pos++; if(pos>=order.length) resultScreen(m,tema,mode,correct,order.length,()=>modeGlossary(tema,mode,m)); else draw(); },500); } }
+        else { errs[sel]=1; b.classList.add("ko"); lb.classList.add("ko"); setTimeout(()=>{b.classList.remove("ko");lb.classList.remove("ko")},500); } }; cr.appendChild(b); });
+      return;
+    }
+    const distract=shuffle(g.map((x,k)=>k).filter(k=>k!==i)).slice(0,3); const opts=shuffle(distract.concat([i]));
+    const ask = kind==="term2def";
+    m.innerHTML=head+`<div class="gl-term"><div class="k">${ask?t("glTerm"):t("glDefL")}</div><div class="v ${ask?"":"def"}">${esc(ask?L(it.term):L(it.def))}</div>
+      <div class="boxes" style="margin-top:12px">${[0,1,2,3,4].map(b=>`<span class="${b<=box&&box>0?"on":""}">${b+1}</span>`).join("")}</div></div>
+      <div class="qtext" style="font-size:15px">${ask?t("glDef"):t("glWhich")}</div>
+      <div class="opts">${opts.map((k,q)=>`<button class="opt" data-i="${k}"><span class="k">${"ABCD"[q]}</span><span style="${ask?"font-size:14px":""}">${esc(ask?L(g[k].def):L(g[k].term))}</span></button>`).join("")}</div>`;
+    m.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ const k=+b.dataset.i; const ok=k===i;
+      m.querySelectorAll(".opt").forEach(x=>{x.disabled=true; if(+x.dataset.i===i) x.classList.add("ok"); else if(+x.dataset.i===k) x.classList.add("ko");});
+      glSet(tema.id,i, ok?box+1:Math.max(0,box-1)); const xp=ok?8:2; addXP(xp); if(ok) correct++;
+      sheet(ok, ok?t("correct"):t("wrong"), `${L(it.term)}: ${L(it.def)}`, xp, ()=>{ pos++; if(pos>=order.length) resultScreen(m,tema,mode,correct,order.length,()=>modeGlossary(tema,mode,m)); else draw(); }); });
+  }
+  draw();
+}
+
+
+/* --- fichas --- */
+function modeFichas(tema,m,v){
+  const fs=tema.fichas||[]; const secs=tema.sections||[];
+  if(!fs.length){ m.innerHTML=`<div class="empty"><div class="ic">📖</div>${t("soon")}</div>`; return; }
+  if(v.f){ const k=fs.findIndex(x=>x.id===v.f); if(k>=0) return renderFicha(tema,m,k); }
+  const seen=S.prog.seen[tema.id+".fichas"]||{};
+  const missingEn = S.lang==="en" && fs.some(f=>!(f.body.en&&f.body.en.length));
+  m.innerHTML=`${missingEn?`<div class="card" style="padding:12px 14px;font-size:13px;color:var(--muted)">${t("fichasEsOnly")}</div>`:""}
+    <input class="search" id="fq" type="search" placeholder="${t("fichasSearch")} (H2·10)" autocomplete="off">
+    <div class="counter" id="fcount"></div><div id="flist" style="display:flex;flex-direction:column;gap:10px"></div>`;
+  const list=document.getElementById("flist"), q=document.getElementById("fq");
+  function paint(){
+    const qq=norm(q.value.trim()); list.innerHTML=""; let shown=0;
+    const qc=qq.replace(/[·\-\s.]/g,""); const codeOf=f=>norm(f.code).replace(/[·\-\s]/g,"");
+    const match=f=>!qq || (qc && codeOf(f)===qc) || norm(L(f.title)+" "+LL(f.body).join(" ")).includes(qq);
+    const bySec={}; fs.forEach((f,i)=>{ if(match(f)){ (bySec[f.sec]=bySec[f.sec]||[]).push(i); shown++; } });
+    const order=secs.map(x=>x.code); Object.keys(bySec).forEach(c=>{ if(!order.includes(c)) order.push(c); });
+    for(const code of order){
+      const sec=secs.find(x=>x.code===code); const idxs=bySec[code]||[]; const major=(code.split(".").length<=2 && tema.num>1) || (tema.num===1 && false);
+      if(!idxs.length && !(sec && !qq && major)) continue;
+      const h=document.createElement("div"); h.className="sec-h"+(major?" major":""); h.innerHTML=`<span class="code">${esc(code)}</span><b>${esc(sec?L(sec.title):"")}</b>`; list.appendChild(h);
+      if(sec && sec.intro && LL(sec.intro).length && !qq){ const d=document.createElement("details"); d.className="sec-intro"; d.innerHTML=`<summary>${t("secIntro")}</summary><div style="margin-top:6px">${LL(sec.intro).map(p=>`<p style="margin-bottom:6px">${md(p)}</p>`).join("")}</div>`; list.appendChild(d); }
+      for(const i of idxs){ const f=fs[i]; const b=document.createElement("button"); b.className="frow";
+        b.innerHTML=`<div class="th" ${f.images[0]?`style="background-image:url('${f.images[0].src}')"`:""}>${f.images[0]?"":"📄"}</div><div class="t"><b>${esc(L(f.title))}</b><span>${esc(f.code)} · ${LL(f.body).length} ¶${f.images.length?` · ${f.images.length} 🖼`:""}</span></div>${seen[i]?`<span class="chk">✓</span>`:""}`;
+        b.onclick=()=>nav({name:"mode",num:tema.num,mode:"fichas",f:f.id}); list.appendChild(b); }
+    }
+    document.getElementById("fcount").textContent = shown? t("fichasOf",{n:shown}) : t("noResults");
+  }
+  q.oninput=paint; paint();
+}
+function renderFicha(tema,m,k){
+  const fs=tema.fichas, f=fs[k]; const first=!(S.prog.seen[tema.id+".fichas"]||{})[k];
+  markSeen(tema.id,"fichas",k); if(first){ addXP(3); toast(`${t("fichaXP")} · ${t("gained",{n:3})}`); } checkBadge(tema,"fichas");
+  const sec=(tema.sections||[]).find(x=>x.code===f.sec);
+  const counts=["cards","glossary","myths","quiz","sources","timeline","match"].map(mode=>({mode,n:(tema[mode]||[]).filter(it=>secMatch(it.sec,f.sec)).length})).filter(x=>x.n>0);
+  m.innerHTML=`<div class="ficha">
+    <div class="card"><div style="font-size:12px;color:var(--muted);font-weight:700">${esc(f.sec)}${sec?" · "+esc(L(sec.title)):""}</div><h2 style="margin-top:4px">${esc(L(f.title))}</h2>
+      <div class="meta"><span class="pill">${esc(f.code)}</span><span class="pill">${t("tema")} ${tema.num}</span></div></div>
+    ${f.images.map((im,j)=>`<div class="fimg" data-j="${j}"><img src="${im.src}" alt="" loading="lazy">${L(im.caption)?`<div class="cap">${esc(L(im.caption))}</div>`:""}</div>`).join("")}
+    <div class="card body">${LL(f.body).map(p=>`<p>${md(p)}</p>`).join("")}</div>
+    ${LL(f.essay).length?`<div class="essay"><b>${t("essayL")}</b>${LL(f.essay).map(p=>md(p.replace(/^(Para el ensayo|For the essay),?\s*/,""))).join("<br>")}</div>`:""}
+    ${f.slide.es.length?`<div class="card"><details class="slide"><summary>${t("slideText")}</summary><ul style="padding-left:18px;margin:8px 0 0">${f.slide.es.map(p=>`<li>${md(p)}</li>`).join("")}</ul></details></div>`:""}
+    ${f.refs.length?`<div class="card"><div class="section-title" style="margin:0 0 8px">${t("refsL")}</div><ul class="refs" style="padding-left:18px;margin:0">${f.refs.map(r=>`<li>${md(r)}</li>`).join("")}</ul></div>`:""}
+    ${counts.length?`<div class="card"><div class="section-title" style="margin:0 0 10px">${t("practice")} (${esc(f.sec)})</div><div class="pbtns">${counts.map(c=>`<button data-mode="${c.mode}">${MODE_ICONS[c.mode]} ${t("modes."+c.mode)} · ${c.n}</button>`).join("")}</div></div>`:""}
+    <div class="row"><button class="btn sec" id="fPrev" ${k===0?"disabled":""}>‹ ${t("prevF")}</button><button class="btn sec" id="fNext" ${k===fs.length-1?"disabled":""}>${t("nextF")} ›</button></div>
+    </div>`;
+  m.querySelectorAll(".pbtns button").forEach(b=>b.onclick=()=>nav({name:"mode",num:tema.num,mode:b.dataset.mode,sec:f.sec,back:{name:"mode",num:tema.num,mode:"fichas",f:f.id}}));
+  m.querySelectorAll(".fimg").forEach(d=>d.onclick=()=>{ const im=f.images[+d.dataset.j]; const lb=document.createElement("div"); lb.className="lightbox"; lb.innerHTML=`<img src="${im.src}" alt=""><div class="cap">${esc(L(im.caption))}</div>`; lb.onclick=()=>lb.remove(); document.body.appendChild(lb); });
+  document.getElementById("fPrev").onclick=()=>nav({name:"mode",num:tema.num,mode:"fichas",f:fs[k-1].id});
+  document.getElementById("fNext").onclick=()=>nav({name:"mode",num:tema.num,mode:"fichas",f:fs[k+1].id});
+}
+
+/* --- videos --- */
+function modeVideos(tema,mode,m){
+  m.innerHTML=tema.videos.map(v=>`<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${esc(v.id)}?rel=0&playsinline=1" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="vt">${esc(L(v.title))}</div></div>`).join("");
+}
+
+/* ============ boot ============ */
+(function(){
+  let l=null; try{ l=localStorage.getItem("historiapp.lang"); }catch(e){}
+  if(l){ S.lang=l; document.documentElement.lang=l; S.view=hashToView(location.hash); } else { S.view={name:"gate"}; S.pending=location.hash||null; }
+  render();
+  if("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(()=>{});
+})();
+</script>
+</body>
+</html>

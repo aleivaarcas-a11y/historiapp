@@ -1,0 +1,104 @@
+{
+  "version": "2026-09-26b",
+  "temas": [
+    {
+      "num": 1,
+      "file": "data/tema01.json",
+      "available": true,
+      "title": {
+        "es": "Introducción a la Historia del Deporte",
+        "en": "Introduction to the History of Sport"
+      }
+    },
+    {
+      "num": 2,
+      "file": "data/tema02.json",
+      "available": true,
+      "title": {
+        "es": "Egipto, Persia y Fenicia",
+        "en": "Egypt, Persia and Phoenicia"
+      }
+    },
+    {
+      "num": 3,
+      "file": "data/tema03.json",
+      "available": false,
+      "title": {
+        "es": "Creta y Grecia",
+        "en": "Crete and Greece"
+      }
+    },
+    {
+      "num": 4,
+      "file": "data/tema04.json",
+      "available": false,
+      "title": {
+        "es": "",
+        "en": ""
+      }
+    },
+    {
+      "num": 5,
+      "file": "data/tema05.json",
+      "available": false,
+      "title": {
+        "es": "China, Japón e India",
+        "en": "China, Japan and India"
+      }
+    },
+    {
+      "num": 6,
+      "file": "data/tema06.json",
+      "available": false,
+      "title": {
+        "es": "Aztecas, mayas e incas",
+        "en": "Aztecs, Maya and Inca"
+      }
+    },
+    {
+      "num": 7,
+      "file": "data/tema07.json",
+      "available": false,
+      "title": {
+        "es": "Alta y Baja Edad Media",
+        "en": "Early and Late Middle Ages"
+      }
+    },
+    {
+      "num": 8,
+      "file": "data/tema08.json",
+      "available": false,
+      "title": {
+        "es": "Renacimiento",
+        "en": "Renaissance"
+      }
+    },
+    {
+      "num": 9,
+      "file": "data/tema09.json",
+      "available": false,
+      "title": {
+        "es": "Barroco",
+        "en": "Baroque"
+      }
+    },
+    {
+      "num": 10,
+      "file": "data/tema10.json",
+      "available": false,
+      "title": {
+        "es": "Ilustración",
+        "en": "Enlightenment"
+      }
+    },
+    {
+      "num": 11,
+      "file": "data/tema11.json",
+      "available": false,
+      "title": {
+        "es": "Escuelas gimnásticas del siglo XIX",
+        "en": "Nineteenth-century gymnastic schools"
+      }
+    }
+  ]
+}
