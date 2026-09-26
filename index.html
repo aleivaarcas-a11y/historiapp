@@ -199,6 +199,64 @@ main{flex:1;padding:16px 16px calc(24px + var(--safe-bottom));display:flex;flex-
 .vtest{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px 16px}
 .vtest .qq{font-weight:700;font-size:15px;margin-bottom:12px;line-height:1.35}
 .vwrap{display:flex;flex-direction:column;gap:12px}
+/* mapa conceptual */
+.mtools{display:flex;gap:8px;justify-content:flex-end;margin-bottom:10px}
+.mtools button{font-size:12px;font-weight:700;color:var(--primary);background:var(--ok-bg);border-radius:999px;padding:7px 12px}
+.mroot{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow);position:relative}
+.mroot .k{font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.75;font-weight:700}
+.mroot h2{font-size:19px;margin:4px 0 8px;color:#fff}
+.mroot p{font-size:14px;line-height:1.5;opacity:.95}
+.mtree{position:relative;margin-left:14px;padding-left:18px;border-left:3px solid var(--line);padding-top:14px}
+.rama{position:relative;margin-bottom:14px}
+.rama:before{content:"";position:absolute;left:-21px;top:24px;width:18px;border-top:3px solid var(--line)}
+.rama>.rh{display:block;width:100%;text-align:left;background:var(--paper);border:1px solid var(--line);border-left:6px solid var(--rc);border-radius:14px;padding:12px 14px;box-shadow:var(--shadow)}
+.rama>.rh .code{display:inline-block;font-size:11px;font-weight:800;color:#fff;background:var(--rc);border-radius:6px;padding:2px 7px;margin-right:6px}
+.rama>.rh b{font-size:15px;line-height:1.3}
+.rama>.rh p{font-size:13.5px;color:var(--ink);line-height:1.45;margin-top:6px}
+.rama>.rh .chev{float:right;font-size:14px;color:var(--muted);transition:transform .2s}
+.rama.open>.rh .chev{transform:rotate(90deg)}
+.nodos{display:none;margin:8px 0 0 12px;padding-left:16px;border-left:2px dashed var(--rc)}
+.rama.open>.nodos{display:block}
+.nodo{position:relative;margin-top:8px}
+.nodo:before{content:"";position:absolute;left:-17px;top:18px;width:14px;border-top:2px dashed var(--rc)}
+.nodo>button.nh{display:flex;align-items:center;gap:8px;width:100%;text-align:left;background:var(--paper);border:1.5px solid var(--rc);border-radius:12px;padding:9px 12px;font-weight:700;font-size:14px}
+.nodo>button.nh i{width:9px;height:9px;border-radius:50%;background:var(--line);flex-shrink:0}
+.nodo.seen>button.nh i{background:var(--rc)}
+.nodo .nd{display:none;background:var(--paper);border:1.5px solid var(--rc);border-top:0;border-radius:0 0 12px 12px;margin-top:-6px;padding:12px;font-size:14px;line-height:1.5}
+.nodo.open>button.nh{border-radius:12px 12px 0 0}
+.nodo.open .nd{display:block}
+.nd .acts{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.nd .acts button{font-size:12.5px;font-weight:700;border-radius:999px;padding:7px 12px;background:var(--ok-bg);color:var(--primary)}
+/* examen */
+.xsec{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.xsec>summary{list-style:none;display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;font-weight:800;font-size:16px;color:var(--primary-2)}
+.xsec>summary::-webkit-details-marker{display:none}
+.xsec>summary .ic{font-size:22px}
+.xsec>summary:after{content:"›";margin-left:auto;font-size:22px;color:var(--muted);transition:transform .2s}
+.xsec[open]>summary:after{transform:rotate(90deg)}
+.xsec .xb{padding:0 16px 16px;font-size:14.5px;line-height:1.55}
+.xsec .xb p{margin-bottom:10px}
+.xtab{width:100%;border-collapse:collapse;font-size:13px;margin:6px 0 12px}
+.xtab th{background:var(--primary);color:#fff;text-align:left;padding:7px 8px;font-weight:700}
+.xtab td{border-bottom:1px solid var(--line);padding:7px 8px;vertical-align:top}
+.xtab .n{text-align:right;white-space:nowrap}
+.xnote{background:#fff8e1;border-left:4px solid var(--accent);border-radius:10px;padding:10px 12px;font-size:13.5px;margin:4px 0 12px}
+.xtips{margin:4px 0 0;padding:0;list-style:none}
+.xtips li{position:relative;padding-left:22px;margin-bottom:7px;font-size:14px}
+.xtips li:before{content:"✓";position:absolute;left:0;color:var(--primary);font-weight:800}
+.xstep{display:flex;gap:12px;margin:10px 0}
+.xstep .k{flex-shrink:0;width:42px;height:42px;border-radius:12px;background:var(--primary);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:14px;line-height:1}
+.xstep .k small{font-size:10px;font-weight:600;opacity:.85;margin-top:2px}
+.xstep .xt{display:block;font-size:14.5px;margin-bottom:2px}
+.xex{background:var(--ok-bg);border-radius:12px;padding:12px;margin:10px 0 12px;font-size:13.5px}
+.xex h4{font-size:13px;margin:0 0 6px;color:var(--primary-2)}
+.xex p{margin-bottom:8px}
+.xex img{width:100%;border-radius:8px;margin-bottom:8px;display:block}
+.xphase{position:relative;padding:0 0 12px 22px;border-left:3px solid var(--accent);margin-left:6px}
+.xphase:before{content:"";position:absolute;left:-8px;top:2px;width:13px;height:13px;border-radius:50%;background:var(--accent)}
+.xphase .xt{display:block;font-size:14.5px;margin-bottom:3px}
+.xcheck label{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.xcheck input{width:20px;height:20px;accent-color:var(--primary);flex-shrink:0;margin-top:1px}
 .empty{text-align:center;color:var(--muted);padding:40px 20px;font-size:15px;line-height:1.5}
 .empty .ic{font-size:44px;margin-bottom:10px}
 
@@ -244,6 +302,14 @@ details.slide li{font-size:13.5px;line-height:1.5;margin-bottom:6px}
 <div class="sheet" id="sheet"><div class="in" id="sheetIn"></div></div>
 
 <script>
+/* ---- estadísticas anónimas (GoatCounter: sin cookies ni datos personales) ---- */
+const GC_CODE="historiapp";
+const GCQ=[]; let GCOK=false;
+(function(){ if(!GC_CODE) return; try{ const sc=document.createElement("script"); sc.async=true; sc.src="https://gc.zgo.at/count.js";
+  sc.dataset.goatcounter="https://"+GC_CODE+".goatcounter.com/count"; sc.dataset.goatcounterSettings='{"no_onload":true}';
+  sc.onload=()=>{ GCOK=true; while(GCQ.length) track(...GCQ.shift()); }; document.head.appendChild(sc); }catch(e){} })();
+function track(path,title,event){ try{ if(!GC_CODE) return; if(!GCOK||!window.goatcounter||!window.goatcounter.count){ if(GCQ.length<50) GCQ.push([path,title,event]); return; }
+  window.goatcounter.count({path:path, title:title||path, event:!!event}); }catch(e){} }
 /* ============ i18n ============ */
 const I18N = {
   es: {
@@ -251,8 +317,8 @@ const I18N = {
     choose:"Elige tu idioma", es:"Castellano", en:"English", esSub:"Historia del Deporte", enSub:"History of Sport",
     home:"Inicio", temas:"Temas", tema:"Tema", soon:"Próximamente", locked:"Este tema se publicará cuando esté listo en clase.",
     level:"Nivel", xp:"XP", streak:"Racha", days:"días", toNext:"para el siguiente nivel",
-    modes:{fichas:"Fichas",cards:"Tarjetas",glossary:"Glosario",timeline:"Cronología",sources:"Fuentes",match:"Relaciona",myths:"Mitos",quiz:"Preguntas rápidas",videos:"Vídeos"},
-    modesSub:{fichas:"El manual de bolsillo, por apartados",cards:"¿Verdadero o falso? Desliza",glossary:"Términos clave con repaso espaciado",timeline:"Ordena los hechos",sources:"¿De dónde procede este texto?",match:"Empareja práctica, grupo y función",myths:"Tópicos que hay que desmontar",quiz:"Test con tiempo",videos:"Píldoras en vídeo"},
+    modes:{fichas:"Fichas",mapa:"Mapa",cards:"Tarjetas",glossary:"Glosario",timeline:"Cronología",sources:"Fuentes",match:"Relaciona",myths:"Mitos",quiz:"Preguntas rápidas",videos:"Vídeos"},
+    modesSub:{fichas:"El manual de bolsillo, por apartados",mapa:"Ideas principales y secundarias del tema",cards:"¿Verdadero o falso? Desliza",glossary:"Términos clave con repaso espaciado",timeline:"Ordena los hechos",sources:"¿De dónde procede este texto?",match:"Empareja práctica, grupo y función",myths:"Tópicos que hay que desmontar",quiz:"Test con tiempo",videos:"Píldoras en vídeo"},
     yes:"SÍ", no:"NO", trueL:"Verdadero", falseL:"Falso", swipeHint:"Desliza a la derecha si es verdadero y a la izquierda si es falso",
     correct:"Correcto", wrong:"No es así", next:"Siguiente", check:"Comprobar", again:"Otra ronda", back:"Volver al tema", continueL:"Continuar",
     gained:"+{n} XP", seen:"{a} de {b}", roundDone:"Ronda terminada", score:"{a} de {b} aciertos", timeUp:"Se acabó el tiempo",
@@ -261,16 +327,16 @@ const I18N = {
     glWhich:"¿Qué término corresponde a esta definición?", glDef:"¿Cuál es la definición de este término?", glTerm:"Término", glDefL:"Definición",
     glBoxes:"Caja de repaso", glMastered:"dominados", glSession:"Sesión de {n} términos",
     settings:"Ajustes", language:"Idioma", reset:"Borrar mi progreso", resetConfirm:"Se borrarán XP, niveles y progreso de todos los temas. ¿Seguro?", resetDone:"Progreso borrado",
-    badges:"Insignias", badgeName:{fichas:"Lector",cards:"Ojo de arqueólogo",glossary:"Léxico",timeline:"Cronista",sources:"Lector de fuentes",match:"Sociólogo",myths:"Cazamitos",quiz:"Relámpago"},
+    badges:"Insignias", badgeName:{fichas:"Lector",mapa:"Cartógrafo",cards:"Ojo de arqueólogo",glossary:"Léxico",timeline:"Cronista",sources:"Lector de fuentes",match:"Sociólogo",myths:"Cazamitos",quiz:"Relámpago"},
     badgeHow:"Completa cada sección de un tema para ganar su insignia.",
     levelUp:"¡Nivel {n}: {name}!", complete:"Completado",
     levels:["Aprendiz","Paleolítico","Neolítico","Escriba","Pahlavan","Hoplita","Gladiador","Caballero","Gentleman","Catedrático"],
     noVideos:"Todavía no hay vídeos para este tema.", vMore:"Saber más", vTest:"Pon a prueba lo que has visto", vSeen:"✓ Visto", vNew:"Sin ver", vAll:"Todos los vídeos", vOk:"Correcto. +{n} XP", vKo:"La respuesta correcta está marcada", install:"Añade Historiapp a tu pantalla de inicio: en Safari, botón Compartir y «Añadir a pantalla de inicio»; en Chrome, menú y «Instalar aplicación».",
-    version:"Contenido actualizado", offline:"Sin conexión: se muestran los datos guardados", loadError:"No se ha podido cargar el contenido. Comprueba la conexión.",
+    privacy:"Tu progreso (XP, rachas, insignias) se guarda solo en este móvil y nadie más lo ve. Para no perderlo, instala la app y úsala siempre desde el icono. La app cuenta de forma anónima qué pantallas se visitan, sin cookies ni datos personales, para mejorar la asignatura.", version:"Contenido actualizado", offline:"Sin conexión: se muestran los datos guardados", loadError:"No se ha podido cargar el contenido. Comprueba la conexión.",
     author:"Historia del Deporte · Grado en CAFD · UCAM",
     fichasSearch:"Buscar en las fichas…", fichasEsOnly:"", practice:"Practicar este apartado", slideText:"En la diapositiva", refsL:"Fuentes", essayL:"Para el ensayo",
     prevF:"Anterior", nextF:"Siguiente", secOnly:"Apartado {s}", allSec:"Todo el tema", fichaIntro:"Presentación del tema", secIntro:"Por qué este apartado", fichaXP:"Ficha leída", noResults:"Sin resultados", fichasOf:"{n} fichas", codeL:"Código", paras:"párrafos", img1:"imagen", imgN:"imágenes",
-    daily:"Reto del día", dailySub:"Una prueba de cada tipo, distinta cada día, con el doble de XP", dailyStart:"Empezar el reto", dailyDone:"Reto de hoy completado", dailyScore:"{a} de {b} aciertos hoy", dailyBack:"Volver mañana para un reto nuevo", dailyStep:"Prueba {a} de {b}", dailyTitle:"Reto del día · {d}",
+    daily:"Reto del día", exam:"Cómo preparar el examen", examSub:"Test, desarrollo y comentario de imagen, paso a paso", mapOpen:"Desplegar todo", mapClose:"Plegar todo", mapTema:"Tema {n}", mapFicha:"📖 Leer la ficha", mapPractice:"⚡ Practicar este apartado", mapHint:"Toca cada apartado para ver sus ideas y cada idea para leer el detalle.", dailySub:"Una prueba de cada tipo, distinta cada día, con el doble de XP", dailyStart:"Empezar el reto", dailyDone:"Reto de hoy completado", dailyScore:"{a} de {b} aciertos hoy", dailyBack:"Volver mañana para un reto nuevo", dailyStep:"Prueba {a} de {b}", dailyTitle:"Reto del día · {d}",
     installBtn:"Instalar en el móvil", installIos:"En iPhone o iPad: pulsa el botón Compartir (el cuadrado con la flecha hacia arriba, abajo en Safari) y elige «Añadir a pantalla de inicio».", installAndroid:"En Android: abre el menú de Chrome (tres puntos) y elige «Instalar aplicación» o «Añadir a pantalla de inicio».", installDesktop:"Abre esta dirección en el móvil para instalarla; en el ordenador funciona igual desde el navegador.", installed:"La app ya está instalada.", close:"Cerrar"
   },
   en: {
@@ -278,8 +344,8 @@ const I18N = {
     choose:"Choose your language", es:"Castellano", en:"English", esSub:"Historia del Deporte", enSub:"History of Sport",
     home:"Home", temas:"Units", tema:"Unit", soon:"Coming soon", locked:"This unit will be published once it is ready in class.",
     level:"Level", xp:"XP", streak:"Streak", days:"days", toNext:"to next level",
-    modes:{fichas:"Study sheets",cards:"Cards",glossary:"Glossary",timeline:"Timeline",sources:"Sources",match:"Match",myths:"Myths",quiz:"Quick quiz",videos:"Videos"},
-    modesSub:{fichas:"The pocket manual, by section",cards:"True or false? Swipe",glossary:"Key terms with spaced review",timeline:"Put the events in order",sources:"Where does this text come from?",match:"Pair practice, group and function",myths:"Clichés to take apart",quiz:"Timed test",videos:"Video bites"},
+    modes:{fichas:"Study sheets",mapa:"Map",cards:"Cards",glossary:"Glossary",timeline:"Timeline",sources:"Sources",match:"Match",myths:"Myths",quiz:"Quick quiz",videos:"Videos"},
+    modesSub:{fichas:"The pocket manual, by section",mapa:"Main and secondary ideas of the unit",cards:"True or false? Swipe",glossary:"Key terms with spaced review",timeline:"Put the events in order",sources:"Where does this text come from?",match:"Pair practice, group and function",myths:"Clichés to take apart",quiz:"Timed test",videos:"Video bites"},
     yes:"YES", no:"NO", trueL:"True", falseL:"False", swipeHint:"Swipe right if true, left if false",
     correct:"Correct", wrong:"Not quite", next:"Next", check:"Check", again:"Another round", back:"Back to unit", continueL:"Continue",
     gained:"+{n} XP", seen:"{a} of {b}", roundDone:"Round finished", score:"{a} of {b} correct", timeUp:"Time is up",
@@ -288,21 +354,21 @@ const I18N = {
     glWhich:"Which term matches this definition?", glDef:"What is the definition of this term?", glTerm:"Term", glDefL:"Definition",
     glBoxes:"Review box", glMastered:"mastered", glSession:"Session of {n} terms",
     settings:"Settings", language:"Language", reset:"Erase my progress", resetConfirm:"XP, levels and progress for all units will be erased. Are you sure?", resetDone:"Progress erased",
-    badges:"Badges", badgeName:{fichas:"Reader",cards:"Archaeologist's eye",glossary:"Lexicon",timeline:"Chronicler",sources:"Source reader",match:"Sociologist",myths:"Myth hunter",quiz:"Lightning"},
+    badges:"Badges", badgeName:{fichas:"Reader",mapa:"Cartographer",cards:"Archaeologist's eye",glossary:"Lexicon",timeline:"Chronicler",sources:"Source reader",match:"Sociologist",myths:"Myth hunter",quiz:"Lightning"},
     badgeHow:"Complete each section of a unit to earn its badge.",
     levelUp:"Level {n}: {name}!", complete:"Completed",
     levels:["Apprentice","Palaeolithic","Neolithic","Scribe","Pahlavan","Hoplite","Gladiator","Knight","Gentleman","Professor"],
     noVideos:"No videos for this unit yet.", vMore:"Learn more", vTest:"Test what you have seen", vSeen:"✓ Watched", vNew:"Not watched", vAll:"All videos", vOk:"Correct. +{n} XP", vKo:"The right answer is marked", install:"Add Historiapp to your home screen: in Safari, tap Share and 'Add to Home Screen'; in Chrome, open the menu and 'Install app'.",
-    version:"Content updated", offline:"Offline: showing saved data", loadError:"Could not load the content. Check your connection.",
+    privacy:"Your progress (XP, streaks, badges) is stored only on this phone and nobody else sees it. To keep it, install the app and always open it from its icon. The app counts anonymously which screens are visited, with no cookies or personal data, to improve the course.", version:"Content updated", offline:"Offline: showing saved data", loadError:"Could not load the content. Check your connection.",
     author:"History of Sport · Sport Sciences degree · UCAM",
     fichasSearch:"Search the sheets…", fichasEsOnly:"Some sheets of this unit are not yet available in English and are shown in Spanish.", practice:"Practise this section", slideText:"On the slide", refsL:"Sources", essayL:"For the essay",
     prevF:"Previous", nextF:"Next", secOnly:"Section {s}", allSec:"Whole unit", fichaIntro:"About this unit", secIntro:"Why this section", fichaXP:"Sheet read", noResults:"No results", fichasOf:"{n} sheets", codeL:"Code", paras:"paragraphs", img1:"image", imgN:"images",
-    daily:"Daily challenge", dailySub:"One task of each kind, new every day, double XP", dailyStart:"Start the challenge", dailyDone:"Today's challenge completed", dailyScore:"{a} of {b} correct today", dailyBack:"Come back tomorrow for a new one", dailyStep:"Task {a} of {b}", dailyTitle:"Daily challenge · {d}",
+    daily:"Daily challenge", exam:"How to prepare for the exam", examSub:"Multiple choice, essay and image commentary, step by step", mapOpen:"Expand all", mapClose:"Collapse all", mapTema:"Unit {n}", mapFicha:"📖 Read the study sheet", mapPractice:"⚡ Practise this section", mapHint:"Tap each section to see its ideas and each idea to read the detail.", dailySub:"One task of each kind, new every day, double XP", dailyStart:"Start the challenge", dailyDone:"Today's challenge completed", dailyScore:"{a} of {b} correct today", dailyBack:"Come back tomorrow for a new one", dailyStep:"Task {a} of {b}", dailyTitle:"Daily challenge · {d}",
     installBtn:"Install on your phone", installIos:"On iPhone or iPad: tap the Share button (the square with the upward arrow, at the bottom in Safari) and choose 'Add to Home Screen'.", installAndroid:"On Android: open the Chrome menu (three dots) and choose 'Install app' or 'Add to Home screen'.", installDesktop:"Open this address on your phone to install it; on a computer it works from the browser.", installed:"The app is already installed.", close:"Close"
   }
 };
-const MODE_ICONS={fichas:"📖",cards:"🖼️",glossary:"🔤",timeline:"⏳",sources:"📜",match:"🔗",myths:"🧨",quiz:"⚡",videos:"🎬"};
-const MODES=["fichas","cards","glossary","timeline","sources","match","myths","quiz","videos"];
+const MODE_ICONS={fichas:"📖",mapa:"🧭",cards:"🖼️",glossary:"🔤",timeline:"⏳",sources:"📜",match:"🔗",myths:"🧨",quiz:"⚡",videos:"🎬"};
+const MODES=["fichas","mapa","cards","glossary","timeline","sources","match","myths","quiz","videos"];
 const LEVEL_XP=[0,100,250,450,700,1000,1400,1900,2500,3300];
 
 /* ============ state ============ */
@@ -330,10 +396,10 @@ function addXP(n){
 }
 function markSeen(temaId,mode,key){ const k=temaId+"."+mode; S.prog.seen[k]=S.prog.seen[k]||{}; S.prog.seen[k][key]=1; save(); }
 function seenCount(temaId,mode){ const k=temaId+"."+mode; return Object.keys(S.prog.seen[k]||{}).length; }
-function modeTotal(tema,mode){ if(mode==="glossary") return tema.glossary.length; const a=tema[mode]; return a?a.length:0; }
+function modeTotal(tema,mode){ if(mode==="glossary") return tema.glossary.length; if(mode==="mapa") return tema.mapa?tema.mapa.ramas.reduce((a,r)=>a+r.nodos.length,0):0; const a=tema[mode]; return a?a.length:0; }
 function secMatch(a,b){ if(!a||!b) return !b; return a===b || a.startsWith(b+".") || b.startsWith(a+"."); }
 function modeIdxs(tema,mode){ const a=tema[mode]||[]; const sec=S.view.sec; return a.map((it,i)=>i).filter(i=>!sec || secMatch(a[i].sec,sec)); }
-function md(s){ return esc(s).replace(/\*([^*]+)\*/g,"<em>$1</em>").replace(/(https?:\/\/[^\s<)]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>'); }
+function md(s){ return esc(s).replace(/\*\*([^*]+)\*\*/g,"<b>$1</b>").replace(/\*([^*]+)\*/g,"<em>$1</em>").replace(/(https?:\/\/[^\s<)]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>'); }
 function LL(o){ if(!o) return []; const a=o[S.lang]; return (a&&a.length)?a:(o.es||[]); }
 function norm(s){ return String(s).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase(); }
 function modePct(tema,mode){ const tot=modeTotal(tema,mode); if(!tot) return 0; if(mode==="glossary"){ const m=tema.glossary.filter((g,i)=>glBox(tema.id,i)>=3).length; return Math.min(100,Math.round(m/tot*100)); } return Math.min(100,Math.round(seenCount(tema.id,mode)/tot*100)); }
@@ -373,9 +439,9 @@ async function getTema(num){
 
 /* ============ rendering ============ */
 const app=document.getElementById("app");
-function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="daily") return "reto"; if(v.name==="tema") return "t"+v.num;
+function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="daily") return "reto"; if(v.name==="exam") return "examen"; if(v.name==="tema") return "t"+v.num;
   if(v.name==="mode"){ if(v.mode==="fichas") return v.f?`t${v.num}/f/${v.f}`:`t${v.num}/fichas`; return `t${v.num}/${v.mode}`+(v.sec?"/"+v.sec:""); } return ""; }
-function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="reto") return {name:"daily"};
+function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="reto") return {name:"daily"}; if(h==="examen") return {name:"exam"};
   const p=h.split("/"); const mt=/^t(\d+)$/.exec(p[0]); if(!mt) return {name:"home"}; const num=+mt[1];
   if(p.length===1) return {name:"tema",num}; if(p[1]==="f"&&p[2]) return {name:"mode",num,mode:"fichas",f:decodeURIComponent(p[2])};
   if(MODES.includes(p[1])) return {name:"mode",num,mode:p[1],sec:p[2]||undefined}; return {name:"tema",num}; }
@@ -383,11 +449,13 @@ function nav(view){ S.view=view; closeSheet(); window.scrollTo(0,0); const h=vie
 window.addEventListener("hashchange",()=>{ if(S.silent){ S.silent=false; return; } if(!S.lang){ S.pending=location.hash; return; } const v=hashToView(location.hash); S.view=v; closeSheet(); render(); });
 function render(){
   const v=S.view;
+  if(v.name!=="gate") track("/"+(S.lang||"es")+"/"+(viewToHash(v)||"inicio"));
   if(v.name==="gate") return renderGate();
   if(v.name==="home") return renderHome();
   if(v.name==="tema") return renderTema(v.num);
   if(v.name==="settings") return renderSettings();
   if(v.name==="daily") return renderDaily();
+  if(v.name==="exam") return renderExam();
   if(v.name==="mode") return renderMode(v.num,v.mode);
 }
 function header(title,back,extra=""){
@@ -428,10 +496,11 @@ async function renderHome(){
       <div class="bar"><i style="width:${pct}%"></i></div>
       <div class="meta"><span>${S.prog.xp} ${t("xp")}${LEVEL_XP[lvl+1]?` · ${nextXP-S.prog.xp} ${t("toNext")}`:""}</span><span>🔥 ${S.prog.streak} ${t("days")}</span></div></div></div>
     <button class="tema" id="dailyBtn" style="border:2px solid var(--accent);background:#fff8e1"><div class="num">☀️</div><div class="t"><b>${t("daily")}</b><span id="dailySub">${t("dailySub")}</span></div><div class="pct" id="dailyPct"></div></button>
+    <button class="tema" id="examBtn" style="border:2px solid var(--primary)"><div class="num" style="background:var(--primary);color:#fff">🎓</div><div class="t"><b>${t("exam")}</b><span>${t("examSub")}</span></div><div class="pct">›</div></button>
     <div id="temaList"><div class="empty">…</div></div>
     <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:10px">${t("author")}</p></main>`;
   bindHeader();
-  { const d=S.prog.daily||{}; const done=d.date===todayKey()&&d.done; document.getElementById("dailyBtn").onclick=()=>nav({name:"daily"});
+  { const d=S.prog.daily||{}; const done=d.date===todayKey()&&d.done; document.getElementById("dailyBtn").onclick=()=>nav({name:"daily"}); document.getElementById("examBtn").onclick=()=>nav({name:"exam"});
     if(done){ document.getElementById("dailySub").textContent=t("dailyScore",{a:d.correct,b:d.total}); document.getElementById("dailyPct").textContent="✓"; } else document.getElementById("dailyPct").textContent="×2"; }
   try{
     const idx=await getIndex(); const list=document.getElementById("temaList"); list.innerHTML=""; let lastUnit="";
@@ -483,6 +552,7 @@ function renderSettings(){
     </div>
     <button class="btn" id="sInstall">📲 ${t("installBtn")}</button>
     <button class="btn sec" id="sReset" style="border-color:var(--ko);color:var(--ko)">${t("reset")}</button>
+    <p style="font-size:12.5px;color:var(--muted);line-height:1.5;margin:0 4px">🔒 ${t("privacy")}</p>
     <p style="font-size:12px;color:var(--muted);text-align:center">${t("version")}: ${S.temasIndex?esc(S.temasIndex.version):"–"} · ${t("author")}</p></main>`;
   bindHeader(()=>nav(from));
   document.getElementById("sInstall").onclick=installApp;
@@ -499,12 +569,14 @@ async function renderMode(num,mode){
   bindHeader(()=>nav(v.back || (mode==="fichas"&&v.f ? {name:"mode",num,mode:"fichas"} : {name:"tema",num})));
   const m=document.getElementById("m");
   if(mode==="fichas") return modeFichas(tema,m,v);
+  if(mode==="mapa") return modeMapa(tema,m,v);
   const items=modeIdxs(tema,mode);
   if(!items.length){ m.innerHTML=`<div class="empty"><div class="ic">${MODE_ICONS[mode]}</div>${mode==="videos"?t("noVideos"):t("soon")}</div>`; return; }
   ({cards:modeSwipe,myths:modeSwipe,glossary:modeGlossary,timeline:modeTimeline,sources:modeChoice,quiz:modeChoice,match:modeMatch,videos:modeVideos})[mode](tema,mode,m);
 }
 function finishRound(m,tema,mode,correct,total,again,opts){ if(opts&&opts.onDone) return opts.onDone(correct,total); resultScreen(m,tema,mode,correct,total,again); }
 function resultScreen(m,tema,mode,correct,total,again){
+  track("ronda/"+tema.id+"/"+mode+"/"+(Math.round(correct/total*10)*10)+"%","Ronda "+mode,true);
   checkBadge(tema,mode);
   const pct=modePct(tema,mode);
   m.innerHTML=`<div class="card result"><div class="big">${correct/total>=.8?"🏆":correct/total>=.5?"👍":"📚"}</div>
@@ -748,7 +820,7 @@ async function renderDaily(){
   const d=S.prog.daily||{}; if(d.date===todayKey() && d.done){ return dailyResult(m,d.correct,d.total); }
   let k=0, correct=0; S.xpMult=2;
   function step(){
-    if(k>=steps.length){ S.xpMult=1; S.prog.daily={date:todayKey(),done:true,correct,total:steps.length}; save(); return dailyResult(m,correct,steps.length); }
+    if(k>=steps.length){ S.xpMult=1; S.prog.daily={date:todayKey(),done:true,correct,total:steps.length}; save(); track("reto/completado/"+Math.round(correct/steps.length*10)*10+"%","Reto del día",true); return dailyResult(m,correct,steps.length); }
     const st=steps[k]; const fn={cards:modeSwipe,myths:modeSwipe,quiz:modeChoice,sources:modeChoice,glossary:modeGlossary,timeline:modeTimeline,match:modeMatch}[st.mode];
     document.querySelector(".top .ttl").textContent=`${t("daily")} · ${t("dailyStep",{a:k+1,b:steps.length})} · ${t("modes."+st.mode)} · ${t("tema")} ${st.tema.num}`;
     S.view.sec=undefined; m.innerHTML="";
@@ -768,12 +840,57 @@ window.addEventListener("beforeinstallprompt",e=>{ e.preventDefault(); deferredI
 function isStandalone(){ return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone===true; }
 function isIOS(){ return /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform==="MacIntel" && navigator.maxTouchPoints>1); }
 async function installApp(){
+  track("instalar","Instalar",true);
   if(isStandalone()){ toast(t("installed")); return; }
   if(deferredInstall){ deferredInstall.prompt(); try{ await deferredInstall.userChoice; }catch(e){} deferredInstall=null; return; }
   const msg = isIOS()? t("installIos") : (/Android/i.test(navigator.userAgent)? t("installAndroid") : t("installDesktop"));
   const el=document.getElementById("sheet"), inn=document.getElementById("sheetIn"); el.className="sheet ok";
   inn.innerHTML=`<div class="verdict"><span class="dot">📲</span>${t("installBtn")}</div><div class="exp">${esc(msg)}</div><button class="btn" id="sheetNext">${t("close")}</button>`;
   requestAnimationFrame(()=>el.classList.add("show")); document.getElementById("sheetNext").onclick=()=>el.classList.remove("show");
+}
+
+/* --- mapa conceptual --- */
+const MAP_COLORS=["#004379","#C77700","#2F6DB5","#8A5A00"];
+function modeMapa(tema,m,v){
+  const mp=tema.mapa; if(!mp){ m.innerHTML=`<div class="empty"><div class="ic">🧭</div>${t("soon")}</div>`; return; }
+  const seen=S.prog.seen[tema.id+".mapa"]||{};
+  m.innerHTML=`<div class="mtools"><button id="mAll">${t("mapOpen")}</button><button id="mNone">${t("mapClose")}</button></div>
+  <div class="mroot"><div class="k">${t("mapTema",{n:tema.num})}</div><h2>${esc(L(tema.title))}</h2><p>${md(L(mp.tesis))}</p></div>
+  <div class="mtree">${mp.ramas.map((r,ri)=>`<div class="rama" style="--rc:${MAP_COLORS[ri%MAP_COLORS.length]}" data-r="${ri}">
+    <button class="rh"><span class="chev">›</span><span class="code">${esc(r.code)}</span><b>${esc(L(r.t))}</b><p>${md(L(r.idea))}</p></button>
+    <div class="nodos">${r.nodos.map((n,ni)=>{const key=r.code+"."+ni;return `<div class="nodo ${seen[key]?"seen":""}" data-k="${key}">
+      <button class="nh"><i></i>${esc(L(n.t))}</button>
+      <div class="nd">${md(L(n.d))}<div class="acts">${n.f?`<button data-f="${esc(n.f)}">${t("mapFicha")}</button>`:""}<button data-s="${esc(n.sec||r.code)}">${t("mapPractice")}</button></div></div></div>`}).join("")}</div></div>`).join("")}</div>
+  <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:6px">${t("mapHint")}</p>`;
+  m.querySelectorAll(".rama>.rh").forEach(b=>b.onclick=()=>b.parentElement.classList.toggle("open"));
+  m.querySelectorAll(".nodo>.nh").forEach(b=>b.onclick=()=>{ const n=b.parentElement; n.classList.toggle("open");
+    const k=n.dataset.k; if(!seen[k]){ seen[k]=1; markSeen(tema.id,"mapa",k); n.classList.add("seen"); addXP(2); checkBadge(tema,"mapa"); } });
+  m.querySelectorAll(".nd [data-f]").forEach(b=>b.onclick=()=>nav({name:"mode",num:tema.num,mode:"fichas",f:b.dataset.f,back:{name:"mode",num:tema.num,mode:"mapa"}}));
+  m.querySelectorAll(".nd [data-s]").forEach(b=>b.onclick=()=>nav({name:"mode",num:tema.num,mode:"quiz",sec:b.dataset.s,back:{name:"mode",num:tema.num,mode:"mapa"}}));
+  document.getElementById("mAll").onclick=()=>m.querySelectorAll(".rama").forEach(r=>r.classList.add("open"));
+  document.getElementById("mNone").onclick=()=>m.querySelectorAll(".rama,.nodo").forEach(r=>r.classList.remove("open"));
+}
+
+/* --- cómo preparar el examen --- */
+async function renderExam(){
+  app.innerHTML=header(t("exam"),true)+`<main><div class="empty">…</div></main>`;
+  bindHeader(()=>nav({name:"home"}));
+  let X; try{ X=S.examCache||(S.examCache=await fetch("data/examen.json").then(r=>r.json())); }catch(e){ app.querySelector("main").innerHTML=`<div class="empty">${t("loadError")}</div>`; return; }
+  const G=X[S.lang]||X.es, ck=S.prog.examCheck||(S.prog.examCheck={});
+  const tab=tb=>`<table class="xtab"><tr>${tb.cab.map((c,i)=>`<th class="${/^[\d.,]+$/.test(tb.filas[0][i])?"n":""}">${esc(c)}</th>`).join("")}</tr>${tb.filas.map(f=>`<tr>${f.map(c=>`<td class="${/^[\d.,]+$/.test(c)?"n":""}">${esc(c)}</td>`).join("")}</tr>`).join("")}</table>`;
+  const sec=(s,i)=>`<details class="xsec" ${i===0?"open":""}><summary><span class="ic">${s.ic}</span>${esc(s.h)}</summary><div class="xb">
+    ${(s.p||[]).map(p=>`<p>${md(p)}</p>`).join("")}
+    ${s.tabla?tab(s.tabla):""}
+    ${s.aviso?`<div class="xnote">${md(s.aviso)}</div>`:""}
+    ${(s.pasos||[]).map(p=>`<div class="xstep"><div class="k">${esc(p.k)}<small>${esc(p.pts)}</small></div><div><b class="xt">${esc(p.t)}</b>${md(p.d)}</div></div>`).join("")}
+    ${s.ejemplo?`<div class="xex"><h4>${esc(s.ejemplo.h)}</h4><img src="img/t2/justa_pescadores.jpg" alt="" loading="lazy" onerror="this.remove()">${s.ejemplo.p.map(p=>`<p>${md(p)}</p>`).join("")}</div>`:""}
+    ${(s.fases||[]).map(f=>`<div class="xphase"><b class="xt">${esc(f.t)}</b>${md(f.d)}</div>`).join("")}
+    ${s.consejos?`<ul class="xtips">${s.consejos.map(c=>`<li>${md(c).replace(/<em>/g,"<b>").replace(/<\/em>/g,"</b>")}</li>`).join("")}</ul>`:""}
+  </div></details>`;
+  app.querySelector("main").innerHTML=`<div class="card" style="padding:14px 16px"><h2 style="font-size:20px">${esc(G.title)}</h2><p style="font-size:14.5px;line-height:1.55;margin-top:6px">${md(G.lead)}</p></div>
+    ${G.secciones.map(sec).join("")}
+    <div class="card xcheck"><div class="section-title" style="margin:0 0 4px">${esc(G.check.h)}</div>${G.check.items.map((it,i)=>`<label><input type="checkbox" data-i="${i}" ${ck[i]?"checked":""}><span>${esc(it)}</span></label>`).join("")}</div>`;
+  app.querySelectorAll(".xcheck input").forEach(c=>c.onchange=()=>{ ck[c.dataset.i]=c.checked?1:0; S.prog.examCheck=ck; save(); });
 }
 
 /* --- videos --- */
@@ -789,10 +906,10 @@ function modeVideos(tema,mode,m){
       <div class="vmore"><h3>${t("vMore")}</h3>${md(L(v.more))}</div>
       ${q&&q.q?`<div class="vtest"><h3>${t("vTest")}</h3><div class="qq">${esc(q.q)}</div><div class="opts">${q.opts.map((o,k)=>`<button class="opt" data-k="${k}"><span class="k">${"ABCD"[k]}</span><span>${esc(o)}</span></button>`).join("")}</div></div>`:""}
       <button class="btn ghost" id="vBack">${t("vAll")}</button></div>`;
-    const vid=m.querySelector("video"); vid.play().catch(()=>{});
+    const vid=m.querySelector("video"); vid.play().catch(()=>{}); let played=false; vid.addEventListener("play",()=>{ if(!played){ played=true; track("video/"+v.id+"/"+S.lang,"Vídeo "+v.id,true); } });
     vid.addEventListener("ended",()=>{ if(!seen[v.id]){ markSeen(tema.id,"videos",v.id); seen[v.id]=1; } });
     m.querySelectorAll(".vtest .opt").forEach(b=>b.onclick=()=>{
-      const k=+b.dataset.k, ok=k===q.a;
+      const k=+b.dataset.k, ok=k===q.a; track("video-test/"+v.id+"/"+(ok?"acierto":"fallo"),"Test vídeo "+v.id,true);
       m.querySelectorAll(".vtest .opt").forEach(x=>{ x.disabled=true; const j=+x.dataset.k; if(j===q.a) x.classList.add("ok"); else if(j===k) x.classList.add("ko"); });
       const first=!S.prog.seen[tema.id+".videoq"]||!S.prog.seen[tema.id+".videoq"][v.id];
       if(ok&&first){ addXP(10); markSeen(tema.id,"videoq",v.id); toast(t("vOk",{n:10*(S.xpMult||1)})); } else if(!ok) toast(t("vKo"));

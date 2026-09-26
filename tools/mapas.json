@@ -1,0 +1,96 @@
+{
+ "1": {
+  "tesis": {
+   "es": "La historia del deporte estudia, con el método del historiador, por qué cada sociedad practica la actividad física de una forma determinada, qué función cumple y qué significa para quienes la practican.",
+   "en": "The history of sport uses the historian's method to study why each society practises physical activity in a particular way, what function it serves and what it means to those who practise it."
+  },
+  "ramas": [
+   {
+    "code": "1.1",
+    "t": {"es": "La ciencia histórica", "en": "Historical science"},
+    "idea": {"es": "La Historia es un método para interrogar las huellas del pasado, y no un simple relato de lo sucedido.", "en": "History is a method for questioning the traces of the past, rather than a mere account of what happened."},
+    "nodos": [
+     {"t": {"es": "Qué hace la Historia", "en": "What History does"}, "d": {"es": "Trabaja sobre huellas, documentos, objetos e imágenes, porque el pasado ya no puede observarse directamente; su sujeto es siempre el ser humano.", "en": "It works on traces, documents, objects and images, because the past can no longer be observed directly; its subject is always the human being."}, "f": "la-historia-como-herramienta"},
+     {"t": {"es": "Fuentes directas e indirectas", "en": "Direct and indirect sources"}, "d": {"es": "Directas cuando la sociedad quiso dejar constancia (los reports olímpicos); indirectas cuando no tenía esa intención (la Tumba de los Augures).", "en": "Direct when the society intended to leave a record (the Olympic reports); indirect when it had no such intention (the Tomb of the Augurs)."}, "f": "fuentes-para-el-conocimiento-de-la-histo"},
+     {"t": {"es": "Fuentes primarias y secundarias", "en": "Primary and secondary sources"}, "d": {"es": "El criterio es la cercanía temporal: primaria es la producida en la época estudiada, como el Libro de los juegos de Alfonso X (1283).", "en": "The criterion is closeness in time: a primary source is produced in the period studied, such as Alfonso X's Book of Games (1283)."}, "f": "fuentes-para-el-conocimiento-de-la-histo-2"},
+     {"t": {"es": "Periodos y ciencias auxiliares", "en": "Periods and auxiliary sciences"}, "d": {"es": "La división en edades es una convención europea; la arqueología, la numismática y otras ciencias auxiliares dan voz a fuentes mudas.", "en": "The division into ages is a European convention; archaeology, numismatics and other auxiliary sciences give voice to silent sources."}, "f": "ciencias-auxiliares-de-la-historia"},
+     {"t": {"es": "Mirada diacrónica y sincrónica", "en": "Diachronic and synchronic view"}, "d": {"es": "La diacrónica sigue un fenómeno a lo largo del tiempo; la sincrónica congela un momento y estudia sus conexiones internas.", "en": "The diachronic view follows a phenomenon over time; the synchronic view freezes a moment and studies its internal connections."}, "f": "enfoques-para-el-estudio-de-la-historia"},
+     {"t": {"es": "Las fuentes corrigen el relato", "en": "Sources correct the story"}, "d": {"es": "Switzer en Boston (1967) y los 800 metros de Ámsterdam (1928) muestran cómo un relato repetido durante décadas se revisa al volver a las fuentes.", "en": "Switzer in Boston (1967) and the 800 metres in Amsterdam (1928) show how a story repeated for decades is revised by going back to the sources."}, "f": "jj-oo-amsterdam-1928"}
+    ]
+   },
+   {
+    "code": "1.2",
+    "t": {"es": "El deporte como objeto de estudio", "en": "Sport as an object of study"},
+    "idea": {"es": "Deporte es un concepto vivo, con límites discutidos, y cuatro autores ofrecen las preguntas con las que se analiza en toda la asignatura.", "en": "Sport is a living concept with disputed boundaries, and four authors provide the questions used to analyse it throughout the course."},
+    "nodos": [
+     {"t": {"es": "Los términos", "en": "The terms"}, "d": {"es": "Actividad física, ejercicio físico, educación física, gimnasia, juego y deporte remiten a realidades históricas distintas y conviene no confundirlos.", "en": "Physical activity, physical exercise, physical education, gymnastics, play and sport refer to different historical realities and should not be confused."}, "f": "aspectos-terminologicos"},
+     {"t": {"es": "Enfoque cerrado y abierto", "en": "Narrow and broad approach"}, "d": {"es": "El cerrado limita el deporte a la práctica reglada, competitiva e institucionalizada; el abierto incluye toda actividad física orientada a la expresión o la mejora.", "en": "The narrow approach limits sport to regulated, competitive and institutional practice; the broad one includes all physical activity aimed at expression or improvement."}, "f": "cuales-son-los-limites-del-deporte"},
+     {"t": {"es": "Un concepto vivo", "en": "A living concept"}, "d": {"es": "Del castellano medieval depuerto al sport inglés; los griegos no tuvieron una palabra equivalente y usaban agón, athlos, gymnastiké y paidiá.", "en": "From medieval Castilian depuerto to English sport; the Greeks had no equivalent word and used agon, athlos, gymnastike and paidia."}, "f": "deporte-un-concepto-vivo"},
+     {"t": {"es": "Huizinga y el juego", "en": "Huizinga and play"}, "d": {"es": "El juego es más viejo que la cultura y traza un círculo mágico, un espacio y un tiempo separados de la vida corriente.", "en": "Play is older than culture and draws a magic circle, a space and time set apart from ordinary life."}, "f": "de-donde-sale-el-impulso-deportivo"},
+     {"t": {"es": "Guttmann, del rito al récord", "en": "Guttmann, from ritual to record"}, "d": {"es": "Siete rasgos del deporte moderno: secularismo, igualdad, especialización, racionalización, burocratización, cuantificación y récord.", "en": "Seven traits of modern sport: secularism, equality, specialisation, rationalisation, bureaucratisation, quantification and the record."}, "f": "los-siete-rasgos-del-deporte-moderno"},
+     {"t": {"es": "Eichberg y Elias", "en": "Eichberg and Elias"}, "d": {"es": "Eichberg ve varias culturas corporales conviviendo en una misma sociedad; Elias estudia cómo la sociedad moldea la práctica y la práctica a quienes la integran.", "en": "Eichberg sees several body cultures coexisting in one society; Elias studies how society shapes practice and how practice shapes those involved."}, "f": "una-sociedad-varias-formas-a-la-vez"},
+     {"t": {"es": "Función y significado", "en": "Function and meaning"}, "d": {"es": "Los dos ejes de la asignatura: qué aporta una práctica a la sociedad que la sostiene y qué representaba para quienes la practicaban.", "en": "The two axes of the course: what a practice contributes to the society that sustains it and what it meant to those who practised it."}, "f": "que-estudia-la-historia-del-deporte"}
+    ]
+   },
+   {
+    "code": "1.3",
+    "t": {"es": "El origen de las actividades físico-deportivas", "en": "The origin of physical and sporting activities"},
+    "idea": {"es": "La Prehistoria es el periodo más largo y el peor documentado, de modo que el origen del deporte se reconstruye con hipótesis, con la antropología y con la arqueología.", "en": "Prehistory is the longest and least documented period, so the origin of sport is reconstructed through hypotheses, anthropology and archaeology."},
+    "nodos": [
+     {"t": {"es": "La bipedestación", "en": "Walking upright"}, "d": {"es": "La marcha erguida responde a varias ventajas adaptativas que se refuerzan entre sí, entre ellas una mejor termorregulación en la sabana.", "en": "Upright walking responds to several mutually reinforcing adaptive advantages, among them better thermoregulation on the savannah."}, "f": "surgimiento-de-la-bipedestacion"},
+     {"t": {"es": "Teorías del origen", "en": "Theories of origin"}, "d": {"es": "Origen cultual (Diem), instintivo (Eppensteiner) o nacido del trabajo (Eichel): responden más a una ideología que a datos concluyentes.", "en": "A cultic origin (Diem), an instinctive one (Eppensteiner) or one born of work (Eichel): they reflect ideology more than conclusive data."}, "f": "a-teorias-e-hipotesis-historicas"},
+     {"t": {"es": "Método antropológico", "en": "Anthropological method"}, "d": {"es": "Blanchard y Cheska estudian pueblos sin escritura ni Estado; los World Eskimo-Indian Olympics sirven como caso de estudio.", "en": "Blanchard and Cheska study peoples without writing or a state; the World Eskimo-Indian Olympics serve as a case study."}, "f": "b-metodo-antropologico"},
+     {"t": {"es": "Método arqueológico", "en": "Archaeological method"}, "d": {"es": "Registro escaso y frágil: la madera y las fibras apenas se conservan, y lo conservado admite casi siempre varias lecturas.", "en": "A scarce and fragile record: wood and fibres rarely survive, and what survives almost always allows several readings."}, "f": "c-metodo-arqueologico"},
+     {"t": {"es": "Cazar, emboscar, correr", "en": "Hunting, ambushing, running"}, "d": {"es": "El bumerán de Obłazowa, las lanzas de Schöningen, las cometas del desierto y las huellas de Engare Sero documentan un cuerpo adiestrado para sobrevivir.", "en": "The Obłazowa boomerang, the Schöningen spears, the desert kites and the Engare Sero footprints document a body trained for survival."}, "f": "cazar-y-pescar"},
+     {"t": {"es": "Menos fuerza ósea", "en": "Weaker bones"}, "d": {"es": "Ruff et al. (2015) muestran que la resistencia de fémur y tibia cae con la sedentarización, hacia el 5000-3000 a. C.", "en": "Ruff et al. (2015) show that the strength of femur and tibia falls with sedentarisation, around 5000-3000 BC."}, "f": "ha-disminuido-la-condicion-fisica-a-lo-l"}
+    ]
+   }
+  ]
+ },
+ "2": {
+  "tesis": {
+   "es": "En Egipto, Persia y Fenicia la práctica física depende de la posición social: el rey la exhibe como prueba de su poder, la élite la usa para distinguirse, el ejército para la guerra y el pueblo casi no deja rastro.",
+   "en": "In Egypt, Persia and Phoenicia physical practice depends on social position: the king displays it as proof of his power, the elite uses it to stand out, the army for war, and the common people leave almost no trace."
+  },
+  "ramas": [
+   {
+    "code": "2.1",
+    "t": {"es": "El deporte en el Antiguo Egipto", "en": "Sport in Ancient Egypt"},
+    "idea": {"es": "Una sociedad piramidal produce un deporte piramidal, documentado casi siempre desde las tumbas de reyes y nobles.", "en": "A pyramidal society produces a pyramidal sport, documented almost always from the tombs of kings and nobles."},
+    "nodos": [
+     {"t": {"es": "Las fuentes y la sociedad", "en": "Sources and society"}, "d": {"es": "El Nilo ordena la vida y la sociedad es una pirámide; las fuentes proceden sobre todo de tumbas, de ahí que el pueblo apenas aparezca.", "en": "The Nile orders life and society is a pyramid; the sources come mostly from tombs, which is why the people barely appear."}, "f": "la-division-social-del-deporte-egipcio", "sec": "2.1.1"},
+     {"t": {"es": "El faraón ludens", "en": "The pharaoh ludens"}, "d": {"es": "Dios encarnado y garante del ma'at, es vencedor perpetuo: no compite con nadie y acumula marcas que manda grabar.", "en": "A god made flesh and guarantor of ma'at, he is a perpetual victor: he competes with no one and piles up records that he has carved."}, "f": "el-dogma-real", "sec": "2.1.2"},
+     {"t": {"es": "El Heb-Sed", "en": "The Heb-Sed"}, "d": {"es": "Carrera ritual que renueva el poder del rey a los treinta años de reinado y después cada tres.", "en": "A ritual run that renews the king's power after thirty years of reign and every three years thereafter."}, "f": "la-fiesta-del-heb-sed", "sec": "2.1.2"},
+     {"t": {"es": "La corte", "en": "The court"}, "d": {"es": "Caza en las marismas y educación cortesana, con la natación como signo de distinción.", "en": "Marsh hunting and courtly education, with swimming as a mark of distinction."}, "f": "la-educacion-cortesana-y-la-natacion", "sec": "2.1.3"},
+     {"t": {"es": "El ejército", "en": "The army"}, "d": {"es": "Ejército profesional desde el Imperio Nuevo: lucha (Beni Hasan), tahtib, boxeo y carrera de fondo (estela de Taharqa).", "en": "A professional army from the New Kingdom: wrestling (Beni Hasan), tahtib, boxing and long-distance running (Taharqa stela)."}, "f": "los-deportes-de-combate", "sec": "2.1.4"},
+     {"t": {"es": "El pueblo llano", "en": "The common people"}, "d": {"es": "Justas de pescadores, competiciones de obreros (Sahure) y el cuerpo como oficio en danzas, acrobacias y malabares.", "en": "Fishermen's jousts, workers' competitions (Sahure) and the body as a trade in dance, acrobatics and juggling."}, "f": "las-justas-de-pescadores", "sec": "2.1.5"},
+     {"t": {"es": "Los juegos", "en": "Games"}, "d": {"es": "El senet y otros juegos de mesa y de pelota; el deporte faraónico se apaga con la sociedad que lo sostenía.", "en": "Senet and other board and ball games; pharaonic sport fades with the society that sustained it."}, "f": "los-juegos-el-senet", "sec": "2.1.6"}
+    ]
+   },
+   {
+    "code": "2.2",
+    "t": {"es": "El deporte en Persia", "en": "Sport in Persia"},
+    "idea": {"es": "Varias Persias a lo largo de los siglos comparten una cultura ecuestre y guerrera, pero casi todo lo antiguo lo cuentan los griegos.", "en": "Several Persias over the centuries share an equestrian and warrior culture, yet almost everything about the ancient period is told by the Greeks."},
+    "nodos": [
+     {"t": {"es": "Cuántas Persias", "en": "How many Persias"}, "d": {"es": "Aqueménidas, sasánidas y Persia islámica: espacios y fuentes distintos, con un sesgo griego para la Antigüedad.", "en": "Achaemenids, Sasanians and Islamic Persia: different spaces and sources, with a Greek bias for Antiquity."}, "f": "cuantas-persias-hay", "sec": "2.2.1"},
+     {"t": {"es": "La realeza", "en": "Kingship"}, "d": {"es": "El rey demuestra su elección divina con el cuerpo: Darío, «buen jinete, buen arquero, buen lancero».", "en": "The king proves his divine election with his body: Darius, 'a good horseman, a good bowman, a good spearman'."}, "f": "el-cuerpo-del-rey-escrito-en-piedra", "sec": "2.2.2"},
+     {"t": {"es": "La caza y el paradeisos", "en": "The hunt and the paradeisos"}, "d": {"es": "Parques de caza cercados, origen de la palabra paraíso; el primer golpe corresponde siempre al rey.", "en": "Fenced hunting parks, the origin of the word paradise; the first blow always belongs to the king."}, "f": "la-caza-real-y-el-paradeisos", "sec": "2.2.2"},
+     {"t": {"es": "La educación persa", "en": "Persian education"}, "d": {"es": "Montar, disparar el arco y decir la verdad, según Heródoto y Estrabón.", "en": "To ride, to shoot the bow and to tell the truth, according to Herodotus and Strabo."}, "f": "educacion-fisica-persa", "sec": "2.2.3"},
+     {"t": {"es": "Pahlavan y zurkhaneh", "en": "Pahlavan and zurkhaneh"}, "d": {"es": "Desde el siglo X, el campeón que vive de su cuerpo entrena en la casa de fuerza, con música en directo y un código de humildad.", "en": "From the 10th century, the champion who lives off his body trains in the house of strength, with live music and a code of humility."}, "f": "zurkhaneh-periodo-arabe-en-adelante", "sec": "2.2.3"},
+     {"t": {"es": "Juegos ecuestres", "en": "Equestrian games"}, "d": {"es": "Chovgan (origen del polo), jereed y buzkashi: juegos de corte, de adiestramiento militar y de poder local.", "en": "Chovgan (origin of polo), jereed and buzkashi: court games, military training and local power."}, "f": "chovgan", "sec": "2.2.4"}
+    ]
+   },
+   {
+    "code": "2.3",
+    "t": {"es": "El deporte en Fenicia", "en": "Sport in Phoenicia"},
+    "idea": {"es": "Sin Estado unificado ni reyes que dejaran constancia de proezas, el deporte fenicio no aparece en las fuentes, lo cual no prueba que no existiera.", "en": "With no unified state and no kings recording feats, Phoenician sport does not appear in the sources, which does not prove it did not exist."},
+    "nodos": [
+     {"t": {"es": "Ciudades y fuentes", "en": "Cities and sources"}, "d": {"es": "Ciudades-estado como Biblos, Sidón y Tiro que colonizan el Mediterráneo; lo que sabemos lo cuentan sus rivales griegos y romanos.", "en": "City-states such as Byblos, Sidon and Tyre that colonise the Mediterranean; what we know is told by their Greek and Roman rivals."}, "f": "el-problema-de-las-fuentes-2", "sec": "2.3.1"},
+     {"t": {"es": "El cuerpo en el trabajo", "en": "The body at work"}, "d": {"es": "Remar es lo único documentado; la arqueología experimental y los pecios de Mazarrón ayudan a medir ese esfuerzo.", "en": "Rowing is the only documented activity; experimental archaeology and the Mazarrón wrecks help to gauge that effort."}, "f": "remar", "sec": "2.3.2"},
+     {"t": {"es": "Los niños de Kharayeb", "en": "The children of Kharayeb"}, "d": {"es": "Miles de figuritas de terracota muestran a niños que, hacia los cinco años, cambian el perro por una pelota.", "en": "Thousands of terracotta figurines show children who, at around five, swap the dog for a ball."}, "f": "los-ninos-de-kharayeb", "sec": "2.3.3"},
+     {"t": {"es": "Por qué no hay deporte fenicio", "en": "Why there is no Phoenician sport"}, "d": {"es": "Que no haya registro no significa que no hubiera práctica: faltan el Estado y los reyes que necesitaban registrarla.", "en": "No record does not mean no practice: the state and the kings who needed to record it are missing."}, "f": "por-que-no-tenemos-deporte-fenicio", "sec": "2.3.3"}
+    ]
+   }
+  ]
+ }
+}
