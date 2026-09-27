@@ -1,0 +1,92 @@
+[
+ {"id": "t1_01", "sec": "1.1",
+  "title": {"es": "El dorsal 261", "en": "Bib number 261"},
+  "src": {"es": "videos/t1/t1_01_es.mp4", "en": "videos/t1/t1_01_en.mp4"},
+  "poster": {"es": "videos/t1/t1_01_es.jpg", "en": "videos/t1/t1_01_en.jpg"},
+  "more": {
+   "es": "Switzer completó el maratón de Boston de 1967 en 4 h 20 min; Constantina Diță-Tomescu ganó el de Pekín 2008 en 2 h 26 min a los 38 años. Revithi recorrió en 1896 casi todo el trazado olímpico sin registro oficial de tiempo. Dale Greig completó en 1964, en la Isla de Wight, el que muchas organizaciones consideran el primer maratón femenino con tiempo certificado (3 h 27 min). La organización de Boston rechazó la inscripción de Gibb en 1966 alegando que las mujeres «no estaban fisiológicamente capacitadas» (Jutel, 2003).",
+   "en": "Switzer completed the 1967 Boston Marathon in 4 h 20 min; Constantina Diță-Tomescu won the Beijing 2008 marathon in 2 h 26 min at the age of 38. In 1896 Revithi covered almost the whole Olympic course with no official time recorded. In 1964, on the Isle of Wight, Dale Greig completed what many organisations regard as the first women's marathon with a certified time (3 h 27 min). The Boston organisers rejected Gibb's entry in 1966, claiming that women were 'not physiologically able' to run the distance (Jutel, 2003)."},
+  "q": {
+   "es": {"q": "¿Por qué rechazó la organización de Boston la inscripción de Bobbi Gibb en 1966?", "opts": ["Porque no tenía marca mínima.", "Porque sostenía que las mujeres no estaban fisiológicamente capacitadas para esa distancia.", "Porque la inscripción estaba cerrada.", "Porque no era estadounidense."], "a": 1},
+   "en": {"q": "Why did the Boston organisers reject Bobbi Gibb's entry in 1966?", "opts": ["Because she had no qualifying time.", "Because they held that women were not physiologically able to run that distance.", "Because entries were closed.", "Because she was not American."], "a": 1}}},
+ {"id": "t1_02", "sec": "1.1",
+  "title": {"es": "La carrera que contó la prensa", "en": "The race the press told"},
+  "src": {"es": "videos/t1/t1_02_es.mp4", "en": "videos/t1/t1_02_en.mp4"},
+  "poster": {"es": "videos/t1/t1_02_es.jpg", "en": "videos/t1/t1_02_en.jpg"},
+  "more": {
+   "es": "Nueve atletas tomaron la salida el 2 de agosto de 1928 y Radke ganó con 2:16,8, récord del mundo (English, 2019, p. 187). John T. McGovern en el Sportsman, Wythe Williams en el New York Times y el corresponsal del Times de Londres describieron corredoras exhaustas en el suelo; la filmación muestra que la mayoría terminó de pie, y la autora concluye que esas crónicas sirvieron a una administración deportiva dominada por hombres (English, 2019, p. 188). Entrenadores, médicos y el propio COI consideraron la prueba contraria al organismo de las mujeres.",
+   "en": "Nine athletes started on 2 August 1928 and Radke won in 2:16.8, a world record (English, 2019, p. 187). John T. McGovern in the Sportsman, Wythe Williams in the New York Times and the London Times correspondent described exhausted runners on the ground; the film shows that most finished on their feet, and the author concludes that those reports served a male-dominated sports administration (English, 2019, p. 188). Coaches, doctors and the IOC itself considered the event harmful to women's bodies."},
+  "q": {
+   "es": {"q": "¿Qué fuente permite contrastar las crónicas de prensa sobre los 800 m femeninos de 1928?", "opts": ["El reglamento del COI.", "Una entrevista a Lina Radke en 1990.", "La filmación de la prueba.", "El cartel de los Juegos."], "a": 2},
+   "en": {"q": "Which source makes it possible to check the press reports on the 1928 women's 800 m?", "opts": ["The IOC rulebook.", "A 1990 interview with Lina Radke.", "The film of the race.", "The Games poster."], "a": 2}}},
+ {"id": "t1_03", "sec": "1.1",
+  "title": {"es": "Tus fotos serán una fuente histórica", "en": "Your photos will be a historical source"},
+  "src": {"es": "videos/t1/t1_03_es.mp4", "en": "videos/t1/t1_03_en.mp4"},
+  "poster": {"es": "videos/t1/t1_03_es.jpg", "en": "videos/t1/t1_03_en.jpg"},
+  "more": {
+   "es": "En tus diapositivas, las fuentes voluntarias se llaman directas y las involuntarias, indirectas; Bloch las llamó testimonios voluntarios e involuntarios, y advirtió que las segundas suelen engañar menos, porque no se hicieron para la posteridad (Bloch, 1949/2001, pp. 83-85). Un informe oficial tampoco es neutro, porque quien narra tiene interés en contar los hechos de una manera. La Tumba de los Augures, en Tarquinia (h. 540-530 a. C.), reúne boxeadores, luchadores con sus premios y una figura de gesto ambiguo, quizá danza, quizá carrera (Bevagna, 2014, p. 397).",
+   "en": "On the slides, intentional sources are called direct and unintentional ones indirect; Bloch called them voluntary and involuntary testimonies, and warned that the latter tend to mislead less, because they were not made for posterity (Bloch, 1949/2001, pp. 83-85). An official report is not neutral either, since whoever tells the story has an interest in telling it a certain way. The Tomb of the Augurs, at Tarquinia (c. 540-530 BC), brings together boxers, wrestlers with their prizes and a figure whose gesture is ambiguous, perhaps dancing, perhaps running (Bevagna, 2014, p. 397)."},
+  "q": {
+   "es": {"q": "¿Qué criterio separa una fuente primaria de una secundaria?", "opts": ["Si es escrita o visual.", "Si es oficial o privada.", "Si está en un museo.", "Su cercanía temporal con los hechos que documenta."], "a": 3},
+   "en": {"q": "What criterion separates a primary source from a secondary one?", "opts": ["Whether it is written or visual.", "Whether it is official or private.", "Whether it is in a museum.", "How close in time it is to the events it documents."], "a": 3}}},
+ {"id": "t1_04", "sec": "1.2",
+  "title": {"es": "¿El ajedrez es deporte?", "en": "Is chess a sport?"},
+  "src": {"es": "videos/t1/t1_04_es.mp4", "en": "videos/t1/t1_04_en.mp4"},
+  "poster": {"es": "videos/t1/t1_04_es.jpg", "en": "videos/t1/t1_04_en.jpg"},
+  "more": {
+   "es": "Las cinco definiciones del tema (actividad física, ejercicio físico, juego, educación física y gimnasia) están en la diapositiva de aspectos terminológicos. El enfoque abierto procede de la Carta Europea del Deporte (Consejo de Europa, 1992). Guttmann representa la versión académica más estricta del enfoque cerrado, con el deporte como contienda física y no utilitaria, lo que deja fuera el ajedrez. Agón era el certamen, athlos la prueba con premio, gymnastiké el ejercicio desnudo y paidiá el juego (Miller, 2004). La RAE incorporó la acepción actual de «deporte» en 1925 (Olivera-Betrán y Torrebadella-Flix, 2015).",
+   "en": "The unit's five definitions (physical activity, physical exercise, play, physical education and gymnastics) are on the terminology slide. The broad approach comes from the European Sports Charter (Council of Europe, 1992). Guttmann represents the strictest academic version of the narrow approach, with sport as a physical, non-utilitarian contest, which leaves chess out. Agon was the contest, athlos the event with a prize, gymnastike exercise in the nude and paidia play (Miller, 2004). The Spanish Academy added the current meaning of 'deporte' in 1925 (Olivera-Betrán & Torrebadella-Flix, 2015)."},
+  "q": {
+   "es": {"q": "¿Qué documento recoge el enfoque abierto de deporte?", "opts": ["La Carta Europea del Deporte (1992).", "La Carta Olímpica de 1896.", "El reglamento de la FIFA.", "El Homo ludens de Huizinga."], "a": 0},
+   "en": {"q": "Which document sets out the broad approach to sport?", "opts": ["The European Sports Charter (1992).", "The 1896 Olympic Charter.", "The FIFA rulebook.", "Huizinga's Homo Ludens."], "a": 0}}},
+ {"id": "t1_05", "sec": "1.2",
+  "title": {"es": "¿Por qué el boxeo lleva guantes?", "en": "Why does boxing use gloves?"},
+  "src": {"es": "videos/t1/t1_05_es.mp4", "en": "videos/t1/t1_05_en.mp4"},
+  "poster": {"es": "videos/t1/t1_05_es.jpg", "en": "videos/t1/t1_05_en.jpg"},
+  "more": {
+   "es": "Elias y Dunning (1992) describen el ocio deportivo como un «de-control controlado y deleitable de las emociones» (p. 59) y sitúan en la Inglaterra del siglo XVIII la deportivización del boxeo, en paralelo a la parlamentarización de la vida política. Huizinga define el círculo mágico como un espacio y un tiempo separados de la vida corriente, con reglas propias (Huizinga, 1972, pp. 24-25). La imagen es un grabado de Samuel William Fores (1788) sobre el combate entre Richard Humphreys y Daniel Mendoza, de dominio público.",
+   "en": "Elias and Dunning (1992) describe sporting leisure as a 'controlled and enjoyable decontrolling of emotions' (p. 59) and place the sportisation of boxing in eighteenth-century England, in parallel with the parliamentarisation of political life. Huizinga defines the magic circle as a space and time set apart from ordinary life, with rules of its own (Huizinga, 1972, pp. 24-25). The image is a public-domain print by Samuel William Fores (1788) of the fight between Richard Humphreys and Daniel Mendoza."},
+  "q": {
+   "es": {"q": "¿Qué autores definieron el deporte como un «descontrol controlado» de las emociones?", "opts": ["Huizinga.", "Guttmann.", "Elias y Dunning.", "Eichberg."], "a": 2},
+   "en": {"q": "Which authors defined sport as a 'controlled decontrolling' of emotions?", "opts": ["Huizinga.", "Guttmann.", "Elias and Dunning.", "Eichberg."], "a": 2}}},
+ {"id": "t1_06", "sec": "1.2",
+  "title": {"es": "El cronómetro nació para apostar", "en": "The stopwatch was born for betting"},
+  "src": {"es": "videos/t1/t1_06_es.mp4", "en": "videos/t1/t1_06_en.mp4"},
+  "poster": {"es": "videos/t1/t1_06_es.jpg", "en": "videos/t1/t1_06_en.jpg"},
+  "more": {
+   "es": "Los siete rasgos de Guttmann son secularismo, igualdad, especialización, racionalización, burocratización, cuantificación y récord (Guttmann, 1978, p. 16); en su tabla, el récord no aparece en ninguna sociedad anterior a la moderna (p. 54). Las apuestas hípicas británicas impulsaron reglas escritas, clubes y cronómetros hacia mediados del siglo XVIII (Kretchmar et al., 2017). En el epílogo de 2004, Guttmann respondió a Decker que las hazañas de los faraones eran «propaganda rather than sports history» y que «five pharaohs are not enough to anticipate the world of modern sports» (Guttmann, 1978/2004, pp. 171-172). Enlaza con el faraón arquero del Tema 2.",
+   "en": "Guttmann's seven traits are secularism, equality, specialisation, rationalisation, bureaucratisation, quantification and the record (Guttmann, 1978, p. 16); in his table, the record appears in no society before the modern one (p. 54). British horse-race betting drove written rules, clubs and stopwatches from around the mid-eighteenth century (Kretchmar et al., 2017). In the 2004 afterword, Guttmann answered Decker that the pharaohs' feats were 'propaganda rather than sports history' and that 'five pharaohs are not enough to anticipate the world of modern sports' (Guttmann, 1978/2004, pp. 171-172). It links to the archer pharaoh of Unit 2."},
+  "q": {
+   "es": {"q": "¿Qué rasgo del deporte moderno no aparece, según Guttmann, en ninguna sociedad anterior?", "opts": ["La igualdad.", "El récord.", "La especialización.", "La racionalización."], "a": 1},
+   "en": {"q": "Which trait of modern sport, according to Guttmann, appears in no earlier society?", "opts": ["Equality.", "The record.", "Specialisation.", "Rationalisation."], "a": 1}}},
+ {"id": "t1_07", "sec": "1.3",
+  "title": {"es": "¿Corría como un finalista olímpico?", "en": "Did he run like an Olympic finalist?"},
+  "src": {"es": "videos/t1/t1_07_es.mp4", "en": "videos/t1/t1_07_en.mp4"},
+  "poster": {"es": "videos/t1/t1_07_es.jpg", "en": "videos/t1/t1_07_en.jpg"},
+  "more": {
+   "es": "Webb, Cupper y Robins (2006) estimaron 10,3 m/s para el rastro T8; Ruiz y Torices (2013, pp. 34-35) lo recalcularon con una ecuación contrastada con corredores en estadio y en arena de playa y obtuvieron 7,15 m/s. En Engare Sero (Tanzania) se conservan más de cuatrocientas huellas del Pleistoceno tardío, con un grupo de catorce mujeres adultas que caminaban juntas (Hatala et al., 2020).",
+   "en": "Webb, Cupper and Robins (2006) estimated 10.3 m/s for trackway T8; Ruiz and Torices (2013, pp. 34-35) recalculated it with an equation tested on runners in a stadium and on beach sand and obtained 7.15 m/s. At Engare Sero (Tanzania) over four hundred Late Pleistocene footprints survive, including a group of fourteen adult women walking together (Hatala et al., 2020)."},
+  "q": {
+   "es": {"q": "¿Qué ocurrió con la velocidad calculada para el rastro T8 de Willandra Lakes?", "opts": ["Se confirmó en 2013.", "Resultó ser de un animal.", "Se duplicó al recalcularla.", "Se rebajó a 7,15 m/s, propia de una persona corriente sobre barro."], "a": 3},
+   "en": {"q": "What happened to the speed calculated for trackway T8 at Willandra Lakes?", "opts": ["It was confirmed in 2013.", "It turned out to be an animal's.", "It doubled when recalculated.", "It was lowered to 7.15 m/s, typical of an ordinary person on mud."], "a": 3}}},
+ {"id": "t1_08", "sec": "1.3",
+  "title": {"es": "Seis mil trampas en el desierto", "en": "Six thousand traps in the desert"},
+  "src": {"es": "videos/t1/t1_08_es.mp4", "en": "videos/t1/t1_08_en.mp4"},
+  "poster": {"es": "videos/t1/t1_08_es.jpg", "en": "videos/t1/t1_08_en.jpg"},
+  "more": {
+   "es": "Crassard et al. (2022) establecieron su función como trampas de caza masiva; hay catalogadas más de 6.000, de decenas de metros a varios kilómetros. Tarawneh et al. (2026) datan las jordanas en el Neolítico Precerámico B tardío. Nadel et al. (2024) proponen el uso social y ceremonial de las cometas timnitas. Otras armas de caza del tema: las lanzas de Schöningen, de unos 200.000 años (Hutson et al., 2025), y el bumerán de marfil de Obłazowa, cuya fecha, 40.300-37.300 a. C., es la del estrato (Talamo et al., 2025).",
+   "en": "Crassard et al. (2022) established their function as mass-hunting traps; over 6,000 are catalogued, from tens of metres to several kilometres long. Tarawneh et al. (2026) date the Jordanian ones to the late Pre-Pottery Neolithic B. Nadel et al. (2024) propose a social and ceremonial use for the Timnian kites. Other hunting weapons in the unit: the Schöningen spears, about 200,000 years old (Hutson et al., 2025), and the ivory boomerang from Obłazowa, whose date, 40,300-37,300 BC, is that of its layer (Talamo et al., 2025)."},
+  "q": {
+   "es": {"q": "¿Por qué se atribuye a las cometas timnitas una función social y ceremonial?", "opts": ["Porque sus constructores eran pastores y apenas conservan huesos de presas.", "Porque tienen altares.", "Porque son demasiado pequeñas.", "Porque aparecen junto a tumbas."], "a": 0},
+   "en": {"q": "Why are the Timnian kites attributed a social and ceremonial function?", "opts": ["Because their builders were herders and they keep hardly any prey bones.", "Because they have altars.", "Because they are too small.", "Because they appear next to tombs."], "a": 0}}},
+ {"id": "t1_09", "sec": "1.3",
+  "title": {"es": "Más brazo que una remera de Cambridge", "en": "Stronger arms than a Cambridge rower"},
+  "src": {"es": "videos/t1/t1_09_es.mp4", "en": "videos/t1/t1_09_en.mp4"},
+  "poster": {"es": "videos/t1/t1_09_es.jpg", "en": "videos/t1/t1_09_en.jpg"},
+  "more": {
+   "es": "Ruff et al. (2015) registran en 1.842 esqueletos europeos una caída de la resistencia de fémur y tibia desde el V-III milenio a. C., ligada a la sedentarización, que se detiene en la Edad del Hierro y en época romana. Macintosh, Pinhasi y Stock (2017) compararon mujeres centroeuropeas del Neolítico a la Edad del Hierro con remeras de la Universidad de Cambridge, que entrenaban dos veces al día. Con la agricultura cambió sobre todo la dirección del esfuerzo femenino, que se concentró en los brazos.",
+   "en": "Ruff et al. (2015) record, across 1,842 European skeletons, a decline in the strength of the femur and tibia from the 5th-3rd millennium BC, linked to sedentary life, which stops in the Iron Age and Roman period. Macintosh, Pinhasi and Stock (2017) compared Central European women from the Neolithic to the Iron Age with University of Cambridge rowers who trained twice a day. With farming, what changed above all was the direction of women's physical effort, which became concentrated in the arms."},
+  "q": {
+   "es": {"q": "Según Ruff et al. (2015), ¿cuándo pierden resistencia los huesos de las piernas de los europeos?", "opts": ["Con la Revolución Industrial.", "Con la llegada de la agricultura y la vida sedentaria.", "En la Edad Media.", "En el siglo XX."], "a": 1},
+   "en": {"q": "According to Ruff et al. (2015), when did European leg bones lose strength?", "opts": ["With the Industrial Revolution.", "With the arrival of farming and sedentary life.", "In the Middle Ages.", "In the twentieth century."], "a": 1}}}
+]
