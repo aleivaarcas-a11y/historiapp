@@ -1,0 +1,788 @@
+{
+ "1.1.0": {
+  "es": [
+   {
+    "k": "autor",
+    "v": "Leopold von Ranke fijó en la Alemania del siglo XIX el primer modelo de la disciplina con la consigna de mostrar el pasado «tal y como verdaderamente fue» (Ranke, 1824)."
+   },
+   {
+    "k": "concepto",
+    "v": "La debilidad del modelo de Ranke residía en la creencia de que los hechos hablan por sí solos en cuanto el investigador se aparta y los deja hablar."
+   },
+   {
+    "k": "autor",
+    "v": "Edward H. Carr sostuvo que el método histórico consiste en conocer un hecho, interpretarlo dentro de una pregunta y elaborar con él una conclusión razonada (Carr, 1961/2010, p. 60)."
+   },
+   {
+    "k": "concepto",
+    "v": "El método histórico somete las huellas del pasado a una prueba de coherencia que admite el error y su corrección, rasgo que lo separa de la simple intuición narrativa."
+   }
+  ],
+  "en": [
+   {
+    "k": "autor",
+    "v": "Leopold von Ranke established the first model of the discipline in nineteenth-century Germany, with the aim of showing the past “as it really was” (Ranke, 1824)."
+   },
+   {
+    "k": "concepto",
+    "v": "The weakness of Ranke's model lay in the belief that facts speak for themselves as soon as the researcher steps aside and lets them speak."
+   },
+   {
+    "k": "autor",
+    "v": "Edward H. Carr argued that historical method consists of knowing a fact, interpreting it within a question and drawing a reasoned conclusion from it (Carr, 1961/2010, p. 60)."
+   },
+   {
+    "k": "concepto",
+    "v": "Historical method subjects the traces of the past to a test of coherence that allows for error and its correction, a feature that separates it from mere narrative intuition."
+   }
+  ]
+ },
+ "1.1.1": {
+  "es": [
+   {
+    "k": "autor",
+    "v": "Marc Bloch distinguió entre testimonios voluntarios, escritos para la posteridad, e involuntarios, que nadie concibió como registro histórico (Bloch, 1949/2001, pp. 84-93)."
+   },
+   {
+    "k": "ejemplo",
+    "v": "Una inscripción funeraria o una crónica oficial ilustran el testimonio voluntario, mientras que una pintura de tumba o los restos de una grada ilustran el involuntario."
+   },
+   {
+    "k": "concepto",
+    "v": "Según Bloch, los testimonios involuntarios suelen resultar más fiables que los voluntarios, porque quienes los produjeron no pretendían convencer a nadie con ellos."
+   },
+   {
+    "k": "concepto",
+    "v": "La crítica de fuentes, que Julio Aróstegui sistematiza, interroga cada documento sobre quién lo hizo, cuándo, dónde, para quién y qué calla (Aróstegui, 2001, pp. 381-420)."
+   },
+   {
+    "k": "concepto",
+    "v": "El historiador honesto mantiene abiertas las varias lecturas de un objeto tallado en hueso o de una escena pintada mientras la prueba disponible no decida entre ellas."
+   }
+  ],
+  "en": [
+   {
+    "k": "autor",
+    "v": "Marc Bloch distinguished between intentional testimonies, written for posterity, and unintentional ones, which nobody conceived of as a historical record (Bloch, 1949/2001, pp. 84-93)."
+   },
+   {
+    "k": "ejemplo",
+    "v": "A funerary inscription or an official chronicle illustrates the intentional testimony, whereas a tomb painting or the remains of a stand illustrate the unintentional one."
+   },
+   {
+    "k": "concepto",
+    "v": "According to Bloch, unintentional testimonies tend to be more reliable than intentional ones, because those who produced them did not seek to convince anybody."
+   },
+   {
+    "k": "concepto",
+    "v": "Source criticism, as systematised by Julio Aróstegui, questions every document about who made it, when, where, for whom and what it leaves unsaid (Aróstegui, 2001, pp. 381-420)."
+   },
+   {
+    "k": "concepto",
+    "v": "The honest historian keeps the various readings of a carved bone object or a painted scene open for as long as the available evidence does not decide between them."
+   }
+  ]
+ },
+ "1.1.2": {
+  "es": [
+   {
+    "k": "concepto",
+    "v": "La distinción entre fuente primaria y secundaria atiende a la cercanía temporal del testimonio, mientras que la de directa e indirecta atiende a la intención de quien lo produjo."
+   },
+   {
+    "k": "concepto",
+    "v": "Una fuente secundaria interpreta a una sociedad desde fuera de su propio tiempo, en ocasiones varios siglos después de los hechos que estudia."
+   },
+   {
+    "k": "concepto",
+    "v": "La combinación de ambos criterios, intención y temporalidad, permite al historiador del deporte clasificar con precisión cualquier material que llegue a sus manos."
+   }
+  ],
+  "en": [
+   {
+    "k": "concepto",
+    "v": "The distinction between primary and secondary sources concerns the temporal proximity of the testimony, whereas that between direct and indirect sources concerns the intention of its producer."
+   },
+   {
+    "k": "concepto",
+    "v": "A secondary source interprets a society from outside its own time, sometimes several centuries after the events it studies."
+   },
+   {
+    "k": "concepto",
+    "v": "Combining both criteria, intention and temporality, allows the sport historian to classify precisely any material that comes into their hands."
+   }
+  ]
+ },
+ "1.1.3": {
+  "es": [
+   {
+    "k": "concepto",
+    "v": "Las ciencias auxiliares son las disciplinas a las que recurre la crítica de fuentes para acceder a testimonios que de otro modo permanecerían mudos (Aróstegui, 2001, pp. 381-420)."
+   },
+   {
+    "k": "ejemplo",
+    "v": "La arqueología ha devuelto a la luz estadios, hipódromos y canchas de juego de pelota en culturas muy distintas entre sí."
+   },
+   {
+    "k": "ejemplo",
+    "v": "La numismática permite leer en una moneda antigua toda una ideología del cuerpo, y la epigrafía rescata listas de vencedores grabadas en piedra."
+   },
+   {
+    "k": "concepto",
+    "v": "La paleografía hace legible el manuscrito medieval, y la geografía explica por qué una sociedad de jinetes surge en la estepa y no en el pantano."
+   },
+   {
+    "k": "ejemplo",
+    "v": "La combinación de estas disciplinas permite reconstruir sociedades sin textos explícitos sobre sus prácticas corporales, como sucederá con Creta en el tema siguiente."
+   }
+  ],
+  "en": [
+   {
+    "k": "concepto",
+    "v": "The auxiliary sciences are the disciplines to which source criticism turns in order to access testimonies that would otherwise remain silent (Aróstegui, 2001, pp. 381-420)."
+   },
+   {
+    "k": "ejemplo",
+    "v": "Archaeology has brought to light stadiums, hippodromes and ball courts in cultures very different from one another."
+   },
+   {
+    "k": "ejemplo",
+    "v": "Numismatics makes it possible to read a whole ideology of the body in an ancient coin, and epigraphy recovers lists of victors carved in stone."
+   },
+   {
+    "k": "concepto",
+    "v": "Palaeography makes the medieval manuscript legible, and geography explains why a society of horsemen arises on the steppe and not in the marshland."
+   },
+   {
+    "k": "ejemplo",
+    "v": "The combination of these disciplines makes it possible to reconstruct societies without explicit texts on their bodily practices, as will be the case with Crete in the next unit."
+   }
+  ]
+ },
+ "1.1.4": {
+  "es": [
+   {
+    "k": "ejemplo",
+    "v": "Una mirada diacrónica puede seguir cómo la lucha pasa, en sucesivas sociedades, del rito de iniciación al deporte reglado."
+   },
+   {
+    "k": "ejemplo",
+    "v": "Una mirada sincrónica puede estudiar qué significaba el gimnasio en la Atenas del siglo V a. C. en su relación con la educación, la política y la religión."
+   },
+   {
+    "k": "concepto",
+    "v": "Ninguna de las dos miradas basta por sí sola, de modo que el historiador alterna entre ellas según lo que quiera comprender en cada momento."
+   },
+   {
+    "k": "concepto",
+    "v": "El manual emplea sobre todo la mirada sincrónica dentro de cada capítulo y recurre a la diacrónica cuando una práctica atraviesa varias de las civilizaciones estudiadas."
+   }
+  ],
+  "en": [
+   {
+    "k": "ejemplo",
+    "v": "A diachronic view can follow how wrestling moves, across successive societies, from initiation rite to regulated sport."
+   },
+   {
+    "k": "ejemplo",
+    "v": "A synchronic view can study what the gymnasium meant in fifth-century BC Athens in its relationship with education, politics and religion."
+   },
+   {
+    "k": "concepto",
+    "v": "Neither view is sufficient on its own, so the historian alternates between them according to what they wish to understand at each moment."
+   },
+   {
+    "k": "concepto",
+    "v": "The textbook relies mainly on the synchronic view within each chapter and turns to the diachronic view when a practice runs through several of the civilisations studied."
+   }
+  ]
+ },
+ "1.1.5": {
+  "es": [
+   {
+    "k": "fecha",
+    "v": "En 1928 los 800 metros lisos femeninos debutaron en Ámsterdam en un clima de oposición de entrenadores, médicos y del propio Comité Olímpico Internacional (English, 2019)."
+   },
+   {
+    "k": "autor",
+    "v": "Roger Robinson volvió a las crónicas y resultados oficiales de la época y comprobó que las nueve atletas que tomaron la salida terminaron la carrera (Robinson, 2018)."
+   },
+   {
+    "k": "ejemplo",
+    "v": "La ganadora de aquella final, la alemana Lina Radke, batió el récord del mundo, dato que contradice el relato de un desplome colectivo en la meta."
+   },
+   {
+    "k": "concepto",
+    "v": "El supuesto desplome fue una construcción de la prensa de la época, con el cronista estadounidense John Tunis a la cabeza, de la que el COI se sirvió para justificar el veto."
+   },
+   {
+    "k": "fecha",
+    "v": "El veto a las pruebas femeninas de más de 200 metros se mantuvo hasta los Juegos Olímpicos de Roma de 1960 (World Athletics, s. f.)."
+   }
+  ],
+  "en": [
+   {
+    "k": "fecha",
+    "v": "In 1928 the women's 800 metres made its debut in Amsterdam amid opposition from coaches, doctors and the International Olympic Committee itself (English, 2019)."
+   },
+   {
+    "k": "autor",
+    "v": "Roger Robinson returned to the chronicles and official results of the period and established that all nine athletes who started the race finished it (Robinson, 2018)."
+   },
+   {
+    "k": "ejemplo",
+    "v": "The winner of that final, the German Lina Radke, broke the world record, a fact that contradicts the story of a collective collapse at the finish."
+   },
+   {
+    "k": "concepto",
+    "v": "The supposed collapse was a construction of the press of the time, led by the American journalist John Tunis, which the IOC then used to justify the ban."
+   },
+   {
+    "k": "fecha",
+    "v": "The ban on women's events longer than 200 metres remained in place until the 1960 Rome Olympic Games (World Athletics, n.d.)."
+   }
+  ]
+ },
+ "1.2.0": {
+  "es": [
+   {
+    "k": "autor",
+    "v": "Johan Huizinga definió el juego como una acción libre, sentida como situada fuera de la vida corriente, limitada en tiempo y espacio y sometida a reglas (Huizinga, 1938/1972, pp. 26-27)."
+   },
+   {
+    "k": "autor",
+    "v": "Suits juzgó demasiado amplia la definición de Huizinga, y su crítica sirvió a Kretchmar, Dyreson, Llewellyn y Gleaves para depurar el concepto de juego."
+   },
+   {
+    "k": "concepto",
+    "v": "Kretchmar y sus colaboradores fijan el juego como un modo de acercarse a una actividad que es «autotélico y temporal», es decir, con su fin en ella misma (Kretchmar et al., 2017, cap. 1)."
+   },
+   {
+    "k": "concepto",
+    "v": "El carácter autotélico separa el juego del ejercicio físico, que se planifica con un objetivo externo como la mejora de la condición física."
+   }
+  ],
+  "en": [
+   {
+    "k": "autor",
+    "v": "Johan Huizinga defined play as a free action, felt to lie outside ordinary life, limited in time and space and subject to rules (Huizinga, 1938/1972, pp. 26-27)."
+   },
+   {
+    "k": "autor",
+    "v": "Suits judged Huizinga's definition too broad, and his critique enabled Kretchmar, Dyreson, Llewellyn and Gleaves to refine the concept of play."
+   },
+   {
+    "k": "concepto",
+    "v": "Kretchmar and his co-authors define play as a way of approaching an activity that is “autotelic and temporary”, that is, with its end within itself (Kretchmar et al., 2017, ch. 1)."
+   },
+   {
+    "k": "concepto",
+    "v": "Its autotelic character separates play from physical exercise, which is planned with an external goal such as the improvement of physical fitness."
+   }
+  ]
+ },
+ "1.2.1": {
+  "es": [
+   {
+    "k": "fecha",
+    "v": "La definición abierta del deporte procede de la Carta Europea del Deporte del Consejo de Europa (1992), y Rey (2014) la recoge en su epistemología de la actividad física."
+   },
+   {
+    "k": "autor",
+    "v": "Allen Guttmann ordenó la cuestión en una cadena de dicotomías, juego, juego organizado, juego competitivo y contienda física, que equivale al deporte en sentido estricto (Guttmann, 1978, pp. 7 y 9)."
+   },
+   {
+    "k": "concepto",
+    "v": "Guttmann define el deporte como contienda física de carácter lúdico y no utilitario, esquema deliberadamente estrecho que constituye la versión académica del enfoque cerrado."
+   },
+   {
+    "k": "ejemplo",
+    "v": "El esquema de Guttmann excluye del deporte el ajedrez, por carecer de componente físico suficiente, y la caza de la ballena, por su finalidad utilitaria."
+   },
+   {
+    "k": "autor",
+    "v": "Roger Caillois replicó a Huizinga que su obra investigaba el espíritu lúdico en la cultura y carecía de un estudio riguroso de los juegos mismos (Guttmann, 1978, p. 7)."
+   }
+  ],
+  "en": [
+   {
+    "k": "fecha",
+    "v": "The broad definition of sport comes from the Council of Europe's European Sports Charter (1992), and Rey (2014) adopts it in his epistemology of physical activity."
+   },
+   {
+    "k": "autor",
+    "v": "Allen Guttmann arranged the question as a chain of dichotomies, play, organised play, competitive play and physical contest, the last being sport in the strict sense (Guttmann, 1978, pp. 7 and 9)."
+   },
+   {
+    "k": "concepto",
+    "v": "Guttmann defines sport as a playful and non-utilitarian physical contest, a deliberately narrow scheme that constitutes the academic version of the narrow approach."
+   },
+   {
+    "k": "ejemplo",
+    "v": "Guttmann's scheme excludes chess from sport, because it lacks a sufficient physical component, and whaling, because of its utilitarian purpose."
+   },
+   {
+    "k": "autor",
+    "v": "Roger Caillois replied to Huizinga that his work investigated the play spirit in culture and lacked a rigorous study of games themselves (Guttmann, 1978, p. 7)."
+   }
+  ]
+ },
+ "1.2.2": {
+  "es": [
+   {
+    "k": "concepto",
+    "v": "Entre los griegos el agón designaba el certamen, el athlos la prueba con premio, la gymnastiké el ejercicio practicado desnudo y la paidiá el juego (Miller, 2004)."
+   },
+   {
+    "k": "concepto",
+    "v": "La ausencia de una palabra griega equivalente demuestra que el deporte, en su acepción actual, es un concepto fechado en el siglo XIX y de contorno abierto."
+   },
+   {
+    "k": "ejemplo",
+    "v": "Bajo el término deporte conviven hoy actividades con una implicación física muy desigual, del atletismo olímpico a los e-sports."
+   },
+   {
+    "k": "autor",
+    "v": "Marcel Mauss entiende cada gesto físico como un hecho social aprendido, mientras que Pierre Bourdieu lee la práctica deportiva como una marca de clase."
+   },
+   {
+    "k": "concepto",
+    "v": "Ante una práctica corporal antigua, la pregunta pertinente interroga para qué servía y por qué aquella sociedad le dio precisamente esa forma."
+   }
+  ],
+  "en": [
+   {
+    "k": "concepto",
+    "v": "Among the Greeks, agon referred to the contest, athlos to the event with a prize, gymnastike to exercise practised naked and paidia to play (Miller, 2004)."
+   },
+   {
+    "k": "concepto",
+    "v": "The absence of an equivalent Greek word shows that sport, in its current sense, is a concept dating from the nineteenth century with open boundaries."
+   },
+   {
+    "k": "ejemplo",
+    "v": "Under the term sport, activities with very unequal physical involvement now coexist, from Olympic athletics to e-sports."
+   },
+   {
+    "k": "autor",
+    "v": "Marcel Mauss understands every physical gesture as a learned social fact, whereas Pierre Bourdieu reads sporting practice as a marker of class."
+   },
+   {
+    "k": "concepto",
+    "v": "Faced with an ancient bodily practice, the relevant question asks what it served for and why that society gave it precisely that form."
+   }
+  ]
+ },
+ "1.2.3": {
+  "es": [
+   {
+    "k": "autor",
+    "v": "Huizinga apoyó la prioridad del juego sobre la cultura en que sociedades sin organización estatal reconocible practican ya formas de juego identificables (Huizinga, 1938/1972, pp. 10-11)."
+   },
+   {
+    "k": "concepto",
+    "v": "Dentro del círculo mágico rigen reglas absolutas que fuera de él carecen de valor, y el jugador se sustrae voluntariamente a la necesidad (Huizinga, 1938/1972, pp. 24-25)."
+   },
+   {
+    "k": "autor",
+    "v": "Elias y Dunning invierten la explicación de Huizinga al considerar el deporte un producto de la sociedad, datable y localizable en el tiempo y en el espacio (Elias y Dunning, 1992)."
+   },
+   {
+    "k": "ejemplo",
+    "v": "En el boxeo inglés, la sustitución de las piernas por los puños, los guantes acolchados y las categorías documentan una creciente sensibilidad hacia la violencia (Elias y Dunning, 1992, pp. 33-34 y 36-37)."
+   },
+   {
+    "k": "concepto",
+    "v": "La diferencia de método, fenomenología del jugar en Huizinga y reconstrucción documental de reglamentos en Elias, explica que ambas lecturas no admitan una síntesis sencilla."
+   }
+  ],
+  "en": [
+   {
+    "k": "autor",
+    "v": "Huizinga based the priority of play over culture on the fact that societies without any recognisable state organisation already practise identifiable forms of play (Huizinga, 1938/1972, pp. 10-11)."
+   },
+   {
+    "k": "concepto",
+    "v": "Within the magic circle absolute rules apply that have no value outside it, and the player voluntarily withdraws from necessity (Huizinga, 1938/1972, pp. 24-25)."
+   },
+   {
+    "k": "autor",
+    "v": "Elias and Dunning reverse Huizinga's explanation by regarding sport as a product of society, which can be dated and located in time and space (Elias and Dunning, 1992)."
+   },
+   {
+    "k": "ejemplo",
+    "v": "In English boxing, the replacement of legs by fists, padded gloves and weight categories document a growing sensitivity towards violence (Elias and Dunning, 1992, pp. 33-34 and 36-37)."
+   },
+   {
+    "k": "concepto",
+    "v": "The difference in method, a phenomenology of playing in Huizinga and a documentary reconstruction of rules in Elias, explains why the two readings do not allow a simple synthesis."
+   }
+  ]
+ },
+ "1.2.4": {
+  "es": [
+   {
+    "k": "autor",
+    "v": "Allen Guttmann enumeró los siete rasgos en un único párrafo de From Ritual to Record y dedicó después un capítulo a cada uno de ellos (Guttmann, 1978, p. 16)."
+   },
+   {
+    "k": "concepto",
+    "v": "La racionalización consiste en la sustitución de la costumbre por el cálculo, y la cuantificación en la conversión de todo resultado en un número comparable (Guttmann, 1978, pp. 40 y 47)."
+   },
+   {
+    "k": "concepto",
+    "v": "El récord es la consecuencia lógica de la cuantificación, puesto que el hecho de medir genera la necesidad de comparar el presente con el pasado (Guttmann, 1978, pp. 52-53)."
+   },
+   {
+    "k": "fecha",
+    "v": "Hacia mediados del siglo XVIII se emplearon en Gran Bretaña cronómetros ideados para tomar el pulso a los pacientes con el fin de registrar los tiempos de los caballos (Kretchmar et al., 2017, cap. 6)."
+   },
+   {
+    "k": "ejemplo",
+    "v": "La apuesta hípica británica obligó a redactar reglas escritas y a fundar clubes reguladores, capítulo temprano de la conversión del deporte en mercancía."
+   }
+  ],
+  "en": [
+   {
+    "k": "autor",
+    "v": "Allen Guttmann listed the seven characteristics in a single paragraph of From Ritual to Record and then devoted a chapter to each of them (Guttmann, 1978, p. 16)."
+   },
+   {
+    "k": "concepto",
+    "v": "Rationalisation consists of replacing custom with calculation, and quantification of converting every result into a comparable number (Guttmann, 1978, pp. 40 and 47)."
+   },
+   {
+    "k": "concepto",
+    "v": "The record is the logical consequence of quantification, since the act of measuring creates the need to compare the present with the past (Guttmann, 1978, pp. 52-53)."
+   },
+   {
+    "k": "fecha",
+    "v": "Around the mid-eighteenth century, stopwatches designed for doctors to take patients' pulses were used in Britain to record the times of racehorses (Kretchmar et al., 2017, ch. 6)."
+   },
+   {
+    "k": "ejemplo",
+    "v": "British horse-race betting made it necessary to draw up written rules and to found regulatory clubs, an early chapter in the conversion of sport into a commodity."
+   }
+  ]
+ },
+ "1.2.5": {
+  "es": [
+   {
+    "k": "autor",
+    "v": "Eichberg opone al modelo lineal de Guttmann un método trialéctico que describe tres patrones de cultura corporal presentes a la vez en una misma sociedad (Eichberg, 1997, pp. 122-123)."
+   },
+   {
+    "k": "concepto",
+    "v": "El deporte de rendimiento se construye sobre la producción de resultados, la medición y la comparación, y sus expertos son entrenadores, científicos del rendimiento y fisiólogos."
+   },
+   {
+    "k": "concepto",
+    "v": "El deporte de la forma física, segundo patrón de Eichberg, se orienta a la salud y al bienestar bajo la tutela de médicos y pedagogos."
+   },
+   {
+    "k": "ejemplo",
+    "v": "La danza y las formas populares de juego encarnan el tercer patrón, hecho de experiencia corporal y sensualidad social, con el maestro, el malabarista o el acróbata como especialistas."
+   },
+   {
+    "k": "concepto",
+    "v": "Eichberg advierte de que ningún fenómeno real encaja de forma limpia en una sola categoría, porque su propuesta ofrece herramientas de análisis y no un catálogo cerrado (Eichberg, 1997, p. 123)."
+   }
+  ],
+  "en": [
+   {
+    "k": "autor",
+    "v": "Eichberg sets against Guttmann's linear model a trialectical method that describes three patterns of body culture present simultaneously in the same society (Eichberg, 1997, pp. 122-123)."
+   },
+   {
+    "k": "concepto",
+    "v": "Achievement sport is built on the production of results, measurement and comparison, and its experts are coaches, performance scientists and physiologists."
+   },
+   {
+    "k": "concepto",
+    "v": "Fitness sport, Eichberg's second pattern, is oriented towards health and well-being under the guidance of doctors and educators."
+   },
+   {
+    "k": "ejemplo",
+    "v": "Dance and popular forms of play embody the third pattern, made of bodily experience and social sensuality, with the master, the juggler or the acrobat as specialists."
+   },
+   {
+    "k": "concepto",
+    "v": "Eichberg warns that no real phenomenon fits neatly into a single category, because his proposal offers tools for analysis and not a closed catalogue (Eichberg, 1997, p. 123)."
+   }
+  ]
+ },
+ "1.2.6": {
+  "es": [
+   {
+    "k": "autor",
+    "v": "Huizinga aporta a la asignatura la pregunta sobre qué recinto lúdico traza una práctica y qué reglas de la vida corriente suspende quien participa en ella."
+   },
+   {
+    "k": "autor",
+    "v": "Guttmann plantea si un deporte ordenado refleja una sociedad ordenada, y Eichberg pregunta qué culturas corporales convivían en una sociedad y cuáles quedaron fuera del relato."
+   },
+   {
+    "k": "concepto",
+    "v": "Los ejes de función y significado forman la retícula que la asignatura aplica desde el origen de la humanidad hasta la actualidad, de modo que cada capítulo remite a alguno de ellos."
+   }
+  ],
+  "en": [
+   {
+    "k": "autor",
+    "v": "Huizinga contributes to the course the question of what playful enclosure a practice draws and which rules of ordinary life its participants suspend."
+   },
+   {
+    "k": "autor",
+    "v": "Guttmann asks whether an ordered sport reflects an ordered society, and Eichberg asks which body cultures coexisted in a society and which were left out of the narrative."
+   },
+   {
+    "k": "concepto",
+    "v": "The axes of function and meaning form the grid that the course applies from the origins of humankind to the present day, so that every chapter refers to one of them."
+   }
+  ]
+ },
+ "1.3.0": {
+  "es": [
+   {
+    "k": "concepto",
+    "v": "La bipedestación expone menos superficie corporal al sol cenital y facilita la disipación del calor por sudoración (Kretchmar et al., 2017, cap. 1)."
+   },
+   {
+    "k": "concepto",
+    "v": "La termorregulación, combinada con otros rasgos físicos, convirtió a los homínidos en los depredadores de resistencia más eficaces de la sabana."
+   },
+   {
+    "k": "concepto",
+    "v": "La postura erguida liberó las manos para cargar a las crías, lo que permitió una gestación y una infancia más largas y un cerebro de mayor capacidad craneal."
+   },
+   {
+    "k": "autor",
+    "v": "El biólogo Bernd Heinrich define la «visión» como la capacidad de proyectar mentalmente un objetivo ausente, capacidad que enlaza la resistencia de la carrera con la caza y el deporte."
+   }
+  ],
+  "en": [
+   {
+    "k": "concepto",
+    "v": "Upright posture exposes less body surface to the overhead sun and makes it easier to dissipate heat through sweating (Kretchmar et al., 2017, ch. 1)."
+   },
+   {
+    "k": "concepto",
+    "v": "Thermoregulation, combined with other physical traits, turned hominins into the most effective endurance predators of the savannah."
+   },
+   {
+    "k": "concepto",
+    "v": "Upright posture freed the hands to carry offspring, which allowed longer gestation and childhood and a brain of greater cranial capacity."
+   },
+   {
+    "k": "autor",
+    "v": "The biologist Bernd Heinrich defines “vision” as the ability to project mentally an absent goal, an ability that links running endurance with hunting and sport."
+   }
+  ]
+ },
+ "1.3.1": {
+  "es": [
+   {
+    "k": "autor",
+    "v": "Diem abre su Historia de los deportes con la frase «todo ejercicio físico tuvo un origen cultual», porque el hombre prehistórico vivía su existencia como un don de fuerzas superiores (Fernández Truan, Tomo I, pp. 20-22)."
+   },
+   {
+    "k": "ejemplo",
+    "v": "Eppensteiner sitúa la prueba del instinto deportivo en la observación de dos niños que se retan a llegar antes a una meta (Fernández Truan, Tomo I, pp. 23-24)."
+   },
+   {
+    "k": "fecha",
+    "v": "Para Eichel, el primer ejercicio corporal fue el lanzamiento de jabalina hacia el 70.000 a. C., seguido del arpón y, hacia el 24.000 a. C., del arco y la flecha (Fernández Truan, Tomo I, pp. 18-19)."
+   },
+   {
+    "k": "concepto",
+    "v": "Lukas y Eichel sustituyen «ejercicio físico» por «ejercicio corporal» desde la República Democrática Alemana para distanciarse del vocabulario idealista occidental (Fernández Truan, Tomo I, pp. 16-18)."
+   },
+   {
+    "k": "autor",
+    "v": "Popplow sitúa el nacimiento del ejercicio físico en la danza del Paleolítico inferior, documentada por huellas de pies y moldes de manos de hasta ochenta mil años (Fernández Truan, Tomo I, pp. 14-16)."
+   }
+  ],
+  "en": [
+   {
+    "k": "autor",
+    "v": "Diem opens his History of Sport with the sentence “all physical exercise had a cultic origin”, because prehistoric man lived his existence as a gift of higher powers (Fernández Truan, Vol. I, pp. 20-22)."
+   },
+   {
+    "k": "ejemplo",
+    "v": "Eppensteiner locates the proof of the sporting instinct in the observation of two children who challenge each other to reach a finishing point first (Fernández Truan, Vol. I, pp. 23-24)."
+   },
+   {
+    "k": "fecha",
+    "v": "For Eichel, the first bodily exercise was javelin throwing around 70,000 BC, followed by the harpoon and, around 24,000 BC, the bow and arrow (Fernández Truan, Vol. I, pp. 18-19)."
+   },
+   {
+    "k": "concepto",
+    "v": "Writing from the German Democratic Republic, Lukas and Eichel replace “physical exercise” with “bodily exercise” to distance themselves from Western idealist vocabulary (Fernández Truan, Vol. I, pp. 16-18)."
+   },
+   {
+    "k": "autor",
+    "v": "Popplow places the birth of physical exercise in the dance of the Lower Palaeolithic, documented by footprints and hand moulds up to eighty thousand years old (Fernández Truan, Vol. I, pp. 14-16)."
+   }
+  ]
+ },
+ "1.3.2": {
+  "es": [
+   {
+    "k": "fecha",
+    "v": "Blanchard y Cheska publicaron en 1985 el primer intento sistemático de aplicar el método antropológico al deporte, traducido al castellano en 1986 como Antropología del deporte."
+   },
+   {
+    "k": "concepto",
+    "v": "La analogía etnográfica informa de qué funciones puede desempeñar una práctica física en una sociedad sin escritura, y no de cómo vivía en concreto el hombre prehistórico."
+   },
+   {
+    "k": "concepto",
+    "v": "El eje de la identidad social aparece cuando se juega sin importar la edad, el sexo o el resultado, y el de la adaptación ecológica cuando la práctica mejora la caza o la defensa."
+   },
+   {
+    "k": "concepto",
+    "v": "El eje de la especialización aparece cuando el juego sirve para detectar talento dentro del grupo, según la lectura habitual de la obra de Blanchard y Cheska (1986)."
+   }
+  ],
+  "en": [
+   {
+    "k": "fecha",
+    "v": "Blanchard and Cheska published in 1985 the first systematic attempt to apply the anthropological method to sport, translated into Spanish in 1986 as Antropología del deporte."
+   },
+   {
+    "k": "concepto",
+    "v": "Ethnographic analogy reveals which functions a physical practice can perform in a society without writing, and not how prehistoric man actually lived."
+   },
+   {
+    "k": "concepto",
+    "v": "The axis of social identity appears when people play regardless of age, sex or outcome, and that of ecological adaptation when the practice improves hunting or defence skills."
+   },
+   {
+    "k": "concepto",
+    "v": "The axis of specialisation appears when play serves to detect talent within the group, according to the usual reading of Blanchard and Cheska's work (1986)."
+   }
+  ]
+ },
+ "1.3.3": {
+  "es": [
+   {
+    "k": "concepto",
+    "v": "Los palos, las cuerdas y las fibras, materiales que con más probabilidad se emplearon en juegos o competiciones, son precisamente los que peor resisten el paso del tiempo."
+   },
+   {
+    "k": "concepto",
+    "v": "Un mismo objeto prehistórico puede leerse como juguete, como objeto votivo o como herramienta de otro uso, según la interpretación del historiador que lo estudia."
+   },
+   {
+    "k": "autor",
+    "v": "Allen Guttmann deja fuera de su historia los primeros ciento cuarenta mil años de existencia humana y sitúa en el antiguo Egipto los deportes más antiguos con información fiable (Guttmann, 2004, p. 12)."
+   }
+  ],
+  "en": [
+   {
+    "k": "concepto",
+    "v": "Sticks, ropes and fibres, the materials most likely to have been used in games or competitions, are precisely those that least withstand the passage of time."
+   },
+   {
+    "k": "concepto",
+    "v": "The same prehistoric object can be read as a toy, as a votive object or as a tool for another use, depending on the interpretation of the historian who studies it."
+   },
+   {
+    "k": "autor",
+    "v": "Allen Guttmann leaves the first hundred and forty thousand years of human existence out of his history and places the oldest sports with reliable information in ancient Egypt (Guttmann, 2004, p. 12)."
+   }
+  ]
+ },
+ "1.3.4": {
+  "es": [
+   {
+    "k": "fecha",
+    "v": "El bumerán de marfil de mamut de la cueva de Obłazowa, en Polonia, procede de un nivel fechado por radiocarbono entre 40.300 y 37.300 a. C. (Talamo et al., 2025)."
+   },
+   {
+    "k": "concepto",
+    "v": "La fecha de Obłazowa corresponde al estrato arqueológico que contiene la pieza, porque el bumerán mismo no pudo datarse de forma directa."
+   },
+   {
+    "k": "autor",
+    "v": "Anderson et al. (2023) y Haas et al. (2020) documentan mujeres cazadoras en un número muy superior al que suponía el modelo clásico del «hombre cazador»."
+   },
+   {
+    "k": "ejemplo",
+    "v": "La escena de caza del Barranco de la Valltorta, en Castellón, pertenece al arte rupestre levantino, con un margen cronológico abierto entre el 10.000 y el 5.000 a. C."
+   },
+   {
+    "k": "concepto",
+    "v": "El repertorio prehistórico de útiles y estrategias de caza constituye el sostén material más directo de la función del deporte como adiestramiento para la guerra."
+   }
+  ],
+  "en": [
+   {
+    "k": "fecha",
+    "v": "The mammoth-ivory boomerang from Obłazowa Cave, in Poland, comes from a layer radiocarbon-dated to between 40,300 and 37,300 BC (Talamo et al., 2025)."
+   },
+   {
+    "k": "concepto",
+    "v": "The Obłazowa date corresponds to the archaeological layer that contains the piece, because the boomerang itself could not be dated directly."
+   },
+   {
+    "k": "autor",
+    "v": "Anderson et al. (2023) and Haas et al. (2020) document women hunters in far greater numbers than the classic “man the hunter” model assumed."
+   },
+   {
+    "k": "ejemplo",
+    "v": "The hunting scene of the Barranco de la Valltorta, in Castellón, belongs to Levantine rock art, with an open chronological range between 10,000 and 5,000 BC."
+   },
+   {
+    "k": "concepto",
+    "v": "The prehistoric repertoire of hunting tools and strategies constitutes the most direct material basis for the function of sport as training for war."
+   }
+  ]
+ },
+ "1.3.5": {
+  "es": [
+   {
+    "k": "autor",
+    "v": "Ruff y su equipo analizaron en 2015 la resistencia del fémur y la tibia en 1.842 esqueletos europeos, desde el Paleolítico superior hasta el siglo XX (Ruff et al., 2015)."
+   },
+   {
+    "k": "concepto",
+    "v": "Con la sedentarización los huesos se vuelven más redondeados y menos preparados para soportar la flexión propia de correr o caminar largas distancias por terreno irregular."
+   },
+   {
+    "k": "fecha",
+    "v": "La caída de la resistencia ósea se detiene en la Edad del Hierro y la época romana, de modo que la industrialización posterior no deja una huella comparable en el esqueleto."
+   },
+   {
+    "k": "ejemplo",
+    "v": "Macintosh, Pinhasi y Stock hallaron en 2017 que el húmero de mujeres centroeuropeas del Neolítico superaba en rigidez al de la mayoría de las atletas actuales comparadas, incluidas remeras semiélite (Macintosh et al., 2017)."
+   },
+   {
+    "k": "ejemplo",
+    "v": "La molienda manual del grano en molinos de piedra explica que el trabajo femenino neolítico exigiera más a los brazos y menos a las piernas que el deporte de las corredoras actuales."
+   }
+  ],
+  "en": [
+   {
+    "k": "autor",
+    "v": "In 2015 Ruff and his team analysed the strength of the femur and tibia in 1,842 European skeletons, from the Upper Palaeolithic to the twentieth century (Ruff et al., 2015)."
+   },
+   {
+    "k": "concepto",
+    "v": "With sedentarisation, bones become rounder and less suited to withstanding the bending caused by running or walking long distances over uneven ground."
+   },
+   {
+    "k": "fecha",
+    "v": "The decline in bone strength stops in the Iron Age and the Roman period, so that later industrialisation leaves no comparable mark on the skeleton."
+   },
+   {
+    "k": "ejemplo",
+    "v": "In 2017 Macintosh, Pinhasi and Stock found that the humerus of Neolithic Central European women exceeded in rigidity that of most modern athletes compared, including semi-elite rowers (Macintosh et al., 2017)."
+   },
+   {
+    "k": "ejemplo",
+    "v": "Grinding grain by hand in stone mills explains why Neolithic women's work demanded more from the arms and less from the legs than the sport of present-day runners."
+   }
+  ]
+ }
+}
