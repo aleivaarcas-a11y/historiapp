@@ -581,7 +581,7 @@
         },
         {
          "k": "concepto",
-         "v": "El récord es la consecuencia lógica de la cuantificación, puesto que el hecho de medir genera la necesidad de comparar el presente con el pasado (Guttmann, 1978, pp. 52-53)."
+         "v": "El récord es la consecuencia lógica de la cuantificación, porque el hecho de medir genera la necesidad de comparar el presente con el pasado (Guttmann, 1978, pp. 52-53)."
         },
         {
          "k": "fecha",
@@ -1139,7 +1139,7 @@
         },
         {
          "k": "concepto",
-         "v": "El tabú se limitaba a las competiciones de resultado incierto, puesto que la mera posibilidad teórica de la derrota resultaba incompatible con un rey que carece de iguales (Decker, 2021)."
+         "v": "El tabú se limitaba a las competiciones de resultado incierto, porque la mera posibilidad teórica de la derrota resultaba incompatible con un rey que carece de iguales (Decker, 2021)."
         },
         {
          "k": "autor",
@@ -1312,16 +1312,20 @@
          "v": "La tumba de Baqet III en Beni Hasan reúne en su pared este doscientas diecinueve parejas de luchadores, distinguidas por un código de color que permite desentrañar los agarres."
         },
         {
-         "k": "ejemplo",
-         "v": "En el tercer festival Sed de Amenofis III, representado en la tumba de Kheruef, numerosas parejas combaten con tallos de papiro mientras se erige el pilar Djed."
-        },
-        {
          "k": "concepto",
          "v": "En Beni Hasan el árbitro solo se identifica por el texto jeroglífico y la frase «haz lo que quieras», mientras que el árbitro con trompeta pertenece a Medinet Habu, bajo Ramsés III."
         },
         {
-         "k": "autor",
-         "v": "Poliakoff (1987) sostiene que los egipcios tuvieron competiciones formales de esgrima con multitudes de espectadores, y propone que la caída exigía solo un toque de espalda u hombro."
+         "k": "fecha",
+         "v": "La estela de Taharqa, fechada entre diciembre del 685 y enero del 684 a. C., recoge una carrera de cien kilómetros de las tropas de élite por el desierto occidental."
+        },
+        {
+         "k": "ejemplo",
+         "v": "Según Decker (1992), los soldados cubrieron la distancia en unas nueve horas de carrera efectiva, con un descanso reglamentario de dos horas en el punto de retorno."
+        },
+        {
+         "k": "concepto",
+         "v": "Decker (1992) lee la prueba en clave política, como un gesto de integración de un rey de origen kushita hacia las tropas nativas egipcias que mandaba."
         }
        ],
        "en": [
@@ -1334,19 +1338,29 @@
          "v": "The tomb of Baqet III at Beni Hasan brings together two hundred and nineteen pairs of wrestlers on its east wall, distinguished by a colour code that makes it possible to follow the holds."
         },
         {
-         "k": "ejemplo",
-         "v": "At the third Sed festival of Amenhotep III, depicted in the tomb of Kheruef, numerous pairs fight with papyrus stalks while the Djed pillar is raised."
-        },
-        {
          "k": "concepto",
          "v": "At Beni Hasan the referee is identified only by the hieroglyphic text and the phrase “do as you wish”, whereas the referee with a trumpet belongs to Medinet Habu, under Ramesses III."
         },
         {
-         "k": "autor",
-         "v": "Poliakoff (1987) maintains that the Egyptians held formal stick-fencing competitions with crowds of spectators, and suggests that a fall required only a touch of the back or shoulder."
+         "k": "fecha",
+         "v": "The stela of Taharqa, dated between December 685 and January 684 BC, records a hundred-kilometre run by elite troops across the western desert."
+        },
+        {
+         "k": "ejemplo",
+         "v": "According to Decker (1992), the soldiers covered the distance in about nine hours of actual running, with a compulsory two-hour rest at the turning point."
+        },
+        {
+         "k": "concepto",
+         "v": "Decker (1992) reads the event politically, as a gesture of integration by a king of Kushite origin towards the native Egyptian troops he commanded."
         }
        ]
-      }
+      },
+      "fs": [
+       "los-deportes-de-combate",
+       "beni-hasan-registros-de-lucha",
+       "esgrima-y-combate-en-medinet-habu",
+       "la-carrera-de-fondo"
+      ]
      },
      {
       "t": {
@@ -1707,20 +1721,24 @@
        "en": "Pahlavan and zurkhaneh"
       },
       "d": {
-       "es": "Desde el siglo X, el campeón que vive de su cuerpo entrena en la casa de fuerza, con música en directo y un código de humildad.",
-       "en": "From the 10th century, the champion who lives off his body trains in the house of strength, with live music and a code of humility."
+       "es": "El pahlavan, luchador profesional de la ciudad islámica, vive de su cuerpo y entrena en la casa de fuerza, de la que no hay pruebas claras antes del siglo XVII (Krawietz, 2013).",
+       "en": "The pahlavan, a professional wrestler of the Islamic city, lives off his body and trains in the house of strength, for which there is no clear evidence before the seventeenth century (Krawietz, 2013)."
       },
-      "f": "zurkhaneh-periodo-arabe-en-adelante",
+      "f": "pahlavan-periodo-arabe",
       "sec": "2.2.3",
       "x": {
        "es": [
         {
          "k": "concepto",
-         "v": "El zurkhaneh, «la casa de fuerza», es un gimnasio bajo cúpula con un foso central de arcilla y una puerta baja que obliga a agacharse como lección de humildad."
+         "v": "El pahlavan, «el campeón», aparece unos mil trescientos años después del fin del imperio aqueménida como luchador profesional que vive de su cuerpo en la ciudad islámica."
         },
         {
-         "k": "fecha",
-         "v": "La UNESCO inscribió el zurkhaneh en 2010 como práctica que combina elementos del islam, del gnosticismo y de creencias persas antiguas."
+         "k": "autor",
+         "v": "Chehabi (2003) documenta que los pahlavan formaban un gremio con cabeza reconocida en la corte y recorrían un espacio que iba del norte de África a Bengala."
+        },
+        {
+         "k": "concepto",
+         "v": "El zurkhaneh, «la casa de fuerza», es un gimnasio bajo cúpula con un foso central de arcilla y una puerta baja que obliga a agacharse como lección de humildad."
         },
         {
          "k": "autor",
@@ -1729,16 +1747,24 @@
         {
          "k": "ejemplo",
          "v": "El testimonio fechado más antiguo corresponde al viajero Chardin, en la década de 1670, y el edificio más antiguo conservado es uno safávida situado en Bam, en la provincia de Kermán."
+        },
+        {
+         "k": "ejemplo",
+         "v": "La sesión, guiada desde el foso por el atleta más consumado y acompañada de música en directo, terminaba con una lucha en la que a menudo se separaba a los contendientes para evitar la derrota pública (Krawietz, 2013)."
         }
        ],
        "en": [
         {
          "k": "concepto",
-         "v": "The zurkhaneh, “the house of strength”, is a domed gymnasium with a central pit of clay and a low door that forces entrants to stoop as a lesson in humility."
+         "v": "The pahlavan, “the champion”, appears some thirteen hundred years after the end of the Achaemenid empire as a professional wrestler who lives off his body in the Islamic city."
         },
         {
-         "k": "fecha",
-         "v": "UNESCO inscribed the zurkhaneh in 2010 as a practice that combines elements of Islam, Gnosticism and ancient Persian beliefs."
+         "k": "autor",
+         "v": "Chehabi (2003) documents that the pahlavan formed a guild with a head recognised at court and travelled across an area stretching from North Africa to Bengal."
+        },
+        {
+         "k": "concepto",
+         "v": "The zurkhaneh, “the house of strength”, is a domed gymnasium with a central pit of clay and a low door that forces entrants to stoop as a lesson in humility."
         },
         {
          "k": "autor",
@@ -1747,9 +1773,18 @@
         {
          "k": "ejemplo",
          "v": "The earliest dated testimony comes from the traveller Chardin in the 1670s, and the oldest surviving building is a Safavid one located in Bam, in the province of Kerman."
+        },
+        {
+         "k": "ejemplo",
+         "v": "The session, led from the pit by the most accomplished athlete and accompanied by live music, ended with wrestling in which the contenders were often separated to avoid a public defeat (Krawietz, 2013)."
         }
        ]
-      }
+      },
+      "fs": [
+       "pahlavan-periodo-arabe",
+       "zurkhaneh-periodo-arabe-en-adelante",
+       "la-sesion"
+      ]
      },
      {
       "t": {
@@ -1774,15 +1809,19 @@
         },
         {
          "k": "concepto",
-         "v": "El número de jugadores no estaba fijado, pues Membré y Chardin hablan de cinco por bando en el siglo XVI y de quince o veinte en el XVII."
-        },
-        {
-         "k": "fecha",
-         "v": "Los cuatro jugadores por equipo del polo actual responden a una codificación británica del siglo XIX, muy posterior a las variantes persas documentadas por los viajeros."
+         "v": "El jereed, documentado desde el siglo XI, es un juego de jabalina a caballo entre dos equipos de ocho a diez jinetes que reproduce el ataque y la huida del combate."
         },
         {
          "k": "autor",
-         "v": "La variante nocturna con bolas luminosas de madera de palas corresponde al emperador mogol Akbar (r. 1556-1605), contemporáneo del sah Abbás pero ajeno a Persia (Chehabi y Guttmann, 2002)."
+         "v": "Chehabi y Guttmann (2002) señalan que selyúcidas y otomanos preferían el jereed, o cirit, al chovgan, de modo que aquel queda como la práctica ecuestre propia del mundo turco."
+        },
+        {
+         "k": "ejemplo",
+         "v": "En el buzkashi tradicional, sin campo, equipos ni árbitro, el señor que invita y paga la partida arriesga su prestigio en que el juego termine en orden (Azoy, 2011)."
+        },
+        {
+         "k": "fecha",
+         "v": "En la década de 1960 el Comité Olímpico afgano promovió una versión reglamentada del buzkashi, que hoy es el deporte nacional de Afganistán."
         }
        ],
        "en": [
@@ -1796,18 +1835,28 @@
         },
         {
          "k": "concepto",
-         "v": "The number of players was not fixed, for Membré and Chardin speak of five a side in the sixteenth century and of fifteen or twenty in the seventeenth."
-        },
-        {
-         "k": "fecha",
-         "v": "The four players per team in modern polo derive from a nineteenth-century British codification, much later than the Persian variants recorded by travellers."
+         "v": "The jereed, documented from the eleventh century, is a mounted javelin game between two teams of eight to ten riders that reproduces the attack and retreat of combat."
         },
         {
          "k": "autor",
-         "v": "The night-time variant with glowing balls of palas wood belongs to the Mughal emperor Akbar (r. 1556-1605), a contemporary of Shah Abbas but not Persian (Chehabi & Guttmann, 2002)."
+         "v": "Chehabi and Guttmann (2002) note that the Seljuks and Ottomans preferred the jereed, or cirit, to chovgan, so that it stands as the equestrian practice of the Turkic world."
+        },
+        {
+         "k": "ejemplo",
+         "v": "In traditional buzkashi, with no pitch, teams or referee, the lord who invites the players and pays for the match stakes his prestige on the game ending in order (Azoy, 2011)."
+        },
+        {
+         "k": "fecha",
+         "v": "In the 1960s the Afghan Olympic Committee promoted a regulated version of buzkashi, which is today the national sport of Afghanistan."
         }
        ]
-      }
+      },
+      "fs": [
+       "chovgan",
+       "el-chovgan-como-adiestramiento-belico",
+       "jereed",
+       "buzkashi"
+      ]
      }
     ]
    },
@@ -1841,7 +1890,7 @@
         },
         {
          "k": "concepto",
-         "v": "A ese sesgo se suma un problema material, puesto que la madera, el papiro y el tejido no resisten el clima del Líbano y las ciudades siguen habitadas sobre sí mismas."
+         "v": "A ese sesgo se suma un problema material, porque la madera, el papiro y el tejido no resisten el clima del Líbano y las ciudades siguen habitadas sobre sí mismas."
         },
         {
          "k": "ejemplo",
@@ -1886,8 +1935,8 @@
        "en": "The body at work"
       },
       "d": {
-       "es": "Remar es lo único documentado; la arqueología experimental y los pecios de Mazarrón ayudan a medir ese esfuerzo.",
-       "en": "Rowing is the only documented activity; experimental archaeology and the Mazarrón wrecks help to gauge that effort."
+       "es": "Remar es el esfuerzo físico mejor documentado; la arqueología experimental permite medirlo y los pecios de Mazarrón muestran los barcos de cabotaje de la época.",
+       "en": "Rowing is the best-documented physical effort; experimental archaeology makes it measurable and the Mazarrón wrecks show the coastal boats of the period."
       },
       "f": "remar",
       "sec": "2.3.2",
@@ -1898,16 +1947,24 @@
          "v": "Los relieves del palacio de Sargón II en Dur-Sharrukin, hacia el 710 a. C., muestran embarcaciones a remo que remolcan troncos de cedro con una cabeza de caballo en la proa."
         },
         {
-         "k": "concepto",
-         "v": "El mascarón en forma de caballo, que llevó a los griegos a llamar hippoi a esas naves, es la única innovación náutica fenicia comprobada por tres vías independientes (Casson, 1971)."
-        },
-        {
          "k": "ejemplo",
          "v": "La galera de guerra avanzaba a remo con toda la tripulación al remo a la vez, mientras que el buque de carga navegaba a vela y reservaba tres o cuatro remos por banda."
         },
         {
-         "k": "fecha",
-         "v": "La imagen del remero encadenado pertenece a la Edad Moderna y no se remonta más allá del siglo XV, puesto que en Atenas remaban ciudadanos libres a sueldo (Casson, 1971)."
+         "k": "ejemplo",
+         "v": "En 1987 la reconstrucción del trirreme Olympias, con ciento setenta remeros, sostuvo entre seis y nueve kilómetros por hora durante un máximo de cinco horas de bogada."
+        },
+        {
+         "k": "concepto",
+         "v": "Esa reconstrucción reproduce el modelo ateniense, de modo que sirve para medir el esfuerzo del remo trirreme sin atribuir su invención a los fenicios (Casson, 1971)."
+        },
+        {
+         "k": "ejemplo",
+         "v": "El pecio Mazarrón 2, hundido en el primer tercio del siglo VI a. C. y extraído en 2024, llevaba unos 2.800 kilos de lingotes de plomo de las minas cercanas."
+        },
+        {
+         "k": "concepto",
+         "v": "La filiación del pecio sigue abierta, porque Negueruela lo considera fenicio mientras que Pomey y Guerrero lo atribuyen a carpinteros locales que conocían la técnica."
         }
        ],
        "en": [
@@ -1916,19 +1973,32 @@
          "v": "The reliefs from the palace of Sargon II at Dur-Sharrukin, around 710 BC, show rowing boats towing cedar logs with a horse's head on the prow."
         },
         {
-         "k": "concepto",
-         "v": "The horse-head figurehead, which led the Greeks to call these ships hippoi, is the only Phoenician nautical innovation verified by three independent lines of evidence (Casson, 1971)."
-        },
-        {
          "k": "ejemplo",
          "v": "The war galley moved under oars with the whole crew rowing together, whereas the merchant ship sailed and kept three or four oars per side for harbour work or emergencies."
         },
         {
-         "k": "fecha",
-         "v": "The image of the chained oarsman belongs to the early modern period and goes back no further than the fifteenth century, since in Athens the rowers were free, paid citizens (Casson, 1971)."
+         "k": "ejemplo",
+         "v": "In 1987 the reconstructed trireme Olympias, with one hundred and seventy rowers, sustained between six and nine kilometres per hour for up to five hours of rowing."
+        },
+        {
+         "k": "concepto",
+         "v": "That reconstruction follows the Athenian model, so it measures the effort of trireme rowing without attributing its invention to the Phoenicians (Casson, 1971)."
+        },
+        {
+         "k": "ejemplo",
+         "v": "The Mazarrón 2 wreck, sunk in the first third of the sixth century BC and raised in 2024, carried some 2,800 kilos of lead ingots from the nearby mines."
+        },
+        {
+         "k": "concepto",
+         "v": "The wreck’s origin remains open, because Negueruela considers it Phoenician while Pomey and Guerrero attribute it to local carpenters who knew the technique."
         }
        ]
-      }
+      },
+      "fs": [
+       "remar",
+       "un-acercamiento-desde-la-arqueologia-exp",
+       "los-pecios-de-mazarron"
+      ]
      },
      {
       "t": {

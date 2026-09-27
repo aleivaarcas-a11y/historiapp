@@ -316,6 +316,13 @@ details.slide li{font-size:13.5px;line-height:1.5;margin-bottom:6px}
 .mxk-autor{background:var(--primary);color:#fff}
 .mxk-fecha{border-color:#8A5A00;color:#8A5A00}
 .mxk-ejemplo{background:#FFF3D6;border-color:#C77700;color:#7A4A00}
+.rep{display:block;margin:10px auto 0;background:none;border:0;color:var(--muted);font-size:13px;text-decoration:underline;cursor:pointer;padding:6px}
+.srch-res{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.srch-res button{text-align:left;background:var(--paper);border-radius:14px;padding:12px 14px;box-shadow:var(--shadow);border:0;cursor:pointer}
+.srch-res .tt{font-weight:800;color:var(--primary-2);font-size:15px}
+.srch-res .mt{font-size:12px;color:var(--muted);margin:2px 0 6px}
+.srch-res .sn{font-size:13.5px;line-height:1.45;color:#383838}
+.srch-res mark{background:#FFE7A3;color:inherit;border-radius:3px;padding:0 2px;font-weight:700}
 </style>
 </head>
 <body>
@@ -359,7 +366,7 @@ const I18N = {
     author:"Historia del Deporte · Grado en CAFD · UCAM",
     fichasSearch:"Buscar en las fichas…", fichasEsOnly:"", practice:"Practicar este apartado", slideText:"En la diapositiva", refsL:"Fuentes", essayL:"Para el ensayo",
     prevF:"Anterior", nextF:"Siguiente", secOnly:"Apartado {s}", allSec:"Todo el tema", fichaIntro:"Presentación del tema", secIntro:"Por qué este apartado", fichaXP:"Ficha leída", noResults:"Sin resultados", fichasOf:"{n} fichas", codeL:"Código", paras:"párrafos", img1:"imagen", imgN:"imágenes",
-    daily:"Reto del día", exam:"Cómo preparar el examen", examSub:"Test, desarrollo y comentario de imagen, paso a paso", mapOpen:"Desplegar todo", mapClose:"Plegar todo", mapTema:"Tema {n}", mapFicha:"📖 Leer la ficha", mapMore:"Para saber más", mapK:{concepto:"Concepto",autor:"Autor",fecha:"Fecha",ejemplo:"Ejemplo"}, mapPractice:"⚡ Practicar este apartado", mapHint:"Toca cada apartado para ver sus ideas y cada idea para leer el detalle.", dailySub:"Una prueba de cada tipo, distinta cada día, con el doble de XP", dailyStart:"Empezar el reto", dailyDone:"Reto de hoy completado", dailyScore:"{a} de {b} aciertos hoy", dailyBack:"Volver mañana para un reto nuevo", dailyStep:"Prueba {a} de {b}", dailyTitle:"Reto del día · {d}",
+    daily:"Reto del día", exam:"Cómo preparar el examen", examSub:"Test, desarrollo y comentario de imagen, paso a paso", mapOpen:"Desplegar todo", mapClose:"Plegar todo", mapTema:"Tema {n}", mapFicha:"📖 Leer la ficha", searchAll:"Buscar en todas las fichas", searchAllSub:"Conceptos, autores, fechas y lugares de todos los temas", searchPh:"Escribe al menos 3 letras", searchN:"{n} fichas encontradas", searchNone:"No hay fichas con esa palabra", searchLoading:"Cargando los temas…", report:"⚑ Avisar de un error", reportHint:"Se abrirá tu correo con el mensaje preparado para el profesor.", reportWrite:"Explica aquí el error:", mapMore:"Para saber más", mapK:{concepto:"Concepto",autor:"Autor",fecha:"Fecha",ejemplo:"Ejemplo"}, mapPractice:"⚡ Practicar este apartado", mapHint:"Toca cada apartado para ver sus ideas y cada idea para leer el detalle.", dailySub:"Una prueba de cada tipo, distinta cada día, con el doble de XP", dailyStart:"Empezar el reto", dailyDone:"Reto de hoy completado", dailyScore:"{a} de {b} aciertos hoy", dailyBack:"Volver mañana para un reto nuevo", dailyStep:"Prueba {a} de {b}", dailyTitle:"Reto del día · {d}",
     installBtn:"Instalar en el móvil", installIos:"En iPhone o iPad: pulsa el botón Compartir (el cuadrado con la flecha hacia arriba, abajo en Safari) y elige «Añadir a pantalla de inicio».", installAndroid:"En Android: abre el menú de Chrome (tres puntos) y elige «Instalar aplicación» o «Añadir a pantalla de inicio».", installDesktop:"Abre esta dirección en el móvil para instalarla; en el ordenador funciona igual desde el navegador.", installed:"La app ya está instalada.", close:"Cerrar"
   },
   en: {
@@ -386,7 +393,7 @@ const I18N = {
     author:"History of Sport · Sport Sciences degree · UCAM",
     fichasSearch:"Search the sheets…", fichasEsOnly:"Some sheets of this unit are not yet available in English and are shown in Spanish.", practice:"Practise this section", slideText:"On the slide", refsL:"Sources", essayL:"For the essay",
     prevF:"Previous", nextF:"Next", secOnly:"Section {s}", allSec:"Whole unit", fichaIntro:"About this unit", secIntro:"Why this section", fichaXP:"Sheet read", noResults:"No results", fichasOf:"{n} sheets", codeL:"Code", paras:"paragraphs", img1:"image", imgN:"images",
-    daily:"Daily challenge", exam:"How to prepare for the exam", examSub:"Multiple choice, essay and image commentary, step by step", mapOpen:"Expand all", mapClose:"Collapse all", mapTema:"Unit {n}", mapFicha:"📖 Read the study sheet", mapMore:"Learn more", mapK:{concepto:"Concept",autor:"Author",fecha:"Date",ejemplo:"Example"}, mapPractice:"⚡ Practise this section", mapHint:"Tap each section to see its ideas and each idea to read the detail.", dailySub:"One task of each kind, new every day, double XP", dailyStart:"Start the challenge", dailyDone:"Today's challenge completed", dailyScore:"{a} of {b} correct today", dailyBack:"Come back tomorrow for a new one", dailyStep:"Task {a} of {b}", dailyTitle:"Daily challenge · {d}",
+    daily:"Daily challenge", exam:"How to prepare for the exam", examSub:"Multiple choice, essay and image commentary, step by step", mapOpen:"Expand all", mapClose:"Collapse all", mapTema:"Unit {n}", mapFicha:"📖 Read the study sheet", searchAll:"Search all study sheets", searchAllSub:"Concepts, authors, dates and places from every unit", searchPh:"Type at least 3 letters", searchN:"{n} study sheets found", searchNone:"No study sheets contain that word", searchLoading:"Loading the units…", report:"⚑ Report a mistake", reportHint:"Your email app will open with a message ready for the lecturer.", reportWrite:"Describe the mistake here:", mapMore:"Learn more", mapK:{concepto:"Concept",autor:"Author",fecha:"Date",ejemplo:"Example"}, mapPractice:"⚡ Practise this section", mapHint:"Tap each section to see its ideas and each idea to read the detail.", dailySub:"One task of each kind, new every day, double XP", dailyStart:"Start the challenge", dailyDone:"Today's challenge completed", dailyScore:"{a} of {b} correct today", dailyBack:"Come back tomorrow for a new one", dailyStep:"Task {a} of {b}", dailyTitle:"Daily challenge · {d}",
     installBtn:"Install on your phone", installIos:"On iPhone or iPad: tap the Share button (the square with the upward arrow, at the bottom in Safari) and choose 'Add to Home Screen'.", installAndroid:"On Android: open the Chrome menu (three dots) and choose 'Install app' or 'Add to Home screen'.", installDesktop:"Open this address on your phone to install it; on a computer it works from the browser.", installed:"The app is already installed.", close:"Close"
   }
 };
@@ -436,8 +443,9 @@ function sheet(ok,title,explain,xp,onNext){
   el.className="sheet "+(ok?"ok":"ko");
   inn.innerHTML=`<div class="verdict"><span class="dot">${ok?"✓":"✗"}</span>${esc(title)}</div>
     <div class="exp">${esc(explain)}</div>${xp?`<div class="xpgain">${t("gained",{n:xp})}</div>`:""}
-    <button class="btn" id="sheetNext">${t("next")}</button>`;
+    <button class="btn" id="sheetNext">${t("next")}</button><button class="rep" id="sheetRep">${t("report")}</button>`;
   requestAnimationFrame(()=>el.classList.add("show"));
+  const rctx=sheetReportCtx(explain); document.getElementById("sheetRep").onclick=()=>reportMail(rctx);
   document.getElementById("sheetNext").onclick=()=>{ el.classList.remove("show"); setTimeout(onNext,200); };
 }
 function closeSheet(){document.getElementById("sheet").classList.remove("show")}
@@ -462,9 +470,9 @@ async function getTema(num){
 
 /* ============ rendering ============ */
 const app=document.getElementById("app");
-function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="daily") return "reto"; if(v.name==="exam") return "examen"; if(v.name==="tema") return "t"+v.num;
+function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="daily") return "reto"; if(v.name==="exam") return "examen"; if(v.name==="search") return "buscar"; if(v.name==="tema") return "t"+v.num;
   if(v.name==="mode"){ if(v.mode==="fichas") return v.f?`t${v.num}/f/${v.f}`:`t${v.num}/fichas`; return `t${v.num}/${v.mode}`+(v.sec?"/"+v.sec:""); } return ""; }
-function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="reto") return {name:"daily"}; if(h==="examen") return {name:"exam"};
+function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="reto") return {name:"daily"}; if(h==="examen") return {name:"exam"}; if(h==="buscar") return {name:"search"};
   const p=h.split("/"); const mt=/^t(\d+)$/.exec(p[0]); if(!mt) return {name:"home"}; const num=+mt[1];
   if(p.length===1) return {name:"tema",num}; if(p[1]==="f"&&p[2]) return {name:"mode",num,mode:"fichas",f:decodeURIComponent(p[2])};
   if(MODES.includes(p[1])) return {name:"mode",num,mode:p[1],sec:p[2]||undefined}; return {name:"tema",num}; }
@@ -479,6 +487,7 @@ function render(){
   if(v.name==="settings") return renderSettings();
   if(v.name==="daily") return renderDaily();
   if(v.name==="exam") return renderExam();
+  if(v.name==="search") return renderSearch();
   if(v.name==="mode") return renderMode(v.num,v.mode);
 }
 function header(title,back,extra=""){
@@ -520,10 +529,11 @@ async function renderHome(){
       <div class="meta"><span>${S.prog.xp} ${t("xp")}${LEVEL_XP[lvl+1]?` · ${nextXP-S.prog.xp} ${t("toNext")}`:""}</span><span>🔥 ${S.prog.streak} ${t("days")}</span></div></div></div>
     <button class="tema" id="dailyBtn" style="border:2px solid var(--accent);background:#fff8e1"><div class="num">☀️</div><div class="t"><b>${t("daily")}</b><span id="dailySub">${t("dailySub")}</span></div><div class="pct" id="dailyPct"></div></button>
     <button class="tema" id="examBtn" style="border:2px solid var(--primary)"><div class="num" style="background:var(--primary);color:#fff">🎓</div><div class="t"><b>${t("exam")}</b><span>${t("examSub")}</span></div><div class="pct">›</div></button>
+    <button class="tema" id="searchBtn"><div class="num">🔎</div><div class="t"><b>${t("searchAll")}</b><span>${t("searchAllSub")}</span></div><div class="pct">›</div></button>
     <div id="temaList"><div class="empty">…</div></div>
     <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:10px">${t("author")}</p></main>`;
   bindHeader();
-  { const d=S.prog.daily||{}; const done=d.date===todayKey()&&d.done; document.getElementById("dailyBtn").onclick=()=>nav({name:"daily"}); document.getElementById("examBtn").onclick=()=>nav({name:"exam"});
+  { const d=S.prog.daily||{}; const done=d.date===todayKey()&&d.done; document.getElementById("dailyBtn").onclick=()=>nav({name:"daily"}); document.getElementById("examBtn").onclick=()=>nav({name:"exam"}); document.getElementById("searchBtn").onclick=()=>nav({name:"search"});
     if(done){ document.getElementById("dailySub").textContent=t("dailyScore",{a:d.correct,b:d.total}); document.getElementById("dailyPct").textContent="✓"; } else document.getElementById("dailyPct").textContent="×2"; }
   try{
     const idx=await getIndex(); const list=document.getElementById("temaList"); list.innerHTML=""; let lastUnit="";
@@ -814,11 +824,13 @@ function renderFicha(tema,m,k){
     ${f.refs.length?`<div class="card"><div class="section-title" style="margin:0 0 8px">${t("refsL")}</div><ul class="refs" style="padding-left:18px;margin:0">${f.refs.map(r=>`<li>${md(r)}</li>`).join("")}</ul></div>`:""}
     ${counts.length?`<div class="card"><div class="section-title" style="margin:0 0 10px">${t("practice")} (${esc(f.sec)})</div><div class="pbtns">${counts.map(c=>`<button data-mode="${c.mode}">${MODE_ICONS[c.mode]} ${t("modes."+c.mode)} · ${c.n}</button>`).join("")}</div></div>`:""}
     <div class="row"><button class="btn sec" id="fPrev" ${k===0?"disabled":""}>‹ ${t("prevF")}</button><button class="btn sec" id="fNext" ${k===fs.length-1?"disabled":""}>${t("nextF")} ›</button></div>
+    <button class="rep" id="fRep">${t("report")}</button><p style="font-size:11.5px;color:var(--muted);text-align:center;margin:0">${t("reportHint")}</p>
     </div>`;
   m.querySelectorAll(".pbtns button").forEach(b=>b.onclick=()=>nav({name:"mode",num:tema.num,mode:b.dataset.mode,sec:f.sec,back:{name:"mode",num:tema.num,mode:"fichas",f:f.id}}));
   m.querySelectorAll(".fimg").forEach(d=>d.onclick=()=>{ const im=f.images[+d.dataset.j]; const lb=document.createElement("div"); lb.className="lightbox"; lb.innerHTML=`<img src="${im.src}" alt=""><div class="cap">${esc(L(im.caption))}</div>`; lb.onclick=()=>lb.remove(); document.body.appendChild(lb); });
   document.getElementById("fPrev").onclick=()=>nav({name:"mode",num:tema.num,mode:"fichas",f:fs[k-1].id});
   document.getElementById("fNext").onclick=()=>nav({name:"mode",num:tema.num,mode:"fichas",f:fs[k+1].id});
+  document.getElementById("fRep").onclick=()=>reportMail({where:`${t("tema")} ${tema.num} · ${f.code} · ${L(f.title)}`,text:""});
 }
 
 
@@ -935,6 +947,50 @@ async function installApp(){
   if(nb) nb.onclick=async()=>{ const p=deferredInstall; if(!p) return; p.prompt(); try{ await p.userChoice; }catch(e){} deferredInstall=null; el.classList.remove("show"); inn.classList.remove("tall"); };
 }
 
+
+/* --- avisar de un error --- */
+function reportMail(ctx){
+  const v=S.view||{}; const ver=S.temasIndex?S.temasIndex.version:"";
+  const subj=`Historiapp · error · ${ctx.where}`;
+  const body=`${t("reportWrite")}\n\n\n\n---\n${ctx.where}\n${ctx.text?ctx.text.slice(0,300)+"\n":""}${S.lang.toUpperCase()} · ${ver}\n${location.href}`;
+  track("aviso-error/"+(v.num||"")+"/"+(v.mode||v.name||""),"Aviso de error",true);
+  location.href=`mailto:aleiva@ucam.edu?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`;
+}
+function sheetReportCtx(explain){
+  const v=S.view||{}; const q=document.querySelector("main .qtext")||document.querySelector("main .deck > :last-child")||document.querySelector("main .card");
+  const qt=q?q.innerText.replace(/\s+/g," ").trim():"";
+  return {where:`${t("tema")} ${v.num||""} · ${v.mode?t("modes."+v.mode):""}`, text:(qt?qt+" | ":"")+(explain||"")};
+}
+
+/* --- buscador global --- */
+async function renderSearch(){
+  const q0=S.view.q||"";
+  app.innerHTML=header(t("searchAll"),true)+`<main>
+    <input class="search" id="gq" type="search" placeholder="${t("searchPh")}" autocomplete="off" value="${esc(q0)}">
+    <div class="counter" id="gcount">${t("searchLoading")}</div><div class="srch-res" id="gres"></div></main>`;
+  bindHeader(()=>nav({name:"home"}));
+  const temas=[]; try{ const idx=await getIndex(); for(const m of idx.temas){ if(m.available){ try{ temas.push(await getTema(m.num)); }catch(e){} } } }catch(e){}
+  const inp=document.getElementById("gq"), res=document.getElementById("gres"), cnt=document.getElementById("gcount"); if(!inp) return;
+  const hl=(txt,qq)=>{ const n=norm(txt); const i=n.indexOf(qq); if(i<0) return esc(txt.slice(0,160))+(txt.length>160?"…":"");
+    const a=Math.max(0,i-70), e=Math.min(txt.length,i+qq.length+90);
+    return (a>0?"…":"")+esc(txt.slice(a,i))+"<mark>"+esc(txt.slice(i,i+qq.length))+"</mark>"+esc(txt.slice(i+qq.length,e))+(e<txt.length?"…":""); };
+  let tmr=null;
+  function paint(){
+    const raw=inp.value.trim(), qq=norm(raw); res.innerHTML="";
+    if(qq.length<3){ cnt.textContent=t("searchPh"); return; }
+    const out=[];
+    for(const tm of temas){ (tm.fichas||[]).forEach(f=>{ const title=L(f.title), body=LL(f.body).join(" ");
+      const inT=norm(title).includes(qq), inB=norm(body).includes(qq); if(inT||inB) out.push({tm,f,score:inT?0:1,title,body}); }); }
+    out.sort((x,y)=>x.score-y.score||x.tm.num-y.tm.num);
+    cnt.textContent=out.length?t("searchN",{n:out.length}):t("searchNone");
+    for(const r of out.slice(0,60)){ const b=document.createElement("button");
+      b.innerHTML=`<div class="tt">${esc(r.title)}</div><div class="mt">${t("tema")} ${r.tm.num} · ${esc(r.f.sec)} · ${esc(r.f.code)}</div><div class="sn">${hl(r.body,qq)}</div>`;
+      b.onclick=()=>nav({name:"mode",num:r.tm.num,mode:"fichas",f:r.f.id,back:{name:"search",q:raw}}); res.appendChild(b); }
+    S.view.q=raw;
+  }
+  inp.oninput=()=>{ clearTimeout(tmr); tmr=setTimeout(paint,180); }; paint(); if(!q0) inp.focus();
+}
+
 /* --- mapa conceptual --- */
 const MAP_COLORS=["#004379","#C77700","#2F6DB5","#8A5A00"];
 function modeMapa(tema,m,v){
@@ -946,7 +1002,7 @@ function modeMapa(tema,m,v){
     <button class="rh"><span class="chev">›</span><span class="code">${esc(r.code)}</span><b>${esc(L(r.t))}</b><p>${md(L(r.idea))}</p></button>
     <div class="nodos">${r.nodos.map((n,ni)=>{const key=r.code+"."+ni;return `<div class="nodo ${seen[key]?"seen":""}" data-k="${key}">
       <button class="nh"><i></i>${esc(L(n.t))}</button>
-      <div class="nd">${md(L(n.d))}${n.x?`<div class="mx"><div class="mxh">${t("mapMore")}</div>${(n.x[S.lang]||n.x.es).map(it=>`<div class="mxi"><span class="mxk mxk-${esc(it.k)}">${esc(t("mapK."+it.k))}</span>${md(it.v)}</div>`).join("")}</div>`:""}<div class="acts">${n.f?`<button data-f="${esc(n.f)}">${t("mapFicha")}</button>`:""}<button data-s="${esc(n.sec||r.code)}">${t("mapPractice")}</button></div></div></div>`}).join("")}</div></div>`).join("")}</div>
+      <div class="nd">${md(L(n.d))}${n.x?`<div class="mx"><div class="mxh">${t("mapMore")}</div>${(n.x[S.lang]||n.x.es).map(it=>`<div class="mxi"><span class="mxk mxk-${esc(it.k)}">${esc(t("mapK."+it.k))}</span>${md(it.v)}</div>`).join("")}</div>`:""}<div class="acts">${(n.fs||(n.f?[n.f]:[])).map(id=>{ const fi=(tema.fichas||[]).find(x=>x.id===id); return `<button data-f="${esc(id)}">📖 ${esc(fi?L(fi.title):t("mapFicha"))}</button>`; }).join("")}<button data-s="${esc(n.sec||r.code)}">${t("mapPractice")}</button></div></div></div>`}).join("")}</div></div>`).join("")}</div>
   <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:6px">${t("mapHint")}</p>`;
   m.querySelectorAll(".rama>.rh").forEach(b=>b.onclick=()=>b.parentElement.classList.toggle("open"));
   m.querySelectorAll(".nodo>.nh").forEach(b=>b.onclick=()=>{ const n=b.parentElement; n.classList.toggle("open");
