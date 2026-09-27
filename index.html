@@ -294,9 +294,15 @@ details.slide li{font-size:13.5px;line-height:1.5;margin-bottom:6px}
 .lightbox img{max-width:100%;max-height:80vh;object-fit:contain}
 .lightbox .cap{color:#ddd;font-size:13px;margin-top:12px;text-align:center}
 @media (min-width:600px){ .deck{max-height:600px} }
+#splash{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:radial-gradient(120% 80% at 50% 0%,#0b5a9a 0%,#004379 55%,#002060 100%);color:#fff;transition:opacity .6s ease;cursor:pointer}
+#splash img{width:min(70vw,320px);height:auto;animation:spIn 1s ease both}
+#splash small{font-size:13px;letter-spacing:.12em;opacity:.8;text-transform:uppercase;animation:spIn 1s .3s ease both}
+#splash.out{opacity:0;pointer-events:none}
+@keyframes spIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
+<div id="splash"><img src="icons/logo_oro.png" alt="Historiapp"><small>Historia del Deporte · UCAM</small></div>
 <div id="app"></div>
 <div class="toast" id="toast"></div>
 <div class="sheet" id="sheet"><div class="in" id="sheetIn"></div></div>
@@ -326,7 +332,7 @@ const I18N = {
     matchHint:"Toca un elemento de la izquierda y su pareja de la derecha", matchDone:"Todas las parejas emparejadas",
     glWhich:"¿Qué término corresponde a esta definición?", glDef:"¿Cuál es la definición de este término?", glTerm:"Término", glDefL:"Definición",
     glBoxes:"Caja de repaso", glMastered:"dominados", glSession:"Sesión de {n} términos",
-    settings:"Ajustes", language:"Idioma", reset:"Borrar mi progreso", resetConfirm:"Se borrarán XP, niveles y progreso de todos los temas. ¿Seguro?", resetDone:"Progreso borrado",
+    settings:"Ajustes", language:"Idioma", reset:"Cerrar sesión y empezar de nuevo", resetConfirm:"Se borrarán el idioma, la XP, los niveles y el progreso de todos los temas en este móvil, y la app volverá a la pantalla de inicio. ¿Seguro?", resetDone:"Sesión cerrada",
     badges:"Insignias", badgeName:{fichas:"Lector",mapa:"Cartógrafo",cards:"Ojo de arqueólogo",glossary:"Léxico",timeline:"Cronista",sources:"Lector de fuentes",match:"Sociólogo",myths:"Cazamitos",quiz:"Relámpago"},
     badgeHow:"Completa cada sección de un tema para ganar su insignia.",
     levelUp:"¡Nivel {n}: {name}!", complete:"Completado",
@@ -353,7 +359,7 @@ const I18N = {
     matchHint:"Tap an item on the left and its pair on the right", matchDone:"All pairs matched",
     glWhich:"Which term matches this definition?", glDef:"What is the definition of this term?", glTerm:"Term", glDefL:"Definition",
     glBoxes:"Review box", glMastered:"mastered", glSession:"Session of {n} terms",
-    settings:"Settings", language:"Language", reset:"Erase my progress", resetConfirm:"XP, levels and progress for all units will be erased. Are you sure?", resetDone:"Progress erased",
+    settings:"Settings", language:"Language", reset:"Log out and start again", resetConfirm:"Your language, XP, levels and progress for all units will be erased on this phone, and the app will go back to the start screen. Are you sure?", resetDone:"Logged out",
     badges:"Badges", badgeName:{fichas:"Reader",mapa:"Cartographer",cards:"Archaeologist's eye",glossary:"Lexicon",timeline:"Chronicler",sources:"Source reader",match:"Sociologist",myths:"Myth hunter",quiz:"Lightning"},
     badgeHow:"Complete each section of a unit to earn its badge.",
     levelUp:"Level {n}: {name}!", complete:"Completed",
@@ -558,7 +564,7 @@ function renderSettings(){
   document.getElementById("sInstall").onclick=installApp;
   document.getElementById("sEs").onclick=()=>{setLang("es");nav({name:"settings",from})};
   document.getElementById("sEn").onclick=()=>{setLang("en");nav({name:"settings",from})};
-  document.getElementById("sReset").onclick=()=>{ if(confirm(t("resetConfirm"))){ S.prog={xp:0,streak:0,lastDay:null,seen:{},badges:{},gl:{}}; save(); toast(t("resetDone")); nav({name:"home"}); } };
+  document.getElementById("sReset").onclick=()=>{ if(confirm(t("resetConfirm"))){ track("sesion/cerrada","Cerrar sesión",true); try{ Object.keys(localStorage).filter(k=>k.startsWith("historiapp.")).forEach(k=>localStorage.removeItem(k)); }catch(e){} location.replace(location.pathname); } };
 }
 
 /* ============ modes ============ */
@@ -932,6 +938,9 @@ function modeVideos(tema,mode,m){
   let l=null; try{ l=localStorage.getItem("historiapp.lang"); }catch(e){}
   if(l){ S.lang=l; document.documentElement.lang=l; S.view=hashToView(location.hash); } else { S.view={name:"gate"}; S.pending=location.hash||null; }
   render();
+  const sp=document.getElementById("splash");
+  if(sp){ let done=false; const hide=()=>{ if(done) return; done=true; sp.classList.add("out"); setTimeout(()=>sp.remove(),650); };
+    sp.onclick=hide; setTimeout(hide,1800); }
   if("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(()=>{});
 })();
 </script>
