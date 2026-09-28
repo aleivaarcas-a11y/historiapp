@@ -6365,15 +6365,19 @@
    "dur": 1273,
    "src": {
     "es": "audio/t1_ep1.m4a?v=1",
-    "en": "audio/t1_ep1.m4a?v=1"
+    "en": "audio/t1_ep1_en.m4a?v=1"
    },
    "title": {
     "es": "Un enigma llamado deporte. Brazos neolíticos y círculos mágicos",
-    "en": "An enigma called sport. Neolithic arms and magic circles"
+    "en": "An Enigma Called Sport. Neolithic Arms and Magic Circles"
    },
    "desc": {
     "es": "Repaso del Tema 1 en forma de conversación y en el mismo orden que las clases, desde qué es la Historia y cómo trabaja el historiador hasta lo que el cuerpo prehistórico dejó escrito en los huesos, pasando por las fuentes, la definición de deporte y las cuatro miradas con las que se analiza.",
     "en": "A conversational review of Unit 1 that follows the order of the lectures, from what History is and how historians work to what the prehistoric body left written in the bones, by way of sources, the definition of sport and the four perspectives used to analyse it."
+   },
+   "durs": {
+    "es": 1273,
+    "en": 1628
    }
   }
  ]

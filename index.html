@@ -1166,7 +1166,7 @@ function podUI(){
 }
 document.addEventListener("play",e=>{ if(e.target&&e.target.tagName==="VIDEO"&&POD.audio&&!POD.audio.paused) POD.audio.pause(); },true);
 function modePodcast(tema,mode,m){
-  const eps=modeIdxs(tema,mode).map(i=>tema.podcast[i]);
+  const eps=modeIdxs(tema,mode).map(i=>{ const e=tema.podcast[i]; if(e.durs&&e.durs[S.lang]) return Object.assign({},e,{id:S.lang==="es"?e.id:e.id+"_"+S.lang,dur:e.durs[S.lang],lang:S.lang}); return e; });
   m.innerHTML=eps.map(ep=>`<div class="pod" data-id="${esc(ep.id)}" data-dur="${ep.dur}">
     <div class="ph"><img src="icons/icon-192.png?v=2" alt=""><div><b>${esc(L(ep.title))}</b><span>${t("tema")} ${tema.num} · ${t("pMin",{m:Math.round(ep.dur/60)})}${ep.lang&&ep.lang!==S.lang?` · ${esc(ep.lang.toUpperCase())}`:""}</span></div></div>
     ${L(ep.desc)?`<p class="desc">${md(L(ep.desc))}</p>`:""}
