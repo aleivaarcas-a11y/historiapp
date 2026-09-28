@@ -353,11 +353,35 @@ body.feedon{overflow:hidden}
 .fsheet .row2{display:flex;gap:10px;margin-top:12px}
 .fsheet .row2 .btn{flex:1}
 .fend{height:100%;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:24px;text-align:center}
+.pod{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;display:flex;flex-direction:column;gap:10px}
+.pod .ph{display:flex;gap:12px;align-items:center}
+.pod .ph img{width:64px;height:64px;border-radius:14px;flex:0 0 auto}
+.pod .ph b{display:block;font-size:16px;color:var(--primary-2);line-height:1.25}
+.pod .ph span{font-size:12.5px;color:var(--muted)}
+.pod .desc{font-size:14px;line-height:1.5;margin:0}
+.pod input[type=range]{width:100%;accent-color:var(--primary)}
+.pod .tm{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:-6px}
+.pod .ctl{display:flex;gap:8px;align-items:center;justify-content:center}
+.pod .ctl button{border:0;border-radius:999px;background:#EAF1F8;color:var(--primary-2);font-weight:800;padding:10px 14px;font-size:14px}
+.pod .ctl button.main{background:var(--primary);color:#fff;padding:12px 22px;font-size:16px}
+.pod .spd{display:flex;gap:6px;justify-content:center;align-items:center;font-size:12px;color:var(--muted)}
+.pod .spd button{border:1px solid #cdd6e2;background:#fff;border-radius:8px;padding:4px 9px;font-weight:700;color:var(--primary-2);font-size:12.5px}
+.pod .spd button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.pod .note{font-size:12px;color:var(--muted);margin:0}
+#podbar{position:fixed;left:10px;right:10px;bottom:calc(10px + var(--safe-bottom,0px));z-index:35;background:#002060;color:#fff;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.25);display:none;align-items:center;gap:10px;padding:8px 10px;max-width:520px;margin:0 auto}
+#podbar.on{display:flex}
+#podbar img{width:38px;height:38px;border-radius:9px}
+#podbar .tt{flex:1;min-width:0;font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}
+#podbar .tt small{display:block;font-weight:500;opacity:.8;font-size:11.5px}
+#podbar button{border:0;background:rgba(255,255,255,.16);color:#fff;border-radius:999px;width:38px;height:38px;font-size:15px;font-weight:800}
+body.feedon #podbar{display:none}
+body.podon main{padding-bottom:84px}
 </style>
 </head>
 <body>
 <div id="splash"><img src="icons/logo_oro.png" alt="Historiapp"><small>Historia del Deporte · UCAM</small></div>
 <div id="app"></div>
+<div id="podbar"><img src="icons/icon-192.png?v=2" alt=""><div class="tt" id="pbT"></div><button id="pbB">−15</button><button id="pbP">▶</button><button id="pbX">✕</button></div>
 <div class="toast" id="toast"></div>
 <div class="sheet" id="sheet"><div class="in" id="sheetIn"></div></div>
 
@@ -377,8 +401,8 @@ const I18N = {
     choose:"Elige tu idioma", es:"Castellano", en:"English", esSub:"Historia del Deporte", enSub:"History of Sport",
     home:"Inicio", temas:"Temas", tema:"Tema", soon:"Próximamente", locked:"Este tema se publicará cuando esté listo en clase.",
     level:"Nivel", xp:"XP", streak:"Racha", days:"días", toNext:"para el siguiente nivel",
-    modes:{fichas:"Fichas",mapa:"Mapa",cards:"Tarjetas",glossary:"Glosario",timeline:"Cronología",sources:"Fuentes",match:"Relaciona",myths:"Mitos",quiz:"Preguntas rápidas",videos:"Vídeos"},
-    modesSub:{fichas:"El manual de bolsillo, por apartados",mapa:"Ideas principales y secundarias del tema",cards:"¿Verdadero o falso? Desliza",glossary:"Términos clave con repaso espaciado",timeline:"Ordena los hechos",sources:"¿De dónde procede este texto?",match:"Empareja práctica, grupo y función",myths:"Tópicos que hay que desmontar",quiz:"Test con tiempo",videos:"Píldoras en vídeo"},
+    modes:{fichas:"Fichas",mapa:"Mapa",cards:"Tarjetas",glossary:"Glosario",timeline:"Cronología",sources:"Fuentes",match:"Relaciona",myths:"Mitos",quiz:"Preguntas rápidas",videos:"Vídeos",podcast:"Pódcast"},
+    modesSub:{fichas:"El manual de bolsillo, por apartados",mapa:"Ideas principales y secundarias del tema",cards:"¿Verdadero o falso? Desliza",glossary:"Términos clave con repaso espaciado",timeline:"Ordena los hechos",sources:"¿De dónde procede este texto?",match:"Empareja práctica, grupo y función",myths:"Tópicos que hay que desmontar",quiz:"Test con tiempo",videos:"Píldoras en vídeo",podcast:"El tema para escuchar"},
     yes:"SÍ", no:"NO", trueL:"Verdadero", falseL:"Falso", swipeHint:"Desliza a la derecha si es verdadero y a la izquierda si es falso",
     correct:"Correcto", wrong:"No es así", next:"Siguiente", check:"Comprobar", again:"Otra ronda", back:"Volver al tema", continueL:"Continuar",
     gained:"+{n} XP", seen:"{a} de {b}", roundDone:"Ronda terminada", score:"{a} de {b} aciertos", timeUp:"Se acabó el tiempo",
@@ -391,7 +415,7 @@ const I18N = {
     badgeHow:"Completa cada sección de un tema para ganar su insignia.",
     levelUp:"¡Nivel {n}: {name}!", complete:"Completado",
     levels:["Aprendiz","Paleolítico","Neolítico","Escriba","Pahlavan","Hoplita","Gladiador","Caballero","Gentleman","Catedrático"],
-    noVideos:"Todavía no hay vídeos para este tema.", vFeed:"▶ Verlos seguidos", vFeedSub:"Desliza hacia arriba para pasar al siguiente", vTap:"Toca para activar el sonido", vNext:"Siguiente vídeo ›", vEnd:"Has llegado al último vídeo del tema", vClose:"Volver", vTestB:"Test", vMoreB:"Saber más", vMore:"Saber más", vTest:"Pon a prueba lo que has visto", vSeen:"✓ Visto", vNew:"Sin ver", vAll:"Todos los vídeos", vOk:"Correcto. +{n} XP", vKo:"La respuesta correcta está marcada", install:"Añade Historiapp a tu pantalla de inicio: en Safari, botón Compartir y «Añadir a pantalla de inicio»; en Chrome, menú y «Instalar aplicación».",
+    noVideos:"Todavía no hay vídeos para este tema.", vFeed:"▶ Verlos seguidos", vFeedSub:"Desliza hacia arriba para pasar al siguiente", vTap:"Toca para activar el sonido", vNext:"Siguiente vídeo ›", vEnd:"Has llegado al último vídeo del tema", vClose:"Volver", vTestB:"Test", vMoreB:"Saber más", pListen:"▶ Escuchar", pResume:"▶ Continuar", pPause:"❚❚ Pausa", pDone:"✓ Escuchado", pLeft:"quedan {m} min", pMin:"{m} min", pBg:"Sigue sonando si apagas la pantalla o si pasas a otras secciones de la app. En iPhone, instala la app para que funcione mejor.", pEsOnly:"", noPod:"Todavía no hay pódcast para este tema.", pSpeed:"Velocidad", vMore:"Saber más", vTest:"Pon a prueba lo que has visto", vSeen:"✓ Visto", vNew:"Sin ver", vAll:"Todos los vídeos", vOk:"Correcto. +{n} XP", vKo:"La respuesta correcta está marcada", install:"Añade Historiapp a tu pantalla de inicio: en Safari, botón Compartir y «Añadir a pantalla de inicio»; en Chrome, menú y «Instalar aplicación».",
     privacy:"Tu progreso (XP, rachas, insignias) se guarda solo en este móvil y nadie más lo ve. Para no perderlo, instala la app y úsala siempre desde el icono. La app cuenta de forma anónima qué pantallas se visitan, sin cookies ni datos personales, para mejorar la asignatura.", version:"Contenido actualizado", offline:"Sin conexión: se muestran los datos guardados", loadError:"No se ha podido cargar el contenido. Comprueba la conexión.",
     author:"Historia del Deporte · Grado en CAFD · UCAM",
     fichasSearch:"Buscar en las fichas…", fichasEsOnly:"", practice:"Practicar este apartado", slideText:"En la diapositiva", refsL:"Fuentes", essayL:"Para el ensayo",
@@ -404,8 +428,8 @@ const I18N = {
     choose:"Choose your language", es:"Castellano", en:"English", esSub:"Historia del Deporte", enSub:"History of Sport",
     home:"Home", temas:"Units", tema:"Unit", soon:"Coming soon", locked:"This unit will be published once it is ready in class.",
     level:"Level", xp:"XP", streak:"Streak", days:"days", toNext:"to next level",
-    modes:{fichas:"Study sheets",mapa:"Map",cards:"Cards",glossary:"Glossary",timeline:"Timeline",sources:"Sources",match:"Match",myths:"Myths",quiz:"Quick quiz",videos:"Videos"},
-    modesSub:{fichas:"The pocket manual, by section",mapa:"Main and secondary ideas of the unit",cards:"True or false? Swipe",glossary:"Key terms with spaced review",timeline:"Put the events in order",sources:"Where does this text come from?",match:"Pair practice, group and function",myths:"Clichés to take apart",quiz:"Timed test",videos:"Video bites"},
+    modes:{fichas:"Study sheets",mapa:"Map",cards:"Cards",glossary:"Glossary",timeline:"Timeline",sources:"Sources",match:"Match",myths:"Myths",quiz:"Quick quiz",videos:"Videos",podcast:"Podcast"},
+    modesSub:{fichas:"The pocket manual, by section",mapa:"Main and secondary ideas of the unit",cards:"True or false? Swipe",glossary:"Key terms with spaced review",timeline:"Put the events in order",sources:"Where does this text come from?",match:"Pair practice, group and function",myths:"Clichés to take apart",quiz:"Timed test",videos:"Video bites",podcast:"The unit to listen to"},
     yes:"YES", no:"NO", trueL:"True", falseL:"False", swipeHint:"Swipe right if true, left if false",
     correct:"Correct", wrong:"Not quite", next:"Next", check:"Check", again:"Another round", back:"Back to unit", continueL:"Continue",
     gained:"+{n} XP", seen:"{a} of {b}", roundDone:"Round finished", score:"{a} of {b} correct", timeUp:"Time is up",
@@ -418,7 +442,7 @@ const I18N = {
     badgeHow:"Complete each section of a unit to earn its badge.",
     levelUp:"Level {n}: {name}!", complete:"Completed",
     levels:["Apprentice","Palaeolithic","Neolithic","Scribe","Pahlavan","Hoplite","Gladiator","Knight","Gentleman","Professor"],
-    noVideos:"No videos for this unit yet.", vFeed:"▶ Watch them in a row", vFeedSub:"Swipe up for the next one", vTap:"Tap to turn the sound on", vNext:"Next video ›", vEnd:"That was the last video of this unit", vClose:"Back", vTestB:"Test", vMoreB:"Learn more", vMore:"Learn more", vTest:"Test what you have seen", vSeen:"✓ Watched", vNew:"Not watched", vAll:"All videos", vOk:"Correct. +{n} XP", vKo:"The right answer is marked", install:"Add Historiapp to your home screen: in Safari, tap Share and 'Add to Home Screen'; in Chrome, open the menu and 'Install app'.",
+    noVideos:"No videos for this unit yet.", vFeed:"▶ Watch them in a row", vFeedSub:"Swipe up for the next one", vTap:"Tap to turn the sound on", vNext:"Next video ›", vEnd:"That was the last video of this unit", vClose:"Back", vTestB:"Test", vMoreB:"Learn more", pListen:"▶ Listen", pResume:"▶ Resume", pPause:"❚❚ Pause", pDone:"✓ Listened", pLeft:"{m} min left", pMin:"{m} min", pBg:"It keeps playing if you switch the screen off or move to other sections of the app. On iPhone, install the app for best results.", pEsOnly:"This episode is in Spanish.", noPod:"No podcast for this unit yet.", pSpeed:"Speed", vMore:"Learn more", vTest:"Test what you have seen", vSeen:"✓ Watched", vNew:"Not watched", vAll:"All videos", vOk:"Correct. +{n} XP", vKo:"The right answer is marked", install:"Add Historiapp to your home screen: in Safari, tap Share and 'Add to Home Screen'; in Chrome, open the menu and 'Install app'.",
     privacy:"Your progress (XP, streaks, badges) is stored only on this phone and nobody else sees it. To keep it, install the app and always open it from its icon. The app counts anonymously which screens are visited, with no cookies or personal data, to improve the course.", version:"Content updated", offline:"Offline: showing saved data", loadError:"Could not load the content. Check your connection.",
     author:"History of Sport · Sport Sciences degree · UCAM",
     fichasSearch:"Search the sheets…", fichasEsOnly:"Some sheets of this unit are not yet available in English and are shown in Spanish.", practice:"Practise this section", slideText:"On the slide", refsL:"Sources", essayL:"For the essay",
@@ -427,8 +451,8 @@ const I18N = {
     installBtn:"Install on your phone", installIos:"On iPhone or iPad: tap the Share button (the square with the upward arrow, at the bottom in Safari) and choose 'Add to Home Screen'.", installAndroid:"On Android: open the Chrome menu (three dots) and choose 'Install app' or 'Add to Home screen'.", installDesktop:"Open this address on your phone to install it; on a computer it works from the browser.", installed:"The app is already installed.", close:"Close"
   }
 };
-const MODE_ICONS={fichas:"📖",mapa:"🧭",cards:"🖼️",glossary:"🔤",timeline:"⏳",sources:"📜",match:"🔗",myths:"🧨",quiz:"⚡",videos:"🎬"};
-const MODES=["fichas","mapa","cards","glossary","timeline","sources","match","myths","quiz","videos"];
+const MODE_ICONS={fichas:"📖",mapa:"🧭",cards:"🖼️",glossary:"🔤",timeline:"⏳",sources:"📜",match:"🔗",myths:"🧨",quiz:"⚡",videos:"🎬",podcast:"🎧"};
+const MODES=["fichas","mapa","cards","glossary","timeline","sources","match","myths","quiz","videos","podcast"];
 const LEVEL_XP=[0,100,250,450,700,1000,1400,1900,2500,3300];
 
 /* ============ state ============ */
@@ -463,7 +487,8 @@ function md(s){ return esc(s).replace(/\*\*([^*]+)\*\*/g,"<b>$1</b>").replace(/\
 function LL(o){ if(!o) return []; const a=o[S.lang]; return (a&&a.length)?a:(o.es||[]); }
 function norm(s){ return String(s).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase(); }
 function modePct(tema,mode){ const tot=modeTotal(tema,mode); if(!tot) return 0; if(mode==="glossary"){ const m=tema.glossary.filter((g,i)=>glBox(tema.id,i)>=3).length; return Math.min(100,Math.round(m/tot*100)); } return Math.min(100,Math.round(seenCount(tema.id,mode)/tot*100)); }
-function checkBadge(tema,mode){ if(mode==="videos") return; if(modePct(tema,mode)>=100 && !S.prog.badges[tema.id+"."+mode]){ S.prog.badges[tema.id+"."+mode]=1; save(); setTimeout(()=>toast("🏅 "+t("badgeName."+mode)+" · "+t("tema")+" "+tema.num,2600),900); } }
+const MEDIA=["videos","podcast"];
+function checkBadge(tema,mode){ if(MEDIA.includes(mode)) return; if(modePct(tema,mode)>=100 && !S.prog.badges[tema.id+"."+mode]){ S.prog.badges[tema.id+"."+mode]=1; save(); setTimeout(()=>toast("🏅 "+t("badgeName."+mode)+" · "+t("tema")+" "+tema.num,2600),900); } }
 function glBox(temaId,i){ return (S.prog.gl[temaId]||{})[i]||0; }
 function glSet(temaId,i,v){ S.prog.gl[temaId]=S.prog.gl[temaId]||{}; S.prog.gl[temaId][i]=Math.max(0,Math.min(4,v)); save(); }
 
@@ -571,7 +596,7 @@ async function renderHome(){
       const u=m.unit?L(m.unit):""; if(u && u!==lastUnit){ const h=document.createElement("div"); h.className="section-title"; h.style.marginTop="14px"; h.textContent=u; list.appendChild(h); lastUnit=u; }
       const b=document.createElement("button"); b.className="tema"+(m.available?"":" locked");
       let pctT="";
-      if(m.available){ const tm=S.temaCache[m.num]; if(tm){ pctT=Math.round(MODES.filter(x=>x!=="videos").reduce((a,x)=>a+modePct(tm,x),0)/(MODES.length-1))+"%"; } }
+      if(m.available){ const tm=S.temaCache[m.num]; if(tm){ pctT=Math.round(MODES.filter(x=>!MEDIA.includes(x)).reduce((a,x)=>a+modePct(tm,x),0)/(MODES.length-MEDIA.length))+"%"; } }
       b.innerHTML=`<div class="num">${m.num}</div><div class="t"><b>${esc(L(m.title))||t("tema")+" "+m.num}</b><span>${t("tema")} ${m.num}${m.available?"":" · "+t("soon")}</span></div>${m.available?`<div class="pct">${pctT}</div>`:`<div>🔒</div>`}`;
       b.onclick=()=>{ if(m.available) nav({name:"tema",num:m.num}); else toast(t("locked"),2200); };
       list.appendChild(b);
@@ -593,16 +618,17 @@ async function renderTema(num){
   const g=document.getElementById("modes");
   for(const m of MODES){
     const tot=modeTotal(tema,m), pct=modePct(tema,m);
+    if(m==="podcast" && !tot) continue;
     const b=document.createElement("button"); b.className="mode";
     b.innerHTML=`<div class="ic">${MODE_ICONS[m]}</div><b>${t("modes."+m)}</b><span>${t("modesSub."+m)}</span>
-      ${m==="videos"?`<span class="pill" style="margin-top:auto">${tot}</span>`:`<div class="prog"><i style="width:${pct}%"></i></div>`}
-      ${pct>=100&&m!=="videos"?`<div class="done">🏅</div>`:""}`;
+      ${MEDIA.includes(m)?`<span class="pill" style="margin-top:auto">${tot}</span>`:`<div class="prog"><i style="width:${pct}%"></i></div>`}
+      ${pct>=100&&!MEDIA.includes(m)?`<div class="done">🏅</div>`:""}`;
     b.onclick=()=>nav({name:"mode",num,mode:m});
     if(!tot) b.style.opacity=.5;
     g.appendChild(b);
   }
   const bd=document.getElementById("bd");
-  bd.innerHTML=MODES.filter(x=>x!=="videos").map(m=>`<div class="b ${S.prog.badges[tema.id+"."+m]?"":"off"}">🏅 ${t("badgeName."+m)}</div>`).join("");
+  bd.innerHTML=MODES.filter(x=>!MEDIA.includes(x)).map(m=>`<div class="b ${S.prog.badges[tema.id+"."+m]?"":"off"}">🏅 ${t("badgeName."+m)}</div>`).join("");
 }
 
 function renderSettings(){
@@ -635,8 +661,8 @@ async function renderMode(num,mode){
   if(mode==="mapa") return modeMapa(tema,m,v);
   let items=modeIdxs(tema,mode);
   if(!items.length && v.sec){ let sec=v.sec; while(!items.length && sec.split(".").length>2){ sec=sec.split(".").slice(0,-1).join("."); v.sec=sec; items=modeIdxs(tema,mode); } if(!items.length){ v.sec=undefined; items=modeIdxs(tema,mode); } }
-  if(!items.length){ m.innerHTML=`<div class="empty"><div class="ic">${MODE_ICONS[mode]}</div>${mode==="videos"?t("noVideos"):t("soon")}</div>`; return; }
-  ({cards:modeSwipe,myths:modeSwipe,glossary:modeGlossary,timeline:modeTimeline,sources:modeChoice,quiz:modeChoice,match:modeMatch,videos:modeVideos})[mode](tema,mode,m);
+  if(!items.length){ m.innerHTML=`<div class="empty"><div class="ic">${MODE_ICONS[mode]}</div>${mode==="videos"?t("noVideos"):mode==="podcast"?t("noPod"):t("soon")}</div>`; return; }
+  ({cards:modeSwipe,myths:modeSwipe,glossary:modeGlossary,timeline:modeTimeline,sources:modeChoice,quiz:modeChoice,match:modeMatch,videos:modeVideos,podcast:modePodcast})[mode](tema,mode,m);
 }
 function finishRound(m,tema,mode,correct,total,again,opts){ if(opts&&opts.onDone) return opts.onDone(correct,total); resultScreen(m,tema,mode,correct,total,again); }
 function resultScreen(m,tema,mode,correct,total,again){
@@ -1072,6 +1098,74 @@ async function renderExam(){
 
 /* --- videos --- */
 
+
+/* --- pódcast --- */
+const POD={audio:null,ep:null,tema:null,saveT:0};
+function fmtT(x){ x=Math.max(0,Math.floor(x||0)); const h=Math.floor(x/3600), m=Math.floor(x%3600/60), s=x%60; return (h?h+":"+String(m).padStart(2,"0"):m)+":"+String(s).padStart(2,"0"); }
+function podState(id){ S.prog.pod=S.prog.pod||{}; return S.prog.pod[id]||(S.prog.pod[id]={t:0,done:0,rate:1}); }
+function podAudio(){
+  if(POD.audio) return POD.audio;
+  const a=new Audio(); a.preload="metadata"; POD.audio=a;
+  a.addEventListener("timeupdate",()=>{ if(!POD.ep) return; const st=podState(POD.ep.id); st.t=a.currentTime;
+    if(a.duration&&a.currentTime/a.duration>.95&&!st.done){ st.done=1; track("podcast/"+POD.ep.id+"/fin","Pódcast terminado",true); }
+    const now=Date.now(); if(now-POD.saveT>5000){ POD.saveT=now; save(); } podUI(); });
+  ["play","pause","ended","loadedmetadata"].forEach(ev=>a.addEventListener(ev,()=>{ if(ev==="ended"&&POD.ep){ podState(POD.ep.id).t=0; } save(); podUI(); }));
+  if("mediaSession" in navigator){ const ms=navigator.mediaSession;
+    ms.setActionHandler("play",()=>a.play()); ms.setActionHandler("pause",()=>a.pause());
+    ms.setActionHandler("seekbackward",()=>{ a.currentTime=Math.max(0,a.currentTime-15); });
+    ms.setActionHandler("seekforward",()=>{ a.currentTime=Math.min(a.duration||1e9,a.currentTime+30); });
+    try{ ms.setActionHandler("seekto",d=>{ a.currentTime=d.seekTime; }); }catch(e){} }
+  document.getElementById("pbP").onclick=()=>{ a.paused?a.play():a.pause(); };
+  document.getElementById("pbB").onclick=()=>{ a.currentTime=Math.max(0,a.currentTime-15); };
+  document.getElementById("pbX").onclick=()=>{ a.pause(); if(POD.ep){ podState(POD.ep.id).t=a.currentTime; save(); } POD.ep=null; a.removeAttribute("src"); a.load(); podUI(); };
+  document.getElementById("pbT").onclick=()=>{ if(POD.tema) nav({name:"mode",num:POD.tema,mode:"podcast"}); };
+  return a;
+}
+function podPlay(tema,ep){
+  const a=podAudio(); const st=podState(ep.id);
+  if(!POD.ep||POD.ep.id!==ep.id){ POD.ep=ep; POD.tema=tema.num; a.src=L(ep.src); a.currentTime=0;
+    a.addEventListener("loadedmetadata",function f(){ a.removeEventListener("loadedmetadata",f); if(st.t&&st.t<(a.duration||1e9)-5) a.currentTime=st.t; },{once:true});
+    track("podcast/"+ep.id+"/"+S.lang,"Pódcast "+ep.id,true);
+    if("mediaSession" in navigator) navigator.mediaSession.metadata=new MediaMetadata({title:L(ep.title),artist:"Historiapp · "+t("tema")+" "+tema.num,album:"Historia del Deporte",artwork:[{src:"icons/icon-512.png?v=2",sizes:"512x512",type:"image/png"},{src:"icons/icon-192.png?v=2",sizes:"192x192",type:"image/png"}]}); }
+  a.playbackRate=st.rate||1; a.play().catch(()=>{}); podUI();
+}
+function podUI(){
+  const a=POD.audio, bar=document.getElementById("podbar"); if(!bar) return;
+  document.body.classList.toggle("podon",!!(a&&POD.ep));
+  if(!a||!POD.ep){ bar.classList.remove("on"); } else { bar.classList.add("on");
+    document.getElementById("pbT").innerHTML=`${esc(L(POD.ep.title))}<small>${fmtT(a.currentTime)} / ${fmtT(a.duration||POD.ep.dur)}</small>`;
+    document.getElementById("pbP").textContent=a.paused?"▶":"❚❚"; }
+  document.querySelectorAll(".pod[data-id]").forEach(c=>{ const id=c.dataset.id, st=podState(id), cur=POD.ep&&POD.ep.id===id&&a;
+    const dur=+c.dataset.dur, t0=cur?a.currentTime:st.t, d=cur&&a.duration?a.duration:dur;
+    const r=c.querySelector("input[type=range]"); if(r&&!r._drag){ r.max=d; r.value=t0; }
+    c.querySelector(".t0").textContent=fmtT(t0); c.querySelector(".t1").textContent=st.done&&!cur?t("pDone"):t("pLeft",{m:Math.max(1,Math.round((d-t0)/60))});
+    c.querySelector(".main").textContent= cur&&!a.paused ? t("pPause") : (t0>5?t("pResume"):t("pListen"));
+    c.querySelectorAll(".spd button").forEach(b=>b.classList.toggle("on",+b.dataset.r===(st.rate||1))); });
+}
+document.addEventListener("play",e=>{ if(e.target&&e.target.tagName==="VIDEO"&&POD.audio&&!POD.audio.paused) POD.audio.pause(); },true);
+function modePodcast(tema,mode,m){
+  const eps=modeIdxs(tema,mode).map(i=>tema.podcast[i]);
+  m.innerHTML=eps.map(ep=>`<div class="pod" data-id="${esc(ep.id)}" data-dur="${ep.dur}">
+    <div class="ph"><img src="icons/icon-192.png?v=2" alt=""><div><b>${esc(L(ep.title))}</b><span>${t("tema")} ${tema.num} · ${t("pMin",{m:Math.round(ep.dur/60)})}${ep.lang&&ep.lang!==S.lang?` · ${esc(ep.lang.toUpperCase())}`:""}</span></div></div>
+    ${L(ep.desc)?`<p class="desc">${md(L(ep.desc))}</p>`:""}
+    ${ep.lang&&ep.lang!==S.lang&&t("pEsOnly")?`<p class="note">${t("pEsOnly")}</p>`:""}
+    <input type="range" min="0" step="1" value="0"><div class="tm"><span class="t0">0:00</span><span class="t1"></span></div>
+    <div class="ctl"><button data-a="b">−15</button><button class="main" data-a="p"></button><button data-a="f">+30</button></div>
+    <div class="spd">${t("pSpeed")} ${[1,1.25,1.5,1.75].map(r=>`<button data-r="${r}">${String(r).replace(".",",")}×</button>`).join("")}</div>
+  </div>`).join("")+`<p class="note" style="text-align:center;margin:12px 8px">🔒 ${t("pBg")}</p>`;
+  m.querySelectorAll(".pod").forEach(c=>{ const ep=eps.find(e=>e.id===c.dataset.id), st=podState(ep.id);
+    const isCur=()=>POD.ep&&POD.ep.id===ep.id&&POD.audio;
+    c.querySelector('[data-a="p"]').onclick=()=>{ if(isCur()&&!POD.audio.paused) POD.audio.pause(); else podPlay(tema,ep); };
+    c.querySelector('[data-a="b"]').onclick=()=>{ if(isCur()) POD.audio.currentTime=Math.max(0,POD.audio.currentTime-15); else { st.t=Math.max(0,st.t-15); save(); podUI(); } };
+    c.querySelector('[data-a="f"]').onclick=()=>{ if(isCur()) POD.audio.currentTime+=30; else { st.t=Math.min(ep.dur-5,st.t+30); save(); podUI(); } };
+    const r=c.querySelector("input[type=range]");
+    r.oninput=()=>{ r._drag=true; c.querySelector(".t0").textContent=fmtT(+r.value); };
+    r.onchange=()=>{ r._drag=false; if(isCur()) POD.audio.currentTime=+r.value; else { st.t=+r.value; save(); } podUI(); };
+    c.querySelectorAll(".spd button").forEach(b=>b.onclick=()=>{ st.rate=+b.dataset.r; if(isCur()) POD.audio.playbackRate=st.rate; save(); podUI(); });
+  });
+  podUI();
+}
+
 /* --- vídeos en feed --- */
 function videoAnswer(tema,v,k,box){
   const q=L(v.q), ok=k===q.a; track("video-test/"+v.id+"/"+(ok?"acierto":"fallo"),"Test vídeo "+v.id,true);
@@ -1082,6 +1176,7 @@ function videoAnswer(tema,v,k,box){
   return ok;
 }
 function openFeed(tema,idxs,start,onClose){
+  if(POD.audio&&!POD.audio.paused) POD.audio.pause();
   const vs=tema.videos; const answered=()=>S.prog.seen[tema.id+".videoq"]||{};
   const fd=document.createElement("div"); fd.className="feed";
   fd.innerHTML=`<div class="fscroll">${idxs.map((i,n)=>{ const v=vs[i]; return `<section class="fitem" data-n="${n}" style="background-image:url('${esc(L(v.poster))}')">
