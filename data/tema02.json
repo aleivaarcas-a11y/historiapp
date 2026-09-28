@@ -34,13 +34,13 @@
     "en": "Wooden prosthesis, Luxor, c. 600 BC"
    },
    "claim": {
-    "es": "Es la prótesis funcional más antigua conocida.",
-    "en": "It is the oldest known functional prosthesis."
+    "es": "La prótesis perteneció a un soldado que perdió el pie en combate.",
+    "en": "The prosthesis belonged to a soldier who lost his foot in battle."
    },
-   "answer": true,
+   "answer": false,
    "explain": {
-    "es": "Perteneció a una mujer noble de 50 a 60 años que perdió el dedo gordo del pie, probablemente por complicaciones de la diabetes. Se conserva en la Universidad de Basilea.",
-    "en": "It belonged to a noblewoman aged 50 to 60 who lost her big toe, probably from complications of diabetes. It is kept at the University of Basel."
+    "es": "Perteneció a una mujer noble de 50 a 60 años que perdió el dedo gordo del pie, probablemente por complicaciones de la diabetes. Es la prótesis funcional más antigua conocida y se conserva en la Universidad de Basilea.",
+    "en": "It belonged to a noblewoman aged 50 to 60 who lost her big toe, probably through complications of diabetes. It is the oldest known functional prosthesis and is kept at the University of Basel."
    },
    "sec": "2.1.1"
   },
@@ -187,13 +187,13 @@
     "en": "Egyptian chariot, Florence Archaeological Museum, c. 1400 BC"
    },
    "claim": {
-    "es": "El carro egipcio pesaba unos 24 kg y alcanzaba 38 km/h.",
-    "en": "The Egyptian chariot weighed about 24 kg and reached 38 km/h."
+    "es": "El carro egipcio se usaba sobre todo en carreras de competición.",
+    "en": "The Egyptian chariot was mainly used in competitive races."
    },
-   "answer": true,
+   "answer": false,
    "explain": {
-    "es": "Chasis de fresno o acacia, cuerpo de piel de cabra y ruedas de un metro con 4 o 6 radios. Tirado por dos caballos, se usó para la guerra y la caza, nunca en carreras.",
-    "en": "Ash or acacia chassis, goatskin body and one-metre wheels with 4 or 6 spokes. Drawn by two horses, it was used for war and hunting, never for racing."
+    "es": "Tirado por dos caballos, se usó para la guerra y la caza, nunca en carreras. Pesaba unos 24 kg, alcanzaba 38 km/h y tenía chasis de fresno o acacia, cuerpo de piel de cabra y ruedas de un metro con 4 o 6 radios.",
+    "en": "Drawn by two horses, it was used for war and hunting, never for racing. It weighed about 24 kg, reached 38 km/h and had an ash or acacia frame, a goatskin body and one-metre wheels with 4 or 6 spokes."
    },
    "sec": "2.1.2"
   },
@@ -306,13 +306,13 @@
     "en": "Battle axe, 12th Dynasty, Metropolitan Museum"
    },
    "claim": {
-    "es": "Esta arma pertenece al Imperio Medio.",
-    "en": "This weapon belongs to the Middle Kingdom."
+    "es": "Esta arma pertenece al ejército profesional del Imperio Nuevo.",
+    "en": "This weapon belongs to the professional army of the New Kingdom."
    },
-   "answer": true,
+   "answer": false,
    "explain": {
-    "es": "Dinastía XII (h. 1981-1802 a. C.). El ejército profesional permanente llegará más tarde, con el Imperio Nuevo, tras el trauma de la ocupación hicsa.",
-    "en": "12th Dynasty (c. 1981-1802 BC). The standing professional army would come later, with the New Kingdom, after the trauma of the Hyksos occupation."
+    "es": "Es de la dinastía XII, en el Imperio Medio (h. 1981-1802 a. C.). El ejército profesional permanente llega después, con el Imperio Nuevo, tras la ocupación hicsa.",
+    "en": "It dates from the 12th Dynasty, in the Middle Kingdom (c. 1981-1802 BC). The permanent professional army came later, with the New Kingdom, after the Hyksos occupation."
    },
    "sec": "2.1.4"
   },
@@ -374,13 +374,13 @@
     "en": "Tomb of Baqet III, Beni Hasan, c. 2000 BC"
    },
    "claim": {
-    "es": "Estas pinturas muestran 219 parejas de luchadores.",
-    "en": "These paintings show 219 pairs of wrestlers."
+    "es": "Los luchadores de Beni Hasan competían con ropa de soldado y casco.",
+    "en": "The Beni Hasan wrestlers competed in soldiers' clothing and helmets."
    },
-   "answer": true,
+   "answer": false,
    "explain": {
-    "es": "Luchadores en marrón oscuro y claro con un repertorio de llaves: proyecciones sobre el hombro, volteos de cadera, llaves de brazo. Competían desnudos salvo por un cinturón de tela.",
-    "en": "Wrestlers in dark and light brown with a repertoire of holds: shoulder throws, hip throws, arm locks. They competed naked except for a cloth belt."
+    "es": "Competían desnudos salvo por un cinturón de tela, y las 219 parejas se distinguen por el color de la piel, marrón oscuro y claro, con proyecciones sobre el hombro, volteos de cadera y llaves de brazo.",
+    "en": "They competed naked except for a cloth belt, and the 219 pairs are told apart by skin colour, dark and light brown, with shoulder throws, hip throws and arm locks."
    },
    "sec": "2.1.4"
   },
@@ -476,13 +476,13 @@
     "en": "Statue of Taharqa, 25th Dynasty, Louvre"
    },
    "claim": {
-    "es": "Una estela de este rey documenta una carrera militar de 100 km entre Menfis y El Fayum.",
-    "en": "A stela of this king documents a 100 km military run between Memphis and the Fayum."
+    "es": "La carrera de la estela de Taharqa se corrió de un tirón, sin ningún descanso.",
+    "en": "The race on the stela of Taharqa was run in one go, without any rest."
    },
-   "answer": true,
+   "answer": false,
    "explain": {
-    "es": "Año 6 de Taharqa (h. 685 a. C.): 50 km nocturnos en 4 horas, descanso reglamentario de 2 horas y 50 km de vuelta, corridos por tropas de élite que entrenaban a diario.",
-    "en": "Year 6 of Taharqa (c. 685 BC): 50 km by night in 4 hours, a regulation 2-hour rest and 50 km back, run by elite troops who trained daily."
+    "es": "En el año 6 de Taharqa (h. 685 a. C.) las tropas de élite corrieron 50 km nocturnos en 4 horas, tuvieron un descanso reglamentario de 2 horas y cubrieron otros 50 km de vuelta.",
+    "en": "In Taharqa's 6th year (c. 685 BC) the elite troops ran 50 km by night in 4 hours, had a compulsory 2-hour rest and covered another 50 km on the way back."
    },
    "sec": "2.1.4"
   },
@@ -510,13 +510,13 @@
     "en": "Tomb of Ny-ankh-nesut, Saqqara, c. 2350 BC"
    },
    "claim": {
-    "es": "Esta práctica pertenece al pueblo llano, no a la aristocracia.",
-    "en": "This practice belongs to the common people, not the aristocracy."
+    "es": "La justa de pescadores era un pasatiempo de la aristocracia.",
+    "en": "The fishermen's joust was a pastime of the aristocracy."
    },
-   "answer": true,
+   "answer": false,
    "explain": {
-    "es": "Es una de las pocas prácticas del pueblo llano documentadas: de dos a cuatro tripulaciones en canoas de papiro, con tres a seis hombres cada una.",
-    "en": "It is one of the few documented practices of the common people: two to four crews in papyrus canoes, with three to six men each."
+    "es": "Pertenece al pueblo llano y es una de sus pocas prácticas documentadas, con dos a cuatro tripulaciones en canoas de papiro de tres a seis hombres cada una.",
+    "en": "It belongs to the common people and is one of their few documented practices, with two to four crews in papyrus canoes of three to six men each."
    },
    "sec": "2.1.5"
   },
@@ -527,13 +527,13 @@
     "en": "Nefertari playing senet, QV66, c. 1255 BC"
    },
    "claim": {
-    "es": "El senet es la única práctica egipcia donde la mujer aparece en igualdad con el hombre.",
-    "en": "Senet is the only Egyptian practice where women appear on equal terms with men."
+    "es": "El senet solo lo jugaban hombres.",
+    "en": "Senet was played only by men."
    },
-   "answer": true,
+   "answer": false,
    "explain": {
-    "es": "Del egipcio snt, «pasar» o «cruzar», jugado por las élites de ambos sexos en un tablero de 30 casillas en tres filas de diez.",
-    "en": "From Egyptian snt, 'to pass' or 'to cross', played by elites of both sexes on a board of 30 squares in three rows of ten."
+    "es": "Lo jugaban las élites de ambos sexos, y es la única práctica egipcia en la que la mujer aparece en igualdad con el hombre. Su nombre viene de snt, «pasar» o «cruzar», y el tablero tenía 30 casillas en tres filas de diez.",
+    "en": "It was played by the elites of both sexes, and it is the only Egyptian practice in which women appear on an equal footing with men. Its name comes from snt, “to pass” or “to cross”, and the board had 30 squares in three rows of ten."
    },
    "sec": "2.1.6"
   },
@@ -595,13 +595,13 @@
     "en": "Maximum extent of the Persian Empire"
    },
    "claim": {
-    "es": "El imperio aqueménida fue fundado por Ciro II en 550 a. C.",
-    "en": "The Achaemenid Empire was founded by Cyrus II in 550 BC."
+    "es": "El imperio aqueménida lo fundó Darío I en el 330 a. C.",
+    "en": "The Achaemenid empire was founded by Darius I in 330 BC."
    },
-   "answer": true,
+   "answer": false,
    "explain": {
-    "es": "Tras derrotar a los medos, en tres generaciones se extendió del Egeo al Indo, el mayor Estado conocido hasta entonces, unido por la caballería, el arco, la educación y la gestión.",
-    "en": "After defeating the Medes, within three generations it stretched from the Aegean to the Indus, the largest state known until then, held together by cavalry, the bow, education and administration."
+    "es": "Lo fundó Ciro II en el 550 a. C., tras derrotar a los medos, y en tres generaciones se extendió del Egeo al Indo. El 330 a. C. marca, por el contrario, su final.",
+    "en": "It was founded by Cyrus II in 550 BC, after defeating the Medes, and within three generations it stretched from the Aegean to the Indus. The year 330 BC marks, on the contrary, its end."
    },
    "sec": "2.2.1"
   },
@@ -612,13 +612,13 @@
     "en": "Xenophon"
    },
    "claim": {
-    "es": "Este autor escribió la fuente más extensa sobre la educación persa, la Ciropedia.",
-    "en": "This author wrote the most extensive source on Persian education, the Cyropaedia."
+    "es": "Del deporte persa antiguo se conservan descripciones escritas por los propios persas.",
+    "en": "Descriptions of ancient Persian sport written by Persians themselves survive."
    },
-   "answer": true,
+   "answer": false,
    "explain": {
-    "es": "Del deporte iranio antiguo no se conserva ninguna descripción escrita por un persa: las principales fuentes son griegas (Heródoto, Jenofonte, Estrabón).",
-    "en": "No description of ancient Iranian sport written by a Persian survives: the main sources are Greek (Herodotus, Xenophon, Strabo)."
+    "es": "No se conserva ninguna, y las principales fuentes son griegas (Heródoto, Jenofonte y Estrabón). La más extensa sobre la educación persa es la Ciropedia de Jenofonte.",
+    "en": "None survive, and the main sources are Greek (Herodotus, Xenophon and Strabo). The longest on Persian education is Xenophon's Cyropaedia."
    },
    "sec": "2.2.1"
   },
@@ -765,13 +765,13 @@
     "en": "Carthage, Tunisia"
    },
    "claim": {
-    "es": "Cartago significa «ciudad nueva» en fenicio.",
-    "en": "Carthage means 'new city' in Phoenician."
+    "es": "Cartago significa «ciudad vieja» en fenicio.",
+    "en": "Carthage means “old city” in Phoenician."
    },
-   "answer": true,
+   "answer": false,
    "explain": {
-    "es": "Qart-ḥadašt, fundada por colonos de Tiro. Hacia 227 a. C. Asdrúbal fundó una segunda Qart-ḥadašt en la actual Cartagena, que los romanos llamaron Carthago Nova.",
-    "en": "Qart-ḥadašt, founded by settlers from Tyre. Around 227 BC Hasdrubal founded a second Qart-ḥadašt at present-day Cartagena, which the Romans called Carthago Nova."
+    "es": "Qart-ḥadašt significa «ciudad nueva». La fundaron colonos de Tiro, y hacia el 227 a. C. Asdrúbal fundó una segunda en la actual Cartagena, la Carthago Nova de los romanos.",
+    "en": "Qart-ḥadašt means “new city”. It was founded by settlers from Tyre, and around 227 BC Hasdrubal founded a second one at present-day Cartagena, the Romans' Carthago Nova."
    },
    "sec": "2.3.1"
   },
@@ -799,13 +799,13 @@
     "en": "Phoenician silver coin, c. 400 BC, Damascus"
    },
    "claim": {
-    "es": "La nave de guerra sobre un hipocampo refleja la importancia del mar en la cultura fenicia.",
-    "en": "The warship over a hippocamp reflects the importance of the sea in Phoenician culture."
+    "es": "Los fenicios se guiaban en el mar por la Osa Mayor, igual que los griegos.",
+    "en": "The Phoenicians steered by the Great Bear, like the Greeks."
    },
-   "answer": true,
+   "answer": false,
    "explain": {
-    "es": "La navegación fue la actividad por excelencia de los fenicios, que se guiaban por la Osa Menor, más próxima al polo que la Osa Mayor de los griegos.",
-    "en": "Seafaring was the Phoenicians' defining activity; they steered by the Little Bear, closer to the pole than the Greeks' Great Bear."
+    "es": "Se guiaban por la Osa Menor, más próxima al polo y por tanto más estable que la Osa Mayor que usaban los griegos. La navegación fue su actividad por excelencia, como refleja esta nave de guerra sobre un hipocampo.",
+    "en": "They steered by the Little Bear, closer to the pole and therefore steadier than the Great Bear used by the Greeks. Seafaring was their defining activity, as this warship above a hippocamp shows."
    },
    "sec": "2.3.1"
   },
