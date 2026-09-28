@@ -376,6 +376,26 @@ body.feedon{overflow:hidden}
 #podbar button{border:0;background:rgba(255,255,255,.16);color:#fff;border-radius:999px;width:38px;height:38px;font-size:15px;font-weight:800}
 body.feedon #podbar{display:none}
 body.podon main{padding-bottom:84px}
+.mode.wide{grid-column:1/-1;display:grid;grid-template-columns:40px 1fr auto;column-gap:12px;row-gap:2px;align-items:center;min-height:0;padding:14px 16px}
+.mode.wide .ic{grid-row:1/3;font-size:30px}
+.mode.wide b,.mode.wide span:not(.pill){grid-column:2}
+.mode.wide .pill{grid-column:3;grid-row:1/3;margin-top:0!important}
+.mode.wide .prog{grid-column:1/-1;margin-top:8px}
+.mode.wide .done{top:50%;transform:translateY(-50%);right:14px}
+.mode.first{order:-1}
+.vfeedbtn{width:100%;margin-bottom:14px;display:flex;flex-direction:row;align-items:center;gap:14px;background:linear-gradient(135deg,#002060,#004379);color:#fff;border:0;border-radius:var(--radius);padding:14px 16px;text-align:left;box-shadow:var(--shadow);cursor:pointer}
+.vfeedbtn .vft{flex:1;display:flex;flex-direction:column;gap:3px}
+.vfeedbtn .vft b{font-size:16px}
+.vfeedbtn .vft small{font-size:12.5px;opacity:.88;line-height:1.35;font-weight:500}
+.vfeedbtn .vfgo{font-size:26px;opacity:.9}
+.vfph{display:block;position:relative;flex:0 0 auto;width:34px;height:58px;border:2.5px solid #fff;border-radius:9px;overflow:hidden}
+.vfph i{position:absolute;left:4px;right:4px;height:22px;border-radius:4px;background:#FBAE40;animation:vfs 1.8s linear infinite}
+.vfph i:nth-child(2){background:#fff;opacity:.75;animation-delay:-.9s}
+.vfhand{position:absolute;right:-9px;bottom:-4px;font-size:18px;animation:vfh 1.8s ease-in-out infinite}
+.vfwrap{display:block;position:relative;flex:0 0 auto;margin-right:6px}
+@keyframes vfs{from{top:56px}to{top:-26px}}
+@keyframes vfh{0%,100%{transform:translateY(4px)}50%{transform:translateY(-12px)}}
+@media (prefers-reduced-motion:reduce){.vfph i,.vfhand{animation:none}.vfph i{top:14px}.vfph i:nth-child(2){display:none}}
 </style>
 </head>
 <body>
@@ -415,7 +435,7 @@ const I18N = {
     badgeHow:"Completa cada sección de un tema para ganar su insignia.",
     levelUp:"¡Nivel {n}: {name}!", complete:"Completado",
     levels:["Aprendiz","Paleolítico","Neolítico","Escriba","Pahlavan","Hoplita","Gladiador","Caballero","Gentleman","Catedrático"],
-    noVideos:"Todavía no hay vídeos para este tema.", vFeed:"▶ Verlos seguidos", vFeedSub:"Desliza hacia arriba para pasar al siguiente", vTap:"Toca para activar el sonido", vNext:"Siguiente vídeo ›", vEnd:"Has llegado al último vídeo del tema", vClose:"Volver", vTestB:"Test", vMoreB:"Saber más", pListen:"▶ Escuchar", pResume:"▶ Continuar", pPause:"❚❚ Pausa", pDone:"✓ Escuchado", pLeft:"quedan {m} min", pMin:"{m} min", pBg:"Sigue sonando si apagas la pantalla o si pasas a otras secciones de la app. En iPhone, instala la app para que funcione mejor.", pEsOnly:"", noPod:"Todavía no hay pódcast para este tema.", pSpeed:"Velocidad", vMore:"Saber más", vTest:"Pon a prueba lo que has visto", vSeen:"✓ Visto", vNew:"Sin ver", vAll:"Todos los vídeos", vOk:"Correcto. +{n} XP", vKo:"La respuesta correcta está marcada", install:"Añade Historiapp a tu pantalla de inicio: en Safari, botón Compartir y «Añadir a pantalla de inicio»; en Chrome, menú y «Instalar aplicación».",
+    noVideos:"Todavía no hay vídeos para este tema.", vFeed:"Modo scroll", vFeedSub:"Desliza hacia arriba y los vídeos pasan uno tras otro, como en TikTok o Reels", vTap:"Toca para activar el sonido", vNext:"Siguiente vídeo ›", vEnd:"Has llegado al último vídeo del tema", vClose:"Volver", vTestB:"Test", vMoreB:"Saber más", pListen:"▶ Escuchar", pResume:"▶ Continuar", pPause:"❚❚ Pausa", pDone:"✓ Escuchado", pLeft:"quedan {m} min", pMin:"{m} min", pBg:"Sigue sonando si apagas la pantalla o si pasas a otras secciones de la app. En iPhone, instala la app para que funcione mejor.", pEsOnly:"", noPod:"Todavía no hay pódcast para este tema.", pSpeed:"Velocidad", vMore:"Saber más", vTest:"Pon a prueba lo que has visto", vSeen:"✓ Visto", vNew:"Sin ver", vAll:"Todos los vídeos", vOk:"Correcto. +{n} XP", vKo:"La respuesta correcta está marcada", install:"Añade Historiapp a tu pantalla de inicio: en Safari, botón Compartir y «Añadir a pantalla de inicio»; en Chrome, menú y «Instalar aplicación».",
     privacy:"Tu progreso (XP, rachas, insignias) se guarda solo en este móvil y nadie más lo ve. Para no perderlo, instala la app y úsala siempre desde el icono. La app cuenta de forma anónima qué pantallas se visitan, sin cookies ni datos personales, para mejorar la asignatura.", version:"Contenido actualizado", offline:"Sin conexión: se muestran los datos guardados", loadError:"No se ha podido cargar el contenido. Comprueba la conexión.",
     author:"Historia del Deporte · Grado en CAFD · UCAM",
     fichasSearch:"Buscar en las fichas…", fichasEsOnly:"", practice:"Practicar este apartado", slideText:"En la diapositiva", refsL:"Fuentes", essayL:"Para el ensayo",
@@ -442,7 +462,7 @@ const I18N = {
     badgeHow:"Complete each section of a unit to earn its badge.",
     levelUp:"Level {n}: {name}!", complete:"Completed",
     levels:["Apprentice","Palaeolithic","Neolithic","Scribe","Pahlavan","Hoplite","Gladiator","Knight","Gentleman","Professor"],
-    noVideos:"No videos for this unit yet.", vFeed:"▶ Watch them in a row", vFeedSub:"Swipe up for the next one", vTap:"Tap to turn the sound on", vNext:"Next video ›", vEnd:"That was the last video of this unit", vClose:"Back", vTestB:"Test", vMoreB:"Learn more", pListen:"▶ Listen", pResume:"▶ Resume", pPause:"❚❚ Pause", pDone:"✓ Listened", pLeft:"{m} min left", pMin:"{m} min", pBg:"It keeps playing if you switch the screen off or move to other sections of the app. On iPhone, install the app for best results.", pEsOnly:"This episode is in Spanish.", noPod:"No podcast for this unit yet.", pSpeed:"Speed", vMore:"Learn more", vTest:"Test what you have seen", vSeen:"✓ Watched", vNew:"Not watched", vAll:"All videos", vOk:"Correct. +{n} XP", vKo:"The right answer is marked", install:"Add Historiapp to your home screen: in Safari, tap Share and 'Add to Home Screen'; in Chrome, open the menu and 'Install app'.",
+    noVideos:"No videos for this unit yet.", vFeed:"Scroll mode", vFeedSub:"Swipe up and the videos play one after another, like TikTok or Reels", vTap:"Tap to turn the sound on", vNext:"Next video ›", vEnd:"That was the last video of this unit", vClose:"Back", vTestB:"Test", vMoreB:"Learn more", pListen:"▶ Listen", pResume:"▶ Resume", pPause:"❚❚ Pause", pDone:"✓ Listened", pLeft:"{m} min left", pMin:"{m} min", pBg:"It keeps playing if you switch the screen off or move to other sections of the app. On iPhone, install the app for best results.", pEsOnly:"This episode is in Spanish.", noPod:"No podcast for this unit yet.", pSpeed:"Speed", vMore:"Learn more", vTest:"Test what you have seen", vSeen:"✓ Watched", vNew:"Not watched", vAll:"All videos", vOk:"Correct. +{n} XP", vKo:"The right answer is marked", install:"Add Historiapp to your home screen: in Safari, tap Share and 'Add to Home Screen'; in Chrome, open the menu and 'Install app'.",
     privacy:"Your progress (XP, streaks, badges) is stored only on this phone and nobody else sees it. To keep it, install the app and always open it from its icon. The app counts anonymously which screens are visited, with no cookies or personal data, to improve the course.", version:"Content updated", offline:"Offline: showing saved data", loadError:"Could not load the content. Check your connection.",
     author:"History of Sport · Sport Sciences degree · UCAM",
     fichasSearch:"Search the sheets…", fichasEsOnly:"Some sheets of this unit are not yet available in English and are shown in Spanish.", practice:"Practise this section", slideText:"On the slide", refsL:"Sources", essayL:"For the essay",
@@ -620,6 +640,7 @@ async function renderTema(num){
     const tot=modeTotal(tema,m), pct=modePct(tema,m);
     if(m==="podcast" && !tot) continue;
     const b=document.createElement("button"); b.className="mode";
+    if(m==="mapa") b.classList.add("wide","first"); if(MEDIA.includes(m)) b.classList.add("wide");
     b.innerHTML=`<div class="ic">${MODE_ICONS[m]}</div><b>${t("modes."+m)}</b><span>${t("modesSub."+m)}</span>
       ${MEDIA.includes(m)?`<span class="pill" style="margin-top:auto">${tot}</span>`:`<div class="prog"><i style="width:${pct}%"></i></div>`}
       ${pct>=100&&!MEDIA.includes(m)?`<div class="done">🏅</div>`:""}`;
@@ -1232,7 +1253,7 @@ function openFeed(tema,idxs,start,onClose){
 function modeVideos(tema,mode,m){
   const idxs=modeIdxs(tema,mode), vs=tema.videos, seen=S.prog.seen[tema.id+".videos"]||{};
   const list=()=>{
-    m.innerHTML=`<button class="btn vfeedbtn" id="vFeed">${t("vFeed")}<small>${t("vFeedSub")}</small></button><div class="vlist">${idxs.map(i=>{const v=vs[i];return `<button class="vcard" data-i="${i}"><img loading="lazy" src="${esc(L(v.poster))}" alt=""><div class="vt">${esc(L(v.title))}</div><div class="vs ${seen[v.id]?"on":""}">${seen[v.id]?t("vSeen"):t("vNew")}</div></button>`}).join("")}</div>`;
+    m.innerHTML=`<button class="vfeedbtn" id="vFeed"><span class="vfwrap"><span class="vfph"><i></i><i></i></span><span class="vfhand">👆</span></span><span class="vft"><b>${t("vFeed")}</b><small>${t("vFeedSub")}</small></span><span class="vfgo">›</span></button><div class="vlist">${idxs.map(i=>{const v=vs[i];return `<button class="vcard" data-i="${i}"><img loading="lazy" src="${esc(L(v.poster))}" alt=""><div class="vt">${esc(L(v.title))}</div><div class="vs ${seen[v.id]?"on":""}">${seen[v.id]?t("vSeen"):t("vNew")}</div></button>`}).join("")}</div>`;
     m.querySelectorAll(".vcard").forEach(b=>b.onclick=()=>open(+b.dataset.i));
     const fb=m.querySelector("#vFeed"); if(fb) fb.onclick=()=>{ const st=Math.max(0,idxs.findIndex(i=>!(S.prog.seen[tema.id+".videos"]||{})[vs[i].id])); openFeed(tema,idxs,st,()=>{ Object.assign(seen,S.prog.seen[tema.id+".videos"]||{}); list(); }); };
   };
