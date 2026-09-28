@@ -7,7 +7,7 @@
 <meta name="description" content="Historiapp: prepara el examen de Historia del Deporte (UCAM)">
 <meta name="theme-color" content="#004379">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Historiapp">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icons/icon-192.png">
@@ -1285,7 +1285,6 @@ function fixSafeTop(){ try{
   const ios=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
   const standalone=navigator.standalone===true||matchMedia("(display-mode: standalone)").matches;
   const portrait=innerHeight>innerWidth, H=Math.max(screen.height,screen.width);
-  if(ios&&standalone&&portrait&&h<20) h = H>=874?62 : H>=852?59 : H>=812?50 : 20;
   document.documentElement.style.setProperty("--safe-top",h+"px");
 }catch(e){} }
 fixSafeTop(); addEventListener("orientationchange",()=>setTimeout(fixSafeTop,300)); addEventListener("resize",()=>setTimeout(fixSafeTop,300));
