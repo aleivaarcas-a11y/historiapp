@@ -898,7 +898,7 @@ function renderFicha(tema,m,k){
     ${f.images.map((im,j)=>`<div class="fimg" data-j="${j}"><img src="${im.src}" alt="" loading="lazy">${L(im.caption)?`<div class="cap">${esc(L(im.caption))}</div>`:""}</div>`).join("")}
     <div class="card body">${LL(f.body).map(p=>`<p>${md(p)}</p>`).join("")}</div>
     ${LL(f.essay).length?`<div class="essay"><b>${t("essayL")}</b>${LL(f.essay).map(p=>md(p.replace(/^(Para el ensayo|For the essay),?\s*/,""))).join("<br>")}</div>`:""}
-    ${f.slide.es.length?`<div class="card"><details class="slide"><summary>${t("slideText")}</summary><ul style="padding-left:18px;margin:8px 0 0">${f.slide.es.map(p=>`<li>${md(p)}</li>`).join("")}</ul></details></div>`:""}
+    ${LL(f.slide).length?`<div class="card"><details class="slide"><summary>${t("slideText")}</summary><ul style="padding-left:18px;margin:8px 0 0">${LL(f.slide).map(p=>`<li>${md(p)}</li>`).join("")}</ul></details></div>`:""}
     ${f.refs.length?`<div class="card"><div class="section-title" style="margin:0 0 8px">${t("refsL")}</div><ul class="refs" style="padding-left:18px;margin:0">${f.refs.map(r=>`<li>${md(r)}</li>`).join("")}</ul></div>`:""}
     ${counts.length?`<div class="card"><div class="section-title" style="margin:0 0 10px">${t("practice")} (${esc(f.sec)})</div><div class="pbtns">${counts.map(c=>`<button data-mode="${c.mode}">${MODE_ICONS[c.mode]} ${t("modes."+c.mode)} · ${c.n}</button>`).join("")}</div></div>`:""}
     <div class="row"><button class="btn sec" id="fPrev" ${k===0?"disabled":""}>‹ ${t("prevF")}</button><button class="btn sec" id="fNext" ${k===fs.length-1?"disabled":""}>${t("nextF")} ›</button></div>
