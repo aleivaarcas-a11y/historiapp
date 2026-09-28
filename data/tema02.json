@@ -8466,15 +8466,19 @@
    "dur": 1932,
    "src": {
     "es": "audio/t2_ep1.m4a?v=1",
-    "en": "audio/t2_ep1.m4a?v=1"
+    "en": "audio/t2_ep1_en.m4a?v=1"
    },
    "title": {
     "es": "El faraón que nunca perdía, casas de fuerza y remeros fenicios",
-    "en": "The pharaoh who never lost, houses of strength and Phoenician rowers"
+    "en": "The Pharaoh Who Never Lost, Houses of Strength, and Phoenician Rowers"
    },
    "desc": {
     "es": "Repaso del Tema 2 en forma de conversación y en el mismo orden que las clases, desde el faraón que exhibe su cuerpo para demostrar que puede gobernar hasta los remeros y los niños de los santuarios fenicios, pasando por la aristocracia, el ejército y el pueblo llano de Egipto, y por la realeza, la educación, el pahlavan y los juegos ecuestres de Persia.",
     "en": "A conversational review of Unit 2 that follows the order of the lectures, from the pharaoh who displays his body to prove he can rule to the rowers and the children of the Phoenician sanctuaries, by way of the Egyptian aristocracy, army and common people, and the kingship, education, pahlavan and equestrian games of Persia."
+   },
+   "durs": {
+    "es": 1932,
+    "en": 1590
    }
   }
  ]
