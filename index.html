@@ -1297,7 +1297,18 @@ fixSafeTop(); addEventListener("orientationchange",()=>setTimeout(fixSafeTop,300
   const sp=document.getElementById("splash");
   if(sp){ let done=false; const hide=()=>{ if(done) return; done=true; sp.classList.add("out"); setTimeout(()=>sp.remove(),650); };
     sp.onclick=hide; setTimeout(hide,1800); }
-  if("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(()=>{});
+  if("serviceWorker" in navigator){
+    const hadCtrl=!!navigator.serviceWorker.controller; let pend=false, done=false;
+    const busy=()=>(typeof POD!=="undefined"&&POD.audio&&!POD.audio.paused)||document.body.classList.contains("feedon")||[...document.querySelectorAll("video")].some(v=>!v.paused);
+    const reloadNow=()=>{ if(done) return; done=true; try{ sessionStorage.setItem("historiapp.updated","1"); }catch(e){} location.reload(); };
+    navigator.serviceWorker.addEventListener("controllerchange",()=>{ if(!hadCtrl) return; if(busy()) pend=true; else reloadNow(); });
+    navigator.serviceWorker.register("sw.js").then(reg=>{
+      window.checkUpdate=()=>{ reg.update().catch(()=>{}); };
+      document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="visible") checkUpdate(); else if(pend) reloadNow(); });
+      setInterval(()=>{ if(pend&&!busy()) reloadNow(); },15000);
+    }).catch(()=>{});
+    try{ if(sessionStorage.getItem("historiapp.updated")){ sessionStorage.removeItem("historiapp.updated"); setTimeout(()=>toast(S.lang==="en"?"Historiapp has been updated":"Historiapp se ha actualizado",2200),2000); } }catch(e){}
+  }
 })();
 </script>
 </body>
