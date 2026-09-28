@@ -1,0 +1,452 @@
+[
+ {
+  "img": "img/t1/barranco_gomez_detalle.jpg",
+  "src": null,
+  "caption": {
+   "es": "Recolección de miel. Abrigo del Barranco Gómez (Castellote, Teruel)",
+   "en": "Honey gathering. Barranco Gómez rock shelter (Castellote, Teruel)"
+  },
+  "claim": {
+   "es": "Esta escena de arte rupestre levantino tiene una datación exacta y segura.",
+   "en": "This Levantine rock-art scene has an exact and secure date."
+  },
+  "answer": false,
+  "explain": {
+   "es": "Su cronología sigue discutida, posiblemente entre el 10.000 y el 5.000 a. C., igual que la del panel de la Cueva de la Araña, que muestra la misma actividad de subsistencia.",
+   "en": "Its chronology is still debated, possibly between 10,000 and 5,000 BC, like that of the Cueva de la Araña panel, which shows the same subsistence activity."
+  },
+  "sec": "1.3"
+ },
+ {
+  "img": "img/t1/bumeran_foto.jpg",
+  "src": null,
+  "caption": {
+   "es": "Bumerán de marfil de mamut. Cueva de Obłazowa (Polonia)",
+   "en": "Mammoth-ivory boomerang. Obłazowa Cave (Poland)"
+  },
+  "claim": {
+   "es": "La fecha de 40.300-37.300 a. C. se obtuvo datando directamente el bumerán.",
+   "en": "The date of 40,300-37,300 BC was obtained by dating the boomerang itself."
+  },
+  "answer": false,
+  "explain": {
+   "es": "La pieza no pudo datarse de forma directa, de modo que la fecha corresponde al estrato arqueológico en que apareció (Talamo et al., 2025). Aun así, es el bumerán más antiguo que se conoce.",
+   "en": "The piece could not be dated directly, so the date belongs to the archaeological layer in which it was found (Talamo et al., 2025). Even so, it is the oldest known boomerang."
+  },
+  "sec": "1.3"
+ },
+ {
+  "img": "img/t1/moai_ladera.jpg",
+  "src": null,
+  "caption": {
+   "es": "Moái de la Isla de Pascua excavado hasta la base",
+   "en": "Easter Island moai excavated down to its base"
+  },
+  "claim": {
+   "es": "Una estatua como esta es objeto de estudio de la arqueología, una de las ciencias auxiliares de la Historia.",
+   "en": "A statue like this is studied by archaeology, one of the auxiliary sciences of History."
+  },
+  "answer": true,
+  "explain": {
+   "es": "La arqueología interroga los restos materiales de sociedades que no dejaron textos sobre sí mismas y, junto a la numismática, la paleografía o la epigrafía, forma parte de las ciencias auxiliares de la Historia.",
+   "en": "Archaeology questions the material remains of societies that left no texts about themselves and, together with numismatics, palaeography and epigraphy, is one of the auxiliary sciences of History."
+  },
+  "sec": "1.1"
+ },
+ {
+  "img": "img/t1/report_800m_ganadoras.jpg",
+  "src": null,
+  "caption": {
+   "es": "Report oficial de Ámsterdam 1928. Ganadoras de los 800 m",
+   "en": "Official report of Amsterdam 1928. Winners of the 800 m"
+  },
+  "claim": {
+   "es": "La ganadora, Lina Radke, batió el récord del mundo.",
+   "en": "The winner, Lina Radke, set a world record."
+  },
+  "answer": true,
+  "explain": {
+   "es": "Las nueve atletas que tomaron la salida terminaron la carrera y Radke batió el récord mundial (Robinson, 2018). El desplome que repitieron durante décadas los manuales lo inventó la prensa de la época.",
+   "en": "All nine athletes who started finished the race and Radke set a world record (Robinson, 2018). The collapse repeated for decades in textbooks was invented by the press of the time."
+  },
+  "sec": "1.1"
+ },
+ {
+  "img": "img/t1/report_800m_resultados.jpg",
+  "src": null,
+  "caption": {
+   "es": "Report oficial de Ámsterdam 1928. Resultados de la final de 800 m",
+   "en": "Official report of Amsterdam 1928. Results of the 800 m final"
+  },
+  "claim": {
+   "es": "Varias corredoras abandonaron la final exhaustas antes de llegar a la meta.",
+   "en": "Several runners dropped out of the final exhausted before reaching the line."
+  },
+  "answer": false,
+  "explain": {
+   "es": "Nueve atletas tomaron la salida y las nueve terminaron. El bulo del desplome, difundido por cronistas como John Tunis, sirvió al COI para vetar las pruebas femeninas de más de 200 m hasta Roma 1960.",
+   "en": "Nine athletes started and all nine finished. The collapse hoax, spread by reporters such as John Tunis, was used by the IOC to ban women's events over 200 m until Rome 1960."
+  },
+  "sec": "1.1"
+ },
+ {
+  "img": "img/t1/utiles_pesca.jpg",
+  "src": null,
+  "caption": {
+   "es": "Útiles de pesca prehistóricos. Nasa, arpones y anzuelos",
+   "en": "Prehistoric fishing tools. Fish trap, harpoons and hooks"
+  },
+  "claim": {
+   "es": "Está demostrado que en la Prehistoria la caza era cosa de hombres y la pesca, del grupo entero.",
+   "en": "It is proven that in Prehistory hunting was for men and fishing for the whole group."
+  },
+  "answer": false,
+  "explain": {
+   "es": "Esa división se dio por supuesta durante décadas, pero no está probada para ninguna de las dos actividades. La investigación reciente documenta muchas más mujeres cazadoras de lo que suponía el modelo del «hombre cazador» (Anderson et al., 2023; Haas et al., 2020).",
+   "en": "That division was taken for granted for decades, but it is not proven for either activity. Recent research documents far more women hunters than the “man the hunter” model assumed (Anderson et al., 2023; Haas et al., 2020)."
+  },
+  "sec": "1.3"
+ },
+ {
+  "img": "img/t1/valltorta_calco.jpg",
+  "src": null,
+  "caption": {
+   "es": "Uso del propulsor para lanzar la azagaya",
+   "en": "Using a spear-thrower to launch a dart"
+  },
+  "claim": {
+   "es": "El propulsor y la azagaya forman parte de los útiles de caza prehistóricos.",
+   "en": "The spear-thrower and dart are among the prehistoric hunting tools."
+  },
+  "answer": true,
+  "explain": {
+   "es": "Junto al arco y la flecha, la jabalina, la honda y el bumerán, y a estrategias como la persecución, el acecho o la emboscada, sitúan en la Prehistoria un adiestramiento corporal ligado a la supervivencia.",
+   "en": "Together with the bow and arrow, the javelin, the sling and the boomerang, and strategies such as pursuit, stalking and ambush, they place in Prehistory a bodily training linked to survival."
+  },
+  "sec": "1.3"
+ },
+ {
+  "img": "img/t1/metodo_cientifico.jpg",
+  "src": "s05_1.png",
+  "caption": {
+   "es": "El método científico aplicado a la Historia",
+   "en": "The scientific method applied to History"
+  },
+  "claim": {
+   "es": "Para Carr, el método histórico consiste sobre todo en acumular datos verificados.",
+   "en": "For Carr, the historical method consists mainly of accumulating verified data."
+  },
+  "answer": false,
+  "explain": {
+   "es": "Carr lo resume en tres operaciones, conocer un hecho, interpretarlo dentro de una pregunta y elaborar con él una conclusión razonada (Carr, 1961/2010, p. 60), y corrige así a Ranke, que creía que los hechos hablan por sí solos.",
+   "en": "Carr sums it up in three operations, knowing a fact, interpreting it within a question and drawing a reasoned conclusion from it (Carr, 1961/2010, p. 60), thereby correcting Ranke, who believed that facts speak for themselves."
+  },
+  "sec": "1.1"
+ },
+ {
+  "img": "img/t1/revithi.jpg",
+  "src": "s10_1.jpg",
+  "caption": {
+   "es": "Stamata Revithi, Atenas 1896",
+   "en": "Stamata Revithi, Athens 1896"
+  },
+  "claim": {
+   "es": "Corrió el maratón olímpico y su tiempo quedó registrado de forma oficial.",
+   "en": "She ran the Olympic marathon and her time was officially recorded."
+  },
+  "answer": false,
+  "explain": {
+   "es": "Corrió casi todo el recorrido al día siguiente de la carrera masculina, pero no la dejaron entrar al estadio ni se registró su tiempo, de modo que quedó fuera del archivo oficial por decisión ajena.",
+   "en": "She ran almost the whole course the day after the men's race, but she was not allowed into the stadium and her time was not recorded, so she was left out of the official record by someone else's decision."
+  },
+  "sec": "1.1"
+ },
+ {
+  "img": "img/t1/greig.jpg",
+  "src": "s10_2.jpg",
+  "caption": {
+   "es": "Dale Greig, 1964",
+   "en": "Dale Greig, 1964"
+  },
+  "claim": {
+   "es": "Muchas organizaciones la consideran la primera mujer en completar un maratón con registro formal de tiempo.",
+   "en": "Many organisations regard her as the first woman to complete a marathon with a formally recorded time."
+  },
+  "answer": true,
+  "explain": {
+   "es": "Completó en 1964 el maratón de la Isla de Wight, en Inglaterra, en 3 h 27 min.",
+   "en": "In 1964 she completed the Isle of Wight marathon, in England, in 3 h 27 min."
+  },
+  "sec": "1.1"
+ },
+ {
+  "img": "img/t1/gibb.jpg",
+  "src": "s10_3.jpg",
+  "caption": {
+   "es": "Bobbi Gibb, Boston 1966",
+   "en": "Bobbi Gibb, Boston 1966"
+  },
+  "claim": {
+   "es": "Corrió el maratón de Boston con dorsal oficial.",
+   "en": "She ran the Boston Marathon with an official bib."
+  },
+  "answer": false,
+  "explain": {
+   "es": "La organización rechazó su inscripción alegando que las mujeres «no estaban fisiológicamente capacitadas» (Jutel, 2003). Corrió escondida entre los arbustos de la salida y sin dorsal, y terminó un año antes que Switzer.",
+   "en": "The organisers rejected her entry, claiming that women were “not physiologically able” (Jutel, 2003). She ran after hiding in the bushes at the start, without a bib, and finished a year before Switzer."
+  },
+  "sec": "1.1"
+ },
+ {
+  "img": "img/t1/documento_conservacion.jpg",
+  "src": "s14_1.jpg",
+  "caption": {
+   "es": "Conservación de un documento antiguo",
+   "en": "Conservation of an old document"
+  },
+  "claim": {
+   "es": "Una fuente primaria es la que elabora la propia sociedad que se investiga, en su propio tiempo.",
+   "en": "A primary source is one produced by the society under study, in its own time."
+  },
+  "answer": true,
+  "explain": {
+   "es": "La secundaria la interpreta después, a veces siglos más tarde. Este criterio atiende a la cercanía temporal, mientras que el de fuente directa o indirecta atiende a la intención de quien la produjo.",
+   "en": "A secondary source interprets it later, sometimes centuries afterwards. This criterion looks at closeness in time, whereas direct and indirect sources are distinguished by the intention of whoever produced them."
+  },
+  "sec": "1.1"
+ },
+ {
+  "img": "img/t1/libro_juegos_pagina.jpg",
+  "src": "s15_3.jpg",
+  "caption": {
+   "es": "Libro de los juegos de Alfonso X el Sabio, 1283",
+   "en": "Alfonso X the Wise's Book of Games, 1283"
+  },
+  "claim": {
+   "es": "Es una fuente secundaria sobre el ocio medieval.",
+   "en": "It is a secondary source on medieval leisure."
+  },
+  "answer": false,
+  "explain": {
+   "es": "Se terminó en Sevilla en 1283, en la misma época que documenta, así que es una fuente primaria. Es, además, el tratado europeo más antiguo dedicado al ajedrez.",
+   "en": "It was completed in Seville in 1283, in the very period it documents, so it is a primary source. It is also the oldest European treatise devoted to chess."
+  },
+  "sec": "1.1"
+ },
+ {
+  "img": "img/t1/prehistoria_historia.jpg",
+  "src": "s16_1.png",
+  "caption": {
+   "es": "Prehistoria e Historia",
+   "en": "Prehistory and History"
+  },
+  "claim": {
+   "es": "La periodización clásica toma la aparición de la escritura como frontera entre la Prehistoria y la Historia.",
+   "en": "Classical periodisation takes the appearance of writing as the boundary between Prehistory and History."
+  },
+  "answer": true,
+  "explain": {
+   "es": "Esa frontera se sitúa en Sumeria, a finales del IV milenio a. C., y es la que ilustra la tablilla sumeria con escritura cuneiforme.",
+   "en": "That boundary lies in Sumer, at the end of the 4th millennium BC, and it is illustrated by the Sumerian tablet with cuneiform writing."
+  },
+  "sec": "1.1"
+ },
+ {
+  "img": "img/t1/edades_historia.jpg",
+  "src": "s17_1.png",
+  "caption": {
+   "es": "Las edades de la Historia",
+   "en": "The ages of History"
+  },
+  "claim": {
+   "es": "Esta división en edades sirve igual para cualquier civilización del mundo.",
+   "en": "This division into ages works equally well for any civilisation in the world."
+  },
+  "answer": false,
+  "explain": {
+   "es": "Es una convención europea cómoda de manejar, aunque sus hitos pertenecen a la historia del Mediterráneo y dicen muy poco de sociedades que marchaban con su propio reloj, como China o la América precolombina.",
+   "en": "It is a convenient European convention, although its milestones belong to Mediterranean history and say very little about societies that kept their own time, such as China or pre-Columbian America."
+  },
+  "sec": "1.1"
+ },
+ {
+  "img": "img/t1/diacronico.jpg",
+  "src": "s20_1.png",
+  "caption": {
+   "es": "Enfoque diacrónico",
+   "en": "Diachronic approach"
+  },
+  "claim": {
+   "es": "El enfoque diacrónico congela un momento concreto y estudia sus conexiones internas.",
+   "en": "The diachronic approach freezes a particular moment and studies its internal connections."
+  },
+  "answer": false,
+  "explain": {
+   "es": "Eso es el enfoque sincrónico. El diacrónico sigue un fenómeno a lo largo del tiempo, por ejemplo cómo la lucha pasa del rito de iniciación al deporte reglado.",
+   "en": "That is the synchronic approach. The diachronic one follows a phenomenon over time, for example how wrestling moves from initiation rite to regulated sport."
+  },
+  "sec": "1.1"
+ },
+ {
+  "img": "img/t1/sincronico.jpg",
+  "src": "s20_2.png",
+  "caption": {
+   "es": "Enfoque sincrónico",
+   "en": "Synchronic approach"
+  },
+  "claim": {
+   "es": "Estudiar qué significaba el gimnasio en la Atenas del siglo V a. C. para su educación, su política y su religión es un análisis sincrónico.",
+   "en": "Studying what the gymnasium meant in 5th-century BC Athens for its education, politics and religion is a synchronic analysis."
+  },
+  "answer": true,
+  "explain": {
+   "es": "El enfoque sincrónico se detiene en un momento y analiza sus conexiones internas. Ninguna de las dos miradas basta por sí sola, y el historiador alterna entre ellas según lo que quiera comprender.",
+   "en": "The synchronic approach stops at one moment and analyses its internal connections. Neither view is enough on its own, and historians switch between them depending on what they want to understand."
+  },
+  "sec": "1.1"
+ },
+ {
+  "img": "img/t1/grabado_juego_pelota.jpg",
+  "src": "s21_1.jpg",
+  "caption": {
+   "es": "Grabado antiguo de un juego de pelota con bate",
+   "en": "Old engraving of a bat-and-ball game"
+  },
+  "claim": {
+   "es": "La historia de las actividades físicas estudia el deporte en sus relaciones con las culturas pasadas y contemporáneas.",
+   "en": "The history of physical activities studies sport in its relations with past and present cultures."
+  },
+  "answer": true,
+  "explain": {
+   "es": "Así la define la asignatura (Pérez y Verdes, 1998), de modo que el deporte se estudia como parte de la cultura de la sociedad que lo practica y no como una simple lista de hechos.",
+   "en": "That is how the course defines it (Pérez & Verdes, 1998), so sport is studied as part of the culture of the society that practises it and not as a mere list of events."
+  },
+  "sec": "1.1"
+ },
+ {
+  "img": "img/t1/rae_deporte.jpg",
+  "src": "s23_2.png",
+  "caption": {
+   "es": "Definición de «deporte» en el Diccionario de la Real Academia Española",
+   "en": "Definition of “deporte” in the Spanish Royal Academy dictionary"
+  },
+  "claim": {
+   "es": "El diccionario recoge también un sentido de deporte como recreación o pasatiempo, sin competición.",
+   "en": "The dictionary also records a sense of sport as recreation or pastime, without competition."
+  },
+  "answer": true,
+  "explain": {
+   "es": "La primera acepción habla de actividad física con competición, entrenamiento y normas, y la segunda, de recreación, pasatiempo o ejercicio al aire libre, la misma tensión que separa el enfoque cerrado del abierto.",
+   "en": "The first sense refers to physical activity with competition, training and rules, and the second to recreation, pastime or outdoor exercise, the same tension that separates the narrow and broad approaches."
+  },
+  "sec": "1.2"
+ },
+ {
+  "img": "img/t1/futbol_profesional.jpg",
+  "src": "s25_1.jpg",
+  "caption": {
+   "es": "Partido de fútbol profesional",
+   "en": "Professional football match"
+  },
+  "claim": {
+   "es": "Un partido profesional de fútbol encaja en el enfoque cerrado del deporte.",
+   "en": "A professional football match fits the narrow approach to sport."
+  },
+  "answer": true,
+  "explain": {
+   "es": "El enfoque cerrado entiende el deporte como actividad física reglada, competitiva e institucionalizada que busca el máximo rendimiento.",
+   "en": "The narrow approach understands sport as regulated, competitive and institutionalised physical activity that seeks maximum performance."
+  },
+  "sec": "1.2"
+ },
+ {
+  "img": "img/t1/ejercicio_mayores.jpg",
+  "src": "s25_2.jpg",
+  "caption": {
+   "es": "Actividad física para personas mayores",
+   "en": "Physical activity for older adults"
+  },
+  "claim": {
+   "es": "Para el enfoque cerrado, esta actividad es deporte.",
+   "en": "Under the narrow approach, this activity counts as sport."
+  },
+  "answer": false,
+  "explain": {
+   "es": "Solo cabe en el enfoque abierto de la Carta Europea del Deporte (Consejo de Europa, 1992), que incluye toda actividad, organizada o no, dirigida a la expresión o a la mejora física o psíquica.",
+   "en": "It only fits the broad approach of the European Sports Charter (Council of Europe, 1992), which includes any activity, organised or not, aimed at physical or mental expression or improvement."
+  },
+  "sec": "1.2"
+ },
+ {
+  "img": "img/t1/prehistoria_cuadro.jpg",
+  "src": "s34_1.png",
+  "caption": {
+   "es": "Cuadro de las etapas de la Prehistoria",
+   "en": "Chart of the stages of Prehistory"
+  },
+  "claim": {
+   "es": "La Prehistoria es la etapa más corta y mejor documentada de la historia humana.",
+   "en": "Prehistory is the shortest and best-documented stage of human history."
+  },
+  "answer": false,
+  "explain": {
+   "es": "Es, con enorme diferencia, la más larga y la peor documentada, porque carece de escritura y porque la madera, la fibra o la cuerda se conservan muy raramente (Kretchmar et al., 2017).",
+   "en": "It is by far the longest and the worst documented, because it has no writing and because wood, fibre and cord very rarely survive (Kretchmar et al., 2017)."
+  },
+  "sec": "1.3"
+ },
+ {
+  "img": "img/t1/caza_jabalina_rupestre.jpg",
+  "src": "s36_1.png",
+  "caption": {
+   "es": "Escena de caza con lanza",
+   "en": "Hunting scene with a spear"
+  },
+  "claim": {
+   "es": "Para Eichel, el primer ejercicio corporal propiamente dicho fue el lanzamiento de jabalina, hacia el 70.000 a. C.",
+   "en": "For Eichel, the first bodily exercise proper was javelin throwing, around 70,000 BC."
+  },
+  "answer": true,
+  "explain": {
+   "es": "Eichel sostiene que el ejercicio corporal nace del trabajo, y sitúa después el arpón y, hacia el 24.000 a. C., el arco y la flecha (Fernández Truan, Tomo I, pp. 18-19).",
+   "en": "Eichel argues that bodily exercise arises from work, and places the harpoon after it and, around 24,000 BC, the bow and arrow (Fernández Truan, Vol. I, pp. 18-19)."
+  },
+  "sec": "1.3"
+ },
+ {
+  "img": "img/t1/mapa_inuit.jpg",
+  "src": "s41_1.png",
+  "caption": {
+   "es": "Territorios inuit de América del Norte",
+   "en": "Inuit territories of North America"
+  },
+  "claim": {
+   "es": "Los World Eskimo-Indian Olympics nacieron en 1961 para mantener vivas las prácticas corporales de estas comunidades.",
+   "en": "The World Eskimo-Indian Olympics were founded in 1961 to keep these communities' bodily practices alive."
+  },
+  "answer": true,
+  "explain": {
+   "es": "Los fundaron comunidades inuit de Alaska, Canadá y Groenlandia, con pruebas como la sogatira, la patada a un pie o la danza del tambor, frente a la homogeneización del deporte occidental (Kretchmar et al., 2017).",
+   "en": "They were founded by Inuit communities from Alaska, Canada and Greenland, with events such as tug-of-war, the one-foot high kick and the drum dance, in response to the homogenisation of Western sport (Kretchmar et al., 2017)."
+  },
+  "sec": "1.3"
+ },
+ {
+  "img": "img/t1/levantino_ciervos.jpg",
+  "src": "s46_4.jpg",
+  "caption": {
+   "es": "Escena de caza de ciervos. Arte rupestre levantino",
+   "en": "Deer-hunting scene. Levantine rock art"
+  },
+  "claim": {
+   "es": "Una escena pintada como esta es siempre un documento fiel de una actividad real.",
+   "en": "A painted scene like this is always a faithful record of a real activity."
+  },
+  "answer": false,
+  "explain": {
+   "es": "Hay que distinguir qué documenta una actividad real y qué es convención estilística o símbolo, y además su cronología es discutida, posiblemente entre el 10.000 y el 5.000 a. C.",
+   "en": "We must distinguish what records a real activity from what is stylistic convention or symbol, and its chronology is also debated, possibly between 10,000 and 5,000 BC."
+  },
+  "sec": "1.3"
+ }
+]
