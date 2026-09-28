@@ -421,8 +421,8 @@ const I18N = {
     choose:"Elige tu idioma", es:"Castellano", en:"English", esSub:"Historia del Deporte", enSub:"History of Sport",
     home:"Inicio", temas:"Temas", tema:"Tema", soon:"Próximamente", locked:"Este tema se publicará cuando esté listo en clase.",
     level:"Nivel", xp:"XP", streak:"Racha", days:"días", toNext:"para el siguiente nivel",
-    modes:{fichas:"Fichas",mapa:"Mapa",cards:"Tarjetas",glossary:"Glosario",timeline:"Cronología",sources:"Fuentes",match:"Relaciona",myths:"Mitos",quiz:"Preguntas rápidas",videos:"Vídeos",podcast:"Pódcast"},
-    modesSub:{fichas:"El manual de bolsillo, por apartados",mapa:"Ideas principales y secundarias del tema",cards:"¿Verdadero o falso? Desliza",glossary:"Términos clave con repaso espaciado",timeline:"Ordena los hechos",sources:"¿De dónde procede este texto?",match:"Empareja práctica, grupo y función",myths:"Tópicos que hay que desmontar",quiz:"Test con tiempo",videos:"Píldoras en vídeo",podcast:"El tema para escuchar"},
+    modes:{fichas:"Fichas",mapa:"Mapa",cards:"Análisis de imágenes",glossary:"Glosario",timeline:"Cronología",sources:"Fuentes",match:"Relaciona",myths:"Mitos",quiz:"Preguntas rápidas",videos:"Vídeos",podcast:"Pódcast"},
+    modesSub:{fichas:"El manual de bolsillo, por apartados",mapa:"Ideas principales y secundarias del tema",cards:"¿Verdadero o falso? Desliza cada imagen",glossary:"Términos clave con repaso espaciado",timeline:"Ordena los hechos",sources:"¿De dónde procede este texto?",match:"Empareja práctica, grupo y función",myths:"Tópicos que hay que desmontar",quiz:"Test con tiempo",videos:"Píldoras en vídeo",podcast:"El tema para escuchar"},
     yes:"SÍ", no:"NO", trueL:"Verdadero", falseL:"Falso", swipeHint:"Desliza a la derecha si es verdadero y a la izquierda si es falso",
     correct:"Correcto", wrong:"No es así", next:"Siguiente", check:"Comprobar", again:"Otra ronda", back:"Volver al tema", continueL:"Continuar",
     gained:"+{n} XP", seen:"{a} de {b}", roundDone:"Ronda terminada", score:"{a} de {b} aciertos", timeUp:"Se acabó el tiempo",
@@ -448,8 +448,8 @@ const I18N = {
     choose:"Choose your language", es:"Castellano", en:"English", esSub:"Historia del Deporte", enSub:"History of Sport",
     home:"Home", temas:"Units", tema:"Unit", soon:"Coming soon", locked:"This unit will be published once it is ready in class.",
     level:"Level", xp:"XP", streak:"Streak", days:"days", toNext:"to next level",
-    modes:{fichas:"Study sheets",mapa:"Map",cards:"Cards",glossary:"Glossary",timeline:"Timeline",sources:"Sources",match:"Match",myths:"Myths",quiz:"Quick quiz",videos:"Videos",podcast:"Podcast"},
-    modesSub:{fichas:"The pocket manual, by section",mapa:"Main and secondary ideas of the unit",cards:"True or false? Swipe",glossary:"Key terms with spaced review",timeline:"Put the events in order",sources:"Where does this text come from?",match:"Pair practice, group and function",myths:"Clichés to take apart",quiz:"Timed test",videos:"Video bites",podcast:"The unit to listen to"},
+    modes:{fichas:"Study sheets",mapa:"Map",cards:"Image analysis",glossary:"Glossary",timeline:"Timeline",sources:"Sources",match:"Match",myths:"Myths",quiz:"Quick quiz",videos:"Videos",podcast:"Podcast"},
+    modesSub:{fichas:"The pocket manual, by section",mapa:"Main and secondary ideas of the unit",cards:"True or false? Swipe each image",glossary:"Key terms with spaced review",timeline:"Put the events in order",sources:"Where does this text come from?",match:"Pair practice, group and function",myths:"Clichés to take apart",quiz:"Timed test",videos:"Video bites",podcast:"The unit to listen to"},
     yes:"YES", no:"NO", trueL:"True", falseL:"False", swipeHint:"Swipe right if true, left if false",
     correct:"Correct", wrong:"Not quite", next:"Next", check:"Check", again:"Another round", back:"Back to unit", continueL:"Continue",
     gained:"+{n} XP", seen:"{a} of {b}", roundDone:"Round finished", score:"{a} of {b} correct", timeUp:"Time is up",
@@ -598,6 +598,7 @@ async function renderHome(){
   const lvl=levelOf(S.prog.xp), nextXP=LEVEL_XP[lvl+1]||LEVEL_XP[lvl], prevXP=LEVEL_XP[lvl];
   const pct=LEVEL_XP[lvl+1]?Math.round((S.prog.xp-prevXP)/(nextXP-prevXP)*100):100;
   app.innerHTML=header("Historiapp",false)+`<main>
+    <button class="tema" id="setBtn"><div class="num" style="background:#EAF1F8;color:var(--primary-2)">⚙️</div><div class="t"><b>${t("setHome")}</b><span>${t("setHomeSub")}</span></div><div class="pct">›</div></button>
     <div class="hero"><div class="lvl">${lvl+1}<small>${t("level").toUpperCase()}</small></div>
       <div class="info"><div class="name">${esc(t("levels")[lvl])}</div>
       <div class="bar"><i style="width:${pct}%"></i></div>
@@ -606,7 +607,6 @@ async function renderHome(){
     <button class="tema" id="examBtn" style="border:2px solid var(--primary)"><div class="num" style="background:var(--primary);color:#fff">🎓</div><div class="t"><b>${t("exam")}</b><span>${t("examSub")}</span></div><div class="pct">›</div></button>
     <button class="tema" id="searchBtn"><div class="num">🔎</div><div class="t"><b>${t("searchAll")}</b><span>${t("searchAllSub")}</span></div><div class="pct">›</div></button>
     <div id="temaList"><div class="empty">…</div></div>
-    <button class="tema" id="setBtn" style="margin-top:6px"><div class="num" style="background:#EAF1F8;color:var(--primary-2)">⚙️</div><div class="t"><b>${t("setHome")}</b><span>${t("setHomeSub")}</span></div><div class="pct">›</div></button>
     <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:10px">${t("author")}</p></main>`;
   bindHeader();
   { const d=S.prog.daily||{}; const done=d.date===todayKey()&&d.done; document.getElementById("dailyBtn").onclick=()=>nav({name:"daily"}); document.getElementById("examBtn").onclick=()=>nav({name:"exam"}); document.getElementById("searchBtn").onclick=()=>nav({name:"search"}); document.getElementById("setBtn").onclick=()=>nav({name:"settings",from:{name:"home"}});
