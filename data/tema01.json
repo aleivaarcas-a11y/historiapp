@@ -144,7 +144,8 @@
     "es": "Se escribió en 2004 sobre épocas muy anteriores, por lo que es una fuente secundaria. Procede de la tesis doctoral de José Luis Salvador y es uno de los compendios más completos en castellano.",
     "en": "It was written in 2004 about much earlier periods, so it is a secondary source. It grew out of José Luis Salvador's doctoral thesis and is one of the most complete surveys in Spanish."
    },
-   "sec": "1.1"
+   "sec": "1.1",
+   "lang": "es"
   },
   {
    "img": "img/t1/tablilla_sumeria.jpg",
@@ -3985,7 +3986,8 @@
      "caption": {
       "es": "Salvador, J. L. (2004). El deporte en Occidente",
       "en": "Salvador, J. L. (2004). El deporte en Occidente"
-     }
+     },
+     "lang": "es"
     }
    ],
    "code": "H1·12",
@@ -4000,8 +4002,8 @@
      "El ejemplo tiene interés metodológico añadido, porque muestra cómo una misma fuente primaria puede generar, con el tiempo, un número creciente de fuentes secundarias que la reinterpretan bajo preguntas distintas, sin que ninguna de ellas sustituya a la otra en autoridad documental. El manual, de hecho, se nutre en último término de la tesis doctoral de Salvador, que la pantalla señala como uno de los compendios más completos sobre historia del deporte en castellano, y que constituye a su vez una fuente secundaria de referencia obligada para este curso."
     ],
     "en": [
-     "The Book of Games that Alfonso X the Wise finished in Seville in 1283, also known as *Libro del acedrex, dados e tablas*, is the oldest European treatise devoted to chess and constitutes a primary source of the first order for late medieval leisure, since it was produced in the very period it documents (*Libro del acedrex, dados e tablas*, 1283). José Luis Salvador's book, *El deporte en Occidente*, is by contrast a secondary source, written seven centuries later with the intention of interpreting that past from the distance of academic research (Salvador, 2004).",
-     "The example carries added methodological interest, because it shows how the same primary source can generate, over time, a growing number of secondary sources that reinterpret it under different questions, without any of them replacing the other in documentary authority. This manual, in fact, draws in the last instance on Salvador's doctoral thesis, which the screen identifies as one of the most complete compendiums on the history of sport in Spanish, and which in turn constitutes an essential secondary source of reference for this course."
+     "The Book of Games that Alfonso X the Wise finished in Seville in 1283, also known as *Libro del acedrex, dados e tablas*, is the oldest European treatise devoted to chess and constitutes a primary source of the first order for late medieval leisure, since it was produced in the very period it documents (*Libro del acedrex, dados e tablas*, 1283). David Shenk's *The Immortal Game: A History of Chess* is, by contrast, a secondary source, written more than seven centuries later with the intention of interpreting the history of the game from the distance of research (Shenk, 2011).",
+     "The example carries added methodological interest, because it shows how the same primary source can generate, over time, a growing number of secondary sources that reinterpret it under different questions, without any of them replacing the original in documentary authority."
     ]
    },
    "slide": {
@@ -4020,6 +4022,10 @@
    "refs": [
     "*Libro del acedrex, dados e tablas* (1283). Real Biblioteca del Monasterio de San Lorenzo de El Escorial, ms. T.I.6.",
     "Salvador, J. L. (2004). *El deporte en Occidente. Historia, cultura y política*. Cátedra."
+   ],
+   "refs_en": [
+    "*Libro del acedrex, dados e tablas* (1283). Real Biblioteca del Monasterio de San Lorenzo de El Escorial, ms. T.I.6.",
+    "Shenk, D. (2011). *The immortal game: A history of chess*. Souvenir Press."
    ]
   },
   {

@@ -500,9 +500,9 @@ function addXP(n){
 }
 function markSeen(temaId,mode,key){ const k=temaId+"."+mode; S.prog.seen[k]=S.prog.seen[k]||{}; S.prog.seen[k][key]=1; save(); }
 function seenCount(temaId,mode){ const k=temaId+"."+mode; return Object.keys(S.prog.seen[k]||{}).length; }
-function modeTotal(tema,mode){ if(mode==="glossary") return tema.glossary.length; if(mode==="mapa") return tema.mapa?tema.mapa.ramas.reduce((a,r)=>a+r.nodos.length,0):0; const a=tema[mode]; return a?a.length:0; }
+function modeTotal(tema,mode){ if(mode==="glossary") return tema.glossary.length; if(mode==="mapa") return tema.mapa?tema.mapa.ramas.reduce((a,r)=>a+r.nodos.length,0):0; const a=tema[mode]; return a?a.filter(x=>!x.lang||x.lang===S.lang).length:0; }
 function secMatch(a,b){ if(!a||!b) return !b; return a===b || a.startsWith(b+".") || b.startsWith(a+"."); }
-function modeIdxs(tema,mode){ const a=tema[mode]||[]; const sec=S.view.sec; return a.map((it,i)=>i).filter(i=>!sec || secMatch(a[i].sec,sec)); }
+function modeIdxs(tema,mode){ const a=tema[mode]||[]; const sec=S.view.sec; return a.map((it,i)=>i).filter(i=>(!a[i].lang||a[i].lang===S.lang) && (!sec || secMatch(a[i].sec,sec))); }
 function md(s){ return esc(s).replace(/\*\*([^*]+)\*\*/g,"<b>$1</b>").replace(/\*([^*]+)\*/g,"<em>$1</em>").replace(/(https?:\/\/[^\s<)]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>'); }
 function LL(o){ if(!o) return []; const a=o[S.lang]; return (a&&a.length)?a:(o.es||[]); }
 function norm(s){ return String(s).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase(); }
@@ -888,24 +888,24 @@ function modeFichas(tema,m,v){
   q.oninput=paint; paint();
 }
 function renderFicha(tema,m,k){
-  const fs=tema.fichas, f=fs[k]; const first=!(S.prog.seen[tema.id+".fichas"]||{})[k];
+  const fs=tema.fichas, f=fs[k]; const fimgs=f.images.filter(im=>!im.lang||im.lang===S.lang); const frefs=(S.lang==="en"&&f.refs_en)?f.refs_en:f.refs; const first=!(S.prog.seen[tema.id+".fichas"]||{})[k];
   markSeen(tema.id,"fichas",k); if(first){ addXP(3); toast(`${t("fichaXP")} · ${t("gained",{n:3})}`); } checkBadge(tema,"fichas");
   const sec=(tema.sections||[]).find(x=>x.code===f.sec);
   const counts=["cards","glossary","myths","quiz","sources","timeline","match"].map(mode=>({mode,n:(tema[mode]||[]).filter(it=>secMatch(it.sec,f.sec)).length})).filter(x=>x.n>0);
   m.innerHTML=`<div class="ficha">
     <div class="card"><div style="font-size:12px;color:var(--muted);font-weight:700">${esc(f.sec)}${sec?" · "+esc(L(sec.title)):""}</div><h2 style="margin-top:4px">${esc(L(f.title))}</h2>
       <div class="meta"><span class="pill">${esc(f.code)}</span><span class="pill">${t("tema")} ${tema.num}</span></div></div>
-    ${f.images.map((im,j)=>`<div class="fimg" data-j="${j}"><img src="${im.src}" alt="" loading="lazy">${L(im.caption)?`<div class="cap">${esc(L(im.caption))}</div>`:""}</div>`).join("")}
+    ${fimgs.map((im,j)=>`<div class="fimg" data-j="${j}"><img src="${im.src}" alt="" loading="lazy">${L(im.caption)?`<div class="cap">${esc(L(im.caption))}</div>`:""}</div>`).join("")}
     <div class="card body">${LL(f.body).map(p=>`<p>${md(p)}</p>`).join("")}</div>
     ${LL(f.essay).length?`<div class="essay"><b>${t("essayL")}</b>${LL(f.essay).map(p=>md(p.replace(/^(Para el ensayo|For the essay),?\s*/,""))).join("<br>")}</div>`:""}
     ${LL(f.slide).length?`<div class="card"><details class="slide"><summary>${t("slideText")}</summary><ul style="padding-left:18px;margin:8px 0 0">${LL(f.slide).map(p=>`<li>${md(p)}</li>`).join("")}</ul></details></div>`:""}
-    ${f.refs.length?`<div class="card"><div class="section-title" style="margin:0 0 8px">${t("refsL")}</div><ul class="refs" style="padding-left:18px;margin:0">${f.refs.map(r=>`<li>${md(r)}</li>`).join("")}</ul></div>`:""}
+    ${frefs.length?`<div class="card"><div class="section-title" style="margin:0 0 8px">${t("refsL")}</div><ul class="refs" style="padding-left:18px;margin:0">${frefs.map(r=>`<li>${md(r)}</li>`).join("")}</ul></div>`:""}
     ${counts.length?`<div class="card"><div class="section-title" style="margin:0 0 10px">${t("practice")} (${esc(f.sec)})</div><div class="pbtns">${counts.map(c=>`<button data-mode="${c.mode}">${MODE_ICONS[c.mode]} ${t("modes."+c.mode)} · ${c.n}</button>`).join("")}</div></div>`:""}
     <div class="row"><button class="btn sec" id="fPrev" ${k===0?"disabled":""}>‹ ${t("prevF")}</button><button class="btn sec" id="fNext" ${k===fs.length-1?"disabled":""}>${t("nextF")} ›</button></div>
     <button class="rep" id="fRep">${t("report")}</button><p style="font-size:11.5px;color:var(--muted);text-align:center;margin:0">${t("reportHint")}</p>
     </div>`;
   m.querySelectorAll(".pbtns button").forEach(b=>b.onclick=()=>nav({name:"mode",num:tema.num,mode:b.dataset.mode,sec:f.sec,back:{name:"mode",num:tema.num,mode:"fichas",f:f.id}}));
-  m.querySelectorAll(".fimg").forEach(d=>d.onclick=()=>{ const im=f.images[+d.dataset.j]; const lb=document.createElement("div"); lb.className="lightbox"; lb.innerHTML=`<img src="${im.src}" alt=""><div class="cap">${esc(L(im.caption))}</div>`; lb.onclick=()=>lb.remove(); document.body.appendChild(lb); });
+  m.querySelectorAll(".fimg").forEach(d=>d.onclick=()=>{ const im=fimgs[+d.dataset.j]; const lb=document.createElement("div"); lb.className="lightbox"; lb.innerHTML=`<img src="${im.src}" alt=""><div class="cap">${esc(L(im.caption))}</div>`; lb.onclick=()=>lb.remove(); document.body.appendChild(lb); });
   document.getElementById("fPrev").onclick=()=>nav({name:"mode",num:tema.num,mode:"fichas",f:fs[k-1].id});
   document.getElementById("fNext").onclick=()=>nav({name:"mode",num:tema.num,mode:"fichas",f:fs[k+1].id});
   document.getElementById("fRep").onclick=()=>reportMail({where:`${t("tema")} ${tema.num} · ${f.code} · ${L(f.title)}`,text:""});
@@ -923,7 +923,7 @@ async function buildDaily(){
   const steps=[];
   for(const mode of ["cards","quiz","glossary","myths","sources","timeline","match"]){
     const cand=temas.filter(tm=>(tm[mode]||[]).length); if(!cand.length) continue;
-    const tm=pick(cand); const i=Math.floor(rnd()*tm[mode].length); steps.push({tema:tm,mode,i});
+    const tm=pick(cand); const ids=tm[mode].map((x,j)=>j).filter(j=>!tm[mode][j].lang||tm[mode][j].lang===S.lang); const i=ids[Math.floor(rnd()*ids.length)]; steps.push({tema:tm,mode,i});
   }
   return steps;
 }
