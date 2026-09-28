@@ -910,6 +910,278 @@
     "en": "Musicians, dancers and mourners in processions and burials. The patera shows a female ritual dance before a goddess."
    },
    "sec": "2.3.3"
+  },
+  {
+   "img": "img/t2/beni_hasan_calco.jpg",
+   "caption": {
+    "es": "Calcos y vista de la cámara de Baqet III, Beni Hasan",
+    "en": "Tracings and view of the chamber of Baqet III, Beni Hasan"
+   },
+   "claim": {
+    "es": "Entre las llaves pintadas en Beni Hasan abundan los puñetazos y los mordiscos.",
+    "en": "Punches and bites are common among the holds painted at Beni Hasan."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Aparecen proyecciones sobre el hombro, volteos de cadera, tirones y zancadillas, mientras que faltan de forma sistemática los puñetazos, los mordiscos y las luxaciones severas, lo que apunta a un límite no escrito del combate (Decker, 1992).",
+    "en": "The paintings show shoulder throws, hip throws, pulls and trips, whereas punches, bites and severe joint locks are systematically absent, which points to an unwritten limit on the fight (Decker, 1992)."
+   },
+   "sec": "2.1.4"
+  },
+  {
+   "img": "img/t2/espada_egipcia.jpg",
+   "caption": {
+    "es": "Espada egipcia de bronce",
+    "en": "Egyptian bronze sword"
+   },
+   "claim": {
+    "es": "Egipto contó con un ejército profesional permanente desde el Imperio Antiguo.",
+    "en": "Egypt had a permanent professional army from the Old Kingdom onwards."
+   },
+   "answer": false,
+   "explain": {
+    "es": "El ejército profesional aparece a partir del Imperio Nuevo, tras la ocupación hicsa, y se convierte en el segundo gran productor de imágenes deportivas del registro egipcio después de la corte.",
+    "en": "The professional army appears from the New Kingdom onwards, after the Hyksos occupation, and becomes the second great producer of sporting images in the Egyptian record after the court."
+   },
+   "sec": "2.1.4"
+  },
+  {
+   "img": "img/t2/mazarron_aerea.jpg",
+   "caption": {
+    "es": "Playa de la Isla de Mazarrón y situación de los dos pecios",
+    "en": "Isla beach at Mazarrón and the position of the two wrecks"
+   },
+   "claim": {
+    "es": "El análisis de carbono-14 sitúa Mazarrón 2 en el primer tercio del siglo VI a. C.",
+    "en": "Carbon-14 analysis places Mazarrón 2 in the first third of the 6th century BC."
+   },
+   "answer": true,
+   "explain": {
+    "es": "El barco apareció en 1995 con el casco casi entero y hoy se conserva en el Museo Nacional de Arqueología Subacuática, en Cartagena, mientras que de Mazarrón 1, hallado en 1988, queda sobre todo la quilla.",
+    "en": "The boat was found in 1995 with its hull almost intact and is now kept in the National Museum of Underwater Archaeology in Cartagena, whereas mostly the keel survives of Mazarrón 1, found in 1988."
+   },
+   "sec": "2.3.2"
+  },
+  {
+   "img": "img/t2/mazarron_pecio_planta.jpg",
+   "caption": {
+    "es": "Estructura de protección sobre el pecio Mazarrón 2",
+    "en": "Protective structure over the Mazarrón 2 wreck"
+   },
+   "claim": {
+    "es": "Está demostrado que el barco lo construyeron carpinteros fenicios.",
+    "en": "It is proven that the boat was built by Phoenician carpenters."
+   },
+   "answer": false,
+   "explain": {
+    "es": "La atribución sigue abierta: Negueruela lo lee como fenicio por el ensamblaje de mortaja y lengüeta, mientras que Pomey y Guerrero lo atribuyen a carpinteros locales que conocían esa técnica, de modo que documenta sobre todo un contacto técnico entre tradiciones.",
+    "en": "The attribution remains open: Negueruela reads it as Phoenician because of its mortise-and-tenon joinery, whereas Pomey and Guerrero attribute it to local carpenters who knew that technique, so it mainly documents technical contact between traditions."
+   },
+   "sec": "2.3.2"
+  },
+  {
+   "img": "img/t2/siclo_sidon.jpg",
+   "caption": {
+    "es": "Siclo de Sidón con una galera",
+    "en": "Shekel of Sidon with a galley"
+   },
+   "claim": {
+    "es": "Las monedas y los cuencos de metal están entre las principales fuentes para conocer a los fenicios.",
+    "en": "Coins and metal bowls are among the main sources for knowing the Phoenicians."
+   },
+   "answer": true,
+   "explain": {
+    "es": "No se conserva ninguna descripción de actividad física escrita por un fenicio, y casi todo lo demás llega de griegos y romanos, que eran a la vez sus rivales comerciales.",
+    "en": "No description of physical activity written by a Phoenician survives, and almost everything else comes from Greeks and Romans, who were also their commercial rivals."
+   },
+   "sec": "2.3.1"
+  },
+  {
+   "img": "img/t2/tahtib_relieve_1.jpg",
+   "caption": {
+    "es": "Relieve de esgrima de bastón (tahtib)",
+    "en": "Relief of stick fencing (tahtib)"
+   },
+   "claim": {
+    "es": "Los bastones de la esgrima egipcia medían unos dos metros y los esgrimistas no llevaban ninguna protección.",
+    "en": "Egyptian fencing sticks were about two metres long and fencers wore no protection at all."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Medían alrededor de un metro, con pequeñas guardias para proteger la mano, y los esgrimistas llevaban protectores de cuero en la frente, el mentón y el antebrazo (Decker, 1992).",
+    "en": "They were about a metre long, with small guards to protect the hand, and fencers wore leather protectors on the forehead, chin and forearm (Decker, 1992)."
+   },
+   "sec": "2.1.4"
+  },
+  {
+   "img": "img/t2/tahtib_relieve_2.jpg",
+   "caption": {
+    "es": "Combate de esgrima de bastón en relieve",
+    "en": "Stick-fencing bout in relief"
+   },
+   "claim": {
+    "es": "Además de servir a la instrucción militar, se celebraban combates rituales de esgrima ante el faraón que simbolizaban su regeneración.",
+    "en": "Besides military training, ritual fencing bouts were held before the pharaoh to symbolise his regeneration."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Es el caso del combate que enmarca la erección del pilar Djed en el jubileo de Amenofis III, y Decker (1992) documenta también combates ofrecidos como parte del ceremonial ante embajadores extranjeros.",
+    "en": "One example is the bout that frames the raising of the Djed pillar at the jubilee of Amenhotep III, and Decker (1992) also documents bouts staged as part of the ceremonial before foreign ambassadors."
+   },
+   "sec": "2.1.4"
+  },
+  {
+   "img": "img/t2/zurkhaneh_cadena.jpg",
+   "caption": {
+    "es": "Balanceo del kabbadeh en el zurkhaneh",
+    "en": "Swinging the kabbadeh in the zurkhaneh"
+   },
+   "claim": {
+    "es": "El kabbadeh es un arco de hierro con anillas que se balancea durante la sesión.",
+    "en": "The kabbadeh is an iron bow with rings that is swung during the session."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Forma parte de un orden fijo, con calentamiento, tablones, flexiones al compás del tambor, mazas, giro sobre sí mismo y kabbadeh, y la lucha cerraba la sesión.",
+    "en": "It belongs to a fixed sequence of warm-up, boards, push-ups to the drum, clubs, spinning and kabbadeh, and wrestling closed the session."
+   },
+   "sec": "2.2.3"
+  },
+  {
+   "img": "img/t2/zurkhaneh_flexiones.jpg",
+   "caption": {
+    "es": "Flexiones en el zurkhaneh",
+    "en": "Push-ups in the zurkhaneh"
+   },
+   "claim": {
+    "es": "En el zurkhaneh cada atleta hace las flexiones a su propio ritmo y sin música.",
+    "en": "In the zurkhaneh each athlete does push-ups at his own pace and without music."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Se hacen al compás del tambor, y toda la sesión la dirige desde el centro del foso el atleta más consumado de la casa, al ritmo de la música en directo.",
+    "en": "They are done to the beat of the drum, and the whole session is led from the centre of the pit by the most accomplished athlete of the house, to live music."
+   },
+   "sec": "2.2.3"
+  },
+  {
+   "img": "img/t2/zurkhaneh_tablones.jpg",
+   "caption": {
+    "es": "Levantamiento de tablones en el zurkhaneh",
+    "en": "Lifting boards in the zurkhaneh"
+   },
+   "claim": {
+    "es": "La lucha que cerraba la sesión se hacía delante de todos para que la derrota fuera pública.",
+    "en": "The wrestling that closed the session was held in front of everyone so that defeat would be public."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Se practicaba en parejas apartadas del resto, y a menudo se separaba a los contendientes antes de la proyección decisiva para ahorrar a uno de ellos la humillación de perder (Krawietz, 2013).",
+    "en": "It was practised in pairs away from the others, and the contenders were often separated before the decisive throw to spare one of them the humiliation of losing (Krawietz, 2013)."
+   },
+   "sec": "2.2.3"
+  },
+  {
+   "img": "img/t2/rosetta_reconstruccion.jpg",
+   "caption": {
+    "es": "Reconstrucción de la estela completa de la Piedra Rosetta",
+    "en": "Reconstruction of the complete Rosetta Stone stela"
+   },
+   "claim": {
+    "es": "La Piedra Rosetta contiene tres textos distintos, uno en cada escritura.",
+    "en": "The Rosetta Stone contains three different texts, one in each script."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Reproduce un mismo decreto sacerdotal en jeroglífico, demótico y griego, y esa triple redacción del mismo texto es la que permitió a Champollion descifrar la escritura egipcia en 1822.",
+    "en": "It reproduces a single priestly decree in hieroglyphic, Demotic and Greek, and that triple version of the same text is what allowed Champollion to decipher Egyptian writing in 1822."
+   },
+   "sec": "2.1.1"
+  },
+  {
+   "img": "img/t2/cronologia_egipto.jpg",
+   "caption": {
+    "es": "Cronología del deporte egipcio por periodos",
+    "en": "Chronology of Egyptian sport by period"
+   },
+   "claim": {
+    "es": "Los egipcios fechaban los acontecimientos con una era continua, como nuestro calendario.",
+    "en": "The Egyptians dated events using a continuous era, as our calendar does."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Fechaban por año de reinado del monarca, de modo que la cronología se reconstruye sumando reinados a partir de las listas reales.",
+    "en": "They dated by the regnal year of the king, so the chronology is reconstructed by adding up reigns from the king lists."
+   },
+   "sec": "2.1.1"
+  },
+  {
+   "img": "img/t2/fuentes_egipcias.jpg",
+   "caption": {
+    "es": "Tipos de fuente: objetos, pintura y arquitectura",
+    "en": "Types of source: objects, painting and architecture"
+   },
+   "claim": {
+    "es": "La iconografía es la fuente más abundante sobre el deporte egipcio.",
+    "en": "Iconography is the most abundant source on Egyptian sport."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Reúne cerca de dos mil escenas catalogadas en relieves y pinturas de tumba, aunque casi todas proceden de tumbas de la aristocracia, que decidía qué quedaba registrado.",
+    "en": "It comprises some two thousand catalogued scenes in reliefs and tomb paintings, although almost all come from aristocratic tombs, whose owners decided what was recorded."
+   },
+   "sec": "2.1.1"
+  },
+  {
+   "img": "img/t2/musicas_banquete.jpg",
+   "caption": {
+    "es": "Músicas en un banquete, pintura de tumba egipcia",
+    "en": "Female musicians at a banquet, Egyptian tomb painting"
+   },
+   "claim": {
+    "es": "El egipcio antiguo tenía una palabra general equivalente a «deporte».",
+    "en": "Ancient Egyptian had a general word equivalent to “sport”."
+   },
+   "answer": false,
+   "explain": {
+    "es": "No hay un término general atestiguado, y el más cercano, sejeméj-ib, significa «hacer que el corazón olvide» y designa la diversión (Cannuyer, 2002, citado en Decker, 2021).",
+    "en": "No general term is attested, and the closest, sekhemekh-ib, means “to make the heart forget” and refers to amusement (Cannuyer, 2002, cited in Decker, 2021)."
+   },
+   "sec": "2.1.1"
+  },
+  {
+   "img": "img/t2/boxeo_dibujo.jpg",
+   "caption": {
+    "es": "Dibujo de dos púgiles egipcios",
+    "en": "Drawing of two Egyptian boxers"
+   },
+   "claim": {
+    "es": "Los púgiles de la tumba de Kheruef visten el faldellín de los soldados.",
+    "en": "The boxers in the tomb of Kheruef wear the soldiers' kilt."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Son seis parejas a puño desnudo, y Decker (1992) observa que varias posturas copian a los danzantes pintados enfrente, de lo que deduce que el artista no conocía bien el pugilato.",
+    "en": "There are six bare-fisted pairs, and Decker (1992) notes that several postures copy the dancers painted opposite, from which he infers that the artist did not know boxing well."
+   },
+   "sec": "2.1.4"
+  },
+  {
+   "img": "img/t2/malabares_pelota.jpg",
+   "caption": {
+    "es": "Juegos de pelota de muchachas en Beni Hasan",
+    "en": "Girls' ball games at Beni Hasan"
+   },
+   "claim": {
+    "es": "Entre los juegos de pelota egipcios se documentan malabares con hasta tres bolas.",
+    "en": "Juggling with up to three balls is among the documented Egyptian ball games."
+   },
+   "answer": true,
+   "explain": {
+    "es": "El catálogo incluye también el juego a caballito con lanzamientos entre parejas montadas, los pases rítmicos con palmadas y los lanzamientos altos recogidos en el aire, a veces sobre una sola pierna.",
+    "en": "The repertoire also includes piggyback games with throws between mounted pairs, rhythmic passes with hand-claps and high throws caught in the air, sometimes standing on one leg."
+   },
+   "sec": "2.1.6"
   }
  ],
  "glossary": [
