@@ -1677,7 +1677,7 @@
   },
   "ft": true,
   "tipo": "completa",
-  "estado": "pendiente"
+  "estado": "excluida"
  },
  {
   "id": "bokator",
@@ -1976,8 +1976,8 @@
    "en": "Combat sports and martial arts"
   },
   "ft": true,
-  "tipo": "completa",
-  "estado": "pendiente"
+  "tipo": "breve",
+  "estado": "lista"
  },
  {
   "id": "lucha-nuba",
