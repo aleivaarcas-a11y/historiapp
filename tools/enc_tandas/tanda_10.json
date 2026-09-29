@@ -1,0 +1,520 @@
+[
+ {
+  "id": "kendo",
+  "name": {
+   "es": "Kendo",
+   "en": "Kendo"
+  },
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Japón; esgrima con protecciones y espada de bambú desde 1711-1764; nombre y forma moderna, 1912-1919",
+   "en": "Japan; fencing with protective gear and bamboo sword from 1711-1764; modern name and form, 1912-1919"
+  },
+  "body": {
+   "es": [
+    "El kendo, «camino de la espada», procede de la esgrima de los guerreros japoneses, cuyo origen la All Japan Kendo Federation (AJKF) vincula a la aparición del sable curvo a mediados del periodo Heian (794-1185) y a las escuelas (*ryū*) que se multiplicaron en el periodo Muromachi tras la guerra de Ōnin (1467-1477), como la Shinkage-ryū o la Ittō-ryū (All Japan Kendo Federation, s. f.). En el campo de batalla la espada fue durante siglos un arma auxiliar, por detrás del arco y de las armas de asta, y solo con la paz impuesta por los Tokugawa a partir de 1603 ocupó el lugar central, como arma adecuada a la vida civil y como emblema del rango de los samuráis (Sánchez García, 2019, pp. 43, 99).",
+    "La forma deportiva nació en el siglo XVIII, cuando algunas escuelas quisieron superar los límites del ejercicio de formas (*kata*) con espada de madera y adoptaron protecciones que permitían golpear con fuerza. Naganuma Shirōzaemon Kunisato, de la Jikishinkage-ryū, desarrolló hacia 1711-1716 las protecciones de cabeza y muñecas, y Nakanishi Chūzō, de la Ittō-ryū, perfeccionó entre 1751 y 1764 el golpeo con espada de bambú (*shinai*) protegido por careta y peto (Sánchez García, 2019, pp. 99-100; All Japan Kendo Federation, s. f.). La Restauración Meiji suprimió en 1868 los privilegios de los samuráis y dejó sin trabajo a los maestros hasta que la policía de Tokio adoptó la esgrima para formar a sus agentes en 1879 y la Dai Nippon Butokukai, fundada en 1895, unificó su práctica (Guttmann y Thompson, 2001, pp. 105-106). El término *kendo* se usó oficialmente por primera vez en 1912 y desde 1919 designó el conjunto de la esgrima japonesa (All Japan Kendo Federation, s. f.).",
+    "La escuela convirtió el kendo en instrumento de identidad nacional, puesto que desde 1911 y 1913 se enseñó como materia ordinaria a los muchachos de secundaria (Sánchez García, 2019, p. 124), y su asociación con el militarismo explica que las autoridades de ocupación lo prohibieran en 1945. Renació como deporte con la fundación de la All Japan Kendo Federation en 1952, y en 1970 se creó la Federación Internacional de Kendo (All Japan Kendo Federation, s. f.), con quince países fundadores y un campeonato mundial cada tres años (Sakaue, 1999, p. 217). La práctica femenina creció después de la guerra, hasta el punto de que desde 1978 alrededor del cuarenta por ciento de los miembros de los clubes escolares de bachillerato eran mujeres, y Japón se ha opuesto a la entrada en los Juegos Olímpicos por temor a que las reglas se transformen como ocurrió con el judo (Sakaue, 1999, pp. 216-217)."
+   ],
+   "en": [
+    "Kendo, the \"way of the sword\", derives from the swordsmanship of Japanese warriors, whose origin the All Japan Kendo Federation (AJKF) links to the appearance of the curved sword in the mid-Heian period (794-1185) and to the schools (*ryū*) that multiplied in the Muromachi period after the Ōnin War (1467-1477), such as the Shinkage-ryū or the Ittō-ryū (All Japan Kendo Federation, n.d.). On the battlefield the sword was for centuries an auxiliary weapon, behind the bow and pole weapons, and only with the peace imposed by the Tokugawa from 1603 onwards did it take the central place, as a weapon suited to civil life and as an emblem of samurai rank (Sánchez García, 2019, pp. 43, 99).",
+    "The sporting form was born in the eighteenth century, when some schools sought to overcome the limits of practising forms (*kata*) with wooden swords and adopted protective equipment that allowed full-power strikes. Naganuma Shirōzaemon Kunisato, of the Jikishinkage-ryū, developed head and wrist protection around 1711-1716, and Nakanishi Chūzō, of the Ittō-ryū, refined between 1751 and 1764 the practice of striking with a bamboo sword (*shinai*) protected by mask and breastplate (Sánchez García, 2019, pp. 99-100; All Japan Kendo Federation, n.d.). The Meiji Restoration abolished the privileges of the samurai in 1868 and left the masters without work until the Tokyo police adopted swordsmanship to train its officers in 1879 and the Dai Nippon Butokukai, founded in 1895, unified its practice (Guttmann & Thompson, 2001, pp. 105-106). The term *kendo* was first used officially in 1912 and from 1919 designated Japanese swordsmanship as a whole (All Japan Kendo Federation, n.d.).",
+    "The school turned kendo into an instrument of national identity, since from 1911 and 1913 it was taught as a regular subject to boys in secondary schools (Sánchez García, 2019, p. 124), and its association with militarism explains why the occupation authorities banned it in 1945. It was reborn as a sport with the founding of the All Japan Kendo Federation in 1952, and in 1970 the International Kendo Federation was created (All Japan Kendo Federation, n.d.), with fifteen founding countries and a world championship every three years (Sakaue, 1999, p. 217). Women's practice grew after the war, to the point that from 1978 around forty per cent of the members of high-school kendo clubs were female, and Japan has opposed entry into the Olympic Games for fear that the rules would be transformed as happened with judo (Sakaue, 1999, pp. 216-217)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/kendo.jpg",
+   "pie": {
+    "es": "Dos esgrimistas con careta, peto y espada de bambú, fotografía de 1873.",
+    "en": "Two fencers with mask, breastplate and bamboo sword, photograph from 1873."
+   },
+   "autor": "Shinichi Suzuki",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Japanese-Kendo-1873-by-Shinichi-Suzuki.png"
+  },
+  "refs": [
+   "All Japan Kendo Federation. (s. f.). *The history of kendo*. Recuperado el 29 de septiembre de 2026 de https://www.kendo.or.jp/en/knowledge/kendo-history/",
+   "Guttmann, A., y Thompson, L. (2001). *Japanese sports: A history*. University of Hawai'i Press.",
+   "Sakaue, Y. (1999). Kendo. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 215-217). Oxford University Press.",
+   "Sánchez García, R. (2019). *The historical sociology of Japanese martial arts*. Routledge."
+  ],
+  "refs_en": [
+   "All Japan Kendo Federation. (n.d.). *The history of kendo*. Retrieved September 29, 2026, from https://www.kendo.or.jp/en/knowledge/kendo-history/",
+   "Guttmann, A., & Thompson, L. (2001). *Japanese sports: A history*. University of Hawai'i Press.",
+   "Sakaue, Y. (1999). Kendo. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 215-217). Oxford University Press.",
+   "Sánchez García, R. (2019). *The historical sociology of Japanese martial arts*. Routledge."
+  ]
+ },
+ {
+  "id": "iaido",
+  "name": {
+   "es": "Iaido",
+   "en": "Iaido"
+  },
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Japón, periodo Muromachi (1333-1573) y hacia 1600; nombre *iaido*, hacia 1930; formas normalizadas de la AJKF, 1969",
+   "en": "Japan, Muromachi period (1333-1573) and around 1600; name *iaido*, around 1930; AJKF standard forms, 1969"
+  },
+  "body": {
+   "es": [
+    "El iaido es el arte de desenvainar y cortar en un mismo movimiento, y la All Japan Kendo Federation lo hace derivar de los métodos de manejo de la espada japonesa surgidos en el periodo Muromachi (1333-1573) (All Japan Kendo Federation, s. f.-a). Su razón de ser procede del campo de batalla, donde la espada era un arma secundaria que había que poner en juego con rapidez cuando se perdía el arco o la lanza, de modo que desenvainar y herir en un solo gesto podía decidir la supervivencia del guerrero. La mayoría de los estilos remontan su linaje a Hayashizaki Jinsuke Shigenobu (h. 1546-1621), cuyos seguidores crearon cientos de escuelas, y Taylor fecha hacia 1600 el iaido que hoy se reconoce (Taylor, 1999, pp. 193-194).",
+    "Durante la paz de los Tokugawa (1603-1868) la espada se convirtió en el símbolo del rango samurái y el arte de desenvainar se practicó en solitario, con hoja real y en secuencias fijas (*kata*) contra un adversario imaginario, lo que lo apartó del combate libre que dio origen al kendo. El nombre *iaido* se aceptó hacia 1930 (Taylor, 1999, p. 193), en una época en que el ejército también lo aprovechaba, puesto que Nakayama Hakudō (1872-1958), fundador de la Musō Shinden-ryū, fue decisivo en el método de manejo del sable militar que la escuela militar de Toyama adoptó oficialmente en 1925 (Sánchez García, 2019, pp. 150, 185).",
+    "La forma competitiva es posterior a la Segunda Guerra Mundial. En 1966 se celebró el primer campeonato de Japón decidido por jueces, y en 1969 la All Japan Kendo Federation creó un repertorio común de siete formas, ampliado a diez en 1980 y a doce en 1999 (All Japan Kendo Federation, s. f.-a), para que alumnos de escuelas distintas pudieran examinarse y competir juntos; la All Japan Iaido Federation adoptó un conjunto propio, y algunas escuelas antiguas rechazaron ambos por temor a que diluyeran sus movimientos (Taylor, 1999, pp. 193-194). En la competición dos practicantes ejecutan las formas uno junto al otro y un tribunal decide el vencedor. En marzo de 2023 Japón contaba con 97.220 grados *dan* de iaido registrados, de los cuales 13.770 correspondían a mujeres (All Japan Kendo Federation, s. f.-b)."
+   ],
+   "en": [
+    "Iaido is the art of drawing and cutting in a single movement, and the All Japan Kendo Federation derives it from the methods of using the Japanese sword that emerged in the Muromachi period (1333-1573) (All Japan Kendo Federation, n.d.-a). Its raison d'être came from the battlefield, where the sword was a secondary weapon that had to be brought into play quickly when the bow or spear was lost, so that drawing and striking in one gesture could decide the warrior's survival. Most styles trace their lineage to Hayashizaki Jinsuke Shigenobu (c. 1546-1621), whose followers created hundreds of schools, and Taylor dates the iaido recognised today to around 1600 (Taylor, 1999, pp. 193-194).",
+    "During the Tokugawa peace (1603-1868) the sword became the symbol of samurai rank, and the art of drawing was practised alone, with a live blade and in fixed sequences (*kata*) against an imaginary opponent, which set it apart from the free sparring that gave rise to kendo. The name *iaido* was accepted around 1930 (Taylor, 1999, p. 193), at a time when the army also made use of it, since Nakayama Hakudō (1872-1958), founder of the Musō Shinden-ryū, was decisive in the method of handling the military sabre that the Toyama military school officially adopted in 1925 (Sánchez García, 2019, pp. 150, 185).",
+    "The competitive form came after the Second World War. In 1966 the first All Japan championship decided by referees was held, and in 1969 the All Japan Kendo Federation created a common repertoire of seven forms, extended to ten in 1980 and to twelve in 1999 (All Japan Kendo Federation, n.d.-a), so that students from different schools could be graded and compete together; the All Japan Iaido Federation adopted its own set, and some old schools rejected both for fear that they would dilute their movements (Taylor, 1999, pp. 193-194). In competition two practitioners perform the forms side by side and a panel of judges decides the winner. In March 2023 Japan had 97,220 registered iaido *dan* grades, of which 13,770 were held by women (All Japan Kendo Federation, n.d.-b)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/iaido.jpg",
+   "pie": {
+    "es": "El maestro Haruna Matsuo (1925-2002) ejecuta una forma de la escuela Musō Jikiden Eishin-ryū.",
+    "en": "Master Haruna Matsuo (1925-2002) performs a form of the Musō Jikiden Eishin-ryū school."
+   },
+   "autor": "Varencor; MichaelFrey",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Sensei_iaido-rework.jpg"
+  },
+  "refs": [
+   "All Japan Kendo Federation. (s. f.-a). *The concept of iaido*. Recuperado el 29 de septiembre de 2026 de https://www.kendo.or.jp/en/knowledge/iaido-concept/",
+   "All Japan Kendo Federation. (s. f.-b). *Kendo, iaido, jodo*. Recuperado el 29 de septiembre de 2026 de https://www.kendo.or.jp/en/knowledge/",
+   "Sánchez García, R. (2019). *The historical sociology of Japanese martial arts*. Routledge.",
+   "Taylor, K. (1999). Iaido. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 193-194). Oxford University Press."
+  ],
+  "refs_en": [
+   "All Japan Kendo Federation. (n.d.-a). *The concept of iaido*. Retrieved September 29, 2026, from https://www.kendo.or.jp/en/knowledge/iaido-concept/",
+   "All Japan Kendo Federation. (n.d.-b). *Kendo, iaido, jodo*. Retrieved September 29, 2026, from https://www.kendo.or.jp/en/knowledge/",
+   "Sánchez García, R. (2019). *The historical sociology of Japanese martial arts*. Routledge.",
+   "Taylor, K. (1999). Iaido. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 193-194). Oxford University Press."
+  ]
+ },
+ {
+  "id": "naginata",
+  "name": {
+   "es": "Naginata",
+   "en": "Naginata"
+  },
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Japón, arma de guerra medieval; práctica femenina escolar desde 1899; *atarashii naginata* y federación japonesa, 1955",
+   "en": "Japan, medieval weapon of war; girls' school practice from 1899; *atarashii naginata* and Japanese federation, 1955"
+  },
+  "body": {
+   "es": [
+    "La naginata es un arma de asta rematada por una hoja curva, que los guerreros japoneses usaron en la guerra junto a la espada y la lanza. Según el recuento de Suzuki sobre 1.302 documentos medievales, el ocho por ciento de las heridas registradas se debía a espadas o a naginata, frente a la gran mayoría causada por flechas (citado en Sánchez García, 2019, p. 43), y varias de las escuelas (*ryū*) fundadas en los siglos XV y XVI, como la Tenshin Shōden Katori Shintō-ryū o la Tendō-ryū, incluían su manejo (Sánchez García, 2019, p. 53). Con la paz de los Tokugawa la especialización de las escuelas favoreció a la espada, más adecuada a la vida civil (Sánchez García, 2019, p. 57), aunque los combates amistosos entre escuelas enfrentaban también naginata contra espada o contra lanza (Sánchez García, 2019, p. 100).",
+    "También la manejaban mujeres de familias guerreras, y en la guerra Boshin (1868-1869) una unidad de veinte o treinta mujeres de Aizu combatió con naginata y espadas (Sánchez García, 2019, p. 92). En la primera exhibición de pago de Sakakibara Kenkichi, en los primeros años Meiji, actuaron mujeres diestras en su manejo (Guttmann y Thompson, 2001, p. 106), y desde 1896 los torneos anuales de la Dai Nippon Butokukai la incluyeron (Guttmann y Thompson, 2001, p. 107). Su institucionalización fue escolar y femenina. Mitamura Kengyo llevó la naginata de la Tendō-ryū a la escuela femenina Doshisha de Kioto en 1899, con un arma más ligera, y en 1910 el encuentro nacional de directores de escuelas normales la recomendó como actividad extraescolar de las alumnas, mientras que a los muchachos correspondían la esgrima y el jujutsu (Sánchez García, 2019, pp. 124, 137).",
+    "Tras la prohibición de las artes marciales durante la ocupación, la práctica se reanudó en 1955, año de fundación de la All Japan Naginata Federation, que encargó a una comisión un estilo apto para la escuela pública. El resultado, la *atarashii naginata* («nueva naginata»), se escribió con silabario fonético en lugar de caracteres chinos y sin el sufijo *dō*, para alejarla de la ideología militarista anterior a la guerra (Sánchez García, 2019, p. 203). La International Naginata Federation se fundó en 1990 y el primer campeonato del mundo se celebró en Japón en 1995. A comienzos del siglo XXI unas cuarenta mil personas la practicaban en Japón, en su gran mayoría mujeres, si bien el número de hombres aumenta, sobre todo fuera del país (Sánchez García, 2019, pp. 214-215)."
+   ],
+   "en": [
+    "The naginata is a pole weapon topped by a curved blade, which Japanese warriors used in war alongside the sword and the spear. According to Suzuki's count of 1,302 medieval documents, eight per cent of recorded wounds were due to swords or naginata, against the great majority caused by arrows (as cited in Sánchez García, 2019, p. 43), and several of the schools (*ryū*) founded in the fifteenth and sixteenth centuries, such as the Tenshin Shōden Katori Shintō-ryū or the Tendō-ryū, included its use (Sánchez García, 2019, p. 53). With the Tokugawa peace the specialisation of the schools favoured the sword, better suited to civil life (Sánchez García, 2019, p. 57), although friendly bouts between schools also pitted naginata against sword or spear (Sánchez García, 2019, p. 100).",
+    "Women of warrior families also wielded it, and in the Boshin War (1868-1869) a unit of twenty or thirty women from Aizu fought with naginata and swords (Sánchez García, 2019, p. 92). At Sakakibara Kenkichi's first paid exhibition, in the early Meiji years, women skilled in its use performed (Guttmann & Thompson, 2001, p. 106), and from 1896 the annual tournaments of the Dai Nippon Butokukai included it (Guttmann & Thompson, 2001, p. 107). Its institutionalisation was scholastic and female. Mitamura Kengyo brought Tendō-ryū naginata to the Doshisha Girls' School in Kyoto in 1899, with a lighter weapon, and in 1910 the national meeting of normal-school principals recommended it as an extracurricular activity for girls, while fencing and jujutsu were assigned to boys (Sánchez García, 2019, pp. 124, 137).",
+    "After the ban on martial arts during the occupation, practice resumed in 1955, the year the All Japan Naginata Federation was founded, which commissioned a committee to devise a style suitable for public schools. The result, *atarashii naginata* (\"new naginata\"), was written in the phonetic syllabary instead of Chinese characters and without the suffix *dō*, to distance it from pre-war militarist ideology (Sánchez García, 2019, p. 203). The International Naginata Federation was founded in 1990 and the first world championship was held in Japan in 1995. In the early twenty-first century some forty thousand people practised it in Japan, the vast majority of them women, although the number of men is growing, especially outside the country (Sánchez García, 2019, pp. 214-215)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/naginata.jpg",
+   "pie": {
+    "es": "Alumnas de la escuela femenina de Hamamatsu ejecutan una demostración de naginata en la fiesta deportiva de otoño de 1911 (tarjeta postal).",
+    "en": "Students of the Hamamatsu Girls' High School give a naginata demonstration at the 1911 autumn sports festival (postcard)."
+   },
+   "autor": {
+    "es": "Escuela Superior Femenina de Hamamatsu",
+    "en": "Hamamatsu Girls' High School"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Hamamatsu_GirlsHighSchool_1911_SportsDay_Naginata.jpg"
+  },
+  "refs": [
+   "Guttmann, A., y Thompson, L. (2001). *Japanese sports: A history*. University of Hawai'i Press.",
+   "Sánchez García, R. (2019). *The historical sociology of Japanese martial arts*. Routledge."
+  ],
+  "refs_en": [
+   "Guttmann, A., & Thompson, L. (2001). *Japanese sports: A history*. University of Hawai'i Press.",
+   "Sánchez García, R. (2019). *The historical sociology of Japanese martial arts*. Routledge."
+  ]
+ },
+ {
+  "id": "silambam",
+  "name": {
+   "es": "Silambam",
+   "en": "Silambam"
+  },
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Tamil Nadu (sur de la India), tradición tamil documentada en los primeros siglos de nuestra era",
+   "en": "Tamil Nadu (southern India), Tamil tradition documented in the first centuries CE"
+  },
+  "body": {
+   "es": [
+    "El silambam es la esgrima con bastón largo del sur de la India, y pertenece a la tradición marcial tamil, una de las dos que, junto con el *Dhanur Veda* sánscrito, alimentan las artes de combate del subcontinente. Zarrilli recuerda que la poesía heroica tamil del periodo Sangam describe, entre el siglo IV a. C. y el 600 d. C., un sur de la India dominado por el espíritu guerrero, en el que cada guerrero recibía un adiestramiento regular con la lanza, la espada y el escudo, el arco y el caballo (Zarrilli, 1999, p. 239).",
+    "La tradición atribuye a los reyes pandya, chola y chera la protección de esta esgrima, y Roy (2017, p. 608) recoge que la epopeya tamil *Silappatikaram*, que fecha en el siglo II, menciona la venta de bastones de silambam, espadas, perlas y armaduras a los comerciantes extranjeros que frecuentaban Madurai, lo que sitúa el bastón entre las armas apreciadas en el comercio con griegos y romanos. El arte se transmitió de maestro a discípulo, con una concepción del cuerpo, de la salud y de la dieta tomada de los sistemas médicos ayurvédico y siddha, de modo que los maestros de combate eran a la vez curanderos que conocían los puntos vitales del cuerpo para atacar o para dar masajes terapéuticos (Zarrilli, 1999, p. 239).",
+    "En el silambam el practicante se ejercita siete años con un bastón de unos 1,2 metros antes de pasar a otras armas y al combate a mano desnuda (Hick, 1999, p. 93). Figura entre las artes regionales que han sobrevivido hasta hoy, como el *varma adi* de Tamil Nadu o el *kalarippayattu* de Kerala, practicadas para la salud, el recreo y la competición, y las formas tamiles se practicaban tradicionalmente al aire libre o en recintos sin techo, a diferencia del foso de tierra (*kalari*) en que se ejercita el arte keralí (Zarrilli, 1999, pp. 239-240)."
+   ],
+   "en": [
+    "Silambam is the long-staff fencing of southern India, and it belongs to the Tamil martial tradition, one of the two that, together with the Sanskrit *Dhanur Veda*, underlie the combat arts of the subcontinent. Zarrilli notes that the Tamil heroic poetry of the Sangam period describes, between the fourth century BCE and 600 CE, a southern India dominated by a warlike spirit, in which every warrior received regular training with lance, sword and shield, bow and horse (Zarrilli, 1999, p. 239).",
+    "Tradition credits the Pandya, Chola and Chera kings with the patronage of this fencing, and Roy (2017, p. 608) reports that the Tamil epic *Silappatikaram*, which he dates to the second century, mentions the sale of silambam staffs, swords, pearls and armour to the foreign merchants who frequented Madurai, which places the staff among the weapons valued in trade with Greeks and Romans. The art was passed from master to disciple, with a conception of the body, health and diet drawn from the Ayurvedic and Siddha medical systems, so that combat masters were also healers who knew the vital points of the body in order to strike them or to give therapeutic massage (Zarrilli, 1999, p. 239).",
+    "In silambam the practitioner trains for seven years with a staff of about 1.2 metres before moving on to other weapons and to bare-handed combat (Hick, 1999, p. 93). It is among the regional arts that have survived to the present, such as *varma adi* in Tamil Nadu or *kalarippayattu* in Kerala, practised for health, recreation and competition, and the Tamil forms were traditionally practised in the open air or in unroofed enclosures, unlike the earthen pit (*kalari*) in which the Keralan art is practised (Zarrilli, 1999, pp. 239-240)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/silambam.jpg",
+   "pie": {
+    "es": "Armas empleadas en el silambam.",
+    "en": "Weapons used in silambam."
+   },
+   "autor": "Arunachalam Mani",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Weapons_images_of_Silambam.jpg"
+  },
+  "refs": [
+   "Hick, S. (1999). Cudgeling. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 93-95). Oxford University Press.",
+   "Roy, A. (2017). Games & sports in ancient India. *International Education & Research Journal*, *3*(5), 607-609.",
+   "Zarrilli, P. B. (1999). Martial arts, South Asia. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 239-240). Oxford University Press."
+  ],
+  "refs_en": [
+   "Hick, S. (1999). Cudgeling. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 93-95). Oxford University Press.",
+   "Roy, A. (2017). Games & sports in ancient India. *International Education & Research Journal*, *3*(5), 607-609.",
+   "Zarrilli, P. B. (1999). Martial arts, South Asia. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 239-240). Oxford University Press."
+  ]
+ },
+ {
+  "id": "eskrima",
+  "name": {
+   "es": "Eskrima",
+   "en": "Eskrima (arnis, kali)"
+  },
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Filipinas; tradición precolonial y época española (1565-1898); forma deportiva (arnis), siglo XX, con reglamento de 1991",
+   "en": "Philippines; pre-colonial tradition and Spanish period (1565-1898); sporting form (arnis), twentieth century, with 1991 rules"
+  },
+  "body": {
+   "es": [
+    "Kali, eskrima y arnis son los nombres de las artes de combate filipinas con armas, cuyo rasgo común es el uso del bastón como arma o como sustituto de la espada y el cuchillo. Wiley les atribuye raíces en la India, China, Indonesia y Malasia, y recoge la leyenda según la cual la enseñanza formal comenzó en el siglo XIII, cuando diez jefes huidos de Borneo se asentaron en la isla de Panay y fundaron una escuela para los futuros jefes tribales, el *bothoan*, en la que el kali se enseñaba junto con materias académicas y astrología (Wiley, 1999, p. 238). El primer encuentro europeo con estas técnicas fue la muerte de Magallanes en Mactán, en 1521, en el combate cuerpo a cuerpo contra los guerreros de Lapulapu que narró Antonio Pigafetta (Wiley, 1999, p. 238).",
+    "Durante la colonización española (1565-1898) las autoridades prohibieron las artes marciales y la exhibición de armas cortantes, y el kali sobrevivió en las *komedyas*, obras de teatro que representaban la victoria del catolicismo sobre los paganos y cuyas escenas de batalla servían a los filipinos para conservar y ensayar sus técnicas, con bastones de ratán en lugar de espadas (Wiley, 1999, p. 238; Hick, 1999, p. 93). A finales del siglo XIX los mestizos que estudiaban en Europa aprendieron la esgrima occidental y, a su regreso, la fundieron con las formas heredadas, lo que dio lugar a un sistema de bastón simple, doble bastón y espada y daga que los españoles llamaron *esgrima* y los filipinos escribieron *eskrima*. El boxeo occidental, tras la guerra con Estados Unidos, y las artes marciales japonesas, después de la Segunda Guerra Mundial, transformaron muchos de esos sistemas en el arnis moderno, con clases de estilo militar y cinturones de colores (Wiley, 1999, p. 238).",
+    "Los torneos de arnis comenzaron en la década de 1920, con pocas reglas y sin protecciones, y solo en 1975, con la fundación de la National Arnis Federation of the Philippines, se celebró el primer torneo nacional; en 1989 la WEKAF organizó en Cebú el primer campeonato del mundo de kali, eskrima y arnis, y en 1991 Arnis Philippines redactó el reglamento deportivo, llevó el arnis como deporte de exhibición a los Juegos del Sudeste Asiático y fundó la International Arnis Federation (Wiley, 1999, p. 239). El combate se disputa con bastones de ratán de 76 centímetros, casco y protecciones, por categorías de peso, y a finales del siglo XX el arnis se consolidó como deporte nacional de Filipinas (Wiley, 1999, p. 239)."
+   ],
+   "en": [
+    "Kali, eskrima and arnis are the names of the Filipino armed combat arts, whose common feature is the use of the stick as a weapon or as a substitute for the sword and knife. Wiley attributes their roots to India, China, Indonesia and Malaysia, and records the legend that formal instruction began in the thirteenth century, when ten chieftains who had fled Borneo settled on the island of Panay and founded a school for future tribal leaders, the *bothoan*, where kali was taught together with academic subjects and astrology (Wiley, 1999, p. 238). The first European encounter with these techniques was the death of Magellan at Mactan in 1521, in the hand-to-hand fight against Lapulapu's warriors narrated by Antonio Pigafetta (Wiley, 1999, p. 238).",
+    "During the Spanish colonisation (1565-1898) the authorities banned the martial arts and the brandishing of sharp weapons, and kali survived in the *komedyas*, stage plays depicting the victory of Catholicism over pagans whose battle scenes allowed Filipinos to preserve and rehearse their techniques, with rattan sticks instead of swords (Wiley, 1999, p. 238; Hick, 1999, p. 93). In the late nineteenth century mestizos who studied in Europe learned Western fencing and, on their return, merged it with the inherited forms, giving rise to a system of single stick, double stick and sword and dagger that the Spanish called *esgrima* and Filipinos spelled *eskrima*. Western boxing, after the war with the United States, and Japanese martial arts, after the Second World War, turned many of these systems into modern arnis, with military-style classes and coloured belts (Wiley, 1999, p. 238).",
+    "Arnis tournaments began in the 1920s, with few rules and no padding, and only in 1975, with the founding of the National Arnis Federation of the Philippines, was the first national tournament held; in 1989 WEKAF organised in Cebu the first world kali, eskrima and arnis championship, and in 1991 Arnis Philippines drafted the sporting rules, brought arnis to the Southeast Asian Games as a demonstration sport and founded the International Arnis Federation (Wiley, 1999, p. 239). Bouts are fought with 76-centimetre rattan sticks, helmet and body protection, by weight categories, and by the end of the twentieth century arnis had become established as the national sport of the Philippines (Wiley, 1999, p. 239)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/eskrima.jpg",
+   "pie": {
+    "es": "Hoja de sellos filipinos de 2011 dedicada al arnis como deporte nacional recién declarado.",
+    "en": "2011 Philippine stamp sheet devoted to arnis as the newly declared national sport."
+   },
+   "autor": {
+    "es": "Correos de Filipinas (Philippine Postal Corporation)",
+    "en": "Philippine Postal Corporation"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Arnis_2011_stampsheet_of_the_Philippines.jpg"
+  },
+  "refs": [
+   "Hick, S. (1999). Cudgeling. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 93-95). Oxford University Press.",
+   "Wiley, M. (1999). Martial arts, Philippines. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 238-239). Oxford University Press."
+  ],
+  "refs_en": [
+   "Hick, S. (1999). Cudgeling. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 93-95). Oxford University Press.",
+   "Wiley, M. (1999). Martial arts, Philippines. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 238-239). Oxford University Press."
+  ]
+ },
+ {
+  "id": "boxeo",
+  "name": {
+   "es": "Boxeo",
+   "en": "Boxing"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Próximo Oriente y Egipto, desde el III milenio a. C.; Grecia (Olimpia, 688 a. C.); boxeo moderno, Inglaterra, 1743-1867",
+   "en": "Near East and Egypt, from the third millennium BCE; Greece (Olympia, 688 BCE); modern boxing, England, 1743-1867"
+  },
+  "body": {
+   "es": [
+    "La lucha con los puños está documentada en el Próximo Oriente desde comienzos del III milenio a. C. (Decker, 1992, p. 70), mientras que en Egipto la única prueba indiscutible es la tumba de Kheruef, en Tebas, con seis parejas de púgiles a puño desnudo en el marco del festival Sed de Amenofis III; Decker observa que sus posturas copian las de los danzantes pintados enfrente y deduce que el pugilato fue allí una práctica ocasional (Decker, 1992, p. 88). Las primeras protecciones aparecen hacia el 1500 a. C. en la Creta minoica y en Grecia los boxeadores usaron correas ligeras de cuero hasta el siglo IV a. C., cuando adoptaron las «correas afiladas», más dañinas, antecedente del *caestus* romano con piezas de metal (Poliakoff, 1987, pp. 68-70). Según la tradición griega, en la 23.ª Olimpiada (688 a. C.) Onomastos de Esmirna redactó las reglas del pugilato olímpico (Poliakoff, 1987, p. 80).",
+    "El boxeo moderno procede del pugilato a puño desnudo por dinero que floreció en la Inglaterra del siglo XVIII bajo el patronazgo de la aristocracia. Jack Broughton publicó en Londres en 1743 las primeras reglas escritas, que prohibían golpear por debajo de la cintura o al rival caído y que se invocaban para presentar el pugilato como un arte «científico» (Guttmann, 2004, p. 72; Shipley, 1999, p. 59). En 1867 aparecieron las reglas redactadas por John Graham Chambers y publicadas bajo el nombre del marqués de Queensberry, que impusieron los guantes, los asaltos cronometrados con un minuto de descanso y la prohibición de agarrar, y que permitieron llevar el combate a locales cerrados con taquilla, a diferencia del combate clandestino, perseguido como alteración del orden público (Shipley, 1999, p. 61).",
+    "El boxeo aficionado nació con el mismo sesgo de clase, puesto que el primer campeonato, disputado en 1867 en Lillie Bridge, excluyó a obreros, artesanos y comerciantes, hasta que la Amateur Boxing Association, cuyo campeonato comenzó en 1881, abrió la competición a los trabajadores; el boxeo entró en los Juegos de San Luis en 1904, faltó en 1912 y figura en el programa desde 1920, año en que se fundó en París la Fédération Internationale de Boxe Amateur, sustituida en 1946 por la International Amateur Boxing Association (Shipley, 1999, p. 62). El profesionalismo reclutó a sus boxeadores entre los pobres, los inmigrantes y los afroamericanos, cuyo acceso a los títulos estuvo limitado durante décadas por la barrera del color (Shipley, 1999, pp. 61-62), y las mujeres, que ya combatían ante el público londinense a comienzos del siglo XVIII (Guttmann, 1991, pp. 74-75), solo a finales del siglo XX empezaron a practicarlo en el marco reglamentado del deporte (Shipley, 1999, p. 63)."
+   ],
+   "en": [
+    "Fist fighting is documented in the Near East from the beginning of the third millennium BCE (Decker, 1992, p. 70), whereas in Egypt the only undisputed evidence is the tomb of Kheruef in Thebes, with six pairs of bare-fisted boxers in the setting of the Sed festival of Amenhotep III; Decker notes that their postures copy those of the dancers painted opposite and infers that boxing was only an occasional practice there (Decker, 1992, p. 88). The first hand protection appears around 1500 BCE in Minoan Crete and in Greece boxers used light leather thongs until the fourth century BCE, when they adopted the more damaging \"sharp thongs\", forerunners of the Roman *caestus* with its metal pieces (Poliakoff, 1987, pp. 68-70). According to Greek tradition, in the 23rd Olympiad (688 BCE) Onomastos of Smyrna drew up the rules of Olympic boxing (Poliakoff, 1987, p. 80).",
+    "Modern boxing derives from the bare-knuckle prizefighting for money that flourished in eighteenth-century England under aristocratic patronage. Jack Broughton published the first written rules in London in 1743, which forbade hitting below the waist or striking a fallen opponent and were invoked to present pugilism as a \"scientific\" art (Guttmann, 2004, p. 72; Shipley, 1999, p. 59). In 1867 the rules drafted by John Graham Chambers and published under the name of the Marquess of Queensberry appeared; they imposed gloves, timed rounds with a one-minute rest and a ban on wrestling holds, and they allowed bouts to move indoors to venues with a paying door, unlike the clandestine prizefight, prosecuted as a breach of the peace (Shipley, 1999, p. 61).",
+    "Amateur boxing was born with the same class bias, since the first championship, held in 1867 at Lillie Bridge, excluded labourers, artisans and tradesmen, until the Amateur Boxing Association, whose championship began in 1881, opened competition to workers; boxing entered the Games at St. Louis in 1904, was absent in 1912 and has been on the programme since 1920, the year the Fédération Internationale de Boxe Amateur was founded in Paris, replaced in 1946 by the International Amateur Boxing Association (Shipley, 1999, p. 62). Professional boxing recruited its fighters among the poor, immigrants and African Americans, whose access to titles was restricted for decades by the colour bar (Shipley, 1999, pp. 61-62), and women, who were already fighting before London crowds in the early eighteenth century (Guttmann, 1991, pp. 74-75), only began to take it up within the regulated framework of the sport at the end of the twentieth century (Shipley, 1999, p. 63)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 2,
+    "f": "beni-hasan-registros-de-lucha",
+    "t": {
+     "es": "Beni Hasan: registros de lucha",
+     "en": "Beni Hasan: wrestling records"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/boxeo.jpg",
+   "pie": {
+    "es": "Hoja impresa con las reglas del ring de Jack Broughton, fechada el 6 de agosto de 1743.",
+    "en": "Broadside with Jack Broughton's rules of the ring, dated 6 August 1743."
+   },
+   "autor": "Jack Broughton",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Broughton_Rules.jpg"
+  },
+  "refs": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trad.). Yale University Press.",
+   "Guttmann, A. (1991). *Women's sports: A history*. Columbia University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Poliakoff, M. B. (1987). *Combat sports in the ancient world: Competition, violence, and culture*. Yale University Press.",
+   "Shipley, S. (1999). Boxing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 59-63). Oxford University Press."
+  ],
+  "refs_en": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trans.). Yale University Press.",
+   "Guttmann, A. (1991). *Women's sports: A history*. Columbia University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Poliakoff, M. B. (1987). *Combat sports in the ancient world: Competition, violence, and culture*. Yale University Press.",
+   "Shipley, S. (1999). Boxing. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 59-63). Oxford University Press."
+  ]
+ },
+ {
+  "id": "lucha-grecorromana",
+  "name": {
+   "es": "Lucha grecorromana",
+   "en": "Greco-Roman wrestling"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Egipto y Mesopotamia, desde el III milenio a. C.; Grecia (Olimpia, 708 a. C.); estilo grecorromano, Europa continental, siglo XIX",
+   "en": "Egypt and Mesopotamia, from the third millennium BCE; Greece (Olympia, 708 BCE); Greco-Roman style, continental Europe, nineteenth century"
+  },
+  "body": {
+   "es": [
+    "La lucha es la más antigua de las modalidades de combate documentadas. En Egipto aparece ya en la paleta de las ciudades, de la época de la unificación, y es la disciplina con mejor documentación visual hasta el final del Imperio Nuevo, con las doscientas diecinueve parejas pintadas en la tumba de Baqet III en Beni Hasan (Decker, 1992, pp. 71-73), y el Próximo Oriente ofrece representaciones desde hacia el 3000 a. C. (Poliakoff, 1999a, p. 459). En Olimpia la lucha entró en el programa en el 708 a. C. (Guttmann, 2004, p. 21), y para ganar un combate formal el luchador griego debía derribar tres veces a su rival (Poliakoff, 1987, p. 23). El nombre del estilo grecorromano, sin embargo, no procede de esta tradición, puesto que se basa en la creencia, extendida y errónea, de que los griegos tenían una competición separada de lucha de pie limitada a las presas del tronco (Poliakoff, 1999b, p. 461).",
+    "La lucha grecorromana es una creación de la Europa continental del siglo XIX, a la que pudieron contribuir estilos populares que también limitaban las presas a la parte superior del cuerpo, y su nombre responde a la tendencia clasicista de los movimientos atléticos de los siglos XVIII y XIX. A finales del siglo XIX gozaba de gran prestigio en el continente, donde casi todas las capitales organizaban torneos internacionales con premios cuantiosos, mientras que en el mundo anglosajón cedió el terreno a los estilos libres (Poliakoff, 1999b, p. 461). Prohíbe las presas por debajo de la cintura y el uso activo de las piernas, lo que favorece los grandes lanzamientos en arco. En el circuito profesional los combates podían durar dos o tres horas y admitían golpes contra el tapiz, estrangulamientos o cabezazos, hasta que las reglas de la federación internacional de lucha amateur (FILA) se formalizaron en 1921 (Poliakoff, 1999b, pp. 461-462).",
+    "La lucha grecorromana figuró en los primeros Juegos Olímpicos modernos, celebrados en Atenas en 1896, ocho años antes que el estilo libre (Poliakoff, 1999b, p. 461). La ausencia de límites de tiempo prolongaba los combates, hasta el punto de que en la final de 1912 el sueco Anders Ahlgren y el finlandés Ivar Böhling lucharon nueve horas antes de que los jueces declararan empate y concedieran a ambos la medalla de plata. Las reglas modernas fijaron combates de dos periodos de tres minutos y prohibieron cualquier acción que pusiera en peligro la integridad del rival (Poliakoff, 1999b, p. 462). El estilo mantuvo su arraigo en Europa, y durante el siglo XX la Unión Soviética, Bulgaria, Rumanía, Japón, Suecia y Finlandia destacaron en la competición olímpica (Poliakoff, 1999b, p. 461)."
+   ],
+   "en": [
+    "Wrestling is the oldest of the documented combat disciplines. In Egypt it already appears on the cities palette from the time of unification, and it is the discipline with the best visual documentation up to the end of the New Kingdom, with the two hundred and nineteen pairs painted in the tomb of Baqet III at Beni Hasan (Decker, 1992, pp. 71-73), while the Near East offers representations from around 3000 BCE (Poliakoff, 1999a, p. 459). At Olympia wrestling entered the programme in 708 BCE (Guttmann, 2004, p. 21), and to win a formal bout the Greek wrestler had to throw his opponent three times (Poliakoff, 1987, p. 23). The name of the Greco-Roman style, however, does not come from this tradition, since it rests on the widespread but mistaken belief that the Greeks had a separate competition of upright wrestling restricted to upper-body holds (Poliakoff, 1999b, p. 461).",
+    "Greco-Roman wrestling is a creation of nineteenth-century continental Europe, to which folk styles that also restricted holds to the upper body may have contributed, and its name reflects the classicising tendency of the athletic movements of the eighteenth and nineteenth centuries. By the late nineteenth century it enjoyed great prestige on the continent, where almost every capital hosted international tournaments with large prizes, whereas in the English-speaking world it gave way to freestyle forms (Poliakoff, 1999b, p. 461). It forbids holds below the waist and the active use of the legs, which encourages high arching throws. On the professional circuit bouts could last two or three hours and allowed body slams, chokeholds or head-butting, until the rules of the international amateur wrestling federation (FILA) were formalised in 1921 (Poliakoff, 1999b, pp. 461-462).",
+    "Greco-Roman wrestling featured at the first modern Olympic Games, held in Athens in 1896, eight years before freestyle (Poliakoff, 1999b, p. 461). The absence of time limits prolonged bouts, to the point that in the 1912 final the Swede Anders Ahlgren and the Finn Ivar Böhling wrestled for nine hours before the officials declared a draw and awarded both the silver medal. Modern rules set bouts of two three-minute periods and banned any action endangering the opponent's safety (Poliakoff, 1999b, p. 462). The style kept its roots in Europe, and during the twentieth century the Soviet Union, Bulgaria, Romania, Japan, Sweden and Finland excelled in Olympic competition (Poliakoff, 1999b, p. 461)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 2,
+    "f": "los-deportes-de-combate",
+    "t": {
+     "es": "Los deportes de combate",
+     "en": "Combat sports"
+    }
+   },
+   {
+    "num": 2,
+    "f": "beni-hasan-registros-de-lucha",
+    "t": {
+     "es": "Beni Hasan: registros de lucha",
+     "en": "Beni Hasan: wrestling records"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/lucha-grecorromana.jpg",
+   "pie": {
+    "es": "Carl Schuhmann y Georgios Tsitas luchan en los Juegos Olímpicos de Atenas de 1896.",
+    "en": "Carl Schuhmann and Georgios Tsitas wrestle at the 1896 Athens Olympic Games."
+   },
+   "autor": "Albert Meyer",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Schuhmann_lotta_atene_1896.jpg"
+  },
+  "refs": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trad.). Yale University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Poliakoff, M. B. (1987). *Combat sports in the ancient world: Competition, violence, and culture*. Yale University Press.",
+   "Poliakoff, M. B. (1999a). Wrestling, freestyle. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 459-461). Oxford University Press.",
+   "Poliakoff, M. B. (1999b). Wrestling, Greco-Roman. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 461-462). Oxford University Press."
+  ],
+  "refs_en": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trans.). Yale University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Poliakoff, M. B. (1987). *Combat sports in the ancient world: Competition, violence, and culture*. Yale University Press.",
+   "Poliakoff, M. B. (1999a). Wrestling, freestyle. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 459-461). Oxford University Press.",
+   "Poliakoff, M. B. (1999b). Wrestling, Greco-Roman. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 461-462). Oxford University Press."
+  ]
+ },
+ {
+  "id": "lucha-libre-olimpica",
+  "name": {
+   "es": "Lucha libre olímpica",
+   "en": "Freestyle wrestling"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Antecedentes desde el III milenio a. C.; estilos populares británicos (*catch as catch can*) y Estados Unidos, siglo XIX; olímpica desde San Luis, 1904",
+   "en": "Antecedents from the third millennium BCE; British folk styles (*catch as catch can*) and the United States, nineteenth century; Olympic since St. Louis, 1904"
+  },
+  "body": {
+   "es": [
+    "La lucha libre, en la que se permiten presas sobre el tronco y las piernas sin agarrar la ropa del adversario, hereda una tradición universal. Poliakoff señala que casi todas las técnicas del estilo libre actual, incluidos los lanzamientos más elaborados, se encuentran ya en las parejas de luchadores pintadas en las tumbas del Imperio Medio de Beni Hasan (Poliakoff, 1999, p. 459), donde la lucha es la disciplina egipcia con mejor documentación visual (Decker, 1992, p. 71), y recuerda la lucha de Gilgamesh con Enkidu, el combate de Jacob en el *Génesis*, las fiestas de lucha de los nuba del Sudán y la lucha popular india, practicada sobre el barro del *akhara* (Poliakoff, 1999, pp. 459-461).",
+    "La forma moderna procede de los estilos populares de las islas británicas. En el de Lancashire, conocido como *catch as catch can*, los luchadores empezaban de pie y seguían en el suelo si ninguno lograba derribar al otro, y en el *collar-and-elbow* irlandés cada luchador sujetaba el cuello y el codo del rival antes de pasar a la lucha abierta; los inmigrantes irlandeses llevaron este estilo a Estados Unidos (Poliakoff, 1999, p. 459). Allí el estilo libre se difundió con rapidez tras la guerra de Secesión, en el contexto de la urbanización, la industrialización y el cierre de la frontera, y en la década de 1880 sus torneos reunían a cientos de participantes. En 1900 se celebró el primer encuentro universitario, en 1905 el primer torneo de la Eastern Intercollegiate Wrestling Association y en 1928 el primer campeonato de la NCAA (Poliakoff, 1999, p. 460).",
+    "El estilo libre entró en los Juegos Olímpicos en San Luis en 1904, con siete categorías de peso, y la federación internacional de lucha amateur (FILA) fija desde 1921 las reglas, la puntuación y los procedimientos de la competición olímpica (Poliakoff, 1999, p. 460). Los límites de tiempo y la victoria por puntos cuando no hay caída son innovaciones del siglo XX, igual que la prohibición de las presas destinadas a castigar al rival, en contraste con la dureza de la lucha griega antigua (Poliakoff, 1999, pp. 460-461). Poliakoff subraya además que la lucha revela la actitud de cada sociedad ante la victoria y la derrota, puesto que Píndaro habló de la deshonra del vencido, los nuba aceptan la derrota con elegancia y entre los mongoles el perdedor debía entregar su ropa al vencedor y ofrecerle un banquete (Poliakoff, 1999, p. 461)."
+   ],
+   "en": [
+    "Freestyle wrestling, in which holds on the trunk and legs are allowed without grasping the opponent's clothing, inherits a universal tradition. Poliakoff points out that almost all the tactics of modern freestyle, including the most sophisticated throws, can already be found among the pairs of wrestlers painted in the Middle Kingdom tombs at Beni Hasan (Poliakoff, 1999, p. 459), where wrestling is the Egyptian discipline with the best visual documentation (Decker, 1992, p. 71), and he recalls Gilgamesh wrestling Enkidu, Jacob's struggle in *Genesis*, the wrestling festivals of the Nuba of Sudan and Indian folk wrestling, practised on the mud of the *akhara* (Poliakoff, 1999, pp. 459-461).",
+    "The modern form derives from the folk styles of the British Isles. In the Lancashire style, known as *catch as catch can*, wrestlers began standing and continued on the ground if neither scored a fall, and in the Irish *collar-and-elbow* style each wrestler grasped the opponent's collar and elbow before moving on to open wrestling; Irish immigrants took this style to the United States (Poliakoff, 1999, p. 459). There freestyle spread rapidly after the Civil War, in the context of urbanisation, industrialisation and the closing of the frontier, and by the 1880s its tournaments drew hundreds of participants. The first intercollegiate match was held in 1900, the first Eastern Intercollegiate Wrestling Association tournament in 1905 and the first NCAA championship in 1928 (Poliakoff, 1999, p. 460).",
+    "Freestyle entered the Olympic Games at St. Louis in 1904, with seven weight categories, and since 1921 the international amateur wrestling federation (FILA) has set the rules, scoring and procedures of Olympic competition (Poliakoff, 1999, p. 460). Time limits and victory on points in the absence of a fall are twentieth-century innovations, as is the ban on holds intended to punish the opponent, in contrast with the roughness of ancient Greek wrestling (Poliakoff, 1999, pp. 460-461). Poliakoff also stresses that wrestling reveals each society's attitude to victory and defeat, since Pindar spoke of the disgrace of the loser, the Nuba bear defeat gracefully and among the Mongols the loser had to give his clothing to the victor and hold a banquet for him (Poliakoff, 1999, p. 461)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 2,
+    "f": "los-deportes-de-combate",
+    "t": {
+     "es": "Los deportes de combate",
+     "en": "Combat sports"
+    }
+   },
+   {
+    "num": 2,
+    "f": "beni-hasan-registros-de-lucha",
+    "t": {
+     "es": "Beni Hasan: registros de lucha",
+     "en": "Beni Hasan: wrestling records"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/lucha-libre-olimpica.jpg",
+   "pie": {
+    "es": "Combate de lucha *collar-and-elbow*, dibujo de W. A. Rogers de 1878 sobre las competiciones atléticas de la policía.",
+    "en": "*Collar-and-elbow* wrestling match, drawing by W. A. Rogers from 1878 on police athletic contests."
+   },
+   "autor": "W. A. Rogers",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Collar_and_elbow_wrestling_match.jpg"
+  },
+  "refs": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trad.). Yale University Press.",
+   "Poliakoff, M. B. (1999). Wrestling, freestyle. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 459-461). Oxford University Press."
+  ],
+  "refs_en": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trans.). Yale University Press.",
+   "Poliakoff, M. B. (1999). Wrestling, freestyle. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 459-461). Oxford University Press."
+  ]
+ },
+ {
+  "id": "pancracio",
+  "name": {
+   "es": "Pancracio",
+   "en": "Pankration"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Grecia arcaica; programa olímpico desde la 33.ª Olimpiada (648 a. C.)",
+   "en": "Archaic Greece; Olympic programme from the 33rd Olympiad (648 BCE)"
+  },
+  "body": {
+   "es": [
+    "El pancracio (*pankration*, «fuerza total» o «victoria total», con un posible sinónimo más antiguo, *pammachon*, «lucha total») combinaba golpes de puño, patadas, derribos de lucha, estrangulamientos y luxaciones, y el combate terminaba cuando uno de los contendientes indicaba que no quería o no podía seguir. Poliakoff subraya que, aunque los griegos posteriores le atribuyeron un origen mitológico, fue casi la última prueba atlética incorporada a Olimpia, con la competición masculina desde la 33.ª Olimpiada (648 a. C.) y la infantil desde la 145.ª (200 a. C.); no aparece en Homero ni en ningún texto anterior al siglo V a. C. y no tuvo equivalente en el Próximo Oriente antiguo, a diferencia de la lucha y del pugilato (Poliakoff, 1987, p. 54; Guttmann, 2004, p. 21).",
+    "Las reglas solo prohibían expresamente morder y meter los dedos en los ojos, y los espartanos admitían incluso eso, aunque restringían estos combates a su ciudad y no participaban en el pancracio de los grandes festivales (Poliakoff, 1987, p. 54). Las patadas eran el signo distintivo del deporte, los golpes a los genitales no estaban vedados y, puesto que tocar el suelo con la espalda no decidía nada, el pancraciasta podía buscar el control del rival de pie o en el suelo; Sostratos de Sición, en el siglo IV a. C., ganó tres coronas olímpicas doblando los dedos de sus adversarios (Poliakoff, 1987, pp. 56-57). En la Olimpiada del 564 a. C. Arriquión murió estrangulado en la final, pero fue proclamado vencedor porque su rival, con el tobillo dislocado, se rindió antes de que cayera su cuerpo sin vida (Poliakoff, 1987, pp. 62-63, 91).",
+    "El pancracio expresaba un ideal de valor que despreciaba la muerte, y los relatos antiguos elogiaron a Arriquión por no ceder, hasta el punto de que uno de ellos presenta su victoria como un triunfo ante toda Grecia (Poliakoff, 1987, p. 91). Varios pancraciastas victoriosos, como Prómaco de Pelene o Timasiteo de Delfos, se distinguieron también en la guerra, y el ateniense Dioxipo, vencedor olímpico en el 336 a. C., derrotó en el campamento de Alejandro Magno, desnudo y armado solo con una maza, a un macedonio que lo había desafiado con armadura completa (Poliakoff, 1987, p. 98). Pese a su dureza, los griegos lo consideraban menos peligroso que el pugilato, y un atleta que quería disputar ambas pruebas en Olimpia pidió que el pancracio se celebrara primero para no llegar herido (Poliakoff, 1987, p. 63)."
+   ],
+   "en": [
+    "Pankration (\"total strength\" or \"total victory\", with a possibly older synonym, *pammachon*, \"total fight\") combined punches, kicks, wrestling throws, strangleholds and joint locks, and the bout ended when one of the contestants signalled that he was unwilling or unable to continue. Poliakoff stresses that, although later Greeks gave it a mythological origin, it was practically the last athletic event added at Olympia, with the men's contest from the 33rd Olympiad (648 BCE) and the boys' from the 145th (200 BCE); it does not appear in Homer or in any text before the fifth century BCE and had no counterpart in the ancient Near East, unlike wrestling and boxing (Poliakoff, 1987, p. 54; Guttmann, 2004, p. 21).",
+    "The rules explicitly forbade only biting and gouging, and the Spartans allowed even these, although they restricted such bouts to their own city and did not take part in pankration at the great festivals (Poliakoff, 1987, p. 54). Kicking was the hallmark of the sport, blows to the genitals were not off limits and, since touching the ground with the back decided nothing, the pankratiast could seek control of his opponent standing or on the ground; Sostratos of Sikyon, in the fourth century BCE, won three Olympic crowns by bending back his opponents' fingers (Poliakoff, 1987, pp. 56-57). At the Olympiad of 564 BCE Arrichion was strangled to death in the final, but he was proclaimed victor because his opponent, with a dislocated ankle, submitted before his lifeless body fell (Poliakoff, 1987, pp. 62-63, 91).",
+    "Pankration expressed an ideal of courage that scorned death, and ancient accounts praised Arrichion for refusing to yield, to the point that one of them presents his victory as a triumph over the whole Greek nation (Poliakoff, 1987, p. 91). Several victorious pankratiasts, such as Promachos of Pellene or Timasitheos of Delphi, also distinguished themselves in war, and the Athenian Dioxippos, Olympic victor in 336 BCE, defeated in the camp of Alexander the Great, naked and armed only with a club, a Macedonian who had challenged him in full armour (Poliakoff, 1987, p. 98). Despite its harshness, the Greeks considered it less dangerous than boxing, and an athlete who wished to compete in both events at Olympia asked for the pankration to be held first so as not to arrive wounded (Poliakoff, 1987, p. 63)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/pancracio.jpg",
+   "pie": {
+    "es": "Pancraciastas en un ánfora panatenaica de premio atribuida al Pintor de Cleofrades, comienzos del siglo V a. C. (Metropolitan Museum of Art).",
+    "en": "Pankratiasts on a Panathenaic prize amphora attributed to the Kleophrades Painter, early fifth century BCE (Metropolitan Museum of Art)."
+   },
+   "autor": {
+    "es": "Atribuida al Pintor de Cleofrades",
+    "en": "Attributed to the Kleophrades Painter"
+   },
+   "licencia": "CC0",
+   "url": "https://commons.wikimedia.org/wiki/File:Pankration_Black_Terracotta_Panathenaic_prize_amphora_Attributed_to_the_Kleophrades_Painter.jpg"
+  },
+  "refs": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Poliakoff, M. B. (1987). *Combat sports in the ancient world: Competition, violence, and culture*. Yale University Press."
+  ],
+  "refs_en": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Poliakoff, M. B. (1987). *Combat sports in the ancient world: Competition, violence, and culture*. Yale University Press."
+  ]
+ }
+]

@@ -1,0 +1,630 @@
+[
+ {
+  "id": "highland-games",
+  "name": {
+   "es": "Highland games",
+   "en": "Highland games"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Tierras Altas de Escocia; forma reglada, Braemar, 1832",
+   "en": "Scottish Highlands; regulated form, Braemar, 1832"
+  },
+  "body": {
+   "es": [
+    "Los Highland games son reuniones festivas de las Tierras Altas de Escocia en las que dominan las pruebas de fuerza y lanzamiento, como el lanzamiento de piedra, el de martillo y el volteo del tronco (*caber*), junto a carreras, baile y música de gaita. El organismo rector actual atribuye a esta tradición más de mil años de antigüedad (Stirling Highland Games, s. f.), si bien la historia documentada de sus reuniones más conocidas empieza en el siglo XIX. En Braemar, el 21 de julio de 1815 se fundó la Braemar Wright's Friendly Society, una sociedad de socorros mutuos cuyos miembros pagaban cuotas para socorrer a los compañeros incapacitados y costear sus funerales (Braemar Royal Highland Society, s. f.-a).",
+    "Aquella sociedad de socorros mutuos fue adoptando los signos de la identidad de las Tierras Altas. En 1822 sus miembros acordaron vestir el traje tradicional en las reuniones, en 1826 pasó a llamarse Braemar Highland Society y el 23 de agosto de 1832 destinó cinco libras de sus fondos a premios para cinco pruebas, fecha en que la reunión adquirió una forma cercana a la actual (Braemar Royal Highland Society, s. f.-a, s. f.-b). Guttmann sitúa en ese mismo año el renacimiento de estos juegos y subraya que ofrecieron al atletismo británico un pasado romántico atractivo, con una imagen de Escocia a gusto de los ingleses (Guttmann, 2004, p. 97).",
+    "La visita de la reina Victoria al encuentro de Braemar el 14 de septiembre de 1848, durante su estancia en Balmoral, dio a los juegos resonancia nacional, y en 1866 la sociedad recibió el título de real (Braemar Royal Highland Society, s. f.-a, s. f.-b). La emigración escocesa llevó estas reuniones a Norteamérica, donde la Highland Society de Nueva York organizó una competición atlética en 1836 y los clubes caledonios de Boston y Nueva York sirvieron de modelo a las primeras reuniones universitarias de atletismo (Guttmann, 2004, p. 125). En 1947 se fundó la actual Royal Scottish Highland Games Association, reconocida como organismo rector del deporte, que agrupa a más de sesenta reuniones en Escocia (Stirling Highland Games, s. f.)."
+   ],
+   "en": [
+    "Highland games are festive gatherings of the Scottish Highlands dominated by strength and throwing events, such as putting the stone, throwing the hammer and tossing the caber, together with races, dancing and bagpipe music. The present governing body attributes more than a thousand years of history to this tradition (Stirling Highland Games, n.d.), although the documented history of its best-known gatherings begins in the nineteenth century. In Braemar, the Braemar Wright's Friendly Society was founded on 21 July 1815, a mutual aid society whose members paid contributions to support fellow members unable to work and to cover their funeral costs (Braemar Royal Highland Society, n.d.-a).",
+    "That mutual aid society gradually adopted the symbols of Highland identity. In 1822 its members agreed to wear Highland dress at their meetings, in 1826 it was renamed the Braemar Highland Society, and on 23 August 1832 it set aside five pounds of its funds as prizes for five events, the date on which the gathering took something like its present form (Braemar Royal Highland Society, n.d.-a, n.d.-b). Guttmann places the revival of these games in the same year and stresses that they gave British athletics an attractive romantic past, with an image of Scotland to English taste (Guttmann, 2004, p. 97).",
+    "Queen Victoria's visit to the Braemar gathering on 14 September 1848, during her stay at Balmoral, gave the games national resonance, and in 1866 the society received royal status (Braemar Royal Highland Society, n.d.-a, n.d.-b). Scottish emigration took these gatherings to North America, where the Highland Society of New York held an athletics meeting in 1836 and the Caledonian clubs of Boston and New York served as a model for the first college track-and-field meets (Guttmann, 2004, p. 125). The present Royal Scottish Highland Games Association was founded in 1947, is recognised as the sport's governing body and brings together more than sixty gatherings in Scotland (Stirling Highland Games, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/highland-games.jpg",
+   "pie": {
+    "es": "Braemar Highland Gathering, 1990.",
+    "en": "Braemar Highland Gathering, 1990."
+   },
+   "autor": "Raibeart MacAoidh",
+   "licencia": "CC BY-SA 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Braemar_Highland_Gathering_-_1990_-_geograph.org.uk_-_5250937.jpg"
+  },
+  "refs": [
+   "Braemar Royal Highland Society. (s. f.-a). *Braemar Royal Highland Society early years*. Recuperado el 29 de septiembre de 2026 de https://www.braemargathering.org/early-years",
+   "Braemar Royal Highland Society. (s. f.-b). *History*. Recuperado el 29 de septiembre de 2026 de https://www.braemargathering.org/history",
+   "Stirling Highland Games. (s. f.). *Royal Scottish Highland Games Association*. Recuperado el 29 de septiembre de 2026 de https://www.stirlinghighlandgames.com/about-us/royal-scottish-highland-games-association/",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press."
+  ],
+  "refs_en": [
+   "Braemar Royal Highland Society. (n.d.-a). *Braemar Royal Highland Society early years*. Retrieved September 29, 2026, from https://www.braemargathering.org/early-years",
+   "Braemar Royal Highland Society. (n.d.-b). *History*. Retrieved September 29, 2026, from https://www.braemargathering.org/history",
+   "Stirling Highland Games. (n.d.). *Royal Scottish Highland Games Association*. Retrieved September 29, 2026, from https://www.stirlinghighlandgames.com/about-us/royal-scottish-highland-games-association/",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press."
+  ]
+ },
+ {
+  "id": "pulso",
+  "name": {
+   "es": "Pulso",
+   "en": "Arm wrestling"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Práctica popular antigua; como competición reglada, Petaluma (California, EE. UU.), 1955-1962",
+   "en": "Old folk practice; as a regulated competition, Petaluma (California, USA), 1955-1962"
+  },
+  "body": {
+   "es": [
+    "El pulso es una prueba de fuerza en la que dos contendientes, con los codos apoyados sobre una mesa y las manos entrelazadas, intentan abatir el brazo del rival. Su práctica informal es muy antigua y varias federaciones nacionales la remontan a una pintura de una tumba egipcia de hacia el año 2000 a. C. (New Zealand Armwrestling Federation, s. f.), identificación que no recoge el estudio de referencia sobre el deporte en el antiguo Egipto, cuyo capítulo de deportes de combate trata la lucha, el combate con bastón y el pugilato (Decker, 1992, pp. 70-88). Como competición organizada, con reglas y campeones, el pulso es un deporte del siglo XX nacido en los bares del norte de California.",
+    "Su cuna fue el bar Gilardi's Corner de Petaluma, donde el 27 de enero de 1955 un preparador de los Detroit Tigers y un ganadero local disputaron un combate a beneficio de la March of Dimes, la campaña contra la poliomielitis, promovido por el columnista Bill Soberanes, del *Petaluma Argus-Courier* (Roussin, s. f.-a). Algunas federaciones fechan ese primer encuentro en 1952 (New Zealand Armwrestling Federation, s. f.). Entre 1955 y 1961 el torneo pasó de ámbito comarcal a estatal, se fijaron el límite de tres minutos y la posición de la mano libre, y en 1958 se introdujo la mesa para competir de pie (Roussin, s. f.-a). El 2 de febrero de 1962 se celebró el primer campeonato del mundo, con unos mil espectadores, y en 1964 se abrió la categoría femenina (Roussin, s. f.-b).",
+    "La difusión del pulso dependió de la televisión, puesto que la cadena ABC filmó el campeonato de 1969 para su programa *Wide World of Sports* y lo emitió en enero de 1970 (Roussin, s. f.-b). La primera federación mundial se constituyó en 1976 en Scranton (Pensilvania) con Estados Unidos como único miembro, y en 1979 se celebró en Wetaskiwin (Canadá) el primer campeonato realmente internacional, con equipos de Canadá, Estados Unidos, la India y Brasil (Roussin, s. f.-c). La cronología de la actual World Armwrestling Federation es confusa, puesto que la federación neozelandesa sitúa su creación a comienzos de los años noventa y su primer campeonato mundial en Suiza en 1992 (New Zealand Armwrestling Federation, s. f.), fechas que no concuerdan con las anteriores."
+   ],
+   "en": [
+    "Arm wrestling is a trial of strength in which two opponents, with their elbows on a table and their hands clasped, try to force down the rival's arm. Its informal practice is very old, and several national federations trace it back to a painting in an Egyptian tomb of around 2000 BCE (New Zealand Armwrestling Federation, n.d.), an identification not included in the standard study of sport in ancient Egypt, whose chapter on combat sports deals with wrestling, stick fighting and boxing (Decker, 1992, pp. 70-88). As an organised competition, with rules and champions, arm wrestling is a twentieth-century sport born in the bars of northern California.",
+    "Its cradle was the Gilardi's Corner bar in Petaluma, where on 27 January 1955 a Detroit Tigers trainer and a local rancher fought a bout to benefit the March of Dimes, the campaign against polio, promoted by Bill Soberanes, a columnist of the *Petaluma Argus-Courier* (Roussin, n.d.-a). Some federations date that first match to 1952 (New Zealand Armwrestling Federation, n.d.). Between 1955 and 1961 the tournament grew from a local to a statewide event, the three-minute limit and the position of the free hand were fixed, and in 1958 the stand-up table was introduced (Roussin, n.d.-a). The first world championship was held on 2 February 1962 before some thousand spectators, and a women's division was opened in 1964 (Roussin, n.d.-b).",
+    "The spread of arm wrestling depended on television, since ABC filmed the 1969 championship for its programme *Wide World of Sports* and broadcast it in January 1970 (Roussin, n.d.-b). The first world federation was formed in 1976 in Scranton (Pennsylvania) with the United States as its only member, and in 1979 the first truly international championship was held in Wetaskiwin (Canada), with teams from Canada, the United States, India and Brazil (Roussin, n.d.-c). The chronology of the present World Armwrestling Federation is confused, since the New Zealand federation places its creation in the early 1990s and its first world championship in Switzerland in 1992 (New Zealand Armwrestling Federation, n.d.), dates that do not match the earlier ones."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/pulso.jpg",
+   "pie": {
+    "es": "El luchador Sándor Szabó y el pianista Carmen Cavallaro echan un pulso durante el festival Fur Rendezvous de Anchorage (Alaska) en 1956.",
+    "en": "The wrestler Sándor Szabó and the pianist Carmen Cavallaro arm wrestling during the Fur Rendezvous festival in Anchorage (Alaska) in 1956."
+   },
+   "autor": {
+    "es": "Fur Rendezvous Festival, fotógrafo anónimo",
+    "en": "Fur Rendezvous Festival, anonymous photographer"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:S%C3%A1ndor_Szab%C3%B3_arm_wrestling_Carmen_Cavallaro,_Anchorage,_Alaska,_1956.jpg"
+  },
+  "refs": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt*. Yale University Press.",
+   "New Zealand Armwrestling Federation. (s. f.). *Origin of armwrestling*. Recuperado el 29 de septiembre de 2026 de https://www.nzarmwrestling.co.nz/origin-of-armwrestling.html",
+   "Roussin, E. (s. f.-a). *World's Wristwrestling Championship, part 1: 1954-1961*. The Armwrestling Archives. Recuperado el 29 de septiembre de 2026 de https://www.thearmwrestlingarchives.com/worlds-wristwrestling-championship---part-1-1954-1961.html",
+   "Roussin, E. (s. f.-b). *World's Wristwrestling Championship, part 2: 1962-1969*. The Armwrestling Archives. Recuperado el 29 de septiembre de 2026 de https://www.thearmwrestlingarchives.com/worlds-wristwrestling-championship---part-2-1962-1969.html",
+   "Roussin, E. (s. f.-c). *World Armwrestling Federation (WAF)*. The Armwrestling Archives. Recuperado el 29 de septiembre de 2026 de https://www.thearmwrestlingarchives.com/world-armwrestling-federation-waf.html"
+  ],
+  "refs_en": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt*. Yale University Press.",
+   "New Zealand Armwrestling Federation. (n.d.). *Origin of armwrestling*. Retrieved September 29, 2026, from https://www.nzarmwrestling.co.nz/origin-of-armwrestling.html",
+   "Roussin, E. (n.d.-a). *World's Wristwrestling Championship, part 1: 1954-1961*. The Armwrestling Archives. Retrieved September 29, 2026, from https://www.thearmwrestlingarchives.com/worlds-wristwrestling-championship---part-1-1954-1961.html",
+   "Roussin, E. (n.d.-b). *World's Wristwrestling Championship, part 2: 1962-1969*. The Armwrestling Archives. Retrieved September 29, 2026, from https://www.thearmwrestlingarchives.com/worlds-wristwrestling-championship---part-2-1962-1969.html",
+   "Roussin, E. (n.d.-c). *World Armwrestling Federation (WAF)*. The Armwrestling Archives. Retrieved September 29, 2026, from https://www.thearmwrestlingarchives.com/world-armwrestling-federation-waf.html"
+  ]
+ },
+ {
+  "id": "comba",
+  "name": {
+   "es": "Comba",
+   "en": "Rope skipping"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Juego infantil tradicional; como deporte de competición, Estados Unidos, 1973",
+   "en": "Traditional children's game; as a competitive sport, United States, 1973"
+  },
+  "body": {
+   "es": [
+    "Saltar a la comba fue durante siglos un juego infantil y callejero antes de convertirse en deporte de competición en la segunda mitad del siglo XX. Su origen remoto no está documentado con precisión. La liga estadounidense de *double dutch*, la modalidad en que se salta entre dos cuerdas que giran en sentidos opuestos, propone como hipótesis que el juego procede de los cordeleros de Fenicia, Egipto y China, cuyos recaderos debían saltar las cuerdas mientras se trenzaban, y sostiene que los colonos neerlandeses lo llevaron a Nueva Ámsterdam, donde los ingleses le dieron el nombre de *double dutch* (National Double Dutch League, s. f.).",
+    "La transformación del juego callejero en deporte tuvo lugar en Nueva York. Según la misma liga, el *double dutch* casi había desaparecido a finales de los años cincuenta por la urbanización y la pérdida de espacios de juego, y en 1973 dos miembros de la policía de la ciudad, David A. Walker y el detective Ulysses Williams, lo reorganizaron como competición por equipos con profesores de educación física de un centro escolar de la ciudad (el IS 10). El primer torneo oficial se celebró el 14 de febrero de 1974 con cerca de seiscientos escolares, y ese mismo año nació la American Double Dutch League (National Double Dutch League, s. f.). La federación internacional también fecha en 1973 el comienzo del salto de comba como deporte de competición (IJRU, s. f.).",
+    "La organización internacional llegó en la década de 1990. El 25 de febrero de 1996 se fundó la Fédération Internationale de Saut à la Corde (FISAC), con Bélgica, los Países Bajos, Suecia, Australia, Estados Unidos, Canadá y Hungría entre sus miembros fundadores, y en 1997 se disputó en Sídney el primer campeonato del mundo, con ocho países; en 2000 adoptó también el nombre inglés de International Rope Skipping Federation (IJRU, 2020). En 2018 la FISAC-IRSF y la World Jump Rope Federation acordaron fusionarse en la International Jump Rope Union (IJRU), que ha obtenido la condición de observador en la asociación mundial de federaciones internacionales (IJRU, 2020, s. f.)."
+   ],
+   "en": [
+    "For centuries skipping rope was a children's street game before it became a competitive sport in the second half of the twentieth century. Its remote origin is not precisely documented. The US double dutch league, the discipline in which jumpers skip between two ropes turning in opposite directions, suggests as a hypothesis that the game comes from the ropemakers of Phoenicia, Egypt and China, whose runners had to jump over the ropes while they were being twisted, and holds that Dutch settlers took it to New Amsterdam, where the English gave it the name double dutch (National Double Dutch League, n.d.).",
+    "The transformation of the street game into a sport took place in New York. According to the same league, double dutch had almost disappeared by the late 1950s owing to urbanisation and the loss of play spaces, and in 1973 two members of the city police, David A. Walker and Detective Ulysses Williams, reorganised it as a team competition together with physical education teachers at a city school (IS 10). The first official tournament was held on 14 February 1974 with nearly six hundred schoolchildren, and the American Double Dutch League was founded in the same year (National Double Dutch League, n.d.). The international federation also dates the beginning of competitive rope skipping to 1973 (IJRU, n.d.).",
+    "International organisation arrived in the 1990s. The Fédération Internationale de Saut à la Corde (FISAC) was founded on 25 February 1996, with Belgium, the Netherlands, Sweden, Australia, the United States, Canada and Hungary among its founding members, and in 1997 the first world championships were held in Sydney with eight countries; in 2000 it also adopted the English name International Rope Skipping Federation (IJRU, 2020). In 2018 FISAC-IRSF and the World Jump Rope Federation agreed to merge into the International Jump Rope Union (IJRU), which has obtained observer status in the global association of international federations (IJRU, 2020, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/comba.jpg",
+   "pie": {
+    "es": "*Niña con comba (retrato de Delphine Legrand)*, óleo de Pierre-Auguste Renoir (1876).",
+    "en": "*Girl with a Jump Rope (Portrait of Delphine Legrand)*, oil painting by Pierre-Auguste Renoir (1876)."
+   },
+   "autor": "Pierre-Auguste Renoir",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Pierre-Auguste_Renoir_-_Girl_with_a_Jump_Rope_(Portrait_of_Delphine_Legrand)_-_BF137_-_Barnes_Foundation.jpg"
+  },
+  "refs": [
+   "IJRU. (2020, 11 de enero). *Celebrating and saying goodbye to FISAC-IRSF*. Recuperado el 29 de septiembre de 2026 de https://ijru.sport/general-communication/2020/1/11/celebrating-and-saying-goodbye-to-fisac",
+   "IJRU. (s. f.). *About*. Recuperado el 29 de septiembre de 2026 de https://ijru.sport/organisation/about",
+   "National Double Dutch League. (s. f.). *The history of double dutch*. Recuperado el 29 de septiembre de 2026 de https://nationaldoubledutchleague.com/history/"
+  ],
+  "refs_en": [
+   "IJRU. (2020, January 11). *Celebrating and saying goodbye to FISAC-IRSF*. Retrieved September 29, 2026, from https://ijru.sport/general-communication/2020/1/11/celebrating-and-saying-goodbye-to-fisac",
+   "IJRU. (n.d.). *About*. Retrieved September 29, 2026, from https://ijru.sport/organisation/about",
+   "National Double Dutch League. (n.d.). *The history of double dutch*. Retrieved September 29, 2026, from https://nationaldoubledutchleague.com/history/"
+  ]
+ },
+ {
+  "id": "fitness-funcional",
+  "name": {
+   "es": "Fitness funcional",
+   "en": "Functional fitness"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "California (EE. UU.), finales de la década de 1990 y 2001; como competición, 2007",
+   "en": "California (USA), late 1990s and 2001; as a competition, 2007"
+  },
+  "body": {
+   "es": [
+    "El fitness funcional como deporte de competición nació de un método de entrenamiento comercial. Su origen más directo es CrossFit, cuyo creador, el antiguo gimnasta Greg Glassman, empezó a diseñar sesiones a finales de los años noventa para sus clientes, entre ellos miembros del departamento de policía de Santa Cruz (California), y en 2001 comenzó a publicar el entrenamiento del día en un pequeño sitio web para que pudieran seguirlo a distancia (CrossFit, s. f.-a). La difusión del método se apoyó en la práctica colectiva, puesto que quienes seguían los entrenamientos publicados empezaron a abrir por su cuenta gimnasios para entrenar juntos (CrossFit, s. f.-a).",
+    "Esos gimnasios se organizaron como afiliados independientes, con licencia de la marca y autonomía para fijar precios, entrenadores y material, un modelo que la empresa cifra hoy en más de nueve mil gimnasios en más de ciento cincuenta países (CrossFit, s. f.-a). La dimensión competitiva apareció en 2007, cuando se celebraron los primeros CrossFit Games en el rancho familiar de su director, Dave Castro, en Aromas (California), con unos setenta participantes en un ambiente de barbacoa (CrossFit, s. f.-b). En 2011 la creación del Open, una fase clasificatoria mundial en la que hombres y mujeres completaban los mismos ejercicios en sus propios gimnasios, reunió a más de 26.000 participantes en su primera edición (CrossFit, s. f.-b).",
+    "La dependencia de una marca privada llevó a crear un organismo deportivo independiente. La International Functional Fitness Federation (iF3), que obtuvo la exención fiscal como entidad sin ánimo de lucro en Estados Unidos en octubre de 2016, se define como la autoridad mundial independiente del fitness funcional como deporte de competición y se ocupa de fijar reglas comunes, normas de seguridad y la formación de jueces (iF3, s. f.). En 2017 se presentó con el objetivo declarado de normalizar el ejercicio competitivo y llevar el fitness funcional a los Juegos Olímpicos, siguiendo el modelo de la federación internacional de halterofilia, y ese mismo año organizó su primer campeonato del mundo en California (FloElite, 2017)."
+   ],
+   "en": [
+    "Functional fitness as a competitive sport grew out of a commercial training method. Its most direct origin is CrossFit, whose creator, the former gymnast Greg Glassman, began designing sessions in the late 1990s for his clients, among them members of the Santa Cruz Police Department (California), and in 2001 started posting the workout of the day on a small website so that they could follow it remotely (CrossFit, n.d.-a). The spread of the method relied on collective practice, since those who followed the posted workouts began to open gyms on their own to train together (CrossFit, n.d.-a).",
+    "These gyms were organised as independent affiliates, licensed to use the brand and free to set their prices, coaches and equipment, a model that the company now puts at more than nine thousand gyms in more than one hundred and fifty countries (CrossFit, n.d.-a). The competitive dimension appeared in 2007, when the first CrossFit Games were held on the family ranch of its director, Dave Castro, in Aromas (California), with some seventy athletes in a barbecue atmosphere (CrossFit, n.d.-b). In 2011 the creation of the Open, a worldwide qualifying stage in which men and women completed the same workouts in their own gyms, drew more than 26,000 participants in its first edition (CrossFit, n.d.-b).",
+    "Dependence on a private brand led to the creation of an independent sports body. The International Functional Fitness Federation (iF3), which obtained non-profit tax exemption in the United States in October 2016, defines itself as the independent global authority for functional fitness as a competitive sport and is responsible for common rules, safety regulations and the training of technical officials (iF3, n.d.). In 2017 it presented itself with the declared aim of standardising competitive exercise and taking functional fitness to the Olympic Games, on the model of the international weightlifting federation, and in the same year it organised its first world championships in California (FloElite, 2017)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/fitness-funcional.jpg",
+   "pie": {
+    "es": "Prueba de *thrusters* en los CrossFit Games de 2008.",
+    "en": "Thrusters event at the 2008 CrossFit Games."
+   },
+   "autor": "Brad Greenlee",
+   "licencia": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:2008_CrossFit_Games_-_Thrusters.jpg"
+  },
+  "refs": [
+   "CrossFit. (s. f.-a). *25 years of results*. Recuperado el 29 de septiembre de 2026 de https://www.crossfit.com/about",
+   "CrossFit. (s. f.-b). *History of the Games*. Recuperado el 29 de septiembre de 2026 de https://games.crossfit.com/history-of-the-games",
+   "FloElite. (2017, 6 de junio). *International Functional Fitness Federation established*. Recuperado el 29 de septiembre de 2026 de https://www.floelite.com/articles/5066400-international-functional-fitness-federation-established",
+   "International Functional Fitness Federation [iF3]. (s. f.). *Organization*. Recuperado el 29 de septiembre de 2026 de https://functionalfitness.sport/organization/"
+  ],
+  "refs_en": [
+   "CrossFit. (n.d.-a). *25 years of results*. Retrieved September 29, 2026, from https://www.crossfit.com/about",
+   "CrossFit. (n.d.-b). *History of the Games*. Retrieved September 29, 2026, from https://games.crossfit.com/history-of-the-games",
+   "FloElite. (2017, June 6). *International Functional Fitness Federation established*. Retrieved September 29, 2026, from https://www.floelite.com/articles/5066400-international-functional-fitness-federation-established",
+   "International Functional Fitness Federation [iF3]. (n.d.). *Organization*. Retrieved September 29, 2026, from https://functionalfitness.sport/organization/"
+  ]
+ },
+ {
+  "id": "carreras-de-obstaculos",
+  "name": {
+   "es": "Carreras de obstáculos",
+   "en": "Obstacle course racing"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Inglaterra, 1987 (Tough Guy); organización internacional desde 2014",
+   "en": "England, 1987 (Tough Guy); international organisation since 2014"
+  },
+  "body": {
+   "es": [
+    "Las carreras de obstáculos combinan la carrera a pie, a menudo campo a través, con la superación de obstáculos artificiales o naturales que exigen trepar, reptar, saltar o cargar peso. Como deporte con nombre propio son muy recientes, y conviene distinguirlas de la prueba atlética de obstáculos o *steeplechase*, que es otro deporte. La cronología que ofrece la Federación Internacional de Parkour sitúa su primer hito en la Tough Guy, una prueba de resistencia celebrada en Inglaterra desde 1987, y recoge como segundo punto de partida el programa de televisión japonés *Sasuke*, estrenado en 1997, del que deriva el formato de carreras cortas de obstáculos de estilo *ninja* (International Parkour Federation, s. f.).",
+    "Entre las carreras comerciales de participación masiva que difundieron la modalidad figura la Spartan Race, que el propio presidente de la UIPM cita entre las experiencias que llevaron a su federación a interesarse por la disciplina (UIPM, 2026a). La institucionalización comenzó en 2014, cuando Ian Adamson impulsó la Fédération Internationale de Sports d'Obstacles (FISO), conocida como World Obstacle, que se constituyó formalmente como federación internacional en Suiza en 2018 (UIPM, 2026b). Ese mismo año la UIPM probó recorridos experimentales de obstáculos en pruebas de la Copa del Mundo de pentatlón moderno celebradas en El Cairo y Los Ángeles (UIPM, 2026a).",
+    "El destino olímpico de las carreras de obstáculos se ha resuelto a través del pentatlón moderno. En 2022 el congreso de la UIPM aprobó por un 83,3 % incorporar la prueba de obstáculos al pentatlón en sustitución de la equitación, y en agosto de 2023 la UIPM y la FISO firmaron un memorando de entendimiento para gobernar juntas el movimiento (UIPM, 2023). El 15 de marzo de 2026 la asamblea de la FISO, reunida en Niza, votó su disolución, y la UIPM pasó a ser el único organismo rector de los deportes de obstáculos reconocido por el COI, con un periodo de transición que termina a finales de 2027 (UIPM, 2026b). Los obstáculos debutarán en los Juegos Olímpicos de Los Ángeles 2028 como parte del pentatlón moderno (UIPM, 2026a)."
+   ],
+   "en": [
+    "Obstacle course racing combines running, often cross-country, with overcoming artificial or natural obstacles that require climbing, crawling, jumping or carrying weight. As a sport in its own right it is very recent, and it should be distinguished from the athletics steeplechase, which is a different sport. The timeline offered by the International Parkour Federation places its first milestone in Tough Guy, an endurance event held in England since 1987, and records as a second starting point the Japanese television programme *Sasuke*, first broadcast in 1997, from which the format of short ninja-style obstacle races derives (International Parkour Federation, n.d.).",
+    "Among the commercial mass-participation races that spread the discipline is the Spartan Race, which the UIPM president himself mentions among the experiences that led his federation to take an interest in the discipline (UIPM, 2026a). Institutionalisation began in 2014, when Ian Adamson launched the Fédération Internationale de Sports d'Obstacles (FISO), known as World Obstacle, which was formally constituted as an international federation in Switzerland in 2018 (UIPM, 2026b). In the same year the UIPM tested experimental obstacle courses at modern pentathlon World Cup events in Cairo and Los Angeles (UIPM, 2026a).",
+    "The Olympic future of obstacle racing has been settled through modern pentathlon. In 2022 the UIPM congress voted by 83.3% to incorporate obstacle into pentathlon in place of riding, and in August 2023 the UIPM and FISO signed a memorandum of understanding to govern the movement together (UIPM, 2023). On 15 March 2026 the FISO assembly, meeting in Nice, voted to dissolve the federation, and the UIPM became the sole IOC-recognised governing body for obstacle sports, with a transition period ending at the close of 2027 (UIPM, 2026b). Obstacle will make its debut at the Los Angeles 2028 Olympic Games as part of modern pentathlon (UIPM, 2026a)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/carreras-de-obstaculos.jpg",
+   "pie": {
+    "es": "Participantes en la Tough Guy, en Inglaterra, en enero de 2005.",
+    "en": "Competitors in Tough Guy, England, January 2005."
+   },
+   "autor": "A-punkt",
+   "licencia": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Tough_Guy_Race.jpg"
+  },
+  "refs": [
+   "International Parkour Federation. (s. f.). *Obstacle sports: A brief history*. Recuperado el 29 de septiembre de 2026 de https://internationalparkourfederation.org/obstacle-sports-a-brief-history/",
+   "UIPM. (2023, 26 de agosto). *UIPM enters into Memorandum of Understanding with FISO to oversee global Obstacle Sport movement*. Recuperado el 29 de septiembre de 2026 de https://www.uipmworld.org/news/uipm-enters-memorandum-understanding-fiso-oversee-global-obstacle-sport-movement",
+   "UIPM. (2026a, 2 de abril). *President's view: What a journey for Obstacle racing, and what a destination*. Recuperado el 29 de septiembre de 2026 de https://www.uipmworld.org/news/presidents-view-what-journey-obstacle-racing-and-what-destination",
+   "UIPM. (2026b). *UIPM and FISO communities celebrate historic vote to dissolve FISO, paving way for organisational integration*. Recuperado el 29 de septiembre de 2026 de https://www.uipmworld.org/news/uipm-and-fiso-communities-celebrate-historic-vote-dissolve-fiso-paving-way-organisational"
+  ],
+  "refs_en": [
+   "International Parkour Federation. (n.d.). *Obstacle sports: A brief history*. Retrieved September 29, 2026, from https://internationalparkourfederation.org/obstacle-sports-a-brief-history/",
+   "UIPM. (2023, August 26). *UIPM enters into Memorandum of Understanding with FISO to oversee global Obstacle Sport movement*. Retrieved September 29, 2026, from https://www.uipmworld.org/news/uipm-enters-memorandum-understanding-fiso-oversee-global-obstacle-sport-movement",
+   "UIPM. (2026a, April 2). *President's view: What a journey for Obstacle racing, and what a destination*. Retrieved September 29, 2026, from https://www.uipmworld.org/news/presidents-view-what-journey-obstacle-racing-and-what-destination",
+   "UIPM. (2026b). *UIPM and FISO communities celebrate historic vote to dissolve FISO, paving way for organisational integration*. Retrieved September 29, 2026, from https://www.uipmworld.org/news/uipm-and-fiso-communities-celebrate-historic-vote-dissolve-fiso-paving-way-organisational"
+  ]
+ },
+ {
+  "id": "triatlon",
+  "name": {
+   "es": "Triatlón",
+   "en": "Triathlon"
+  },
+  "bloque": {
+   "es": "Combinados",
+   "en": "Combined events"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "San Diego (California, EE. UU.), septiembre de 1974",
+   "en": "San Diego (California, USA), September 1974"
+  },
+  "body": {
+   "es": [
+    "El triatlón encadena natación, ciclismo y carrera a pie sin interrupción entre las pruebas, y su historia documentada empieza en la bahía de Mission Bay, en San Diego. Según la federación internacional, en septiembre de 1974 cuarenta y seis miembros de un club de atletismo local completaron una prueba de 5,3 millas de carrera, parte de ellas descalzos sobre hierba y arena, 5 millas de bicicleta y 600 yardas a nado, en un orden inverso al que se impuso después (World Triathlon, s. f.-a, s. f.-b). La propia federación fecha esa primera prueba el 24 de septiembre en una página y el 25 en otra, y algún manual adopta la segunda fecha (Fernández Truan, s. f., p. 407).",
+    "El salto a la larga distancia llegó con John y Judy Collins, que habían participado en la prueba de Mission Bay y organizaron en la isla hawaiana de Oahu, el 18 de febrero de 1978, el primer Ironman, con 2,4 millas de natación, 112 de bicicleta y 26,2 de carrera; tomaron la salida quince participantes, sin avituallamientos y cada uno con su propio equipo de apoyo, y terminaron doce (USA Triathlon, s. f.). La versión que atribuye el origen del triatlón a una apuesta entre marines en Hawái en 1978, recogida en algún manual (Fernández Truan, s. f., p. 407), confunde el nacimiento del Ironman con el del deporte, que ya existía desde 1974. El reglamento de aquella carrera acababa con una invitación a presumir de por vida, reflejo de un deporte que nació como desafío personal de resistencia (USA Triathlon, s. f.).",
+    "La International Triathlon Union se fundó el 1 de abril de 1989 en el primer congreso celebrado en Aviñón, con treinta federaciones nacionales, y ese mismo año más de 800 deportistas de cuarenta países disputaron el primer campeonato del mundo (World Triathlon, s. f.-a). El triatlón debutó en los Juegos de Sídney 2000 con pruebas masculina y femenina desde el primer día, ganadas por el canadiense Simon Whitfield y la suiza Brigitte McMahon (World Triathlon, s. f.-a). El paratriatlón entró en los Juegos Paralímpicos de Río 2016 con seis pruebas, tres masculinas y tres femeninas, y en octubre de 2020 la federación adoptó el nombre de World Triathlon para representar mejor al conjunto de modalidades que gobierna (World Triathlon, s. f.-a)."
+   ],
+   "en": [
+    "Triathlon links swimming, cycling and running with no break between them, and its documented history begins at Mission Bay in San Diego. According to the international federation, in September 1974 forty-six members of a local athletics club completed a 5.3-mile run, part of it barefoot over grass and sand, a 5-mile cycle and a 600-yard swim, in the reverse of the order that later became standard (World Triathlon, n.d.-a, n.d.-b). The federation itself dates this first race to 24 September on one page and to 25 September on another, and one textbook adopts the second date (Fernández Truan, n.d., p. 407).",
+    "The leap to long distance came with John and Judy Collins, who had taken part in the Mission Bay race and organised the first Ironman on the Hawaiian island of Oahu on 18 February 1978, with a 2.4-mile swim, a 112-mile ride and a 26.2-mile run; fifteen competitors started, without aid stations and each with his own support crew, and twelve finished (USA Triathlon, n.d.). The version that attributes the origin of triathlon to a bet among marines in Hawaii in 1978, found in one textbook (Fernández Truan, n.d., p. 407), confuses the birth of the Ironman with that of the sport, which had existed since 1974. The rules of that race ended with an invitation to brag for the rest of one's life, a sign of a sport born as a personal challenge of endurance (USA Triathlon, n.d.).",
+    "The International Triathlon Union was founded on 1 April 1989 at its first congress in Avignon, with thirty national federations, and in the same year more than 800 athletes from forty countries contested the first world championships (World Triathlon, n.d.-a). Triathlon made its debut at the Sydney 2000 Games with men's and women's events from the outset, won by the Canadian Simon Whitfield and the Swiss Brigitte McMahon (World Triathlon, n.d.-a). Paratriathlon entered the Paralympic Games at Rio 2016 with six events, three for men and three for women, and in October 2020 the federation adopted the name World Triathlon to better represent the range of disciplines it governs (World Triathlon, n.d.-a)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/triatlon.jpg",
+   "pie": {
+    "es": "Salida de la prueba de natación en el triatlón de Bonn (2015).",
+    "en": "Swim start at the Bonn Triathlon (2015)."
+   },
+   "autor": "Bonn Triathlon",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Swim_start_at_Bonn_Triathlon_2015.jpg"
+  },
+  "refs": [
+   "World Triathlon. (s. f.-a). *Inside World Triathlon: The history of triathlon*. Recuperado el 29 de septiembre de 2026 de https://triathlon.org/about",
+   "World Triathlon. (s. f.-b). *San Diego, the birthplace of triathlon*. Recuperado el 29 de septiembre de 2026 de https://triathlon.org/news/san-diego---the-birthplace-of-triathlon",
+   "USA Triathlon. (s. f.). *12 finishers of original 1978 Hawaii Ironman inducted into Hall of Fame*. Recuperado el 29 de septiembre de 2026 de https://www.usatriathlon.org/articles/news/12-finishers-of-original-1978-hawaii-ironman-inducted-into-hall-of-fame",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide."
+  ],
+  "refs_en": [
+   "World Triathlon. (n.d.-a). *Inside World Triathlon: The history of triathlon*. Retrieved September 29, 2026, from https://triathlon.org/about",
+   "World Triathlon. (n.d.-b). *San Diego, the birthplace of triathlon*. Retrieved September 29, 2026, from https://triathlon.org/news/san-diego---the-birthplace-of-triathlon",
+   "USA Triathlon. (n.d.). *12 finishers of original 1978 Hawaii Ironman inducted into Hall of Fame*. Retrieved September 29, 2026, from https://www.usatriathlon.org/articles/news/12-finishers-of-original-1978-hawaii-ironman-inducted-into-hall-of-fame",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide."
+  ]
+ },
+ {
+  "id": "duatlon",
+  "name": {
+   "es": "Duatlón",
+   "en": "Duathlon"
+  },
+  "bloque": {
+   "es": "Combinados",
+   "en": "Combined events"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Estados Unidos, década de 1980; primer campeonato mundial en 1990",
+   "en": "United States, 1980s; first world championships in 1990"
+  },
+  "body": {
+   "es": [
+    "El duatlón combina carrera a pie, ciclismo y una segunda carrera a pie, y se difundió en Estados Unidos junto al triatlón en la década de 1980, cuando el auge de las pruebas combinadas de resistencia atrajo el patrocinio de grandes empresas. La federación estadounidense sitúa su edad dorada en aquellos años, en los que series comerciales como la de Coors Light reunían a miles de participantes en cada carrera (USA Triathlon, s. f.). La misma federación recuerda que el nombre se confunde a menudo con el del biatlón, deporte olímpico de invierno que une esquí de fondo y tiro, con el que no guarda relación (USA Triathlon, s. f.).",
+    "La institucionalización internacional del duatlón quedó en manos de la federación de triatlón, fundada en 1989. El primer campeonato del mundo se celebró en 1990 en Cathedral City (California) y lo ganó el estadounidense Kenny Souza, uno de los pioneros de la modalidad (World Triathlon, s. f.). Desde 1994 la distancia estándar del campeonato del mundo es de 10 kilómetros de carrera, 40 de bicicleta y 5 de carrera, y existe también una distancia *sprint* con la mitad de esos recorridos. La variante de campo a través, o *cross duatlón*, sustituye la bicicleta de carretera por la de montaña y el asfalto por caminos, manteniendo el mismo orden de pruebas (World Triathlon, s. f.).",
+    "El desarrollo del duatlón ha dependido mucho del patrocinio comercial. En Estados Unidos vivió un segundo impulso a finales de los años noventa con la serie Dannon, y la participación cayó cuando la empresa retiró su apoyo en 2004, si bien el número de pruebas homologadas siguió creciendo (USA Triathlon, s. f.). Desde 2017 los títulos mundiales se disputan dentro de los campeonatos del mundo multideporte de World Triathlon, que Pontevedra acogió en 2019 y en 2025, y en 2022 se entregaron en Târgu Mureș (Rumanía) los primeros títulos mundiales del relevo mixto, en equipos de dos integrantes con un hombre y una mujer (World Triathlon, s. f.)."
+   ],
+   "en": [
+    "Duathlon combines a run, a bike leg and a second run, and it spread in the United States alongside triathlon in the 1980s, when the boom in combined endurance events attracted sponsorship from large companies. The US federation places its golden age in those years, when commercial series such as the Coors Light series drew thousands of participants to each race (USA Triathlon, n.d.). The same federation notes that the name is often confused with biathlon, the Olympic winter sport that combines cross-country skiing and shooting, to which it bears no relation (USA Triathlon, n.d.).",
+    "The international institutionalisation of duathlon fell to the triathlon federation, founded in 1989. The first world championships were held in 1990 in Cathedral City (California) and were won by the American Kenny Souza, one of the pioneers of the discipline (World Triathlon, n.d.). Since 1994 the standard world championship distance has been a 10-kilometre run, a 40-kilometre ride and a 5-kilometre run, and there is also a sprint distance with half of those lengths. The off-road variant, cross duathlon, replaces the road bike with a mountain bike and tarmac with trails, keeping the same order of events (World Triathlon, n.d.).",
+    "The development of duathlon has depended heavily on commercial sponsorship. In the United States it enjoyed a second boost in the late 1990s with the Dannon series, and participation fell when the company withdrew its support in 2004, although the number of sanctioned events kept growing (USA Triathlon, n.d.). Since 2017 world titles have been decided within World Triathlon's Multisport World Championships, which Pontevedra hosted in 2019 and 2025, and in 2022 the first world titles in the mixed relay, contested by teams of two with one man and one woman, were awarded in Târgu Mureș, Romania (World Triathlon, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/duatlon.jpg",
+   "pie": {
+    "es": "Participante en el Campeonato del Mundo de Duatlón de la ITU (2013).",
+    "en": "Competitor at the ITU Duathlon World Championships (2013)."
+   },
+   "autor": "Ozzymate",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:ITU_Duathlon_World_Championships.jpg"
+  },
+  "refs": [
+   "World Triathlon. (s. f.). *Duathlon / Cross duathlon*. Recuperado el 29 de septiembre de 2026 de https://triathlon.org/multisports/duathlon",
+   "USA Triathlon. (s. f.). *Duathlon*. Recuperado el 29 de septiembre de 2026 de https://www.usatriathlon.org/about/multisport/disciplines/duathlon"
+  ],
+  "refs_en": [
+   "World Triathlon. (n.d.). *Duathlon / Cross duathlon*. Retrieved September 29, 2026, from https://triathlon.org/multisports/duathlon",
+   "USA Triathlon. (n.d.). *Duathlon*. Retrieved September 29, 2026, from https://www.usatriathlon.org/about/multisport/disciplines/duathlon"
+  ]
+ },
+ {
+  "id": "pentatlon-moderno",
+  "name": {
+   "es": "Pentatlón moderno",
+   "en": "Modern pentathlon"
+  },
+  "bloque": {
+   "es": "Combinados",
+   "en": "Combined events"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Juegos Olímpicos de Estocolmo, 1912, a iniciativa de Pierre de Coubertin",
+   "en": "Stockholm Olympic Games, 1912, on the initiative of Pierre de Coubertin"
+  },
+  "body": {
+   "es": [
+    "El pentatlón moderno toma su nombre y su idea del pentatlón de los Juegos Olímpicos antiguos, introducido en el año 708 a. C. y formado por la carrera del estadio, el salto, el lanzamiento de jabalina, el de disco y la lucha, cuyo vencedor recibía el título de *Victor Ludorum* (UIPM, s. f.). La forma en que se determinaba el ganador de aquella prueba sigue sin aclararse, y los historiadores solo coinciden en que la lucha cerraba la competición (Guttmann, 2004, p. 21). Pierre de Coubertin, fundador de los Juegos modernos, admiraba ese modelo de deportista completo y promovió una versión actualizada que pusiera a prueba tanto las cualidades morales como los recursos físicos y técnicos del competidor (UIPM, s. f.).",
+    "La nueva prueba debutó en los Juegos de Estocolmo de 1912 con cinco disciplinas, tiro con pistola, esgrima, natación, equitación y carrera a pie, cuya combinación respondía a la figura de un soldado que debía actuar tras las líneas enemigas con recursos muy diversos (UIPM, s. f.). El participante más recordado de aquella primera edición es el estadounidense George S. Patton, futuro general, que terminó quinto (UIPM, s. f.). Algún manual hace derivar el pentatlón moderno de las patrullas militares noruegas del siglo XIX, antecedente del biatlón, relación que la federación internacional no recoge (Fernández Truan, s. f., p. 405).",
+    "La Unión Internacional de Pentatlón Moderno (UIPM) se fundó en Londres el 3 de agosto de 1948. Durante décadas fue un deporte exclusivamente masculino; el primer campeonato del mundo femenino se celebró en 1981 y las mujeres entraron en el programa olímpico en Sídney 2000 (UIPM, s. f.). Para conservar su lugar en los Juegos, la federación redujo la competición a una sola jornada en Atlanta 1996 y sustituyó la pistola de aire por la de láser entre 2009 y 2012. En 2023 el COI confirmó el deporte rediseñado para Los Ángeles 2028, y en 2024 la equitación, vínculo directo con el origen militar de la prueba, dio paso a una disciplina de obstáculos (UIPM, s. f.)."
+   ],
+   "en": [
+    "Modern pentathlon takes its name and its idea from the pentathlon of the ancient Olympic Games, introduced in 708 BCE and made up of the stadium race, jumping, the javelin, the discus and wrestling, whose winner received the title *Victor Ludorum* (UIPM, n.d.). How the winner of that event was determined remains unclear, and historians agree only that wrestling was the last event (Guttmann, 2004, p. 21). Pierre de Coubertin, founder of the modern Games, admired this model of the complete athlete and promoted an updated version that would test the competitor's moral qualities as much as his physical resources and skills (UIPM, n.d.).",
+    "The new event made its debut at the Stockholm Games of 1912 with five disciplines, pistol shooting, fencing, swimming, riding and running, a combination that corresponded to the figure of a soldier who had to act behind enemy lines with very diverse resources (UIPM, n.d.). The best remembered participant of that first edition is the American George S. Patton, later a general, who finished fifth (UIPM, n.d.). One textbook derives modern pentathlon from the nineteenth-century Norwegian military patrols, forerunners of biathlon, a link that the international federation does not mention (Fernández Truan, n.d., p. 405).",
+    "The Union Internationale de Pentathlon Moderne (UIPM) was founded in London on 3 August 1948. For decades it was an exclusively male sport; the first women's world championships were held in 1981 and women entered the Olympic programme at Sydney 2000 (UIPM, n.d.). To keep its place in the Games, the federation reduced the competition to a single day at Atlanta 1996 and replaced the air pistol with the laser pistol between 2009 and 2012. In 2023 the IOC confirmed the redesigned sport for Los Angeles 2028, and in 2024 riding, a direct link with the military origin of the event, gave way to an obstacle discipline (UIPM, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/pentatlon-moderno.jpg",
+   "pie": {
+    "es": "Asalto de esgrima del pentatlón moderno en los Juegos de Estocolmo de 1912, entre el francés De Mas Latrie y el estadounidense George S. Patton.",
+    "en": "Fencing bout of the modern pentathlon at the 1912 Stockholm Games, between the Frenchman De Mas Latrie and the American George S. Patton."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:1912_fencing_patton_and_mas_latrie.jpg"
+  },
+  "refs": [
+   "UIPM. (s. f.). *History*. Recuperado el 29 de septiembre de 2026 de https://www.uipmworld.org/history",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide."
+  ],
+  "refs_en": [
+   "UIPM. (n.d.). *History*. Retrieved September 29, 2026, from https://www.uipmworld.org/history",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide."
+  ]
+ },
+ {
+  "id": "futbol",
+  "name": {
+   "es": "Fútbol",
+   "en": "Football (soccer)"
+  },
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Juegos de pelota con el pie en muchas culturas; como fútbol asociación, Londres, 26 de octubre de 1863",
+   "en": "Foot-ball games in many cultures; as association football, London, 26 October 1863"
+  },
+  "body": {
+   "es": [
+    "Casi todas las culturas han practicado juegos en los que una pelota se impulsa con las manos y los pies hacia una meta, desde el *cuju* de la corte china de los Han, nacido del entrenamiento militar, hasta la *soule* francesa o el *calcio* florentino, si bien ninguno de ellos fue antepasado directo del fútbol moderno (Collins, 2019, p. 11). En las islas británicas el primer testimonio escrito es el de William Fitzstephen, que hacia 1174 describió un juego de pelota de los aprendices de Londres en carnaval, y a partir de 1365 los reyes ingleses y escoceses lo prohibieron por los tumultos que causaba y porque apartaba a los súbditos del tiro con arco (Collins, 2019, p. 10). Aquel fútbol popular, jugado en fiestas religiosas por cientos de vecinos entre dos pueblos, expresaba el orgullo local y la sociabilidad de una sociedad agraria (Collins, 2019, p. 12).",
+    "La forma moderna procede de la necesidad de reglas comunes. Cada colegio privado inglés (*public school*) jugaba con su propio código, y los antiguos alumnos que querían seguir jugando de adultos entre las clases profesionales no podían enfrentarse sin acordarlas (Collins, 2019, pp. 5-6). El 26 de octubre de 1863 representantes de una docena de clubes londinenses fundaron en la Freemasons' Tavern la Football Association, a propuesta del abogado Ebenezer Morley, y el 19 de diciembre se jugó el primer partido con sus reglas, entre Barnes y Richmond (FIFA, 2017). Aquel reglamento conservaba rasgos del rugby, como el marcaje en la línea de gol o la recepción limpia del balón, y el juego con las manos para los jugadores de campo no se prohibió por completo hasta 1870 (Collins, 2019, p. 7). En 1886 se creó la International Football Association Board para unificar los códigos que seguían en conflicto (FIFA, 2017).",
+    "El fútbol se convirtió pronto en espectáculo obrero y en negocio. La Football Association legalizó el profesionalismo el 20 de julio de 1885 y la Football League empezó a jugarse en septiembre de 1888 con criterios comerciales (Collins, 2019, pp. 58, 61). El 21 de mayo de 1904 los representantes de siete países europeos fundaron la FIFA en París, con Robert Guérin como primer presidente (FIFA, 2024), y en 1930 la federación organizó su propio campeonato del mundo al chocar su profesionalismo con el amateurismo olímpico (Collins, 2019, pp. 170, 173). El fútbol femenino, muy popular durante la Primera Guerra Mundial, fue expulsado de los campos de los clubes por la Football Association el 5 de diciembre de 1921 (Collins, 2019, pp. 69-71). La idea de que el fútbol nació en los colegios privados y descendió después a las clases populares está hoy discutida por quienes documentan su práctica continuada fuera de esos colegios (Swain, 2020, introducción)."
+   ],
+   "en": [
+    "Almost every culture has played games in which a ball is driven by hand and foot towards a goal, from the *cuju* of the Han Chinese court, which grew out of military training, to the French *soule* or the Florentine *calcio*, although none of them was a direct ancestor of modern football (Collins, 2019, p. 11). In the British Isles the first written reference is William Fitzstephen's description, around 1174, of a Shrovetide ball game among London apprentices, and from 1365 English and Scottish kings banned it because of the tumults it caused and because it drew their subjects away from archery practice (Collins, 2019, p. 10). This folk football, played on religious holidays by hundreds of villagers between two communities, expressed local pride and the sociability of an agrarian society (Collins, 2019, p. 12).",
+    "The modern form arose from the need for common rules. Each English public school played its own code, and former pupils who wished to go on playing as adults among the professional classes could not meet without agreeing on them (Collins, 2019, pp. 5-6). On 26 October 1863 representatives of a dozen London clubs founded the Football Association at the Freemasons' Tavern, on the proposal of the solicitor Ebenezer Morley, and on 19 December the first match under its laws was played between Barnes and Richmond (FIFA, 2017). Those laws kept features of rugby, such as touching down behind the goal line or the fair catch, and handling by outfield players was not completely outlawed until 1870 (Collins, 2019, p. 7). In 1886 the International Football Association Board was created to unify the codes that were still in conflict (FIFA, 2017).",
+    "Football soon became a working-class spectacle and a business. The Football Association legalised professionalism on 20 July 1885, and the Football League kicked off in September 1888 under commercial criteria (Collins, 2019, pp. 58, 61). On 21 May 1904 representatives of seven European countries founded FIFA in Paris, with Robert Guérin as its first president (FIFA, 2024), and in 1930 the federation organised its own world championship because its professionalism clashed with Olympic amateurism (Collins, 2019, pp. 170, 173). Women's football, very popular during the First World War, was banned from club grounds by the Football Association on 5 December 1921 (Collins, 2019, pp. 69-71). The view that football was born in the public schools and later filtered down to the popular classes is now contested by historians who document its continuous practice outside those schools (Swain, 2020, introduction)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/futbol.jpg",
+   "pie": {
+    "es": "Fútbol popular en Kingston upon Thames el martes de carnaval de 1846, según la *Illustrated London News*.",
+    "en": "Folk football at Kingston upon Thames on Shrove Tuesday 1846, from the *Illustrated London News*."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Foot_Ball,_Kingston-upon-Thames,_Shrove_Tuesday,_Feb._24th,_1846.jpg"
+  },
+  "refs": [
+   "FIFA. (2017, 8 de agosto). *London's football history: Laws of the Game*. Recuperado el 29 de septiembre de 2026 de https://inside.fifa.com/news/london-s-football-history-laws-of-the-game-2902981",
+   "FIFA. (2024). *FIFA celebrates 120th anniversary of foundation in Paris*. Recuperado el 29 de septiembre de 2026 de https://inside.fifa.com/media-releases/fifa-celebrates-120th-anniversary-of-foundation-in-paris",
+   "Collins, T. (2019). *How football began: A global history of how the world's football codes were born*. Routledge.",
+   "Swain, P. (2020). *The emergence of football: Sport, culture and society in the nineteenth century*. Routledge."
+  ],
+  "refs_en": [
+   "FIFA. (2017, August 8). *London's football history: Laws of the Game*. Retrieved September 29, 2026, from https://inside.fifa.com/news/london-s-football-history-laws-of-the-game-2902981",
+   "FIFA. (2024). *FIFA celebrates 120th anniversary of foundation in Paris*. Retrieved September 29, 2026, from https://inside.fifa.com/media-releases/fifa-celebrates-120th-anniversary-of-foundation-in-paris",
+   "Collins, T. (2019). *How football began: A global history of how the world's football codes were born*. Routledge.",
+   "Swain, P. (2020). *The emergence of football: Sport, culture and society in the nineteenth century*. Routledge."
+  ]
+ },
+ {
+  "id": "futbol-sala",
+  "name": {
+   "es": "Fútbol sala",
+   "en": "Futsal"
+  },
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Montevideo (Uruguay), 1930",
+   "en": "Montevideo (Uruguay), 1930"
+  },
+  "body": {
+   "es": [
+    "El fútbol sala nació en Montevideo en 1930, el año en que Uruguay organizó y ganó el primer campeonato mundial de fútbol. Según la FIFA, el profesor argentino Juan Carlos Ceriani, que trabajaba en la ciudad, ideó el juego al observar que los niños, a falta de campos de fútbol, jugaban en las canchas de baloncesto (FIFA, 2020). Ceriani lo organizó en el gimnasio de la Asociación Cristiana de Jóvenes (YMCA) de Montevideo, y algún manual precisa la fecha del 8 de septiembre de 1930 (Fernández Truan, s. f., p. 313). La FIFA escribe el apellido como «Cerini», forma distinta de la que emplean la bibliografía en castellano y la Asociación Mundial de Futsal.",
+    "El reglamento combinaba normas de varios deportes, tomadas del waterpolo, del balonmano y del baloncesto, y la FIFA recuerda que las dimensiones del campo y las porterías de balonmano resultaron las más adecuadas (FIFA, 2020). El llamado fútbol de salón se extendió por Sudamérica y encontró en Brasil su gran foco de desarrollo (FIFA, 2020). En 1971 se fundó en São Paulo la Federación Internacional de Fútbol de Salón (FIFUSA), por iniciativa conjunta de las confederaciones sudamericana y brasileña, y en 1982 esa misma ciudad acogió el primer campeonato del mundo, con diez selecciones, en el Ginásio do Ibirapuera (FIFA, 2020; LNF, s. f.).",
+    "La FIFA asumió después el control de la modalidad y celebró su primera Copa del Mundo en enero de 1989 en varias ciudades de los Países Bajos (FIFA, 2020). El conflicto entre ambos organismos afectó al nombre del deporte, puesto que la prohibición de usar la palabra «fútbol» fuera de la FIFA llevó a la FIFUSA a adoptar la denominación *futsal* a mediados de los años ochenta (LNF, s. f.). La FIFUSA se disolvió a comienzos de la década de 2000 y la sucedió la Asociación Mundial de Futsal (AMF), que mantiene un circuito paralelo, de modo que el deporte conserva dos organismos rectores (LNF, s. f.). La primera Copa del Mundo femenina de la FIFA se disputó en Manila entre noviembre y diciembre de 2025 con dieciséis selecciones (FIFA, 2025)."
+   ],
+   "en": [
+    "Futsal was born in Montevideo in 1930, the year in which Uruguay hosted and won the first football World Cup. According to FIFA, the Argentine teacher Juan Carlos Ceriani, who worked in the city, devised the game after observing that children, for lack of football pitches, were playing on basketball courts (FIFA, 2020). Ceriani organised it in the gymnasium of the Young Men's Christian Association (YMCA) in Montevideo, and one textbook gives the precise date of 8 September 1930 (Fernández Truan, n.d., p. 313). FIFA spells the surname «Cerini», a form that differs from the one used in the Spanish-language literature and by the Asociación Mundial de Futsal.",
+    "The rules combined elements from several sports, taken from water polo, handball and basketball, and FIFA notes that the dimensions of the handball court and goals proved the most suitable (FIFA, 2020). The so-called *fútbol de salón* spread across South America and found its main centre of development in Brazil (FIFA, 2020). In 1971 the Federación Internacional de Fútbol de Salón (FIFUSA) was founded in São Paulo on the joint initiative of the South American and Brazilian confederations, and in 1982 the same city hosted the first world championship, with ten national teams, at the Ginásio do Ibirapuera (FIFA, 2020; LNF, n.d.).",
+    "FIFA later took control of the discipline and held its first World Cup in January 1989 in several cities of the Netherlands (FIFA, 2020). The conflict between the two bodies affected the name of the sport, since the ban on using the word «football» outside FIFA led FIFUSA to adopt the name futsal in the mid-1980s (LNF, n.d.). FIFUSA was dissolved in the early 2000s and succeeded by the Asociación Mundial de Futsal (AMF), which runs a parallel circuit, so the sport still has two governing bodies (LNF, n.d.). FIFA's first Women's World Cup was played in Manila between November and December 2025 with sixteen national teams (FIFA, 2025)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/futbol-sala.jpg",
+   "pie": {
+    "es": "Monolito dedicado a Juan Carlos Ceriani en el Parque Batlle de Montevideo (2024).",
+    "en": "Monolith dedicated to Juan Carlos Ceriani in Parque Batlle, Montevideo (2024)."
+   },
+   "autor": "NaBUru38",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Monolith_of_Juan_Carlos_Ceriani_in_Parque_Batlle_in_Montevideo_in_2024.jpg"
+  },
+  "refs": [
+   "FIFA. (2020, 24 de febrero). *Die Geschichte des Futsal*. Recuperado el 29 de septiembre de 2026 de https://inside.fifa.com/de/tournaments/mens/futsalworldcup/lithuania2021/news/die-geschichte-des-futsal-716529-x5350",
+   "FIFA. (2025, 21 de noviembre). *Historic FIFA Futsal Women's World Cup 2025 kick-off \"just fantastic\" says FIFA President Gianni Infantino*. Recuperado el 29 de septiembre de 2026 de https://inside.fifa.com/news/historic-fifa-futsal-womens-world-cup-2025-tm-kick-off-just-fantastic-says",
+   "Liga Nacional de Futsal [LNF]. (s. f.). *A era FIFUSA no futsal*. Recuperado el 29 de septiembre de 2026 de https://lnfoficial.com.br/noticias/a-era-fifusa-no-futsal/",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide."
+  ],
+  "refs_en": [
+   "FIFA. (2020, February 24). *Die Geschichte des Futsal*. Retrieved September 29, 2026, from https://inside.fifa.com/de/tournaments/mens/futsalworldcup/lithuania2021/news/die-geschichte-des-futsal-716529-x5350",
+   "FIFA. (2025, November 21). *Historic FIFA Futsal Women's World Cup 2025 kick-off \"just fantastic\" says FIFA President Gianni Infantino*. Retrieved September 29, 2026, from https://inside.fifa.com/news/historic-fifa-futsal-womens-world-cup-2025-tm-kick-off-just-fantastic-says",
+   "Liga Nacional de Futsal [LNF]. (n.d.). *A era FIFUSA no futsal*. Retrieved September 29, 2026, from https://lnfoficial.com.br/noticias/a-era-fifusa-no-futsal/",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide."
+  ]
+ },
+ {
+  "id": "futbol-americano",
+  "name": {
+   "es": "Fútbol americano",
+   "en": "American football"
+  },
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Universidades del noreste de EE. UU., 1869-1880, a partir del rugby",
+   "en": "North-eastern US universities, 1869-1880, derived from rugby"
+  },
+  "body": {
+   "es": [
+    "El fútbol americano procede del rugby inglés y creció dentro de las universidades de élite de la costa este de Estados Unidos, donde se jugaban partidos informales al menos desde la década de 1820. Hacia 1850 formaba parte de la vida estudiantil de Columbia, Harvard, Princeton o Yale, a menudo como rito de iniciación, y era tan violento que Harvard lo prohibió en 1860 (Collins, 2019, p. 117). Su difusión respondía a la admiración de las clases medias por el modelo educativo británico, con el cristianismo muscular y la novela *Tom Brown's Schooldays* como referentes, y a la creencia de que el deporte de las *public schools* había forjado el imperio británico (Collins, 2019, pp. 117-118).",
+    "El primer partido entre universidades enfrentó a Rutgers y Princeton el 6 de noviembre de 1869, con un código que prohibía correr con el balón y no puede identificarse sin más con el fútbol asociación (Collins, 2019, p. 119). El giro decisivo llegó en mayo de 1874, cuando Harvard jugó contra la Universidad McGill de Montreal con reglas de rugby y decidió adoptarlas; en noviembre de 1876 Harvard, Yale, Princeton y Columbia crearon la Intercollegiate Football Association con unas normas que eran en esencia las de la Rugby Football Union (Collins, 2019, p. 120). En 1880 la asociación aceptó la propuesta de Walter Camp de sustituir la melé por el *snapback*, que ordenaba el juego en líneas enfrentadas, y en 1906 legalizó el pase adelantado (Collins, 2019, pp. 124, 150).",
+    "El partido del Día de Acción de Gracias reunía a 40.000 espectadores en 1893, y el fútbol universitario se convirtió en fuente de prestigio, de distinción social y de ingresos para las universidades, que lo mantuvieron amateur y reservado a la clase media (Collins, 2019, pp. 119-121). El profesionalismo, nacido en los pueblos industriales de Pensilvania en 1892, no se estabilizó hasta después de la Primera Guerra Mundial, con la liga que en 1922 adoptó el nombre de National Football League (Collins, 2019, p. 122). Camp construyó el relato de un deporte nacido de la excepcionalidad estadounidense, si bien su trayectoria siguió la pauta común del mundo anglófono (Collins, 2019, p. 123). La federación internacional (IFAF) impulsó con la NFL la inclusión del *flag football*, masculino y femenino, en los Juegos de Los Ángeles 2028, aprobada por el COI en su sesión de Mumbai (NFL, s. f.)."
+   ],
+   "en": [
+    "American football derives from English rugby and grew within the elite universities of the US east coast, where informal games had been played since at least the 1820s. By the 1850s it was part of student life at Columbia, Harvard, Princeton or Yale, often as an initiation rite, and it was so violent that Harvard banned it in 1860 (Collins, 2019, p. 117). Its spread reflected middle-class admiration for the British educational model, with Muscular Christianity and the novel *Tom Brown's Schooldays* as references, and the belief that public school sport had forged the British Empire (Collins, 2019, pp. 117-118).",
+    "The first intercollegiate match was played between Rutgers and Princeton on 6 November 1869, under a code that forbade running with the ball and cannot simply be identified with association football (Collins, 2019, p. 119). The decisive turn came in May 1874, when Harvard played McGill University of Montreal under rugby rules and decided to adopt them; in November 1876 Harvard, Yale, Princeton and Columbia created the Intercollegiate Football Association with rules that were essentially those of the Rugby Football Union (Collins, 2019, p. 120). In 1880 the association accepted Walter Camp's proposal to replace the scrum with the snapback, which organised play into opposing lines, and in 1906 it legalised the forward pass (Collins, 2019, pp. 124, 150).",
+    "The Thanksgiving Day game drew 40,000 spectators in 1893, and college football became a source of prestige, social distinction and revenue for the universities, which kept it amateur and reserved for the middle class (Collins, 2019, pp. 119-121). Professionalism, born in the industrial towns of Pennsylvania in 1892, did not become stable until after the First World War, with the league that took the name National Football League in 1922 (Collins, 2019, p. 122). Camp built the story of a sport born of American exceptionalism, although its path followed the common pattern of the English-speaking world (Collins, 2019, p. 123). The international federation (IFAF), together with the NFL, promoted the inclusion of men's and women's flag football in the Los Angeles 2028 Games, approved by the IOC at its session in Mumbai (NFL, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/futbol-americano.jpg",
+   "pie": {
+    "es": "Partido entre Yale y Princeton en una ilustración de diciembre de 1890 titulada *Losing the ball on fourth down*.",
+    "en": "Yale versus Princeton in an illustration of December 1890 entitled *Losing the ball on fourth down*."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Yale_v_princeton_football_losing_ball_1890.jpg"
+  },
+  "refs": [
+   "Collins, T. (2019). *How football began: A global history of how the world's football codes were born*. Routledge.",
+   "NFL. (s. f.). *Global American football family reacts to confirmation of flag football's inclusion in the Olympic Games Los Angeles 2028*. Recuperado el 29 de septiembre de 2026 de https://www.nfl.com/news/global-american-football-family-reacts-to-confirmation-of-flag-football-s-inclus"
+  ],
+  "refs_en": [
+   "Collins, T. (2019). *How football began: A global history of how the world's football codes were born*. Routledge.",
+   "NFL. (n.d.). *Global American football family reacts to confirmation of flag football's inclusion in the Olympic Games Los Angeles 2028*. Retrieved September 29, 2026, from https://www.nfl.com/news/global-american-football-family-reacts-to-confirmation-of-flag-football-s-inclus"
+  ]
+ },
+ {
+  "id": "futbol-australiano",
+  "name": {
+   "es": "Fútbol australiano",
+   "en": "Australian rules football"
+  },
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Melbourne (Victoria, Australia), 1858-1859",
+   "en": "Melbourne (Victoria, Australia), 1858-1859"
+  },
+  "body": {
+   "es": [
+    "El fútbol australiano nació en Melbourne a finales de la década de 1850 como pasatiempo invernal de los jugadores de críquet. Su principal promotor, Tom Wills, hijo de un gran terrateniente de Victoria, se había educado en la Rugby School y en 1858 propuso en la prensa local crear un club de fútbol con un reglamento propio (Collins, 2019, pp. 83-84). Ese mismo año se jugó el primer partido registrado, entre el Scotch College y el Melbourne Grammar (AFL, s. f.). La ciudad, fundada apenas veinte años antes sobre tierras de las que los colonos habían expulsado a casi toda la población aborigen, crecía con la fiebre del oro y adoptó el nuevo juego como parte de una cultura asociativa de clase media que imitaba a la metrópoli (Collins, 2019, p. 84).",
+    "El 17 de mayo de 1859 Wills, el maestro Thomas Smith y los periodistas William Hammersley y J. B. Thompson redactaron en el Bryant's Hotel las primeras reglas del Melbourne Football Club (AFL, s. f.). Partieron del reglamento de la Rugby School, y en las tres décadas siguientes los clubes de Victoria suprimieron el fuera de juego, prohibieron correr con el balón en las manos y convirtieron la recepción limpia del balón pateado (*mark*) en el rasgo distintivo del juego (Collins, 2019, p. 86). Como aquellas reglas se fijaron cuatro años antes de la creación de la Football Association, Melbourne no tuvo que someterse a ningún organismo británico y conservó un código propio que acabó siendo nacional (Collins, 2019, pp. 85-86). La Victorian Football Association se fundó en 1877 (AFL, s. f.).",
+    "El juego reunió desde muy pronto a todas las clases de la ciudad, y en 1886 un partido decisivo del campeonato atrajo a unos 34.000 espectadores (Collins, 2019, p. 84). En 1896 los clubes más fuertes abandonaron la asociación y fundaron la Victorian Football League, que en 1990 adoptó el nombre de Australian Football League y se extendió a todos los estados continentales (AFL, s. f.). La tesis de que Wills se inspiró en el juego aborigen *marn grook*, difundida desde los años noventa en el marco de la reconciliación nacional, carece de apoyo documental, puesto que la investigación biográfica sobre Wills no encontró ninguna mención a esos juegos en sus escritos, y el mismo autor recuerda que el padre de Wills participó en la matanza de aborígenes (Collins, 2019, pp. 91-93)."
+   ],
+   "en": [
+    "Australian football was born in Melbourne in the late 1850s as a winter pastime for cricketers. Its main promoter, Tom Wills, son of one of Victoria's largest landowners, had been educated at Rugby School, and in 1858 he proposed in the local press the creation of a football club with its own code of laws (Collins, 2019, pp. 83-84). In the same year the first recorded match was played, between Scotch College and Melbourne Grammar (AFL, n.d.). The city, founded barely twenty years earlier on land from which settlers had driven almost all the Aboriginal population, was growing with the gold rush and adopted the new game as part of a middle-class associational culture that imitated the Mother Country (Collins, 2019, p. 84).",
+    "On 17 May 1859 Wills, the schoolteacher Thomas Smith and the journalists William Hammersley and J. B. Thompson drew up the first rules of the Melbourne Football Club at Bryant's Hotel (AFL, n.d.). They started from the Rugby School rules, and over the next three decades the Victorian clubs abolished offside, forbade running with the ball in the hands and turned the clean catch of a kicked ball (the mark) into the distinctive feature of the game (Collins, 2019, p. 86). Because those rules were set four years before the creation of the Football Association, Melbourne did not have to defer to any British body and kept a code of its own that eventually became national (Collins, 2019, pp. 85-86). The Victorian Football Association was founded in 1877 (AFL, n.d.).",
+    "The game brought together all the classes of the city from very early on, and in 1886 a decisive championship match drew a claimed 34,000 spectators (Collins, 2019, p. 84). In 1896 the strongest clubs left the association and founded the Victorian Football League, which took the name Australian Football League in 1990 and spread to all the mainland states (AFL, n.d.). The claim that Wills drew on the Aboriginal game *marn grook*, popular since the 1990s within the framework of national reconciliation, lacks documentary support, since biographical research on Wills found no mention of such games in his writings, and the same author recalls that Wills's father took part in the killing of Aboriginal people (Collins, 2019, pp. 91-93)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/futbol-australiano.jpg",
+   "pie": {
+    "es": "Partido de fútbol australiano en el Richmond Paddock de Melbourne hacia 1866, con el pabellón del Melbourne Cricket Ground al fondo. Grabado en madera.",
+    "en": "Australian football match at the Richmond Paddock, Melbourne, around 1866, with the Melbourne Cricket Ground pavilion in the background. Wood engraving."
+   },
+   "autor": "Robert Bruce",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Australianfootball1866.jpg"
+  },
+  "refs": [
+   "AFL. (s. f.). *History of Australian football*. Recuperado el 29 de septiembre de 2026 de https://www.afl.com.au/news/49/history-of-australian-football",
+   "Collins, T. (2019). *How football began: A global history of how the world's football codes were born*. Routledge."
+  ],
+  "refs_en": [
+   "AFL. (n.d.). *History of Australian football*. Retrieved September 29, 2026, from https://www.afl.com.au/news/49/history-of-australian-football",
+   "Collins, T. (2019). *How football began: A global history of how the world's football codes were born*. Routledge."
+  ]
+ }
+]

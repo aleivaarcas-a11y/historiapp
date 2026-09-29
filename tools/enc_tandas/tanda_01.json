@@ -1,0 +1,663 @@
+[
+ {
+  "id": "atletismo",
+  "name": {
+   "es": "Atletismo",
+   "en": "Athletics"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Olimpia (Grecia), 776 a. C. según la fecha tradicional; forma moderna, Inglaterra, décadas de 1860 y 1870",
+   "en": "Olympia (Greece), 776 BCE by the traditional date; modern form, England, 1860s and 1870s"
+  },
+  "body": {
+   "es": [
+    "Correr, saltar y lanzar son gestos tan antiguos como la especie, y las carreras formaron parte del adiestramiento militar de varias civilizaciones antiguas, como la persa, antes de convertirse en espectáculo. La tradición sitúa el primer certamen de Olimpia en el 776 a. C., fecha que Hipias de Élide calculó tres siglos después a partir de una lista de vencedores y que los historiadores consideran una conjetura para la que no disponen de alternativa mejor. Según la mayoría de los especialistas, el programa inicial se reducía al *stade*, una carrera de una longitud del estadio, al que se añadieron el *diaulos* en el 724 y el *dolichos* en el 720, y después el pentatlón, que reunía carrera, salto, lanzamientos de disco y jabalina y lucha (Guttmann, 2004, pp. 20-21).",
+    "El atletismo moderno nació en la Inglaterra victoriana de la confluencia de dos tradiciones, el pedestrismo profesional, con sus apuestas y sus hazañas extravagantes, y los Juegos de las Tierras Altas escocesas, revitalizados en Braemar en 1832, donde predominaban los lanzamientos de piedra, martillo y tronco. Lo que dio al deporte su forma nueva fue la obsesión por la medida exacta, con la primera pista de ceniza trazada en Lord's en 1837, los récords cronometrados y una prensa especializada, *The Athlete*, que desde 1867 publicaba resultados cuantificados. El Mincing Lane Athletic Club, fundado en 1863, se convirtió en el London Athletic Club en 1866, y en 1864 Oxford y Cambridge inauguraron su rivalidad atlética (Guttmann, 2004, pp. 97-98).",
+    "El nuevo deporte fue también una herramienta de distinción social. Los fundadores del London Athletic Club querían competir entre ellos sin mezclarse con corredores profesionales, sesenta socios dimitieron cuando en 1872 se admitió a comerciantes, y la Amateur Athletic Association, creada en 1880, prolongó esa exclusión (Guttmann, 2004, p. 98). El 17 de julio de 1912, tras la clausura de los Juegos de Estocolmo, delegados de diecisiete federaciones nacionales fundaron la International Amateur Athletic Federation, que en 2001 abandonó el término *amateur* y en 2019 adoptó el nombre de World Athletics (World Athletics, s. f.). Las mujeres, que Alice Milliat había reunido en París en 1922 en unos Juegos femeninos, compitieron en el atletismo olímpico por primera vez en Ámsterdam en 1928 (Guttmann, 2004, p. 264)."
+   ],
+   "en": [
+    "Running, jumping and throwing are as old as the species, and races were part of the military training of several ancient civilisations, such as the Persian, before they became a spectacle. Tradition places the first contest at Olympia in 776 BCE, a date that Hippias of Elis calculated three centuries later from a list of victors and that historians regard as guesswork for which they have no better alternative. According to most specialists, the original programme consisted only of the *stade*, a race of one length of the stadium, to which the *diaulos* was added in 724 and the *dolichos* in 720, followed by the pentathlon, which combined running, jumping, the discus and javelin throws and wrestling (Guttmann, 2004, pp. 20-21).",
+    "Modern athletics was born in Victorian England from the meeting of two traditions, professional pedestrianism, with its wagers and its eccentric feats, and the Scottish Highland Games, revived at Braemar in 1832, where the putting of the stone, the hammer and the caber predominated. What gave the sport its new form was the obsession with exact measurement, with the first cinder track laid out at Lord's in 1837, timed records and a specialised press, *The Athlete*, which from 1867 published quantified results. The Mincing Lane Athletic Club, founded in 1863, became the London Athletic Club in 1866, and in 1864 Oxford and Cambridge began their athletic rivalry (Guttmann, 2004, pp. 97-98).",
+    "The new sport was also a tool of social distinction. The founders of the London Athletic Club wished to compete among themselves without mixing with professional runners, sixty members resigned when tradesmen were admitted in 1872, and the Amateur Athletic Association, created in 1880, continued that exclusion (Guttmann, 2004, p. 98). On 17 July 1912, after the closing ceremony of the Stockholm Games, delegates from seventeen national federations founded the International Amateur Athletic Federation, which dropped the word *amateur* in 2001 and adopted the name World Athletics in 2019 (World Athletics, n.d.). Women, whom Alice Milliat had brought together in Paris in 1922 for a women's Games, competed in Olympic athletics for the first time in Amsterdam in 1928 (Guttmann, 2004, p. 264)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 2,
+    "f": "atletismo",
+    "t": {
+     "es": "Atletismo",
+     "en": "Athletics"
+    }
+   },
+   {
+    "num": 1,
+    "f": "jj-oo-amsterdam-1928",
+    "t": {
+     "es": "JJ. OO. Ámsterdam 1928",
+     "en": "1928 Amsterdam Olympics"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/atletismo.jpg",
+   "pie": {
+    "es": "Cuatro corredores en un ánfora panatenaica ática de figuras negras, hacia 530-520 a. C. (British Museum, B137).",
+    "en": "Four runners on an Attic black-figure Panathenaic amphora, c. 530-520 BCE (British Museum, B137)."
+   },
+   "autor": "Pintor de Eufileto (atribuido)",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Panathenaic_amphora_BM_B137.jpg"
+  },
+  "refs": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "World Athletics. (s. f.). *History*. Recuperado el 29 de septiembre de 2026 de https://worldathletics.org/heritage/history"
+  ],
+  "refs_en": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "World Athletics. (n.d.). *History*. Retrieved September 29, 2026, from https://worldathletics.org/heritage/history"
+  ]
+ },
+ {
+  "id": "gimnasia-artistica",
+  "name": {
+   "es": "Gimnasia artística",
+   "en": "Artistic gymnastics"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Alemania, 1811 (Turnplatz de Jahn en Berlín); federación internacional, 1881; forma olímpica actual, décadas de 1950",
+   "en": "Germany, 1811 (Jahn's Turnplatz in Berlin); international federation, 1881; current Olympic form, 1950s"
+  },
+  "body": {
+   "es": [
+    "La Federación Internacional de Gimnasia remite el origen de la disciplina a la Grecia antigua, donde la condición física era una cualidad muy apreciada, y a Roma, que se sirvió del ejercicio para preparar a sus soldados y de cuyos métodos de adiestramiento procedería el caballo con arcos (World Gymnastics, s. f.-a). La palabra misma procede del griego *gymnastiké*, el ejercicio practicado desnudo. La gimnasia moderna, sin embargo, nació en la Alemania ocupada por Napoleón, cuando Friedrich Ludwig Jahn levantó en 1811, en los campos próximos a Berlín, un *Turnplatz* con torres, plataformas, cuerdas y anillas, y con él un movimiento, el *Turnen*, que concebía a sus practicantes como el núcleo del ejército llamado a expulsar a los franceses (Guttmann, 2004, p. 273).",
+    "El *Turnen* tuvo desde el principio una función política. Prusia encarceló a Jahn en 1819 y prohibió la práctica hasta 1842, y tras el fracaso de la revolución de 1848 los gimnastas que permanecieron en Alemania fundaron en 1868 la Deutsche Turnerschaft, cuyos festivales combinaban ejercicios colectivos, discursos patrióticos y juramentos de lealtad al emperador; en la escuela, guiada por los escritos de Adolf Spiess, la gimnasia se convirtió en una rutina próxima a la instrucción militar (Guttmann, 2004, p. 274). Los gimnastas alemanes rechazaron el deporte inglés por materialista y competitivo, y en 1910 su organización contaba con un millón de socios, doce veces más que la federación de fútbol (Guttmann, 2004, p. 275).",
+    "Tras la aparición de federaciones nacionales, la primera en Suiza en 1832, el 23 de julio de 1881 se creó la Unión Europea de Gimnasia, germen de la actual federación internacional, a iniciativa del belga Nicolas Cuperus. La federación sitúa hoy la fundación en Amberes (World Gymnastics, s. f.-a), mientras que su propio presidente la fijaba en Lieja (Grandi, 2011, p. 3), versión que recoge también Fernández Truan (s. f., p. 128). La gimnasia artística estuvo en los primeros Juegos Olímpicos modernos de 1896 y en 1903 se disputó en Amberes el primer torneo internacional, reconocido después como primer Campeonato del Mundo (World Gymnastics, s. f.-b). Las mujeres debutaron en Ámsterdam en 1928 con una única prueba por equipos, y el formato actual de cuatro aparatos femeninos y seis masculinos se fijó entre 1952 y 1956 (World Gymnastics, s. f.-a, s. f.-c)."
+   ],
+   "en": [
+    "The International Gymnastics Federation traces the discipline back to ancient Greece, where physical fitness was a highly prized attribute, and to Rome, which used exercise to prepare its soldiers and whose training methods gave rise to the pommel horse (World Gymnastics, n.d.-a). The word itself comes from the Greek *gymnastiké*, exercise performed naked. Modern gymnastics, however, was born in the Germany occupied by Napoleon, when Friedrich Ludwig Jahn built in 1811, in the fields near Berlin, a *Turnplatz* with towers, platforms, ropes and rings, and with it a movement, *Turnen*, which regarded its practitioners as the core of the army that would drive out the French (Guttmann, 2004, p. 273).",
+    "*Turnen* had a political function from the outset. Prussia imprisoned Jahn in 1819 and banned the practice until 1842, and after the failure of the 1848 revolution the gymnasts who remained in Germany founded the Deutsche Turnerschaft in 1868, whose festivals combined mass exercises, patriotic speeches and oaths of loyalty to the emperor; in schools, guided by the writings of Adolf Spiess, gymnastics became a routine close to military drill (Guttmann, 2004, p. 274). German gymnasts rejected English sport as materialistic and competitive, and in 1910 their organisation had a million members, twelve times as many as the football federation (Guttmann, 2004, p. 275).",
+    "After the appearance of national federations, the first in Switzerland in 1832, the European Gymnastics Union, forerunner of today's international federation, was created on 23 July 1881 on the initiative of the Belgian Nicolas Cuperus. The federation now places the foundation in Antwerp (World Gymnastics, n.d.-a), whereas its own president placed it in Liège (Grandi, 2011, p. 3), the version also given by Fernández Truan (n.d., p. 128). Artistic gymnastics was part of the first modern Olympic Games in 1896, and in 1903 the first international tournament, later recognised as the first World Championships, was held in Antwerp (World Gymnastics, n.d.-b). Women made their debut in Amsterdam in 1928 with a single team event, and the current format of four women's and six men's apparatus was fixed between 1952 and 1956 (World Gymnastics, n.d.-a, n.d.-c)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 1,
+    "f": "deporte-un-concepto-vivo",
+    "t": {
+     "es": "Deporte: un concepto vivo",
+     "en": "Sport: a living concept"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/gimnasia-artistica.png",
+   "pie": {
+    "es": "Gimnastas del Friedrich-Gymnasium en el Turnplatz de la Hasenheide (Berlín) en 1903; al fondo, el monumento a Jahn.",
+    "en": "Gymnasts of the Friedrich-Gymnasium at the Hasenheide Turnplatz (Berlin) in 1903, with the monument to Jahn in the background."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Turnplatz_in_der_Hasenheide,_1903.png"
+  },
+  "refs": [
+   "Grandi, B. (2011). 130 years of FIG: Letter from FIG president Prof. Bruno Grandi. *Science of Gymnastics Journal*, *3*(3), 3-4.",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "World Gymnastics. (s. f.-a). *Men's artistic: History*. Recuperado el 29 de septiembre de 2026 de https://www.gymnastics.sport/site/pages/disciplines/mag-history.php",
+   "World Gymnastics. (s. f.-b). *Gymnastics for all: History*. Recuperado el 29 de septiembre de 2026 de https://www.gymnastics.sport/site/pages/disciplines/gfa-history.php",
+   "World Gymnastics. (s. f.-c). *Women's artistic: History*. Recuperado el 29 de septiembre de 2026 de https://www.gymnastics.sport/site/pages/disciplines/wag-history.php"
+  ],
+  "refs_en": [
+   "Grandi, B. (2011). 130 years of FIG: Letter from FIG president Prof. Bruno Grandi. *Science of Gymnastics Journal*, *3*(3), 3-4.",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "World Gymnastics. (n.d.-a). *Men's artistic: History*. Retrieved September 29, 2026, from https://www.gymnastics.sport/site/pages/disciplines/mag-history.php",
+   "World Gymnastics. (n.d.-b). *Gymnastics for all: History*. Retrieved September 29, 2026, from https://www.gymnastics.sport/site/pages/disciplines/gfa-history.php",
+   "World Gymnastics. (n.d.-c). *Women's artistic: History*. Retrieved September 29, 2026, from https://www.gymnastics.sport/site/pages/disciplines/wag-history.php"
+  ]
+ },
+ {
+  "id": "gimnasia-ritmica",
+  "name": {
+   "es": "Gimnasia rítmica",
+   "en": "Rhythmic gymnastics"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Europa central y URSS, primera mitad del siglo XX; disciplina de la federación internacional, 1962-1963",
+   "en": "Central Europe and the USSR, first half of the 20th century; discipline of the international federation, 1962-1963"
+  },
+  "body": {
+   "es": [
+    "La gimnasia rítmica procede de las corrientes que, entre finales del siglo XIX y comienzos del XX, buscaron en el movimiento un medio de expresión y una educación física adecuada para las mujeres. La federación internacional reconoce como precursores al fisiólogo francés Georges Demenÿ, que introdujo en la educación física femenina ejercicios con aparatos de mano como coronas y bastones, al sistema de expresión de François Delsarte, a la danza libre de Isadora Duncan, a la euritmia del músico suizo Émile Jaques-Dalcroze y al alemán Rudolf Bode, que en 1911 fundó su escuela de gimnasia rítmica (World Gymnastics, s. f.). De esa tradición salió la llamada gimnasia moderna, nombre con el que la disciplina se conoció hasta bien entrado el siglo XX (Fernández Truan, s. f., pp. 130-131).",
+    "La conversión de aquella gimnasia expresiva en deporte de competición se produjo en la Unión Soviética, donde en las décadas de 1920 y 1930 se crearon grupos de gimnasia femenina y, en 1934, un departamento de euritmia en el instituto de educación física de Moscú (World Gymnastics, s. f.). La Real Federación Española de Gimnasia sitúa el nacimiento de la modalidad deportiva en la URSS durante los años cincuenta y su reconocimiento por la federación internacional en 1962 (Real Federación Española de Gimnasia, s. f.), mientras que la federación internacional la cuenta entre sus disciplinas desde el primer Campeonato del Mundo, celebrado en Budapest en 1963 (World Gymnastics, s. f.). Ambas fechas son compatibles, puesto que la decisión se tomó en el congreso de la federación de 1962 y la primera competición mundial tuvo lugar al año siguiente (Fernández Truan, s. f., p. 131).",
+    "El concurso individual entró en el programa olímpico en Los Ángeles en 1984 y el de conjuntos en Atlanta en 1996 (World Gymnastics, s. f.), y ambos son exclusivamente femeninos, rasgo que la distingue de casi todas las disciplinas olímpicas y que remite a su origen como gimnasia concebida para la gracia y la expresión del cuerpo de la mujer. En España llegó a través de la Sección Femenina, que durante el franquismo se encargó del deporte femenino, y tres gimnastas españolas participaron ya en el Mundial de Budapest de 1963; el Campeonato del Mundo de Madrid de 1975 le dio su primera medalla internacional y la dio a conocer ante el gran público (Fernández Truan, s. f., p. 132; Real Federación Española de Gimnasia, s. f.)."
+   ],
+   "en": [
+    "Rhythmic gymnastics derives from the currents that, between the late nineteenth and early twentieth centuries, sought in movement a means of expression and a form of physical education suited to women. The international federation recognises as its precursors the French physiologist Georges Demenÿ, who introduced exercises with hand-held apparatus such as wreaths and sticks into women's physical education, the system of expression of François Delsarte, the free dance of Isadora Duncan, the eurhythmics of the Swiss musician Émile Jaques-Dalcroze and the German Rudolf Bode, who founded his school of rhythmic gymnastics in 1911 (World Gymnastics, n.d.). From that tradition came so-called modern gymnastics, the name by which the discipline was known until well into the twentieth century (Fernández Truan, n.d., pp. 130-131).",
+    "The conversion of that expressive gymnastics into a competitive sport took place in the Soviet Union, where women's gymnastics groups were created in the 1920s and 1930s and, in 1934, a eurhythmics department at the Moscow institute of physical education (World Gymnastics, n.d.). The Royal Spanish Gymnastics Federation places the birth of the competitive form in the USSR during the 1950s and its recognition by the international federation in 1962 (Real Federación Española de Gimnasia, n.d.), while the international federation counts it among its disciplines from the first World Championships, held in Budapest in 1963 (World Gymnastics, n.d.). Both dates are compatible, since the decision was taken at the federation's 1962 congress and the first world competition took place the following year (Fernández Truan, n.d., p. 131).",
+    "The individual event entered the Olympic programme in Los Angeles in 1984 and the group event in Atlanta in 1996 (World Gymnastics, n.d.), and both are for women only, a feature that sets it apart from almost every Olympic discipline and that goes back to its origin as a gymnastics conceived for the grace and expression of the female body. In Spain it arrived through the Sección Femenina, which was in charge of women's sport under Franco, and three Spanish gymnasts already took part in the 1963 World Championships in Budapest; the 1975 World Championships in Madrid brought the country its first international medal and introduced the sport to the general public (Fernández Truan, n.d., p. 132; Real Federación Española de Gimnasia, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/gimnasia-ritmica.jpg",
+   "pie": {
+    "es": "Alumnas de Émile Jaques-Dalcroze practicando gimnasia rítmica al aire libre en Ginebra, 1910.",
+    "en": "Students of Émile Jaques-Dalcroze practising rhythmic gymnastics outdoors in Geneva, 1910."
+   },
+   "autor": "Frédéric Boissonnas",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:DalcrozeEurhythmics_Geneva_ByFredericBoissonsas_BibliothequeDeGeneveIconographie-ijd-2-1910-1-p-03a.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Real Federación Española de Gimnasia. (s. f.). *Historia de la RFEG*. Recuperado el 29 de septiembre de 2026 de https://rfegimnasia.es/historia-de-la-rfeg/",
+   "World Gymnastics. (s. f.). *Rhythmic: History*. Recuperado el 29 de septiembre de 2026 de https://www.gymnastics.sport/site/pages/disciplines/rg-history.php"
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Real Federación Española de Gimnasia. (n.d.). *Historia de la RFEG*. Retrieved September 29, 2026, from https://rfegimnasia.es/historia-de-la-rfeg/",
+   "World Gymnastics. (n.d.). *Rhythmic: History*. Retrieved September 29, 2026, from https://www.gymnastics.sport/site/pages/disciplines/rg-history.php"
+  ]
+ },
+ {
+  "id": "trampolin",
+  "name": {
+   "es": "Trampolín",
+   "en": "Trampoline"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Estados Unidos (Iowa), década de 1930; primer Campeonato del Mundo, Londres, 1964",
+   "en": "United States (Iowa), 1930s; first World Championships, London, 1964"
+  },
+  "body": {
+   "es": [
+    "El trampolín es uno de los pocos deportes cuyo aparato precedió a la disciplina. Según la federación internacional, el gimnasta estadounidense George Nissen construyó en 1934 el primer prototipo después de observar cómo los acróbatas de circo aprovechaban la elasticidad de las redes de seguridad, y bautizó el invento con una adaptación de la palabra española *trampolín* (World Gymnastics, s. f.). Nissen, antiguo gimnasta de la Universidad de Iowa, desarrolló el aparato junto con Larry Griswold, con quien fundó después una empresa para fabricarlo (USA Gymnastics, s. f.). El origen del deporte está así ligado al espectáculo circense y a la gimnasia universitaria, y también a un negocio que necesitaba crear su propio mercado.",
+    "Durante la Segunda Guerra Mundial el trampolín se empleó para enseñar a los pilotos el sentido de la orientación en el aire, y en 1948 se celebró en Estados Unidos el primer campeonato nacional (World Gymnastics, s. f.). Nissen y Griswold regalaron aparatos a las universidades para dar a conocer el nuevo deporte, y el propio Nissen fue cofundador de la asociación estadounidense de tumbling y trampolín (USA Gymnastics, s. f.). La combinación de un fin militar, que valoraba el control del cuerpo en vuelo, y de una estrategia comercial, que buscaba practicantes en los centros educativos, explica la rapidez con que el aparato pasó del circo al gimnasio.",
+    "El primer Campeonato del Mundo se disputó en el Royal Albert Hall de Londres en 1964, con competición masculina y femenina desde el principio, y tras él se fundó la Fédération Internationale de Trampoline, que el Comité Olímpico Internacional reconoció en 1988. Esa federación se disolvió a finales de 1998 y el 1 de enero de 1999 el trampolín pasó a ser una disciplina de la Federación Internacional de Gimnasia, y al año siguiente entró en el programa olímpico en los Juegos de Sídney de 2000, a los que asistió el propio Nissen como espectador (World Gymnastics, s. f.)."
+   ],
+   "en": [
+    "Trampolining is one of the few sports in which the apparatus came before the discipline. According to the international federation, the American gymnast George Nissen built the first prototype in 1934 after watching circus acrobats make use of the elasticity of safety nets, and he named the invention after the Spanish word *trampolín*, springboard (World Gymnastics, n.d.). Nissen, a former University of Iowa gymnast, developed the apparatus together with Larry Griswold, with whom he later founded a company to manufacture it (USA Gymnastics, n.d.). The origin of the sport is thus tied to circus spectacle and to university gymnastics, and also to a business that needed to create its own market.",
+    "During the Second World War the trampoline was used to teach pilots air sense, and in 1948 the first national championships were held in the United States (World Gymnastics, n.d.). Nissen and Griswold gave apparatus to universities free of charge to make the new sport known, and Nissen himself co-founded the United States Tumbling and Trampoline Association (USA Gymnastics, n.d.). The combination of a military purpose, which valued control of the body in flight, and a commercial strategy, which sought practitioners in educational institutions, explains how quickly the apparatus moved from the circus to the gymnasium.",
+    "The first World Championships were held at the Royal Albert Hall in London in 1964, with men's and women's competition from the outset, and after them the Fédération Internationale de Trampoline was founded, which the International Olympic Committee recognised in 1988. That federation was dissolved at the end of 1998, and on 1 January 1999 trampoline became a discipline of the International Gymnastics Federation, and the following year it entered the Olympic programme at the Sydney Games of 2000, attended by Nissen himself as a spectator (World Gymnastics, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/trampolin.jpg",
+   "pie": {
+    "es": "Salto durante el Campeonato del Mundo de trampolín celebrado en Amersfoort (Países Bajos) en noviembre de 1968.",
+    "en": "A jump during the Trampoline World Championships held in Amersfoort (Netherlands) in November 1968."
+   },
+   "autor": "Eric Koch (Anefo)",
+   "licencia": "CC0",
+   "url": "https://commons.wikimedia.org/wiki/File:Wereldkampioenschappen_trampoline-springen_te_Amersfoort_aktie-opnamen,_Bestanddeelnr_921-9038.jpg"
+  },
+  "refs": [
+   "USA Gymnastics. (s. f.). *Nissen, George*. Recuperado el 29 de septiembre de 2026 de https://usagym.org/halloffame/inductee/nissen-george/",
+   "World Gymnastics. (s. f.). *Trampoline & tumbling: History*. Recuperado el 29 de septiembre de 2026 de https://www.gymnastics.sport/site/pages/disciplines/tra-history.php"
+  ],
+  "refs_en": [
+   "USA Gymnastics. (n.d.). *Nissen, George*. Retrieved September 29, 2026, from https://usagym.org/halloffame/inductee/nissen-george/",
+   "World Gymnastics. (n.d.). *Trampoline & tumbling: History*. Retrieved September 29, 2026, from https://www.gymnastics.sport/site/pages/disciplines/tra-history.php"
+  ]
+ },
+ {
+  "id": "halterofilia",
+  "name": {
+   "es": "Halterofilia",
+   "en": "Weightlifting"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Exhibiciones de fuerza desde la Antigüedad; deporte reglado en Europa central, 1890-1891; federación internacional, Duisburgo, 1905",
+   "en": "Feats of strength since antiquity; regulated sport in Central Europe, 1890-1891; international federation, Duisburg, 1905"
+  },
+  "body": {
+   "es": [
+    "Levantar objetos pesados para demostrar la fuerza es una práctica muy antigua, y la Grecia arcaica ha dejado testimonios materiales de ella. Cerca de Olimpia se encontró un bloque de arenisca del siglo VI a. C., de unos 143 kilos, cuya inscripción afirma que Bibón, hijo de Folas, lo lanzó por encima de su cabeza con una sola mano, y en la isla de Tera se conserva una roca volcánica de unos 480 kilos con la inscripción «Eumasto, hijo de Critóbulo, me levantó del suelo» (Golden, 2004, pp. 29, 64). Estas piedras conmemoraban hazañas individuales de hombres fuertes, y el levantamiento de pesos nunca figuró entre las pruebas del programa olímpico antiguo (Guttmann, 2004, pp. 20-21).",
+    "La halterofilia moderna se organizó en Europa central a finales del siglo XIX. Según la federación internacional, en 1890 el Österreichischer Athleten Bund fue el primer organismo nacional de gobierno del deporte, en 1891 se coronó en Londres al primer campeón del mundo aficionado, con siete atletas de seis países, y en 1896 la disciplina entró en el programa de los primeros Juegos Olímpicos modernos (International Weightlifting Federation [IWF], s. f.). El 10 de junio de 1905 Alemania, Dinamarca, Italia y Países Bajos fundaron en Duisburgo la Amateur-Athleten-Weltunion, que gobernaba a la vez la halterofilia y la lucha y cuyos fines eran unificar los ejercicios, los reglamentos, las normas de amateurismo y el registro de récords (IWF, 2025). Algún manual sitúa esa fundación en París (Fernández Truan, s. f., p. 140), dato que la federación no respalda.",
+    "En 1920 la federación se ocupó ya solo de la halterofilia y adoptó el nombre de Fédération Internationale Haltérophile; entre 1950 y 1972 incluyó también el culturismo en su denominación, y desde 1972 se llama International Weightlifting Federation (IWF, s. f.; IWF, 2025). La supresión del *press* a dos manos en 1973 dejó la competición reducida a los dos movimientos actuales, la arrancada y el dos tiempos (IWF, s. f.). Las mujeres, que durante casi un siglo no tuvieron competiciones oficiales en un deporte asociado a la exhibición de la fuerza masculina, disputaron su primer torneo mundial en 1987, con veintitrés atletas de cinco países, y debutaron en los Juegos Olímpicos de Sídney en 2000 (IWF, s. f.)."
+   ],
+   "en": [
+    "Lifting heavy objects to show one's strength is a very old practice, and archaic Greece has left material evidence of it. A sandstone block from the sixth century BCE, weighing about 143 kilos, was found near Olympia with an inscription stating that Bybon, son of Pholas, threw it over his head with one hand, and on the island of Thera there is a volcanic rock of about 480 kilos inscribed «Eumastus son of Critobolus lifted me from the ground» (Golden, 2004, pp. 29, 64). These stones commemorated individual feats by strong men, and weightlifting never appeared among the events of the ancient Olympic programme (Guttmann, 2004, pp. 20-21).",
+    "Modern weightlifting was organised in Central Europe at the end of the nineteenth century. According to the international federation, in 1890 the Österreichischer Athleten Bund became the first national governing body of the sport, in 1891 the first amateur world champion was crowned in London, with seven athletes from six countries, and in 1896 the discipline entered the programme of the first modern Olympic Games (International Weightlifting Federation [IWF], n.d.). On 10 June 1905 Germany, Denmark, Italy and the Netherlands founded in Duisburg the Amateur-Athleten-Weltunion, which governed both weightlifting and wrestling and whose aims were to standardise exercises, regulations, amateur rules and record-keeping (IWF, 2025). One textbook places that foundation in Paris (Fernández Truan, n.d., p. 140), a claim the federation does not support.",
+    "In 1920 the federation began to deal with weightlifting alone and adopted the name Fédération Internationale Haltérophile; between 1950 and 1972 it also included bodybuilding in its name, and since 1972 it has been called the International Weightlifting Federation (IWF, n.d.; IWF, 2025). The abolition of the two-hand press in 1973 reduced competition to the two current lifts, the snatch and the clean and jerk (IWF, n.d.). Women, who for almost a century had no official competitions in a sport associated with the display of male strength, held their first world tournament in 1987, with twenty-three athletes from five countries, and made their debut at the Sydney Olympic Games in 2000 (IWF, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/halterofilia.jpg",
+   "pie": {
+    "es": "El griego Periklís Kakousis, vencedor del levantamiento a dos manos, durante su ejercicio en los Juegos Olímpicos de San Luis de 1904.",
+    "en": "The Greek Periklis Kakousis, winner of the two-handed lift, during his attempt at the 1904 St. Louis Olympic Games."
+   },
+   "autor": "Jessie Tarbox Beals (atribuida)",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Perikles_Kakousis_of_Athens,_Greece,_winner_of_the_two-handed_weightlifting_competition_in_action_at_the_1904_Olympics.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Golden, M. (2004). *Sport in the ancient world from A to Z*. Routledge.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "International Weightlifting Federation. (s. f.). *History*. Recuperado el 29 de septiembre de 2026 de https://iwf.sport/weightlifting_/history/",
+   "International Weightlifting Federation. (2025, 10 de junio). *IWF120y/120: 1905-2025, happy birthday IWF!* Recuperado el 29 de septiembre de 2026 de https://iwf.sport/2025/06/10/iwf120y-120-1905-2025-happy-birthday-iwf/"
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Golden, M. (2004). *Sport in the ancient world from A to Z*. Routledge.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "International Weightlifting Federation. (n.d.). *History*. Retrieved September 29, 2026, from https://iwf.sport/weightlifting_/history/",
+   "International Weightlifting Federation. (2025, June 10). *IWF120y/120: 1905-2025, happy birthday IWF!* Retrieved September 29, 2026, from https://iwf.sport/2025/06/10/iwf120y-120-1905-2025-happy-birthday-iwf/"
+  ]
+ },
+ {
+  "id": "culturismo",
+  "name": {
+   "es": "Culturismo",
+   "en": "Bodybuilding"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Gran Bretaña y Estados Unidos, décadas de 1880 y 1890 (cultura física); federación internacional, Montreal, 1946",
+   "en": "Britain and the United States, 1880s and 1890s (physical culture); international federation, Montreal, 1946"
+  },
+  "body": {
+   "es": [
+    "El culturismo nació de la llamada cultura física, el desarrollo y fortalecimiento del cuerpo mediante el ejercicio regular, que ocupó un lugar destacado en Europa y Estados Unidos a finales del siglo XIX. La sociedad victoriana se obsesionó con medir el cuerpo y asoció la simetría de sus proporciones con la aptitud física y moral (Day, 2021, p. 94). Sobre ese terreno, Eugen Sandow, George Hackenschmidt y William Bankier en Inglaterra, Bernarr Macfadden y Charles Atlas en Estados Unidos y Edmond Desbonnet en Francia difundieron métodos sistemáticos de entrenamiento con pesas que invocaban el ideal griego de la *areté*, y lo hicieron como hombres fuertes y también como hombres de espectáculo, a través de revistas, números de variedades, combates de lucha y concursos de físico (Day, 2021, p. 95).",
+    "La figura decisiva fue Sandow, que empezó su carrera teatral en 1887 y al retirarse en 1903 había convertido su nombre en sinónimo internacional de fuerza, salud y perfección corporal, y en una marca con la que vendía libros, una revista, gimnasios y aparatos (Day, 2021, p. 96). Lo que le distinguía de los forzudos que se limitaban a levantar pesos era la exhibición de su cuerpo casi desnudo sobre el escenario (Vamplew, 2021, p. 168), y ese desplazamiento del esfuerzo hacia la contemplación del músculo define el nuevo deporte. El primer concurso masculino de culturismo en Estados Unidos se celebró en Nueva York en 1903, y en 1939 la Amateur Athletic Union creó el título de Mr. America (Matthias, s. f.).",
+    "En 1946 los hermanos Ben y Joe Weider fundaron en Montreal la International Federation of BodyBuilders (IFBB), que hoy se denomina International Federation of Bodybuilding and Fitness, con Canadá y Estados Unidos como únicos miembros (IFBB, s. f.; Matthias, s. f.). La federación de halterofilia incluyó también el culturismo en su nombre entre 1950 y 1972 (International Weightlifting Federation, s. f.), señal de la cercanía inicial entre ambas prácticas. En 1965 Joe Weider y su federación organizaron en Brooklyn el primer Mr. Olympia, concebido como alternativa a un Mr. America que no permitía repetir a sus antiguos ganadores (Matthias, s. f.). El culturismo no es deporte olímpico, y su historia está ligada desde el origen a la industria de las revistas, los gimnasios y los productos para el cuidado del cuerpo."
+   ],
+   "en": [
+    "Bodybuilding grew out of so-called physical culture, the development and strengthening of the body through regular exercise, which occupied an important place in Europe and the United States in the late nineteenth century. Victorian society became obsessed with measuring the body and associated symmetrical proportions with physical and moral fitness (Day, 2021, p. 94). On that ground, Eugen Sandow, George Hackenschmidt and William Bankier in England, Bernarr Macfadden and Charles Atlas in the United States and Edmond Desbonnet in France spread systematic methods of weight training that invoked the Greek ideal of *arete*, and they did so as strongmen and also as showmen, through magazines, vaudeville acts, wrestling matches and physique competitions (Day, 2021, p. 95).",
+    "The decisive figure was Sandow, who began his theatrical career in 1887 and on retiring in 1903 had made his name an international synonym for strength, health and bodily perfection, and a brand with which he sold books, a magazine, health clubs and equipment (Day, 2021, p. 96). What set him apart from strongmen who merely lifted weights was the display of his near-naked body on stage (Vamplew, 2021, p. 168), and that shift from effort to the contemplation of muscle defines the new sport. The first men's bodybuilding competition in the United States was held in New York in 1903, and in 1939 the Amateur Athletic Union created the Mr. America title (Matthias, n.d.).",
+    "In 1946 the brothers Ben and Joe Weider founded the International Federation of BodyBuilders (IFBB) in Montreal, today called the International Federation of Bodybuilding and Fitness, with Canada and the United States as its only members (IFBB, n.d.; Matthias, n.d.). The weightlifting federation also included bodybuilding in its name between 1950 and 1972 (International Weightlifting Federation, n.d.), a sign of the early closeness between the two practices. In 1965 Joe Weider and his federation staged the first Mr. Olympia in Brooklyn, conceived as an alternative to a Mr. America that did not allow former winners to compete again (Matthias, n.d.). Bodybuilding is not an Olympic sport, and its history has been tied from the outset to the industry of magazines, gyms and body-care products."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/culturismo.jpg",
+   "pie": {
+    "es": "Eugen Sandow posando con una columna, a la manera de Sansón, en una fotografía de estudio de 1894.",
+    "en": "Eugen Sandow posing with a pillar, in the manner of Samson, in an 1894 studio photograph."
+   },
+   "autor": "Benjamin J. Falk",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Eugen_Sandow_holding_pillar_cph.3b11215.jpg"
+  },
+  "refs": [
+   "Day, D. (2021). Products, training, and technology. En M. Huggins (Ed.), *A cultural history of sport in the age of industry* (pp. 77-98). Bloomsbury Academic.",
+   "IFBB. (s. f.). *The founding fathers: Ben and Joe Weider*. International Federation of Bodybuilding and Fitness. Recuperado el 29 de septiembre de 2026 de https://ifbb.com/the-founding-fathers-ben-and-joe-weider/",
+   "International Weightlifting Federation. (s. f.). *History*. Recuperado el 29 de septiembre de 2026 de https://iwf.sport/weightlifting_/history/",
+   "Matthias, M. (s. f.). Mr. Olympia. En *Encyclopaedia Britannica*. Recuperado el 29 de septiembre de 2026 de https://www.britannica.com/topic/Mr-Olympia",
+   "Vamplew, W. (2021). Minds, bodies, and identities. En M. Huggins (Ed.), *A cultural history of sport in the age of industry* (pp. 165-186). Bloomsbury Academic."
+  ],
+  "refs_en": [
+   "Day, D. (2021). Products, training, and technology. In M. Huggins (Ed.), *A cultural history of sport in the age of industry* (pp. 77-98). Bloomsbury Academic.",
+   "IFBB. (n.d.). *The founding fathers: Ben and Joe Weider*. International Federation of Bodybuilding and Fitness. Retrieved September 29, 2026, from https://ifbb.com/the-founding-fathers-ben-and-joe-weider/",
+   "International Weightlifting Federation. (n.d.). *History*. Retrieved September 29, 2026, from https://iwf.sport/weightlifting_/history/",
+   "Matthias, M. (n.d.). Mr. Olympia. In *Encyclopaedia Britannica*. Retrieved September 29, 2026, from https://www.britannica.com/topic/Mr-Olympia",
+   "Vamplew, W. (2021). Minds, bodies, and identities. In M. Huggins (Ed.), *A cultural history of sport in the age of industry* (pp. 165-186). Bloomsbury Academic."
+  ]
+ },
+ {
+  "id": "powerlifting",
+  "name": {
+   "es": "Powerlifting",
+   "en": "Powerlifting"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Estados Unidos y Gran Bretaña, décadas de 1950 y 1960; primer campeonato nacional, Estados Unidos, 1965; federación internacional, Harrisburg (Pensilvania), 1972",
+   "en": "United States and Britain, 1950s and 1960s; first national championship, United States, 1965; international federation, Harrisburg (Pennsylvania), 1972"
+  },
+  "body": {
+   "es": [
+    "El powerlifting surgió de los márgenes de la halterofilia olímpica. Según la federación internacional, los levantamientos olímpicos no convencían a todos, y en muchos países había hombres fuertes que no podían, no querían o no se adaptaban a competir en ellos; los culturistas, por su parte, empleaban otros ejercicios para ganar fuerza, entre ellos la sentadilla, el press de banca y el peso muerto, que acabarían formando el nuevo deporte. En las décadas de 1950 y 1960 destacaron levantadores como Terry Todd en Estados Unidos, Doug Hepburn y Benoît Côté en Canadá o Bruce White en Australia, y a finales de esa década Gran Bretaña practicaba el llamado *Strength Set*, que reunía el curl, el press de banca y la sentadilla (International Powerlifting Federation [IPF], s. f.).",
+    "La institucionalización se produjo en Estados Unidos. En 1964 se celebró en York (Pensilvania) un primer campeonato nacional oficioso, y en 1965 la Amateur Athletic Union organizó su primer campeonato nacional con la sentadilla, el press de banca y el peso muerto como levantamientos oficiales. El primer encuentro internacional enfrentó a Gran Bretaña y Francia en 1968, y en 1971 Bob Hoffman, de la York Barbell Company, organizó y financió en York el primer Campeonato del Mundo (IPF, s. f.). La presencia de un fabricante de barras y discos detrás de las primeras competiciones muestra la estrecha relación del deporte con la industria del entrenamiento con pesas.",
+    "El 11 de noviembre de 1972, tras el campeonato de ese año, se fundó en Harrisburg (Pensilvania) la International Powerlifting Federation, con Robert Crist como primer presidente. El primer Campeonato del Mundo femenino se celebró en Lowell (Massachusetts) en 1980, el deporte entró en los Juegos Mundiales en 1981 y en 1982 se introdujeron controles antidopaje conforme a los requisitos del Comité Olímpico Internacional (IPF, s. f.). El powerlifting no es olímpico, aunque su modalidad de press de banca para deportistas con discapacidad forma parte de los Juegos Paralímpicos desde Nueva York 1984, heredera de la halterofilia introducida en Tokio 1964, y admite mujeres desde Sídney 2000 (International Paralympic Committee, s. f.)."
+   ],
+   "en": [
+    "Powerlifting emerged on the margins of Olympic weightlifting. According to the international federation, the Olympic lifts did not appeal to everybody, and in many countries there were strong men unable, unsuited or unwilling to compete in them; bodybuilders, for their part, used other exercises to build strength, among them the squat, the bench press and the deadlift, which would eventually make up the new sport. In the 1950s and 1960s lifters such as Terry Todd in the United States, Doug Hepburn and Benoît Côté in Canada and Bruce White in Australia were prominent, and by the end of that decade Britain practised the so-called *Strength Set*, which combined the curl, the bench press and the squat (International Powerlifting Federation [IPF], n.d.).",
+    "Institutionalisation took place in the United States. In 1964 a first unofficial national championship was held in York (Pennsylvania), and in 1965 the Amateur Athletic Union staged its first national championship with the squat, the bench press and the deadlift as the official lifts. The first international match pitted Britain against France in 1968, and in 1971 Bob Hoffman, of the York Barbell Company, hosted and financed the first World Championships in York (IPF, n.d.). The presence of a manufacturer of bars and plates behind the first competitions shows how closely the sport was tied to the weight-training industry.",
+    "On 11 November 1972, after that year's championships, the International Powerlifting Federation was founded in Harrisburg (Pennsylvania), with Robert Crist as its first president. The first women's World Championships were held in Lowell (Massachusetts) in 1980, the sport entered the World Games in 1981, and in 1982 drug testing was introduced in line with the requirements of the International Olympic Committee (IPF, n.d.). Powerlifting is not an Olympic sport, although its bench-press form for athletes with disabilities has been part of the Paralympic Games since New York 1984, as heir to the weightlifting introduced at Tokyo 1964, and has admitted women since Sydney 2000 (International Paralympic Committee, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/powerlifting.jpg",
+   "pie": {
+    "es": "Montaje con los tres movimientos del powerlifting (sentadilla, press de banca y peso muerto) en el Campeonato de la Commonwealth de 2005.",
+    "en": "Composite showing the three powerlifting movements (squat, bench press and deadlift) at the 2005 Commonwealth Championships."
+   },
+   "autor": "LiftingPictures.com",
+   "licencia": "CC BY 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:IPF_World_Champion_Dean_Bowring_performing_the_three_Powerlifting_moves.jpg"
+  },
+  "refs": [
+   "International Paralympic Committee. (s. f.). *Powerlifting: About the sport*. Recuperado el 29 de septiembre de 2026 de https://www.paralympic.org/powerlifting/about",
+   "International Powerlifting Federation. (s. f.). *History*. Recuperado el 29 de septiembre de 2026 de https://www.powerlifting.sport/federation/history"
+  ],
+  "refs_en": [
+   "International Paralympic Committee. (n.d.). *Powerlifting: About the sport*. Retrieved September 29, 2026, from https://www.paralympic.org/powerlifting/about",
+   "International Powerlifting Federation. (n.d.). *History*. Retrieved September 29, 2026, from https://www.powerlifting.sport/federation/history"
+  ]
+ },
+ {
+  "id": "cheerleading",
+  "name": {
+   "es": "Cheerleading",
+   "en": "Cheerleading"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Universidades de Princeton y Minnesota (EE. UU.), décadas de 1880 y 1890; primer animador reconocido, Minneapolis, 2 de noviembre de 1898",
+   "en": "Princeton and Minnesota universities (USA), 1880s and 1890s; first recognised cheerleader, Minneapolis, 2 November 1898"
+  },
+  "body": {
+   "es": [
+    "El cheerleading nació en el fútbol americano universitario de Estados Unidos como una forma organizada de animar a los equipos desde la grada. Según la federación internacional, Thomas Peebles, graduado en Princeton en 1882, se trasladó a Minnesota en 1884 y llevó a la universidad de ese estado la costumbre de los gritos colectivos organizados. El 2 de noviembre de 1898 un estudiante de la Universidad de Minnesota, Johnny Campbell, saltó de su asiento al campo y dirigió los cánticos del público, gesto por el que la federación lo considera el primer animador de la historia (International Cheer Union [ICU], 2018). En su origen fue, por tanto, una actividad masculina ligada al prestigio de las universidades y al espíritu de cuerpo de sus estudiantes.",
+    "La composición del cheerleading cambió con la entrada de Estados Unidos en la Segunda Guerra Mundial en 1941, cuando pasó a estar formado en su gran mayoría por mujeres, en torno a un 85 % según la federación. En 1949 Lawrence Herkimer impartió su primer curso de formación de animadores en Texas, con cincuenta y dos participantes, y fundó después la National Cheerleaders Association; en 1974 Jeff Webb creó la Universal Cheerleaders Association, y en 1982 las competiciones con música llegaron a la televisión nacional (ICU, 2018). La feminización convirtió a las animadoras en parte del espectáculo del fútbol, y el sociólogo Michael Messner ha criticado que sus cuerpos expuestos se incorporasen al relato de un juego asociado a la virilidad (Guttmann, 2004, p. 145).",
+    "A partir de esas competiciones televisadas, el cheerleading se consolidó como deporte de competición con acrobacias, pirámides y lanzamientos juzgados por paneles, y buscó una estructura internacional propia. La International Cheer Union celebró su primera reunión el 26 de abril de 2004 con trece federaciones nacionales, ingresó en SportAccord en 2013 y obtuvo el reconocimiento provisional del Comité Olímpico Internacional en 2016 (ICU, 2018). El reconocimiento pleno llegó en la 138.ª Sesión del COI, celebrada en Tokio el 20 de julio de 2021, lo que permite a la federación solicitar su inclusión en los Juegos Olímpicos (ICU, 2021)."
+   ],
+   "en": [
+    "Cheerleading was born in American college football in the United States as an organised way of supporting teams from the stands. According to the international federation, Thomas Peebles, a Princeton graduate of 1882, moved to Minnesota in 1884 and brought the custom of organised crowd cheering to that state's university. On 2 November 1898 a University of Minnesota student, Johnny Campbell, jumped from his seat onto the field and led the crowd's chants, a gesture for which the federation regards him as the first cheerleader in history (International Cheer Union [ICU], 2018). In its origins it was, therefore, a male activity tied to the prestige of the universities and to the esprit de corps of their students.",
+    "The make-up of cheerleading changed when the United States entered the Second World War in 1941, when it came to be formed overwhelmingly by women, about 85 per cent according to the federation. In 1949 Lawrence Herkimer held his first cheerleader training clinic in Texas, with fifty-two participants, and later founded the National Cheerleaders Association; in 1974 Jeff Webb created the Universal Cheerleaders Association, and in 1982 competitions with music reached national television (ICU, 2018). Feminisation turned cheerleaders into part of the football spectacle, and the sociologist Michael Messner has criticised the insertion of their exposed bodies into the narrative of a game associated with virility (Guttmann, 2004, p. 145).",
+    "Building on those televised competitions, cheerleading became established as a competitive sport with acrobatics, pyramids and tosses judged by panels, and sought an international structure of its own. The International Cheer Union held its first meeting on 26 April 2004 with thirteen national federations, joined SportAccord in 2013 and obtained provisional recognition from the International Olympic Committee in 2016 (ICU, 2018). Full recognition came at the 138th IOC Session, held in Tokyo on 20 July 2021, which allows the federation to apply for inclusion in the Olympic Games (ICU, 2021)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/cheerleading.jpg",
+   "pie": {
+    "es": "Animadores del Washington & Jefferson College (Pensilvania) en 1932, cuando la actividad era todavía mayoritariamente masculina; en el centro, el jefe de animadores William Dom.",
+    "en": "Washington & Jefferson College (Pennsylvania) cheerleaders in 1932, when the activity was still mostly male; in the centre, head cheerleader William Dom."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:WashJeff_Cheerleaders.jpg"
+  },
+  "refs": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "International Cheer Union. (2018). *History of the sport of cheer*. Recuperado el 29 de septiembre de 2026 de https://cheerunion.org/wp-content/uploads/2020/11/ICU_History_2018.pdf",
+   "International Cheer Union. (2021, 20 de julio). *International Cheer Union receives full recognition by the International Olympic Committee* [Comunicado de prensa]. PR Newswire. https://www.prnewswire.com/news-releases/international-cheer-union-receives-full-recognition-by-the-international-olympic-committee-301337601.html"
+  ],
+  "refs_en": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "International Cheer Union. (2018). *History of the sport of cheer*. Retrieved September 29, 2026, from https://cheerunion.org/wp-content/uploads/2020/11/ICU_History_2018.pdf",
+   "International Cheer Union. (2021, July 20). *International Cheer Union receives full recognition by the International Olympic Committee* [Press release]. PR Newswire. https://www.prnewswire.com/news-releases/international-cheer-union-receives-full-recognition-by-the-international-olympic-committee-301337601.html"
+  ]
+ },
+ {
+  "id": "parkour",
+  "name": {
+   "es": "Parkour",
+   "en": "Parkour"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Lisses y Évry (afueras de París, Francia), décadas de 1980 y 1990; disciplina de la federación internacional de gimnasia, 2017",
+   "en": "Lisses and Évry (outskirts of Paris, France), 1980s and 1990s; discipline of the international gymnastics federation, 2017"
+  },
+  "body": {
+   "es": [
+    "El parkour tiene un antecedente reconocido en el método natural de Georges Hébert, oficial de la Marina francesa que, tras observar desde 1896 la destreza de movimiento de los pueblos que conoció en sus destinos, empezó a probar hacia 1904 un sistema de ejercicios destinado a recuperar las habilidades prácticas del cuerpo. Raymond Belle, nacido en 1939 en la Indochina francesa y miembro desde 1954 de los bomberos militares de París, se formó en esos métodos y en el entrenamiento en recorridos de obstáculos, a los que llamaba *parcours*, palabra de la que su hijo David y sus compañeros derivaron el término *parkour* (Parkour UK, s. f.). El origen militar y utilitario del método, resumido en el lema hebertista «ser fuerte para ser útil», acompaña al parkour desde su nacimiento (Fernández Truan, s. f., p. 144).",
+    "David Belle, nacido en 1973, empezó a entrenar por su cuenta en la década de 1980 y, tras trasladarse a Lisses, reunió a un grupo de jóvenes que practicaban en el entorno urbano de esa localidad y de Évry, en las afueras de París (Parkour UK, s. f.). La federación internacional de gimnasia sitúa el comienzo de la disciplina en la década de 1990, cuando aquellos jóvenes saltaban escaleras, barreras, muros y mobiliario urbano (World Gymnastics, s. f.). En 1997 el grupo adoptó el nombre de Yamakasi; después Belle se separó y acuñó el término parkour, mientras que el resto continuó bajo la denominación de *art du déplacement* (Parkour UK, s. f.). La práctica nació, por tanto, como una forma de apropiarse del espacio de la periferia urbana.",
+    "La difusión mundial se debió al cine y a la televisión, con la película *Yamakasi* en 2001, el documental *Jump London* en 2003 y *Banlieue 13* en 2004 (Parkour UK, s. f.). En febrero de 2017 el comité ejecutivo de la federación internacional de gimnasia aprobó el desarrollo del parkour como disciplina propia, y en 2018 se lanzó su primera Copa del Mundo (World Gymnastics, s. f.). Esa decisión encontró la oposición de Parkour Earth, que agrupaba a federaciones de parkour de varios países, entre ellos Francia, Gran Bretaña y Australia, y que en agosto de 2017 reclamó ser la custodia de la filosofía y la soberanía de la disciplina frente a la gimnasia (Grassie, 2017)."
+   ],
+   "en": [
+    "Parkour has an acknowledged forerunner in the natural method of Georges Hébert, a French Navy officer who, after observing from 1896 the movement skills of the peoples he met on his postings, began around 1904 to test a system of exercises intended to recover the practical abilities of the body. Raymond Belle, born in 1939 in French Indochina and a member of the Paris military fire service from 1954, was trained in these methods and in obstacle-course training, which he called *parcours*, a word from which his son David and his companions derived the term *parkour* (Parkour UK, n.d.). The military and utilitarian origin of the method, summed up in the Hébertist motto «be strong to be useful», has accompanied parkour since its birth (Fernández Truan, n.d., p. 144).",
+    "David Belle, born in 1973, began training on his own in the 1980s and, after moving to Lisses, gathered a group of young people who practised in the urban setting of that town and of Évry, on the outskirts of Paris (Parkour UK, n.d.). The international gymnastics federation places the beginning of the discipline in the 1990s, when those young people jumped over stairs, barriers, walls and street furniture (World Gymnastics, n.d.). In 1997 the group adopted the name Yamakasi; Belle later left and coined the term parkour, while the rest continued under the name *art du déplacement* (Parkour UK, n.d.). The practice was thus born as a way of appropriating the space of the urban periphery.",
+    "Its worldwide spread was due to cinema and television, with the film *Yamakasi* in 2001, the documentary *Jump London* in 2003 and *Banlieue 13* in 2004 (Parkour UK, n.d.). In February 2017 the executive committee of the international gymnastics federation approved the development of parkour as a discipline of its own, and in 2018 its first World Cup was launched (World Gymnastics, n.d.). That decision met with the opposition of Parkour Earth, which brought together parkour federations from several countries, among them France, Britain and Australia, and which in August 2017 claimed to be the custodian of the philosophy and sovereignty of the discipline against gymnastics (Grassie, 2017)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/parkour.jpg",
+   "pie": {
+    "es": "Atletas haciendo ejercicios en el Collège d'athlètes de Reims, centro dirigido por Georges Hébert, en octubre de 1913.",
+    "en": "Athletes exercising at the Collège d'athlètes in Reims, a centre directed by Georges Hébert, in October 1913."
+   },
+   "autor": "Agence Rol",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:1-10-13,_Reims,_coll%C3%A8ge_d%27athl%C3%A8tes_(un_groupe_d%27athl%C3%A8tes_effectuant_des_exercices)_-_btv1b6927325f.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Grassie, J. (2017, 25 de agosto). Parkour organizers tell International Gymnastics Federation to back off. *NBC Sports*. https://www.nbcsports.com/olympics/news/parkour-organizers-tell-international-gymnastics-federation-to-back-off",
+   "Parkour UK. (s. f.). *A brief history of parkour*. Recuperado el 29 de septiembre de 2026 de https://parkour.uk/hub/a-brief-history-of-parkour",
+   "World Gymnastics. (s. f.). *Parkour: History*. Recuperado el 29 de septiembre de 2026 de https://www.gymnastics.sport/site/pages/disciplines/pk-history.php"
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Grassie, J. (2017, August 25). Parkour organizers tell International Gymnastics Federation to back off. *NBC Sports*. https://www.nbcsports.com/olympics/news/parkour-organizers-tell-international-gymnastics-federation-to-back-off",
+   "Parkour UK. (n.d.). *A brief history of parkour*. Retrieved September 29, 2026, from https://parkour.uk/hub/a-brief-history-of-parkour",
+   "World Gymnastics. (n.d.). *Parkour: History*. Retrieved September 29, 2026, from https://www.gymnastics.sport/site/pages/disciplines/pk-history.php"
+  ]
+ },
+ {
+  "id": "kabaddi",
+  "name": {
+   "es": "Kabaddi",
+   "en": "Kabaddi"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "India rural, origen tradicional sin fecha documentada; deporte reglado, oeste de la India, década de 1920 (primer torneo nacional, Baroda, 1923)",
+   "en": "Rural India, traditional origin with no documented date; regulated sport, western India, 1920s (first all-India tournament, Baroda, 1923)"
+  },
+  "body": {
+   "es": [
+    "El kabaddi es un juego tradicional de persecución por equipos, mucho más popular en la India rural que en las ciudades, en el que un jugador, el atacante, debe tocar a los rivales del campo contrario y regresar al suyo sin tomar aire, repitiendo un canto que contiene la palabra *kabaddi*. Recibía nombres distintos según la región, *hu-tu-tu* en Maharashtra, *chedu-gudu* en Madrás y Mysore, *jabarjang* en el Punjab o *hu-du-du* en Bengala, y se jugaba en varias modalidades (Sen, 2015, cap. 9). Se le atribuye a menudo una antigüedad remota, que algunos llevan hasta la época védica y algún manual cifra en más de cuatro mil años (Fernández Truan, s. f., p. 143), si bien ninguna de esas afirmaciones se apoya en una fuente fechada.",
+    "La primera mención del kabaddi en la India moderna data de 1911, cuando figuró entre los entretenimientos de la Badshahi Mela de Delhi, y en la década de 1920 empezó a organizarse como deporte en el oeste del país, con el primer torneo de ámbito nacional celebrado en Baroda en 1923 (Sen, 2015, cap. 9). Joseph Alter (citado en Sen, 2015, cap. 9) ha descrito ese proceso como la conversión de un juego diverso en un deporte «civilizado», adaptado por grupos nacionalistas y organismos del Estado a los criterios internacionales de reglamentación. En 1936 la Hanuman Vyayam Prasarak Mandal, una asociación nacionalista de cultura física de Maharashtra, incluyó el kabaddi en las demostraciones de juegos indios que ofreció en Berlín, invitada a un congreso pedagógico celebrado durante los Juegos Olímpicos, y en 1938 el kabaddi entró en los Juegos Olímpicos de la India (Sen, 2015, caps. 7 y 9).",
+    "Tras la independencia, el kabaddi se convirtió en emblema de un deporte autóctono frente al deporte colonial. En 1950 se fundó la All-India Kabaddi Federation, en 1951 fue el único deporte de exhibición de los Juegos Asiáticos de Delhi y Nehru lo elogió como un juego que formaba «hombres robustos» (Sen, 2015, cap. 9). En 1978 la India impulsó la Asian Amateur Kabaddi Federation, el kabaddi volvió a ser deporte de exhibición en los Juegos Asiáticos de Delhi de 1982, entró en el programa oficial en 1990 y la competición femenina se incorporó en 2010 (Sen, 2015, cap. 12). Algún manual lo presenta como deporte de exhibición de los Juegos Olímpicos de Berlín de 1936 (Fernández Truan, s. f., p. 143), cuando lo que hubo fue esa demostración al margen del programa oficial."
+   ],
+   "en": [
+    "Kabaddi is a traditional team pursuit game, far more popular in rural than in urban India, in which one player, the raider, must touch opponents in the other half of the field and return to his own without taking breath, repeating a chant that contains the word *kabaddi*. It went by different names in different regions, *hu-tu-tu* in Maharashtra, *chedu-gudu* in Madras and Mysore, *jabarjang* in the Punjab and *hu-du-du* in Bengal, and was played in several variants (Sen, 2015, chap. 9). It is often credited with a remote antiquity, which some take back to the Vedic age and one textbook puts at more than four thousand years (Fernández Truan, n.d., p. 143), although none of these claims rests on a dated source.",
+    "The first mention of kabaddi in modern India dates from 1911, when it was among the entertainments at the Badshahi Mela in Delhi, and in the 1920s it began to be organised as a sport in the west of the country, with the first all-India tournament held in Baroda in 1923 (Sen, 2015, chap. 9). Joseph Alter (cited in Sen, 2015, chap. 9) has described this process as the conversion of a diverse game into a «civilized» sport, adapted by nationalist groups and state bodies to international standards of regulation. In 1936 the Hanuman Vyayam Prasarak Mandal, a nationalist physical culture association from Maharashtra, included kabaddi in the demonstrations of Indian games it gave in Berlin, having been invited to a pedagogical congress held during the Olympic Games, and in 1938 kabaddi entered the Indian Olympic Games (Sen, 2015, chaps. 7 and 9).",
+    "After independence, kabaddi became an emblem of indigenous sport as opposed to colonial sport. The All-India Kabaddi Federation was founded in 1950, in 1951 it was the only demonstration sport at the Asian Games in Delhi, and Nehru praised it as a game that built «sturdy men» (Sen, 2015, chap. 9). In 1978 India promoted the Asian Amateur Kabaddi Federation, kabaddi was again a demonstration sport at the 1982 Asian Games in Delhi, entered the official programme in 1990, and the women's competition was added in 2010 (Sen, 2015, chap. 12). One textbook presents it as a demonstration sport at the 1936 Berlin Olympic Games (Fernández Truan, n.d., p. 143), whereas what took place was that demonstration outside the official programme."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/kabaddi.jpg",
+   "pie": {
+    "es": "Partido de kabaddi en los Juegos Asiáticos de Doha de 2006.",
+    "en": "A kabaddi match at the 2006 Asian Games in Doha."
+   },
+   "autor": "Doha 2006",
+   "licencia": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:A_Kabaddi_match_at_2006_Asian_Games.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Sen, R. (2015). *Nation at play: A history of sport in India*. Columbia University Press."
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Sen, R. (2015). *Nation at play: A history of sport in India*. Columbia University Press."
+  ]
+ },
+ {
+  "id": "sokatira-tira-y-afloja",
+  "name": {
+   "es": "Sokatira (tira y afloja)",
+   "en": "Tug of war"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Origen ritual en numerosas culturas, sin fecha documentada; deporte olímpico, 1900-1920; federación internacional, 1960",
+   "en": "Ritual origin in many cultures, with no documented date; Olympic sport, 1900-1920; international federation, 1960"
+  },
+  "body": {
+   "es": [
+    "La federación internacional reconoce que el origen del tira y afloja es difícil de precisar y lo vincula con ceremonias antiguas de pueblos muy distantes entre sí, en Egipto, Birmania, la India, Borneo, Japón, Corea, Hawái o Sudamérica, con variantes como las estacas de madera empleadas en Afganistán en lugar de cuerda, la cadena humana coreana en la que los participantes se sujetaban por la cintura o el *arsaaraq* de los inuit canadienses, que se practicaba sentado y con una cuerda corta (Tug of War International Federation [TWIF], 2018, p. 4). La propia federación sitúa su presencia en Europa hacia el año 1000 en los juegos de fuerza escandinavos y germánicos y en torneos franceses y británicos del siglo XV, afirmaciones que no documenta con fuentes.",
+    "Como prueba reglada, el tira y afloja formó parte de cinco Juegos Olímpicos consecutivos, los de París 1900, San Luis 1904, Londres 1908, Estocolmo 1912 y Amberes 1920, hasta que el Comité Olímpico Internacional decidió reducir el número de participantes y suprimió varios deportes de equipo, entre ellos este (TWIF, 2018, p. 4). La final de Londres 1908 enfrentó a dos equipos de policía británicos, el de la City de Londres y el de Liverpool. La fuerza colectiva y la disciplina del grupo, más que la destreza individual, definen desde entonces el deporte.",
+    "La iniciativa de crear una federación internacional partió en 1960 de George Hutton, de la asociación británica, y se hizo realidad con la colaboración de la asociación sueca; la primera competición internacional se celebró en Malmö en 1964, en los Juegos del Báltico, con Gran Bretaña, Suecia, Países Bajos y Dinamarca como naciones fundadoras (TWIF, 2018, p. 5). En el País Vasco la sokatira es una de las modalidades del deporte rural, en la que dos equipos de ocho tiradores, con límites de peso por categoría, compiten sobre frontón calzados con abarcas o sobre hierba con botas herradas (Gobierno Vasco, s. f.)."
+   ],
+   "en": [
+    "The international federation acknowledges that the origin of tug of war is hard to pin down and links it to ancient ceremonies of peoples far apart from one another, in Egypt, Burma, India, Borneo, Japan, Korea, Hawaii and South America, with variants such as the wooden stakes used in Afghanistan instead of rope, the Korean human chain in which participants held each other by the waist, or the *arsaaraq* of the Canadian Inuit, played seated with a short rope (Tug of War International Federation [TWIF], 2018, p. 4). The federation itself places its presence in Europe around the year 1000 in Scandinavian and Germanic power games and in French and British tournaments of the fifteenth century, claims for which it gives no sources.",
+    "As a regulated event, tug of war was part of five consecutive Olympic Games, Paris 1900, St. Louis 1904, London 1908, Stockholm 1912 and Antwerp 1920, until the International Olympic Committee decided to reduce the number of participants and removed several team sports, this one among them (TWIF, 2018, p. 4). The 1908 London final pitted two British police teams against each other, the City of London and Liverpool. Collective strength and group discipline, rather than individual skill, have defined the sport ever since.",
+    "The initiative to create an international federation came in 1960 from George Hutton, of the British association, and was carried out with the cooperation of the Swedish association; the first international competition was held in Malmö in 1964, at the Baltic Games, with Great Britain, Sweden, the Netherlands and Denmark as founding nations (TWIF, 2018, p. 5). In the Basque Country, *sokatira* is one of the disciplines of rural sport, in which two teams of eight pullers, with weight limits by category, compete on a fronton wearing *abarcas* or on grass wearing studded boots (Gobierno Vasco, s. f.)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 1,
+    "f": "caso-de-estudio",
+    "t": {
+     "es": "Caso de estudio",
+     "en": "Case study"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/sokatira-tira-y-afloja.jpg",
+   "pie": {
+    "es": "Final olímpica de tira y afloja en Londres 1908, ganada por el equipo de la policía de la City de Londres frente al de la policía de Liverpool.",
+    "en": "The Olympic tug-of-war final in London 1908, won by the City of London Police team against the Liverpool Police team."
+   },
+   "autor": "La Vie au Grand Air",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Jeux_Olympiques_de_1908,_finale_de_tir_%C3%A0_la_corde,_victoire_de_la_City_Police_sur_la_Liverpool_Police.jpg"
+  },
+  "refs": [
+   "Gobierno Vasco. (s. f.). *Deporte rural*. Euskadi.eus. Recuperado el 29 de septiembre de 2026 de https://www.euskadi.eus/deporte-autoctono/web01-a2kirola/es/deporte08_c.html",
+   "Tug of War International Federation. (2018). *TWIF rules manual* (ed. 2018). Recuperado el 29 de septiembre de 2026 de https://tugofwar-twif.org/wp-content/uploads/2019/01/TWIF-Rules-Manual-2018_Single.pdf"
+  ],
+  "refs_en": [
+   "Gobierno Vasco. (n.d.). *Deporte rural*. Euskadi.eus. Retrieved September 29, 2026, from https://www.euskadi.eus/deporte-autoctono/web01-a2kirola/es/deporte08_c.html",
+   "Tug of War International Federation. (2018). *TWIF rules manual* (2018 ed.). Retrieved September 29, 2026, from https://tugofwar-twif.org/wp-content/uploads/2019/01/TWIF-Rules-Manual-2018_Single.pdf"
+  ]
+ },
+ {
+  "id": "deporte-rural-vasco",
+  "name": {
+   "es": "Deporte rural vasco",
+   "en": "Basque rural sports"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "País Vasco y Navarra, trabajo rural tradicional sin fecha documentada; competiciones modernas en plazas de toros desde 1903",
+   "en": "Basque Country and Navarre, traditional rural work with no documented date; modern competitions in bullrings from 1903"
+  },
+  "body": {
+   "es": [
+    "El deporte rural vasco (*herri kirolak*) agrupa un conjunto de pruebas nacidas de las tareas del caserío, del bosque y del mar, entre ellas el corte de troncos de los *aizkolaris*, el levantamiento de piedra de los *harrijasotzailes*, la siega de los *segalaris*, las pruebas de bueyes (*idi dema*) y la sokatira (Gobierno Vasco, s. f.-c; Etxepare Euskal Institutua, s. f.). Según el Gobierno Vasco, las apuestas de hacha tienen su origen en el trabajo cotidiano de carboneros y leñadores, cuya fuerza física o cuyo oficio los llevaba a competir en la propia faena cruzando pequeñas apuestas (Gobierno Vasco, s. f.-a). El Instituto Etxepare remonta la aizkolaritza a la Edad Media, dato que no acompaña de ninguna fuente documental (Etxepare Euskal Institutua, s. f.).",
+    "La piedra ofreció una ocasión semejante para medir la fuerza, y en las romerías del patrón del pueblo los jóvenes buscaban objetos pesados con los que demostrarla (Gobierno Vasco, s. f.-b). El paso de esa competición informal al espectáculo reglado se produjo a comienzos del siglo XX. En 1903 las plazas de toros de Tolosa, Azpeitia, San Sebastián y Eibar empezaron a acoger pruebas de aizkolaris, y la primera gran apuesta moderna se celebró en la de Azpeitia el 27 de diciembre de ese año (Gobierno Vasco, s. f.-a). En el levantamiento de piedra, Víctor Zabala, *Arteondo*, llevó las pruebas a los espacios públicos con normas fijas y normalizó cuatro formas de piedra, el cilindro, el cubo, la esfera y el prisma rectangular (Gobierno Vasco, s. f.-b).",
+    "La apuesta fue durante mucho tiempo el marco social de estas pruebas, y en el siglo XIX los aizkolaris se identificaban más por su pueblo o su caserío que por su nombre propio (Gobierno Vasco, s. f.-a). Las apuestas de los años cincuenta llegaron a reunir unos quince mil espectadores, y con el tiempo las competiciones por apuestas convivieron con campeonatos reglados por federaciones (Gobierno Vasco, s. f.-a; Etxepare Euskal Institutua, s. f.). Hoy se reconocen oficialmente una veintena de modalidades, algunas integradas en federaciones internacionales, y mujeres y jóvenes se han incorporado a unas disciplinas tradicionalmente masculinas, ligadas a la identidad del mundo rural vasco (Etxepare Euskal Institutua, s. f.)."
+   ],
+   "en": [
+    "Basque rural sport (*herri kirolak*) brings together a set of events born of the tasks of the farmstead, the forest and the sea, among them woodchopping by *aizkolaris*, stone lifting by *harrijasotzailes*, scything by *segalaris*, ox trials (*idi dema*) and *sokatira*, or tug of war (Gobierno Vasco, n.d.-c; Etxepare Euskal Institutua, n.d.). According to the Basque Government, axe wagers originate in the daily work of charcoal burners and woodcutters, whose physical strength or skill led them to compete in the task itself while placing small bets (Gobierno Vasco, n.d.-a). The Etxepare Institute traces woodchopping back to the Middle Ages, a claim it does not support with any documentary source (Etxepare Euskal Institutua, n.d.).",
+    "Stone offered a similar opportunity to measure strength, and at the festivals of the village patron saint young men looked for heavy objects with which to prove it (Gobierno Vasco, n.d.-b). The shift from informal contest to regulated spectacle took place at the beginning of the twentieth century. In 1903 the bullrings of Tolosa, Azpeitia, San Sebastián and Eibar began to host woodchopping events, and the first great modern wager took place in the Azpeitia ring on 27 December of that year (Gobierno Vasco, n.d.-a). In stone lifting, Víctor Zabala, *Arteondo*, brought the events into public spaces with fixed rules and standardised four shapes of stone, the cylinder, the cube, the sphere and the rectangular block (Gobierno Vasco, n.d.-b).",
+    "For a long time the wager was the social framework of these contests, and in the nineteenth century *aizkolaris* were identified by their village or farmstead more than by their own names (Gobierno Vasco, n.d.-a). The wagers of the 1950s drew some fifteen thousand spectators, and over time betting contests came to coexist with championships regulated by federations (Gobierno Vasco, n.d.-a; Etxepare Euskal Institutua, n.d.). Some twenty disciplines are officially recognised today, some of them within international federations, and women and young people have taken up disciplines that were traditionally male and bound up with the identity of the Basque rural world (Etxepare Euskal Institutua, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/deporte-rural-vasco.jpg",
+   "pie": {
+    "es": "Prueba de aizkolaris en una plaza de toros de Guipúzcoa, en una fotografía de Ricardo Martín.",
+    "en": "A woodchopping contest in a bullring in Gipuzkoa, photographed by Ricardo Martín."
+   },
+   "autor": "Ricardo Martín (Kutxa Fototeka)",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Prueba_de_aizkolaris_en_una_plaza_de_toros_(1_de_2)_-_Fondo_Car-Kutxa_Fototeka.jpg"
+  },
+  "refs": [
+   "Etxepare Euskal Institutua. (s. f.). *Basque rural sports: A showcase for tradition*. Recuperado el 29 de septiembre de 2026 de https://www.etxepare.eus/en/basque-rural-sports",
+   "Gobierno Vasco. (s. f.-a). *Deporte rural: Aizkolaris*. Euskadi.eus. Recuperado el 29 de septiembre de 2026 de https://www.euskadi.eus/deporte-autoctono/web01-a2kirola/es/deporte02_c.html",
+   "Gobierno Vasco. (s. f.-b). *Deporte rural: Harrijasotzaile*. Euskadi.eus. Recuperado el 29 de septiembre de 2026 de https://www.euskadi.eus/deporte-autoctono/web01-a2kirola/es/deporte03_c.html",
+   "Gobierno Vasco. (s. f.-c). *Deporte rural*. Euskadi.eus. Recuperado el 29 de septiembre de 2026 de https://www.euskadi.eus/deporte-autoctono/web01-a2kirola/es/deporte08_c.html"
+  ],
+  "refs_en": [
+   "Etxepare Euskal Institutua. (n.d.). *Basque rural sports: A showcase for tradition*. Retrieved September 29, 2026, from https://www.etxepare.eus/en/basque-rural-sports",
+   "Gobierno Vasco. (n.d.-a). *Deporte rural: Aizkolaris*. Euskadi.eus. Retrieved September 29, 2026, from https://www.euskadi.eus/deporte-autoctono/web01-a2kirola/es/deporte02_c.html",
+   "Gobierno Vasco. (n.d.-b). *Deporte rural: Harrijasotzaile*. Euskadi.eus. Retrieved September 29, 2026, from https://www.euskadi.eus/deporte-autoctono/web01-a2kirola/es/deporte03_c.html",
+   "Gobierno Vasco. (n.d.-c). *Deporte rural*. Euskadi.eus. Retrieved September 29, 2026, from https://www.euskadi.eus/deporte-autoctono/web01-a2kirola/es/deporte08_c.html"
+  ]
+ }
+]
