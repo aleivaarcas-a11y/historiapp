@@ -47,3 +47,8 @@ Si el deporte o sus antecedentes aparecen en los temas 1 o 2 (busca con grep en 
 ## Reglas de acceso a la web (añadidas tras las primeras tandas)
 - **Prohibido usar copias de archivo, caché o espejos** (web.archive.org, archive.today, cachés de buscadores) para leer una web a la que no se llega directamente. Si una web no se puede abrir con WebFetch, se da por no disponible y se usa otra fuente. Los libros antiguos de dominio público digitalizados (por ejemplo, un libro de 1909 en archive.org) sí se pueden usar, porque no sustituyen a una web bloqueada.
 - **Las búsquedas web son limitadas y compartidas entre todos los redactores.** Haz como máximo una o dos búsquedas por deporte y ve directo a la página de historia de la federación. Si WebSearch deja de funcionar, no insistas: termina con la biblioteca las fichas que se puedan hacer con garantías y deja el resto sin hacer, explicándolo en el resumen.
+
+## Coherencia con las diapositivas de todos los temas (añadido)
+El texto de las diapositivas de Alex de los temas 1 a 11 está extraído en `~/enc/ppt/*.txt` (una línea por diapositiva, `[n] texto`). Busca ahí el deporte (grep -i) y no contradigas lo que dicen sin fuente mejor. Si una fuente sólida contradice una diapositiva, la ficha sigue a la fuente y tu resumen final lo avisa, indicando tema y número de diapositiva, para que Alex la corrija. Solo los temas 1 y 2 tienen fichas en la app, así que el campo `tema` solo puede enlazar con ellos.
+
+- **Búsqueda de fuentes en caso de duda.** Pregunta de investigación en Google Scholar Labs (https://scholar.google.es/scholar_labs/search?hl=es&authuser=0) desde el navegador de la app de escritorio; cada fuente propuesta se lee antes de citarla.

@@ -1,0 +1,594 @@
+[
+ {
+  "id": "carreras-de-caballos",
+  "name": {
+   "es": "Carreras de caballos",
+   "en": "Horse racing"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Antigüedad; como deporte moderno, Inglaterra, siglos XVII y XVIII (Newmarket, Jockey Club hacia 1750)",
+   "en": "Antiquity; as a modern sport, England, 17th and 18th centuries (Newmarket, Jockey Club c. 1750)"
+  },
+  "body": {
+   "es": [
+    "Desde el momento en que el caballo fue domado y montado, sus jinetes debieron de competir en velocidad, y hay testimonios de carreras en Sumer y en otras civilizaciones antiguas (Guttmann, 2004, p. 69). En el Egipto faraónico, en cambio, el caballo y el carro sirvieron para la guerra, la caza y la exhibición de la destreza del rey, y no se ha documentado ninguna carrera (Decker, 2021, p. 35). La condición que acompaña a todas estas prácticas es la misma, puesto que criar, alimentar y cuidar un caballo tiene un coste que solo pueden asumir unos pocos. En Gran Bretaña hay noticias de carreras en Smithfield (Londres) en el siglo XII, el Roodee de Chester se trazó como hipódromo en 1540 y en Kiplingcotes (Yorkshire) se redactaron en 1619 las reglas más antiguas que se conocen (Vamplew, 2021, p. 140).",
+    "La Restauración de 1660 hizo de Newmarket, que ya habían favorecido los Estuardo, el centro de un pasatiempo aristocrático basado en el *match* entre dos caballos y en apuestas elevadas; Carlos II fue su gran patrón, y en su reinado se importaron sementales del norte de África y de Arabia (Guttmann, 2004, p. 69; Vamplew, 2021, p. 140). Las carreras inglesas fueron de los primeros deportes con rasgos de modernidad, con distancias normalizadas, pesos para igualar la competición y cronómetros desde la década de 1730, en buena medida porque los apostantes exigían un resultado inequívoco. A comienzos de la década de 1750 un grupo de caballeros empezó a llamarse Jockey Club y en 1758 ya controlaba Newmarket; en 1773 James Weatherby comenzó a publicar el *Racing Calendar*, se crearon el St. Leger (1776), las Oaks (1779) y el Derby de Epsom (1780) para caballos de tres años, y en 1791 apareció el *General Stud Book*, registro genealógico del pura sangre (Guttmann, 2004, pp. 70-71).",
+    "Durante el siglo XIX Gran Bretaña exportó caballos, nombres de carreras y un modelo de gobierno del turf a buena parte del mundo, y las carreras fueron probablemente el deporte con más espectadores del país hasta la década de 1880 (Vamplew, 2021, p. 142). En Australia la primera reunión documentada se celebró en Hyde Park (Sídney) en 1810, y en el primer Derby de Kentucky, en 1875, catorce de los quince jinetes eran afroamericanos (Vamplew, 1999, pp. 175-176). La apuesta sostiene la economía del deporte, porque los gastos de los propietarios siempre han superado los premios y la propiedad de un caballo ha funcionado como consumo ostentoso y fuente de prestigio social (Vamplew, 1999, p. 176; Vamplew, 2021, p. 143). En 1961 las autoridades hípicas de Estados Unidos, Francia, Gran Bretaña e Irlanda empezaron a coordinarse, en 1967 crearon en París una conferencia internacional y en 1993 fundaron la International Federation of Horseracing Authorities (IFHA), que agrupa a unos sesenta miembros (International Federation of Horseracing Authorities, s. f.)."
+   ],
+   "en": [
+    "From the moment the horse was tamed and mounted, its riders must have raced, and there is evidence of races in Sumer and other ancient civilisations (Guttmann, 2004, p. 69). In pharaonic Egypt, by contrast, the horse and the chariot served war, hunting and the display of the king's skill, and no race has been documented (Decker, 2021, p. 35). The condition that accompanies all these practices is the same, since breeding, feeding and caring for a horse carries a cost that only a few can bear. In Britain there are reports of races at Smithfield (London) in the twelfth century, the Roodee at Chester was laid out as a racecourse in 1540, and the oldest known rules were drawn up at Kiplingcotes (Yorkshire) in 1619 (Vamplew, 2021, p. 140).",
+    "The Restoration of 1660 made Newmarket, already favoured by the Stuarts, the centre of an aristocratic pastime based on the match between two horses and on heavy wagers; Charles II was its great patron, and during his reign stallions were imported from North Africa and Arabia (Guttmann, 2004, p. 69; Vamplew, 2021, p. 140). English horse races were among the first sports to show features of modernity, with standardised distances, weights to equalise competition and stopwatches from the 1730s, largely because bettors demanded an unambiguous result. Early in the 1750s a group of gentlemen began to call themselves the Jockey Club, and by 1758 they controlled Newmarket; in 1773 James Weatherby began publishing the *Racing Calendar*, the St Leger (1776), the Oaks (1779) and the Derby at Epsom (1780) were created for three-year-olds, and in 1791 the *General Stud Book*, the pedigree register of the Thoroughbred, appeared (Guttmann, 2004, pp. 70-71).",
+    "During the nineteenth century Britain exported horses, race names and a model of turf governance to much of the world, and racing was probably the country's most watched sport until the 1880s (Vamplew, 2021, p. 142). In Australia the first documented meeting was held in Hyde Park (Sydney) in 1810, and at the first Kentucky Derby, in 1875, fourteen of the fifteen jockeys were African Americans (Vamplew, 1999, pp. 175-176). Betting sustains the economics of the sport, because owners' costs have always exceeded prize money and owning a horse has worked as conspicuous consumption and a source of social prestige (Vamplew, 1999, p. 176; Vamplew, 2021, p. 143). In 1961 the racing authorities of the United States, France, Great Britain and Ireland began to coordinate their action, in 1967 they created an international conference in Paris, and in 1993 they founded the International Federation of Horseracing Authorities (IFHA), which brings together some sixty members (International Federation of Horseracing Authorities, n.d.)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 2,
+    "f": "el-carro-y-los-caballos",
+    "t": {
+     "es": "El carro y los caballos",
+     "en": "The chariot and the horses"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/carreras-de-caballos.jpg",
+   "pie": {
+    "es": "Carrera en el Round Course de Newmarket, óleo de John Wootton (primera mitad del siglo XVIII).",
+    "en": "A race on the Round Course at Newmarket, oil painting by John Wootton (first half of the 18th century)."
+   },
+   "autor": {
+    "es": "John Wootton",
+    "en": "John Wootton"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:John_Wootton_(c.1682-1764)_-_A_Race_on_the_Round_Course_at_Newmarket_-_PD.1-1979_-_Fitzwilliam_Museum.jpg"
+  },
+  "refs": [
+   "Decker, W. (2021). Sport in ancient Egypt and the ancient Near East. En A. Futrell y T. F. Scanlon (Eds.), *The Oxford handbook of sport and spectacle in the ancient world* (pp. 31-46). Oxford University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "International Federation of Horseracing Authorities. (s. f.). *About IFHA*. Recuperado el 29 de septiembre de 2026 de https://ifhaonline.org/default.asp?section=Resources&story=764",
+   "Vamplew, W. (1999). Horse racing, Thoroughbred. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 173-177). Oxford University Press.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Decker, W. (2021). Sport in ancient Egypt and the ancient Near East. In A. Futrell & T. F. Scanlon (Eds.), *The Oxford handbook of sport and spectacle in the ancient world* (pp. 31-46). Oxford University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "International Federation of Horseracing Authorities. (n.d.). *About IFHA*. Retrieved September 29, 2026, from https://ifhaonline.org/default.asp?section=Resources&story=764",
+   "Vamplew, W. (1999). Horse racing, Thoroughbred. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 173-177). Oxford University Press.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "carreras-al-trote",
+  "name": {
+   "es": "Carreras al trote",
+   "en": "Harness racing"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Estados Unidos, primera mitad del siglo XIX; organización moderna con la United States Trotting Association (1939)",
+   "en": "United States, first half of the 19th century; modern organisation with the United States Trotting Association (1939)"
+  },
+  "body": {
+   "es": [
+    "Las carreras al trote nacieron en Estados Unidos a comienzos del siglo XIX como un pasatiempo de caminos rurales, calles mayores de pueblo y avenidas urbanas, en el que los granjeros medían la velocidad de sus caballos de trabajo, a menudo de la raza Morgan (Pines, 1999, p. 170; Vamplew, 2021, p. 148). A diferencia del galope, el trote obliga al caballo a mover las patas en pares diagonales, y el paso o ambladura, que también se admite, sincroniza las dos patas del mismo lado; de ahí que el nombre de *trotting* se sustituyera a finales de siglo por el de *harness racing*, que abarca las dos marchas (Vamplew, 2021, p. 148). Al principio trotones y ambladores se corrían montados, aunque pronto se enganchó el caballo al *sulky*, un carruaje ligero de dos ruedas para un solo conductor (Pines, 1999, p. 171).",
+    "A lo largo del siglo XIX el trote llegó a considerarse el gran pasatiempo nacional estadounidense, y el antiguo hipódromo de Goshen (Nueva York) fue el primer escenario deportivo del país declarado monumento histórico nacional, en recuerdo de lo que algunos consideran el primer deporte modernizado de Estados Unidos (Pines, 1999, p. 171; Vamplew, 2021, p. 148). La cría fue la base de esa modernización. El semental Messenger, llegado al país tras la Independencia, se considera el fundador de la raza, casi todos los trotones estadounidenses descienden de Hambletonian, y el suplemento de trotones que John H. Wallace añadió en 1867 al *American Stud Book* dio origen al Standardbred, cuyo registro se cerró pronto a las genealogías dudosas (Pines, 1999, pp. 170-171). En 1892 el *sulky* de ruedas de bicicleta desplazó a los de rueda alta, más lentos (Pines, 1999, p. 171).",
+    "En 1939 la creación de la United States Trotting Association unificó el deporte, y en 1940 las carreras nocturnas con luz artificial del Roosevelt Raceway (Westbury, Nueva York) lo transformaron en un espectáculo de masas sostenido por la apuesta mutua, al que se sumaron después los autos de salida móviles, que redujeron las salidas nulas (Pines, 1999, p. 171; Vamplew, 2021, p. 149). El trote arraigó también en Europa y en Australia; Suecia y Australia adoptaron el modelo estadounidense de pistas grandes y salida móvil (Vamplew, 2021, p. 149), mientras que la Union Européenne du Trot (UET) se fundó en 1973 por nueve países, Alemania, Austria, Bélgica, Dinamarca, Francia, Italia, Países Bajos, Noruega y Suecia (Union Européenne du Trot, s. f.). A diferencia de otras disciplinas, el conductor puede competir muchos años si mantiene la forma, y durante mucho tiempo se consideró un deporte de hombres mayores (Pines, 1999, p. 172)."
+   ],
+   "en": [
+    "Harness racing was born in the United States in the early nineteenth century as a pastime on country roads, village main streets and city avenues, in which farmers tested the speed of their workhorses, often of the Morgan breed (Pines, 1999, p. 170; Vamplew, 2021, p. 148). Unlike the gallop, the trot makes the horse move its legs in diagonal pairs, while the pace, which is also allowed, synchronises the two legs on the same side; hence the name *trotting* was replaced at the end of the century by *harness racing*, which covers both gaits (Vamplew, 2021, p. 148). At first trotters and pacers were raced under saddle, but they were soon hitched to the *sulky*, a light two-wheeled carriage for a single driver (Pines, 1999, p. 171).",
+    "Over the nineteenth century trotting came to be regarded as the great American national pastime, and the old track at Goshen (New York) was the first sporting site in the country to be designated a National Historic Landmark, in memory of what some regard as the first modernised sport in the United States (Pines, 1999, p. 171; Vamplew, 2021, p. 148). Breeding was the basis of that modernisation. The stallion Messenger, who arrived after Independence, is regarded as the founder of the breed, almost all American trotters descend from Hambletonian, and the trotting supplement that John H. Wallace added to the *American Stud Book* in 1867 gave rise to the Standardbred, whose register was soon closed to doubtful pedigrees (Pines, 1999, pp. 170-171). In 1892 the bicycle-wheeled sulky displaced the slower high-wheeled models (Pines, 1999, p. 171).",
+    "In 1939 the creation of the United States Trotting Association unified the sport, and in 1940 floodlit night racing at Roosevelt Raceway (Westbury, New York) turned it into a mass spectacle sustained by pari-mutuel betting, later joined by mobile starting gates that reduced false starts (Pines, 1999, p. 171; Vamplew, 2021, p. 149). Trotting also took root in Europe and Australia; Sweden and Australia adopted the American model of large tracks and mobile starts (Vamplew, 2021, p. 149), while the Union Européenne du Trot (UET) was founded in 1973 by nine countries, Germany, Austria, Belgium, Denmark, France, Italy, the Netherlands, Norway and Sweden (Union Européenne du Trot, n.d.). Unlike other disciplines, a driver can compete for many years if he keeps fit, and for a long time it was regarded as an old man's sport (Pines, 1999, p. 172)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/carreras-al-trote.jpg",
+   "pie": {
+    "es": "El semental Ethan Allen, en tiro doble, compite contra Dexter enganchado a un *sulky* en el Fashion Course de Long Island, el 21 de junio de 1867; litografía de Currier & Ives.",
+    "en": "The stallion Ethan Allen, in double harness, races against Dexter hitched to a sulky on the Fashion Course, Long Island, 21 June 1867; lithograph by Currier & Ives."
+   },
+   "autor": {
+    "es": "Currier & Ives",
+    "en": "Currier & Ives"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:The_celebrated_trotting_Stallion_Ethan_Allen_in_double_harness,_with_running_mate-_Driven_by_Dan_Mace,_trotting_against_Dexter_to_Sulky_on_the_fashion_course,_L.I._June_21st_1867,_winning_in_LCCN90715692.jpg"
+  },
+  "refs": [
+   "Pines, P. A. (1999). Horse racing, harness (trotting). En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 170-172). Oxford University Press.",
+   "Union Européenne du Trot. (s. f.). *Presentation of the UET*. Recuperado el 29 de septiembre de 2026 de https://www.uet-trot.eu/en/presentation-uet/",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Pines, P. A. (1999). Horse racing, harness (trotting). In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 170-172). Oxford University Press.",
+   "Union Européenne du Trot. (n.d.). *Presentation of the UET*. Retrieved September 29, 2026, from https://www.uet-trot.eu/en/presentation-uet/",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "palio-de-siena",
+  "name": {
+   "es": "Palio de Siena",
+   "en": "Palio di Siena"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Siena (Italia), carreras de *palio* desde la Edad Media; primer palio «a la redonda» en la Piazza del Campo, 1633",
+   "en": "Siena (Italy), *palio* races since the Middle Ages; first palio run «in the round» in the Piazza del Campo, 1633"
+  },
+  "body": {
+   "es": [
+    "El Palio de Siena es el superviviente más célebre de una tradición que ocupó a casi todas las ciudades del norte y el centro de Italia. Las carreras de *palio*, documentadas desde el siglo XIII, tomaban el nombre del estandarte que se entregaba como premio (Renson, 1999, p. 413) y formaban un calendario que iba de febrero a noviembre; Roma, Bolonia, Siena y Ferrara celebraban varias al año, y Florencia llegó a organizar siete entre junio y octubre, desde el Palio di San Giovanni, el más prestigioso de Italia, hasta el del gremio de tintoreros (Vamplew, 2021, p. 138). Se corrían en las fiestas de los santos, dentro del tiempo de juego que concedía el calendario religioso (Baker, 1999, p. 319), y vivieron su apogeo a finales del siglo XV y comienzos del XVI (Vamplew, 2021, p. 138). En Siena las contradas, los barrios que hoy protagonizan la fiesta, dejan rastro documental desde el siglo XV (Comune di Siena, s. f.).",
+    "El paso decisivo fue trasladar la carrera a la plaza mayor. Según el Ayuntamiento de Siena, el primer palio corrido «a la redonda» en la Piazza del Campo parece remontarse a 1633 (Comune di Siena, s. f.), y a esa fecha asocia Vamplew (2021, pp. 138-139) el palio de julio, dedicado a la Virgen de Provenzano, al que desde 1701 se sumó el de agosto, coincidente con la fiesta de la Asunción. Sobre la plaza se extiende una gruesa capa de tierra, y la carrera, precedida de un cortejo histórico, consiste en tres vueltas de unos treinta segundos cada una, con jinetes que montan sin silla y caen con frecuencia en las curvas cerradas. En el siglo XVIII, por razones de seguridad, el número de caballos se limitó a diez, de modo que las siete contradas que se quedan fuera corren la edición siguiente y las tres plazas restantes se sortean (Vamplew, 2021, p. 139).",
+    "El Palio no depende de ninguna federación deportiva, puesto que lo organiza el Ayuntamiento y lo sostienen las diecisiete contradas, para las que la victoria es ante todo una cuestión de identidad de barrio. Hasta junio de 2013 las fuentes documentan 385 palios corridos en el Campo por las contradas actuales (Comune di Siena, s. f.). Su continuidad lo ha convertido en uno de los ejemplos más citados de juego tradicional europeo y en una atracción turística de alcance internacional (Renson, 1999, p. 413), sin que haya perdido su carácter de rito cívico, con una estética de raíz medieval y renacentista que se mantiene en los trajes, las banderas y el cortejo."
+   ],
+   "en": [
+    "The Palio of Siena is the most famous survivor of a tradition that involved almost every city in northern and central Italy. *Palio* races, documented since the thirteenth century, took their name from the banner given as a prize (Renson, 1999, p. 413) and formed a calendar running from February to November; Rome, Bologna, Siena and Ferrara held several each year, and Florence came to stage seven between June and October, from the Palio di San Giovanni, the most prestigious in Italy, to that of the dyers' guild (Vamplew, 2021, p. 138). They were run on saints' days, within the time for play that the religious calendar allowed (Baker, 1999, p. 319), and reached their heyday in the late fifteenth and early sixteenth centuries (Vamplew, 2021, p. 138). In Siena the contrade, the wards that lead the festival today, leave documentary traces from the fifteenth century (Comune di Siena, n.d.).",
+    "The decisive step was moving the race into the main square. According to the City of Siena, the first palio run «in the round» in the Piazza del Campo appears to date from 1633 (Comune di Siena, n.d.), and Vamplew (2021, pp. 138-139) links that date to the July palio, dedicated to the Madonna of Provenzano, which from 1701 was joined by the August race, coinciding with the Feast of the Assumption. A thick layer of earth is spread over the square, and the race, preceded by a historical pageant, consists of three laps of about thirty seconds each, with riders who ride bareback and frequently fall on the tight turns. In the eighteenth century, for safety reasons, the number of horses was limited to ten, so that the seven contrade left out run in the following edition and the three remaining places are drawn by lot (Vamplew, 2021, p. 139).",
+    "The Palio depends on no sports federation, since it is organised by the City Council and sustained by the seventeen contrade, for whom victory is above all a matter of neighbourhood identity. Up to June 2013 the sources document 385 palios run in the Campo by the present contrade (Comune di Siena, n.d.). Its continuity has made it one of the most frequently cited examples of European traditional games and an internationally known tourist attraction (Renson, 1999, p. 413), without losing its character as a civic rite, with an aesthetic of medieval and Renaissance roots that survives in the costumes, the banners and the pageant."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/palio-de-siena.jpg",
+   "pie": {
+    "es": "Palio corrido en la Piazza del Campo el 17 de abril de 1904 en honor del rey Víctor Manuel III, que lo presenció desde los balcones del Circolo degli Uniti.",
+    "en": "Palio run in the Piazza del Campo on 17 April 1904 in honour of King Victor Emmanuel III, who watched it from the balconies of the Circolo degli Uniti."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:S.M._Vittorio_Emanuele_III_assiste_al_Palio_dal_Circolo_degli_Uniti_17_Aprile_1904.jpg"
+  },
+  "refs": [
+   "Baker, W. J. (1999). Religion. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 317-322). Oxford University Press.",
+   "Comune di Siena. (s. f.). *La storia*. Recuperado el 29 de septiembre de 2026 de https://palio.comune.siena.it/node/77",
+   "Renson, R. (1999). Traditional sports, Europe. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 411-414). Oxford University Press.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Baker, W. J. (1999). Religion. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 317-322). Oxford University Press.",
+   "Comune di Siena. (n.d.). *La storia*. Retrieved September 29, 2026, from https://palio.comune.siena.it/node/77",
+   "Renson, R. (1999). Traditional sports, Europe. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 411-414). Oxford University Press.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "cetreria",
+  "name": {
+   "es": "Cetrería",
+   "en": "Falconry"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Asia y Oriente Próximo, posiblemente hacia el 2000 a. C.; auge en la Europa medieval; patrimonio inmaterial de la UNESCO desde 2010",
+   "en": "Asia and the Middle East, possibly around 2000 BCE; heyday in medieval Europe; UNESCO intangible heritage since 2010"
+  },
+  "body": {
+   "es": [
+    "La cetrería es la caza con aves de presa adiestradas, halcones y, en ocasiones, águilas, azores, gavilanes o busardos, que el cetrero suelta para que capturen la pieza y vuelvan a su puño (Townes, 1999, p. 125; UNESCO, s. f.). Se cree que nació en Asia y en Oriente Próximo, quizá hacia el 2000 a. C., y la UNESCO le atribuye más de cuatro mil años de práctica; en su origen fue un medio de obtener alimento y con el tiempo adquirió valores sociales y recreativos (Townes, 1999, p. 125; UNESCO, s. f.). A Europa llegó en los siglos posteriores al cambio de era, y los romanos, que preferían la caza con perros, también cazaban con halcón y gavilán, como recoge Plinio (Fernández Truan, s. f., p. 191). Su adiestramiento, lento y minucioso, generó un vocabulario técnico propio que se remonta a sus primeros tiempos (Townes, 1999, p. 126).",
+    "En la Europa medieval la cetrería se convirtió en el deporte de estatus por excelencia. Los grandes linajes tenían halconeros profesionales, intercambiaban aves y las regalaban al monarca, y la heráldica recurrió al halcón para expresar poder (Vamplew, 2021, p. 122). La jerarquía social se leía incluso en el ave, puesto que la realeza cazaba con el gerifalte, los condes con el peregrino, las damas con el esmerejón y los criados con el cernícalo, y tratados como el *Boke of St. Albans* (1486) codificaron sus normas (Guttmann, 2004, p. 58). A diferencia de otras formas de caza, las mujeres de la nobleza la practicaban con normalidad, y los manuscritos iluminados abundan en damas con halcones, en lo que Guttmann (2004, p. 58) llama una iconografía de la jerarquía (Fernández Truan, s. f., p. 191).",
+    "A finales del siglo XVII la cetrería perdió importancia. La monarquía dejó de practicarla y las fincas sustituyeron a los halconeros por guardas, perreros y armeros, porque el arma de fuego, que tenía una utilidad militar y mejoraba sin cesar, dio lugar a la caza con escopeta, mientras la cetrería conservaba una técnica casi medieval (Vamplew, 2021, p. 122). Sobrevivió gracias a practicantes individuales y a asociaciones regionales y nacionales, y en el siglo XX tuvo que adaptarse a la protección legal de las rapaces y a programas de cría en cautividad (Townes, 1999, p. 125). En 2010 el Comité del Patrimonio Inmaterial de la UNESCO inscribió la cetrería en su Lista Representativa a propuesta de once Estados, entre ellos España, y en 2021 la candidatura ampliada reunía a veinticuatro países que la transmiten en familias, mediante tutores o en clubes (UNESCO, 2010, s. f.)."
+   ],
+   "en": [
+    "Falconry is hunting with trained birds of prey, falcons and sometimes eagles, goshawks, sparrowhawks or buzzards, which the falconer releases to catch the quarry and return to the fist (Townes, 1999, p. 125; UNESCO, n.d.). It is believed to have originated in Asia and the Middle East, perhaps around 2000 BCE, and UNESCO credits it with more than four thousand years of practice; originally a means of obtaining food, it acquired social and recreational values over time (Townes, 1999, p. 125; UNESCO, n.d.). It reached Europe in the centuries after the start of the common era, and the Romans, who preferred hunting with dogs, also hunted with falcon and sparrowhawk, as Pliny records (Fernández Truan, n.d., p. 191). Its slow and meticulous training produced a technical vocabulary of its own that dates back to its early days (Townes, 1999, p. 126).",
+    "In medieval Europe falconry became the status sport par excellence. Great families kept professional falconers, exchanged birds and gave them to the monarch, and heraldry used the falcon to express power (Vamplew, 2021, p. 122). Social hierarchy could be read even in the bird, since royalty hunted with the gyrfalcon, earls with the peregrine, ladies with the merlin and servants with the kestrel, and treatises such as the *Boke of St. Albans* (1486) codified its rules (Guttmann, 2004, p. 58). Unlike other forms of hunting, noblewomen practised it as a matter of course, and illuminated manuscripts abound with ladies holding falcons, in what Guttmann (2004, p. 58) calls an iconography of hierarchy (Fernández Truan, n.d., p. 191).",
+    "By the end of the seventeenth century falconry had lost importance. The monarchy stopped practising it and estates replaced falconers with gamekeepers, houndsmen and gunsmiths, because the firearm, which had a military use and kept improving, gave rise to shooting, while falconry kept an almost medieval technique (Vamplew, 2021, p. 122). It survived thanks to individual practitioners and to regional and national associations, and in the twentieth century it had to adapt to the legal protection of raptors and to captive breeding programmes (Townes, 1999, p. 125). In 2010 UNESCO's Intangible Heritage Committee inscribed falconry on its Representative List at the proposal of eleven States, Spain among them, and by 2021 the extended nomination brought together twenty-four countries that transmit it within families, through mentors or in clubs (UNESCO, 2010, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/cetreria.jpg",
+   "pie": {
+    "es": "Halconeros con sus aves, detalle de una miniatura del tratado de cetrería de Federico II, *De arte venandi cum avibus* (siglo XIII).",
+    "en": "Falconers with their birds, detail of a miniature from Frederick II's falconry treatise, *De arte venandi cum avibus* (13th century)."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Falconry_Book_of_Frederick_II_1240s_detail_falconers.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Townes, J. (1999). Falconry. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 125-126). Oxford University Press.",
+   "UNESCO. (2010). *Decision of the Intergovernmental Committee: 5.COM 6.45*. Recuperado el 29 de septiembre de 2026 de https://ich.unesco.org/en/decisions/5.COM/6.45",
+   "UNESCO. (s. f.). *Falconry, a living human heritage*. Recuperado el 29 de septiembre de 2026 de https://ich.unesco.org/en/RL/falconry-a-living-human-heritage-01708",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Townes, J. (1999). Falconry. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 125-126). Oxford University Press.",
+   "UNESCO. (2010). *Decision of the Intergovernmental Committee: 5.COM 6.45*. Retrieved September 29, 2026, from https://ich.unesco.org/en/decisions/5.COM/6.45",
+   "UNESCO. (n.d.). *Falconry, a living human heritage*. Retrieved September 29, 2026, from https://ich.unesco.org/en/RL/falconry-a-living-human-heritage-01708",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "cirit",
+  "name": {
+   "es": "Cirit",
+   "en": "Cirit (jereed)"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Mundo turco de Asia central y Anatolia, desde el siglo XI; hoy deporte tradicional reglado en Turquía",
+   "en": "Turkic world of Central Asia and Anatolia, from the 11th century; today a regulated traditional sport in Turkey"
+  },
+  "body": {
+   "es": [
+    "El *cirit*, llamado *jereed* en las fuentes persas y en los apuntes de la asignatura, es un juego de jabalina a caballo que se desarrolló desde el siglo XI como adiestramiento militar de la caballería, pensado para entrenar el ataque y la huida en combate. La tradición turca lo atribuye a los pueblos turcos de Asia central, que lo habrían creado para mantener en forma a jinetes y caballos en tiempo de paz (Koçan, 2007, p. 34). Chehabi y Guttmann (2002, p. 391) señalan que los turcos selyúcidas y, después, los otomanos conocían el chovgan persa, del que deriva el polo, aunque en Anatolia preferían el *cirit*, de modo que este juego se convirtió en la práctica ecuestre característica del mundo turco. Como todas las prácticas hípicas, dependía de disponer de caballo, lo que lo vinculaba al ejército y a las élites capaces de mantenerlo.",
+    "El juego enfrenta a dos equipos de ocho a diez jinetes en campo abierto. Uno de ellos se acerca al bando contrario, lanza su jabalina y huye al galope, mientras los rivales lo persiguen y le arrojan jabalinas de madera sin punta; se puntúa por acertar al cuerpo del perseguido, sacarlo del campo o atraparlo, y el perseguido suma si coge una jabalina en el aire, mientras que golpear al caballo, caer o lanzar desde una zona prohibida resta puntos (Ubaidulloev, 2015). En la corte otomana el *cirit* llegó a ser un gran juego de ceremonia y exhibición, y los sultanes dispusieron campos para practicarlo en sus palacios (Koçan, 2007, p. 36); según la misma autora, Mahmud II lo prohibió durante un tiempo en 1826, afectado por la muerte de un jugador alcanzado por una jabalina.",
+    "Tras la desaparición de su función militar, el *cirit* sobrevivió en el medio rural de Anatolia como juego de fiesta y como símbolo de la herencia ecuestre turca, y la literatura turca lo presenta como un deporte nacional que reúne valor, deportividad e historia y que se sigue jugando y contemplando con interés en muchas provincias (Koçan, 2007, p. 37). La reglamentación moderna corrió primero a cargo de la Federación de Deportes Tradicionales de Turquía (Koçan, 2007), y hoy el *cirit* a caballo depende de la Türkiye Geleneksel Atlı Spor Dalları Federasyonu, que rige también el tiro con arco a caballo, el *kökbörü* y otras disciplinas ecuestres tradicionales (Türkiye Geleneksel Atlı Spor Dalları Federasyonu, s. f.). No existe una federación internacional ni ha entrado en programas olímpicos, y su valor es sobre todo identitario."
+   ],
+   "en": [
+    "*Cirit*, called *jereed* in Persian sources and in the course notes, is a javelin game on horseback that developed from the eleventh century as military training for cavalry, designed to practise attack and retreat in combat. Turkish tradition attributes it to the Turkic peoples of Central Asia, who are said to have created it to keep riders and horses fit in peacetime (Koçan, 2007, p. 34). Chehabi and Guttmann (2002, p. 391) note that the Seljuk and later the Ottoman Turks knew Persian chovgan, from which polo derives, although in Anatolia they preferred *cirit*, so that this game became the characteristic equestrian practice of the Turkic world. Like all equestrian practices, it depended on owning a horse, which tied it to the army and to the elites able to keep one.",
+    "The game pits two teams of eight to ten riders against each other in open ground. One rider approaches the opposing side, throws his javelin and flees at a gallop, while his rivals chase him and hurl blunted wooden javelins at him; points are scored for hitting the pursued rider's body, driving him off the field or catching him, and the pursued rider scores if he catches a javelin in mid-air, while hitting the horse, falling or throwing from a forbidden zone costs points (Ubaidulloev, 2015). At the Ottoman court *cirit* became a great game of ceremony and display, and the sultans laid out grounds for it in their palaces (Koçan, 2007, p. 36); according to the same author, Mahmud II banned it for a time in 1826, distressed by the death of a player struck by a javelin.",
+    "Once its military function had disappeared, *cirit* survived in rural Anatolia as a festive game and as a symbol of the Turkish equestrian heritage, and Turkish literature presents it as a national sport combining courage, sportsmanship and history that is still played and watched with interest in many provinces (Koçan, 2007, p. 37). Modern regulation was first in the hands of the Turkish Traditional Sports Federation (Koçan, 2007), and today mounted *cirit* falls under the Türkiye Geleneksel Atlı Spor Dalları Federasyonu, which also governs mounted archery, *kökbörü* and other traditional equestrian disciplines (Türkiye Geleneksel Atlı Spor Dalları Federasyonu, n.d.). There is no international federation and it has not entered any Olympic programme, and its value is above all a matter of identity."
+   ]
+  },
+  "tema": [
+   {
+    "num": 2,
+    "f": "jereed",
+    "t": {
+     "es": "Jereed",
+     "en": "Jereed"
+    }
+   },
+   {
+    "num": 2,
+    "f": "deportes-hipicos",
+    "t": {
+     "es": "Deportes hípicos",
+     "en": "Equestrian sports"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/cirit.jpg",
+   "pie": {
+    "es": "Dos jinetes jugando al *cirit*, lanzándose jabalinas a caballo; obra de un artista griego anónimo, hacia 1809.",
+    "en": "Two riders playing *cirit*, throwing javelins at each other on horseback; work by an anonymous Greek artist, c. 1809."
+   },
+   "autor": {
+    "es": "Artista griego anónimo",
+    "en": "Anonymous Greek artist"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Two_men_playing_cirid.jpg"
+  },
+  "refs": [
+   "Chehabi, H. E., y Guttmann, A. (2002). From Iran to all of Asia: The origin and diffusion of polo. *The International Journal of the History of Sport*, *19*(2-3), 384-400.",
+   "Koçan, N. (2007). Geleneksel sporlarımızdan ciritin rekreasyon amacı ile günümüze uyarlanması. *Spor Yönetimi ve Bilgi Teknolojileri Dergisi*, *2*(1), 31-39. https://dergipark.org.tr/tr/download/article-file/118071",
+   "Ubaidulloev, Z. (2015). The history and characteristics of traditional sports in Central Asia: Tajikistan. *Bulletin of the Faculty of Health and Sport Sciences, University of Tsukuba*, *38*, 43-58.",
+   "Türkiye Geleneksel Atlı Spor Dalları Federasyonu. (s. f.). *Inicio*. Recuperado el 29 de septiembre de 2026 de https://www.tgasdf.gov.tr/"
+  ],
+  "refs_en": [
+   "Chehabi, H. E., & Guttmann, A. (2002). From Iran to all of Asia: The origin and diffusion of polo. *The International Journal of the History of Sport*, *19*(2-3), 384-400.",
+   "Koçan, N. (2007). Geleneksel sporlarımızdan ciritin rekreasyon amacı ile günümüze uyarlanması. *Spor Yönetimi ve Bilgi Teknolojileri Dergisi*, *2*(1), 31-39. https://dergipark.org.tr/tr/download/article-file/118071",
+   "Ubaidulloev, Z. (2015). The history and characteristics of traditional sports in Central Asia: Tajikistan. *Bulletin of the Faculty of Health and Sport Sciences, University of Tsukuba*, *38*, 43-58.",
+   "Türkiye Geleneksel Atlı Spor Dalları Federasyonu. (n.d.). *Home*. Retrieved September 29, 2026, from https://www.tgasdf.gov.tr/"
+  ]
+ },
+ {
+  "id": "kambala",
+  "name": {
+   "es": "Kambala",
+   "en": "Kambala (buffalo racing)"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Costa de Karnataka (India), tierra tulu, práctica ritual agraria sin fecha de origen documentada; como carrera competitiva, desde finales de la década de 1960",
+   "en": "Coastal Karnataka (India), Tulu country, an agrarian ritual practice with no documented date of origin; as a competitive race, from the late 1960s"
+  },
+  "body": {
+   "es": [
+    "La *kambala* es una carrera de búfalos que se celebra en los distritos costeros de Dakshina Kannada y Udupi, en el estado indio de Karnataka, dentro de la región de lengua tulu. Su origen es agrario y ritual, y las fuentes consultadas no permiten fecharlo. En su forma tradicional se celebraba después de noviembre, en arrozales inundados tras arar para la segunda cosecha, y era a la vez rito y recreo; según el profesor K. Chinnappa Gowda, en las versiones no competitivas los búfalos se conducían alrededor de un poste propicio, se ofrecía leche, se veneraba a la serpiente (Naga) y se rezaba por la fertilidad de la tierra, y todavía se celebran docenas de ellas en ambos distritos (Shoba, 2026).",
+    "La competición llegó a la *kambala* poco a poco, y las carreras propiamente dichas empezaron a finales de la década de 1960, con pistas dobles y nuevas categorías (Shoba, 2026). En cada carrera una pareja de búfalos uncidos recorre una pista de barro, conducida por un hombre que sujeta una cuerda o va de pie sobre una tabla enganchada detrás de los animales, y las mejores parejas cubren el recorrido en poco más de once segundos (Shoba, 2026). El circuito profesional va de noviembre a marzo y reúne entre veintitrés y veintiséis pruebas, y en noviembre de 2023 la carrera salió de la costa con una edición en el Palace Grounds de Bangalore, con 159 parejas sobre una pista de 155 metros (Shoba, 2026).",
+    "Como en el *jallikattu* de Tamil Nadu, el conflicto entre tradición y bienestar animal ha marcado su historia reciente. En 2014 el Tribunal Supremo de la India prohibió el *jallikattu* y otras prácticas semejantes en el caso *Animal Welfare Board of India contra A. Nagaraja*, y Karnataka respondió en 2017 con una reforma de su ley de prevención de la crueldad con los animales que exceptuaba la *kambala* (Ghai, 2023; Shoba, 2026). El 18 de mayo de 2023 un tribunal de cinco jueces avaló esas reformas al considerar que las normas ofrecían garantías suficientes contra el maltrato (Ghai, 2023), y en marzo de 2026 el mismo tribunal rechazó la pretensión de PETA de limitar la carrera a los dos distritos costeros (Shoba, 2026). No hay federación internacional, y la polémica que ha provocado cada salida de la carrera fuera de la costa muestra hasta qué punto se ha convertido en emblema de la cultura tulu (Shoba, 2026)."
+   ],
+   "en": [
+    "*Kambala* is a buffalo race held in the coastal districts of Dakshina Kannada and Udupi, in the Indian state of Karnataka, within the Tulu-speaking region. Its origin is agrarian and ritual, and the sources consulted do not allow it to be dated. In its traditional form it took place after November, in paddy fields flooded after ploughing for the second crop, and it was both rite and recreation; according to Professor K. Chinnappa Gowda, in the non-competitive versions the buffaloes were led around an auspicious post, milk was offered, the serpent (Naga) was worshipped and prayers were made for the fertility of the land, and dozens of them are still held in both districts (Shoba, 2026).",
+    "Competition came to *kambala* by degrees, and racing proper began in the late 1960s, with dual tracks and new categories (Shoba, 2026). In each race a pair of yoked buffaloes runs down a track of mud, driven by a man holding a rope or standing on a plank hitched behind the animals, and the best pairs cover the course in just over eleven seconds (Shoba, 2026). The professional circuit runs from November to March and comprises twenty-three to twenty-six events, and in November 2023 the race left the coast with an edition at the Palace Grounds in Bengaluru, with 159 pairs on a 155-metre track (Shoba, 2026).",
+    "As with *jallikattu* in Tamil Nadu, the conflict between tradition and animal welfare has shaped its recent history. In 2014 the Supreme Court of India banned *jallikattu* and similar practices in *Animal Welfare Board of India v. A. Nagaraja*, and Karnataka responded in 2017 with an amendment to its prevention of cruelty to animals law that exempted *kambala* (Ghai, 2023; Shoba, 2026). On 18 May 2023 a five-judge bench upheld those amendments, finding that the rules provided adequate safeguards against cruelty (Ghai, 2023), and in March 2026 the same court rejected PETA's attempt to confine the race to the two coastal districts (Shoba, 2026). There is no international federation, and the controversy provoked by each attempt to take the race away from the coast shows how far it has become an emblem of Tulu culture (Shoba, 2026)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/kambala.jpg",
+   "pie": {
+    "es": "Carrera de *kambala* en el pueblo de Vandar, distrito de Udupi (Karnataka), con una pareja de búfalos lanzada por la pista de barro.",
+    "en": "*Kambala* race at Vandar village, Udupi district (Karnataka), with a pair of buffaloes charging down the mud track."
+   },
+   "autor": {
+    "es": "Rayabhari",
+    "en": "Rayabhari"
+   },
+   "licencia": {
+    "es": "CC BY-SA 3.0",
+    "en": "CC BY-SA 3.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Kambala,_he-buffalo_race_at_Vandar_village,_Udupi_Dist.,_Kar._India.jpg"
+  },
+  "refs": [
+   "Ghai, R. (18 de mayo de 2023). Jallikattu, Kambala can go on in Tamil Nadu and Karnataka, rules Supreme Court. *Down To Earth*. https://www.downtoearth.org.in/governance/jallikattu-kambala-can-go-on-in-tamil-nadu-and-karnataka-rules-supreme-court-89425",
+   "Shoba, V. (8 de agosto de 2026). Mudslinging time: A proposal to hold a coastal buffalo race has ignited a culture war in Karnataka. *Open*. https://openthemagazine.com/art-culture/mudslinging-time-a-proposal-to-hold-a-coastal-buffalo-race-has-ignited-a-culture-war-in-karnataka"
+  ],
+  "refs_en": [
+   "Ghai, R. (2023, May 18). Jallikattu, Kambala can go on in Tamil Nadu and Karnataka, rules Supreme Court. *Down To Earth*. https://www.downtoearth.org.in/governance/jallikattu-kambala-can-go-on-in-tamil-nadu-and-karnataka-rules-supreme-court-89425",
+   "Shoba, V. (2026, August 8). Mudslinging time: A proposal to hold a coastal buffalo race has ignited a culture war in Karnataka. *Open*. https://openthemagazine.com/art-culture/mudslinging-time-a-proposal-to-hold-a-coastal-buffalo-race-has-ignited-a-culture-war-in-karnataka"
+  ]
+ },
+ {
+  "id": "lanzamiento-de-herraduras",
+  "name": {
+   "es": "Lanzamiento de herraduras",
+   "en": "Horseshoe pitching"
+  },
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Derivado del *quoits* inglés; como deporte organizado, Estados Unidos, 1909-1921 (Kansas, primeros torneos; National Horseshoe Pitchers Association, 1921)",
+   "en": "Derived from English quoits; as an organised sport, United States, 1909-1921 (Kansas, first tournaments; National Horseshoe Pitchers Association, 1921)"
+  },
+  "body": {
+   "es": [
+    "El lanzamiento de herraduras consiste en arrojar una herradura para rodear con ella una estaca clavada en el suelo o dejarla lo más cerca posible, igual que el *quoits* hace con un aro de metal (Trevithick, 1999, p. 188). Su origen se explica mediante relatos que no pueden comprobarse. El más repetido sostiene que los oficiales romanos de la Britania ocupada jugaban al *quoits* con aros de hierro fabricados a propósito y que los soldados rasos, que no podían costearlos, usaron herraduras desechadas, y la federación estadounidense recoge una versión semejante que atribuye la costumbre a los acompañantes de los ejércitos griegos, incapaces de pagarse un disco (Trevithick, 1999, p. 188; National Horseshoe Pitchers Association, s. f.). Lo seguro es su parentesco con el *quoits*, juego de aros muy antiguo que se practicaba en Inglaterra desde el siglo XIV (Trevithick, 1999, p. 188).",
+    "En Estados Unidos el juego fue durante mucho tiempo una diversión informal, y la federación sitúa el impulso decisivo en los campamentos de la Unión durante la Guerra de Secesión, donde los soldados lanzaban herraduras de mula (National Horseshoe Pitchers Association, s. f.). La primera competición se celebró, al parecer, en 1905 en Manhattan (Kansas), y el primer torneo abierto al mundo se disputó en Bronson (Kansas), en 1909 según Trevithick (1999, p. 188) y en el verano de 1910 según la federación. El 16 de mayo de 1914 se constituyó en Kansas City la Grand League of the American Horseshoe Pitchers Association, en 1919 se fundó en St. Petersburg (Florida) la National League of Horseshoe and Quoit Pitchers, con representantes de 29 estados, y el 10 de mayo de 1921 se registró en Ohio la National Horseshoe Pitchers Association (National Horseshoe Pitchers Association, s. f.).",
+    "La técnica se refinó en la década de 1920, cuando George May popularizó un lanzamiento con giro de una vuelta y cuarto que le permitió encadenar la mitad de sus tiros alrededor de la estaca, y los mejores jugadores actuales rondan el ochenta por ciento (Trevithick, 1999, p. 188). Los torneos fueron frecuentes aunque irregulares hasta 1946, año en que el presidente Harry S. Truman jugó en la Casa Blanca y desde el que se celebran campeonatos nacionales anuales. Pese a su organización competitiva, el deporte conserva un carácter amistoso e inclusivo, de juego habitual en las meriendas campestres, y sus premios nunca han bastado para profesionalizarlo (Trevithick, 1999, p. 188). La federación estadounidense reconoce hoy categorías de mujeres, niños, niñas y veteranos, lo que refleja un deporte abierto a todas las edades (National Horseshoe Pitchers Association, s. f.)."
+   ],
+   "en": [
+    "Horseshoe pitching consists of throwing a horseshoe so that it rings a stake driven into the ground or lands as close to it as possible, just as quoits does with a metal ring (Trevithick, 1999, p. 188). Its origin is explained through stories that cannot be verified. The most repeated holds that Roman officers in occupied Britain played quoits with specially made iron rings and that common soldiers, who could not afford them, used cast-off horseshoes, and the American federation records a similar version attributing the custom to the camp followers of Greek armies, who could not afford a discus (Trevithick, 1999, p. 188; National Horseshoe Pitchers Association, n.d.). What is certain is its kinship with quoits, a very old ring game played in England since the fourteenth century (Trevithick, 1999, p. 188).",
+    "In the United States the game long remained an informal pastime, and the federation places the decisive impulse in the Union camps during the Civil War, where soldiers threw mule shoes (National Horseshoe Pitchers Association, n.d.). The first competition was apparently held in 1905 in Manhattan (Kansas), and the first tournament open to the world was played in Bronson (Kansas), in 1909 according to Trevithick (1999, p. 188) and in the summer of 1910 according to the federation. On 16 May 1914 the Grand League of the American Horseshoe Pitchers Association was formed in Kansas City, in 1919 the National League of Horseshoe and Quoit Pitchers was founded in St. Petersburg (Florida) with representatives of 29 states, and on 10 May 1921 the National Horseshoe Pitchers Association was incorporated in Ohio (National Horseshoe Pitchers Association, n.d.).",
+    "Technique was refined in the 1920s, when George May popularised a throw with a one-and-a-quarter turn that allowed him to ring the stake with half of his throws, and today's best players reach around eighty per cent (Trevithick, 1999, p. 188). Tournaments were frequent but irregular until 1946, the year President Harry S. Truman pitched at the White House, and national championships have been held annually since then. Despite its competitive organisation, the sport keeps a friendly and inclusive character, that of a standard picnic game, and its prizes have never been enough to make it professional (Trevithick, 1999, p. 188). The American federation today recognises divisions for women, boys, girls and seniors, reflecting a sport open to all ages (National Horseshoe Pitchers Association, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/lanzamiento-de-herraduras.jpg",
+   "pie": {
+    "es": "Concurso de lanzamiento de herraduras en la jornada deportiva anual de la comunidad de jornaleros agrícolas de la Farm Security Administration en Yuma (Arizona), marzo de 1942.",
+    "en": "Horseshoe pitching contest at the annual field day of the Farm Security Administration farmworkers' community in Yuma (Arizona), March 1942."
+   },
+   "autor": {
+    "es": "Russell Lee",
+    "en": "Russell Lee"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Horseshoes.jpg"
+  },
+  "refs": [
+   "National Horseshoe Pitchers Association. (s. f.). *Horseshoe history*. Recuperado el 29 de septiembre de 2026 de https://www.horseshoepitching.com/gameinfo/history.html",
+   "Trevithick, A. (1999). Horseshoes. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (p. 188). Oxford University Press."
+  ],
+  "refs_en": [
+   "National Horseshoe Pitchers Association. (n.d.). *Horseshoe history*. Retrieved September 29, 2026, from https://www.horseshoepitching.com/gameinfo/history.html",
+   "Trevithick, A. (1999). Horseshoes. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (p. 188). Oxford University Press."
+  ]
+ },
+ {
+  "id": "quoits",
+  "name": {
+   "es": "Quoits",
+   "en": "Quoits"
+  },
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Inglaterra, practicado al menos desde el siglo XIV; auge como deporte obrero en Gran Bretaña, siglo XIX y comienzos del XX",
+   "en": "England, played at least since the 14th century; heyday as a working-class sport in Britain, 19th and early 20th centuries"
+  },
+  "body": {
+   "es": [
+    "El *quoits* es un juego de lanzamiento en el que cada jugador arroja un aro de metal para rodear una estaca o dejarlo lo más cerca posible de ella, y es el antecedente directo del lanzamiento de herraduras (Trevithick, 1999, p. 188). Una tradición lo presenta como descendiente del disco griego y lo asocia a los oficiales romanos de Britania, aunque se trata de relatos especulativos; lo que sí puede afirmarse es que es un juego antiguo, practicado al menos desde el siglo II d. C., y que en Inglaterra se juega desde el siglo XIV (Trevithick, 1999, p. 188). Formaba parte de los juegos de lanzamiento tradicionales de Europa, junto a variantes como la *malha* portuguesa (Vamplew, 2021, p. 58).",
+    "En su forma inglesa, el jugador lanza un aro de unos veinte centímetros de diámetro exterior hacia un *hob* o estaca clavada a ras de suelo, o algo por encima, en un lecho de arcilla situado a unos cinco metros y medio del otro; gana quien llega a 21 puntos, con dos por cada aro que rodea la estaca y uno por cada aro que queda más cerca que el del rival (Trevithick, 1999, p. 188). Era un juego de todas las edades y de ambos sexos en las fiestas rurales de la Francia del Antiguo Régimen (Holt, 1981, p. 6), y la colonización lo llevó a América, donde los puritanos de Massachusetts y Connecticut lo prohibieron junto a los dados, los naipes y los bolos, mientras la aristocracia de Virginia lo contaba entre sus pasatiempos (Guttmann, 1988, pp. 24, 36). En 1850 figuró en la primera reunión de los juegos de Much Wenlock (Fernández Truan, s. f., p. 102).",
+    "En Gran Bretaña el *quoits* se convirtió en un juego de trabajadores. En Escocia, donde está bien documentado desde comienzos del siglo XIX, arraigó en comunidades mineras y aldeas agrícolas e industriales, donde los taberneros organizaban partidas en los jardines de sus locales y los mejores jugadores competían por premios importantes y apuestas, hasta el punto de considerarse profesionales; el juego alcanzó su cima en torno a la Primera Guerra Mundial (Kilpatrick, 2025). La desindustrialización, el cine, la televisión y el fútbol precipitaron su declive desde la década de 1930, y en Escocia apenas quedaban cinco clubes a finales del siglo XX (Kilpatrick, 2025). No existe federación internacional, y el club de Dunnottar, en Stonehaven, figura como el último activo en Escocia (Kilpatrick, 2025)."
+   ],
+   "en": [
+    "Quoits is a throwing game in which each player tosses a metal ring to encircle a stake or land as close to it as possible, and it is the direct ancestor of horseshoe pitching (Trevithick, 1999, p. 188). One tradition presents it as a descendant of the Greek discus and associates it with Roman officers in Britain, although these are speculative accounts; what can be stated is that it is an ancient game, played at least since the second century CE, and that it has been played in England since the fourteenth century (Trevithick, 1999, p. 188). It belonged to Europe's traditional throwing games, alongside variants such as Portuguese *malha* (Vamplew, 2021, p. 58).",
+    "In its English form, the player throws a ring about twenty centimetres across towards a *hob*, a stake driven flush with the ground or slightly above it, in a clay bed some five and a half metres from the other; the winner is the first to reach 21 points, with two for each ring that encircles the stake and one for each ring lying closer than the opponent's (Trevithick, 1999, p. 188). It was a game for all ages and both sexes at rural festivities in ancien régime France (Holt, 1981, p. 6), and colonisation took it to America, where the Puritans of Massachusetts and Connecticut banned it together with dice, cards and ninepins, while Virginia's aristocracy counted it among its pastimes (Guttmann, 1988, pp. 24, 36). In 1850 it featured in the first meeting of the Much Wenlock games (Fernández Truan, n.d., p. 102).",
+    "In Britain quoits became a working men's game. In Scotland, where it is well documented from the early nineteenth century, it took root in mining communities and farming and industrial villages, where publicans organised matches in the gardens of their premises and the best players competed for substantial prizes and wagers, to the point of being regarded as professionals; the game reached its peak around the First World War (Kilpatrick, 2025). Deindustrialisation, cinema, television and football hastened its decline from the 1930s, and in Scotland only five clubs remained by the end of the twentieth century (Kilpatrick, 2025). There is no international federation, and the Dunnottar club in Stonehaven is identified as the last active one in Scotland (Kilpatrick, 2025)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/quoits.jpg",
+   "pie": {
+    "es": "*Pitching Quoits* (1865), de Winslow Homer; soldados zuavos de la Unión juegan al *quoits* en un campamento de la Guerra de Secesión.",
+    "en": "*Pitching Quoits* (1865), by Winslow Homer; Union Zouave soldiers play quoits in a Civil War camp."
+   },
+   "autor": {
+    "es": "Winslow Homer",
+    "en": "Winslow Homer"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Winslow_Homer_-_Pitching_Quoits_(1865).jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (1988). *A whole new ball game: An interpretation of American sports*. University of North Carolina Press.",
+   "Holt, R. (1981). *Sport and society in modern France*. Macmillan.",
+   "Kilpatrick, A. (13 de agosto de 2025). Quoiting: The history of a lost Scottish sport. *Historic Environment Scotland Blog*. https://blog.historicenvironment.scot/2025/08/quoiting-the-history-of-a-lost-scottish-sport/",
+   "Trevithick, A. (1999). Horseshoes. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (p. 188). Oxford University Press.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (1988). *A whole new ball game: An interpretation of American sports*. University of North Carolina Press.",
+   "Holt, R. (1981). *Sport and society in modern France*. Macmillan.",
+   "Kilpatrick, A. (2025, August 13). Quoiting: The history of a lost Scottish sport. *Historic Environment Scotland Blog*. https://blog.historicenvironment.scot/2025/08/quoiting-the-history-of-a-lost-scottish-sport/",
+   "Trevithick, A. (1999). Horseshoes. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (p. 188). Oxford University Press.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "aerostacion",
+  "name": {
+   "es": "Aerostación",
+   "en": "Ballooning"
+  },
+  "bloque": {
+   "es": "Aéreos",
+   "en": "Air sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Francia, 1783 (hermanos Montgolfier y J. A. C. Charles); como deporte de competición, Copa Gordon Bennett desde 1906 y globo de aire caliente moderno desde 1960 (Estados Unidos)",
+   "en": "France, 1783 (Montgolfier brothers and J. A. C. Charles); as a competitive sport, Gordon Bennett Cup from 1906 and the modern hot-air balloon from 1960 (United States)"
+  },
+  "body": {
+   "es": [
+    "La aerostación inauguró el vuelo humano. Joseph y Jacques Étienne Montgolfier, hijos de un fabricante de papel de Annonay, construyeron globos de papel y tafetán que llenaban con el humo de paja húmeda, convencidos de que era el humo lo que los elevaba, y el 19 de septiembre de 1783 lanzaron uno con una oveja, un gallo y un pato (Ludwig, 1999, p. 26). Ese mismo año J. A. C. Charles, con los hermanos Robert, fabricó una envoltura de seda barnizada que llenó de hidrógeno. En noviembre de 1783 Pilâtre de Rozier y el marqués de Arlandes despegaron junto al Bois de Boulogne en un globo de los Montgolfier y fueron los primeros seres humanos que volaron, ocupados buena parte del tiempo en apagar los pequeños fuegos que la paja provocaba en la tela (Ludwig, 1999, p. 26).",
+    "Poco después Charles y Robert partieron de las Tullerías en un globo de hidrógeno, y el globo de gas ganó popularidad en Europa y Estados Unidos, mientras el de aire caliente quedaba relegado hasta el siglo XX (Ludwig, 1999, p. 26). La competición deportiva nació con la Coupe Aéronautique Gordon Bennett, creada por el magnate de la prensa James Gordon Bennett Jr.; en 1906 despegaron de las Tullerías dieciséis globos ante unos doscientos mil espectadores, con el objetivo de volar sin escalas la mayor distancia posible, y el país del equipo ganador organizaba la edición siguiente (Fédération Aéronautique Internationale, s. f.-a). La carrera se interrumpió al estallar la Segunda Guerra Mundial y se recuperó en 1983 (Fédération Aéronautique Internationale, s. f.-b).",
+    "El globo de aire caliente resurgió en 1960, cuando el ingeniero aeronáutico Paul Edward Yost, contratado por la Marina de Estados Unidos, elevó en Bruning (Nebraska) un pequeño aerostato con un quemador de propano y empezó a construir globos para el vuelo deportivo, origen del crecimiento explosivo posterior (Ludwig, 1999, p. 26). Las reglas de competición y los récords de altura, distancia y duración dependen de la Comisión de Aerostación de la Fédération Aéronautique Internationale (FAI), que organiza las pruebas internacionales en distancia, velocidad y precisión de navegación (Ludwig, 1999, pp. 26-27; Fédération Aéronautique Internationale, s. f.-b). Cada país cuenta con su federación, y la Balloon Federation of America y el British Balloon and Airship Club son las más activas (Ludwig, 1999, p. 27)."
+   ],
+   "en": [
+    "Ballooning inaugurated human flight. Joseph and Jacques Étienne Montgolfier, sons of a paper manufacturer from Annonay, built balloons of paper and taffeta that they filled with smoke from damp straw, convinced that the smoke was what lifted them, and on 19 September 1783 they launched one carrying a sheep, a cockerel and a duck (Ludwig, 1999, p. 26). That same year J. A. C. Charles, with the Robert brothers, made a varnished silk envelope that he filled with hydrogen. In November 1783 Pilâtre de Rozier and the Marquis d'Arlandes took off by the Bois de Boulogne in a Montgolfier balloon and became the first human beings to fly, spending much of the time putting out the small fires the straw caused in the fabric (Ludwig, 1999, p. 26).",
+    "Shortly afterwards Charles and Robert set off from the Tuileries in a hydrogen balloon, and the gas balloon grew in popularity in Europe and the United States, while the hot-air balloon was sidelined until the twentieth century (Ludwig, 1999, p. 26). Sporting competition was born with the Coupe Aéronautique Gordon Bennett, created by the newspaper magnate James Gordon Bennett Jr.; in 1906 sixteen balloons took off from the Tuileries before some two hundred thousand spectators, with the aim of flying the greatest non-stop distance, and the winning team's country hosted the next edition (Fédération Aéronautique Internationale, n.d.-a). The race was discontinued at the outbreak of the Second World War and revived in 1983 (Fédération Aéronautique Internationale, n.d.-b).",
+    "The hot-air balloon re-emerged in 1960, when the aeronautical engineer Paul Edward Yost, under contract to the United States Navy, launched a small aerostat with a propane burner at Bruning (Nebraska) and began building balloons for sport flying, the origin of the explosive growth that followed (Ludwig, 1999, p. 26). Competition rules and records for altitude, distance and duration fall under the Ballooning Commission of the Fédération Aéronautique Internationale (FAI), which organises international events in distance, speed and navigational precision (Ludwig, 1999, pp. 26-27; Fédération Aéronautique Internationale, n.d.-b). Each country has its own federation, and the Balloon Federation of America and the British Balloon and Airship Club are the most active (Ludwig, 1999, p. 27)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/aerostacion.jpg",
+   "pie": {
+    "es": "Ascensión del globo de los Montgolfier desde el castillo de La Muette, el 21 de noviembre de 1783, primer vuelo tripulado de la historia; estampa de la época.",
+    "en": "Ascent of the Montgolfier balloon from the Château de La Muette on 21 November 1783, the first crewed flight in history; contemporary print."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Experience_de_la_Machine_A%C3%ABrostatique_de_M._Montgolfier_au_Chat._de_la_Muette,_le_21_9bre_1783._-_estampe_-_btv1b550015646.jpg"
+  },
+  "refs": [
+   "Fédération Aéronautique Internationale. (s. f.-a). *Coupe Aéronautique Gordon Bennett*. Recuperado el 29 de septiembre de 2026 de https://www-2025.fai.org/gordonbennett",
+   "Fédération Aéronautique Internationale. (s. f.-b). *Ballooning*. Recuperado el 29 de septiembre de 2026 de https://www.fai.org/sport/ballooning",
+   "Ludwig, R. P. (1999). Ballooning. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 25-27). Oxford University Press."
+  ],
+  "refs_en": [
+   "Fédération Aéronautique Internationale. (n.d.-a). *Coupe Aéronautique Gordon Bennett*. Retrieved September 29, 2026, from https://www-2025.fai.org/gordonbennett",
+   "Fédération Aéronautique Internationale. (n.d.-b). *Ballooning*. Retrieved September 29, 2026, from https://www.fai.org/sport/ballooning",
+   "Ludwig, R. P. (1999). Ballooning. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 25-27). Oxford University Press."
+  ]
+ },
+ {
+  "id": "vela-sobre-hielo",
+  "name": {
+   "es": "Vela sobre hielo",
+   "en": "Ice sailing"
+  },
+  "bloque": {
+   "es": "De invierno",
+   "en": "Winter sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Países Bajos, siglo XVIII; como deporte organizado, Estados Unidos, siglo XIX (Poughkeepsie Ice Yacht Club, 1869) y clase DN (Detroit, 1937)",
+   "en": "Netherlands, 18th century; as an organised sport, United States, 19th century (Poughkeepsie Ice Yacht Club, 1869) and DN class (Detroit, 1937)"
+  },
+  "body": {
+   "es": [
+    "La vela sobre hielo emplea una embarcación parecida a un velero, con casco, mástil y velas, a la que se añaden patines cuyas cuchillas se deslizan sobre lagos, ríos o bahías helados, y se practica sobre todo en el norte de Europa y de Norteamérica, allí donde el invierno congela el agua y deja el hielo limpio de nieve (Townes, 1999, p. 194). Los Países Bajos del siglo XVIII suelen citarse como su cuna, porque allí se navegaba en invierno sobre el hielo con barcos movidos por el viento, aunque la práctica se conocía también en otros lugares de Europa (Townes, 1999, p. 194; Vamplew, 2021, p. 218). Los primeros barcos eran muy sencillos, con patines toscos y aparejos simples, y algunos no pasaban de ser veleros corrientes a los que se habían fijado patines (Townes, 1999, p. 195).",
+    "En el siglo XIX los estados de Nueva York y Nueva Jersey se convirtieron en los primeros centros del deporte en Estados Unidos. Desde mediados de siglo se construyeron barcos mayores y más complejos, los llamados *Hudson River ice yachts*, que solían pertenecer a familias muy ricas (Townes, 1999, pp. 194-195), y algunos de ellos figuraron entre los vehículos más rápidos de su tiempo, puesto que el barco, al no sufrir la resistencia del agua, genera su propio viento y llega a multiplicar por tres o cuatro la velocidad del viento real (Vamplew, 2021, p. 218; Townes, 1999, p. 195). En 1869 se fundó el Poughkeepsie Ice Yacht Club, el primer club formal de Estados Unidos, y el deporte se extendió después al Medio Oeste y a Canadá (Townes, 1999, pp. 194-195).",
+    "En el siglo XX la vela sobre hielo se popularizó gracias a barcos pequeños, baratos y transportables. En 1931, en Milwaukee, Starke Meyer diseñó un barco gobernado por un patín pivotante situado en la proa, y no en la popa como era habitual (Townes, 1999, p. 195). En 1937 un concurso de diseño patrocinado por el diario *The Detroit News* dio nombre a la clase DN, hoy la mayor del mundo; en febrero de 1953 una regata del Detroit Ice Yacht Club reunió a sus patrones, tres clubes redactaron la constitución de la asociación internacional de la clase y esta se registró en Michigan en 1962 (International DN Ice Yacht Racing Association, s. f.). La vela sobre hielo no forma parte del programa olímpico, y Vamplew (2021, p. 218) la considera poco probable en unos Juegos de Invierno."
+   ],
+   "en": [
+    "Ice sailing uses a craft resembling a sailboat, with hull, mast and sails, fitted with runners whose blades glide over frozen lakes, rivers or bays, and it is practised mainly in northern Europe and North America, wherever winter freezes the water and leaves the ice clear of snow (Townes, 1999, p. 194). The eighteenth-century Netherlands is often cited as its birthplace, because wind-powered boats sailed on the winter ice there, although the practice was also known elsewhere in Europe (Townes, 1999, p. 194; Vamplew, 2021, p. 218). The first boats were very simple, with crude runners and simple rigging, and some were no more than ordinary sailboats with runners attached (Townes, 1999, p. 195).",
+    "In the nineteenth century the states of New York and New Jersey became the first centres of the sport in the United States. From the middle of the century larger and more complex boats were built, the so-called Hudson River ice yachts, which were usually owned by very wealthy families (Townes, 1999, pp. 194-195), and some of them were among the fastest vehicles of their time, since the boat, free of water resistance, generates its own wind and can reach three or four times the speed of the true wind (Vamplew, 2021, p. 218; Townes, 1999, p. 195). In 1869 the Poughkeepsie Ice Yacht Club was founded, the first formal club in the United States, and the sport later spread to the Midwest and Canada (Townes, 1999, pp. 194-195).",
+    "In the twentieth century ice sailing became popular thanks to small, cheap and portable boats. In 1931, in Milwaukee, Starke Meyer designed a boat steered by a pivoting runner in the bow, and not in the stern as had been usual (Townes, 1999, p. 195). In 1937 a design contest sponsored by the newspaper *The Detroit News* gave its name to the DN class, today the largest in the world; in February 1953 a regatta of the Detroit Ice Yacht Club brought its skippers together, three clubs drafted the constitution of the class's international association, and it was incorporated in Michigan in 1962 (International DN Ice Yacht Racing Association, n.d.). Ice sailing is not part of the Olympic programme, and Vamplew (2021, p. 218) considers it unlikely to reach the Winter Games."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/vela-sobre-hielo.jpg",
+   "pie": {
+    "es": "Club de vela sobre hielo y barcos de hielo en la bahía de Deephaven (Minnesota); en el centro, un barco con el aparejo completo. Fotografía de Edward A. Bromley.",
+    "en": "Ice yacht clubhouse and iceboats on Deephaven Bay (Minnesota); at the centre, a fully rigged boat. Photograph by Edward A. Bromley."
+   },
+   "autor": {
+    "es": "Edward A. Bromley",
+    "en": "Edward A. Bromley"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Ice_Yacht_Clubhouse_and_Iceboats_on_Deephaven_Bay_-_DPLA_-_4bb0684d1762be00b0815669045148d8.jpg"
+  },
+  "refs": [
+   "International DN Ice Yacht Racing Association. (s. f.). *About*. Recuperado el 29 de septiembre de 2026 de https://www.idniyra.org/about/",
+   "Townes, J. (1999). Ice boating. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 194-195). Oxford University Press.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "International DN Ice Yacht Racing Association. (n.d.). *About*. Retrieved September 29, 2026, from https://www.idniyra.org/about/",
+   "Townes, J. (1999). Ice boating. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 194-195). Oxford University Press.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ }
+]

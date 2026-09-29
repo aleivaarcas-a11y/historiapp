@@ -3298,5 +3298,485 @@
   "ft": false,
   "tipo": "completa",
   "estado": "lista"
+ },
+ {
+  "id": "carreras-de-caballos",
+  "es": "Carreras de caballos",
+  "en": "Horse racing",
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "carreras-al-trote",
+  "es": "Carreras al trote",
+  "en": "Harness racing",
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "palio-de-siena",
+  "es": "Palio de Siena",
+  "en": "Palio di Siena",
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "cetreria",
+  "es": "Cetrería",
+  "en": "Falconry",
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "cirit",
+  "es": "Cirit",
+  "en": "Cirit (jereed)",
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "kho-kho",
+  "es": "Kho-kho",
+  "en": "Kho kho",
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "mallakhamb",
+  "es": "Mallakhamb",
+  "en": "Mallakhamb",
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "yoga",
+  "es": "Yoga",
+  "en": "Yoga",
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "pedestrismo",
+  "es": "Pedestrismo",
+  "en": "Pedestrianism",
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "rackets",
+  "es": "Rackets",
+  "en": "Rackets",
+  "bloque": {
+   "es": "De raqueta y pala",
+   "en": "Racket and paddle sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "fives",
+  "es": "Fives",
+  "en": "Fives",
+  "bloque": {
+   "es": "De pelota",
+   "en": "Handball games and pelota"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "tamburello",
+  "es": "Tamburello",
+  "en": "Tamburello",
+  "bloque": {
+   "es": "De raqueta y pala",
+   "en": "Racket and paddle sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "jianzi",
+  "es": "Jianzi",
+  "en": "Jianzi (shuttlecock)",
+  "bloque": {
+   "es": "De pelota",
+   "en": "Handball games and pelota"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "yubi-lakpi",
+  "es": "Yubi lakpi",
+  "en": "Yubi lakpi",
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "lanzamiento-de-herraduras",
+  "es": "Lanzamiento de herraduras",
+  "en": "Horseshoe pitching",
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "quoits",
+  "es": "Quoits",
+  "en": "Quoits",
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "aerostacion",
+  "es": "Aerostación",
+  "en": "Ballooning",
+  "bloque": {
+   "es": "Aéreos",
+   "en": "Air sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "vela-sobre-hielo",
+  "es": "Vela sobre hielo",
+  "en": "Ice sailing",
+  "bloque": {
+   "es": "De invierno",
+   "en": "Winter sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "vela-sobre-arena",
+  "es": "Vela sobre arena",
+  "en": "Land sailing",
+  "bloque": {
+   "es": "En la naturaleza",
+   "en": "Outdoor sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "lucha-de-cumberland-y-westmorland",
+  "es": "Lucha de Cumberland y Westmorland",
+  "en": "Cumberland and Westmorland wrestling",
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "scottish-backhold",
+  "es": "Scottish backhold",
+  "en": "Scottish backhold",
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "ringen",
+  "es": "Ringen",
+  "en": "Ringen",
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "tinku",
+  "es": "Tinku",
+  "en": "Tinku",
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "botaoshi",
+  "es": "Bōtaoshi",
+  "en": "Bōtaoshi",
+  "bloque": {
+   "es": "Alternativos",
+   "en": "Alternative sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "kambala",
+  "es": "Kambala",
+  "en": "Kambala (buffalo racing)",
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "torneos-y-justas",
+  "es": "Torneos y justas",
+  "en": "Tournaments and jousts",
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "juego-de-canas",
+  "es": "Juego de cañas",
+  "en": "Juego de cañas",
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "carrera-de-sortija",
+  "es": "Carrera de sortija",
+  "en": "Ring tilting (sortija)",
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "carreras-de-carros",
+  "es": "Carreras de carros",
+  "en": "Chariot racing",
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "combates-de-gladiadores",
+  "es": "Combates de gladiadores",
+  "en": "Gladiatorial combat",
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "salto-del-toro",
+  "es": "Salto del toro",
+  "en": "Bull-leaping",
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "cuju",
+  "es": "Cuju",
+  "en": "Cuju",
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "kemari",
+  "es": "Kemari",
+  "en": "Kemari",
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "chuiwan",
+  "es": "Chuiwan",
+  "en": "Chuiwan",
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "pall-mall",
+  "es": "Pall-mall",
+  "en": "Pall-mall",
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "chunkey",
+  "es": "Chunkey",
+  "en": "Chunkey",
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "harpastum",
+  "es": "Harpastum",
+  "en": "Harpastum",
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "episkyros",
+  "es": "Episkyros",
+  "en": "Episkyros",
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "juegos-de-pelota-romanos",
+  "es": "Juegos de pelota romanos",
+  "en": "Roman ball games",
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "palo-volador",
+  "es": "Palo volador",
+  "en": "Danza de los voladores (palo volador)",
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
  }
 ]

@@ -1,0 +1,537 @@
+[
+ {
+  "id": "carreras-de-carros",
+  "name": {
+   "es": "Carreras de carros",
+   "en": "Chariot racing"
+  },
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Mundo micénico (siglos XIV-XII a. C.); Olimpia, 680 a. C.; Circo Máximo de Roma, desde la época monárquica hasta 549 d. C.; Constantinopla hasta el siglo XI",
+   "en": "Mycenaean world (14th-12th centuries BC); Olympia, 680 BC; Circus Maximus in Rome, from the regal period to AD 549; Constantinople until the 11th century"
+  },
+  "body": {
+   "es": [
+    "El carro ligero de dos ruedas llegó a Egipto con los hicsos en el siglo XVI a. C. y allí se convirtió en instrumento de guerra, de caza y de exhibición regia, si bien no se conserva ningún testimonio egipcio de carreras, de modo que las primeras representaciones de la carrera de carros como deporte corresponden a los griegos micénicos (Decker, 1992, pp. 11 y 47). El canto 23 de la *Ilíada* concede a la carrera el lugar preferente en los juegos fúnebres de Patroclo, y en Olimpia la cuadriga o *téthrippon* entró en el programa en 680 a. C., lo que atrajo a la aristocracia al santuario (Kyle, 2015, p. 87). La corona correspondía al dueño de los caballos y no al auriga, de modo que la prueba premiaba la riqueza y permitió que la espartana Cinisca fuera en 396 a. C. la primera mujer vencedora olímpica (Kyle, 2015, p. 184).",
+    "En Roma las grandes carreras se corrían en el Circo Máximo, cuya organización atribuía la tradición a los reyes etruscos. La influencia etrusca se aprecia en la indumentaria y la técnica de los aurigas y la griega en las cuadras de salida, mientras que las facciones, la barrera central o *spina* y las siete vueltas parecen rasgos propiamente romanos (Kyle, 2015, p. 248). Las facciones, que surgieron quizá tras la Segunda Guerra Púnica, eran empresas privadas que poseían carros, caballos y cuadras, empleaban desde aurigas hasta carpinteros y se distinguían por los colores rojo, blanco, verde y azul (Kyle, 2015, p. 249). Tras la ampliación de Trajano el circo acogía unos 150.000 espectadores (Kyle, 2015, p. 290), y la mayoría de los aurigas eran esclavos o libertos, aunque los mejores se hacían ricos y célebres, como el hispano Cayo Apuleyo Diocles, que ganó 1.462 de las 4.257 carreras que disputó (Kyle, 2015, pp. 295-296).",
+    "La pobreza y la inseguridad del Occidente tardío acabaron con el sistema de espectáculos, y la última carrera conocida en Roma se celebró en 549 bajo los godos. En Constantinopla, en cambio, el hipódromo contiguo al palacio imperial mantuvo las carreras al estilo romano hasta el siglo XI, y las facciones de los azules y los verdes, a las que Cameron describe como grupos de seguidores apasionados, protagonizaron frecuentes disturbios, el más grave de ellos la revuelta Nika de 532, que Justiniano sofocó con las tropas dejando unos 30.000 muertos (Kyle, 2015, p. 338). La carrera de carros desapareció con el mundo que la sostenía, si bien la identificación de las masas con unos colores y la violencia de sus seguidores han servido a los historiadores como término de comparación con el deporte de espectáculo contemporáneo (Kyle, 2015, p. 339)."
+   ],
+   "en": [
+    "The light two-wheeled chariot reached Egypt with the Hyksos in the 16th century BC and became an instrument of war, hunting and royal display there, although no Egyptian evidence of races survives, so the first depictions of chariot racing as a sport belong to the Mycenaean Greeks (Decker, 1992, pp. 11, 47). Book 23 of the *Iliad* gives the race pride of place in the funeral games of Patroclus, and at Olympia the four-horse chariot or *tethrippon* entered the programme in 680 BC, which drew the aristocracy to the sanctuary (Kyle, 2015, p. 87). The crown went to the owner of the horses and not to the driver, so the event rewarded wealth and allowed the Spartan Kyniska, who could not attend the Games, to become in 396 BC the first female Olympic victor (Kyle, 2015, p. 184).",
+    "In Rome the great races were run in the Circus Maximus, whose organisation tradition attributed to the Etruscan kings. Etruscan influence is visible in the dress and technique of the charioteers and Greek influence in the starting stalls, while the factions, the central barrier or *spina* and the seven laps seem distinctively Roman (Kyle, 2015, p. 248). The factions, which perhaps arose after the Second Punic War, were private businesses that owned chariots, horses and stables, employed everyone from drivers to wheelwrights and were identified by the colours red, white, green and blue, which their supporters also adopted (Kyle, 2015, p. 249). After Trajan's enlargement the circus held about 150,000 spectators (Kyle, 2015, p. 290), and most charioteers were slaves or freedmen, although the best became rich and famous, like the Spaniard Gaius Appuleius Diocles, who won 1,462 of the 4,257 races he entered (Kyle, 2015, pp. 295-296).",
+    "Poverty and insecurity in the late West brought down the system of spectacles, and the last known race in Rome was held in 549 under the Goths. In Constantinople, by contrast, the hippodrome next to the imperial palace kept Roman-style racing alive until the 11th century, and the Blue and Green factions, which Cameron describes as groups of passionate fans, were behind frequent disturbances, the worst being the Nika riot of 532, which Justinian crushed with troops, leaving some 30,000 dead (Kyle, 2015, p. 338). Chariot racing disappeared together with the world that sustained it, although the identification of the crowd with a set of colours and the violence of its supporters have given historians a point of comparison with contemporary spectator sport (Kyle, 2015, p. 339)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 2,
+    "f": "el-carro-y-los-caballos",
+    "t": {
+     "es": "El carro y los caballos",
+     "en": "The chariot and the horses"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/carreras-de-carros.jpg",
+   "pie": {
+    "es": "Mosaico de los juegos del circo de Lugdunum (Lyon), siglo II d. C., con una carrera de cuadrigas en torno a la *spina*.",
+    "en": "Circus games mosaic from Lugdunum (Lyon), 2nd century AD, showing a four-horse chariot race around the *spina*."
+   },
+   "autor": "Carole Raddato",
+   "licencia": {
+    "es": "CC BY-SA 2.0",
+    "en": "CC BY-SA 2.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:The_restored_Circus_Games_Mosaic_depicting_a_chariot_race_in_quadrigas,_2nd_century_AD,_from_Lugdunum,_Mus%C3%A9e_gallo-romain_de_Fourvi%C3%A8re,_Lyon_(9194365396).jpg"
+  },
+  "refs": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt*. Yale University Press.",
+   "Kyle, D. G. (2015). *Sport and spectacle in the ancient world* (2.ª ed.). Wiley Blackwell."
+  ],
+  "refs_en": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt*. Yale University Press.",
+   "Kyle, D. G. (2015). *Sport and spectacle in the ancient world* (2nd ed.). Wiley Blackwell."
+  ]
+ },
+ {
+  "id": "combates-de-gladiadores",
+  "name": {
+   "es": "Combates de gladiadores",
+   "en": "Gladiatorial combat"
+  },
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Campania (Italia), siglo IV a. C.; en Roma, desde 264 a. C. hasta su desaparición gradual en el siglo V d. C.",
+   "en": "Campania (Italy), 4th century BC; in Rome, from 264 BC until their gradual disappearance in the 5th century AD"
+  },
+  "body": {
+   "es": [
+    "El origen de los combates de gladiadores sigue discutido. La tesis antigua los derivaba de los etruscos como un sacrificio humano funerario convertido en competición, y las tumbas etruscas del siglo VI a. C. muestran el llamado juego de Phersu, en el que un hombre encapuchado y armado con una porra se enfrenta a un perro, aunque no está claro si era una ejecución, un sacrificio o un certamen, y a lo sumo anticipa los combates con fieras (Kyle, 2015, p. 258). La mayoría de los especialistas sitúa hoy el origen entre los pueblos campanos y oscosamnitas del siglo IV a. C., cuyas pinturas funerarias de Paestum representan combates armados con árbitros (Kyle, 2015, p. 259). En Roma el primer combate conocido fue el *munus* que los hijos de Décimo Junio Bruto ofrecieron en 264 a. C. en honor de su padre, con tres parejas de luchadores, en el Foro Boario (Kyle, 2015, p. 260).",
+    "Tras la derrota de Cannas en 216 a. C. los combates crecieron con rapidez y la élite los convirtió en instrumento de propaganda política, como hizo Cayo Graco en 122 a. C. al abrir a todos el espectáculo del Foro (Kyle, 2015, pp. 261 y 271). Los gladiadores eran sobre todo prisioneros de guerra y esclavos, agrupados en *familiae* y adiestrados por un *lanista* en escuelas como las de Capua, donde juraban dejarse quemar, encadenar, azotar y matar, y los primeros tipos llevaban el nombre de enemigos de Roma, como samnitas, tracios o galos (Kyle, 2015, p. 270). En 105 a. C. el cónsul Rutilio Rufo empleó a instructores de gladiadores para adiestrar a los reclutas, hecho que a veces se ha leído por error como el primer combate oficial (Kyle, 2015, p. 272). Los duelos entre rivales bien emparejados no terminaban necesariamente en la muerte (Kyle, 2015, p. 258), y según el estudio de Georges Ville sobre los epitafios, en el siglo I sobrevivía en torno al noventa por ciento de los combatientes, proporción que bajó al setenta y cinco por ciento en los siglos II y III (Mañas Bastidas, 2011, p. 192).",
+    "También hubo gladiadoras, como las que un relieve de Halicarnaso nombra Amazona y Aquilia, hasta que Septimio Severo prohibió su participación en el año 200 d. C., aunque una inscripción de Ostia muestra que seguían combatiendo en el siglo III (Crowther, 2007, pp. 152-153). La desaparición de los combates fue lenta. Constantino quiso suprimir en 325 la condena a luchar en la arena más que los espectáculos, y Honorio cerró las escuelas de Roma en 399 y prohibió los combates en 404, con escaso efecto fuera de la capital, de modo que los juegos gladiatorios se extinguieron poco a poco por la escasez económica y la condena cristiana, sin que se conozca un edicto definitivo (Kyle, 2015, p. 336). La historia del monje Telémaco, lapidado por interrumpir un combate, se considera hoy una leyenda (Kyle, 2015, p. 336)."
+   ],
+   "en": [
+    "The origin of gladiatorial combat is still debated. The older view derived it from the Etruscans as a funerary human sacrifice turned into a contest, and 6th-century BC Etruscan tombs show the so-called game of Phersu, in which a hooded man armed with a club faces a dog, although it is unclear whether this was an execution, a sacrifice or a contest, and at most it anticipates the fights with beasts (Kyle, 2015, p. 258). Most specialists now place the origin among the Campanian and Osco-Samnite peoples of the 4th century BC, whose funerary paintings at Paestum show armed combats with referees (Kyle, 2015, p. 259). In Rome the first known combat was the *munus* that the sons of Decimus Junius Brutus gave in 264 BC in honour of their father, with three pairs of fighters, in the Forum Boarium (Kyle, 2015, p. 260).",
+    "After the defeat at Cannae in 216 BC the combats grew rapidly and the elite turned them into an instrument of political propaganda, as Gaius Gracchus did in 122 BC when he opened the show in the Forum to everyone (Kyle, 2015, pp. 261, 271). Gladiators were mostly prisoners of war and slaves, grouped in *familiae* and trained by a *lanista* in schools such as those of Capua, where they swore to be burned, chained, beaten and killed, and the earliest types bore the names of Rome's enemies, such as Samnites, Thracians or Gauls (Kyle, 2015, p. 270). In 105 BC the consul Rutilius Rufus used gladiatorial instructors to train recruits, an event sometimes misread as the first official combat (Kyle, 2015, p. 272). Duels between well-matched opponents did not necessarily end in death (Kyle, 2015, p. 258), and according to Georges Ville's study of the epitaphs, around ninety per cent of combatants survived in the first century, a proportion that fell to seventy-five per cent in the second and third centuries (Mañas Bastidas, 2011, p. 192).",
+    "There were also female gladiators, such as the two named Amazon and Achillia on a relief from Halicarnassus, until Septimius Severus banned their participation in AD 200, although an inscription from Ostia shows that they were still fighting in the 3rd century (Crowther, 2007, pp. 152-153). The disappearance of the combats was slow. Constantine sought in 325 to abolish the sentence of fighting in the arena rather than the shows themselves, and Honorius closed the schools of Rome in 399 and banned the combats in 404, with little effect outside the capital, so gladiatorial games died out gradually through economic shortage and Christian condemnation, with no definitive edict known (Kyle, 2015, p. 336). The story of the monk Telemachus, stoned for interrupting a fight, is now considered a legend (Kyle, 2015, p. 336)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/combates-de-gladiadores.jpg",
+   "pie": {
+    "es": "Gladiadores en combate en el mosaico de Zliten (Libia), época imperial romana.",
+    "en": "Gladiators fighting in the Zliten mosaic (Libya), Roman imperial period."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Gladiators_from_the_Zliten_mosaic_2.JPG"
+  },
+  "refs": [
+   "Crowther, N. B. (2007). *Sport in ancient times*. Praeger.",
+   "Kyle, D. G. (2015). *Sport and spectacle in the ancient world* (2.ª ed.). Wiley Blackwell.",
+   "Mañas Bastidas, A. (2011). *Munera gladiatoria: Origen del deporte espectáculo de masas* [Tesis doctoral, Universidad de Granada]. Editorial de la Universidad de Granada."
+  ],
+  "refs_en": [
+   "Crowther, N. B. (2007). *Sport in ancient times*. Praeger.",
+   "Kyle, D. G. (2015). *Sport and spectacle in the ancient world* (2nd ed.). Wiley Blackwell.",
+   "Mañas Bastidas, A. (2011). *Munera gladiatoria: Origen del deporte espectáculo de masas* [Doctoral dissertation, Universidad de Granada]. Editorial de la Universidad de Granada."
+  ]
+ },
+ {
+  "id": "salto-del-toro",
+  "name": {
+   "es": "Salto del toro",
+   "en": "Bull-leaping"
+  },
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Creta minoica, sobre todo Cnoso, hacia 1600-1400 a. C., con precedentes en sellos del Próximo Oriente del siglo XVII a. C.",
+   "en": "Minoan Crete, above all Knossos, c. 1600-1400 BC, with precedents on Near Eastern seals of the 17th century BC"
+  },
+  "body": {
+   "es": [
+    "El salto del toro o taurocatapsia es la práctica más representada del arte minoico y aparece en frescos, anillos de oro, sellos, marfiles y bronces, como el grupo del Museo Británico de hacia 1600 a. C. en el que un acróbata voltea sobre la cabeza del animal (Shapland, 2013, p. 195). La mayoría de las imágenes procede de Cnoso y se concentra en un periodo corto (Shapland, 2013, p. 199), con el célebre fresco del palacio, del periodo palacial final, como imagen de referencia (McInerney, 2011, p. 11). La práctica tenía, con todo, precedentes orientales, puesto que en sellos cilíndricos de hacia 1700 a. C. dos acróbatas hacen el pino sobre un mismo toro (Younger, 2021, p. 56) y sellos cananeos del siglo XVII a. C. hallados en Alalakh reflejan que se conocía (McInerney, 2011, p. 13). La imagen viajó también hacia el sur, hasta los frescos de Tell el-Dab'a (Avaris), en el delta del Nilo, de diseño y ejecución cretenses (Shapland, 2013, p. 198).",
+    "Las imágenes muestran a una figura que voltea sobre los cuernos del toro o se apoya en ellos para saltar sobre su lomo, con ayudantes que sujetan al animal (Golden, 2004, p. 29), y un sello presenta a un saltador que se lanza en picado desde una plataforma, semejante a la escalonada del patio central de Festo (Younger, 2021, p. 56). Las figuras de piel blanca de los frescos de Cnoso, color que el arte egeo reservaba a las mujeres, han abierto un debate todavía sin cerrar, dado que llevan el faldellín masculino y no muestran pecho (Younger, 2021, p. 56). Los anillos de oro con escenas de salto servían para que la élite se identificara, mientras que el espectáculo lo presenciaban muchos más (Shapland, 2013, p. 203), y seis de los diez anillos de Cnoso cuyas copias se usaron para sellar en otros lugares de la isla representan el salto (McInerney, 2011, p. 13). El pelaje moteado de los toros indica animales domésticos, menos fieros que el uro (Shapland, 2013, p. 204).",
+    "La taurocatapsia no sobrevivió a la Edad del Bronce. En la Grecia continental micénica las escenas de salto son escasas y, salvo en Micenas, casi todos los yacimientos lo representan una sola vez, de modo que los juegos con toros quedaron limitados al Egeo de la Edad del Bronce y, sobre todo, a Creta (Younger, 2021, pp. 56-57). Tampoco hay pruebas de que el salto terminara con el sacrificio del toro (Shapland, 2013, p. 198). Su herencia es sobre todo historiográfica, puesto que Arthur Evans relacionó las escenas halladas en Cnoso con el mito del Minotauro (Shapland, 2013, p. 197) y se han buscado paralelos en la corrida española, en los recortadores y en la *course landaise* del suroeste de Francia, cuyos saltadores esquivan o saltan sobre vacas sin herirlas (McInerney, 2011, pp. 10-11; Shapland, 2013, p. 199). Ambos autores advierten, no obstante, que el contexto social de esas prácticas es muy distinto."
+   ],
+   "en": [
+    "Bull-leaping or taurokathapsia is the most frequently depicted practice in Minoan art and appears on frescoes, gold rings, seals, ivories and bronzes, such as the British Museum group of about 1600 BC in which an acrobat somersaults over the animal's head (Shapland, 2013, p. 195). Most images come from Knossos and cluster in a short period (Shapland, 2013, p. 199), with the famous palace fresco, of the Final Palace period, as the reference image (McInerney, 2011, p. 11). The practice had eastern precedents, however, since on cylinder seals of about 1700 BC two acrobats perform handstands on the same bull (Younger, 2021, p. 56) and Canaanite seals of the 17th century BC found at Alalakh show that it was known there (McInerney, 2011, p. 13). The image also travelled south, to the frescoes of Tell el-Dab'a (Avaris) in the Nile Delta, Cretan in design and execution (Shapland, 2013, p. 198).",
+    "The images show a figure who somersaults over the bull's horns or uses them to vault over its back, with helpers holding the animal (Golden, 2004, p. 29), and one seal shows a leaper diving from a platform like the stepped one in the central court at Phaistos (Younger, 2021, p. 56). The white-skinned figures of the Knossos frescoes, a colour that Aegean art reserved for women, have opened a debate that is still unresolved, since they wear the male kilt and show no breasts (Younger, 2021, p. 56). Gold rings with leaping scenes served the self-identification of the elite, while the spectacle itself was watched by many more people (Shapland, 2013, p. 203), and six of the ten Knossos rings whose replicas were used for sealing elsewhere on the island depict the leap (McInerney, 2011, p. 13). The piebald coats of the bulls indicate domestic animals, less ferocious than the aurochs (Shapland, 2013, p. 204).",
+    "Bull-leaping did not outlive the Bronze Age. On the Mycenaean mainland leaping scenes are scarce and, apart from Mycenae, almost every site depicts it only once, so bull sports remained confined to the Bronze Age Aegean and above all to Crete (Younger, 2021, pp. 56-57). Nor is there evidence that the leap ended with the sacrifice of the bull (Shapland, 2013, p. 198). Its legacy is above all historiographical, since Arthur Evans linked the scenes found at Knossos to the myth of the Minotaur (Shapland, 2013, p. 197) and parallels have been sought in the Spanish bullfight, in the *recortadores* and in the *course landaise* of south-western France, whose leapers dodge or jump over cows without harming them (McInerney, 2011, pp. 10-11; Shapland, 2013, p. 199). Both authors warn, however, that the social context of these practices is very different."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/salto-del-toro.jpg",
+   "pie": {
+    "es": "Fresco del salto del toro del palacio de Cnoso, Museo Arqueológico de Heraclión.",
+    "en": "Bull-leaping fresco from the palace of Knossos, Heraklion Archaeological Museum."
+   },
+   "autor": "Jebulon",
+   "licencia": {
+    "es": "CC0",
+    "en": "CC0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Bull_leaping_minoan_fresco_archmus_Heraklion.jpg"
+  },
+  "refs": [
+   "Golden, M. (2004). *Sport in the ancient world from A to Z*. Routledge.",
+   "McInerney, J. (2011). Bulls and bull-leaping in the Minoan world. *Expedition, 53*(3), 6-13.",
+   "Shapland, A. (2013). Jumping to conclusions: Bull-leaping in Minoan Crete. *Society & Animals, 21*(2), 194-207.",
+   "Younger, J. G. (2021). Sport and spectacle in the Greek Bronze Age. En A. Futrell y T. F. Scanlon (Eds.), *The Oxford handbook of sport and spectacle in the ancient world* (pp. 47-61). Oxford University Press."
+  ],
+  "refs_en": [
+   "Golden, M. (2004). *Sport in the ancient world from A to Z*. Routledge.",
+   "McInerney, J. (2011). Bulls and bull-leaping in the Minoan world. *Expedition, 53*(3), 6-13.",
+   "Shapland, A. (2013). Jumping to conclusions: Bull-leaping in Minoan Crete. *Society & Animals, 21*(2), 194-207.",
+   "Younger, J. G. (2021). Sport and spectacle in the Greek Bronze Age. In A. Futrell & T. F. Scanlon (Eds.), *The Oxford handbook of sport and spectacle in the ancient world* (pp. 47-61). Oxford University Press."
+  ]
+ },
+ {
+  "id": "chuiwan",
+  "name": {
+   "es": "Chuiwan",
+   "en": "Chuiwan"
+  },
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "China, dinastía Song (960-1279); reglamento del *Wanjing*, 1282; auge cortesano bajo los Ming (1368-1644)",
+   "en": "China, Song dynasty (960-1279); *Wanjing* rulebook, 1282; courtly peak under the Ming (1368-1644)"
+  },
+  "body": {
+   "es": [
+    "El *chuiwan*, «golpear la bola», es un juego chino en el que los jugadores impulsaban una bola de madera con palos hasta introducirla en hoyos excavados en el terreno. Procede de un juego anterior de bola de madera golpeada con un palo, y bajo la dinastía Song, cuando la imprenta multiplicó los textos sobre reglas y técnicas deportivas, adquirió la forma organizada que recoge el *Wanjing* o «Clásico de la bola», de 1282, el reglamento más detallado de una actividad que hoy llamaríamos golf (Speak, 1999, p. 49). Los defensores de su antigüedad remiten además a los *Registros de Dongxuan*, en los que un magistrado del siglo X pide a su hija que excave hoyos en el suelo para introducir en ellos la bola con un palo hecho a propósito (The Irish Times, 2006).",
+    "Según el *Wanjing*, el campo tenía salidas y hoyos separados entre diez pies y cien pasos, situados en hondonadas y señalados con banderas de colores. Los palos eran de madera con mango de bambú y de longitudes y formas diversas, y cada jugador elegía uno al llegar y no podía cambiarlo durante la partida. Podían jugar desde dos hasta diez personas, salía primero quien lograba el golpe más largo, y el hoyo se lo adjudicaba el primero que metía la bola, de modo que al final vencía quien había reunido más fichas. El texto dedica también veintiuna reglas a la técnica y a la etiqueta y subraya la equidad, la armonía entre los jugadores y el trato con los rivales soberbios (Speak, 1999, pp. 49-50). Lo practicaban emperadores, funcionarios y damas de la corte, como muestra una pintura Ming con cinco mujeres jugando (Guttmann, 2004, p. 41).",
+    "El *chuiwan* desapareció en la Edad Moderna, aunque las fuentes no coinciden en el momento, puesto que unas lo sitúan ya durante la dinastía Ming (Scottish Golf History, 2017) y otras bajo los Qing (Fernández Truan, s. f., p. 1161). En el siglo XX la China republicana no apostó por deportes tradicionales como el tiro con arco o el *chuiwan* (Guttmann, 2004, p. 208). Su principal herencia es el debate sobre el origen del golf, puesto que en 2006 el profesor Ling Hongling, de la Universidad de Lanzhou, afirmó que el golf nació en China y que viajeros mongoles llevaron el juego a Europa (The Irish Times, 2006). Esa transmisión no está documentada, y los historiadores escoceses del golf rechazan una influencia directa, si bien no descartan del todo una indirecta (Scottish Golf History, 2017)."
+   ],
+   "en": [
+    "*Chuiwan*, 'hitting the ball', is a Chinese game in which players drove a wooden ball with clubs into holes dug in the ground. It derives from an earlier game in which a wooden ball was struck with a stick, and under the Song dynasty, when printing multiplied texts on sporting rules and techniques, it took on the organised form recorded in the *Wanjing* or 'Ball Classic' of 1282, the most detailed rulebook for an activity we would now call golf (Speak, 1999, p. 49). Advocates of its antiquity also point to the *Dongxuan Records*, in which a 10th-century magistrate asks his daughter to dig holes in the ground so that he can drive the ball into them with a purpose-made stick (The Irish Times, 2006).",
+    "According to the *Wanjing*, the course had tees and holes set between ten feet and a hundred paces apart, placed in hollows and marked with coloured flags. Clubs were made of wood with a bamboo handle and came in various lengths and shapes, and each player chose one on arrival and could not change it during the game. From two to ten people could play, the player with the longest drive teed off first, and the hole went to whoever holed the ball first, so that the winner was whoever had gathered most counters at the end. The text also devotes twenty-one rules to technique and etiquette and stresses fairness, harmony among players and how to deal with proud opponents (Speak, 1999, pp. 49-50). It was played by emperors, officials and court ladies, as a Ming painting of five women playing shows (Guttmann, 2004, p. 41).",
+    "*Chuiwan* disappeared in the early modern period, although the sources disagree on when, since some place its end during the Ming dynasty (Scottish Golf History, 2017) and others under the Qing (Fernández Truan, n.d., p. 1161). In the 20th century republican China did not commit itself to traditional sports such as archery or *chuiwan* (Guttmann, 2004, p. 208). Its main legacy is the debate on the origin of golf, since in 2006 Professor Ling Hongling of Lanzhou University claimed that golf was born in China and that Mongol travellers carried the game to Europe (The Irish Times, 2006). That transmission is undocumented, and Scottish golf historians reject a direct influence, although they do not entirely rule out an indirect one (Scottish Golf History, 2017)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/chuiwan.jpg",
+   "pie": {
+    "es": "El emperador Xuande (1425-1435) juega al *chuiwan* en un campo con hoyos señalados con banderas, detalle del rollo *Diversiones del emperador Xuanzong*, Museo del Palacio, Pekín.",
+    "en": "The Xuande Emperor (1425-1435) playing *chuiwan* on a course with flag-marked holes, detail from the scroll *Amusements of the Xuanzong Emperor*, Palace Museum, Beijing."
+   },
+   "autor": {
+    "es": "Pintor anónimo de la corte Ming",
+    "en": "Anonymous Ming court painter"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Ming_Emperor_Xuande_playing_Golf.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Scottish Golf History. (2017, 15 de diciembre). *Chuiwan 捶丸: Coincidence or espionage?* Recuperado el 29 de septiembre de 2026 de https://www.scottishgolfhistory.org/news/chuiwan/",
+   "Speak, M. (1999). The emergence of modern sport: 960-1840. En J. Riordan y R. Jones (Eds.), *Sport and physical education in China* (pp. 45-69). E & FN Spon.",
+   "The Irish Times. (2006, 27 de abril). *China says it is the true home of golf*. Recuperado el 29 de septiembre de 2026 de https://www.irishtimes.com/news/china-says-it-is-the-true-home-of-golf-1.1044292"
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Scottish Golf History. (2017, December 15). *Chuiwan 捶丸: Coincidence or espionage?* Retrieved September 29, 2026, from https://www.scottishgolfhistory.org/news/chuiwan/",
+   "Speak, M. (1999). The emergence of modern sport: 960-1840. In J. Riordan & R. Jones (Eds.), *Sport and physical education in China* (pp. 45-69). E & FN Spon.",
+   "The Irish Times. (2006, April 27). *China says it is the true home of golf*. Retrieved September 29, 2026, from https://www.irishtimes.com/news/china-says-it-is-the-true-home-of-golf-1.1044292"
+  ]
+ },
+ {
+  "id": "pall-mall",
+  "name": {
+   "es": "Pall-mall",
+   "en": "Pall-mall"
+  },
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Italia (*pallamaglio*), siglos XV-XVI; difusión en Francia (*jeu de mail*) e Inglaterra en los siglos XVI y XVII",
+   "en": "Italy (*pallamaglio*), 15th-16th centuries; spread to France (*jeu de mail*) and England in the 16th and 17th centuries"
+  },
+  "body": {
+   "es": [
+    "El pall-mall pertenece a la familia de juegos europeos de bola y mazo que distinguían palos para el golpe largo y para el golpe corto. Algunos conservaron el paisaje natural como elemento del juego y en Escocia dieron lugar al golf, mientras que otros se hicieron urbanos y se jugaron por las calles, siguiendo un recorrido pactado, o en una pista larga, recta y preparada con una meta al fondo. Ambas formas recibieron en inglés el nombre de pall-mall, del italiano *palla*, «pelota», y *maglio*, «mazo» (McClelland, 2007, p. 78). A comienzos del siglo XVI Leonardo da Vinci lo citaba junto al tenis entre los juegos que atraían a los pintores por el esfuerzo que exigían al cuerpo, y en 1553 un maestro de escuela, Bartolomeo Ricci, explicó por carta a un noble cómo se jugaba (McClelland, 2007, pp. 21 y 56).",
+    "La modalidad de pista se hizo muy popular entre las clases altas de Francia e Inglaterra, hasta rivalizar en Francia con el tenis como juego nacional (McClelland, 2007, p. 78). En 1579 Henri Estienne quiso demostrar que el tenis francés superaba al pall-mall italiano (McClelland, 2007, p. 124), y en 1604 Robert Dallington lo describía como un juego digno de un caballero, poco fatigoso, que permitía conversar mientras se caminaba de un blanco a otro. Jacobo I lo incluyó entre los ejercicios que recomendó a su heredero (McClelland, 2007, pp. 56-57). Su función era, por tanto, la de un pasatiempo cortesano de distinción, y su reglamentación temprana lo convierte en un caso notable, puesto que las *Loix du paillemail* de 1655 fijaron ochenta y tres reglas impresas en una sola hoja (McClelland, 2007, p. 58).",
+    "En Londres el paseo de The Mall se trazó poco después de la Restauración de 1660 para jugar al pall-mall, juego favorito de Carlos II, y pronto se convirtió en el paseo más elegante de la ciudad (London Museum, s. f.). Las pistas de *pallamaglio*, largas, llanas, cercadas y flanqueadas por hileras de árboles que daban sombra, se convirtieron después en paseos, en calles de casas caras y en zonas de tiendas, de modo que el término *mall* designa hoy un gran espacio comercial (Behringer, 2016, p. 38). El juego decayó en Inglaterra, mientras que en Francia el *jeu de mail* siguió teniendo tratados propios en el siglo XVIII, como el de Joseph Lauthier de 1717 que ilustra esta ficha. Suele presentarse como antecesor del croquet (Fernández Truan, s. f., p. 1155), aunque los manuales lo relacionan sobre todo con los juegos de bola y mazo que precedieron al golf (McClelland, 2007, p. 78)."
+   ],
+   "en": [
+    "Pall-mall belongs to the family of European ball-and-mallet games that distinguished clubs for the long shot and for the short one. Some kept the natural landscape as an element of the game and in Scotland gave rise to golf, while others became urban and were played through the streets, along an agreed course, or on a long, straight, prepared alley with a goal at the end. Both forms were called pall-mall in English, from the Italian *palla*, 'ball', and *maglio*, 'mallet' (McClelland, 2007, p. 78). In the early 16th century Leonardo da Vinci cited it together with tennis among the games that attracted painters because of the effort they demanded of the body, and in 1553 a schoolmaster, Bartolomeo Ricci, explained in a letter to a nobleman how it was played (McClelland, 2007, pp. 21, 56).",
+    "The alley version became very popular among the upper classes of France and England, to the point of rivalling tennis as the national game in France (McClelland, 2007, p. 78). In 1579 Henri Estienne tried to show that French tennis was superior to Italian pall-mall (McClelland, 2007, p. 124), and in 1604 Robert Dallington described it as a game worthy of a gentleman, not strenuous, which allowed conversation while walking from one target to the next. James I included it among the exercises he recommended to his heir (McClelland, 2007, pp. 56-57). Its function was therefore that of a courtly pastime of distinction, and its early codification makes it a notable case, since the *Loix du paillemail* of 1655 set out eighty-three rules printed on a single sheet (McClelland, 2007, p. 58).",
+    "In London the promenade of The Mall was laid out shortly after the Restoration of 1660 for playing pall-mall, a favourite game of Charles II, and soon became the most fashionable walk in the city (London Museum, n.d.). The *pallamaglio* alleys, long, level, fenced and lined with rows of trees for shade, were later turned into promenades, streets of expensive houses and shopping areas, so that the word *mall* today refers to a large commercial space (Behringer, 2016, p. 38). The game declined in England, while in France the *jeu de mail* still had treatises of its own in the 18th century, such as Joseph Lauthier's of 1717 that illustrates this entry. It is often presented as a forerunner of croquet (Fernández Truan, n.d., p. 1155), although the handbooks relate it above all to the ball-and-mallet games that preceded golf (McClelland, 2007, p. 78)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/pall-mall.jpg",
+   "pie": {
+    "es": "Jugador de *mail* con su mazo, grabado del tratado *Nouvelles règles pour le jeu de mail* de Joseph Lauthier (1717).",
+    "en": "A *mail* player with his mallet, engraving from Joseph Lauthier's treatise *Nouvelles règles pour le jeu de mail* (1717)."
+   },
+   "autor": "Joseph Lauthier",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Cropped_image_from_Joseph_Lauthier%27s_%22Le_Jeu_de_Mail%22.jpg"
+  },
+  "refs": [
+   "Behringer, W. (2016). The invention of sports: Early modern ball games. En R. von Mallinckrodt y A. Schattner (Eds.), *Sports and physical exercise in early modern culture: New perspectives on the history of sports and motion* (pp. 15-49). Routledge.",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "London Museum. (s. f.). *The Mall, St James's Park*. Recuperado el 29 de septiembre de 2026 de https://www.londonmuseum.org.uk/collections/v/object-98643/the-mall-st-jamess-park/",
+   "McClelland, J. (2007). *Body and mind: Sport in Europe from the Roman Empire to the Renaissance*. Routledge."
+  ],
+  "refs_en": [
+   "Behringer, W. (2016). The invention of sports: Early modern ball games. In R. von Mallinckrodt & A. Schattner (Eds.), *Sports and physical exercise in early modern culture: New perspectives on the history of sports and motion* (pp. 15-49). Routledge.",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "London Museum. (n.d.). *The Mall, St James's Park*. Retrieved September 29, 2026, from https://www.londonmuseum.org.uk/collections/v/object-98643/the-mall-st-jamess-park/",
+   "McClelland, J. (2007). *Body and mind: Sport in Europe from the Roman Empire to the Renaissance*. Routledge."
+  ]
+ },
+ {
+  "id": "chunkey",
+  "name": {
+   "es": "Chunkey",
+   "en": "Chunkey"
+  },
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "American Bottom (valle central del Misisipi, junto a San Luis), hacia 600 d. C.; auge en Cahokia en el periodo misisipiense medio (1050-1400)",
+   "en": "American Bottom (central Mississippi Valley, near St. Louis), c. AD 600; peak at Cahokia in the Middle Mississippian period (1050-1400)"
+  },
+  "body": {
+   "es": [
+    "El chunkey es un juego indígena norteamericano en el que se lanzaban varas tras un disco de piedra rodante. Las pruebas más antiguas proceden del American Bottom, la llanura aluvial del Misisipi junto a la actual San Luis, en el periodo Woodland tardío, hacia 600 d. C., y los discos, de arcilla, caliza o rocas ígneas y metamórficas, cambiaron de forma con el tiempo y se extendieron por todo el interior del continente (Zych, 2017, p. 68). Con el comienzo del periodo misisipiense, hacia 1050, el chunkey pasó de juego doméstico de recreo a actividad asociada a la élite, y los especialistas sostienen que en la región de Cahokia, la gran ciudad indígena próxima a East St. Louis, alcanzó entre 1050 y 1400 un nivel de profesionalismo de élite (Zych, 2017, p. 63).",
+    "Las descripciones del juego proceden de viajeros europeos y estadounidenses de los siglos XVIII y XIX. El nombre deriva del término choctaw *chungke* (Zych, 2017, p. 65). Se jugaba en campos abiertos, lisos y construidos a propósito en el centro de los poblados o en sus márgenes, que los creek y los cherokee llamaban *chunky yards*, y James Adair describió en 1775 un campo choctaw junto a la casa de consejo cubierto de arena fina para que la piedra corriera más (Zych, 2017, pp. 65-67). Dos hombres corrían tras la piedra lanzada de canto y arrojaban sus varas marcadas para que se detuvieran lo más cerca posible de ella. Los jugadores apostaban joyas, ropas, armas e incluso a sí mismos, y las piedras, pulidas con gran esfuerzo, pertenecían a cada pueblo y se transmitían de generación en generación (Zych, 2017, p. 67).",
+    "El juego tenía además un sentido cosmológico, dado que el movimiento del disco se ha relacionado con el recorrido del sol por el cielo (Zych, 2017, p. 65). George Catlin lo vio practicar a los mandan del alto Misuri y lo consideró su diversión favorita, mientras que William Bartram, a finales del siglo XVIII, encontró muchos campos cherokee abandonados, construidos sobre ellos o convertidos en huertos (Zych, 2017, pp. 66-67). En el momento del contacto el chunkey se jugaba en toda la mitad oriental del continente, pero cayó casi en el olvido durante el periodo histórico posterior, y en muchos casos las piedras son lo único que queda de él (Zych, 2017, p. 68). Su recuperación es sobre todo arqueológica, a través de los discos hallados en Cahokia y en enterramientos del valle del Illinois (Zych, 2017, p. 68)."
+   ],
+   "en": [
+    "Chunkey is a Native North American game in which poles were thrown after a rolling stone disk. The earliest evidence comes from the American Bottom, the Mississippi floodplain next to present-day St. Louis, in the Late Woodland period, around AD 600, and the disks, made of clay, limestone or igneous and metamorphic rocks, changed shape over time and spread throughout the interior of the continent (Zych, 2017, p. 68). With the start of the Mississippian period, around 1050, chunkey changed from a household game of recreation into an activity associated with the elite, and specialists argue that in the region of Cahokia, the great Native city near East St. Louis, it reached a level of elite professionalism between 1050 and 1400 (Zych, 2017, p. 63).",
+    "Descriptions of the game come from European and American travellers of the 18th and 19th centuries. The name derives from the Choctaw term *chungke* (Zych, 2017, p. 65). It was played on open, smooth, purpose-built fields in the centre of villages or on their edges, which the Creek and Cherokee called *chunky yards*, and James Adair described in 1775 a Choctaw field next to the council house strewn with fine sand so that the stone would run faster (Zych, 2017, pp. 65-67). Two men ran after the stone, bowled on its edge, and threw their marked poles so that they stopped as close to it as possible. Players wagered jewellery, clothes, weapons and even themselves, and the stones, polished with great labour, belonged to each town and were handed down from generation to generation (Zych, 2017, p. 67).",
+    "The game also had a cosmological meaning, since the movement of the disk has been linked to the path of the sun across the sky (Zych, 2017, p. 65). George Catlin saw the Mandan of the upper Missouri play it and considered it their favourite amusement, while William Bartram, in the late 18th century, found many Cherokee fields abandoned, built over or turned into gardens (Zych, 2017, pp. 66-67). At the time of contact chunkey was played across the whole eastern half of the continent, but it was largely forgotten during the later historic period, and in many cases the stones are all that remain of it (Zych, 2017, p. 68). Its recovery has been above all archaeological, through the disks found at Cahokia and in burials of the Illinois Valley (Zych, 2017, p. 68)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/chunkey.jpg",
+   "pie": {
+    "es": "Estatuilla de arcilla de un jugador de chunkey con el disco en la mano, elaborada probablemente en Cahokia o sus inmediaciones y hallada en el condado de Muskogee (Oklahoma), Centro de Ciencias de San Luis.",
+    "en": "Flint clay figurine of a chunkey player holding the disk, probably made at or near Cahokia and found in Muskogee County (Oklahoma), St. Louis Science Center."
+   },
+   "autor": "TimVickers",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Chunkey_player_figurine.jpg"
+  },
+  "refs": [
+   "Zych, T. J. (2017). Chunkey and the historic experience in the Mississippian world. En B. Voorhies (Ed.), *Prehistoric games of North American Indians: Subarctic to Mesoamerica* (pp. 63-86). University of Utah Press."
+  ],
+  "refs_en": [
+   "Zych, T. J. (2017). Chunkey and the historic experience in the Mississippian world. In B. Voorhies (Ed.), *Prehistoric games of North American Indians: Subarctic to Mesoamerica* (pp. 63-86). University of Utah Press."
+  ]
+ },
+ {
+  "id": "harpastum",
+  "name": {
+   "es": "Harpastum",
+   "en": "Harpastum"
+  },
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Grecia (*phaininda* o *harpaston*), época clásica y helenística; Roma, siglos I a. C.-IV d. C.",
+   "en": "Greece (*phaininda* or *harpaston*), Classical and Hellenistic periods; Rome, 1st century BC-4th century AD"
+  },
+  "body": {
+   "es": [
+    "El término *harpaston* designaba en griego a la vez una pelota y el juego que se practicaba con ella, y procede del verbo *harpazein*, «arrebatar». La pelota era pequeña y dura, forrada de cuero y rellena quizá de crin, del tamaño de una pelota de béisbol o algo mayor, de modo que podía agarrarse con facilidad (Miller, 2004, pp. 171-172). Los griegos conocían un juego semejante, la *phaininda*, cuyo nombre aludía a un inventor llamado Fenindo o, más probablemente, al verbo que significa fingir, porque el jugador amagaba un pase a un compañero y lanzaba a otro (Miller, 2004, p. 172). Las fuentes antiguas, entre ellas el léxico de Pólux y Ateneo, tratan ambos nombres como equivalentes, y la *phaininda* consistía en que un jugador intentaba interceptar la pelota que se pasaban otros dos (Golden, 2004, p. 131).",
+    "Los romanos adoptaron el juego, que junto con el trigón fue uno de los dos juegos de pelota más populares de Roma. Varios jugadores se colocaban en círculo o en dos filas sobre un terreno polvoriento, con un hombre en el centro, se daban instrucciones a gritos y se lanzaban la pelota por encima de su cabeza o contra él, mientras este intentaba esquivarla o interceptarla. El juego consistía en atrapar la pelota, quitársela de las manos al rival, arrebatarla y regatear a los contrarios, con un contacto físico que causaba lesiones, aunque un poema latino anónimo del siglo I d. C. destaca que al público lo cautivaban la gracia y la destreza del juego más que la victoria o la violencia (Crowther, 2007, p. 158). Era un ejercicio de recreo que se practicaba en las termas y en el Campo de Marte, donde jugaban también miembros de la élite (Crowther, 2007, p. 157). Rowley (2015, p. 19) sostiene además que los romanos lo adoptaron en el siglo I a. C. como parte del adiestramiento militar y que su difusión por los campamentos influyó en la historia posterior del fútbol, interpretación suya que otros estudios no recogen.",
+    "Los juegos de pelota nunca formaron parte de los festivales competitivos griegos y romanos (Golden, 2004, p. 25), y el *harpastum* careció de instalaciones propias, de ligas y de grandes públicos (Crowther, 2007, p. 159). Tampoco lo rechazaron los autores cristianos, que condenaban los combates de gladiadores y las carreras de carros, de manera que el juego de pelota sobrevivió en la Antigüedad tardía, y Sidonio Apolinar describe en el siglo V un partido en la villa de un amigo (Crowther, 2007, p. 159). Su herencia es sobre todo la de un antecedente buscado por los historiadores del fútbol y del rugby, si bien los intentos de hallar un juego semejante al fútbol en el mundo grecorromano han tenido poco éxito, puesto que las fuentes apenas documentan el uso del pie para golpear la pelota (Crowther, 2007, p. 159)."
+   ],
+   "en": [
+    "In Greek the term *harpaston* referred both to a ball and to the game played with it, and it derives from the verb *harpazein*, 'to snatch'. The ball was small and hard, covered in leather and perhaps stuffed with horsehair, about the size of a baseball or a little larger, so that it could be grasped easily (Miller, 2004, pp. 171-172). The Greeks knew a similar game, *phaininda*, whose name referred to an inventor called Phainindos or, more probably, to the verb meaning to feint, because the player faked a pass to one teammate and threw to another (Miller, 2004, p. 172). Ancient sources, among them the lexicon of Pollux and Athenaeus, treat the two names as equivalent, and in *phaininda* one player tried to intercept the ball passed between two others (Golden, 2004, p. 131).",
+    "The Romans adopted the game, which together with trigon was one of the two most popular ball games in Rome. Several players stood in a circle or in two lines on a dusty court, with a man in the middle, shouted instructions to each other and threw the ball over his head or at him, while he tried to dodge or intercept it. The game involved catching the ball, knocking it out of an opponent's hands, snatching it and dodging opponents, with body contact that caused injuries, although an anonymous Latin poem of the 1st century AD stresses that spectators were captivated by the grace and skill of the game rather than by victory or violence (Crowther, 2007, p. 158). It was a recreational exercise practised in the baths and on the Campus Martius, where members of the elite also played (Crowther, 2007, p. 157). Rowley (2015, p. 19) further argues that the Romans adopted it in the first century BC as part of military training and that its spread through the camps shaped the later history of football, an interpretation of his own that other studies do not take up.",
+    "Ball games were never part of the Greek and Roman competitive festivals (Golden, 2004, p. 25), and *harpastum* had no venues of its own, no leagues and no large crowds (Crowther, 2007, p. 159). Nor was it rejected by Christian authors, who condemned gladiatorial combat and chariot racing, so ball play survived into late antiquity, and Sidonius Apollinaris describes in the 5th century a game at a friend's villa (Crowther, 2007, p. 159). Its legacy is above all that of an antecedent sought by historians of football and rugby, although attempts to find a game like football in the Greco-Roman world have had little success, since the sources barely document the use of the foot to strike the ball (Crowther, 2007, p. 159)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/harpastum.jpg",
+   "pie": {
+    "es": "Estela funeraria del niño Gayo Laberio, muerto a los siete años, que sostiene una pelota, procedente de la colonia romana de Tilurium y hoy empotrada en una casa de Sinj (Croacia).",
+    "en": "Funerary stele of the boy Gaius Laberius, who died aged seven, holding a ball, from the Roman colony of Tilurium and now set into a house wall in Sinj (Croatia)."
+   },
+   "autor": "Lovrepalos",
+   "licencia": {
+    "es": "CC BY-SA 3.0",
+    "en": "CC BY-SA 3.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Tombstone_of_Gaius_Laberius_with_harpastum_ball_in_Sinj,_Croatia.jpg"
+  },
+  "refs": [
+   "Crowther, N. B. (2007). *Sport in ancient times*. Praeger.",
+   "Golden, M. (2004). *Sport in the ancient world from A to Z*. Routledge.",
+   "Miller, S. G. (2004). *Ancient Greek athletics*. Yale University Press.",
+   "Rowley, C. (2015). *The shared origins of football, rugby, and soccer*. Rowman & Littlefield."
+  ],
+  "refs_en": [
+   "Crowther, N. B. (2007). *Sport in ancient times*. Praeger.",
+   "Golden, M. (2004). *Sport in the ancient world from A to Z*. Routledge.",
+   "Miller, S. G. (2004). *Ancient Greek athletics*. Yale University Press.",
+   "Rowley, C. (2015). *The shared origins of football, rugby, and soccer*. Rowman & Littlefield."
+  ]
+ },
+ {
+  "id": "episkyros",
+  "name": {
+   "es": "Episkyros",
+   "en": "Episkyros"
+  },
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Grecia, época arcaica y clásica (relieve ateniense de hacia 510 a. C.); descrito por Pólux hacia 180 d. C.",
+   "en": "Greece, Archaic and Classical periods (Athenian relief of c. 510 BC); described by Pollux c. AD 180"
+  },
+  "body": {
+   "es": [
+    "El *epískyros* debe su nombre a la esquirla de piedra, *skyros*, con la que se trazaba la línea que separaba a los dos equipos, y también se llamaba *ephebiké*, «de los efebos», y *epíkoinos*, «juego común» o de equipo (Golden, 2004, p. 61). Casi todo lo que sabemos procede de Pólux, profesor de retórica del siglo II d. C., que lo incluyó entre los juegos de pelota infantiles. Según su descripción, dos equipos con el mismo número de jugadores se situaban a ambos lados de la línea central, sobre la que se colocaba la pelota, y cada uno trazaba otra línea detrás del rival. El equipo que se hacía primero con la pelota la lanzaba por encima de los contrarios, que debían atraparla en movimiento y devolverla, hasta que uno de los dos empujaba al otro más allá de su línea de fondo (Miller, 2004, p. 172).",
+    "El juego es mucho más antiguo que su descripción. Una basa de estatua ateniense de hacia 510 a. C. muestra a seis jóvenes desnudos dispuestos en dos grupos enfrentados, uno de ellos a punto de lanzar una pelota pequeña, escena que suele identificarse con el *epískyros* (Miller, 2004, p. 173; Crowther, 2007, p. 156). Lo practicaban en el gimnasio los efebos, jóvenes de dieciocho a veinte años, y tenía connotaciones militares, puesto que se trataba sobre todo de ganar terreno. Los indicios apuntan a un juego de élite, al menos fuera del gimnasio público, y es posible que coincidiera con el juego de pelota espartano (Crowther, 2007, p. 156). En el teatro de la Esparta posclásica cinco equipos de catorce *sphaireis* disputaban una versión dura del juego como última etapa de su paso a la condición de guerreros adultos, y los vencedores sacrificaban a Heracles (Golden, 2004, p. 25).",
+    "Los juegos de pelota nunca formaron parte de los festivales competitivos griegos, y el torneo espartano fue la única competición de equipos de efebos que incluyó la pelota (Golden, 2004, p. 25). Griegos y romanos lo practicaron, si bien las fuentes no permiten reconstruir sus reglas con precisión (Crowther, 2007, pp. 156-158). Su herencia es sobre todo historiográfica, porque la disposición de los jugadores del relieve ateniense invita a compararlo con el fútbol americano o el rugby. Crowther advierte, no obstante, que esas comparaciones responden a ideas preconcebidas modernas y que no puede suponerse que los antiguos practicaran una versión de esos deportes (Crowther, 2007, p. 156)."
+   ],
+   "en": [
+    "*Episkyros* owes its name to the stone chip, *skyros*, used to draw the line separating the two teams, and it was also called *ephebike*, 'ephebe ball', and *epikoinos*, 'team ball' (Golden, 2004, p. 61). Almost everything we know comes from Pollux, a teacher of rhetoric of the 2nd century AD, who listed it among children's ball games. According to his description, two teams with the same number of players stood on either side of the central line, on which the ball was placed, and each drew another line behind the opponents. The team that first got the ball threw it over the opponents, who had to catch it while still moving and throw it back, until one side pushed the other beyond its back line (Miller, 2004, p. 172).",
+    "The game is much older than its description. An Athenian statue base of about 510 BC shows six naked youths arranged in two facing groups, one of them about to throw a small ball, a scene usually identified with *episkyros* (Miller, 2004, p. 173; Crowther, 2007, p. 156). It was played in the gymnasium by the ephebes, young men aged eighteen to twenty, and had military overtones, since the aim was above all to gain ground. The evidence points to an elite game, at least outside the public gymnasium, and it may have been the same as the Spartan ball game (Crowther, 2007, p. 156). In the theatre of post-classical Sparta five teams of fourteen *sphaireis* played a rough version of the game as the last stage of their transition to adult warrior status, and the winners sacrificed to Heracles (Golden, 2004, p. 25).",
+    "Ball games were never part of the Greek competitive festivals, and the Spartan tournament was the only contest for ephebe teams that involved a ball (Golden, 2004, p. 25). Greeks and Romans both played it, although the sources do not allow its rules to be reconstructed precisely (Crowther, 2007, pp. 156-158). Its legacy is above all historiographical, because the arrangement of the players on the Athenian relief invites comparison with American football or rugby. Crowther warns, however, that such comparisons reflect modern preconceptions and that we cannot assume the ancients played a version of those sports (Crowther, 2007, p. 156)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/episkyros.jpg",
+   "pie": {
+    "es": "Relieve de los jugadores de pelota en una basa de estatua funeraria, mármol pentélico, hacia 510 a. C., Museo Arqueológico Nacional de Atenas.",
+    "en": "Ball players relief on a funerary statue base, Pentelic marble, c. 510 BC, National Archaeological Museum, Athens."
+   },
+   "autor": "Zde",
+   "licencia": {
+    "es": "CC BY-SA 3.0",
+    "en": "CC BY-SA 3.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Relief_pentelic_marble_%22Ball_Players%22_510_BC,_NAMA_3476_102584.jpg"
+  },
+  "refs": [
+   "Crowther, N. B. (2007). *Sport in ancient times*. Praeger.",
+   "Golden, M. (2004). *Sport in the ancient world from A to Z*. Routledge.",
+   "Miller, S. G. (2004). *Ancient Greek athletics*. Yale University Press."
+  ],
+  "refs_en": [
+   "Crowther, N. B. (2007). *Sport in ancient times*. Praeger.",
+   "Golden, M. (2004). *Sport in the ancient world from A to Z*. Routledge.",
+   "Miller, S. G. (2004). *Ancient Greek athletics*. Yale University Press."
+  ]
+ },
+ {
+  "id": "juegos-de-pelota-romanos",
+  "name": {
+   "es": "Juegos de pelota romanos",
+   "en": "Roman ball games"
+  },
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Roma e Italia, desde la época republicana tardía (siglos II-I a. C.) hasta la Antigüedad tardía (siglo V d. C.)",
+   "en": "Rome and Italy, from the late Republic (2nd-1st centuries BC) to late antiquity (5th century AD)"
+  },
+  "body": {
+   "es": [
+    "Los romanos, como los griegos, jugaban con pelotas de tamaños y materiales muy variados, y ninguna de ellas botaba como la de caucho mesoamericana. El poeta Marcial menciona cinco tipos. La *pila*, dura, era la que mejor botaba, el *follis* era una pelota ligera de vejiga de cerdo inflada con la que jugaban jóvenes y viejos, y la *pila paganica*, o «pelota campesina», iba rellena de plumas, mientras que la *trigonalis* y el *harpastum* daban nombre a dos juegos populares (Crowther, 2007, pp. 157-158). El médico Galeno recomendaba el ejercicio con la pelota pequeña porque era cómodo y barato, servía para individuos y grupos, para jóvenes y viejos, fortalecía todo el cuerpo y entrenaba la vista, y era además seguro, aunque el derecho romano recoge el caso de un jugador que rompió la pierna a un esclavo (Golden, 2004, p. 26).",
+    "En el trigón tres jugadores se colocaban en los vértices de un triángulo y se lanzaban una pelota dura, quizá más de una a la vez, con amagos que buscaban sorprender al compañero, y Marcial elogia la destreza de los zurdos en este juego. Los textos hablan a veces de anotadores que contaban las recepciones, como en el caso del Trimalción de Petronio, que jugaba en las termas con un esclavo encargado de recoger las pelotas caídas (Crowther, 2007, pp. 157-158). La pelota aportaba prestigio social a la élite. Catón se consoló de una derrota electoral jugando en el Campo de Marte, Cicerón jugaba con sesenta y dos años y Espurina, a los setenta y siete, mientras que jugadores profesionales hacían exhibiciones en las termas e instruían a los ricos. No está claro hasta qué punto jugaban las clases bajas, que tenían acceso a las termas y al Campo de Marte (Crowther, 2007, p. 157).",
+    "Los juegos de pelota romanos eran de carácter recreativo, sin grandes públicos, sin ligas y sin instalaciones propias, y las palabras victoria y derrota apenas aparecen en los textos antes de la era cristiana (Crowther, 2007, pp. 158-159). Los practicaban también las mujeres, como muestra el mosaico de la villa de Piazza Armerina, en Sicilia, del siglo IV d. C., donde unas jóvenes lanzan una pelota pequeña junto a otras que corren o lanzan el disco (Crowther, 2007, p. 159). Los autores cristianos no los condenaron, a diferencia de los espectáculos del anfiteatro y del circo, y en el siglo V Sidonio Apolinar describe todavía un partido en la villa de un amigo (Crowther, 2007, p. 159). Su herencia es discutida, puesto que algunos autores ven en una variante de la *paganica* jugada con palo curvo un antecedente del golf (Crowther, 2007, p. 158)."
+   ],
+   "en": [
+    "The Romans, like the Greeks, played with balls of very different sizes and materials, none of which bounced like the Mesoamerican rubber ball. The poet Martial mentions five kinds. The hard *pila* bounced best, the *follis* was a light ball made of an inflated pig's bladder played by young and old, and the *pila paganica*, or 'peasant ball', was stuffed with feathers, while the *trigonalis* and the *harpastum* gave their names to two popular games (Crowther, 2007, pp. 157-158). The physician Galen recommended exercise with the small ball because it was convenient and cheap, suited individuals and groups, young and old, strengthened the whole body and trained the eye, and was also safe, although Roman law records the case of a player who broke a slave's leg (Golden, 2004, p. 26).",
+    "In trigon three players stood at the corners of a triangle and threw a hard ball to each other, perhaps more than one at a time, with feints meant to surprise a partner, and Martial praises the skill of left-handers in this game. The texts sometimes mention scorers who counted catches, as in the case of Petronius's Trimalchio, who played in the baths with a slave assigned to pick up dropped balls (Crowther, 2007, pp. 157-158). Ball play brought social prestige to the elite. Cato consoled himself for an electoral defeat by playing on the Campus Martius, Cicero played at sixty-two and Spurinna at seventy-seven, while professional ball players gave displays in the baths and taught the rich. It is unclear to what extent the lower classes played, although they had access to the baths and the Campus Martius (Crowther, 2007, p. 157).",
+    "Roman ball games were recreational, without large crowds, leagues or purpose-built venues, and the words victory and defeat hardly appear in the texts before the Christian era (Crowther, 2007, pp. 158-159). Women played them too, as the 4th-century AD mosaic from the villa at Piazza Armerina in Sicily shows, where young women throw a small ball alongside others who run or throw the discus (Crowther, 2007, p. 159). Christian authors did not condemn them, unlike the shows of the amphitheatre and the circus, and in the 5th century Sidonius Apollinaris still describes a game at a friend's villa (Crowther, 2007, p. 159). Their legacy is debated, since some authors see in a variant of *paganica* played with a curved stick a forerunner of golf (Crowther, 2007, p. 158)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/juegos-de-pelota-romanos.jpg",
+   "pie": {
+    "es": "Mosaico de las «muchachas en biquini» de la villa romana del Casale (Piazza Armerina, Sicilia), hacia 320 d. C.; en el registro inferior, dos jóvenes juegan a la pelota.",
+    "en": "The 'bikini girls' mosaic from the Roman villa del Casale (Piazza Armerina, Sicily), c. AD 320; in the lower register, two young women play ball."
+   },
+   "autor": "Carole Raddato",
+   "licencia": {
+    "es": "CC BY-SA 2.0",
+    "en": "CC BY-SA 2.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:The_so-called_Bikini_Girls_Mosaic_depicting_ten_female_athletes_dressed_in_a_subligaculum_(loincloth_short)_and_a_strophium_(breast-cloth)_doing_various_sports_exercises_and_receiving_awards,_dated_to_AD_320,_Villa_del_Casale_3.jpg"
+  },
+  "refs": [
+   "Crowther, N. B. (2007). *Sport in ancient times*. Praeger.",
+   "Golden, M. (2004). *Sport in the ancient world from A to Z*. Routledge."
+  ],
+  "refs_en": [
+   "Crowther, N. B. (2007). *Sport in ancient times*. Praeger.",
+   "Golden, M. (2004). *Sport in the ancient world from A to Z*. Routledge."
+  ]
+ },
+ {
+  "id": "palo-volador",
+  "name": {
+   "es": "Palo volador",
+   "en": "Danza de los voladores (palo volador)"
+  },
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Mesoamérica, época prehispánica; hoy sobre todo entre los totonacas de Veracruz (México), con Papantla como centro; Patrimonio Cultural Inmaterial de la UNESCO desde 2009",
+   "en": "Mesoamerica, pre-Hispanic period; today above all among the Totonac of Veracruz (Mexico), centred on Papantla; UNESCO Intangible Cultural Heritage since 2009"
+  },
+  "body": {
+   "es": [
+    "La ceremonia de los voladores es un rito de origen prehispánico, practicado desde hace más de diez siglos, en el que varios hombres descienden girando atados a cuerdas desde lo alto de un mástil. El Códice Borbónico recoge una ceremonia del palo vinculada a la fiesta mexica de Xócotl Huetzi, y los cronistas de la época colonial describieron el vuelo con un sentido calendárico. Según un texto del siglo XVI, cada volador daba trece vueltas alrededor del palo antes de llegar al suelo, y esas vueltas representaban la cuenta de los años, de modo que los cuatro voladores sumaban cincuenta y dos, el ciclo del calendario mesoamericano (Tuzi, 2017). Durante la evangelización el rito se transformó y llegó a ejecutarse con seis u ocho voladores, cambio con el que los números perdieron su carácter ritual y que, según Guy Stresser-Péan, buscaba eludir la prohibición (Tuzi, 2017).",
+    "En su forma actual participan cinco hombres. Los cuatro voladores y el caporal suben a un poste de dieciocho a cuarenta metros de altura, cortado en el bosque tras pedir perdón al dios de la montaña, y el caporal, de pie en la plataforma superior, toca la flauta y un pequeño tambor con cantos dedicados al sol, a los cuatro vientos y a cada uno de los puntos cardinales. Después los cuatro jóvenes, atados con largas cuerdas a la plataforma giratoria, se dejan colgar y descienden poco a poco hasta el suelo, girando e imitando los movimientos del vuelo. El rito expresa el respeto y la armonía con el mundo natural y espiritual, recrea el mito del nacimiento del universo y sirve para comunicarse con los dioses y atraer la prosperidad (UNESCO, s. f.). La función del volador es, por tanto, ritual y comunitaria, y la destreza física queda al servicio de la ceremonia.",
+    "A diferencia de otros juegos y ritos prehispánicos, la danza de los voladores no desapareció. La practican varios grupos étnicos de México y Centroamérica, en especial los totonacas del estado de Veracruz (UNESCO, s. f.), y la región del Totonacapan, con la mayor concentración de grupos y postes, ha convertido a Papantla en la cuna moderna de la ceremonia (Tuzi, 2017). En 2009 la UNESCO la inscribió en la Lista Representativa del Patrimonio Cultural Inmaterial de la Humanidad (UNESCO, s. f.). Para los voladores y para quienes participan como espectadores en su espiritualidad, la ceremonia fomenta el orgullo y el respeto por el propio patrimonio y la propia identidad (UNESCO, s. f.), de modo que su herencia es la de una práctica corporal indígena que sobrevivió a la conquista adaptándose."
+   ],
+   "en": [
+    "The ceremony of the voladores is a rite of pre-Hispanic origin, practised for more than ten centuries, in which several men descend spinning on ropes from the top of a pole. The Codex Borbonicus records a pole ceremony linked to the Mexica feast of Xocotl Huetzi, and colonial chroniclers described the flight in calendrical terms. According to a 16th-century text, each flyer made thirteen turns around the pole before reaching the ground, and these turns represented the count of years, so that the four flyers added up to fifty-two, the cycle of the Mesoamerican calendar (Tuzi, 2017). During evangelisation the rite was transformed and came to be performed with six or eight flyers, a change by which the numbers lost their ritual character and which, according to Guy Stresser-Péan, was meant to avoid prohibition (Tuzi, 2017).",
+    "In its present form five men take part. The four flyers and the caporal climb a pole eighteen to forty metres high, cut in the forest after asking forgiveness of the mountain god, and the caporal, standing on the top platform, plays the flute and a small drum with songs dedicated to the sun, the four winds and each of the cardinal directions. The four young men, tied with long ropes to the spinning platform, then hang from it and gradually lower themselves to the ground, twirling to mimic the motions of flight. The rite expresses respect for and harmony with the natural and spiritual worlds, re-enacts the myth of the birth of the universe and serves to communicate with the gods and invite prosperity (UNESCO, n.d.). The function of the flyer is therefore ritual and communal, and physical skill is placed at the service of the ceremony.",
+    "Unlike other pre-Hispanic games and rites, the dance of the voladores did not disappear. It is performed by several ethnic groups in Mexico and Central America, especially the Totonac of the state of Veracruz (UNESCO, n.d.), and the Totonacapan region, with the highest concentration of groups and poles, has made Papantla the modern cradle of the ceremony (Tuzi, 2017). In 2009 UNESCO inscribed it on the Representative List of the Intangible Cultural Heritage of Humanity (UNESCO, n.d.). For the dancers and for those who share in its spirituality as observers, the ceremony encourages pride in and respect for one's cultural heritage and identity (UNESCO, n.d.), so its legacy is that of an indigenous bodily practice that survived the conquest by adapting."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/palo-volador.jpg",
+   "pie": {
+    "es": "Voladores de Papantla descendiendo del mástil.",
+    "en": "Voladores of Papantla descending from the pole."
+   },
+   "autor": "Yaomautzin Ohtokani Olvera Lara",
+   "licencia": {
+    "es": "CC BY-SA 4.0",
+    "en": "CC BY-SA 4.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Voladores_Papantla_3.JPG"
+  },
+  "refs": [
+   "Tuzi, G. (2017, 22 de febrero). *The Voladores (pole flying) ceremony*. Mexicolore. Recuperado el 29 de septiembre de 2026 de https://www.mexicolore.co.uk/aztecs/home/the-voladores-ceremony",
+   "UNESCO. (s. f.). *Ritual ceremony of the Voladores*. Recuperado el 29 de septiembre de 2026 de https://ich.unesco.org/en/RL/ritual-ceremony-of-the-voladores-00175"
+  ],
+  "refs_en": [
+   "Tuzi, G. (2017, February 22). *The Voladores (pole flying) ceremony*. Mexicolore. Retrieved September 29, 2026, from https://www.mexicolore.co.uk/aztecs/home/the-voladores-ceremony",
+   "UNESCO. (n.d.). *Ritual ceremony of the Voladores*. Retrieved September 29, 2026, from https://ich.unesco.org/en/RL/ritual-ceremony-of-the-voladores-00175"
+  ]
+ }
+]
