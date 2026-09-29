@@ -317,6 +317,28 @@ details.slide li{font-size:13.5px;line-height:1.5;margin-bottom:6px}
 .mxk-fecha{border-color:#8A5A00;color:#8A5A00}
 .mxk-ejemplo{background:#FFF3D6;border-color:#C77700;color:#7A4A00}
 .rep{display:block;margin:10px auto 0;background:none;border:0;color:var(--muted);font-size:13px;text-decoration:underline;cursor:pointer;padding:6px}
+.encday{display:flex;gap:10px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;box-shadow:var(--shadow)}
+.encday .d{flex:1;text-align:left;background:none;border:0;padding:0;font:inherit;color:inherit}
+.encday small{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700}
+.encday b{display:block;color:var(--primary-2);font-size:16px;margin:1px 0}
+.encday span{display:block;font-size:13px;color:var(--muted)}
+.dice{width:48px;height:48px;border-radius:14px;background:var(--accent);font-size:24px;border:0;flex-shrink:0;cursor:pointer}
+.enc-wrap{padding-right:22px}
+.enc-list .letter{font-weight:800;color:var(--primary);font-size:15px;margin:14px 4px 6px;padding-bottom:2px;border-bottom:2px solid var(--accent);display:inline-block}
+.enc-list button{display:block;width:100%;text-align:left;background:var(--paper);border:0;border-radius:12px;padding:10px 12px;margin-bottom:6px;box-shadow:var(--shadow);cursor:pointer}
+.enc-list button b{color:var(--primary-2);font-size:15px}
+.enc-list button span{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.az{position:fixed;right:2px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;z-index:15;touch-action:none;user-select:none;-webkit-user-select:none;background:rgba(255,255,255,.85);border-radius:10px;padding:4px 0}
+.az a{font-size:11px;font-weight:800;color:var(--primary);padding:1px 6px;text-align:center;line-height:1.2;text-decoration:none}
+.az a.off{color:#c3cbd6}
+.enc-when{background:#fff8e1;border-left:4px solid var(--accent);border-radius:10px;padding:10px 12px;font-weight:700;color:var(--primary-2);margin-top:12px}
+.enc-blq{font-size:12px;color:var(--muted);margin:8px 2px 0;text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+.enc-body p{line-height:1.55;margin:12px 0}
+.enc-refs p{font-size:12.5px;color:#444;margin:6px 0;padding-left:1.4em;text-indent:-1.4em;line-height:1.4}
+.enc-links{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.enc-links button{text-align:left;background:#EAF1F8;color:var(--primary-2);border:0;border-radius:12px;padding:10px 12px;font-weight:700;cursor:pointer}
+.enc-act{display:flex;gap:8px;margin-top:18px}
+.enc-act button{flex:1;border:0;border-radius:12px;padding:12px;font-weight:700;cursor:pointer}
 .srch-res{display:flex;flex-direction:column;gap:10px;margin-top:10px}
 .srch-res button{text-align:left;background:var(--paper);border-radius:14px;padding:12px 14px;box-shadow:var(--shadow);border:0;cursor:pointer}
 .srch-res .tt{font-weight:800;color:var(--primary-2);font-size:15px}
@@ -440,7 +462,7 @@ const I18N = {
     author:"Historia del Deporte · Grado en CAFD · UCAM",
     fichasSearch:"Buscar en las fichas…", fichasEsOnly:"", practice:"Practicar este apartado", slideText:"En la diapositiva", refsL:"Fuentes", essayL:"Para el ensayo",
     prevF:"Anterior", nextF:"Siguiente", secOnly:"Apartado {s}", allSec:"Todo el tema", fichaIntro:"Presentación del tema", secIntro:"Por qué este apartado", fichaXP:"Ficha leída", noResults:"Sin resultados", fichasOf:"{n} fichas", codeL:"Código", paras:"párrafos", img1:"imagen", imgN:"imágenes",
-    daily:"Reto del día", exam:"Cómo preparar el examen", examSub:"Test, desarrollo y comentario de imagen, paso a paso", mapOpen:"Desplegar todo", mapClose:"Plegar todo", mapTema:"Tema {n}", mapFicha:"📖 Leer la ficha", setHome:"Ajustes y ayuda", setHomeSub:"Idioma, instalar en el móvil, privacidad y cerrar sesión", searchAll:"Buscar en todas las fichas", searchAllSub:"Conceptos, autores, fechas y lugares de todos los temas", searchPh:"Escribe al menos 3 letras", searchN:"{n} fichas encontradas", searchNone:"No hay fichas con esa palabra", searchLoading:"Cargando los temas…", report:"⚑ Avisar de un error", reportHint:"Se abrirá tu correo con el mensaje preparado para el profesor.", reportWrite:"Explica aquí el error:", mapMore:"Para saber más", mapK:{concepto:"Concepto",autor:"Autor",fecha:"Fecha",ejemplo:"Ejemplo"}, mapPractice:"⚡ Practicar este apartado", mapHint:"Toca cada apartado para ver sus ideas y cada idea para leer el detalle.", dailySub:"Una prueba de cada tipo, distinta cada día, con el doble de XP", dailyStart:"Empezar el reto", dailyDone:"Reto de hoy completado", dailyScore:"{a} de {b} aciertos hoy", dailyBack:"Volver mañana para un reto nuevo", dailyStep:"Prueba {a} de {b}", dailyTitle:"Reto del día · {d}",
+    daily:"Reto del día", exam:"Cómo preparar el examen", examSub:"Test, desarrollo y comentario de imagen, paso a paso", mapOpen:"Desplegar todo", mapClose:"Plegar todo", mapTema:"Tema {n}", mapFicha:"📖 Leer la ficha", setHome:"Ajustes y ayuda", setHomeSub:"Idioma, instalar en el móvil, privacidad y cerrar sesión", enc:"Enciclopedia del deporte", encSub:"Origen e historia de {n} deportes", encDay:"Deporte del día", encPh:"Busca un deporte", encN:"{n} deportes", encNone:"No hay ningún deporte con ese nombre", encRand:"🎲 Otro deporte al azar", encCourse:"En la asignatura", encRefs:"Fuentes", encGrow:"La enciclopedia crece por tandas: {n} de {t} deportes publicados.", encImg:"Imagen", searchAll:"Buscar en todas las fichas", searchAllSub:"Conceptos, autores, fechas y lugares de todos los temas", searchPh:"Escribe al menos 3 letras", searchN:"{n} fichas encontradas", searchNone:"No hay fichas con esa palabra", searchLoading:"Cargando los temas…", report:"⚑ Avisar de un error", reportHint:"Se abrirá tu correo con el mensaje preparado para el profesor.", reportWrite:"Explica aquí el error:", mapMore:"Para saber más", mapK:{concepto:"Concepto",autor:"Autor",fecha:"Fecha",ejemplo:"Ejemplo"}, mapPractice:"⚡ Practicar este apartado", mapHint:"Toca cada apartado para ver sus ideas y cada idea para leer el detalle.", dailySub:"Una prueba de cada tipo, distinta cada día, con el doble de XP", dailyStart:"Empezar el reto", dailyDone:"Reto de hoy completado", dailyScore:"{a} de {b} aciertos hoy", dailyBack:"Volver mañana para un reto nuevo", dailyStep:"Prueba {a} de {b}", dailyTitle:"Reto del día · {d}",
     installBtn:"Instalar en el móvil", installIos:"En iPhone o iPad: pulsa el botón Compartir (el cuadrado con la flecha hacia arriba, abajo en Safari) y elige «Añadir a pantalla de inicio».", installAndroid:"En Android: abre el menú de Chrome (tres puntos) y elige «Instalar aplicación» o «Añadir a pantalla de inicio».", installDesktop:"Abre esta dirección en el móvil para instalarla; en el ordenador funciona igual desde el navegador.", installed:"La app ya está instalada.", close:"Cerrar"
   },
   en: {
@@ -467,7 +489,7 @@ const I18N = {
     author:"History of Sport · Sport Sciences degree · UCAM",
     fichasSearch:"Search the sheets…", fichasEsOnly:"Some sheets of this unit are not yet available in English and are shown in Spanish.", practice:"Practise this section", slideText:"On the slide", refsL:"Sources", essayL:"For the essay",
     prevF:"Previous", nextF:"Next", secOnly:"Section {s}", allSec:"Whole unit", fichaIntro:"About this unit", secIntro:"Why this section", fichaXP:"Sheet read", noResults:"No results", fichasOf:"{n} sheets", codeL:"Code", paras:"paragraphs", img1:"image", imgN:"images",
-    daily:"Daily challenge", exam:"How to prepare for the exam", examSub:"Multiple choice, essay and image commentary, step by step", mapOpen:"Expand all", mapClose:"Collapse all", mapTema:"Unit {n}", mapFicha:"📖 Read the study sheet", setHome:"Settings and help", setHomeSub:"Language, install on your phone, privacy and log out", searchAll:"Search all study sheets", searchAllSub:"Concepts, authors, dates and places from every unit", searchPh:"Type at least 3 letters", searchN:"{n} study sheets found", searchNone:"No study sheets contain that word", searchLoading:"Loading the units…", report:"⚑ Report a mistake", reportHint:"Your email app will open with a message ready for the lecturer.", reportWrite:"Describe the mistake here:", mapMore:"Learn more", mapK:{concepto:"Concept",autor:"Author",fecha:"Date",ejemplo:"Example"}, mapPractice:"⚡ Practise this section", mapHint:"Tap each section to see its ideas and each idea to read the detail.", dailySub:"One task of each kind, new every day, double XP", dailyStart:"Start the challenge", dailyDone:"Today's challenge completed", dailyScore:"{a} of {b} correct today", dailyBack:"Come back tomorrow for a new one", dailyStep:"Task {a} of {b}", dailyTitle:"Daily challenge · {d}",
+    daily:"Daily challenge", exam:"How to prepare for the exam", examSub:"Multiple choice, essay and image commentary, step by step", mapOpen:"Expand all", mapClose:"Collapse all", mapTema:"Unit {n}", mapFicha:"📖 Read the study sheet", setHome:"Settings and help", setHomeSub:"Language, install on your phone, privacy and log out", enc:"Sports Encyclopedia", encSub:"Origins and history of {n} sports", encDay:"Sport of the day", encPh:"Search for a sport", encN:"{n} sports", encNone:"No sport with that name", encRand:"🎲 Another random sport", encCourse:"In the course", encRefs:"Sources", encGrow:"The encyclopedia grows in batches: {n} of {t} sports published.", encImg:"Image", searchAll:"Search all study sheets", searchAllSub:"Concepts, authors, dates and places from every unit", searchPh:"Type at least 3 letters", searchN:"{n} study sheets found", searchNone:"No study sheets contain that word", searchLoading:"Loading the units…", report:"⚑ Report a mistake", reportHint:"Your email app will open with a message ready for the lecturer.", reportWrite:"Describe the mistake here:", mapMore:"Learn more", mapK:{concepto:"Concept",autor:"Author",fecha:"Date",ejemplo:"Example"}, mapPractice:"⚡ Practise this section", mapHint:"Tap each section to see its ideas and each idea to read the detail.", dailySub:"One task of each kind, new every day, double XP", dailyStart:"Start the challenge", dailyDone:"Today's challenge completed", dailyScore:"{a} of {b} correct today", dailyBack:"Come back tomorrow for a new one", dailyStep:"Task {a} of {b}", dailyTitle:"Daily challenge · {d}",
     installBtn:"Install on your phone", installIos:"On iPhone or iPad: tap the Share button (the square with the upward arrow, at the bottom in Safari) and choose 'Add to Home Screen'.", installAndroid:"On Android: open the Chrome menu (three dots) and choose 'Install app' or 'Add to Home screen'.", installDesktop:"Open this address on your phone to install it; on a computer it works from the browser.", installed:"The app is already installed.", close:"Close"
   }
 };
@@ -545,9 +567,9 @@ async function getTema(num){
 
 /* ============ rendering ============ */
 const app=document.getElementById("app");
-function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="daily") return "reto"; if(v.name==="exam") return "examen"; if(v.name==="search") return "buscar"; if(v.name==="tema") return "t"+v.num;
+function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="daily") return "reto"; if(v.name==="exam") return "examen"; if(v.name==="search") return "buscar"; if(v.name==="enc") return v.id?"enciclopedia/"+encodeURIComponent(v.id):"enciclopedia"; if(v.name==="tema") return "t"+v.num;
   if(v.name==="mode"){ if(v.mode==="fichas") return v.f?`t${v.num}/f/${v.f}`:`t${v.num}/fichas`; return `t${v.num}/${v.mode}`+(v.sec?"/"+v.sec:""); } return ""; }
-function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="reto") return {name:"daily"}; if(h==="examen") return {name:"exam"}; if(h==="buscar") return {name:"search"};
+function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="reto") return {name:"daily"}; if(h==="examen") return {name:"exam"}; if(h==="buscar") return {name:"search"}; if(h==="enciclopedia") return {name:"enc"}; if(h.startsWith("enciclopedia/")) return {name:"enc",id:decodeURIComponent(h.slice(13))};
   const p=h.split("/"); const mt=/^t(\d+)$/.exec(p[0]); if(!mt) return {name:"home"}; const num=+mt[1];
   if(p.length===1) return {name:"tema",num}; if(p[1]==="f"&&p[2]) return {name:"mode",num,mode:"fichas",f:decodeURIComponent(p[2])};
   if(MODES.includes(p[1])) return {name:"mode",num,mode:p[1],sec:p[2]||undefined}; return {name:"tema",num}; }
@@ -563,6 +585,7 @@ function render(){
   if(v.name==="daily") return renderDaily();
   if(v.name==="exam") return renderExam();
   if(v.name==="search") return renderSearch();
+  if(v.name==="enc") return v.id?renderEncFicha(v.id):renderEnc();
   if(v.name==="mode") return renderMode(v.num,v.mode);
 }
 function header(title,back,extra=""){
@@ -606,10 +629,12 @@ async function renderHome(){
     <button class="tema" id="dailyBtn" style="border:2px solid var(--accent);background:#fff8e1"><div class="num">☀️</div><div class="t"><b>${t("daily")}</b><span id="dailySub">${t("dailySub")}</span></div><div class="pct" id="dailyPct"></div></button>
     <button class="tema" id="examBtn" style="border:2px solid var(--primary)"><div class="num" style="background:var(--primary);color:#fff">🎓</div><div class="t"><b>${t("exam")}</b><span>${t("examSub")}</span></div><div class="pct">›</div></button>
     <button class="tema" id="searchBtn"><div class="num">🔎</div><div class="t"><b>${t("searchAll")}</b><span>${t("searchAllSub")}</span></div><div class="pct">›</div></button>
+    <button class="tema" id="encBtn"><div class="num" style="background:var(--primary);color:#fff">📚</div><div class="t"><b>${t("enc")}</b><span id="encSub">${t("encSub",{n:"…"})}</span></div><div class="pct">›</div></button>
+    <div class="encday" id="encDay" style="display:none"></div>
     <div id="temaList"><div class="empty">…</div></div>
     <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:10px">${t("author")}</p></main>`;
   bindHeader();
-  { const d=S.prog.daily||{}; const done=d.date===todayKey()&&d.done; document.getElementById("dailyBtn").onclick=()=>nav({name:"daily"}); document.getElementById("examBtn").onclick=()=>nav({name:"exam"}); document.getElementById("searchBtn").onclick=()=>nav({name:"search"}); document.getElementById("setBtn").onclick=()=>nav({name:"settings",from:{name:"home"}});
+  { const d=S.prog.daily||{}; const done=d.date===todayKey()&&d.done; document.getElementById("dailyBtn").onclick=()=>nav({name:"daily"}); document.getElementById("examBtn").onclick=()=>nav({name:"exam"}); document.getElementById("searchBtn").onclick=()=>nav({name:"search"}); document.getElementById("encBtn").onclick=()=>nav({name:"enc"}); encHome(); document.getElementById("setBtn").onclick=()=>nav({name:"settings",from:{name:"home"}});
     if(done){ document.getElementById("dailySub").textContent=t("dailyScore",{a:d.correct,b:d.total}); document.getElementById("dailyPct").textContent="✓"; } else document.getElementById("dailyPct").textContent="×2"; }
   try{
     const idx=await getIndex(); const list=document.getElementById("temaList"); list.innerHTML=""; let lastUnit="";
@@ -1025,6 +1050,77 @@ async function installApp(){
   if(nb) nb.onclick=async()=>{ const p=deferredInstall; if(!p) return; p.prompt(); try{ await p.userChoice; }catch(e){} deferredInstall=null; el.classList.remove("show"); inn.classList.remove("tall"); };
 }
 
+
+/* --- enciclopedia del deporte --- */
+async function getEnc(){ if(!S.enc){ S.enc=await fetch("data/enciclopedia.json",{cache:"no-cache"}).then(r=>r.json()); } return S.enc; }
+function encSorted(D){ return D.entries.slice().sort((a,b)=>L(a.name).localeCompare(L(b.name),S.lang)); }
+function encDaily(E){ const k=todayKey(); let h=7; for(const c of k) h=(h*31+c.charCodeAt(0))>>>0; const A=E.slice().sort((a,b)=>a.id<b.id?-1:1); return A[h%A.length]; }
+function encRandom(E,not){ if(E.length<2) return E[0]; let e; do{ e=E[Math.floor(Math.random()*E.length)]; }while(e.id===not); return e; }
+function encLetter(e){ const c=norm(L(e.name)).replace(/[^a-z0-9]/g,"")[0]||"#"; return /[a-z]/.test(c)?c.toUpperCase():"#"; }
+async function encHome(){
+  try{ const D=await getEnc(); const E=D.entries; if(!E.length) return;
+    const sub=document.getElementById("encSub"); if(sub) sub.textContent=t("encSub",{n:E.length});
+    const box=document.getElementById("encDay"); if(!box) return; const d=encDaily(E);
+    box.innerHTML=`<button class="d" id="encDayGo"><small>${t("encDay")}</small><b>${esc(L(d.name))}</b><span>${esc(L(d.cuando))}</span></button><button class="dice" id="encDice" aria-label="${esc(t("encRand"))}">🎲</button>`;
+    box.style.display="flex";
+    document.getElementById("encDayGo").onclick=()=>nav({name:"enc",id:d.id,back:{name:"home"}});
+    document.getElementById("encDice").onclick=()=>{ const r=encRandom(E); nav({name:"enc",id:r.id,back:{name:"home"}}); };
+  }catch(e){}
+}
+async function renderEnc(){
+  const q0=S.view.q||"";
+  app.innerHTML=header(t("enc"),true)+`<main><div class="enc-wrap">
+    <div style="display:flex;gap:8px"><input class="search" id="eq" type="search" placeholder="${t("encPh")}" autocomplete="off" value="${esc(q0)}" style="flex:1"><button class="dice" id="eDice" aria-label="${esc(t("encRand"))}">🎲</button></div>
+    <div class="counter" id="ecount" style="margin-top:8px">…</div><div class="enc-list" id="elist"></div>
+    <p class="counter" id="egrow" style="margin-top:14px;font-weight:400"></p></div></main><nav class="az" id="az"></nav>`;
+  bindHeader(()=>nav({name:"home"}));
+  let D; try{ D=await getEnc(); }catch(e){ app.querySelector("main").innerHTML=`<div class="empty">${t("loadError")}</div>`; return; }
+  const E=encSorted(D), inp=document.getElementById("eq"), list=document.getElementById("elist"), cnt=document.getElementById("ecount"), az=document.getElementById("az");
+  if(!inp) return;
+  document.getElementById("egrow").textContent=t("encGrow",{n:E.length,t:D.total||E.length});
+  document.getElementById("eDice").onclick=()=>{ const r=encRandom(E); nav({name:"enc",id:r.id,back:{name:"enc",q:inp.value.trim()}}); };
+  const LET="ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+  function paint(){
+    const raw=inp.value.trim(), qq=norm(raw); list.innerHTML="";
+    const out=E.filter(e=>!qq||norm(e.name.es+" "+e.name.en+" "+L(e.cuando)).includes(qq));
+    cnt.textContent=out.length?t("encN",{n:out.length}):t("encNone");
+    let last=""; const have=new Set();
+    for(const e of out){ const l=encLetter(e); if(l!==last){ const h=document.createElement("div"); h.className="letter"; h.id="L-"+l; h.textContent=l; list.appendChild(h); last=l; have.add(l); }
+      const b=document.createElement("button"); b.innerHTML=`<b>${esc(L(e.name))}</b><span>${esc(L(e.cuando))}</span>`;
+      b.onclick=()=>nav({name:"enc",id:e.id,back:{name:"enc",q:raw}}); list.appendChild(b); }
+    az.style.display=qq?"none":"flex";
+    az.innerHTML=LET.map(l=>`<a data-l="${l}" class="${have.has(l)?"":"off"}">${l}</a>`).join("");
+    S.view.q=raw;
+  }
+  function jump(l){ let el=document.getElementById("L-"+l); if(!el){ const i=LET.indexOf(l); for(let j=i+1;j<LET.length&&!el;j++) el=document.getElementById("L-"+LET[j]); for(let j=i-1;j>=0&&!el;j--) el=document.getElementById("L-"+LET[j]); }
+    if(el){ const top=el.getBoundingClientRect().top+window.scrollY-(document.querySelector(".top")?.offsetHeight||60)-8; window.scrollTo(0,top); } }
+  function fromTouch(ev){ const p=ev.touches?ev.touches[0]:ev; const el=document.elementFromPoint(p.clientX,p.clientY); if(el&&el.dataset&&el.dataset.l) jump(el.dataset.l); }
+  az.addEventListener("touchstart",e=>{ e.preventDefault(); fromTouch(e); },{passive:false});
+  az.addEventListener("touchmove",e=>{ e.preventDefault(); fromTouch(e); },{passive:false});
+  az.addEventListener("click",fromTouch);
+  let tmr=null; inp.oninput=()=>{ clearTimeout(tmr); tmr=setTimeout(paint,150); }; paint();
+}
+async function renderEncFicha(id){
+  const v=S.view; let D; try{ D=await getEnc(); }catch(e){ D={entries:[]}; }
+  const e=D.entries.find(x=>x.id===id); if(!e){ nav({name:"enc"}); return; }
+  const im=e.img||{}, refs=(S.lang==="en"&&e.refs_en)?e.refs_en:(e.refs||[]);
+  const LX=x=>x&&typeof x==="object"?L(x):x; const lic=[LX(im.autor),LX(im.licencia)].filter(Boolean).map(esc).join(" · ");
+  app.innerHTML=header(L(e.name),true)+`<main>
+    ${im.src?`<div class="fimg" id="eImg"><img src="${esc(im.src)}" alt="${esc(L(e.name))}" loading="lazy"><div class="cap">${md(L(im.pie))}${lic?`<br>${lic}${im.url?` · <a href="${esc(im.url)}" target="_blank" rel="noopener">Wikimedia Commons</a>`:""}`:""}</div></div>`:""}
+    <div class="enc-when">🕰️ ${esc(L(e.cuando))}</div>
+    <div class="enc-blq">${esc(L(e.bloque))}</div>
+    <div class="enc-body">${LL(e.body).map(x=>`<p>${md(x)}</p>`).join("")}</div>
+    ${(e.tema&&e.tema.length)?`<div class="section-title" style="margin-top:14px">${t("encCourse")}</div><div class="enc-links">${e.tema.map((x,j)=>`<button data-j="${j}">📖 ${t("tema")} ${x.num} · ${esc(L(x.t))}</button>`).join("")}</div>`:""}
+    ${refs.length?`<div class="section-title" style="margin-top:16px">${t("encRefs")}</div><div class="enc-refs">${refs.map(r=>`<p>${md(r)}</p>`).join("")}</div>`:""}
+    <div class="enc-act"><button id="eRand" style="background:var(--accent);color:var(--primary-2)">${t("encRand")}</button></div>
+    <div class="enc-act" style="margin-top:8px"><button id="eRep" style="background:#F1F3F6;color:var(--muted)">${t("report")}</button></div>
+  </main>`;
+  bindHeader(()=>nav(v.back||{name:"enc"}));
+  document.querySelectorAll(".enc-links button").forEach(b=>b.onclick=()=>{ const x=e.tema[+b.dataset.j]; nav({name:"mode",num:x.num,mode:"fichas",f:x.f,back:{name:"enc",id:e.id,back:v.back}}); });
+  document.getElementById("eRand").onclick=()=>{ const r=encRandom(D.entries,e.id); nav({name:"enc",id:r.id,back:v.back}); };
+  document.getElementById("eRep").onclick=()=>reportMail({where:t("enc")+" · "+L(e.name),text:LL(e.body)[0]||""});
+  const ei=document.getElementById("eImg"); if(ei) ei.querySelector("img").onclick=()=>{ const lb=document.createElement("div"); lb.className="lightbox"; lb.innerHTML=`<img src="${esc(im.src)}" alt=""><div class="cap">${md(L(im.pie))}</div>`; lb.onclick=()=>lb.remove(); document.body.appendChild(lb); };
+}
 
 /* --- avisar de un error --- */
 function reportMail(ctx){
