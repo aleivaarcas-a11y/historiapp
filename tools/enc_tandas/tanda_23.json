@@ -1,0 +1,264 @@
+[
+ {
+  "id": "go",
+  "name": {
+   "es": "Go",
+   "en": "Go"
+  },
+  "bloque": {
+   "es": "Deportes mentales y otros",
+   "en": "Mind sports and others"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "China, hace más de tres mil años según su federación internacional; forma institucional moderna en Japón, con la Nihon Ki-in (Tokio, 1924)",
+   "en": "China, more than three thousand years ago according to its international federation; modern institutional form in Japan, with the Nihon Ki-in (Tokyo, 1924)"
+  },
+  "body": {
+   "es": [
+    "El go, que en China recibe el nombre de *weiqi*, es un juego de estrategia en el que dos jugadores colocan piedras blancas y negras sobre un tablero cuadriculado para dominar territorio. La Federación Internacional de Go sitúa su invención en China hace más de tres mil años, aunque recoge que otros autores la llevan hasta cerca de cuatro mil, y recuerda que aparece en las *Analectas* de Confucio, del siglo VI a. C. (International Go Federation, s. f.-a). En los siglos que siguieron a la caída de la dinastía Han, el *weiqi* ganó aceptación entre los letrados, que lo jugaban en banquetes y tertulias, y con el apoyo de los emperadores se extendió a todas las clases sociales; se concertaban partidas entre jugadores afamados, se anotaban las jugadas para entretenimiento de otros y se celebraban evaluaciones públicas, a veces de varios cientos de participantes, que clasificaban a los jugadores en nueve grados según su nivel (Speak, 1999a, p. 37).",
+    "Según la federación internacional, el juego llegó a Japón hace unos mil quinientos años a través de la península de Corea, fue apreciado en la corte imperial, como muestra su presencia en la *Historia de Genji* del siglo XI, y desde allí se difundió entre los guerreros y las comunidades budistas (International Go Federation, s. f.-a). Durante el periodo Edo (1603-1868) adquirió en Japón una organización profesional amparada por el poder político, puesto que Sansa (1559-1623) fue nombrado jefe de la academia oficial de go (*Godokoro*) y estableció el sistema de escuelas hereditarias, de manera que las casas Honinbo, Yasui, Inoue y Hayashi rivalizaban en partidas celebradas ante el *shōgun* en el castillo de Edo (International Go Federation, s. f.-a). Desaparecido ese patrocinio con el fin del shogunato, las organizaciones japonesas de go se fusionaron en 1924 en la Nihon Ki-in, o Asociación Japonesa de Go (International Go Federation, s. f.-a).",
+    "En la era Meiji los occidentales que visitaban Japón aprendieron el juego y empezaron a enseñarlo en Europa y en América, donde quedó bien asentado en las décadas de 1920 y 1930 (International Go Federation, s. f.-a). La Federación Internacional de Go se fundó oficialmente el 18 de marzo de 1982 con veintinueve miembros y en 2012 agrupaba a setenta y cuatro federaciones de todos los continentes, la mitad de ellas europeas, si bien la mayor parte de sus más de cuarenta millones de jugadores sigue concentrada en Asia oriental (International Go Federation, s. f.-b). Su reconocimiento deportivo llegó por la vía de los deportes mentales, dado que la federación fue admitida como miembro provisional de SportAccord, la antigua GAISF, en 2004 y como miembro de pleno derecho en 2006, y figura entre los fundadores de la International Mind Sports Association (International Go Federation, s. f.-b). Las fuentes chinas muestran además que en época Tang el *weiqi* estaba entre los juegos de moda de las mujeres de los círculos cortesanos (Speak, 1999a, p. 42)."
+   ],
+   "en": [
+    "Go, known in China as *weiqi*, is a strategy game in which two players place white and black stones on a grid board in order to control territory. The International Go Federation places its invention in China more than three thousand years ago, while noting that some authors push it back to nearly four thousand, and recalls that it appears in the *Analects* of Confucius, from the 6th century BC (International Go Federation, n.d.-a). In the centuries that followed the fall of the Han dynasty, *weiqi* gained acceptance among the literati, who played it at banquets and gatherings, and with the support of the emperors it spread to all social classes; matches were arranged between well-known players, games were recorded for the entertainment of others and public appraisals were held, sometimes of several hundred contestants, which divided players into nine grades according to their level (Speak, 1999a, p. 37).",
+    "According to the international federation, the game reached Japan some fifteen hundred years ago by way of the Korean peninsula, found favour at the imperial court, as its presence in the 11th-century *Tale of Genji* shows, and from there spread among warriors and Buddhist communities (International Go Federation, n.d.-a). During the Edo period (1603-1868) it acquired in Japan a professional organisation sheltered by political power, since Sansa (1559-1623) was appointed head of the official Go academy (*Godokoro*) and established the system of hereditary schools, so that the Honinbo, Yasui, Inoue and Hayashi houses competed in games played before the *shōgun* at Edo Castle (International Go Federation, n.d.-a). Once that patronage disappeared with the end of the shogunate, the Japanese Go organisations merged in 1924 into the Nihon Ki-in, or Japan Go Association (International Go Federation, n.d.-a).",
+    "In the Meiji era Westerners visiting Japan learned the game and began to teach it in Europe and America, where it became well established in the 1920s and 1930s (International Go Federation, n.d.-a). The International Go Federation was officially founded on 18 March 1982 with twenty-nine members and by 2012 it brought together seventy-four federations on every continent, half of them European, although most of its more than forty million players remain concentrated in East Asia (International Go Federation, n.d.-b). Its recognition as a sport came through the route of mind sports, since the federation was admitted as a provisional member of SportAccord, the former GAISF, in 2004 and as a full member in 2006, and it is one of the founders of the International Mind Sports Association (International Go Federation, n.d.-b). Chinese sources also show that in the Tang period *weiqi* was among the fashionable games of women in court circles (Speak, 1999a, p. 42)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/go.jpg",
+   "pie": {
+    "es": "Estampa *surimono* de Kubo Shunman (periodo Edo) con un conjunto de objetos para el juego del go.",
+    "en": "*Surimono* print by Kubo Shunman (Edo period) showing an outfit for the game of Go."
+   },
+   "autor": "Kubo Shunman",
+   "licencia": "CC0",
+   "url": "https://commons.wikimedia.org/wiki/File:MET_DP135836.jpg"
+  },
+  "refs": [
+   "International Go Federation. (s. f.-a). *History of Go*. Recuperado el 29 de septiembre de 2026 de https://intergofed.org/history-of-go/",
+   "International Go Federation. (s. f.-b). *About the IGF*. Recuperado el 29 de septiembre de 2026 de https://intergofed.org/about-the-igf/",
+   "Speak, M. (1999a). Recreation and sport in ancient China: Primitive society to AD 960. En J. Riordan y R. Jones (Eds.), *Sport and physical education in China* (pp. 20-44). E & FN Spon."
+  ],
+  "refs_en": [
+   "International Go Federation. (n.d.-a). *History of Go*. Retrieved September 29, 2026, from https://intergofed.org/history-of-go/",
+   "International Go Federation. (n.d.-b). *About the IGF*. Retrieved September 29, 2026, from https://intergofed.org/about-the-igf/",
+   "Speak, M. (1999a). Recreation and sport in ancient China: Primitive society to AD 960. In J. Riordan & R. Jones (Eds.), *Sport and physical education in China* (pp. 20-44). E & FN Spon."
+  ]
+ },
+ {
+  "id": "bridge",
+  "name": {
+   "es": "Bridge",
+   "en": "Bridge"
+  },
+  "bloque": {
+   "es": "Deportes mentales y otros",
+   "en": "Mind sports and others"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Estambul, hacia 1860-1865, según varias fuentes; bridge de contrato, a bordo del vapor *Finland*, 1 de noviembre de 1925",
+   "en": "Istanbul, around 1860-1865, according to several sources; contract bridge, aboard the steamship *Finland*, 1 November 1925"
+  },
+  "body": {
+   "es": [
+    "El bridge pertenece a la familia de juegos de bazas que en Inglaterra desembocó en el whist, cuyos antecedentes se remontan a una referencia de 1529 en un sermón publicado del obispo Latimer y que en el siglo XVII se jugaba con nombres como *triumph*, *trump*, *ruff* o *slam*; en 1742 Edmond Hoyle publicó su *Short treatise on whist*, que fue un gran éxito editorial (English Bridge Union, s. f.). Del whist procede también el juego de duplicado, en el que distintas parejas juegan las mismas manos, practicado por primera vez en Londres en 1857 bajo la dirección de Cavendish y organizado en Estados Unidos con la American Whist League en 1891 (English Bridge Union, s. f.). El origen del bridge propiamente dicho es incierto; varias fuentes lo sitúan en Estambul hacia 1860-1865, quizá a partir de un juego ruso llamado *sibirskii ieralash*, y el Museo Británico conserva un folleto de 1886 titulado *Biritch or Russian whist* (English Bridge Union, s. f.).",
+    "La difusión en Occidente se hizo a través de los clubes, puesto que Henry Barbey fechó en 1892 unas leyes del bridge impresas de forma privada y llevó el juego a Nueva York en 1893, y en 1894 los socios del Portland Club de Londres empezaron a jugarlo, introducido por lord Brougham, que lo había conocido en la India (English Bridge Union, s. f.). Hacia 1904 apareció el principio de la subasta, que la tradición sitúa también en la India, y el bridge de subasta se extendió hasta 1927 (English Bridge Union, s. f.). La forma actual se debe al estadounidense Harold S. Vanderbilt, que perfeccionó el bridge de contrato durante un viaje en el vapor *Finland* de Los Ángeles a La Habana; su creación se fecha el 1 de noviembre de 1925 y fue una pasajera quien propuso el término *vulnerable* (English Bridge Union, s. f.). En 1927 aparecieron los primeros códigos, en 1928 lo adoptaron los grandes clubes neoyorquinos y en 1932 entró en vigor el primer Código Internacional de Leyes (English Bridge Union, s. f.).",
+    "La popularidad del bridge de contrato debió mucho a Ely Culbertson, que fundó en 1929 la revista *The Bridge World*, fijó en 1930 los principios de la subasta y protagonizó en 1931 el encuentro con Lenz que dio al juego resonancia internacional (English Bridge Union, s. f.). La Federación Mundial de Bridge (WBF) se constituyó en Oslo el 18 de agosto de 1958 con delegados de Europa, Estados Unidos y Sudamérica (World Bridge Federation, s. f.), y en 1960 se celebró la primera Olimpiada por equipos (English Bridge Union, s. f.). El Comité Olímpico Internacional la reconoció como federación deportiva internacional en 1999 y la WBF ingresó en la GAISF en 2000; forma parte de la International Mind Sports Association, creada en 2005, y reúne a un centenar de organizaciones nacionales con unos 530.000 afiliados (World Bridge Federation, s. f.). Su trayectoria muestra el paso de un pasatiempo de sociabilidad de club, cultivado en el Portland Club y en los clubes de whist neoyorquinos, a una competición reglada que busca su reconocimiento como deporte mental."
+   ],
+   "en": [
+    "Bridge belongs to the family of trick-taking games that in England culminated in whist, whose antecedents go back to a reference of 1529 in a published sermon by Bishop Latimer and which in the 17th century was played under names such as *triumph*, *trump*, *ruff* or *slam*; in 1742 Edmond Hoyle published his *Short treatise on whist*, which became a best-seller (English Bridge Union, n.d.). Duplicate play, in which different pairs play the same hands, also comes from whist; it was first played in London in 1857 under the direction of Cavendish and organised in the United States with the American Whist League in 1891 (English Bridge Union, n.d.). The origin of bridge proper is uncertain; several sources place it in Istanbul around 1860-1865, perhaps derived from a Russian game called *sibirskii ieralash*, and the British Museum holds an 1886 pamphlet entitled *Biritch or Russian whist* (English Bridge Union, n.d.).",
+    "Its spread in the West took place through clubs, since Henry Barbey dated to 1892 a privately printed set of laws of bridge and took the game to New York in 1893, and in 1894 members of the Portland Club in London began to play it, introduced by Lord Brougham, who had learned it in India (English Bridge Union, n.d.). Around 1904 the auction principle appeared, which tradition also places in India, and auction bridge spread until 1927 (English Bridge Union, n.d.). The present form is owed to the American Harold S. Vanderbilt, who perfected contract bridge during a voyage on the steamship *Finland* from Los Angeles to Havana; its creation is dated to 1 November 1925 and it was a woman passenger who suggested the term *vulnerable* (English Bridge Union, n.d.). In 1927 the first codes of laws appeared, in 1928 the major New York clubs adopted the game, and in 1932 the first International Code of Laws came into force (English Bridge Union, n.d.).",
+    "The popularity of contract bridge owed much to Ely Culbertson, who founded the magazine *The Bridge World* in 1929, set out the principles of bidding in 1930 and in 1931 played the match against Lenz that gave the game international resonance (English Bridge Union, n.d.). The World Bridge Federation (WBF) was constituted in Oslo on 18 August 1958 by delegates from Europe, the United States and South America (World Bridge Federation, n.d.), and in 1960 the first Team Olympiad was held (English Bridge Union, n.d.). The International Olympic Committee recognised it as an international sports federation in 1999 and the WBF joined GAISF in 2000; it belongs to the International Mind Sports Association, created in 2005, and brings together about a hundred national organisations with some 530,000 affiliated members (World Bridge Federation, n.d.). Its trajectory shows the passage from a pastime of club sociability, cultivated in the Portland Club and the New York whist clubs, to a regulated competition that seeks recognition as a mind sport."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/bridge.jpg",
+   "pie": {
+    "es": "Harold S. Vanderbilt, creador del bridge de contrato, en la portada de la revista *Time* del 15 de septiembre de 1930.",
+    "en": "Harold S. Vanderbilt, creator of contract bridge, on the cover of *Time* magazine, 15 September 1930."
+   },
+   "autor": "International",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Harold_vanderbilt_time.jpg"
+  },
+  "refs": [
+   "English Bridge Union. (s. f.). *Origins and history of bridge*. Recuperado el 29 de septiembre de 2026 de https://www.ebu.co.uk/origins-and-history-bridge",
+   "World Bridge Federation. (s. f.). *History*. Recuperado el 29 de septiembre de 2026 de https://www.worldbridge.org/the-wbf/history/"
+  ],
+  "refs_en": [
+   "English Bridge Union. (n.d.). *Origins and history of bridge*. Retrieved September 29, 2026, from https://www.ebu.co.uk/origins-and-history-bridge",
+   "World Bridge Federation. (n.d.). *History*. Retrieved September 29, 2026, from https://www.worldbridge.org/the-wbf/history/"
+  ]
+ },
+ {
+  "id": "breaking",
+  "name": {
+   "es": "Breaking",
+   "en": "Breaking"
+  },
+  "bloque": {
+   "es": "Deportes mentales y otros",
+   "en": "Mind sports and others"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "El Bronx (Nueva York, EE. UU.), mediados de la década de 1970, dentro de la cultura hip hop",
+   "en": "The Bronx (New York, USA), mid-1970s, within hip hop culture"
+  },
+  "body": {
+   "es": [
+    "El breaking nació a mediados de la década de 1970 en el Bronx, en Nueva York, y sus pioneros fueron jóvenes afroamericanos y puertorriqueños, que hicieron de él una de las expresiones de la cultura hip hop surgida en aquellos barrios (World DanceSport Federation, s. f.-b). La federación internacional que hoy lo rige lo presenta como un modo que encontraron aquellos jóvenes de canalizar su energía y de comunicar su identidad, en un ambiente en el que destacaron DJ como Kool Herc y grupos como la Rock Steady Crew o los Cold Crush Brothers, y en el que los *b-boys* y las *b-girls* exhibían sus movimientos de baile (World DanceSport Federation, 2023). A diferencia de la mayoría de los deportes olímpicos, su origen no se encuentra en las escuelas, los clubes o las asociaciones de aficionados, puesto que la práctica creció en la calle, como parte de una cultura juvenil que unía la música y el baile.",
+    "A medida que la cultura hip hop se difundía por el mundo, el breaking se difundió con ella y evolucionó hacia una forma competitiva, acrobática y técnicamente compleja, a la que la federación internacional de baile deportivo se refiere ya como una modalidad de su deporte (World DanceSport Federation, 2023). Su expansión fue global; en Japón, por ejemplo, los *breakdancers* formaron parte de una escena hip hop «glocal» que, como los patinadores, reclamaba el uso del espacio urbano, dentro de un conjunto de deportes alternativos que fundían la práctica corporal con la música pop y la moda y celebraban la actuación espectacular del cuerpo de un modo distinto del deporte tradicional (Manzenreiter, 2014, p. 259). La propia federación subraya que el breaking ha pasado de sus raíces callejeras a ser una forma artística reconocida internacionalmente, en la que los elementos del baile urbano se entrelazan con una capacidad atlética extraordinaria (World DanceSport Federation, s. f.-b).",
+    "La incorporación institucional corrió a cargo de la World DanceSport Federation, la antigua federación de baile deportivo de origen europeo. El 6 de diciembre de 2016 el breaking fue aceptado en el programa de los Juegos Olímpicos de la Juventud de 2018, que lo acogieron en Buenos Aires los días 7 y 8 de octubre, y los días 9 y 10 de agosto de 2024 formó parte de los Juegos Olímpicos de París (World DanceSport Federation, s. f.-a). Continúa en los Juegos Olímpicos de la Juventud de Dakar de 2026 y se compite en pruebas separadas para *b-boys* y *b-girls*, con categorías por edad y un formato mixto por equipos de tres contra tres (World DanceSport Federation, s. f.-b). Su llegada a los Juegos colocó bajo una federación nacida en los salones de baile de competición una práctica surgida en la calle."
+   ],
+   "en": [
+    "Breaking was born in the mid-1970s in the Bronx, New York, and its pioneers were African American and Puerto Rican youths, who made it one of the expressions of the hip hop culture that emerged in those neighbourhoods (World DanceSport Federation, n.d.-b). The international federation that now governs it presents it as a way those young people found to channel their energy and communicate their identity, in a setting where DJs such as Kool Herc and groups such as the Rock Steady Crew or the Cold Crush Brothers stood out, and where *b-boys* and *b-girls* displayed their dance moves (World DanceSport Federation, 2023). Unlike most Olympic sports, its origin does not lie in schools, clubs or amateur associations, since the practice grew in the street, as part of a youth culture that combined music and dance.",
+    "As hip hop culture spread around the world, breaking spread with it and evolved into a competitive, acrobatic and technically complex form, which the international dancesport federation now treats as a discipline of its sport (World DanceSport Federation, 2023). Its expansion was global; in Japan, for example, breakdancers were part of a «glocal» hip hop scene which, like skaters, reclaimed the use of urban space, within a set of alternative sports that fused bodily practice with pop music and fashion and celebrated the spectacular performance of the body in a way different from traditional sport (Manzenreiter, 2014, p. 259). The federation itself stresses that breaking has moved from its street roots to become an internationally recognised art form, in which elements of urban dance are intertwined with extraordinary athleticism (World DanceSport Federation, n.d.-b).",
+    "Its institutional incorporation was carried out by the World DanceSport Federation, the former dancesport federation of European origin. On 6 December 2016 breaking was accepted into the programme of the 2018 Youth Olympic Games, which hosted it in Buenos Aires on 7 and 8 October, and on 9 and 10 August 2024 it formed part of the Paris Olympic Games (World DanceSport Federation, n.d.-a). It continues at the 2026 Youth Olympic Games in Dakar and is contested in separate events for *b-boys* and *b-girls*, with age categories and a mixed three-versus-three team format (World DanceSport Federation, n.d.-b). Its arrival at the Games placed a practice born in the street under a federation born in competitive ballrooms."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/breaking.jpg",
+   "pie": {
+    "es": "El *b-boy* Pumba baila en el corro (*cypher*) del trigésimo aniversario de la Rock Steady Crew, en el Bronx, en julio de 2007.",
+    "en": "B-boy Pumba dancing in the cypher at the Rock Steady Crew 30th anniversary, in the Bronx, July 2007."
+   },
+   "autor": "NexusMoves",
+   "licencia": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Breakdance_cypher.JPG"
+  },
+  "refs": [
+   "Manzenreiter, W. (2014). *Sport and body politics in Japan*. Routledge.",
+   "World DanceSport Federation. (2023, 25 de abril). *Throwing it back to the 1970s: The birth of hip hop and breaking's road to Paris 2024*. Recuperado el 29 de septiembre de 2026 de https://www.worlddancesport.org/News/Breaking-Olympic-Sport-Paris-2024-3319",
+   "World DanceSport Federation. (s. f.-a). *History*. Recuperado el 29 de septiembre de 2026 de https://www.worlddancesport.org/wdsf/history",
+   "World DanceSport Federation. (s. f.-b). *Breaking*. Recuperado el 29 de septiembre de 2026 de https://www.worlddancesport.org/breaking"
+  ],
+  "refs_en": [
+   "Manzenreiter, W. (2014). *Sport and body politics in Japan*. Routledge.",
+   "World DanceSport Federation. (2023, April 25). *Throwing it back to the 1970s: The birth of hip hop and breaking's road to Paris 2024*. Retrieved September 29, 2026, from https://www.worlddancesport.org/News/Breaking-Olympic-Sport-Paris-2024-3319",
+   "World DanceSport Federation. (n.d.-a). *History*. Retrieved September 29, 2026, from https://www.worlddancesport.org/wdsf/history",
+   "World DanceSport Federation. (n.d.-b). *Breaking*. Retrieved September 29, 2026, from https://www.worlddancesport.org/breaking"
+  ]
+ },
+ {
+  "id": "baile-deportivo",
+  "name": {
+   "es": "Baile deportivo",
+   "en": "DanceSport"
+  },
+  "bloque": {
+   "es": "Deportes mentales y otros",
+   "en": "Mind sports and others"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Europa, década de 1920, con la codificación del «estilo inglés» en 1929; primera federación internacional en Praga, 1935",
+   "en": "Europe, 1920s, with the codification of the «English style» in 1929; first international federation in Prague, 1935"
+  },
+  "body": {
+   "es": [
+    "El baile deportivo es la forma competitiva del baile de salón en pareja, y su federación internacional sitúa su nacimiento en la década de 1920, cuando varios países europeos fueron pioneros en la conversión gradual del baile en un deporte organizado (World DanceSport Federation, s. f.-b). El paso decisivo fue la fijación de un canon común, puesto que en 1929 los profesores de baile británicos definieron las normas de un «estilo inglés» que pronto se adoptó en todas partes (World DanceSport Federation, s. f.-b). De ese modo, una práctica de sociabilidad propia de los salones de baile quedó sometida a normas comunes, lo que permitía que parejas de distintos lugares se midieran entre sí ante un jurado.",
+    "La primera organización internacional fue la Fédération Internationale de Danse pour Amateurs (FIDA), fundada en Praga el 10 de septiembre de 1935 por nueve países europeos, que un año después celebró su primer campeonato del mundo en Bad Nauheim, en Alemania (World DanceSport Federation, s. f.-b). La FIDA suspendió su actividad en 1956, tras veinte años marcados por la Segunda Guerra Mundial y por los conflictos entre aficionados y profesionales, y el 12 de mayo de 1957, en la casa del campeón alemán Otto Teipel en Wiesbaden, ocho naciones europeas fundaron el International Council of Amateur Dancers (ICAD), del que Teipel fue elegido presidente (World DanceSport Federation, s. f.-b). El Acuerdo de Bremen, firmado el 3 de octubre de 1965 entre el ICAD y el International Council of Ballroom Dancing, dejó a los aficionados bajo la autoridad del primero y a los profesionales bajo la del segundo (World DanceSport Federation, s. f.-b).",
+    "En 1990 el ICAD adoptó el nombre de International DanceSport Federation, con el que subrayaba el carácter deportivo del baile, y el Comité Olímpico Internacional reconoció el baile deportivo de forma provisional en 1995 y de manera plena en su 106.ª sesión, celebrada en Lausana en 1997 (World DanceSport Federation, s. f.-a). En los Juegos Mundiales de Akita de 2001 fue el deporte que más ingresos obtuvo por venta de entradas, en 2005 el *rock and roll* se sumó a las modalidades estándar y latina en los Juegos Mundiales de Duisburgo y en 2008 la federación inició una cooperación formal con el Comité Paralímpico Internacional para desarrollar el baile deportivo en silla de ruedas (World DanceSport Federation, s. f.-c). Entre 2011 y 2012 pasó a llamarse World DanceSport Federation (WDSF), y fue esta federación, nacida del baile de salón aficionado europeo, la que llevó el breaking a los Juegos Olímpicos de París de 2024 (World DanceSport Federation, s. f.-a)."
+   ],
+   "en": [
+    "DanceSport is the competitive form of partnered ballroom dancing, and its international federation places its birth in the 1920s, when several European nations pioneered the gradual emergence of dance as an organised sport (World DanceSport Federation, n.d.-b). The decisive step was the establishment of a common canon, since in 1929 British dance teachers defined the standards of an «English style» that was soon adopted everywhere (World DanceSport Federation, n.d.-b). In this way a practice of sociability belonging to the ballroom became subject to common standards, which allowed couples from different places to compete against one another before a panel of judges.",
+    "The first international organisation was the Fédération Internationale de Danse pour Amateurs (FIDA), founded in Prague on 10 September 1935 by nine European countries, which a year later held its first world championship in Bad Nauheim, Germany (World DanceSport Federation, n.d.-b). FIDA suspended its activities in 1956, after twenty years marked by the Second World War and by conflicts between amateurs and professionals, and on 12 May 1957, at the home of the German champion Otto Teipel in Wiesbaden, eight European nations founded the International Council of Amateur Dancers (ICAD), with Teipel elected president (World DanceSport Federation, n.d.-b). The Bremen Agreement, signed on 3 October 1965 between ICAD and the International Council of Ballroom Dancing, placed amateurs under the authority of the former and professionals under that of the latter (World DanceSport Federation, n.d.-b).",
+    "In 1990 ICAD adopted the name International DanceSport Federation, stressing the sporting character of dance, and the International Olympic Committee recognised DanceSport provisionally in 1995 and fully at its 106th Session, held in Lausanne in 1997 (World DanceSport Federation, n.d.-a). At the 2001 World Games in Akita it was the sport that generated the highest ticket revenue, in 2005 rock 'n' roll joined the Standard and Latin disciplines at the World Games in Duisburg, and in 2008 the federation entered into formal cooperation with the International Paralympic Committee to develop wheelchair DanceSport (World DanceSport Federation, n.d.-c). In 2011-2012 it was renamed the World DanceSport Federation (WDSF), and it was this federation, born of European amateur ballroom dancing, that took breaking to the 2024 Paris Olympic Games (World DanceSport Federation, n.d.-a)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/baile-deportivo.jpg",
+   "pie": {
+    "es": "Baile de San Valentín y concurso de baile de salón en los Empress Rooms del Royal Palace Hotel de Londres, el 14 de febrero de 1921; en el centro, el profesor Santos Casani.",
+    "en": "St Valentine's dance and ballroom dancing competition in the Empress Rooms of the Royal Palace Hotel, London, 14 February 1921; in the centre, the teacher Santos Casani."
+   },
+   "autor": "Morey (Topical Press Agency)",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Santos_Casani_(1893-1983)_on_14_February_1921_at_the_Royal_Palace_Hotel_in_London.jpg"
+  },
+  "refs": [
+   "World DanceSport Federation. (s. f.-a). *History*. Recuperado el 29 de septiembre de 2026 de https://www.worlddancesport.org/wdsf/history",
+   "World DanceSport Federation. (s. f.-b). *How it all started*. Recuperado el 29 de septiembre de 2026 de https://www.worlddancesport.org/WDSF/History/How-It-All-Started",
+   "World DanceSport Federation. (s. f.-c). *How it continued*. Recuperado el 29 de septiembre de 2026 de https://www.worlddancesport.org/WDSF/History/How-It-Continued"
+  ],
+  "refs_en": [
+   "World DanceSport Federation. (n.d.-a). *History*. Retrieved September 29, 2026, from https://www.worlddancesport.org/wdsf/history",
+   "World DanceSport Federation. (n.d.-b). *How it all started*. Retrieved September 29, 2026, from https://www.worlddancesport.org/WDSF/History/How-It-All-Started",
+   "World DanceSport Federation. (n.d.-c). *How it continued*. Retrieved September 29, 2026, from https://www.worlddancesport.org/WDSF/History/How-It-Continued"
+  ]
+ },
+ {
+  "id": "esports",
+  "name": {
+   "es": "Esports",
+   "en": "Esports"
+  },
+  "bloque": {
+   "es": "Deportes mentales y otros",
+   "en": "Mind sports and others"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Siglo XXI como práctica deportiva institucionalizada; primera federación internacional, la International Esports Federation, fundada en 2008",
+   "en": "21st century as an institutionalised sporting practice; first international federation, the International Esports Federation, founded in 2008"
+  },
+  "body": {
+   "es": [
+    "Los esports, o deportes electrónicos, son competiciones organizadas de videojuegos, y su inclusión en el campo del deporte es uno de los casos que mejor muestran que el deporte es un concepto de contorno abierto, bajo el que conviven prácticas con una implicación física muy desigual; en la asignatura se discuten junto al ajedrez o la pesca como ejemplos de esa frontera discutida. Manzenreiter (2014, p. 259) sitúa los juegos virtuales y los esports entre los procesos de «deportivización» que difuminan la frontera entre el deporte y el entretenimiento, al lado de fenómenos tan distintos como los maratones de baile o la obsesión casi deportiva por las clasificaciones. Vamplew (2021, pp. 104-105) los cuenta entre los deportes nuevos del siglo XXI y señala que atraen a jugadores y espectadores de los que muchos apenas mostraban interés por los deportes convencionales.",
+    "La institucionalización siguió el modelo de las federaciones deportivas. La International Esports Federation (IESF) se fundó en 2008 con nueve naciones miembro de Europa y de Asia, tiene su sede en Busan, en Corea del Sur, y en 2020 alcanzó los setenta y un países miembro; se presenta como el mayor organismo unificador de los esports en el mundo y centra su actividad en la organización de campeonatos, en la gobernanza de la disciplina y en una cumbre anual de directivos (International Esports Federation, 2020).",
+    "Los esports entraron en el programa de los Juegos Asiáticos de 2022 (Vamplew, 2021, p. 104). En el movimiento olímpico, el Comité Olímpico Internacional firmó en julio de 2024 una alianza de doce años con Arabia Saudí para celebrar en Riad unos Juegos Olímpicos de Esports, cuya primera edición, prevista para 2025, se aplazó en febrero de 2025 a 2027; en octubre de 2025, ya bajo la presidencia de Kirsty Coventry, ambas partes acordaron poner fin a esa cooperación y el COI anunció que desarrollaría un nuevo enfoque y un nuevo modelo de colaboración, sin sede ni calendario confirmados (Dixon, 2025)."
+   ],
+   "en": [
+    "Esports, or electronic sports, are organised video game competitions, and their inclusion in the field of sport is one of the cases that best show that sport is an open-ended concept, under which practices with very unequal physical involvement coexist; in this course they are discussed alongside chess or fishing as examples of that contested boundary. Manzenreiter (2014, p. 259) places virtual games and esports among the processes of «sportification» that blur the boundary between sport and entertainment, alongside phenomena as different as marathon dancing or the sport-like obsession with charts and rankings. Vamplew (2021, pp. 104-105) counts them among the new sports of the 21st century and notes that they attract players and spectators, many of whom had little time for conventional sports.",
+    "Institutionalisation followed the model of sports federations. The International Esports Federation (IESF) was founded in 2008 with nine member nations from Europe and Asia, has its headquarters in Busan, South Korea, and in 2020 reached seventy-one member countries; it presents itself as the largest unifying body for esports in the world and focuses its activity on organising championships, on the governance of the discipline and on an annual executive summit (International Esports Federation, 2020).",
+    "Esports entered the programme of the 2022 Asian Games (Vamplew, 2021, p. 104). Within the Olympic movement, the International Olympic Committee signed a twelve-year partnership with Saudi Arabia in July 2024 to hold Olympic Esports Games in Riyadh, whose first edition, planned for 2025, was postponed in February 2025 to 2027; in October 2025, now under the presidency of Kirsty Coventry, both parties agreed to end that cooperation and the IOC announced that it would develop a new approach and a new partnership model, with no host or timeline confirmed (Dixon, 2025)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 1,
+    "f": "deporte-un-concepto-vivo",
+    "t": {
+     "es": "Deporte: un concepto vivo",
+     "en": "Sport: a living concept"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/esports.jpg",
+   "pie": {
+    "es": "Los comentaristas Artosis y Tasteless narran para la retransmisión en inglés un torneo de *StarCraft* en el estudio de GOMTV de Seúl, en julio de 2011.",
+    "en": "Commentators Artosis and Tasteless calling a *StarCraft* tournament for the English-language stream at the GOMTV studio in Seoul, July 2011."
+   },
+   "autor": "Nick Pettit",
+   "licencia": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Artosis_and_Tasteless_at_2011_South_Korean_StarCraft_tournament_(6012884181).jpg"
+  },
+  "refs": [
+   "Dixon, E. (2025, 30 de octubre). IOC scraps partnership with Saudi Arabia to host Olympic Esports Games. *SportsPro*. https://www.sportspro.com/news/esports-and-digital-sport/ioc-olympic-esports-games-saudi-arabia-partnership-cancelled-october-2025/",
+   "International Esports Federation. (2020, 7 de agosto). *IESF grows to 71 member nations*. Recuperado el 29 de septiembre de 2026 de https://archive.iesf.org/iesf/document.do?mode=view&articleNo=388",
+   "Manzenreiter, W. (2014). *Sport and body politics in Japan*. Routledge.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Dixon, E. (2025, October 30). IOC scraps partnership with Saudi Arabia to host Olympic Esports Games. *SportsPro*. https://www.sportspro.com/news/esports-and-digital-sport/ioc-olympic-esports-games-saudi-arabia-partnership-cancelled-october-2025/",
+   "International Esports Federation. (2020, August 7). *IESF grows to 71 member nations*. Retrieved September 29, 2026, from https://archive.iesf.org/iesf/document.do?mode=view&articleNo=388",
+   "Manzenreiter, W. (2014). *Sport and body politics in Japan*. Routledge.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ }
+]

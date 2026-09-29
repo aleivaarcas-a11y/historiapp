@@ -47,7 +47,7 @@ NEW = r'''async function renderSearch(){
     const out=[]; const has=x=>norm(x).includes(qq);
     for(const e of enc.entries||[]){ const title=L(e.name), body=plain(LL(e.body).join(" "));
       const inT=has(e.name.es+" "+e.name.en), inB=has(body)||has(L(e.cuando));
-      if(inT||inB) out.push({score:inT?0:3,title,tag:t("sEnc"),meta:L(e.cuando),body:inT?"":body,go:()=>nav({name:"enc",id:e.id,back:{name:"search",q:raw}})}); }
+      if(inT||inB) out.push({score:inT?0:3,title,tag:t("sEnc"),meta:plain(L(e.cuando)),body:inT?"":body,go:()=>nav({name:"enc",id:e.id,back:{name:"search",q:raw}})}); }
     for(const tm of temas){
       (tm.fichas||[]).forEach(f=>{ const title=L(f.title), body=plain(LL(f.body).join(" "));
         const inT=has(title), inB=has(body); if(inT||inB) out.push({score:inT?1:4,num:tm.num,title,tag:t("sFicha"),meta:`${t("tema")} ${tm.num} · ${f.sec} · ${f.code}`,body,go:()=>nav({name:"mode",num:tm.num,mode:"fichas",f:f.id,back:{name:"search",q:raw}})}); });

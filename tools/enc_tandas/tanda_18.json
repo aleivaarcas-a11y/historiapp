@@ -1,0 +1,662 @@
+[
+ {
+  "id": "piraguismo",
+  "name": {
+   "es": "Piragüismo",
+   "en": "Canoeing"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "América del Norte y Ártico, canoas y kayaks indígenas; deporte moderno, Gran Bretaña, 1865",
+   "en": "North America and the Arctic, Indigenous canoes and kayaks; modern sport, Britain, 1865"
+  },
+  "body": {
+   "es": [
+    "Las embarcaciones movidas con pala son muy anteriores al deporte, puesto que durante milenios sirvieron para el transporte, la pesca, la caza y la guerra en ríos, lagos y costas de medio mundo. Las dos embarcaciones de las que deriva el piragüismo moderno proceden de América del Norte. La canoa abierta de corteza de los pueblos nativos era ligera, fácil de reparar y podía llevarse a hombros de un curso de agua a otro, mientras que el kayak de los aleutas y los inuit del Ártico, hecho con pieles tensadas sobre un armazón de madera o de hueso, llevaba la cubierta cerrada, protegía al palista del agua helada y permitía enderezarlo tras un vuelco con un giro de cuerpo y de pala que todavía se conoce como esquimotaje (Townes, 1999, p. 72).",
+    "A mediados del siglo XIX, cuando otros medios de transporte desplazaron a la canoa, su uso se desvió hacia el recreo y la competición. En 1865 el abogado escocés John MacGregor, residente en Londres, se hizo construir una embarcación cubierta a la que llamó *Rob Roy*, que en realidad era un kayak, y recorrió con ella ríos británicos y del continente; los relatos de esos viajes difundieron el modelo en Gran Bretaña y en Europa (Fernández Truan, s. f., p. 991; Townes, 1999, p. 72). En Alemania y en Suiza el kayak se adaptó al excursionismo con armazones desmontables que cabían en una mochila, los *Faltboote* (Fernández Truan, s. f., p. 991), y en Estados Unidos los aficionados fundaron en 1880 la American Canoe Association (Townes, 1999, p. 72).",
+    "El 19 de enero de 1924 las asociaciones de Dinamarca, Alemania, Austria y Suecia fundaron en Copenhague la Internationale Repräsentantenschaft für Kanusport (IRK), que en 1946 pasó a llamarse International Canoe Federation. Ese mismo año de 1924 el piragüismo en aguas tranquilas se exhibió en los Juegos de París, en Berlín 1936 entró como deporte olímpico con medallas y el slalom en aguas bravas debutó en Múnich 1972 y quedó fijo en el programa desde Barcelona 1992 (International Canoe Federation, 2024); la fecha de 1996 que da algún manual para las aguas bravas (Fernández Truan, s. f., p. 992) no concuerda con estos datos. En 2026 la federación adoptó el nombre de Paddle Worldwide (International Testing Agency, s. f.). La trayectoria del piragüismo resume el paso de una técnica indígena de subsistencia a un ocio de viajeros europeos y, ya en el siglo XX, a una práctica ligada a la preocupación por la forma física y a la vida al aire libre (Townes, 1999, p. 72)."
+   ],
+   "en": [
+    "Paddle-driven craft long predate sport, since for millennia they were used for transport, fishing, hunting and war on the rivers, lakes and coasts of much of the world. The two craft from which modern canoeing derives come from North America. The open bark canoe of the Native peoples was light, easy to repair and could be carried on the shoulders from one waterway to the next, while the kayak of the Aleuts and Inuit of the Arctic, made of skins stretched over a frame of wood or bone, had a closed deck, protected the paddler from the freezing water and could be righted after a capsize with a turn of body and paddle still known as the Eskimo roll (Townes, 1999, p. 72).",
+    "In the mid-nineteenth century, when other means of transport displaced the canoe, its use shifted towards recreation and competition. In 1865 the Scottish lawyer John MacGregor, who lived in London, had a decked craft built which he named *Rob Roy*, in fact a kayak, and travelled in it along British and continental rivers; the accounts of those journeys spread the model in Britain and across Europe (Fernández Truan, n.d., p. 991; Townes, 1999, p. 72). In Germany and Switzerland the kayak was adapted to touring with collapsible frames that fitted into a rucksack, the *Faltboote* (Fernández Truan, n.d., p. 991), and in the United States enthusiasts founded the American Canoe Association in 1880 (Townes, 1999, p. 72).",
+    "On 19 January 1924 the associations of Denmark, Germany, Austria and Sweden founded in Copenhagen the Internationale Repräsentantenschaft für Kanusport (IRK), renamed the International Canoe Federation in 1946. In that same year of 1924 flatwater canoeing was shown as a demonstration at the Paris Games, at Berlin 1936 it became a full Olympic medal sport, and canoe slalom made its debut at Munich 1972 and has been a fixture of the programme since Barcelona 1992 (International Canoe Federation, 2024); the date of 1996 given in one textbook for the arrival of whitewater events (Fernández Truan, n.d., p. 992) does not match these facts. In 2026 the federation adopted the name Paddle Worldwide (International Testing Agency, n.d.). The history of canoeing traces the passage from an Indigenous subsistence technique to a pastime of European travellers and, in the twentieth century, to a practice linked to the concern with physical fitness and outdoor life (Townes, 1999, p. 72)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/piraguismo.jpg",
+   "pie": {
+    "es": "John MacGregor rema en su *Rob Roy* a su paso por Tuttlingen (Alemania), ilustración de su relato de viaje (1866).",
+    "en": "John MacGregor paddles his *Rob Roy* through Tuttlingen (Germany), illustration from his travel account (1866)."
+   },
+   "autor": "John MacGregor",
+   "licencia": {
+    "es": "CC0",
+    "en": "CC0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:John_MacGregor_Tuttlingen.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Canoe Federation. (2024, 19 de enero). *International Canoe Federation celebrates 100th birthday*. Recuperado el 29 de septiembre de 2026 de https://www.canoeicf.com/news/international-canoe-federation-celebrates-100th-birthday",
+   "International Testing Agency. (s. f.). *Paddle Worldwide (PWW)*. Recuperado el 29 de septiembre de 2026 de https://ita.sport/partner/international-canoe-federation-icf/",
+   "Townes, J. (1999). Canoeing and kayaking. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 71-73). Oxford University Press."
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Canoe Federation. (2024, January 19). *International Canoe Federation celebrates 100th birthday*. Retrieved September 29, 2026, from https://www.canoeicf.com/news/international-canoe-federation-celebrates-100th-birthday",
+   "International Testing Agency. (n.d.). *Paddle Worldwide (PWW)*. Retrieved September 29, 2026, from https://ita.sport/partner/international-canoe-federation-icf/",
+   "Townes, J. (1999). Canoeing and kayaking. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 71-73). Oxford University Press."
+  ]
+ },
+ {
+  "id": "rafting",
+  "name": {
+   "es": "Rafting",
+   "en": "Rafting"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Ríos del oeste de Estados Unidos, balsas neumáticas tras la Segunda Guerra Mundial; competición internacional desde 1989",
+   "en": "Rivers of the western United States, inflatable rafts after the Second World War; international competition from 1989"
+  },
+  "body": {
+   "es": [
+    "La balsa es una de las formas más antiguas de navegar por un río, y durante siglos los troncos talados en las montañas bajaron por la corriente atados en largos trenes que los almadieros gobernaban con remos, como ocurría en los valles del Pirineo. Esa práctica de trabajo, sin embargo, no guarda relación directa con el deporte actual (Fernández Truan, s. f., p. 1067). El rafting moderno nació en los ríos del oeste de Estados Unidos, en particular en el cañón del Colorado, donde tras la Segunda Guerra Mundial los botes neumáticos sobrantes del ejército empezaron a usarse para descender los rápidos por aventura y por turismo (Fernández Truan, s. f., p. 1066).",
+    "Las balsas neumáticas, más anchas y planas que las canoas, ofrecen menos respuesta en los giros y exigen más fuerza para avanzar, a cambio de una estabilidad que permite llevar grupos numerosos con pocas nociones previas. Esa cualidad explica que, desde los años sesenta, el rafting se difundiera sobre todo como actividad recreativa y como negocio de excursiones comerciales por ríos de aguas bravas, con guías profesionales al frente de cada embarcación (Townes, 1999, pp. 316-317). La competición internacional llegó tarde, con el Project RAFT (*Russians and Americans for Teamwork*), que en los últimos años de la Guerra Fría reunió a equipos de muchos países en Siberia (1989), Estados Unidos (1990), Costa Rica (1991) y Turquía (1993) (International Rafting Federation, s. f.).",
+    "En un campeonato mundial celebrado en Italia en 1994 varios de sus protagonistas plantearon la necesidad de un organismo común, y en mayo de 1997 se fundó en Augsburgo (Alemania) la International Rafting Federation, que celebró su primer congreso el 8 de septiembre de ese año durante el Camel White Water Challenge. El primer campeonato del mundo oficial se disputó en Costa Rica en 1998, año en que la federación aprobó además un sistema de formación y titulación de guías (International Rafting Federation, s. f.). En Europa el rafting se extendió en los años ochenta y en España a comienzos de los noventa, primero en los ríos pirenaicos (Fernández Truan, s. f., p. 1067). El deporte, que no es olímpico, mantiene un fuerte vínculo con el turismo activo y con la profesión de guía, en la que la federación registra una proporción creciente de mujeres (International Rafting Federation, s. f.)."
+   ],
+   "en": [
+    "The raft is one of the oldest ways of travelling down a river, and for centuries timber felled in the mountains was floated downstream bound in long trains that raftsmen steered with oars, as happened in the valleys of the Pyrenees. That working practice, however, bears no direct relation to the present-day sport (Fernández Truan, n.d., p. 1067). Modern rafting was born on the rivers of the western United States, particularly in the canyon of the Colorado, where after the Second World War surplus army inflatable boats began to be used to run the rapids for adventure and tourism (Fernández Truan, n.d., p. 1066).",
+    "Inflatable rafts, broader and flatter than canoes, respond less readily to turns and need more power to move forward, in exchange for a stability that allows large groups with little previous knowledge to be carried. That quality explains why, from the 1960s, rafting spread above all as a recreational activity and as a business of commercial trips on whitewater rivers, with professional guides in charge of each boat (Townes, 1999, pp. 316-317). International competition came late, with Project RAFT (Russians and Americans for Teamwork), which in the last years of the Cold War brought together teams from many countries in Siberia (1989), the United States (1990), Costa Rica (1991) and Turkey (1993) (International Rafting Federation, n.d.).",
+    "At a world championship held in Italy in 1994 several of its leading figures raised the need for a common body, and in May 1997 the International Rafting Federation was founded in Augsburg (Germany), holding its first congress on 8 September that year during the Camel White Water Challenge. The first official world championship took place in Costa Rica in 1998, the year in which the federation also approved a system for training and certifying guides (International Rafting Federation, n.d.). In Europe rafting spread in the 1980s and in Spain in the early 1990s, first on the rivers of the Pyrenees (Fernández Truan, n.d., p. 1067). The sport, which is not Olympic, keeps a strong link with adventure tourism and with the profession of guide, in which the federation records a growing proportion of women (International Rafting Federation, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/rafting.jpg",
+   "pie": {
+    "es": "Botes de expedición y una balsa neumática preparados para descender el Gran Cañón desde Lees Ferry (Arizona), julio de 1952.",
+    "en": "Expedition boats and an inflatable raft prepared to run the Grand Canyon from Lees Ferry (Arizona), July 1952."
+   },
+   "autor": "Steve Leding (Grand Canyon National Park)",
+   "licencia": {
+    "es": "CC BY 2.0",
+    "en": "CC BY 2.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:02278_Grand_Canyon_Nat_Park_Historic_River_Photo_(7304882156).jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Rafting Federation. (s. f.). *History*. Recuperado el 29 de septiembre de 2026 de https://internationalrafting.com/about/history/",
+   "Townes, J. (1999). Rafting. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 316-317). Oxford University Press."
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Rafting Federation. (n.d.). *History*. Retrieved September 29, 2026, from https://internationalrafting.com/about/history/",
+   "Townes, J. (1999). Rafting. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 316-317). Oxford University Press."
+  ]
+ },
+ {
+  "id": "vela",
+  "name": {
+   "es": "Vela",
+   "en": "Sailing"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Países Bajos, siglo XVII; regatas en Inglaterra desde la década de 1660; federación internacional, París, 1907",
+   "en": "The Netherlands, seventeenth century; races in England from the 1660s; international federation, Paris, 1907"
+  },
+  "body": {
+   "es": [
+    "Casi todas las sociedades con acceso al mar desarrollaron alguna forma de navegación a vela como parte de su sistema de transporte. Los pueblos de Oriente Próximo navegaban en barcas de juncos hacia el 3500 a. C., y griegos, romanos, chinos y vikingos diseñaron cada uno sus embarcaciones en función del viento dominante, de la tripulación disponible y de los materiales a su alcance (Reekie, 1999, p. 338). En el Mediterráneo antiguo la vela convivió con el remo, y en la marina fenicia la galera de guerra solo izaba vela en las travesías largas, mientras que el buque de carga navegaba a vela y reservaba los remos para el puerto, como se explica en el tema 2.",
+    "La vela como deporte parece haber nacido en los Países Bajos, de cuya lengua proceden muchos términos náuticos, entre ellos *yacht* (Reekie, 1999, p. 338; Vamplew, 2021, p. 201). Carlos II de Inglaterra, que se había aficionado a navegar en el *jaght schip* holandés durante su exilio, se hizo construir hasta catorce yates tras la Restauración (Guttmann, 2004, p. 69), y en la década de 1660 disputó en Londres una carrera contra el barco de su hermano, el duque de York. La primera regata organizada se asocia al Water Club de Cork, en 1720, y el club más antiguo en actividad continuada nació en Londres en 1815 como Yacht Club, llamado desde 1830 Royal Yacht Squadron (Reekie, 1999, p. 338). En 1851 la goleta *America* ganó frente a la isla de Wight la copa que después llevó su nombre (Reekie, 1999, p. 339).",
+    "Hasta 1870 cada club aplicaba sus propias reglas de regata, y la necesidad de medir y compensar barcos distintos llevó a una regla internacional de medición aprobada en Londres en 1906 y a la creación en París, en octubre de 1907, de la International Yacht Racing Union, que en 1996 pasó a llamarse International Sailing Federation y en 2015 World Sailing (World Sailing, s. f.). La vela entró en los Juegos Olímpicos en París 1900 y figura en todas las ediciones desde 1908; en aquella primera cita compitió una regatista, la primera mujer olímpica, y las pruebas femeninas separadas llegaron en Seúl 1988 (Olympedia, s. f.). Hasta finales del siglo XIX fue un deporte de ricos, y aunque después aparecieron embarcaciones más baratas, los clubes náuticos conservan fama de exclusivos (Vamplew, 2021, pp. 201-202)."
+   ],
+   "en": [
+    "Almost every society with access to the sea developed some form of sailing as part of its transport system. The peoples of the Near East sailed reed boats around 3500 BCE, and Greeks, Romans, Chinese and Vikings each designed their craft according to the prevailing wind, the crew available and the materials at hand (Reekie, 1999, p. 338). In the ancient Mediterranean sail coexisted with oar, and in the Phoenician navy the war galley raised sail only on long crossings, while the cargo ship sailed under canvas and kept its oars for harbour work, as explained in Unit 2.",
+    "Sailing as a sport seems to have been born in the Netherlands, whose language gave many nautical terms, *yacht* among them (Reekie, 1999, p. 338; Vamplew, 2021, p. 201). Charles II of England, who had taken to sailing in the Dutch *jaght schip* during his exile, had no fewer than fourteen yachts built after the Restoration (Guttmann, 2004, p. 69), and in the 1660s he raced his boat in London against that of his brother, the Duke of York. The first organised regatta is associated with the Water Club of Cork, in 1720, and the oldest club in continuous existence was founded in London in 1815 as the Yacht Club, known from 1830 as the Royal Yacht Squadron (Reekie, 1999, p. 338). In 1851 the schooner *America* won off the Isle of Wight the cup that later took her name (Reekie, 1999, p. 339).",
+    "Until 1870 each club applied its own racing rules, and the need to measure and handicap different boats led to an international measurement rule agreed in London in 1906 and to the creation in Paris, in October 1907, of the International Yacht Racing Union, renamed the International Sailing Federation in 1996 and World Sailing in 2015 (World Sailing, n.d.). Sailing entered the Olympic Games at Paris 1900 and has featured at every edition since 1908; at that first appearance a woman sailor competed, the first female Olympian, and separate women's events arrived at Seoul 1988 (Olympedia, n.d.). Until the late nineteenth century it was a sport of the wealthy, and although cheaper boats appeared later, yacht clubs retain a reputation for exclusiveness (Vamplew, 2021, pp. 201-202)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 2,
+    "f": "remar",
+    "t": {
+     "es": "Remar",
+     "en": "Rowing"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/vela.jpg",
+   "pie": {
+    "es": "*East Cowes Castle*, óleo de J. M. W. Turner (1827-1828) con los yates de la regata de Cowes, en la isla de Wight.",
+    "en": "*East Cowes Castle*, oil painting by J. M. W. Turner (1827-1828) showing the yachts of the Cowes regatta on the Isle of Wight."
+   },
+   "autor": "J. M. W. Turner",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:East_Cowes_Castle,_by_J_M_W_Turner_1827.jpg"
+  },
+  "refs": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Olympedia. (s. f.). *Sailing*. Recuperado el 29 de septiembre de 2026 de https://www.olympedia.org/sports/SAL",
+   "Reekie, S. H. M. (1999). Sailing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 338-340). Oxford University Press.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books.",
+   "World Sailing. (s. f.). *History*. Recuperado el 29 de septiembre de 2026 de https://www.sailing.org/inside-world-sailing/organisation/world-sailing/history/"
+  ],
+  "refs_en": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Olympedia. (n.d.). *Sailing*. Retrieved September 29, 2026, from https://www.olympedia.org/sports/SAL",
+   "Reekie, S. H. M. (1999). Sailing. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 338-340). Oxford University Press.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books.",
+   "World Sailing. (n.d.). *History*. Retrieved September 29, 2026, from https://www.sailing.org/inside-world-sailing/organisation/world-sailing/history/"
+  ]
+ },
+ {
+  "id": "windsurf",
+  "name": {
+   "es": "Windsurf",
+   "en": "Windsurfing"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Estados Unidos, década de 1960 (tabla de Newman Darby, 1964; Windsurfer de Drake y Schweitzer, patentado en 1970)",
+   "en": "United States, 1960s (Newman Darby's sailboard, 1964; Drake and Schweitzer's Windsurfer, patented 1970)"
+  },
+  "body": {
+   "es": [
+    "El windsurf combina el surf y la vela en una tabla cuyo aparejo, formado por mástil, vela y botavara, se une a la tabla mediante una junta universal que permite moverlo en cualquier dirección, de manera que el navegante, de pie, sostiene la vela con las manos y gobierna inclinándola y desplazando el peso del cuerpo (Reekie, 1999, p. 337). La paternidad del invento es uno de los asuntos más discutidos del deporte, con aspirantes en Estados Unidos, Inglaterra y Australia (Reekie, 1999, p. 337). El estadounidense Newman Darby llevaba desde finales de los años cuarenta dando vueltas a la idea, en 1964 construyó una tabla a vela con aparejo articulado y en 1965 la revista *Popular Science* publicó un reportaje con sus planos, aunque nunca llegó a patentarla (Scuttlebutt Sailing News, 2016).",
+    "El modelo que se impuso fue el de los californianos Jim Drake y Hoyle Schweitzer, que patentaron en 1970 una tabla comercializada después con el nombre de *Windsurfer* (Scuttlebutt Sailing News, 2016); algún manual atribuye además la invención al inglés Peter Chilvers en 1958 (Fernández Truan, s. f., p. 1020). El deporte creció despacio en California y muy deprisa en Europa durante los años setenta, y la evolución del material fue rápida, puesto que en 1977 Larry Stanley añadió en las olas de Hawái las cinchas para los pies, que junto con tablas más cortas hicieron posibles los saltos, y en los años ochenta las tablas de tipo *funboard* trataron de conciliar estabilidad y maniobrabilidad (Reekie, 1999, p. 337).",
+    "El windsurf pasó de la oscuridad al programa olímpico en unos veinte años. Los Juegos de Los Ángeles de 1984 lo incorporaron dentro de la vela, con deportistas de 38 países (Reekie, 1999, p. 338), y la prueba femenina llegó en Barcelona 1992 (Olympedia, s. f.), de modo que el deporte depende de la federación internacional de vela, hoy World Sailing. Parte de su atractivo social procede de su coste relativamente bajo y de su facilidad de transporte, porque la tabla viaja en el techo de un coche y se monta en media hora, y de que exige más equilibrio y técnica que fuerza, lo que lo abrió desde el principio a hombres y mujeres de todas las edades (Reekie, 1999, pp. 337-338)."
+   ],
+   "en": [
+    "Windsurfing combines surfing and sailing on a board whose rig, made up of mast, sail and boom, is attached to the board by a universal joint that allows it to move in any direction, so that the sailor, standing, holds the sail by hand and steers by tilting it and shifting body weight (Reekie, 1999, p. 337). The authorship of the invention is one of the most disputed questions in the sport, with claimants in the United States, England and Australia (Reekie, 1999, p. 337). The American Newman Darby had been turning the idea over since the late 1940s, in 1964 he built a sailboard with an articulated rig and in 1965 *Popular Science* magazine published a feature with his plans, although he never patented it (Scuttlebutt Sailing News, 2016).",
+    "The model that prevailed was that of the Californians Jim Drake and Hoyle Schweitzer, who in 1970 patented a board later marketed as the *Windsurfer* (Scuttlebutt Sailing News, 2016); one textbook also attributes the invention to the Englishman Peter Chilvers in 1958 (Fernández Truan, n.d., p. 1020). The sport grew slowly in California and very quickly in Europe during the 1970s, and equipment evolved fast, since in 1977 Larry Stanley added footstraps in the Hawaiian surf, which together with shorter boards made jumps possible, and in the 1980s funboards tried to reconcile stability and manoeuvrability (Reekie, 1999, p. 337).",
+    "Windsurfing went from obscurity to the Olympic programme in some twenty years. The 1984 Los Angeles Games included it within sailing, with competitors from 38 countries (Reekie, 1999, p. 338), and the women's event arrived at Barcelona 1992 (Olympedia, n.d.), so that the sport falls under the international sailing federation, today World Sailing. Part of its social appeal comes from its relatively low cost and ease of transport, because the board travels on a car roof and can be rigged in half an hour, and from the fact that it demands more balance and skill than strength, which opened it from the start to men and women of all ages (Reekie, 1999, pp. 337-338)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/windsurf.jpg",
+   "pie": {
+    "es": "Windsurf en la bahía de Länsilahti, en Lauttasaari (Helsinki), junio de 1979.",
+    "en": "Windsurfing in Länsilahti bay, Lauttasaari (Helsinki), June 1979."
+   },
+   "autor": "Volker von Bonin (Museo de la Ciudad de Helsinki)",
+   "licencia": {
+    "es": "CC BY 4.0",
+    "en": "CC BY 4.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Purjelautailua_L%C3%A4nsilahdella_Lauttasaaressa_-_N212448_-_hkm.HKMS000005-00000zee.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Olympedia. (s. f.). *Sailing*. Recuperado el 29 de septiembre de 2026 de https://www.olympedia.org/sports/SAL",
+   "Reekie, S. H. M. (1999). Sailboarding. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 337-338). Oxford University Press.",
+   "Scuttlebutt Sailing News. (2016, 29 de diciembre). *The original originator of windsurfing*. Recuperado el 29 de septiembre de 2026 de https://www.sailingscuttlebutt.com/2016/12/29/original-originator-windsurfing/"
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Olympedia. (n.d.). *Sailing*. Retrieved September 29, 2026, from https://www.olympedia.org/sports/SAL",
+   "Reekie, S. H. M. (1999). Sailboarding. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 337-338). Oxford University Press.",
+   "Scuttlebutt Sailing News. (2016, December 29). *The original originator of windsurfing*. Retrieved September 29, 2026, from https://www.sailingscuttlebutt.com/2016/12/29/original-originator-windsurfing/"
+  ]
+ },
+ {
+  "id": "kitesurf",
+  "name": {
+   "es": "Kitesurf",
+   "en": "Kitesurfing"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Francia y Estados Unidos, décadas de 1980 y 1990 (cometa hinchable de los hermanos Legaignoux, patentada en 1984); difusión desde Maui (Hawái), 1996-1998",
+   "en": "France and the United States, 1980s and 1990s (the Legaignoux brothers' inflatable kite, patented 1984); spread from Maui (Hawaii), 1996-1998"
+  },
+  "body": {
+   "es": [
+    "La idea de aprovechar la tracción de una cometa para desplazarse es antigua, y en la década de 1820 el inglés George Pocock patentó el *charvolant*, un carruaje arrastrado por dos cometas. En 1977 el neerlandés Gijsbertus Adrianus Panhuise obtuvo una patente para una tabla impulsada por una cometa (IKSURFMAG, 2023). El kitesurf actual nació del ambiente del windsurf, cuando los hermanos franceses Bruno y Dominique Legaignoux, aficionados a esa disciplina, idearon una cometa en forma de arco con el borde de ataque hinchable, capaz de mantener la forma y de flotar tras caer al agua, y la patentaron en 1984 (IKSURFMAG, s. f., 2023).",
+    "En Estados Unidos Bill y Cory Roeseler siguieron un camino paralelo con cometas de armazón rígido que remolcaban a un esquiador náutico, y en 1994 comercializaron el *KiteSki* (IKSURFMAG, 2023). El paso decisivo se dio en Maui (Hawái), adonde el francés Manu Bertin llevó la cometa a mediados de los años noventa. Allí la adoptaron windsurfistas y surfistas de renombre, como Laird Hamilton y Robby Naish, y en 1998 se celebró la primera competición internacional, llamada campeonato del mundo, que dio a conocer el deporte fuera del círculo de pioneros (IKSURFMAG, s. f., 2023). A comienzos de los años 2000 ya se practicaba en las costas de Europa, Australia y Estados Unidos.",
+    "La institucionalización llegó a través de la vela. En 2008 la federación internacional, entonces International Sailing Federation, reconoció el kiteboarding como clase internacional, lo que abrió el camino a su entrada en los Juegos Olímpicos de la Juventud de Buenos Aires en 2018 y al anuncio de su debut olímpico en París 2024 (IKSURFMAG, 2023), donde figuró ya dentro del programa de vela (Olympedia, s. f.). Como el windsurf, del que procede, el kitesurf nació de la experimentación de practicantes y fabricantes y solo después se integró en la estructura federativa de la vela, que le dio acceso a la competición reglada y al reconocimiento olímpico."
+   ],
+   "en": [
+    "The idea of using the pull of a kite for travel is old, and in the 1820s the Englishman George Pocock patented the *charvolant*, a carriage drawn by two kites. In 1977 the Dutchman Gijsbertus Adrianus Panhuise obtained a patent for a board propelled by a kite (IKSURFMAG, 2023). Present-day kitesurfing grew out of the windsurfing scene, when the French brothers Bruno and Dominique Legaignoux, keen windsurfers, designed an arc-shaped kite with an inflatable leading edge, able to hold its shape and to float after falling into the water, and patented it in 1984 (IKSURFMAG, n.d., 2023).",
+    "In the United States Bill and Cory Roeseler followed a parallel path with rigid-framed kites that towed a water skier, and in 1994 they put the *KiteSki* on the market (IKSURFMAG, 2023). The decisive step came in Maui (Hawaii), where the Frenchman Manu Bertin brought the kite in the mid-1990s. There it was taken up by well-known windsurfers and surfers such as Laird Hamilton and Robby Naish, and in 1998 the first international competition, billed as a world championship, was held and made the sport known beyond the circle of pioneers (IKSURFMAG, n.d., 2023). By the early 2000s it was practised on the coasts of Europe, Australia and the United States.",
+    "Institutionalisation came through sailing. In 2008 the international federation, then the International Sailing Federation, recognised kiteboarding as an international class, which opened the way to its inclusion in the Buenos Aires Youth Olympic Games in 2018 and to the announcement of its Olympic debut at Paris 2024 (IKSURFMAG, 2023), where it featured within the sailing programme (Olympedia, n.d.). Like windsurfing, from which it derives, kitesurfing arose from the experimentation of practitioners and manufacturers and only later joined the federative structure of sailing, which gave it access to regulated competition and Olympic recognition."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/kitesurf.jpg",
+   "pie": {
+    "es": "Kitesurfistas en la playa de Kanaha, en Maui (Hawái), en 2004.",
+    "en": "Kitesurfers at Kanaha Beach, Maui (Hawaii), in 2004."
+   },
+   "autor": "Forest y Kim Starr",
+   "licencia": {
+    "es": "CC BY 3.0",
+    "en": "CC BY 3.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Starr_040411-0013_kitesurfers,_Kanaha_Beach,_Maui.jpg"
+  },
+  "refs": [
+   "IKSURFMAG. (s. f.). *Who invented kitesurfing?* Recuperado el 29 de septiembre de 2026 de https://www.iksurfmag.com/wiki/who-invented-kitesurfing/",
+   "IKSURFMAG. (2023, 9 de agosto). *100 moments: A kitesurfing timeline*. Recuperado el 29 de septiembre de 2026 de https://www.iksurfmag.com/articles/issue100/100-moments-a-kitesurfing-timeline/",
+   "Olympedia. (s. f.). *Sailing*. Recuperado el 29 de septiembre de 2026 de https://www.olympedia.org/sports/SAL"
+  ],
+  "refs_en": [
+   "IKSURFMAG. (n.d.). *Who invented kitesurfing?* Retrieved September 29, 2026, from https://www.iksurfmag.com/wiki/who-invented-kitesurfing/",
+   "IKSURFMAG. (2023, August 9). *100 moments: A kitesurfing timeline*. Retrieved September 29, 2026, from https://www.iksurfmag.com/articles/issue100/100-moments-a-kitesurfing-timeline/",
+   "Olympedia. (n.d.). *Sailing*. Retrieved September 29, 2026, from https://www.olympedia.org/sports/SAL"
+  ]
+ },
+ {
+  "id": "surf",
+  "name": {
+   "es": "Surf",
+   "en": "Surfing"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Polinesia y Hawái, época precolonial; resurgimiento en Waikiki a comienzos del siglo XX; federación internacional, Manly (Australia), 1964",
+   "en": "Polynesia and Hawaii, precolonial period; revival at Waikiki in the early twentieth century; international federation, Manly (Australia), 1964"
+  },
+  "body": {
+   "es": [
+    "Los polinesios practicaban el surf mucho antes del contacto con Europa, y los primeros exploradores y viajeros que recorrieron el Pacífico dejaron testimonios admirados de su destreza, sobre todo de la de los hawaianos. Los misioneros estadounidenses instalados en Hawái en el siglo XIX lo vieron de otro modo y lo condenaron como una actividad inmoral, porque permitía la mezcla sin freno de hombres y mujeres en el agua; lo prohibieron y, a finales de aquel siglo, solo unas pocas decenas de hawaianos seguían deslizándose sobre las olas (Booth, 1999, p. 380).",
+    "A comienzos del siglo XX los jóvenes *haole*, hawaianos de origen europeo y estadounidense, redescubrieron el surf en la playa de Waikiki, en un momento en que una nueva cultura del placer permitía presentarlo como un pasatiempo sano y emocionante, y desde allí se difundió por el Pacífico. En Australia creció dentro de los clubes de salvamento, cuya asociación, nacida en Sídney en 1907, imponía un ambiente de disciplina casi militar (Booth, 1999, p. 380; Vamplew, 2021, p. 201). El nadador hawaiano Duke Kahanamoku expresó en los Juegos de Estocolmo de 1912 su deseo de ver algún día el surf en el programa olímpico (International Surfing Association, 2024), y en California Tom Blake aligeró en los años veinte las pesadas tablas tradicionales con tablas huecas provistas de quilla (Booth, 1999, pp. 380-381).",
+    "En 1954 el Waikiki Surf Club organizó en Makaha el primer campeonato internacional, que abrió un debate todavía vivo entre quienes veían el surf como una comunión con la naturaleza y quienes lo entendían como un deporte disciplinado. Diez años después, en el primer campeonato del mundo, celebrado en Manly (Australia), las asociaciones nacionales fundaron la federación internacional (Booth, 1999, p. 381), hoy International Surfing Association, que data su origen en 1964 (International Surfing Association, s. f.). El Comité Olímpico Internacional aprobó el 3 de agosto de 2016 su inclusión en los Juegos de Tokio 2020 (International Surfing Association, 2024). Su historia social gira en torno a la tensión entre una subcultura hedonista, difundida por el cine y las revistas desde la California de los años cincuenta, y la búsqueda de respetabilidad a través de la competición organizada (Booth, 1999, pp. 381-382)."
+   ],
+   "en": [
+    "Polynesians surfed long before contact with Europe, and the first explorers and travellers in the Pacific left admiring accounts of their skill, above all that of the Hawaiians. The American missionaries established in Hawaii in the nineteenth century saw it differently and condemned it as an immoral activity, because it allowed the unrestrained mingling of men and women in the water; they banned it and, by the end of that century, only a few dozen Hawaiians still rode the waves (Booth, 1999, p. 380).",
+    "In the early twentieth century young *haole*, Hawaiians of European and American descent, rediscovered surfing at Waikiki beach, at a time when a new culture of pleasure allowed it to be presented as a healthy and thrilling pastime, and from there it spread around the Pacific. In Australia it grew within the lifesaving clubs, whose association, founded in Sydney in 1907, imposed an atmosphere of almost military discipline (Booth, 1999, p. 380; Vamplew, 2021, p. 201). The Hawaiian swimmer Duke Kahanamoku expressed at the 1912 Stockholm Games his wish to see surfing one day on the Olympic programme (International Surfing Association, 2024), and in California in the 1920s Tom Blake lightened the heavy traditional boards with hollow boards fitted with a fin (Booth, 1999, pp. 380-381).",
+    "In 1954 the Waikiki Surf Club organised the first international championships at Makaha, which opened a debate still alive between those who saw surfing as communion with nature and those who understood it as a disciplined sport. Ten years later, at the first world championships, held at Manly (Australia), the national associations founded the international federation (Booth, 1999, p. 381), today the International Surfing Association, which dates its origin to 1964 (International Surfing Association, n.d.). On 3 August 2016 the International Olympic Committee approved its inclusion in the Tokyo 2020 Games (International Surfing Association, 2024). Its social history turns on the tension between a hedonistic subculture, spread by films and magazines from 1950s California, and the search for respectability through organised competition (Booth, 1999, pp. 381-382)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/surf.jpg",
+   "pie": {
+    "es": "Hawaianos practicando surf, ilustración de la revista *Hutchings' California Magazine*, noviembre de 1858.",
+    "en": "Native Hawaiians surf-riding, illustration from *Hutchings' California Magazine*, November 1858."
+   },
+   "autor": "Butler (Hutchings' California Magazine)",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Surf-riding_1858.jpg"
+  },
+  "refs": [
+   "Booth, D. (1999). Surfing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 380-382). Oxford University Press.",
+   "International Surfing Association. (s. f.). *Who we are: About the International Surfing Association*. Recuperado el 29 de septiembre de 2026 de https://isasurf.org/about-isa/",
+   "International Surfing Association. (2024, 11 de diciembre). *Riding the wave to Olympic inclusion*. Recuperado el 29 de septiembre de 2026 de https://isasurf.org/riding-the-wave-to-olympic-inclusion/",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Booth, D. (1999). Surfing. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 380-382). Oxford University Press.",
+   "International Surfing Association. (n.d.). *Who we are: About the International Surfing Association*. Retrieved September 29, 2026, from https://isasurf.org/about-isa/",
+   "International Surfing Association. (2024, December 11). *Riding the wave to Olympic inclusion*. Retrieved September 29, 2026, from https://isasurf.org/riding-the-wave-to-olympic-inclusion/",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "bodyboard",
+  "name": {
+   "es": "Bodyboard",
+   "en": "Bodyboarding"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Kona (Hawái, EE. UU.), 7 de julio de 1971; antecedentes en las tablas polinesias para deslizarse tumbado",
+   "en": "Kona (Hawaii, USA), 7 July 1971; antecedents in Polynesian boards ridden lying down"
+  },
+  "body": {
+   "es": [
+    "Deslizarse sobre las olas tumbado en una tabla es una práctica muy antigua en las culturas polinesias y en otros pueblos navegantes (California Surf Museum, s. f.). En Hawái esas tablas cortas se conocían como *paipo* y, según algún manual, eran sobre todo un pasatiempo infantil que estuvo a punto de desaparecer, eclipsado por las tablas de surf, en los años sesenta (Fernández Truan, s. f., p. 1007). El bodyboard moderno, sin embargo, tiene fecha y autor. El 7 de julio de 1971, en Kona (Hawái), el surfista, matemático e ingeniero Tom Morey cortó unos restos de espuma de polietileno con un cuchillo eléctrico de trinchar y selló la pieza con la plancha de su mujer y papel de periódico (California Surf Museum, s. f.).",
+    "La tabla pesaba alrededor de kilo y medio, mucho menos que una de surf, y Morey la llamó primero S.N.A.K.E., siglas en inglés de costado, ombligo, brazo, rodilla y codo, y después *Boogie*, en recuerdo de su afición a la música; la primera la vendió por diez dólares a un desconocido que lo había visto surfear con ella (NPR, 2021). Poco después la familia se trasladó a California para fabricarlas, en 1975 lanzó un equipo para montarla en casa por veinticinco dólares anunciado en la revista *Surfer* y en 1977 la empresa, instalada en Carlsbad, producía unas ochenta mil tablas al año (California Surf Museum, s. f.). El éxito de la marca hizo que las demás tablas de este tipo se llamaran *bodyboards*, dado que *Boogie* era un nombre registrado (NPR, 2021).",
+    "La competición nació casi a la vez que el negocio. Patti Serrano, contratada por la empresa en 1974, organizó a comienzos de 1977 el primer concurso de Boogie en Laguna Beach, y en los años ochenta el bodyboard fue el deporte acuático de mayor crecimiento, con figuras como Mike Stewart, nueve veces campeón del mundo, y con la postura de rodilla hincada (*dropknee*) inventada por Jack Lindholm (California Surf Museum, s. f.). Hoy la International Surfing Association incluye el bodyboard entre las modalidades que gobierna (International Surfing Association, s. f.). En 2021, al cumplirse cincuenta años del invento, Hawái proclamó a Morey padre del deporte y dedicó a la tabla el 9 de julio (NPR, 2021)."
+   ],
+   "en": [
+    "Riding waves lying prone on a board is a very old practice in Polynesian cultures and among other seafaring peoples (California Surf Museum, n.d.). In Hawaii these short boards were known as *paipo* and, according to one textbook, were above all a children's pastime that nearly disappeared in the 1960s, overshadowed by surfboards (Fernández Truan, n.d., p. 1007). The modern bodyboard, however, has a date and an inventor. On 7 July 1971, at Kona (Hawaii), the surfer, mathematician and engineer Tom Morey cut some scraps of polyethylene foam with an electric carving knife and sealed the piece with his wife's iron and newspaper (California Surf Museum, n.d.).",
+    "The board weighed around three pounds, far less than a surfboard, and Morey first called it S.N.A.K.E., for side, navel, arm, knee and elbow, and then *Boogie*, in reference to his love of music; he sold the first one for ten dollars to a stranger who had seen him riding waves on it (NPR, 2021). Soon afterwards the family moved to California to manufacture them, in 1975 he launched a twenty-five-dollar do-it-yourself kit advertised in *Surfer* magazine, and by 1977 the company, based in Carlsbad, was producing some eighty thousand boards a year (California Surf Museum, n.d.). The success of the brand meant that other boards of this type came to be called *bodyboards*, since *Boogie* was a registered name (NPR, 2021).",
+    "Competition was born almost at the same time as the business. Patti Serrano, hired by the company in 1974, organised the first Boogie contest at Laguna Beach in early 1977, and in the 1980s bodyboarding was the fastest-growing water sport, with figures such as Mike Stewart, nine-time world champion, and with the dropknee stance invented by Jack Lindholm (California Surf Museum, n.d.). Today the International Surfing Association includes bodyboarding among the disciplines it governs (International Surfing Association, n.d.). In 2021, fifty years after the invention, Hawaii proclaimed Morey the father of the sport and dedicated 9 July to the board (NPR, 2021)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/bodyboard.jpg",
+   "pie": {
+    "es": "Bodyboard en el Santuario Marino Nacional de las Islas Hawái, 2015.",
+    "en": "Bodyboarding in the Hawaiian Islands National Marine Sanctuary, 2015."
+   },
+   "autor": "Matt McIntosh (NOAA, National Marine Sanctuaries)",
+   "licencia": {
+    "es": "CC BY 2.0",
+    "en": "CC BY 2.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:HIHWNMS_Boogie_Boarder_(49530527398).jpg"
+  },
+  "refs": [
+   "California Surf Museum. (s. f.). *Let's boogie! Tom Morey and the evolution of the Boogie Board*. Recuperado el 29 de septiembre de 2026 de https://surfmuseum.org/archive-exhibit/lets-boogie-tom-morey-and-the-evolution-of-the-boogie-board/",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Surfing Association. (s. f.). *Who we are: About the International Surfing Association*. Recuperado el 29 de septiembre de 2026 de https://isasurf.org/about-isa/",
+   "NPR. (2021, 17 de octubre). *Tom Morey, inventor of the Boogie Board, dies at 86*. Recuperado el 29 de septiembre de 2026 de https://www.npr.org/2021/10/17/1046901332/tom-morey-inventor-of-the-boogie-board-dies-at-86"
+  ],
+  "refs_en": [
+   "California Surf Museum. (n.d.). *Let's boogie! Tom Morey and the evolution of the Boogie Board*. Retrieved September 29, 2026, from https://surfmuseum.org/archive-exhibit/lets-boogie-tom-morey-and-the-evolution-of-the-boogie-board/",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Surfing Association. (n.d.). *Who we are: About the International Surfing Association*. Retrieved September 29, 2026, from https://isasurf.org/about-isa/",
+   "NPR. (2021, October 17). *Tom Morey, inventor of the Boogie Board, dies at 86*. Retrieved September 29, 2026, from https://www.npr.org/2021/10/17/1046901332/tom-morey-inventor-of-the-boogie-board-dies-at-86"
+  ]
+ },
+ {
+  "id": "paddle-surf",
+  "name": {
+   "es": "Paddle surf",
+   "en": "Stand-up paddle"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Waikiki (Hawái), décadas de 1940 a 1960; forma deportiva actual, Hawái, hacia 2000-2003",
+   "en": "Waikiki (Hawaii), 1940s to 1960s; present sporting form, Hawaii, around 2000-2003"
+  },
+  "body": {
+   "es": [
+    "Avanzar de pie sobre una embarcación estrecha impulsándose con una pértiga o una pala es una técnica que aparece en muchas culturas marineras y fluviales. Los pescadores de la costa de Perú usaban desde hace unos tres mil años los *caballitos de totora*, balsas de junco que movían con una caña y en las que al volver a tierra también cogían olas; en África se han descrito guerreros de pie en canoas monóxilas y, a comienzos del siglo XX, los socorristas de Tel Aviv usaban una tabla de pie con pala de dos hojas llamada *hassakeh* (SUP World Magazine, 2013). Ninguna de estas prácticas, sin embargo, dio lugar por sí sola al deporte actual.",
+    "La forma moderna procede de Waikiki (Hawái), donde entre los años cuarenta y sesenta Duke Kahanamoku y los *beach boys* de la familia AhChoy se ponían de pie sobre tablas largas con una pala para ver mejor a los surfistas que estaban en el agua, y donde John Zapotocky, llegado en 1940, practicó durante décadas esta forma de surf (SUP World Magazine, 2013). El resurgimiento llegó a finales de los años noventa y comienzos de los dos mil, cuando surfistas hawaianos de olas grandes como Dave Kalama, Brian Keaulana, Archie Kalepa y Laird Hamilton lo adoptaron como entrenamiento, y en 2003 Keaulana introdujo una categoría de *beach boy surfing* en el Buffalo Big Board Contest, con más de cuarenta participantes (SUP World Magazine, 2013).",
+    "Desde 2004 el paddle surf se extendió por California y, en 2009, era la rama de más rápido crecimiento de los deportes de pala en Norteamérica (SUP World Magazine, 2013). Su doble condición de modalidad de ola y de travesía en aguas tranquilas provocó una disputa por su gobierno entre la International Surfing Association y la International Canoe Federation, que convocaron campeonatos del mundo rivales y llevaron el caso ante el Tribunal de Arbitraje Deportivo en 2019 (Parker, 2019). La International Surfing Association lo incluye entre las modalidades que rige, tanto en carreras como en olas (International Surfing Association, s. f.)."
+   ],
+   "en": [
+    "Moving forward while standing on a narrow craft, propelled by a pole or a paddle, is a technique found in many seafaring and river cultures. Fishermen on the coast of Peru used for some three thousand years the *caballitos de totora*, reed craft moved with a cane on which they also rode waves back to shore; in Africa warriors have been described standing in dugout canoes and, in the early twentieth century, the lifeguards of Tel Aviv used a stand-up board with a double-bladed paddle called a *hassakeh* (SUP World Magazine, 2013). None of these practices, however, gave rise on its own to the present-day sport.",
+    "The modern form comes from Waikiki (Hawaii), where between the 1940s and the 1960s Duke Kahanamoku and the beach boys of the AhChoy family stood on long boards with a paddle to get a better view of the surfers in the water, and where John Zapotocky, who arrived in 1940, practised this form of surfing for decades (SUP World Magazine, 2013). The revival came in the late 1990s and early 2000s, when Hawaiian big-wave surfers such as Dave Kalama, Brian Keaulana, Archie Kalepa and Laird Hamilton took it up as training, and in 2003 Keaulana added a beach boy surfing category to the Buffalo Big Board Contest, with more than forty participants (SUP World Magazine, 2013).",
+    "From 2004 stand-up paddling spread through California and, by 2009, it was the fastest-growing branch of paddle sports in North America (SUP World Magazine, 2013). Its double nature, as a wave discipline and as flatwater touring, led to a dispute over its governance between the International Surfing Association and the International Canoe Federation, which organised rival world championships and took the case to the Court of Arbitration for Sport in 2019 (Parker, 2019). The International Surfing Association includes it among the disciplines it governs, both in racing and in waves (International Surfing Association, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/paddle-surf.jpg",
+   "pie": {
+    "es": "Paddle surf en la playa de Kuau, en Maui (Hawái), en 2006.",
+    "en": "Stand-up paddle surfing at Kuau beach, Maui (Hawaii), in 2006."
+   },
+   "autor": "Forest y Kim Starr",
+   "licencia": {
+    "es": "CC BY 3.0",
+    "en": "CC BY 3.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Starr_061017-1265_paddle_surfing_at_Kuau.jpg"
+  },
+  "refs": [
+   "International Surfing Association. (s. f.). *Who we are: About the International Surfing Association*. Recuperado el 29 de septiembre de 2026 de https://isasurf.org/about-isa/",
+   "Parker, C. (2019, 17 de octubre). *Olympic paddletics update: SUP has its day in the ‘Supreme Court of sport’*. SUP Racer. Recuperado el 29 de septiembre de 2026 de https://supracer.com/stand-up-paddleboarding-olympics-court-of-arbitration-for-sport/",
+   "SUP World Magazine. (2013, 6 de abril). *The history of stand up paddling*. Recuperado el 29 de septiembre de 2026 de https://www.supworldmag.com/the-history-of-stand-up-paddling/"
+  ],
+  "refs_en": [
+   "International Surfing Association. (n.d.). *Who we are: About the International Surfing Association*. Retrieved September 29, 2026, from https://isasurf.org/about-isa/",
+   "Parker, C. (2019, October 17). *Olympic paddletics update: SUP has its day in the ‘Supreme Court of sport’*. SUP Racer. Retrieved September 29, 2026, from https://supracer.com/stand-up-paddleboarding-olympics-court-of-arbitration-for-sport/",
+   "SUP World Magazine. (2013, April 6). *The history of stand up paddling*. Retrieved September 29, 2026, from https://www.supworldmag.com/the-history-of-stand-up-paddling/"
+  ]
+ },
+ {
+  "id": "esqui-nautico",
+  "name": {
+   "es": "Esquí náutico",
+   "en": "Water skiing"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Lago Pepin (Minnesota, EE. UU.), 1922; federación internacional, 1946",
+   "en": "Lake Pepin (Minnesota, USA), 1922; international federation, 1946"
+  },
+  "body": {
+   "es": [
+    "El esquí náutico es un deporte del siglo XX que aplica un principio antiguo, el de aprovechar la fuerza de un objeto en movimiento para remolcar otro. Es probable que antes se intentara con veleros, pero su forma moderna depende de la lancha a motor, que se difundió después de 1900 y con la que los aficionados empezaron a arrastrar trineos y tablas sobre los que iban sentados o de pie (Townes, 1999, p. 363). En 1922 Ralph Samuelson ideó y mostró en público un par de esquís en el lago Pepin (Minnesota), y hacia la misma época Fred Waller, cerca de Nueva York, patentó y vendió su propio modelo e inventó el asa en que termina la cuerda de remolque (Townes, 1999, p. 363). Una tradición francesa sitúa el origen en el lago de Annecy, hacia 1918 (Fernández Truan, s. f., p. 962).",
+    "En los años treinta comenzó la organización del deporte. La American Water Ski Association, fundada en 1939, fijó reglas comunes y una estructura de clubes locales y competiciones, y otras naciones siguieron el mismo camino (Townes, 1999, p. 363). La federación internacional, que hoy se llama International Waterski & Wakeboard Federation, se fundó el 29 de julio de 1946 (Union of International Associations, s. f.) para coordinar el deporte, autorizar competiciones y récords y redactar reglas de ámbito internacional (Townes, 1999, p. 363). Al mismo tiempo, el esquí náutico se hizo espectáculo. Los *shows* acuáticos, con acrobacias, saltos y números coreografiados de mujeres esquiadoras, atrajeron a un público amplio, y en uno de ellos, en los Cypress Gardens de Florida, se presentó en 1947 el esquí descalzo (Townes, 1999, pp. 363-364).",
+    "Después de la Segunda Guerra Mundial el deporte creció de manera constante con un carácter sobre todo aficionado, con trofeos más que premios en metálico, y la relación entre la práctica amateur y los circuitos profesionales ha sido objeto de debate continuo (Townes, 1999, p. 363). Los torneos clásicos reúnen tres pruebas, el eslalon entre boyas, las figuras y el salto desde una rampa, a las que se añadieron especialidades como el salto libre y el esquí descalzo (Townes, 1999, p. 364). En España la federación se creó en 1965, y cuatro años después Víctor Palomo ganó el título mundial de eslalon (Fernández Truan, s. f., p. 968)."
+   ],
+   "en": [
+    "Water skiing is a twentieth-century sport that applies an ancient principle, that of using the power of one moving object to tow another. It was probably attempted earlier with sailboats, but its modern form depends on the motorboat, which spread after 1900 and with which enthusiasts began to tow sleds and boards on which they sat or stood (Townes, 1999, p. 363). In 1922 Ralph Samuelson devised and publicly demonstrated a pair of skis on Lake Pepin (Minnesota), and at about the same time Fred Waller, near New York, patented and marketed his own model and invented the bridle at the end of the tow rope (Townes, 1999, p. 363). A French tradition places the origin on Lake Annecy, around 1918 (Fernández Truan, n.d., p. 962).",
+    "The organisation of the sport began in the 1930s. The American Water Ski Association, founded in 1939, established common rules and a structure of local clubs and competitions, and other nations followed the same path (Townes, 1999, p. 363). The international federation, today called the International Waterski & Wakeboard Federation, was founded on 29 July 1946 (Union of International Associations, n.d.) to coordinate the sport, sanction competitions and records and draw up international rules (Townes, 1999, p. 363). At the same time, water skiing became a spectacle. Water shows, with stunts, jumps and choreographed routines by women skiers, drew a wide public, and at one of them, at Cypress Gardens in Florida, barefoot skiing was introduced in 1947 (Townes, 1999, pp. 363-364).",
+    "After the Second World War the sport grew steadily with a mainly amateur character, with trophies rather than prize money, and the relationship between amateur practice and professional circuits has been a matter of ongoing debate (Townes, 1999, p. 363). Classic tournaments bring together three events, slalom between buoys, tricks and jumping from a ramp, to which specialities such as freestyle jumping and barefoot skiing were added (Townes, 1999, p. 364). In Spain the federation was created in 1965, and four years later Víctor Palomo won the world slalom title (Fernández Truan, n.d., p. 968)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/esqui-nautico.jpg",
+   "pie": {
+    "es": "Salto en el espectáculo de esquí náutico de los Cypress Gardens (Florida), postal de hacia 1940.",
+    "en": "A jump at the Cypress Gardens water-ski show (Florida), postcard from around 1940."
+   },
+   "autor": "State Library and Archives of Florida",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:%22The_Big_Jump_-_Water_Skiing_at_Florida%27s_Cypress_Gardens%22_(12433327965).jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Townes, J. (1999). Skiing, water. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 363-364). Oxford University Press.",
+   "Union of International Associations. (s. f.). *International Waterski and Wakeboard Federation*. Recuperado el 29 de septiembre de 2026 de https://uia.org/s/or/en/1100059192"
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Townes, J. (1999). Skiing, water. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 363-364). Oxford University Press.",
+   "Union of International Associations. (n.d.). *International Waterski and Wakeboard Federation*. Retrieved September 29, 2026, from https://uia.org/s/or/en/1100059192"
+  ]
+ },
+ {
+  "id": "motonautica",
+  "name": {
+   "es": "Motonáutica",
+   "en": "Powerboating"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Europa y Estados Unidos, hacia 1900 (Trofeo Harmsworth, 1903-1904); federación internacional, Bélgica, 1922",
+   "en": "Europe and the United States, around 1900 (Harmsworth Trophy, 1903-1904); international federation, Belgium, 1922"
+  },
+  "body": {
+   "es": [
+    "A lo largo de los siglos XIX y XX las embarcaciones a motor sustituyeron a los veleros en el transporte, el comercio y la guerra. La primera generación funcionó con máquinas de vapor, que también se instalaron en yates privados cuyos dueños, por lo general ricos, se desafiaban de vez en cuando en carreras. La motonáutica moderna, sin embargo, suele fecharse a partir del motor de combustión interna, con una de las primeras lanchas de este tipo construida en Francia hacia 1865 por Jean Lenoir y con los motores de gasolina que Gottlieb Daimler desarrolló en la década de 1880 y que se montaron tanto en vehículos como en barcos (Townes, 1999, p. 258).",
+    "Las carreras se multiplicaron después de 1900, y desde el principio sirvieron de banco de pruebas para motores y cascos que después pasaban al mercado (Townes, 1999, p. 258). El magnate de la prensa británico Alfred Harmsworth dotó el trofeo de motonáutica más antiguo, que la federación fecha en 1904 y algún manual en 1903 (Union Internationale Motonautique, s. f.; Fernández Truan, s. f., p. 971), y antes de la Primera Guerra Mundial se corría con regularidad en Niza, Palermo, Montecarlo, Argel, Tolón y Arcachón (Union Internationale Motonautique, s. f.). En Estados Unidos los clubes náuticos del nordeste fundaron en 1903 la American Power Boat Association, que desde 1904 organiza la Gold Cup (Townes, 1999, pp. 258-259), y en Londres 1908 la motonáutica figuró en el programa olímpico (Fernández Truan, s. f., p. 971).",
+    "En septiembre de 1922 se creó en Bélgica la Union Internationale du Yachting Automobile, que en 1927 ya se llamaba Union Internationale Motonautique y había publicado sus primeras reglas y su primer calendario de carreras; en 1988 trasladó su sede de Bruselas a Mónaco (Union Internationale Motonautique, s. f.; UIM-ABP Aquabike World Championship, 2022). La federación, reconocida por el Comité Olímpico Internacional, gobierna hoy la motonáutica y las motos de agua (Union Internationale Motonautique, s. f.). La creciente variedad de cascos y motores obligó a dividir las carreras en categorías cada vez más numerosas, desde lanchas fueraborda modestas hasta los hidroplanos sin límite de potencia (Townes, 1999, p. 259)."
+   ],
+   "en": [
+    "Over the nineteenth and twentieth centuries motor vessels replaced sailing ships in transport, trade and war. The first generation ran on steam engines, which were also fitted to private yachts whose owners, usually wealthy, occasionally raced one another. Modern powerboating, however, is usually dated from the internal-combustion engine, with one of the first boats of this type built in France around 1865 by Jean Lenoir and with the petrol engines that Gottlieb Daimler developed in the 1880s and that were fitted to both vehicles and boats (Townes, 1999, p. 258).",
+    "Races multiplied after 1900, and from the start they served as a proving ground for engines and hulls that later reached the market (Townes, 1999, p. 258). The British press magnate Alfred Harmsworth endowed the oldest powerboat trophy, which the federation dates to 1904 and one textbook to 1903 (Union Internationale Motonautique, n.d.; Fernández Truan, n.d., p. 971), and before the First World War races were held regularly in Nice, Palermo, Monte Carlo, Algiers, Toulon and Arcachon (Union Internationale Motonautique, n.d.). In the United States the yacht clubs of the north-east founded the American Power Boat Association in 1903, which has organised the Gold Cup since 1904 (Townes, 1999, pp. 258-259), and at London 1908 powerboating was on the Olympic programme (Fernández Truan, n.d., p. 971).",
+    "In September 1922 the Union Internationale du Yachting Automobile was created in Belgium; by 1927 it was already called the Union Internationale Motonautique and had issued its first rules and its first racing calendar, and in 1988 it moved its seat from Brussels to Monaco (Union Internationale Motonautique, n.d.; UIM-ABP Aquabike World Championship, 2022). The federation, recognised by the International Olympic Committee, today governs powerboating and personal watercraft (Union Internationale Motonautique, n.d.). The growing variety of hulls and engines made it necessary to divide racing into ever more numerous categories, from modest outboard boats to unlimited hydroplanes (Townes, 1999, p. 259)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/motonautica.jpg",
+   "pie": {
+    "es": "La lancha de carreras *Princesse Elisabeth*, participante en las carreras de canoas automóviles de Mónaco, abril de 1904.",
+    "en": "The racing boat *Princesse Elisabeth*, a competitor in the motorboat races at Monaco, April 1904."
+   },
+   "autor": "Agence Rol",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:(Le_racer)_Princesse_Elisabeth_(participant_aux_courses_de_canots_automobiles_%C3%A0_Monaco,_en_avril_1904)_-_btv1b6914005f.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Townes, J. (1999). Motor boating. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 258-260). Oxford University Press.",
+   "UIM-ABP Aquabike World Championship. (2022, 8 de febrero). *UIM celebrates 100 years of excellence in the powerboat sport*. Recuperado el 29 de septiembre de 2026 de https://www.aquabike.net/news/2022/uim-celebrates-100-years-of-excellence-in-the-powerboat-sport",
+   "Union Internationale Motonautique. (s. f.). *Union internationale motonautique*. Recuperado el 29 de septiembre de 2026 de https://www.uim.sport/Wys.aspx?num=1"
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Townes, J. (1999). Motor boating. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 258-260). Oxford University Press.",
+   "UIM-ABP Aquabike World Championship. (2022, February 8). *UIM celebrates 100 years of excellence in the powerboat sport*. Retrieved September 29, 2026, from https://www.aquabike.net/news/2022/uim-celebrates-100-years-of-excellence-in-the-powerboat-sport",
+   "Union Internationale Motonautique. (n.d.). *Union internationale motonautique*. Retrieved September 29, 2026, from https://www.uim.sport/Wys.aspx?num=1"
+  ]
+ },
+ {
+  "id": "justas-nauticas",
+  "name": {
+   "es": "Justas náuticas",
+   "en": "Water jousting"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Egipto, Imperio Antiguo (antecedente); Francia, desde la Edad Media (Lyon, 1177; Sète, 1666); reconocida como deporte en Francia en 1960",
+   "en": "Egypt, Old Kingdom (antecedent); France, from the Middle Ages (Lyon, 1177; Sète, 1666); recognised as a sport in France in 1960"
+  },
+  "body": {
+   "es": [
+    "Las representaciones más antiguas de un combate entre barcas son las justas de pescadores que decoran las tumbas egipcias del Imperio Antiguo y del Medio, con más de dos docenas de escenas en las que tripulaciones armadas con pértigas intentaban derribar a los rivales al agua. Decker las interpreta como un desafío improvisado, quizá nacido de las bromas camino del trabajo, que a menudo acababa en violencia (Decker, 1992, p. 99), y Guttmann subraya su carácter competitivo y estacional, ligado a la cosecha del delta (Guttmann, 2004, p. 14). La federación francesa sitúa en esos relieves el origen remoto de su deporte y menciona prácticas semejantes en Grecia y Roma y una justa celebrada en Estrasburgo en el año 303 en honor de Diocleciano (Fédération Française de Joute et Sauvetage Nautique, s. f.).",
+    "La primera justa documentada en Francia tuvo lugar en Lyon el 2 de junio de 1177, en la conmemoración de los mártires cristianos de la ciudad. En los siglos siguientes las justas se convirtieron en un espectáculo ofrecido a los soberanos, puesto que los pescadores de Saint-Vincent justaron ante Ana de Bretaña en 1507 y los barqueros lo hicieron ante Francisco I en 1536 y ante Enrique II y Catalina de Médicis en 1548. El 29 de julio de 1666 se celebraron justas en la inauguración del puerto de Sète, donde desde entonces forman parte de la vida de la ciudad (Fédération Française de Joute et Sauvetage Nautique, s. f.). La práctica existe también en Alemania y en Suiza (Fernández Truan, s. f., p. 969).",
+    "En el siglo XIX las justas del Ródano quedaron en manos de sociedades de barqueros que se habían agrupado para socorrer a la población durante las inundaciones y que justaban en las fiestas locales (Fernández Truan, s. f., p. 970). Por eso el deporte se organizó junto con el salvamento, y en 1905 se creó la Fédération Nationale des Sociétés de Natation et de Sauvetage. El Estado francés reconoció las justas como deporte el 13 de marzo de 1960, y el 22 de noviembre de 1964 nació la Fédération Française de Joute et Sauvetage Nautique, que agrupa las variantes alsaciana, parisina, lionesa, languedociana y provenzal, cada una adaptada a sus aguas y a su tradición local (Fédération Française de Joute et Sauvetage Nautique, s. f.)."
+   ],
+   "en": [
+    "The oldest depictions of a fight between boats are the fishermen's jousts that decorate Egyptian tombs of the Old and Middle Kingdoms, with more than two dozen scenes in which crews armed with poles tried to knock their rivals into the water. Decker interprets them as an impromptu contest, perhaps born of horseplay on the way to work, that often turned violent (Decker, 1992, p. 99), and Guttmann stresses their competitive and seasonal character, linked to the harvest in the delta (Guttmann, 2004, p. 14). The French federation places the remote origin of its sport in those reliefs and mentions similar practices in Greece and Rome and a joust held in Strasbourg in the year 303 in honour of Diocletian (Fédération Française de Joute et Sauvetage Nautique, n.d.).",
+    "The first documented joust in France took place in Lyon on 2 June 1177, at the commemoration of the city's Christian martyrs. In the following centuries jousts became a spectacle offered to sovereigns, since the fishermen of Saint-Vincent jousted before Anne of Brittany in 1507 and boatmen did so before Francis I in 1536 and before Henry II and Catherine de' Medici in 1548. On 29 July 1666 jousts were held at the inauguration of the port of Sète, where they have been part of the life of the town ever since (Fédération Française de Joute et Sauvetage Nautique, n.d.). The practice also exists in Germany and Switzerland (Fernández Truan, n.d., p. 969).",
+    "In the nineteenth century the jousts of the Rhône were in the hands of societies of boatmen who had banded together to help the population during floods and who jousted at local festivals (Fernández Truan, n.d., p. 970). For that reason the sport was organised together with lifesaving, and in 1905 the Fédération Nationale des Sociétés de Natation et de Sauvetage was created. The French State recognised jousting as a sport on 13 March 1960, and on 22 November 1964 the Fédération Française de Joute et Sauvetage Nautique was founded, bringing together the Alsatian, Parisian, Lyonnais, Languedocian and Provençal variants, each adapted to its waters and local tradition (Fédération Française de Joute et Sauvetage Nautique, n.d.)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 2,
+    "f": "las-justas-de-pescadores",
+    "t": {
+     "es": "Las justas de pescadores",
+     "en": "The fishermen's jousts"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/justas-nauticas.jpg",
+   "pie": {
+    "es": "Justas en el Sena, vistas desde el muelle del Louvre, durante los festejos de la Fiesta de la Federación del 18 de julio de 1790; grabado de Philippe Joseph Maillart (1798).",
+    "en": "Jousting on the Seine, seen from the Quai du Louvre, during the festivities of the Fête de la Fédération on 18 July 1790; engraving by Philippe Joseph Maillart (1798)."
+   },
+   "autor": "Philippe Joseph Maillart, sobre dibujo de Jean-François Laurent",
+   "licencia": {
+    "es": "CC0",
+    "en": "CC0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:18_juillet._R%C3%A9jouissances_et_Joute_sur_l%27eau_%C3%A0_l%27occasion_de_la_F%C3%A9d%C3%A9ration_G%C3%A9n%C3%A9rale_.._G.28232.jpg"
+  },
+  "refs": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trad.). Yale University Press.",
+   "Fédération Française de Joute et Sauvetage Nautique. (s. f.). *Historique*. Recuperado el 29 de septiembre de 2026 de https://www.ffjsn.fr/ffjsn/historique/",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press."
+  ],
+  "refs_en": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trans.). Yale University Press.",
+   "Fédération Française de Joute et Sauvetage Nautique. (n.d.). *Historique*. Retrieved September 29, 2026, from https://www.ffjsn.fr/ffjsn/historique/",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press."
+  ]
+ },
+ {
+  "id": "alpinismo",
+  "name": {
+   "es": "Alpinismo",
+   "en": "Mountaineering"
+  },
+  "bloque": {
+   "es": "En la naturaleza",
+   "en": "Outdoor sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Alpes, finales del siglo XVIII (Mont Blanc, 1786); deporte organizado, Gran Bretaña, 1857 (Alpine Club); federación internacional, Chamonix, 1932",
+   "en": "The Alps, late eighteenth century (Mont Blanc, 1786); organised sport, Britain, 1857 (Alpine Club); international federation, Chamonix, 1932"
+  },
+  "body": {
+   "es": [
+    "Los seres humanos han subido montañas a lo largo de toda su historia, pero no se sabe con precisión cuándo empezaron a hacerlo por deporte. A finales del siglo XVIII el Romanticismo convirtió las montañas en lugares atractivos y sublimes, algunas cumbres conocidas entraron en el itinerario del *Grand Tour* y el espíritu de la Ilustración llevó a varios europeos a ascenderlas con fines de investigación científica (Donnelly, 1999, p. 262). En ese contexto Jacques Balmat alcanzó la cima del Mont Blanc el 8 de agosto de 1786 (Guttmann, 1988, p. 174). Los primeros historiadores británicos del alpinismo fijaron el nacimiento del deporte en la ascensión de Alfred Wills al Wetterhorn el 17 de septiembre de 1854, una fecha que Donnelly considera un mito comparable al de Abner Doubleday y el béisbol (Donnelly, 1999, pp. 262-263).",
+    "En la década de 1850 las visitas a los Alpes para subir cumbres y cruzar collados se reconocieron como una actividad propia, y en 1857 sus practicantes británicos, sobre todo de clase media, fundaron el Alpine Club, que se parecía a las sociedades científicas y geográficas de la época (Donnelly, 1999, p. 263). Para ingresar había que acreditar experiencia en los Alpes o méritos literarios o artísticos relacionados con la montaña (Vamplew, 2021, p. 272). El atletismo de las *public schools* y el cristianismo muscular aportaron el lenguaje de la conquista y la competencia por las primeras ascensiones, vinculadas al patriotismo y al Imperio, y en los diez años que culminaron con la ascensión de Edward Whymper al Cervino, en 1865, se coronaron por primera vez la mayoría de las grandes cumbres alpinas (Donnelly, 1999, p. 263).",
+    "Después de 1865 el alpinismo se extendió al Cáucaso, el Himalaya, Nueva Zelanda, África y las dos Américas, y surgieron clubes alpinos en toda Europa (Donnelly, 1999, p. 264; Guttmann, 1988, p. 174). Las nuevas generaciones subieron sin guías, buscaron vías más difíciles y empezaron a registrar la primera ascensión invernal, la primera femenina o la más rápida (Donnelly, 1999, p. 264). En agosto de 1932 veinte asociaciones reunidas en Chamonix fundaron la Union Internationale des Associations d'Alpinisme (UIAA), que en los años sesenta creó un sello de seguridad para el material, en 1995 obtuvo el reconocimiento del Comité Olímpico Internacional y en 2007 vio separarse la escalada deportiva de competición (UIAA, s. f.). Aun así, el alpinismo carece de reglas escritas y de medios para imponerlas, lo que lo distingue de casi todos los deportes modernos (Donnelly, 1999, p. 262)."
+   ],
+   "en": [
+    "Human beings have climbed mountains throughout their history, but it is not known precisely when they began to do so for sport. At the end of the eighteenth century Romanticism turned mountains into attractive and sublime places, some well-known summits entered the itinerary of the Grand Tour and the spirit of the Enlightenment led a number of Europeans to climb them for scientific research (Donnelly, 1999, p. 262). In that context Jacques Balmat reached the summit of Mont Blanc on 8 August 1786 (Guttmann, 1988, p. 174). The first British historians of mountaineering fixed the birth of the sport at Alfred Wills's ascent of the Wetterhorn on 17 September 1854, a date that Donnelly considers a myth comparable to that of Abner Doubleday and baseball (Donnelly, 1999, pp. 262-263).",
+    "In the 1850s visits to the Alps to climb peaks and cross passes came to be recognised as a distinct activity, and in 1857 its British practitioners, mostly middle class, founded the Alpine Club, which resembled the scientific and geographical societies of the period (Donnelly, 1999, p. 263). Admission required experience of climbing in the Alps or literary or artistic accomplishments relating to mountains (Vamplew, 2021, p. 272). Public-school athleticism and muscular Christianity supplied the language of conquest and the competition for first ascents, bound up with patriotism and Empire, and in the ten years culminating in Edward Whymper's ascent of the Matterhorn in 1865 most of the major Alpine summits were climbed for the first time (Donnelly, 1999, p. 263).",
+    "After 1865 mountaineering spread to the Caucasus, the Himalaya, New Zealand, Africa and the Americas, and Alpine clubs appeared throughout Europe (Donnelly, 1999, p. 264; Guttmann, 1988, p. 174). New generations climbed without guides, sought harder routes and began to record the first winter ascent, the first ascent by a woman or the fastest one (Donnelly, 1999, p. 264). In August 1932 twenty associations meeting in Chamonix founded the Union Internationale des Associations d'Alpinisme (UIAA), which in the 1960s created a safety label for equipment, in 1995 obtained recognition from the International Olympic Committee and in 2007 saw competition sport climbing break away (UIAA, n.d.). Even so, mountaineering lacks written rules and the means to enforce them, which sets it apart from almost every other modern sport (Donnelly, 1999, p. 262)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/alpinismo.jpg",
+   "pie": {
+    "es": "La primera ascensión al Cervino, en 1865, según Gustave Doré.",
+    "en": "The first ascent of the Matterhorn, in 1865, as depicted by Gustave Doré."
+   },
+   "autor": "Gustave Doré",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Matterhorn_ascent_Dore.jpg"
+  },
+  "refs": [
+   "Donnelly, P. (1999). Mountain climbing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 262-264). Oxford University Press.",
+   "Guttmann, A. (1988). *A whole new ball game: An interpretation of American sports*. University of North Carolina Press.",
+   "UIAA. (s. f.). *History*. Recuperado el 29 de septiembre de 2026 de https://www.theuiaa.org/inside-the-uiaa/history/",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Donnelly, P. (1999). Mountain climbing. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 262-264). Oxford University Press.",
+   "Guttmann, A. (1988). *A whole new ball game: An interpretation of American sports*. University of North Carolina Press.",
+   "UIAA. (n.d.). *History*. Retrieved September 29, 2026, from https://www.theuiaa.org/inside-the-uiaa/history/",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ }
+]

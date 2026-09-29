@@ -43,3 +43,7 @@ Si el deporte o sus antecedentes aparecen en los temas 1 o 2 (busca con grep en 
 - Escribe tu tanda en `tools/enc_tandas/tanda_NN.json` (NN = tu número) como lista JSON de fichas con exactamente estos campos: `id`, `name`, `bloque`, `tipo` (los tres copiados de la lista maestra), `cuando`, `body` {es:[...],en:[...]}, `tema` (lista, puede ir vacía), `img`, `refs`, `refs_en`. Guarda el fichero después de cada ficha terminada, para no perder trabajo.
 - No toques `data/enciclopedia.json`, `index.html` ni ningún otro fichero. No borres nada.
 - Al terminar, responde con un resumen breve: ids hechos, ids que no pudiste hacer y por qué, y cualquier dato dudoso o contradicción entre fuentes que Alex deba conocer.
+
+## Reglas de acceso a la web (añadidas tras las primeras tandas)
+- **Prohibido usar copias de archivo, caché o espejos** (web.archive.org, archive.today, cachés de buscadores) para leer una web a la que no se llega directamente. Si una web no se puede abrir con WebFetch, se da por no disponible y se usa otra fuente. Los libros antiguos de dominio público digitalizados (por ejemplo, un libro de 1909 en archive.org) sí se pueden usar, porque no sustituyen a una web bloqueada.
+- **Las búsquedas web son limitadas y compartidas entre todos los redactores.** Haz como máximo una o dos búsquedas por deporte y ve directo a la página de historia de la federación. Si WebSearch deja de funcionar, no insistas: termina con la biblioteca las fichas que se puedan hacer con garantías y deja el resto sin hacer, explicándolo en el resumen.

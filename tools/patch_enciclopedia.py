@@ -59,7 +59,7 @@ async function encHome(){
   try{ const D=await getEnc(); const E=D.entries; if(!E.length) return;
     const sub=document.getElementById("encSub"); if(sub) sub.textContent=t("encSub",{n:E.length});
     const box=document.getElementById("encDay"); if(!box) return; const d=encDaily(E);
-    box.innerHTML=`<button class="d" id="encDayGo"><small>${t("encDay")}</small><b>${esc(L(d.name))}</b><span>${esc(L(d.cuando))}</span></button><button class="dice" id="encDice" aria-label="${esc(t("encRand"))}">🎲</button>`;
+    box.innerHTML=`<button class="d" id="encDayGo"><small>${t("encDay")}</small><b>${esc(L(d.name))}</b><span>${md(L(d.cuando))}</span></button><button class="dice" id="encDice" aria-label="${esc(t("encRand"))}">🎲</button>`;
     box.style.display="flex";
     document.getElementById("encDayGo").onclick=()=>nav({name:"enc",id:d.id,back:{name:"home"}});
     document.getElementById("encDice").onclick=()=>{ const r=encRandom(E); nav({name:"enc",id:r.id,back:{name:"home"}}); };
@@ -84,7 +84,7 @@ async function renderEnc(){
     cnt.textContent=out.length?t("encN",{n:out.length}):t("encNone");
     let last=""; const have=new Set();
     for(const e of out){ const l=encLetter(e); if(l!==last){ const h=document.createElement("div"); h.className="letter"; h.id="L-"+l; h.textContent=l; list.appendChild(h); last=l; have.add(l); }
-      const b=document.createElement("button"); b.innerHTML=`<b>${esc(L(e.name))}</b><span>${esc(L(e.cuando))}</span>`;
+      const b=document.createElement("button"); b.innerHTML=`<b>${esc(L(e.name))}</b><span>${md(L(e.cuando))}</span>`;
       b.onclick=()=>nav({name:"enc",id:e.id,back:{name:"enc",q:raw}}); list.appendChild(b); }
     az.style.display=qq?"none":"flex";
     az.innerHTML=LET.map(l=>`<a data-l="${l}" class="${have.has(l)?"":"off"}">${l}</a>`).join("");
@@ -105,7 +105,7 @@ async function renderEncFicha(id){
   const LX=x=>x&&typeof x==="object"?L(x):x; const lic=[LX(im.autor),LX(im.licencia)].filter(Boolean).map(esc).join(" · ");
   app.innerHTML=header(L(e.name),true)+`<main>
     ${im.src?`<div class="fimg" id="eImg"><img src="${esc(im.src)}" alt="${esc(L(e.name))}" loading="lazy"><div class="cap">${md(L(im.pie))}${lic?`<br>${lic}${im.url?` · <a href="${esc(im.url)}" target="_blank" rel="noopener">Wikimedia Commons</a>`:""}`:""}</div></div>`:""}
-    <div class="enc-when">🕰️ ${esc(L(e.cuando))}</div>
+    <div class="enc-when">🕰️ ${md(L(e.cuando))}</div>
     <div class="enc-blq">${esc(L(e.bloque))}</div>
     <div class="enc-body">${LL(e.body).map(x=>`<p>${md(x)}</p>`).join("")}</div>
     ${(e.tema&&e.tema.length)?`<div class="section-title" style="margin-top:14px">${t("encCourse")}</div><div class="enc-links">${e.tema.map((x,j)=>`<button data-j="${j}">📖 ${t("tema")} ${x.num} · ${esc(L(x.t))}</button>`).join("")}</div>`:""}
