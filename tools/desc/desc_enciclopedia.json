@@ -7,11 +7,11 @@
   "nota": ""
  },
  "zurkhaneh": {
-  "es": "Entrenamiento tradicional iraní de fuerza que se practica en grupo alrededor de un foso central, con ejercicios rítmicos acompañados de tambor y cantos, mazas de madera pesadas, escudos de madera y giros sobre uno mismo.",
-  "en": "Traditional Iranian strength training carried out in a group around a central pit, with rhythmic exercises accompanied by drum and chanting, heavy wooden clubs, wooden shields and spinning on the spot.",
-  "fuente": "International Zurkhaneh Sports and Koshti Pahlavani Federation. (s. f.-a). *International Zurkhaneh Sports and Koshti Pahlavani Federation* [Página de inicio]. Recuperado el 29 de septiembre de 2026 de https://izsf.ch/en",
-  "duda": true,
-  "nota": "Descripción general de la práctica; el número de ejercicios y su orden varía. No se ha consultado la web de la federación."
+  "es": "Entrenamiento tradicional iraní que se practica en grupo dentro de un foso, con ejercicios de fuerza y de lucha que se ejecutan al ritmo del tambor y de los poemas que recita el guía.",
+  "en": "Traditional Iranian training practised in a group inside a pit, with strength and wrestling exercises carried out to the rhythm of the drum and the poems recited by the guide.",
+  "fuente": "https://izsf.ch/en",
+  "duda": false,
+  "nota": "contrastada: generalizada. Se quitan mazas, escudos y giros porque la web de la federación no los detalla; se conservan foso, tambor, guía (morshed) y lucha."
  },
  "powerlifting": {
   "es": "Deporte de fuerza individual en el que cada atleta, dentro de su categoría de peso, intenta levantar la mayor carga posible en tres movimientos con barra, sentadilla, press de banca y peso muerto.",
@@ -77,11 +77,11 @@
   "nota": ""
  },
  "fitness-funcional": {
-  "es": "Competición individual o por parejas en la que los atletas completan series de ejercicios variados, como levantamientos con barra, gimnásticos y cardiovasculares, en el menor tiempo o con el mayor número de repeticiones.",
-  "en": "Individual or pairs competition in which athletes complete sets of varied exercises, such as barbell lifts, gymnastic movements and cardio work, in the shortest time or with the most repetitions.",
-  "fuente": "CrossFit. (s. f.-a). *25 years of results*. Recuperado el 29 de septiembre de 2026 de https://www.crossfit.com/about",
-  "duda": true,
-  "nota": "Descripción genérica de las competiciones de fitness funcional; los formatos varían según la organización. Conviene revisarla contra la ficha."
+  "es": "Competición individual o por equipos en la que los atletas afrontan varias pruebas de halterofilia, gimnasia y acondicionamiento, y se clasifican por los puntos que suman según su puesto en cada una.",
+  "en": "Individual or team competition in which athletes tackle several weightlifting, gymnastics and conditioning tests and are ranked by the points they gain according to their placing in each one.",
+  "fuente": "https://www.crossfit.com/wp-content/uploads/2023/01/21114340/2024_CrossFitGames_Rulebook_V6.pdf",
+  "duda": false,
+  "nota": "contrastada: corregida. El reglamento habla de equipos (no de parejas) y de clasificación por puntos de posición; se retira 'menor tiempo o mayor número de repeticiones' como criterio general."
  },
  "carreras-de-obstaculos": {
   "es": "Carreras a pie sobre recorridos de varios kilómetros con obstáculos artificiales, como muros, cuerdas, barro y estructuras que hay que trepar, en las que se compite contra el crono o por equipos.",
@@ -107,9 +107,9 @@
  "futbol-canadiense": {
   "es": "Deporte de equipo de doce jugadores por bando en el que se avanza con un balón ovalado mediante carreras y pases, con tres oportunidades por serie, y se puntúa con touchdowns y goles de campo.",
   "en": "Team sport with twelve players a side in which the team advances an oval ball by running and passing, with three downs per series, and scores through touchdowns and field goals.",
-  "fuente": "Canadian Football Hall of Fame. (s. f.). *History of the Grey Cup*. Recuperado el 29 de septiembre de 2026 de https://cfhof.ca/history-of-the-grey-cup/",
-  "duda": true,
-  "nota": "Detalle de tres oportunidades y doce jugadores procede del conocimiento general del reglamento, no confirmado en la ficha."
+  "fuente": "https://static.cfl.ca/wp-content/uploads/2026_Rule-Book.pdf",
+  "duda": false,
+  "nota": "contrastada: confirmada. Reglamento de la CFL confirma 12 jugadores, tres downs por serie, touchdown (6) y gol de campo (3)."
  },
  "futbol-gaelico": {
   "es": "Deporte de equipo de quince jugadores por bando con balón redondo que se lleva con manos y pies; un gol bajo el larguero vale tres puntos y pasar el balón por encima, uno.",
@@ -119,11 +119,11 @@
   "nota": ""
  },
  "calcio-storico": {
-  "es": "Deporte de contacto entre dos equipos de veintisiete jugadores sobre un campo de arena, que mezcla rasgos del fútbol, el rugby y la lucha, y gana quien anota más veces en la portería rival.",
-  "en": "Contact sport between two teams of twenty-seven players on a sand field, mixing features of football, rugby and wrestling, and the side that scores more often in the opposing goal wins.",
-  "fuente": "Comune di Firenze. (s. f.-a). *Calcio storico fiorentino*. Recuperado el 29 de septiembre de 2026 de https://cultura.comune.fi.it/calcio-storico-fiorentino",
-  "duda": true,
-  "nota": "Número de jugadores (27) y puntuación por caccia; conviene confirmar con la ficha o la web oficial."
+  "es": "Deporte de contacto florentino entre dos equipos sobre un campo de arena, en el que gana el equipo que anota más puntos llevando el balón a la portería del rival.",
+  "en": "Florentine contact sport between two teams on a sand field, in which the team that scores more points by taking the ball into the opposing goal wins.",
+  "fuente": "https://cultura.comune.fi.it/calcio-storico-fiorentino",
+  "duda": false,
+  "nota": "contrastada: generalizada. No se pudo confirmar en fuente oficial el número de 27 jugadores ni el mezclado de rasgos; el reglamento PDF del Comune no era accesible. Se quitan y se deja la frase general."
  },
  "rugby-league": {
   "es": "Deporte de contacto entre dos equipos de trece jugadores con un balón ovalado, en el que cada equipo dispone de seis placajes para avanzar y se puntúa con ensayos, transformaciones y golpes de castigo.",
@@ -175,11 +175,11 @@
   "nota": ""
  },
  "balon-prisionero": {
-  "es": "Juego de equipos en el que cada bando lanza un balón para golpear con él a los rivales, que quedan eliminados o prisioneros si no lo atrapan, hasta que un equipo se queda sin jugadores.",
-  "en": "Team game in which each side throws a ball to hit opponents, who are eliminated or made prisoners if they do not catch it, until one team has no players left.",
-  "fuente": "Vroman, T. (s. f.). *Dodgeball*. EBSCO Research Starters. Recuperado el 29 de septiembre de 2026 de https://www.ebsco.com/research-starters/sports-and-leisure/dodgeball/",
-  "duda": true,
-  "nota": "Reglas varían mucho según la versión; descripción de la forma más difundida."
+  "es": "Juego en el que cada bando lanza balones contra los rivales, que quedan eliminados si los alcanzan, salvo que atrapen el balón y eliminen al lanzador, hasta que un equipo se queda sin jugadores.",
+  "en": "Team game in which each side throws balls at the opponents, who are eliminated if hit unless they catch the ball and eliminate the thrower, until one team has no players left.",
+  "fuente": "https://www.ebsco.com/research-starters/sports-and-leisure/dodgeball/",
+  "duda": false,
+  "nota": "contrastada: corregida. La fuente indica que se elimina al alcanzado y que el atrapar elimina al lanzador; no confirma la figura de prisionero, que se retira."
  },
  "futbolin": {
   "es": "Juego de mesa con figuras de jugadores fijadas a barras giratorias que dos jugadores o dos parejas manejan con las manos para golpear una bola pequeña y meterla en la portería contraria.",
@@ -210,11 +210,11 @@
   "nota": ""
  },
  "tenis-playa": {
-  "es": "Deporte de raqueta que se juega por parejas sobre arena, con raquetas sin cordaje y una pelota de presión reducida, golpeada sin dejarla botar y con puntuación de tenis.",
-  "en": "Racket sport played in pairs on sand with stringless rackets and a low-pressure ball, hit without letting it bounce and with tennis scoring.",
-  "fuente": "Federazione Italiana Tennis e Padel. (s. f.). *Cosa è il beach tennis*. Recuperado el 29 de septiembre de 2026 de https://www.fitp.it/Beach-tennis/Cosa-e-il-beach-tennis",
-  "duda": true,
-  "nota": "Puntuación y raquetas descritas de forma general; revisar contra la ficha."
+  "es": "Deporte de raqueta que se juega sobre arena, en una pista de 16 por 8 metros con red de 1,70 metros, con la pelota golpeada al vuelo y con puntuación de tenis.",
+  "en": "Racket sport played on sand, on a court of 16 by 8 metres with a net 1.70 metres high, with the ball hit on the volley and with tennis scoring.",
+  "fuente": "https://www.fitp.it/Beach-tennis/Cosa-e-il-beach-tennis",
+  "duda": false,
+  "nota": "contrastada: generalizada. La federación confirma medidas, red, juego al vuelo y puntuación de tenis; no confirma raquetas sin cordaje, presión reducida ni parejas, que se quitan."
  },
  "baseball5": {
   "es": "Deporte de bate y pelota sin bate ni guante, en el que dos equipos de cinco golpean con la mano una pelota de goma contra una pared y corren por cuatro bases para anotar.",
@@ -245,11 +245,11 @@
   "nota": "revisado"
  },
  "paddle-tennis": {
-  "es": "Deporte de pala que se juega en una pista pequeña con red, individual o por parejas, con una pelota de tenis golpeada tras un bote y con puntuación de tenis.",
-  "en": "Paddle sport played on a small court with a net, in singles or doubles, with a tennis ball struck after one bounce and with tennis scoring.",
-  "fuente": "International Padel Federation. (s. f.). *History*. Recuperado el 30 de septiembre de 2026 de https://www.padelfip.com/history/",
-  "duda": true,
-  "nota": "Descripción por conocimiento general; el reglamento americano prevé variantes. Revisar."
+  "es": "Deporte de pala que se juega en una pista pequeña con red, individual o por parejas, con una pelota de tenis de presión reducida, saque por debajo y puntuación de tenis.",
+  "en": "Paddle sport played on a small court with a net, in singles or doubles, with a reduced-pressure tennis ball, an underarm serve and tennis scoring.",
+  "fuente": "https://www.paddleballgalaxy.com/paddle-tennis-rules.html",
+  "duda": false,
+  "nota": "contrastada: corregida. La página de la FIP solo trata el pádel; se contrasta con una web de reglas (no federativa, fuente débil). Se quita 'tras un bote' por no confirmarse y se añade saque por debajo y presión reducida."
  },
  "platform-tennis": {
   "es": "Deporte de pala que se juega por parejas en una pista elevada rodeada de una valla metálica, con una pala perforada y una pelota de goma que puede jugarse tras rebotar en la valla.",
@@ -266,18 +266,18 @@
   "nota": ""
  },
  "frontenis": {
-  "es": "Deporte de raqueta que se juega solo o por parejas contra un frontón, golpeando con raqueta una pelota de goma, y se puntúa con tantos en un partido a varios juegos.",
-  "en": "Racket sport played singly or in pairs against a front wall, hitting a rubber ball with a racket, scoring points over a match of several games.",
-  "fuente": "FIPV. (2025, 20 de mayo). *FIPV, 96 años de historia junto al deporte*. Recuperado el 29 de septiembre de 2026 de https://www.fipv.net/en/noticia/fipv-96-anos-de-historia-junto-al-deporte",
-  "duda": true,
-  "nota": "Sistema de puntuación no confirmado en la ficha; revisar."
+  "es": "Deporte de raqueta que se juega por parejas en un frontón de 30 metros, golpeando con raqueta una pelota de goma contra la pared frontal.",
+  "en": "Racket sport played in pairs on a 30-metre fronton court, hitting a rubber ball against the front wall with a racket.",
+  "fuente": "https://www.fipv.net/en/especialidad/frontenis",
+  "duda": false,
+  "nota": "contrastada: corregida. La FIPV lo describe por parejas, con frontón de 30 m y pelota de goma; no se confirmó el sistema de puntuación, que se elimina."
  },
  "pelota-paleta-argentina": {
-  "es": "Deporte de pelota en el que dos jugadores o dos parejas golpean con una paleta de madera una pelota de goma contra un frontón, y se puntúa con tantos hasta llegar a un total.",
-  "en": "Pelota sport in which two players or two pairs strike a rubber ball against a front wall with a wooden paddle, scoring points up to a set total.",
-  "fuente": "FIPV. (2025, 20 de mayo). *FIPV, 96 años de historia junto al deporte*. Recuperado el 29 de septiembre de 2026 de https://www.fipv.net/en/noticia/fipv-96-anos-de-historia-junto-al-deporte",
-  "duda": true,
-  "nota": "Puntuación exacta (tantos por partido) no confirmada; revisar contra la ficha."
+  "es": "Deporte de pelota en el que dos jugadores, en frontón, o dos parejas, en trinquete, golpean con una pala una pelota de goma contra la pared, y gana quien logra antes los tantos exigidos.",
+  "en": "Pelota sport in which two players, on a fronton, or two pairs, in a trinquete, strike a rubber ball against the wall with a paddle, and whoever reaches the required points first wins.",
+  "fuente": "https://www.fipv.net/en/especialidad/paleta-goma",
+  "duda": false,
+  "nota": "contrastada: corregida. FIPV: pala de madera, carbono o fibra, pelota de goma, frontón de 30 m (individual) y trinquete (parejas). No se confirmó el total de tantos, se deja general."
  },
  "pickleball": {
   "es": "Deporte de pala que se juega en pista pequeña con red, individual o por parejas, con pelota perforada de plástico; solo puntúa quien saca y no se puede volear junto a la red.",
@@ -317,9 +317,9 @@
  "pilota-valenciana": {
   "es": "Deporte de pelota en el que dos equipos se enfrentan en una calle o trinquet, golpeando la pelota con la mano desnuda, y en el que se puntúa por quinces al estilo del tenis.",
   "en": "Ball sport in which two teams face each other in a street or a trinquet, striking the ball with the bare hand, with points scored in fifteens in tennis fashion.",
-  "fuente": "Càtedra de Pilota Valenciana. (s. f.). *La pilota en el mundo*. Universitat de València. Recuperado el 29 de septiembre de 2026 de https://www.uv.es/pilota-valenciana-chair/en/el-mon-de-la-pilota/la-pilota-al-mon.html",
-  "duda": true,
-  "nota": "Puntuación por quinces y formato de calle o trinquet de conocimiento general; revisar."
+  "fuente": "https://www.uv.es/pilota-valenciana-chair/en/el-mon-de-la-pilota/la-pilota-al-mon.html",
+  "duda": false,
+  "nota": "contrastada: confirmada. Cátedra de la UV: mano desnuda, puntuación en quinzes (15-30-40 y joc); federación (fedpival.es) confirma calle y trinquet."
  },
  "sepak-takraw": {
   "es": "Deporte de equipo parecido al voleibol, con tres jugadores por bando y red, en el que se pasa el balón de fibra con pies, rodillas, pecho y cabeza, sin usar las manos.",
@@ -329,18 +329,18 @@
   "nota": ""
  },
  "batey-taino": {
-  "es": "Juego de pelota antiguo en el que dos equipos se pasaban una pelota de caucho sin usar las manos, golpeándola con caderas, rodillas y otras partes del cuerpo, dentro de un espacio ceremonial llamado batey.",
-  "en": "Ancient ball game in which two teams passed a rubber ball without using the hands, striking it with hips, knees and other parts of the body, within a ceremonial space called the batey.",
-  "fuente": "Fernández de Oviedo, G. (1851). *Historia general y natural de las Indias, islas y tierra-firme del mar océano* (J. Amador de los Ríos, Ed.; Vol. 1). Real Academia de la Historia. (Obra original publicada en 1535)",
-  "duda": true,
-  "nota": "Se describe en pasado; número de jugadores y reglas de puntuación no consta. Descripción prudente."
+  "es": "Juego de pelota antiguo de los taínos en el que dos equipos golpeaban una pelota con hombros, codos, cabeza, caderas o rodillas, sin usar las manos, en una plaza rectangular de piedra llamada batey.",
+  "en": "Ancient Taino ball game in which two teams struck a ball with shoulders, elbows, head, hips or knees, without using the hands, in a rectangular stone plaza called the batey.",
+  "fuente": "https://traditionalsportsgames.org/news/Batey-%E2%80%93-Preserving-the-Caribbean%E2%80%99s-Ancient-Ball-Game-as-Intangible-Heritage",
+  "duda": false,
+  "nota": "contrastada: generalizada. Se quita el caucho y el carácter ceremonial, no confirmados en la fuente consultada; se añaden partes del cuerpo y plaza de piedra."
  },
  "ulama": {
-  "es": "Juego de pelota en el que dos equipos golpean con la cadera una pesada bola de caucho en un campo largo dividido en dos mitades, y puntúan si el rival no consigue devolverla.",
-  "en": "Ball game in which two teams strike a heavy rubber ball with the hip on a long court divided in two halves, scoring when the opponent fails to return it.",
-  "fuente": "Chick, G. (1999). Mesoamerican ballgame. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 252-254). Oxford University Press.",
-  "duda": true,
-  "nota": "Sistema de puntuación de la ulama moderna descrito a grandes rasgos; revisar."
+  "es": "Juego de pelota mesoamericano milenario en el que dos equipos golpean con la cadera una pesada pelota de caucho, de tres a cinco kilos, que debe mantenerse siempre en el aire.",
+  "en": "Ancient Mesoamerican ball game in which two teams strike a heavy rubber ball, weighing three to five kilograms, with the hip, and the ball must be kept in the air at all times.",
+  "fuente": "https://www.gaceta.unam.mx/ulama-el-juego-mesoamericano-de-pelota-que-sobrevive-en-la-unam/",
+  "duda": false,
+  "nota": "contrastada: generalizada. No se confirmó la puntuación ni el campo dividido en mitades; se quitan y se añade el peso y la norma de mantener la pelota en el aire."
  },
  "chinlone": {
   "es": "Juego de pelota en el que un grupo de seis jugadores forma un círculo y se pasa una pelota de caña con pies, rodillas y cabeza, y no hay rival ni vencedor.",
@@ -406,11 +406,11 @@
   "nota": ""
  },
  "chueca-mapuche": {
-  "es": "Deporte de equipo entre dos bandos que, con un palo curvo, intentan llevar una pequeña pelota de madera más allá de la línea final del campo contrario, con contacto físico permitido.",
-  "en": "Team sport between two sides who, with a curved stick, try to carry a small wooden ball beyond the end line of the opposing field, with physical contact permitted.",
-  "fuente": "Museo Mapuche de Cañete. (s. f.). *Palin: Un encuentro espiritual, social y político*. Recuperado el 29 de septiembre de 2026 de https://www.museomapuchecanete.gob.cl/colecciones/palin-un-encuentro-espiritual-social-y-politico",
-  "duda": true,
-  "nota": "Número de jugadores y sistema de puntuación variable; descripción prudente."
+  "es": "Deporte de equipo entre dos bandos que, con un palo de madera llamado weño, intentan llevar una pequeña bola más allá de la raya del campo contrario, donde cruzarla vale un tanto.",
+  "en": "Team sport between two sides who, with a wooden stick called a weño, try to carry a small ball beyond the line of the opposing field, where crossing it earns a point.",
+  "fuente": "https://www.museomapuchecanete.gob.cl/colecciones/palin-un-encuentro-espiritual-social-y-politico",
+  "duda": false,
+  "nota": "contrastada: corregida. La fuente no menciona palo curvo, bola de madera ni contacto físico; sí el weño, la raya y un punto por cruzarla. Se ajusta."
  },
  "hornussen": {
   "es": "Deporte de equipo en el que un bateador golpea con una vara flexible un disco lanzado desde una rampa, y el equipo contrario intenta interceptarlo en el aire con grandes paletas.",
@@ -462,11 +462,11 @@
   "nota": ""
  },
  "bochas": {
-  "es": "Deporte de precisión en el que dos jugadores o equipos lanzan bolas grandes sobre una pista de tierra para acercarlas lo más posible al boccino, la bola pequeña, y pueden golpear las del rival.",
-  "en": "A precision sport in which two players or teams throw large balls along a dirt court to place them as close as possible to the small target ball, the boccino, and may knock the opponents' balls away.",
-  "fuente": "Confederazione Boccistica Internazionale. (s. f.). *La confederazione*. Recuperado el 29 de septiembre de 2026 de https://cbi-prv.org/la-confederazione",
-  "duda": true,
-  "nota": "Fuente de la ficha es la CBI (Confederazione Boccistica Internazionale); no he consultado el reglamento y hay variantes (raffa, volo) con reglas distintas."
+  "es": "Deporte de precisión en el que dos jugadores o equipos lanzan bolas grandes sobre una pista rectangular para acercarlas lo más posible al pallino, la bola pequeña, o para golpear las del rival.",
+  "en": "A precision sport in which two players or teams throw large balls along a rectangular court to place them as close as possible to the pallino, the small target ball, or to knock the opponents' balls away.",
+  "fuente": "https://cbi-prv.org/la-confederazione",
+  "duda": false,
+  "nota": "contrastada: corregida. La CBI describe pista rectangular de caliza prensada o material sintético (no de tierra) y bolas sintéticas; se corrige el terreno y el nombre pallino."
  },
  "petanca": {
   "es": "Deporte de precisión en el que jugadores individuales, parejas o tríos lanzan bolas metálicas sobre terreno llano para acercarlas lo más posible al boliche, la bola pequeña de madera, y pueden desplazar las del rival.",
@@ -518,18 +518,18 @@
   "nota": ""
  },
  "silambam": {
-  "es": "Arte marcial del sur de la India que se practica con un bastón largo de bambú, con el que dos contendientes se atacan y se defienden en combates de exhibición o deportivos.",
-  "en": "A martial art of southern India practised with a long bamboo staff, with which two contestants attack and defend in demonstration or sporting bouts.",
-  "fuente": "Zarrilli, P. B. (1999). Martial arts, South Asia. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 239-240). Oxford University Press.",
-  "duda": true,
-  "nota": "Descripción deportiva actual (puntuación, categorías) no confirmada en fuente; me limito a lo que dan las refs sobre el bastón."
+  "es": "Arte marcial tradicional de la India que se practica con bastón y que se disputa en combates entre dos contendientes, con protecciones y puntuación de jueces.",
+  "en": "Traditional Indian martial art practised with a staff and contested in bouts between two contestants, with protective gear and scoring by judges.",
+  "fuente": "https://silambam.world/silambam-sports-rules",
+  "duda": false,
+  "nota": "contrastada: generalizada. La WSA confirma combates (Silambam Kai Sandai) con protecciones y jueces; no se pudo confirmar el bambú ni el sur de la India en fuente accesible, se quitan."
  },
  "eskrima": {
-  "es": "Arte marcial filipino de combate con palos de ratán o con cuchillos, en el que se entrena el golpeo, la defensa y el desarme, y que se practica en forma de sparring deportivo.",
-  "en": "A Filipino martial art of fighting with rattan sticks or knives, training striking, defence and disarming, and practised as sporting sparring.",
-  "fuente": "Wiley, M. (1999). Martial arts, Philippines. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 238-239). Oxford University Press.",
-  "duda": true,
-  "nota": "Nombre y variantes (arnis, kali) según la fuente; el detalle del sparring deportivo no lo he verificado."
+  "es": "Arte marcial filipino que se practica con uno o dos palos y con las manos, con golpeo, bloqueo y luxación, y que se compite en formas y en combates puntuados.",
+  "en": "Filipino martial art practised with one or two sticks and with the hands, with striking, blocking and locking, and competed in forms and scored sparring.",
+  "fuente": "https://pnat-pekaf.org/?page_id=41",
+  "duda": false,
+  "nota": "contrastada: corregida. Ley RA 9850: uno o dos palos y manos, golpeo, bloqueo, luxación; no cita cuchillos ni desarme, que se quitan. Formas (anyo) y combate (labanan) según reglas de competición."
  },
  "pancracio": {
   "es": "Combate que se disputaba entre dos hombres, sin categorías de peso, en el que valían golpes de puño, patadas, derribos, estrangulamientos y luxaciones, y terminaba cuando uno de ellos se rendía.",
@@ -581,11 +581,11 @@
   "nota": ""
  },
  "lucha-nuba": {
-  "es": "Lucha tradicional de los nuba de Kordofán en la que dos hombres, con el cuerpo desnudo y pintado, intentan derribarse mutuamente, y que se disputa en torneos entre poblados.",
-  "en": "A traditional wrestling of the Nuba of Kordofan in which two men, with bare, painted bodies, try to throw each other down, contested in tournaments between villages.",
-  "fuente": "Carroll, S. T. (1988). Wrestling in ancient Nubia. *Journal of Sport History*, *15*(2), 121-137.",
-  "duda": true,
-  "nota": "Las refs tratan sobre todo el origen antiguo; pintura corporal y torneos entre poblados proceden de la etnografía general, no de una ref concreta. Reglas de puntuación no confirmadas."
+  "es": "Lucha tradicional de los nuba de Kordofán en la que dos hombres intentan derribarse y gana quien lleva primero al rival al suelo, con torneos entre poblados en siembra y cosecha.",
+  "en": "Traditional wrestling of the Nuba of Kordofan in which two men try to throw each other and whoever first takes the opponent to the ground wins, contested in tournaments between villages at sowing and harvest time.",
+  "fuente": "https://digital.la84.org/digital/api/collection/p17103coll10/id/696/download",
+  "duda": false,
+  "nota": "contrastada: corregida. Fuente académica: gana quien primero lleva al rival al suelo, torneos entre poblados en siembra y cosecha; se retira el cuerpo desnudo y pintado (era ceniza, y hoy se lucha con ropa deportiva)."
  },
  "lucha-libre-profesional": {
   "es": "Espectáculo de lucha con combates coreografiados entre dos luchadores o equipos en un ring cuadrado, en los que se aplican llaves y proyecciones y se gana por inmovilización o rendición con final pactado.",
@@ -595,11 +595,11 @@
   "nota": ""
  },
  "buzkashi": {
-  "es": "Deporte ecuestre centroasiático en el que jinetes, individualmente o en equipos, se disputan a caballo el cadáver de un ternero o una cabra para llevarlo hasta una zona de anotación.",
-  "en": "A Central Asian equestrian sport in which riders, individually or in teams, compete on horseback for the carcass of a calf or goat to carry it to a scoring area.",
-  "fuente": "Azoy, G. W. (1999). Buzkashi. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 68-70). Oxford University Press.",
-  "duda": true,
-  "nota": "Las variantes (individual o por equipos, zona de anotación o círculo) dependen de la modalidad; descripción general."
+  "es": "Deporte ecuestre practicado sobre todo por pueblos túrquicos del norte de Afganistán, en el que jinetes compiten a caballo por apoderarse de la res de un ternero o una cabra y retenerla.",
+  "en": "Equestrian sport played mainly by Turkic peoples of northern Afghanistan, in which riders compete on horseback to seize and retain the carcass of a calf or goat.",
+  "fuente": "https://www.britannica.com/sports/buzkashi",
+  "duda": false,
+  "nota": "contrastada: generalizada. Se quitan individual o por equipos y zona de anotación, que dependen de la modalidad y no se confirmaron; se ajusta a la definición de Britannica."
  },
  "rodeo-estadounidense": {
   "es": "Competición en la que vaqueros montan caballos y toros que intentan derribarlos, y ponen a prueba el lazo y el derribo de reses, puntuados por jueces o por el tiempo empleado.",
@@ -611,23 +611,23 @@
  "charreria": {
   "es": "Deporte ecuestre mexicano en el que charros, individualmente o en equipos, realizan suertes con caballo y ganado, como el lazo, la monta de toros y de yeguas y las coleadas, puntuadas por jueces.",
   "en": "A Mexican equestrian sport in which charros, individually or in teams, perform feats with horse and cattle, such as roping, bull and mare riding and steer tailing, scored by judges.",
-  "fuente": "LeCompte, M. L. (1999). Rodeo. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 327-329). Oxford University Press.",
-  "duda": true,
-  "nota": "Lista de suertes tomada de mi conocimiento general de la charrería (la ref LeCompte trata rodeo); conviene contrastar con la Federación Mexicana de Charrería."
+  "fuente": "https://fmcharreria.org.mx/wp-content/uploads/Reglamento-Oficial-Charros-Libre-Juvenil-24-28.pdf",
+  "duda": false,
+  "nota": "contrastada: confirmada. Reglamento de la Federación Mexicana de Charrería: cala de caballo, piales, coleadero, jineteo de toro y yegua, manganas, terna; competencia por equipos e individual; puntuación por jueces."
  },
  "carreras-de-camellos": {
-  "es": "Carrera en la que camellos montados por jinetes, hoy a menudo robots, recorren en grupo una pista larga de entre cuatro y diez kilómetros, y gana el que cruza primero la meta.",
-  "en": "A race in which camels ridden by jockeys, today often robots, run together over a long track of between four and ten kilometres, and the first to cross the line wins.",
-  "fuente": "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
-  "duda": true,
-  "nota": "Distancias y uso de robots de mi conocimiento general; las refs no las detallan."
+  "es": "Carrera en la que camellos montados por jinetes, hoy a menudo por robots controlados a distancia, recorren en grupo una pista larga, y gana el primero que cruza la meta.",
+  "en": "A race in which camels ridden by jockeys, today often robots operated by remote control, run together over a long track, and the first to cross the line wins.",
+  "fuente": "https://www.ebsco.com/research-starters/zoology/camel-racing/",
+  "duda": false,
+  "nota": "contrastada: generalizada. No se confirmó el rango de cuatro a diez kilómetros (la fuente cita una primera pista de unos 8 km); se quita la cifra. Robots confirmados."
  },
  "galgos": {
-  "es": "Carrera de galgos que persiguen una liebre, mecánica en pista o viva en el campo, en la que compiten dos perros a la vez y gana el más veloz o el que puntúa más.",
-  "en": "A race in which greyhounds chase a hare, mechanical on a track or live in open country, with two dogs competing at once and the winner being the fastest or the highest scoring.",
-  "fuente": "Federación Española de Galgos. (s. f.). *Historia*. Recuperado el 30 de septiembre de 2026 de https://www.fedegalgos.com/federacion-espanola-galgos/historia/",
-  "duda": true,
-  "nota": "Mezclo las carreras en pista y el coursing en campo; el sistema de puntuación de campo (Federación Española de Galgos) no lo he verificado."
+  "es": "Carrera de galgos que persiguen una liebre, viva en el campo o mecánica, en la que compiten dos perros a la vez y un juez puntúa la velocidad, la resistencia y otras cualidades.",
+  "en": "A race in which greyhounds chase a hare, live in open country or mechanical, with two dogs competing at once and a judge scoring speed, stamina and other qualities.",
+  "fuente": "https://www.fedegalgos.com/wp-content/uploads/2021/02/REGLAMENTO-DE-CAMPO-2020.pdf",
+  "duda": false,
+  "nota": "contrastada: corregida. Reglamento de campo de la Federación Española de Galgos: dos galgos por carrera, liebre viva, puntuación por juez (velocidad, resistencia, etc.). Se sustituye 'gana el más veloz' por puntuación de juez."
  },
  "colombofilia": {
   "es": "Deporte en el que los aficionados crían palomas mensajeras y las sueltan a cientos de kilómetros de su palomar, y gana la que regresa en menos tiempo, medido por su velocidad de vuelo.",
@@ -658,11 +658,11 @@
   "nota": "revisado"
  },
  "muay-thai": {
-  "es": "Deporte de combate de Tailandia en el que dos púgiles se enfrentan en un ring con puños, codos, rodillas y patadas, y ganan por puntos, por abandono o por nocaut, en asaltos de tres minutos.",
-  "en": "A combat sport from Thailand in which two fighters face each other in a ring using fists, elbows, knees and kicks, winning on points, by stoppage or by knockout, in rounds of three minutes.",
-  "fuente": "International Federation of Muaythai Associations. (s. f.-a). *History of Muaythai*. Recuperado el 29 de septiembre de 2026 de https://muaythai.sport/history-of-muaythai/",
-  "duda": true,
-  "nota": "Duración de los asaltos (tres minutos) de mi conocimiento general; no consta en la ref revisada."
+  "es": "Deporte de combate de Tailandia en el que dos púgiles se enfrentan en un ring con puños, codos, rodillas y espinillas, en tres asaltos de tres minutos, y ganan por puntos, parada o nocaut.",
+  "en": "A combat sport from Thailand in which two fighters face each other in a ring using fists, elbows, knees and shins, winning on points, by stoppage or by knockout, over three rounds of three minutes.",
+  "fuente": "https://muaythai.sport/wp-content/uploads/2023/04/IFMA-Rules-and-Regulations-v2.04-1.pdf",
+  "duda": false,
+  "nota": "contrastada: corregida. Reglamento IFMA: tres asaltos de tres minutos en categoría sénior, puños, codos, rodillas y espinillas; victoria por puntos, RSC, KO o retirada. Se precisa 'espinillas' en lugar de patadas y 'tres asaltos'."
  },
  "kalaripayattu": {
   "es": "Arte marcial del sur de la India que se entrena en un foso de tierra, el kalari, con ejercicios corporales, luchas sin armas y manejo de bastones, dagas, espadas y lanzas.",
@@ -672,18 +672,18 @@
   "nota": ""
  },
  "kushti": {
-  "es": "Lucha tradicional del sur de Asia que se disputa en un foso de tierra, el akhara, entre dos luchadores que buscan inmovilizar la espalda del rival contra el suelo.",
-  "en": "A traditional wrestling of South Asia contested in an earth pit, the akhara, between two wrestlers who try to pin the opponent's back to the ground.",
-  "fuente": "Zarrilli, P. B. (1999). Martial arts, South Asia. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 239-240). Oxford University Press.",
-  "duda": true,
-  "nota": "Reglas de puntuación no comprobadas; me limito al objetivo general de la lucha."
+  "es": "Lucha tradicional del sur de Asia que se practica en un foso de tierra, el akhara, y en la que se vence inmovilizando los hombros y la espalda del rival contra el suelo.",
+  "en": "Traditional wrestling of South Asia practised in an earth pit, the akhara, between two wrestlers, in which victory comes from pinning the opponent's shoulders and back to the ground.",
+  "fuente": "https://people.howstuffworks.com/culture-traditions/cultural-traditions/kushti-indian-traditional-mud-wrestling.htm",
+  "duda": false,
+  "nota": "contrastada: corregida. Fuente divulgativa (no federativa, fuente débil) confirma akhara e inmovilización de hombros y espalda; se precisa la formulación."
  },
  "gatka": {
-  "es": "Arte marcial sij que se practica con bastones, espadas y otras armas, en combates por parejas o en exhibiciones, y que se ejecuta al ritmo de tambor.",
-  "en": "A Sikh martial art practised with sticks, swords and other weapons, in paired bouts or displays, and performed to the rhythm of a drum.",
-  "fuente": "Hick, S. (1999). Cudgeling. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 93-95). Oxford University Press.",
-  "duda": true,
-  "nota": "Puntuación y reglas de la modalidad deportiva (incluida en los Juegos Nacionales 2023) no verificadas."
+  "es": "Arte marcial sij que se practica con bastón (soti) y escudo (farri), en combates por parejas o por equipos de tres, puntuados por los golpes válidos que recibe el oponente.",
+  "en": "Sikh martial art practised with a stick (soti) and shield (farri), in bouts between pairs or teams of three, scored by valid strikes landed on the opponent.",
+  "fuente": "https://gatkaa.com/wp-content/uploads/2021/07/NGAI-Rule-Book-Final-updated-on-08-07-21.pdf",
+  "duda": false,
+  "nota": "contrastada: corregida. Reglamento de la NGAI: soti y farri, combates individuales y por equipos de tres, puntos por golpes. Se quitan espadas y tambor, no confirmados en la modalidad deportiva."
  },
  "ssireum": {
   "es": "Lucha coreana en la que dos luchadores, agarrados a la faja que el rival lleva en la cintura y el muslo, intentan que toque la arena con cualquier parte del cuerpo por encima de la rodilla.",
@@ -693,32 +693,32 @@
   "nota": "revisado"
  },
  "vovinam": {
-  "es": "Arte marcial vietnamita que combina golpes, patadas, proyecciones y luxaciones, y se practica en formas individuales y por parejas, y en combate deportivo con protecciones.",
-  "en": "A Vietnamese martial art that combines punches, kicks, throws and joint locks, and is practised in individual and paired forms and in sporting combat with protective gear.",
-  "fuente": "Vovinam-VietVoDao World Federation. (s. f.-b). *History of Vovinam-VVD-TND*. Recuperado el 29 de septiembre de 2026 de https://vovinamworldfederation.eu/en/livre-bibliography-vovinamvvd-tnd/livre-history-of-vovinamvvd-tnd.html",
-  "duda": true,
-  "nota": "Detalle del combate deportivo de mi conocimiento general; las refs se centran en el origen."
+  "es": "Arte marcial vietnamita que combina golpes, patadas, rodillazos y proyecciones, y se practica en formas individuales y colectivas, con armas, y en combate deportivo con protecciones.",
+  "en": "Vietnamese martial art that combines punches, kicks, knee strikes and throws, practised in individual and group forms, with weapons, and in sporting combat with protective gear.",
+  "fuente": "https://vovinamworldfederation.eu/en/world-council-of-masters/world-championship/2014-paris/worldcup2014-rules-regulations/218-sparring-regulation.html",
+  "duda": false,
+  "nota": "contrastada: corregida. Reglamento de la federación mundial: golpes, patadas, rodillazos, lucha y tijeras en combate con protecciones; formas (quyen) y armas en la competición técnica. Se quitan las luxaciones, no confirmadas."
  },
  "bokator": {
-  "es": "Arte marcial camboyano de combate cuerpo a cuerpo con golpes, patadas, rodillazos, codazos, llaves y armas tradicionales, que se practica con maestros en escuelas y en combate deportivo con reglas.",
-  "en": "A Cambodian martial art of close combat with punches, kicks, knees, elbows, holds and traditional weapons, practised with masters in schools and in sporting combat with rules.",
-  "fuente": "UNESCO. (s. f.). *Kun Lbokator, traditional martial arts in Cambodia*. Recuperado el 29 de septiembre de 2026 de https://ich.unesco.org/en/RL/kun-lbokator-traditional-martial-arts-in-cambodia-01868",
-  "duda": true,
-  "nota": "Contenido técnico de mi conocimiento general; la ref UNESCO habla del carácter filosófico."
+  "es": "Arte marcial camboyano que emplea golpes con manos, pies, rodillas, codos y cabeza, además de sumisiones y lucha en el suelo, y armas como palos cortos, y que transmiten los maestros en escuelas.",
+  "en": "Cambodian martial art that uses strikes with hands, feet, knees, elbows and head, together with submissions and ground fighting, and weapons such as short sticks, transmitted by masters in schools.",
+  "fuente": "https://ich.unesco.org/en/RL/kun-lbokator-traditional-martial-arts-in-cambodia-01868",
+  "duda": false,
+  "nota": "contrastada: corregida. UNESCO confirma la transmisión por maestros y no cita competición; la técnica procede de intocambodia.org (no oficial). Se quita 'combate deportivo con reglas'."
  },
  "taekkyon": {
-  "es": "Arte marcial coreano de patadas, barridos y golpes con la mano abierta que se practica con un movimiento rítmico y flexible, y en su forma de combate busca derribar al rival.",
-  "en": "A Korean martial art of kicks, sweeps and open-hand strikes practised with a rhythmic, flexible movement, and in its fighting form aimed at bringing the opponent down.",
-  "fuente": "Moenig, U. (2012). The available evidence regarding t'aekkyŏn and its portrayal as a traditional Korean martial art. *Acta Koreana*, *15*(2), 341-368.",
-  "duda": true,
-  "nota": "Descripción de mi conocimiento general; la ref discute la evidencia histórica, no la técnica ni el modo de ganar."
+  "es": "Arte marcial coreano de patadas y golpes con las manos, practicado con un movimiento rítmico y flexible que recuerda a una danza.",
+  "en": "A Korean martial art of kicks and hand strikes, practised with a rhythmic, flexible movement reminiscent of dance.",
+  "fuente": "https://www.unesco.org/archives/multimedia/document-2224",
+  "duda": false,
+  "nota": "contrastada: generalizada. UNESCO confirma patadas, manos y movimiento rítmico; se quitan barridos, mano abierta y el modo de ganar, que no constan en fuente oficial."
  },
  "silat": {
-  "es": "Arte marcial del sudeste asiático que combina golpes, patadas, barridos, luxaciones y armas blancas, y se compite en combate, en formas individuales, por parejas y por equipos.",
-  "en": "A martial art of South-East Asia that combines strikes, kicks, sweeps, joint locks and bladed weapons, and is contested in combat and in individual, paired and team forms.",
-  "fuente": "Adams, I. (2003). Pancasila: Sport and the building of Indonesia. Ambitions and obstacles. En J. A. Mangan y F. Hong (Eds.), *Sport in Asian society: Past and present* (pp. 240-257). Frank Cass.",
-  "duda": true,
-  "nota": "Categorías competitivas de mi conocimiento general (pencak silat); no las traen las refs."
+  "es": "Arte marcial del sudeste asiático que combina golpes, patadas, barridos y derribos, y se compite en combate y en rutinas individuales, por parejas y por equipos, con armas en las individuales y por parejas.",
+  "en": "A martial art of South-East Asia that combines strikes, kicks, sweeps and takedowns, and is contested in combat and in individual, paired and team routines, with weapons in the individual and paired ones.",
+  "fuente": "https://www.activesgcircle.gov.sg/learn/silat/categories-and-age-classifications-in-silat",
+  "duda": false,
+  "nota": "contrastada: corregida. Categorías tanding, tunggal, ganda y regu confirmadas; luxaciones y armas blancas no constan (se pasa a derribos y armas, solo en tunggal y ganda)."
  },
  "savate": {
   "es": "Deporte de combate en el que dos púgiles con calzado especial se pegan con puños y patadas, sin agarres ni golpes con rodilla ni codo, y ganan por puntos o por nocaut.",
@@ -744,23 +744,23 @@
  "krav-maga": {
   "es": "Sistema de defensa personal sin competición que enseña a responder a golpes, agarres y ataques con armas mediante golpes, patadas, técnicas de suelo y desarmes, entrenados en situaciones realistas.",
   "en": "A system of self-defence without competition that teaches how to respond to punches, grabs and armed attacks through strikes, kicks, ground techniques and disarms, trained in realistic situations.",
-  "fuente": "Krav Maga Global. (s. f.). *About*. Recuperado el 29 de septiembre de 2026 de https://krav-maga.com/about/",
-  "duda": true,
-  "nota": "Descripción técnica de mi conocimiento general; las refs de la ficha son sobre origen y federaciones."
+  "fuente": "https://krav-maga.com/understanding-the-core-principles-of-kmg-krav-maga-a-cheat-sheet/",
+  "duda": false,
+  "nota": "contrastada: confirmada. Sin cambios; golpes, patadas, suelo, desarmes, simulaciones y ausencia de reglas deportivas constan en KMG."
  },
  "jeet-kune-do": {
-  "es": "Sistema de combate sin competición que integra golpes de puño, patadas, atrapes y lucha en el suelo, y que busca interceptar el ataque del rival con economía de movimiento y sin formas fijas.",
-  "en": "A system of combat without competition that integrates punches, kicks, trapping and ground fighting, aiming to intercept the opponent's attack with economy of movement and without fixed forms.",
-  "fuente": "Burrows, A. (2002, 21 de octubre). *Lee, Bruce (1940-1973)* (Ensayo 3999). HistoryLink.org. Recuperado el 29 de septiembre de 2026 de https://www.historylink.org/file/3999",
-  "duda": true,
-  "nota": "Descripción técnica de mi conocimiento general; las refs tratan sobre Bruce Lee y el origen."
+  "es": "Sistema de combate creado por Bruce Lee, sin competición ni formas fijas, que busca interceptar el ataque del rival con economía de movimiento y trabaja todas las distancias del combate.",
+  "en": "A system of combat created by Bruce Lee, without competition or fixed forms, aiming to intercept the opponent's attack with economy of movement and working at every range of combat.",
+  "fuente": "https://jeetkunedoinstitute.com/what-is-jeet-kune-do/",
+  "duda": false,
+  "nota": "contrastada: generalizada. Se confirman interceptación, economía de movimiento, ausencia de formas y de competición; se quitan atrapes y lucha en el suelo, no confirmados."
  },
  "lucha-canaria": {
-  "es": "Lucha por equipos de doce luchadores que se enfrentan por parejas en un terrero circular, y gana cada agarrada quien hace tocar la arena al rival con algo más que las plantas.",
-  "en": "A wrestling sport in which two teams of twelve wrestlers face each other in pairs in a circular sand ring, a bout going to the one who makes the opponent touch the sand with more than the soles of his feet.",
-  "fuente": "Federación de Lucha Canaria. (2019). *Estatutos de la Federación de Lucha Canaria*. Recuperado el 29 de septiembre de 2026 de https://fedluchacanaria.com/archivos/transparencia/estatutos.pdf",
-  "duda": true,
-  "nota": "Número de luchadores por equipo y forma de ganar de mi conocimiento general de la Federación de Lucha Canaria; conviene contrastar en los estatutos."
+  "es": "Lucha por equipos, con doce luchadores en el sistema de tres las dos mejores, que se enfrentan por parejas en un terrero circular, y pierde quien toca el suelo con algo más que las plantas.",
+  "en": "A team wrestling sport, with twelve wrestlers in the best-of-three system, who face each other in pairs in a circular ring, and whoever touches the ground with more than the soles loses.",
+  "fuente": "https://fedluchacanaria.com/archivos/reglasDeporteLuchaCanaria.pdf",
+  "duda": false,
+  "nota": "contrastada: corregida. El reglamento da 12 luchadores solo en 'tres las dos mejores' (18 o 6-8 en otros sistemas); terrero circular y regla de la agarrada confirmados."
  },
  "lucha-leonesa": {
   "es": "Lucha en la que dos luchadores, agarrados con ambas manos al cinto del contrario, dentro de un corro de arena intentan derribarlo mediante técnicas llamadas mañas.",
@@ -777,11 +777,11 @@
   "nota": ""
  },
  "glima": {
-  "es": "Lucha en pie de dos contendientes que se agarran a un cinturón y a unas cintas en los muslos y buscan derribarse con zancadillas y proyecciones sin dejar de mantenerse erguidos.",
-  "en": "A standing wrestling between two contestants who grip a belt and straps around the thighs and try to bring each other down with trips and throws while remaining upright.",
-  "fuente": "Glímusamband Íslands. (s. f.). *Um glímu*. Recuperado el 29 de septiembre de 2026 de https://glima.is/um-glimu/",
-  "duda": true,
-  "nota": "Reglas concretas de puntuación no consultadas en la web de la federación."
+  "es": "Lucha en pie de dos contendientes que se agarran al cinturón y buscan derribarse con zancadillas y proyecciones sin dejar de mantenerse erguidos.",
+  "en": "A standing wrestling between two contestants who grip the belt and try to bring each other down with trips and throws while remaining upright.",
+  "fuente": "https://glima.is/um-glimu/",
+  "duda": false,
+  "nota": "contrastada: generalizada. La federación confirma presa en el cinturón y postura erguida; se quitan las cintas en los muslos, no confirmadas."
  },
  "schwingen": {
   "es": "Lucha suiza en la que dos luchadores, con calzones de yute sobre la ropa, se agarran a los del contrario en un círculo de serrín y ganan al dejar al rival de espaldas.",
@@ -791,11 +791,11 @@
   "nota": "revisado"
  },
  "yagl-gures": {
-  "es": "Lucha en pie en la que dos luchadores con calzones de cuero y el cuerpo empapado en aceite de oliva se agarran, y gana quien consigue levantar y derribar al rival o inmovilizarlo.",
-  "en": "A standing wrestling in which two wrestlers in leather trousers and with bodies soaked in olive oil grapple, and the winner is the one who lifts and throws the opponent or pins him.",
-  "fuente": "UNESCO. (2010a). *Nomination file no. 00386 for inscription on the Representative List of the Intangible Cultural Heritage in 2010: Kırkpınar oil wrestling festival*. Recuperado el 29 de septiembre de 2026 de https://ich.unesco.org/doc/src/07485-EN.pdf",
-  "duda": true,
-  "nota": "Forma de ganar de mi conocimiento general (Kırkpınar); el resto sí consta en la ficha UNESCO."
+  "es": "Lucha en pie de dos luchadores con calzones de cuero y el cuerpo untado de aceite, en la que gana quien tumba al rival de espaldas o lo levanta y camina tres pasos con él.",
+  "en": "A standing wrestling of two wrestlers in leather trousers and with bodies coated in oil, in which the winner is the one who puts the opponent on his back or lifts him and carries him three steps.",
+  "fuente": "https://tggf.org.tr/yagli-gures-2/",
+  "duda": false,
+  "nota": "contrastada: corregida. Forma de ganar corregida según la federación turca (espalda al suelo o levantar y andar tres pasos); 'aceite de oliva' pasa a 'aceite' por no confirmarse."
  },
  "kurash": {
   "es": "Lucha en pie con chaqueta en la que dos luchadores puntúan con proyecciones y barridos, sin acciones en el suelo, luxaciones, estrangulaciones ni golpes, y en categorías de peso.",
@@ -805,11 +805,11 @@
   "nota": ""
  },
  "bokh": {
-  "es": "Lucha tradicional de Mongolia en la que dos luchadores compiten sin círculo ni límite de tiempo, y pierde el primero que toca el suelo con cualquier parte del cuerpo salvo pies y manos.",
-  "en": "A traditional Mongolian wrestling in which two wrestlers compete without a ring or time limit, and the first to touch the ground with any body part other than feet and hands loses.",
-  "fuente": "UNESCO. (s. f.). *Naadam, Mongolian traditional festival*. Recuperado el 29 de septiembre de 2026 de https://ich.unesco.org/en/RL/naadam-mongolian-traditional-festival-00395",
-  "duda": true,
-  "nota": "Regla de derrota de mi conocimiento general; la ref indica ausencia de círculo y palmas al suelo."
+  "es": "Lucha tradicional de Mongolia en la que dos luchadores compiten en pie y pierde el primero que toca el suelo con el codo, la rodilla u otra parte del cuerpo.",
+  "en": "A traditional Mongolian wrestling in which two wrestlers compete standing and the first to touch the ground with an elbow, a knee or another part of the body loses.",
+  "fuente": "https://worldnomadgames.com/media/images/2018/04/09/18-mongol-bokh-rules-en.pdf",
+  "duda": false,
+  "nota": "contrastada: generalizada. Regla de derrota según reglamento; se quitan 'sin círculo ni límite de tiempo' (el reglamento fija tiempos) y la excepción de pies y manos."
  },
  "lucha-libre-mexicana": {
   "es": "Espectáculo de lucha con combates coreografiados, individuales o por equipos, entre luchadores que a menudo llevan máscara, en un ring cuadrado, con caídas que se ganan por inmovilización o rendición.",
@@ -819,18 +819,18 @@
   "nota": "revisado"
  },
  "horseball": {
-  "es": "Deporte ecuestre por equipos de cuatro jinetes que se pasan a caballo un balón con asas y lo lanzan a un aro vertical en la portería contraria, tras varios pases entre compañeros.",
-  "en": "An equestrian team sport in which teams of four riders pass a handled ball on horseback and throw it into a vertical hoop at the opposing end, after several passes between team-mates.",
-  "fuente": "FIHB. (s. f.). *Fédération Internationale de Horseball*. Recuperado el 29 de septiembre de 2026 de https://fihb.net/",
-  "duda": true,
-  "nota": "Número de pases exigidos antes del tiro no verificado."
+  "es": "Deporte ecuestre de equipos de cuatro jinetes que se pasan a caballo un balón con asas y lo lanzan a un aro vertical rival, tras al menos tres pases entre tres jugadores.",
+  "en": "An equestrian sport of teams of four riders who pass a handled ball on horseback and throw it into an opposing vertical hoop, after at least three passes between three players.",
+  "fuente": "https://fihb.net/",
+  "duda": false,
+  "nota": "contrastada: confirmada. Se concreta 'varios pases' en al menos tres pases entre tres jugadores distintos."
  },
  "pato": {
   "es": "Deporte ecuestre por equipos de cuatro jinetes que se disputan a caballo una pelota con asas de cuero para introducirla en un aro elevado de la portería contraria.",
   "en": "An equestrian team sport in which teams of four riders compete on horseback for a ball with leather handles to put it through a raised hoop at the opposing goal.",
-  "fuente": "Gobierno de Argentina. (s. f.). *El Pato*. Argentina.gob.ar. Recuperado el 29 de septiembre de 2026 de https://www.argentina.gob.ar/pais/pato",
-  "duda": true,
-  "nota": "Nº de jinetes y dimensión del aro de mi conocimiento general de la Federación Argentina de Pato; no verificados en la ficha."
+  "fuente": "https://www.utta.org.ar/pdf/manual_pato.pdf",
+  "duda": false,
+  "nota": "contrastada: confirmada. Sin cambios; reglas de la Federación Argentina de Pato confirman 4 por bando, asas y aro de 1 m a 2,70 m."
  },
  "mushing": {
   "es": "Deporte de invierno en el que un conductor guía un trineo tirado por un tiro de perros sobre nieve o hielo, en carreras de velocidad o de larga distancia cronometradas.",
@@ -847,18 +847,18 @@
   "nota": ""
  },
  "skibob": {
-  "es": "Deporte de invierno en el que el deportista desciende sentado sobre un vehículo con cuadro de bicicleta y patines, con esquís cortos en los pies, en pruebas cronometradas como el eslalon y el gigante.",
-  "en": "A winter sport in which the athlete descends seated on a vehicle with a bicycle frame and runners, wearing short skis on the feet, in timed events such as the slalom and giant slalom.",
-  "fuente": "FISB. (s. f.). *Association*. Recuperado el 29 de septiembre de 2026 de https://www.skibob.org/en/association/",
-  "duda": true,
-  "nota": "Disciplinas concretas (eslalon, gigante) de mi conocimiento general; la ficha describe el vehículo."
+  "es": "Deporte de invierno en el que el deportista desciende sentado sobre un vehículo con cuadro, asiento y patines, con esquís cortos en los pies, en carreras de descenso, eslalon, gigante y supergigante.",
+  "en": "A winter sport in which the athlete descends seated on a vehicle with a frame, seat and runners, wearing short skis on the feet, in races of downhill, slalom, giant slalom and super-G.",
+  "fuente": "https://www.skibob.org/en/",
+  "duda": false,
+  "nota": "contrastada: corregida. FISB confirma cuatro disciplinas (se añaden descenso y supergigante); se quita 'de bicicleta' y 'cronometradas'."
  },
  "salvamento-y-socorrismo": {
   "es": "Deporte acuático en el que los participantes, en piscina o en playa, compiten en pruebas de natación, rescate de maniquíes, remolque y uso de material de salvamento, contra el reloj o por equipos.",
   "en": "An aquatic sport in which participants, in a pool or on a beach, compete in swimming events, mannequin rescues, towing and the use of lifesaving equipment, against the clock or in teams.",
-  "fuente": "ILS. (s. f.-a). *ILS history*. Recuperado el 29 de septiembre de 2026 de https://www.ilsf.org/about/history/ils/",
-  "duda": true,
-  "nota": "Pruebas concretas de mi conocimiento general (ILS); la ficha trata del origen."
+  "fuente": "https://www.ilsf.org/lifesaving-sport/disciplines/",
+  "duda": false,
+  "nota": "contrastada: confirmada. Sin cambios; ILS lista pruebas de piscina y aguas abiertas, maniquí, remolque con tubo, aletas y relevos."
  },
  "actividades-subacuaticas": {
   "es": "Conjunto de disciplinas practicadas bajo el agua o en superficie con aletas, como la natación con aletas, la apnea, el hockey y el rugby subacuáticos, con pruebas por tiempo, puntos o goles.",
@@ -875,25 +875,25 @@
   "nota": ""
  },
  "traineras": {
-  "es": "Deporte de remo en el que tripulaciones de trece remeros y un patrón compiten en embarcaciones de banco fijo sobre un recorrido de ida y vuelta en el mar, y gana la que llega antes.",
-  "en": "A rowing sport in which crews of thirteen rowers and a coxswain compete in fixed-seat boats over an out-and-back sea course, the first to finish winning.",
-  "fuente": "Liga ACT. (s. f.). *Historia*. Asociación de Clubes de Traineras. Recuperado el 29 de septiembre de 2026 de https://www.euskolabelliga.com/contenidos/index.php?id=es&s=1&co=1",
-  "duda": true,
-  "nota": "Composición de la tripulación y recorrido de mi conocimiento general; conviene contrastar con el reglamento de la Liga ACT."
+  "es": "Deporte de remo en el que tripulaciones de trece remeros y un patrón compiten en embarcaciones de banco fijo sobre tres millas con tres ciabogas, y gana la que cruza antes la meta.",
+  "en": "A rowing sport in which crews of thirteen rowers and a coxswain compete in fixed-seat boats over three miles with three turns, the first to cross the finish line winning.",
+  "fuente": "http://www.liga-arc.com/data/portal/docs/arc_codigo.pdf?v=01",
+  "duda": false,
+  "nota": "contrastada: corregida. Tripulación confirmada; el recorrido es de tres millas (5556 m) con tres ciabogas, no se describe como ida y vuelta."
  },
  "dragon-boat": {
-  "es": "Deporte de remo en el que equipos de veinte palistas sentados por parejas, un tambor y un timonel compiten en una embarcación estrecha y larga sobre distancias cortas o medias.",
-  "en": "A paddling sport in which crews of twenty paddlers seated in pairs, a drummer and a helmsman compete in a long, narrow boat over short or medium distances.",
-  "fuente": "IDBF. (s. f.). *History & culture*. Recuperado el 29 de septiembre de 2026 de https://www.dragonboat.sport/about-us/history-culture/",
-  "duda": true,
-  "nota": "Composición de la tripulación (20 palistas) de mi conocimiento general; hay también embarcaciones de diez."
+  "es": "Deporte de pala en el que tripulaciones de diez o veinte palistas, un tambor y un timonel compiten en una embarcación larga y estrecha sobre distancias cortas o medias.",
+  "en": "A paddling sport in which crews of ten or twenty paddlers, a drummer and a steersperson compete in a long, narrow boat over short or medium distances.",
+  "fuente": "https://idbfchamps.org/idbf_comp_regs_and_rules_of_racing.php",
+  "duda": false,
+  "nota": "contrastada: corregida. IDBF fija 18-20 palistas en la embarcación estándar y 10 en la pequeña; se quita 'sentados por parejas', no confirmado."
  },
  "rafting": {
-  "es": "Deporte de aguas bravas en el que equipos de cuatro a ocho personas, con pala, descienden un río en una balsa hinchable, en pruebas de velocidad, eslalon y descenso cronometradas.",
-  "en": "A whitewater sport in which teams of four to eight people, using paddles, descend a river on an inflatable raft in timed sprint, slalom and descent events.",
-  "fuente": "International Rafting Federation. (s. f.). *History*. Recuperado el 29 de septiembre de 2026 de https://internationalrafting.com/about/history/",
-  "duda": true,
-  "nota": "Tamaños de equipo y pruebas de mi conocimiento general de la IRF; conviene confirmar."
+  "es": "Deporte de aguas bravas en el que equipos de cuatro o seis personas, con pala, descienden un río en una balsa hinchable, en pruebas de esprint, cara a cara, eslalon y descenso.",
+  "en": "A whitewater sport in which teams of four or six people, using paddles, descend a river on an inflatable raft in sprint, head-to-head, slalom and downriver events.",
+  "fuente": "https://internationalrafting.com/wp-content/uploads/2019/03/IRF-Race-Rules-2019-clean.pdf",
+  "duda": false,
+  "nota": "contrastada: corregida. Tamaños R4 y R6, no 'cuatro a ocho'; las cuatro pruebas de la IRF son esprint, cara a cara, eslalon y descenso."
  },
  "bodyboard": {
   "es": "Deporte de deslizamiento en el que el deportista surfea olas tumbado, o con una rodilla apoyada, sobre una tabla pequeña y blanda, con aletas, y unos jueces puntúan sus maniobras.",
@@ -917,18 +917,18 @@
   "nota": ""
  },
  "motonautica": {
-  "es": "Deporte en el que pilotos individuales o tripulaciones compiten con lanchas a motor de distintas categorías en circuitos marcados sobre el agua, y gana quien completa antes el recorrido.",
-  "en": "A sport in which drivers, alone or in crews, race motorboats of various classes around marked water courses, and the first to complete the distance wins.",
-  "fuente": "Olympedia. (s. f.). Motorboating; ficha de la Enciclopedia",
-  "duda": true,
-  "nota": "Descripción genérica; no se ha consultado el reglamento de la UIM"
+  "es": "Deporte en el que pilotos compiten con lanchas a motor de distintas clases en circuitos marcados con boyas, en varias mangas cuyos puntos determinan la clasificación.",
+  "en": "A sport in which drivers race motorboats of various classes around water circuits marked with buoys, in several heats whose points decide the standings.",
+  "fuente": "https://www.uim.sport/Documents/RuleBookRelease/RuleBookRelease119/2026%20UIM%20Circuit%20Rulebook%20-%20published%20on%2022.12.25.pdf",
+  "duda": false,
+  "nota": "contrastada: corregida. El reglamento de circuito UIM puntúa por mangas, no gana quien completa antes un recorrido; se quita 'individuales o tripulaciones'."
  },
  "justas-nauticas": {
   "es": "Combate entre dos justadores que, de pie en la popa elevada de sendas barcas impulsadas por remeros, intentan hacerse caer al agua empujándose con una lanza y protegidos por un escudo.",
   "en": "A duel between two jousters who stand on the raised stern of rowed boats and try to knock each other into the water with a lance while protected by a shield.",
-  "fuente": "Fédération Française de Joute et Sauvetage Nautique (s. f.), citada en la ficha",
-  "duda": true,
-  "nota": "Descripción de la justa lionesa/languedociana de memoria; la ficha no detalla el reglamento"
+  "fuente": "https://www.ffjsn.fr/ss-z/up/ffjsn/reglement-languedocienne.pdf",
+  "duda": false,
+  "nota": "contrastada: confirmada. Sin cambios; el reglamento languedociano confirma tintaine, lanza, pavois y caída al agua."
  },
  "carreras-por-montana": {
   "es": "Carrera a pie individual por senderos y terreno natural con fuertes desniveles, en subida o en subida y bajada, en la que gana quien completa antes el recorrido.",
@@ -1015,11 +1015,11 @@
   "nota": ""
  },
  "baloncesto-en-silla-de-ruedas": {
-  "es": "Baloncesto de dos equipos de cinco jugadores que se desplazan en silla de ruedas y encestan en canastas a altura reglamentaria; se bota o pasa el balón tras dos impulsos como máximo.",
-  "en": "Basketball for two teams of five players who move in wheelchairs and shoot at baskets of standard height; the ball must be dribbled or passed after at most two pushes.",
-  "fuente": "IWBF. (s. f.-a). History; reglas del baloncesto en silla",
-  "duda": true,
-  "nota": "Comprobar la regla de los dos impulsos antes del bote o pase"
+  "es": "Baloncesto de dos equipos de cinco jugadores que se desplazan en silla de ruedas; tras dos impulsos como máximo hay que botar, pasar o tirar el balón.",
+  "en": "Basketball for two teams of five players who move in wheelchairs; after at most two pushes the ball must be dribbled, passed or shot.",
+  "fuente": "https://www.iwbf.org/our-sport/rules",
+  "duda": false,
+  "nota": "contrastada: corregida. Regla de dos impulsos confirmada (botar, pasar o tirar); se quita 'altura reglamentaria' de las canastas, no verificada."
  },
  "tenis-en-silla-de-ruedas": {
   "es": "Tenis en silla de ruedas, individual o de dobles, con pista, red y raqueta habituales, en el que la pelota puede botar dos veces antes de ser devuelta, y se gana por juegos y sets.",
@@ -1071,11 +1071,11 @@
   "nota": ""
  },
  "showdown": {
-  "es": "Deporte de raqueta para personas con discapacidad visual, en mesa con bordes y agujeros en los extremos, en el que se golpea con una pala una pelota sonora para meterla en la portería rival.",
-  "en": "A racket sport for visually impaired players on a table with borders and goal pockets at each end, in which a bat is used to strike a ball with bells into the opponent's goal.",
-  "fuente": "Brittain, I. (2016). The Paralympic Games explained; IBSA",
-  "duda": true,
-  "nota": "Descripción hecha de memoria, sin consultar el reglamento de la IBSA"
+  "es": "Deporte para personas con discapacidad visual en el que dos jugadores, en una mesa especial, golpean con una pala plana una pelota sonora para meterla en la portería rival.",
+  "en": "A sport for visually impaired people in which two players, at a specially designed table, strike a ball with bells using a flat bat to put it into the opponent's goal.",
+  "fuente": "https://ibsasport.org/sports/showdown/overview/",
+  "duda": false,
+  "nota": "contrastada: generalizada. IBSA confirma dos jugadores, palas planas, pelota sonora y gol; se quitan bordes y agujeros en los extremos, no confirmados."
  },
  "patinaje-sobre-ruedas": {
   "es": "Deporte con patines de ruedas que agrupa carreras de velocidad y fondo, patinaje artístico y hockey, en pista, circuito o carretera, y se gana por tiempo o por puntuación de jueces.",
@@ -1085,11 +1085,11 @@
   "nota": ""
  },
  "roller-derby": {
-  "es": "Deporte de contacto sobre patines de ruedas en pista oval, en el que dos equipos de cinco jugadores puntúan cuando su jammer adelanta a las oponentes mientras el bloqueo lo dificulta.",
-  "en": "A contact sport on roller skates on an oval track in which two teams of five score when their jammer laps the opponents while the blockers impede them.",
-  "fuente": "Homan, A. (2025, 19 de mayo). Roller derby. CALS Encyclopedia of Arkansas; reglamento WFTDA",
-  "duda": true,
-  "nota": "Reglas de puntuación de memoria; no consultado el reglamento WFTDA"
+  "es": "Deporte de contacto sobre patines de ruedas en pista oval, con equipos de hasta cinco patinadores en pista, en el que el jammer suma un punto por cada bloqueador rival que adelanta.",
+  "en": "A contact sport on roller skates on an oval track, with teams of up to five skaters on the track, in which the jammer scores a point for each opposing blocker passed.",
+  "fuente": "https://static.wftda.com/rules/wftda-rules.pdf",
+  "duda": false,
+  "nota": "contrastada: corregida. WFTDA: hasta cinco por equipo (un jammer y hasta cuatro bloqueadores) y un punto por bloqueador rival adelantado tras rebasar el grupo."
  },
  "monociclo": {
   "es": "Deporte en el que una persona se desplaza en un vehículo de una sola rueda con pedales, y compite en carreras, saltos, figuras de habilidad o partidos de hockey y baloncesto.",
@@ -1127,11 +1127,11 @@
   "nota": ""
  },
  "kinball": {
-  "es": "Deporte de tres equipos simultáneos de cuatro jugadores que golpean con los brazos un balón enorme, y el equipo señalado debe atraparlo antes de que toque el suelo o pierde puntos.",
-  "en": "A sport with three teams of four playing at once, who strike a huge ball with their arms, and the named team must catch it before it hits the floor or lose points.",
-  "fuente": "Hamel, P.-J. (2022, 1 de agosto), citada en la ficha",
-  "duda": true,
-  "nota": "Reglas de puntuación de memoria; comprobar en la federación internacional"
+  "es": "Deporte de tres equipos de cuatro jugadores que golpean con los brazos un balón enorme, y el equipo nombrado debe atraparlo antes de que toque el suelo o los otros dos suman un punto.",
+  "en": "A sport with three teams of four who strike a huge ball with their arms, and the team named must catch it before it touches the floor or the other two score a point.",
+  "fuente": "https://cms.omnikin.com/wp-content/uploads/2023/08/Official-Kin-Ball-Rulebook-2022-IKBF.pdf",
+  "duda": false,
+  "nota": "contrastada: corregida. Con la falta, el equipo no pierde puntos y cada uno de los otros dos suma un punto."
  },
  "colpbol": {
   "es": "Deporte de invasión entre dos equipos mixtos de siete jugadores que golpean con las manos una pelota para introducirla en la portería contraria, con una técnica próxima a la de la pelota valenciana.",
@@ -1143,9 +1143,9 @@
  "bossaball": {
   "es": "Deporte de dos equipos que juegan sobre una cama elástica e hinchable con una red central y pueden golpear el balón con pies, cabeza y manos, puntuando al hacerlo tocar el campo rival.",
   "en": "A sport for two teams playing on an inflatable court with trampolines on each side of a central net, who may strike the ball with feet, head and hands, scoring when it lands in the opposing court.",
-  "fuente": "Bossaball Sports. (s. f.). What is bossaball? https://www.bossaballsports.com/bossaball/what-is-bossaball/",
-  "duda": true,
-  "nota": "Número de jugadores por equipo no confirmado en la ficha"
+  "fuente": "https://www.bossaballsports.com/bossaball/how-to-play-bossaball/",
+  "duda": false,
+  "nota": "contrastada: confirmada. Sin cambios; equipos de cuatro, toque de voleibol y de fútbol, punto al tocar el campo rival."
  },
  "spikeball": {
   "es": "Deporte de dos parejas alrededor de una pequeña red circular horizontal, en el que cada equipo debe devolver la pelota tras rebotar en la red, con un máximo de tres toques, sin turnos ni cancha.",
@@ -1157,9 +1157,9 @@
  "quadball": {
   "es": "Deporte de contacto de dos equipos de siete jugadores que corren con una escoba entre las piernas, lanzan una pelota por tres aros y esquivan otras pelotas, hasta que se atrapa la snitch.",
   "en": "A contact sport for two teams of seven players who run with a broom between their legs, throw a ball through three hoops and dodge other balls, until the snitch is caught.",
-  "fuente": "International Quadball Association. (2022, 19 de julio), citada en la ficha",
-  "duda": true,
-  "nota": "Comprobar los detalles de la snitch y del reglamento IQA"
+  "fuente": "https://www.iqasport.org/play/",
+  "duda": false,
+  "nota": "contrastada: confirmada. Sin cambios; siete en pista, escobas, tres aros, bludgers y snitch que cierra el partido."
  },
  "pole-sport": {
   "es": "Disciplina en la que una persona ejecuta una rutina de giros, trepas, posturas de fuerza y acrobacias en una barra vertical fija, y un jurado puntúa la técnica y la creatividad.",
@@ -1171,9 +1171,9 @@
  "damas": {
   "es": "Juego de mesa para dos jugadores con piezas sobre un tablero cuadriculado de casillas alternas, en el que se mueve en diagonal y se captura saltando sobre la pieza rival, hasta dejarlo sin jugadas.",
   "en": "A board game for two players with pieces on a chequered board, in which pieces move diagonally and capture by jumping over an opponent's piece, until the opponent has no moves left.",
-  "fuente": "Arcangeli, A. (2003). Recreation in the Renaissance",
-  "duda": true,
-  "nota": "Descripción general de las damas; variantes con tableros de 8 o 10 casillas no detalladas"
+  "fuente": "https://www.fmjd.org/docs/Annex_1.pdf",
+  "duda": false,
+  "nota": "contrastada: confirmada. Sin cambios; la FMJD confirma movimiento diagonal, captura por salto y victoria si el rival no puede mover."
  },
  "go": {
   "es": "Juego de estrategia para dos jugadores que colocan piedras negras y blancas por turnos en las intersecciones de un tablero, con el fin de rodear más territorio que el contrario.",
@@ -1225,18 +1225,18 @@
   "nota": "revisado"
  },
  "ice-stock": {
-  "es": "Deporte, por equipos o de puntería, en el que se deslizan discos con mango, los stocks, sobre una superficie de hielo para acercarlos a una diana o lograr más distancia.",
-  "en": "A sport, in teams or for accuracy, in which handled discs called stocks are slid across ice to place them close to a target or to achieve the greatest distance.",
-  "fuente": "ARISF. (s. f.). Icestock sport: IFI, citada en la ficha",
-  "duda": true,
-  "nota": "Modalidades y reglas de puntuación no detalladas en la ficha"
+  "es": "Deporte de hielo en el que se deslizan stocks, discos con mango, en modalidades por equipos, de puntería sobre una diana y de distancia, según se acerquen a la meta o lleguen más lejos.",
+  "en": "An ice sport in which stocks, handled discs, are slid in team, target-accuracy and distance events, according to how close they come to the target or how far they travel.",
+  "fuente": "https://www.icestock.sport/wp-content/uploads/2025/06/IFI-Official-Rules-Book_11_EN.pdf",
+  "duda": false,
+  "nota": "contrastada: corregida. La IFI define tres modalidades (equipos, puntería, distancia); en equipos se acerca a la duba y en puntería se puntúa por anillos."
  },
  "jogo-do-pau": {
-  "es": "Arte de combate con bastón en el que dos jugadores se enfrentan con palos largos, golpeando, parando y esquivando según técnicas codificadas, tanto en asaltos deportivos como en demostración.",
-  "en": "A stick-fighting art in which two players face each other with long staves, striking, parrying and dodging according to codified techniques, in sporting bouts or in demonstration.",
-  "fuente": "Associação Desportiva e Cultural do Jogo do Pau Português. (s. f.). https://www.jogodopau.com.pt/",
-  "duda": true,
-  "nota": "Reglas de asalto deportivo no consultadas"
+  "es": "Arte marcial tradicional portugués de origen popular, que consiste en una forma de esgrima con una vara de madera y se practica hoy como disciplina deportiva.",
+  "en": "A traditional Portuguese martial art of popular origin, consisting of a form of fencing with a wooden staff and practised today as a sporting discipline.",
+  "fuente": "https://www.jogodopau.com.pt/",
+  "duda": false,
+  "nota": "contrastada: generalizada. Se confirma la definición y la evolución deportiva; se quitan dos jugadores, técnicas codificadas y asaltos, no confirmados."
  },
  "palo-canario": {
   "es": "Juego de oposición en el que dos jugadores combaten cuerpo a cuerpo con un palo, tratando de tocar al adversario sin ser tocados, y el estilo depende del tamaño del palo.",
@@ -1253,25 +1253,25 @@
   "nota": ""
  },
  "polocrosse": {
-  "es": "Deporte ecuestre de dos equipos de seis jinetes que, con una raqueta con red, recogen, llevan y lanzan una pelota de goma para marcar entre dos postes de gol.",
-  "en": "An equestrian team sport in which two teams of six riders use a racket with a net to pick up, carry and throw a rubber ball, scoring between two goal posts.",
-  "fuente": "Adina Polocrosse World Cup. (s. f.). History of sport; Polocrosse Victoria. (s. f.)",
-  "duda": true,
-  "nota": "Número de jugadores en el campo (seis por equipo, jugando tres por turno) no confirmado en la ficha"
+  "es": "Deporte ecuestre de dos equipos de seis jinetes, tres en juego a la vez, que con una raqueta de red recogen, llevan y lanzan una pelota de goma para marcar entre dos postes.",
+  "en": "An equestrian team sport in which two teams of six riders, three playing at a time, use a racket with a net to pick up, carry and throw a rubber ball, scoring between two posts.",
+  "fuente": "https://www.polocrosse.co.za/the-sport/",
+  "duda": false,
+  "nota": "contrastada: corregida. Confirmados seis por equipo y gol lanzando entre postes; añadido que juegan tres por turno."
  },
  "aluche": {
-  "es": "Lucha en la que dos luchadores, de pie y agarrados por la ropa a la altura de la cintura, intentan derribarse hasta que uno toca el suelo con la espalda o más de un apoyo.",
-  "en": "A wrestling form in which two standing wrestlers, gripping each other's clothing at waist level, try to throw each other until one touches the ground with the back or more than one support.",
-  "fuente": "Acuerdo 33/2017, de 29 de junio, de la Junta de Castilla y León. BOE, 165",
-  "duda": true,
-  "nota": "Reglas y agarre de la lucha leonesa de memoria; la ficha remite a la de lucha leonesa"
+  "es": "Lucha en la que dos luchadores, agarrados por un cinto de cuero, intentan derribarse, y puntúa más la caída sobre la espalda que la que toca el suelo con otras partes del cuerpo.",
+  "en": "A wrestling form in which two wrestlers, gripping a leather belt, try to throw each other, and a fall onto the back scores higher than one touching the ground with other parts of the body.",
+  "fuente": "https://www.raco.cat/index.php/ApuntsEFD/article/download/301908/391524",
+  "duda": false,
+  "nota": "contrastada: corregida. El agarre es por el cinto de cuero, no por la ropa a la cintura; sustituida la regla de los apoyos por la de caída entera y media."
  },
  "laamb": {
-  "es": "Lucha en la que dos luchadores, sobre arena y con o sin golpes según la modalidad, intentan derribar al rival y hacer que toque el suelo con la espalda o con la rodilla.",
-  "en": "A wrestling sport in which two wrestlers on sand, with or without strikes depending on the variant, try to throw the opponent so that his back or knee touches the ground.",
-  "fuente": "M'bayo, T. E. (2017). History of laamb (Senegalese wrestling)",
-  "duda": true,
-  "nota": "Detalles de las modalidades y del derribo no confirmados en la ficha"
+  "es": "Lucha senegalesa en la que dos luchadores intentan derribarse, con golpes en la modalidad moderna y sin ellos en la simple, y pierde quien toca el suelo con cualquier parte del cuerpo salvo los pies.",
+  "en": "A Senegalese wrestling sport in which two wrestlers try to throw each other, with strikes in the modern variant and none in the simple one, and whoever touches the ground with any part of the body except the feet loses.",
+  "fuente": "https://www.countryreports.org/articles/history-of-senegalese-laamb-wrestling",
+  "duda": false,
+  "nota": "contrastada: corregida. Confirmadas las dos modalidades; quitados arena, espalda y rodilla por no confirmarse, y puesta la regla de derrota que da la fuente. Fuente secundaria: no se accedió al texto de M'bayo."
  },
  "sanda": {
   "es": "Deporte de combate de contacto pleno en el que dos púgiles, sobre una plataforma elevada, se enfrentan con golpes de puño y pierna, proyecciones y derribos, y puntúan por golpear o sacar al rival.",
@@ -1295,11 +1295,11 @@
   "nota": ""
  },
  "dambe": {
-  "es": "Deporte de combate en el que dos púgiles golpean con el puño de la mano dominante, envuelta en cuerda, y con las piernas, hasta que uno toca el suelo con la rodilla o la espalda.",
-  "en": "A combat sport in which two fighters punch with the dominant fist, wrapped in cord, and kick until one touches the ground with a knee or the back.",
-  "fuente": "Green, T. A. (2005, septiembre). Dambe: Traditional Nigerian boxing. InYo",
-  "duda": true,
-  "nota": "Criterio de derrota de memoria"
+  "es": "Deporte de combate hausa en el que dos púgiles golpean con la mano dominante, envuelta en tela y cuerda, y con los pies, hasta que uno toca el suelo con mano o rodilla.",
+  "en": "A Hausa combat sport in which two fighters strike with the dominant hand, wrapped in cloth and cord, and with the feet, until one touches the ground with a hand or a knee.",
+  "fuente": "https://ejmas.com/jalt/2005jalt/jcsart_Green_0905.html",
+  "duda": false,
+  "nota": "contrastada: corregida. El criterio de derrota es tocar el suelo con la mano o la rodilla, no la espalda; añadido el vendaje de tela y cuerda."
  },
  "carreras-al-trote": {
   "es": "Carrera en la que caballos de trote tiran de un pequeño carruaje ligero, el sulky, conducido por un jinete sentado, y gana el primero en cruzar la meta sin romper el trote.",
@@ -1311,9 +1311,9 @@
  "palio-de-siena": {
   "es": "Carrera de caballos a pelo en la que diez jinetes, cada uno por un barrio, dan tres vueltas a una plaza de tierra y gana el primer caballo en llegar, aunque haya perdido al jinete.",
   "en": "A bareback horse race in which ten riders, each for a district, run three laps round an earth-covered square, and the first horse home wins, even if it has lost its rider.",
-  "fuente": "Comune di Siena. (s. f.). La storia, citada en la ficha",
-  "duda": true,
-  "nota": "Número de jinetes y vueltas de memoria; comprobar"
+  "fuente": "https://palio.comune.siena.it/node/5795; https://www.ilpost.it/2023/07/02/palio-di-siena-gara-regole-guida/",
+  "duda": false,
+  "nota": "contrastada: confirmada. Sin cambios: diez de diecisiete contrade, tres vueltas, a pelo, pista de tufo y victoria del caballo sin jinete."
  },
  "cetreria": {
   "es": "Práctica en la que una persona adiestra un ave rapaz, como un halcón, para cazar presas en vuelo, y la recupera después mediante señales, sin competición reglada de puntos.",
@@ -1344,11 +1344,11 @@
   "nota": ""
  },
  "quoits": {
-  "es": "Juego de puntería en el que dos jugadores lanzan aros metálicos a una estaca clavada a distancia, con puntos por aros que la rodean o quedan más cerca.",
-  "en": "A pitching game in which two players throw metal rings at a stake fixed at a distance, with points for rings that encircle it or land closest.",
-  "fuente": "Kilpatrick, A. (2025), citada en la ficha",
-  "duda": true,
-  "nota": "Reglas de puntuación no confirmadas; puede variar por modalidad"
+  "es": "Juego de puntería en el que dos jugadores o dos parejas lanzan aros a una estaca clavada a distancia, con puntos por los aros que la rodean y por el que queda más cerca.",
+  "en": "A pitching game in which two players or two pairs throw rings at a stake fixed at a distance, with points for rings that encircle it and for the one that lands closest.",
+  "fuente": "https://www.traditionalsports.org/images/sports/europe/quoits/QUOIT-RULES.pdf",
+  "duda": false,
+  "nota": "contrastada: generalizada. Quitado que los aros sean metálicos, no confirmado; añadidas las parejas y confirmada la puntuación por aro encajado y por aro más cercano."
  },
  "aerostacion": {
   "es": "Deporte en el que se pilota un globo aerostático, que asciende con aire caliente o gas, y se compite en pruebas de distancia, precisión o duración de vuelo, sin propulsión propia.",
@@ -1372,11 +1372,11 @@
   "nota": ""
  },
  "mallakhamb": {
-  "es": "Disciplina gimnástica en la que un deportista ejecuta posturas, giros y presas sobre un poste vertical de madera o una cuerda colgante, y gana quien obtiene la mayor puntuación de los jueces.",
-  "en": "Gymnastic discipline in which an athlete performs postures, turns and holds on a vertical wooden pole or a hanging rope, and the winner is whoever earns the highest score from the judges.",
-  "fuente": "Mallakhamb Federation USA (s. f.) y Chitnis (2024), citados en la ficha",
-  "duda": true,
-  "nota": "Descripción de la puntuación por jueces basada en conocimiento general; la ficha no detalla el reglamento."
+  "es": "Disciplina gimnástica en la que un deportista ejecuta posturas y presas sobre un poste vertical de madera o una cuerda, y gana quien obtiene la mayor puntuación de un panel de jueces.",
+  "en": "Gymnastic discipline in which an athlete performs postures and holds on a vertical wooden pole or a rope, and the winner is whoever earns the highest score from a panel of judges.",
+  "fuente": "https://www.sgfi.org.in/Content/FileUpload/PDF/Rules_Mallakhamb.pdf",
+  "duda": false,
+  "nota": "contrastada: generalizada. Confirmada la puntuación por jueces; quitados los giros y que la cuerda sea colgante, no confirmados."
  },
  "pedestrismo": {
   "es": "Competición individual de carrera o marcha de larga distancia, con apuestas, en la que ganaba quien completaba antes el recorrido pactado o cubría más distancia en un tiempo fijado.",
@@ -1386,18 +1386,18 @@
   "nota": ""
  },
  "rackets": {
-  "es": "Juego de pared en el que dos o cuatro jugadores golpean con raqueta una pelota dura contra los muros de una pista cerrada, y puntúa quien impide que el rival la devuelva.",
-  "en": "Wall game in which two or four players hit a hard ball with a racket against the walls of an enclosed court, and a point goes to whoever prevents the opponent from returning it.",
-  "fuente": "Encyclopaedia Britannica (s. f.), citada en la ficha; Tennis and Rackets Association (s. f.)",
-  "duda": true,
-  "nota": "La regla del segundo bote procede de conocimiento general, no de la ficha."
+  "es": "Juego de pared en el que dos o cuatro jugadores golpean con raqueta una pelota dura contra los muros de una pista cerrada, y solo puntúa el bando que saca, hasta llegar a quince puntos.",
+  "en": "Wall game in which two or four players hit a hard ball with a racket against the walls of an enclosed court, and only the serving side can score, up to fifteen points.",
+  "fuente": "https://www.tennisandrackets.com/rackets/how-to-play/laws-of-rackets; https://www.tennisandrackets.com/rackets/how-to-play",
+  "duda": false,
+  "nota": "contrastada: corregida. Falso que puntúe quien impide la devolución: solo puntúa el que saca; juego a quince puntos."
  },
  "fives": {
-  "es": "Juego en el que uno o dos jugadores por bando golpean con la mano enguantada una pelota pequeña y dura contra las paredes de una pista, y puntúa quien impide que el rival la devuelva.",
-  "en": "Game in which one or two players per side hit a small hard ball with a gloved hand against the walls of a court, and a point goes to whoever stops the opponent returning it.",
-  "fuente": "Chandler (1999, p. 332) y Eton Fives Association (s. f.), citados en la ficha",
-  "duda": true,
-  "nota": "Número de jugadores (parejas en Eton fives) tomado de conocimiento general."
+  "es": "Juego en el que dos parejas golpean con la mano enguantada una pelota pequeña y dura contra las paredes de una pista con escalón, y solo puntúa el bando que sirve, hasta doce puntos.",
+  "en": "Game in which two pairs hit a small hard ball with a gloved hand against the walls of a court with a step, and only the serving side can score, up to twelve points.",
+  "fuente": "https://www.etonfives.com/the-game/etonlaws; https://www.etonfives.com/the-game/laws-of-the-game",
+  "duda": false,
+  "nota": "contrastada: corregida. Referido al Eton fives, que solo se juega por parejas; solo puntúa el bando que sirve, a doce puntos."
  },
  "tamburello": {
   "es": "Deporte en el que dos equipos de cinco se devuelven una pelota sin red, golpeándola con un tamburello, aro de madera con membrana tensada, en un campo de tierra de 80 por 20 metros.",
@@ -1407,11 +1407,11 @@
   "nota": ""
  },
  "jianzi": {
-  "es": "Juego en el que se mantiene en el aire un volante de plumas con base pesada, golpeándolo con los pies y otras partes del cuerpo salvo las manos, en círculo o sobre una red.",
-  "en": "Game in which a weighted feathered shuttlecock is kept in the air by kicking it or hitting it with any part of the body except the hands, in a circle or across a net.",
-  "fuente": "International Shuttlecock Federation (s. f.-a), citada en la ficha",
-  "duda": true,
-  "nota": "Las modalidades (circulo, red) proceden de conocimiento general; la ficha no las detalla."
+  "es": "Juego en el que se mantiene en el aire un volante de plumas con base de plástico, golpeándolo con los pies y otras partes del cuerpo salvo las manos, en competición con red o libre.",
+  "en": "Game in which a feathered shuttlecock with a plastic base is kept in the air by kicking it or hitting it with any part of the body except the hands, in net competition or freestyle.",
+  "fuente": "https://www.shuttlecock-world.org/shuttlecock",
+  "duda": false,
+  "nota": "contrastada: corregida. La base es de plástico, no pesada; las modalidades son competición con red, artística y libre, no círculo."
  },
  "yubi-lakpi": {
   "es": "Juego de contacto entre dos equipos de siete jugadores descalzos, que se disputan un coco untado de aceite y lo llevan bajo el brazo hasta la meta contraria, sin placar a quien no lo tiene.",
@@ -1421,11 +1421,11 @@
   "nota": ""
  },
  "vela-sobre-arena": {
-  "es": "Deporte en el que cada piloto conduce, sentado, un carro de tres ruedas impulsado solo por una vela, y compite en regatas contra otros por una playa o una superficie llana y dura.",
-  "en": "Sport in which each pilot drives, seated, a three-wheeled cart powered only by a sail, and races against others along a beach or a flat, hard surface.",
-  "fuente": "Parr (1999, pp. 342-343), citado en la ficha",
-  "duda": true,
-  "nota": "Las mangas y el sistema de puntuación proceden de conocimiento general."
+  "es": "Deporte en el que cada piloto conduce un vehículo con ruedas impulsado solo por el viento, y compite contra otros en carreras por mangas sobre una playa o un lago seco y llano.",
+  "en": "Sport in which each pilot drives a wheeled vehicle powered only by the wind, and races against others in heats on a beach or a flat dry lake.",
+  "fuente": "https://www.fisly.org/rules/isrr.pdf",
+  "duda": false,
+  "nota": "contrastada: generalizada. Quitados el asiento y las tres ruedas (se admiten tres o cuatro); confirmadas las mangas y las superficies de playa y lago seco."
  },
  "lucha-de-cumberland-y-westmorland": {
   "es": "Lucha de agarre en la que los dos contendientes empiezan de pie, con los brazos enlazados a la espalda del rival, y pierde quien toca el suelo con algo distinto de los pies.",
@@ -1477,11 +1477,11 @@
   "nota": ""
  },
  "carrera-de-sortija": {
-  "es": "Prueba de destreza ecuestre en la que un jinete, a galope, intenta ensartar con la lanza un aro o anillo colgado de una cuerda, y se valoraba el número de anillos conseguidos.",
-  "en": "Test of equestrian skill in which a rider, at the gallop, tries to spear with a lance a ring hanging from a cord, with the number of rings taken being what counted.",
-  "fuente": "Fernández Fuster y Fernández Truan (s. f., p. 19); Guttmann (2004, p. 56), citados en la ficha",
-  "duda": true,
-  "nota": "El criterio de puntuación (número de anillos) procede de conocimiento general, no de la ficha."
+  "es": "Prueba de destreza ecuestre en la que un jinete, a galope, intenta ensartar con un palo puntiagudo una anilla colgada de una cinta, y gana quien engancha más anillas.",
+  "en": "Test of equestrian skill in which a rider, at the gallop, tries to spear with a pointed stick a ring hanging from a ribbon, and the winner is whoever catches the most rings.",
+  "fuente": "https://www3.gobiernodecanarias.org/medusa/wiki/index.php?title=Carreras_de_sortijas_o_cintas",
+  "duda": false,
+  "nota": "contrastada: corregida. El aro cuelga de una cinta y se ensarta con un palo puntiagudo de unos veinte centímetros; confirmado el recuento de anillas."
  },
  "cuju": {
   "es": "Juego de pelota con los pies en el que dos equipos intentaban meter un balón por una portería en media luna, o mantenerlo en el aire con pies, hombros o espalda, sin usar las manos.",
@@ -1505,18 +1505,18 @@
   "nota": ""
  },
  "combates-de-gladiadores": {
-  "es": "Combates armados entre parejas de luchadores, casi siempre esclavos o prisioneros, con armamento distinto según su tipo, ante el público y bajo un árbitro, hasta que uno era vencido.",
-  "en": "Armed combats between pairs of fighters, nearly always slaves or prisoners, with different equipment according to type, on an arena before spectators, under a referee and until one was defeated.",
-  "fuente": "Kyle (2015, pp. 258-272), citado en la ficha",
-  "duda": true,
-  "nota": "Árbitro y desenlace hasta la derrota: la ficha menciona árbitros en pinturas campanas y duelos no siempre mortales; el detalle del vencimiento es general."
+  "es": "Combates armados entre parejas de gladiadores, con armamento distinto según su tipo, ante el público, que terminaban con la derrota de uno de ellos, a quien solía concederse la vida (missio).",
+  "en": "Armed combats between pairs of gladiators, with different equipment according to type, before spectators, that ended with the defeat of one of them, who was usually spared (missio).",
+  "fuente": "https://www.metmuseum.org/essays/gladiators-types-and-training",
+  "duda": false,
+  "nota": "contrastada: generalizada. Quitados el árbitro y que fueran casi siempre esclavos o prisioneros, no confirmados; confirmado que lo habitual era la missio y no la muerte."
  },
  "salto-del-toro": {
-  "es": "Práctica acrobática en la que una persona agarraba los cuernos de un toro, voltejeaba sobre su cabeza o se apoyaba en ellos para saltar sobre su lomo, con ayudantes que sujetaban al animal.",
-  "en": "Acrobatic practice in which a person grasped a bull's horns, somersaulted over its head or vaulted from them onto its back, with assistants who held the animal.",
-  "fuente": "Golden (2004, p. 29) y Shapland (2013, p. 195), citados en la ficha",
-  "duda": true,
-  "nota": "Se sabe por imágenes; el desarrollo real del ejercicio es interpretación de iconografía."
+  "es": "Práctica acrobática conocida por imágenes, en la que una persona agarraba los cuernos de un toro y saltaba sobre su lomo, con ayudantes a los lados, aunque su desarrollo real se discute.",
+  "en": "Acrobatic practice known from images, in which a person grasped a bull's horns and vaulted onto its back, with assistants at its sides, though how it actually unfolded is debated.",
+  "fuente": "https://www.penn.museum/sites/expedition/bulls-and-bull-leaping-in-the-minoan-world/",
+  "duda": false,
+  "nota": "contrastada: generalizada. Quitada la voltereta sobre la cabeza y que los ayudantes sujetaran al animal; añadida la incertidumbre interpretativa."
  },
  "chuiwan": {
   "es": "Juego en el que de dos a diez jugadores golpeaban con palos una bola de madera hasta meterla en hoyos señalados con banderas, y vencía quien acumulaba más fichas al ganar hoyos.",
@@ -1526,11 +1526,11 @@
   "nota": ""
  },
  "pall-mall": {
-  "es": "Juego en el que los jugadores golpeaban una bola con un mazo a lo largo de una pista larga y recta, o de un recorrido urbano pactado, hasta hacerla pasar por una meta al fondo.",
-  "en": "Game in which players struck a ball with a mallet along a long straight alley, or an agreed urban route, until it passed through a goal at the far end.",
-  "fuente": "McClelland (2007, p. 78), citado en la ficha",
-  "duda": true,
-  "nota": "El detalle de la meta al fondo se apoya en la ficha solo de forma general (pista con meta al fondo)."
+  "es": "Juego en el que se golpeaba una bola de madera con un mazo a lo largo de una pista larga hacia un aro de hierro, para pasarla por él con el menor número de golpes.",
+  "en": "Game in which players struck a wooden ball with a mallet along a long alley towards an iron hoop, aiming to pass it through in the fewest strokes.",
+  "fuente": "https://www.tradgames.org.uk/games/Pall-Mall.htm",
+  "duda": false,
+  "nota": "contrastada: corregida. La meta es un aro de hierro y gana quien lo pasa con menos golpes; quitado el recorrido urbano pactado, no confirmado."
  },
  "chunkey": {
   "es": "Juego de apuestas en el que dos hombres corrían tras un disco de piedra lanzado de canto por un campo de arena y arrojaban varas para que quedaran lo más cerca posible del disco.",
@@ -1540,11 +1540,11 @@
   "nota": ""
  },
  "harpastum": {
-  "es": "Juego romano de pelota en el que varios jugadores, repartidos en el terreno, intentaban atrapar una pelota pequeña y dura y quitársela al rival o arrebatarla, con regates, empujones y contacto físico.",
-  "en": "Roman ball game in which several players, spread across the ground, tried to catch a small hard ball and take it from an opponent or snatch it, with dribbling, shoving and physical contact.",
-  "fuente": "Crowther (2007, p. 158) y Miller (2004, pp. 171-172), citados en la ficha",
-  "duda": true,
-  "nota": "Las fuentes antiguas son parcas y no permiten fijar reglas exactas de puntuación."
+  "es": "Juego romano de pelota en el que varios jugadores, repartidos en dos bandos, se disputaban la pelota con empujones, tirones y presas de lucha, sin que se conozcan reglas exactas de puntuación.",
+  "en": "Roman ball game in which several players, divided into two sides, contested the ball with shoving, tugging and wrestling holds, with no exact scoring rules known.",
+  "fuente": "https://www.fifamuseum.com/en/explore/fifamuseumplus/blog/origins-greco-roman",
+  "duda": false,
+  "nota": "contrastada: generalizada. Quitados el tamaño y la dureza de la pelota, no confirmados; conservado el contacto físico según Galeno. Fuente secundaria: no se pudo abrir el diccionario de Perseus."
  },
  "episkyros": {
   "es": "Juego en el que dos equipos con igual número de jugadores se disputaban la pelota sobre una línea central, y ganaba el que empujaba al contrario más allá de su línea de fondo.",
@@ -1589,11 +1589,11 @@
   "nota": ""
  },
  "lucha-con-palos-nguni": {
-  "es": "Combate entre dos hombres, cada uno con un palo de ataque y un bastón largo o escudo pequeño de piel, sin pinchar, que termina cuando uno queda vencido o corre la primera sangre.",
-  "en": "Combat between two men, each with an attack stick and a long staff or small hide shield, without stabbing, which ends when one is clearly beaten or first blood is drawn.",
-  "fuente": "Coetzee (2002), citado en la ficha",
-  "duda": true,
-  "nota": "Mezcla de pasado y presente en la ficha; se ha descrito en presente por seguir la fuente."
+  "es": "Combate entre dos hombres, cada uno con un palo de ataque y un bastón largo de defensa, a veces con escudo pequeño, sin pinchar, que termina cuando uno queda malherido o corre sangre.",
+  "en": "Combat between two men, each with an attack stick and a long defensive staff, sometimes with a small shield, without stabbing, which ends when one is badly hurt or first blood is drawn.",
+  "fuente": "https://ejmas.com/jalt/jaltart_Coetzee_0902.htm",
+  "duda": false,
+  "nota": "contrastada: corregida. El bastón largo de defensa y el escudo se llevan a la vez, no son alternativos; quitado que el escudo sea de piel."
  },
  "musangwe": {
   "es": "Combate a puño desnudo entre dos hombres de la misma categoría de edad, con cabezazos y rodillazos permitidos, que termina cuando corre la sangre, uno cae fuera de combate o levanta la mano para rendirse.",
@@ -1603,25 +1603,25 @@
   "nota": ""
  },
  "jukskei": {
-  "es": "Juego de lanzamiento en el que jugadores o equipos arrojan una clavija de madera contra una estaca clavada en el suelo, y puntúan según lo cerca que queda la clavija o si derriba la estaca.",
-  "en": "Throwing game in which players or teams hurl a wooden peg at a stake driven into the ground, scoring according to how close the peg lands or whether it knocks the stake down.",
-  "fuente": "Jukskei SA (s. f.), citada en la ficha",
-  "duda": true,
-  "nota": "La ficha describe el lanzamiento contra una estaca, pero no el sistema de puntuación ni el número de jugadores; se ha generalizado."
+  "es": "Juego de lanzamiento en el que equipos de cuatro jugadores arrojan cilindros contra una estaca clavada en la arena, desde al menos diez metros, y puntúa derribarla o quedar más cerca de ella.",
+  "en": "Throwing game in which teams of four players hurl cylinders at a stake driven into the sand, from at least ten metres, and a point is scored by knocking it down or landing closer to it.",
+  "fuente": "https://www.jukskei.co.za/van-jukskei-about-jukskei/aksie-action-jukskei-reel-rules/",
+  "duda": false,
+  "nota": "contrastada: corregida. Confirmados cuatro jugadores, estaca en arena, distancia mínima de diez metros y puntuación por derribo o cercanía; quitado que la clavija sea de madera."
  },
  "touch": {
   "es": "Variante del rugby sin placajes, con seis jugadores por equipo, en la que el balón se pasa hacia atrás, el defensor detiene al atacante tocándolo y se anota apoyando el balón tras la línea.",
-  "en": "Rugby variant without tackling, with six players a side, in which the ball is passed backwards, the defender stops the attacker with a touch and a score means grounding the ball over the line.",
-  "fuente": "Federation of International Touch (s. f.), citada en la ficha",
-  "duda": true,
-  "nota": "Las reglas concretas (seis jugadores, pase hacia atrás) proceden de conocimiento general; la ficha no las recoge."
+  "en": "Rugby variant without tackling, with six players a side on the field, in which the ball is passed backwards, the defender stops the attacker with a touch and a score means grounding the ball over the line.",
+  "fuente": "https://www.englandtouch.org.uk/develop/coaching/the-rules/; https://www.internationaltouch.org/what-is-touch/",
+  "duda": false,
+  "nota": "contrastada: confirmada. Sin cambios de fondo; confirmados seis jugadores, pase atrás, toque y ensayo apoyando el balón en o tras la línea."
  },
  "ki-o-rahi": {
-  "es": "Juego de pelota entre dos equipos en un campo circular con un poste central, en el que se puntúa golpeando el poste con la pelota tras pasarla, correr con ella y superar a los defensores.",
-  "en": "Ball game between two teams on a circular pitch with a central post, in which points are scored by hitting the post with the ball after passing it, running with it and getting past defenders.",
-  "fuente": "Calman (s. f.) y Smith y Smith (2023), citados en la ficha",
-  "duda": true,
-  "nota": "La ficha solo indica campo redondo y poste central; el número de jugadores no se cita y no se ha incluido."
+  "es": "Juego de pelota entre dos equipos, uno atacante y otro defensor, en un campo circular con un poste central llamado tupu, en el que se puntúa tocando el poste con la pelota.",
+  "en": "Ball game between two teams, one attacking and one defending, on a circular pitch with a central post called the tupu, in which points are scored by touching the post with the ball.",
+  "fuente": "https://teara.govt.nz/en/photograph/39363/a-game-of-ki-o-rahi",
+  "duda": false,
+  "nota": "contrastada: generalizada. Puntuar es tocar el tupu con la pelota; quitados los pases, la carrera con balón y superar defensores, que la fuente no detalla."
  },
  "mau-rakau": {
   "es": "Arte del manejo de armas en el que los jóvenes se ejercitaban en combates simulados con armas largas de madera, como el taiaha, o con mazas cortas, aprendiendo ataque, defensa y juego de pies.",
@@ -1652,18 +1652,18 @@
   "nota": ""
  },
  "waka-ama": {
-  "es": "Deporte de remo en canoa con balancín lateral, en el que tripulaciones de uno a seis palistas compiten en velocidad o en larga distancia, y gana la que cruza primero la meta.",
-  "en": "Paddling sport in outrigger canoes in which crews of one to six paddlers race for speed or over long distances, and the winner is the crew that crosses the finish line first.",
-  "fuente": "International Va'a Federation (s. f.-a), citada en la ficha",
-  "duda": true,
-  "nota": "El número de palistas (de uno a seis) procede de conocimiento general; la ficha habla de velocidad y larga distancia."
+  "es": "Deporte de paleo en canoa con balancín lateral, en el que tripulaciones de uno a seis palistas compiten en carreras de velocidad y de larga distancia.",
+  "en": "Paddling sport in outrigger canoes in which crews of one to six paddlers compete in sprint and long-distance races.",
+  "fuente": "https://teara.govt.nz/en/waka-ama-outrigger-canoeing/print; https://www.ivfiv.org/para-vaa.html",
+  "duda": false,
+  "nota": "contrastada: generalizada. Confirmadas las categorías de una, dos, tres y seis personas en Nueva Zelanda; quitado que gane quien cruza primero la meta y cambiado remo por paleo."
  },
  "kilikiti": {
-  "es": "Versión samoana del críquet en la que dos equipos numerosos, con pelota blanda y bate de madera, se turnan para batear y lanzar, en partidos comunitarios mucho más largos que los de críquet convencional.",
-  "en": "Samoan version of cricket in which two large teams, with a soft ball and a wooden bat, take turns batting and bowling, in community matches much longer than in conventional cricket.",
-  "fuente": "McDowell (2021, p. 114), citado en la ficha",
-  "duda": true,
-  "nota": "La forma del bate no se cita en la ficha, por lo que no se ha incluido."
+  "es": "Versión samoana del críquet en la que dos equipos numerosos, con pelota de goma y bate de madera de hoja triangular, se turnan para batear y lanzar, en partidos comunitarios con cantos y bailes.",
+  "en": "Samoan version of cricket in which two large teams, with a rubber ball and a wooden bat with a triangular blade, take turns batting and bowling, in community matches with singing and dancing.",
+  "fuente": "https://collections.tepapa.govt.nz/topic/2069",
+  "duda": false,
+  "nota": "contrastada: corregida. La pelota es de goma, no blanda; añadida la forma triangular del bate; quitado que los partidos sean más largos, no confirmado."
  },
  "criquet-de-las-trobriand": {
   "es": "Variante ritualizada del críquet con equipos de cuarenta a sesenta jugadores, bates y pelotas tallados a mano, lanzamiento con brazo flexionado, cantos y bailes en formación, y victoria siempre del equipo anfitrión.",
@@ -1687,11 +1687,11 @@
   "nota": ""
  },
  "sipa": {
-  "es": "Juego de pelota de ratán golpeada con el pie, sin usar las manos, en grupos de dos, cuatro u ocho jugadores que se la envían, tocándola solo desde la rodilla hasta la punta del pie.",
-  "en": "Game with a rattan ball struck with the foot, without hands, in groups of two, four or eight players who send it back and forth, touching it only from knee to toe.",
-  "fuente": "National Commission for Culture and the Arts (2003), citada en la ficha; Trevithick (1999, p. 390)",
-  "duda": true,
-  "nota": "La ficha dice que se envían la pelota como en el voleibol y menciona la modalidad con red; no confirma expresamente la red en la forma tradicional."
+  "es": "Juego filipino con pelota de ratán golpeada con el pie, sin usar las manos, de dos a ocho jugadores, y solo se toca la pelota desde la rodilla hasta la punta del pie.",
+  "en": "Filipino game with a rattan ball struck with the foot, without hands, played by two to eight players, in which the ball may only be touched from knee to toe.",
+  "fuente": "https://ncca.gov.ph/about-culture-and-arts/in-focus/traditional-games-in-the-philippines/",
+  "duda": false,
+  "nota": "contrastada: generalizada. Confirmados de dos a ocho jugadores y contacto solo de rodilla a pie; quitada la referencia a grupos de dos, cuatro u ocho y a la red."
  },
  "peleas-de-cometas": {
   "es": "Competición en la que los pilotos manejan cometas desde el suelo para cortar el hilo de las rivales o hacerlas caer, ya sea de forma individual o por equipos que enfrentan cometas de dos tipos.",
@@ -1722,18 +1722,18 @@
   "nota": ""
  },
  "krabi-krabong": {
-  "es": "Arte marcial con armas en el que los practicantes manejan espadas, lanzas y hachas, solas o combinadas, en combates simulados de pareja y en exhibiciones.",
-  "en": "Armed martial art in which practitioners handle swords, spears and axes, alone or in combination, in mock combats in pairs and in exhibitions.",
-  "fuente": "Trevithick (1999, p. 409) y Chanprakhone (2025), citados en la ficha",
-  "duda": true,
-  "nota": "La ficha describe las armas y el carácter simulado, pero no el formato de pareja en detalle."
+  "es": "Arte marcial tailandés con armas en el que los practicantes manejan sables, espadas, escudos, lanzas y bastones, en combates simulados de pareja y en exhibiciones.",
+  "en": "Thai armed martial art in which practitioners handle sabres, swords, shields, spears and staffs, in mock combats in pairs and in exhibitions.",
+  "fuente": "https://thailandfoundation.or.th/krabi-krabong-an-ancient-thai-martial-making-its-way-back/",
+  "duda": false,
+  "nota": "contrastada: corregida. Quitadas las hachas, no confirmadas; añadidos sables, escudos y bastones; confirmados el combate por parejas y las exhibiciones."
  },
  "vallam-kali": {
-  "es": "Regata en la que tripulaciones de decenas de remeros, sentados en filas a lo largo de barcas muy alargadas de proa elevada, compiten remando en aguas interiores, y gana la que cruza primero la meta.",
-  "en": "Regatta in which crews of dozens of rowers, seated in rows along very long boats with a raised prow, race on inland waters, and the first to cross the finish line wins.",
-  "fuente": "Kerala Tourism (2015) y District Administration Alappuzha (s. f.), citados en la ficha",
-  "duda": true,
-  "nota": "La ficha da la capacidad de más de cien remeros y eslora de más de treinta metros; la disposición en filas y el lugar de la regata son generales."
+  "es": "Regata en la que tripulaciones de más de cien remeros, en barcas muy alargadas de proa elevada, compiten en lagos y ríos interiores de Kerala, y gana la que cruza primero la meta.",
+  "en": "Regatta in which crews of over a hundred rowers, in very long boats with a raised prow, race on inland lakes and rivers of Kerala, and the first to cross the finish line wins.",
+  "fuente": "https://nehrutrophy.nic.in/pages-en-IN/about-ntbr.php; https://thebetterindia.com/culture/science-tradition-kerala-snake-boat-races-12124080",
+  "duda": false,
+  "nota": "contrastada: corregida. Sustituido decenas de remeros por más de cien; quitada la disposición en filas, no confirmada; precisado el ámbito de Kerala."
  },
  "er-enish": {
   "es": "Lucha a caballo en la que dos jinetes con el torso desnudo, cinturón y látigo en la mano intentan arrancarse de la montura hasta que cualquier parte del cuerpo de uno toque el suelo.",
@@ -1757,18 +1757,18 @@
   "nota": ""
  },
  "mas-wrestling": {
-  "es": "Prueba de tracción en la que dos contendientes, sentados frente a frente con los pies contra una tabla divisoria, tiran de un palo de madera e intentan arrancárselo al rival o levantarlo.",
-  "en": "Pulling contest in which two contestants, seated facing each other with their feet against a dividing board, pull on a wooden stick and try to wrest it from the opponent or lift him.",
-  "fuente": "MAS Wrestling USA (s. f.), citada en la ficha",
-  "duda": true,
-  "nota": "La ficha no dice cómo se gana; el criterio (arrancar el palo o levantar al rival) procede de conocimiento general."
+  "es": "Prueba de fuerza en la que dos contendientes, sentados frente a frente con los pies contra una tabla divisoria, tiran de un palo de madera e intentan arrancárselo al rival o hacerlo volcar de lado.",
+  "en": "Strength contest in which two contestants, seated facing each other with their feet against a dividing board, pull on a wooden stick and try to wrest it from the opponent or pull him over sideways.",
+  "fuente": "https://www.mas-wrestling.com/en/mas-wrestling/; https://maswrestlingusa.com/wp-content/uploads/2014/05/Abridged-MAS-USA-Combat-Rules-athletesv1.07.pdf",
+  "duda": false,
+  "nota": "contrastada: corregida. Confirmado arrancar el palo; corregido levantar al rival por hacerlo volcar de lado (o que suelte la mano o mueva los pies sobre la tabla)."
  },
  "tejo": {
-  "es": "Juego de lanzamiento en el que los jugadores arrojan un disco metálico contra una caja de arcilla con un aro y mechas de pólvora que explotan al impacto, y puntúan según el resultado.",
-  "en": "Throwing game in which players hurl a metal disc at a clay-filled box with a ring, on which gunpowder charges explode on impact, and points are scored according to the result.",
-  "fuente": "Brown (2023, p. 25) y Federación Colombiana de Tejo (s. f.), citados en la ficha",
-  "duda": true,
-  "nota": "La ficha solo dice que interviene la pólvora; el resto (disco metálico, aro, mechas) es conocimiento general."
+  "es": "Juego de lanzamiento en el que los jugadores arrojan un disco metálico contra una caja de arcilla con un aro central y mechas de pólvora que explotan al impacto, y puntúan según el resultado.",
+  "en": "Throwing game in which players hurl a metal disc at a clay-filled box with a central ring and gunpowder charges that explode on impact, and points are scored according to the result.",
+  "fuente": "https://www.eltiempo.com/deportes/otros-deportes/reglas-del-tejo-aprenda-a-jugar-este-deporte-tradicional-colombiano-776146",
+  "duda": false,
+  "nota": "contrastada: confirmada. Sin cambios de fondo; se precisa que el aro (bocín) es central."
  },
  "bolas-criollas": {
   "es": "Juego en el que dos equipos hacen rodar bolas de distinto color para dejarlas cerca de una bola pequeña, el mingo, arrimándolas con suavidad o golpeando las del rival en una jugada llamada boche.",
@@ -1785,11 +1785,11 @@
   "nota": ""
  },
  "pelota-mixteca": {
-  "es": "Juego de pelota a mano en el que dos equipos se devuelven una pelota de caucho de un kilo aproximado, golpeándola con un guante de cuero rígido con tachuelas metálicas, en una cancha larga.",
-  "en": "Hand-ball game in which two teams return a rubber ball of about a kilogram, striking it with a stiff leather glove studded with metal, on a long open court.",
-  "fuente": "Stoll y Anderson (2017, p. 229), citados en la ficha",
-  "duda": true,
-  "nota": "La ficha describe el material y el golpeo con la mano protegida, pero no el tamaño de la cancha ni el sistema de puntos; se ha omitido el sistema de puntos."
+  "es": "Juego de pelota entre dos equipos de cinco jugadores, que se devuelven una pelota de caucho de unos novecientos gramos golpeándola con un guante pesado atado a la muñeca, en una cancha larga y estrecha.",
+  "en": "Ball game between two teams of five players who return a rubber ball of about nine hundred grams, striking it with a heavy glove tied to the wrist, on a long, narrow court.",
+  "fuente": "https://hispadoc.es/descarga/articulo/5848614.pdf",
+  "duda": false,
+  "nota": "contrastada: corregida. La pelota pesa unos 920 g, no un kilo; se quita el cuero rígido con tachuelas (no confirmado); se añaden cinco jugadores y cancha larga y estrecha."
  },
  "rarajipari": {
   "es": "Carrera de equipos en la que corredores de dos comunidades lanzan hacia delante con el pie una bola de madera, sin tocarla con la mano, durante un número de vueltas acordado sobre terreno accidentado.",
@@ -1827,18 +1827,18 @@
   "nota": ""
  },
  "lapta": {
-  "es": "Juego de bate y pelota entre dos equipos en el que un jugador golpea la pelota con un bate y corre hasta el otro extremo del campo, mientras los rivales intentan alcanzarlo con la pelota.",
-  "en": "Bat-and-ball game between two teams in which a player strikes the ball with a bat and runs to the far end of the field while opponents try to hit him with the ball.",
-  "fuente": "Martynenko, D. (s. f.). https://www.culture.ru/s/vopros/lapta-ili-beysbol/",
-  "duda": true,
-  "nota": "Reglas exactas y tamaño de equipo no confirmados."
+  "es": "Juego de bate y pelota entre equipos de tres a siete jugadores, en el que se golpea la pelota y se corre hasta la línea contraria y vuelta, mientras los rivales intentan eliminar al corredor.",
+  "en": "Bat-and-ball game between teams of three to seven players, in which the ball is struck with a flat bat and the runner goes to the opposite line and back while opponents try to put him out.",
+  "fuente": "https://www.culture.ru/s/vopros/lapta-ili-beysbol/",
+  "duda": false,
+  "nota": "contrastada: generalizada. Se añade tamaño de equipo (3 a 7) y recorrido de ida y vuelta; se quita la forma exacta de eliminar (dar con la pelota), que la fuente no precisa."
  },
  "oina": {
-  "es": "Juego de bate y pelota entre dos equipos en el que un jugador golpea la pelota con un bate de madera y corre por el campo, mientras los rivales intentan tocarlo con la pelota lanzada.",
-  "en": "Bat-and-ball game between two teams in which a player hits the ball with a wooden bat and runs across the field while opponents try to touch him with the thrown ball.",
-  "fuente": "Federația Română de Oină. https://froina.ro/istoric/",
-  "duda": true,
-  "nota": "Número de jugadores por equipo no confirmado; se omite."
+  "es": "Juego de bate y pelota entre dos equipos en el que un jugador golpea la pelota con un bate y corre por el campo, mientras los rivales intentan eliminarlo con la pelota.",
+  "en": "Bat-and-ball game between two teams in which a player hits the ball with a bat and runs across the field while opponents try to put him out with the ball.",
+  "fuente": "https://froina.ro/istoric/",
+  "duda": false,
+  "nota": "contrastada: generalizada. Se quita 'de madera' y 'tocarlo con la pelota lanzada', no confirmados en la fuente; se generaliza la forma de eliminar."
  },
  "molkky": {
   "es": "Juego de lanzamiento en el que los jugadores arrojan por turnos un taco de madera contra doce pinos numerados y gana quien suma exactamente cincuenta puntos.",
@@ -1862,32 +1862,32 @@
   "nota": ""
  },
  "stoolball": {
-  "es": "Deporte de bate y pelota entre dos equipos en el que el bateador defiende con una paleta un taburete o tablero sobre poste, mientras el lanzador intenta golpearlo y los rivales eliminan corredores.",
-  "en": "Bat-and-ball sport between two teams in which the batter defends a board mounted on a post with a paddle-like bat while the bowler tries to hit it and fielders dismiss runners.",
-  "fuente": "Stoolball England. https://www.stoolball.org.uk/history/story/",
-  "duda": true,
-  "nota": "Detalles de tamaño de equipo y puntuación no confirmados."
+  "es": "Deporte de bate y pelota entre equipos de hasta once jugadores, en el que el bateador defiende con un bate un tablero sobre poste, mientras el lanzador intenta darle y los rivales eliminan corredores.",
+  "en": "Bat-and-ball sport between teams of up to eleven players, in which the batter defends a board on a post with a bat while the bowler tries to hit it and fielders dismiss runners.",
+  "fuente": "https://www.stoolball.org.uk/rules/rules-of-stoolball",
+  "duda": false,
+  "nota": "contrastada: corregida. Se confirma tablero sobre poste, lanzador y eliminaciones; se quita 'taburete' y se añade el máximo de once jugadores."
  },
  "lanzamiento-de-barra": {
-  "es": "Prueba de fuerza en la que un atleta lanza una barra de hierro pesada, girando el cuerpo o con impulso desde una marca, y gana quien la envía más lejos.",
-  "en": "Strength event in which an athlete throws a heavy iron bar, using a spin or run-up from a mark, and the one who sends it farthest wins.",
-  "fuente": "Federación Aragonesa de Deportes Tradicionales. https://faragondeportestradicionales.com/tiro-de-barra/",
-  "duda": true,
-  "nota": "Varía según modalidad regional (aragonesa, castellana); descripción general."
+  "es": "Prueba de fuerza en la que un atleta lanza una barra de hierro pesada desde una zona fija, sin girar el cuerpo, y gana quien la envía más lejos, debiendo caer clavada por la punta.",
+  "en": "Strength event in which an athlete throws a heavy iron bar from a fixed zone, without spinning, and the one who sends it farthest wins, the tip having to strike the ground first.",
+  "fuente": "https://faragondeportestradicionales.com/tiro-de-barra/",
+  "duda": false,
+  "nota": "contrastada: corregida. En la modalidad aragonesa los pies permanecen quietos, la barra no gira en el aire y debe caer de punta; se elimina el giro o impulso."
  },
  "ajedrez-boxeo": {
   "es": "Combate por rondas que alterna asaltos de boxeo y partidas de ajedrez, en el que se gana por nocaut, por jaque mate o por decisión de los jueces.",
   "en": "Bout of alternating rounds of boxing and chess, won by knockout, checkmate or the judges' decision.",
-  "fuente": "Guinness World Records. https://www.guinnessworldrecords.com/world-records/760438-longest-running-chess-boxing-championship",
-  "duda": true,
-  "nota": "Reglas de rondas y desempate no consultadas en detalle."
+  "fuente": "https://worldchess.com/chess-terms/chess-boxing",
+  "duda": false,
+  "nota": "contrastada: confirmada. Sin cambios. Formato de 11 rondas (6 de ajedrez y 5 de boxeo) y victoria por jaque mate, KO, tiempo o decisión de los jueces."
  },
  "bike-polo": {
-  "es": "Deporte de equipo en el que jugadores en bicicleta golpean una pelota con un mazo de mango largo e intentan meterla en la portería rival, sin poner el pie en el suelo.",
-  "en": "Team sport in which players on bicycles strike a ball with a long-handled mallet and try to score in the opponents' goal without putting a foot on the ground.",
-  "fuente": "Kettlewell, C. (2005). The Washington Post. https://www.washingtonpost.com/wp-dyn/articles/A53124-2005Apr14.html",
-  "duda": true,
-  "nota": "Norma del pie en el suelo y tamaño de equipo según práctica actual; no verificado."
+  "es": "Deporte de tres jugadores por bando que golpean una pelota desde la bicicleta con un mazo largo para meterla en la portería rival, y apoyar el pie obliga a tocar el mazo a media pista.",
+  "en": "Sport of three players a side in which a ball is struck from a bicycle with a long mallet to score in the opposing goal, and putting a foot down obliges the player to tap the mallet at half-court.",
+  "fuente": "https://www.nahardcourt.com/wp-content/uploads/2012/11/2015Ruleset-V4.5.pdf",
+  "duda": false,
+  "nota": "contrastada: corregida. Poner el pie se penaliza con tocar el mazo a media pista; se añaden los tres jugadores por equipo."
  },
  "slamball": {
   "es": "Baloncesto por equipos de cuatro jugadores con cuatro camas elásticas delante de cada canasta, que permiten saltos y mates acrobáticos, y en el que se admite el contacto físico entre rivales.",
@@ -1946,18 +1946,18 @@
   "nota": ""
  },
  "buceo-en-cienaga": {
-  "es": "Carrera individual en la que los participantes, con tubo y aletas, recorren nadando dos veces una zanja llena de agua de turbera sin usar técnica de natación, y gana el más rápido.",
-  "en": "Individual race in which participants, wearing snorkel and flippers, swim two lengths of a peat-bog trench without conventional strokes, the fastest winning.",
-  "fuente": "Guinness World Records. https://www.guinnessworldrecords.com/world-records/760589-longest-running-bog-snorkelling-championship",
-  "duda": true,
-  "nota": "Zanja de 55 m aprox.; se omite la medida."
+  "es": "Carrera individual en la que los participantes, con tubo y aletas, recorren nadando dos veces una zanja de unos 55 metros llena de agua de turbera sin brazadas convencionales, y gana el más rápido.",
+  "en": "Individual race in which participants, wearing snorkel and flippers, swim two lengths of a trench of about 55 metres filled with peat-bog water without conventional strokes, the fastest winning.",
+  "fuente": "https://www.sjacymru.org.uk/en/page/world-bog-snorkelling-championships",
+  "duda": false,
+  "nota": "contrastada: corregida. Se precisa que se prohíben las brazadas convencionales y se recupera la medida de 55 m (Guinness la confirma)."
  },
  "patadas-en-la-espinilla": {
-  "es": "Combate entre dos contendientes que se agarran de los hombros e intentan derribarse a patadas en las espinillas, y gana quien tumba al rival dos veces.",
-  "en": "Contest between two opponents who grip each other's shoulders and try to bring each other down by kicking the shins, the first to floor the rival twice winning.",
-  "fuente": "Robert Dover's Games Society (ref. de la ficha)",
-  "duda": true,
-  "nota": "Regla de mejor de tres caídas según fuentes generales; confirmar."
+  "es": "Combate entre dos contendientes que se agarran de los hombros e intentan derribarse a patadas en las espinillas, y gana quien logra más derribos a lo largo de tres asaltos.",
+  "en": "Contest between two opponents who grip each other's shoulders and try to bring each other down by kicking the shins, the winner being whoever achieves most throws over three rounds.",
+  "fuente": "https://olimpickgames.co.uk/shin-kicking/",
+  "duda": false,
+  "nota": "contrastada: corregida. La regla es más derribos en tres asaltos, no dos caídas del rival."
  },
  "carrera-del-queso": {
   "es": "Carrera cuesta abajo en una ladera muy empinada en la que los participantes persiguen una rueda de queso lanzada desde arriba, y gana quien cruza primero la meta.",
@@ -1967,18 +1967,18 @@
   "nota": ""
  },
  "lucha-de-dedos-del-pie": {
-  "es": "Duelo entre dos personas sentadas frente a frente, que enganchan el dedo gordo del pie con el del rival e intentan forzarle a apoyar el pie en el suelo.",
-  "en": "Duel between two seated people who lock big toes and try to force the opponent's foot to the ground.",
-  "fuente": "Kim, E. (2023). Slate. https://slate.com/culture/2023/06/toe-wrestling-sport-ben-woodroffe-alan-nash.html",
-  "duda": true,
-  "nota": "Detalle de rondas no confirmado; descripción general."
+  "es": "Duelo entre dos personas sentadas frente a frente, que enganchan el dedo gordo del pie con el del rival e intentan forzarle a tocar el poste con el pie, al mejor de tres asaltos.",
+  "en": "Duel between two people seated facing each other, who lock big toes and try to force the opponent's foot to touch the central post, in a best-of-three format.",
+  "fuente": "https://toewrestling.com/rules",
+  "duda": false,
+  "nota": "contrastada: corregida. El pie debe tocar el poste (stanchion), no el suelo; se añade el mejor de tres asaltos."
  },
  "lanzamiento-de-piedras-al-agua": {
-  "es": "Prueba en la que cada participante lanza una piedra plana para que rebote sobre la superficie de una masa de agua, y gana quien logra más rebotes o mayor distancia.",
-  "en": "Event in which each participant throws a flat stone so that it skips across the surface of water, the one achieving the most bounces or the greatest distance winning.",
-  "fuente": "World Stone Skimming Championships. https://www.stoneskimming.com/about/",
-  "duda": true,
-  "nota": "Criterio de puntuación (rebotes o distancia) varía según campeonato."
+  "es": "Prueba en la que cada participante lanza una piedra plana para que rebote sobre el agua, y gana quien logra el rebote válido más largo, medido hasta donde se hunde la piedra.",
+  "en": "Event in which each participant throws a flat stone so that it skips across the water, the winner being whoever achieves the longest valid skim, measured to where the stone sinks.",
+  "fuente": "https://www.stoneskimming.com/about/",
+  "duda": false,
+  "nota": "contrastada: corregida. En el campeonato mundial de Easdale se puntúa la distancia (rebote válido de al menos dos botes), no el número de rebotes."
  },
  "futbol-en-el-barro": {
   "es": "Fútbol jugado sobre un terreno de ciénaga en el que los equipos intentan marcar goles pese al barro, con cambios ilimitados y faltas y saques ejecutados con la mano o con el pie.",
@@ -1988,11 +1988,11 @@
   "nota": ""
  },
  "planchado-extremo": {
-  "es": "Actividad en la que una persona plancha una prenda en un lugar extremo o inusual, como una pared de escalada, un río o un cañón, y se valora la dificultad y originalidad.",
-  "en": "Activity in which a person irons a garment in an extreme or unusual place, such as a climbing wall, a river or a canyon, judged on difficulty and originality.",
-  "fuente": "Fiouzi, A. (2022). MEL Magazine. https://melmagazine.com/en-us/story/extreme-ironing",
-  "duda": true,
-  "nota": "No hay reglamento oficial unificado; descripción general."
+  "es": "Actividad en la que una persona plancha una prenda en un lugar extremo o inusual, como una montaña, un río o una cueva, y en competición se ha valorado la creatividad y el planchado.",
+  "en": "Activity in which a person irons a garment in an extreme or unusual place, such as a mountain, a river or a cave, with competitions having judged creativity and the quality of the ironing.",
+  "fuente": "https://melmagazine.com/en-us/story/extreme-ironing",
+  "duda": false,
+  "nota": "contrastada: generalizada. Se quitan pared de escalada y cañón, y 'dificultad y originalidad'; la fuente cita creatividad y calidad de los pliegues en el mundial de 2002."
  },
  "carreras-de-drones": {
   "es": "Competición de pilotaje en la que cada piloto guía un dron con gafas de visión en primera persona por un circuito de puertas, y gana quien completa las vueltas en menos tiempo.",
@@ -2002,18 +2002,18 @@
   "nota": ""
  },
  "joggling": {
-  "es": "Carrera a pie en la que el corredor hace malabares con tres pelotas o más mientras corre, y gana quien llega antes a la meta sin dejarlas caer.",
-  "en": "Foot race in which the runner juggles three or more balls while running, the first to finish without dropping them winning.",
-  "fuente": "Velez, E. (2021). https://www.juggle.org/the-history-of-juggling-games-joggling/",
-  "duda": true,
-  "nota": "Normas de caída variables según prueba."
+  "es": "Carrera a pie en la que el corredor hace malabares con tres o más pelotas mientras corre, y en las pruebas de velocidad gana quien termina antes.",
+  "en": "Foot race in which the runner juggles three or more balls while running, the fastest finisher winning in speed events.",
+  "fuente": "https://www.juggle.org/the-history-of-juggling-games-joggling/",
+  "duda": false,
+  "nota": "contrastada: generalizada. Se quita 'sin dejarlas caer', porque la fuente no detalla el tratamiento de las caídas."
  },
  "kayak-polo": {
-  "es": "Deporte de equipo en el que los jugadores, cada uno en un kayak individual, se pasan un balón y tratan de introducirlo en la portería contraria, con contacto limitado permitido.",
-  "en": "Team sport in which players, each in a single kayak, pass a ball and try to put it into the opposing goal, with limited contact allowed.",
-  "fuente": "Townes, J. (1999). Canoeing and kayaking (ref. de la ficha); Paddle Worldwide. https://paddleworldwide.com/disciplines/canoe-polo",
-  "duda": true,
-  "nota": "Contacto limitado y portería elevada sobre el agua no aparecen en la ficha; confirmar en reglamento."
+  "es": "Deporte de cinco jugadores por bando, cada uno en un kayak, que se pasan un balón con la mano o la pala para marcar en una portería suspendida sobre el agua, con contacto permitido.",
+  "en": "Team sport of five players a side, each in a single kayak, who pass a ball by hand or paddle to score in a goal suspended above the water, with contact allowed.",
+  "fuente": "https://paddleworldwide.com/disciplines/canoe-polo",
+  "duda": false,
+  "nota": "contrastada: corregida. Se añaden cinco jugadores, portería suspendida sobre el agua y uso de mano o pala; se quita 'contacto limitado', que la fuente no matiza."
  },
  "apnea": {
   "es": "Inmersión bajo el agua sin equipo de respiración, en la que el buceador busca alcanzar la mayor profundidad, distancia o tiempo posibles conteniendo la respiración.",
@@ -2023,18 +2023,18 @@
   "nota": ""
  },
  "natacion-con-aletas": {
-  "es": "Modalidad de natación en la que el deportista nada con aletas, con monoaleta o con equipo de buceo, en pruebas de velocidad en superficie o de inmersión sobre distancias en piscina o aguas abiertas.",
-  "en": "Swimming discipline in which the athlete swims with fins, with a monofin or with diving gear, in speed events at the surface or underwater over pool or open-water distances.",
-  "fuente": "CMAS. https://www.cmas.org/finswimming/fun-facts.html",
-  "duda": true,
-  "nota": "Programa exacto de pruebas por categoría no consultado."
+  "es": "Modalidad de natación con aletas o monoaleta, con pruebas en superficie con tubo, en apnea y en inmersión con aire comprimido, en piscina de cincuenta metros o en aguas abiertas.",
+  "en": "Swimming discipline with fins or a monofin, with events on the surface with a snorkel, in apnoea and in immersion with compressed air, in a fifty-metre pool or open water.",
+  "fuente": "https://www.cmas.org/media/pdf/1.1.%20CMAS%20Finswimming%20Rules_V2023_01_EN.pdf",
+  "duda": false,
+  "nota": "contrastada: corregida. Se ajustan las modalidades a las del reglamento CMAS (superficie, apnea, inmersión, bialetas, monoaleta)."
  },
  "motos-de-agua": {
   "es": "Carreras en las que pilotos manejan motos acuáticas sobre un circuito marcado con boyas, y gana quien completa antes las vueltas, ya sea de pie o sentado según la categoría.",
   "en": "Races in which riders pilot personal watercraft around a buoy-marked circuit, the first to complete the laps winning, either standing or seated depending on the class.",
-  "fuente": "UIM-ABP Aquabike World Championship. https://www.aquabike.net/championship",
-  "duda": true,
-  "nota": "Modalidades (freestyle, circuito, etc.) no detalladas."
+  "fuente": "https://www.aquabike.net/championship",
+  "duda": false,
+  "nota": "contrastada: confirmada. Sin cambios. Runabout admite pie o sentado, Ski solo de pie; circuito de varias vueltas con boyas."
  },
  "padbol": {
   "es": "Deporte que combina fútbol y pádel, en el que dos parejas se pasan un balón por encima de una red en una pista cerrada con paredes, golpeándolo con cualquier parte del cuerpo salvo brazos y manos.",
@@ -2079,11 +2079,11 @@
   "nota": ""
  },
  "doma-vaquera": {
-  "es": "Disciplina ecuestre en la que el jinete ejecuta con su caballo una serie de ejercicios de campo, como giros, paradas y cambios de mano, y se puntúa la precisión y armonía.",
-  "en": "Equestrian discipline in which the rider performs with the horse a set of working exercises, such as turns, halts and changes of lead, judged on precision and harmony.",
-  "fuente": "Junta de Andalucía. (2022) (ref. de la ficha)",
-  "duda": true,
-  "nota": "Ejercicios concretos del reglamento de la RFHE no consultados."
+  "es": "Disciplina ecuestre en la que el jinete ejecuta con su caballo ejercicios de trabajo de campo, como piruetas, paradas y cambios de pie al galope, y cada ejercicio recibe una nota de cero a diez.",
+  "en": "Equestrian discipline in which the rider performs with the horse working exercises, such as pirouettes, halts and flying changes, each exercise receiving a mark from zero to ten.",
+  "fuente": "https://rfhe.com/wp-content/uploads/2024/03/Reglamento-Doma-Vaquera-2024-VD-1.pdf",
+  "duda": false,
+  "nota": "contrastada: corregida. Se sustituyen giros y cambios de mano por piruetas, paradas y cambios de pie según el reglamento RFHE; se añade la nota de 0 a 10 por ejercicio."
  },
  "equitacion-de-trabajo": {
   "es": "Competición ecuestre en la que jinete y caballo, individualmente o por equipos, superan pruebas de doma, manejabilidad, velocidad y apartado de la vaca, puntuados por los jueces.",
@@ -2093,18 +2093,18 @@
   "nota": ""
  },
  "tiro-con-arco-a-caballo": {
-  "es": "Disciplina en la que un jinete dispara flechas contra dianas mientras cabalga al galope por una pista, y se puntúa la precisión y, según la modalidad, el tiempo.",
-  "en": "Discipline in which a rider shoots arrows at targets while galloping along a lane, scored on accuracy and, depending on the format, on time.",
-  "fuente": "Guttmann, A. (2004). Sports: The first five millennia (ref. de la ficha)",
-  "duda": true,
-  "nota": "Modalidades y puntuación varían por federación; no verificadas."
+  "es": "Disciplina en la que un jinete dispara flechas contra dianas mientras cabalga por una pista delimitada, y se puntúa la precisión y, según la modalidad, el tiempo.",
+  "en": "Discipline in which a rider shoots arrows at targets while riding along a marked lane, scored on accuracy and, depending on the format, on time.",
+  "fuente": "https://ponyclubaustralia.com.au/wp-content/uploads/2025/02/PCA-Mounted-Archery-Rule-Book-2022.pdf",
+  "duda": false,
+  "nota": "contrastada: corregida. Se quita 'al galope' (hay pruebas a otros aires) y se precisa pista delimitada; puntuación por precisión y tiempo confirmada en algunas pruebas."
  },
  "tiro-con-ballesta": {
-  "es": "Disciplina de tiro en la que el deportista dispara virotes con una ballesta contra una diana a distancia fija, y gana quien suma más puntos.",
-  "en": "Shooting discipline in which the athlete fires bolts with a crossbow at a target from a fixed distance, the highest score winning.",
-  "fuente": "Union of International Associations (ref. de la ficha)",
-  "duda": true,
-  "nota": "Distancias y modalidades (10, 30 m) no verificadas."
+  "es": "Disciplina de tiro en la que el deportista dispara virotes con una ballesta contra una diana, a diez metros en sala o a treinta al aire libre, y gana quien suma más puntos.",
+  "en": "Shooting discipline in which the athlete fires bolts with a crossbow at a target, from ten metres indoors or thirty outdoors, the highest score winning.",
+  "fuente": "https://www.iau-crossbow.org/sport/match-division",
+  "duda": false,
+  "nota": "contrastada: corregida. Se concretan las distancias de la modalidad match (10 m y 30 m)."
  },
  "ciclocros": {
   "es": "Carrera de bicicleta sobre circuito corto de campo con barro, césped y obstáculos, en la que el corredor baja a menudo a cuestas de la bici, y gana quien completa antes las vueltas.",
@@ -2123,9 +2123,9 @@
  "speedway": {
   "es": "Carrera de motos sin frenos sobre un óvalo de tierra, en la que cuatro pilotos dan cuatro vueltas y derrapan en las curvas, con puntos según la posición de llegada.",
   "en": "Motorcycle race without brakes on a dirt oval, in which four riders run four laps and slide through the bends, with points awarded by finishing position.",
-  "fuente": "FIM Speedway. (s. f.-a). 100 years of Speedway (ref. de la ficha)",
-  "duda": true,
-  "nota": "Cuatro pilotos y cuatro vueltas según práctica habitual; confirmar."
+  "fuente": "https://fimspeedway.com/sgp/rules",
+  "duda": false,
+  "nota": "contrastada: confirmada. Sin cambios. Cuatro pilotos, cuatro vueltas, sin frenos, 3-2-1-0 puntos."
  },
  "motocross": {
   "es": "Carrera de motos por un circuito cerrado de tierra con saltos y curvas, con pilotos que salen a la vez y ganan por posición de llegada en varias mangas.",
@@ -2135,18 +2135,18 @@
   "nota": ""
  },
  "kilometro-lanzado": {
-  "es": "Prueba de esquí en la que el esquiador desciende una pista recta muy inclinada en posición aerodinámica, y gana quien alcanza la mayor velocidad media en el tramo cronometrado.",
-  "en": "Skiing event in which the skier descends a very steep straight slope in an aerodynamic position, the highest average speed over the timed section winning.",
-  "fuente": "Allen, E. J. B. (1999). Skiing, alpine (ref. de la ficha)",
-  "duda": true,
-  "nota": "Longitud del tramo cronometrado no confirmada."
+  "es": "Prueba de esquí de velocidad en la que el esquiador desciende una pista recta muy inclinada en posición aerodinámica, y gana quien alcanza la mayor velocidad en el tramo cronometrado.",
+  "en": "Speed skiing event in which the skier descends a very steep straight slope in an aerodynamic position, the highest speed over the timed section winning.",
+  "fuente": "https://www.fis-ski.com/speed-skiing/documents",
+  "duda": false,
+  "nota": "contrastada: generalizada. Se quita 'velocidad media' y cualquier longitud del tramo; la fuente FIS consultada no detalla el reglamento."
  },
  "esqui-freeride": {
-  "es": "Esquí fuera de pista en el que el deportista elige su propia línea por una ladera con saltos y pasos técnicos, y los jueces puntúan fluidez, control, técnica y línea.",
-  "en": "Off-piste skiing in which the athlete chooses their own line down a face with jumps and technical sections, scored by judges on fluidity, control, technique and line.",
-  "fuente": "FIS (2026). https://www.fis-ski.com/freeride/news/2025-26/fis-freeride-world-tour-celebrates-freeride-inclusion-in-the-alpes-2030-olympic-winter-games",
-  "duda": true,
-  "nota": "Criterios de puntuación de memoria."
+  "es": "Esquí fuera de pista en el que el deportista elige su propia línea por una ladera con saltos y pasos técnicos, y los jueces puntúan línea, control, técnica, fluidez y aire y estilo.",
+  "en": "Off-piste skiing in which the athlete chooses their own line down a face with jumps and technical sections, scored by judges on line, control, technique, fluidity and air and style.",
+  "fuente": "https://www.freerideworldtour.com/judging/",
+  "duda": false,
+  "nota": "contrastada: corregida. Los criterios del Freeride World Tour son línea, control, técnica, fluidez y aire y estilo; se sustituye la lista de memoria."
  },
  "escalada-en-hielo": {
   "es": "Ascensión de paredes o cascadas heladas con piolets y crampones, en pruebas de velocidad o de dificultad en estructuras artificiales, y gana quien llega más alto o antes.",
@@ -2163,18 +2163,18 @@
   "nota": ""
  },
  "paramotor": {
-  "es": "Vuelo en parapente con un motor de hélice a la espalda, que permite despegar a pie y mantenerse en el aire, con pruebas de precisión, navegación y velocidad.",
-  "en": "Flight under a paraglider with a propeller engine on the back, allowing take-off on foot and sustained flight, with events in precision, navigation and speed.",
-  "fuente": "Fédération Aéronautique Internationale. https://www.fai.org/page/paramotors-0",
-  "duda": true,
-  "nota": "Pruebas concretas no consultadas."
+  "es": "Vuelo en parapente con un motor de hélice a la espalda, que se despega a pie o con carro, con pruebas de precisión, navegación, resistencia y eslalon entre pilonas.",
+  "en": "Flight under a paraglider with a propeller engine on the back, taking off on foot or with a wheeled trike, with events in precision, navigation, endurance and slalom around pylons.",
+  "fuente": "https://www.fai.org/page/paramotors-0",
+  "duda": false,
+  "nota": "contrastada: corregida. Se añade despegue con carro y se sustituye 'velocidad' por eslalon y resistencia, que son las pruebas de la FAI."
  },
  "aeromodelismo": {
   "es": "Vuelo de aviones en miniatura controlados por radio, por cable o libres, en competiciones que puntúan el tiempo de vuelo, la velocidad o la precisión de las maniobras.",
   "en": "Flying of miniature aircraft controlled by radio, line or free flight, in competitions scored on flight time, speed or precision of manoeuvres.",
-  "fuente": "Fédération Aéronautique Internationale. https://www.fai.org/page/ciam-history",
-  "duda": true,
-  "nota": "Categorías FAI (F1, F2, F3) no detalladas."
+  "fuente": "https://www.fai.org/page/ciam-history",
+  "duda": false,
+  "nota": "contrastada: confirmada. Sin cambios. Clases F1 (libre), F2 (cable), F3 (radio); se juzgan duración, velocidad y precisión acrobática."
  },
  "acuatlon": {
   "es": "Prueba continua en aguas abiertas que combina carrera a pie y natación, con el formato de 2,5 kilómetros corriendo, 1 nadando y otros 2,5 corriendo, y gana quien la completa en menos tiempo.",
@@ -2228,9 +2228,9 @@
  "carreras-de-resistencia": {
   "es": "Carreras de automóviles de larga duración, de seis a veinticuatro horas, en las que varios pilotos se relevan al volante y gana el equipo que más distancia recorre.",
   "en": "Long-duration car races, of six to twenty-four hours, in which several drivers take turns at the wheel and the team covering the greatest distance wins.",
-  "fuente": "ACO. (2019). https://www.24h-lemans.com/en/news/24-hours-of-le-mans-the-birth-of-a-legend-51862",
-  "duda": true,
-  "nota": "Duración de pruebas más cortas no verificada."
+  "fuente": "https://www.fiawec.com/en/page/regulations-1",
+  "duda": false,
+  "nota": "contrastada: confirmada. Sin cambios. El WEC corre 6, 8 y 24 horas, con varios pilotos y victoria por mayor distancia."
  },
  "trial-en-moto": {
   "es": "Prueba en la que el piloto supera secciones con obstáculos naturales o artificiales sin apoyar el pie, y gana quien acumula menos penalizaciones.",
