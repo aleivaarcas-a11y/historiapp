@@ -1896,7 +1896,7 @@ fixSafeTop(); addEventListener("orientationchange",()=>setTimeout(fixSafeTop,300
   let hidden=false; const hide=()=>{ if(hidden||!sp) return; hidden=true; sp.classList.add("out"); setTimeout(()=>sp.remove(),650); };
   if(!l){ render(); if(sp){ sp.onclick=hide; setTimeout(hide,1800); } }
   else { const t0=Date.now(); const bar=document.getElementById("spBar"), msg=document.getElementById("spMsg"); if(msg) msg.textContent=t("loading");
-    let rendered=false; const go=()=>{ if(rendered) return; rendered=true; render(); setTimeout(hide,Math.max(0,1200-(Date.now()-t0))); };
+    let rendered=false; const go=()=>{ if(rendered) return; rendered=true; if(bar) bar.style.width="100%"; render(); requestAnimationFrame(()=>requestAnimationFrame(()=>setTimeout(hide,Math.max(250,1000-(Date.now()-t0))))); };
     const img=src=>new Promise(r=>{ const i=new Image(); i.onload=i.onerror=()=>r(); i.src=src; });
     const jobs=[]; const add=p=>{ jobs.push(p.catch(()=>{}).then(()=>{ done++; if(bar) bar.style.width=Math.round(done/Math.max(1,jobs.length)*100)+"%"; })); }; let done=0;
     add(getIndex().then(idx=>Promise.all(idx.temas.filter(x=>x.available).map(x=>getTema(x.num).catch(()=>{})))));
@@ -1908,7 +1908,8 @@ fixSafeTop(); addEventListener("orientationchange",()=>setTimeout(fixSafeTop,300
     const hadCtrl=!!navigator.serviceWorker.controller; let pend=false, done=false;
     const busy=()=>(typeof POD!=="undefined"&&POD.audio&&!POD.audio.paused)||document.body.classList.contains("feedon")||[...document.querySelectorAll("video")].some(v=>!v.paused);
     const reloadNow=()=>{ if(done) return; done=true; try{ sessionStorage.setItem("historiapp.updated","1"); }catch(e){} location.reload(); };
-    navigator.serviceWorker.addEventListener("controllerchange",()=>{ if(!hadCtrl) return; if(busy()) pend=true; else reloadNow(); });
+    const bootT=Date.now();
+    navigator.serviceWorker.addEventListener("controllerchange",()=>{ if(!hadCtrl) return; if(Date.now()-bootT<30000) return; if(busy()) pend=true; else reloadNow(); });
     navigator.serviceWorker.register("sw.js").then(reg=>{
       window.checkUpdate=()=>{ reg.update().catch(()=>{}); };
       document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="visible") checkUpdate(); else if(pend) reloadNow(); });
