@@ -33,15 +33,18 @@
    "img": {
     "src": "img/enc/baloncesto.jpg",
     "pie": {
-     "es": "Primer borrador de las trece reglas de Naismith, mecanografiado en diciembre de 1891.",
-     "en": "First draft of Naismith's thirteen rules, typed in December 1891."
+     "es": "Partido de baloncesto femenino al aire libre en el Bessie Tift College de Forsyth (Georgia, Estados Unidos), hacia 1910.",
+     "en": "Women's outdoor basketball game at Bessie Tift College, Forsyth (Georgia, United States), around 1910."
     },
-    "autor": "James Naismith",
+    "autor": {
+     "es": "Autor anónimo",
+     "en": "Anonymous"
+    },
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Naismith_Rules_of_Basketball_1892_first_draft.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Georgia._Forsyth._Girls_basketball_game_at_Bessie_Tift_College_LCCN2013646087.jpg"
    },
    "refs": [
     "FIBA. (2017, 18 de junio). *FIBA celebrates 85th anniversary*. Recuperado el 29 de septiembre de 2026 de https://www.fiba.basketball/en/news/fiba-celebrates-85th-anniversary",
@@ -160,18 +163,15 @@
    "img": {
     "src": "img/enc/remo.jpg",
     "pie": {
-     "es": "La carrera del abrigo y la insignia de Doggett en *The Illustrated London News* (6 de agosto de 1842).",
-     "en": "Doggett's Coat and Badge race in *The Illustrated London News* (6 August 1842)."
+     "es": "*The Annual Sculling Race for Doggett's Coat and Badge*, dibujo de Thomas Rowlandson (hacia 1805-1810) con los remeros de la regata en el Támesis.",
+     "en": "*The Annual Sculling Race for Doggett's Coat and Badge*, drawing by Thomas Rowlandson (c. 1805-1810) showing the scullers of the race on the Thames."
     },
-    "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
-    },
+    "autor": "Thomas Rowlandson",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Liddy_Doggett_Coat_and_Badge_ILN_1842-08-06.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Thomas_Rowlandson_-_The_Annual_Sculling_Race_for_Doggett%27s_Coat_and_Badge_-_Google_Art_Project.jpg"
    },
    "refs": [
     "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
@@ -310,15 +310,12 @@
    "img": {
     "src": "img/enc/zurkhaneh.jpg",
     "pie": {
-     "es": "Zurkhaneh fotografiado por Antoin Sevruguin (finales del siglo XIX).",
-     "en": "Zurkhaneh photographed by Antoin Sevruguin (late 19th century)."
+     "es": "Ejercicio con las mazas (*mil*) en el foso de un zurkhaneh de Teherán, 2013.",
+     "en": "Exercise with the wooden clubs (*meel*) in the pit of a zurkhaneh in Tehran, 2013."
     },
-    "autor": "Antoin Sevruguin",
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Antoin_Sevruguin_zoorkhaneh.jpg"
+    "autor": "Reza Dehshiri",
+    "licencia": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Tehran_Zurkhaneh_(3).jpg"
    },
    "refs": [
     "Krawietz, B. (2013). Martial arts Iranian style: Zurkhane heavy athletics and wrestling contested. En K. Bromber, B. Krawietz y J. Maguire (Eds.), *Sport across Asia: Politics, cultures, and identities* (pp. 144-166). Routledge.",
@@ -362,12 +359,12 @@
    "img": {
     "src": "img/enc/padel.jpg",
     "pie": {
-     "es": "Pista de pádel actual, con las paredes de cristal que forman parte del juego.",
-     "en": "A present-day padel court, with the glass walls that are part of play."
+     "es": "Jugadora de pádel golpeando la bola junto a la red en un partido de la Asociación Pádel Argentino (2022).",
+     "en": "A padel player hitting the ball at the net during a match of the Asociación Pádel Argentino (2022)."
     },
-    "autor": "Samson Ssemakadde",
-    "licencia": "CC0",
-    "url": "https://commons.wikimedia.org/wiki/File:Padel_court.jpg"
+    "autor": "Valenzuelaoriana26",
+    "licencia": "CC BY-SA 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:JUGADORA_DE_PADEL.jpg"
    },
    "refs": [
     "Federación Internacional de Pádel. (s. f.). *Historia*. Recuperado el 29 de septiembre de 2026 de https://www.padelfip.com/es/historia/",
@@ -483,10 +480,10 @@
     }
    ],
    "img": {
-    "src": "img/enc/gimnasia-artistica.png",
+    "src": "img/enc/gimnasia-artistica.jpg",
     "pie": {
-     "es": "Gimnastas del Friedrich-Gymnasium en el Turnplatz de la Hasenheide (Berlín) en 1903; al fondo, el monumento a Jahn.",
-     "en": "Gymnasts of the Friedrich-Gymnasium at the Hasenheide Turnplatz (Berlin) in 1903, with the monument to Jahn in the background."
+     "es": "Ejercicio en paralelas durante los Juegos Olímpicos de San Luis de 1904.",
+     "en": "A parallel bars exercise at the 1904 Olympic Games in St. Louis."
     },
     "autor": {
      "es": "Autor anónimo",
@@ -496,7 +493,7 @@
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Turnplatz_in_der_Hasenheide,_1903.png"
+    "url": "https://commons.wikimedia.org/wiki/File:Parallel_bars_during_1904_Summer_Olympics.jpg"
    },
    "refs": [
     "Grandi, B. (2011). 130 years of FIG: Letter from FIG president Prof. Bruno Grandi. *Science of Gymnastics Journal*, *3*(3), 3-4.",
@@ -698,15 +695,12 @@
    "img": {
     "src": "img/enc/culturismo.jpg",
     "pie": {
-     "es": "Eugen Sandow posando con una columna, a la manera de Sansón, en una fotografía de estudio de 1894.",
-     "en": "Eugen Sandow posing with a pillar, in the manner of Samson, in an 1894 studio photograph."
+     "es": "Phil Heath y Kai Greene comparan su musculatura sobre el escenario en el Mr. Olympia de Las Vegas (2012).",
+     "en": "Phil Heath and Kai Greene comparing physiques on stage at the 2012 Mr. Olympia in Las Vegas."
     },
-    "autor": "Benjamin J. Falk",
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Eugen_Sandow_holding_pillar_cph.3b11215.jpg"
+    "autor": "Kevin Laval",
+    "licencia": "CC0",
+    "url": "https://commons.wikimedia.org/wiki/File:Phil_Heath_Kai_Greene.JPG"
    },
    "refs": [
     "Day, D. (2021). Products, training, and technology. En M. Huggins (Ed.), *A cultural history of sport in the age of industry* (pp. 77-98). Bloomsbury Academic.",
@@ -801,18 +795,12 @@
    "img": {
     "src": "img/enc/cheerleading.jpg",
     "pie": {
-     "es": "Animadores del Washington & Jefferson College (Pensilvania) en 1932, cuando la actividad era todavía mayoritariamente masculina; en el centro, el jefe de animadores William Dom.",
-     "en": "Washington & Jefferson College (Pennsylvania) cheerleaders in 1932, when the activity was still mostly male; in the centre, head cheerleader William Dom."
+     "es": "Animadoras de la Universidad de Cornell forman pirámides durante el partido de fútbol americano contra Penn, el 9 de noviembre de 2019.",
+     "en": "Cornell University cheerleaders building pyramids during the American football game against Penn, 9 November 2019."
     },
-    "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
-    },
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:WashJeff_Cheerleaders.jpg"
+    "autor": "Kenneth C. Zirkel",
+    "licencia": "CC BY-SA 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Cornell_University_cheerleaders_at_Cornell-Penn_game,_2019.jpg"
    },
    "refs": [
     "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
@@ -1180,15 +1168,12 @@
    "img": {
     "src": "img/enc/comba.jpg",
     "pie": {
-     "es": "*Niña con comba (retrato de Delphine Legrand)*, óleo de Pierre-Auguste Renoir (1876).",
-     "en": "*Girl with a Jump Rope (Portrait of Delphine Legrand)*, oil painting by Pierre-Auguste Renoir (1876)."
+     "es": "Dos niñas saltan a la comba en un parque (2015).",
+     "en": "Two girls skipping rope in a park (2015)."
     },
-    "autor": "Pierre-Auguste Renoir",
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Pierre-Auguste_Renoir_-_Girl_with_a_Jump_Rope_(Portrait_of_Delphine_Legrand)_-_BF137_-_Barnes_Foundation.jpg"
+    "autor": "Maksym Kozlenko",
+    "licencia": "CC BY-SA 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Two_girls_playing_skipping_rope.jpg"
    },
    "refs": [
     "IJRU. (2020, 11 de enero). *Celebrating and saying goodbye to FISAC-IRSF*. Recuperado el 29 de septiembre de 2026 de https://ijru.sport/general-communication/2020/1/11/celebrating-and-saying-goodbye-to-fisac",
@@ -1544,12 +1529,12 @@
    "img": {
     "src": "img/enc/futbol-sala.jpg",
     "pie": {
-     "es": "Monolito dedicado a Juan Carlos Ceriani en el Parque Batlle de Montevideo (2024).",
-     "en": "Monolith dedicated to Juan Carlos Ceriani in Parque Batlle, Montevideo (2024)."
+     "es": "Partido entre Corea del Sur y Kirguistán en la Copa Asiática de fútbol sala de la AFC (2026).",
+     "en": "Korea Republic against Kyrgyzstan at the AFC Futsal Asian Cup (2026)."
     },
-    "autor": "NaBUru38",
+    "autor": "Medelam",
     "licencia": "CC BY-SA 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Monolith_of_Juan_Carlos_Ceriani_in_Parque_Batlle_in_Montevideo_in_2024.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:2026_AFC_Futsal_Asian_Cup,_Korea_Republic_vs_Kyrgyzstan_04.jpg"
    },
    "refs": [
     "FIFA. (2020, 24 de febrero). *Die Geschichte des Futsal*. Recuperado el 29 de septiembre de 2026 de https://inside.fifa.com/de/tournaments/mens/futsalworldcup/lithuania2021/news/die-geschichte-des-futsal-716529-x5350",
@@ -1698,18 +1683,15 @@
    "img": {
     "src": "img/enc/futbol-canadiense.jpg",
     "pie": {
-     "es": "Equipo campeón de la primera Grey Cup, disputada en 1909.",
-     "en": "The team that won the first Grey Cup, played in 1909."
+     "es": "Partido de *rugby football* entre Ottawa y los Hamilton Tigers, fotografiado por William James Topley en 1910.",
+     "en": "A *rugby football* game between Ottawa and the Hamilton Tigers, photographed by William James Topley in 1910."
     },
-    "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
-    },
+    "autor": "William James Topley",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:1909_Grey_Cup_Champions_(Bigger).jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Ottawa_and_Hamilton_Tigers_football_game_5.jpg"
    },
    "refs": [
     "Canadian Football Hall of Fame. (s. f.). *History of the Grey Cup*. Recuperado el 29 de septiembre de 2026 de https://cfhof.ca/history-of-the-grey-cup/",
@@ -1753,18 +1735,12 @@
    "img": {
     "src": "img/enc/futbol-gaelico.jpg",
     "pie": {
-     "es": "Retrato de Michael Cusack, fundador de la Gaelic Athletic Association en 1884.",
-     "en": "Portrait of Michael Cusack, founder of the Gaelic Athletic Association in 1884."
+     "es": "Partido de fútbol gaélico entre Bretaña y Galicia en el Festival Intercéltico de Lorient (2013).",
+     "en": "Gaelic football match between Brittany and Galicia at the 2013 Festival Interceltique de Lorient."
     },
-    "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
-    },
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Michael_cusack_portrait.jpg"
+    "autor": "Pymouss",
+    "licencia": "CC BY-SA 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:FIL_2013_-_Football_ga%C3%A9lique_Bretagne_-_Galice_03.JPG"
    },
    "refs": [
     "Collins, T. (2019). *How football began: A global history of how the world's football codes were born*. Routledge.",
@@ -1919,18 +1895,12 @@
    "img": {
     "src": "img/enc/rugby-league.jpg",
     "pie": {
-     "es": "Recuerdo oficial de la gira del equipo neozelandés de rugby league por Australia y Gran Bretaña en 1907-1908.",
-     "en": "Official souvenir of the New Zealand rugby league team's tour of Australia and Great Britain in 1907-1908."
+     "es": "Partido de rugby league entre el Cardiff Rugby League Club y Nueva Zelanda, en diciembre de 1951.",
+     "en": "Rugby league match between Cardiff Rugby League Club and New Zealand, December 1951."
     },
-    "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
-    },
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Souvenir_new_zealand_rugby_football.jpg"
+    "autor": "Geoff Charles",
+    "licencia": "CC BY-SA 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Cardiff_Rugby_League_Club_in_a_match_against_New_Zealand_(1511138).jpg"
    },
    "refs": [
     "Collins, T. (2019). *How football began: A global history of how the world's football codes were born*. Routledge.",
@@ -2086,18 +2056,12 @@
    "img": {
     "src": "img/enc/balonkorf.jpg",
     "pie": {
-     "es": "Exhibición de balonkorf en los Juegos Olímpicos de Ámsterdam de 1928.",
-     "en": "Korfball demonstration at the 1928 Amsterdam Olympic Games."
+     "es": "Lance del partido de balonkorf entre Westerkwartier y Koog Zaandijk (7-2), el 18 de marzo de 1960.",
+     "en": "A moment in the korfball match between Westerkwartier and Koog Zaandijk (7-2), 18 March 1960."
     },
-    "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
-    },
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Korfbal_at_the_1928_Summer_Olympics,_Team_White-Red.jpg"
+    "autor": "Joop van Bilsen / Anefo",
+    "licencia": "CC0",
+    "url": "https://commons.wikimedia.org/wiki/File:Korfbal_Westerkwartier_tegen_Koog_Zaandijk_7-2,_spelmoment_tijdens_de_wedstrijd,_Bestanddeelnr_911-1070.jpg"
    },
    "refs": [
     "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
@@ -2303,18 +2267,12 @@
    "img": {
     "src": "img/enc/voleibol.jpg",
     "pie": {
-     "es": "William G. Morgan como director de educación física de la YMCA de Holyoke.",
-     "en": "William G. Morgan as physical director of the Holyoke YMCA."
+     "es": "Partido de voleibol en el encuentro juvenil de gimnasia y deporte (*Turn- und Sporttreffen*) de Leipzig, el 21 de julio de 1957.",
+     "en": "Volleyball match at the youth gymnastics and sports meeting (*Turn- und Sporttreffen*) in Leipzig, 21 July 1957."
     },
-    "autor": {
-     "es": "YMCA de Holyoke",
-     "en": "Holyoke YMCA"
-    },
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:William_G_Morgan,_as_physical_director_of_Holyoke%27s_YMCA.jpg"
+    "autor": "Dittrich (Bundesarchiv)",
+    "licencia": "CC BY-SA 3.0 de",
+    "url": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-48465-0023,_Leipzig,_Turn-_und_Sporttreffen,_Volleyball.jpg"
    },
    "refs": [
     "Fédération Internationale de Volleyball. (s. f.-a). *History*. Recuperado el 29 de septiembre de 2026 de https://www.fivb.com/volleyball/the-game/history/",
@@ -2468,12 +2426,15 @@
    "img": {
     "src": "img/enc/futbolin.jpg",
     "pie": {
-     "es": "Futbolín antiguo de madera conservado en el Museo de Juegos Tradicionales de Loon-Plage (Francia).",
-     "en": "Old wooden table football kept at the Museum of Traditional Games in Loon-Plage (France)."
+     "es": "Cuatro jugadores en una partida de futbolín (2007).",
+     "en": "Four players in a game of table football (2007)."
     },
-    "autor": "Pierre André Leclercq",
-    "licencia": "CC BY-SA 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Loon-Plage_mus%C3%A9e_des_jeu_x_traditionnels_(Baby-Foot).jpg"
+    "autor": "PDD",
+    "licencia": {
+     "es": "Dominio público",
+     "en": "Public domain"
+    },
+    "url": "https://commons.wikimedia.org/wiki/File:Table_football_with_4_players.jpg"
    },
    "refs": [
     "De Frutos, J. (2009, 4 de abril). *La patente perdida de Alejandro Finisterre*. Rebelión. Recuperado el 29 de septiembre de 2026 de https://rebelion.org/la-patente-perdida-de-alejandro-finisterre/",
@@ -3199,15 +3160,15 @@
    "img": {
     "src": "img/enc/badminton.jpg",
     "pie": {
-     "es": "*Niña con raqueta y volante*, óleo de Jean-Siméon Chardin (1737), Galería de los Uffizi.",
-     "en": "*Girl with Racket and Shuttlecock*, oil painting by Jean-Siméon Chardin (1737), Uffizi Gallery."
+     "es": "*Badminton-Spieler*, pintura de Johann Friedrich Hennings (siglo XIX), con damas y caballeros jugando al volante en un jardín.",
+     "en": "*Badminton-Spieler*, painting by Johann Friedrich Hennings (19th century), with ladies and gentlemen playing shuttlecock in a garden."
     },
-    "autor": "Jean-Siméon Chardin",
+    "autor": "Johann Friedrich Hennings",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Jean_Sim%C3%A9on_Chardin_-_Girl_with_Racket_and_Shuttlecock_-_WGA04765.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Johann_Friedrich_Hennings_-_Badminton-Spieler.jpg"
    },
    "refs": [
     "The Badminton Museum. (s. f.). *The history of the Badminton Association*. Recuperado el 30 de septiembre de 2026 de https://badmintonmuseum.org/history-badminton-association/",
@@ -3251,15 +3212,12 @@
    "img": {
     "src": "img/enc/tenis-de-mesa.jpg",
     "pie": {
-     "es": "Viñeta de John Hassall sobre el ping-pong publicada en la revista londinense *The Sketch* el 5 de marzo de 1902, en plena moda del juego.",
-     "en": "Cartoon by John Hassall on ping-pong published in the London magazine *The Sketch* on 5 March 1902, at the height of the craze."
+     "es": "Partidas de tenis de mesa al aire libre en la Prager Straße de Dresde, el 23 de octubre de 1977.",
+     "en": "Open-air table tennis games on the Prager Straße in Dresden, 23 October 1977."
     },
-    "autor": "John Hassall",
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Ping-Pong_by_John_Hassall_(1868%E2%80%931948).png"
+    "autor": "Ulrich Häßler (Bundesarchiv)",
+    "licencia": "CC BY-SA 3.0 de",
+    "url": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-S1023-0012,_Dresden,_Prager_Stra%C3%9Fe,_Tischtennis.jpg"
    },
    "refs": [
     "Boggan, T. (1999). Tennis, table. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 398-399). Oxford University Press.",
@@ -3717,15 +3675,15 @@
    "img": {
     "src": "img/enc/soft-tennis.jpg",
     "pie": {
-     "es": "Miembros de un club de soft tennis en Taihoku (Taipéi), en el Taiwán bajo dominio japonés, en la década de 1930.",
-     "en": "Members of a soft tennis club in Taihoku (Taipei), in Japanese-ruled Taiwan, in the 1930s."
+     "es": "Final de soft tennis en el Festival Nacional de Deportes de Corea de 1923, en una fotografía publicada por el diario *Dong-A Ilbo*.",
+     "en": "Soft tennis final at the 1923 Korean National Sports Festival, in a photograph published by the newspaper *Dong-A Ilbo*."
     },
-    "autor": "Peng Ruilin",
+    "autor": "Dong-A Ilbo",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Group_photo_of_members_of_the_soft_tennis_club_in_Taihoku.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:1923_Korean_National_Sports_Festival_-_Soft_Tennis_-_Final.png"
    },
    "refs": [
     "Guttmann, A., y Thompson, L. (2001). *Japanese sports: A history*. University of Hawai'i Press.",
@@ -3864,12 +3822,18 @@
    "img": {
     "src": "img/enc/pilota-valenciana.jpg",
     "pie": {
-     "es": "Interior del trinquet de Pelayo, en Valencia, abierto en 1868.",
-     "en": "Interior of the Pelayo trinquet in Valencia, opened in 1868."
+     "es": "Partida de pilota valenciana en el trinquet de la Cova Santa de Alcoy (1930); Xulla golpea la pelota de volea mientras Borrelló lo observa.",
+     "en": "Valencian pilota match at the Cova Santa trinquet in Alcoy (1930); Xulla hits the ball on the volley while Borrelló looks on."
     },
-    "autor": "Joanbanjo",
-    "licencia": "CC BY-SA 3.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Interior_del_trinquet_de_Pelayo,_Val%C3%A8ncia.JPG"
+    "autor": {
+     "es": "Autor anónimo",
+     "en": "Anonymous"
+    },
+    "licencia": {
+     "es": "Dominio público",
+     "en": "Public domain"
+    },
+    "url": "https://commons.wikimedia.org/wiki/File:Pilota_alcoi02.jpeg"
    },
    "refs": [
     "Càtedra de Pilota Valenciana. (s. f.). *La pilota en el mundo*. Universitat de València. Recuperado el 29 de septiembre de 2026 de https://www.uv.es/pilota-valenciana-chair/en/el-mon-de-la-pilota/la-pilota-al-mon.html",
@@ -4408,15 +4372,18 @@
    "img": {
     "src": "img/enc/bandy.jpg",
     "pie": {
-     "es": "Charles Goodman Tebbutt, patinador y jugador de bandy, retratado en 1889.",
-     "en": "Charles Goodman Tebbutt, skater and bandy player, photographed in 1889."
+     "es": "Primer partido de bandy disputado en Suecia, en Nybroviken (Estocolmo), durante los Juegos Nórdicos de 1901.",
+     "en": "The first bandy match played in Sweden, at Nybroviken (Stockholm), during the 1901 Nordic Games."
     },
-    "autor": "Turnbull & Sons",
+    "autor": {
+     "es": "Autor anónimo",
+     "en": "Anonymous"
+    },
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Charles_Goodman_Tebbutt_(0401-02823).png"
+    "url": "https://commons.wikimedia.org/wiki/File:Bandy_1901.jpg"
    },
    "refs": [
     "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trad.). Yale University Press.",
@@ -4561,15 +4528,12 @@
    "img": {
     "src": "img/enc/hurling.jpg",
     "pie": {
-     "es": "El equipo de hurling de Tipperary ante la estación de tren de Clonmel, 26 de agosto de 1910.",
-     "en": "The Tipperary hurling team outside Clonmel railway station, 26 August 1910."
+     "es": "Partido de hurling entre los DC Gaels y los Shamrocks en los Gaelic Games de Filadelfia (Estados Unidos), 2007.",
+     "en": "Hurling match between DC Gaels and Shamrocks at the Gaelic Games in Philadelphia (United States), 2007."
     },
-    "autor": "National Library of Ireland",
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Tipperary_Hurling_Team_August_26,_1910.jpg"
+    "autor": "Jeff Meade",
+    "licencia": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Hurling_game_Philadelphia_USA_2007.jpg"
    },
    "refs": [
     "GAA. (s. f.). *Hurling: History and evolution*. Recuperado el 29 de septiembre de 2026 de https://www.gaa.ie/my-gaa/getting-involved/hurling-history-and-evolution",
@@ -4771,15 +4735,15 @@
    "img": {
     "src": "img/enc/hornussen.jpg",
     "pie": {
-     "es": "Cartel de Paul Wyss para la 9.ª Fiesta Federal de Hornussen, celebrada en Berna del 23 al 25 de agosto de 1930.",
-     "en": "Poster by Paul Wyss for the 9th Federal Hornussen Festival, held in Bern from 23 to 25 August 1930."
+     "es": "Jugadores de la Hornussergesellschaft Zollikofen en la Fiesta Federal de Hornussen de Frauenfeld (2000), con las palas levantadas para señalar la trayectoria del *nouss*.",
+     "en": "Players of the Hornussergesellschaft Zollikofen at the Federal Hornussen Festival in Frauenfeld (2000), holding up their boards to signal the flight of the *nouss*."
     },
-    "autor": "Paul Wyss",
+    "autor": "Urs Vonhuben",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:CH-NB_Poster_Collection_SNL_SPOR_445.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Hornussen_catching.jpg"
    },
    "refs": [
     "Eidgenössischer Hornusserverband. (s. f.). *Hornussen*. Recuperado el 29 de septiembre de 2026 de https://ehv.ch/hornussen/",
@@ -4821,15 +4785,15 @@
    "img": {
     "src": "img/enc/golf.jpg",
     "pie": {
-     "es": "William Inglis, capitán de la Honourable Company of Edinburgh Golfers, retratado por David Allan hacia 1787 en los Leith Links.",
-     "en": "William Inglis, captain of the Honourable Company of Edinburgh Golfers, painted by David Allan around 1787 on Leith Links."
+     "es": "*The Golfers*, óleo de Charles Lees (1847) con una partida en St Andrews ante numeroso público, National Galleries of Scotland.",
+     "en": "*The Golfers*, oil painting by Charles Lees (1847) showing a match at St Andrews before a large crowd, National Galleries of Scotland."
     },
-    "autor": "David Allan",
+    "autor": "Charles Lees",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:David_Allan_-_William_Inglis,_c_1712_-_1792._Surgeon_and_Captain_of_the_Honourable_Company_of_Edinburgh_Golfers_-_Google_Art_Project.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:%27The_Golfers%27_by_Charles_Lees,_1847,_oil_on_canvas,_National_Galleries_of_Scotland,_Edinburgh.jpg"
    },
    "refs": [
     "Guttmann, A. (1991). *Women's sports: A history*. Columbia University Press.",
@@ -4986,12 +4950,12 @@
    "img": {
     "src": "img/enc/minigolf.jpg",
     "pie": {
-     "es": "Fotografía histórica del campo de minigolf de Ascona (Suiza).",
-     "en": "Historical photograph of the minigolf course at Ascona (Switzerland)."
+     "es": "Niños jugando al minigolf en el condado de Alameda (California), 1963.",
+     "en": "Boys playing miniature golf in Alameda County (California), 1963."
     },
-    "autor": "Pallone",
+    "autor": "George Garrigues",
     "licencia": "CC BY-SA 3.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Minigolf_Ascona,_alt.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Boys_playing_miniature_golf_in_Alameda_County,_California,_1963.jpg"
    },
    "refs": [
     "Raaflaub, C. (2026, 18 de julio). How Switzerland became the 'motherland of minigolf'. *Swissinfo*. Recuperado el 29 de septiembre de 2026 de https://www.swissinfo.ch/eng/swiss-oddities/switzerland-the-motherland-of-minigolf/89929116",
@@ -5080,18 +5044,12 @@
    "img": {
     "src": "img/enc/broomball.jpg",
     "pie": {
-     "es": "Equipo femenino de broomball de Petrolia (Ontario), a comienzos del siglo XX.",
-     "en": "Petrolia girls' broomball team (Ontario), early twentieth century."
+     "es": "Partida de broomball sobre hielo, con jugadoras golpeando la pelota con escobas.",
+     "en": "A broomball game on ice, with players striking the ball with brooms."
     },
-    "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
-    },
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:1900s_Girls_Broomball_Team,_Canada.jpg"
+    "autor": "college.library",
+    "licencia": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Katherine_in_a_game_of_broomball_(10947797483).jpg"
    },
    "refs": [
     "Broomball Canada. (s. f.). *The sport of broomball historical roots*. Recuperado el 29 de septiembre de 2026 de https://www.broomball.ca/wp/?page_id=58"
@@ -5339,12 +5297,15 @@
    "img": {
     "src": "img/enc/bochas.jpg",
     "pie": {
-     "es": "Campo de bochas de la Trattoria Cafasso, en la colina de Turín, fotografiado por Mario Gabinio hacia 1925.",
-     "en": "Bocce court at the Trattoria Cafasso, on the hill of Turin, photographed by Mario Gabinio around 1925."
+     "es": "*Los jugadores de bochas*, óleo atribuido a Jan Miel (siglo XVII), con un grupo de hombres inclinados sobre el lanzamiento.",
+     "en": "*The Bocce Players*, oil painting attributed to Jan Miel (17th century), with a group of men bending over a throw."
     },
-    "autor": "Mario Gabinio",
-    "licencia": "CC BY 3.0 IT",
-    "url": "https://commons.wikimedia.org/wiki/File:Gabinio.Torino-Collina,_Trattoria_Cafasso,_Campo_Per_Il_Gioco_Delle_Bocce_026P1.jpg"
+    "autor": "Jan Miel",
+    "licencia": {
+     "es": "Dominio público",
+     "en": "Public domain"
+    },
+    "url": "https://commons.wikimedia.org/wiki/File:Jan_Miel_-_The_bocce_players.jpg"
    },
    "refs": [
     "Confederazione Boccistica Internazionale. (s. f.). *La confederazione*. Recuperado el 29 de septiembre de 2026 de https://cbi-prv.org/la-confederazione",
@@ -6069,12 +6030,12 @@
    "img": {
     "src": "img/enc/silambam.jpg",
     "pie": {
-     "es": "Armas empleadas en el silambam.",
-     "en": "Weapons used in silambam."
+     "es": "Juego tradicional de silambam en Veeranattar (Tamil Nadu), con dos practicantes enfrentados con bastones ante el público.",
+     "en": "Traditional silambam game in Veeranattar (Tamil Nadu), with two practitioners facing each other with staffs before onlookers."
     },
-    "autor": "Arunachalam Mani",
-    "licencia": "CC BY-SA 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Weapons_images_of_Silambam.jpg"
+    "autor": "Valorsu",
+    "licencia": "CC0",
+    "url": "https://commons.wikimedia.org/wiki/File:Veeranattar_traditional_silamba_game.jpg"
    },
    "refs": [
     "Hick, S. (1999). Cudgeling. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 93-95). Oxford University Press.",
@@ -6118,18 +6079,12 @@
    "img": {
     "src": "img/enc/eskrima.jpg",
     "pie": {
-     "es": "Hoja de sellos filipinos de 2011 dedicada al arnis como deporte nacional recién declarado.",
-     "en": "2011 Philippine stamp sheet devoted to arnis as the newly declared national sport."
+     "es": "Combate con bastones y protecciones en un torneo de eskrima, 2011.",
+     "en": "Stick bout with protective gear at an eskrima tournament, 2011."
     },
-    "autor": {
-     "es": "Correos de Filipinas (Philippine Postal Corporation)",
-     "en": "Philippine Postal Corporation"
-    },
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Arnis_2011_stampsheet_of_the_Philippines.jpg"
+    "autor": "Leticia Barletta",
+    "licencia": "CC BY-SA 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Eskrima_Kombat.jpg"
    },
    "refs": [
     "Hick, S. (1999). Cudgeling. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 93-95). Oxford University Press.",
@@ -6180,15 +6135,12 @@
    "img": {
     "src": "img/enc/boxeo.jpg",
     "pie": {
-     "es": "Hoja impresa con las reglas del ring de Jack Broughton, fechada el 6 de agosto de 1743.",
-     "en": "Broadside with Jack Broughton's rules of the ring, dated 6 August 1743."
+     "es": "*The Battle between Crib and Molineaux*, estampa de George Cruikshank sobre el combate entre Tom Cribb y Tom Molineaux del 28 de septiembre de 1811, Metropolitan Museum of Art.",
+     "en": "*The Battle between Crib and Molineaux*, print by George Cruikshank of the fight between Tom Cribb and Tom Molineaux on 28 September 1811, Metropolitan Museum of Art."
     },
-    "autor": "Jack Broughton",
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Broughton_Rules.jpg"
+    "autor": "George Cruikshank",
+    "licencia": "CC0",
+    "url": "https://commons.wikimedia.org/wiki/File:The_Battle_Between_Crib_and_Molineaux,_September_28,_1811_MET_DP877152.jpg"
    },
    "refs": [
     "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trad.). Yale University Press.",
@@ -6428,15 +6380,18 @@
    "img": {
     "src": "img/enc/judo.jpg",
     "pie": {
-     "es": "Kanō Jigorō, fundador del Kōdōkan, hacia 1892, a los treinta y dos años.",
-     "en": "Kanō Jigorō, founder of the Kōdōkan, around 1892, aged thirty-two."
+     "es": "Yoshimatsu Yoshihiko e Itō Hideo en la final del Campeonato de Japón de judo de 1953, arbitrada por Mifune Kyūzō.",
+     "en": "Yoshimatsu Yoshihiko and Itō Hideo in the final of the 1953 All-Japan Judo Championships, refereed by Mifune Kyūzō."
     },
     "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
+     "es": "Asahi Shimbun",
+     "en": "Asahi Shimbun"
     },
-    "licencia": "CC BY-SA 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Kano-Jigoro-c1892.png"
+    "licencia": {
+     "es": "Dominio público",
+     "en": "Public domain"
+    },
+    "url": "https://commons.wikimedia.org/wiki/File:Yoshimatsu_Yoshihiko_and_Ito_Hideo_4.JPG"
    },
    "refs": [
     "Carr, K. G. (1999). Judo. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 207-209). Oxford University Press.",
@@ -6484,15 +6439,15 @@
    "img": {
     "src": "img/enc/karate.jpg",
     "pie": {
-     "es": "Funakoshi Gichin, introductor del kárate en Tokio, fotografiado en 1953.",
-     "en": "Funakoshi Gichin, who introduced karate to Tokyo, photographed in 1953."
+     "es": "Combate de kárate con protecciones en la Universidad Imperial de Tokio, 1929.",
+     "en": "Karate bout with protective gear at Tokyo Imperial University, 1929."
     },
-    "autor": "Funakoshi Gichin",
+    "autor": "Miki Jisaburō y Takada Mizuho",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Funakoshi_Gichin_in_1953.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Todai_kumite.jpg"
    },
    "refs": [
     "Bureau of Tokyo 2020 Olympic and Paralympic Games Preparation. (s. f.). *Karate*. Tokyo Metropolitan Government. Recuperado el 29 de septiembre de 2026 de https://www.2020games.metro.tokyo.lg.jp/eng/taikaijyunbi/taikai/syumoku/games-olympics/karate/index.html",
@@ -6632,18 +6587,12 @@
    "img": {
     "src": "img/enc/aikido.jpg",
     "pie": {
-     "es": "Retrato de Ueshiba Morihei, tenido por fundador del aikido, en 1939.",
-     "en": "Portrait of Ueshiba Morihei, regarded as the founder of aikido, in 1939."
+     "es": "Watahiki, séptimo dan, proyecta a su compañero en la 51.ª Demostración de Aikido de Japón, 2013.",
+     "en": "Watahiki, seventh dan, throws his partner at the 51st All Japan Aikido Demonstration, 2013."
     },
-    "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
-    },
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Morihei_Ueshiba_1939.jpg"
+    "autor": "L'oeil étranger",
+    "licencia": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:2013-05-25_51st_All_Japan_Aikido_Demonstration.jpg"
    },
    "refs": [
     "Guttmann, A., y Thompson, L. (2001). *Japanese sports: A history*. University of Hawai'i Press.",
@@ -6745,18 +6694,18 @@
    "img": {
     "src": "img/enc/jiu-jitsu-brasileno.jpg",
     "pie": {
-     "es": "Maeda Mitsuyo, judoca del Kōdōkan que enseñó en Brasil, hacia 1910.",
-     "en": "Maeda Mitsuyo, Kōdōkan judoka who taught in Brazil, around 1910."
+     "es": "Tareq Azim enseña una técnica de jiu-jitsu brasileño en el suelo en Camp Eggers (Kabul), 2011.",
+     "en": "Tareq Azim teaches a Brazilian jiu-jitsu ground technique at Camp Eggers (Kabul), 2011."
     },
     "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
+     "es": "NATO Training Mission-Afghanistan",
+     "en": "NATO Training Mission-Afghanistan"
     },
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Mitsuyo_Maeda_c1910.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Tareq_Azim_gives_Brazilian_Jiu-jitsu_instruction_to_Raj_Richardson.jpg"
    },
    "refs": [
     "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
@@ -7160,18 +7109,15 @@
    "img": {
     "src": "img/enc/charreria.jpg",
     "pie": {
-     "es": "Charro junto a su silla vaquera mexicana, fotografía de hacia 1895-1900.",
-     "en": "A *charro* standing beside his Mexican stock saddle, photograph from around 1895-1900."
+     "es": "*Enlazando al toro*, óleo de Ernesto Icaza (1925) con charros a caballo lazando un toro en el campo.",
+     "en": "*Enlazando al toro*, oil painting by Ernesto Icaza (1925) with mounted charros roping a bull in open country."
     },
-    "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
-    },
+    "autor": "Ernesto Icaza",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Charro_junto_a_silla_vaquera_mexicana_(ca._1900).jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Ernesto_icaza_enlazando_al_toro_101335).jpg"
    },
    "refs": [
     "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
@@ -7435,15 +7381,15 @@
    "img": {
     "src": "img/enc/pesca-deportiva.jpg",
     "pie": {
-     "es": "Portada de la primera edición de *The Compleat Angler*, de Izaak Walton (Londres, 1653).",
-     "en": "Title page of the first edition of Izaak Walton's *The Compleat Angler* (London, 1653)."
+     "es": "*A Party Angling*, óleo de George Morland (1789) con un grupo pescando con caña desde una barca.",
+     "en": "*A Party Angling*, oil painting by George Morland (1789) with a group fishing with rods from a boat."
     },
-    "autor": "Izaak Walton",
+    "autor": "George Morland",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:The_Compleat_Angler,_by_Izaak_Walton_(1653)_(title_page).jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:George_Morland_-_A_Party_Angling_-_Google_Art_Project.jpg"
    },
    "refs": [
     "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trad.). Yale University Press.",
@@ -7594,15 +7540,18 @@
    "img": {
     "src": "img/enc/saltos-de-esqui.jpg",
     "pie": {
-     "es": "Esquiadores y público en el concurso de Holmenkollen (Oslo), fotografía de Peter Elfelt, 1900.",
-     "en": "Skiers and spectators at the Holmenkollen meet (Oslo), photograph by Peter Elfelt, 1900."
+     "es": "Un soldado del batallón IV/93 del ejército suizo en pleno salto de esquí, fotografía de entre 1914 y 1918.",
+     "en": "A soldier of Swiss Army battalion IV/93 in mid ski jump, photograph taken between 1914 and 1918."
     },
-    "autor": "Peter Elfelt",
+    "autor": {
+     "es": "Autor anónimo",
+     "en": "Anonymous"
+    },
     "licencia": {
-     "es": "CC BY-SA 4.0",
-     "en": "CC BY-SA 4.0"
+     "es": "Dominio público",
+     "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Skil%C3%B8b_p%C3%A5_Holmenkollen,_1900.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Skispringen_-_CH-BAR_-_3237100.tif"
    },
    "refs": [
     "Allen, E. J. B. (2007). *The culture and sport of skiing: From antiquity to World War II*. University of Massachusetts Press.",
@@ -7698,15 +7647,15 @@
    "img": {
     "src": "img/enc/combinada-nordica.jpg",
     "pie": {
-     "es": "El noruego Thorleif Haug en los Juegos de Chamonix, fotografiado el 2 de febrero de 1924.",
-     "en": "Norway's Thorleif Haug at the Chamonix Games, photographed on 2 February 1924."
+     "es": "Hans Vinjarengen esquiando en los Juegos Olímpicos de invierno de St. Moritz, 1928.",
+     "en": "Hans Vinjarengen skiing at the St. Moritz Winter Olympics, 1928."
     },
-    "autor": "Agence Rol",
+    "autor": "Henriksen & Steen",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Haug_Thorleif_en_1924_%C3%A0_Chamonix.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Jeux_olympiques_d%27hiver_de_St-Moritz_1928_-_13_-_Hans_Vinjarengen.jpg"
    },
    "refs": [
     "Allen, E. J. B. (2007). *The culture and sport of skiing: From antiquity to World War II*. University of Massachusetts Press.",
@@ -7752,18 +7701,15 @@
    "img": {
     "src": "img/enc/telemark.jpg",
     "pie": {
-     "es": "Sondre Norheim, el esquiador de Morgedal (Telemark), en una fotografía de hacia 1880.",
-     "en": "Sondre Norheim, the skier from Morgedal (Telemark), in a photograph from around 1880."
+     "es": "Esquiador trazando un giro telemark en la nieve, fotografía de Arthur Wehrli, 1908.",
+     "en": "A skier making a telemark turn in the snow, photograph by Arthur Wehrli, 1908."
     },
-    "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
-    },
+    "autor": "Arthur Wehrli",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Sondre_Norheim.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:CH-NB_Photoglob-Wehrli_EAD-WEHR-14883-B.tif"
    },
    "refs": [
     "Allen, E. J. B. (2007). *The culture and sport of skiing: From antiquity to World War II*. University of Massachusetts Press.",
@@ -7855,15 +7801,12 @@
    "img": {
     "src": "img/enc/snowboard.jpg",
     "pie": {
-     "es": "Dibujo de la patente del Snurfer, presentada en 1966 a nombre de Sherman R. Poppen y cedida a Brunswick.",
-     "en": "Drawing from the Snurfer patent, filed in 1966 in the name of Sherman R. Poppen and assigned to Brunswick."
+     "es": "Primera manga de la final de halfpipe femenino de snowboard en los Juegos Olímpicos de la Juventud de Lausana, enero de 2020.",
+     "en": "First run of the women's snowboard halfpipe final at the Lausanne Youth Olympic Games, January 2020."
     },
-    "autor": "Sherman R. Poppen",
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Snurfer_patent_3378274_diagram_excerpt.png"
+    "autor": "Martin Rulsch",
+    "licencia": "CC BY-SA 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:2020-01-20_Snowboarding_at_the_2020_Winter_Youth_Olympics_%E2%80%93_Women%27s_Halfpipe_%E2%80%93_Final_%E2%80%93_1st_run_(Martin_Rulsch)_25.jpg"
    },
    "refs": [
     "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
@@ -8122,15 +8065,18 @@
    "img": {
     "src": "img/enc/skeleton.jpg",
     "pie": {
-     "es": "El Cresta Run de St. Moritz hacia 1907, con las curvas conocidas como Battledore y Shuttlecock, según *The Illustrated London News*.",
-     "en": "The Cresta Run at St. Moritz around 1907, showing the bends known as Battledore and Shuttlecock, from *The Illustrated London News*."
+     "es": "Un corredor desciende boca abajo sobre su trineo por el Cresta Run de St. Moritz, 1907.",
+     "en": "A rider descends head-first on his sled down the Cresta Run at St. Moritz, 1907."
     },
-    "autor": "Frederick Schröder",
+    "autor": {
+     "es": "Autor anónimo",
+     "en": "Anonymous"
+    },
     "licencia": {
-     "es": "CC BY 4.0",
-     "en": "CC BY 4.0"
+     "es": "Dominio público",
+     "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:1907_Cresta.tif"
+    "url": "https://commons.wikimedia.org/wiki/File:CH-NB_Photoglob-Wehrli_EAD-WEHR-14674-B.tif"
    },
    "refs": [
     "Cronin, M. (1999). Bobsledding. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 48-50). Oxford University Press.",
@@ -8498,8 +8444,8 @@
    "img": {
     "src": "img/enc/kushti.jpg",
     "pie": {
-     "es": "El luchador indio Gama, en una fotografía de 1910, el año de su viaje a Londres.",
-     "en": "The Indian wrestler Gama, in a 1910 photograph, the year of his journey to London."
+     "es": "Luchadores (*pahelwan*) ejercitándose por parejas en Hyderabad, hacia 1870.",
+     "en": "Wrestlers (*pahelwan*) training in pairs in Hyderabad, around 1870."
     },
     "autor": {
      "es": "Autor anónimo",
@@ -8509,7 +8455,7 @@
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:The_Indian_Wrestler_Gama.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Pahelwans_in_Hyderabad,_c_1870.jpg"
    },
    "refs": [
     "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
@@ -8720,18 +8666,18 @@
    "img": {
     "src": "img/enc/bokator.jpg",
     "pie": {
-     "es": "Boxeadores camboyanos hacia 1910, en una imagen publicada por Étienne Lunet de Lajonquière.",
-     "en": "Cambodian boxers around 1910, in an image published by Étienne Lunet de Lajonquière."
+     "es": "Combate de boxeo tradicional camboyano ante el público, fotografía fechada hacia 1920.",
+     "en": "Traditional Cambodian boxing bout before spectators, photograph dated around 1920."
     },
     "autor": {
-     "es": "Étienne Lunet de Lajonquière",
-     "en": "Étienne Lunet de Lajonquière"
+     "es": "Autor anónimo",
+     "en": "Anonymous"
     },
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Boxeurs_Cambodgiens_1910.png"
+    "url": "https://commons.wikimedia.org/wiki/File:Bokator_1920_(MMA).jpg"
    },
    "refs": [
     "Agence France-Presse. (2023, 11 de mayo). Nearly wiped out Cambodian martial art hits SEA Games. *Taipei Times*. Recuperado el 29 de septiembre de 2026 de https://www.taipeitimes.com/News/sport/archives/2023/05/11/2003799587",
@@ -8985,15 +8931,15 @@
    "img": {
     "src": "img/enc/sambo.jpg",
     "pie": {
-     "es": "Primer campamento de formación de entrenadores de sambo de los sindicatos de la Unión Soviética, celebrado en Malájovka (región de Moscú) en 1959.",
-     "en": "First training camp for sambo coaches of the Soviet trade unions, held at Malakhovka (Moscow region) in 1959."
+     "es": "Andrei Kazusionak y Ashot Danielyan en un combate de sambo de los Juegos Europeos de Bakú, 2015.",
+     "en": "Andrei Kazusionak and Ashot Danielyan in a sambo bout at the Baku European Games, 2015."
     },
-    "autor": "Vdilyin",
-    "licencia": {
-     "es": "CC BY-SA 4.0",
-     "en": "CC BY-SA 4.0"
+    "autor": {
+     "es": "Presidential Press and Information Office (Azerbaiyán)",
+     "en": "Presidential Press and Information Office (Azerbaijan)"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:The_first_of_camp_for_training_of_coachs_of_Sambo_(Trade_Unions_of_the_USSR),_1959_(Malakhovka,_Moscow_region)..jpg"
+    "licencia": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Sambo_at_the_2015_European_Games.jpg"
    },
    "refs": [
     "FIAS. (s. f.). *History*. International Sambo Federation. Recuperado el 29 de septiembre de 2026 de https://sambo.sport/en/fias/history/",
@@ -9035,15 +8981,15 @@
    "img": {
     "src": "img/enc/krav-maga.jpg",
     "pie": {
-     "es": "Placa conmemorativa de Imrich (Imi) Lichtenfeld en Bratislava, ciudad en la que creció y comenzó a enseñar defensa personal.",
-     "en": "Memorial plaque to Imrich (Imi) Lichtenfeld in Bratislava, the city where he grew up and began teaching self-defence."
+     "es": "Sesión de entrenamiento de krav maga dirigida por el instructor Alfonso Torregrossa, 2013.",
+     "en": "Krav maga training session led by instructor Alfonso Torregrossa, 2013."
     },
-    "autor": "Jan Polák",
+    "autor": "Ekmt",
     "licencia": {
      "es": "CC BY-SA 3.0",
      "en": "CC BY-SA 3.0"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Bratislava,_Imrich_Lichtenfeld,_pam%C4%9Btn%C3%AD_deska.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Krav_Maga_Training.JPG"
    },
    "refs": [
     "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
@@ -9139,15 +9085,15 @@
    "img": {
     "src": "img/enc/artes-marciales-mixtas.jpg",
     "pie": {
-     "es": "Retrato de Royce Gracie, practicante de jiu-jitsu brasileño, tomado al colodión húmedo por Shane Balkowitsch (2025).",
-     "en": "Portrait of Royce Gracie, Brazilian jiu-jitsu practitioner, taken in wet plate collodion by Shane Balkowitsch (2025)."
+     "es": "Combate entre Irlanda y México en el Campeonato del Mundo de la IMMAF celebrado en Baréin, 2022.",
+     "en": "Ireland v Mexico bout at the IMMAF World Championships held in Bahrain, 2022."
     },
-    "autor": "Shane Balkowitsch",
+    "autor": "Haribhagirath",
     "licencia": {
      "es": "CC BY 4.0",
      "en": "CC BY 4.0"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Royce_Gracie_Carrying_on_the_BJJ_Tradition_Wet_Plate_Collodion_by_Shane_Balkowitsch.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:IMMAF_World_Championships_held_in_the_Kingdom_of_Bahrain.jpg"
    },
    "refs": [
     "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
@@ -9567,12 +9513,15 @@
    "img": {
     "src": "img/enc/bokh.jpg",
     "pie": {
-     "es": "Luchadores de bökh posan antes del combate durante el Naadam.",
-     "en": "Bökh wrestlers pose before the bout during Naadam."
+     "es": "Combates de bökh durante el Naadam, cerca de Ulán Bator, 2005.",
+     "en": "Bökh bouts during the Naadam festival near Ulaanbaatar, 2005."
     },
-    "autor": "Orgio89",
-    "licencia": "CC BY-SA 3.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Mongolian_wrestling_Bukh_during_the_Naadam.jpg"
+    "autor": "Burumbátor",
+    "licencia": {
+     "es": "Dominio público",
+     "en": "Public domain"
+    },
+    "url": "https://commons.wikimedia.org/wiki/File:Mongolian_warriors.jpg"
    },
    "refs": [
     "UNESCO. (s. f.). *Naadam, Mongolian traditional festival*. Recuperado el 29 de septiembre de 2026 de https://ich.unesco.org/en/RL/naadam-mongolian-traditional-festival-00395",
@@ -9614,12 +9563,15 @@
    "img": {
     "src": "img/enc/lucha-libre-mexicana.jpg",
     "pie": {
-     "es": "Función de lucha libre en la Arena México, 2022.",
-     "en": "Lucha libre show at the Arena México, 2022."
+     "es": "Función de lucha libre en la Arena México, con un combate en el cuadrilátero, 2022.",
+     "en": "Lucha libre night at Arena México, with a bout in the ring, 2022."
     },
-    "autor": "Wotancito",
-    "licencia": "CC BY-SA 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Lucha_libre_Arena_M%C3%A9xico.jpg"
+    "autor": "Luis Alvaz",
+    "licencia": {
+     "es": "CC BY-SA 4.0",
+     "en": "CC BY-SA 4.0"
+    },
+    "url": "https://commons.wikimedia.org/wiki/File:Noche_de_lucha_libre_en_la_Arena_M%C3%A9xico_17.jpg"
    },
    "refs": [
     "Consejo Mundial de Lucha Libre. (s. f.). *Historia del CMLL*. Recuperado el 29 de septiembre de 2026 de https://cmll.com/historia/",
@@ -9678,18 +9630,18 @@
    "img": {
     "src": "img/enc/hipica.jpg",
     "pie": {
-     "es": "Equipo ruso de salto en los Juegos Olímpicos de Estocolmo, 1912, fotografía del informe oficial.",
-     "en": "Russian jumping team at the 1912 Stockholm Olympic Games, photograph from the official report."
+     "es": "El teniente conde G. Lewenhaupt salta un obstáculo en la prueba individual de saltos de los Juegos Olímpicos de Estocolmo, 1912.",
+     "en": "Lieutenant Count G. Lewenhaupt clears an obstacle in the individual jumping event at the 1912 Stockholm Olympics."
     },
     "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
+     "es": "Fotógrafo del COI",
+     "en": "IOC photographer"
     },
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Russian_jumping_team_1912_Olympics.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:1912OG-jumping-lewenhaupt.jpg"
    },
    "refs": [
     "FEI. (s. f.-a). *Celebrating 100 years of the FEI*. Recuperado el 29 de septiembre de 2026 de https://www.fei.org/stories/100-years/celebrating-100-years-fei",
@@ -9840,15 +9792,18 @@
    "img": {
     "src": "img/enc/mushing.jpg",
     "pie": {
-     "es": "El equipo ganador cruza la meta de la tercera All Alaska Sweepstakes, Nome, 1910.",
-     "en": "The winning team crosses the finish line of the third All Alaska Sweepstakes, Nome, 1910."
+     "es": "Un musher con once huskies siberianos en la carrera de trineos del Campeonato de Alemania, Frauenwald, 2012.",
+     "en": "A musher with eleven Siberian huskies in the German Championship sled dog race, Frauenwald, 2012."
     },
-    "autor": "Lomen Bros.",
+    "autor": {
+     "es": "Rainer Lippert (edición de Ritchyblack)",
+     "en": "Rainer Lippert (edited by Ritchyblack)"
+    },
     "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
+     "es": "CC0",
+     "en": "CC0"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Winner_crossing_the_finish_line_at_Third_All_Alaska_dogsled_sweepstakes,_All-Alaska_Sweepstakes,_Nome,_1910_(AL%2BCA_6206).jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Frauenwald,_Hundeschlittenrennen,_6.jpg"
    },
    "refs": [
     "Bureau of Land Management. (s. f.). *Iditarod National Historic Trail: Birth of sled dog racing*. Recuperado el 30 de septiembre de 2026 de https://www.blm.gov/sites/blm.gov/files/Programs_NLCS_Iditarod_Birth-of-Sled-Dog-Racing.pdf",
@@ -10160,15 +10115,15 @@
    "img": {
     "src": "img/enc/natacion-artistica.jpg",
     "pie": {
-     "es": "La nadadora australiana Annette Kellerman, pionera de los espectáculos acuáticos, a comienzos del siglo XX.",
-     "en": "The Australian swimmer Annette Kellerman, a pioneer of water shows, in the early twentieth century."
+     "es": "El equipo ruso de natación sincronizada, campeón del mundo, entrena para el Campeonato de Europa en Gran Canaria, 2007.",
+     "en": "The Russian world champion synchronised swimming team training for the European Championships in Gran Canaria, 2007."
     },
-    "autor": "Bain News Service",
+    "autor": "Jesus de Blas",
     "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
+     "es": "CC BY-SA 2.0",
+     "en": "CC BY-SA 2.0"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Annette_Kellerman1.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Synchronized_swimming_-_Russian_team.jpg"
    },
    "refs": [
     "Bean, D. (1999). Swimming, synchronized. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 385-386). Oxford University Press.",
@@ -10540,15 +10495,15 @@
    "img": {
     "src": "img/enc/rafting.jpg",
     "pie": {
-     "es": "Botes de expedición y una balsa neumática preparados para descender el Gran Cañón desde Lees Ferry (Arizona), julio de 1952.",
-     "en": "Expedition boats and an inflatable raft prepared to run the Grand Canyon from Lees Ferry (Arizona), July 1952."
+     "es": "Descenso de aguas bravas en balsa neumática, 2009.",
+     "en": "Whitewater rafting in an inflatable raft, 2009."
     },
-    "autor": "Steve Leding (Grand Canyon National Park)",
+    "autor": "Graeme Walker",
     "licencia": {
-     "es": "CC BY 2.0",
-     "en": "CC BY 2.0"
+     "es": "CC BY-SA 2.0",
+     "en": "CC BY-SA 2.0"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:02278_Grand_Canyon_Nat_Park_Historic_River_Photo_(7304882156).jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Whitewater_Rafting_-_geograph.org.uk_-_1530594.jpg"
    },
    "refs": [
     "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
@@ -10715,15 +10670,15 @@
    "img": {
     "src": "img/enc/kitesurf.jpg",
     "pie": {
-     "es": "Kitesurfistas en la playa de Kanaha, en Maui (Hawái), en 2004.",
-     "en": "Kitesurfers at Kanaha Beach, Maui (Hawaii), in 2004."
+     "es": "Un kitesurfista en pleno salto, 2017.",
+     "en": "A kitesurfer in mid-jump, 2017."
     },
-    "autor": "Forest y Kim Starr",
+    "autor": "Jernej Furman",
     "licencia": {
-     "es": "CC BY 3.0",
-     "en": "CC BY 3.0"
+     "es": "CC BY 2.0",
+     "en": "CC BY 2.0"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Starr_040411-0013_kitesurfers,_Kanaha_Beach,_Maui.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Kitesurfer_Jumping_High_In_The_Air_(46262593652).jpg"
    },
    "refs": [
     "IKSURFMAG. (s. f.). *Who invented kitesurfing?* Recuperado el 29 de septiembre de 2026 de https://www.iksurfmag.com/wiki/who-invented-kitesurfing/",
@@ -11152,18 +11107,15 @@
    "img": {
     "src": "img/enc/escalada.jpg",
     "pie": {
-     "es": "Owen Glynne Jones en el primer largo de Deep Ghyll (Scafell, Lake District), fotografía de los hermanos Abraham publicada en *Rock-climbing in the English Lake District*.",
-     "en": "Owen Glynne Jones on the first pitch of Deep Ghyll (Scafell, Lake District), photograph by the Abraham brothers published in *Rock-climbing in the English Lake District*."
+     "es": "Escalada deportiva en una vía equipada del risco de Shipley Upper, en las Montañas Azules (Australia), 2013.",
+     "en": "Sport climbing on a bolted route at the Shipley Upper crag, Blue Mountains (Australia), 2013."
     },
-    "autor": {
-     "es": "G. P. Abraham & Sons",
-     "en": "G. P. Abraham & Sons"
-    },
+    "autor": "Adam Kubalica",
     "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
+     "es": "CC BY 2.0",
+     "en": "CC BY 2.0"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Owen_Glynne_Jones_12.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Sport_Climb_Shipley_Upper_2.jpg"
    },
    "refs": [
     "Donnelly, P. (1999). Rock climbing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 325-327). Oxford University Press.",
@@ -11439,18 +11391,15 @@
    "img": {
     "src": "img/enc/barranquismo.jpg",
     "pie": {
-     "es": "Bastarás, en la sierra de Guara, fotografiado por Lucien Briet en 1908.",
-     "en": "Bastarás, in the Sierra de Guara, photographed by Lucien Briet in 1908."
+     "es": "Descenso de barrancos junto a una cascada en Sundarijal (Katmandú, Nepal), 2013.",
+     "en": "Canyoning beside a waterfall at Sundarijal (Kathmandu, Nepal), 2013."
     },
-    "autor": {
-     "es": "Lucien Briet",
-     "en": "Lucien Briet"
-    },
+    "autor": "Krish Dulal",
     "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
+     "es": "CC BY-SA 3.0",
+     "en": "CC BY-SA 3.0"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Bastar%C3%A1s_en_1908._Lucien_Briet.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Canyoning_NP.jpg"
    },
    "refs": [
     "Federación Canaria de Montañismo. (s. f.). *¿Qué es el barranquismo?* Recuperado el 29 de septiembre de 2026 de https://fecamon.es/barranquismo/",
@@ -11494,18 +11443,15 @@
    "img": {
     "src": "img/enc/espeleologia.jpg",
     "pie": {
-     "es": "Retrato de Édouard-Alfred Martel en 1895, el año en que fundó la Société de spéléologie.",
-     "en": "Portrait of Édouard-Alfred Martel in 1895, the year he founded the Société de spéléologie."
+     "es": "Un espeleólogo suspendido de una cuerda en Niggly Cave, 2022.",
+     "en": "A caver hanging on a rope in Niggly Cave, 2022."
     },
-    "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
-    },
+    "autor": "Cave Person 2",
     "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
+     "es": "CC BY-SA 4.0",
+     "en": "CC BY-SA 4.0"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:%C3%89douard-Alfred_Martel_(1895).jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Cave_explorer_in_Niggly_Cave.jpg"
    },
    "refs": [
     "Federació Catalana d'Espeleologia. (s. f.). *Font i Sagué*. Recuperado el 30 de septiembre de 2026 de https://www.espeleologia.cat/en/font-i-sague/",
@@ -11551,18 +11497,15 @@
    "img": {
     "src": "img/enc/ciclismo-de-montana.jpg",
     "pie": {
-     "es": "Gary Fisher, Charlie Kelly y Jacquie Phelan, pioneros del ciclismo de montaña, en el monte Tamalpais (California) en 1994.",
-     "en": "Mountain-bike pioneers Gary Fisher, Charlie Kelly and Jacquie Phelan on Mount Tamalpais (California) in 1994."
+     "es": "Adrien Niyonshuti (Ruanda) en la prueba masculina de campo a través de los Juegos Olímpicos de Londres, 2012.",
+     "en": "Adrien Niyonshuti (Rwanda) in the men's cross-country race at the London 2012 Olympics."
     },
-    "autor": {
-     "es": "Patty Mooney",
-     "en": "Patty Mooney"
-    },
+    "autor": "Tim Regan",
     "licencia": {
-     "es": "CC BY-SA 3.0",
-     "en": "CC BY-SA 3.0"
+     "es": "CC BY 2.0",
+     "en": "CC BY 2.0"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Gary_Fisher_Charlie_Kelly_Jacquie_Phelan_1994.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:MTB_cycling_2012_Olympics_M_cross-country_RWA_Adrien_Niyonshuti.jpg"
    },
    "refs": [
     "Breeze, J. (s. f.). *Repack history*. Marin Museum of Bicycling and Mountain Bike Hall of Fame. Recuperado el 30 de septiembre de 2026 de https://mmbhof.org/mtn-bike-hall-of-fame/history/repack-history/",
@@ -11958,15 +11901,15 @@
    "img": {
     "src": "img/enc/acrobacia-aerea.jpg",
     "pie": {
-     "es": "Adolphe Pégoud despega en su monoplano Blériot para hacer un rizo en Buc, cerca de París, en septiembre de 1913.",
-     "en": "Adolphe Pégoud takes off in his Blériot monoplane to loop the loop at Buc, near Paris, in September 1913."
+     "es": "Un Yakovlev Yak-52 en vuelo acrobático con estela de humo, 2017.",
+     "en": "A Yakovlev Yak-52 flying aerobatics with a smoke trail, 2017."
     },
-    "autor": "Agence de presse Meurisse",
+    "autor": "Anna Zvereva",
     "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
+     "es": "CC BY-SA 2.0",
+     "en": "CC BY-SA 2.0"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:P%C3%A9goud_partant_pour_un_looping_(21-9-)1913_(%C3%A0_Buc,_sur_monoplan_Bl%C3%A9riot)_-_btv1b532419391.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:The_First_Flight,_Yakovlev_Yak-52_(37183803376).jpg"
    },
    "refs": [
     "FAI. (s. f.). *Aerobatics*. Recuperado el 29 de septiembre de 2026 de https://www.fai.org/sport/aerobatics",
@@ -12012,15 +11955,18 @@
    "img": {
     "src": "img/enc/ciclismo-en-ruta.jpg",
     "pie": {
-     "es": "Maurice Garin en la salida de la primera etapa del primer Tour de Francia, Villeneuve-Saint-Georges, 1903.",
-     "en": "Maurice Garin at the start of the first stage of the first Tour de France, Villeneuve-Saint-Georges, 1903."
+     "es": "François Faber se abre paso entre los espectadores en la Côte de Picardie durante el Tour de Francia, 31 de julio de 1910.",
+     "en": "François Faber makes his way through the spectators on the Côte de Picardie during the Tour de France, 31 July 1910."
     },
-    "autor": "Jules Beau",
+    "autor": {
+     "es": "Agence Rol",
+     "en": "Agence Rol"
+    },
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Maurice_Garin_au_d%C3%A9part_de_la_premi%C3%A8re_%C3%A9tape_du_premier_Tour_de_France_(Villeneuve-Saint-Georges_1903).jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Tour_de_France_1910,_Fran%C3%A7ois_Faber_dans_la_C%C3%B4te_de_Picardie_(se_frayant_un_chemin_parmi_les_spectateurs,_31_juillet)_-_btv1b6914591x.jpg"
    },
    "refs": [
     "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
@@ -12070,15 +12016,18 @@
    "img": {
     "src": "img/enc/ciclismo-en-pista.jpg",
     "pie": {
-     "es": "La ciclista Mademoiselle Lefebvre en la salida en el velódromo Buffalo de París, 1896-1897.",
-     "en": "The racing cyclist Mademoiselle Lefebvre at the start at the Vélodrome Buffalo in Paris, 1896-1897."
+     "es": "Carrera tras tándems en el velódromo Buffalo de Montrouge, 29 de agosto de 1926.",
+     "en": "Race paced by tandems at the Buffalo velodrome in Montrouge, 29 August 1926."
     },
-    "autor": "Jules Beau",
+    "autor": {
+     "es": "Agence Rol",
+     "en": "Agence Rol"
+    },
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Racing_Cyclist_Mademoiselle_Lefebvre_on_Start_at_V%C3%A9lodrome_Buffalo_(cropped).jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:(V%C3%A9lodrome)_Buffalo,_29-8-26,_course_derri%C3%A8re_tandems_-_btv1b53167367h.jpg"
    },
    "refs": [
     "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
@@ -12187,18 +12136,15 @@
    "img": {
     "src": "img/enc/ciclismo-artistico.jpg",
     "pie": {
-     "es": "Compañía femenina de ciclismo artístico vinculada a Nicholas Edward Kaufmann, hacia 1890.",
-     "en": "Women's artistic cycling troupe associated with Nicholas Edward Kaufmann, around 1890."
+     "es": "Viola Brand en su ejercicio del Campeonato del Mundo de ciclismo artístico de la UCI, Basilea, 2019.",
+     "en": "Viola Brand performing her routine at the UCI artistic cycling World Championships, Basel, 2019."
     },
-    "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
-    },
+    "autor": "Nick Lange",
     "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
+     "es": "CC BY-SA 4.0",
+     "en": "CC BY-SA 4.0"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Kaufmann%27s_Cycling_Beauties.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Viola_Brand_Worldchampionship.jpg"
    },
    "refs": [
     "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
@@ -12358,12 +12304,15 @@
    "img": {
     "src": "img/enc/karting.jpg",
     "pie": {
-     "es": "Karl-Henrik Mattila pone a punto su kart, julio de 1969.",
-     "en": "Karl-Henrik Mattila tuning his go-kart, July 1969."
+     "es": "Carrera de karts en el circuito Waterfront de Karen, 2026.",
+     "en": "Kart race at the Waterfront circuit in Karen, 2026."
     },
-    "autor": "Museovirasto (Finnish Heritage Agency)",
-    "licencia": "CC BY 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Go-kart_as_hobby_1969_(JOKA%C3%96N3A_F44-1).tif"
+    "autor": "VickyOmondi",
+    "licencia": {
+     "es": "CC0",
+     "en": "CC0"
+    },
+    "url": "https://commons.wikimedia.org/wiki/File:Karting_Sports.jpg"
    },
    "refs": [
     "FIA. (s. f.). *Karting*. Recuperado el 29 de septiembre de 2026 de https://www.fia.com/events/karting/season-2024/karting",
@@ -12407,18 +12356,18 @@
    "img": {
     "src": "img/enc/motociclismo.jpg",
     "pie": {
-     "es": "Norton con motor Peugeot con la que Rem Fowler ganó en el Tourist Trophy de la isla de Man de 1907.",
-     "en": "Peugeot-engined Norton on which Rem Fowler won at the 1907 Isle of Man Tourist Trophy."
+     "es": "Carrera motociclista de 500 cc en Juan-les-Pins (Antibes), 8 de abril de 1928.",
+     "en": "500 cc motorcycle race at Juan-les-Pins (Antibes), 8 April 1928."
     },
     "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
+     "es": "Agence Rol",
+     "en": "Agence Rol"
     },
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Norton_TT_1907_01.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Juan-les-Pins,_8-4-28_(course_motocycliste)_Ardisson_sur_(motocyclette)_Terrot,_Oilter_sur_(motocyclette)_Motosacoche,_Delequizamon_sur_(motocyclette)_A.J.S.,_500_cm3_-_btv1b53197886q.jpg"
    },
    "refs": [
     "Bonini, G. (1999). Motorcycle racing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 260-262). Oxford University Press.",
@@ -12791,15 +12740,15 @@
    "img": {
     "src": "img/enc/boccia.jpg",
     "pie": {
-     "es": "Pistas de boccia en los Juegos Paralímpicos de Atlanta, 1996.",
-     "en": "Boccia courts at the 1996 Atlanta Paralympic Games."
+     "es": "Lanzamiento con canaleta en la competición de boccia de los Juegos Paralímpicos de París, 2024.",
+     "en": "A ramp throw in the boccia competition at the Paris 2024 Paralympic Games."
     },
-    "autor": "John Sherwell",
+    "autor": "Gail Leenstra",
     "licencia": {
-     "es": "CC BY-SA 3.0",
-     "en": "CC BY-SA 3.0"
+     "es": "CC BY-SA 4.0",
+     "en": "CC BY-SA 4.0"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Boccia_view_of_venue_at_the_1996_Paralympic_Games.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Boccia_at_the_2024_Summer_Paralympics_-_September_2.jpg"
    },
    "refs": [
     "Bailey, S. (2008). *Athlete first: A history of the Paralympic movement*. John Wiley & Sons.",
@@ -12849,15 +12798,15 @@
    "img": {
     "src": "img/enc/futbol-para-ciegos.jpg",
     "pie": {
-     "es": "Semifinal entre China y Brasil en el Campeonato del Mundo de fútbol para ciegos de la IBSA, Madrid, 2018.",
-     "en": "China against Brazil in a semi-final of the IBSA Blind Football World Championships, Madrid, 2018."
+     "es": "Partido de fútbol para ciegos entre Francia y Brasil en los Juegos Paralímpicos de París, 2024.",
+     "en": "France v Brazil blind football match at the Paris 2024 Paralympic Games."
     },
-    "autor": "Laura Hale",
+    "autor": "AlSepPhoenix",
     "licencia": {
-     "es": "CC BY-SA 4.0",
-     "en": "CC BY-SA 4.0"
+     "es": "CC BY 4.0",
+     "en": "CC BY 4.0"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:2018_IBSA_Blind_Football_Madrid_China_v_Brazil-1.JPG"
+    "url": "https://commons.wikimedia.org/wiki/File:2024_Summer_Paralympics_football_5-a-side,_France_v_Brazil_(21).jpg"
    },
    "refs": [
     "Hums, M. A., y Pate, J. R. (2018). The International Paralympic Committee as a governing body. En I. Brittain y A. Beacom (Eds.), *The Palgrave handbook of Paralympic studies* (pp. 173-196). Palgrave Macmillan.",
@@ -13257,12 +13206,15 @@
    "img": {
     "src": "img/enc/disc-golf.jpg",
     "pie": {
-     "es": "Cesta de disc golf en Rosedale Park, Auckland (Nueva Zelanda), 2024.",
-     "en": "Disc golf basket in Rosedale Park, Auckland (New Zealand), 2024."
+     "es": "Lanzamiento de disc golf en la playa de Yyteri (Finlandia) al atardecer, 2010.",
+     "en": "Disc golf throw at Yyteri beach (Finland) at sunset, 2010."
     },
-    "autor": "Bjankuloski06",
-    "licencia": "CC BY 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Disc_golf_basket,_Rosedale_Park.jpg"
+    "autor": "kallerna",
+    "licencia": {
+     "es": "CC BY-SA 3.0",
+     "en": "CC BY-SA 3.0"
+    },
+    "url": "https://commons.wikimedia.org/wiki/File:Disc_golf_Yyteri.jpg"
    },
    "refs": [
     "Professional Disc Golf Association. (s. f.). *History of disc golf and the PDGA*. Recuperado el 29 de septiembre de 2026 de https://www.pdga.com/history",
@@ -13777,12 +13729,18 @@
    "img": {
     "src": "img/enc/go.jpg",
     "pie": {
-     "es": "Estampa *surimono* de Kubo Shunman (periodo Edo) con un conjunto de objetos para el juego del go.",
-     "en": "*Surimono* print by Kubo Shunman (Edo period) showing an outfit for the game of Go."
+     "es": "Dama jugando al *weiqi* (go), fragmento de una pintura sobre seda de época Tang (hacia 744) hallada en las tumbas de Astana (Turfán, China).",
+     "en": "Lady playing *weiqi* (go), fragment of a Tang-dynasty silk painting (c. 744) found in the Astana tombs (Turpan, China)."
     },
-    "autor": "Kubo Shunman",
-    "licencia": "CC0",
-    "url": "https://commons.wikimedia.org/wiki/File:MET_DP135836.jpg"
+    "autor": {
+     "es": "Autor anónimo",
+     "en": "Anonymous"
+    },
+    "licencia": {
+     "es": "Dominio público",
+     "en": "Public domain"
+    },
+    "url": "https://commons.wikimedia.org/wiki/File:Anonymous-Astana_Graves_Wei_Qi_Player.jpg"
    },
    "refs": [
     "International Go Federation. (s. f.-a). *History of Go*. Recuperado el 29 de septiembre de 2026 de https://intergofed.org/history-of-go/",
@@ -13826,15 +13784,15 @@
    "img": {
     "src": "img/enc/bridge.jpg",
     "pie": {
-     "es": "Harold S. Vanderbilt, creador del bridge de contrato, en la portada de la revista *Time* del 15 de septiembre de 1930.",
-     "en": "Harold S. Vanderbilt, creator of contract bridge, on the cover of *Time* magazine, 15 September 1930."
+     "es": "Cuatro mujeres juegan una partida de bridge en Tallahassee (Florida), enero de 1954.",
+     "en": "Four women playing a game of bridge in Tallahassee, Florida, January 1954."
     },
-    "autor": "International",
+    "autor": "Tallahassee Democrat",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Harold_vanderbilt_time.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Women_playing_bridge_in_Tallahassee,_Florida.jpg"
    },
    "refs": [
     "English Bridge Union. (s. f.). *Origins and history of bridge*. Recuperado el 29 de septiembre de 2026 de https://www.ebu.co.uk/origins-and-history-bridge",
@@ -13927,15 +13885,12 @@
    "img": {
     "src": "img/enc/baile-deportivo.jpg",
     "pie": {
-     "es": "Baile de San Valentín y concurso de baile de salón en los Empress Rooms del Royal Palace Hotel de Londres, el 14 de febrero de 1921; en el centro, el profesor Santos Casani.",
-     "en": "St Valentine's dance and ballroom dancing competition in the Empress Rooms of the Royal Palace Hotel, London, 14 February 1921; in the centre, the teacher Santos Casani."
+     "es": "Una pareja compite en el campeonato del mundo de baile de salón celebrado en el Messuhalli de Helsinki, el 4 de marzo de 1948.",
+     "en": "A couple competing in the World Ballroom Dancing Championships at the Helsinki Fair Hall, 4 March 1948."
     },
-    "autor": "Morey (Topical Press Agency)",
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Santos_Casani_(1893-1983)_on_14_February_1921_at_the_Royal_Palace_Hotel_in_London.jpg"
+    "autor": "Hugo Sundström",
+    "licencia": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:World_Championships_in_Ballroom_dancing_1948_Helsinki_(867D;_JOKAHBL3C_I06-6).tif"
    },
    "refs": [
     "World DanceSport Federation. (s. f.-a). *History*. Recuperado el 29 de septiembre de 2026 de https://www.worlddancesport.org/wdsf/history",
@@ -13988,12 +13943,12 @@
    "img": {
     "src": "img/enc/esports.jpg",
     "pie": {
-     "es": "Los comentaristas Artosis y Tasteless narran para la retransmisión en inglés un torneo de *StarCraft* en el estudio de GOMTV de Seúl, en julio de 2011.",
-     "en": "Commentators Artosis and Tasteless calling a *StarCraft* tournament for the English-language stream at the GOMTV studio in Seoul, July 2011."
+     "es": "Un jugador compite ante su ordenador en el torneo Intel Extreme Masters de San José (California), noviembre de 2015.",
+     "en": "A player competing at his computer in the Intel Extreme Masters tournament in San Jose, California, November 2015."
     },
-    "autor": "Nick Pettit",
-    "licencia": "CC BY 2.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Artosis_and_Tasteless_at_2011_South_Korean_StarCraft_tournament_(6012884181).jpg"
+    "autor": "Kevin Chang for Team Liquid",
+    "licencia": "CC BY-SA 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:IEM_2015_San_Jose_Day_2_-_17.jpg"
    },
    "refs": [
     "Dixon, E. (2025, 30 de octubre). IOC scraps partnership with Saudi Arabia to host Olympic Esports Games. *SportsPro*. https://www.sportspro.com/news/esports-and-digital-sport/ioc-olympic-esports-games-saudi-arabia-partnership-cancelled-october-2025/",
@@ -14379,15 +14334,15 @@
    "img": {
     "src": "img/enc/bartitsu.jpg",
     "pie": {
-     "es": "Pierre Vigny, instructor de bastón del Bartitsu Club, en una fotografía publicada en *The Sketch* el 10 de abril de 1901.",
-     "en": "Pierre Vigny, stick instructor at the Bartitsu Club, in a photograph published in *The Sketch* on 10 April 1901."
+     "es": "Fotomontaje de ilustraciones de técnicas de defensa personal con bastón del bartitsu, con un retrato de Edward William Barton-Wright en el centro.",
+     "en": "Photomontage of illustrations of Bartitsu walking-stick self-defence techniques, with a portrait of Edward William Barton-Wright in the centre."
     },
-    "autor": "Hana Studios",
+    "autor": "Artful Dodger (English Wikipedia)",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Pierre_Vigny_(1866%E2%80%931943)_stick_fighting.png"
+    "url": "https://commons.wikimedia.org/wiki/File:Bartitsu_montage.jpg"
    },
    "refs": [
     "Budo Japan. (2021, 18 de noviembre). *«Bartitsu» The new art of self defence by E. W. Barton-Wright, part 2*. Recuperado el 29 de septiembre de 2026 de https://budojapan.com/feature-articles/20211118-2/",
@@ -14627,14 +14582,14 @@
    },
    "tema": [],
    "img": {
-    "src": "img/enc/wing-chun.jpg",
+    "src": "img/enc/wing-chun.png",
     "pie": {
-     "es": "Ip Man con sus alumnos y sus hijos Ip Chun e Ip Ching (Hong Kong, 1963).",
-     "en": "Ip Man with his students and his sons Ip Chun and Ip Ching (Hong Kong, 1963)."
+     "es": "Sean Mann practica el *chi sau* (manos pegajosas), ejercicio característico del wing chun, con Ip Chun, hijo de Ip Man, en 2017.",
+     "en": "Sean Mann practising *chi sau* (sticky hands), the characteristic Wing Chun drill, with Ip Chun, son of Ip Man, in 2017."
     },
-    "autor": "Wing Chun Athletic Association",
+    "autor": "Mannsifu",
     "licencia": "CC BY-SA 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:IpMan70.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Wing_Chun_Sifu_Sean_Mann_playing_Chi_Sau_With_Grand_Master_Ip_Chun_-_Copy.png"
    },
    "refs": [
     "Judkins, B. N. (2019, 29 de septiembre). The history and global transmission of Wing Chun (in less than five thousand words). *Kung Fu Tea*. Recuperado el 29 de septiembre de 2026 de https://chinesemartialstudies.com/2019/09/29/the-history-and-global-transmission-of-wing-chun-in-less-than-five-thousand-words/",
@@ -14901,8 +14856,8 @@
    "img": {
     "src": "img/enc/palio-de-siena.jpg",
     "pie": {
-     "es": "Palio corrido en la Piazza del Campo el 17 de abril de 1904 en honor del rey Víctor Manuel III, que lo presenció desde los balcones del Circolo degli Uniti.",
-     "en": "Palio run in the Piazza del Campo on 17 April 1904 in honour of King Victor Emmanuel III, who watched it from the balconies of the Circolo degli Uniti."
+     "es": "Vista general de la plaza de Siena (hoy Piazza del Campo) durante la carrera del Palio, con los caballos en la pista y la multitud en el centro; xilografía de 1888.",
+     "en": "General view of the main square of Siena (today Piazza del Campo) during the Palio race, with the horses on the track and the crowd in the centre; woodcut, 1888."
     },
     "autor": {
      "es": "Autor anónimo",
@@ -14912,7 +14867,7 @@
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:S.M._Vittorio_Emanuele_III_assiste_al_Palio_dal_Circolo_degli_Uniti_17_Aprile_1904.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Siena,_veduta_generale_della_Piazza_Vittorio_Emanuele_nel_momento_delle_corse_(xilografia).jpg"
    },
    "refs": [
     "Baker, W. J. (1999). Religion. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 317-322). Oxford University Press.",
@@ -15633,14 +15588,17 @@
    },
    "tema": [],
    "img": {
-    "src": "img/enc/fives.jpg",
+    "src": "img/enc/fives.png",
     "pie": {
-     "es": "Pista de Eton fives al aire libre en High Elms Country Park (Farnborough, Kent).",
-     "en": "Open-air Eton fives court at High Elms Country Park (Farnborough, Kent)."
+     "es": "Muchachos jugando al *fives* contra una pared, grabado de *A Little Pretty Pocket-Book*, libro infantil de juegos en la edición de Isaiah Thomas.",
+     "en": "Boys playing fives against a wall, woodcut from *A Little Pretty Pocket-Book*, a children's book of games, in Isaiah Thomas's edition."
     },
-    "autor": "Ethan Doyle White",
-    "licencia": "CC BY-SA 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:The_Eton_Fives_Court_at_High_Elms_Country_Park.jpg"
+    "autor": "Isaiah Thomas",
+    "licencia": {
+     "es": "Dominio público",
+     "en": "Public domain"
+    },
+    "url": "https://commons.wikimedia.org/wiki/File:ALPP_-_Fives.png"
    },
    "refs": [
     "Chandler, T. J. L. (1999). Rugby fives. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (p. 332). Oxford University Press.",
@@ -16697,15 +16655,15 @@
    "img": {
     "src": "img/enc/chunkey.jpg",
     "pie": {
-     "es": "Estatuilla de arcilla de un jugador de chunkey con el disco en la mano, elaborada probablemente en Cahokia o sus inmediaciones y hallada en el condado de Muskogee (Oklahoma), Centro de Ciencias de San Luis.",
-     "en": "Flint clay figurine of a chunkey player holding the disk, probably made at or near Cahokia and found in Muskogee County (Oklahoma), St. Louis Science Center."
+     "es": "*Tchung-kee, juego mandan con aro y pértiga*, óleo de George Catlin (1832-1833); dos jugadores corren lanzando sus pértigas tras el disco ante un grupo de espectadores. Smithsonian American Art Museum.",
+     "en": "*Tchung-kee, a Mandan Game Played with a Ring and Pole*, oil by George Catlin (1832-1833); two players run and throw their poles after the rolling disc before a group of onlookers. Smithsonian American Art Museum."
     },
-    "autor": "TimVickers",
+    "autor": "George Catlin",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Chunkey_player_figurine.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:George_Catlin_-_Tchung-kee,_a_Mandan_Game_Played_with_a_Ring_and_Pole_-_1985.66.431_-_Smithsonian_American_Art_Museum.jpg"
    },
    "refs": [
     "Zych, T. J. (2017). Chunkey and the historic experience in the Mississippian world. En B. Voorhies (Ed.), *Prehistoric games of North American Indians: Subarctic to Mesoamerica* (pp. 63-86). University of Utah Press."
@@ -16968,15 +16926,15 @@
    "img": {
     "src": "img/enc/tahtib.jpg",
     "pie": {
-     "es": "Corro de *tahtib* durante el *mawlid* de al-Ashi en Luxor (2025), con un jugador apoyado en su bastón en primer plano y el público alrededor del terreno de juego.",
-     "en": "*Tahtib* circle during the *mawlid* of al-Ashi in Luxor (2025), with a player leaning on his stick in the foreground and spectators around the playing ground."
+     "es": "Dos jugadores se enfrentan con sus bastones en un corro de *tahtib* durante el *mawlid* de al-Ashi en Luxor, febrero de 2025, rodeados por el público.",
+     "en": "Two players face each other with their sticks in a *tahtib* ring during the *mawlid* of al-Ashi in Luxor, February 2025, surrounded by spectators."
     },
     "autor": "ولاء",
     "licencia": {
-     "es": "CC BY-SA 4.0",
-     "en": "CC BY-SA 4.0"
+     "es": "Dominio público",
+     "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Tahtib,_Mawlid_Al-Ashi,_Luxor_01.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Tahtib,_Mawlid_Al-Ashi,_Luxor_10.jpg"
    },
    "refs": [
     "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trad.). Yale University Press.",
@@ -17116,15 +17074,12 @@
    "img": {
     "src": "img/enc/lucha-con-palos-nguni.jpg",
     "pie": {
-     "es": "«Método zulú de avanzar al ataque», grabado publicado en *The Illustrated London News* el 19 de abril de 1879 y reproducido por D. C. F. Moodie en 1888, con guerreros zulúes armados y protegidos por escudos de piel.",
-     "en": "\"Zulu method of advancing to the attack\", engraving published in *The Illustrated London News* on 19 April 1879 and reproduced by D. C. F. Moodie in 1888, showing armed Zulu warriors behind hide shields."
+     "es": "Dos hombres se enfrentan con palos y escudos en una exhibición de lucha con palos en el poblado cultural de Lesedi (Hartbeespoort, Sudáfrica), julio de 2015.",
+     "en": "Two men face each other with sticks and shields in a stick-fighting display at Lesedi Cultural Village (Hartbeespoort, South Africa), July 2015."
     },
-    "autor": "The Illustrated London News (reproducido por D. C. F. Moodie)",
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:The_history_of_the_battles_and_adventures_of_the_British,_the_Boers,_and_the_Zulus,_etc._in_Southern_Africa,_from_the_time_of_Pharaoh_Necho,_to_1888_(1888)_(14584488607).jpg"
+    "autor": "South African Tourism",
+    "licencia": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Lesedi_Cultural_Village,_Hartbeespoort,_North_West,_South_Africa_(20517297875).jpg"
    },
    "refs": [
     "Baker, W. J. (1999). Traditional sports, Africa. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 407-409). Oxford University Press.",
@@ -17714,18 +17669,15 @@
    "img": {
     "src": "img/enc/holua.jpg",
     "pie": {
-     "es": "Fotografía antigua de un hombre con un trineo de *hōlua* (*papa hōlua*).",
-     "en": "Old photograph of a man with a *hōlua* sled (*papa hōlua*)."
+     "es": "Dibujo de Herb Kawainui Kāne que muestra la salida de un descenso en *hōlua*: el deslizador toma carrerilla con el trineo y se lanza boca abajo sobre él por la pista.",
+     "en": "Drawing by Herb Kawainui Kāne showing the start of a *hōlua* run: the rider sprints with the sled and throws himself face down on it onto the slide."
     },
-    "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
-    },
+    "autor": "Herb Kawainui Kāne",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Holua_man.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Holua_form.jpg"
    },
    "refs": [
     "Howell, R. (1999). Traditional sports, Oceania. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 417-420). Oxford University Press.",
@@ -17769,18 +17721,18 @@
    "img": {
     "src": "img/enc/lua.jpg",
     "pie": {
-     "es": "Kamehameha I y sus guerreros hacia 1820, dibujo de Émile Bayard realizado hacia 1863-1866 a partir de documentos de la época.",
-     "en": "Kamehameha I and his warriors around 1820, drawing by Émile Bayard made around 1863-1866 from period documents."
+     "es": "Dos hombres hawaianos practican *lua*, fotografía de finales del siglo XIX.",
+     "en": "Two Hawaiian men practising *lua*, late nineteenth-century photograph."
     },
     "autor": {
-     "es": "Émile Bayard",
-     "en": "Émile Bayard"
+     "es": "Autor anónimo",
+     "en": "Anonymous"
     },
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Hava%C3%AFens_en_1870_-_Kam%C3%A9ham%C3%A9ha_Ier,_ses_guerriers._Dessin_d%27%C3%89mile_Bayard,_d%27apr%C3%A8s_des_documents_communiqu%C3%A9s_par_l%27auteur.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Hawaiian_lua_(1899).jpg"
    },
    "refs": [
     "Howell, R. (1999). Traditional sports, Oceania. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 417-420). Oxford University Press.",
@@ -17879,15 +17831,12 @@
    "img": {
     "src": "img/enc/peleas-de-cometas.jpg",
     "pie": {
-     "es": "Cometas tailandesas, algunas en forma de estrella y otras de pájaro, atadas a postes en la explanada de Sanam Luang (Bangkok), escenario tradicional de los combates de cometas, hacia 1963.",
-     "en": "Thai kites, some star-shaped and others bird-shaped, tied to poles on the Sanam Luang grounds (Bangkok), traditional venue of kite fights, around 1963."
+     "es": "Un muchacho afgano hace volar su cometa en la competición de cometas de Senjaray (Afganistán), enero de 2010.",
+     "en": "An Afghan boy flies his kite at the Senjaray kite-flying competition, Afghanistan, January 2010."
     },
-    "autor": {
-     "es": "Sherwin John Carlquist",
-     "en": "Sherwin John Carlquist"
-    },
-    "licencia": "CC BY 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:(Kites_at_Sanam_Luang,_Thailand)_-_DPLA_-_09c78e6098090f585ebbf79c641f64b0.jpg"
+    "autor": "NATO Training Mission-Afghanistan",
+    "licencia": "CC BY-SA 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:DSC_5966-1_(6781703163).jpg"
    },
    "refs": [
     "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
@@ -18040,18 +17989,15 @@
    "img": {
     "src": "img/enc/ekiden.jpg",
     "pie": {
-     "es": "El equipo de la Escuela Normal Superior de Tokio, ganador del primer Hakone Ekiden, febrero de 1920.",
-     "en": "The Tokyo Higher Normal School team, winners of the first Hakone Ekiden, February 1920."
+     "es": "Zensaku Mogi, de la Escuela Normal Superior de Tokio, cruza la meta del primer Hakone Ekiden, 15 de febrero de 1920 (fotografía del diario *Hōchi Shimbun*).",
+     "en": "Zensaku Mogi, of Tokyo Higher Normal School, crosses the finish line of the first Hakone Ekiden, 15 February 1920 (photograph from the *Hōchi Shimbun* newspaper)."
     },
-    "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
-    },
+    "autor": "{\"es\":\"Hōchi Shimbun\",\"en\":\"Hōchi Shimbun\"}",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:First_Hakone_Winners,_Tokyo_Higher_Normal_School.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Last_scene_of_the_1st_Hakone_Ekiden,_MOGI_Zensaku.jpg"
    },
    "refs": [
     "Guttmann, A., y Thompson, L. (2001). *Japanese sports: A history*. University of Hawai'i Press.",
@@ -18195,15 +18141,12 @@
    "img": {
     "src": "img/enc/er-enish.jpg",
     "pie": {
-     "es": "Sello de Kirguistán de la serie de juegos nacionales dedicado al *oodarysh* (derribo), la lucha a caballo, 2008.",
-     "en": "Kyrgyz stamp from the national games series devoted to *oodarysh* (overthrow), horseback wrestling, 2008."
+     "es": "Dos jinetes luchan a caballo, cada uno intentando derribar al otro de la montura, en los Juegos Nacionales del Caballo celebrados junto al pico Lenin (Kirguistán), 2015.",
+     "en": "Two riders wrestle on horseback, each trying to pull the other from the saddle, at the National Horse Games held near Lenin Peak (Kyrgyzstan), 2015."
     },
-    "autor": "Post of Kyrgyzstan",
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Stamp_of_Kyrgyzstan_oodarysh.jpg"
+    "autor": "Theklan",
+    "licencia": "CC BY-SA 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Horseback_wrestlers_in_Kyrgyzstan.jpg"
    },
    "refs": [
     "Eichberg, H. (1999). Volkssport. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 433-436). Oxford University Press.",
@@ -18428,15 +18371,12 @@
    "img": {
     "src": "img/enc/tejo.jpg",
     "pie": {
-     "es": "Canchas de tejo construidas en Turmequé (Boyacá), localidad que dio nombre al juego.",
-     "en": "Tejo pitches built in Turmequé (Boyacá), the town that gave the game its name."
+     "es": "Un jugador lanza el tejo hacia la cancha de arcilla en un local de Bogotá (Colombia), 2007.",
+     "en": "A player throws the tejo towards the clay pitch at a venue in Bogotá (Colombia), 2007."
     },
-    "autor": "Hug0Pa0",
-    "licencia": {
-     "es": "CC0",
-     "en": "CC0"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Cancha_de_Tejo_en_Turmeque.jpg"
+    "autor": "Matt Zimmerman",
+    "licencia": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Tejo_in_Bogota.jpg"
    },
    "refs": [
     "Abello Rodríguez, G. (2013). El juego de tejo ¿Un símbolo nacional o un proyecto inconcluso? *Historia y Memoria*, (7), 169-198. https://doi.org/10.19053/20275137.2196",
@@ -18688,15 +18628,15 @@
    "img": {
     "src": "img/enc/juegos-inuit.jpg",
     "pie": {
-     "es": "Iñupiat (tareumiut) reunidos en la playa de Barrow (Alaska) para contemplar un manteo, fotografía de los hermanos Lomen (h. 1908-1915).",
-     "en": "Iñupiat (Tareumiut) gathered on the beach at Barrow (Alaska) to watch a blanket toss, photograph by the Lomen Brothers (c. 1908-1915)."
+     "es": "Manteo (*nalukataq*) sobre una piel de morsa en Nome (Alaska): un saltador en el aire por encima del grupo que sostiene la piel, fotografía de los hermanos Lomen (h. 1913-1923).",
+     "en": "Blanket toss (*nalukataq*) on a walrus skin at Nome (Alaska): a jumper in mid-air above the group holding the skin, photograph by the Lomen Brothers (c. 1913-1923)."
     },
     "autor": "Lomen Bros.",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Tareumiut_Eskimos_gathered_on_the_beach_watching_a_blanket_toss_at_Barrow,_Alaska,_circa_1908-1915_(AL%2BCA_6446).jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Nalakatuk,_or_blanket_toss_using_a_walrus_skin_trampoline,_Nome,_Alaska,_between_1913_and_1923_(AL%2BCA_1283).jpg"
    },
    "refs": [
     "Filice, M. (2024). Arctic Winter Games. En *The Canadian Encyclopedia*. Historica Canada. Recuperado el 30 de septiembre de 2026 de https://www.thecanadianencyclopedia.ca/en/article/arctic-winter-games",
@@ -19003,15 +18943,12 @@
    "img": {
     "src": "img/enc/molkky.jpg",
     "pie": {
-     "es": "Bolos numerados y palo de lanzamiento del mölkky.",
-     "en": "Numbered pins and throwing stick of mölkky."
+     "es": "Un jugador lanza el palo contra los bolos numerados en el Open de France de mölkky, Nantes, junio de 2025.",
+     "en": "A player throws the stick at the numbered pins at the French Mölkky Open, Nantes, June 2025."
     },
-    "autor": "YOUFACTORY",
-    "licencia": {
-     "es": "CC BY-SA 2.0",
-     "en": "CC BY-SA 2.0"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:M%C3%B6lkky_pins.jpg"
+    "autor": "François de Dijon",
+    "licencia": "CC BY-SA 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:M%C3%B6lkky_-_Open_de_France_2025_-_07.jpg"
    },
    "refs": [
     "International Mölkky Organisation. (s. f.). *World championships*. Recuperado el 30 de septiembre de 2026 de https://www.international-molkky.org/world-championships",
@@ -19112,15 +19049,12 @@
    "img": {
     "src": "img/enc/irish-road-bowling.jpg",
     "pie": {
-     "es": "Señal que advierte a los conductores de una partida de *road bowls* en la carretera de Cullyhanna, en el condado de Armagh (2019).",
-     "en": "Sign warning drivers of a game of road bowls in progress on the Cullyhanna Road, County Armagh (2019)."
+     "es": "Partida de *road bowling* en curso sobre la carretera de Lower Killeens, con jugadores y seguidores a lo largo del camino, 23 de noviembre de 2008.",
+     "en": "A road bowling match in progress on the Lower Killeens Road, with players and followers along the road, 23 November 2008."
     },
-    "autor": "Eric Jones",
-    "licencia": {
-     "es": "CC BY-SA 2.0",
-     "en": "CC BY-SA 2.0"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:%22Caution_Road_Bowls_in_Progress%22_warning_sign_on_the_Cullyhanna_Road_-_geograph.org.uk_-_6239744.jpg"
+    "autor": "Kevin Higgins",
+    "licencia": "CC BY-SA 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Road_Bowling_-_geograph.org.uk_-_1057461.jpg"
    },
    "refs": [
     "Ask About Ireland. (s. f.-a). *Early history* [Road bowling]. Recuperado el 30 de septiembre de 2026 de https://www.askaboutireland.ie/reading-room/sports-recreation/sport/road-bowling/early-history/",
@@ -19363,12 +19297,12 @@
    "img": {
     "src": "img/enc/slamball.jpg",
     "pie": {
-     "es": "El jugador Adam Hooker en un partido de SlamBall, 2003.",
-     "en": "Player Adam Hooker in a SlamBall game, 2003."
+     "es": "Corey Beezhold e Ivan Lattimore se disputan el balón en el aire, sobre la canasta, en un partido de la temporada 2008 de SlamBall.",
+     "en": "Corey Beezhold and Ivan Lattimore contest the ball in mid-air above the basket in a game of the 2008 SlamBall season."
     },
-    "autor": "Patrick Ecclesine",
+    "autor": "Gotoenter (Wikipedia en inglés)",
     "licencia": "CC BY 3.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Adam_Hooker_in_2003.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Corey_vs_Ivan_in_2008.jpg"
    },
    "refs": [
     "SlamBall: Everything to know about its TV return, rules and format. (2023). *Sportico*. Recuperado el 30 de septiembre de 2026 de https://www.sportico.com/leagues/other-sports/2023/slamball-rules-teams-format-tv-tickets-1234731244/",
@@ -19666,12 +19600,15 @@
    "img": {
     "src": "img/enc/carrera-de-esposas.jpg",
     "pie": {
-     "es": "Entrega de premios del Campeonato del Mundo de carrera cargando con la esposa en Sonkajärvi (Finlandia), 2016.",
-     "en": "Awards ceremony of the Wife Carrying World Championships at Sonkajärvi (Finland), 2016."
+     "es": "Tres parejas corren en una carrera de maridos que cargan con sus esposas sobre la espalda, en la base aérea de Malmstrom (Montana, Estados Unidos), 26 de agosto de 2011.",
+     "en": "Three couples race with the husbands carrying their wives on their backs, at Malmstrom Air Force Base (Montana, United States), 26 August 2011."
     },
-    "autor": "Sagaldg333",
-    "licencia": "CC BY-SA 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Awards_ceremony_of_The_Wife_Carrying_World_Championships.jpg"
+    "autor": "{\"es\":\"Cortney Paxton (Fuerza Aérea de los Estados Unidos)\",\"en\":\"Cortney Paxton (U.S. Air Force)\"}",
+    "licencia": {
+     "es": "Dominio público",
+     "en": "Public domain"
+    },
+    "url": "https://commons.wikimedia.org/wiki/File:Malmstrom_wife_carry.JPG"
    },
    "refs": [
     "Mouriquand, D. (4 de julio de 2025). Everything you need to know about the Wife-Carrying World Championship in Finland. *Euronews*. Recuperado el 30 de septiembre de 2026 de https://www.euronews.com/2025/07/04/everything-you-need-to-know-about-the-wife-carrying-world-championship-in-finland",
@@ -19754,18 +19691,12 @@
    "img": {
     "src": "img/enc/patadas-en-la-espinilla.jpg",
     "pie": {
-     "es": "Grabado de los Juegos de Cotswold publicado en 1636 como portada de *Annalia Dubrensia*, con Robert Dover a caballo.",
-     "en": "Woodcut of the Cotswold Games published in 1636 as the frontispiece of *Annalia Dubrensia*, with Robert Dover on horseback."
+     "es": "Dos contendientes, con blusones blancos, se agarran y se patean las espinillas para derribarse en los Cotswold Olimpick Games de Dover's Hill, 2007.",
+     "en": "Two contestants, in white smocks, grip each other and kick at each other's shins to bring the opponent down at the Cotswold Olimpick Games on Dover's Hill, 2007."
     },
-    "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
-    },
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:CotswoldGames01.jpg"
+    "autor": "David Stowell",
+    "licencia": "CC BY-SA 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Shin_kicking_at_the_Olimpicks.jpg"
    },
    "refs": [
     "McClelland, J. (2007). *Body and mind: Sport in Europe from the Roman Empire to the Renaissance*. Routledge.",
@@ -19887,12 +19818,12 @@
    "img": {
     "src": "img/enc/lanzamiento-de-piedras-al-agua.jpg",
     "pie": {
-     "es": "Una de las canteras de pizarra inundadas de la isla de Easdale (Escocia).",
-     "en": "One of the flooded slate quarries on Easdale Island (Scotland)."
+     "es": "Un participante lanza una piedra plana para hacerla rebotar sobre el agua en el campeonato de lanzamiento de piedras de Bishop's Castle (Inglaterra), 26 de junio de 2011.",
+     "en": "A competitor throws a flat stone to make it skip across the water at the Bishop's Castle Stone Skimming Championship (England), 26 June 2011."
     },
-    "autor": "Eileen Henderson",
+    "autor": "Penny Mayes",
     "licencia": "CC BY-SA 2.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Flooded_slate_quarry_on_Easdale_-_geograph.org.uk_-_140356.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Bishop%27s_Castle_Stone_Skimming_Championship_-_competitor_-_geograph.org.uk_-_2491622.jpg"
    },
    "refs": [
     "World Stone Skimming Championships. (s. f.). *About*. Recuperado el 30 de septiembre de 2026 de https://www.stoneskimming.com/about/"
@@ -20210,15 +20141,12 @@
    "img": {
     "src": "img/enc/apnea.jpg",
     "pie": {
-     "es": "Enzo Maiorca prepara en Sorrento un intento de récord mundial de inmersión en apnea a 90 metros, 21 de septiembre de 1974.",
-     "en": "Enzo Maiorca in Sorrento preparing an attempt at the world freediving record at 90 metres, 21 September 1974."
+     "es": "Una apneísta con monoaleta avanza bajo el agua en la segunda Great Camberwell Breath Hold Freediving Competition, Londres, 31 de mayo de 2009.",
+     "en": "A monofin freediver swims underwater at the 2nd Great Camberwell Breath Hold Freediving Competition, London, 31 May 2009."
     },
-    "autor": "ANSA",
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Enzo_Maiorca_(Sorrento,_1974).jpg"
+    "autor": "Jayhem",
+    "licencia": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Freediving_competition_Flying_Girl_(3618500018).jpg"
    },
    "refs": [
     "AIDA International. (s. f.). *About*. Recuperado el 30 de septiembre de 2026 de https://www.aidainternational.org/about",
@@ -20547,15 +20475,12 @@
    "img": {
     "src": "img/enc/ultramaraton.jpg",
     "pie": {
-     "es": "El pedestrista británico Charles Rowell, figura de las carreras de varios días del siglo XIX, en una litografía de Currier & Ives.",
-     "en": "The British pedestrian Charles Rowell, a leading figure in the multi-day races of the nineteenth century, in a Currier & Ives lithograph."
+     "es": "Leonid Shvetsov corre a su paso por Botha's Hill en la Comrades Marathon de 2012 (Sudáfrica), en la que terminó quinto.",
+     "en": "Leonid Shvetsov running past Botha's Hill in the 2012 Comrades Marathon (South Africa), in which he finished fifth."
     },
-    "autor": "Currier & Ives",
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Celebrated_pedestrian_Charles_Rowell.jpg"
+    "autor": "NRJ",
+    "licencia": "CC BY-SA 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Leonid_Shvetsov,_2012_Comrades.jpg"
    },
    "refs": [
     "Bedkowski, J. (2024, 18 de abril). *Beyond the marathon: The early years of IAU*. International Association of Ultrarunners. Recuperado el 30 de septiembre de 2026 de https://iau-ultramarathon.org/beyond-the-marathon-the-early-years-of-iau.html",
@@ -20839,12 +20764,12 @@
    "img": {
     "src": "img/enc/equitacion-de-trabajo.jpg",
     "pie": {
-     "es": "Silla vaquera andaluza, uno de los arreos tradicionales que los jinetes conservan en la equitación de trabajo.",
-     "en": "Andalusian vaquero saddle, one of the traditional pieces of tack that riders retain in working equitation."
+     "es": "Un jinete supera un obstáculo en una prueba de velocidad a caballo celebrada en la feria Fatacil de Lagoa (Algarve, Portugal), 26 de agosto de 2007.",
+     "en": "A rider clears an obstacle in a timed horse trial held at the Fatacil fair in Lagoa (Algarve, Portugal), 26 August 2007."
     },
-    "autor": "Jebulon",
-    "licencia": "CC0",
-    "url": "https://commons.wikimedia.org/wiki/File:Andalusian_vaquero_saddle.jpg"
+    "autor": "Glen Bowman",
+    "licencia": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Horse_time_trials_-_Fatacil_Agriculture_and_Tourism_Fair_-_Lagoa_-_The_Algarve,_Portugal_(1470299922).jpg"
    },
    "refs": [
     "Real Federación Hípica Española. (s. f.). *Equitación de trabajo*. Recuperado el 30 de septiembre de 2026 de https://rfhe.com/equitacion-de-trabajo/",
@@ -21002,18 +20927,12 @@
    "img": {
     "src": "img/enc/ciclocros.jpg",
     "pie": {
-     "es": "Eugène Christophe, vencedor del campeonato de Francia de *cross cyclo-pédestre* del 19 de marzo de 1911.",
-     "en": "Eugène Christophe, winner of the French *cross cyclo-pédestre* championship on 19 March 1911."
+     "es": "Un corredor empuja la bicicleta por un tramo embarrado del circuito en el Campeonato del Mundo de Ciclocrós Máster de la UCI, 1 de diciembre de 2024.",
+     "en": "A rider pushes his bicycle through a muddy section of the course at the UCI Masters Cyclo-cross World Championships, 1 December 2024."
     },
-    "autor": {
-     "es": "Agence Rol",
-     "en": "Agence Rol"
-    },
-    "licencia": {
-     "es": "Dominio público",
-     "en": "Public domain"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:Eugene_Christophe_Cyclo_Cross_1911.jpg"
+    "autor": "Tim Rademacher",
+    "licencia": "CC BY-SA 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:2024-12-01_105549_UCI_Masters_Cyclo-Cross_World_Championships.jpg"
    },
    "refs": [
     "Shepherd, R. (1999). Cycling. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 97-100). Oxford University Press.",
@@ -21114,18 +21033,15 @@
    "img": {
     "src": "img/enc/speedway.jpg",
     "pie": {
-     "es": "Tercer encuentro internacional entre Inglaterra y Australia en el Empire Speedway de Sídney, 15 de diciembre de 1937.",
-     "en": "Third test match between England and Australia at the Empire Speedway, Sydney, 15 December 1937."
+     "es": "Tres pilotos de speedway derrapan en una curva de la pista de tierra, Sídney, 9 de febrero de 1946 (fotografía de Ray Olsen para la revista *Pix*).",
+     "en": "Three speedway riders slide through a bend on the dirt track, Sydney, 9 February 1946 (photograph by Ray Olsen for *Pix* magazine)."
     },
-    "autor": {
-     "es": "Sam Hood",
-     "en": "Sam Hood"
-    },
+    "autor": "Ray Olsen",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:SLNSW_21244_Empire_Speedway_3rd_test_match_England_v_Australia.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:Sydney_Speedway_1946_by_Ray_Olsen.jpg"
    },
    "refs": [
     "Collins, T. (2009). *A social history of English rugby union*. Routledge.",
@@ -21283,18 +21199,18 @@
    "img": {
     "src": "img/enc/formula-1.jpg",
     "pie": {
-     "es": "Alfa Romeo 158, el modelo con el que Giuseppe Farina ganó el primer campeonato del mundo de Fórmula 1 en 1950, expuesto en Silverstone en 2025.",
-     "en": "Alfa Romeo 158, the model in which Giuseppe Farina won the first Formula One world championship in 1950, on display at Silverstone in 2025."
+     "es": "Salida del Gran Premio de Italia en el Autódromo de Monza, 3 de septiembre de 1950, última prueba del primer campeonato del mundo de pilotos.",
+     "en": "Start of the Italian Grand Prix at the Monza circuit, 3 September 1950, the final round of the first World Drivers' Championship."
     },
     "autor": {
-     "es": "David Merrett",
-     "en": "David Merrett"
+     "es": "Autor anónimo",
+     "en": "Anonymous"
     },
     "licencia": {
-     "es": "CC BY 4.0",
-     "en": "CC BY 4.0"
+     "es": "Dominio público",
+     "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:1950_Alfa_Romeo_158_(54834195044).jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:1950_Italian_Grand_Prix_-_Race_start.jpg"
    },
    "refs": [
     "Chick, G. (1999). Formula 1 auto racing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 144-146). Oxford University Press.",
@@ -21740,12 +21656,15 @@
    "img": {
     "src": "img/enc/carreras-de-cortacesped.jpg",
     "pie": {
-     "es": "Cortacéspedes de carreras en el desfile de la 32.ª edición de la fiesta Bois d'Arc Bash en Commerce (Texas, Estados Unidos), 2017.",
-     "en": "Racing lawn mowers in the parade of the 32nd Bois d'Arc Bash in Commerce (Texas, United States), 2017."
+     "es": "Dos pilotos con casco compiten sobre cortacéspedes de carreras en una pista de tierra en Finlandia, 2016.",
+     "en": "Two helmeted riders race modified lawn mowers on a dirt track in Finland, 2016."
     },
-    "autor": "Michael Barera",
-    "licencia": "CC BY-SA 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:2017_Bois_d%27Arc_Bash_parade_30_(racing_lawn_mowers).jpg"
+    "autor": "lhelminen",
+    "licencia": {
+     "es": "Dominio público",
+     "en": "Public domain"
+    },
+    "url": "https://commons.wikimedia.org/wiki/File:Lawn_mower_racing_finland.jpg"
    },
    "refs": [
     "British Lawn Mower Racing Association. (s. f.). *How did it start?* Recuperado el 30 de septiembre de 2026 de https://www.blmra.co.uk/howdiditstart"
@@ -21781,12 +21700,12 @@
    "img": {
     "src": "img/enc/tractor-pulling.jpg",
     "pie": {
-     "es": "Tractor preparado para una prueba de *tractor pulling*.",
-     "en": "A tractor prepared for a tractor pulling event."
+     "es": "Un tractor Farmall 400 arrastra el trineo de lastre en la prueba de tracción de tractores antiguos de la Chippokes Steam and Gas Engine Show, 31 de mayo de 2015.",
+     "en": "A Farmall 400 tractor drags the weight sled in the antique tractor pull at the Chippokes Steam and Gas Engine Show, 31 May 2015."
     },
-    "autor": "Rasbak",
-    "licencia": "CC BY-SA 3.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Tractor_bij_tractorpulling.jpg"
+    "autor": "Mobilus In Mobili",
+    "licencia": "CC BY 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Farmall_400_Tractor_Pull_(18299918306).jpg"
    },
    "refs": [
     "Camillo, M. B. (1999). Truck and tractor pulling. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 423-424). Oxford University Press.",
@@ -21885,18 +21804,15 @@
    "img": {
     "src": "img/enc/nascar.jpg",
     "pie": {
-     "es": "El piloto de la NASCAR Red Byron en un retrato publicado por el *Winston-Salem Journal* en 1949.",
-     "en": "NASCAR driver Red Byron in a portrait published by the *Winston-Salem Journal* in 1949."
+     "es": "Los coches de Kurt Busch y Joe Nemechek ruedan en paralelo sobre el peralte del Talladega Superspeedway (Alabama, Estados Unidos) durante una carrera de la NASCAR, 2005.",
+     "en": "The cars of Kurt Busch and Joe Nemechek run side by side on the banking of Talladega Superspeedway (Alabama, United States) during a NASCAR race, 2005."
     },
-    "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
-    },
+    "autor": "{\"es\":\"Cameras in Action (Ejército de los Estados Unidos)\",\"en\":\"Cameras in Action (U.S. Army)\"}",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:Red_Byron_1949.png"
+    "url": "https://commons.wikimedia.org/wiki/File:NASCAR_BuschNemechek_Cars.jpg"
    },
    "refs": [
     "Albert, Z. (2017, 14 de diciembre). *#TBT: NASCAR's creation began 70 years ago today*. NASCAR. Recuperado el 30 de septiembre de 2026 de https://www.nascar.com/news-media/2017/12/14/nascar-streamline-hotel-meeting-throwback-thursday",
@@ -21944,18 +21860,15 @@
    "img": {
     "src": "img/enc/indycar.jpg",
     "pie": {
-     "es": "El Marmon Wasp con el que Ray Harroun ganó las primeras 500 Millas de Indianápolis, 1911.",
-     "en": "The Marmon Wasp in which Ray Harroun won the first Indianapolis 500, 1911."
+     "es": "Primera fila en la salida de las 500 Millas de Indianápolis de 1915, con Howard Wilcox (Stutz), el vencedor Ralph DePalma (Mercedes) y Dario Resta (Peugeot); fotografía retocada por un dibujante, publicada en *The New York Times* el 13 de junio de 1915.",
+     "en": "The front row at the start of the 1915 Indianapolis 500, with Howard Wilcox (Stutz), the winner Ralph DePalma (Mercedes) and Dario Resta (Peugeot); photograph heavily retouched by an artist, published in *The New York Times* on 13 June 1915."
     },
-    "autor": {
-     "es": "Autor anónimo",
-     "en": "Anonymous"
-    },
+    "autor": "North H. Losey",
     "licencia": {
      "es": "Dominio público",
      "en": "Public domain"
     },
-    "url": "https://commons.wikimedia.org/wiki/File:The_Marmon_Wasp.jpg"
+    "url": "https://commons.wikimedia.org/wiki/File:1915Indianapolis500StartNewYorkTimes.jpg"
    },
    "refs": [
     "Crawford, S. A. G. M. (1999). Indy auto racing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 195-197). Oxford University Press.",
@@ -22113,18 +22026,12 @@
    "img": {
     "src": "img/enc/carreras-de-aceleracion.jpg",
     "pie": {
-     "es": "*Dragster* de tipo *slingshot* de Bucks y Thompson, de 1960, expuesto en el museo The Henry Ford de Dearborn (Míchigan) en 2016.",
-     "en": "1960 Bucks and Thompson slingshot dragster on display at The Henry Ford museum in Dearborn (Michigan) in 2016."
+     "es": "El *dragster* de Eddie Hill en la pista de Bandimere Speedway (Denver) durante los Mile-High Nationals, tras el *burnout* y antes de volver a la línea de salida, hacia 1996.",
+     "en": "Eddie Hill's dragster on the strip at Bandimere Speedway (Denver) during the Mile-High Nationals, after the burnout and before backing up to the start line, around 1996."
     },
-    "autor": {
-     "es": "Joe Ross",
-     "en": "Joe Ross"
-    },
-    "licencia": {
-     "es": "CC BY-SA 2.0",
-     "en": "CC BY-SA 2.0"
-    },
-    "url": "https://commons.wikimedia.org/wiki/File:1960_Bucks_and_Thompson_slingshot_dragster_-_The_Henry_Ford_-_Engines_Exposed_Exhibit_2-22-2016_(1)_(31310699204).jpg"
+    "autor": "twm1340",
+    "licencia": "CC BY-SA 2.0",
+    "url": "https://commons.wikimedia.org/wiki/File:EddieHillDragsterCirca1996.jpg"
    },
    "refs": [
     "Dyer-Bennet, B. (1999). Drag racing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 108-109). Oxford University Press.",

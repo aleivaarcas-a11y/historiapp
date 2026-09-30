@@ -1,0 +1,1222 @@
+[
+ {
+  "id": "krav-maga",
+  "name": {
+   "es": "Krav magá",
+   "en": "Krav Maga"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Bratislava, década de 1930, y Palestina bajo mandato británico, desde 1944; sistema de combate del ejército israelí desde 1948",
+   "en": "Bratislava, 1930s, and Mandatory Palestine, from 1944; combat system of the Israeli army from 1948"
+  },
+  "body": {
+   "es": [
+    "El krav magá, cuyo nombre hebreo significa «combate de contacto», es obra de Imi Lichtenfeld, nacido en Budapest en 1910 y criado en Bratislava, donde practicó natación, boxeo, lucha y gimnasia y destacó en la lucha como competidor y como entrenador (IKMF, s. f.). A mediados de la década de 1930, cuando aparecieron en Bratislava grupos fascistas y antisemitas, Lichtenfeld encabezó a un grupo de antiguos boxeadores y luchadores en la defensa de su barrio judío y comprobó que el deporte tenía poco en común con el combate real, experiencia que le llevó a elaborar un sistema de técnicas de defensa personal práctica; en 1940 huyó de la ocupación nazi en el último barco de emigrantes que logró escapar de los nazis (IKMF, s. f.). El origen del sistema está así ligado a la defensa de una minoría perseguida, más que a la competición.",
+    "La forma que hoy se conoce se elaboró en Palestina y en Israel. Desde 1944 Lichtenfeld enseñó combate cuerpo a cuerpo en la Haganá, la milicia de defensa judía anterior al Estado, y tras la independencia de Israel en 1948 continuó como instructor jefe de preparación física y combate cuerpo a cuerpo de las Fuerzas de Defensa de Israel, donde desarrolló lo que después se llamó krav magá (Krav Maga Global, s. f.). El sistema se concibió para soldados y policías, con defensas contra uno o varios agresores, armados o no (Fernández Truan, s. f., pp. 921-922). Se retiró del ejército en 1964 (IKMF, s. f.), fecha coherente con la cronología de Krav Maga Global, según la cual Eyal Yanilov empezó a estudiar con él diez años después, en 1974 (Krav Maga Global, s. f.), si bien algún manual retrasa su retiro a 1967 (Fernández Truan, s. f., p. 922).",
+    "Al dejar el ejército, Lichtenfeld llevó el krav magá al ámbito civil (Krav Maga Global, s. f.), abrió escuelas y lo enseñó a jóvenes y adultos como método de defensa personal (Fernández Truan, s. f., p. 922), y su difusión por Estados Unidos y Europa reforzó su imagen de sistema de defensa personal apto para cualquier adulto sin distinción de género, edad o condición física (Fernández Truan, s. f., p. 921). A diferencia de la mayoría de los deportes de combate, carece de vertiente competitiva y de una federación internacional única, de modo que su enseñanza está repartida entre organizaciones privadas; una de ellas, Krav Maga Global, fundada en 2010 por Eyal Yanilov, discípulo directo de Lichtenfeld, afirma estar presente en más de sesenta países y ofrece cursos específicos para instructoras (Krav Maga Global, s. f.). Su función social ha pasado así de la autodefensa comunitaria al adiestramiento militar y, finalmente, a un servicio comercial de seguridad personal."
+   ],
+   "en": [
+    "Krav Maga, whose Hebrew name means «contact combat», is the work of Imi Lichtenfeld, born in Budapest in 1910 and raised in Bratislava, where he practised swimming, boxing, wrestling and gymnastics and excelled in wrestling as a competitor and as a coach (IKMF, n.d.). In the mid-1930s, when fascist and antisemitic groups appeared in Bratislava, Lichtenfeld led a group of former boxers and wrestlers in the defence of his Jewish neighbourhood and found that sport had little in common with real combat, an experience that led him to develop a system of practical self-defence techniques; in 1940 he fled the Nazi occupation on the last emigrant ship that managed to escape the Nazis (IKMF, n.d.). The origin of the system is thus tied to the defence of a persecuted minority rather than to competition.",
+    "The form known today was developed in Palestine and in Israel. From 1944 Lichtenfeld taught hand-to-hand combat in the Haganah, the pre-state Jewish defence militia, and after Israeli independence in 1948 he continued as chief instructor for physical fitness and hand-to-hand combat of the Israel Defense Forces, where he developed what later became known as Krav Maga (Krav Maga Global, n.d.). The system was conceived for soldiers and police, with defences against one or several attackers, armed or unarmed (Fernández Truan, n.d., pp. 921-922). He retired from the army in 1964 (IKMF, n.d.), a date consistent with the Krav Maga Global timeline, according to which Eyal Yanilov began to study with him ten years later, in 1974 (Krav Maga Global, n.d.), although one textbook places his retirement in 1967 (Fernández Truan, n.d., p. 922).",
+    "On leaving the army, Lichtenfeld took Krav Maga into civilian life (Krav Maga Global, n.d.), opened schools and taught it to young people and adults as a method of self-defence (Fernández Truan, n.d., p. 922), and its spread through the United States and Europe reinforced its image as a self-defence system suitable for any adult regardless of gender, age or physical condition (Fernández Truan, n.d., p. 921). Unlike most combat sports, it has no competitive side and no single international federation, so its teaching is shared among private organizations; one of them, Krav Maga Global, founded in 2010 by Eyal Yanilov, a direct pupil of Lichtenfeld, claims a presence in more than sixty countries and offers specific courses for women instructors (Krav Maga Global, n.d.). Its social function has thus moved from community self-defence to military training and, finally, to a commercial personal security service."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/krav-maga.jpg",
+   "pie": {
+    "es": "Sesión de entrenamiento de krav maga dirigida por el instructor Alfonso Torregrossa, 2013.",
+    "en": "Krav maga training session led by instructor Alfonso Torregrossa, 2013."
+   },
+   "autor": "Ekmt",
+   "licencia": {
+    "es": "CC BY-SA 3.0",
+    "en": "CC BY-SA 3.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Krav_Maga_Training.JPG"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "IKMF. (s. f.). *The founder of Krav Maga Imrich (Imi) Sde-Or*. International Krav Maga Federation. Recuperado el 30 de septiembre de 2026 de https://kravmaga-ikmf.com/krav-maga/the-founder/",
+   "Krav Maga Global. (s. f.). *About*. Recuperado el 29 de septiembre de 2026 de https://krav-maga.com/about/"
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "IKMF. (n.d.). *The founder of Krav Maga Imrich (Imi) Sde-Or*. International Krav Maga Federation. Retrieved September 30, 2026, from https://kravmaga-ikmf.com/krav-maga/the-founder/",
+   "Krav Maga Global. (n.d.). *About*. Retrieved September 29, 2026, from https://krav-maga.com/about/"
+  ]
+ },
+ {
+  "id": "artes-marciales-mixtas",
+  "name": {
+   "es": "Artes marciales mixtas",
+   "en": "Mixed martial arts"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Brasil (vale tudo) y Estados Unidos, siglo XX; forma moderna con el Ultimate Fighting Championship, Estados Unidos, 1993, y reglas unificadas desde 2001",
+   "en": "Brazil (vale tudo) and the United States, twentieth century; modern form with the Ultimate Fighting Championship, United States, 1993, and unified rules from 2001"
+  },
+  "body": {
+   "es": [
+    "Las artes marciales mixtas combinan la lucha con los golpes de las artes marciales de percusión y reúnen técnicas del boxeo tailandés, el judo, el jiu-jitsu brasileño y el boxeo; la federación internacional les busca raíces en el pancracio de los Juegos Olímpicos antiguos (IMMAF, s. f.-b), una prueba introducida en Olimpia en 648 a. C. y tan brutal que solo prohibía morder y hundir los ojos al rival (Guttmann, 2004, p. 21). Su antecedente inmediato fueron los combates de *vale tudo* nacidos en el entorno del jiu-jitsu brasileño, en los que sus practicantes ponían a prueba su técnica frente a otros deportes de combate (IMMAF, s. f.-b). Fernández Truan considera además precursores los encuentros entre especialistas de distintos estilos que organizó en Inglaterra, a comienzos del siglo XX, Edward Barton-Wright (Fernández Truan, s. f., p. 217).",
+    "La forma contemporánea se dio a conocer a través de un programa de televisión estadounidense, el Ultimate Fighting Championship (UFC), que comenzó en 1993 y enfrentaba a especialistas de distintas disciplinas para decidir qué estilo era superior (IMMAF, s. f.-b). Aquellos primeros torneos, que llevaban a Estados Unidos el desafío que la familia Gracie venía lanzando desde Brasil, se emitían en pago por visión, tenían muy pocas reglas y admitían todos los estilos, y su dureza atrajo al público televisivo tanto como provocó la prohibición en varios estados (Vamplew, 2021, p. 121); en 2001 la empresa Zuffa asumió el UFC y trabajó con los organismos reguladores de los estados para elaborar e implantar las reglas unificadas de las artes marciales mixtas, que lo convirtieron en un deporte reglado, con normas sobre arbitraje y seguridad médica y un vallado que impide que los luchadores caigan fuera del ring (IMMAF, s. f.-b). Según Fernández Truan, el primer uso documentado de la expresión «artes marciales mixtas» aparece en una crítica televisiva del UFC de 1993 (Fernández Truan, s. f., p. 799).",
+    "La organización deportiva llegó tarde y desde el profesionalismo. En 2012 se fundaron dos organismos rivales, la International Mixed Martial Arts Federation (IMMAF), en Suecia, con apoyo del UFC, y la World Mixed Martial Arts Association (WMMAA), en Mónaco; la IMMAF celebró su primer campeonato del mundo aficionado en Las Vegas en 2014 y, después de que la Asociación Global de Federaciones Deportivas Internacionales (GAISF) les advirtiera en junio de 2017 de que solo podía considerarse un solicitante por deporte, ambas cerraron a finales de 2018 un acuerdo de unificación (IMMAF, s. f.-a). La federación reúne hoy más de 120 federaciones nacionales y aspira al reconocimiento olímpico (IMMAF, s. f.-a). Su historia está marcada por la búsqueda de legitimidad frente a la acusación de violencia, como muestra el caso de Suecia, donde en 2006 un proyecto de ley pretendía extender a las artes marciales mixtas la prohibición vigente del boxeo profesional (IMMAF, s. f.-a)."
+   ],
+   "en": [
+    "Mixed martial arts combine wrestling with the strikes of the percussive martial arts and bring together techniques from Thai boxing, judo, Brazilian jiu-jitsu and boxing; the international federation traces their roots to the pankration of the ancient Olympic Games (IMMAF, n.d.-b), an event introduced at Olympia in 648 BCE and so brutal that it forbade only biting and gouging the opponent's eyes (Guttmann, 2004, p. 21). Their immediate forerunner was the *vale tudo* bouts that arose around Brazilian jiu-jitsu, in which its practitioners tested their technique against other combat sports (IMMAF, n.d.-b). Fernández Truan also regards as precursors the contests between specialists of different styles organized in England in the early twentieth century by Edward Barton-Wright (Fernández Truan, n.d., p. 217).",
+    "The contemporary form became known through an American television contest, the Ultimate Fighting Championship (UFC), which began in 1993 and pitted specialists from different disciplines against each other to decide which style was superior (IMMAF, n.d.-b). Those first tournaments, which brought to the United States the challenge the Gracie family had been issuing in Brazil, were broadcast on pay-per-view, had very few rules and admitted every style, and their brutality appealed to the television audience as much as it led several states to ban them (Vamplew, 2021, p. 121); in 2001 the company Zuffa took over the UFC and worked with state regulatory bodies to develop and implement the Unified Rules of Mixed Martial Arts, which turned it into a regulated sport, with rules on officiating and medical safety and a fence that prevents athletes from tumbling out of the ring (IMMAF, n.d.-b). According to Fernández Truan, the first documented use of the phrase «mixed martial arts» appears in a television review of the 1993 UFC (Fernández Truan, n.d., p. 799).",
+    "Sporting organization came late and from within professionalism. In 2012 two rival bodies were founded, the International Mixed Martial Arts Federation (IMMAF), in Sweden, with UFC support, and the World Mixed Martial Arts Association (WMMAA), in Monaco; IMMAF held its first amateur world championship in Las Vegas in 2014 and, after the Global Association of International Sports Federations (GAISF) advised them in June 2017 that only one applicant per sport could be considered, the two concluded a unification agreement at the end of 2018 (IMMAF, n.d.-a). The federation now brings together more than 120 national federations and seeks Olympic recognition (IMMAF, n.d.-a). Its history is marked by the search for legitimacy against the charge of violence, as shown by the case of Sweden, where in 2006 proposed legislation sought to extend the existing ban on professional boxing to mixed martial arts (IMMAF, n.d.-a)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/artes-marciales-mixtas.jpg",
+   "pie": {
+    "es": "Combate entre Irlanda y México en el Campeonato del Mundo de la IMMAF celebrado en Baréin, 2022.",
+    "en": "Ireland v Mexico bout at the IMMAF World Championships held in Bahrain, 2022."
+   },
+   "autor": "Haribhagirath",
+   "licencia": {
+    "es": "CC BY 4.0",
+    "en": "CC BY 4.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:IMMAF_World_Championships_held_in_the_Kingdom_of_Bahrain.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "IMMAF. (s. f.-a). *History*. International Mixed Martial Arts Federation. Recuperado el 29 de septiembre de 2026 de https://immaf.org/about/history/",
+   "IMMAF. (s. f.-b). *What is MMA?* International Mixed Martial Arts Federation. Recuperado el 29 de septiembre de 2026 de https://immaf.org/about/what-is-mma/",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "IMMAF. (n.d.-a). *History*. International Mixed Martial Arts Federation. Retrieved September 29, 2026, from https://immaf.org/about/history/",
+   "IMMAF. (n.d.-b). *What is MMA?* International Mixed Martial Arts Federation. Retrieved September 29, 2026, from https://immaf.org/about/what-is-mma/",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "bokh",
+  "name": {
+   "es": "Bökh",
+   "en": "Bökh"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Estepas de Mongolia, tradición de los pueblos pastores de origen antiguo; festival del Naadam, Patrimonio Cultural Inmaterial desde 2010",
+   "en": "Mongolian steppes, an ancient tradition of the herding peoples; Naadam festival, Intangible Cultural Heritage since 2010"
+  },
+  "body": {
+   "es": [
+    "El bökh es la lucha tradicional de Mongolia y forma, con la equitación y el tiro con arco, la tríada de juegos que se consideran propios de hombres en la tradición mongola (Trevithick, 1999, p. 409). Su historia es inseparable del Naadam, fiesta nacional que la UNESCO vincula a la civilización nómada de un pueblo que practicó durante siglos el pastoreo en las grandes estepas de Asia Central, y cuyas tres pruebas, carreras de caballos, lucha y arco, guardan relación directa con los modos de vida y las condiciones de existencia de los mongoles (UNESCO, s. f.). Trevithick recuerda que los Naadam fueron en origen asambleas tribales de gran antigüedad destinadas a negociar el reparto de los pastos, de modo que la lucha se inscribía en un encuentro político y económico entre grupos (Trevithick, 1999, p. 409).",
+    "La modalidad guarda cierto parecido con el sumo japonés, si bien se disputa sin un círculo que limite el espacio de combate y permite que las palmas de las manos toquen el suelo (Trevithick, 1999, p. 409). El combate se rodea de un ritual propio, con trajes y objetos distintivos, cantos y poemas de alabanza dedicados a los contendientes y títulos honoríficos para los vencedores, y su transmisión se hacía tradicionalmente en el seno de la familia, aunque en tiempos recientes han surgido para la lucha y el arco sistemas de entrenamiento formalizados (UNESCO, s. f.). El festival nacional se celebra cada año del 11 al 13 de julio en todo el país (UNESCO, s. f.).",
+    "La lucha conserva una fuerte carga social y de identidad. Trevithick señala que puede reunir hasta treinta mil participantes en algunas citas, una cifra considerable en un país que apenas superaba entonces los dos millones de habitantes, y que su atractivo se apoya en la tradición patriarcal mongola (Trevithick, 1999, p. 409). La UNESCO inscribió el Naadam en 2010 en la Lista Representativa del Patrimonio Cultural Inmaterial de la Humanidad, destacando que se anima a todos a participar y que la fiesta refuerza la implicación de la comunidad y el respeto a la naturaleza (UNESCO, s. f.)."
+   ],
+   "en": [
+    "Bökh is the traditional wrestling of Mongolia and forms, with horse riding and archery, the triad of games regarded as manly in Mongolian tradition (Trevithick, 1999, p. 409). Its history cannot be separated from Naadam, a national festival that UNESCO links to the nomadic civilisation of a people who practised pastoralism for centuries on the vast steppes of Central Asia, and whose three contests, horse racing, wrestling and archery, are directly linked to the ways of life and living conditions of the Mongols (UNESCO, n.d.). Trevithick recalls that the Naadam were originally tribal gatherings of great antiquity intended to negotiate the allocation of pastureland, so that wrestling was part of a political and economic meeting between groups (Trevithick, 1999, p. 409).",
+    "The style bears some resemblance to Japanese sumo, although it is fought without a ring bounding the combat area and allows the palms of the hands to touch the ground (Trevithick, 1999, p. 409). The bout is surrounded by its own ritual, with distinctive costumes and objects, songs and poems of praise dedicated to the contestants and honorific titles for the winners, and it was traditionally passed on within the family, although formalised training regimes have recently developed for wrestling and archery (UNESCO, n.d.). The national festival is held every year from 11 to 13 July throughout the country (UNESCO, n.d.).",
+    "Wrestling retains a strong social and identity charge. Trevithick notes that some events can draw up to thirty thousand participants, a considerable figure in a country that then had barely more than two million inhabitants, and that its appeal rests on Mongolian patriarchal tradition (Trevithick, 1999, p. 409). UNESCO inscribed Naadam in 2010 on the Representative List of the Intangible Cultural Heritage of Humanity, stressing that everyone is encouraged to take part and that the festival strengthens community involvement and respect for nature (UNESCO, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/bokh.jpg",
+   "pie": {
+    "es": "Combates de bökh durante el Naadam, cerca de Ulán Bator, 2005.",
+    "en": "Bökh bouts during the Naadam festival near Ulaanbaatar, 2005."
+   },
+   "autor": "Burumbátor",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Mongolian_warriors.jpg"
+  },
+  "refs": [
+   "UNESCO. (s. f.). *Naadam, Mongolian traditional festival*. Recuperado el 29 de septiembre de 2026 de https://ich.unesco.org/en/RL/naadam-mongolian-traditional-festival-00395",
+   "Trevithick, A. (1999). Traditional sports, Asia. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 409-411). Oxford University Press."
+  ],
+  "refs_en": [
+   "UNESCO. (n.d.). *Naadam, Mongolian traditional festival*. Retrieved September 29, 2026, from https://ich.unesco.org/en/RL/naadam-mongolian-traditional-festival-00395",
+   "Trevithick, A. (1999). Traditional sports, Asia. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 409-411). Oxford University Press."
+  ]
+ },
+ {
+  "id": "hipica",
+  "name": {
+   "es": "Hípica",
+   "en": "Equestrian sports"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Antigüedad (carreras de carros; doma ecuestre, Nápoles, 1532); hípica olímpica, Estocolmo, 1912; FEI, París, 1921",
+   "en": "Antiquity (chariot racing; dressage, Naples, 1532); Olympic equestrian sport, Stockholm, 1912; FEI, Paris, 1921"
+  },
+  "body": {
+   "es": [
+    "La Federación Ecuestre Internacional (FEI) remonta la historia de los deportes ecuestres a los antiguos Juegos Olímpicos, en los que las carreras de carros fueron uno de los grandes espectáculos a partir del 680 a. C. (FEI, s. f.-b). Antes aún, en Egipto, el carro ligero de dos ruedas con radios llegó con los hicsos y se convirtió en símbolo de estatus en la corte, y su popularidad se explica también por la cría de caballos finos (Decker, 2021, p. 35). En todas estas sociedades la práctica ecuestre dependía de una condición previa, disponer de caballo, y el coste de criarlo, alimentarlo, alojarlo y atenderlo reservaba la hípica a las élites, como muestran también los juegos ecuestres de Persia.",
+    "Las disciplinas modernas proceden sobre todo de la equitación de corte y del ejército. La doma clásica nació en el Renacimiento con el noble napolitano Federico Grisone, que fundó una academia de equitación en Nápoles en 1532 y publicó *Gli ordini di cavalcare* en 1550, y tuvo en la Versalles de Luis XIV uno de sus grandes centros (Kidd, 1999, pp. 177-178). Guttmann la relaciona con el ballet ecuestre barroco, derivado de la danza cortesana y codificado por Antoine de Pluvinel en *Manège royal* (1623), que sobrevive en la doma olímpica como competición de valoración estética (Guttmann, 2004, p. 70). El salto, la doma y el concurso completo entraron en los Juegos de Estocolmo de 1912 y desde entonces no han salido del programa olímpico (FEI, s. f.-b; Vamplew, 2021, p. 149).",
+    "La inclusión de la hípica en los Juegos llevó a crear la FEI en 1921, puesto que la integridad de la competición exigía reglas y sistemas de clasificación aprobados internacionalmente (FEI, s. f.-b). La fundaron en París, tras el Congreso Olímpico de Lausana, ocho federaciones nacionales, y su primer presidente fue el francés barón Du Teil (FEI, s. f.-a). Durante medio siglo dominaron la competición los oficiales de caballería (Kidd, 1999, p. 178). La hípica es uno de los pocos deportes en que hombres y mujeres compiten juntos, aunque esa igualdad llegó tarde, en 1952 en la doma, en 1956 en el salto y en 1964 en el concurso completo (FEI, s. f.-a; Vamplew, 2021, p. 149). La FEI incorporó después el enganche en 1970, la resistencia en 1982, el volteo en 1983 y el *reining* en 2000, gobierna también las disciplinas paraecuestres y reúne a 136 federaciones nacionales (FEI, s. f.-a, s. f.-b)."
+   ],
+   "en": [
+    "The International Equestrian Federation (FEI) traces the history of equestrian sport back to the ancient Olympic Games, where chariot racing was one of the main spectacles from 680 BCE (FEI, n.d.-b). Earlier still, in Egypt, the light two-wheeled spoked chariot arrived with the Hyksos and became a status symbol at court, and its popularity is also explained by the breeding of fine horses (Decker, 2021, p. 35). In all these societies equestrian practice depended on a prior condition, owning a horse, and the cost of breeding, feeding, stabling and tending it reserved horsemanship for the elites, as the equestrian games of Persia also show.",
+    "The modern disciplines derive above all from courtly and military riding. Classical dressage was born in the Renaissance with the Neapolitan nobleman Federico Grisone, who founded a riding academy in Naples in 1532 and published *Gli ordini di cavalcare* in 1550, and Louis XIV's Versailles became one of its great centres (Kidd, 1999, pp. 177-178). Guttmann links it to the baroque equestrian ballet, derived from courtly dance and codified by Antoine de Pluvinel in *Manège royal* (1623), which survives in Olympic dressage as a competition of aesthetic judgement (Guttmann, 2004, p. 70). Jumping, dressage and eventing entered the Stockholm Games of 1912 and have remained on the Olympic programme ever since (FEI, n.d.-b; Vamplew, 2021, p. 149).",
+    "The inclusion of equestrian sport in the Games led to the creation of the FEI in 1921, since the integrity of competition required internationally approved rules and qualification systems (FEI, n.d.-b). It was founded in Paris, following the Olympic Congress in Lausanne, by eight national federations, and its first president was the Frenchman Baron Du Teil (FEI, n.d.-a). For half a century cavalry officers dominated competition (Kidd, 1999, p. 178). Equestrian sport is one of the few in which men and women compete together, although that equality came late, in 1952 in dressage, in 1956 in jumping and in 1964 in eventing (FEI, n.d.-a; Vamplew, 2021, p. 149). The FEI later added driving in 1970, endurance in 1982, vaulting in 1983 and reining in 2000, also governs the para-equestrian disciplines and brings together 136 national federations (FEI, n.d.-a, n.d.-b)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 2,
+    "f": "el-carro-y-los-caballos",
+    "t": {
+     "es": "El carro y los caballos",
+     "en": "The chariot and the horses"
+    }
+   },
+   {
+    "num": 2,
+    "f": "deportes-hipicos",
+    "t": {
+     "es": "Deportes hípicos",
+     "en": "Equestrian sports"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/hipica.jpg",
+   "pie": {
+    "es": "El teniente conde G. Lewenhaupt salta un obstáculo en la prueba individual de saltos de los Juegos Olímpicos de Estocolmo, 1912.",
+    "en": "Lieutenant Count G. Lewenhaupt clears an obstacle in the individual jumping event at the 1912 Stockholm Olympics."
+   },
+   "autor": {
+    "es": "Fotógrafo del COI",
+    "en": "IOC photographer"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:1912OG-jumping-lewenhaupt.jpg"
+  },
+  "refs": [
+   "FEI. (s. f.-a). *Celebrating 100 years of the FEI*. Recuperado el 29 de septiembre de 2026 de https://www.fei.org/stories/100-years/celebrating-100-years-fei",
+   "FEI. (s. f.-b). *History*. Recuperado el 29 de septiembre de 2026 de https://inside.fei.org/fei/about-fei/history",
+   "Decker, W. (2021). Sport in ancient Egypt and the ancient Near East. En A. Futrell y T. F. Scanlon (Eds.), *The Oxford handbook of sport and spectacle in the ancient world* (pp. 31-46). Oxford University Press.",
+   "Kidd, J. (1999). Horseback riding, dressage. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 177-178). Oxford University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "FEI. (n.d.-a). *Celebrating 100 years of the FEI*. Retrieved September 29, 2026, from https://www.fei.org/stories/100-years/celebrating-100-years-fei",
+   "FEI. (n.d.-b). *History*. Retrieved September 29, 2026, from https://inside.fei.org/fei/about-fei/history",
+   "Decker, W. (2021). Sport in ancient Egypt and the ancient Near East. In A. Futrell & T. F. Scanlon (Eds.), *The Oxford handbook of sport and spectacle in the ancient world* (pp. 31-46). Oxford University Press.",
+   "Kidd, J. (1999). Horseback riding, dressage. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 177-178). Oxford University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "natacion-artistica",
+  "name": {
+   "es": "Natación artística",
+   "en": "Artistic swimming"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Inglaterra, 1892 (natación ornamental); Chicago (EE. UU.), 1923-1940; olímpica desde Los Ángeles 1984",
+   "en": "England, 1892 (ornamental swimming); Chicago (USA), 1923-1940; Olympic since Los Angeles 1984"
+  },
+  "body": {
+   "es": [
+    "Los elementos de la natación artística, las brazadas, las figuras, el remo con las manos y la flotación, son tan antiguos como la natación misma, y ya un relieve asirio de Nimrud, hacia el 880 a. C., muestra nadadores bajo el agua (Bean, 1999, p. 385). Sus antecedentes deportivos directos fueron masculinos, puesto que en 1892 existía en Inglaterra una competición de natación científica y ornamental para hombres y en 1898 Canadá creó otra semejante, mientras que a comienzos del siglo XX grupos de mujeres formaban figuras flotantes en Alemania, Bélgica, los Países Bajos y Francia (Bean, 1999, p. 385).",
+    "El espectáculo fue el motor de la nueva disciplina. Desde 1907 la australiana Annette Kellerman actuó en un tanque de cristal en distintos países, y en Estados Unidos Katharine Curtis experimentó desde 1915 con figuras acuáticas acompañadas de música, que en 1923 convirtió en combinaciones sincronizadas con el compás para sus clases de la Universidad de Chicago (Bean, 1999, p. 385). Sus alumnas actuaron en la exposición universal de Chicago de 1933-1934, donde el locutor Norman Ross acuñó la expresión *synchronized swimming*. En 1939 Frank Havlicek propuso convertir aquellas rutinas en competición entre universidades, la Amateur Athletic Union la reconoció como deporte en 1940 y el primer campeonato nacional se celebró en 1946 (Bean, 1999, p. 385).",
+    "La FINA aceptó la natación sincronizada como disciplina en 1954 (Bean, 1999, p. 386), aunque algún manual adelanta la fecha a 1952 (Fernández Truan, s. f., p. 982). Entró en los campeonatos del mundo de Belgrado en 1973 y en el programa olímpico en Los Ángeles 1984, y hoy World Aquatics la gobierna con el nombre de natación artística (World Aquatics, s. f.). Su origen en el espectáculo acuático la persiguió como una sospecha de ser teatro antes que deporte, y convirtió en femenina una práctica cuyas primeras competiciones de figuras habían sido masculinas, de modo que a finales del siglo XX los hombres seguían excluidos de los Juegos Olímpicos y de los campeonatos del mundo (Bean, 1999, p. 385; Vamplew, 2021, p. 197)."
+   ],
+   "en": [
+    "The elements of artistic swimming, strokes, figures, sculling and floating, are as old as swimming itself, and an Assyrian relief from Nimrud, around 880 BCE, already shows underwater swimmers (Bean, 1999, p. 385). Its direct sporting antecedents were male, since in 1892 England had a competition in scientific and ornamental swimming for men and in 1898 Canada created a similar one, while at the beginning of the twentieth century groups of women formed floating patterns in Germany, Belgium, the Netherlands and France (Bean, 1999, p. 385).",
+    "Spectacle was the driving force of the new discipline. From 1907 the Australian Annette Kellerman performed in a glass tank in various countries, and in the United States Katharine Curtis experimented from 1915 with water figures accompanied by music, which in 1923 she turned into combinations synchronised to the beat for her classes at the University of Chicago (Bean, 1999, p. 385). Her students performed at the Chicago world's fair of 1933-1934, where the announcer Norman Ross coined the term *synchronized swimming*. In 1939 Frank Havlicek suggested turning those routines into competition between colleges, the Amateur Athletic Union recognised it as a sport in 1940 and the first national championship was held in 1946 (Bean, 1999, p. 385).",
+    "FINA accepted synchronised swimming as a discipline in 1954 (Bean, 1999, p. 386), although one textbook brings the date forward to 1952 (Fernández Truan, n.d., p. 982). It entered the World Championships in Belgrade in 1973 and the Olympic programme at Los Angeles in 1984, and World Aquatics now governs it under the name of artistic swimming (World Aquatics, n.d.). Its origin in the water show pursued it as a suspicion of being theatre rather than sport, and it turned into a women's practice an activity whose first figure competitions had been male, so that at the end of the twentieth century men were still excluded from the Olympic Games and the World Championships (Bean, 1999, p. 385; Vamplew, 2021, p. 197)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/natacion-artistica.jpg",
+   "pie": {
+    "es": "El equipo ruso de natación sincronizada, campeón del mundo, entrena para el Campeonato de Europa en Gran Canaria, 2007.",
+    "en": "The Russian world champion synchronised swimming team training for the European Championships in Gran Canaria, 2007."
+   },
+   "autor": "Jesus de Blas",
+   "licencia": {
+    "es": "CC BY-SA 2.0",
+    "en": "CC BY-SA 2.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Synchronized_swimming_-_Russian_team.jpg"
+  },
+  "refs": [
+   "Bean, D. (1999). Swimming, synchronized. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 385-386). Oxford University Press.",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books.",
+   "World Aquatics. (s. f.). *Overview*. Recuperado el 29 de septiembre de 2026 de https://www.worldaquatics.com/about"
+  ],
+  "refs_en": [
+   "Bean, D. (1999). Swimming, synchronized. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 385-386). Oxford University Press.",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books.",
+   "World Aquatics. (n.d.). *Overview*. Retrieved September 29, 2026, from https://www.worldaquatics.com/about"
+  ]
+ },
+ {
+  "id": "kitesurf",
+  "name": {
+   "es": "Kitesurf",
+   "en": "Kitesurfing"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Francia y Estados Unidos, décadas de 1980 y 1990 (cometa hinchable de los hermanos Legaignoux, patentada en 1984); difusión desde Maui (Hawái), 1996-1998",
+   "en": "France and the United States, 1980s and 1990s (the Legaignoux brothers' inflatable kite, patented 1984); spread from Maui (Hawaii), 1996-1998"
+  },
+  "body": {
+   "es": [
+    "La idea de aprovechar la tracción de una cometa para desplazarse es antigua, y en la década de 1820 el inglés George Pocock patentó el *charvolant*, un carruaje arrastrado por dos cometas. En 1977 el neerlandés Gijsbertus Adrianus Panhuise obtuvo una patente para una tabla impulsada por una cometa (IKSURFMAG, 2023). El kitesurf actual nació del ambiente del windsurf, cuando los hermanos franceses Bruno y Dominique Legaignoux, aficionados a esa disciplina, idearon una cometa en forma de arco con el borde de ataque hinchable, capaz de mantener la forma y de flotar tras caer al agua, y la patentaron en 1984 (IKSURFMAG, s. f., 2023).",
+    "En Estados Unidos Bill y Cory Roeseler siguieron un camino paralelo con cometas de armazón rígido que remolcaban a un esquiador náutico, y en 1994 comercializaron el *KiteSki* (IKSURFMAG, 2023). El paso decisivo se dio en Maui (Hawái), adonde el francés Manu Bertin llevó la cometa a mediados de los años noventa. Allí la adoptaron windsurfistas y surfistas de renombre, como Laird Hamilton y Robby Naish, y en 1998 se celebró la primera competición internacional, llamada campeonato del mundo, que dio a conocer el deporte fuera del círculo de pioneros (IKSURFMAG, s. f., 2023). A comienzos de los años 2000 ya se practicaba en las costas de Europa, Australia y Estados Unidos.",
+    "La institucionalización llegó a través de la vela. En 2008 la federación internacional, entonces International Sailing Federation, reconoció el kiteboarding como clase internacional, lo que abrió el camino a su entrada en los Juegos Olímpicos de la Juventud de Buenos Aires en 2018 y al anuncio de su debut olímpico en París 2024 (IKSURFMAG, 2023), donde figuró ya dentro del programa de vela (Olympedia, s. f.). Como el windsurf, del que procede, el kitesurf nació de la experimentación de practicantes y fabricantes y solo después se integró en la estructura federativa de la vela, que le dio acceso a la competición reglada y al reconocimiento olímpico."
+   ],
+   "en": [
+    "The idea of using the pull of a kite for travel is old, and in the 1820s the Englishman George Pocock patented the *charvolant*, a carriage drawn by two kites. In 1977 the Dutchman Gijsbertus Adrianus Panhuise obtained a patent for a board propelled by a kite (IKSURFMAG, 2023). Present-day kitesurfing grew out of the windsurfing scene, when the French brothers Bruno and Dominique Legaignoux, keen windsurfers, designed an arc-shaped kite with an inflatable leading edge, able to hold its shape and to float after falling into the water, and patented it in 1984 (IKSURFMAG, n.d., 2023).",
+    "In the United States Bill and Cory Roeseler followed a parallel path with rigid-framed kites that towed a water skier, and in 1994 they put the *KiteSki* on the market (IKSURFMAG, 2023). The decisive step came in Maui (Hawaii), where the Frenchman Manu Bertin brought the kite in the mid-1990s. There it was taken up by well-known windsurfers and surfers such as Laird Hamilton and Robby Naish, and in 1998 the first international competition, billed as a world championship, was held and made the sport known beyond the circle of pioneers (IKSURFMAG, n.d., 2023). By the early 2000s it was practised on the coasts of Europe, Australia and the United States.",
+    "Institutionalisation came through sailing. In 2008 the international federation, then the International Sailing Federation, recognised kiteboarding as an international class, which opened the way to its inclusion in the Buenos Aires Youth Olympic Games in 2018 and to the announcement of its Olympic debut at Paris 2024 (IKSURFMAG, 2023), where it featured within the sailing programme (Olympedia, n.d.). Like windsurfing, from which it derives, kitesurfing arose from the experimentation of practitioners and manufacturers and only later joined the federative structure of sailing, which gave it access to regulated competition and Olympic recognition."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/kitesurf.jpg",
+   "pie": {
+    "es": "Un kitesurfista en pleno salto, 2017.",
+    "en": "A kitesurfer in mid-jump, 2017."
+   },
+   "autor": "Jernej Furman",
+   "licencia": {
+    "es": "CC BY 2.0",
+    "en": "CC BY 2.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Kitesurfer_Jumping_High_In_The_Air_(46262593652).jpg"
+  },
+  "refs": [
+   "IKSURFMAG. (s. f.). *Who invented kitesurfing?* Recuperado el 29 de septiembre de 2026 de https://www.iksurfmag.com/wiki/who-invented-kitesurfing/",
+   "IKSURFMAG. (2023, 9 de agosto). *100 moments: A kitesurfing timeline*. Recuperado el 29 de septiembre de 2026 de https://www.iksurfmag.com/articles/issue100/100-moments-a-kitesurfing-timeline/",
+   "Olympedia. (s. f.). *Sailing*. Recuperado el 29 de septiembre de 2026 de https://www.olympedia.org/sports/SAL"
+  ],
+  "refs_en": [
+   "IKSURFMAG. (n.d.). *Who invented kitesurfing?* Retrieved September 29, 2026, from https://www.iksurfmag.com/wiki/who-invented-kitesurfing/",
+   "IKSURFMAG. (2023, August 9). *100 moments: A kitesurfing timeline*. Retrieved September 29, 2026, from https://www.iksurfmag.com/articles/issue100/100-moments-a-kitesurfing-timeline/",
+   "Olympedia. (n.d.). *Sailing*. Retrieved September 29, 2026, from https://www.olympedia.org/sports/SAL"
+  ]
+ },
+ {
+  "id": "barranquismo",
+  "name": {
+   "es": "Barranquismo",
+   "en": "Canyoning"
+  },
+  "bloque": {
+   "es": "En la naturaleza",
+   "en": "Outdoor sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Pirineos, primeras exploraciones de Lucien Briet (1903-1911); primer descenso documentado, garganta de Holzarté-Olhadubi, 1933; disciplina propia, décadas de 1980 y 1990",
+   "en": "The Pyrenees, first explorations by Lucien Briet (1903-1911); first documented descent, Holzarté-Olhadubi gorge, 1933; a discipline in its own right, 1980s and 1990s"
+  },
+  "body": {
+   "es": [
+    "Cazadores y pastores se internaron desde muy antiguo en gargantas y cauces secos persiguiendo presas o buscando abrigo para el ganado, aunque nada de ello puede considerarse barranquismo en el sentido actual. El descenso de barrancos nació de la espeleología, su hermana mayor, puesto que fueron los espeleólogos quienes empezaron a entrar de forma sistemática en gargantas y cañones. El francés Lucien Briet ingresó en 1896 en la sociedad de espeleología fundada por Martel y, mientras sus compañeros se centraban en las cavidades, se dedicó a los barrancos, de modo que entre 1903 y 1911 exploró y documentó buena parte de los Pirineos y, en particular, la sierra de Guara (Fernández Truan, s. f., p. 1035).",
+    "Por falta de material adecuado, los primeros exploradores recorrían los barrancos remontándolos, cargados de escalas y pequeñas embarcaciones, y pasaban largas jornadas expuestos a las crecidas. En 1909 un grupo francés intentó atravesar la garganta de Holzarté-Olhadubi, en el País Vasco francés, y se quedó a mitad de camino (Federación Canaria de Montañismo, s. f.); en 1933 Cazalet, Dubosq, Mailly y Ollivier completaron su descenso, que se considera el primer recorrido moderno de barranquismo bien documentado (Fernández Truan, s. f., p. 1035). En los años sesenta otro grupo francés empezó a descender los cañones de Guara, como Choca o Mascún, apoyándose en los trabajos de Briet, y en los setenta tomaron el relevo barranquistas españoles (Fernández Truan, s. f., p. 1035).",
+    "La aparición de guías y de topografías en los años setenta aceleró la difusión de la actividad (Federación Canaria de Montañismo, s. f.), y a finales de los ochenta y comienzos de los noventa el barranquismo adquirió entidad propia con técnicas y materiales específicos. En Francia se combinaron las técnicas de tres federaciones, la de montaña y escalada, la de espeleología y la de piragüismo, y a comienzos de los noventa se publicó el primer manual técnico, actualizado en 1999 (Fernández Truan, s. f., p. 1035). Institucionalmente lo acogen las federaciones de montaña y de espeleología; en España figura en los estatutos de la FEDME (Federación Canaria de Montañismo, s. f.), y en Francia la federación de espeleología recibió en 2022 la delegación para el barranquismo (Fédération Française de Spéléologie, s. f.)."
+   ],
+   "en": [
+    "Hunters and shepherds entered gorges and dry riverbeds from very early times, pursuing prey or seeking shelter for their flocks, although none of this can be considered canyoning in today's sense. Canyoning was born from caving, its elder sister, since it was cavers who first began to enter gorges and canyons systematically. The Frenchman Lucien Briet joined the speleological society founded by Martel in 1896 and, while his companions concentrated on caves, devoted himself to canyons, so that between 1903 and 1911 he explored and documented much of the Pyrenees and, in particular, the Sierra de Guara (Fernández Truan, n.d., p. 1035).",
+    "For lack of suitable equipment, the first explorers travelled up the canyons, laden with ladders and small boats, and spent long days exposed to floods. In 1909 a French group tried to cross the Holzarté-Olhadubi gorge, in the French Basque Country, and got only halfway (Federación Canaria de Montañismo, n.d.); in 1933 Cazalet, Dubosq, Mailly and Ollivier completed its descent, which is regarded as the first well-documented modern canyoning trip (Fernández Truan, n.d., p. 1035). In the 1960s another French group began descending the canyons of Guara, such as Choca and Mascún, relying on Briet's work, and in the 1970s Spanish canyoners took over (Fernández Truan, n.d., p. 1035).",
+    "The appearance of guides and route descriptions in the 1970s accelerated the spread of the activity (Federación Canaria de Montañismo, n.d.), and in the late 1980s and early 1990s canyoning acquired an identity of its own with specific techniques and equipment. In France the techniques of three federations were combined, mountaineering and climbing, caving, and canoeing, and in the early 1990s the first technical manual was published, updated in 1999 (Fernández Truan, n.d., p. 1035). Institutionally it is hosted by the mountaineering and caving federations; in Spain it is included in the statutes of the FEDME (Federación Canaria de Montañismo, n.d.), and in France the caving federation received the delegation for canyoning in 2022 (Fédération Française de Spéléologie, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/barranquismo.jpg",
+   "pie": {
+    "es": "Descenso de barrancos junto a una cascada en Sundarijal (Katmandú, Nepal), 2013.",
+    "en": "Canyoning beside a waterfall at Sundarijal (Kathmandu, Nepal), 2013."
+   },
+   "autor": "Krish Dulal",
+   "licencia": {
+    "es": "CC BY-SA 3.0",
+    "en": "CC BY-SA 3.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Canyoning_NP.jpg"
+  },
+  "refs": [
+   "Federación Canaria de Montañismo. (s. f.). *¿Qué es el barranquismo?* Recuperado el 29 de septiembre de 2026 de https://fecamon.es/barranquismo/",
+   "Fédération Française de Spéléologie. (s. f.). *Histoire de la fédération*. Recuperado el 29 de septiembre de 2026 de https://ffspeleo.fr/historique.html",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide."
+  ],
+  "refs_en": [
+   "Federación Canaria de Montañismo. (n.d.). *¿Qué es el barranquismo?* Retrieved September 29, 2026, from https://fecamon.es/barranquismo/",
+   "Fédération Française de Spéléologie. (n.d.). *Histoire de la fédération*. Retrieved September 29, 2026, from https://ffspeleo.fr/historique.html",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide."
+  ]
+ },
+ {
+  "id": "espeleologia",
+  "name": {
+   "es": "Espeleología",
+   "en": "Caving"
+  },
+  "bloque": {
+   "es": "En la naturaleza",
+   "en": "Outdoor sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Francia, 1888-1895 (exploraciones de Édouard-Alfred Martel y Sociedad de Espeleología); unión internacional, Liubliana, 1965",
+   "en": "France, 1888-1895 (explorations of Édouard-Alfred Martel and the Société de spéléologie); international union, Ljubljana, 1965"
+  },
+  "body": {
+   "es": [
+    "Los seres humanos entraron en las cuevas desde la prehistoria en busca de refugio y protección, pero la exploración de las cavidades para conocerlas empezó en la Edad Moderna, con obras como la del jesuita alemán Athanasius Kircher, que en 1657 publicó un primer intento de análisis sistemático del mundo subterráneo, poblado todavía de dragones y monstruos. En el siglo XVIII siguieron los estudios de naturalistas como Vallisneri, Leibniz o Volta, y en 1841 el italiano Lindner alcanzó el curso subterráneo del río Timavo (Fernández Truan, s. f., pp. 1043-1044).",
+    "La espeleología moderna nació en Francia con Édouard-Alfred Martel, que en 1888 recorrió con varios compañeros un río subterráneo del Languedoc durante dos días, en 1894 publicó *Les abîmes* y fue el primero en considerar la exploración directa como medio para estudiar las cavidades con rigor científico, colgado de una cuerda de cáñamo y con una vela en la mano (Fernández Truan, s. f., pp. 1035 y 1044). En 1895 fundó la Société de spéléologie, que publicó el boletín *Spelunca* hasta la Primera Guerra Mundial (Fédération Française de Spéléologie [FFS], s. f.). Durante décadas las expediciones con escalas exigieron muchos porteadores y quedaron al alcance de unos pocos con recursos, hasta que en los años setenta la técnica de la cuerda sola permitió a grupos pequeños abordar exploraciones antes impensables (Fernández Truan, s. f., p. 1044).",
+    "En Francia, al Spéléo Club de France (1930) y a la Société spéléologique de France (1936) siguieron el Comité nacional de espeleología (1948) y, el 1 de junio de 1963 en Millau, la Fédération Française de Spéléologie (FFS, s. f.). En el plano internacional, una reunión celebrada en Valence en 1949 preparó el primer congreso, que tuvo lugar en París en 1953, y la Unión Internacional de Espeleología (UIS) se fundó el 16 de septiembre de 1965 en la Universidad de Liubliana, durante el IV Congreso Internacional, como organización que reúne a espeleólogos científicos y técnicos (UIS, s. f.). En España, el sacerdote y geólogo Norbert Font i Sagué, considerado el introductor de la espeleología en Cataluña y en el resto del país, publicó en 1897, con el patrocinio del Centre Excursionista de Catalunya, el primer catálogo espeleológico de Cataluña (Federació Catalana d'Espeleologia, s. f.), y la Federación Española de Espeleología se constituyó en 1983 (Fernández Truan, s. f., p. 1046)."
+   ],
+   "en": [
+    "Human beings entered caves from prehistoric times in search of shelter and protection, but the exploration of caves in order to know them began in the early modern period, with works such as that of the German Jesuit Athanasius Kircher, who in 1657 published a first attempt at a systematic analysis of the underground world, still peopled with dragons and monsters. In the eighteenth century naturalists such as Vallisneri, Leibniz and Volta continued this work, and in 1841 the Italian Lindner reached the underground course of the river Timavo (Fernández Truan, n.d., pp. 1043-1044).",
+    "Modern speleology was born in France with Édouard-Alfred Martel, who in 1888 followed an underground river in Languedoc with several companions over two days, published *Les abîmes* in 1894 and was the first to regard direct exploration as a means of studying caves with scientific rigour, hanging from a hemp rope with a candle in his hand (Fernández Truan, n.d., pp. 1035 and 1044). In 1895 he founded the Société de spéléologie, which published the bulletin *Spelunca* until the First World War (Fédération Française de Spéléologie [FFS], n.d.). For decades expeditions using ladders required many porters and remained within reach of a wealthy few, until in the 1970s the single-rope technique allowed small groups to undertake explorations that had been unthinkable before (Fernández Truan, n.d., p. 1044).",
+    "In France, the Spéléo Club de France (1930) and the Société spéléologique de France (1936) were followed by the National Speleology Committee (1948) and, on 1 June 1963 in Millau, by the Fédération Française de Spéléologie (FFS, n.d.). At the international level, a meeting held in Valence in 1949 prepared the first congress, which took place in Paris in 1953, and the International Union of Speleology (UIS) was founded on 16 September 1965 at the University of Ljubljana, during the 4th International Congress, as an organisation bringing together scientific and technical speleologists (UIS, n.d.). In Spain, the priest and geologist Norbert Font i Sagué, regarded as the introducer of speleology in Catalonia and the rest of the country, published in 1897, under the patronage of the Centre Excursionista de Catalunya, the first speleological catalogue of Catalonia (Federació Catalana d'Espeleologia, n.d.), and the Spanish Speleology Federation was established in 1983 (Fernández Truan, n.d., p. 1046)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/espeleologia.jpg",
+   "pie": {
+    "es": "Un espeleólogo suspendido de una cuerda en Niggly Cave, 2022.",
+    "en": "A caver hanging on a rope in Niggly Cave, 2022."
+   },
+   "autor": "Cave Person 2",
+   "licencia": {
+    "es": "CC BY-SA 4.0",
+    "en": "CC BY-SA 4.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Cave_explorer_in_Niggly_Cave.jpg"
+  },
+  "refs": [
+   "Federació Catalana d'Espeleologia. (s. f.). *Font i Sagué*. Recuperado el 30 de septiembre de 2026 de https://www.espeleologia.cat/en/font-i-sague/",
+   "Fédération Française de Spéléologie. (s. f.). *Histoire de la fédération*. Recuperado el 29 de septiembre de 2026 de https://ffspeleo.fr/historique.html",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "UIS. (s. f.). *What is the UIS?* Recuperado el 29 de septiembre de 2026 de https://uis-speleo.org/index.php/what-is-the-uis/"
+  ],
+  "refs_en": [
+   "Federació Catalana d'Espeleologia. (n.d.). *Font i Sagué*. Retrieved September 30, 2026, from https://www.espeleologia.cat/en/font-i-sague/",
+   "Fédération Française de Spéléologie. (n.d.). *Histoire de la fédération*. Retrieved September 29, 2026, from https://ffspeleo.fr/historique.html",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "UIS. (n.d.). *What is the UIS?* Retrieved September 29, 2026, from https://uis-speleo.org/index.php/what-is-the-uis/"
+  ]
+ },
+ {
+  "id": "ciclismo-de-montana",
+  "name": {
+   "es": "Ciclismo de montaña",
+   "en": "Mountain biking"
+  },
+  "bloque": {
+   "es": "En la naturaleza",
+   "en": "Outdoor sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "California (Estados Unidos), década de 1970 (carreras de Repack, monte Tamalpais); Campeonato del Mundo UCI, 1990; olímpico desde Atlanta 1996",
+   "en": "California (United States), 1970s (Repack races, Mount Tamalpais); UCI World Championships, 1990; Olympic since Atlanta 1996"
+  },
+  "body": {
+   "es": [
+    "El ciclismo de montaña surgió del ciclismo recreativo, puesto que la demanda de bicicletas para salir de los caminos asfaltados provocó a mediados del siglo XX una revolución en el diseño de la bicicleta, y solo después la bicicleta de montaña se convirtió en instrumento de competición (Vamplew, 2021, p. 161). Sus antecedentes están en las bicicletas de neumáticos anchos, o de balón, que Schwinn y otras marcas fabricaron en las décadas de 1930 y 1940, y en la *Woodsie Bike* que John Finley Scott montó en 1953 con un cuadro Schwinn, neumáticos de balón, manillar plano y cambio de desviador (Marin Museum of Bicycling and Mountain Bike Hall of Fame, s. f.).",
+    "La forma moderna nació en California en la década de 1970, cuando se prepararon bicicletas resistentes para bajar por las pistas cortafuegos y después se les añadieron cambios de amplio desarrollo para poder subirlas (Shepherd, 1999, p. 99). Los aficionados del condado de Marin restauraban aquellas viejas bicicletas de balón y recorrían con ellas las pistas cortafuegos del monte Tamalpais (Marin Museum of Bicycling and Mountain Bike Hall of Fame, s. f.), y el 21 de octubre de 1976 corrieron la primera carrera de *Repack*, una bajada al oeste de Fairfax que es el antecedente del descenso actual y en la que participaron, entre otros, Gary Fisher y Joe Breeze (Breeze, s. f.). Pronto otros grupos añadieron cambios de desviador a esas bicicletas y surgieron empresas para comercializarlas (Marin Museum of Bicycling and Mountain Bike Hall of Fame, s. f.). En 1983 se celebró el primer campeonato nacional de los Estados Unidos (Shepherd, 1999, p. 99).",
+    "Europa y Australia adoptaron pronto el nuevo deporte, y el patrocinio comercial impulsó circuitos más cortos, de varias vueltas, para que el público y la televisión pudieran seguir la carrera (Shepherd, 1999, p. 99). Shepherd fecha en 1987 el primer campeonato mundial, aunque el primero organizado por la Unión Ciclista Internacional (UCI) se celebró en Durango (Colorado) en 1990, con pruebas de *cross-country* olímpico y de descenso, y el *cross-country* forma parte de los Juegos Olímpicos desde Atlanta 1996 (UCI, s. f.). Nacido en un ambiente informal de aficionados que fabricaban sus propias máquinas, el ciclismo de montaña pasó en menos de dos décadas a integrarse en la federación internacional y en el programa olímpico."
+   ],
+   "en": [
+    "Mountain biking grew out of recreational cycling, since demand for bicycles that could leave paved roads brought about a revolution in cycle design in the mid-twentieth century, and only later did the mountain bike become an instrument of competition (Vamplew, 2021, p. 161). Its antecedents lie in the wide-tyred, or balloon-tyre, bicycles that Schwinn and other makers produced in the 1930s and 1940s, and in the *Woodsie Bike* that John Finley Scott assembled in 1953 with a Schwinn frame, balloon tyres, flat handlebars and derailleur gears (Marin Museum of Bicycling and Mountain Bike Hall of Fame, n.d.).",
+    "The modern form was born in California in the 1970s, when tough bicycles were prepared for racing down fire trails and wide-range gears were then added so that they could be ridden up them (Shepherd, 1999, p. 99). Enthusiasts in Marin County restored those old balloon-tyre bicycles and rode them on the fire roads of Mount Tamalpais (Marin Museum of Bicycling and Mountain Bike Hall of Fame, n.d.), and on 21 October 1976 they ran the first *Repack* race, a descent west of Fairfax that is the forerunner of today's downhill and in which Gary Fisher and Joe Breeze, among others, took part (Breeze, n.d.). Other groups soon fitted derailleur gears to these bicycles, and new businesses emerged to market them (Marin Museum of Bicycling and Mountain Bike Hall of Fame, n.d.). The first United States national championships were held in 1983 (Shepherd, 1999, p. 99).",
+    "Europe and Australia soon took up the new sport, and commercial sponsorship pushed for shorter courses with several laps so that spectators and television could follow the race (Shepherd, 1999, p. 99). Shepherd dates the first world championships to 1987, although the first organised by the Union Cycliste Internationale (UCI) was held in Durango (Colorado) in 1990, with Olympic cross-country and downhill events, and cross-country has been part of the Olympic Games since Atlanta 1996 (UCI, n.d.). Born in an informal setting of enthusiasts who built their own machines, mountain biking was absorbed in less than two decades into the international federation and the Olympic programme."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/ciclismo-de-montana.jpg",
+   "pie": {
+    "es": "Adrien Niyonshuti (Ruanda) en la prueba masculina de campo a través de los Juegos Olímpicos de Londres, 2012.",
+    "en": "Adrien Niyonshuti (Rwanda) in the men's cross-country race at the London 2012 Olympics."
+   },
+   "autor": "Tim Regan",
+   "licencia": {
+    "es": "CC BY 2.0",
+    "en": "CC BY 2.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:MTB_cycling_2012_Olympics_M_cross-country_RWA_Adrien_Niyonshuti.jpg"
+  },
+  "refs": [
+   "Breeze, J. (s. f.). *Repack history*. Marin Museum of Bicycling and Mountain Bike Hall of Fame. Recuperado el 30 de septiembre de 2026 de https://mmbhof.org/mtn-bike-hall-of-fame/history/repack-history/",
+   "Marin Museum of Bicycling and Mountain Bike Hall of Fame. (s. f.). *Mountain biking history*. Recuperado el 30 de septiembre de 2026 de https://mmbhof.org/mtn-bike-hall-of-fame/history/",
+   "Shepherd, R. (1999). Cycling. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 97-100). Oxford University Press.",
+   "UCI. (s. f.). *UCI Mountain Bike World Championships: The history, the formats and the legends*. Recuperado el 29 de septiembre de 2026 de https://www.uci.org/article/uci-mountain-bike-world-championships-the-history-the-formats-and-the-legends/5xzmwV5qEpY2gvEQWNUKru",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Breeze, J. (n.d.). *Repack history*. Marin Museum of Bicycling and Mountain Bike Hall of Fame. Retrieved September 30, 2026, from https://mmbhof.org/mtn-bike-hall-of-fame/history/repack-history/",
+   "Marin Museum of Bicycling and Mountain Bike Hall of Fame. (n.d.). *Mountain biking history*. Retrieved September 30, 2026, from https://mmbhof.org/mtn-bike-hall-of-fame/history/",
+   "Shepherd, R. (1999). Cycling. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 97-100). Oxford University Press.",
+   "UCI. (n.d.). *UCI Mountain Bike World Championships: The history, the formats and the legends*. Retrieved September 29, 2026, from https://www.uci.org/article/uci-mountain-bike-world-championships-the-history-the-formats-and-the-legends/5xzmwV5qEpY2gvEQWNUKru",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "motociclismo",
+  "name": {
+   "es": "Motociclismo",
+   "en": "Motorcycle racing"
+  },
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Europa, finales del siglo XIX; primera carrera internacional en Dourdan (Francia), 1904",
+   "en": "Europe, late nineteenth century; first international race at Dourdan (France), 1904"
+  },
+  "body": {
+   "es": [
+    "El motociclismo surgió a finales del siglo XIX, cuando los ingenieros de los países industrializados aplicaron el motor recién inventado a la estructura del velocípedo. Italia, Alemania, Francia, Reino Unido y Estados Unidos registraron patentes de velocípedos con motor, aunque suele considerarse padre de la motocicleta a Gottlieb Daimler, que desarrolló en 1885 la *Einspur* (Bonini, 1999, pp. 260-261). Al principio las motocicletas competían junto a triciclos y automóviles, y la primera carrera reservada a ellas se celebró en Inglaterra en 1896; las primeras pruebas unían a menudo capitales europeas y fracasaban con frecuencia porque la preparación técnica y los materiales no soportaban la potencia de los motores (Bonini, 1999, p. 261). Gracias a James Gordon Bennett, los Juegos de París de 1900 incluyeron dieciséis pruebas para automóviles y motocicletas (Guttmann, 2004, p. 202).",
+    "El 25 de septiembre de 1904 el Motocycle-Club de France organizó en Dourdan, al suroeste de París, la Copa Internacional, con participantes de Alemania, Austria, Dinamarca, Francia y Gran Bretaña, y los desacuerdos sobre las condiciones de la carrera llevaron a esos cinco países a fundar el 21 de diciembre de ese año, en el restaurante Ledoyen de París, la Federación Internacional de Clubes Motociclistas (FICM). La federación quedó inactiva desde 1906 y se reactivó tras una reunión celebrada en Londres el 28 de noviembre de 1912 y un congreso posterior en París, con diez países que se consideran sus fundadores oficiales, y en 1913 organizó su primera prueba internacional, los Seis Días (FIM, s. f.). El Tourist Trophy de la isla de Man, disputado desde 1907, fijó las categorías de cilindrada y en 1914 hizo obligatorio el casco (Bonini, 1999, p. 261).",
+    "En 1949 la FICM adoptó el nombre de Federación Internacional de Motociclismo (FIM) y creó el Campeonato del Mundo de Velocidad, su competición más prestigiosa; en 1947 se había corrido en los Países Bajos el primer Motocross de las Naciones y en 1975 nació el mundial de trial (FIM, s. f.). El motociclismo ha sido uno de los últimos bastiones del machismo deportivo, porque, aunque en 1896 se organizó en Francia un campeonato exclusivamente femenino, las mujeres participaron después solo de forma esporádica, y cuando Beryl Swain terminó el Tourist Trophy en 1962 la asociación de pilotos votó por unanimidad impedir la participación femenina en el futuro (Bonini, 1999, p. 262). El peligro forma parte de su historia, y el circuito del Tourist Trophy se cobró 260 vidas entre 1907 y 2019 (Vamplew, 2021, p. 161)."
+   ],
+   "en": [
+    "Motorcycling emerged at the end of the nineteenth century, when industrial engineers in developed countries applied the newly invented engine to the structure of the velocipede. Italy, Germany, France, the United Kingdom and the United States all filed patents for motor velocipedes, although Gottlieb Daimler, who developed the *Einspur* in 1885, is generally regarded as the father of the motorcycle (Bonini, 1999, pp. 260-261). At first motorcycles competed alongside motor tricycles and automobiles, and the first race exclusively for motorcycles was held in England in 1896; early events often linked European capitals and frequently failed because technical preparation and materials could not withstand the power of the engines (Bonini, 1999, p. 261). Thanks to James Gordon Bennett, the 1900 Paris Games included sixteen events for automobiles and motorcycles (Guttmann, 2004, p. 202).",
+    "On 25 September 1904 the Motocycle-Club de France organised the International Cup at Dourdan, south-west of Paris, with riders from Austria, Denmark, France, Germany and Great Britain, and disagreements over the racing conditions led these five countries to found the Fédération Internationale des Clubs Motocyclistes (FICM) on 21 December of that year, in the Ledoyen restaurant in Paris. The federation became inactive from 1906 and was revived after a meeting held in London on 28 November 1912 and a later congress in Paris, with ten countries regarded as its official founder members, and in 1913 it organised its first international event, the Six Days Trial (FIM, n.d.). The Isle of Man Tourist Trophy, contested since 1907, fixed the engine capacity classes and made helmets compulsory in 1914 (Bonini, 1999, p. 261).",
+    "In 1949 the FICM took the name Fédération Internationale de Motocyclisme (FIM) and created the Road Racing World Championship, its most prestigious competition; in 1947 the first Motocross des Nations had been run in the Netherlands, and in 1975 the trial world championship was born (FIM, n.d.). Motorcycle racing has been one of the last bastions of sporting machismo, because, although a championship exclusively for women was organised in France in 1896, women later took part only sporadically, and when Beryl Swain finished the Tourist Trophy in 1962 the riders' association voted unanimously to bar women from future races (Bonini, 1999, p. 262). Danger is part of its history, and the Tourist Trophy circuit claimed 260 lives between 1907 and 2019 (Vamplew, 2021, p. 161)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/motociclismo.jpg",
+   "pie": {
+    "es": "Carrera motociclista de 500 cc en Juan-les-Pins (Antibes), 8 de abril de 1928.",
+    "en": "500 cc motorcycle race at Juan-les-Pins (Antibes), 8 April 1928."
+   },
+   "autor": {
+    "es": "Agence Rol",
+    "en": "Agence Rol"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Juan-les-Pins,_8-4-28_(course_motocycliste)_Ardisson_sur_(motocyclette)_Terrot,_Oilter_sur_(motocyclette)_Motosacoche,_Delequizamon_sur_(motocyclette)_A.J.S.,_500_cm3_-_btv1b53197886q.jpg"
+  },
+  "refs": [
+   "Bonini, G. (1999). Motorcycle racing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 260-262). Oxford University Press.",
+   "FIM. (s. f.). *A century of motorcycle passion*. Recuperado el 29 de septiembre de 2026 de https://www.fim-moto.com/en/fim/history-heritage",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Bonini, G. (1999). Motorcycle racing. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 260-262). Oxford University Press.",
+   "FIM. (n.d.). *A century of motorcycle passion*. Retrieved September 29, 2026, from https://www.fim-moto.com/en/fim/history-heritage",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "ciclismo-en-ruta",
+  "name": {
+   "es": "Ciclismo en ruta",
+   "en": "Road cycling"
+  },
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Francia, carrera París-Ruán de 1869; grandes vueltas por etapas desde 1903 (Tour de Francia)",
+   "en": "France, Paris-Rouen race of 1869; grand stage races from 1903 (Tour de France)"
+  },
+  "body": {
+   "es": [
+    "El ciclismo es uno de los pocos deportes modernos de origen francés, y por eso buena parte de su vocabulario técnico procede de esa lengua (Guttmann, 2004, p. 196). Su antecedente mecánico fue el aparato de dos ruedas sin pedales, impulsado por los pies contra el suelo, que el barón alemán Karl-Friedrich von Drais patentó en París en 1818, aunque el vehículo práctico llegó con el velocípedo de pedales en la rueda delantera que Pierre Michaux y su hijo Ernest empezaron a fabricar en 1866 (Guttmann, 2004, p. 196). En 1869, en plena fiebre ciclista francesa, la revista *Le Vélocipède Illustré* patrocinó una carrera de París a Ruán abierta a hombres y a mujeres, que ganó el inglés James Moore y que fue la primera carrera ciclista de larga distancia (Guttmann, 2004, pp. 196-197; Vamplew, 2021, pp. 158-159).",
+    "Desde la década de 1890 los periódicos organizaron carreras por carreteras abiertas, en parte para demostrar que la bicicleta podía cubrir grandes distancias y sobre todo para aumentar sus ventas y sus ingresos por publicidad, y *Le Petit Journal* creó en 1891 la París-Brest-París, de 1.200 kilómetros (Vamplew, 2021, pp. 159-160). En 1903 Henri Desgrange, director de *L'Auto*, puso en marcha el Tour de Francia, seis etapas y 2.408 kilómetros que ganó Maurice Garin y que duplicaron con creces la tirada del diario hasta 65.000 ejemplares (Guttmann, 2004, p. 199). Le siguieron el Giro de Italia en 1909, patrocinado por *La Gazzetta dello Sport*, y la Vuelta a España en 1935, creada por el diario *Informaciones* (Vamplew, 2021, p. 160). En 1900 las federaciones del continente, enfrentadas con la británica por el amateurismo, fundaron en París la Unión Ciclista Internacional (UCI, s. f.-a).",
+    "En Inglaterra, en cambio, el temor a los peligros de las carreras en la vía pública llevó a prohibir las salidas en grupo, y durante la primera mitad del siglo XX la contrarreloj individual fue allí la forma principal del ciclismo en carretera (Shepherd, 1999, pp. 98-99). La prueba en ruta figura en el programa olímpico desde Atenas 1896, la femenina desde Los Ángeles 1984, y los profesionales no fueron admitidos hasta Atlanta 1996 (UCI, s. f.-b). Su rasgo social más característico es el vínculo con la identidad nacional, puesto que en el periodo de entreguerras el Tour se promocionó como una peregrinación por los paisajes y lugares históricos de Francia, desde 1930 se corrió por selecciones nacionales y sus vencedores fueron venerados como héroes (Guttmann, 2004, p. 199; Holt, 1999, p. 100). La bicicleta dio además a muchas mujeres una movilidad desconocida hasta entonces (Guttmann, 2004, p. 198)."
+   ],
+   "en": [
+    "Cycling is one of the few modern sports of French origin, which is why much of its technical vocabulary comes from that language (Guttmann, 2004, p. 196). Its mechanical antecedent was the pedal-less two-wheeled contraption, propelled by the rider's feet pushing against the ground, that the German Baron Karl-Friedrich von Drais patented in Paris in 1818, although the practical vehicle arrived with the velocipede with pedals on the front wheel that Pierre Michaux and his son Ernest began to produce in 1866 (Guttmann, 2004, p. 196). In 1869, at the height of the French cycling craze, the magazine *Le Vélocipède Illustré* sponsored a race from Paris to Rouen open to men and women, which was won by the Englishman James Moore and was the first long-distance cycle race (Guttmann, 2004, pp. 196-197; Vamplew, 2021, pp. 158-159).",
+    "From the 1890s newspapers organised races on open roads, partly to show that the bicycle could cover great distances and mainly to boost their sales and advertising revenue, and *Le Petit Journal* created the 1,200-kilometre Paris-Brest-Paris in 1891 (Vamplew, 2021, pp. 159-160). In 1903 Henri Desgrange, editor of *L'Auto*, launched the Tour de France, six stages and 2,408 kilometres won by Maurice Garin, which more than doubled the paper's circulation to 65,000 copies (Guttmann, 2004, p. 199). It was followed by the Giro d'Italia in 1909, sponsored by *La Gazzetta dello Sport*, and the Vuelta a España in 1935, created by the newspaper *Informaciones* (Vamplew, 2021, p. 160). In 1900 the continental federations, at odds with the British over amateurism, founded the Union Cycliste Internationale in Paris (UCI, n.d.-a).",
+    "In England, by contrast, fear of the dangers of racing on public roads led to a ban on massed-start racing, and during the first half of the twentieth century the individual time trial was the main form of road racing there (Shepherd, 1999, pp. 98-99). The road race has been on the Olympic programme since Athens 1896, the women's race since Los Angeles 1984, and professionals were not admitted until Atlanta 1996 (UCI, n.d.-b). Its most characteristic social feature is its bond with national identity, since between the wars the Tour was promoted as a pilgrimage through the landscapes and historic sites of France, from 1930 it was contested by national teams, and its winners were worshipped as heroes (Guttmann, 2004, p. 199; Holt, 1999, p. 100). The bicycle also gave many women a mobility they had never known before (Guttmann, 2004, p. 198)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/ciclismo-en-ruta.jpg",
+   "pie": {
+    "es": "François Faber se abre paso entre los espectadores en la Côte de Picardie durante el Tour de Francia, 31 de julio de 1910.",
+    "en": "François Faber makes his way through the spectators on the Côte de Picardie during the Tour de France, 31 July 1910."
+   },
+   "autor": {
+    "es": "Agence Rol",
+    "en": "Agence Rol"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Tour_de_France_1910,_Fran%C3%A7ois_Faber_dans_la_C%C3%B4te_de_Picardie_(se_frayant_un_chemin_parmi_les_spectateurs,_31_juillet)_-_btv1b6914591x.jpg"
+  },
+  "refs": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Holt, R. (1999). Cycling: Tour de France. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (p. 100). Oxford University Press.",
+   "Shepherd, R. (1999). Cycling. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 97-100). Oxford University Press.",
+   "UCI. (s. f.-a). *1900: The ICA is dead, long live the UCI*. Recuperado el 29 de septiembre de 2026 de https://www.uci.org/article/1900-the-ica-is-dead-long-live-the-uci/2TVO1R0rwV5H34wBw4RBCv",
+   "UCI. (s. f.-b). *Cycling at the Olympic Games: An ode to the cultural diversity of the bicycle*. Recuperado el 29 de septiembre de 2026 de https://www.uci.org/article/cycling-at-the-olympic-games-an-ode-to-the-cultural-diversity-of-the-bicycle/e51X5qw3QcAJFIIf19JC7",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Holt, R. (1999). Cycling: Tour de France. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (p. 100). Oxford University Press.",
+   "Shepherd, R. (1999). Cycling. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 97-100). Oxford University Press.",
+   "UCI. (n.d.-a). *1900: The ICA is dead, long live the UCI*. Retrieved September 29, 2026, from https://www.uci.org/article/1900-the-ica-is-dead-long-live-the-uci/2TVO1R0rwV5H34wBw4RBCv",
+   "UCI. (n.d.-b). *Cycling at the Olympic Games: An ode to the cultural diversity of the bicycle*. Retrieved September 29, 2026, from https://www.uci.org/article/cycling-at-the-olympic-games-an-ode-to-the-cultural-diversity-of-the-bicycle/e51X5qw3QcAJFIIf19JC7",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "ciclismo-en-pista",
+  "name": {
+   "es": "Ciclismo en pista",
+   "en": "Track cycling"
+  },
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "París (Francia), 1868; velódromos y primer campeonato del mundo en la década de 1890 (Chicago, 1893)",
+   "en": "Paris (France), 1868; velodromes and first world championship in the 1890s (Chicago, 1893)"
+  },
+  "body": {
+   "es": [
+    "Las primeras carreras de bicicletas se corrieron en recintos cerrados. En 1868 se disputó en el parque de Saint-Cloud, junto a París, una carrera de 1.200 metros promovida por empresarios y notables de la ciudad para exhibir el ingenio francés, que ganó el inglés James Moore, y ese mismo año hubo en París y en Burdeos carreras para hombres y también para mujeres (Shepherd, 1999, p. 97; Guttmann, 2004, p. 196; Vamplew, 2021, p. 158). Hasta la década de 1880 la mayoría de las pruebas se celebraban en velódromos, donde, a diferencia de la carretera, se podía cobrar la entrada, de modo que la pista fue el primer estímulo del ciclismo como espectáculo (Vamplew, 2021, p. 159). Algún manual fecha la carrera de Saint-Cloud en 1889 (Fernández Truan, s. f., p. 1214), una fecha que no concuerda con el resto de las fuentes.",
+    "En la década de 1890 las pistas de peralte pronunciado se hicieron enormemente populares en Europa, Norteamérica y Australia, con bicicletas de piñón fijo y sin frenos, una tradición que se mantiene, y desde 1898 los ciclistas empezaron a correr detrás de motocicletas que marcaban el ritmo (Shepherd, 1999, p. 98). En 1899 Francia tenía más de trescientos velódromos, entre ellos el Buffalo de París, que frecuentaba Toulouse-Lautrec, y europeos y norteamericanos, hombres y mujeres, competían en carreras de seis días (Guttmann, 2004, p. 197). La Asociación Internacional de Ciclismo, creada en 1892, entregó en la Exposición Universal de Chicago de 1893 los primeros títulos mundiales, dos de ellos para el estadounidense Arthur Zimmerman, y desde 1895 hubo también títulos para profesionales (UCI, s. f.-c). En 1900 la Unión Ciclista Internacional ocupó el lugar de aquella asociación (UCI, s. f.-a).",
+    "La pista reflejó las tensiones sociales del deporte decimonónico. En Inglaterra las pruebas se separaron entre aficionados, caballeros que competían por placer y no aceptaban premios de valor, y profesionales que corrían por dinero ante un público obrero (Shepherd, 1999, p. 98), y el propio Zimmerman, campeón mundial aficionado en 1893, reunió con sus carreras veintinueve bicicletas, caballos, pianos y una casa (UCI, s. f.-a). El ciclismo en pista forma parte del programa olímpico desde Atenas 1896, donde se entregaron cinco títulos (UCI, s. f.-c), y ha incorporado pruebas como el keirin, nacido en Japón en 1948 (Shepherd, 1999, p. 99), que las mujeres disputan en los Juegos desde Londres 2012 (UCI, s. f.-b). Las mujeres estuvieron presentes muy pronto en los velódromos, y en 1893 Hélène Dutrieu recorrió 31,437 kilómetros en una hora (Guttmann, 2004, p. 199)."
+   ],
+   "en": [
+    "The first bicycle races were run in enclosed spaces. In 1868 a 1,200-metre race was held in the park of Saint-Cloud, near Paris, promoted by the city's business and civic leaders to showcase French ingenuity, and won by the Englishman James Moore, and in the same year there were races in Paris and Bordeaux for men and also for women (Shepherd, 1999, p. 97; Guttmann, 2004, p. 196; Vamplew, 2021, p. 158). Until the 1880s most races were held in velodromes, where, unlike on the road, an entry fee could be charged, so the track was the first stimulus to cycling as a spectator sport (Vamplew, 2021, p. 159). One textbook dates the Saint-Cloud race to 1889 (Fernández Truan, n.d., p. 1214), a date that does not agree with the rest of the sources.",
+    "In the 1890s steeply banked tracks became enormously popular in Europe, North America and Australia, with fixed-gear bicycles without brakes, a tradition that continues, and from 1898 riders began to race behind pacing motorcycles (Shepherd, 1999, p. 98). In 1899 France had more than three hundred velodromes, among them the Buffalo in Paris, frequented by Toulouse-Lautrec, and European and North American cyclists, men and women, competed in six-day races (Guttmann, 2004, p. 197). The International Cycling Association, created in 1892, awarded the first world titles at the 1893 World's Fair in Chicago, two of them to the American Arthur Zimmerman, and from 1895 there were also titles for professionals (UCI, n.d.-c). In 1900 the Union Cycliste Internationale took the place of that association (UCI, n.d.-a).",
+    "The track reflected the social tensions of nineteenth-century sport. In England races were divided between amateurs, gentlemen who competed for enjoyment and accepted no valuable prizes, and professionals who raced for money before working-class crowds (Shepherd, 1999, p. 98), and Zimmerman himself, amateur world champion in 1893, amassed twenty-nine bicycles, horses, pianos and a house from his racing (UCI, n.d.-a). Track cycling has been on the Olympic programme since Athens 1896, where five titles were awarded (UCI, n.d.-c), and it has taken in events such as the keirin, born in Japan in 1948 (Shepherd, 1999, p. 99), which women have contested at the Games since London 2012 (UCI, n.d.-b). Women were present on the velodromes very early, and in 1893 Hélène Dutrieu covered 31.437 kilometres in one hour (Guttmann, 2004, p. 199)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/ciclismo-en-pista.jpg",
+   "pie": {
+    "es": "Carrera tras tándems en el velódromo Buffalo de Montrouge, 29 de agosto de 1926.",
+    "en": "Race paced by tandems at the Buffalo velodrome in Montrouge, 29 August 1926."
+   },
+   "autor": {
+    "es": "Agence Rol",
+    "en": "Agence Rol"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:(V%C3%A9lodrome)_Buffalo,_29-8-26,_course_derri%C3%A8re_tandems_-_btv1b53167367h.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Shepherd, R. (1999). Cycling. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 97-100). Oxford University Press.",
+   "UCI. (s. f.-a). *1900: The ICA is dead, long live the UCI*. Recuperado el 29 de septiembre de 2026 de https://www.uci.org/article/1900-the-ica-is-dead-long-live-the-uci/2TVO1R0rwV5H34wBw4RBCv",
+   "UCI. (s. f.-b). *Cycling at the Olympic Games: An ode to the cultural diversity of the bicycle*. Recuperado el 29 de septiembre de 2026 de https://www.uci.org/article/cycling-at-the-olympic-games-an-ode-to-the-cultural-diversity-of-the-bicycle/e51X5qw3QcAJFIIf19JC7",
+   "UCI. (s. f.-c). *What is track cycling?* Recuperado el 29 de septiembre de 2026 de https://www.uci.org/article/what-is-track-cycling/6yFQsdYGiuw1bIWiLS6Hxq",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Shepherd, R. (1999). Cycling. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 97-100). Oxford University Press.",
+   "UCI. (n.d.-a). *1900: The ICA is dead, long live the UCI*. Retrieved September 29, 2026, from https://www.uci.org/article/1900-the-ica-is-dead-long-live-the-uci/2TVO1R0rwV5H34wBw4RBCv",
+   "UCI. (n.d.-b). *Cycling at the Olympic Games: An ode to the cultural diversity of the bicycle*. Retrieved September 29, 2026, from https://www.uci.org/article/cycling-at-the-olympic-games-an-ode-to-the-cultural-diversity-of-the-bicycle/e51X5qw3QcAJFIIf19JC7",
+   "UCI. (n.d.-c). *What is track cycling?* Retrieved September 29, 2026, from https://www.uci.org/article/what-is-track-cycling/6yFQsdYGiuw1bIWiLS6Hxq",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "rafting",
+  "name": {
+   "es": "Rafting",
+   "en": "Rafting"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Ríos del oeste de Estados Unidos, balsas neumáticas tras la Segunda Guerra Mundial; competición internacional desde 1989",
+   "en": "Rivers of the western United States, inflatable rafts after the Second World War; international competition from 1989"
+  },
+  "body": {
+   "es": [
+    "La balsa es una de las formas más antiguas de navegar por un río, y durante siglos los troncos talados en las montañas bajaron por la corriente atados en largos trenes que los almadieros gobernaban con remos, como ocurría en los valles del Pirineo. Esa práctica de trabajo, sin embargo, no guarda relación directa con el deporte actual (Fernández Truan, s. f., p. 1067). El rafting moderno nació en los ríos del oeste de Estados Unidos, en particular en el cañón del Colorado, donde tras la Segunda Guerra Mundial los botes neumáticos sobrantes del ejército empezaron a usarse para descender los rápidos por aventura y por turismo (Fernández Truan, s. f., p. 1066).",
+    "Las balsas neumáticas, más anchas y planas que las canoas, ofrecen menos respuesta en los giros y exigen más fuerza para avanzar, a cambio de una estabilidad que permite llevar grupos numerosos con pocas nociones previas. Esa cualidad explica que, desde los años sesenta, el rafting se difundiera sobre todo como actividad recreativa y como negocio de excursiones comerciales por ríos de aguas bravas, con guías profesionales al frente de cada embarcación (Townes, 1999, pp. 316-317). La competición internacional llegó tarde, con el Project RAFT (*Russians and Americans for Teamwork*), que en los últimos años de la Guerra Fría reunió a equipos de muchos países en Siberia (1989), Estados Unidos (1990), Costa Rica (1991) y Turquía (1993) (International Rafting Federation, s. f.).",
+    "En un campeonato mundial celebrado en Italia en 1994 varios de sus protagonistas plantearon la necesidad de un organismo común, y en mayo de 1997 se fundó en Augsburgo (Alemania) la International Rafting Federation, que celebró su primer congreso el 8 de septiembre de ese año durante el Camel White Water Challenge. El primer campeonato del mundo oficial se disputó en Costa Rica en 1998, año en que la federación aprobó además un sistema de formación y titulación de guías (International Rafting Federation, s. f.). En Europa el rafting se extendió en los años ochenta y en España a comienzos de los noventa, primero en los ríos pirenaicos (Fernández Truan, s. f., p. 1067). El deporte, que no es olímpico, mantiene un fuerte vínculo con el turismo activo y con la profesión de guía, en la que la federación registra una proporción creciente de mujeres (International Rafting Federation, s. f.)."
+   ],
+   "en": [
+    "The raft is one of the oldest ways of travelling down a river, and for centuries timber felled in the mountains was floated downstream bound in long trains that raftsmen steered with oars, as happened in the valleys of the Pyrenees. That working practice, however, bears no direct relation to the present-day sport (Fernández Truan, n.d., p. 1067). Modern rafting was born on the rivers of the western United States, particularly in the canyon of the Colorado, where after the Second World War surplus army inflatable boats began to be used to run the rapids for adventure and tourism (Fernández Truan, n.d., p. 1066).",
+    "Inflatable rafts, broader and flatter than canoes, respond less readily to turns and need more power to move forward, in exchange for a stability that allows large groups with little previous knowledge to be carried. That quality explains why, from the 1960s, rafting spread above all as a recreational activity and as a business of commercial trips on whitewater rivers, with professional guides in charge of each boat (Townes, 1999, pp. 316-317). International competition came late, with Project RAFT (Russians and Americans for Teamwork), which in the last years of the Cold War brought together teams from many countries in Siberia (1989), the United States (1990), Costa Rica (1991) and Turkey (1993) (International Rafting Federation, n.d.).",
+    "At a world championship held in Italy in 1994 several of its leading figures raised the need for a common body, and in May 1997 the International Rafting Federation was founded in Augsburg (Germany), holding its first congress on 8 September that year during the Camel White Water Challenge. The first official world championship took place in Costa Rica in 1998, the year in which the federation also approved a system for training and certifying guides (International Rafting Federation, n.d.). In Europe rafting spread in the 1980s and in Spain in the early 1990s, first on the rivers of the Pyrenees (Fernández Truan, n.d., p. 1067). The sport, which is not Olympic, keeps a strong link with adventure tourism and with the profession of guide, in which the federation records a growing proportion of women (International Rafting Federation, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/rafting.jpg",
+   "pie": {
+    "es": "Descenso de aguas bravas en balsa neumática, 2009.",
+    "en": "Whitewater rafting in an inflatable raft, 2009."
+   },
+   "autor": "Graeme Walker",
+   "licencia": {
+    "es": "CC BY-SA 2.0",
+    "en": "CC BY-SA 2.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Whitewater_Rafting_-_geograph.org.uk_-_1530594.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Rafting Federation. (s. f.). *History*. Recuperado el 29 de septiembre de 2026 de https://internationalrafting.com/about/history/",
+   "Townes, J. (1999). Rafting. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 316-317). Oxford University Press."
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Rafting Federation. (n.d.). *History*. Retrieved September 29, 2026, from https://internationalrafting.com/about/history/",
+   "Townes, J. (1999). Rafting. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 316-317). Oxford University Press."
+  ]
+ },
+ {
+  "id": "escalada",
+  "name": {
+   "es": "Escalada",
+   "en": "Climbing"
+  },
+  "bloque": {
+   "es": "En la naturaleza",
+   "en": "Outdoor sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Europa, finales del siglo XVIII y siglo XIX (escalada en roca, Napes Needle, Inglaterra, 1886); competición deportiva, Bardonecchia (Italia), 1985",
+   "en": "Europe, late eighteenth and nineteenth centuries (rock climbing, Napes Needle, England, 1886); competitive sport climbing, Bardonecchia (Italy), 1985"
+  },
+  "body": {
+   "es": [
+    "La escalada en roca nació a la sombra del alpinismo, del que durante mucho tiempo fue un simple entrenamiento, y sus primeros practicantes sistemáticos en Europa fueron los naturalistas de finales del siglo XVIII y del XIX que trepaban por los cantiles en busca de especímenes. Gran Bretaña reclama el origen de la escalada de montaña y también el de la escalada en roca, y suele fijar su comienzo en la primera ascensión de la Napes Needle, en el Lake District, que W. P. Haskett Smith realizó en 1886, aunque antes de esa fecha se habían hecho y registrado muchas otras vías y en el continente se entrenaba ya en roca para el alpinismo. Hacia finales del siglo XIX la escalada se convirtió en un deporte con entidad propia (Donnelly, 1999, p. 325).",
+    "Durante casi un siglo la escalada funcionó sin reglamento escrito ni órganos de gobierno, con una competición directa, basada en la primera ascensión de una vía o en sus variantes (en solitario, femenina o invernal), y otra indirecta, que valoraba el estilo con que se subía. Ese conjunto de normas, al que los escaladores llaman «ética», se construía por consenso en la conversación y en las revistas especializadas y se hacía cumplir mediante la autodisciplina y la presión del grupo (Donnelly, 1999, p. 326). A mediados del siglo XX los británicos encabezaron un salto en la dificultad de las vías, en los años sesenta se impuso el estilo estadounidense de las grandes paredes y en los setenta apareció en el Verdon el estilo francés, muy gimnástico y con poco riesgo gracias a los anclajes fijos (Donnelly, 1999, p. 325).",
+    "La competición reglada tuvo un precedente en las pruebas de velocidad de la Unión Soviética y de Europa del Este, que Occidente no aceptó (Donnelly, 1999, pp. 325-326). La primera competición organizada de dificultad fue *SportRoccia*, celebrada en 1985 en una pared natural de Bardonecchia, y en 1986 la federación francesa celebró la primera prueba en rocódromo en Vaulx-en-Velin; siguieron la primera Copa del Mundo (1989) y el primer Campeonato del Mundo (Fráncfort, 1991). En 1997 la UIAA creó un consejo para la competición y en 2007 cincuenta y siete federaciones fundaron la Federación Internacional de Escalada Deportiva (IFSC), hoy World Climbing, que el COI reconoció en 2010 y cuyo deporte se incorporó a los Juegos de Tokio 2020 (World Climbing, s. f.). El paso al rocódromo abrió una disputa entre la escalada deportiva, comercializada y sin apenas riesgo, y la tradicional o de aventura (Donnelly, 1999, p. 326)."
+   ],
+   "en": [
+    "Rock climbing was born in the shadow of mountaineering, of which it was long no more than a form of training, and its first systematic practitioners in Europe were the naturalists of the late eighteenth and nineteenth centuries who climbed cliffs in search of specimens. Britain claims the origin of both mountain and rock climbing and usually dates the latter to the first ascent of Napes Needle, in the Lake District, made by W. P. Haskett Smith in 1886, although many other routes had been climbed and recorded before that date and rock training for mountaineering was already common on the Continent. Towards the end of the nineteenth century climbing became a sport in its own right (Donnelly, 1999, p. 325).",
+    "For almost a century climbing worked without written rules or governing bodies, with a direct form of competition, based on the first ascent of a route or its variants (solo, female or winter), and an indirect one, which judged the style of the ascent. That set of norms, which climbers call \"ethics\", was built by consensus in conversation and in specialist magazines and enforced through self-discipline and peer pressure (Donnelly, 1999, p. 326). In the mid-twentieth century British climbers led a leap in the difficulty of routes, in the 1960s the American big-wall style took over, and in the 1970s the French style appeared in the Verdon, highly gymnastic and low in risk thanks to fixed bolts (Donnelly, 1999, p. 325).",
+    "Regulated competition had a precedent in the speed events of the Soviet Union and Eastern Europe, which the West did not accept (Donnelly, 1999, pp. 325-326). The first organised lead competition was *SportRoccia*, held in 1985 on a natural crag at Bardonecchia, and in 1986 the French federation held the first indoor event at Vaulx-en-Velin; the first World Cup (1989) and the first World Championship (Frankfurt, 1991) followed. In 1997 the UIAA set up a council for competition and in 2007 fifty-seven federations founded the International Federation of Sport Climbing (IFSC), now World Climbing, which the IOC recognised in 2010 and whose sport joined the Tokyo 2020 Games (World Climbing, n.d.). The move indoors opened a dispute between sport climbing, commercialised and almost risk-free, and traditional or adventure climbing (Donnelly, 1999, p. 326)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/escalada.jpg",
+   "pie": {
+    "es": "Escalada deportiva en una vía equipada del risco de Shipley Upper, en las Montañas Azules (Australia), 2013.",
+    "en": "Sport climbing on a bolted route at the Shipley Upper crag, Blue Mountains (Australia), 2013."
+   },
+   "autor": "Adam Kubalica",
+   "licencia": {
+    "es": "CC BY 2.0",
+    "en": "CC BY 2.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Sport_Climb_Shipley_Upper_2.jpg"
+  },
+  "refs": [
+   "Donnelly, P. (1999). Rock climbing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 325-327). Oxford University Press.",
+   "World Climbing. (s. f.). *About World Climbing*. Recuperado el 29 de septiembre de 2026 de https://www1.ifsc-climbing.org/ifsc/index"
+  ],
+  "refs_en": [
+   "Donnelly, P. (1999). Rock climbing. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 325-327). Oxford University Press.",
+   "World Climbing. (n.d.). *About World Climbing*. Retrieved September 29, 2026, from https://www1.ifsc-climbing.org/ifsc/index"
+  ]
+ },
+ {
+  "id": "acrobacia-aerea",
+  "name": {
+   "es": "Acrobacia aérea",
+   "en": "Aerobatics"
+  },
+  "bloque": {
+   "es": "Aéreos",
+   "en": "Air sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Europa y Estados Unidos, exhibiciones anteriores a 1914; competición desde la década de 1930 y campeonato del mundo desde 1960 (Bratislava)",
+   "en": "Europe and the United States, displays before 1914; competition from the 1930s and world championship from 1960 (Bratislava)"
+  },
+  "body": {
+   "es": [
+    "La acrobacia aérea es casi tan antigua como el vuelo con motor. En los años anteriores a la Primera Guerra Mundial los pilotos realizaban maniobras en exhibiciones para un público fascinado por las nuevas máquinas voladoras, y más tarde esas maniobras pasaron a formar parte del adiestramiento de los pilotos militares y del combate aéreo (FAI, s. f.). Al terminar la guerra, los cientos de pilotos desmovilizados y los miles de aviones sobrantes del ejército alimentaron en Estados Unidos el *barnstorming*, espectáculos aéreos itinerantes con los que muchos aviadores se ganaban la vida a duras penas y que a veces incluían pruebas de velocidad, hasta que en 1926 las leyes del Congreso que regularon la aviación les pusieron fin (Luce, 1999, p. 8).",
+    "Mientras en Estados Unidos la acrobacia siguió siendo sobre todo un espectáculo, en Europa se convirtió en un deporte de competición (Fernández Truan, s. f., p. 45). Las primeras competiciones se celebraron a comienzos de la década de 1930 y la acrobacia estuvo presente en los Juegos Olímpicos de Berlín de 1936 (FAI, s. f.). Formaba parte de una cultura del concurso aeronáutico que venía de antes, puesto que en 1909 el editor James Gordon Bennett había financiado en Reims una gran competición internacional de velocidad, altura y distancia, y en el periodo de entreguerras las pruebas aéreas siguieron siendo muy populares en Estados Unidos y en Europa occidental, con mujeres que competían sin desventaja física alguna frente a los hombres (Guttmann, 2004, p. 204).",
+    "La Segunda Guerra Mundial y la Guerra Fría paralizaron las competiciones internacionales, y en el Reino Unido se disputó en 1955 el Trofeo Lockheed, que algún manual considera el germen del campeonato mundial (Fernández Truan, s. f., p. 45). La FAI reconoció la necesidad de un campeonato del mundo oficial y en 1960 se celebró el primero de la posguerra, en Bratislava, con Ladislav Bezák como primer campeón (FAI, s. f.; Fernández Truan, s. f., p. 45). Desde entonces la Comisión de Acrobacia Aérea de la FAI (CIVA) dirige los campeonatos internacionales de aviones y de planeadores, con mundiales cada dos años en los primeros y cada año en los segundos (FAI, s. f.). La estadounidense Jacqueline Cochran, que ganó carreras y batió récords en la aviación de entreguerras, llegó a presidir la Federación Aeronáutica Internacional (Guttmann, 2004, p. 204)."
+   ],
+   "en": [
+    "Aerobatics is almost as old as powered flight. In the years before the First World War pilots performed manoeuvres at air displays for crowds fascinated by the new flying machines, and later those manoeuvres became part of military pilot training and of air combat (FAI, n.d.). After the war, hundreds of demobilised pilots and thousands of surplus military aircraft fed barnstorming in the United States, travelling air shows through which many aviators made a very marginal living and which sometimes included speed contests, until in 1926 the laws passed by Congress to regulate aviation brought them to an end (Luce, 1999, p. 8).",
+    "While in the United States aerobatics remained above all a spectacle, in Europe it became a competitive sport (Fernández Truan, n.d., p. 45). The first competitions were held in the early 1930s and aerobatics was present at the 1936 Olympic Games in Berlin (FAI, n.d.). It belonged to an older culture of aeronautical contests, since in 1909 the publisher James Gordon Bennett had financed a great international competition for speed, altitude and distance at Reims, and between the wars air contests remained very popular in the United States and western Europe, with women competing without any physical disadvantage against men (Guttmann, 2004, p. 204).",
+    "The Second World War and the Cold War paralysed international competition, and in the United Kingdom the Lockheed Trophy was contested in 1955, which one textbook regards as the seed of the world championship (Fernández Truan, n.d., p. 45). The FAI recognised the need for a sanctioned world championship, and in 1960 the first post-war edition was held in Bratislava, with Ladislav Bezák as the first champion (FAI, n.d.; Fernández Truan, n.d., p. 45). Since then the FAI Aerobatics Commission (CIVA) has directed international championships for powered aircraft and gliders, with world championships every two years for the former and every year for the latter (FAI, n.d.). The American Jacqueline Cochran, who won races and set records in inter-war aviation, went on to become president of the Fédération Aéronautique Internationale (Guttmann, 2004, p. 204)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/acrobacia-aerea.jpg",
+   "pie": {
+    "es": "Un Yakovlev Yak-52 en vuelo acrobático con estela de humo, 2017.",
+    "en": "A Yakovlev Yak-52 flying aerobatics with a smoke trail, 2017."
+   },
+   "autor": "Anna Zvereva",
+   "licencia": {
+    "es": "CC BY-SA 2.0",
+    "en": "CC BY-SA 2.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:The_First_Flight,_Yakovlev_Yak-52_(37183803376).jpg"
+  },
+  "refs": [
+   "FAI. (s. f.). *Aerobatics*. Recuperado el 29 de septiembre de 2026 de https://www.fai.org/sport/aerobatics",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Luce, S. (1999). Air racing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 8-10). Oxford University Press."
+  ],
+  "refs_en": [
+   "FAI. (n.d.). *Aerobatics*. Retrieved September 29, 2026, from https://www.fai.org/sport/aerobatics",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Luce, S. (1999). Air racing. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 8-10). Oxford University Press."
+  ]
+ },
+ {
+  "id": "lucha-libre-mexicana",
+  "name": {
+   "es": "Lucha libre mexicana",
+   "en": "Lucha libre"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "México, 21 de septiembre de 1933 (Empresa Mexicana de Lucha Libre, hoy Consejo Mundial de Lucha Libre)",
+   "en": "Mexico, 21 September 1933 (Empresa Mexicana de Lucha Libre, today Consejo Mundial de Lucha Libre)"
+  },
+  "body": {
+   "es": [
+    "La lucha libre mexicana es la versión nacional de la lucha profesional, espectáculo de combates con resultado pactado que se había formado en Estados Unidos. Su institucionalización se debe a la Empresa Mexicana de Lucha Libre (EMLL), hoy Consejo Mundial de Lucha Libre (CMLL), fundada el 21 de septiembre de 1933 por Salvador Lutteroth González, a quien la propia empresa llama «Padre de la Lucha Libre Mexicana» (CMLL, s. f.). Según su relato oficial, Lutteroth había presenciado este deporte en 1929 en el Liberty Hall de El Paso, en Texas, y, convencido de sus posibilidades, reunió a un grupo de emprendedores para implantarlo en México, lo que muestra el origen fronterizo e importado de un espectáculo que después se convertiría en seña de identidad nacional (CMLL, s. f.).",
+    "El espectáculo se consolidó en recintos propios. La empresa cuenta que dos premios de lotería ganados por Lutteroth le permitieron afianzar el negocio y remodelar la antigua Arena México, y hoy dispone de la Arena México, la Arena Coliseo, la Arena Puebla y la Arena Coliseo de Occidente (CMLL, s. f.). La lucha mexicana divide a sus luchadores en técnicos, que representan la destreza y la virtud, y rudos, que confían en la fuerza, la agresividad y el engaño, aunque el rudo acaba a menudo siendo el favorito del público, y convierte la máscara, con sus ritos de enmascaramiento y desenmascaramiento, en un elemento central del ritual que simboliza el honor (Lehman, 2015, p. 44).",
+    "Lehman, siguiendo a Levi, sostiene que la lucha mexicana escenifica dos tensiones culturales del país, el mestizaje y la relación con Estados Unidos, con intervenciones sobrenaturales propias del realismo mágico (Lehman, 2015, p. 44). La participación femenina fue tardía, puesto que las mujeres tuvieron prohibido luchar en México hasta 1985 y todavía sufren discriminación y rara vez encabezan los carteles, si bien la lucha funciona también como un laboratorio en el que se parodian y se ponen en cuestión los modelos de masculinidad (Lehman, 2015, p. 46). Su influencia ha cruzado fronteras, como muestran las *cholitas luchadoras* bolivianas, que practican un estilo inspirado en la lucha mexicana (Lehman, 2015, p. 41), y el propio CMLL la reivindica como parte de la identidad nacional y como referente de la cultura mexicana en el extranjero, con una estética, un lenguaje y unas pautas culturales propias (CMLL, s. f.)."
+   ],
+   "en": [
+    "Mexican lucha libre is the national version of professional wrestling, a spectacle of bouts with an agreed outcome that had taken shape in the United States. Its institutionalisation is owed to the Empresa Mexicana de Lucha Libre (EMLL), today the Consejo Mundial de Lucha Libre (CMLL), founded on 21 September 1933 by Salvador Lutteroth González, whom the company itself calls the \"Father of Mexican Lucha Libre\" (CMLL, n.d.). According to its official account, Lutteroth had watched the sport in 1929 at the Liberty Hall in El Paso, Texas, and, convinced of its prospects, gathered a group of entrepreneurs to establish it in Mexico, which shows the border and imported origin of a spectacle that would later become a mark of national identity (CMLL, n.d.).",
+    "The spectacle was consolidated in its own venues. The company relates that two lottery prizes won by Lutteroth allowed it to secure the business and remodel the old Arena México, and today it has the Arena México, the Arena Coliseo, the Arena Puebla and the Arena Coliseo de Occidente (CMLL, n.d.). Mexican lucha divides its wrestlers into técnicos, who stand for skill and virtue, and rudos, who rely on strength, aggression and deceit, although the rudo often ends up as the crowd favourite, and it makes the mask, with its rites of masking and unmasking, a central element of the ritual that symbolises honour (Lehman, 2015, p. 44).",
+    "Lehman, following Levi, argues that Mexican lucha stages two cultural tensions of the country, mestizaje and the relationship with the United States, with supernatural interventions typical of magical realism (Lehman, 2015, p. 44). Women's participation came late, since women were banned from wrestling in Mexico until 1985 and still face discrimination and rarely top the bill, although lucha also works as a laboratory in which models of masculinity are parodied and questioned (Lehman, 2015, p. 46). Its influence has crossed borders, as shown by the Bolivian *cholitas luchadoras*, who practise a style inspired by Mexican lucha (Lehman, 2015, p. 41), and the CMLL itself claims it as part of national identity and as a reference point of Mexican culture abroad, with its own aesthetics, language and cultural patterns (CMLL, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/lucha-libre-mexicana.jpg",
+   "pie": {
+    "es": "Función de lucha libre en la Arena México, con un combate en el cuadrilátero, 2022.",
+    "en": "Lucha libre night at Arena México, with a bout in the ring, 2022."
+   },
+   "autor": "Luis Alvaz",
+   "licencia": {
+    "es": "CC BY-SA 4.0",
+    "en": "CC BY-SA 4.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Noche_de_lucha_libre_en_la_Arena_M%C3%A9xico_17.jpg"
+  },
+  "refs": [
+   "Consejo Mundial de Lucha Libre. (s. f.). *Historia del CMLL*. Recuperado el 29 de septiembre de 2026 de https://cmll.com/historia/",
+   "Lehman, K. (2015). Fighting on the edge: Cholitas luchadoras in Bolivia's cholo revolution. En D. M. K. Sheinin (Ed.), *Sports culture in Latin American history* (pp. 39-60). University of Pittsburgh Press."
+  ],
+  "refs_en": [
+   "Consejo Mundial de Lucha Libre. (n.d.). *Historia del CMLL*. Retrieved September 29, 2026, from https://cmll.com/historia/",
+   "Lehman, K. (2015). Fighting on the edge: Cholitas luchadoras in Bolivia's cholo revolution. In D. M. K. Sheinin (Ed.), *Sports culture in Latin American history* (pp. 39-60). University of Pittsburgh Press."
+  ]
+ },
+ {
+  "id": "futbol-para-ciegos",
+  "name": {
+   "es": "Fútbol para ciegos",
+   "en": "Blind football"
+  },
+  "bloque": {
+   "es": "Adaptados y paralímpicos",
+   "en": "Adapted and Paralympic sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Escuelas para personas ciegas de España, década de 1920; reglamento internacional de la IBSA, 1996",
+   "en": "Schools for blind people in Spain, 1920s; IBSA international rules, 1996"
+  },
+  "body": {
+   "es": [
+    "A diferencia de la mayoría de los deportes paralímpicos, nacidos en los hospitales de rehabilitación de la posguerra, el fútbol para ciegos surgió en las escuelas para personas con discapacidad visual, donde se adaptó a las condiciones de los alumnos ciegos el juego más popular de la época. La federación internacional considera a España pionera de este deporte, puesto que allí se jugaba ya en la década de 1920, mientras que en Brasil la práctica apareció en los años sesenta y el primer campeonato nacional se disputó en 1974 (IBSA Football, s. f.). Durante décadas el juego se desarrolló de manera independiente en cada país, con reglas propias, y su historia temprana está ligada al ámbito escolar más que al hospitalario.",
+    "En 1996 la International Blind Sports Federation asumió el gobierno del fútbol y estableció dos modalidades, el fútbol para ciegos, reservado a los jugadores de la clase B1, y el fútbol para deficientes visuales, para las clases B2 y B3 (IBSA Football, s. f.). La modalidad paralímpica se juega cinco contra cinco (Hums y Pate, 2018, p. 180) en un campo de cuarenta por veinte metros cerrado por bandas laterales que impiden la salida del balón, y este lleva en su interior un dispositivo sonoro que permite seguirlo. Los jugadores de campo llevan antifaces opacos que igualan su grado de visión, el portero puede ver, un guía situado detrás de la portería contraria orienta los disparos, y los jugadores gritan «voy» al ir hacia el balón para evitar choques (IPC, s. f.).",
+    "El primer Campeonato de Europa de las dos modalidades se jugó en Barcelona en 1997 y el primer Campeonato del Mundo en Campinas (Brasil) en 1998, y el fútbol para ciegos entró en los Juegos Paralímpicos en Atenas en 2004, con victoria de Brasil (IBSA Football, s. f.). La participación femenina es mucho más reciente, puesto que las primeras concentraciones y torneos de mujeres se organizaron a partir de 2017 (IBSA Football, s. f.). Un rasgo singular de este deporte es su relación con el público, obligado a guardar silencio durante el juego hasta que se marca un gol (IPC, s. f.), de modo que los espectadores participan en las condiciones que hacen posible el partido."
+   ],
+   "en": [
+    "Unlike most Paralympic sports, born in the rehabilitation hospitals of the post-war period, blind football emerged in schools for visually impaired people, where the most popular game of the day was adapted to the conditions of blind pupils. The international federation regards Spain as the pioneer of the sport, since it was already being played there in the 1920s, whereas in Brazil the practice appeared in the 1960s and the first national championship was held in 1974 (IBSA Football, n.d.). For decades the game developed independently in each country, with its own rules, and its early history is tied to the school rather than to the hospital.",
+    "In 1996 the International Blind Sports Federation took over the governance of football and established two disciplines, blind football, reserved for players in class B1, and partially sighted football, for classes B2 and B3 (IBSA Football, n.d.). The Paralympic form is played five-a-side (Hums & Pate, 2018, p. 180) on a pitch of forty by twenty metres enclosed by side boards that keep the ball in play, and the ball carries a sound device inside that allows it to be followed. Outfield players wear opaque eyeshades that equalise their degree of vision, the goalkeeper can see, a guide positioned behind the opposing goal directs the shots, and players shout «voy» as they go for the ball to avoid collisions (IPC, n.d.).",
+    "The first European Championship of both disciplines was played in Barcelona in 1997 and the first World Championship in Campinas (Brazil) in 1998, and blind football entered the Paralympic Games in Athens in 2004, with Brazil winning (IBSA Football, n.d.). Women's participation is much more recent, since the first women's camps and tournaments were organised from 2017 onwards (IBSA Football, n.d.). A distinctive feature of this sport is its relationship with spectators, who must remain silent during play until a goal is scored (IPC, n.d.), so that the audience takes part in the conditions that make the game possible."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/futbol-para-ciegos.jpg",
+   "pie": {
+    "es": "Partido de fútbol para ciegos entre Francia y Brasil en los Juegos Paralímpicos de París, 2024.",
+    "en": "France v Brazil blind football match at the Paris 2024 Paralympic Games."
+   },
+   "autor": "AlSepPhoenix",
+   "licencia": {
+    "es": "CC BY 4.0",
+    "en": "CC BY 4.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:2024_Summer_Paralympics_football_5-a-side,_France_v_Brazil_(21).jpg"
+  },
+  "refs": [
+   "Hums, M. A., y Pate, J. R. (2018). The International Paralympic Committee as a governing body. En I. Brittain y A. Beacom (Eds.), *The Palgrave handbook of Paralympic studies* (pp. 173-196). Palgrave Macmillan.",
+   "IBSA Football. (s. f.). *History*. Recuperado el 29 de septiembre de 2026 de https://blindfootball.sport/about-football/history/",
+   "IPC. (s. f.). *Blind football*. Recuperado el 29 de septiembre de 2026 de https://www.paralympic.org/blind-football"
+  ],
+  "refs_en": [
+   "Hums, M. A., & Pate, J. R. (2018). The International Paralympic Committee as a governing body. In I. Brittain & A. Beacom (Eds.), *The Palgrave handbook of Paralympic studies* (pp. 173-196). Palgrave Macmillan.",
+   "IBSA Football. (n.d.). *History*. Retrieved September 29, 2026, from https://blindfootball.sport/about-football/history/",
+   "IPC. (n.d.). *Blind football*. Retrieved September 29, 2026, from https://www.paralympic.org/blind-football"
+  ]
+ },
+ {
+  "id": "mushing",
+  "name": {
+   "es": "Mushing",
+   "en": "Sled dog racing"
+  },
+  "bloque": {
+   "es": "De invierno",
+   "en": "Winter sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Escandinavia y Norteamérica ártica; primera carrera organizada en Nome (Alaska, EE. UU.), 1908",
+   "en": "Scandinavia and Arctic North America; first organised race in Nome (Alaska, USA), 1908"
+  },
+  "body": {
+   "es": [
+    "Los perros de trineo acompañaron durante siglos a los pueblos del Ártico norteamericano y siberiano como medio de transporte, de caza y de viaje, y su empleo recreativo es con toda probabilidad tan antiguo como su empleo en el trabajo. Crawford sitúa en Escandinavia, ya en el siglo XVIII, las primeras competiciones europeas, mientras que en Norteamérica las carreras no aparecieron hasta finales del siglo XIX, quizá como desafíos entre buscadores de oro o tramperos que querían saber quién tenía el trineo más rápido y el mejor tiro de perros (Crawford, 1999, p. 364). El nombre del deporte procede, según la explicación más extendida, de la voz *marche* con que los colonos francófonos de Canadá arreaban a los perros, que los angloparlantes convirtieron en *mush* y de la que salió *musher* para designar al conductor (Fernández Truan, s. f., p. 467).",
+    "La primera carrera organizada fue la All Alaska Sweepstakes de 1908, un recorrido de ida y vuelta de 656 kilómetros entre Nome y Candle (Crawford, 1999, p. 364), y se disputó en una ciudad minera donde el Nome Kennel Club, fundado en 1907, se ocupaba de los perros y de las carreras, que movían fuertes apuestas; en 1909 un comerciante ruso presentó un equipo de huskies siberianos que estuvo cerca de ganar y cambió la opinión local sobre esos perros (Bureau of Land Management, s. f.). La epidemia de difteria de Nome en 1925, cuando el suero solo pudo llegar a la ciudad por relevos de trineos, llevó este deporte menor a la prensa de todo el mundo. En 1936 el Laconia Sled Dog Club de New Hampshire organizó el primer World Championship Derby, en 1966 se fundó la International Sled Dog Racing Association y en 1973 se corrió por primera vez la Iditarod entre Anchorage y Nome (Crawford, 1999, pp. 364-365; Vamplew, 2021, p. 214), si bien algún manual fecha su primera edición en 1967 (Fernández Truan, s. f., p. 469).",
+    "El trineo de perros llegó a los Juegos Olímpicos de Invierno solo como exhibición, con una prueba de *skijöring* con perros en St. Moritz en 1928 y una carrera de trineos en Lake Placid en 1932 (Olympedia, s. f.). La Federación Internacional de Deportes de Trineo con Perros (IFSS) nació en 1985 de la fusión de la asociación norteamericana y de la europea, precisamente porque el COI solo reconocía a federaciones internacionales, ingresó en la Asociación General de Federaciones Deportivas Internacionales en 1987 y organiza campeonatos del mundo desde 1990, a los que se añadieron en 2002 las pruebas sobre tierra (IFSS, s. f.). La historia del *mushing* muestra cómo un medio de supervivencia se convirtió en espectáculo y en seña de identidad de Alaska, y en 1985 Libby Riddles fue la primera mujer que ganó la Iditarod (Vamplew, 2021, p. 214)."
+   ],
+   "en": [
+    "Sled dogs accompanied the peoples of the North American and Siberian Arctic for centuries as a means of transport, hunting and travel, and their recreational use is in all probability as old as their use for work. Crawford places the first European competitions in Scandinavia as early as the eighteenth century, whereas in North America races did not appear until the late nineteenth century, perhaps as challenges between gold prospectors or trappers who wanted to know who had the fastest sled and the best dog team (Crawford, 1999, p. 364). The name of the sport comes, according to the most widespread explanation, from the word *marche* with which French-speaking settlers in Canada drove their dogs, which English speakers turned into *mush*, giving *musher* for the driver (Fernández Truan, n.d., p. 467).",
+    "The first organised race was the All Alaska Sweepstakes of 1908, a 656-kilometre round trip between Nome and Candle (Crawford, 1999, p. 364), and was held in a mining town where the Nome Kennel Club, founded in 1907, looked after the dogs and the racing, which attracted heavy betting; in 1909 a Russian trader entered a team of Siberian huskies that nearly won and changed local opinion of these dogs (Bureau of Land Management, n.d.). The diphtheria epidemic in Nome in 1925, when serum could reach the town only by relays of dog sleds, carried this minor sport into newspapers around the world. In 1936 the Laconia Sled Dog Club of New Hampshire organised the first World Championship Derby, in 1966 the International Sled Dog Racing Association was founded, and in 1973 the Iditarod between Anchorage and Nome was run for the first time (Crawford, 1999, pp. 364-365; Vamplew, 2021, p. 214), although one textbook dates its first edition to 1967 (Fernández Truan, n.d., p. 469).",
+    "Dog sledding reached the Olympic Winter Games only as a demonstration, with a dog skijoring event at St. Moritz in 1928 and a sled race at Lake Placid in 1932 (Olympedia, n.d.). The International Federation of Sleddog Sports (IFSS) was born in 1985 from the merger of the North American and European associations, precisely because the IOC recognised only international federations; it joined the General Association of International Sports Federations in 1987 and has organised world championships since 1990, to which dryland events were added in 2002 (IFSS, n.d.). The history of mushing shows how a means of survival became a spectacle and an emblem of Alaskan identity, and in 1985 Libby Riddles became the first woman to win the Iditarod (Vamplew, 2021, p. 214)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/mushing.jpg",
+   "pie": {
+    "es": "Un musher con once huskies siberianos en la carrera de trineos del Campeonato de Alemania, Frauenwald, 2012.",
+    "en": "A musher with eleven Siberian huskies in the German Championship sled dog race, Frauenwald, 2012."
+   },
+   "autor": {
+    "es": "Rainer Lippert (edición de Ritchyblack)",
+    "en": "Rainer Lippert (edited by Ritchyblack)"
+   },
+   "licencia": {
+    "es": "CC0",
+    "en": "CC0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Frauenwald,_Hundeschlittenrennen,_6.jpg"
+  },
+  "refs": [
+   "Bureau of Land Management. (s. f.). *Iditarod National Historic Trail: Birth of sled dog racing*. Recuperado el 30 de septiembre de 2026 de https://www.blm.gov/sites/blm.gov/files/Programs_NLCS_Iditarod_Birth-of-Sled-Dog-Racing.pdf",
+   "Crawford, S. A. G. M. (1999). Sled dog racing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 364-365). Oxford University Press.",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "IFSS. (s. f.). *IFSS history*. Recuperado el 29 de septiembre de 2026 de https://sleddogsport.net/eng/22",
+   "Olympedia. (s. f.). *International Federation of Sleddog Sports*. Recuperado el 29 de septiembre de 2026 de https://www.olympedia.org/organizations/387",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Bureau of Land Management. (n.d.). *Iditarod National Historic Trail: Birth of sled dog racing*. Retrieved September 30, 2026, from https://www.blm.gov/sites/blm.gov/files/Programs_NLCS_Iditarod_Birth-of-Sled-Dog-Racing.pdf",
+   "Crawford, S. A. G. M. (1999). Sled dog racing. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 364-365). Oxford University Press.",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "IFSS. (n.d.). *IFSS history*. Retrieved September 29, 2026, from https://sleddogsport.net/eng/22",
+   "Olympedia. (n.d.). *International Federation of Sleddog Sports*. Retrieved September 29, 2026, from https://www.olympedia.org/organizations/387",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "boccia",
+  "name": {
+   "es": "Boccia",
+   "en": "Boccia"
+  },
+  "bloque": {
+   "es": "Adaptados y paralímpicos",
+   "en": "Adapted and Paralympic sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Programas deportivos para personas con parálisis cerebral, década de 1970; debut paralímpico en Nueva York, 1984",
+   "en": "Sports programmes for people with cerebral palsy, 1970s; Paralympic debut in New York, 1984"
+  },
+  "body": {
+   "es": [
+    "La boccia pertenece a la familia de juegos en los que se lanzan bolas hacia un blanco, como las bochas italianas o la petanca, y el Comité Paralímpico Internacional le atribuye por ello unas raíces remotas en la Grecia y el Egipto antiguos (IPC, 2016; IPC, s. f.), una genealogía que corresponde a toda esa familia de juegos más que a la modalidad paralímpica. Como deporte reglamentado, la boccia se diseñó para personas con parálisis cerebral y hoy la practican personas con cualquier discapacidad neurológica que afecte a su función motora (IPC, 2016). Su aparición está ligada a la incorporación de las personas con parálisis cerebral al deporte organizado en los años setenta, cuando las reuniones de 1976 y 1977 entre la International Sports Organisation for the Disabled y la sociedad internacional de parálisis cerebral fijaron las clases en que estos deportistas podían competir y en 1978 se creó una asociación deportiva internacional propia, la CP-ISRA (Bailey, 2008, p. 10).",
+    "Los jugadores, en competición individual, por parejas o por equipos, lanzan seis bolas de color hacia una bola blanca que hace de blanco, y puntúa el bando que deja sus bolas más cerca de ella (IPC, s. f.). La clasificación en cuatro categorías permite competir a deportistas con grados de afectación muy distintos, incluidos quienes no pueden lanzar con la mano y juegan con una rampa manejada por un asistente (IPC, s. f.). La entrada de grupos de discapacidad distintos de la lesión medular llevó al programa paralímpico deportes específicos para cada uno de ellos, entre ellos la boccia para las personas con parálisis cerebral (Brittain, 2016, p. 127), que debutó en los Juegos de Nueva York de 1984 con diecinueve deportistas, diez hombres y nueve mujeres, de cinco países (Bailey, 2008, p. 62; IPC, 2016).",
+    "Durante décadas la boccia se organizó dentro de las estructuras del deporte para personas con parálisis cerebral, hasta que en 2013 se fundó la Boccia International Sports Federation (Boccia Ireland, s. f.), que dio al deporte un gobierno propio al margen de la CP-ISRA (Hums y Pate, 2018, p. 184) y que hoy se denomina World Boccia (IPC, s. f.). La federación se propuso preservar la vía paralímpica para los deportistas con grandes necesidades de apoyo (Hums y Pate, 2018, p. 184) y ese propósito define el lugar de la boccia dentro del movimiento paralímpico, como el deporte que abre la competición de alto nivel a quienes tienen las discapacidades más graves. Se practica en más de 75 países (IPC, s. f.)."
+   ],
+   "en": [
+    "Boccia belongs to the family of games in which balls are thrown towards a target, such as Italian bocce or pétanque, and the International Paralympic Committee therefore attributes to it remote roots in ancient Greece and Egypt (IPC, 2016; IPC, n.d.), a genealogy that belongs to that whole family of games more than to the Paralympic discipline. As a regulated sport, boccia was designed for people with cerebral palsy and is today played by people with any neurological impairment affecting their motor function (IPC, 2016). Its appearance is linked to the incorporation of people with cerebral palsy into organised sport in the 1970s, when the 1976 and 1977 meetings between the International Sports Organisation for the Disabled and the international cerebral palsy society established the classes in which these athletes could compete and in 1978 a dedicated international sports association, CP-ISRA, was created (Bailey, 2008, p. 10).",
+    "Players, competing as individuals, pairs or teams, throw six coloured balls towards a white target ball, and the side that leaves its balls closest to it scores (IPC, n.d.). Classification into four categories allows athletes with very different degrees of impairment to compete, including those who cannot throw by hand and play with a ramp operated by an assistant (IPC, n.d.). The entry of impairment groups other than spinal cord injury brought to the Paralympic programme sports specific to each of them, among them boccia for people with cerebral palsy (Brittain, 2016, p. 127), which made its debut at the 1984 New York Games with nineteen athletes, ten men and nine women, from five countries (Bailey, 2008, p. 62; IPC, 2016).",
+    "For decades boccia was organised within the structures of sport for people with cerebral palsy, until in 2013 the Boccia International Sports Federation was founded (Boccia Ireland, n.d.), giving the sport its own governing body separate from CP-ISRA (Hums & Pate, 2018, p. 184), today called World Boccia (IPC, n.d.). The federation set out to preserve the Paralympic pathway for athletes with high support needs (Hums & Pate, 2018, p. 184), and that purpose defines the place of boccia within the Paralympic movement, as the sport that opens high-level competition to those with the most severe impairments. It is played in more than 75 countries (IPC, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/boccia.jpg",
+   "pie": {
+    "es": "Lanzamiento con canaleta en la competición de boccia de los Juegos Paralímpicos de París, 2024.",
+    "en": "A ramp throw in the boccia competition at the Paris 2024 Paralympic Games."
+   },
+   "autor": "Gail Leenstra",
+   "licencia": {
+    "es": "CC BY-SA 4.0",
+    "en": "CC BY-SA 4.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Boccia_at_the_2024_Summer_Paralympics_-_September_2.jpg"
+  },
+  "refs": [
+   "Bailey, S. (2008). *Athlete first: A history of the Paralympic movement*. John Wiley & Sons.",
+   "Boccia Ireland. (s. f.). *History*. Recuperado el 29 de septiembre de 2026 de https://boccia.ie/about/history/",
+   "Brittain, I. (2016). *The Paralympic Games explained* (2.ª ed.). Routledge.",
+   "Hums, M. A., y Pate, J. R. (2018). The International Paralympic Committee as a governing body. En I. Brittain y A. Beacom (Eds.), *The Palgrave handbook of Paralympic studies* (pp. 173-196). Palgrave Macmillan.",
+   "IPC. (2016, 31 de marzo). *Sport Week: History of boccia*. Recuperado el 29 de septiembre de 2026 de https://www.paralympic.org/news/sport-week-history-boccia",
+   "IPC. (s. f.). *Boccia*. Recuperado el 29 de septiembre de 2026 de https://www.paralympic.org/boccia"
+  ],
+  "refs_en": [
+   "Bailey, S. (2008). *Athlete first: A history of the Paralympic movement*. John Wiley & Sons.",
+   "Boccia Ireland. (n.d.). *History*. Retrieved September 29, 2026, from https://boccia.ie/about/history/",
+   "Brittain, I. (2016). *The Paralympic Games explained* (2nd ed.). Routledge.",
+   "Hums, M. A., & Pate, J. R. (2018). The International Paralympic Committee as a governing body. In I. Brittain & A. Beacom (Eds.), *The Palgrave handbook of Paralympic studies* (pp. 173-196). Palgrave Macmillan.",
+   "IPC. (2016, March 31). *Sport Week: History of boccia*. Retrieved September 29, 2026, from https://www.paralympic.org/news/sport-week-history-boccia",
+   "IPC. (n.d.). *Boccia*. Retrieved September 29, 2026, from https://www.paralympic.org/boccia"
+  ]
+ },
+ {
+  "id": "disc-golf",
+  "name": {
+   "es": "Disc golf",
+   "en": "Disc golf"
+  },
+  "bloque": {
+   "es": "Alternativos",
+   "en": "Alternative sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Estados Unidos, década de 1970; primer recorrido oficial en Oak Grove Park (Pasadena, California), 1975",
+   "en": "United States, 1970s; first official course at Oak Grove Park (Pasadena, California), 1975"
+  },
+  "body": {
+   "es": [
+    "El disc golf traslada al disco volador la lógica del golf, puesto que el jugador recorre una serie de hoyos y trata de completar cada uno con el menor número de lanzamientos, aunque sustituye la bola por discos de diseño específico y el agujero por un poste o una meta elevada (Townes, 1999, p. 135). Sus antecedentes se confunden con la difusión del *Frisbee* en los años sesenta, y la Professional Disc Golf Association (PDGA) atribuye su organización a Ed Headrick, apodado *Steady Ed*, que como empleado de Wham-O había patentado el *Frisbee* en 1967 y a quien la asociación considera el padre del disc golf (Professional Disc Golf Association [PDGA], s. f.). La misma fuente recuerda que en Rochester (Nueva York) un pequeño grupo encabezado por Jim Palmeri lo jugaba ya como deporte de competición, con regularidad, desde agosto de 1970 (PDGA, s. f.).",
+    "La forma moderna tomó cuerpo a mediados de los setenta. En 1974 se celebró el *American Flying Disc Open*, y Headrick, animado por la respuesta de la incipiente comunidad de jugadores, decidió incluir el disc golf como prueba en los campeonatos mundiales de Frisbee que Wham-O organizó en 1975, año en que instaló también el primer recorrido oficial en Oak Grove Park, en Pasadena (California) (PDGA, s. f.). En abril de 1976 creó la empresa Disc Golf Association y ese mismo año fundó la PDGA, a la que invitó por carta a unos cien de los mejores jugadores del país, y en 1977 patentó la meta que denominó *Disc Golf Pole Hole*, con la que se normalizó el objetivo del juego (PDGA, s. f.).",
+    "En 1982 se disputó en Los Ángeles el primer campeonato del mundo, y en 1984 Headrick cedió el control de la PDGA a un grupo de jugadores encabezado por Ted Smethers, de modo que la asociación quedó en manos de los propios deportistas (PDGA, s. f.). Su implantación se apoyó en los parques públicos, donde se encontraban muchos de los al menos quinientos recorridos que ya existían en Estados Unidos a finales del siglo XX (Townes, 1999, p. 135), un rasgo que lo convierte en una práctica barata y abierta. La PDGA alcanzó en enero de 2025 el socio número 300 000, y el disc golf figura además entre las disciplinas de la World Flying Disc Federation, reconocida por el Comité Olímpico Internacional en 2015 (PDGA, s. f.; World Flying Disc Federation, 2015)."
+   ],
+   "en": [
+    "Disc golf transfers the logic of golf to the flying disc, since the player goes round a series of holes and tries to complete each one in as few throws as possible, although the ball is replaced by specially designed discs and the hole by a pole or raised target (Townes, 1999, p. 135). Its antecedents merge with the spread of the *Frisbee* in the 1960s, and the Professional Disc Golf Association (PDGA) credits its organisation to Ed Headrick, nicknamed *Steady Ed*, who as a Wham-O employee had patented the *Frisbee* in 1967 and whom the association regards as the father of disc golf (Professional Disc Golf Association [PDGA], n.d.). The same source notes that in Rochester (New York) a small group led by Jim Palmeri had been playing it as a competitive sport on a regular basis since August 1970 (PDGA, n.d.).",
+    "The modern form took shape in the mid-1970s. The *American Flying Disc Open* was held in 1974, and Headrick, encouraged by the response of the growing community of players, decided to include disc golf as an event in the Frisbee world championships that Wham-O organised in 1975, the year in which he also installed the first official course at Oak Grove Park in Pasadena (California) (PDGA, n.d.). In April 1976 he set up the Disc Golf Association business and that same year founded the PDGA, inviting about one hundred of the country's top players to join by letter, and in 1977 he patented the target he called the *Disc Golf Pole Hole*, which standardised the object of the game (PDGA, n.d.).",
+    "The first world championship was held in Los Angeles in 1982, and in 1984 Headrick handed control of the PDGA to a group of players led by Ted Smethers, so that the association passed into the hands of the athletes themselves (PDGA, n.d.). Its growth relied on public parks, where many of the at least five hundred courses that already existed in the United States at the end of the twentieth century were located (Townes, 1999, p. 135), a feature that makes it a cheap and open activity. The PDGA reached its 300,000th member in January 2025, and disc golf is also one of the disciplines of the World Flying Disc Federation, recognised by the International Olympic Committee in 2015 (PDGA, n.d.; World Flying Disc Federation, 2015)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/disc-golf.jpg",
+   "pie": {
+    "es": "Lanzamiento de disc golf en la playa de Yyteri (Finlandia) al atardecer, 2010.",
+    "en": "Disc golf throw at Yyteri beach (Finland) at sunset, 2010."
+   },
+   "autor": "kallerna",
+   "licencia": {
+    "es": "CC BY-SA 3.0",
+    "en": "CC BY-SA 3.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Disc_golf_Yyteri.jpg"
+  },
+  "refs": [
+   "Professional Disc Golf Association. (s. f.). *History of disc golf and the PDGA*. Recuperado el 29 de septiembre de 2026 de https://www.pdga.com/history",
+   "Townes, J. (1999). Flying disc. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 134-135). Oxford University Press.",
+   "World Flying Disc Federation. (2015). *International Olympic Committee grants full recognition to the World Flying Disc Federation (WFDF)*. Recuperado el 29 de septiembre de 2026 de https://wfdf.sport/2015/08/international-olympic-committee-grants-full-recognition-to-the-world-flying-disc-federation-wfdf/"
+  ],
+  "refs_en": [
+   "Professional Disc Golf Association. (n.d.). *History of disc golf and the PDGA*. Retrieved September 29, 2026, from https://www.pdga.com/history",
+   "Townes, J. (1999). Flying disc. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 134-135). Oxford University Press.",
+   "World Flying Disc Federation. (2015). *International Olympic Committee grants full recognition to the World Flying Disc Federation (WFDF)*. Retrieved September 29, 2026, from https://wfdf.sport/2015/08/international-olympic-committee-grants-full-recognition-to-the-world-flying-disc-federation-wfdf/"
+  ]
+ },
+ {
+  "id": "karting",
+  "name": {
+   "es": "Karting",
+   "en": "Karting"
+  },
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Sur de California (EE. UU.), 1956",
+   "en": "Southern California (USA), 1956"
+  },
+  "body": {
+   "es": [
+    "El karting es uno de los deportes de motor más recientes y su nacimiento puede fecharse con precisión. En 1956 Art Ingels, un técnico profesional de competición del sur de California, construyó para su propia diversión un pequeño vehículo de cuatro ruedas con motor de combustión interna, y su diseño sigue siendo el prototipo básico de los karts, que con el tiempo han ganado tamaño y complejidad (Townes, 1999, p. 215). Surgió en una región donde el automóvil era desde hacía décadas un objeto de juego juvenil, puesto que ya en los años veinte los jóvenes estadounidenses modificaban coches de serie para probarlos en las calles, y los californianos corrían en el lago seco de Muroc, a unos 160 kilómetros de Los Ángeles (Guttmann, 2004, p. 203).",
+    "Ingels empezó utilizando su kart como afición y después fundó la empresa Caretta para fabricarlos; los karts despertaron el interés del público, otras compañías comenzaron a producirlos y en 1957 se formó el Go Kart Club of America, que ese mismo año organizó la primera carrera oficial (Townes, 1999, p. 215). El karting se difundió con rapidez por Estados Unidos, Europa, Asia y otras partes del mundo, y aunque al principio tuvo mucho de moda pasajera, el interés se estabilizó y el deporte se mantuvo, con una competición especialmente intensa en Europa (Townes, 1999, p. 215). En 1962 se creó la Comisión Internacional de Karting (CIK-FIA), una de las comisiones deportivas de la Federación Internacional del Automóvil, que rige desde entonces la competición internacional (FIA, s. f.).",
+    "Los karts son vehículos pequeños y sencillos, de un solo asiento y chasis a menudo descubierto, con motores de dos o cuatro tiempos parecidos a los de un cortacésped, aunque los más rápidos superan los 225 kilómetros por hora; las carreras se celebran sobre todo en circuitos cerrados de una milla o menos, con categorías según la transmisión y el motor y con clases especiales para pilotos jóvenes (Townes, 1999, p. 215). Su rasgo social más destacado es la accesibilidad, puesto que se trata de un deporte aficionado, abierto a todas las edades, en el que muchos jóvenes con acceso a un terreno adecuado se divierten o practican la conducción, y en los años noventa vivió en Estados Unidos un renovado interés (Townes, 1999, p. 215)."
+   ],
+   "en": [
+    "Karting is one of the most recent motor sports and its birth can be dated precisely. In 1956 Art Ingels, a professional racing technician in southern California, built a tiny four-wheeled vehicle with an internal-combustion engine for his own amusement, and his design remains the basic prototype of karts, which have grown larger and more sophisticated over time (Townes, 1999, p. 215). It arose in a region where the automobile had for decades been a plaything of the young, since as early as the 1920s American youths modified mass-produced cars to test them on city streets, and Californians raced on Muroc Dry Lake, some 160 kilometres from Los Angeles (Guttmann, 2004, p. 203).",
+    "Ingels first ran his kart as a hobby and then founded a company named Caretta to manufacture karts; they attracted public attention, other companies began making them, and in 1957 the Go Kart Club of America was formed and held the first sanctioned kart race that same year (Townes, 1999, p. 215). Karting spread quickly across the United States, Europe, Asia and other parts of the world, and although at first it was largely a fad, interest settled and the sport endured, with especially keen competition in Europe (Townes, 1999, p. 215). In 1962 the International Karting Commission (CIK-FIA) was created as one of the sporting commissions of the Fédération Internationale de l'Automobile, and it has governed international competition ever since (FIA, n.d.).",
+    "Karts are small and simple single-seat vehicles, often with an uncovered frame and two- or four-stroke engines resembling lawnmower motors, although the fastest exceed 225 kilometres per hour; races are held mostly on closed tracks of a mile or less, with classes based on transmission and engine and special classes for young drivers (Townes, 1999, p. 215). Its most notable social feature is accessibility, since it is an amateur sport open to all ages, in which many young people with access to suitable land drive for fun or to practise their driving skills, and in the 1990s it enjoyed renewed interest in the United States (Townes, 1999, p. 215)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/karting.jpg",
+   "pie": {
+    "es": "Carrera de karts en el circuito Waterfront de Karen, 2026.",
+    "en": "Kart race at the Waterfront circuit in Karen, 2026."
+   },
+   "autor": "VickyOmondi",
+   "licencia": {
+    "es": "CC0",
+    "en": "CC0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Karting_Sports.jpg"
+  },
+  "refs": [
+   "FIA. (s. f.). *Karting*. Recuperado el 29 de septiembre de 2026 de https://www.fia.com/events/karting/season-2024/karting",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Townes, J. (1999). Karting. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (p. 215). Oxford University Press."
+  ],
+  "refs_en": [
+   "FIA. (n.d.). *Karting*. Retrieved September 29, 2026, from https://www.fia.com/events/karting/season-2024/karting",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Townes, J. (1999). Karting. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (p. 215). Oxford University Press."
+  ]
+ },
+ {
+  "id": "ciclismo-artistico",
+  "name": {
+   "es": "Ciclismo artístico",
+   "en": "Artistic cycling"
+  },
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Estados Unidos y Alemania, finales del siglo XIX; campeonato del mundo de la UCI desde 1956",
+   "en": "United States and Germany, late nineteenth century; UCI world championship since 1956"
+  },
+  "body": {
+   "es": [
+    "El ciclismo artístico procede de los números de acrobacia en bicicleta que se exhibían en los espectáculos de finales del siglo XIX. Antes de 1900 ya lo practicaban en Estados Unidos acróbatas ciclistas como Nicholas Edward Kaufmann y John Featherly, cuyos números sentaron las bases de una disciplina que después se desarrolló en Europa (UCI, s. f.-b). Kaufmann, ciclista artístico de origen alemán emigrado a Estados Unidos, es también el autor al que la UCI atribuye el primer partido de ciclobol, jugado en Rochester en 1883 (UCI, s. f.-c). La propia federación la describe como una mezcla de gimnasia artística, volteo ecuestre y patinaje artístico, en la que los participantes ejecutan sus ejercicios ante comisarios sobre una bicicleta especial, casi siempre hecha a mano, de acero o aluminio y con piñón fijo (UCI, s. f.-b).",
+    "Alemania fue el país donde el ciclismo artístico arraigó con más fuerza, hasta reunir unas diez mil licencias, y algún manual sitúa en Leipzig, en 1884, las primeras competiciones y en 1895 el primer campeonato de Europa (Fernández Truan, s. f., p. 1226), datos que no ha sido posible contrastar con la federación internacional. Del mismo ambiente salió el juego de pelota en bicicleta, y en 1901 los hermanos Paul y Otto Lüders, dos acróbatas de Berlín, presentaron el ciclobol al público alemán (UCI, s. f.-c). La UCI celebró en Leipzig en 1930 sus primeros campeonatos del mundo de ciclismo en sala (UCI, s. f.-a), aunque el ciclismo artístico no tuvo un campeonato mundial propio hasta 1956 (UCI, s. f.-b).",
+    "Los campeonatos del mundo anuales de la UCI comenzaron en 1956 solo con la prueba individual masculina; la individual femenina se añadió en 1959, las parejas en 1986 y el conjunto de cuatro ciclistas en 2005, y en 2018 se creó una copa del mundo (UCI, s. f.-b). Algún manual retrasa el primer mundial femenino hasta 1970 (Fernández Truan, s. f., p. 1226), una fecha que contradice la de la federación. Cada deportista elige entre unas 120 figuras y dispone de cinco minutos para ejecutar hasta 30 en la modalidad individual y hasta 25 en parejas y conjuntos, y tres parejas de comisarios puntúan el ejercicio y descuentan los errores técnicos, las caídas y la falta de precisión (UCI, s. f.-b)."
+   ],
+   "en": [
+    "Artistic cycling derives from the bicycle acrobatics shown in late nineteenth-century entertainments. Before 1900 it was already practised in the United States by cycling acrobats such as Nicholas Edward Kaufmann and John Featherly, whose acts laid the foundations of a discipline that later developed in Europe (UCI, n.d.-b). Kaufmann, an artistic cyclist of German origin who had emigrated to the United States, is also the man the UCI credits with the first game of cycle-ball, played in Rochester in 1883 (UCI, n.d.-c). The federation itself describes it as a mixture of artistic gymnastics, equestrian vaulting and figure skating, in which participants perform their routines before commissaires on a special bicycle, mostly handmade, of steel or aluminium and with a fixed gear (UCI, n.d.-b).",
+    "Germany was the country where artistic cycling took the strongest root, reaching some ten thousand licence holders, and one textbook places the first competitions in Leipzig in 1884 and the first European championship in 1895 (Fernández Truan, n.d., p. 1226), data that could not be checked against the international federation. The game of ball on bicycles came from the same milieu, and in 1901 the brothers Paul and Otto Lüders, two acrobats from Berlin, presented cycle-ball to the German public (UCI, n.d.-c). The UCI held its first Indoor Cycling World Championships in Leipzig in 1930 (UCI, n.d.-a), although artistic cycling did not have a world championship of its own until 1956 (UCI, n.d.-b).",
+    "The annual UCI World Championships began in 1956 with only the men's single event; the women's single was added in 1959, pairs in 1986 and the four-rider team event in 2005, and a World Cup was created in 2018 (UCI, n.d.-b). One textbook delays the first women's world championship to 1970 (Fernández Truan, n.d., p. 1226), a date that contradicts the federation's. Each athlete chooses from some 120 figures and has five minutes to perform up to 30 in the single event and up to 25 in pairs and teams, and three pairs of commissaires score the routine and deduct for technical errors, falls and imprecision (UCI, n.d.-b)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/ciclismo-artistico.jpg",
+   "pie": {
+    "es": "Viola Brand en su ejercicio del Campeonato del Mundo de ciclismo artístico de la UCI, Basilea, 2019.",
+    "en": "Viola Brand performing her routine at the UCI artistic cycling World Championships, Basel, 2019."
+   },
+   "autor": "Nick Lange",
+   "licencia": {
+    "es": "CC BY-SA 4.0",
+    "en": "CC BY-SA 4.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Viola_Brand_Worldchampionship.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "UCI. (s. f.-a). *125th anniversary of the UCI: The institution's road to coherence and universality*. Recuperado el 29 de septiembre de 2026 de https://www.uci.org/article/125th-anniversary-of-the-uci-the-institutions-road-to-coherence-and/6yn9QpBSHeP7P1QGw1R4rh",
+   "UCI. (s. f.-b). *What is artistic cycling?* Recuperado el 29 de septiembre de 2026 de https://www.uci.org/article/what-is-artistic-cycling/1tFbM5IBYXLLYen7BbIVor",
+   "UCI. (s. f.-c). *What is cycle-ball?* Recuperado el 29 de septiembre de 2026 de https://www.uci.org/article/what-is-cycle-ball/545EYyXdrXMhOTvuyjR0u3"
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "UCI. (n.d.-a). *125th anniversary of the UCI: The institution's road to coherence and universality*. Retrieved September 29, 2026, from https://www.uci.org/article/125th-anniversary-of-the-uci-the-institutions-road-to-coherence-and/6yn9QpBSHeP7P1QGw1R4rh",
+   "UCI. (n.d.-b). *What is artistic cycling?* Retrieved September 29, 2026, from https://www.uci.org/article/what-is-artistic-cycling/1tFbM5IBYXLLYen7BbIVor",
+   "UCI. (n.d.-c). *What is cycle-ball?* Retrieved September 29, 2026, from https://www.uci.org/article/what-is-cycle-ball/545EYyXdrXMhOTvuyjR0u3"
+  ]
+ }
+]

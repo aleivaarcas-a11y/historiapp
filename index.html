@@ -30,14 +30,15 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--ink);
   font-family:Calibri,"Carlito",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
   -webkit-font-smoothing:antialiased;overscroll-behavior:none}
 body{display:flex;justify-content:center}
-#app{width:100%;max-width:520px;min-height:100vh;display:flex;flex-direction:column;position:relative}
+#app{width:100%;max-width:520px;height:100vh;height:100dvh;min-height:0;overflow:hidden;display:flex;flex-direction:column;position:relative}
+html,body{overflow:hidden}
 button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.01em}
 p{margin:0}
 .hidden{display:none!important}
 
 /* header */
-.top{position:sticky;top:0;z-index:20;background:var(--primary);color:#fff;
+.top{position:relative;flex-shrink:0;z-index:20;background:var(--primary);color:#fff;
   padding:calc(10px + var(--safe-top)) 16px 10px;display:flex;align-items:center;gap:10px;min-height:56px}
 .top .back{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);font-size:20px}
 .top .ttl{flex:1;min-width:0;font-weight:700;font-size:18px;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.35)}
@@ -47,10 +48,11 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:var(--safe-to
 @media (max-width:380px){.top .xp{font-size:12px;padding:5px 8px}}
 .top .xp{font-size:13px;background:rgba(255,255,255,.16);color:#fff;padding:6px 10px;border-radius:999px;white-space:nowrap;flex-shrink:0}
 .top .gear{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;background:rgba(255,255,255,.12)}
-main{flex:1;padding:16px 16px calc(24px + var(--safe-bottom));display:flex;flex-direction:column;gap:14px}
+main{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:16px 16px calc(92px + var(--safe-bottom));display:flex;flex-direction:column;gap:14px}
+main>*{flex-shrink:0}
 
 /* language gate */
-.gate{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:32px 24px;text-align:center;
+.gate{flex:1;overflow-y:auto;min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:32px 24px;text-align:center;
   background:radial-gradient(120% 80% at 50% 0%,#0b5a9a 0%,#004379 55%,#002060 100%);color:#fff}
 .gate .logo{width:112px;height:112px;border-radius:28px;background:var(--paper);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);font-size:56px}
 .gate h1{font-size:38px;letter-spacing:-.02em}
@@ -345,6 +347,55 @@ details.slide li{font-size:13.5px;line-height:1.5;margin-bottom:6px}
 .enc-links button{text-align:left;background:#EAF1F8;color:var(--primary-2);border:0;border-radius:12px;padding:10px 12px;font-weight:700;cursor:pointer}
 .enc-act{display:flex;gap:8px;margin-top:18px}
 .enc-act button{flex:1;border:0;border-radius:12px;padding:12px;font-weight:700;cursor:pointer}
+
+/* --- interfaz 3: pestañas, portada nueva --- */
+#tabbar{position:fixed;left:0;right:0;bottom:0;z-index:30;max-width:520px;margin:0 auto;background:#fff;border-top:1px solid var(--line);display:flex;padding:6px 4px calc(6px + var(--safe-bottom));box-shadow:0 -4px 16px rgba(0,32,96,.06)}
+#tabbar button{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0 4px;border-radius:12px;color:var(--muted);font-size:10.5px;letter-spacing:-.01em;font-weight:600;position:relative}
+#tabbar button .i{font-size:21px;line-height:1;filter:grayscale(1);opacity:.75}
+#tabbar button.on{color:var(--primary-2);font-weight:800}
+#tabbar button.on .i{filter:none;opacity:1}
+#tabbar button.on::before{content:"";position:absolute;top:-7px;left:28%;right:28%;height:3px;border-radius:0 0 3px 3px;background:var(--accent)}
+body.gateon #tabbar,body.feedon #tabbar{display:none}
+.top .srch{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;background:rgba(255,255,255,.12);flex-shrink:0}
+.strip{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px 12px;box-shadow:var(--shadow)}
+.strip .st{display:flex;align-items:center;gap:4px;font-weight:800;color:var(--primary-2);font-size:15px;white-space:nowrap}
+.strip .lv{flex:1;min-width:0}
+.strip .lv b{display:block;font-size:12px;color:var(--muted);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.strip .bar{height:6px;border-radius:6px;background:#e9eef4;overflow:hidden;margin-top:4px}
+.strip .bar i{display:block;height:100%;background:var(--accent);border-radius:6px}
+.cont{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;border-radius:18px;padding:14px 16px;text-align:left;box-shadow:var(--shadow)}
+.cont .pl{width:42px;height:42px;border-radius:50%;background:var(--accent);color:var(--primary-2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.cont small{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.06em;opacity:.8;font-weight:700}
+.cont b{display:block;font-size:15px;line-height:1.25}
+.hoy{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:2px 16px 8px;scrollbar-width:none}
+.hoy::-webkit-scrollbar{display:none}
+.hoy .card{flex:0 0 78%;scroll-snap-align:start;text-align:left;border-radius:18px;padding:14px;min-height:132px;display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow)}
+.hoy .card small{font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:800;color:var(--muted)}
+.hoy .card b{font-size:17px;color:var(--primary-2);line-height:1.2}
+.hoy .card span{font-size:13.5px;color:var(--ink);line-height:1.35;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.hoy .card .ft{margin-top:auto;display:flex;align-items:center;justify-content:space-between;font-size:12px;font-weight:700;color:var(--primary)}
+.hoy .card.reto{background:#fff8e1;border:2px solid var(--accent)}
+.hoy .dice{width:40px;height:40px;font-size:20px;border-radius:12px}
+.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tcard{position:relative;border-radius:18px;overflow:hidden;min-height:150px;display:flex;flex-direction:column;justify-content:flex-end;text-align:left;color:#fff;background:var(--primary-2) center/cover no-repeat;box-shadow:var(--shadow)}
+.tcard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,32,96,.05) 20%,rgba(0,20,60,.88) 100%)}
+.tcard .tx{position:relative;z-index:1;padding:10px 12px}
+.tcard .tx small{display:block;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+.tcard .tx b{display:block;font-size:14.5px;line-height:1.2}
+.tcard .ring{position:absolute;top:8px;right:8px;z-index:1;width:44px;height:44px}
+.tcard .ring svg{width:44px;height:44px;transform:rotate(-90deg)}
+.tcard .ring span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800}
+.tcard.locked{background:linear-gradient(135deg,#7d8ea3,#4b5b70)}
+.tcard.locked .big{position:absolute;top:10px;left:12px;z-index:1;font-size:34px;font-weight:800;opacity:.55}
+.tcard.locked .lk{position:absolute;top:10px;right:12px;z-index:1;font-size:20px}
+.efe-date{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.efe-year{font-size:40px;font-weight:800;color:var(--primary);line-height:1}
+.efe-txt p{line-height:1.55;margin:10px 0}
+.efe-nav{display:flex;gap:10px}
+.efe-nav button{flex:1;padding:12px;border-radius:12px;background:#EAF1F8;color:var(--primary-2);font-weight:700}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:80;overflow:hidden}
+.confetti i{position:absolute;top:-12px;width:8px;height:14px;border-radius:2px;animation:cf 1.4s ease-in forwards}
+@keyframes cf{to{transform:translateY(110vh) rotate(540deg);opacity:.9}}
 .srch-res{display:flex;flex-direction:column;gap:10px;margin-top:10px}
 .srch-res button{text-align:left;background:var(--paper);border-radius:14px;padding:12px 14px;box-shadow:var(--shadow);border:0;cursor:pointer}
 .srch-res .tt{font-weight:800;color:var(--primary-2);font-size:15px}
@@ -396,7 +447,7 @@ body.feedon{overflow:hidden}
 .pod .spd button{border:1px solid #cdd6e2;background:#fff;border-radius:8px;padding:4px 9px;font-weight:700;color:var(--primary-2);font-size:12.5px}
 .pod .spd button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
 .pod .note{font-size:12px;color:var(--muted);margin:0}
-#podbar{position:fixed;left:10px;right:10px;bottom:calc(10px + var(--safe-bottom,0px));z-index:35;background:#002060;color:#fff;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.25);display:none;align-items:center;gap:10px;padding:8px 10px;max-width:520px;margin:0 auto}
+#podbar{position:fixed;left:10px;right:10px;bottom:calc(74px + var(--safe-bottom,0px));z-index:35;background:#002060;color:#fff;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.25);display:none;align-items:center;gap:10px;padding:8px 10px;max-width:520px;margin:0 auto}
 #podbar.on{display:flex}
 #podbar img{width:38px;height:38px;border-radius:9px}
 #podbar .tt{flex:1;min-width:0;font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}
@@ -468,7 +519,7 @@ const I18N = {
     author:"Historia del Deporte · Grado en CAFD · UCAM",
     fichasSearch:"Buscar en las fichas…", fichasEsOnly:"", practice:"Practicar este apartado", slideText:"En la diapositiva", refsL:"Fuentes", essayL:"Para el ensayo",
     prevF:"Anterior", nextF:"Siguiente", secOnly:"Apartado {s}", allSec:"Todo el tema", fichaIntro:"Presentación del tema", secIntro:"Por qué este apartado", fichaXP:"Ficha leída", noResults:"Sin resultados", fichasOf:"{n} fichas", codeL:"Código", paras:"párrafos", img1:"imagen", imgN:"imágenes",
-    daily:"Reto del día", exam:"Cómo preparar el examen", examSub:"Test, desarrollo y comentario de imagen, paso a paso", mapOpen:"Desplegar todo", mapClose:"Plegar todo", mapTema:"Tema {n}", mapFicha:"📖 Leer la ficha", setHome:"Ajustes y ayuda", setHomeSub:"Idioma, instalar en el móvil, privacidad y cerrar sesión", enc:"Enciclopedia del deporte", encShort:"Enciclopedia", encSub:"Origen e historia de {n} deportes", encDay:"Deporte del día", encPh:"Busca un deporte", encN:"{n} deportes", encNone:"No hay ningún deporte con ese nombre", encRand:"🎲 Otro deporte al azar", encCourse:"En la asignatura", encRefs:"Fuentes", encGrow:"La enciclopedia crece por tandas: {n} de {t} deportes publicados.", encImg:"Imagen", searchAll:"Buscar en Historiapp", searchHome:"Buscar en toda la app", sFicha:"Ficha", sEnc:"Enciclopedia", sGloss:"Glosario", sTime:"Cronología", sVid:"Vídeo", searchRes:"{n} resultados", searchAllSub:"Conceptos, autores, fechas y lugares de todos los temas", searchPh:"Escribe al menos 3 letras", searchN:"{n} fichas encontradas", searchNone:"No hay fichas con esa palabra", searchLoading:"Cargando los temas…", report:"⚑ Avisar de un error", reportHint:"Se abrirá tu correo con el mensaje preparado para el profesor.", reportWrite:"Explica aquí el error:", mapMore:"Para saber más", mapK:{concepto:"Concepto",autor:"Autor",fecha:"Fecha",ejemplo:"Ejemplo"}, mapPractice:"⚡ Practicar este apartado", mapHint:"Toca cada apartado para ver sus ideas y cada idea para leer el detalle.", dailySub:"Una prueba de cada tipo, distinta cada día, con el doble de XP", dailyStart:"Empezar el reto", dailyDone:"Reto de hoy completado", dailyScore:"{a} de {b} aciertos hoy", dailyBack:"Volver mañana para un reto nuevo", dailyStep:"Prueba {a} de {b}", dailyTitle:"Reto del día · {d}",
+    daily:"Reto del día", exam:"Cómo preparar el examen", examSub:"Test, desarrollo y comentario de imagen, paso a paso", mapOpen:"Desplegar todo", mapClose:"Plegar todo", mapTema:"Tema {n}", mapFicha:"📖 Leer la ficha", setHome:"Ajustes y ayuda", setHomeSub:"Idioma, instalar en el móvil, privacidad y cerrar sesión", enc:"Enciclopedia del deporte", encShort:"Enciclopedia", encSub:"Origen e historia de {n} deportes", encDay:"Deporte del día", encPh:"Busca un deporte", encN:"{n} deportes", encNone:"No hay ningún deporte con ese nombre", encRand:"🎲 Otro deporte al azar", encCourse:"En la asignatura", encRefs:"Fuentes", encGrow:"La enciclopedia crece por tandas: {n} de {t} deportes publicados.", encImg:"Imagen", tabHome:"Inicio", tabTemas:"Temas", tabVid:"Vídeos", tabEnc:"Enciclopedia", tabExam:"Examen", tabSet:"Ajustes", contTitle:"Continuar", hoy:"Hoy", temasT:"Temas", dailyCard:"Reto del día", encCard:"Deporte del día", efeCard:"Tal día como hoy", pilCard:"Píldora del día", pilSub:"Un vídeo corto del tema", open:"Abrir", efePrev:"‹ Día anterior", efeNext:"Día siguiente ›", efeToday:"Hoy", efeNone:"Todavía no hay una curiosidad para este día.", allTemas:"Ver todos los temas ›", modeWord:"Modo", searchAll:"Buscar en Historiapp", searchHome:"Buscar en toda la app", sFicha:"Ficha", sEnc:"Enciclopedia", sGloss:"Glosario", sTime:"Cronología", sVid:"Vídeo", searchRes:"{n} resultados", searchAllSub:"Conceptos, autores, fechas y lugares de todos los temas", searchPh:"Escribe al menos 3 letras", searchN:"{n} fichas encontradas", searchNone:"No hay fichas con esa palabra", searchLoading:"Cargando los temas…", report:"⚑ Avisar de un error", reportHint:"Se abrirá tu correo con el mensaje preparado para el profesor.", reportWrite:"Explica aquí el error:", mapMore:"Para saber más", mapK:{concepto:"Concepto",autor:"Autor",fecha:"Fecha",ejemplo:"Ejemplo"}, mapPractice:"⚡ Practicar este apartado", mapHint:"Toca cada apartado para ver sus ideas y cada idea para leer el detalle.", dailySub:"Una prueba de cada tipo, distinta cada día, con el doble de XP", dailyStart:"Empezar el reto", dailyDone:"Reto de hoy completado", dailyScore:"{a} de {b} aciertos hoy", dailyBack:"Volver mañana para un reto nuevo", dailyStep:"Prueba {a} de {b}", dailyTitle:"Reto del día · {d}",
     installBtn:"Instalar en el móvil", installIos:"En iPhone o iPad: pulsa el botón Compartir (el cuadrado con la flecha hacia arriba, abajo en Safari) y elige «Añadir a pantalla de inicio».", installAndroid:"En Android: abre el menú de Chrome (tres puntos) y elige «Instalar aplicación» o «Añadir a pantalla de inicio».", installDesktop:"Abre esta dirección en el móvil para instalarla; en el ordenador funciona igual desde el navegador.", installed:"La app ya está instalada.", close:"Cerrar"
   },
   en: {
@@ -495,7 +546,7 @@ const I18N = {
     author:"History of Sport · Sport Sciences degree · UCAM",
     fichasSearch:"Search the sheets…", fichasEsOnly:"Some sheets of this unit are not yet available in English and are shown in Spanish.", practice:"Practise this section", slideText:"On the slide", refsL:"Sources", essayL:"For the essay",
     prevF:"Previous", nextF:"Next", secOnly:"Section {s}", allSec:"Whole unit", fichaIntro:"About this unit", secIntro:"Why this section", fichaXP:"Sheet read", noResults:"No results", fichasOf:"{n} sheets", codeL:"Code", paras:"paragraphs", img1:"image", imgN:"images",
-    daily:"Daily challenge", exam:"How to prepare for the exam", examSub:"Multiple choice, essay and image commentary, step by step", mapOpen:"Expand all", mapClose:"Collapse all", mapTema:"Unit {n}", mapFicha:"📖 Read the study sheet", setHome:"Settings and help", setHomeSub:"Language, install on your phone, privacy and log out", enc:"Sports Encyclopedia", encShort:"Encyclopedia", encSub:"Origins and history of {n} sports", encDay:"Sport of the day", encPh:"Search for a sport", encN:"{n} sports", encNone:"No sport with that name", encRand:"🎲 Another random sport", encCourse:"In the course", encRefs:"Sources", encGrow:"The encyclopedia grows in batches: {n} of {t} sports published.", encImg:"Image", searchAll:"Search Historiapp", searchHome:"Search the whole app", sFicha:"Study sheet", sEnc:"Encyclopedia", sGloss:"Glossary", sTime:"Timeline", sVid:"Video", searchRes:"{n} results", searchAllSub:"Concepts, authors, dates and places from every unit", searchPh:"Type at least 3 letters", searchN:"{n} study sheets found", searchNone:"No study sheets contain that word", searchLoading:"Loading the units…", report:"⚑ Report a mistake", reportHint:"Your email app will open with a message ready for the lecturer.", reportWrite:"Describe the mistake here:", mapMore:"Learn more", mapK:{concepto:"Concept",autor:"Author",fecha:"Date",ejemplo:"Example"}, mapPractice:"⚡ Practise this section", mapHint:"Tap each section to see its ideas and each idea to read the detail.", dailySub:"One task of each kind, new every day, double XP", dailyStart:"Start the challenge", dailyDone:"Today's challenge completed", dailyScore:"{a} of {b} correct today", dailyBack:"Come back tomorrow for a new one", dailyStep:"Task {a} of {b}", dailyTitle:"Daily challenge · {d}",
+    daily:"Daily challenge", exam:"How to prepare for the exam", examSub:"Multiple choice, essay and image commentary, step by step", mapOpen:"Expand all", mapClose:"Collapse all", mapTema:"Unit {n}", mapFicha:"📖 Read the study sheet", setHome:"Settings and help", setHomeSub:"Language, install on your phone, privacy and log out", enc:"Sports Encyclopedia", encShort:"Encyclopedia", encSub:"Origins and history of {n} sports", encDay:"Sport of the day", encPh:"Search for a sport", encN:"{n} sports", encNone:"No sport with that name", encRand:"🎲 Another random sport", encCourse:"In the course", encRefs:"Sources", encGrow:"The encyclopedia grows in batches: {n} of {t} sports published.", encImg:"Image", tabHome:"Home", tabTemas:"Units", tabVid:"Videos", tabEnc:"Encyclopedia", tabExam:"Exam", tabSet:"Settings", contTitle:"Continue", hoy:"Today", temasT:"Units", dailyCard:"Daily challenge", encCard:"Sport of the day", efeCard:"On this day", pilCard:"Clip of the day", pilSub:"A short video from the unit", open:"Open", efePrev:"‹ Previous day", efeNext:"Next day ›", efeToday:"Today", efeNone:"There is no fact for this day yet.", allTemas:"See all units ›", modeWord:"Mode", searchAll:"Search Historiapp", searchHome:"Search the whole app", sFicha:"Study sheet", sEnc:"Encyclopedia", sGloss:"Glossary", sTime:"Timeline", sVid:"Video", searchRes:"{n} results", searchAllSub:"Concepts, authors, dates and places from every unit", searchPh:"Type at least 3 letters", searchN:"{n} study sheets found", searchNone:"No study sheets contain that word", searchLoading:"Loading the units…", report:"⚑ Report a mistake", reportHint:"Your email app will open with a message ready for the lecturer.", reportWrite:"Describe the mistake here:", mapMore:"Learn more", mapK:{concepto:"Concept",autor:"Author",fecha:"Date",ejemplo:"Example"}, mapPractice:"⚡ Practise this section", mapHint:"Tap each section to see its ideas and each idea to read the detail.", dailySub:"One task of each kind, new every day, double XP", dailyStart:"Start the challenge", dailyDone:"Today's challenge completed", dailyScore:"{a} of {b} correct today", dailyBack:"Come back tomorrow for a new one", dailyStep:"Task {a} of {b}", dailyTitle:"Daily challenge · {d}",
     installBtn:"Install on your phone", installIos:"On iPhone or iPad: tap the Share button (the square with the upward arrow, at the bottom in Safari) and choose 'Add to Home Screen'.", installAndroid:"On Android: open the Chrome menu (three dots) and choose 'Install app' or 'Add to Home screen'.", installDesktop:"Open this address on your phone to install it; on a computer it works from the browser.", installed:"The app is already installed.", close:"Close"
   }
 };
@@ -523,7 +574,7 @@ function addXP(n){
     S.prog.streak = (S.prog.lastDay===y) ? S.prog.streak+1 : 1; S.prog.lastDay=today;
   }
   save(); const after=levelOf(S.prog.xp);
-  if(after>before) setTimeout(()=>toast(t("levelUp",{n:after+1,name:t("levels")[after]}),2600),350);
+  if(after>before) setTimeout(()=>{ toast(t("levelUp",{n:after+1,name:t("levels")[after]}),2600); celebrate(); },350);
   renderXP();
 }
 function markSeen(temaId,mode,key){ const k=temaId+"."+mode; S.prog.seen[k]=S.prog.seen[k]||{}; S.prog.seen[k][key]=1; save(); }
@@ -573,19 +624,22 @@ async function getTema(num){
 
 /* ============ rendering ============ */
 const app=document.getElementById("app");
-function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="daily") return "reto"; if(v.name==="exam") return "examen"; if(v.name==="search") return "buscar"; if(v.name==="enc") return v.id?"enciclopedia/"+encodeURIComponent(v.id):"enciclopedia"; if(v.name==="tema") return "t"+v.num;
+function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="daily") return "reto"; if(v.name==="exam") return "examen"; if(v.name==="search") return "buscar"; if(v.name==="temas") return "temas"; if(v.name==="efe") return v.d?"hoy/"+v.d:"hoy"; if(v.name==="enc") return v.id?"enciclopedia/"+encodeURIComponent(v.id):"enciclopedia"; if(v.name==="tema") return "t"+v.num;
   if(v.name==="mode"){ if(v.mode==="fichas") return v.f?`t${v.num}/f/${v.f}`:`t${v.num}/fichas`; return `t${v.num}/${v.mode}`+(v.sec?"/"+v.sec:""); } return ""; }
-function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="reto") return {name:"daily"}; if(h==="examen") return {name:"exam"}; if(h==="buscar") return {name:"search"}; if(h==="enciclopedia") return {name:"enc"}; if(h.startsWith("enciclopedia/")) return {name:"enc",id:decodeURIComponent(h.slice(13))};
+function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="reto") return {name:"daily"}; if(h==="examen") return {name:"exam"}; if(h==="buscar") return {name:"search"}; if(h==="temas") return {name:"temas"}; if(h==="hoy") return {name:"efe"}; if(h.startsWith("hoy/")) return {name:"efe",d:h.slice(4)}; if(h==="enciclopedia") return {name:"enc"}; if(h.startsWith("enciclopedia/")) return {name:"enc",id:decodeURIComponent(h.slice(13))};
   const p=h.split("/"); const mt=/^t(\d+)$/.exec(p[0]); if(!mt) return {name:"home"}; const num=+mt[1];
   if(p.length===1) return {name:"tema",num}; if(p[1]==="f"&&p[2]) return {name:"mode",num,mode:"fichas",f:decodeURIComponent(p[2])};
   if(MODES.includes(p[1])) return {name:"mode",num,mode:p[1],sec:p[2]||undefined}; return {name:"tema",num}; }
-function nav(view){ S.view=view; closeSheet(); window.scrollTo(0,0); const h=viewToHash(view); if(location.hash.replace(/^#/,"")!==h){ S.silent=true; if(h) location.hash=h; else history.replaceState(null,"",location.pathname+location.search); } render(); }
+function nav(view){ S.view=view; closeSheet(); scrollTop0(); const h=viewToHash(view); if(location.hash.replace(/^#/,"")!==h){ S.silent=true; if(h) location.hash=h; else history.replaceState(null,"",location.pathname+location.search); } render(); }
 window.addEventListener("hashchange",()=>{ if(S.silent){ S.silent=false; return; } if(!S.lang){ S.pending=location.hash; return; } const v=hashToView(location.hash); S.view=v; closeSheet(); render(); });
 function render(){
   const v=S.view;
   if(v.name!=="gate") track("/"+(S.lang||"es")+"/"+(viewToHash(v)||"inicio"));
   if(v.name==="gate") return renderGate();
+  document.body.classList.toggle("gateon",v.name==="gate"); updateTabbar(); rememberLast(v);
   if(v.name==="home") return renderHome();
+  if(v.name==="temas") return renderTemas();
+  if(v.name==="efe") return renderEfe();
   if(v.name==="tema") return renderTema(v.num);
   if(v.name==="settings") return renderSettings();
   if(v.name==="daily") return renderDaily();
@@ -597,11 +651,11 @@ function render(){
 function header(title,back,extra=""){
   return `<div class="top">${back?`<button class="back" id="hBack">‹</button>`:`<img src="icons/emblema_blanco.png" alt="" style="width:40px;height:40px;object-fit:contain">`}
     <div class="ttl${extra?" two":""}">${esc(title)}</div>${extra}<div class="xp" id="hXP"></div>
-    <button class="gear" id="hGear">⚙︎</button></div>`;
+    <button class="srch" id="hSearch" aria-label="${esc(t("searchAll"))}">🔎</button></div>`;
 }
 function bindHeader(back){
   const b=document.getElementById("hBack"); if(b) b.onclick=back;
-  const g=document.getElementById("hGear"); if(g) g.onclick=()=>nav({name:"settings",from:S.view});
+  const g=document.getElementById("hSearch"); if(g) g.onclick=()=>nav({name:"search",back:S.view});
   renderXP();
 }
 function renderXP(){ const e=document.getElementById("hXP"); if(e) e.textContent=`${S.prog.xp} ${t("xp")} · ${t("level")} ${levelOf(S.prog.xp)+1}`; }
@@ -623,40 +677,96 @@ function renderGate(){
 }
 function setLang(l){ S.lang=l; try{localStorage.setItem("historiapp.lang",l)}catch(e){} document.documentElement.lang=l; const pend=S.pending; S.pending=null; nav(pend?hashToView(pend):{name:"home"}); }
 
+function scrollTop0(){ const m=document.querySelector("#app main"); if(m) m.scrollTo(0,0); }
+function celebrate(){ try{ if(matchMedia("(prefers-reduced-motion: reduce)").matches) return; const c=document.createElement("div"); c.className="confetti"; const col=["#004379","#EDAB00","#FBAE40","#002060","#7fb2e5"]; for(let i=0;i<26;i++){ const e=document.createElement("i"); e.style.left=(Math.random()*100)+"%"; e.style.background=col[i%col.length]; e.style.animationDelay=(Math.random()*.35)+"s"; e.style.transform="rotate("+(Math.random()*180)+"deg)"; c.appendChild(e); } document.body.appendChild(c); setTimeout(()=>c.remove(),2100); }catch(e){} }
+const TABS=[["home","🏠","tabHome"],["temas","📚","tabTemas"],["videos","▶️","tabVid"],["enc","📖","tabEnc"],["exam","🎓","tabExam"],["settings","⚙️","tabSet"]];
+function tabOf(v){ const n=(v||{}).name; if(n==="tema"||n==="mode"||n==="temas") return "temas"; if(n==="enc") return "enc"; if(n==="exam") return "exam"; if(n==="settings") return "settings"; return "home"; }
+function updateTabbar(){ let tb=document.getElementById("tabbar"); if(!tb){ tb=document.createElement("nav"); tb.id="tabbar"; document.body.appendChild(tb); }
+  const cur=tabOf(S.view); tb.innerHTML=TABS.map(([k,i,l])=>`<button data-k="${k}" class="${k===cur?"on":""}" aria-current="${k===cur?"page":"false"}"><span class="i">${i}</span>${esc(t(l))}</button>`).join("");
+  tb.querySelectorAll("button").forEach(b=>b.onclick=()=>{ const k=b.dataset.k; if(k==="videos"){ openMixFeed(); return; } nav(k==="settings"?{name:"settings",from:{name:"home"}}:{name:k}); }); }
+function rememberLast(v){ if(!v) return; if(v.name==="mode"||v.name==="tema"||(v.name==="enc"&&v.id)){ S.prog.last={name:v.name,num:v.num,mode:v.mode,f:v.f,id:v.id,sec:v.sec,at:Date.now()}; save(); } }
+function dayHash(k){ let h=7; for(const c of k) h=(h*31+c.charCodeAt(0))>>>0; return h; }
+async function getEfe(){ if(S.efe===undefined){ try{ S.efe=await fetch("data/efemerides.json",{cache:"no-cache"}).then(r=>r.ok?r.json():null); }catch(e){ S.efe=null; } } return S.efe; }
+function mmdd(d){ return String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+function fmtDay(k){ const [m,d]=k.split("-").map(Number); return new Date(2024,m-1,d).toLocaleDateString(S.lang==="en"?"en-GB":"es-ES",{day:"numeric",month:"long"}); }
+function ringSVG(p){ const r=18,c=2*Math.PI*r; return `<svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="${r}" fill="rgba(0,0,0,.35)" stroke="rgba(255,255,255,.3)" stroke-width="4"/><circle cx="22" cy="22" r="${r}" fill="none" stroke="#EDAB00" stroke-width="4" stroke-linecap="round" stroke-dasharray="${(c*p/100).toFixed(1)} ${c.toFixed(1)}"/></svg><span>${p}%</span>`; }
+const TEMA_IMG={1:"img/t1/valltorta_caza.jpg",2:"img/t2/hatshepsut_hebsed.jpg"};
+function temaPct(num){ const tm=S.temaCache[num]; if(!tm) return 0; return Math.round(MODES.filter(x=>!MEDIA.includes(x)).reduce((a,x)=>a+modePct(tm,x),0)/(MODES.length-MEDIA.length)); }
+async function fillTemaGrid(box,short){
+  try{ const idx=await getIndex(); box.innerHTML=""; let locked=0;
+    for(const m of idx.temas){ if(short&&!m.available&&++locked>2) break; const b=document.createElement("button"); const ttl=esc(L(m.title))||t("tema")+" "+m.num;
+      if(m.available){ b.className="tcard"; if(TEMA_IMG[m.num]) b.style.backgroundImage=`url('${TEMA_IMG[m.num]}')`;
+        b.innerHTML=`<div class="ring">${ringSVG(temaPct(m.num))}</div><div class="tx"><small>${t("tema")} ${m.num}</small><b>${ttl}</b></div>`;
+        b.onclick=()=>nav({name:"tema",num:m.num});
+        if(!S.temaCache[m.num]) getTema(m.num).then(()=>{ const r=b.querySelector(".ring"); if(r) r.innerHTML=ringSVG(temaPct(m.num)); }).catch(()=>{});
+      } else { b.className="tcard locked"; b.innerHTML=`<div class="big">${m.num}</div><div class="lk" aria-label="${esc(t("soon"))}">🔒</div><div class="tx"><small>${t("tema")} ${m.num} · ${t("soon")}</small><b>${ttl}</b></div>`; b.onclick=()=>toast(t("locked"),2200); }
+      box.appendChild(b); }
+  }catch(e){ box.innerHTML=`<div class="empty">${t("loadError")}</div>`; }
+}
 async function renderHome(){
   const lvl=levelOf(S.prog.xp), nextXP=LEVEL_XP[lvl+1]||LEVEL_XP[lvl], prevXP=LEVEL_XP[lvl];
   const pct=LEVEL_XP[lvl+1]?Math.round((S.prog.xp-prevXP)/(nextXP-prevXP)*100):100;
+  const nb=Object.keys(S.prog.badges||{}).length;
   app.innerHTML=header("Historiapp",false)+`<main>
-    <button class="tema" id="setBtn"><div class="num" style="background:#EAF1F8;color:var(--primary-2)">⚙️</div><div class="t"><b>${t("setHome")}</b><span>${t("setHomeSub")}</span></div><div class="pct">›</div></button>
-    <div class="hero"><div class="lvl">${lvl+1}<small>${t("level").toUpperCase()}</small></div>
-      <div class="info"><div class="name">${esc(t("levels")[lvl])}</div>
-      <div class="bar"><i style="width:${pct}%"></i></div>
-      <div class="meta"><span>${S.prog.xp} ${t("xp")}${LEVEL_XP[lvl+1]?` · ${nextXP-S.prog.xp} ${t("toNext")}`:""}</span><span>🔥 ${S.prog.streak} ${t("days")}</span></div></div></div>
-    <input class="search" id="homeQ" type="search" readonly placeholder="🔎 ${t("searchHome")}" style="cursor:pointer">
-    <button class="tema" id="dailyBtn" style="border:2px solid var(--accent);background:#fff8e1"><div class="num">☀️</div><div class="t"><b>${t("daily")}</b><span id="dailySub">${t("dailySub")}</span></div><div class="pct" id="dailyPct"></div></button>
-    <div class="encday" id="encDay" style="display:none"></div>
-    <button class="tema" id="examBtn" style="border:2px solid var(--primary)"><div class="num" style="background:var(--primary);color:#fff">🎓</div><div class="t"><b>${t("exam")}</b><span>${t("examSub")}</span></div><div class="pct">›</div></button>
-    <button class="tema" id="encBtn"><div class="num" style="background:var(--primary);color:#fff">📚</div><div class="t"><b>${t("enc")}</b><span id="encSub">${t("encSub",{n:"…"})}</span></div><div class="pct">›</div></button>
-    <div id="temaList"><div class="empty">…</div></div>
+    <div class="strip"><span class="st" title="${esc(t("days"))}">🔥 ${S.prog.streak}</span><span class="st">⭐ ${S.prog.xp}</span><span class="st">🏅 ${nb}</span>
+      <div class="lv"><b>${t("level")} ${lvl+1} · ${esc(t("levels")[lvl])}</b><div class="bar"><i style="width:${pct}%"></i></div></div></div>
+    <div id="contBox"></div>
+    <div class="section-title">${t("hoy")}</div>
+    <div class="hoy" id="hoy"></div>
+    <div class="section-title">${t("temasT")}</div>
+    <div class="tgrid" id="tgrid"></div>
+    <button class="tema" id="allT" style="justify-content:center;font-weight:700;color:var(--primary)">${t("allTemas")}</button>
     <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:10px">${t("author")}</p></main>`;
   bindHeader();
-  { const d=S.prog.daily||{}; const done=d.date===todayKey()&&d.done; document.getElementById("dailyBtn").onclick=()=>nav({name:"daily"}); document.getElementById("examBtn").onclick=()=>nav({name:"exam"}); document.getElementById("homeQ").onclick=()=>nav({name:"search"}); document.getElementById("encBtn").onclick=()=>nav({name:"enc"}); encHome(); document.getElementById("setBtn").onclick=()=>nav({name:"settings",from:{name:"home"}});
-    if(done){ document.getElementById("dailySub").textContent=t("dailyScore",{a:d.correct,b:d.total}); document.getElementById("dailyPct").textContent="✓"; } else document.getElementById("dailyPct").textContent="×2"; }
-  try{
-    const idx=await getIndex(); const list=document.getElementById("temaList"); list.innerHTML=""; let lastUnit="";
-    for(const m of idx.temas){
-      const u=m.unit?L(m.unit):""; if(u && u!==lastUnit){ const h=document.createElement("div"); h.className="section-title"; h.style.marginTop="14px"; h.textContent=u; list.appendChild(h); lastUnit=u; }
-      const b=document.createElement("button"); b.className="tema"+(m.available?"":" locked");
-      let pctT="";
-      if(m.available){ const tm=S.temaCache[m.num]; if(tm){ pctT=Math.round(MODES.filter(x=>!MEDIA.includes(x)).reduce((a,x)=>a+modePct(tm,x),0)/(MODES.length-MEDIA.length))+"%"; } }
-      b.innerHTML=`<div class="num">${m.num}</div><div class="t"><b>${esc(L(m.title))||t("tema")+" "+m.num}</b><span>${t("tema")} ${m.num}${m.available?"":" · "+t("soon")}</span></div>${m.available?`<div class="pct">${pctT}</div>`:`<div>🔒</div>`}`;
-      b.onclick=()=>{ if(m.available) nav({name:"tema",num:m.num}); else toast(t("locked"),2200); };
-      list.appendChild(b);
-      if(m.available && !S.temaCache[m.num]) getTema(m.num).then(()=>{ if(S.view.name==="home") renderHome(); }).catch(()=>{});
-    }
-  }catch(e){ document.getElementById("temaList").innerHTML=`<div class="empty">${t("loadError")}</div>`; }
+  const hoy=document.getElementById("hoy");
+  const d=S.prog.daily||{}; const done=d.date===todayKey()&&d.done;
+  const rc=document.createElement("button"); rc.className="card reto";
+  rc.innerHTML=`<small>☀️ ${t("dailyCard")}</small><b>${done?t("dailyScore",{a:d.correct,b:d.total}):t("daily")}</b><span>${t("dailySub")}</span><div class="ft"><span>${done?"✓":"×2 XP"}</span><span>›</span></div>`;
+  rc.onclick=()=>nav({name:"daily"}); hoy.appendChild(rc);
+  fillTemaGrid(document.getElementById("tgrid"),true); document.getElementById("allT").onclick=()=>nav({name:"temas"});
+  // continuar
+  (async()=>{ const l=S.prog.last, box=document.getElementById("contBox"); if(!l||!box) return; let label="", sub="";
+    try{ if(l.name==="enc"){ const D=await getEnc(); const e=D.entries.find(x=>x.id===l.id); if(!e) return; label=L(e.name); sub=t("enc"); }
+      else { const tm=await getTema(l.num); sub=t("tema")+" "+l.num; if(l.name==="tema") label=L(tm.title); else if(l.mode==="fichas"&&l.f){ const f=(tm.fichas||[]).find(x=>x.id===l.f); label=f?L(f.title):t("modes.fichas"); } else label=t("modes."+l.mode); }
+    }catch(e){ return; }
+    if(!document.getElementById("contBox")) return;
+    box.innerHTML=`<button class="cont" id="contBtn"><div class="pl">▶</div><div><small>${t("contTitle")} · ${esc(sub)}</small><b>${esc(label)}</b></div></button>`;
+    document.getElementById("contBtn").onclick=()=>{ const v={name:l.name,num:l.num,mode:l.mode,f:l.f,id:l.id,sec:l.sec}; Object.keys(v).forEach(k=>v[k]===undefined&&delete v[k]); nav(v); }; })();
+  // deporte del día
+  try{ const D=await getEnc(); const E=D.entries; if(E.length&&document.getElementById("hoy")===hoy){ const e=encDaily(E); const c=document.createElement("div"); c.className="card";
+    c.innerHTML=`<small>🏅 ${t("encCard")}</small><b>${esc(L(e.name))}</b><span>${md(L(e.cuando))}</span><div class="ft"><button class="dice" aria-label="${esc(t("encRand"))}">🎲</button><span>${t("open")} ›</span></div>`;
+    c.onclick=ev=>{ if(ev.target.closest(".dice")){ const r=encRandom(E); nav({name:"enc",id:r.id,back:{name:"home"}}); } else nav({name:"enc",id:e.id,back:{name:"home"}}); };
+    c.style.cursor="pointer"; hoy.appendChild(c); } }catch(e){}
+  // tal día como hoy
+  try{ const F=await getEfe(); const k=mmdd(new Date()); if(F&&F[k]&&document.getElementById("hoy")===hoy){ const f=F[k]; const c=document.createElement("button"); c.className="card";
+    c.innerHTML=`<small>📅 ${t("efeCard")} · ${esc(fmtDay(k))}</small><b>${esc(String(f.year||""))}</b><span>${md(L(f))}</span><div class="ft"><span></span><span>${t("open")} ›</span></div>`;
+    c.onclick=()=>nav({name:"efe"}); hoy.appendChild(c); } }catch(e){}
+  // píldora del día
+  try{ const idx=await getIndex(); const vids=[]; for(const m of idx.temas){ if(!m.available) continue; const tm=await getTema(m.num); (tm.videos||[]).forEach(v=>vids.push({num:m.num,v})); }
+    if(vids.length&&document.getElementById("hoy")===hoy){ const p=vids[dayHash(todayKey()+"v")%vids.length]; const c=document.createElement("button"); c.className="card";
+      c.innerHTML=`<small>▶ ${t("pilCard")} · ${t("tema")} ${p.num}</small><b>${esc(L(p.v.title))}</b><span>${t("pilSub")}</span><div class="ft"><span></span><span>${t("open")} ›</span></div>`;
+      c.onclick=()=>nav({name:"mode",num:p.num,mode:"videos"}); hoy.appendChild(c); } }catch(e){}
 }
-
+async function renderTemas(){
+  app.innerHTML=header(t("tabTemas"),false)+`<main><div class="tgrid" id="tgrid2"></div></main>`;
+  bindHeader(); fillTemaGrid(document.getElementById("tgrid2"));
+}
+async function renderEfe(){
+  const v=S.view; const k=v.d||mmdd(new Date());
+  app.innerHTML=header(t("efeCard"),true)+`<main id="efeM"><div class="empty">…</div></main>`;
+  bindHeader(()=>nav(v.back||{name:"home"}));
+  const F=await getEfe(); const m=document.getElementById("efeM"); if(!m) return; const f=F&&F[k];
+  const shift=n=>{ const [mm,dd]=k.split("-").map(Number); const d=new Date(2024,mm-1,dd+n); return mmdd(d); };
+  const refs=f?((S.lang==="en"&&f.refs_en)?f.refs_en:(f.refs||[])):[];
+  m.innerHTML=`<div class="efe-date">📅 ${esc(fmtDay(k))}</div>
+    ${f?`<div class="efe-year">${esc(String(f.year||""))}</div><div class="efe-txt">${LL(f.body||{es:[f.es],en:[f.en]}).map(x=>`<p>${md(x)}</p>`).join("")}</div>
+    ${f.enc?`<div class="enc-links"><button id="efeEnc">🔍 ${esc(t("enc"))}</button></div>`:""}
+    ${refs.length?`<div class="section-title" style="margin-top:14px">${t("encRefs")}</div><div class="enc-refs">${refs.map(r=>`<p>${md(r)}</p>`).join("")}</div>`:""}`:`<div class="empty">${t("efeNone")}</div>`}
+    <div class="efe-nav"><button id="efeP">${t("efePrev")}</button><button id="efeN">${t("efeNext")}</button></div>`;
+  document.getElementById("efeP").onclick=()=>nav({name:"efe",d:shift(-1),back:v.back});
+  document.getElementById("efeN").onclick=()=>nav({name:"efe",d:shift(1),back:v.back});
+  const eb=document.getElementById("efeEnc"); if(eb) eb.onclick=()=>nav({name:"enc",id:f.enc,back:{name:"efe",d:k}});
+}
 async function renderTema(num){
   app.innerHTML=header(t("tema")+" "+num,true)+`<main><div class="empty">…</div></main>`;
   bindHeader(()=>nav({name:"home"}));
@@ -965,7 +1075,7 @@ async function renderDaily(){
   const d=S.prog.daily||{}; if(d.date===todayKey() && d.done){ return dailyResult(m,d.correct,d.total); }
   let k=0, correct=0; S.xpMult=2;
   function step(){
-    if(k>=steps.length){ S.xpMult=1; S.prog.daily={date:todayKey(),done:true,correct,total:steps.length}; save(); track("reto/completado/"+Math.round(correct/steps.length*10)*10+"%","Reto del día",true); return dailyResult(m,correct,steps.length); }
+    if(k>=steps.length){ S.xpMult=1; S.prog.daily={date:todayKey(),done:true,correct,total:steps.length}; save(); celebrate(); track("reto/completado/"+Math.round(correct/steps.length*10)*10+"%","Reto del día",true); return dailyResult(m,correct,steps.length); }
     const st=steps[k]; const fn={cards:modeSwipe,myths:modeSwipe,quiz:modeChoice,sources:modeChoice,glossary:modeGlossary,timeline:modeTimeline,match:modeMatch}[st.mode];
     document.querySelector(".top .ttl").textContent=`${t("daily")} · ${t("dailyStep",{a:k+1,b:steps.length})} · ${t("modes."+st.mode)} · ${t("tema")} ${st.tema.num}`;
     S.view.sec=undefined; m.innerHTML="";
@@ -1099,7 +1209,7 @@ async function renderEnc(){
     S.view.q=raw;
   }
   function jump(l){ let el=document.getElementById("L-"+l); if(!el){ const i=LET.indexOf(l); for(let j=i+1;j<LET.length&&!el;j++) el=document.getElementById("L-"+LET[j]); for(let j=i-1;j>=0&&!el;j--) el=document.getElementById("L-"+LET[j]); }
-    if(el){ const top=el.getBoundingClientRect().top+window.scrollY-(document.querySelector(".top")?.offsetHeight||60)-8; window.scrollTo(0,top); } }
+    if(el){ const mm=document.querySelector("#app main"); if(mm) mm.scrollTo(0,el.getBoundingClientRect().top-mm.getBoundingClientRect().top+mm.scrollTop-8); } }
   function fromTouch(ev){ const p=ev.touches?ev.touches[0]:ev; const el=document.elementFromPoint(p.clientX,p.clientY); if(el&&el.dataset&&el.dataset.l) jump(el.dataset.l); }
   az.addEventListener("touchstart",e=>{ e.preventDefault(); fromTouch(e); },{passive:false});
   az.addEventListener("touchmove",e=>{ e.preventDefault(); fromTouch(e); },{passive:false});
@@ -1315,12 +1425,12 @@ function videoAnswer(tema,v,k,box){
 }
 function openFeed(tema,idxs,start,onClose){
   if(POD.audio&&!POD.audio.paused) POD.audio.pause();
-  const vs=tema.videos; const answered=()=>S.prog.seen[tema.id+".videoq"]||{};
+  const vs=tema.videos; const TT=v=>(v&&v._t)||tema; const answered=v=>S.prog.seen[TT(v).id+".videoq"]||{};
   const fd=document.createElement("div"); fd.className="feed";
   fd.innerHTML=`<div class="fscroll">${idxs.map((i,n)=>{ const v=vs[i]; return `<section class="fitem" data-n="${n}" style="background-image:url('${esc(L(v.poster))}')">
       <div class="fcenter"><span></span></div>
-      <div class="fside"><button data-a="more"><b>📖</b>${t("vMoreB")}</button>${L(v.q)&&L(v.q).q?`<button data-a="test" class="${answered()[v.id]?"done":""}"><b>${answered()[v.id]?"✓":"❓"}</b>${t("vTestB")}</button>`:""}</div>
-      <div class="fcap">${esc(L(v.title))}<small>${t("tema")} ${tema.num} · ${n+1}/${idxs.length}</small></div>
+      <div class="fside"><button data-a="more"><b>📖</b>${t("vMoreB")}</button>${L(v.q)&&L(v.q).q?`<button data-a="test" class="${answered(v)[v.id]?"done":""}"><b>${answered(v)[v.id]?"✓":"❓"}</b>${t("vTestB")}</button>`:""}</div>
+      <div class="fcap">${esc(L(v.title))}<small>${t("tema")} ${TT(v).num} · ${n+1}/${idxs.length}</small></div>
       <div class="fbar"><i></i></div></section>`; }).join("")}
       <section class="fend"><div style="font-size:40px">🏁</div><b style="font-size:18px">${t("vEnd")}</b><button class="btn" id="fEndBack">${t("vClose")}</button></section></div>
     <div class="ftop"><button id="fClose">✕ ${t("vClose")}</button><span class="fc" id="fCount"></span></div>
@@ -1343,8 +1453,8 @@ function openFeed(tema,idxs,start,onClose){
   const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting&&e.intersectionRatio>=.6){ if(e.target.classList.contains("fend")){ vid.pause(); cur=-1; fd.querySelector("#fCount").textContent=""; } else activate(+e.target.dataset.n); } }),{root:sc,threshold:[.6]});
   items.forEach(it=>io.observe(it)); io.observe(fd.querySelector(".fend"));
   vid.addEventListener("timeupdate",()=>{ const b=items[cur]&&items[cur].querySelector(".fbar i"); if(b&&vid.duration) b.style.width=(vid.currentTime/vid.duration*100)+"%"; });
-  vid.addEventListener("ended",()=>{ const v=vs[idxs[cur]]; const seen=S.prog.seen[tema.id+".videos"]||{}; if(!seen[v.id]) markSeen(tema.id,"videos",v.id);
-    const q=L(v.q); if(q&&q.q&&!answered()[v.id]) showTest(true); else showNextOnly(); });
+  vid.addEventListener("ended",()=>{ const v=vs[idxs[cur]]; const seen=S.prog.seen[TT(v).id+".videos"]||{}; if(!seen[v.id]) markSeen(TT(v).id,"videos",v.id);
+    const q=L(v.q); if(q&&q.q&&!answered(v)[v.id]) showTest(true); else showNextOnly(); });
   sc.addEventListener("click",e=>{ if(e.target.closest(".fside")||e.target.closest(".fend")) return; if(sh.classList.contains("show")){ closeSh(); return; }
     if(vid.muted){ vid.muted=false; if(vid.paused) vid.play().catch(()=>{}); hint("🔊",700); return; }
     if(vid.paused){ vid.play().catch(()=>{}); hint("▶",500); } else { vid.pause(); hint("❚❚"); } });
@@ -1357,7 +1467,7 @@ function openFeed(tema,idxs,start,onClose){
     sh.innerHTML=`<h3>${t("vTest")}</h3><div class="qq">${esc(q.q)}</div><div class="opts">${q.opts.map((o,k)=>`<button class="opt" data-k="${k}"><span class="k">${"ABCD"[k]}</span><span>${esc(o)}</span></button>`).join("")}</div>
       <div class="row2"><button class="btn sec" id="fsX">${t("close")}</button><button class="btn" id="fsN">${t("vNext")}</button></div>`;
     sh.classList.add("show");
-    sh.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ videoAnswer(tema,v,+b.dataset.k,sh); const tb=items[cur].querySelector('[data-a="test"]'); if(tb){ tb.classList.add("done"); tb.querySelector("b").textContent="✓"; } });
+    sh.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ videoAnswer(TT(v),v,+b.dataset.k,sh); const tb=items[cur].querySelector('[data-a="test"]'); if(tb){ tb.classList.add("done"); tb.querySelector("b").textContent="✓"; } });
     sh.querySelector("#fsX").onclick=closeSh; sh.querySelector("#fsN").onclick=goNext; }
   function showNextOnly(){ sh.innerHTML=`<div class="row2"><button class="btn sec" id="fsR">↺</button><button class="btn" id="fsN">${t("vNext")}</button></div>`; sh.classList.add("show");
     sh.querySelector("#fsR").onclick=()=>{ closeSh(); vid.currentTime=0; vid.play().catch(()=>{}); }; sh.querySelector("#fsN").onclick=goNext; }
@@ -1365,6 +1475,16 @@ function openFeed(tema,idxs,start,onClose){
   const close=()=>{ io.disconnect(); vid.pause(); vid.removeAttribute("src"); pre.removeAttribute("src"); fd.remove(); document.body.classList.remove("feedon"); onClose&&onClose(); };
   fd.querySelector("#fClose").onclick=close; fd.querySelector("#fEndBack").onclick=close;
   requestAnimationFrame(()=>{ items[start].scrollIntoView(); activate(start); });
+}
+
+async function openMixFeed(){
+  try{ const idx=await getIndex(); const all=[];
+    for(const m of idx.temas){ if(!m.available) continue; const tm=await getTema(m.num); modeIdxs(tm,"videos").forEach(i=>all.push(Object.assign({},tm.videos[i],{_t:tm}))); }
+    if(!all.length){ toast(t("noVideos"),2200); return; }
+    for(let i=all.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [all[i],all[j]]=[all[j],all[i]]; }
+    track("videos/mezcla","Vídeos (pestaña)",true);
+    openFeed({id:"mix",num:"",videos:all},all.map((_,i)=>i),0,()=>updateTabbar());
+  }catch(e){ toast(t("loadError"),2200); }
 }
 
 function modeVideos(tema,mode,m){
@@ -1389,8 +1509,8 @@ function modeVideos(tema,mode,m){
       if(ok&&first){ addXP(10); markSeen(tema.id,"videoq",v.id); toast(t("vOk",{n:10*(S.xpMult||1)})); } else if(!ok) toast(t("vKo"));
       if(!seen[v.id]){ markSeen(tema.id,"videos",v.id); seen[v.id]=1; }
     });
-    m.querySelector("#vBack").onclick=()=>{ vid.pause(); list(); window.scrollTo(0,0); };
-    window.scrollTo(0,0);
+    m.querySelector("#vBack").onclick=()=>{ vid.pause(); list(); scrollTop0(); };
+    scrollTop0();
   };
   list();
 }

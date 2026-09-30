@@ -1,0 +1,1431 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Historiapp</title>
+<meta name="description" content="Historiapp: prepara el examen de Historia del Deporte (UCAM)">
+<meta name="theme-color" content="#004379">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Historiapp">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png?v=2">
+<style>
+:root{
+  /* Paleta de la plantilla UCAM: azul 004379, azul oscuro 002060, naranja EDAB00 / FBAE40, texto 383838, blanco */
+  --bg:#ffffff; --paper:#ffffff; --ink:#383838; --muted:#656565;
+  --primary:#004379; --primary-2:#002060; --accent:#EDAB00; --accent-2:#FBAE40;
+  --ok:#004379; --ok-bg:#e3edf6; --ko:#e8710a; --ko-bg:#fdebdd;
+  --line:#e6e6e6; --radius:18px; --shadow:0 4px 18px rgba(0,32,96,.10);
+  --safe-top:env(safe-area-inset-top,0px); --safe-bottom:env(safe-area-inset-bottom,0px);
+}
+@font-face{font-family:"Carlito";src:url("fonts/Carlito-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Carlito";src:url("fonts/Carlito-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Carlito";src:url("fonts/Carlito-Italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Carlito";src:url("fonts/Carlito-BoldItalic.woff2") format("woff2");font-weight:700;font-style:italic;font-display:swap}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--ink);
+  font-family:Calibri,"Carlito",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;overscroll-behavior:none}
+body{display:flex;justify-content:center}
+#app{width:100%;max-width:520px;min-height:100vh;display:flex;flex-direction:column;position:relative}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+.hidden{display:none!important}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:var(--primary);color:#fff;
+  padding:calc(10px + var(--safe-top)) 16px 10px;display:flex;align-items:center;gap:10px;min-height:56px}
+.top .back{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);font-size:20px}
+.top .ttl{flex:1;min-width:0;font-weight:700;font-size:18px;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.35)}
+.top .ttl.two{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:17px}
+.top .hdice{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;background:var(--accent);border:0;flex-shrink:0;cursor:pointer}
+body::before{content:"";position:fixed;top:0;left:0;right:0;height:var(--safe-top);background:var(--primary);z-index:25;pointer-events:none}
+@media (max-width:380px){.top .xp{font-size:12px;padding:5px 8px}}
+.top .xp{font-size:13px;background:rgba(255,255,255,.16);color:#fff;padding:6px 10px;border-radius:999px;white-space:nowrap;flex-shrink:0}
+.top .gear{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;background:rgba(255,255,255,.12)}
+main{flex:1;padding:16px 16px calc(24px + var(--safe-bottom));display:flex;flex-direction:column;gap:14px}
+
+/* language gate */
+.gate{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:32px 24px;text-align:center;
+  background:radial-gradient(120% 80% at 50% 0%,#0b5a9a 0%,#004379 55%,#002060 100%);color:#fff}
+.gate .logo{width:112px;height:112px;border-radius:28px;background:var(--paper);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);font-size:56px}
+.gate h1{font-size:38px;letter-spacing:-.02em}
+.gate p{opacity:.85;max-width:320px;line-height:1.45}
+.gate .langs{display:flex;gap:14px;width:100%;max-width:340px}
+.gate .langs button{flex:1;padding:18px 12px;border-radius:16px;background:var(--paper);color:var(--primary);font-weight:700;font-size:18px;box-shadow:var(--shadow)}
+.gate .langs button small{display:block;font-weight:500;color:var(--muted);font-size:13px;margin-top:2px}
+.gate .foot{font-size:12px;opacity:.6}
+
+/* cards / lists */
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
+.hero{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;border-radius:var(--radius);padding:18px;display:flex;gap:14px;align-items:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-10px;top:-10px;width:150px;height:150px;background:url("icons/emblema_oro.png") center/contain no-repeat;opacity:.22;pointer-events:none}
+.hero>*{position:relative}
+.hero .lvl{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;font-size:22px;line-height:1}
+.hero .lvl small{font-size:10px;font-weight:600;opacity:.85;letter-spacing:.06em}
+.hero .info{flex:1;min-width:0}
+.hero .info .name{font-weight:700;font-size:17px}
+.hero .bar{height:8px;background:rgba(255,255,255,.2);border-radius:99px;margin-top:8px;overflow:hidden}
+.hero .bar i{display:block;height:100%;background:var(--accent-2);border-radius:99px;transition:width .4s}
+.hero .meta{display:flex;gap:12px;font-size:12px;opacity:.9;margin-top:6px}
+.section-title{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700;margin:6px 4px 0}
+.tema{display:flex;align-items:center;gap:14px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow);text-align:left;width:100%}
+.tema .num{width:46px;height:46px;border-radius:14px;background:var(--accent);color:var(--primary-2);font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.tema.locked .num{background:#cfc7b8}
+.tema .t{flex:1;min-width:0}
+.tema .t b{display:block;font-size:15px;line-height:1.25}
+.tema .t span{display:block;font-size:12px;color:var(--muted);margin-top:3px}
+.tema .pct{font-size:12px;font-weight:700;color:var(--primary)}
+.tema.locked{opacity:.6}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mode{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:16px 14px;box-shadow:var(--shadow);text-align:left;display:flex;flex-direction:column;gap:8px;min-height:120px;position:relative}
+.mode .ic{font-size:28px}
+.mode b{font-size:15px;line-height:1.2}
+.mode span{font-size:12px;color:var(--muted)}
+.mode .prog{height:5px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:auto}
+.mode .prog i{display:block;height:100%;background:var(--ok);border-radius:99px}
+.mode .done{position:absolute;top:10px;right:10px;font-size:16px}
+.pill{display:inline-block;padding:4px 10px;border-radius:999px;background:var(--line);font-size:12px;font-weight:600;color:var(--ink)}
+.btn{display:block;width:100%;padding:15px;border-radius:14px;background:var(--primary);color:#fff;font-weight:700;font-size:16px;text-align:center}
+.btn.sec{background:var(--paper);color:var(--primary);border:2px solid var(--primary)}
+.btn.ghost{background:transparent;color:var(--muted);font-weight:600}
+.btn:disabled{opacity:.5}
+.row{display:flex;gap:10px}
+.row .btn{flex:1}
+.counter{font-size:13px;color:var(--muted);text-align:center;font-weight:600}
+.progress{height:6px;background:var(--line);border-radius:99px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .3s}
+
+/* swipe deck */
+.deck{position:relative;height:calc(100vh - 262px);min-height:400px;max-height:620px}
+.scard{position:absolute;inset:0;background:var(--paper);border:1px solid var(--line);border-radius:22px;box-shadow:0 10px 30px rgba(30,36,48,.16);overflow:hidden;display:flex;flex-direction:column;touch-action:none;user-select:none;will-change:transform}
+.scard.behind{transform:scale(.95) translateY(14px);opacity:.7}
+.scard .img{flex:1;background:#f3f5f8 center/contain no-repeat;min-height:160px}
+.scard .img.text{display:flex;align-items:center;justify-content:center;padding:28px;font-size:22px;line-height:1.35;font-weight:600;text-align:center;background:linear-gradient(160deg,#fff8e1,#fde9bf);color:var(--primary-2)}
+.scard .cap{font-size:11px;color:var(--muted);padding:8px 14px 0;text-align:center}
+.scard .q{padding:12px 16px 16px;font-size:17px;font-weight:600;line-height:1.35;text-align:center}
+.scard .stamp{position:absolute;top:22px;padding:8px 14px;border:4px solid;border-radius:10px;font-weight:900;font-size:26px;letter-spacing:.05em;opacity:0;transform:rotate(-12deg);background:rgba(255,255,255,.85)}
+.scard .stamp.yes{right:18px;color:var(--ok);border-color:var(--ok);transform:rotate(12deg)}
+.scard .stamp.no{left:18px;color:var(--ko);border-color:var(--ko)}
+.swipe-btns{display:flex;justify-content:center;gap:22px}
+.swipe-btns button{width:74px;height:74px;border-radius:50%;background:var(--paper);box-shadow:var(--shadow);font-size:26px;font-weight:800;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.swipe-btns button small{font-size:10px;font-weight:700;letter-spacing:.06em;margin-top:2px}
+.swipe-btns .no{color:var(--ko)} .swipe-btns .yes{color:var(--ok)}
+.swipe-hint{text-align:center;font-size:12px;color:var(--muted)}
+
+/* feedback sheet */
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:center;pointer-events:none}
+.sheet .in{width:100%;max-width:520px;background:var(--paper);border-radius:22px 22px 0 0;box-shadow:0 -10px 40px rgba(0,0,0,.18);padding:18px 18px calc(18px + var(--safe-bottom));transform:translateY(110%);transition:transform .28s cubic-bezier(.2,.8,.2,1);pointer-events:auto;max-height:70vh;overflow:auto}
+.sheet.show .in{transform:none}
+.sheet .verdict{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;margin-bottom:8px}
+.sheet .verdict .dot{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px}
+.sheet.ok .dot{background:var(--ok)} .sheet.ko .dot{background:var(--ko)}
+.sheet.ok .verdict{color:var(--ok)} .sheet.ko .verdict{color:var(--ko)}
+.sheet .exp{font-size:15px;line-height:1.5;margin-bottom:14px;white-space:pre-line}
+.sheet .xpgain{font-size:13px;color:var(--accent);font-weight:700;margin-bottom:10px}
+
+/* options */
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{background:var(--paper);border:2px solid var(--line);border-radius:14px;padding:14px;text-align:left;font-size:15px;line-height:1.35;display:flex;gap:10px;align-items:center}
+.opt .k{width:26px;height:26px;border-radius:8px;background:var(--line);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex-shrink:0}
+.opt.ok{border-color:var(--ok);background:var(--ok-bg)} .opt.ok .k{background:var(--ok);color:#fff}
+.opt.ko{border-color:var(--ko);background:var(--ko-bg)} .opt.ko .k{background:var(--ko);color:#fff}
+.opt:disabled{opacity:.9}
+.quote{background:linear-gradient(160deg,#fff8e1,#fde9bf);border-radius:var(--radius);padding:20px;font-size:17px;line-height:1.5;font-style:italic;box-shadow:var(--shadow);position:relative}
+.quote:before{content:"\201C";position:absolute;top:-6px;left:12px;font-size:64px;color:var(--accent);opacity:.35;font-style:normal}
+.qtext{font-size:17px;font-weight:700;line-height:1.35}
+.timer{height:6px;background:var(--line);border-radius:99px;overflow:hidden}
+.timer i{display:block;height:100%;background:var(--ko);width:100%;transition:width 1s linear}
+
+/* timeline */
+.tl{display:flex;flex-direction:column;gap:10px}
+.tl .it{background:var(--paper);border-radius:14px;padding:12px 12px 12px 14px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;font-size:15px;line-height:1.3;touch-action:none;position:relative;transition:transform .15s}
+.tl .it.drag{opacity:.55;transform:scale(1.02)}
+.tl .it .n{width:26px;height:26px;border-radius:50%;background:var(--line);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex-shrink:0}
+.tl .it .lbl{flex:1}
+.tl .it .mv{display:flex;flex-direction:column;gap:4px}
+.tl .it .mv button{width:34px;height:26px;border-radius:8px;background:var(--line);font-size:13px;font-weight:800}
+.tl .it.ok{border-left:6px solid var(--ok)} .tl .it.ko{border-left:6px solid var(--ko)}
+.tl .it .date{font-size:12px;color:var(--muted);display:none}
+.tl.revealed .it .date{display:block} .tl.revealed .it .mv{display:none}
+
+/* match */
+.mcols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mcols .col{display:flex;flex-direction:column;gap:10px}
+.mtile{background:var(--paper);border:2px solid var(--line);border-radius:14px;padding:12px 10px;font-size:13px;line-height:1.3;min-height:64px;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:var(--shadow);transition:all .15s}
+.mtile.sel{border-color:var(--accent);background:#fff8e1}
+.mtile.ok{border-color:var(--ok);background:var(--ok-bg);opacity:.55;pointer-events:none}
+.mtile.ko{border-color:var(--ko);background:var(--ko-bg)}
+
+/* glossary */
+.gl-term{background:linear-gradient(160deg,#fff8e1,#fde9bf);border-radius:var(--radius);padding:22px 18px;text-align:center;box-shadow:var(--shadow)}
+.gl-term .k{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.gl-term .v{font-size:22px;font-weight:800;margin-top:6px;line-height:1.25}
+.gl-term .v.def{font-size:16px;font-weight:600;line-height:1.45}
+.boxes{display:flex;gap:6px;justify-content:center}
+.boxes span{font-size:11px;padding:3px 8px;border-radius:99px;background:var(--line);color:var(--muted);font-weight:700}
+.boxes span.on{background:var(--ok);color:#fff}
+
+/* results */
+.result{text-align:center;padding:26px 18px;display:flex;flex-direction:column;gap:12px;align-items:center}
+.result .big{font-size:52px}
+.result h2{font-size:24px}
+.result .score{font-size:40px;font-weight:900;color:var(--primary)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff8e1;border:2px solid var(--accent);border-radius:999px;padding:8px 14px;font-weight:700;font-size:14px;color:var(--primary-2)}
+
+/* toast / level up */
+.toast{position:fixed;top:calc(70px + var(--safe-top));left:50%;transform:translateX(-50%) translateY(-20px);background:var(--ink);color:#fff;padding:12px 18px;border-radius:14px;font-weight:700;font-size:14px;opacity:0;transition:all .3s;z-index:60;pointer-events:none;white-space:nowrap;box-shadow:var(--shadow)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* settings */
+.set-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.set-row:last-child{border-bottom:0}
+.seg{display:flex;background:var(--line);border-radius:12px;padding:3px}
+.seg button{padding:7px 14px;border-radius:10px;font-weight:700;font-size:13px}
+.seg button.on{background:var(--paper);color:var(--primary);box-shadow:var(--shadow)}
+.badges{display:flex;flex-wrap:wrap;gap:8px}
+.badges .b{background:var(--paper);border-radius:12px;padding:8px 10px;font-size:12px;font-weight:600;box-shadow:var(--shadow);display:flex;align-items:center;gap:6px}
+.badges .b.off{opacity:.35;filter:grayscale(1)}
+.vlist{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.vcard{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;text-align:left;padding:0;display:flex;flex-direction:column}
+.vcard img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 58%;display:block;background:#0a0806}
+.vcard .vt{padding:10px 12px;font-weight:700;font-size:13px;line-height:1.3;flex:1}
+.vcard .vs{padding:0 12px 10px;font-size:12px;color:var(--muted)}
+.vcard .vs.on{color:var(--primary);font-weight:700}
+.vplayer{background:#0a0806;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.vplayer video{width:100%;aspect-ratio:9/16;max-height:72vh;display:block;background:#0a0806}
+.vmore{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px 16px;font-size:14.5px;line-height:1.55}
+.vmore h3,.vtest h3{margin:0 0 8px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.vtest{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px 16px}
+.vtest .qq{font-weight:700;font-size:15px;margin-bottom:12px;line-height:1.35}
+.vwrap{display:flex;flex-direction:column;gap:12px}
+/* mapa conceptual */
+.mtools{display:flex;gap:8px;justify-content:flex-end;margin-bottom:10px}
+.mtools button{font-size:12px;font-weight:700;color:var(--primary);background:var(--ok-bg);border-radius:999px;padding:7px 12px}
+.mroot{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow);position:relative}
+.mroot .k{font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.75;font-weight:700}
+.mroot h2{font-size:19px;margin:4px 0 8px;color:#fff}
+.mroot p{font-size:14px;line-height:1.5;opacity:.95}
+.mtree{position:relative;margin-left:14px;padding-left:18px;border-left:3px solid var(--line);padding-top:14px}
+.rama{position:relative;margin-bottom:14px}
+.rama:before{content:"";position:absolute;left:-21px;top:24px;width:18px;border-top:3px solid var(--line)}
+.rama>.rh{display:block;width:100%;text-align:left;background:var(--paper);border:1px solid var(--line);border-left:6px solid var(--rc);border-radius:14px;padding:12px 14px;box-shadow:var(--shadow)}
+.rama>.rh .code{display:inline-block;font-size:11px;font-weight:800;color:#fff;background:var(--rc);border-radius:6px;padding:2px 7px;margin-right:6px}
+.rama>.rh b{font-size:15px;line-height:1.3}
+.rama>.rh p{font-size:13.5px;color:var(--ink);line-height:1.45;margin-top:6px}
+.rama>.rh .chev{float:right;font-size:14px;color:var(--muted);transition:transform .2s}
+.rama.open>.rh .chev{transform:rotate(90deg)}
+.nodos{display:none;margin:8px 0 0 12px;padding-left:16px;border-left:2px dashed var(--rc)}
+.rama.open>.nodos{display:block}
+.nodo{position:relative;margin-top:8px}
+.nodo:before{content:"";position:absolute;left:-17px;top:18px;width:14px;border-top:2px dashed var(--rc)}
+.nodo>button.nh{display:flex;align-items:center;gap:8px;width:100%;text-align:left;background:var(--paper);border:1.5px solid var(--rc);border-radius:12px;padding:9px 12px;font-weight:700;font-size:14px}
+.nodo>button.nh i{width:9px;height:9px;border-radius:50%;background:var(--line);flex-shrink:0}
+.nodo.seen>button.nh i{background:var(--rc)}
+.nodo .nd{display:none;background:var(--paper);border:1.5px solid var(--rc);border-top:0;border-radius:0 0 12px 12px;margin-top:-6px;padding:12px;font-size:14px;line-height:1.5}
+.nodo.open>button.nh{border-radius:12px 12px 0 0}
+.nodo.open .nd{display:block}
+.nd .acts{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.nd .acts button{font-size:12.5px;font-weight:700;border-radius:999px;padding:7px 12px;background:var(--ok-bg);color:var(--primary)}
+/* examen */
+.xsec{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.xsec>summary{list-style:none;display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;font-weight:800;font-size:16px;color:var(--primary-2)}
+.xsec>summary::-webkit-details-marker{display:none}
+.xsec>summary .ic{font-size:22px}
+.xsec>summary:after{content:"›";margin-left:auto;font-size:22px;color:var(--muted);transition:transform .2s}
+.xsec[open]>summary:after{transform:rotate(90deg)}
+.xsec .xb{padding:0 16px 16px;font-size:14.5px;line-height:1.55}
+.xsec .xb p{margin-bottom:10px}
+.xtab{width:100%;border-collapse:collapse;font-size:13px;margin:6px 0 12px}
+.xtab th{background:var(--primary);color:#fff;text-align:left;padding:7px 8px;font-weight:700}
+.xtab td{border-bottom:1px solid var(--line);padding:7px 8px;vertical-align:top}
+.xtab .n{text-align:right;white-space:nowrap}
+.xnote{background:#fff8e1;border-left:4px solid var(--accent);border-radius:10px;padding:10px 12px;font-size:13.5px;margin:4px 0 12px}
+.xtips{margin:4px 0 0;padding:0;list-style:none}
+.xtips li{position:relative;padding-left:22px;margin-bottom:7px;font-size:14px}
+.xtips li:before{content:"✓";position:absolute;left:0;color:var(--primary);font-weight:800}
+.xstep{display:flex;gap:12px;margin:10px 0}
+.xstep .k{flex-shrink:0;width:42px;height:42px;border-radius:12px;background:var(--primary);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:14px;line-height:1}
+.xstep .k small{font-size:10px;font-weight:600;opacity:.85;margin-top:2px}
+.xstep .xt{display:block;font-size:14.5px;margin-bottom:2px}
+.xex{background:var(--ok-bg);border-radius:12px;padding:12px;margin:10px 0 12px;font-size:13.5px}
+.xex h4{font-size:13px;margin:0 0 6px;color:var(--primary-2)}
+.xex p{margin-bottom:8px}
+.xex img{width:100%;border-radius:8px;margin-bottom:8px;display:block}
+.xphase{position:relative;padding:0 0 12px 22px;border-left:3px solid var(--accent);margin-left:6px}
+.xphase:before{content:"";position:absolute;left:-8px;top:2px;width:13px;height:13px;border-radius:50%;background:var(--accent)}
+.xphase .xt{display:block;font-size:14.5px;margin-bottom:3px}
+.xcheck label{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.xcheck input{width:20px;height:20px;accent-color:var(--primary);flex-shrink:0;margin-top:1px}
+.empty{text-align:center;color:var(--muted);padding:40px 20px;font-size:15px;line-height:1.5}
+.empty .ic{font-size:44px;margin-bottom:10px}
+
+/* fichas */
+.search{width:100%;padding:13px 14px;border-radius:14px;border:2px solid var(--line);background:var(--paper);font:inherit;font-size:15px;color:var(--ink);outline:none}
+.search:focus{border-color:var(--primary)}
+.sec-h{display:flex;align-items:baseline;gap:10px;margin:8px 4px 0}
+.sec-h .code{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.04em}
+.sec-h b{font-size:15px}
+.sec-h.major b{font-size:17px;color:var(--primary)}
+.sec-intro{font-size:13px;line-height:1.5;color:var(--muted);margin:0 4px}
+.sec-intro summary{cursor:pointer;font-weight:700;color:var(--primary);font-size:12px}
+.frow{display:flex;align-items:center;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px 12px;box-shadow:var(--shadow);text-align:left;width:100%}
+.frow .th{width:54px;height:54px;border-radius:10px;background:#f3f5f8 center/cover no-repeat;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:22px}
+.frow .t{flex:1;min-width:0}
+.frow .t b{display:block;font-size:14px;line-height:1.25}
+.frow .t span{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+.frow .chk{font-size:16px;color:var(--ok)}
+.ficha h2{font-size:22px;line-height:1.2}
+.ficha .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.ficha .body p{font-size:15.5px;line-height:1.6;margin:0 0 12px}
+.ficha .body em{font-style:italic}
+.fimg{background:var(--paper);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.fimg img{display:block;width:100%;max-height:300px;object-fit:contain;background:#f3f5f8}
+.fimg .cap{font-size:12px;color:var(--muted);padding:8px 12px}
+.essay{background:#fff8e1;border-left:4px solid var(--accent);border-radius:10px;padding:12px 14px;font-size:14px;line-height:1.5}
+.essay b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--primary-2);margin-bottom:4px}
+.refs{font-size:12.5px;line-height:1.5;color:var(--muted)}
+.refs li{margin-bottom:6px;word-break:break-word}
+details.slide summary{cursor:pointer;font-weight:700;font-size:13px;color:var(--primary)}
+details.slide li{font-size:13.5px;line-height:1.5;margin-bottom:6px}
+.pbtns{display:flex;flex-wrap:wrap;gap:8px}
+.pbtns button{background:var(--paper);border:2px solid var(--line);border-radius:999px;padding:8px 12px;font-size:13px;font-weight:700;color:var(--primary)}
+.lightbox{position:fixed;inset:0;background:rgba(10,12,18,.94);z-index:80;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px}
+.lightbox img{max-width:100%;max-height:80vh;object-fit:contain}
+.lightbox .cap{color:#ddd;font-size:13px;margin-top:12px;text-align:center}
+@media (min-width:600px){ .deck{max-height:600px} }
+#splash{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:radial-gradient(120% 80% at 50% 0%,#0b5a9a 0%,#004379 55%,#002060 100%);color:#fff;transition:opacity .6s ease;cursor:pointer}
+#splash img{width:min(70vw,320px);height:auto;animation:spIn 1s ease both}
+#splash small{font-size:13px;letter-spacing:.12em;opacity:.8;text-transform:uppercase;animation:spIn 1s .3s ease both}
+#splash.out{opacity:0;pointer-events:none}
+@keyframes spIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+.ig{font-size:14.5px;line-height:1.5}
+.ig .me{background:#EAF1F8;border-radius:14px;padding:12px 14px;margin:6px 0 12px}
+.ig .me b{color:var(--primary-2)}
+.ig ol{margin:6px 0 0;padding-left:22px} .ig li{margin:4px 0}
+.ig h4{margin:14px 2px 6px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.ig details{border:1px solid #dde3ea;border-radius:12px;margin:6px 0;background:#fff}
+.ig summary{padding:10px 12px;font-weight:700;cursor:pointer;color:var(--primary-2)}
+.ig details ol{padding:0 14px 10px 34px}
+.ig .tip{font-size:13px;color:var(--muted);margin:10px 2px}
+.sheet .in.tall{max-height:88vh}
+.mx{margin:10px 0 4px;padding:10px 12px;background:#F4F7FB;border-radius:12px;border-left:3px solid var(--rc,var(--primary))}
+.mxh{font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--primary-2);margin-bottom:6px}
+.mxi{margin:8px 0;font-size:14px;line-height:1.45}
+.mxk{display:inline-block;margin-right:6px;vertical-align:1px;font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:1px 6px;border-radius:6px;border:1px solid var(--primary);color:var(--primary);background:#fff}
+.mxk-autor{background:var(--primary);color:#fff}
+.mxk-fecha{border-color:#8A5A00;color:#8A5A00}
+.mxk-ejemplo{background:#FFF3D6;border-color:#C77700;color:#7A4A00}
+.rep{display:block;margin:10px auto 0;background:none;border:0;color:var(--muted);font-size:13px;text-decoration:underline;cursor:pointer;padding:6px}
+.encday{display:flex;gap:10px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;box-shadow:var(--shadow)}
+.encday .d{flex:1;text-align:left;background:none;border:0;padding:0;font:inherit;color:inherit}
+.encday small{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700}
+.encday b{display:block;color:var(--primary-2);font-size:16px;margin:1px 0}
+.encday span{display:block;font-size:13px;color:var(--muted)}
+.dice{width:48px;height:48px;border-radius:14px;background:var(--accent);font-size:24px;border:0;flex-shrink:0;cursor:pointer}
+.enc-wrap{padding-right:22px}
+.enc-list .letter{font-weight:800;color:var(--primary);font-size:15px;margin:14px 4px 6px;padding-bottom:2px;border-bottom:2px solid var(--accent);display:inline-block}
+.enc-list button{display:block;width:100%;text-align:left;background:var(--paper);border:0;border-radius:12px;padding:10px 12px;margin-bottom:6px;box-shadow:var(--shadow);cursor:pointer}
+.enc-list button b{color:var(--primary-2);font-size:15px}
+.enc-list button span{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.az{position:fixed;right:2px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;z-index:15;touch-action:none;user-select:none;-webkit-user-select:none;background:rgba(255,255,255,.85);border-radius:10px;padding:4px 0}
+.az a{font-size:11px;font-weight:800;color:var(--primary);padding:1px 6px;text-align:center;line-height:1.2;text-decoration:none}
+.az a.off{color:#c3cbd6}
+.enc-head{display:flex;align-items:center;gap:12px;margin:2px 0 12px}
+.enc-head h1{flex:1;margin:0;font-size:26px;line-height:1.15;font-weight:800;color:var(--primary-2);overflow-wrap:anywhere}
+.enc-when{background:#fff8e1;border-left:4px solid var(--accent);border-radius:10px;padding:10px 12px;font-weight:700;color:var(--primary-2);margin-top:12px}
+.enc-blq{font-size:12px;color:var(--muted);margin:8px 2px 0;text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+.enc-body p{line-height:1.55;margin:12px 0}
+.enc-refs p{font-size:12.5px;color:#444;margin:6px 0;padding-left:1.4em;text-indent:-1.4em;line-height:1.4}
+.enc-links{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.enc-links button{text-align:left;background:#EAF1F8;color:var(--primary-2);border:0;border-radius:12px;padding:10px 12px;font-weight:700;cursor:pointer}
+.enc-act{display:flex;gap:8px;margin-top:18px}
+.enc-act button{flex:1;border:0;border-radius:12px;padding:12px;font-weight:700;cursor:pointer}
+.srch-res{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.srch-res button{text-align:left;background:var(--paper);border-radius:14px;padding:12px 14px;box-shadow:var(--shadow);border:0;cursor:pointer}
+.srch-res .tt{font-weight:800;color:var(--primary-2);font-size:15px}
+.srch-res .mt{font-size:12px;color:var(--muted);margin:2px 0 6px}
+.srch-res .sn{font-size:13.5px;line-height:1.45;color:#383838}
+.srch-res mark{background:#FFE7A3;color:inherit;border-radius:3px;padding:0 2px;font-weight:700}
+.vfeedbtn{width:100%;margin-bottom:12px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.vfeedbtn small{font-weight:500;font-size:12px;opacity:.85}
+body.feedon{overflow:hidden}
+.feed{position:fixed;inset:0;z-index:60;background:#000;color:#fff}
+.fscroll{height:100%;overflow-y:scroll;scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;scrollbar-width:none}
+.fscroll::-webkit-scrollbar{display:none}
+.fitem{position:relative;height:100%;scroll-snap-align:start;scroll-snap-stop:always;background:#000 center/contain no-repeat;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.fitem video{width:100%;height:100%;object-fit:contain;background:#000}
+.ftop{position:absolute;top:0;left:0;right:0;z-index:3;display:flex;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top)) 12px 10px;background:linear-gradient(#000a,#0000)}
+.ftop button{background:rgba(255,255,255,.18);color:#fff;border:0;border-radius:999px;padding:8px 14px;font-weight:700;font-size:14px}
+.ftop .fc{margin-left:auto;font-size:13px;font-weight:700;opacity:.9}
+.fside{position:absolute;right:10px;bottom:calc(110px + env(safe-area-inset-bottom));z-index:3;display:flex;flex-direction:column;gap:14px}
+.fside button{width:64px;border:0;background:rgba(0,0,0,.45);color:#fff;border-radius:16px;padding:9px 4px;font-size:11.5px;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:3px}
+.fside button b{font-size:22px;line-height:1}
+.fside button.done{background:var(--primary)}
+.fcap{position:absolute;left:14px;right:86px;bottom:calc(26px + env(safe-area-inset-bottom));z-index:3;font-weight:800;font-size:15px;line-height:1.3;text-shadow:0 1px 4px #000}
+.fcap small{display:block;font-weight:600;font-size:12px;opacity:.85;margin-top:3px}
+.fbar{position:absolute;left:0;right:0;bottom:env(safe-area-inset-bottom);height:3px;background:rgba(255,255,255,.25);z-index:3}
+.fbar i{display:block;height:100%;width:0;background:var(--accent-2)}
+.fcenter{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.fcenter span{background:rgba(0,0,0,.55);border-radius:999px;padding:12px 18px;font-weight:700;font-size:15px;opacity:0;transition:opacity .2s}
+.fcenter span.on{opacity:1}
+.fsheet{position:absolute;left:0;right:0;bottom:0;z-index:5;background:var(--paper);color:#383838;border-radius:22px 22px 0 0;padding:16px 18px calc(18px + env(safe-area-inset-bottom));max-height:72vh;overflow:auto;transform:translateY(105%);transition:transform .28s cubic-bezier(.2,.8,.2,1)}
+.fsheet.show{transform:none}
+.fsheet h3{margin:0 0 8px;color:var(--primary-2);font-size:17px}
+.fsheet .qq{font-weight:700;margin:4px 0 10px;line-height:1.4}
+.fsheet p{line-height:1.5;margin:0 0 10px;font-size:14.5px}
+.fsheet .row2{display:flex;gap:10px;margin-top:12px}
+.fsheet .row2 .btn{flex:1}
+.fend{height:100%;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:24px;text-align:center}
+.pod{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;display:flex;flex-direction:column;gap:10px}
+.pod .ph{display:flex;gap:12px;align-items:center}
+.pod .ph img{width:64px;height:64px;border-radius:14px;flex:0 0 auto}
+.pod .ph b{display:block;font-size:16px;color:var(--primary-2);line-height:1.25}
+.pod .ph span{font-size:12.5px;color:var(--muted)}
+.pod .desc{font-size:14px;line-height:1.5;margin:0}
+.pod input[type=range]{width:100%;accent-color:var(--primary)}
+.pod .tm{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:-6px}
+.pod .ctl{display:flex;gap:8px;align-items:center;justify-content:center}
+.pod .ctl button{border:0;border-radius:999px;background:#EAF1F8;color:var(--primary-2);font-weight:800;padding:10px 14px;font-size:14px}
+.pod .ctl button.main{background:var(--primary);color:#fff;padding:12px 22px;font-size:16px}
+.pod .spd{display:flex;gap:6px;justify-content:center;align-items:center;font-size:12px;color:var(--muted)}
+.pod .spd button{border:1px solid #cdd6e2;background:#fff;border-radius:8px;padding:4px 9px;font-weight:700;color:var(--primary-2);font-size:12.5px}
+.pod .spd button.on{background:var(--primary);color:#fff;border-color:var(--primary)}
+.pod .note{font-size:12px;color:var(--muted);margin:0}
+#podbar{position:fixed;left:10px;right:10px;bottom:calc(10px + var(--safe-bottom,0px));z-index:35;background:#002060;color:#fff;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.25);display:none;align-items:center;gap:10px;padding:8px 10px;max-width:520px;margin:0 auto}
+#podbar.on{display:flex}
+#podbar img{width:38px;height:38px;border-radius:9px}
+#podbar .tt{flex:1;min-width:0;font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}
+#podbar .tt small{display:block;font-weight:500;opacity:.8;font-size:11.5px}
+#podbar button{border:0;background:rgba(255,255,255,.16);color:#fff;border-radius:999px;width:38px;height:38px;font-size:15px;font-weight:800}
+body.feedon #podbar{display:none}
+body.podon main{padding-bottom:84px}
+.mode.wide{grid-column:1/-1;display:grid;grid-template-columns:40px 1fr auto;column-gap:12px;row-gap:2px;align-items:center;min-height:0;padding:14px 16px}
+.mode.wide .ic{grid-row:1/3;font-size:30px}
+.mode.wide b,.mode.wide span:not(.pill){grid-column:2}
+.mode.wide .pill{grid-column:3;grid-row:1/3;margin-top:0!important}
+.mode.wide .prog{grid-column:1/-1;margin-top:8px}
+.mode.wide .done{top:50%;transform:translateY(-50%);right:14px}
+.mode.first{order:-1}
+.vfeedbtn{width:100%;margin-bottom:14px;display:flex;flex-direction:row;align-items:center;gap:14px;background:linear-gradient(135deg,#002060,#004379);color:#fff;border:0;border-radius:var(--radius);padding:14px 16px;text-align:left;box-shadow:var(--shadow);cursor:pointer}
+.vfeedbtn .vft{flex:1;display:flex;flex-direction:column;gap:3px}
+.vfeedbtn .vft b{font-size:16px}
+.vfeedbtn .vft small{font-size:12.5px;opacity:.88;line-height:1.35;font-weight:500}
+.vfeedbtn .vfgo{font-size:26px;opacity:.9}
+.vfph{display:block;position:relative;flex:0 0 auto;width:34px;height:58px;border:2.5px solid #fff;border-radius:9px;overflow:hidden}
+.vfph i{position:absolute;left:4px;right:4px;height:22px;border-radius:4px;background:#FBAE40;animation:vfs 1.8s linear infinite}
+.vfph i:nth-child(2){background:#fff;opacity:.75;animation-delay:-.9s}
+.vfhand{position:absolute;right:-9px;bottom:-4px;font-size:18px;animation:vfh 1.8s ease-in-out infinite}
+.vfwrap{display:block;position:relative;flex:0 0 auto;margin-right:6px}
+@keyframes vfs{from{top:56px}to{top:-26px}}
+@keyframes vfh{0%,100%{transform:translateY(4px)}50%{transform:translateY(-12px)}}
+@media (prefers-reduced-motion:reduce){.vfph i,.vfhand{animation:none}.vfph i{top:14px}.vfph i:nth-child(2){display:none}}
+</style>
+</head>
+<body>
+<div id="splash"><img src="icons/logo_oro.png" alt="Historiapp"><small>Historia del Deporte · UCAM</small></div>
+<div id="app"></div>
+<div id="podbar"><img src="icons/icon-192.png?v=2" alt=""><div class="tt" id="pbT"></div><button id="pbB">−15</button><button id="pbP">▶</button><button id="pbX">✕</button></div>
+<div class="toast" id="toast"></div>
+<div class="sheet" id="sheet"><div class="in" id="sheetIn"></div></div>
+
+<script>
+/* ---- estadísticas anónimas (GoatCounter: sin cookies ni datos personales) ---- */
+const GC_CODE="historiapp";
+const GCQ=[]; let GCOK=false;
+(function(){ if(!GC_CODE) return; try{ const sc=document.createElement("script"); sc.async=true; sc.src="https://gc.zgo.at/count.js";
+  sc.dataset.goatcounter="https://"+GC_CODE+".goatcounter.com/count"; sc.dataset.goatcounterSettings='{"no_onload":true}';
+  sc.onload=()=>{ GCOK=true; while(GCQ.length) track(...GCQ.shift()); }; document.head.appendChild(sc); }catch(e){} })();
+function track(path,title,event){ try{ if(!GC_CODE) return; if(!GCOK||!window.goatcounter||!window.goatcounter.count){ if(GCQ.length<50) GCQ.push([path,title,event]); return; }
+  window.goatcounter.count({path:path, title:title||path, event:!!event}); }catch(e){} }
+/* ============ i18n ============ */
+const I18N = {
+  es: {
+    appName:"Historiapp", tagline:"Prepara el examen de Historia del Deporte en el móvil, a tu ritmo.",
+    choose:"Elige tu idioma", es:"Castellano", en:"English", esSub:"Historia del Deporte", enSub:"History of Sport",
+    home:"Inicio", temas:"Temas", tema:"Tema", soon:"Próximamente", locked:"Este tema se publicará cuando esté listo en clase.",
+    level:"Nivel", xp:"XP", streak:"Racha", days:"días", toNext:"para el siguiente nivel",
+    modes:{fichas:"Fichas",mapa:"Mapa",cards:"Análisis de imágenes",glossary:"Glosario",timeline:"Cronología",sources:"Fuentes",match:"Relaciona",myths:"Mitos",quiz:"Preguntas rápidas",videos:"Vídeos",podcast:"Pódcast"},
+    modesSub:{fichas:"El manual de bolsillo, por apartados",mapa:"Ideas principales y secundarias del tema",cards:"¿Verdadero o falso? Desliza cada imagen",glossary:"Términos clave con repaso espaciado",timeline:"Ordena los hechos",sources:"¿De dónde procede este texto?",match:"Empareja práctica, grupo y función",myths:"Tópicos que hay que desmontar",quiz:"Test con tiempo",videos:"Píldoras en vídeo",podcast:"El tema para escuchar"},
+    yes:"SÍ", no:"NO", trueL:"Verdadero", falseL:"Falso", swipeHint:"Desliza a la derecha si es verdadero y a la izquierda si es falso",
+    correct:"Correcto", wrong:"No es así", next:"Siguiente", check:"Comprobar", again:"Otra ronda", back:"Volver al tema", continueL:"Continuar",
+    gained:"+{n} XP", seen:"{a} de {b}", roundDone:"Ronda terminada", score:"{a} de {b} aciertos", timeUp:"Se acabó el tiempo",
+    tlHint:"Arrastra o usa las flechas para ordenar del más antiguo al más reciente", tlOk:"Orden correcto", tlKo:"{n} en posición incorrecta",
+    matchHint:"Toca un elemento de la izquierda y su pareja de la derecha", matchDone:"Todas las parejas emparejadas",
+    glWhich:"¿Qué término corresponde a esta definición?", glDef:"¿Cuál es la definición de este término?", glTerm:"Término", glDefL:"Definición",
+    glBoxes:"Caja de repaso", glMastered:"dominados", glSession:"Sesión de {n} términos",
+    settings:"Ajustes", language:"Idioma", reset:"Cerrar sesión y empezar de nuevo", resetConfirm:"Se borrarán el idioma, la XP, los niveles y el progreso de todos los temas en este móvil, y la app volverá a la pantalla de inicio. ¿Seguro?", resetDone:"Sesión cerrada",
+    badges:"Insignias", badgeName:{fichas:"Lector",mapa:"Cartógrafo",cards:"Ojo de arqueólogo",glossary:"Escriba",timeline:"Cronista",sources:"Lector de fuentes",match:"Atacabos",myths:"Cazamitos",quiz:"Relámpago"},
+    badgeHow:"Completa cada sección de un tema para ganar su insignia.",
+    levelUp:"¡Nivel {n}: {name}!", complete:"Completado",
+    levels:["Aprendiz","Paleolítico","Neolítico","Escriba","Pahlavan","Hoplita","Gladiador","Caballero","Gentleman","Catedrático"],
+    noVideos:"Todavía no hay vídeos para este tema.", vFeed:"Modo scroll", vFeedSub:"Desliza hacia arriba y los vídeos pasan uno tras otro, como en TikTok o Reels", vTap:"Toca para activar el sonido", vNext:"Siguiente vídeo ›", vEnd:"Has llegado al último vídeo del tema", vClose:"Volver", vTestB:"Test", vMoreB:"Saber más", pListen:"▶ Escuchar", pResume:"▶ Continuar", pPause:"❚❚ Pausa", pDone:"✓ Escuchado", pLeft:"quedan {m} min", pMin:"{m} min", pBg:"Sigue sonando si apagas la pantalla o si pasas a otras secciones de la app. En iPhone, instala la app para que funcione mejor.", pEsOnly:"", noPod:"Todavía no hay pódcast para este tema.", pSpeed:"Velocidad", vMore:"Saber más", vTest:"Pon a prueba lo que has visto", vSeen:"✓ Visto", vNew:"Sin ver", vAll:"Todos los vídeos", vOk:"Correcto. +{n} XP", vKo:"La respuesta correcta está marcada", install:"Añade Historiapp a tu pantalla de inicio: en Safari, botón Compartir y «Añadir a pantalla de inicio»; en Chrome, menú y «Instalar aplicación».",
+    privacy:"Tu progreso (XP, rachas, insignias) se guarda solo en este móvil y nadie más lo ve. Para no perderlo, instala la app y úsala siempre desde el icono. La app cuenta de forma anónima qué pantallas se visitan, sin cookies ni datos personales, para mejorar la asignatura.", version:"Contenido actualizado", offline:"Sin conexión: se muestran los datos guardados", loadError:"No se ha podido cargar el contenido. Comprueba la conexión.",
+    author:"Historia del Deporte · Grado en CAFD · UCAM",
+    fichasSearch:"Buscar en las fichas…", fichasEsOnly:"", practice:"Practicar este apartado", slideText:"En la diapositiva", refsL:"Fuentes", essayL:"Para el ensayo",
+    prevF:"Anterior", nextF:"Siguiente", secOnly:"Apartado {s}", allSec:"Todo el tema", fichaIntro:"Presentación del tema", secIntro:"Por qué este apartado", fichaXP:"Ficha leída", noResults:"Sin resultados", fichasOf:"{n} fichas", codeL:"Código", paras:"párrafos", img1:"imagen", imgN:"imágenes",
+    daily:"Reto del día", exam:"Cómo preparar el examen", examSub:"Test, desarrollo y comentario de imagen, paso a paso", mapOpen:"Desplegar todo", mapClose:"Plegar todo", mapTema:"Tema {n}", mapFicha:"📖 Leer la ficha", setHome:"Ajustes y ayuda", setHomeSub:"Idioma, instalar en el móvil, privacidad y cerrar sesión", enc:"Enciclopedia del deporte", encShort:"Enciclopedia", encSub:"Origen e historia de {n} deportes", encDay:"Deporte del día", encPh:"Busca un deporte", encN:"{n} deportes", encNone:"No hay ningún deporte con ese nombre", encRand:"🎲 Otro deporte al azar", encCourse:"En la asignatura", encRefs:"Fuentes", encGrow:"La enciclopedia crece por tandas: {n} de {t} deportes publicados.", encImg:"Imagen", searchAll:"Buscar en Historiapp", searchHome:"Buscar en toda la app", sFicha:"Ficha", sEnc:"Enciclopedia", sGloss:"Glosario", sTime:"Cronología", sVid:"Vídeo", searchRes:"{n} resultados", searchAllSub:"Conceptos, autores, fechas y lugares de todos los temas", searchPh:"Escribe al menos 3 letras", searchN:"{n} fichas encontradas", searchNone:"No hay fichas con esa palabra", searchLoading:"Cargando los temas…", report:"⚑ Avisar de un error", reportHint:"Se abrirá tu correo con el mensaje preparado para el profesor.", reportWrite:"Explica aquí el error:", mapMore:"Para saber más", mapK:{concepto:"Concepto",autor:"Autor",fecha:"Fecha",ejemplo:"Ejemplo"}, mapPractice:"⚡ Practicar este apartado", mapHint:"Toca cada apartado para ver sus ideas y cada idea para leer el detalle.", dailySub:"Una prueba de cada tipo, distinta cada día, con el doble de XP", dailyStart:"Empezar el reto", dailyDone:"Reto de hoy completado", dailyScore:"{a} de {b} aciertos hoy", dailyBack:"Volver mañana para un reto nuevo", dailyStep:"Prueba {a} de {b}", dailyTitle:"Reto del día · {d}",
+    installBtn:"Instalar en el móvil", installIos:"En iPhone o iPad: pulsa el botón Compartir (el cuadrado con la flecha hacia arriba, abajo en Safari) y elige «Añadir a pantalla de inicio».", installAndroid:"En Android: abre el menú de Chrome (tres puntos) y elige «Instalar aplicación» o «Añadir a pantalla de inicio».", installDesktop:"Abre esta dirección en el móvil para instalarla; en el ordenador funciona igual desde el navegador.", installed:"La app ya está instalada.", close:"Cerrar"
+  },
+  en: {
+    appName:"Historiapp", tagline:"Get ready for the History of Sport exam on your phone, at your own pace.",
+    choose:"Choose your language", es:"Castellano", en:"English", esSub:"Historia del Deporte", enSub:"History of Sport",
+    home:"Home", temas:"Units", tema:"Unit", soon:"Coming soon", locked:"This unit will be published once it is ready in class.",
+    level:"Level", xp:"XP", streak:"Streak", days:"days", toNext:"to next level",
+    modes:{fichas:"Study sheets",mapa:"Map",cards:"Image analysis",glossary:"Glossary",timeline:"Timeline",sources:"Sources",match:"Match",myths:"Myths",quiz:"Quick quiz",videos:"Videos",podcast:"Podcast"},
+    modesSub:{fichas:"The pocket manual, by section",mapa:"Main and secondary ideas of the unit",cards:"True or false? Swipe each image",glossary:"Key terms with spaced review",timeline:"Put the events in order",sources:"Where does this text come from?",match:"Pair practice, group and function",myths:"Clichés to take apart",quiz:"Timed test",videos:"Video bites",podcast:"The unit to listen to"},
+    yes:"YES", no:"NO", trueL:"True", falseL:"False", swipeHint:"Swipe right if true, left if false",
+    correct:"Correct", wrong:"Not quite", next:"Next", check:"Check", again:"Another round", back:"Back to unit", continueL:"Continue",
+    gained:"+{n} XP", seen:"{a} of {b}", roundDone:"Round finished", score:"{a} of {b} correct", timeUp:"Time is up",
+    tlHint:"Drag or use the arrows to order from oldest to most recent", tlOk:"Correct order", tlKo:"{n} in the wrong position",
+    matchHint:"Tap an item on the left and its pair on the right", matchDone:"All pairs matched",
+    glWhich:"Which term matches this definition?", glDef:"What is the definition of this term?", glTerm:"Term", glDefL:"Definition",
+    glBoxes:"Review box", glMastered:"mastered", glSession:"Session of {n} terms",
+    settings:"Settings", language:"Language", reset:"Log out and start again", resetConfirm:"Your language, XP, levels and progress for all units will be erased on this phone, and the app will go back to the start screen. Are you sure?", resetDone:"Logged out",
+    badges:"Badges", badgeName:{fichas:"Reader",mapa:"Cartographer",cards:"Archaeologist's eye",glossary:"Scribe",timeline:"Chronicler",sources:"Source reader",match:"Dot-connector",myths:"Myth hunter",quiz:"Lightning"},
+    badgeHow:"Complete each section of a unit to earn its badge.",
+    levelUp:"Level {n}: {name}!", complete:"Completed",
+    levels:["Apprentice","Palaeolithic","Neolithic","Scribe","Pahlavan","Hoplite","Gladiator","Knight","Gentleman","Professor"],
+    noVideos:"No videos for this unit yet.", vFeed:"Scroll mode", vFeedSub:"Swipe up and the videos play one after another, like TikTok or Reels", vTap:"Tap to turn the sound on", vNext:"Next video ›", vEnd:"That was the last video of this unit", vClose:"Back", vTestB:"Test", vMoreB:"Learn more", pListen:"▶ Listen", pResume:"▶ Resume", pPause:"❚❚ Pause", pDone:"✓ Listened", pLeft:"{m} min left", pMin:"{m} min", pBg:"It keeps playing if you switch the screen off or move to other sections of the app. On iPhone, install the app for best results.", pEsOnly:"This episode is in Spanish.", noPod:"No podcast for this unit yet.", pSpeed:"Speed", vMore:"Learn more", vTest:"Test what you have seen", vSeen:"✓ Watched", vNew:"Not watched", vAll:"All videos", vOk:"Correct. +{n} XP", vKo:"The right answer is marked", install:"Add Historiapp to your home screen: in Safari, tap Share and 'Add to Home Screen'; in Chrome, open the menu and 'Install app'.",
+    privacy:"Your progress (XP, streaks, badges) is stored only on this phone and nobody else sees it. To keep it, install the app and always open it from its icon. The app counts anonymously which screens are visited, with no cookies or personal data, to improve the course.", version:"Content updated", offline:"Offline: showing saved data", loadError:"Could not load the content. Check your connection.",
+    author:"History of Sport · Sport Sciences degree · UCAM",
+    fichasSearch:"Search the sheets…", fichasEsOnly:"Some sheets of this unit are not yet available in English and are shown in Spanish.", practice:"Practise this section", slideText:"On the slide", refsL:"Sources", essayL:"For the essay",
+    prevF:"Previous", nextF:"Next", secOnly:"Section {s}", allSec:"Whole unit", fichaIntro:"About this unit", secIntro:"Why this section", fichaXP:"Sheet read", noResults:"No results", fichasOf:"{n} sheets", codeL:"Code", paras:"paragraphs", img1:"image", imgN:"images",
+    daily:"Daily challenge", exam:"How to prepare for the exam", examSub:"Multiple choice, essay and image commentary, step by step", mapOpen:"Expand all", mapClose:"Collapse all", mapTema:"Unit {n}", mapFicha:"📖 Read the study sheet", setHome:"Settings and help", setHomeSub:"Language, install on your phone, privacy and log out", enc:"Sports Encyclopedia", encShort:"Encyclopedia", encSub:"Origins and history of {n} sports", encDay:"Sport of the day", encPh:"Search for a sport", encN:"{n} sports", encNone:"No sport with that name", encRand:"🎲 Another random sport", encCourse:"In the course", encRefs:"Sources", encGrow:"The encyclopedia grows in batches: {n} of {t} sports published.", encImg:"Image", searchAll:"Search Historiapp", searchHome:"Search the whole app", sFicha:"Study sheet", sEnc:"Encyclopedia", sGloss:"Glossary", sTime:"Timeline", sVid:"Video", searchRes:"{n} results", searchAllSub:"Concepts, authors, dates and places from every unit", searchPh:"Type at least 3 letters", searchN:"{n} study sheets found", searchNone:"No study sheets contain that word", searchLoading:"Loading the units…", report:"⚑ Report a mistake", reportHint:"Your email app will open with a message ready for the lecturer.", reportWrite:"Describe the mistake here:", mapMore:"Learn more", mapK:{concepto:"Concept",autor:"Author",fecha:"Date",ejemplo:"Example"}, mapPractice:"⚡ Practise this section", mapHint:"Tap each section to see its ideas and each idea to read the detail.", dailySub:"One task of each kind, new every day, double XP", dailyStart:"Start the challenge", dailyDone:"Today's challenge completed", dailyScore:"{a} of {b} correct today", dailyBack:"Come back tomorrow for a new one", dailyStep:"Task {a} of {b}", dailyTitle:"Daily challenge · {d}",
+    installBtn:"Install on your phone", installIos:"On iPhone or iPad: tap the Share button (the square with the upward arrow, at the bottom in Safari) and choose 'Add to Home Screen'.", installAndroid:"On Android: open the Chrome menu (three dots) and choose 'Install app' or 'Add to Home screen'.", installDesktop:"Open this address on your phone to install it; on a computer it works from the browser.", installed:"The app is already installed.", close:"Close"
+  }
+};
+const MODE_ICONS={fichas:"📖",mapa:"🧭",cards:"🖼️",glossary:"🔤",timeline:"⏳",sources:"📜",match:"🔗",myths:"🧨",quiz:"⚡",videos:"🎬",podcast:"🎧"};
+const MODES=["fichas","mapa","cards","glossary","timeline","sources","match","myths","quiz","videos","podcast"];
+const LEVEL_XP=[0,100,250,450,700,1000,1400,1900,2500,3300];
+
+/* ============ state ============ */
+const S = {
+  lang:null, temasIndex:null, temaCache:{}, view:{name:"gate"},
+  prog: load("historiapp.progress", {xp:0, streak:0, lastDay:null, seen:{}, badges:{}, gl:{}, daily:{}})
+};
+function load(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
+function save(){try{localStorage.setItem("historiapp.progress",JSON.stringify(S.prog));}catch(e){}}
+function t(key,vars){ let s=key.split(".").reduce((o,k)=>o&&o[k],I18N[S.lang||"es"]); if(s==null) s=key; if(vars) for(const k in vars) s=s.replace("{"+k+"}",vars[k]); return s; }
+function L(obj){ return obj ? (obj[S.lang] || obj.es || "") : ""; }
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]))}
+function levelOf(xp){let l=0;for(let i=0;i<LEVEL_XP.length;i++) if(xp>=LEVEL_XP[i]) l=i;return l}
+function addXP(n){
+  n=n*(S.xpMult||1); const before=levelOf(S.prog.xp); S.prog.xp+=n;
+  const today=new Date().toISOString().slice(0,10);
+  if(S.prog.lastDay!==today){
+    const y=new Date(Date.now()-864e5).toISOString().slice(0,10);
+    S.prog.streak = (S.prog.lastDay===y) ? S.prog.streak+1 : 1; S.prog.lastDay=today;
+  }
+  save(); const after=levelOf(S.prog.xp);
+  if(after>before) setTimeout(()=>toast(t("levelUp",{n:after+1,name:t("levels")[after]}),2600),350);
+  renderXP();
+}
+function markSeen(temaId,mode,key){ const k=temaId+"."+mode; S.prog.seen[k]=S.prog.seen[k]||{}; S.prog.seen[k][key]=1; save(); }
+function seenCount(temaId,mode){ const k=temaId+"."+mode; return Object.keys(S.prog.seen[k]||{}).length; }
+function modeTotal(tema,mode){ if(mode==="glossary") return tema.glossary.length; if(mode==="mapa") return tema.mapa?tema.mapa.ramas.reduce((a,r)=>a+r.nodos.length,0):0; const a=tema[mode]; return a?a.filter(x=>!x.lang||x.lang===S.lang).length:0; }
+function secMatch(a,b){ if(!a||!b) return !b; return a===b || a.startsWith(b+".") || b.startsWith(a+"."); }
+function modeIdxs(tema,mode){ const a=tema[mode]||[]; const sec=S.view.sec; return a.map((it,i)=>i).filter(i=>(!a[i].lang||a[i].lang===S.lang) && (!sec || secMatch(a[i].sec,sec))); }
+function md(s){ return esc(s).replace(/\*\*([^*]+)\*\*/g,"<b>$1</b>").replace(/\*([^*]+)\*/g,"<em>$1</em>").replace(/(https?:\/\/[^\s<)]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>'); }
+function LL(o){ if(!o) return []; const a=o[S.lang]; return (a&&a.length)?a:(o.es||[]); }
+function norm(s){ return String(s).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase(); }
+function modePct(tema,mode){ const tot=modeTotal(tema,mode); if(!tot) return 0; if(mode==="glossary"){ const m=tema.glossary.filter((g,i)=>glBox(tema.id,i)>=3).length; return Math.min(100,Math.round(m/tot*100)); } return Math.min(100,Math.round(seenCount(tema.id,mode)/tot*100)); }
+const MEDIA=["videos","podcast"];
+function checkBadge(tema,mode){ if(MEDIA.includes(mode)) return; if(modePct(tema,mode)>=100 && !S.prog.badges[tema.id+"."+mode]){ S.prog.badges[tema.id+"."+mode]=1; save(); setTimeout(()=>toast("🏅 "+t("badgeName."+mode)+" · "+t("tema")+" "+tema.num,2600),900); } }
+function glBox(temaId,i){ return (S.prog.gl[temaId]||{})[i]||0; }
+function glSet(temaId,i,v){ S.prog.gl[temaId]=S.prog.gl[temaId]||{}; S.prog.gl[temaId][i]=Math.max(0,Math.min(4,v)); save(); }
+
+let toastT; function toast(msg,ms=1800){const e=document.getElementById("toast");e.textContent=msg;e.classList.add("show");clearTimeout(toastT);toastT=setTimeout(()=>e.classList.remove("show"),ms)}
+function sheet(ok,title,explain,xp,onNext){
+  const el=document.getElementById("sheet"), inn=document.getElementById("sheetIn");
+  el.className="sheet "+(ok?"ok":"ko");
+  inn.innerHTML=`<div class="verdict"><span class="dot">${ok?"✓":"✗"}</span>${esc(title)}</div>
+    <div class="exp">${esc(explain)}</div>${xp?`<div class="xpgain">${t("gained",{n:xp})}</div>`:""}
+    <button class="btn" id="sheetNext">${t("next")}</button><button class="rep" id="sheetRep">${t("report")}</button>`;
+  requestAnimationFrame(()=>el.classList.add("show"));
+  const rctx=sheetReportCtx(explain); document.getElementById("sheetRep").onclick=()=>reportMail(rctx);
+  document.getElementById("sheetNext").onclick=()=>{ el.classList.remove("show"); setTimeout(onNext,200); };
+}
+function closeSheet(){document.getElementById("sheet").classList.remove("show")}
+
+/* ============ data ============ */
+async function fetchJSON(url){
+  const r=await fetch(url,{cache:"no-cache"}); if(!r.ok) throw new Error(r.status); return r.json();
+}
+async function getIndex(){
+  if(S.temasIndex) return S.temasIndex;
+  try{ S.temasIndex=await fetchJSON("data/temas.json"); localStorage.setItem("historiapp.index",JSON.stringify(S.temasIndex)); }
+  catch(e){ const c=load("historiapp.index",null); if(c){S.temasIndex=c; toast(t("offline"));} else throw e; }
+  return S.temasIndex;
+}
+async function getTema(num){
+  if(S.temaCache[num]) return S.temaCache[num];
+  const idx=await getIndex(); const meta=idx.temas.find(x=>x.num===num);
+  let d; try{ d=await fetchJSON(meta.file); localStorage.setItem("historiapp.tema."+num,JSON.stringify(d)); }
+  catch(e){ d=load("historiapp.tema."+num,null); if(!d) throw e; }
+  S.temaCache[num]=d; return d;
+}
+
+/* ============ rendering ============ */
+const app=document.getElementById("app");
+function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="daily") return "reto"; if(v.name==="exam") return "examen"; if(v.name==="search") return "buscar"; if(v.name==="enc") return v.id?"enciclopedia/"+encodeURIComponent(v.id):"enciclopedia"; if(v.name==="tema") return "t"+v.num;
+  if(v.name==="mode"){ if(v.mode==="fichas") return v.f?`t${v.num}/f/${v.f}`:`t${v.num}/fichas`; return `t${v.num}/${v.mode}`+(v.sec?"/"+v.sec:""); } return ""; }
+function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="reto") return {name:"daily"}; if(h==="examen") return {name:"exam"}; if(h==="buscar") return {name:"search"}; if(h==="enciclopedia") return {name:"enc"}; if(h.startsWith("enciclopedia/")) return {name:"enc",id:decodeURIComponent(h.slice(13))};
+  const p=h.split("/"); const mt=/^t(\d+)$/.exec(p[0]); if(!mt) return {name:"home"}; const num=+mt[1];
+  if(p.length===1) return {name:"tema",num}; if(p[1]==="f"&&p[2]) return {name:"mode",num,mode:"fichas",f:decodeURIComponent(p[2])};
+  if(MODES.includes(p[1])) return {name:"mode",num,mode:p[1],sec:p[2]||undefined}; return {name:"tema",num}; }
+function nav(view){ S.view=view; closeSheet(); window.scrollTo(0,0); const h=viewToHash(view); if(location.hash.replace(/^#/,"")!==h){ S.silent=true; if(h) location.hash=h; else history.replaceState(null,"",location.pathname+location.search); } render(); }
+window.addEventListener("hashchange",()=>{ if(S.silent){ S.silent=false; return; } if(!S.lang){ S.pending=location.hash; return; } const v=hashToView(location.hash); S.view=v; closeSheet(); render(); });
+function render(){
+  const v=S.view;
+  if(v.name!=="gate") track("/"+(S.lang||"es")+"/"+(viewToHash(v)||"inicio"));
+  if(v.name==="gate") return renderGate();
+  if(v.name==="home") return renderHome();
+  if(v.name==="tema") return renderTema(v.num);
+  if(v.name==="settings") return renderSettings();
+  if(v.name==="daily") return renderDaily();
+  if(v.name==="exam") return renderExam();
+  if(v.name==="search") return renderSearch();
+  if(v.name==="enc") return v.id?renderEncFicha(v.id):renderEnc();
+  if(v.name==="mode") return renderMode(v.num,v.mode);
+}
+function header(title,back,extra=""){
+  return `<div class="top">${back?`<button class="back" id="hBack">‹</button>`:`<img src="icons/emblema_blanco.png" alt="" style="width:40px;height:40px;object-fit:contain">`}
+    <div class="ttl${extra?" two":""}">${esc(title)}</div>${extra}<div class="xp" id="hXP"></div>
+    <button class="gear" id="hGear">⚙︎</button></div>`;
+}
+function bindHeader(back){
+  const b=document.getElementById("hBack"); if(b) b.onclick=back;
+  const g=document.getElementById("hGear"); if(g) g.onclick=()=>nav({name:"settings",from:S.view});
+  renderXP();
+}
+function renderXP(){ const e=document.getElementById("hXP"); if(e) e.textContent=`${S.prog.xp} ${t("xp")} · ${t("level")} ${levelOf(S.prog.xp)+1}`; }
+
+function renderGate(){
+  app.innerHTML=`<div class="gate">
+    <img src="icons/logo_oro.png" alt="Historiapp" style="width:min(72vw,340px);height:auto">
+    <div><p>Historia del Deporte · History of Sport</p></div>
+    <p>Elige tu idioma · Choose your language</p>
+    <div class="langs">
+      <button id="lEs">Castellano<small>Historia del Deporte</small></button>
+      <button id="lEn">English<small>History of Sport</small></button>
+    </div>
+    <button id="gInstall" style="background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:10px 18px;font-weight:700;font-size:14px">📲 Instalar en el móvil · Install on your phone</button>
+    <div class="foot">UCAM · Grado en CAFD</div></div>`;
+  document.getElementById("gInstall").onclick=()=>{ S.lang=S.lang||"es"; installApp(); };
+  document.getElementById("lEs").onclick=()=>setLang("es");
+  document.getElementById("lEn").onclick=()=>setLang("en");
+}
+function setLang(l){ S.lang=l; try{localStorage.setItem("historiapp.lang",l)}catch(e){} document.documentElement.lang=l; const pend=S.pending; S.pending=null; nav(pend?hashToView(pend):{name:"home"}); }
+
+async function renderHome(){
+  const lvl=levelOf(S.prog.xp), nextXP=LEVEL_XP[lvl+1]||LEVEL_XP[lvl], prevXP=LEVEL_XP[lvl];
+  const pct=LEVEL_XP[lvl+1]?Math.round((S.prog.xp-prevXP)/(nextXP-prevXP)*100):100;
+  app.innerHTML=header("Historiapp",false)+`<main>
+    <button class="tema" id="setBtn"><div class="num" style="background:#EAF1F8;color:var(--primary-2)">⚙️</div><div class="t"><b>${t("setHome")}</b><span>${t("setHomeSub")}</span></div><div class="pct">›</div></button>
+    <div class="hero"><div class="lvl">${lvl+1}<small>${t("level").toUpperCase()}</small></div>
+      <div class="info"><div class="name">${esc(t("levels")[lvl])}</div>
+      <div class="bar"><i style="width:${pct}%"></i></div>
+      <div class="meta"><span>${S.prog.xp} ${t("xp")}${LEVEL_XP[lvl+1]?` · ${nextXP-S.prog.xp} ${t("toNext")}`:""}</span><span>🔥 ${S.prog.streak} ${t("days")}</span></div></div></div>
+    <input class="search" id="homeQ" type="search" readonly placeholder="🔎 ${t("searchHome")}" style="cursor:pointer">
+    <button class="tema" id="dailyBtn" style="border:2px solid var(--accent);background:#fff8e1"><div class="num">☀️</div><div class="t"><b>${t("daily")}</b><span id="dailySub">${t("dailySub")}</span></div><div class="pct" id="dailyPct"></div></button>
+    <div class="encday" id="encDay" style="display:none"></div>
+    <button class="tema" id="examBtn" style="border:2px solid var(--primary)"><div class="num" style="background:var(--primary);color:#fff">🎓</div><div class="t"><b>${t("exam")}</b><span>${t("examSub")}</span></div><div class="pct">›</div></button>
+    <button class="tema" id="encBtn"><div class="num" style="background:var(--primary);color:#fff">📚</div><div class="t"><b>${t("enc")}</b><span id="encSub">${t("encSub",{n:"…"})}</span></div><div class="pct">›</div></button>
+    <div id="temaList"><div class="empty">…</div></div>
+    <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:10px">${t("author")}</p></main>`;
+  bindHeader();
+  { const d=S.prog.daily||{}; const done=d.date===todayKey()&&d.done; document.getElementById("dailyBtn").onclick=()=>nav({name:"daily"}); document.getElementById("examBtn").onclick=()=>nav({name:"exam"}); document.getElementById("homeQ").onclick=()=>nav({name:"search"}); document.getElementById("encBtn").onclick=()=>nav({name:"enc"}); encHome(); document.getElementById("setBtn").onclick=()=>nav({name:"settings",from:{name:"home"}});
+    if(done){ document.getElementById("dailySub").textContent=t("dailyScore",{a:d.correct,b:d.total}); document.getElementById("dailyPct").textContent="✓"; } else document.getElementById("dailyPct").textContent="×2"; }
+  try{
+    const idx=await getIndex(); const list=document.getElementById("temaList"); list.innerHTML=""; let lastUnit="";
+    for(const m of idx.temas){
+      const u=m.unit?L(m.unit):""; if(u && u!==lastUnit){ const h=document.createElement("div"); h.className="section-title"; h.style.marginTop="14px"; h.textContent=u; list.appendChild(h); lastUnit=u; }
+      const b=document.createElement("button"); b.className="tema"+(m.available?"":" locked");
+      let pctT="";
+      if(m.available){ const tm=S.temaCache[m.num]; if(tm){ pctT=Math.round(MODES.filter(x=>!MEDIA.includes(x)).reduce((a,x)=>a+modePct(tm,x),0)/(MODES.length-MEDIA.length))+"%"; } }
+      b.innerHTML=`<div class="num">${m.num}</div><div class="t"><b>${esc(L(m.title))||t("tema")+" "+m.num}</b><span>${t("tema")} ${m.num}${m.available?"":" · "+t("soon")}</span></div>${m.available?`<div class="pct">${pctT}</div>`:`<div>🔒</div>`}`;
+      b.onclick=()=>{ if(m.available) nav({name:"tema",num:m.num}); else toast(t("locked"),2200); };
+      list.appendChild(b);
+      if(m.available && !S.temaCache[m.num]) getTema(m.num).then(()=>{ if(S.view.name==="home") renderHome(); }).catch(()=>{});
+    }
+  }catch(e){ document.getElementById("temaList").innerHTML=`<div class="empty">${t("loadError")}</div>`; }
+}
+
+async function renderTema(num){
+  app.innerHTML=header(t("tema")+" "+num,true)+`<main><div class="empty">…</div></main>`;
+  bindHeader(()=>nav({name:"home"}));
+  let tema; try{ tema=await getTema(num); }catch(e){ app.querySelector("main").innerHTML=`<div class="empty">${t("loadError")}</div>`; return; }
+  const main=app.querySelector("main");
+  main.innerHTML=`<div class="card" style="padding:14px 16px"><div style="font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.06em">${esc(L(tema.unit))}</div><h2 style="font-size:20px;margin-top:4px">${esc(L(tema.title))}</h2>
+    ${tema.intro&&LL(tema.intro).length?`<details style="margin-top:10px"><summary style="font-size:13px;font-weight:700;color:var(--primary);cursor:pointer">${t("fichaIntro")}</summary><div style="font-size:14px;line-height:1.55;margin-top:8px">${LL(tema.intro).map(p=>`<p style="margin-bottom:8px">${md(p)}</p>`).join("")}</div></details>`:""}</div>
+    <div class="grid" id="modes"></div>
+    <div class="section-title">${t("badges")}</div><div class="badges" id="bd"></div>
+    <p style="font-size:12px;color:var(--muted);margin:0 4px">${t("badgeHow")}</p></main>`;
+  const g=document.getElementById("modes");
+  for(const m of MODES){
+    const tot=modeTotal(tema,m), pct=modePct(tema,m);
+    if(m==="podcast" && !tot) continue;
+    const b=document.createElement("button"); b.className="mode";
+    if(m==="mapa") b.classList.add("wide","first"); if(MEDIA.includes(m)) b.classList.add("wide");
+    b.innerHTML=`<div class="ic">${MODE_ICONS[m]}</div><b>${t("modes."+m)}</b><span>${t("modesSub."+m)}</span>
+      ${MEDIA.includes(m)?`<span class="pill" style="margin-top:auto">${tot}</span>`:`<div class="prog"><i style="width:${pct}%"></i></div>`}
+      ${pct>=100&&!MEDIA.includes(m)?`<div class="done">🏅</div>`:""}`;
+    b.onclick=()=>nav({name:"mode",num,mode:m});
+    if(!tot) b.style.opacity=.5;
+    g.appendChild(b);
+  }
+  const bd=document.getElementById("bd");
+  bd.innerHTML=MODES.filter(x=>!MEDIA.includes(x)).map(m=>`<div class="b ${S.prog.badges[tema.id+"."+m]?"":"off"}">🏅 ${t("badgeName."+m)}</div>`).join("");
+}
+
+function renderSettings(){
+  const from=S.view.from||{name:"home"};
+  app.innerHTML=header(t("settings"),true)+`<main>
+    <div class="card">
+      <div class="set-row"><span>${t("language")}</span><div class="seg"><button id="sEs" class="${S.lang==="es"?"on":""}">ES</button><button id="sEn" class="${S.lang==="en"?"on":""}">EN</button></div></div>
+      <div class="set-row"><span>${t("xp")}</span><b>${S.prog.xp}</b></div>
+      <div class="set-row"><span>${t("streak")}</span><b>🔥 ${S.prog.streak}</b></div>
+    </div>
+    <button class="btn" id="sInstall">📲 ${t("installBtn")}</button>
+    <button class="btn sec" id="sReset" style="border-color:var(--ko);color:var(--ko)">${t("reset")}</button>
+    <p style="font-size:12.5px;color:var(--muted);line-height:1.5;margin:0 4px">🔒 ${t("privacy")}</p>
+    <p style="font-size:12px;color:var(--muted);text-align:center">${t("version")}: ${S.temasIndex?esc(S.temasIndex.version):"–"} · ${t("author")}</p></main>`;
+  bindHeader(()=>nav(from));
+  document.getElementById("sInstall").onclick=installApp;
+  document.getElementById("sEs").onclick=()=>{setLang("es");nav({name:"settings",from})};
+  document.getElementById("sEn").onclick=()=>{setLang("en");nav({name:"settings",from})};
+  document.getElementById("sReset").onclick=()=>{ if(confirm(t("resetConfirm"))){ track("sesion/cerrada","Cerrar sesión",true); try{ Object.keys(localStorage).filter(k=>k.startsWith("historiapp.")).forEach(k=>localStorage.removeItem(k)); }catch(e){} location.replace(location.pathname); } };
+}
+
+/* ============ modes ============ */
+async function renderMode(num,mode){
+  const tema=await getTema(num); const v=S.view;
+  const ttl = mode==="fichas" ? (v.f?t("modes.fichas"):t("modes.fichas")+" · "+t("tema")+" "+num) : t("modes."+mode)+" · "+(v.sec?t("secOnly",{s:v.sec}):t("tema")+" "+num);
+  app.innerHTML=header(ttl,true)+`<main id="m"></main>`;
+  bindHeader(()=>nav(v.back || (mode==="fichas"&&v.f ? {name:"mode",num,mode:"fichas"} : {name:"tema",num})));
+  const m=document.getElementById("m");
+  if(mode==="fichas") return modeFichas(tema,m,v);
+  if(mode==="mapa") return modeMapa(tema,m,v);
+  let items=modeIdxs(tema,mode);
+  if(!items.length && v.sec){ let sec=v.sec; while(!items.length && sec.split(".").length>2){ sec=sec.split(".").slice(0,-1).join("."); v.sec=sec; items=modeIdxs(tema,mode); } if(!items.length){ v.sec=undefined; items=modeIdxs(tema,mode); } }
+  if(!items.length){ m.innerHTML=`<div class="empty"><div class="ic">${MODE_ICONS[mode]}</div>${mode==="videos"?t("noVideos"):mode==="podcast"?t("noPod"):t("soon")}</div>`; return; }
+  ({cards:modeSwipe,myths:modeSwipe,glossary:modeGlossary,timeline:modeTimeline,sources:modeChoice,quiz:modeChoice,match:modeMatch,videos:modeVideos,podcast:modePodcast})[mode](tema,mode,m);
+}
+function finishRound(m,tema,mode,correct,total,again,opts){ if(opts&&opts.onDone) return opts.onDone(correct,total); resultScreen(m,tema,mode,correct,total,again); }
+function resultScreen(m,tema,mode,correct,total,again){
+  track("ronda/"+tema.id+"/"+mode+"/"+(Math.round(correct/total*10)*10)+"%","Ronda "+mode,true);
+  checkBadge(tema,mode);
+  const pct=modePct(tema,mode);
+  m.innerHTML=`<div class="card result"><div class="big">${correct/total>=.8?"🏆":correct/total>=.5?"👍":"📚"}</div>
+    <h2>${t("roundDone")}</h2><div class="score">${correct}/${total}</div><p>${t("score",{a:correct,b:total})}</p>
+    <p style="color:var(--muted);font-size:13px">${t("modes."+mode)}: ${pct}% ${t("complete").toLowerCase()}</p>
+    ${pct>=100?`<div class="badge">🏅 ${t("badgeName."+mode)}</div>`:""}
+    </div><button class="btn" id="rAgain">${t("again")}</button><button class="btn ghost" id="rBack">${t("back")}</button>`;
+  document.getElementById("rAgain").onclick=again; document.getElementById("rBack").onclick=()=>nav(S.view.back||{name:"tema",num:tema.num});
+}
+function pickRound(tema,mode,idxs,n){
+  // prioritise unseen items, then fill randomly
+  const k=tema.id+"."+mode, seen=S.prog.seen[k]||{};
+  const unseen=idxs.filter(i=>!seen[i]);
+  const rest=idxs.filter(i=>seen[i]);
+  return shuffle(unseen).concat(shuffle(rest)).slice(0,n);
+}
+
+/* --- swipe (cards & myths) --- */
+function modeSwipe(tema,mode,m,opts={}){
+  const items=tema[mode]; const idxs=modeIdxs(tema,mode); const order=opts.order||pickRound(tema,mode,idxs,idxs.length); let pos=0, correct=0;
+  m.innerHTML=`<div class="counter" id="cnt"></div><div class="progress"><i id="pr"></i></div><div class="deck" id="deck"></div>
+    <div class="swipe-btns"><button class="no" id="bNo">✗<small>${t("falseL").toUpperCase()}</small></button><button class="yes" id="bYes">✓<small>${t("trueL").toUpperCase()}</small></button></div>
+    <div class="swipe-hint">${t("swipeHint")}</div>`;
+  const deck=document.getElementById("deck");
+  function mk(it,behind){
+    const c=document.createElement("div"); c.className="scard"+(behind?" behind":"");
+    const imgHtml = it.img ? `<div class="img" style="background-image:url('${it.img}')"></div><div class="cap">${esc(L(it.caption))}</div>`
+                           : `<div class="img text">${esc(L(it.claim))}</div>`;
+    c.innerHTML=`${imgHtml}${it.img?`<div class="q">${esc(L(it.claim))}</div>`:`<div class="q" style="color:var(--muted);font-weight:500;font-size:14px">${S.lang==="es"?"¿":""}${t("trueL")} ${S.lang==="es"?"o":"or"} ${t("falseL").toLowerCase()}?</div>`}
+      <div class="stamp yes">${t("yes")}</div><div class="stamp no">${t("no")}</div>`;
+    return c;
+  }
+  function draw(){
+    document.getElementById("cnt").textContent=t("seen",{a:Math.min(pos+1,order.length),b:order.length});
+    document.getElementById("pr").style.width=(pos/order.length*100)+"%";
+    deck.innerHTML="";
+    if(order[pos+1]!=null) deck.appendChild(mk(items[order[pos+1]],true));
+    const top=mk(items[order[pos]],false); deck.appendChild(top); attachDrag(top);
+  }
+  function attachDrag(c){
+    let sx=0,sy=0,dx=0,active=false;
+    const yes=c.querySelector(".stamp.yes"), no=c.querySelector(".stamp.no");
+    c.addEventListener("pointerdown",e=>{active=true;sx=e.clientX;sy=e.clientY;dx=0;c.setPointerCapture(e.pointerId);c.style.transition="none"});
+    c.addEventListener("pointermove",e=>{ if(!active) return; dx=e.clientX-sx; const dy=e.clientY-sy;
+      c.style.transform=`translate(${dx}px,${dy*0.3}px) rotate(${dx/18}deg)`; yes.style.opacity=Math.min(1,Math.max(0,dx/80)); no.style.opacity=Math.min(1,Math.max(0,-dx/80)); });
+    const end=()=>{ if(!active) return; active=false; if(Math.abs(dx)>100) answer(dx>0,c); else { c.style.transition="transform .25s"; c.style.transform=""; yes.style.opacity=0; no.style.opacity=0; } };
+    c.addEventListener("pointerup",end); c.addEventListener("pointercancel",end);
+  }
+  function answer(val,c){
+    const it=items[order[pos]]; const ok=(val===it.answer);
+    if(c){ c.style.transition="transform .35s ease, opacity .35s"; c.style.transform=`translate(${val?600:-600}px,-40px) rotate(${val?30:-30}deg)`; c.style.opacity=0; }
+    markSeen(tema.id,mode,order[pos]); const xp=ok?10:2; addXP(xp); if(ok) correct++;
+    sheet(ok, ok?t("correct"):t("wrong")+` · ${it.answer?t("trueL"):t("falseL")}`, L(it.explain), xp, ()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeSwipe(tema,mode,m),opts); else draw(); });
+  }
+  document.getElementById("bNo").onclick=()=>answer(false,deck.lastElementChild);
+  document.getElementById("bYes").onclick=()=>answer(true,deck.lastElementChild);
+  draw();
+}
+
+/* --- multiple choice (sources & quiz) --- */
+function modeChoice(tema,mode,m,opts={}){
+  const items=tema[mode]; const idxs=modeIdxs(tema,mode); const order=opts.order||pickRound(tema,mode,idxs,mode==="quiz"?Math.min(10,idxs.length):idxs.length); let pos=0,correct=0,timer=null;
+  function draw(){
+    const it=items[order[pos]]; const choices=shuffle(it.options.map((o,i)=>({o,i})));
+    m.innerHTML=`<div class="counter">${t("seen",{a:pos+1,b:order.length})}</div><div class="progress"><i style="width:${pos/order.length*100}%"></i></div>
+      ${mode==="quiz"?`<div class="timer"><i id="tm"></i></div>`:""}
+      ${mode==="sources"?`<div class="quote">${esc(L(it.text))}</div><div class="qtext">${esc(L(it.question))}</div>`:`<div class="card qtext">${esc(L(it.q))}</div>`}
+      <div class="opts">${choices.map((x,k)=>`<button class="opt" data-i="${x.i}"><span class="k">${"ABCD"[k]}</span><span>${esc(L(x.o))}</span></button>`).join("")}</div>`;
+    let done=false;
+    const finish=(chosen)=>{ if(done) return; done=true; clearInterval(timer);
+      const ok=chosen===it.answer; m.querySelectorAll(".opt").forEach(b=>{ b.disabled=true; const i=+b.dataset.i; if(i===it.answer) b.classList.add("ok"); else if(i===chosen) b.classList.add("ko"); });
+      markSeen(tema.id,mode,order[pos]); const xp=ok?(mode==="quiz"?15:10):2; addXP(xp); if(ok) correct++;
+      sheet(ok, ok?t("correct"):(chosen===-1?t("timeUp"):t("wrong")), L(it.explain), xp, ()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeChoice(tema,mode,m),opts); else draw(); }); };
+    m.querySelectorAll(".opt").forEach(b=>b.onclick=()=>finish(+b.dataset.i));
+    if(mode==="quiz"){ let left=20; const bar=document.getElementById("tm"); bar.style.width="100%";
+      timer=setInterval(()=>{ left--; bar.style.width=(left/20*100)+"%"; if(left<=0) finish(-1); },1000); }
+  }
+  draw();
+}
+
+/* --- timeline --- */
+function modeTimeline(tema,mode,m,opts={}){
+  const sets=tema.timeline; const order=opts.order||pickRound(tema,mode,modeIdxs(tema,mode),sets.length); let pos=0, correct=0;
+  function draw(){
+    const set=sets[order[pos]]; let cur=shuffle(set.items.map((it,i)=>i));
+    if(cur.every((v,i)=>i===0||set.items[cur[i-1]].year<=set.items[v].year)) cur=cur.reverse();
+    m.innerHTML=`<div class="counter">${t("seen",{a:pos+1,b:order.length})}</div><div class="card" style="padding:12px 16px"><b>${esc(L(set.title))}</b><p style="font-size:12px;color:var(--muted);margin-top:4px">${t("tlHint")}</p></div>
+      <div class="tl" id="tl"></div><button class="btn" id="tlCheck">${t("check")}</button>`;
+    const tl=document.getElementById("tl");
+    function paint(){ tl.innerHTML=""; cur.forEach((idx,i)=>{ const it=set.items[idx]; const d=document.createElement("div"); d.className="it"; d.dataset.i=i;
+      d.innerHTML=`<span class="n">${i+1}</span><div class="lbl">${esc(L(it.label))}<div class="date">${esc(L(it.date))}</div></div><div class="mv"><button data-d="-1">▲</button><button data-d="1">▼</button></div>`;
+      d.querySelectorAll(".mv button").forEach(b=>b.onclick=(e)=>{e.stopPropagation(); const j=i+(+b.dataset.d); if(j<0||j>=cur.length) return; [cur[i],cur[j]]=[cur[j],cur[i]]; paint();});
+      attachDrag(d,i); tl.appendChild(d); }); }
+    function attachDrag(el,i){
+      let active=false, startY=0, ghostIdx=i;
+      el.addEventListener("pointerdown",e=>{ if(e.target.closest(".mv")) return; active=true; startY=e.clientY; el.setPointerCapture(e.pointerId); el.classList.add("drag"); });
+      el.addEventListener("pointermove",e=>{ if(!active) return; const dy=e.clientY-startY; el.style.transform=`translateY(${dy}px) scale(1.02)`;
+        const rows=[...tl.children]; const h=el.offsetHeight+10; const target=Math.max(0,Math.min(cur.length-1,i+Math.round(dy/h))); ghostIdx=target; });
+      const end=()=>{ if(!active) return; active=false; el.classList.remove("drag"); el.style.transform=""; if(ghostIdx!==i){ const v=cur.splice(i,1)[0]; cur.splice(ghostIdx,0,v); } paint(); };
+      el.addEventListener("pointerup",end); el.addEventListener("pointercancel",end);
+    }
+    paint();
+    document.getElementById("tlCheck").onclick=()=>{
+      const sorted=set.items.map((it,i)=>i).sort((a,b)=>set.items[a].year-set.items[b].year);
+      let wrong=0; [...tl.children].forEach((row,i)=>{ const okRow=(set.items[cur[i]].year===set.items[sorted[i]].year); row.classList.add(okRow?"ok":"ko"); if(!okRow) wrong++; });
+      tl.classList.add("revealed"); markSeen(tema.id,mode,order[pos]); const ok=wrong===0; const xp=ok?20:Math.max(2,10-wrong*2); addXP(xp); if(ok) correct++;
+      const expl=sorted.map((i,k)=>`${k+1}. ${L(set.items[i].label)} (${L(set.items[i].date)})`).join("\n");
+      sheet(ok, ok?t("tlOk"):t("tlKo",{n:wrong}), expl, xp, ()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeTimeline(tema,mode,m),opts); else draw(); });
+    };
+  }
+  draw();
+}
+
+/* --- match --- */
+function modeMatch(tema,mode,m,opts={}){
+  const sets=tema.match; const order=opts.order||pickRound(tema,mode,modeIdxs(tema,mode),sets.length); let pos=0, correct=0;
+  function draw(){
+    const set=sets[order[pos]]; const n=set.pairs.length; let left=shuffle(set.pairs.map((p,i)=>i)), right=shuffle(set.pairs.map((p,i)=>i)); let sel=null, matched=0, errors=0;
+    m.innerHTML=`<div class="counter">${t("seen",{a:pos+1,b:order.length})}</div><div class="card" style="padding:12px 16px"><b>${esc(L(set.title))}</b><p style="font-size:12px;color:var(--muted);margin-top:4px">${t("matchHint")}</p></div>
+      <div class="mcols"><div class="col" id="cl"></div><div class="col" id="cr"></div></div>`;
+    const cl=document.getElementById("cl"), cr=document.getElementById("cr");
+    left.forEach(i=>{ const b=document.createElement("button"); b.className="mtile"; b.dataset.i=i; b.textContent=L(set.pairs[i].a); b.onclick=()=>{ cl.querySelectorAll(".mtile").forEach(x=>x.classList.remove("sel")); b.classList.add("sel"); sel=i; }; cl.appendChild(b); });
+    right.forEach(i=>{ const b=document.createElement("button"); b.className="mtile"; b.dataset.i=i; b.textContent=L(set.pairs[i].b); b.onclick=()=>{ if(sel==null) return; const lb=cl.querySelector(`.mtile[data-i="${sel}"]`);
+      if(sel===i){ b.classList.add("ok"); lb.classList.add("ok"); lb.classList.remove("sel"); sel=null; matched++; addXP(5);
+        if(matched===n){ markSeen(tema.id,mode,order[pos]); const ok=errors===0; if(ok) correct++; sheet(ok,t("matchDone"),set.pairs.map(p=>`${L(p.a)} → ${L(p.b)}`).join("\n"),0,()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeMatch(tema,mode,m),opts); else draw(); }); } }
+      else { errors++; b.classList.add("ko"); lb.classList.add("ko"); setTimeout(()=>{b.classList.remove("ko");lb.classList.remove("ko")},500); } }; cr.appendChild(b); });
+  }
+  draw();
+}
+
+/* --- glossary (Leitner) --- */
+function modeGlossary(tema,mode,m,opts={}){
+  const g=tema.glossary; const pool=modeIdxs(tema,"glossary"); const n=pool.length;
+  // weight by box: lower boxes first
+  const idxs=pool.slice().sort((a,b)=>(glBox(tema.id,a)-glBox(tema.id,b))||(Math.random()-.5)).slice(0,n);
+  const order=opts.order||shuffle(idxs); let pos=0, correct=0;
+  function draw(){
+    const i=order[pos], it=g[i]; const box=glBox(tema.id,i);
+    const kind = pos%3===2 ? "match" : (box%2===0 ? "term2def" : "def2term");
+    const mastered=g.filter((x,k)=>glBox(tema.id,k)>=3).length;
+    const head=`<div class="counter">${t("glSession",{n:order.length})} · ${t("seen",{a:pos+1,b:order.length})} · ${mastered}/${g.length} ${t("glMastered")}</div><div class="progress"><i style="width:${pos/order.length*100}%"></i></div>`;
+    if(kind==="match"){
+      const pool=shuffle(g.map((x,k)=>k).filter(k=>k!==i)).slice(0,3).concat([i]); const set={title:{es:t("modes.glossary"),en:t("modes.glossary")},pairs:pool.map(k=>({a:g[k].term,b:g[k].def,k}))};
+      let left=shuffle(set.pairs.map((p,k)=>k)), right=shuffle(set.pairs.map((p,k)=>k)); let sel=null, matched=0, errs={};
+      m.innerHTML=head+`<div class="card" style="padding:12px 16px;font-size:13px;color:var(--muted)">${t("matchHint")}</div><div class="mcols"><div class="col" id="cl"></div><div class="col" id="cr"></div></div>`;
+      const cl=document.getElementById("cl"), cr=document.getElementById("cr");
+      left.forEach(k=>{ const b=document.createElement("button"); b.className="mtile"; b.dataset.i=k; b.textContent=L(set.pairs[k].a); b.onclick=()=>{cl.querySelectorAll(".mtile").forEach(x=>x.classList.remove("sel")); b.classList.add("sel"); sel=k;}; cl.appendChild(b); });
+      right.forEach(k=>{ const b=document.createElement("button"); b.className="mtile"; b.style.fontSize="12px"; b.dataset.i=k; b.textContent=L(set.pairs[k].b); b.onclick=()=>{ if(sel==null) return; const lb=cl.querySelector(`.mtile[data-i="${sel}"]`);
+        if(sel===k){ b.classList.add("ok"); lb.classList.add("ok"); const gi=set.pairs[k].k; glSet(tema.id,gi,glBox(tema.id,gi)+(errs[k]?0:1)); sel=null; matched++; addXP(errs[k]?2:5);
+          if(matched===4){ correct++; setTimeout(()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeGlossary(tema,mode,m),opts); else draw(); },500); } }
+        else { errs[sel]=1; b.classList.add("ko"); lb.classList.add("ko"); setTimeout(()=>{b.classList.remove("ko");lb.classList.remove("ko")},500); } }; cr.appendChild(b); });
+      return;
+    }
+    const distract=shuffle(g.map((x,k)=>k).filter(k=>k!==i)).slice(0,3); const choices=shuffle(distract.concat([i]));
+    const ask = kind==="term2def";
+    m.innerHTML=head+`<div class="gl-term"><div class="k">${ask?t("glTerm"):t("glDefL")}</div><div class="v ${ask?"":"def"}">${esc(ask?L(it.term):L(it.def))}</div>
+      <div class="boxes" style="margin-top:12px">${[0,1,2,3,4].map(b=>`<span class="${b<=box&&box>0?"on":""}">${b+1}</span>`).join("")}</div></div>
+      <div class="qtext" style="font-size:15px">${ask?t("glDef"):t("glWhich")}</div>
+      <div class="opts">${choices.map((k,q)=>`<button class="opt" data-i="${k}"><span class="k">${"ABCD"[q]}</span><span style="${ask?"font-size:14px":""}">${esc(ask?L(g[k].def):L(g[k].term))}</span></button>`).join("")}</div>`;
+    m.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ const k=+b.dataset.i; const ok=k===i;
+      m.querySelectorAll(".opt").forEach(x=>{x.disabled=true; if(+x.dataset.i===i) x.classList.add("ok"); else if(+x.dataset.i===k) x.classList.add("ko");});
+      glSet(tema.id,i, ok?box+1:Math.max(0,box-1)); const xp=ok?8:2; addXP(xp); if(ok) correct++;
+      sheet(ok, ok?t("correct"):t("wrong"), `${L(it.term)}: ${L(it.def)}`, xp, ()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeGlossary(tema,mode,m),opts); else draw(); }); });
+  }
+  draw();
+}
+
+
+/* --- fichas --- */
+function modeFichas(tema,m,v){
+  const fs=tema.fichas||[]; const secs=tema.sections||[];
+  if(!fs.length){ m.innerHTML=`<div class="empty"><div class="ic">📖</div>${t("soon")}</div>`; return; }
+  if(v.f){ const k=fs.findIndex(x=>x.id===v.f); if(k>=0) return renderFicha(tema,m,k); }
+  const seen=S.prog.seen[tema.id+".fichas"]||{};
+  const missingEn = S.lang==="en" && fs.some(f=>!(f.body.en&&f.body.en.length));
+  m.innerHTML=`${missingEn?`<div class="card" style="padding:12px 14px;font-size:13px;color:var(--muted)">${t("fichasEsOnly")}</div>`:""}
+    <input class="search" id="fq" type="search" placeholder="${t("fichasSearch")} (H2·10)" autocomplete="off">
+    <div class="counter" id="fcount"></div><div id="flist" style="display:flex;flex-direction:column;gap:10px"></div>`;
+  const list=document.getElementById("flist"), q=document.getElementById("fq");
+  function paint(){
+    const qq=norm(q.value.trim()); list.innerHTML=""; let shown=0;
+    const qc=qq.replace(/[·\-\s.]/g,""); const codeOf=f=>norm(f.code).replace(/[·\-\s]/g,"");
+    const match=f=>!qq || (qc && codeOf(f)===qc) || norm(L(f.title)+" "+LL(f.body).join(" ")).includes(qq);
+    const bySec={}; fs.forEach((f,i)=>{ if(match(f)){ (bySec[f.sec]=bySec[f.sec]||[]).push(i); shown++; } });
+    const order=secs.map(x=>x.code); Object.keys(bySec).forEach(c=>{ if(!order.includes(c)) order.push(c); });
+    for(const code of order){
+      const sec=secs.find(x=>x.code===code); const idxs=bySec[code]||[]; const major=(code.split(".").length<=2 && tema.num>1) || (tema.num===1 && false);
+      if(!idxs.length && !(sec && !qq && major)) continue;
+      const h=document.createElement("div"); h.className="sec-h"+(major?" major":""); h.innerHTML=`<span class="code">${esc(code)}</span><b>${esc(sec?L(sec.title):"")}</b>`; list.appendChild(h);
+      if(sec && sec.intro && LL(sec.intro).length && !qq){ const d=document.createElement("details"); d.className="sec-intro"; d.innerHTML=`<summary>${t("secIntro")}</summary><div style="margin-top:6px">${LL(sec.intro).map(p=>`<p style="margin-bottom:6px">${md(p)}</p>`).join("")}</div>`; list.appendChild(d); }
+      for(const i of idxs){ const f=fs[i]; const b=document.createElement("button"); b.className="frow";
+        b.innerHTML=`<div class="th" ${f.images[0]?`style="background-image:url('${f.images[0].src}')"`:""}>${f.images[0]?"":"📄"}</div><div class="t"><b>${esc(L(f.title))}</b><span>${esc(f.code)} · ${LL(f.body).length} ${t("paras")}${f.images.length?` · ${f.images.length} ${f.images.length===1?t("img1"):t("imgN")}`:""}</span></div>${seen[i]?`<span class="chk">✓</span>`:""}`;
+        b.onclick=()=>nav({name:"mode",num:tema.num,mode:"fichas",f:f.id}); list.appendChild(b); }
+    }
+    document.getElementById("fcount").textContent = shown? t("fichasOf",{n:shown}) : t("noResults");
+  }
+  q.oninput=paint; paint();
+}
+function renderFicha(tema,m,k){
+  const fs=tema.fichas, f=fs[k]; const fimgs=f.images.filter(im=>!im.lang||im.lang===S.lang); const frefs=(S.lang==="en"&&f.refs_en)?f.refs_en:f.refs; const first=!(S.prog.seen[tema.id+".fichas"]||{})[k];
+  markSeen(tema.id,"fichas",k); if(first){ addXP(3); toast(`${t("fichaXP")} · ${t("gained",{n:3})}`); } checkBadge(tema,"fichas");
+  const sec=(tema.sections||[]).find(x=>x.code===f.sec);
+  const counts=["cards","glossary","myths","quiz","sources","timeline","match"].map(mode=>({mode,n:(tema[mode]||[]).filter(it=>secMatch(it.sec,f.sec)).length})).filter(x=>x.n>0);
+  m.innerHTML=`<div class="ficha">
+    <div class="card"><div style="font-size:12px;color:var(--muted);font-weight:700">${esc(f.sec)}${sec?" · "+esc(L(sec.title)):""}</div><h2 style="margin-top:4px">${esc(L(f.title))}</h2>
+      <div class="meta"><span class="pill">${esc(f.code)}</span><span class="pill">${t("tema")} ${tema.num}</span></div></div>
+    ${fimgs.map((im,j)=>`<div class="fimg" data-j="${j}"><img src="${im.src}" alt="" loading="lazy">${L(im.caption)?`<div class="cap">${esc(L(im.caption))}</div>`:""}</div>`).join("")}
+    <div class="card body">${LL(f.body).map(p=>`<p>${md(p)}</p>`).join("")}</div>
+    ${LL(f.essay).length?`<div class="essay"><b>${t("essayL")}</b>${LL(f.essay).map(p=>md(p.replace(/^(Para el ensayo|For the essay),?\s*/,""))).join("<br>")}</div>`:""}
+    ${LL(f.slide).length?`<div class="card"><details class="slide"><summary>${t("slideText")}</summary><ul style="padding-left:18px;margin:8px 0 0">${LL(f.slide).map(p=>`<li>${md(p)}</li>`).join("")}</ul></details></div>`:""}
+    ${frefs.length?`<div class="card"><div class="section-title" style="margin:0 0 8px">${t("refsL")}</div><ul class="refs" style="padding-left:18px;margin:0">${frefs.map(r=>`<li>${md(r)}</li>`).join("")}</ul></div>`:""}
+    ${counts.length?`<div class="card"><div class="section-title" style="margin:0 0 10px">${t("practice")} (${esc(f.sec)})</div><div class="pbtns">${counts.map(c=>`<button data-mode="${c.mode}">${MODE_ICONS[c.mode]} ${t("modes."+c.mode)} · ${c.n}</button>`).join("")}</div></div>`:""}
+    <div class="row"><button class="btn sec" id="fPrev" ${k===0?"disabled":""}>‹ ${t("prevF")}</button><button class="btn sec" id="fNext" ${k===fs.length-1?"disabled":""}>${t("nextF")} ›</button></div>
+    <button class="rep" id="fRep">${t("report")}</button><p style="font-size:11.5px;color:var(--muted);text-align:center;margin:0">${t("reportHint")}</p>
+    </div>`;
+  m.querySelectorAll(".pbtns button").forEach(b=>b.onclick=()=>nav({name:"mode",num:tema.num,mode:b.dataset.mode,sec:f.sec,back:{name:"mode",num:tema.num,mode:"fichas",f:f.id}}));
+  m.querySelectorAll(".fimg").forEach(d=>d.onclick=()=>{ const im=fimgs[+d.dataset.j]; const lb=document.createElement("div"); lb.className="lightbox"; lb.innerHTML=`<img src="${im.src}" alt=""><div class="cap">${esc(L(im.caption))}</div>`; lb.onclick=()=>lb.remove(); document.body.appendChild(lb); });
+  document.getElementById("fPrev").onclick=()=>nav({name:"mode",num:tema.num,mode:"fichas",f:fs[k-1].id});
+  document.getElementById("fNext").onclick=()=>nav({name:"mode",num:tema.num,mode:"fichas",f:fs[k+1].id});
+  document.getElementById("fRep").onclick=()=>reportMail({where:`${t("tema")} ${tema.num} · ${f.code} · ${L(f.title)}`,text:""});
+}
+
+
+/* --- reto del día --- */
+function todayKey(){ return new Date().toISOString().slice(0,10); }
+function seededRandom(str){ let h=1779033703^str.length; for(let i=0;i<str.length;i++){ h=Math.imul(h^str.charCodeAt(i),3432918353); h=h<<13|h>>>19; }
+  return function(){ h=Math.imul(h^(h>>>16),2246822507); h=Math.imul(h^(h>>>13),3266489909); h^=h>>>16; return (h>>>0)/4294967296; }; }
+async function buildDaily(){
+  const idx=await getIndex(); const temas=[]; for(const m of idx.temas){ if(m.available){ try{ temas.push(await getTema(m.num)); }catch(e){} } }
+  if(!temas.length) return [];
+  const rnd=seededRandom("historiapp-"+todayKey()); const pick=a=>a[Math.floor(rnd()*a.length)];
+  const steps=[];
+  for(const mode of ["cards","quiz","glossary","myths","sources","timeline","match"]){
+    const cand=temas.filter(tm=>(tm[mode]||[]).length); if(!cand.length) continue;
+    const tm=pick(cand); const ids=tm[mode].map((x,j)=>j).filter(j=>!tm[mode][j].lang||tm[mode][j].lang===S.lang); const i=ids[Math.floor(rnd()*ids.length)]; steps.push({tema:tm,mode,i});
+  }
+  return steps;
+}
+async function renderDaily(){
+  app.innerHTML=header(t("daily"),true)+`<main id="m"><div class="empty">…</div></main>`;
+  bindHeader(()=>nav({name:"home"}));
+  const m=document.getElementById("m"); const steps=await buildDaily(); if(!steps.length){ m.innerHTML=`<div class="empty">${t("soon")}</div>`; return; }
+  const d=S.prog.daily||{}; if(d.date===todayKey() && d.done){ return dailyResult(m,d.correct,d.total); }
+  let k=0, correct=0; S.xpMult=2;
+  function step(){
+    if(k>=steps.length){ S.xpMult=1; S.prog.daily={date:todayKey(),done:true,correct,total:steps.length}; save(); track("reto/completado/"+Math.round(correct/steps.length*10)*10+"%","Reto del día",true); return dailyResult(m,correct,steps.length); }
+    const st=steps[k]; const fn={cards:modeSwipe,myths:modeSwipe,quiz:modeChoice,sources:modeChoice,glossary:modeGlossary,timeline:modeTimeline,match:modeMatch}[st.mode];
+    document.querySelector(".top .ttl").textContent=`${t("daily")} · ${t("dailyStep",{a:k+1,b:steps.length})} · ${t("modes."+st.mode)} · ${t("tema")} ${st.tema.num}`;
+    S.view.sec=undefined; m.innerHTML="";
+    fn(st.tema,st.mode,m,{order:[st.i],onDone:(c)=>{ correct+=c; k++; step(); }});
+  }
+  step();
+}
+function dailyResult(m,correct,total){
+  S.xpMult=1;
+  m.innerHTML=`<div class="card result"><div class="big">${correct/total>=.8?"🏆":correct/total>=.5?"👍":"📚"}</div><h2>${t("dailyDone")}</h2><div class="score">${correct}/${total}</div><p>${t("dailyScore",{a:correct,b:total})}</p><p style="color:var(--muted);font-size:13px">${t("dailyBack")}</p></div><button class="btn" id="dHome">${t("home")}</button>`;
+  document.getElementById("dHome").onclick=()=>nav({name:"home"});
+}
+
+/* --- instalación --- */
+let deferredInstall=null;
+window.addEventListener("beforeinstallprompt",e=>{ e.preventDefault(); deferredInstall=e; });
+function isStandalone(){ return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone===true; }
+function isIOS(){ return /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform==="MacIntel" && navigator.maxTouchPoints>1); }
+/* --- guía de instalación --- */
+const IG={
+es:{title:"Instalar Historiapp", yours:"Tu móvil", now:"Instalar ahora", others:"Otros móviles y navegadores", ios:"iPhone y iPad", and:"Android", pc:"Ordenador",
+ after:"Cuando termines, abre Historiapp siempre desde su icono: tu progreso se guarda ahí. En iPhone, lo que hagas en Safari no pasa a la app instalada, así que conviene instalarla el primer día.",
+ lost:"Si usas Brave en iPhone o no encuentras la opción, abre la dirección en Safari (iPhone) o en Chrome (Android) y sigue sus pasos.",
+ b:{
+ ios_safari:["Safari",["Toca el botón Compartir (el cuadrado con una flecha hacia arriba). En iOS 26, si no lo ves, toca antes los tres puntos (···) junto a la dirección.","Desliza el menú hacia abajo y elige «Añadir a pantalla de inicio». Si no aparece, toca «Ver más» o «Editar acciones».","Si ves la opción de abrirla como app web, déjala activada. Pulsa «Añadir»."]],
+ ios_chrome:["Chrome",["Toca el botón Compartir, arriba a la derecha junto a la dirección. También está en el menú de tres puntos, en «Compartir».","Elige «Añadir a pantalla de inicio». Si no aparece, toca «Ver más».","Pulsa «Añadir». Necesitas iOS 16.4 o posterior; con una versión anterior, usa Safari."]],
+ ios_brave:["Brave",["Brave en iPhone no permite instalar aplicaciones web (su menú no tiene «Añadir a pantalla de inicio»).","Copia la dirección de la app, ábrela en Safari y sigue los pasos de Safari.","Deja activada la opción de abrirla como app web: así funciona como una aplicación y guarda tu progreso."]],
+ ios_firefox:["Firefox",["Toca el menú (tres rayas) y elige «Compartir».","Elige «Añadir a pantalla de inicio». Si no aparece, toca «Ver más».","Pulsa «Añadir». Necesitas iOS 16.4 o posterior; con una versión anterior, usa Safari."]],
+ ios_edge:["Edge",["Toca el menú de tres puntos (···) de la barra inferior y elige «Compartir».","Elige «Añadir a pantalla de inicio». Si no aparece, toca «Ver más».","Pulsa «Añadir». Necesitas iOS 16.4 o posterior; con una versión anterior, usa Safari."]],
+ and_chrome:["Chrome",["Si aparece el aviso «Instalar app» o «Añadir a pantalla de inicio», tócalo.","Si no, abre el menú de tres puntos (⋮, arriba a la derecha) y elige «Instalar aplicación» o «Añadir a pantalla de inicio».","Confirma con «Instalar». El icono aparece en tu pantalla de inicio o en el cajón de aplicaciones."]],
+ and_samsung:["Samsung Internet",["Si en la barra de la dirección aparece un icono de descarga o de instalar, tócalo.","Si no, abre el menú (tres rayas, abajo a la derecha), elige «Añadir página a» y después «Pantalla de inicio».","Confirma con «Añadir» o «Instalar»."]],
+ and_brave:["Brave",["Abre el menú de tres puntos (⋮, arriba o abajo a la derecha, según cómo tengas la barra).","Elige «Añadir a pantalla de inicio» (en versiones anteriores, «Instalar aplicación»). Si no lo ves, desliza el menú hacia abajo.","Confirma con «Añadir» o «Instalar»."]],
+ and_firefox:["Firefox",["Abre el menú de tres puntos (⋮).","Elige «Añadir a la pantalla de inicio» (en algunas versiones se llama «Instalar»).","Confirma con «Añadir»."]],
+ and_edge:["Edge",["Abre el menú de la barra inferior (tres puntos o tres rayas).","Elige «Añadir al teléfono» o «Añadir a pantalla de inicio».","Confirma con «Instalar»."]],
+ and_opera:["Opera",["Abre el menú de tres puntos (⋮).","Elige «Añadir a…» y después «Pantalla de inicio».","Confirma con «Añadir»."]],
+ and_other:["Otros (Xiaomi, Huawei, DuckDuckGo…)",["Algunos navegadores de fábrica no instalan aplicaciones web.","Abre esta misma dirección en Chrome y sigue los pasos de Chrome."]],
+ inapp:["Si abriste el enlace desde WhatsApp, Instagram, Teams, el correo o el Aula Virtual",["Esas aplicaciones abren la web en un navegador interno que no permite instalar.","Toca los tres puntos o el icono de la brújula y elige «Abrir en Safari», «Abrir en Chrome» o «Abrir en el navegador».","Después sigue los pasos de ese navegador."]],
+ pc:["Chrome o Edge en el ordenador",["Pulsa el icono de instalar que aparece a la derecha de la barra de direcciones, o abre el menú y elige «Instalar Historiapp».","Para el móvil, abre esta misma dirección en el teléfono."]]
+ }},
+en:{title:"Install Historiapp", yours:"Your phone", now:"Install now", others:"Other phones and browsers", ios:"iPhone and iPad", and:"Android", pc:"Computer",
+ after:"When you finish, always open Historiapp from its icon: your progress is saved there. On iPhone, what you do in Safari does not carry over to the installed app, so install it on day one.",
+ lost:"If you use Brave on iPhone or cannot find the option, open the address in Safari (iPhone) or Chrome (Android) and follow their steps.",
+ b:{
+ ios_safari:["Safari",["Tap the Share button (the square with an upward arrow). On iOS 26, if you cannot see it, first tap the three dots (···) next to the address.","Scroll down the menu and choose 'Add to Home Screen'. If it is not there, tap 'View More' or 'Edit Actions'.","If you see the option to open it as a web app, leave it on. Tap 'Add'."]],
+ ios_chrome:["Chrome",["Tap the Share button, top right next to the address. It is also in the three-dot menu, under 'Share'.","Choose 'Add to Home Screen'. If it is not there, tap 'View More'.","Tap 'Add'. You need iOS 16.4 or later; with an older version, use Safari."]],
+ ios_brave:["Brave",["Brave on iPhone cannot install web apps (its menu has no 'Add to Home Screen').","Copy the app address, open it in Safari and follow the Safari steps.","Leave the option to open it as a web app on: that way it works like an app and keeps your progress."]],
+ ios_firefox:["Firefox",["Tap the menu (three lines) and choose 'Share'.","Choose 'Add to Home Screen'. If it is not there, tap 'View More'.","Tap 'Add'. You need iOS 16.4 or later; with an older version, use Safari."]],
+ ios_edge:["Edge",["Tap the three-dot menu (···) in the bottom bar and choose 'Share'.","Choose 'Add to Home Screen'. If it is not there, tap 'View More'.","Tap 'Add'. You need iOS 16.4 or later; with an older version, use Safari."]],
+ and_chrome:["Chrome",["If an 'Install app' or 'Add to Home screen' prompt appears, tap it.","Otherwise open the three-dot menu (⋮, top right) and choose 'Install app' or 'Add to Home screen'.","Confirm with 'Install'. The icon appears on your home screen or in the app drawer."]],
+ and_samsung:["Samsung Internet",["If a download or install icon appears in the address bar, tap it.","Otherwise open the menu (three lines, bottom right), choose 'Add page to' and then 'Home screen'.","Confirm with 'Add' or 'Install'."]],
+ and_brave:["Brave",["Open the three-dot menu (⋮, top or bottom right, depending on your toolbar).","Choose 'Add to Home screen' ('Install app' in older versions). If you cannot see it, scroll down the menu.","Confirm with 'Add' or 'Install'."]],
+ and_firefox:["Firefox",["Open the three-dot menu (⋮).","Choose 'Add to Home screen' (called 'Install' in some versions).","Confirm with 'Add'."]],
+ and_edge:["Edge",["Open the menu in the bottom bar (three dots or three lines).","Choose 'Add to phone' or 'Add to Home screen'.","Confirm with 'Install'."]],
+ and_opera:["Opera",["Open the three-dot menu (⋮).","Choose 'Add to…' and then 'Home screen'.","Confirm with 'Add'."]],
+ and_other:["Others (Xiaomi, Huawei, DuckDuckGo…)",["Some pre-installed browsers cannot install web apps.","Open this same address in Chrome and follow the Chrome steps."]],
+ inapp:["If you opened the link from WhatsApp, Instagram, Teams, email or the Virtual Campus",["Those apps open the page in a built-in browser that cannot install.","Tap the three dots or the compass icon and choose 'Open in Safari', 'Open in Chrome' or 'Open in browser'.","Then follow the steps for that browser."]],
+ pc:["Chrome or Edge on a computer",["Click the install icon at the right of the address bar, or open the menu and choose 'Install Historiapp'.","For your phone, open this same address on it."]]
+ }}};
+function detectBrowser(){
+  const ua=navigator.userAgent, brave=!!navigator.brave;
+  const inapp=/FBAN|FBAV|Instagram|WhatsApp|MicrosoftTeams|Line\/|LinkedInApp|Snapchat|TikTok|GSA\/|Outlook/i.test(ua)||(/Android/i.test(ua)&&/; wv\)/.test(ua));
+  if(isIOS()){ const b=brave?"ios_brave":/CriOS/.test(ua)?"ios_chrome":/FxiOS/.test(ua)?"ios_firefox":/EdgiOS/.test(ua)?"ios_edge":"ios_safari"; return {os:"ios",key:inapp?"inapp":b}; }
+  if(/Android/i.test(ua)){ const b=brave?"and_brave":/SamsungBrowser/.test(ua)?"and_samsung":/EdgA/.test(ua)?"and_edge":/OPR|Opera/.test(ua)?"and_opera":/Firefox/.test(ua)?"and_firefox":/MiuiBrowser|HuaweiBrowser|HeyTap|DuckDuckGo/.test(ua)?"and_other":"and_chrome"; return {os:"and",key:inapp?"inapp":b}; }
+  return {os:"pc",key:"pc"};
+}
+function igSteps(k,L){ const [, st]=L.b[k]; return `<ol>${st.map(x=>`<li>${esc(x)}</li>`).join("")}</ol>`; }
+function igBlock(k,L){ return `<details><summary>${esc(L.b[k][0])}</summary>${igSteps(k,L)}</details>`; }
+async function installApp(){
+  track("instalar","Instalar",true);
+  if(isStandalone()){ toast(t("installed")); return; }
+  const L=IG[S.lang==="en"?"en":"es"], d=detectBrowser();
+  const osName={ios:L.ios,and:L.and,pc:L.pc}[d.os];
+  const el=document.getElementById("sheet"), inn=document.getElementById("sheetIn"); el.className="sheet ok"; inn.classList.add("tall");
+  inn.innerHTML=`<div class="verdict"><span class="dot">📲</span>${esc(L.title)}</div><div class="ig">
+    ${deferredInstall?`<button class="btn" id="igNow">${esc(L.now)}</button>`:""}
+    <div class="me"><b>${esc(L.yours)}: ${esc(osName)} · ${esc(L.b[d.key][0])}</b>${igSteps(d.key,L)}</div>
+    <p class="tip">${esc(L.after)}</p>
+    <h4>${esc(L.others)}</h4>
+    <h4>${esc(L.ios)}</h4>${["ios_safari","ios_chrome","ios_brave","ios_firefox","ios_edge"].map(k=>igBlock(k,L)).join("")}
+    <h4>${esc(L.and)}</h4>${["and_chrome","and_samsung","and_brave","and_firefox","and_edge","and_opera","and_other"].map(k=>igBlock(k,L)).join("")}
+    <h4>WhatsApp, Instagram…</h4>${igBlock("inapp",L)}
+    <h4>${esc(L.pc)}</h4>${igBlock("pc",L)}
+    <p class="tip">${esc(L.lost)}</p></div>
+    <button class="btn sec" id="sheetNext">${t("close")}</button>`;
+  requestAnimationFrame(()=>el.classList.add("show"));
+  document.getElementById("sheetNext").onclick=()=>{ el.classList.remove("show"); inn.classList.remove("tall"); };
+  const nb=document.getElementById("igNow");
+  if(nb) nb.onclick=async()=>{ const p=deferredInstall; if(!p) return; p.prompt(); try{ await p.userChoice; }catch(e){} deferredInstall=null; el.classList.remove("show"); inn.classList.remove("tall"); };
+}
+
+
+/* --- enciclopedia del deporte --- */
+async function getEnc(){ if(!S.enc){ S.enc=await fetch("data/enciclopedia.json",{cache:"no-cache"}).then(r=>r.json()); } return S.enc; }
+function encSorted(D){ return D.entries.slice().sort((a,b)=>L(a.name).localeCompare(L(b.name),S.lang)); }
+function encDaily(E){ const k=todayKey(); let h=7; for(const c of k) h=(h*31+c.charCodeAt(0))>>>0; const A=E.slice().sort((a,b)=>a.id<b.id?-1:1); return A[h%A.length]; }
+function encRandom(E,not){ if(E.length<2) return E[0]; let e; do{ e=E[Math.floor(Math.random()*E.length)]; }while(e.id===not); return e; }
+function encLetter(e){ const c=norm(L(e.name)).replace(/[^a-z0-9]/g,"")[0]||"#"; return /[a-z]/.test(c)?c.toUpperCase():"#"; }
+async function encHome(){
+  try{ const D=await getEnc(); const E=D.entries; if(!E.length) return;
+    const sub=document.getElementById("encSub"); if(sub) sub.textContent=t("encSub",{n:E.length});
+    const box=document.getElementById("encDay"); if(!box) return; const d=encDaily(E);
+    box.innerHTML=`<button class="d" id="encDayGo"><small>${t("encDay")}</small><b>${esc(L(d.name))}</b><span>${md(L(d.cuando))}</span></button><button class="dice" id="encDice" aria-label="${esc(t("encRand"))}">🎲</button>`;
+    box.style.display="flex";
+    document.getElementById("encDayGo").onclick=()=>nav({name:"enc",id:d.id,back:{name:"home"}});
+    document.getElementById("encDice").onclick=()=>{ const r=encRandom(E); nav({name:"enc",id:r.id,back:{name:"home"}}); };
+  }catch(e){}
+}
+async function renderEnc(){
+  const q0=S.view.q||"";
+  app.innerHTML=header(t("encShort"),true)+`<main><div class="enc-wrap">
+    <div style="display:flex;gap:8px"><input class="search" id="eq" type="search" placeholder="${t("encPh")}" autocomplete="off" value="${esc(q0)}" style="flex:1"><button class="dice" id="eDice" aria-label="${esc(t("encRand"))}">🎲</button></div>
+    <div class="counter" id="ecount" style="margin-top:8px">…</div><div class="enc-list" id="elist"></div>
+    <p class="counter" id="egrow" style="margin-top:14px;font-weight:400"></p></div></main><nav class="az" id="az"></nav>`;
+  bindHeader(()=>nav({name:"home"}));
+  let D; try{ D=await getEnc(); }catch(e){ app.querySelector("main").innerHTML=`<div class="empty">${t("loadError")}</div>`; return; }
+  const E=encSorted(D), inp=document.getElementById("eq"), list=document.getElementById("elist"), cnt=document.getElementById("ecount"), az=document.getElementById("az");
+  if(!inp) return;
+  document.getElementById("egrow").textContent=t("encGrow",{n:E.length,t:D.total||E.length});
+  document.getElementById("eDice").onclick=()=>{ const r=encRandom(E); nav({name:"enc",id:r.id,back:{name:"enc",q:inp.value.trim()}}); };
+  const LET="ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+  function paint(){
+    const raw=inp.value.trim(), qq=norm(raw); list.innerHTML="";
+    const out=E.filter(e=>!qq||norm(e.name.es+" "+e.name.en+" "+L(e.cuando)).includes(qq));
+    cnt.textContent=out.length?t("encN",{n:out.length}):t("encNone");
+    let last=""; const have=new Set();
+    for(const e of out){ const l=encLetter(e); if(l!==last){ const h=document.createElement("div"); h.className="letter"; h.id="L-"+l; h.textContent=l; list.appendChild(h); last=l; have.add(l); }
+      const b=document.createElement("button"); b.innerHTML=`<b>${esc(L(e.name))}</b><span>${md(L(e.cuando))}</span>`;
+      b.onclick=()=>nav({name:"enc",id:e.id,back:{name:"enc",q:raw}}); list.appendChild(b); }
+    az.style.display=qq?"none":"flex";
+    az.innerHTML=LET.map(l=>`<a data-l="${l}" class="${have.has(l)?"":"off"}">${l}</a>`).join("");
+    S.view.q=raw;
+  }
+  function jump(l){ let el=document.getElementById("L-"+l); if(!el){ const i=LET.indexOf(l); for(let j=i+1;j<LET.length&&!el;j++) el=document.getElementById("L-"+LET[j]); for(let j=i-1;j>=0&&!el;j--) el=document.getElementById("L-"+LET[j]); }
+    if(el){ const top=el.getBoundingClientRect().top+window.scrollY-(document.querySelector(".top")?.offsetHeight||60)-8; window.scrollTo(0,top); } }
+  function fromTouch(ev){ const p=ev.touches?ev.touches[0]:ev; const el=document.elementFromPoint(p.clientX,p.clientY); if(el&&el.dataset&&el.dataset.l) jump(el.dataset.l); }
+  az.addEventListener("touchstart",e=>{ e.preventDefault(); fromTouch(e); },{passive:false});
+  az.addEventListener("touchmove",e=>{ e.preventDefault(); fromTouch(e); },{passive:false});
+  az.addEventListener("click",fromTouch);
+  let tmr=null; inp.oninput=()=>{ clearTimeout(tmr); tmr=setTimeout(paint,150); }; paint();
+}
+async function renderEncFicha(id){
+  const v=S.view; let D; try{ D=await getEnc(); }catch(e){ D={entries:[]}; }
+  const e=D.entries.find(x=>x.id===id); if(!e){ nav({name:"enc"}); return; }
+  const im=e.img||{}, refs=(S.lang==="en"&&e.refs_en)?e.refs_en:(e.refs||[]);
+  const LX=x=>x&&typeof x==="object"?L(x):x; const lic=[LX(im.autor),LX(im.licencia)].filter(Boolean).map(esc).join(" · ");
+  app.innerHTML=header(L(e.name),true,`<button class="hdice" id="eRand" aria-label="${esc(t("encRand"))}" title="${esc(t("encRand"))}">🎲</button>`)+`<main>
+    ${im.src?`<div class="fimg" id="eImg"><img src="${esc(im.src)}" alt="${esc(L(e.name))}" loading="lazy"><div class="cap">${md(L(im.pie))}${lic?`<br>${lic}${im.url?` · <a href="${esc(im.url)}" target="_blank" rel="noopener">Wikimedia Commons</a>`:""}`:""}</div></div>`:""}
+    <div class="enc-when">🕰️ ${md(L(e.cuando))}</div>
+    <div class="enc-blq">${esc(L(e.bloque))}</div>
+    <div class="enc-body">${LL(e.body).map(x=>`<p>${md(x)}</p>`).join("")}</div>
+    ${(e.tema&&e.tema.length)?`<div class="section-title" style="margin-top:14px">${t("encCourse")}</div><div class="enc-links">${e.tema.map((x,j)=>`<button data-j="${j}">📖 ${t("tema")} ${x.num} · ${esc(L(x.t))}</button>`).join("")}</div>`:""}
+    ${refs.length?`<div class="section-title" style="margin-top:16px">${t("encRefs")}</div><div class="enc-refs">${refs.map(r=>`<p>${md(r)}</p>`).join("")}</div>`:""}
+    <div class="enc-act"><button id="eRep" style="background:#F1F3F6;color:var(--muted)">${t("report")}</button></div>
+  </main>`;
+  bindHeader(()=>nav(v.back||{name:"enc"}));
+  document.querySelectorAll(".enc-links button").forEach(b=>b.onclick=()=>{ const x=e.tema[+b.dataset.j]; nav({name:"mode",num:x.num,mode:"fichas",f:x.f,back:{name:"enc",id:e.id,back:v.back}}); });
+  document.getElementById("eRand").onclick=()=>{ const r=encRandom(D.entries,e.id); nav({name:"enc",id:r.id,back:v.back}); };
+  document.getElementById("eRep").onclick=()=>reportMail({where:t("enc")+" · "+L(e.name),text:LL(e.body)[0]||""});
+  const ei=document.getElementById("eImg"); if(ei) ei.querySelector("img").onclick=()=>{ const lb=document.createElement("div"); lb.className="lightbox"; lb.innerHTML=`<img src="${esc(im.src)}" alt=""><div class="cap">${md(L(im.pie))}</div>`; lb.onclick=()=>lb.remove(); document.body.appendChild(lb); };
+}
+
+/* --- avisar de un error --- */
+function reportMail(ctx){
+  const v=S.view||{}; const ver=S.temasIndex?S.temasIndex.version:"";
+  const subj=`Historiapp · error · ${ctx.where}`;
+  const body=`${t("reportWrite")}\n\n\n\n---\n${ctx.where}\n${ctx.text?ctx.text.slice(0,300)+"\n":""}${S.lang.toUpperCase()} · ${ver}\n${location.href}`;
+  track("aviso-error/"+(v.num||"")+"/"+(v.mode||v.name||""),"Aviso de error",true);
+  location.href=`mailto:aleiva@ucam.edu?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`;
+}
+function sheetReportCtx(explain){
+  const v=S.view||{}; const q=document.querySelector("main .qtext")||document.querySelector("main .deck > :last-child")||document.querySelector("main .card");
+  const qt=q?q.innerText.replace(/\s+/g," ").trim():"";
+  return {where:`${t("tema")} ${v.num||""} · ${v.mode?t("modes."+v.mode):""}`, text:(qt?qt+" | ":"")+(explain||"")};
+}
+
+/* --- buscador global --- */
+async function renderSearch(){
+  const q0=S.view.q||"";
+  app.innerHTML=header(t("searchAll"),true)+`<main>
+    <input class="search" id="gq" type="search" placeholder="${t("searchPh")}" autocomplete="off" value="${esc(q0)}">
+    <div class="counter" id="gcount">${t("searchLoading")}</div><div class="srch-res" id="gres"></div></main>`;
+  bindHeader(()=>nav({name:"home"}));
+  const inp0=document.getElementById("gq"); if(inp0&&!q0) inp0.focus();
+  const temas=[]; let enc={entries:[]};
+  try{ const idx=await getIndex(); for(const m of idx.temas){ if(m.available){ try{ temas.push(await getTema(m.num)); }catch(e){} } } }catch(e){}
+  try{ enc=await getEnc(); }catch(e){}
+  const inp=document.getElementById("gq"), res=document.getElementById("gres"), cnt=document.getElementById("gcount"); if(!inp) return;
+  const hl=(txt,qq)=>{ const n=norm(txt); const i=n.indexOf(qq); if(i<0) return esc(txt.slice(0,160))+(txt.length>160?"…":"");
+    const a=Math.max(0,i-70), e=Math.min(txt.length,i+qq.length+90);
+    return (a>0?"…":"")+esc(txt.slice(a,i))+"<mark>"+esc(txt.slice(i,i+qq.length))+"</mark>"+esc(txt.slice(i+qq.length,e))+(e<txt.length?"…":""); };
+  const plain=x=>String(x).replace(/\*+/g,"");
+  let tmr=null;
+  function paint(){
+    const raw=inp.value.trim(), qq=norm(raw); res.innerHTML="";
+    if(qq.length<3){ cnt.textContent=t("searchPh"); S.view.q=raw; return; }
+    const out=[]; const has=x=>norm(x).includes(qq);
+    for(const e of enc.entries||[]){ const title=L(e.name), body=plain(LL(e.body).join(" "));
+      const inT=has(e.name.es+" "+e.name.en), inB=has(body)||has(L(e.cuando));
+      if(inT||inB) out.push({score:inT?0:3,title,tag:t("sEnc"),meta:plain(L(e.cuando)),body:inT?"":body,go:()=>nav({name:"enc",id:e.id,back:{name:"search",q:raw}})}); }
+    for(const tm of temas){
+      (tm.fichas||[]).forEach(f=>{ const title=L(f.title), body=plain(LL(f.body).join(" "));
+        const inT=has(title), inB=has(body); if(inT||inB) out.push({score:inT?1:4,num:tm.num,title,tag:t("sFicha"),meta:`${t("tema")} ${tm.num} · ${f.sec} · ${f.code}`,body,go:()=>nav({name:"mode",num:tm.num,mode:"fichas",f:f.id,back:{name:"search",q:raw}})}); });
+      (tm.glossary||[]).forEach(g=>{ if(g.lang&&g.lang!==S.lang) return; const title=L(g.term), def=L(g.def);
+        if(has(title)||has(def)) out.push({score:has(title)?2:5,num:tm.num,title,tag:t("sGloss"),meta:`${t("tema")} ${tm.num}`,body:def,full:true}); });
+      (tm.timeline||[]).forEach(tl=>(tl.items||[]).forEach(it=>{ const lab=L(it.label);
+        if(has(lab)) out.push({score:5,num:tm.num,title:L(it.date)+" · "+lab,tag:t("sTime"),meta:`${t("tema")} ${tm.num} · ${L(tl.title)}`,body:"",go:()=>nav({name:"mode",num:tm.num,mode:"timeline",back:{name:"search",q:raw}})}); }));
+      (tm.videos||[]).forEach(vd=>{ const title=L(vd.title);
+        if(has(title)||has(L(vd.more||""))) out.push({score:6,num:tm.num,title:"▶ "+title,tag:t("sVid"),meta:`${t("tema")} ${tm.num}`,body:"",go:()=>nav({name:"mode",num:tm.num,mode:"videos",back:{name:"search",q:raw}})}); });
+    }
+    out.sort((x,y)=>x.score-y.score||(x.num||0)-(y.num||0));
+    cnt.textContent=out.length?t("searchRes",{n:out.length}):t("searchNone");
+    for(const r of out.slice(0,100)){ const b=document.createElement("button");
+      b.innerHTML=`<div class="tt">${esc(r.title)}</div><div class="mt"><b>${esc(r.tag)}</b> · ${esc(r.meta)}</div>${r.body?`<div class="sn">${r.full?esc(r.body):hl(r.body,qq)}</div>`:""}`;
+      if(r.go) b.onclick=r.go; else b.style.cursor="default"; res.appendChild(b); }
+    S.view.q=raw;
+  }
+  inp.oninput=()=>{ clearTimeout(tmr); tmr=setTimeout(paint,180); }; paint();
+}
+
+/* --- mapa conceptual --- */
+const MAP_COLORS=["#004379","#C77700","#2F6DB5","#8A5A00"];
+function modeMapa(tema,m,v){
+  const mp=tema.mapa; if(!mp){ m.innerHTML=`<div class="empty"><div class="ic">🧭</div>${t("soon")}</div>`; return; }
+  const seen=S.prog.seen[tema.id+".mapa"]||{};
+  m.innerHTML=`<div class="mtools"><button id="mAll">${t("mapOpen")}</button><button id="mNone">${t("mapClose")}</button></div>
+  <div class="mroot"><div class="k">${t("mapTema",{n:tema.num})}</div><h2>${esc(L(tema.title))}</h2><p>${md(L(mp.tesis))}</p></div>
+  <div class="mtree">${mp.ramas.map((r,ri)=>`<div class="rama" style="--rc:${MAP_COLORS[ri%MAP_COLORS.length]}" data-r="${ri}">
+    <button class="rh"><span class="chev">›</span><span class="code">${esc(r.code)}</span><b>${esc(L(r.t))}</b><p>${md(L(r.idea))}</p></button>
+    <div class="nodos">${r.nodos.map((n,ni)=>{const key=r.code+"."+ni;return `<div class="nodo ${seen[key]?"seen":""}" data-k="${key}">
+      <button class="nh"><i></i>${esc(L(n.t))}</button>
+      <div class="nd">${md(L(n.d))}${n.x?`<div class="mx"><div class="mxh">${t("mapMore")}</div>${(n.x[S.lang]||n.x.es).map(it=>`<div class="mxi"><span class="mxk mxk-${esc(it.k)}">${esc(t("mapK."+it.k))}</span>${md(it.v)}</div>`).join("")}</div>`:""}<div class="acts">${(n.fs||(n.f?[n.f]:[])).map(id=>{ const fi=(tema.fichas||[]).find(x=>x.id===id); return `<button data-f="${esc(id)}">📖 ${esc(fi?L(fi.title):t("mapFicha"))}</button>`; }).join("")}<button data-s="${esc(n.sec||r.code)}">${t("mapPractice")}</button></div></div></div>`}).join("")}</div></div>`).join("")}</div>
+  <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:6px">${t("mapHint")}</p>`;
+  m.querySelectorAll(".rama>.rh").forEach(b=>b.onclick=()=>b.parentElement.classList.toggle("open"));
+  m.querySelectorAll(".nodo>.nh").forEach(b=>b.onclick=()=>{ const n=b.parentElement; n.classList.toggle("open");
+    const k=n.dataset.k; if(!seen[k]){ seen[k]=1; markSeen(tema.id,"mapa",k); n.classList.add("seen"); addXP(2); checkBadge(tema,"mapa"); } });
+  m.querySelectorAll(".nd [data-f]").forEach(b=>b.onclick=()=>nav({name:"mode",num:tema.num,mode:"fichas",f:b.dataset.f,back:{name:"mode",num:tema.num,mode:"mapa"}}));
+  const has=(md,sec)=>(tema[md]||[]).some(x=>secMatch(x.sec,sec));
+  const bestMode=sec=>["quiz","cards","myths","sources","glossary"].find(md=>has(md,sec));
+  m.querySelectorAll(".nd [data-s]").forEach(b=>b.onclick=()=>{ let sec=b.dataset.s, md=bestMode(sec);
+    while(!md && sec.includes(".") && sec.split(".").length>2){ sec=sec.split(".").slice(0,-1).join("."); md=bestMode(sec); }
+    if(!md){ md="quiz"; sec=undefined; }
+    nav({name:"mode",num:tema.num,mode:md,sec,back:{name:"mode",num:tema.num,mode:"mapa"}}); });
+  document.getElementById("mAll").onclick=()=>m.querySelectorAll(".rama").forEach(r=>r.classList.add("open"));
+  document.getElementById("mNone").onclick=()=>m.querySelectorAll(".rama,.nodo").forEach(r=>r.classList.remove("open"));
+}
+
+/* --- cómo preparar el examen --- */
+async function renderExam(){
+  app.innerHTML=header(t("exam"),true)+`<main><div class="empty">…</div></main>`;
+  bindHeader(()=>nav({name:"home"}));
+  let X; try{ X=S.examCache||(S.examCache=await fetch("data/examen.json").then(r=>r.json())); }catch(e){ app.querySelector("main").innerHTML=`<div class="empty">${t("loadError")}</div>`; return; }
+  const G=X[S.lang]||X.es, ck=S.prog.examCheck||(S.prog.examCheck={});
+  const tab=tb=>`<table class="xtab"><tr>${tb.cab.map((c,i)=>`<th class="${/^[\d.,]+$/.test(tb.filas[0][i])?"n":""}">${esc(c)}</th>`).join("")}</tr>${tb.filas.map(f=>`<tr>${f.map(c=>`<td class="${/^[\d.,]+$/.test(c)?"n":""}">${esc(c)}</td>`).join("")}</tr>`).join("")}</table>`;
+  const sec=(s,i)=>`<details class="xsec" ${i===0?"open":""}><summary><span class="ic">${s.ic}</span>${esc(s.h)}</summary><div class="xb">
+    ${(s.p||[]).map(p=>`<p>${md(p)}</p>`).join("")}
+    ${s.tabla?tab(s.tabla):""}
+    ${s.aviso?`<div class="xnote">${md(s.aviso)}</div>`:""}
+    ${(s.pasos||[]).map(p=>`<div class="xstep"><div class="k">${esc(p.k)}<small>${esc(p.pts)}</small></div><div><b class="xt">${esc(p.t)}</b>${md(p.d)}</div></div>`).join("")}
+    ${s.ejemplo?`<div class="xex"><h4>${esc(s.ejemplo.h)}</h4><img src="img/t2/justa_pescadores.jpg" alt="" loading="lazy" onerror="this.remove()">${s.ejemplo.p.map(p=>`<p>${md(p)}</p>`).join("")}</div>`:""}
+    ${(s.fases||[]).map(f=>`<div class="xphase"><b class="xt">${esc(f.t)}</b>${md(f.d)}</div>`).join("")}
+    ${s.consejos?`<ul class="xtips">${s.consejos.map(c=>`<li>${md(c).replace(/<em>/g,"<b>").replace(/<\/em>/g,"</b>")}</li>`).join("")}</ul>`:""}
+  </div></details>`;
+  app.querySelector("main").innerHTML=`<div class="card" style="padding:14px 16px"><h2 style="font-size:20px">${esc(G.title)}</h2><p style="font-size:14.5px;line-height:1.55;margin-top:6px">${md(G.lead)}</p></div>
+    ${G.secciones.map(sec).join("")}
+    <div class="card xcheck"><div class="section-title" style="margin:0 0 4px">${esc(G.check.h)}</div>${G.check.items.map((it,i)=>`<label><input type="checkbox" data-i="${i}" ${ck[i]?"checked":""}><span>${esc(it)}</span></label>`).join("")}</div>`;
+  app.querySelectorAll(".xcheck input").forEach(c=>c.onchange=()=>{ ck[c.dataset.i]=c.checked?1:0; S.prog.examCheck=ck; save(); });
+}
+
+/* --- videos --- */
+
+
+/* --- pódcast --- */
+const POD={audio:null,ep:null,tema:null,saveT:0};
+function fmtT(x){ x=Math.max(0,Math.floor(x||0)); const h=Math.floor(x/3600), m=Math.floor(x%3600/60), s=x%60; return (h?h+":"+String(m).padStart(2,"0"):m)+":"+String(s).padStart(2,"0"); }
+function podState(id){ S.prog.pod=S.prog.pod||{}; return S.prog.pod[id]||(S.prog.pod[id]={t:0,done:0,rate:1}); }
+function podAudio(){
+  if(POD.audio) return POD.audio;
+  const a=new Audio(); a.preload="metadata"; POD.audio=a;
+  a.addEventListener("timeupdate",()=>{ if(!POD.ep) return; const st=podState(POD.ep.id); st.t=a.currentTime;
+    if(a.duration&&a.currentTime/a.duration>.95&&!st.done){ st.done=1; track("podcast/"+POD.ep.id+"/fin","Pódcast terminado",true); }
+    const now=Date.now(); if(now-POD.saveT>5000){ POD.saveT=now; save(); } podUI(); });
+  ["play","pause","ended","loadedmetadata"].forEach(ev=>a.addEventListener(ev,()=>{ if(ev==="ended"&&POD.ep){ podState(POD.ep.id).t=0; } save(); podUI(); }));
+  if("mediaSession" in navigator){ const ms=navigator.mediaSession;
+    ms.setActionHandler("play",()=>a.play()); ms.setActionHandler("pause",()=>a.pause());
+    ms.setActionHandler("seekbackward",()=>{ a.currentTime=Math.max(0,a.currentTime-15); });
+    ms.setActionHandler("seekforward",()=>{ a.currentTime=Math.min(a.duration||1e9,a.currentTime+30); });
+    try{ ms.setActionHandler("seekto",d=>{ a.currentTime=d.seekTime; }); }catch(e){} }
+  document.getElementById("pbP").onclick=()=>{ a.paused?a.play():a.pause(); };
+  document.getElementById("pbB").onclick=()=>{ a.currentTime=Math.max(0,a.currentTime-15); };
+  document.getElementById("pbX").onclick=()=>{ a.pause(); if(POD.ep){ podState(POD.ep.id).t=a.currentTime; save(); } POD.ep=null; a.removeAttribute("src"); a.load(); podUI(); };
+  document.getElementById("pbT").onclick=()=>{ if(POD.tema) nav({name:"mode",num:POD.tema,mode:"podcast"}); };
+  return a;
+}
+function podPlay(tema,ep){
+  const a=podAudio(); const st=podState(ep.id);
+  if(!POD.ep||POD.ep.id!==ep.id){ POD.ep=ep; POD.tema=tema.num; a.src=L(ep.src); a.currentTime=0;
+    a.addEventListener("loadedmetadata",function f(){ a.removeEventListener("loadedmetadata",f); if(st.t&&st.t<(a.duration||1e9)-5) a.currentTime=st.t; },{once:true});
+    track("podcast/"+ep.id+"/"+S.lang,"Pódcast "+ep.id,true);
+    if("mediaSession" in navigator) navigator.mediaSession.metadata=new MediaMetadata({title:L(ep.title),artist:"Historiapp · "+t("tema")+" "+tema.num,album:"Historia del Deporte",artwork:[{src:"icons/icon-512.png?v=2",sizes:"512x512",type:"image/png"},{src:"icons/icon-192.png?v=2",sizes:"192x192",type:"image/png"}]}); }
+  a.playbackRate=st.rate||1; a.play().catch(()=>{}); podUI();
+}
+function podUI(){
+  const a=POD.audio, bar=document.getElementById("podbar"); if(!bar) return;
+  document.body.classList.toggle("podon",!!(a&&POD.ep));
+  if(!a||!POD.ep){ bar.classList.remove("on"); } else { bar.classList.add("on");
+    document.getElementById("pbT").innerHTML=`${esc(L(POD.ep.title))}<small>${fmtT(a.currentTime)} / ${fmtT(a.duration||POD.ep.dur)}</small>`;
+    document.getElementById("pbP").textContent=a.paused?"▶":"❚❚"; }
+  document.querySelectorAll(".pod[data-id]").forEach(c=>{ const id=c.dataset.id, st=podState(id), cur=POD.ep&&POD.ep.id===id&&a;
+    const dur=+c.dataset.dur, t0=cur?a.currentTime:st.t, d=cur&&a.duration?a.duration:dur;
+    const r=c.querySelector("input[type=range]"); if(r&&!r._drag){ r.max=d; r.value=t0; }
+    c.querySelector(".t0").textContent=fmtT(t0); c.querySelector(".t1").textContent=st.done&&!cur?t("pDone"):t("pLeft",{m:Math.max(1,Math.round((d-t0)/60))});
+    c.querySelector(".main").textContent= cur&&!a.paused ? t("pPause") : (t0>5?t("pResume"):t("pListen"));
+    c.querySelectorAll(".spd button").forEach(b=>b.classList.toggle("on",+b.dataset.r===(st.rate||1))); });
+}
+document.addEventListener("play",e=>{ if(e.target&&e.target.tagName==="VIDEO"&&POD.audio&&!POD.audio.paused) POD.audio.pause(); },true);
+function modePodcast(tema,mode,m){
+  const eps=modeIdxs(tema,mode).map(i=>{ const e=tema.podcast[i]; if(e.durs&&e.durs[S.lang]) return Object.assign({},e,{id:S.lang==="es"?e.id:e.id+"_"+S.lang,dur:e.durs[S.lang],lang:S.lang}); return e; });
+  m.innerHTML=eps.map(ep=>`<div class="pod" data-id="${esc(ep.id)}" data-dur="${ep.dur}">
+    <div class="ph"><img src="icons/icon-192.png?v=2" alt=""><div><b>${esc(L(ep.title))}</b><span>${t("tema")} ${tema.num} · ${t("pMin",{m:Math.round(ep.dur/60)})}${ep.lang&&ep.lang!==S.lang?` · ${esc(ep.lang.toUpperCase())}`:""}</span></div></div>
+    ${L(ep.desc)?`<p class="desc">${md(L(ep.desc))}</p>`:""}
+    ${ep.lang&&ep.lang!==S.lang&&t("pEsOnly")?`<p class="note">${t("pEsOnly")}</p>`:""}
+    <input type="range" min="0" step="1" value="0"><div class="tm"><span class="t0">0:00</span><span class="t1"></span></div>
+    <div class="ctl"><button data-a="b">−15</button><button class="main" data-a="p"></button><button data-a="f">+30</button></div>
+    <div class="spd">${t("pSpeed")} ${[1,1.25,1.5,1.75].map(r=>`<button data-r="${r}">${String(r).replace(".",",")}×</button>`).join("")}</div>
+  </div>`).join("")+`<p class="note" style="text-align:center;margin:12px 8px">🔒 ${t("pBg")}</p>`;
+  m.querySelectorAll(".pod").forEach(c=>{ const ep=eps.find(e=>e.id===c.dataset.id), st=podState(ep.id);
+    const isCur=()=>POD.ep&&POD.ep.id===ep.id&&POD.audio;
+    c.querySelector('[data-a="p"]').onclick=()=>{ if(isCur()&&!POD.audio.paused) POD.audio.pause(); else podPlay(tema,ep); };
+    c.querySelector('[data-a="b"]').onclick=()=>{ if(isCur()) POD.audio.currentTime=Math.max(0,POD.audio.currentTime-15); else { st.t=Math.max(0,st.t-15); save(); podUI(); } };
+    c.querySelector('[data-a="f"]').onclick=()=>{ if(isCur()) POD.audio.currentTime+=30; else { st.t=Math.min(ep.dur-5,st.t+30); save(); podUI(); } };
+    const r=c.querySelector("input[type=range]");
+    r.oninput=()=>{ r._drag=true; c.querySelector(".t0").textContent=fmtT(+r.value); };
+    r.onchange=()=>{ r._drag=false; if(isCur()) POD.audio.currentTime=+r.value; else { st.t=+r.value; save(); } podUI(); };
+    c.querySelectorAll(".spd button").forEach(b=>b.onclick=()=>{ st.rate=+b.dataset.r; if(isCur()) POD.audio.playbackRate=st.rate; save(); podUI(); });
+  });
+  podUI();
+}
+
+/* --- vídeos en feed --- */
+function videoAnswer(tema,v,k,box){
+  const q=L(v.q), ok=k===q.a; track("video-test/"+v.id+"/"+(ok?"acierto":"fallo"),"Test vídeo "+v.id,true);
+  box.querySelectorAll(".opt").forEach(x=>{ x.disabled=true; const j=+x.dataset.k; if(j===q.a) x.classList.add("ok"); else if(j===k) x.classList.add("ko"); });
+  const first=!S.prog.seen[tema.id+".videoq"]||!S.prog.seen[tema.id+".videoq"][v.id];
+  if(ok&&first){ addXP(10); markSeen(tema.id,"videoq",v.id); toast(t("vOk",{n:10*(S.xpMult||1)})); } else if(!ok) toast(t("vKo"));
+  const seen=S.prog.seen[tema.id+".videos"]||{}; if(!seen[v.id]) markSeen(tema.id,"videos",v.id);
+  return ok;
+}
+function openFeed(tema,idxs,start,onClose){
+  if(POD.audio&&!POD.audio.paused) POD.audio.pause();
+  const vs=tema.videos; const answered=()=>S.prog.seen[tema.id+".videoq"]||{};
+  const fd=document.createElement("div"); fd.className="feed";
+  fd.innerHTML=`<div class="fscroll">${idxs.map((i,n)=>{ const v=vs[i]; return `<section class="fitem" data-n="${n}" style="background-image:url('${esc(L(v.poster))}')">
+      <div class="fcenter"><span></span></div>
+      <div class="fside"><button data-a="more"><b>📖</b>${t("vMoreB")}</button>${L(v.q)&&L(v.q).q?`<button data-a="test" class="${answered()[v.id]?"done":""}"><b>${answered()[v.id]?"✓":"❓"}</b>${t("vTestB")}</button>`:""}</div>
+      <div class="fcap">${esc(L(v.title))}<small>${t("tema")} ${tema.num} · ${n+1}/${idxs.length}</small></div>
+      <div class="fbar"><i></i></div></section>`; }).join("")}
+      <section class="fend"><div style="font-size:40px">🏁</div><b style="font-size:18px">${t("vEnd")}</b><button class="btn" id="fEndBack">${t("vClose")}</button></section></div>
+    <div class="ftop"><button id="fClose">✕ ${t("vClose")}</button><span class="fc" id="fCount"></span></div>
+    <div class="fsheet" id="fSheet"></div>`;
+  document.body.appendChild(fd); document.body.classList.add("feedon");
+  const sc=fd.querySelector(".fscroll"), items=[...fd.querySelectorAll(".fitem")], sh=fd.querySelector("#fSheet");
+  const vid=document.createElement("video"); vid.playsInline=true; vid.setAttribute("playsinline",""); vid.preload="auto";
+  const pre=document.createElement("video"); pre.preload="auto"; pre.muted=true;
+  let cur=-1, tracked={};
+  const hint=(txt,ms)=>{ const sp=items[cur]&&items[cur].querySelector(".fcenter span"); if(!sp) return; sp.textContent=txt; sp.classList.add("on"); clearTimeout(hint.t); if(ms) hint.t=setTimeout(()=>sp.classList.remove("on"),ms); };
+  const tryPlay=()=>{ vid.play().then(()=>{ if(!vid.muted) return; hint("🔇 "+t("vTap")); }).catch(()=>{ vid.muted=true; vid.play().then(()=>hint("🔇 "+t("vTap"))).catch(()=>hint("▶")); }); };
+  function activate(n){
+    if(n===cur||n<0||n>=items.length) return; cur=n; closeSh();
+    const v=vs[idxs[n]]; items[n].insertBefore(vid,items[n].firstChild);
+    vid.src=L(v.src); vid.poster=L(v.poster); vid.currentTime=0; tryPlay();
+    fd.querySelector("#fCount").textContent=`${n+1}/${items.length}`;
+    if(idxs[n+1]!=null){ pre.src=L(vs[idxs[n+1]].src); pre.load(); }
+    if(!tracked[v.id]){ tracked[v.id]=1; track("video/"+v.id+"/"+S.lang,"Vídeo "+v.id,true); }
+  }
+  const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting&&e.intersectionRatio>=.6){ if(e.target.classList.contains("fend")){ vid.pause(); cur=-1; fd.querySelector("#fCount").textContent=""; } else activate(+e.target.dataset.n); } }),{root:sc,threshold:[.6]});
+  items.forEach(it=>io.observe(it)); io.observe(fd.querySelector(".fend"));
+  vid.addEventListener("timeupdate",()=>{ const b=items[cur]&&items[cur].querySelector(".fbar i"); if(b&&vid.duration) b.style.width=(vid.currentTime/vid.duration*100)+"%"; });
+  vid.addEventListener("ended",()=>{ const v=vs[idxs[cur]]; const seen=S.prog.seen[tema.id+".videos"]||{}; if(!seen[v.id]) markSeen(tema.id,"videos",v.id);
+    const q=L(v.q); if(q&&q.q&&!answered()[v.id]) showTest(true); else showNextOnly(); });
+  sc.addEventListener("click",e=>{ if(e.target.closest(".fside")||e.target.closest(".fend")) return; if(sh.classList.contains("show")){ closeSh(); return; }
+    if(vid.muted){ vid.muted=false; if(vid.paused) vid.play().catch(()=>{}); hint("🔊",700); return; }
+    if(vid.paused){ vid.play().catch(()=>{}); hint("▶",500); } else { vid.pause(); hint("❚❚"); } });
+  function closeSh(){ sh.classList.remove("show"); }
+  function goNext(){ closeSh(); const nx=items[cur+1]||fd.querySelector(".fend"); nx.scrollIntoView({behavior:"smooth"}); }
+  function showMore(){ const v=vs[idxs[cur]]; vid.pause();
+    sh.innerHTML=`<h3>${t("vMore")}</h3>${String(L(v.more)).split(/\n+/).map(p=>`<p>${md(p)}</p>`).join("")}<div class="row2"><button class="btn sec" id="fsX">${t("close")}</button></div>`;
+    sh.classList.add("show"); sh.querySelector("#fsX").onclick=()=>{ closeSh(); vid.play().catch(()=>{}); }; }
+  function showTest(fromEnd){ const v=vs[idxs[cur]], q=L(v.q); if(!(q&&q.q)) return; if(!fromEnd) vid.pause();
+    sh.innerHTML=`<h3>${t("vTest")}</h3><div class="qq">${esc(q.q)}</div><div class="opts">${q.opts.map((o,k)=>`<button class="opt" data-k="${k}"><span class="k">${"ABCD"[k]}</span><span>${esc(o)}</span></button>`).join("")}</div>
+      <div class="row2"><button class="btn sec" id="fsX">${t("close")}</button><button class="btn" id="fsN">${t("vNext")}</button></div>`;
+    sh.classList.add("show");
+    sh.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ videoAnswer(tema,v,+b.dataset.k,sh); const tb=items[cur].querySelector('[data-a="test"]'); if(tb){ tb.classList.add("done"); tb.querySelector("b").textContent="✓"; } });
+    sh.querySelector("#fsX").onclick=closeSh; sh.querySelector("#fsN").onclick=goNext; }
+  function showNextOnly(){ sh.innerHTML=`<div class="row2"><button class="btn sec" id="fsR">↺</button><button class="btn" id="fsN">${t("vNext")}</button></div>`; sh.classList.add("show");
+    sh.querySelector("#fsR").onclick=()=>{ closeSh(); vid.currentTime=0; vid.play().catch(()=>{}); }; sh.querySelector("#fsN").onclick=goNext; }
+  fd.querySelectorAll(".fside button").forEach(b=>b.onclick=e=>{ e.stopPropagation(); if(b.dataset.a==="more") showMore(); else showTest(false); });
+  const close=()=>{ io.disconnect(); vid.pause(); vid.removeAttribute("src"); pre.removeAttribute("src"); fd.remove(); document.body.classList.remove("feedon"); onClose&&onClose(); };
+  fd.querySelector("#fClose").onclick=close; fd.querySelector("#fEndBack").onclick=close;
+  requestAnimationFrame(()=>{ items[start].scrollIntoView(); activate(start); });
+}
+
+function modeVideos(tema,mode,m){
+  const idxs=modeIdxs(tema,mode), vs=tema.videos, seen=S.prog.seen[tema.id+".videos"]||{};
+  const list=()=>{
+    m.innerHTML=`<button class="vfeedbtn" id="vFeed"><span class="vfwrap"><span class="vfph"><i></i><i></i></span><span class="vfhand">👆</span></span><span class="vft"><b>${t("vFeed")}</b><small>${t("vFeedSub")}</small></span><span class="vfgo">›</span></button><div class="vlist">${idxs.map(i=>{const v=vs[i];return `<button class="vcard" data-i="${i}"><img loading="lazy" src="${esc(L(v.poster))}" alt=""><div class="vt">${esc(L(v.title))}</div><div class="vs ${seen[v.id]?"on":""}">${seen[v.id]?t("vSeen"):t("vNew")}</div></button>`}).join("")}</div>`;
+    m.querySelectorAll(".vcard").forEach(b=>b.onclick=()=>open(+b.dataset.i));
+    const fb=m.querySelector("#vFeed"); if(fb) fb.onclick=()=>{ const st=Math.max(0,idxs.findIndex(i=>!(S.prog.seen[tema.id+".videos"]||{})[vs[i].id])); openFeed(tema,idxs,st,()=>{ Object.assign(seen,S.prog.seen[tema.id+".videos"]||{}); list(); }); };
+  };
+  const open=i=>{
+    const v=vs[i], q=L(v.q);
+    m.innerHTML=`<div class="vwrap"><div class="vplayer"><video controls playsinline preload="metadata" poster="${esc(L(v.poster))}" src="${esc(L(v.src))}"></video></div>
+      <div class="vmore"><h3>${t("vMore")}</h3>${md(L(v.more))}</div>
+      ${q&&q.q?`<div class="vtest"><h3>${t("vTest")}</h3><div class="qq">${esc(q.q)}</div><div class="opts">${q.opts.map((o,k)=>`<button class="opt" data-k="${k}"><span class="k">${"ABCD"[k]}</span><span>${esc(o)}</span></button>`).join("")}</div></div>`:""}
+      <button class="btn ghost" id="vBack">${t("vAll")}</button></div>`;
+    const vid=m.querySelector("video"); vid.play().catch(()=>{}); let played=false; vid.addEventListener("play",()=>{ if(!played){ played=true; track("video/"+v.id+"/"+S.lang,"Vídeo "+v.id,true); } });
+    vid.addEventListener("ended",()=>{ if(!seen[v.id]){ markSeen(tema.id,"videos",v.id); seen[v.id]=1; } });
+    m.querySelectorAll(".vtest .opt").forEach(b=>b.onclick=()=>{
+      const k=+b.dataset.k, ok=k===q.a; track("video-test/"+v.id+"/"+(ok?"acierto":"fallo"),"Test vídeo "+v.id,true);
+      m.querySelectorAll(".vtest .opt").forEach(x=>{ x.disabled=true; const j=+x.dataset.k; if(j===q.a) x.classList.add("ok"); else if(j===k) x.classList.add("ko"); });
+      const first=!S.prog.seen[tema.id+".videoq"]||!S.prog.seen[tema.id+".videoq"][v.id];
+      if(ok&&first){ addXP(10); markSeen(tema.id,"videoq",v.id); toast(t("vOk",{n:10*(S.xpMult||1)})); } else if(!ok) toast(t("vKo"));
+      if(!seen[v.id]){ markSeen(tema.id,"videos",v.id); seen[v.id]=1; }
+    });
+    m.querySelector("#vBack").onclick=()=>{ vid.pause(); list(); window.scrollTo(0,0); };
+    window.scrollTo(0,0);
+  };
+  list();
+}
+
+/* --- margen superior seguro (iPhone) --- */
+function fixSafeTop(){ try{
+  const d=document.createElement("div"); d.style.cssText="position:fixed;top:0;left:0;width:1px;height:env(safe-area-inset-top,0px);visibility:hidden;pointer-events:none";
+  document.body.appendChild(d); let h=d.getBoundingClientRect().height; d.remove();
+  const ios=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
+  const standalone=navigator.standalone===true||matchMedia("(display-mode: standalone)").matches;
+  const portrait=innerHeight>innerWidth, H=Math.max(screen.height,screen.width);
+  document.documentElement.style.setProperty("--safe-top",h+"px");
+}catch(e){} }
+fixSafeTop(); addEventListener("orientationchange",()=>setTimeout(fixSafeTop,300)); addEventListener("resize",()=>setTimeout(fixSafeTop,300));
+/* ============ boot ============ */
+(function(){
+  let l=null; try{ l=localStorage.getItem("historiapp.lang"); }catch(e){}
+  if(l){ S.lang=l; document.documentElement.lang=l; S.view=hashToView(location.hash); } else { S.view={name:"gate"}; S.pending=location.hash||null; }
+  render();
+  const sp=document.getElementById("splash");
+  if(sp){ let done=false; const hide=()=>{ if(done) return; done=true; sp.classList.add("out"); setTimeout(()=>sp.remove(),650); };
+    sp.onclick=hide; setTimeout(hide,1800); }
+  if("serviceWorker" in navigator){
+    const hadCtrl=!!navigator.serviceWorker.controller; let pend=false, done=false;
+    const busy=()=>(typeof POD!=="undefined"&&POD.audio&&!POD.audio.paused)||document.body.classList.contains("feedon")||[...document.querySelectorAll("video")].some(v=>!v.paused);
+    const reloadNow=()=>{ if(done) return; done=true; try{ sessionStorage.setItem("historiapp.updated","1"); }catch(e){} location.reload(); };
+    navigator.serviceWorker.addEventListener("controllerchange",()=>{ if(!hadCtrl) return; if(busy()) pend=true; else reloadNow(); });
+    navigator.serviceWorker.register("sw.js").then(reg=>{
+      window.checkUpdate=()=>{ reg.update().catch(()=>{}); };
+      document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="visible") checkUpdate(); else if(pend) reloadNow(); });
+      setInterval(()=>{ if(pend&&!busy()) reloadNow(); },15000);
+    }).catch(()=>{});
+    try{ if(sessionStorage.getItem("historiapp.updated")){ sessionStorage.removeItem("historiapp.updated"); setTimeout(()=>toast(S.lang==="en"?"Historiapp has been updated":"Historiapp se ha actualizado",2200),2000); } }catch(e){}
+  }
+})();
+</script>
+</body>
+</html>

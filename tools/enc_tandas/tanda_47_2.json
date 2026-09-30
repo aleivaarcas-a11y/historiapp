@@ -1,0 +1,1220 @@
+[
+ {
+  "id": "hurling",
+  "name": {
+   "es": "Hurling",
+   "en": "Hurling"
+  },
+  "bloque": {
+   "es": "Con stick o mazo",
+   "en": "Stick and mallet sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Irlanda, época medieval o anterior; reglas modernas, Gaelic Athletic Association, Thurles, 1884",
+   "en": "Ireland, medieval period or earlier; modern rules, Gaelic Athletic Association, Thurles, 1884"
+  },
+  "body": {
+   "es": [
+    "El hurling y el shinty escocés proceden de un mismo juego gaélico, el de impulsar una pelota (*iomáin*) con un palo curvo (*camán*), términos que aparecen en antiguos textos legales y en obras literarias como la leyenda de Cú Chulainn, y fueron misioneros irlandeses quienes lo llevaron a Escocia (Hardy y Holman, 2018, cap. 2). La GAA (s. f.) afirma que el juego se practica en Irlanda desde hace al menos tres mil años y que las leyes brehon preveían compensaciones por los accidentes y las lesiones causadas en él; Guttmann (2004, p. 289) recuerda, en cambio, que esa antigüedad se atribuye a Cú Chulainn y a otros héroes míticos, y Hardy y Holman (2018, cap. 2) advierten que ni las leyes que prohibían el *horlinge* ni las fuentes literarias permiten saber cómo se jugaba.",
+    "Según la GAA (s. f.), el hurling sobrevivió a las prohibiciones medievales y prosperó hasta comienzos del siglo XIX gracias al patrocinio de los terratenientes, pero en la época de la Gran Hambruna (1846-1849) había decaído tanto que corría peligro de desaparecer, aunque a finales de la década de 1850 volvía a jugarse en todo Munster. Michael Cusack empezó a escribir en 1882 sobre la necesidad de recuperarlo con reglas comunes, y el 1 de noviembre de 1884 se reunió con otros seis nacionalistas en el Hayes Hotel de Thurles y fundó la Gaelic Athletic Association, con el apoyo del arzobispo Thomas Croke y de Michael Davitt (Guttmann, 2004, p. 289). Como el shinty, el hurling fue codificado por clubes y asociaciones en las tres últimas décadas del siglo XIX (Hardy y Holman, 2018, cap. 2).",
+    "La función del hurling moderno fue desde el principio identitaria, puesto que la GAA lo presentó como expresión auténtica de lo irlandés frente al críquet y a los deportes ingleses, excluyó de sus filas a quienes practicaban juegos modernos y reservó el domingo tras la misa para sus partidos (Guttmann, 2004, p. 289). Pronto la controló la Irish Republican Brotherhood, que negó la entrada a soldados y policías, y en noviembre de 1920 soldados británicos irrumpieron en Croke Park durante un partido entre Dublín y Tipperary y mataron a varias personas, entre ellas el capitán de Tipperary, Michael Hogan (Guttmann, 2004, p. 289). Tras la independencia la GAA mantuvo la defensa de la autonomía cultural irlandesa, si bien Guttmann (2004, p. 290) juzga difícil que los deportes tradicionales resistan el avance del fútbol."
+   ],
+   "en": [
+    "Hurling and Scottish shinty derive from the same Gaelic game of driving a ball (*iomáin*) with a curved stick (*camán*), terms that appear in early legal texts and in literary works such as the legend of Cú Chulainn, and it was Irish missionaries who took it to Scotland (Hardy & Holman, 2018, ch. 2). The GAA (n.d.) states that the game has been played in Ireland for at least three thousand years and that the Brehon Laws provided compensation for accidents and injuries caused in it; Guttmann (2004, p. 289) notes, by contrast, that this antiquity is attributed to Cú Chulainn and other mythic heroes, and Hardy and Holman (2018, ch. 2) warn that neither the laws that prohibited *horlinge* nor the literary sources reveal how it was played.",
+    "According to the GAA (n.d.), hurling survived medieval prohibitions and flourished until the early nineteenth century thanks to the patronage of landlords, but by the time of the Great Famine (1846-1849) it had declined so much that it was in danger of dying out, although by the late 1850s it was again being played throughout Munster. Michael Cusack began writing in 1882 about the need to revive it with common rules, and on 1 November 1884 he met six other nationalists at Hayes Hotel in Thurles and founded the Gaelic Athletic Association, with the support of Archbishop Thomas Croke and Michael Davitt (Guttmann, 2004, p. 289). Like shinty, hurling was codified by clubs and associations in the last three decades of the nineteenth century (Hardy & Holman, 2018, ch. 2).",
+    "The function of modern hurling was from the outset a matter of identity, since the GAA presented it as an authentic expression of Irishness against cricket and English sports, excluded those who played modern games from its ranks and set aside Sunday after mass for its matches (Guttmann, 2004, p. 289). It was soon controlled by the Irish Republican Brotherhood, which denied membership to soldiers and policemen, and in November 1920 British soldiers stormed Croke Park during a game between Dublin and Tipperary and killed several people, among them the Tipperary captain, Michael Hogan (Guttmann, 2004, p. 289). After independence the GAA kept up the defence of Irish cultural autonomy, although Guttmann (2004, p. 290) doubts that traditional sports can withstand the advance of football."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/hurling.jpg",
+   "pie": {
+    "es": "Partido de hurling entre los DC Gaels y los Shamrocks en los Gaelic Games de Filadelfia (Estados Unidos), 2007.",
+    "en": "Hurling match between DC Gaels and Shamrocks at the Gaelic Games in Philadelphia (United States), 2007."
+   },
+   "autor": "Jeff Meade",
+   "licencia": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Hurling_game_Philadelphia_USA_2007.jpg"
+  },
+  "refs": [
+   "GAA. (s. f.). *Hurling: History and evolution*. Recuperado el 29 de septiembre de 2026 de https://www.gaa.ie/my-gaa/getting-involved/hurling-history-and-evolution",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Hardy, S., y Holman, A. C. (2018). *Hockey: A global history*. University of Illinois Press."
+  ],
+  "refs_en": [
+   "GAA. (n.d.). *Hurling: History and evolution*. Retrieved September 29, 2026, from https://www.gaa.ie/my-gaa/getting-involved/hurling-history-and-evolution",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Hardy, S., & Holman, A. C. (2018). *Hockey: A global history*. University of Illinois Press."
+  ]
+ },
+ {
+  "id": "hornussen",
+  "name": {
+   "es": "Hornussen",
+   "en": "Hornussen"
+  },
+  "bloque": {
+   "es": "Con stick o mazo",
+   "en": "Stick and mallet sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Emental (cantón de Berna, Suiza), primera mención en 1625; federación, Burgdorf, 1902",
+   "en": "Emmental (canton of Bern, Switzerland), first mentioned in 1625; federation, Burgdorf, 1902"
+  },
+  "body": {
+   "es": [
+    "El hornussen es un juego campesino suizo que probablemente nació en el Emental, en el cantón de Berna, donde aparece mencionado por primera vez en 1625 (Federal Office of Culture, s. f.). Las primeras noticias escritas proceden de libros eclesiásticos de los siglos XVI y XVII, y en ellas el juego aparece como objeto de reprensión, como en el tribunal consistorial (*Chorgericht*) de Lauperswil, que lo reprendió porque los jugadores se entregaban a él durante la catequesis (*Kinderlehre*) (Eidgenössischer Hornusserverband [EHV], s. f.). El primer partido de competición conocido se disputó en Trub, también en el Emental, en 1655 (EHV, s. f.).",
+    "El juego enfrenta a dos equipos que se turnan en el golpeo y en la defensa. El bateador lanza desde un soporte, con un palo flexible, un pequeño disco llamado *Nouss* hacia el campo contrario, y los defensores intentan detenerlo en el aire con *Schindeln*, tablas en forma de pala que sostienen en alto o lanzan al paso del disco (Federal Office of Culture, s. f.). Jeremias Gotthelf lo describió en su novela *Uli der Knecht* como parte de la vida de las comunidades rurales bernesas (Federal Office of Culture, s. f.), y a lo largo del siglo XIX se jugó con gran pasión, hasta el punto de que la federación de gimnasia lo incluyó ya en la primera fiesta federal de lucha y juegos alpinos (EHV, s. f.).",
+    "La Eidgenössischer Hornusserverband, la federación suiza, se fundó en 1902 en Burgdorf y reunió en su primer año a veinticuatro sociedades y unos seiscientos jugadores; en 2011 tenía registrados 171 clubes, concentrados en los cantones de Berna, Soleura y Argovia (Federal Office of Culture, s. f.). El hornussen ha conservado su carácter de deporte rural y de expresión de la identidad del campo suizo, y la Oficina Federal de Cultura lo incluye en su inventario de tradiciones vivas de Suiza. Durante siglos lo practicaron solo hombres, si bien en los últimos años mujeres y niñas se han incorporado a los equipos en pie de igualdad (Federal Office of Culture, s. f.)."
+   ],
+   "en": [
+    "Hornussen is a Swiss peasant game that was probably born in the Emmental, in the canton of Bern, where it was first mentioned in 1625 (Federal Office of Culture, n.d.). The first written records come from church books of the sixteenth and seventeenth centuries, where the game appears as an object of reproof, as in the consistorial court (*Chorgericht*) of Lauperswil, which reproved it because the players indulged in it during catechism (*Kinderlehre*) (Eidgenössischer Hornusserverband [EHV], n.d.). The first known competitive match was played in Trub, also in the Emmental, in 1655 (EHV, n.d.).",
+    "The game pits two teams against each other, taking turns at striking and defending. The batter strikes a small puck called the *Nouss* from a stand with a flexible stick towards the opponents' field, and the defenders try to stop it in the air with *Schindeln*, shovel-shaped boards that they hold up or throw into its path (Federal Office of Culture, n.d.). Jeremias Gotthelf described it in his novel *Uli der Knecht* as part of the life of Bernese rural communities (Federal Office of Culture, n.d.), and throughout the nineteenth century it was played with great passion, to the point that the gymnastics federation included it in the very first federal festival of wrestling and Alpine games (EHV, n.d.).",
+    "The Eidgenössischer Hornusserverband, the Swiss federation, was founded in 1902 in Burgdorf and in its first year brought together twenty-four societies and some six hundred players; by 2011 it had 171 registered clubs, concentrated in the cantons of Bern, Solothurn and Aargau (Federal Office of Culture, n.d.). Hornussen has kept its character as a rural sport and an expression of the identity of the Swiss countryside, and the Federal Office of Culture includes it in its inventory of the country's living traditions. For centuries it was played only by men, although in recent years women and girls have joined the teams on an equal footing (Federal Office of Culture, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/hornussen.jpg",
+   "pie": {
+    "es": "Jugadores de la Hornussergesellschaft Zollikofen en la Fiesta Federal de Hornussen de Frauenfeld (2000), con las palas levantadas para señalar la trayectoria del *nouss*.",
+    "en": "Players of the Hornussergesellschaft Zollikofen at the Federal Hornussen Festival in Frauenfeld (2000), holding up their boards to signal the flight of the *nouss*."
+   },
+   "autor": "Urs Vonhuben",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Hornussen_catching.jpg"
+  },
+  "refs": [
+   "Eidgenössischer Hornusserverband. (s. f.). *Hornussen*. Recuperado el 29 de septiembre de 2026 de https://ehv.ch/hornussen/",
+   "Federal Office of Culture. (s. f.). *Hornussen*. Lebendige Traditionen in der Schweiz. Recuperado el 29 de septiembre de 2026 de https://www.lebendige-traditionen.ch/tradition/en/home/traditions/hornussen.html"
+  ],
+  "refs_en": [
+   "Eidgenössischer Hornusserverband. (n.d.). *Hornussen*. Retrieved September 29, 2026, from https://ehv.ch/hornussen/",
+   "Federal Office of Culture. (n.d.). *Hornussen*. Living Traditions in Switzerland. Retrieved September 29, 2026, from https://www.lebendige-traditionen.ch/tradition/en/home/traditions/hornussen.html"
+  ]
+ },
+ {
+  "id": "golf",
+  "name": {
+   "es": "Golf",
+   "en": "Golf"
+  },
+  "bloque": {
+   "es": "Con stick o mazo",
+   "en": "Stick and mallet sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Escocia, primera mención en 1457; primeras reglas escritas, Leith (Edimburgo), 1744",
+   "en": "Scotland, first mentioned in 1457; first written rules, Leith (Edinburgh), 1744"
+  },
+  "body": {
+   "es": [
+    "El golf fue uno de los muchos juegos de palo y bola que se practicaban en Escocia desde la Edad Media, con equivalentes en los Países Bajos, Alemania, Francia e Italia, y su primera mención escocesa es la ley del Parlamento del 6 de marzo de 1457, que ordenaba condenar el fútbol y el golf y organizar exhibiciones de tiro con arco, prohibición repetida en 1471 y 1491 (National Library of Scotland, s. f.-a). Guttmann (2004, p. 100) hace derivar el juego del *kolf* medieval neerlandés, que se jugaba sobre los canales helados, y concluye con Herbert Warren Wind que los escoceses fueron los primeros en golpear una bola con varios palos hasta meterla en un hoyo; Hardy y Holman (2018, cap. 2) advierten, en cambio, que las primeras menciones del *kolf* o del golf no se refieren necesariamente a nada parecido al juego moderno.",
+    "Las prohibiciones afectaban al juego del pueblo llano, que se disputaba en espacios cerrados como los cementerios y a horas en que debía estar en el trabajo, en la iglesia o en la instrucción militar, mientras reyes y nobles adoptaban un juego largo en espacios abiertos, con material artesanal caro, bajo cuyo patrocinio surgieron los recorridos fijos, el equipo especializado y el vocabulario propio, en campos casi siempre costeros del este de Escocia (National Library of Scotland, s. f.-b). En marzo de 1744 varios golfistas pidieron al ayuntamiento de Edimburgo un palo de plata como premio para una competición anual en Leith, y para organizarla formaron la Company of Gentlemen Golfers y redactaron trece artículos, las reglas escritas más antiguas que se conocen (National Library of Scotland, s. f.-c).",
+    "La sociedad de golfistas de St Andrews se fundó el 14 de mayo de 1754 con la primera competición por el Silver Club y desde finales del siglo XIX pasó a ser considerada autoridad rectora del juego (The R&A, s. f.-a), creó en 1897 su comité de reglas y en 1952 publicó con la USGA el primer código unificado (The R&A, s. f.-b). El golf conservó un marcado carácter de distinción social, y aunque los hombres ayudaron a fundar la Ladies' Golf Union en 1893, el club de St Andrews le negó en 1901 la celebración de su torneo y solo cedió siete años después, reservando a los varones los vestuarios y el salón (Guttmann, 1991, pp. 121-122). Fue olímpico en 1900, con prueba femenina, y en 1904, y el Comité Olímpico Internacional lo recuperó en 2009 para los Juegos de 2016 (International Golf Federation, s. f.)."
+   ],
+   "en": [
+    "Golf was one of the many stick-and-ball games played in Scotland from the Middle Ages, with equivalents in the Low Countries, Germany, France and Italy, and its first Scottish mention is the Act of Parliament of 6 March 1457, which ordered that football and golf be condemned and archery displays organised, a ban repeated in 1471 and 1491 (National Library of Scotland, n.d.-a). Guttmann (2004, p. 100) derives the game from medieval Dutch *kolf*, played on frozen canals, and concludes with Herbert Warren Wind that the Scots were the first to strike a ball with an assortment of clubs into a hole; Hardy and Holman (2018, ch. 2) warn, by contrast, that the early references to *kolf* or golf do not necessarily refer to anything resembling the modern game.",
+    "The bans affected the game of ordinary people, played in enclosed spaces such as churchyards and at times when they should have been at work, at church or at military training, while kings and nobles took up a long game in open spaces, with expensive handcrafted equipment, under whose patronage fixed courses, specialised equipment and a vocabulary of its own emerged, on grounds that were mostly coastal and on the east of Scotland (National Library of Scotland, n.d.-b). In March 1744 a group of golfers asked Edinburgh Town Council for a silver club as the prize for an annual competition at Leith, and to organise it they formed the Company of Gentlemen Golfers and drew up thirteen articles, the earliest known written rules (National Library of Scotland, n.d.-c).",
+    "The society of golfers at St Andrews was founded on 14 May 1754 with the first competition for the Silver Club and from the late nineteenth century came to be regarded as the game's governing authority (The R&A, n.d.-a); it set up its rules committee in 1897 and in 1952 issued the first unified code with the USGA (The R&A, n.d.-b). Golf kept a strong character of social distinction, and although men helped to found the Ladies' Golf Union in 1893, the St Andrews club refused it permission to hold its tournament there in 1901 and gave way only seven years later, reserving the lockers and the lounge for men (Guttmann, 1991, pp. 121-122). It was Olympic in 1900, with a women's event, and in 1904, and the International Olympic Committee restored it in 2009 for the 2016 Games (International Golf Federation, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/golf.jpg",
+   "pie": {
+    "es": "*The Golfers*, óleo de Charles Lees (1847) con una partida en St Andrews ante numeroso público, National Galleries of Scotland.",
+    "en": "*The Golfers*, oil painting by Charles Lees (1847) showing a match at St Andrews before a large crowd, National Galleries of Scotland."
+   },
+   "autor": "Charles Lees",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:%27The_Golfers%27_by_Charles_Lees,_1847,_oil_on_canvas,_National_Galleries_of_Scotland,_Edinburgh.jpg"
+  },
+  "refs": [
+   "Guttmann, A. (1991). *Women's sports: A history*. Columbia University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Hardy, S., y Holman, A. C. (2018). *Hockey: A global history*. University of Illinois Press.",
+   "International Golf Federation. (s. f.). *Olympic golf: History*. Recuperado el 29 de septiembre de 2026 de https://www.igfgolf.org/olympic-games/history",
+   "National Library of Scotland. (s. f.-a). *Acts of Parliament banning golf*. Golf in Scotland 1457-1744. Recuperado el 29 de septiembre de 2026 de https://digital.nls.uk/golf-in-scotland/banned/1457-act.html",
+   "National Library of Scotland. (s. f.-b). *Background*. Golf in Scotland 1457-1744. Recuperado el 29 de septiembre de 2026 de https://digital.nls.uk/golf-in-scotland/background.html",
+   "National Library of Scotland. (s. f.-c). *First rules of golf*. Golf in Scotland 1457-1744. Recuperado el 29 de septiembre de 2026 de https://digital.nls.uk/golf-in-scotland/rules/index.html",
+   "The R&A. (s. f.-a). *The Royal and Ancient Golf Club*. Recuperado el 29 de septiembre de 2026 de https://www.randa.org/en/about-us/the-royal-and-ancient-golf-club",
+   "The R&A. (s. f.-b). *A brief history of revisions to the Rules of Golf: 1744 to 2016*. Recuperado el 29 de septiembre de 2026 de https://assets.randa.org/c42c7bf4-dca7-00ea-4f2e-373223f80f76/e9ac12cc-5263-40c6-a47a-f4f0850b7cd6/A%20History%20of%20the%20Rules%20of%20Golf%201744%20-%202016.pdf"
+  ],
+  "refs_en": [
+   "Guttmann, A. (1991). *Women's sports: A history*. Columbia University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Hardy, S., & Holman, A. C. (2018). *Hockey: A global history*. University of Illinois Press.",
+   "International Golf Federation. (n.d.). *Olympic golf: History*. Retrieved September 29, 2026, from https://www.igfgolf.org/olympic-games/history",
+   "National Library of Scotland. (n.d.-a). *Acts of Parliament banning golf*. Golf in Scotland 1457-1744. Retrieved September 29, 2026, from https://digital.nls.uk/golf-in-scotland/banned/1457-act.html",
+   "National Library of Scotland. (n.d.-b). *Background*. Golf in Scotland 1457-1744. Retrieved September 29, 2026, from https://digital.nls.uk/golf-in-scotland/background.html",
+   "National Library of Scotland. (n.d.-c). *First rules of golf*. Golf in Scotland 1457-1744. Retrieved September 29, 2026, from https://digital.nls.uk/golf-in-scotland/rules/index.html",
+   "The R&A. (n.d.-a). *The Royal and Ancient Golf Club*. Retrieved September 29, 2026, from https://www.randa.org/en/about-us/the-royal-and-ancient-golf-club",
+   "The R&A. (n.d.-b). *A brief history of revisions to the Rules of Golf: 1744 to 2016*. Retrieved September 29, 2026, from https://assets.randa.org/c42c7bf4-dca7-00ea-4f2e-373223f80f76/e9ac12cc-5263-40c6-a47a-f4f0850b7cd6/A%20History%20of%20the%20Rules%20of%20Golf%201744%20-%202016.pdf"
+  ]
+ },
+ {
+  "id": "minigolf",
+  "name": {
+   "es": "Minigolf",
+   "en": "Minigolf"
+  },
+  "bloque": {
+   "es": "Con stick o mazo",
+   "en": "Stick and mallet sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Escocia (1867) y Estados Unidos (década de 1920) como antecedentes; minigolf normalizado, Ascona (Suiza), 1953-1954",
+   "en": "Scotland (1867) and the United States (1920s) as antecedents; standardised minigolf, Ascona (Switzerland), 1953-1954"
+  },
+  "body": {
+   "es": [
+    "El minigolf nació de la reducción del golf a su fase final, el golpe corto sobre el green. Se suele considerar primer campo de golf en miniatura el del Ladies' Putting Club de St Andrews, en Escocia, abierto en 1867 y atribuido a Old Tom Morris, uno de los primeros golfistas profesionales, y en 1916 el inglés James Wells Barber desarrolló, con un arquitecto aficionado y un paisajista, un pequeño recorrido que recordaba más a un jardín barroco que a un campo de minigolf (Raaflaub, 2026). La federación alemana sitúa en la década de 1920 los primeros ensayos de un golf sobre pistas en Estados Unidos e Inglaterra, recuerda que en 1927 un hotelero de Chattanooga construyó uno para entretener a sus clientes, lo que desató una rápida expansión por el país, y señala que hacia 1930 había instalaciones semejantes en casi todos los parques de Londres (Thelen, 2023).",
+    "Esos primeros campos, de madera o de césped y decorados con obstáculos caprichosos, desaparecieron casi por completo en Alemania y Escandinavia a comienzos de la década de 1940 (Thelen, 2023). El minigolf de competición nació después en Suiza, donde el paisajista Paul Bongni, de origen tesinés y ginebrino, diseñó un sistema de dieciocho pistas normalizadas; diecisiete de ellas medían doce metros de largo por 1,25 de ancho, eran de hormigón y estaban delimitadas con tubos de hierro, de manera que se podía jugar con cualquier tiempo sin mancharse la ropa ni el calzado (Raaflaub, 2026). La federación alemana fecha en 1953 el primer campo normalizado, cerca de Locarno (Thelen, 2023), mientras que Raaflaub (2026) sitúa su inauguración en Ascona el 19 de marzo de 1954.",
+    "A finales de 1954 ya había en Suiza dieciocho campos con la norma de Bongni y a finales de 1962 eran ciento veinte en Europa, sobre todo en Italia, Austria y Suiza (Raaflaub, 2026). En 1956 el comerciante hamburgués Albert-Rolf Plees trajo de un viaje por Escandinavia la idea de las pistas de *Miniaturgolf*, más cortas, y ese mismo año se fundó una federación alemana; en 1963, con motivo del primer campeonato de Europa, se creó la Fédération Internationale de Golfe Miniature (Thelen, 2023). El primer campeonato del mundo se celebró en Noruega en 1991 (Raaflaub, 2026). Desde sus comienzos, en todo caso, el juego ha estado ligado al ocio de hoteles, parques y lugares de vacaciones (Raaflaub, 2026; Thelen, 2023)."
+   ],
+   "en": [
+    "Minigolf was born from the reduction of golf to its final phase, the short stroke on the green. The Ladies' Putting Club at St Andrews, in Scotland, opened in 1867 and attributed to Old Tom Morris, one of the first professional golfers, is usually regarded as the first miniature golf course, and in 1916 the Englishman James Wells Barber developed, with an amateur architect and a landscape gardener, a small course more reminiscent of a baroque garden than of a minigolf course (Raaflaub, 2026). The German federation places the first attempts at golf on lanes in the United States and England in the 1920s, recalls that in 1927 a hotelier in Chattanooga built one to entertain his guests, which set off a rapid expansion across the country, and notes that by around 1930 there were similar facilities in almost every park in London (Thelen, 2023).",
+    "Those early courses, made of wood or grass and decorated with whimsical obstacles, had almost completely disappeared from Germany and Scandinavia by the early 1940s (Thelen, 2023). Competitive minigolf was born later in Switzerland, where the landscape gardener Paul Bongni, with roots in Ticino and Geneva, designed a system of eighteen standardised lanes; seventeen of them were twelve metres long and 1.25 metres wide, made of concrete and bordered with iron tubes, so that the game could be played in any weather without dirtying clothes or shoes (Raaflaub, 2026). The German federation dates the first standardised course to 1953, near Locarno (Thelen, 2023), whereas Raaflaub (2026) places its opening in Ascona on 19 March 1954.",
+    "By the end of 1954 there were already eighteen courses in Switzerland built to Bongni's standard, and by the end of 1962 there were one hundred and twenty in Europe, mainly in Italy, Austria and Switzerland (Raaflaub, 2026). In 1956 the Hamburg businessman Albert-Rolf Plees brought back from a trip to Scandinavia the idea of shorter *Miniaturgolf* lanes, and a German federation was founded that same year; in 1963, on the occasion of the first European championship, the Fédération Internationale de Golfe Miniature was created (Thelen, 2023). The first world championship was held in Norway in 1991 (Raaflaub, 2026). From its beginnings, in any case, the game has been tied to the leisure of hotels, parks and holiday resorts (Raaflaub, 2026; Thelen, 2023)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/minigolf.jpg",
+   "pie": {
+    "es": "Niños jugando al minigolf en el condado de Alameda (California), 1963.",
+    "en": "Boys playing miniature golf in Alameda County (California), 1963."
+   },
+   "autor": "George Garrigues",
+   "licencia": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Boys_playing_miniature_golf_in_Alameda_County,_California,_1963.jpg"
+  },
+  "refs": [
+   "Raaflaub, C. (2026, 18 de julio). How Switzerland became the 'motherland of minigolf'. *Swissinfo*. Recuperado el 29 de septiembre de 2026 de https://www.swissinfo.ch/eng/swiss-oddities/switzerland-the-motherland-of-minigolf/89929116",
+   "Thelen, C. (2023). *Geschichte des Minigolfs*. Deutscher Minigolfsport Verband. Recuperado el 29 de septiembre de 2026 de https://www.minigolfsport.de/pdf/Der%20Verband/Der%20Minigolfsport/Geschichte%20des%20Minigolf/Geschichte%20des%20Minigolfs%20230111.pdf"
+  ],
+  "refs_en": [
+   "Raaflaub, C. (2026, July 18). How Switzerland became the 'motherland of minigolf'. *Swissinfo*. Retrieved September 29, 2026, from https://www.swissinfo.ch/eng/swiss-oddities/switzerland-the-motherland-of-minigolf/89929116",
+   "Thelen, C. (2023). *Geschichte des Minigolfs*. Deutscher Minigolfsport Verband. Retrieved September 29, 2026, from https://www.minigolfsport.de/pdf/Der%20Verband/Der%20Minigolfsport/Geschichte%20des%20Minigolf/Geschichte%20des%20Minigolfs%20230111.pdf"
+  ]
+ },
+ {
+  "id": "broomball",
+  "name": {
+   "es": "Broomball",
+   "en": "Broomball"
+  },
+  "bloque": {
+   "es": "Con stick o mazo",
+   "en": "Stick and mallet sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Canadá (Ontario y Saskatchewan), primeros años del siglo XX; organización competitiva desde la década de 1970",
+   "en": "Canada (Ontario and Saskatchewan), early twentieth century; competitive organisation from the 1970s"
+  },
+  "body": {
+   "es": [
+    "El broomball, literalmente «pelota con escoba», nació en Canadá a comienzos del siglo XX como un pasatiempo invernal de carácter popular, y la federación canadiense atribuye sus primeras partidas a trabajadores del ferrocarril que encontraron en él una distracción para los meses de hielo (Broomball Canada, s. f.). Los testimonios más antiguos que recoge proceden de Barrie, en Ontario, donde entre 1903 y 1905 los vecinos se reunían sobre el lago Simcoe para disputar partidas masculinas, y de Saskatchewan, donde el periodista deportivo Paul Hack rescató en 1986 la noticia de un partido jugado el 5 de marzo de 1909 entre el hotel y el pueblo de Purdue (Broomball Canada, s. f.).",
+    "El equipo de los primeros tiempos era el que tenía cualquier familia a mano, botas de goma para no resbalar sobre el hielo y la escoba de la cocina para conducir una pequeña pelota hinchable o, en su defecto, una bola de cinta enrollada, lo que hacía del juego una práctica barata y abierta a cualquiera que tuviera acceso a una superficie helada (Broomball Canada, s. f.). Durante décadas el broomball se mantuvo como actividad recreativa, y fue en torno a 1970 cuando se orientó hacia la competición; tras un torneo celebrado en Montreal en 1975, representantes de Alberta, Quebec, Ontario, Saskatchewan y Terranova fundaron en 1976 la Canadian Broomball Federation (Broomball Canada, s. f.).",
+    "Canadá figura entre los miembros fundadores de la International Federation of Broomball Associations, que organiza un campeonato del mundo cada dos años, en los años pares, con categorías masculina, femenina y mixta, y el juego se practica hoy en dieciséis países (Broomball Canada, s. f.). La presencia femenina es muy temprana, puesto que la misma federación documenta que el 16 de marzo de 1909 las mujeres de Asquith, en Saskatchewan, desafiaron y vencieron por 2 a 1 a un grupo de comerciantes de la localidad, y la categoría mixta se presenta hoy como una ocasión para que las familias jueguen juntas (Broomball Canada, s. f.)."
+   ],
+   "en": [
+    "Broomball was born in Canada in the early twentieth century as a popular winter pastime, and the Canadian federation attributes its first games to railway workers who found in it a diversion for the months of ice (Broomball Canada, n.d.). The oldest evidence it records comes from Barrie, Ontario, where between 1903 and 1905 local people met on Lake Simcoe for men's games, and from Saskatchewan, where the sports journalist Paul Hack retrieved in 1986 the report of a game played on 5 March 1909 between the hotel and the town of Purdue (Broomball Canada, n.d.).",
+    "The equipment of the early days was whatever any family had to hand, rubber boots for traction on the ice and the kitchen broom to control a small inflatable ball or, failing that, a ball of rolled-up tape, which made the game cheap and open to anyone with access to a frozen surface (Broomball Canada, n.d.). For decades broomball remained a recreational activity, and it was around 1970 that it turned towards competition; after a tournament held in Montreal in 1975, representatives of Alberta, Quebec, Ontario, Saskatchewan and Newfoundland founded the Canadian Broomball Federation in 1976 (Broomball Canada, n.d.).",
+    "Canada is among the founding members of the International Federation of Broomball Associations, which organises a world championship every two years, in even years, with men's, women's and mixed categories, and the game is played today in sixteen countries (Broomball Canada, n.d.). Women took part very early, since the same federation records that on 16 March 1909 the women of Asquith, in Saskatchewan, challenged and defeated a group of local businessmen 2-1, and the mixed category is presented today as an opportunity for families to play together (Broomball Canada, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/broomball.jpg",
+   "pie": {
+    "es": "Partida de broomball sobre hielo, con jugadoras golpeando la pelota con escobas.",
+    "en": "A broomball game on ice, with players striking the ball with brooms."
+   },
+   "autor": "college.library",
+   "licencia": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Katherine_in_a_game_of_broomball_(10947797483).jpg"
+  },
+  "refs": [
+   "Broomball Canada. (s. f.). *The sport of broomball historical roots*. Recuperado el 29 de septiembre de 2026 de https://www.broomball.ca/wp/?page_id=58"
+  ],
+  "refs_en": [
+   "Broomball Canada. (n.d.). *The sport of broomball historical roots*. Retrieved September 29, 2026, from https://www.broomball.ca/wp/?page_id=58"
+  ]
+ },
+ {
+  "id": "bochas",
+  "name": {
+   "es": "Bochas",
+   "en": "Bocce"
+  },
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Italia, con antecedentes romanos; primera sociedad, Turín, 1873; federación nacional, 1919",
+   "en": "Italy, with Roman antecedents; first society, Turin, 1873; national federation, 1919"
+  },
+  "body": {
+   "es": [
+    "Las bochas, *bocce* en italiano, son la variante italiana de los juegos de bolas de aproximación, en los que cada jugador lanza su bola para dejarla lo más cerca posible de una bola pequeña que sirve de blanco, el *pallino* (Lowerson, 1999, p. 56). Como tantos juegos de bolas, se le atribuye una antigüedad clásica, y la tradición cita al emperador Augusto entre sus aficionados (Lowerson, 1999, p. 56); Impiglia (2004) recuerda que los egipcios jugaban con piedras redondeadas y atribuye a los romanos la transformación del juego, que dejó de ser una demostración de fuerza para convertirse en un ejercicio de precisión en torno a un punto fijo. En la Edad Media el juego se hizo más popular y muy local, con numerosas variantes regionales de estilo y de reglas (Lowerson, 1999, p. 56).",
+    "La organización moderna acompañó a la industrialización de Italia desde comienzos del siglo XX y convirtió un juego humilde en deporte mediante una normalización parcial (Lowerson, 1999, p. 56). La primera sociedad de la península, la Cricca bocciofila dei martiri, nació en Turín en 1873, en septiembre de 1919 se constituyó la Unione bocciofila italiana y en 1926 llegó el reconocimiento del CONI; con el tiempo se asentaron dos especialidades, el *volo*, muy arraigado en el Piamonte y Liguria, y la *raffa*, extendida por todo el país (Impiglia, 2004). De origen campesino, el juego ha seguido siendo mayoritariamente masculino y ligado a la sociabilidad del verano y del café, lo que un aficionado resumía como «sport simpatico e popolare» (Lowerson, 1999, p. 56).",
+    "Los emigrantes italianos, en un movimiento iniciado a finales del siglo XIX, llevaron el juego a todas partes del mundo (Impiglia, 2004), y esa huella se aprecia en la composición de la Confederazione Boccistica Internazionale, fundada el 3 de septiembre de 1983 en Chiasso (Suiza), durante el primer campeonato del mundo por equipos, con delegados de veinte naciones entre las que figuraban Argentina, Brasil, Uruguay, Paraguay, Perú, Estados Unidos y Canadá (Confederazione Boccistica Internazionale, s. f.). El 21 de diciembre de 1985 las federaciones de *raffa*, *volo* y petanca formaron la Confédération Mondiale des Sports de Boules (Impiglia, 2004), y en 2001 se disputó en Ossana (Italia) el primer campeonato del mundo femenino por equipos (Confederazione Boccistica Internazionale, s. f.)."
+   ],
+   "en": [
+    "Bocce is the Italian variant of the bowls games of approach, in which each player throws a ball to leave it as close as possible to a small target ball, the *pallino* (Lowerson, 1999, p. 56). Like so many bowls games it is credited with classical antiquity, and tradition names the emperor Augustus among its devotees (Lowerson, 1999, p. 56); Impiglia (2004) recalls that the Egyptians played with rounded stones and credits the Romans with transforming the game from a display of strength into an exercise in precision around a fixed point. In the Middle Ages the game became more popular and intensely local, with many regional variations of style and rules (Lowerson, 1999, p. 56).",
+    "Modern organisation accompanied the industrialisation of Italy from the beginning of the twentieth century and turned a humble game into a sport through partial standardisation (Lowerson, 1999, p. 56). The first society on the peninsula, the Cricca bocciofila dei martiri, was founded in Turin in 1873, the Unione bocciofila italiana was constituted in September 1919 and recognition by CONI followed in 1926; over time two specialities became established, *volo*, deeply rooted in Piedmont and Liguria, and *raffa*, widespread throughout the country (Impiglia, 2004). Of peasant origin, the game has remained predominantly male and tied to the sociability of summer and the café, which one enthusiast summed up as \"sport simpatico e popolare\" (Lowerson, 1999, p. 56).",
+    "Italian emigrants, in a movement that began at the end of the nineteenth century, carried the game to every part of the world (Impiglia, 2004), and that imprint can be seen in the make-up of the Confederazione Boccistica Internazionale, founded on 3 September 1983 in Chiasso, Switzerland, during the first team world championship, with delegates from twenty nations including Argentina, Brazil, Uruguay, Paraguay, Peru, the United States and Canada (Confederazione Boccistica Internazionale, n.d.). On 21 December 1985 the *raffa*, *volo* and pétanque federations formed the Confédération Mondiale des Sports de Boules (Impiglia, 2004), and in 2001 the first women's team world championship was held in Ossana, Italy (Confederazione Boccistica Internazionale, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/bochas.jpg",
+   "pie": {
+    "es": "*Los jugadores de bochas*, óleo atribuido a Jan Miel (siglo XVII), con un grupo de hombres inclinados sobre el lanzamiento.",
+    "en": "*The Bocce Players*, oil painting attributed to Jan Miel (17th century), with a group of men bending over a throw."
+   },
+   "autor": "Jan Miel",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Jan_Miel_-_The_bocce_players.jpg"
+  },
+  "refs": [
+   "Confederazione Boccistica Internazionale. (s. f.). *La confederazione*. Recuperado el 29 de septiembre de 2026 de https://cbi-prv.org/la-confederazione",
+   "Impiglia, M. (2004). Bocce. En *Enciclopedia dello Sport*. Istituto della Enciclopedia Italiana Treccani. Recuperado el 29 de septiembre de 2026 de https://www.treccani.it/enciclopedia/bocce_(Enciclopedia-dello-Sport)/",
+   "Lowerson, J. (1999). Bowls and bowling. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 55-59). Oxford University Press."
+  ],
+  "refs_en": [
+   "Confederazione Boccistica Internazionale. (n.d.). *La confederazione*. Retrieved September 29, 2026, from https://cbi-prv.org/la-confederazione",
+   "Impiglia, M. (2004). Bocce. In *Enciclopedia dello Sport*. Istituto della Enciclopedia Italiana Treccani. Retrieved September 29, 2026, from https://www.treccani.it/enciclopedia/bocce_(Enciclopedia-dello-Sport)/",
+   "Lowerson, J. (1999). Bowls and bowling. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 55-59). Oxford University Press."
+  ]
+ },
+ {
+  "id": "silambam",
+  "name": {
+   "es": "Silambam",
+   "en": "Silambam"
+  },
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Tamil Nadu (sur de la India), tradición tamil documentada en los primeros siglos de nuestra era",
+   "en": "Tamil Nadu (southern India), Tamil tradition documented in the first centuries CE"
+  },
+  "body": {
+   "es": [
+    "El silambam es la esgrima con bastón largo del sur de la India, y pertenece a la tradición marcial tamil, una de las dos que, junto con el *Dhanur Veda* sánscrito, alimentan las artes de combate del subcontinente. Zarrilli recuerda que la poesía heroica tamil del periodo Sangam describe, entre el siglo IV a. C. y el 600 d. C., un sur de la India dominado por el espíritu guerrero, en el que cada guerrero recibía un adiestramiento regular con la lanza, la espada y el escudo, el arco y el caballo (Zarrilli, 1999, p. 239).",
+    "La tradición atribuye a los reyes pandya, chola y chera la protección de esta esgrima, y Roy (2017, p. 608) recoge que la epopeya tamil *Silappatikaram*, que fecha en el siglo II, menciona la venta de bastones de silambam, espadas, perlas y armaduras a los comerciantes extranjeros que frecuentaban Madurai, lo que sitúa el bastón entre las armas apreciadas en el comercio con griegos y romanos. El arte se transmitió de maestro a discípulo, con una concepción del cuerpo, de la salud y de la dieta tomada de los sistemas médicos ayurvédico y siddha, de modo que los maestros de combate eran a la vez curanderos que conocían los puntos vitales del cuerpo para atacar o para dar masajes terapéuticos (Zarrilli, 1999, p. 239).",
+    "En el silambam el practicante se ejercita siete años con un bastón de unos 1,2 metros antes de pasar a otras armas y al combate a mano desnuda (Hick, 1999, p. 93). Figura entre las artes regionales que han sobrevivido hasta hoy, como el *varma adi* de Tamil Nadu o el *kalarippayattu* de Kerala, practicadas para la salud, el recreo y la competición, y las formas tamiles se practicaban tradicionalmente al aire libre o en recintos sin techo, a diferencia del foso de tierra (*kalari*) en que se ejercita el arte keralí (Zarrilli, 1999, pp. 239-240)."
+   ],
+   "en": [
+    "Silambam is the long-staff fencing of southern India, and it belongs to the Tamil martial tradition, one of the two that, together with the Sanskrit *Dhanur Veda*, underlie the combat arts of the subcontinent. Zarrilli notes that the Tamil heroic poetry of the Sangam period describes, between the fourth century BCE and 600 CE, a southern India dominated by a warlike spirit, in which every warrior received regular training with lance, sword and shield, bow and horse (Zarrilli, 1999, p. 239).",
+    "Tradition credits the Pandya, Chola and Chera kings with the patronage of this fencing, and Roy (2017, p. 608) reports that the Tamil epic *Silappatikaram*, which he dates to the second century, mentions the sale of silambam staffs, swords, pearls and armour to the foreign merchants who frequented Madurai, which places the staff among the weapons valued in trade with Greeks and Romans. The art was passed from master to disciple, with a conception of the body, health and diet drawn from the Ayurvedic and Siddha medical systems, so that combat masters were also healers who knew the vital points of the body in order to strike them or to give therapeutic massage (Zarrilli, 1999, p. 239).",
+    "In silambam the practitioner trains for seven years with a staff of about 1.2 metres before moving on to other weapons and to bare-handed combat (Hick, 1999, p. 93). It is among the regional arts that have survived to the present, such as *varma adi* in Tamil Nadu or *kalarippayattu* in Kerala, practised for health, recreation and competition, and the Tamil forms were traditionally practised in the open air or in unroofed enclosures, unlike the earthen pit (*kalari*) in which the Keralan art is practised (Zarrilli, 1999, pp. 239-240)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/silambam.jpg",
+   "pie": {
+    "es": "Juego tradicional de silambam en Veeranattar (Tamil Nadu), con dos practicantes enfrentados con bastones ante el público.",
+    "en": "Traditional silambam game in Veeranattar (Tamil Nadu), with two practitioners facing each other with staffs before onlookers."
+   },
+   "autor": "Valorsu",
+   "licencia": "CC0",
+   "url": "https://commons.wikimedia.org/wiki/File:Veeranattar_traditional_silamba_game.jpg"
+  },
+  "refs": [
+   "Hick, S. (1999). Cudgeling. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 93-95). Oxford University Press.",
+   "Roy, A. (2017). Games & sports in ancient India. *International Education & Research Journal*, *3*(5), 607-609.",
+   "Zarrilli, P. B. (1999). Martial arts, South Asia. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 239-240). Oxford University Press."
+  ],
+  "refs_en": [
+   "Hick, S. (1999). Cudgeling. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 93-95). Oxford University Press.",
+   "Roy, A. (2017). Games & sports in ancient India. *International Education & Research Journal*, *3*(5), 607-609.",
+   "Zarrilli, P. B. (1999). Martial arts, South Asia. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 239-240). Oxford University Press."
+  ]
+ },
+ {
+  "id": "eskrima",
+  "name": {
+   "es": "Eskrima",
+   "en": "Eskrima (arnis, kali)"
+  },
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Filipinas; tradición precolonial y época española (1565-1898); forma deportiva (arnis), siglo XX, con reglamento de 1991",
+   "en": "Philippines; pre-colonial tradition and Spanish period (1565-1898); sporting form (arnis), twentieth century, with 1991 rules"
+  },
+  "body": {
+   "es": [
+    "Kali, eskrima y arnis son los nombres de las artes de combate filipinas con armas, cuyo rasgo común es el uso del bastón como arma o como sustituto de la espada y el cuchillo. Wiley les atribuye raíces en la India, China, Indonesia y Malasia, y recoge la leyenda según la cual la enseñanza formal comenzó en el siglo XIII, cuando diez jefes huidos de Borneo se asentaron en la isla de Panay y fundaron una escuela para los futuros jefes tribales, el *bothoan*, en la que el kali se enseñaba junto con materias académicas y astrología (Wiley, 1999, p. 238). El primer encuentro europeo con estas técnicas fue la muerte de Magallanes en Mactán, en 1521, en el combate cuerpo a cuerpo contra los guerreros de Lapulapu que narró Antonio Pigafetta (Wiley, 1999, p. 238).",
+    "Durante la colonización española (1565-1898) las autoridades prohibieron las artes marciales y la exhibición de armas cortantes, y el kali sobrevivió en las *komedyas*, obras de teatro que representaban la victoria del catolicismo sobre los paganos y cuyas escenas de batalla servían a los filipinos para conservar y ensayar sus técnicas, con bastones de ratán en lugar de espadas (Wiley, 1999, p. 238; Hick, 1999, p. 93). A finales del siglo XIX los mestizos que estudiaban en Europa aprendieron la esgrima occidental y, a su regreso, la fundieron con las formas heredadas, lo que dio lugar a un sistema de bastón simple, doble bastón y espada y daga que los españoles llamaron *esgrima* y los filipinos escribieron *eskrima*. El boxeo occidental, tras la guerra con Estados Unidos, y las artes marciales japonesas, después de la Segunda Guerra Mundial, transformaron muchos de esos sistemas en el arnis moderno, con clases de estilo militar y cinturones de colores (Wiley, 1999, p. 238).",
+    "Los torneos de arnis comenzaron en la década de 1920, con pocas reglas y sin protecciones, y solo en 1975, con la fundación de la National Arnis Federation of the Philippines, se celebró el primer torneo nacional; en 1989 la WEKAF organizó en Cebú el primer campeonato del mundo de kali, eskrima y arnis, y en 1991 Arnis Philippines redactó el reglamento deportivo, llevó el arnis como deporte de exhibición a los Juegos del Sudeste Asiático y fundó la International Arnis Federation (Wiley, 1999, p. 239). El combate se disputa con bastones de ratán de 76 centímetros, casco y protecciones, por categorías de peso, y a finales del siglo XX el arnis se consolidó como deporte nacional de Filipinas (Wiley, 1999, p. 239)."
+   ],
+   "en": [
+    "Kali, eskrima and arnis are the names of the Filipino armed combat arts, whose common feature is the use of the stick as a weapon or as a substitute for the sword and knife. Wiley attributes their roots to India, China, Indonesia and Malaysia, and records the legend that formal instruction began in the thirteenth century, when ten chieftains who had fled Borneo settled on the island of Panay and founded a school for future tribal leaders, the *bothoan*, where kali was taught together with academic subjects and astrology (Wiley, 1999, p. 238). The first European encounter with these techniques was the death of Magellan at Mactan in 1521, in the hand-to-hand fight against Lapulapu's warriors narrated by Antonio Pigafetta (Wiley, 1999, p. 238).",
+    "During the Spanish colonisation (1565-1898) the authorities banned the martial arts and the brandishing of sharp weapons, and kali survived in the *komedyas*, stage plays depicting the victory of Catholicism over pagans whose battle scenes allowed Filipinos to preserve and rehearse their techniques, with rattan sticks instead of swords (Wiley, 1999, p. 238; Hick, 1999, p. 93). In the late nineteenth century mestizos who studied in Europe learned Western fencing and, on their return, merged it with the inherited forms, giving rise to a system of single stick, double stick and sword and dagger that the Spanish called *esgrima* and Filipinos spelled *eskrima*. Western boxing, after the war with the United States, and Japanese martial arts, after the Second World War, turned many of these systems into modern arnis, with military-style classes and coloured belts (Wiley, 1999, p. 238).",
+    "Arnis tournaments began in the 1920s, with few rules and no padding, and only in 1975, with the founding of the National Arnis Federation of the Philippines, was the first national tournament held; in 1989 WEKAF organised in Cebu the first world kali, eskrima and arnis championship, and in 1991 Arnis Philippines drafted the sporting rules, brought arnis to the Southeast Asian Games as a demonstration sport and founded the International Arnis Federation (Wiley, 1999, p. 239). Bouts are fought with 76-centimetre rattan sticks, helmet and body protection, by weight categories, and by the end of the twentieth century arnis had become established as the national sport of the Philippines (Wiley, 1999, p. 239)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/eskrima.jpg",
+   "pie": {
+    "es": "Combate con bastones y protecciones en un torneo de eskrima, 2011.",
+    "en": "Stick bout with protective gear at an eskrima tournament, 2011."
+   },
+   "autor": "Leticia Barletta",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Eskrima_Kombat.jpg"
+  },
+  "refs": [
+   "Hick, S. (1999). Cudgeling. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 93-95). Oxford University Press.",
+   "Wiley, M. (1999). Martial arts, Philippines. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 238-239). Oxford University Press."
+  ],
+  "refs_en": [
+   "Hick, S. (1999). Cudgeling. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 93-95). Oxford University Press.",
+   "Wiley, M. (1999). Martial arts, Philippines. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 238-239). Oxford University Press."
+  ]
+ },
+ {
+  "id": "boxeo",
+  "name": {
+   "es": "Boxeo",
+   "en": "Boxing"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Próximo Oriente y Egipto, desde el III milenio a. C.; Grecia (Olimpia, 688 a. C.); boxeo moderno, Inglaterra, 1743-1867",
+   "en": "Near East and Egypt, from the third millennium BCE; Greece (Olympia, 688 BCE); modern boxing, England, 1743-1867"
+  },
+  "body": {
+   "es": [
+    "La lucha con los puños está documentada en el Próximo Oriente desde comienzos del III milenio a. C. (Decker, 1992, p. 70), mientras que en Egipto la única prueba indiscutible es la tumba de Kheruef, en Tebas, con seis parejas de púgiles a puño desnudo en el marco del festival Sed de Amenofis III; Decker observa que sus posturas copian las de los danzantes pintados enfrente y deduce que el pugilato fue allí una práctica ocasional (Decker, 1992, p. 88). Las primeras protecciones aparecen hacia el 1500 a. C. en la Creta minoica y en Grecia los boxeadores usaron correas ligeras de cuero hasta el siglo IV a. C., cuando adoptaron las «correas afiladas», más dañinas, antecedente del *caestus* romano con piezas de metal (Poliakoff, 1987, pp. 68-70). Según la tradición griega, en la 23.ª Olimpiada (688 a. C.) Onomastos de Esmirna redactó las reglas del pugilato olímpico (Poliakoff, 1987, p. 80).",
+    "El boxeo moderno procede del pugilato a puño desnudo por dinero que floreció en la Inglaterra del siglo XVIII bajo el patronazgo de la aristocracia. Jack Broughton publicó en Londres en 1743 las primeras reglas escritas, que prohibían golpear por debajo de la cintura o al rival caído y que se invocaban para presentar el pugilato como un arte «científico» (Guttmann, 2004, p. 72; Shipley, 1999, p. 59). En 1867 aparecieron las reglas redactadas por John Graham Chambers y publicadas bajo el nombre del marqués de Queensberry, que impusieron los guantes, los asaltos cronometrados con un minuto de descanso y la prohibición de agarrar, y que permitieron llevar el combate a locales cerrados con taquilla, a diferencia del combate clandestino, perseguido como alteración del orden público (Shipley, 1999, p. 61).",
+    "El boxeo aficionado nació con el mismo sesgo de clase, puesto que el primer campeonato, disputado en 1867 en Lillie Bridge, excluyó a obreros, artesanos y comerciantes, hasta que la Amateur Boxing Association, cuyo campeonato comenzó en 1881, abrió la competición a los trabajadores; el boxeo entró en los Juegos de San Luis en 1904, faltó en 1912 y figura en el programa desde 1920, año en que se fundó en París la Fédération Internationale de Boxe Amateur, sustituida en 1946 por la International Amateur Boxing Association (Shipley, 1999, p. 62). El profesionalismo reclutó a sus boxeadores entre los pobres, los inmigrantes y los afroamericanos, cuyo acceso a los títulos estuvo limitado durante décadas por la barrera del color (Shipley, 1999, pp. 61-62), y las mujeres, que ya combatían ante el público londinense a comienzos del siglo XVIII (Guttmann, 1991, pp. 74-75), solo a finales del siglo XX empezaron a practicarlo en el marco reglamentado del deporte (Shipley, 1999, p. 63)."
+   ],
+   "en": [
+    "Fist fighting is documented in the Near East from the beginning of the third millennium BCE (Decker, 1992, p. 70), whereas in Egypt the only undisputed evidence is the tomb of Kheruef in Thebes, with six pairs of bare-fisted boxers in the setting of the Sed festival of Amenhotep III; Decker notes that their postures copy those of the dancers painted opposite and infers that boxing was only an occasional practice there (Decker, 1992, p. 88). The first hand protection appears around 1500 BCE in Minoan Crete and in Greece boxers used light leather thongs until the fourth century BCE, when they adopted the more damaging \"sharp thongs\", forerunners of the Roman *caestus* with its metal pieces (Poliakoff, 1987, pp. 68-70). According to Greek tradition, in the 23rd Olympiad (688 BCE) Onomastos of Smyrna drew up the rules of Olympic boxing (Poliakoff, 1987, p. 80).",
+    "Modern boxing derives from the bare-knuckle prizefighting for money that flourished in eighteenth-century England under aristocratic patronage. Jack Broughton published the first written rules in London in 1743, which forbade hitting below the waist or striking a fallen opponent and were invoked to present pugilism as a \"scientific\" art (Guttmann, 2004, p. 72; Shipley, 1999, p. 59). In 1867 the rules drafted by John Graham Chambers and published under the name of the Marquess of Queensberry appeared; they imposed gloves, timed rounds with a one-minute rest and a ban on wrestling holds, and they allowed bouts to move indoors to venues with a paying door, unlike the clandestine prizefight, prosecuted as a breach of the peace (Shipley, 1999, p. 61).",
+    "Amateur boxing was born with the same class bias, since the first championship, held in 1867 at Lillie Bridge, excluded labourers, artisans and tradesmen, until the Amateur Boxing Association, whose championship began in 1881, opened competition to workers; boxing entered the Games at St. Louis in 1904, was absent in 1912 and has been on the programme since 1920, the year the Fédération Internationale de Boxe Amateur was founded in Paris, replaced in 1946 by the International Amateur Boxing Association (Shipley, 1999, p. 62). Professional boxing recruited its fighters among the poor, immigrants and African Americans, whose access to titles was restricted for decades by the colour bar (Shipley, 1999, pp. 61-62), and women, who were already fighting before London crowds in the early eighteenth century (Guttmann, 1991, pp. 74-75), only began to take it up within the regulated framework of the sport at the end of the twentieth century (Shipley, 1999, p. 63)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 2,
+    "f": "beni-hasan-registros-de-lucha",
+    "t": {
+     "es": "Beni Hasan: registros de lucha",
+     "en": "Beni Hasan: wrestling records"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/boxeo.jpg",
+   "pie": {
+    "es": "*The Battle between Crib and Molineaux*, estampa de George Cruikshank sobre el combate entre Tom Cribb y Tom Molineaux del 28 de septiembre de 1811, Metropolitan Museum of Art.",
+    "en": "*The Battle between Crib and Molineaux*, print by George Cruikshank of the fight between Tom Cribb and Tom Molineaux on 28 September 1811, Metropolitan Museum of Art."
+   },
+   "autor": "George Cruikshank",
+   "licencia": "CC0",
+   "url": "https://commons.wikimedia.org/wiki/File:The_Battle_Between_Crib_and_Molineaux,_September_28,_1811_MET_DP877152.jpg"
+  },
+  "refs": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trad.). Yale University Press.",
+   "Guttmann, A. (1991). *Women's sports: A history*. Columbia University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Poliakoff, M. B. (1987). *Combat sports in the ancient world: Competition, violence, and culture*. Yale University Press.",
+   "Shipley, S. (1999). Boxing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 59-63). Oxford University Press."
+  ],
+  "refs_en": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trans.). Yale University Press.",
+   "Guttmann, A. (1991). *Women's sports: A history*. Columbia University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Poliakoff, M. B. (1987). *Combat sports in the ancient world: Competition, violence, and culture*. Yale University Press.",
+   "Shipley, S. (1999). Boxing. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 59-63). Oxford University Press."
+  ]
+ },
+ {
+  "id": "judo",
+  "name": {
+   "es": "Judo",
+   "en": "Judo"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Tokio (Japón), mayo de 1882, con la apertura del Kōdōkan de Kanō Jigorō a partir de escuelas de *jūjutsu*",
+   "en": "Tokyo (Japan), May 1882, with the opening of Kanō Jigorō's Kōdōkan on the basis of *jūjutsu* schools"
+  },
+  "body": {
+   "es": [
+    "Antes de la era Meiji las numerosas escuelas japonesas de combate sin armas se conocían con el nombre genérico de *jūjutsu*, «técnicas suaves», y el judo fue la primera de esas artes en presentarse como un «camino» (*dō*) y la primera en llegar a los Juegos Olímpicos (Guttmann y Thompson, 2001, p. 100). Su creador, Kanō Jigorō (1860-1938), era un educador de formación occidental que había estudiado en el Kaisei Gakkō de Tokio y que desde 1877 aprendió *jūjutsu* con maestros de la escuela Tenjin shin'yō y después de la Kitō (Guttmann y Thompson, 2001, p. 101). El cambio de nombre tenía también una intención social, puesto que en la década de 1870 el *jūjutsu* había quedado asociado a los espectáculos con que muchos expertos empobrecidos se ganaban la vida, y Kanō quiso apartar su método de esa fama vulgar (Sánchez García, 2019, p. 125).",
+    "En mayo de 1882 Kanō empezó a enseñar en una sala del templo Eishōji de Tokio, combinando los golpes y estrangulaciones de la escuela Tenjin shin'yō con las proyecciones de la Kitō, y llamó a su escuela Kōdōkan, «la sala donde se enseña y se aprende el camino» (Guttmann y Thompson, 2001, p. 101). Eliminó las técnicas más peligrosas, introdujo las caídas (*ukemi*) para los principiantes y organizó la enseñanza en torno al *kata* y al *randori* bajo los principios de máxima eficacia y beneficio mutuo (Sánchez García, 2019, p. 125); sustituyó además los tres grados tradicionales por diez *dan* (Guttmann y Thompson, 2001, p. 102). El Kōdōkan pasó de nueve alumnos en 1882 a cerca de quinientos cinco años después, en parte por las victorias de sus discípulos en los torneos de la policía de Tokio de 1887 y 1888 (Guttmann y Thompson, 2001, pp. 102-103), que Carr (1999, p. 208) sitúa en 1886.",
+    "La difusión se apoyó en la posición de Kanō en el sistema educativo, que llevó el judo a la Academia Naval, a las universidades y a la enseñanza secundaria (Guttmann y Thompson, 2001, p. 103), y en el exterior dio lugar al club Budōkwai de Londres en 1918 y a una federación europea fundada en Fráncfort en 1932 (Guttmann y Thompson, 2001, pp. 103-104). Tras la prohibición durante la ocupación y su recuperación en 1951, en 1952 se creó la Federación Internacional de Judo con diecisiete países, si bien la propia federación fecha su fundación en 1951 (International Judo Federation, s. f.); en 1956 se celebró en Tokio el primer campeonato mundial y en 1964 el judo debutó en los Juegos de Tokio (Carr, 1999, pp. 208-209), donde sirvió para proyectar una imagen pacífica de la identidad japonesa (Sánchez García, 2019, p. 204).",
+    "El Kōdōkan admitió mujeres desde sus primeros años (Guttmann y Thompson, 2001, p. 102), si bien su sección femenina de 1926 mantuvo grados y distintivos diferentes de los masculinos (Sánchez García, 2019, p. 148). En la competición internacional, el primer campeonato mundial femenino se celebró en Nueva York en 1980, el judo femenino fue deporte de exhibición en los Juegos de Seúl de 1988 y desde Barcelona 1992 las pruebas masculinas y femeninas forman parte del programa olímpico (International Judo Federation, s. f.)."
+   ],
+   "en": [
+    "Before the Meiji era the many Japanese schools of unarmed combat were known by the generic name of *jūjutsu*, «soft techniques», and judo was the first of these arts to present itself as a «way» (*dō*) and the first to reach the Olympic Games (Guttmann & Thompson, 2001, p. 100). Its creator, Kanō Jigorō (1860-1938), was a Western-educated teacher who had studied at the Kaisei Gakkō in Tokyo and who from 1877 learned *jūjutsu* with masters of the Tenjin shin'yō school and later of the Kitō school (Guttmann & Thompson, 2001, p. 101). The change of name also had a social purpose, since in the 1870s *jūjutsu* had become associated with the shows by which many impoverished experts earned a living, and Kanō wanted to keep his method away from that vulgar reputation (Sánchez García, 2019, p. 125).",
+    "In May 1882 Kanō began teaching in a room of the Eishōji temple in Tokyo, combining the strikes and strangles of the Tenjin shin'yō school with the throws of the Kitō school, and he called his school the Kōdōkan, «the hall where the way is taught and learned» (Guttmann & Thompson, 2001, p. 101). He removed the most dangerous techniques, introduced breakfalls (*ukemi*) for beginners and organised teaching around *kata* and *randori* under the principles of maximum efficiency and mutual welfare (Sánchez García, 2019, p. 125); he also replaced the three traditional grades with ten *dan* (Guttmann & Thompson, 2001, p. 102). The Kōdōkan grew from nine pupils in 1882 to nearly five hundred five years later, partly thanks to its students' victories in the Tokyo police tournaments of 1887 and 1888 (Guttmann & Thompson, 2001, pp. 102-103), which Carr (1999, p. 208) places in 1886.",
+    "Diffusion relied on Kanō's position in the education system, which took judo to the Naval Academy, the universities and secondary schools (Guttmann & Thompson, 2001, p. 103), and abroad it led to the Budōkwai club in London in 1918 and to a European federation founded in Frankfurt in 1932 (Guttmann & Thompson, 2001, pp. 103-104). After its prohibition during the occupation and its recovery in 1951, the International Judo Federation was created in 1952 with seventeen countries, although the federation itself dates its foundation to 1951 (International Judo Federation, n.d.); the first world championship was held in Tokyo in 1956 and in 1964 judo made its debut at the Tokyo Games (Carr, 1999, pp. 208-209), where it served to project a peaceful image of Japanese identity (Sánchez García, 2019, p. 204).",
+    "The Kōdōkan admitted women from its early years (Guttmann & Thompson, 2001, p. 102), although its women's section of 1926 kept grades and insignia different from those of men (Sánchez García, 2019, p. 148). In international competition, the first women's world championship was held in New York in 1980, women's judo was a demonstration sport at the 1988 Seoul Games, and since Barcelona 1992 both men's and women's events have formed part of the Olympic programme (International Judo Federation, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/judo.jpg",
+   "pie": {
+    "es": "Yoshimatsu Yoshihiko e Itō Hideo en la final del Campeonato de Japón de judo de 1953, arbitrada por Mifune Kyūzō.",
+    "en": "Yoshimatsu Yoshihiko and Itō Hideo in the final of the 1953 All-Japan Judo Championships, refereed by Mifune Kyūzō."
+   },
+   "autor": {
+    "es": "Asahi Shimbun",
+    "en": "Asahi Shimbun"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Yoshimatsu_Yoshihiko_and_Ito_Hideo_4.JPG"
+  },
+  "refs": [
+   "Carr, K. G. (1999). Judo. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 207-209). Oxford University Press.",
+   "Guttmann, A., y Thompson, L. (2001). *Japanese sports: A history*. University of Hawai'i Press.",
+   "International Judo Federation. (s. f.). *Timeline*. Recuperado el 29 de septiembre de 2026 de https://www.ijf.org/history/timeline",
+   "Sánchez García, R. (2019). *The historical sociology of Japanese martial arts*. Routledge."
+  ],
+  "refs_en": [
+   "Carr, K. G. (1999). Judo. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 207-209). Oxford University Press.",
+   "Guttmann, A., & Thompson, L. (2001). *Japanese sports: A history*. University of Hawai'i Press.",
+   "International Judo Federation. (n.d.). *Timeline*. Retrieved September 29, 2026, from https://www.ijf.org/history/timeline",
+   "Sánchez García, R. (2019). *The historical sociology of Japanese martial arts*. Routledge."
+  ]
+ },
+ {
+  "id": "karate",
+  "name": {
+   "es": "Kárate",
+   "en": "Karate"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Okinawa (reino de Ryūkyū), con raíz china probable y primera mención escrita en 1867; forma moderna en Tokio, décadas de 1920 y 1930",
+   "en": "Okinawa (Ryūkyū kingdom), with a probable Chinese root and first written mention in 1867; modern form in Tokyo, 1920s and 1930s"
+  },
+  "body": {
+   "es": [
+    "El kárate tiene sus raíces en Okinawa, pero la referencia escrita más antigua data de 1867 y su historia anterior es materia de conjetura. La hipótesis más probable le atribuye un origen chino, puesto que los reyes de Okinawa pagaron tributo a China desde el siglo XV y entre finales del XIV y comienzos del XVI se asentó en Kumemura una comunidad de emigrantes de Fujian (Guttmann y Thompson, 2001, pp. 145-146). La lengua apoya esa hipótesis, dado que la palabra *karate* se escribió primero con el carácter que designa la China de los Tang, «mano china», y en las fiestas de 1867 por el reconocimiento del nuevo rey de Okinawa por la dinastía Qing lo exhibieron precisamente vecinos de Kumemura (Guttmann y Thompson, 2001, p. 146).",
+    "El primer *dōjō* de Okinawa lo abrió en 1889 Higashionna Kanryō, que había estudiado combate en China durante quince años, y su contemporáneo Itosu Ankō ideó cinco *kata* básicos con fines educativos y logró en 1909 que el kárate entrara en el programa de la escuela media de la prefectura (Guttmann y Thompson, 2001, p. 146). En abril de 1922 Funakoshi Gichin (1868-1957) lo presentó en Tokio en una exhibición de educación física del Ministerio de Educación, y en 1924 y 1926 impulsó los clubes de las universidades Keiō e Imperial de Tokio; en 1929 los estudiantes de Keiō cambiaron la escritura del nombre por «mano vacía», y en 1935 Funakoshi adoptó el término *karatedō* para equipararlo moralmente al judo, del que tomó también el uniforme y el cinturón (Guttmann y Thompson, 2001, p. 147).",
+    "El abandono de la «mano china» coincidió con el desprecio japonés hacia China en los años previos a la guerra, y por eso el kárate moderno puede leerse como una tradición inventada a imagen del judo (Guttmann y Thompson, 2001, p. 147) y como vehículo de una identidad okinawense integrada en la japonesa, puesto que Okinawa solo fue oficialmente japonesa desde 1895 (Sánchez García, 2019, p. 124). Después de la guerra los maestros japoneses se impusieron a los okinawenses en las organizaciones del kárate, dentro y fuera de Japón, y en el exterior dominó el estilo Shōtōkan (Sánchez García, 2019, p. 205), mientras algunas escuelas como la Gōjū-ryū se resistieron durante mucho tiempo a la competición (Sánchez García, 2019, p. 206). La influencia de estos maestros sobre alumnos coreanos durante la colonia fue además decisiva para el nacimiento del taekwondo (Sánchez García, 2019, p. 178).",
+    "La organización internacional nació en Tokio el 10 de octubre de 1970 como World Union of Karate-Do Organizations (WUKO), y ese mismo año celebró en Tokio su primer campeonato mundial con treinta y tres países; el 20 de diciembre de 1992 adoptó el nombre de World Karate Federation (WKF), a la que el Comité Olímpico Internacional reconoció en 1999 como único organismo rector del kárate deportivo (World Karate Federation, s. f.). El kárate se presentó por primera vez en unos Juegos Olímpicos en Tokio 2020 (Bureau of Tokyo 2020 Olympic and Paralympic Games Preparation, s. f.)."
+   ],
+   "en": [
+    "Karate has its roots in Okinawa, but the oldest written reference dates from 1867 and its earlier history is a matter of conjecture. The most likely hypothesis gives it a Chinese origin, since the kings of Okinawa paid tribute to China from the fifteenth century and between the late fourteenth and early sixteenth centuries a community of emigrants from Fujian settled in Kumemura (Guttmann & Thompson, 2001, pp. 145-146). Language supports this hypothesis, given that the word *karate* was first written with the character for Tang China, «Chinese hand», and at the 1867 celebrations of the recognition of the new Okinawan king by the Qing dynasty it was performed precisely by residents of Kumemura (Guttmann & Thompson, 2001, p. 146).",
+    "The first *dōjō* in Okinawa was opened in 1889 by Higashionna Kanryō, who had studied combat in China for fifteen years, and his contemporary Itosu Ankō devised five basic *kata* for educational purposes and in 1909 succeeded in having karate included in the curriculum of the prefectural middle school (Guttmann & Thompson, 2001, p. 146). In April 1922 Funakoshi Gichin (1868-1957) presented it in Tokyo at a Ministry of Education physical education exhibition, and in 1924 and 1926 he promoted the clubs at Keiō and Tokyo Imperial universities; in 1929 the Keiō students changed the writing of the name to «empty hand», and in 1935 Funakoshi adopted the term *karatedō* to place it on a moral par with judo, from which he also took the uniform and the belt (Guttmann & Thompson, 2001, p. 147).",
+    "The abandonment of the «Chinese hand» coincided with Japanese contempt for China in the years before the war, and for this reason modern karate can be read as a tradition invented in the image of judo (Guttmann & Thompson, 2001, p. 147) and as the vehicle of an Okinawan identity integrated into the Japanese one, since Okinawa only became officially Japanese in 1895 (Sánchez García, 2019, p. 124). After the war Japanese masters prevailed over Okinawan ones in karate organisations, inside and outside Japan, and abroad the Shōtōkan style dominated (Sánchez García, 2019, p. 205), while some schools such as Gōjū-ryū resisted competition for a long time (Sánchez García, 2019, p. 206). The influence of these masters on Korean pupils during the colonial period was also decisive for the birth of taekwondo (Sánchez García, 2019, p. 178).",
+    "The international organisation was born in Tokyo on 10 October 1970 as the World Union of Karate-Do Organizations (WUKO), and that same year it held its first world championship in Tokyo with thirty-three countries; on 20 December 1992 it adopted the name World Karate Federation (WKF), which the International Olympic Committee recognised in 1999 as the sole governing body of sport karate (World Karate Federation, n.d.). Karate appeared for the first time at the Olympic Games in Tokyo 2020 (Bureau of Tokyo 2020 Olympic and Paralympic Games Preparation, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/karate.jpg",
+   "pie": {
+    "es": "Combate de kárate con protecciones en la Universidad Imperial de Tokio, 1929.",
+    "en": "Karate bout with protective gear at Tokyo Imperial University, 1929."
+   },
+   "autor": "Miki Jisaburō y Takada Mizuho",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Todai_kumite.jpg"
+  },
+  "refs": [
+   "Bureau of Tokyo 2020 Olympic and Paralympic Games Preparation. (s. f.). *Karate*. Tokyo Metropolitan Government. Recuperado el 29 de septiembre de 2026 de https://www.2020games.metro.tokyo.lg.jp/eng/taikaijyunbi/taikai/syumoku/games-olympics/karate/index.html",
+   "Guttmann, A., y Thompson, L. (2001). *Japanese sports: A history*. University of Hawai'i Press.",
+   "Sánchez García, R. (2019). *The historical sociology of Japanese martial arts*. Routledge.",
+   "World Karate Federation. (s. f.). *World Karate Federation: The book*. Recuperado el 29 de septiembre de 2026 de https://thebook.wkf.net/"
+  ],
+  "refs_en": [
+   "Bureau of Tokyo 2020 Olympic and Paralympic Games Preparation. (n.d.). *Karate*. Tokyo Metropolitan Government. Retrieved September 29, 2026, from https://www.2020games.metro.tokyo.lg.jp/eng/taikaijyunbi/taikai/syumoku/games-olympics/karate/index.html",
+   "Guttmann, A., & Thompson, L. (2001). *Japanese sports: A history*. University of Hawai'i Press.",
+   "Sánchez García, R. (2019). *The historical sociology of Japanese martial arts*. Routledge.",
+   "World Karate Federation. (n.d.). *World Karate Federation: The book*. Retrieved September 29, 2026, from https://thebook.wkf.net/"
+  ]
+ },
+ {
+  "id": "aikido",
+  "name": {
+   "es": "Aikido",
+   "en": "Aikido"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Japón, décadas de 1920 y 1930, a partir del *jūjutsu* Daitō-ryū; nombre fijado en 1942 y fundación Aikikai en 1948",
+   "en": "Japan, 1920s and 1930s, from Daitō-ryū *jūjutsu*; name fixed in 1942 and Aikikai foundation in 1948"
+  },
+  "body": {
+   "es": [
+    "El aikido, «camino de la armonía», tomó forma en la primera mitad del siglo XX a partir de la escuela Daitō de *jūjutsu*. El término *aiki* aparece en textos del período Edo casi siempre en sentido negativo, como advertencia contra la excesiva armonía con el rival, y adquirió su sentido positivo con un tratado de 1892 que hacía de la armonía entre el *ki* individual y el universal el corazón de las artes marciales. Takeda Sōkaku (1860-1943) revitalizó, o según algunos creó, la escuela Daitō, que en 1923 rebautizó como Daitō-ryū Aiki Jūjutsu, y Ueshiba Morihei (1883-1969), nacido en Wakayama, fue su discípulo desde 1915 y la enseñó en Hyōgo entre 1920 y 1927 (Guttmann y Thompson, 2001, p. 148).",
+    "Ueshiba unió la práctica marcial a una intensa búsqueda religiosa en la secta Ōmoto-kyō, cuyo líder acompañó a Mongolia en 1924, y según su propio relato, aceptado por sus seguidores, en 1925 vivió una experiencia mística que le infundió el *ki* (Guttmann y Thompson, 2001, pp. 148-149). En 1931 abrió en Tokio el *dōjō* Kōbukan y fue separándose de Takeda, pero el nombre de aikido le llegó desde fuera, cuando en octubre de 1942 el Dai Nippon Butokukai, convertido en federación estatal de las artes marciales al servicio de la guerra, añadió una sección de aikido. En 1948 su hijo Kisshōmaru creó la fundación Aikikai, que ha presentado a Ueshiba como único fundador (Guttmann y Thompson, 2001, p. 149).",
+    "Tras la guerra, Kisshōmaru reinterpretó el aikido como un arte de la paz acorde con la sensibilidad pacifista de la época, el *dōjō* central abrió sus puertas a extranjeros y en 1955 recibió a su primer alumno interno no japonés, el francés André Nocquet (Sánchez García, 2019, p. 201). La mayoría de sus practicantes rechazan las categorías de peso, los torneos y los campeonatos, y entrenan casi solo mediante *kata* en los que el compañero no opone resistencia, lo que permite practicar a personas mayores o con poca fuerza. La excepción es la línea de Tomiki Kenji, que por exigencia de la Universidad de Waseda desarrolló una forma competitiva, publicada en 1965 y con torneos desde 1967 (Guttmann y Thompson, 2001, pp. 149-150).",
+    "La International Aikido Federation celebró su primer congreso en Tokio en 1976 con el propósito de llevar el aikido a la comunidad deportiva mundial; agrupa a organizaciones nacionales vinculadas al Aikikai Hombu, cuyo *dōshu* preside siempre la federación, en 1984 ingresó como miembro de pleno derecho en la GAISF y en la International World Games Association, y participa en los Juegos Mundiales como deporte de exhibición (International Aikido Federation, s. f.)."
+   ],
+   "en": [
+    "Aikido, «the way of harmony», took shape in the first half of the twentieth century from the Daitō school of *jūjutsu*. The term *aiki* appears in Edo-period texts almost always in a negative sense, as a warning against excessive harmony with the opponent, and it acquired its positive meaning with a treatise of 1892 that made the harmony between individual and universal *ki* the heart of the martial arts. Takeda Sōkaku (1860-1943) revived, or according to some created, the Daitō school, which in 1923 he renamed Daitō-ryū Aiki Jūjutsu, and Ueshiba Morihei (1883-1969), born in Wakayama, was his disciple from 1915 and taught it in Hyōgo between 1920 and 1927 (Guttmann & Thompson, 2001, p. 148).",
+    "Ueshiba joined martial practice to an intense religious search in the Ōmoto-kyō sect, whose leader he accompanied to Mongolia in 1924, and according to his own account, accepted by his followers, in 1925 he had a mystical experience that infused him with *ki* (Guttmann & Thompson, 2001, pp. 148-149). In 1931 he opened the Kōbukan *dōjō* in Tokyo and gradually separated from Takeda, but the name aikido came to him from outside, when in October 1942 the Dai Nippon Butokukai, turned into a state federation of martial arts serving the war effort, added an aikido section. In 1948 his son Kisshōmaru created the Aikikai foundation, which has presented Ueshiba as the sole founder (Guttmann & Thompson, 2001, p. 149).",
+    "After the war Kisshōmaru reinterpreted aikido as an art of peace in tune with the pacifist sensibility of the time, the central *dōjō* opened its doors to foreigners and in 1955 it received its first non-Japanese live-in student, the Frenchman André Nocquet (Sánchez García, 2019, p. 201). Most practitioners reject weight categories, tournaments and championships, and train almost exclusively through *kata* in which the partner does not resist, which allows elderly people or those with little strength to practise. The exception is the line of Tomiki Kenji, who at the demand of Waseda University developed a competitive form, published in 1965 and with tournaments from 1967 (Guttmann & Thompson, 2001, pp. 149-150).",
+    "The International Aikido Federation held its first congress in Tokyo in 1976 with the aim of bringing aikido into the global sporting community; it brings together national organisations linked to the Aikikai Hombu, whose *dōshu* always presides over the federation, in 1984 it became a full member of GAISF and of the International World Games Association, and it takes part in the World Games as a demonstration sport (International Aikido Federation, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/aikido.jpg",
+   "pie": {
+    "es": "Watahiki, séptimo dan, proyecta a su compañero en la 51.ª Demostración de Aikido de Japón, 2013.",
+    "en": "Watahiki, seventh dan, throws his partner at the 51st All Japan Aikido Demonstration, 2013."
+   },
+   "autor": "L'oeil étranger",
+   "licencia": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:2013-05-25_51st_All_Japan_Aikido_Demonstration.jpg"
+  },
+  "refs": [
+   "Guttmann, A., y Thompson, L. (2001). *Japanese sports: A history*. University of Hawai'i Press.",
+   "International Aikido Federation. (s. f.). *About*. Recuperado el 29 de septiembre de 2026 de https://www.aikido-international.org/about/",
+   "Sánchez García, R. (2019). *The historical sociology of Japanese martial arts*. Routledge."
+  ],
+  "refs_en": [
+   "Guttmann, A., & Thompson, L. (2001). *Japanese sports: A history*. University of Hawai'i Press.",
+   "International Aikido Federation. (n.d.). *About*. Retrieved September 29, 2026, from https://www.aikido-international.org/about/",
+   "Sánchez García, R. (2019). *The historical sociology of Japanese martial arts*. Routledge."
+  ]
+ },
+ {
+  "id": "jiu-jitsu-brasileno",
+  "name": {
+   "es": "Jiu-jitsu brasileño",
+   "en": "Brazilian jiu-jitsu"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Brasil (Belém do Pará y después Río de Janeiro), desde mediados de la década de 1910, a partir del judo del Kōdōkan",
+   "en": "Brazil (Belém do Pará and later Rio de Janeiro), from the mid-1910s, on the basis of Kōdōkan judo"
+  },
+  "body": {
+   "es": [
+    "El jiu-jitsu brasileño procede de la rama profesional de la expansión del judo, la de los expertos japoneses que recorrían el mundo con exhibiciones y desafíos. En 1905 Tomita Tsunejirō viajó a Estados Unidos acompañado de Maeda Mitsuyo y Satake Shinshirō, que pronto siguieron su propio camino aceptando combates profesionales en América Central, América del Sur y Europa (Sánchez García, 2019, p. 122). Fuera de Japón judo y *jūjutsu* se confundían, y el grupo conocido como los Cuatro Reyes de Cuba, con Maeda, Itō Tokugorō, Satake y Ōno Akitarō, recorrió América Central y del Sur en 1913 y 1914 y pasó 1915 luchando en Brasil antes de separarse en 1916 (Sánchez García, 2019, p. 148).",
+    "Según Sánchez García (2019, p. 149), el jiu-jitsu de los Gracie nació a mediados de la década de 1910, cuando Maeda (1878-1941) inició a Carlos Gracie (1902-1994) en el judo, que en Brasil se conocía como jiu-jitsu. Fernández Truan fecha la llegada de Maeda a Belém do Pará en noviembre de 1914 y precisa que se alojó en casa de Gastão Gracie, cuyos hijos decidieron aprender con él tras verlo actuar (Fernández Truan, s. f., p. 809). La disciplina resultante se caracteriza por el trabajo en el suelo, heredero de los pioneros japoneses del judo y el *jūjutsu* (Sánchez García, 2019, p. 210), y su modelo de difusión fue el del desafío abierto, el mismo que el Kōdōkan de Kanō rechazaba hasta el punto de expulsar a los judocas que participaban en combates profesionales (Sánchez García, 2019, p. 149).",
+    "La proyección mundial llegó con las artes marciales mixtas, puesto que el Ultimate Fighting Championship, nacido en Estados Unidos en 1993, fue idea y obra de Rorion Gracie, experto en el jiu-jitsu familiar, y su éxito influyó en las grandes promociones japonesas de finales de esa década, de modo que las técnicas exportadas por los judocas profesionales volvieron a Japón casi ochenta años después (Sánchez García, 2019, pp. 149, 210). Como rasgo social destaca el peso del linaje familiar, que dio al método el nombre de una familia, y su vínculo originario con el espectáculo y la demostración de eficacia en el combate real, frente al ideal educativo y amateur con que Kanō había concebido el judo (Sánchez García, 2019, p. 149)."
+   ],
+   "en": [
+    "Brazilian jiu-jitsu derives from the professional branch of judo's expansion, that of the Japanese experts who travelled the world giving exhibitions and taking on challenges. In 1905 Tomita Tsunejirō went to the United States accompanied by Maeda Mitsuyo and Satake Shinshirō, who soon went their own way accepting professional fights in Central America, South America and Europe (Sánchez García, 2019, p. 122). Outside Japan judo and *jūjutsu* were confused, and the group known as the Four Kings of Cuba, with Maeda, Itō Tokugorō, Satake and Ōno Akitarō, toured Central and South America in 1913 and 1914 and spent 1915 wrestling in Brazil before splitting up in 1916 (Sánchez García, 2019, p. 148).",
+    "According to Sánchez García (2019, p. 149), the Gracie jiu-jitsu began in the mid-1910s, when Maeda (1878-1941) introduced Carlos Gracie (1902-1994) to judo, which in Brazil was known as jiu-jitsu. Fernández Truan dates Maeda's arrival in Belém do Pará to November 1914 and states that he stayed in the house of Gastão Gracie, whose sons decided to learn with him after seeing him perform (Fernández Truan, n.d., p. 809). The resulting discipline is characterised by groundwork, inherited from the Japanese pioneers of judo and *jūjutsu* (Sánchez García, 2019, p. 210), and its model of diffusion was the open challenge, the same one that Kanō's Kōdōkan rejected to the point of expelling judoka who took part in professional bouts (Sánchez García, 2019, p. 149).",
+    "Worldwide projection came with mixed martial arts, since the Ultimate Fighting Championship, born in the United States in 1993, was the idea and work of Rorion Gracie, an expert in the family jiu-jitsu, and its success influenced the major Japanese promotions of the late 1990s, so that the techniques exported by professional judoka returned to Japan almost eighty years later (Sánchez García, 2019, pp. 149, 210). A notable social feature is the weight of family lineage, which gave the method the name of a family, together with its original link to spectacle and to the demonstration of effectiveness in real combat, in contrast with the educational and amateur ideal with which Kanō had conceived judo (Sánchez García, 2019, p. 149)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/jiu-jitsu-brasileno.jpg",
+   "pie": {
+    "es": "Tareq Azim enseña una técnica de jiu-jitsu brasileño en el suelo en Camp Eggers (Kabul), 2011.",
+    "en": "Tareq Azim teaches a Brazilian jiu-jitsu ground technique at Camp Eggers (Kabul), 2011."
+   },
+   "autor": {
+    "es": "NATO Training Mission-Afghanistan",
+    "en": "NATO Training Mission-Afghanistan"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Tareq_Azim_gives_Brazilian_Jiu-jitsu_instruction_to_Raj_Richardson.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Sánchez García, R. (2019). *The historical sociology of Japanese martial arts*. Routledge."
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Sánchez García, R. (2019). *The historical sociology of Japanese martial arts*. Routledge."
+  ]
+ },
+ {
+  "id": "charreria",
+  "name": {
+   "es": "Charrería",
+   "en": "Charrería"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "México, época colonial (trabajo ganadero de las haciendas); reorganizada como deporte de equipo aficionado después de la Primera Guerra Mundial",
+   "en": "Mexico, colonial period (cattle work on the haciendas); reorganised as an amateur team sport after the First World War"
+  },
+  "body": {
+   "es": [
+    "La charrería procede del trabajo con el ganado en el México colonial. Tras la conquista, los españoles prohibieron el juego de pelota indígena e introdujeron sus propias diversiones, entre ellas las carreras de caballos, las peleas de gallos, las corridas de toros y la charreada, un juego ecuestre semejante al rodeo (Guttmann, 2004, p. 168). Su protagonista es el charro, el jinete que doma, conduce y derriba reses, y sus suertes proceden de las faenas de las haciendas ganaderas. Con el negocio del ganado, esas competiciones pasaron al norte, y los vaqueros mexicanos enseñaron a los cowboys de Estados Unidos las destrezas, el vocabulario y la indumentaria del oficio (LeCompte, 1999, p. 327).",
+    "Durante el siglo XIX y los primeros años del XX, charreada y rodeo fueron casi la misma cosa. En las ferias y fiestas del Oeste norteamericano se celebraban juntos concursos de rodeo y de charros, con participantes de orígenes muy diversos, y todas las pruebas del rodeo, salvo la carrera femenina de barriles, tienen su equivalente en la charreada, aunque la lucha con el novillo estadounidense difiere mucho de la cola mexicana, en la que el jinete derriba al toro tirándole del rabo (LeCompte, 1999, p. 327). La separación llegó después de la Primera Guerra Mundial, cuando la charreada se reorganizó como deporte de equipo y aficionado, mientras el rodeo siguió siendo individual y profesional (LeCompte, 1999, p. 327).",
+    "Esa reorganización explica su función social. Al renunciar al profesionalismo y competir por equipos, la charrería se afirmó como una práctica de asociación y de representación colectiva, ligada a la figura del charro, emblema del mundo ranchero y de la identidad mexicana. El contraste con el rodeo estadounidense, nacido del mismo tronco y orientado hacia el espectáculo comercial, muestra cómo una misma técnica ecuestre puede servir a fines distintos según la sociedad que la adopta. En 2016 la UNESCO inscribió la charrería en la Lista Representativa del Patrimonio Cultural Inmaterial de la Humanidad."
+   ],
+   "en": [
+    "Charrería derives from cattle work in colonial Mexico. After the conquest the Spanish banned the indigenous ballgame and introduced their own pastimes, among them horse races, cockfights, bullfights and the *charreada*, an equestrian game similar to rodeo (Guttmann, 2004, p. 168). Its central figure is the *charro*, the horseman who breaks, drives and throws cattle, and its events come from the tasks of the cattle haciendas. With the cattle business these contests spread north, and Mexican *vaqueros* taught the cowboys of the United States the skills, vocabulary and dress of the trade (LeCompte, 1999, p. 327).",
+    "Throughout the nineteenth century and the first years of the twentieth, *charreada* and rodeo were almost the same thing. At fairs and holidays in the American West, rodeo and charro contests were held together, with contestants of very diverse origins, and every rodeo event except women's barrel racing has a counterpart in the *charreada*, although American steer wrestling differs greatly from the Mexican *cola*, in which the rider throws the bull by pulling its tail (LeCompte, 1999, p. 327). The two parted ways after the First World War, when the *charreada* was reorganised as an amateur team sport while rodeo remained individual and professional (LeCompte, 1999, p. 327).",
+    "That reorganisation explains its social function. By giving up professionalism and competing in teams, charrería established itself as a practice of association and collective representation, tied to the figure of the *charro*, an emblem of ranch life and of Mexican identity. The contrast with American rodeo, which grew from the same root and turned towards commercial spectacle, shows how the same equestrian technique can serve different ends depending on the society that adopts it. In 2016 UNESCO inscribed charrería on the Representative List of the Intangible Cultural Heritage of Humanity."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/charreria.jpg",
+   "pie": {
+    "es": "*Enlazando al toro*, óleo de Ernesto Icaza (1925) con charros a caballo lazando un toro en el campo.",
+    "en": "*Enlazando al toro*, oil painting by Ernesto Icaza (1925) with mounted charros roping a bull in open country."
+   },
+   "autor": "Ernesto Icaza",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Ernesto_icaza_enlazando_al_toro_101335).jpg"
+  },
+  "refs": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "LeCompte, M. L. (1999). Rodeo. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 327-329). Oxford University Press."
+  ],
+  "refs_en": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "LeCompte, M. L. (1999). Rodeo. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 327-329). Oxford University Press."
+  ]
+ },
+ {
+  "id": "pesca-deportiva",
+  "name": {
+   "es": "Pesca deportiva",
+   "en": "Sport fishing"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Tradición antigua (Egipto, Japón); forma moderna en Inglaterra entre 1496 y 1653, con los primeros tratados de pesca con caña; competición y récords en el siglo XX",
+   "en": "Ancient tradition (Egypt, Japan); modern form in England between 1496 and 1653, with the first treatises on angling; competition and records in the twentieth century"
+  },
+  "body": {
+   "es": [
+    "La pesca por alimento es la madre de la pesca deportiva, y la distinción entre ambas depende sobre todo de quién pesca y para qué. En Egipto, la pesca con arpón que decora las tumbas nobles del Imperio Antiguo debía proporcionar un placer contemplativo al difunto (Decker, 1992), de modo que la misma actividad que para el campesino era sustento servía al noble como ocio y distinción. Los primeros escritos sobre pesca deportiva proceden del Japón del siglo VIII, donde ya era una práctica de prestigio social (Yoder, 1999, p. 129), y Fernández Truan (s. f., p. 168) recuerda que Claudio Eliano describió en el siglo III el uso de moscas artificiales por los pescadores de truchas de Macedonia.",
+    "La forma moderna se fijó en Inglaterra. El *Treatyse of Fysshynge wyth an Angle*, impreso en 1496 y atribuido a Dame Juliana Berners, presentaba la pesca con caña como un pasatiempo aristocrático, y *The Compleat Angler*, de Izaak Walton, publicado en 1653, trató a la vez la técnica y la filosofía del pescador y se convirtió en el libro más influyente del género (Salvador Alonso, 2006, p. 592; Yoder, 1999, p. 129). La jerarquía social pasó también a las especies, hasta el punto de que muchos ingleses siguen considerando pesca basta cualquier pez que no sea la trucha o el salmón. En Estados Unidos, donde los puritanos habían visto la pesca como una pérdida de tiempo, la afición creció desde comienzos del siglo XIX con el carrete de Kentucky y la caña de bambú, y la pesca con mosca conservó el mayor prestigio (Yoder, 1999, pp. 129-130).",
+    "La competición llegó en el siglo XX con el registro de récords y los torneos. La International Game Fish Association, que homologa los récords de agua salada y dulce, nació en 1939 con sede en el American Museum of Natural History (International Game Fish Association [IGFA], s. f.), aunque Yoder (1999, p. 133) fecha su fundación en 1940. En 1967 se celebró el primer torneo de pesca del black bass y en 1968 nació la Bass Anglers Sportsman Society, que convirtió a un pequeño grupo de profesionales, casi todos varones blancos de mediana edad, en figuras patrocinadas por la industria del material de pesca (Yoder, 1999, p. 129). El agotamiento de las poblaciones y las críticas de los defensores de los animales han extendido la captura y suelta, y la pesca conserva a menudo su antigua consideración de deporte de élite (Yoder, 1999, p. 129)."
+   ],
+   "en": [
+    "Fishing for food is the mother of sport fishing, and the distinction between the two depends above all on who fishes and why. In Egypt, the harpoon fishing that decorates the noble tombs of the Old Kingdom was meant to give the deceased a contemplative pleasure (Decker, 1992), so the same activity that meant sustenance for the peasant served the noble as leisure and distinction. The earliest writing on sport fishing comes from eighth-century Japan, where it was already a socially prestigious practice (Yoder, 1999, p. 129), and Fernández Truan (n.d., p. 168) notes that Claudius Aelianus described in the third century the use of artificial flies by trout fishermen in Macedonia.",
+    "The modern form took shape in England. The *Treatyse of Fysshynge wyth an Angle*, printed in 1496 and attributed to Dame Juliana Berners, presented angling as an aristocratic pastime, and Izaak Walton's *The Compleat Angler*, published in 1653, dealt with both the technique and the philosophy of the angler and became the most influential book of its kind (Salvador Alonso, 2006, p. 592; Yoder, 1999, p. 129). Social hierarchy was also transferred to the species, to the point that many English people still regard every fish except trout and salmon as coarse fish. In the United States, where the Puritans had seen fishing as a waste of time, the pastime grew from the early nineteenth century with the Kentucky reel and the split bamboo rod, and fly fishing kept the greatest prestige (Yoder, 1999, pp. 129-130).",
+    "Competition arrived in the twentieth century with record keeping and tournaments. The International Game Fish Association, which ratifies saltwater and freshwater records, was born in 1939, housed at the American Museum of Natural History (International Game Fish Association [IGFA], n.d.), although Yoder (1999, p. 133) dates its foundation to 1940. The first bass tournament was held in 1967 and the Bass Anglers Sportsman Society was born in 1968, turning a small group of professionals, almost all white middle-aged men, into figures sponsored by the fishing tackle industry (Yoder, 1999, p. 129). Depleted stocks and criticism from animal rights activists have spread catch-and-release, and fishing often keeps its old standing as an elite sport (Yoder, 1999, p. 129)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 2,
+    "f": "la-caza-en-las-marismas",
+    "t": {
+     "es": "La caza en las marismas",
+     "en": "Hunting in the marshes"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/pesca-deportiva.jpg",
+   "pie": {
+    "es": "*A Party Angling*, óleo de George Morland (1789) con un grupo pescando con caña desde una barca.",
+    "en": "*A Party Angling*, oil painting by George Morland (1789) with a group fishing with rods from a boat."
+   },
+   "autor": "George Morland",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:George_Morland_-_A_Party_Angling_-_Google_Art_Project.jpg"
+  },
+  "refs": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trad.). Yale University Press.",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Game Fish Association. (s. f.). *About us*. Recuperado el 30 de septiembre de 2026 de https://igfa.org/about-us/",
+   "Salvador Alonso, J. L. (2006). *El deporte en Occidente: Historia, cultura, política y espacios* (Tomo II) [Tesis doctoral, Universidade da Coruña].",
+   "Yoder, D. G. (1999). Fishing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 129-134). Oxford University Press."
+  ],
+  "refs_en": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trans.). Yale University Press.",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Game Fish Association. (n.d.). *About us*. Retrieved September 30, 2026, from https://igfa.org/about-us/",
+   "Salvador Alonso, J. L. (2006). *El deporte en Occidente: Historia, cultura, política y espacios* (Tomo II) [Doctoral dissertation, Universidade da Coruña].",
+   "Yoder, D. G. (1999). Fishing. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 129-134). Oxford University Press."
+  ]
+ },
+ {
+  "id": "saltos-de-esqui",
+  "name": {
+   "es": "Saltos de esquí",
+   "en": "Ski jumping"
+  },
+  "bloque": {
+   "es": "De invierno",
+   "en": "Winter sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Noruega; primera competición de saltos conocida en Trysil, 1862; trampolín de Holmenkollen (Oslo) desde 1892",
+   "en": "Norway; first known jumping competition at Trysil, 1862; Holmenkollen hill (Oslo) from 1892"
+  },
+  "body": {
+   "es": [
+    "El salto con esquís surgió en el ámbito nórdico y como deporte es una invención noruega. Las compañías militares de esquiadores practicaban ya el salto en el siglo XVIII (Goksøyr, 1999, p. 357), y en las competiciones del ejército noruego de la segunda mitad de ese siglo el salto figuraba entre las pruebas premiadas según su valor militar (Allen, 2007, p. 31). Las primeras competiciones civiles combinaban el salto con el descenso o con el fondo, y la carrera de Trysil de 1862 es la primera competición de saltos puros que se conoce (Goksøyr, 1999, p. 357). Sondre Norheim y los esquiadores de Telemark, que llegaron a Christiania en 1868, entusiasmaron a la burguesía de la capital con su velocidad y su estilo de salto (Allen, 2007, pp. 32 y 182).",
+    "La burguesía de Christiania, impresionada por lo que veía, quiso controlarlo; se erigió en juez del nuevo deporte y lo encuadró en el ideal del *idrett*, camino a la vez de desarrollo físico y moral, en el que los jueces valoraban tanto la longitud como el estilo (Goksøyr, 1999, p. 357). El gran concurso de la capital empezó en la colina de Huseby, en 1883 el salto se separó del fondo, en 1890 se trasladó a Ullbakken y en 1892 encontró su sede definitiva en Holmenkollen, con el salto como centro de la fiesta (Allen, 2007, pp. 44-45). El trampolín construido permitía medir con exactitud y atraer a multitudes, y el salto se convirtió en espectáculo; el cartero austriaco Josef Wallner llegó a decir que era un arte para los huéspedes de los hoteles y para el cine (Allen, 2007, p. 45).",
+    "En las últimas décadas del siglo XIX los noruegos vieron en el salto su deporte nacional, parte de la afirmación de una cultura propia frente a Suecia, y en 1905 una de las primeras apariciones públicas de los nuevos reyes fue el festival de Holmenkollen (Goksøyr, 1999, p. 357). Soldados noruegos lo llevaron a Suecia, donde en 1886 se celebró el que se presentó como primer concurso internacional, y los emigrantes a Norteamérica; después pasó a Finlandia, los Alpes y Europa central (Goksøyr, 1999, p. 357). La FIS organizó desde 1926 campeonatos del mundo de esquí nórdico, y el estilo en V que introdujo el sueco Jan Boklöv en 1986 terminó por imponerse pese a romper el ideal estético de los esquís paralelos (Goksøyr, 1999, p. 358)."
+   ],
+   "en": [
+    "Ski jumping arose in the Nordic region, and as a sport it is a Norwegian invention. Military ski companies were already jumping in the eighteenth century (Goksøyr, 1999, p. 357), and in the Norwegian army competitions of the second half of that century jumping was among the events rewarded according to their military value (Allen, 2007, p. 31). The first civilian competitions combined jumping with downhill or cross-country, and the Trysil race of 1862 is the first known pure jumping competition (Goksøyr, 1999, p. 357). Sondre Norheim and the skiers from Telemark, who came to Christiania in 1868, thrilled the capital's bourgeoisie with their speed and jumping style (Allen, 2007, pp. 32 and 182).",
+    "The bourgeoisie of Christiania, impressed by what it saw, wanted to control it; it made itself the judge of the new sport and framed it within the ideal of *idrett*, a path to both physical and moral development, in which judges assessed style as well as length (Goksøyr, 1999, p. 357). The capital's great meet began on Huseby Hill, in 1883 jumping was separated from cross-country, in 1890 the event moved to Ullbakken, and in 1892 it found its permanent home at Holmenkollen, with the jump as the centrepiece of the festival (Allen, 2007, pp. 44-45). The constructed hill allowed exact measurement and drew crowds, and jumping became a spectacle; the Austrian postman Josef Wallner went so far as to call it an art form for hotel guests and the cinema (Allen, 2007, p. 45).",
+    "In the last decades of the nineteenth century Norwegians came to see jumping as their national sport, part of asserting a culture of their own against Sweden, and in 1905 one of the first public appearances of the new king and queen was at the Holmenkollen festival (Goksøyr, 1999, p. 357). Norwegian soldiers took it to Sweden, where the event billed as the first international contest was held in 1886, and emigrants took it to North America; it then spread to Finland, the Alps and central Europe (Goksøyr, 1999, p. 357). The FIS has held Nordic world championships since 1926, and the V-style introduced by the Swede Jan Boklöv in 1986 eventually prevailed, although it broke the aesthetic ideal of parallel skis (Goksøyr, 1999, p. 358)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/saltos-de-esqui.jpg",
+   "pie": {
+    "es": "Un soldado del batallón IV/93 del ejército suizo en pleno salto de esquí, fotografía de entre 1914 y 1918.",
+    "en": "A soldier of Swiss Army battalion IV/93 in mid ski jump, photograph taken between 1914 and 1918."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Skispringen_-_CH-BAR_-_3237100.tif"
+  },
+  "refs": [
+   "Allen, E. J. B. (2007). *The culture and sport of skiing: From antiquity to World War II*. University of Massachusetts Press.",
+   "Goksøyr, M. (1999). Ski jumping. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 357-358). Oxford University Press."
+  ],
+  "refs_en": [
+   "Allen, E. J. B. (2007). *The culture and sport of skiing: From antiquity to World War II*. University of Massachusetts Press.",
+   "Goksøyr, M. (1999). Ski jumping. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 357-358). Oxford University Press."
+  ]
+ },
+ {
+  "id": "combinada-nordica",
+  "name": {
+   "es": "Combinada nórdica",
+   "en": "Nordic combined"
+  },
+  "bloque": {
+   "es": "De invierno",
+   "en": "Winter sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Christiania (hoy Oslo, Noruega), concursos de Huseby desde 1879 y de Holmenkollen desde 1892; olímpica desde Chamonix 1924",
+   "en": "Christiania (now Oslo, Norway), Huseby meets from 1879 and Holmenkollen from 1892; Olympic since Chamonix 1924"
+  },
+  "body": {
+   "es": [
+    "La combinada nórdica procede del ideal noruego del esquiador completo, que valoraba a quien dominaba todas las formas de moverse sobre esquís y veía con recelo la especialización. El gran concurso anual de Christiania, que empezó en 1879 en la colina de Huseby, puso a prueba hasta 1881 la subida, el descenso, el salto y la marcha en llano, y a partir de 1883 separó el salto de la carrera de fondo, si bien todos los participantes seguían obligados a disputar las dos pruebas (Allen, 2007, pp. 44 y 181). Ese mismo año se fundó la Asociación para el Fomento del Esquí (*Foreningen til Ski-Idrættens Fremme*), que asumió la organización de las competiciones locales y nacionales (Allen, 2007, p. 182).",
+    "La falta de nieve en Huseby obligó a trasladar el concurso en 1890 a Ullbakken, cerca de Frogneseter, y en 1892 encontró su sede definitiva en Holmenkollen, donde el trampolín pasó a ser el centro de la fiesta (Allen, 2007, p. 45). La Federación Internacional de Esquí (FIS) fecha en ese año el origen de la combinada nórdica, con la primera gran competición del Festival de Esquí de Holmenkollen (FIS, s. f.-a). Hasta 1933 no se permitió inscribirse en una sola de las dos pruebas, de modo que el salto y el fondo como especialidades independientes se desgajaron de la prueba combinada (Allen, 2007, p. 45). Hoy la clasificación sigue el método Gundersen, que convierte la puntuación del salto en diferencias de tiempo para una salida escalonada en la carrera de fondo (FIS, s. f.-a).",
+    "La FIS se fundó el 2 de febrero de 1924 en Chamonix, durante la semana de deportes de invierno que el COI reconoció después como primeros Juegos Olímpicos de Invierno, y heredó la labor de la Comisión Internacional de Esquí creada en 1910 (FIS, s. f.-b; Guttmann, 2004, p. 252). La combinada nórdica figura en el programa olímpico desde aquella primera edición (FIS, s. f.-a). Su función social fue sobre todo identitaria, puesto que Holmenkollen se convirtió en el escaparate de la cultura noruega del esquí, y tras la independencia de 1905 el príncipe heredero llegó a saltar en competición mientras los nuevos reyes asistían cada año al concurso (Allen, 2007, p. 182). Según la FIS, es además la única disciplina olímpica de invierno que carece de categoría femenina (FIS, s. f.-a)."
+   ],
+   "en": [
+    "Nordic combined derives from the Norwegian ideal of the all-round skier, which prized those who mastered every way of moving on skis and regarded specialisation with suspicion. The great annual meet in Christiania, which began in 1879 on Huseby Hill, tested climbing, descending, jumping and running on the flat until 1881, and from 1883 it separated the jump from the cross-country race, although every competitor was still required to take part in both events (Allen, 2007, pp. 44 and 181). That same year the Association for the Promotion of Ski Sports (*Foreningen til Ski-Idrættens Fremme*) was founded and took charge of local and national competitions (Allen, 2007, p. 182).",
+    "A lack of snow at Huseby forced the meet to move in 1890 to Ullbakken, near Frogneseter, and in 1892 it found its permanent home at Holmenkollen, where the jump became the centrepiece of the festivities (Allen, 2007, p. 45). The International Ski Federation (FIS) dates the origin of Nordic combined to that year, with the first major competition of the Holmenkollen Ski Festival (FIS, n.d.-a). Only in 1933 were skiers allowed to enter just one of the two events, so that jumping and cross-country as separate specialities split off from the combined competition (Allen, 2007, p. 45). Today the ranking follows the Gundersen method, which converts jumping scores into time gaps for a staggered start in the cross-country race (FIS, n.d.-a).",
+    "FIS was founded on 2 February 1924 in Chamonix, during the winter sports week that the IOC later recognised as the first Olympic Winter Games, and it took over the work of the International Ski Commission created in 1910 (FIS, n.d.-b; Guttmann, 2004, p. 252). Nordic combined has been on the Olympic programme since that first edition (FIS, n.d.-a). Its social function was above all a matter of identity, since Holmenkollen became the showcase of Norwegian ski culture, and after independence in 1905 the crown prince jumped in competition while the new king and queen attended the meet every year (Allen, 2007, p. 182). According to FIS, it is also the only Olympic winter discipline without a women's category (FIS, n.d.-a)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/combinada-nordica.jpg",
+   "pie": {
+    "es": "Hans Vinjarengen esquiando en los Juegos Olímpicos de invierno de St. Moritz, 1928.",
+    "en": "Hans Vinjarengen skiing at the St. Moritz Winter Olympics, 1928."
+   },
+   "autor": "Henriksen & Steen",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Jeux_olympiques_d%27hiver_de_St-Moritz_1928_-_13_-_Hans_Vinjarengen.jpg"
+  },
+  "refs": [
+   "Allen, E. J. B. (2007). *The culture and sport of skiing: From antiquity to World War II*. University of Massachusetts Press.",
+   "FIS. (s. f.-a). *Nordic Combined 101: How Nordic Combined works*. Recuperado el 29 de septiembre de 2026 de https://www.fis-ski.com/nordic-combined/news/2024-25/nordic-combined-101-how-nordic-combined-works",
+   "FIS. (s. f.-b). *History of snowsports*. Recuperado el 29 de septiembre de 2026 de https://www.fis-ski.com/en/inside-fis/about-fis/history/history-of-snowsports",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press."
+  ],
+  "refs_en": [
+   "Allen, E. J. B. (2007). *The culture and sport of skiing: From antiquity to World War II*. University of Massachusetts Press.",
+   "FIS. (n.d.-a). *Nordic Combined 101: How Nordic Combined works*. Retrieved September 29, 2026, from https://www.fis-ski.com/nordic-combined/news/2024-25/nordic-combined-101-how-nordic-combined-works",
+   "FIS. (n.d.-b). *History of snowsports*. Retrieved September 29, 2026, from https://www.fis-ski.com/en/inside-fis/about-fis/history/history-of-snowsports",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press."
+  ]
+ },
+ {
+  "id": "telemark",
+  "name": {
+   "es": "Telemark",
+   "en": "Telemark skiing"
+  },
+  "bloque": {
+   "es": "De invierno",
+   "en": "Winter sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Región de Telemark (Noruega), mediados del siglo XIX; llega a Christiania en 1868",
+   "en": "Telemark region (Norway), mid-19th century; reaches Christiania in 1868"
+  },
+  "body": {
+   "es": [
+    "El telemark toma su nombre del distrito noruego de Telemark, cuyo esquí, uno de los muchos tipos regionales que se usaban en Noruega, alcanzó una fama particular (Allen, 2007, p. 17). En el concurso de fabricación que acompañó a la reunión de Huseby de 1879, en la que Sondre Norheim hizo una exhibición memorable, un artesano de Kviteseid, en Telemark, ganó el segundo premio, al año siguiente el primero fue para un esquí de modelo Telemark y en 1886 un fabricante de Christiania anunciaba ya esquís construidos «según el diseño de Telemark» (Allen, 2007, p. 70). Entre los primeros hitos del esquí moderno figura también la carrera celebrada en Sauland, en Telemark, en 1867 (Guttmann, 2004, p. 251).",
+    "Durante mucho tiempo se ha asociado el nacimiento del esquí moderno con el entusiasmo que despertaron en la burguesía de Christiania la velocidad y el estilo de salto de Norheim y sus compañeros de Telemark, que llegaron a la ciudad en 1868 y dirigieron una escuela de esquí a la que se apuntaron aquellos burgueses (Allen, 2007, pp. 32, 182 y 283). Allen matiza esa versión con los trabajos de Olav Christensen, que sitúan las raíces del esquí deportivo al menos un siglo antes, en las carreras reglamentadas del ejército noruego del siglo XVIII (Allen, 2007, pp. 31-32). El prestigio de Telemark respondía también a su valor simbólico, dado que aquel distrito representaba, como Dalecarlia en Suecia o el Lake District en Inglaterra, lo mejor del campesinado sobre el que se levantó la construcción nacional (Allen, 2007, p. 53).",
+    "El viraje de telemark viajó a los Alpes con el esquí noruego, y en una de las primeras carreras de descenso organizadas por los británicos en Mürren John Mercer bajó enlazando virajes de telemark con una fijación de talón libre (Allen, 2007, p. 101). Allen reproduce una ilustración de la revista *Simplicissimus* de 1910 y observa que entonces muy pocas mujeres sabían ejecutar ese viraje (Allen, 2007, p. 151). Su retroceso llegó con Hannes Schneider, que en St. Anton dio prioridad al *stem-christiania*, y con las películas que rodó junto a Arnold Fanck, que contribuyeron a desterrar el telemark de los Alpes y a convertir al público al llamado esquí alpino, de manera que hacia 1930 el *Schuss* del Arlberg lo había desplazado de las pistas alpinas (Allen, 2007, pp. 194 y 261-262)."
+   ],
+   "en": [
+    "Telemark skiing takes its name from the Norwegian district of Telemark, whose ski, one of the many regional types used in Norway, became particularly famous (Allen, 2007, p. 17). At the manufacturing competition held alongside the 1879 Huseby meet, where Sondre Norheim gave a memorable display, a craftsman from Kviteseid in Telemark won second prize, the following year first prize went to a Telemark-style ski, and by 1886 a Christiania maker was advertising skis built \"following the Telemark design\" (Allen, 2007, p. 70). The race held at Sauland, in Telemark, in 1867 also counts among the early milestones of modern skiing (Guttmann, 2004, p. 251).",
+    "The birth of modern skiing has long been associated with the enthusiasm that the speed and jumping style of Norheim and his Telemark companions aroused among the Christiania bourgeoisie; they came to the city in 1868 and ran a ski school that those burghers joined (Allen, 2007, pp. 32, 182 and 283). Allen qualifies this account with the work of Olav Christensen, which places the roots of sport skiing at least a century earlier, in the regulated races of the eighteenth-century Norwegian army (Allen, 2007, pp. 31-32). Telemark's prestige also rested on its symbolic value, since the district stood, like Dalarna in Sweden or the Lake District in England, for the best of the peasantry on which nation-building rested (Allen, 2007, p. 53).",
+    "The Telemark turn travelled to the Alps with Norwegian skiing, and in one of the first downhill races organised by the British at Mürren John Mercer descended with linked Telemark turns on a free-heel binding (Allen, 2007, p. 101). Allen reproduces an illustration from the magazine *Simplicissimus* of 1910 and notes that very few women could then perform the turn (Allen, 2007, p. 151). Its decline came with Hannes Schneider, who gave priority to the stem-christiania at St. Anton, and with the films he made with Arnold Fanck, which helped to banish the Telemark from the Alps and convert the public to what was called Alpine skiing, so that by around 1930 the Arlberg *Schuss* had displaced it from Alpine slopes (Allen, 2007, pp. 194 and 261-262)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/telemark.jpg",
+   "pie": {
+    "es": "Esquiador trazando un giro telemark en la nieve, fotografía de Arthur Wehrli, 1908.",
+    "en": "A skier making a telemark turn in the snow, photograph by Arthur Wehrli, 1908."
+   },
+   "autor": "Arthur Wehrli",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:CH-NB_Photoglob-Wehrli_EAD-WEHR-14883-B.tif"
+  },
+  "refs": [
+   "Allen, E. J. B. (2007). *The culture and sport of skiing: From antiquity to World War II*. University of Massachusetts Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press."
+  ],
+  "refs_en": [
+   "Allen, E. J. B. (2007). *The culture and sport of skiing: From antiquity to World War II*. University of Massachusetts Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press."
+  ]
+ },
+ {
+  "id": "snowboard",
+  "name": {
+   "es": "Snowboard",
+   "en": "Snowboarding"
+  },
+  "bloque": {
+   "es": "De invierno",
+   "en": "Winter sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Muskegon (Michigan, EE. UU.), 1965-1966, con el Snurfer; olímpico desde Nagano 1998",
+   "en": "Muskegon (Michigan, USA), 1965-1966, with the Snurfer; Olympic since Nagano 1998"
+  },
+  "body": {
+   "es": [
+    "El snowboard nació en Estados Unidos en la década de 1960. El día de Navidad de 1965 Sherman Poppen unió con travesaños dos esquís y se deslizó de pie sobre ellos por la colina de su casa; así nació el Snurfer, nombre formado con *snow* y *surfer*, un juguete de 42 por 7 pulgadas con una cuerda en la punta que Poppen patentó y cedió bajo licencia a Brunswick, y del que se vendieron más de 750.000 unidades en los quince años siguientes (MacArthur, 2010). Humphreys fecha en 1966 la salida al mercado de la primera tabla fabricada en serie, poco más que un monopatín grande que se vendía como juguete, si bien el movimiento del ocio de aquella década vio en ella un equipo recreativo serio (Humphreys, 1999, p. 365). Algún manual recoge otras versiones que adelantan el origen a 1900 o a 1929, sin documentarlas (Fernández Truan, s. f., p. 460).",
+    "Los Snurfer eran difíciles de controlar y las estaciones comerciales los prohibieron, de modo que la práctica se refugió fuera de pistas, donde adquirió un seguimiento de culto (Humphreys, 1999, p. 365). En la década de 1970 surgieron fabricantes especializados, como Dimitrije Milovich, que tras dejar la Universidad de Cornell se instaló en Utah y probó allí los prototipos de sus tablas Winterstick, o Jake Burton, que en la temporada 1977-1978 empezó a vender en Vermont su propia tabla, la Burton Board (MacArthur, 2010). A finales de esa década el monopatín y la subcultura *punk* impregnaron el snowboard, que se convirtió en el surf sobre nieve de los patinadores, y a mediados de la de 1980 la mayoría de las estaciones abrieron sus pistas porque el esquí había tocado techo y la tabla ofrecía un mercado juvenil nuevo, aun a costa de tolerar su carácter contracultural (Humphreys, 1999, p. 365).",
+    "A finales de la década de 1980 se creó la International Snowboard Federation (ISF), que organizó el primer circuito profesional mundial (Fernández Truan, s. f., p. 461). La Federación Internacional de Esquí (FIS) formó entonces un comité de snowboard, y el COI la reconoció a ella, y no a la ISF, como organismo del snowboard olímpico, lo que la mayoría de los competidores vivió como una apropiación hostil por parte de los esquiadores y como una amenaza para su identidad (Humphreys, 1999, p. 366). El snowboard debutó en los Juegos de Nagano en 1998 (MacArthur, 2010), y en 2003 la ISF se disolvió y marcas y deportistas crearon la World Snowboard Federation (Fernández Truan, s. f., p. 461). Su historia social es la de una práctica juvenil que nació en oposición al esquí y acabó absorbida por sus instituciones."
+   ],
+   "en": [
+    "Snowboarding was born in the United States in the 1960s. On Christmas Day 1965 Sherman Poppen cross-braced two skis together and rode them standing up down the hill behind his house; this was the birth of the Snurfer, a name made from *snow* and *surfer*, a 42-by-7-inch toy with a rope at the nose that Poppen patented and licensed to Brunswick, and of which more than 750,000 units were sold over the next fifteen years (MacArthur, 2010). Humphreys dates the first mass-produced board to 1966, little more than a large skateboard sold as a toy, although the leisure movement of that decade saw it as serious recreational equipment (Humphreys, 1999, p. 365). One textbook records other versions that push the origin back to 1900 or 1929, without documenting them (Fernández Truan, n.d., p. 460).",
+    "Snurfers were hard to control and commercial ski areas banned them, so the activity moved to the backcountry, where it acquired a cult following (Humphreys, 1999, p. 365). Specialised makers emerged in the 1970s, such as Dimitrije Milovich, who left Cornell University, moved to Utah and tested the prototypes of his Winterstick boards there, or Jake Burton, who in the 1977-78 season began selling his own board, the Burton Board, in Vermont (MacArthur, 2010). In the late 1970s skateboarding and punk subculture permeated snowboarding, which became surfing on snow for skaters, and by the mid-1980s most ski areas had opened their slopes because skiing had reached a plateau and the board offered a new youth market, even at the cost of tolerating its countercultural character (Humphreys, 1999, p. 365).",
+    "The International Snowboard Federation (ISF) was created in the late 1980s and organised the first professional world tour (Fernández Truan, n.d., p. 461). The International Ski Federation (FIS) then formed a snowboard committee, and the IOC recognised FIS rather than the ISF as the body for Olympic snowboarding, which most competitors experienced as a hostile takeover by skiers and a threat to their identity (Humphreys, 1999, p. 366). Snowboarding made its debut at the Nagano Games in 1998 (MacArthur, 2010), and in 2003 the ISF dissolved and brands and riders set up the World Snowboard Federation (Fernández Truan, n.d., p. 461). Its social history is that of a youth practice born in opposition to skiing and eventually absorbed by skiing's institutions."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/snowboard.jpg",
+   "pie": {
+    "es": "Primera manga de la final de halfpipe femenino de snowboard en los Juegos Olímpicos de la Juventud de Lausana, enero de 2020.",
+    "en": "First run of the women's snowboard halfpipe final at the Lausanne Youth Olympic Games, January 2020."
+   },
+   "autor": "Martin Rulsch",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:2020-01-20_Snowboarding_at_the_2020_Winter_Youth_Olympics_%E2%80%93_Women%27s_Halfpipe_%E2%80%93_Final_%E2%80%93_1st_run_(Martin_Rulsch)_25.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Humphreys, D. (1999). Snowboarding. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 365-366). Oxford University Press.",
+   "MacArthur, P. J. (2010, 5 de febrero). The top ten important moments in snowboarding history. *Smithsonian Magazine*. https://www.smithsonianmag.com/history/the-top-ten-important-moments-in-snowboarding-history-6851590/"
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Humphreys, D. (1999). Snowboarding. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 365-366). Oxford University Press.",
+   "MacArthur, P. J. (2010, February 5). The top ten important moments in snowboarding history. *Smithsonian Magazine*. https://www.smithsonianmag.com/history/the-top-ten-important-moments-in-snowboarding-history-6851590/"
+  ]
+ },
+ {
+  "id": "skeleton",
+  "name": {
+   "es": "Skeleton",
+   "en": "Skeleton"
+  },
+  "bloque": {
+   "es": "De invierno",
+   "en": "Winter sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Davos y St. Moritz (Suiza), décadas de 1870-1880; olímpico en 1928 y 1948, y de nuevo desde 2002",
+   "en": "Davos and St. Moritz (Switzerland), 1870s-1880s; Olympic in 1928 and 1948, and again since 2002"
+  },
+  "body": {
+   "es": [
+    "El tobogán procede de los pueblos nativos del este de Canadá, que lo fabricaban con tablas de abedul curvadas para transportar cargas sobre la nieve, y su nombre viene del franco-canadiense *tabaganne*, derivado a su vez de un término algonquino (Pawelko, 1999, p. 399). La Federación Internacional de Bobsleigh y Skeleton (IBSF) recuerda que los toboganes de los países alpinos de finales del siglo XIX se inspiraron en esos trineos canadienses y cita como precursores los trineos noruegos *ake*, de los pescadores, y *kjaelke*, de recreo, del que podría derivar el nombre del deporte, aunque también se atribuye al aspecto esquelético del trineo (International Bobsleigh and Skeleton Federation [IBSF], s. f.-b). En 1882 unos soldados ingleses construyeron entre Davos y Klosters una pista con curvas peraltadas para hacerla más difícil (IBSF, s. f.-b).",
+    "Cronin atribuye a un grupo de turistas británicos la invención en 1875 del skeleton, un trineo con asiento deslizante sobre el que el corredor viajaba tumbado boca abajo y que se dirigía desplazando el peso del cuerpo (Cronin, 1999, p. 48). En 1892 un inglés apellidado Child ideó un trineo casi enteramente metálico (IBSF, s. f.-b). Pawelko, por su parte, fecha el asiento deslizante en 1901 y la proa roma en 1903, y considera que desde entonces el diseño apenas ha cambiado (Pawelko, 1999, p. 401). Su escenario por excelencia fue el Cresta Run de St. Moritz, una pista muy sinuosa que el St. Moritz Toboggan Club reconstruye cada invierno (Pawelko, 1999, p. 401). En 1905 el skeleton se practicó por primera vez fuera de Suiza, en Mürzzuschlag (Estiria), y al año siguiente se celebró allí el primer campeonato austriaco (IBSF, s. f.-b).",
+    "Constituida en 1923 la Fédération Internationale de Bobsleigh et de Tobogganing (FIBT), su congreso de París de 1926 llevó al COI a declarar olímpico el skeleton y a aceptar como válidas las reglas de St. Moritz, y el deporte se disputó en los Juegos de St. Moritz de 1928 y 1948 (IBSF, s. f.-b). En 1964 la luge ocupó su lugar en el programa olímpico (Pawelko, 1999, p. 400), y el skeleton no regresó hasta 2002, con pruebas masculina y femenina en Park City (IBSF, s. f.-b). En el Cresta el género pesó mucho, puesto que en la década de 1920 las caídas de algunas corredoras abrieron un debate que terminó con la prohibición o la restricción de su acceso, y a finales del siglo XX las socias solo podían bajar el último día de la temporada y desde un punto intermedio (Pawelko, 1999, p. 400)."
+   ],
+   "en": [
+    "The toboggan comes from the Native peoples of eastern Canada, who made it from curved birch boards to carry loads over the snow, and its name comes from the French-Canadian *tabaganne*, itself derived from an Algonquian word (Pawelko, 1999, p. 399). The International Bobsleigh and Skeleton Federation (IBSF) notes that the toboggans of the Alpine countries in the late nineteenth century were inspired by these Canadian sleds, and it names as forerunners the Norwegian *ake*, used by fishermen, and the *kjaelke*, used for amusement, from which the sport's name may derive, although it is also attributed to the skeletal look of the sled (International Bobsleigh and Skeleton Federation [IBSF], n.d.-b). In 1882 English soldiers built a track between Davos and Klosters with banked curves to make it more demanding (IBSF, n.d.-b).",
+    "Cronin attributes to a group of British tourists the invention in 1875 of the skeleton, a sled with a sliding seat on which the rider lay face down and steered by shifting body weight (Cronin, 1999, p. 48). In 1892 an Englishman named Child designed a sled made mostly of metal (IBSF, n.d.-b). Pawelko, for her part, dates the sliding seat to 1901 and the snub nose to 1903, and holds that the design has hardly changed since (Pawelko, 1999, p. 401). Its classic setting was the Cresta Run at St. Moritz, a highly winding course that the St. Moritz Toboggan Club rebuilds every winter (Pawelko, 1999, p. 401). In 1905 skeleton was practised outside Switzerland for the first time, at Mürzzuschlag (Styria), and the first Austrian championships were held there the following year (IBSF, n.d.-b).",
+    "Once the Fédération Internationale de Bobsleigh et de Tobogganing (FIBT) had been constituted in 1923, its 1926 Paris congress led the IOC to declare skeleton an Olympic sport and to accept the St. Moritz rules as valid, and the sport was contested at the St. Moritz Games of 1928 and 1948 (IBSF, n.d.-b). In 1964 luge took its place on the Olympic programme (Pawelko, 1999, p. 400), and skeleton did not return until 2002, with men's and women's events at Park City (IBSF, n.d.-b). The history of the Cresta shows the weight of gender in this sport, since in the 1920s falls by some women riders sparked a debate that ended with their exclusion or restricted access, and at the end of the twentieth century women associate members could only ride on the last day of the season and from an intermediate point (Pawelko, 1999, p. 400)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/skeleton.jpg",
+   "pie": {
+    "es": "Un corredor desciende boca abajo sobre su trineo por el Cresta Run de St. Moritz, 1907.",
+    "en": "A rider descends head-first on his sled down the Cresta Run at St. Moritz, 1907."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:CH-NB_Photoglob-Wehrli_EAD-WEHR-14674-B.tif"
+  },
+  "refs": [
+   "Cronin, M. (1999). Bobsledding. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 48-50). Oxford University Press.",
+   "International Bobsleigh and Skeleton Federation. (s. f.-b). *Skeleton*. Recuperado el 29 de septiembre de 2026 de https://www.ibsf.org/en/our-sports/skeleton",
+   "Pawelko, K. A. (1999). Tobogganing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 399-401). Oxford University Press."
+  ],
+  "refs_en": [
+   "Cronin, M. (1999). Bobsledding. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 48-50). Oxford University Press.",
+   "International Bobsleigh and Skeleton Federation. (n.d.-b). *Skeleton*. Retrieved September 29, 2026, from https://www.ibsf.org/en/our-sports/skeleton",
+   "Pawelko, K. A. (1999). Tobogganing. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 399-401). Oxford University Press."
+  ]
+ },
+ {
+  "id": "sambo",
+  "name": {
+   "es": "Sambo",
+   "en": "Sambo"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Unión Soviética, décadas de 1920 y 1930; deporte oficial con reglas y campeonato nacional desde 1938",
+   "en": "Soviet Union, 1920s and 1930s; official sport with rules and a national championship from 1938"
+  },
+  "body": {
+   "es": [
+    "El sambo nació en la Unión Soviética de entreguerras como sistema de combate sin armas al servicio de la preparación militar. El combate cuerpo a cuerpo gozaba desde hacía tiempo de popularidad en los clubes del ejército y de Dinamo, la sociedad deportiva de los servicios de seguridad interior, y en 1932 se había incluido en el programa de pruebas físicas GTO (Riordan, 1977, pp. 93-94, 140). El nombre es una abreviatura del ruso *samozashchita bez oruzhiya*, defensa personal sin armas, y la nueva disciplina se construyó en parte sobre el jiu-jitsu y en parte sobre diversos estilos nacionales de lucha de los pueblos soviéticos; Riordan sospecha que se trataba en realidad de una forma de judo rebautizada, dada la asociación del judo con una filosofía militarista extranjera (Riordan, 1977, pp. 140-141).",
+    "La forma deportiva se fijó en 1938, cuando el Comité de toda la Unión para la Cultura Física y el Deporte introdujo el sambo por decreto, publicó sus reglas oficiales y creó el campeonato de la Unión Soviética (Riordan, 1977, p. 140). La Federación Internacional de Sambo toma el 16 de noviembre de 1938 como fecha de nacimiento del deporte (FIAS, s. f.). Su salida al exterior fue lenta; en 1966 la federación internacional de luchas asociadas (FILA, hoy United World Wrestling) le reconoció la condición de estilo internacional de lucha; en 1972 se celebró en Riga el primer campeonato abierto de Europa y en 1973 en Teherán el primer campeonato del mundo (FIAS, s. f.).",
+    "La federación internacional propia, la Fédération Internationale Amateur de Sambo (FIAS), se constituyó en Madrid el 13 de junio de 1984 con delegados de 56 países y el español Fernando Compte como primer presidente; el sambo entró después en los Juegos Mundiales (1985), en los Juegos Europeos (2015) y, en 2018, obtuvo el reconocimiento provisional del Comité Olímpico Internacional (FIAS, s. f.). La historia del sambo femenino muestra los límites de la política deportiva soviética, puesto que en 1973 las autoridades lo censuraron, junto con el fútbol femenino, por haber sido explotado en exhibiciones de «fuerza y belleza» consideradas degradantes para la mujer soviética y lo confinaron a clubes militares sin competición (Riordan, 1977, pp. 200, 321-322), mientras que en 1983 Madrid acogía el primer campeonato del mundo femenino (FIAS, s. f.)."
+   ],
+   "en": [
+    "Sambo was born in the interwar Soviet Union as a system of unarmed combat serving military preparation. Hand-to-hand combat had long been popular in the clubs of the army and of Dinamo, the sports society of the internal security services, and in 1932 it had been included in the GTO physical fitness programme (Riordan, 1977, pp. 93-94, 140). The name is an abbreviation of the Russian *samozashchita bez oruzhiya*, self-defence without weapons, and the new discipline was built partly on jiu-jitsu and partly on various national wrestling styles of the Soviet peoples; Riordan suspects that it was in fact a renamed form of judo, given judo's association with a foreign militaristic philosophy (Riordan, 1977, pp. 140-141).",
+    "The sporting form was fixed in 1938, when the All-Union Committee on Physical Culture and Sports Affairs introduced sambo by order, published its official rules and created the Soviet championship (Riordan, 1977, p. 140). The International Sambo Federation takes 16 November 1938 as the birth date of the sport (FIAS, n.d.). Its spread abroad was slow; in 1966 the international federation of associated wrestling styles (FILA, now United World Wrestling) granted it the status of an international wrestling style; the first open European championship was held in Riga in 1972 and the first world championship in Tehran in 1973 (FIAS, n.d.).",
+    "Its own international federation, the Fédération Internationale Amateur de Sambo (FIAS), was constituted in Madrid on 13 June 1984 with delegates from 56 countries and the Spaniard Fernando Compte as its first president; sambo later entered the World Games (1985) and the European Games (2015) and, in 2018, obtained provisional recognition from the International Olympic Committee (FIAS, n.d.). The history of women's sambo shows the limits of Soviet sports policy, since in 1973 the authorities censured it, together with women's football, for having been exploited in «strength-and-beauty» shows considered degrading to Soviet womanhood and confined it to non-competitive military clubs (Riordan, 1977, pp. 200, 321-322), while in 1983 Madrid hosted the first women's world championship (FIAS, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/sambo.jpg",
+   "pie": {
+    "es": "Andrei Kazusionak y Ashot Danielyan en un combate de sambo de los Juegos Europeos de Bakú, 2015.",
+    "en": "Andrei Kazusionak and Ashot Danielyan in a sambo bout at the Baku European Games, 2015."
+   },
+   "autor": {
+    "es": "Presidential Press and Information Office (Azerbaiyán)",
+    "en": "Presidential Press and Information Office (Azerbaijan)"
+   },
+   "licencia": "CC BY 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Sambo_at_the_2015_European_Games.jpg"
+  },
+  "refs": [
+   "FIAS. (s. f.). *History*. International Sambo Federation. Recuperado el 29 de septiembre de 2026 de https://sambo.sport/en/fias/history/",
+   "Riordan, J. (1977). *Sport in Soviet society: Development of sport and physical education in Russia and the USSR*. Cambridge University Press."
+  ],
+  "refs_en": [
+   "FIAS. (n.d.). *History*. International Sambo Federation. Retrieved September 29, 2026, from https://sambo.sport/en/fias/history/",
+   "Riordan, J. (1977). *Sport in Soviet society: Development of sport and physical education in Russia and the USSR*. Cambridge University Press."
+  ]
+ },
+ {
+  "id": "kushti",
+  "name": {
+   "es": "Kushti",
+   "en": "Kushti"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Norte de la India, tradición de lucha documentada desde la época medieval y la corte mogola (siglo XVI); proyección internacional desde 1910",
+   "en": "Northern India, a wrestling tradition documented since medieval times and the Mughal court (sixteenth century); international projection from 1910"
+  },
+  "body": {
+   "es": [
+    "El *kushti*, o *bharatiya kushti*, es la lucha tradicional del norte de la India, que se practica todavía en esa región (Guttmann, 2004, p. 218) en los fosos de tierra de los gimnasios llamados *akharas* (Sen, 2015, cap. 12). Forma parte de las tradiciones de combate del subcontinente, en las que la *mushti* del norte figura junto a otras artes regionales herederas de los saberes marciales antiguos (Zarrilli, 1999, p. 239), y tanto hindúes como musulmanes la han entendido como una manifestación de la vida religiosa (Guttmann, 2004, p. 44). Desde la época medieval, los luchadores o *pehalwans*, muchos de ellos campesinos y de castas bajas, vivían del patronazgo de los príncipes; el emperador mogol Akbar mantuvo en el siglo XVI un plantel de luchadores hindúes y musulmanes de procedencias muy diversas, y desde finales del periodo mogol la mayoría de los campeones célebres fueron musulmanes (Sen, 2015, cap. 8).",
+    "La vida del luchador está sometida a la autoridad de un gurú, que dirige ejercicios como el volteo de mazas pesadas y el control de la respiración; flexiones y sentadillas se acompañan de mantras, y la dieta, la sexualidad y hasta las funciones corporales se disciplinan conforme a la lucha hindú contra la impureza (Guttmann, 2004, p. 218). Dentro del *akhara*, sin embargo, se ignora la casta, de modo que un brahmán recién iniciado puede masajear los pies de un luchador veterano de casta inferior (Guttmann, 2004, p. 218). Los príncipes del norte, como los de Baroda, Darbhanga, Datiya o Indore, protegieron a los luchadores porque encarnaban la disciplina, la fuerza, la virtud moral y el deber, y por eso servían como emblemas políticos (Sen, 2015, cap. 8).",
+    "A comienzos del siglo XX el *kushti* se unió al nacionalismo y a la cultura física. En 1910 un millonario bengalí financió el viaje a Londres de Gama y otros tres luchadores para un torneo mundial; Gama derrotó al estadounidense B. F. Roller y en septiembre se enfrentó al polaco Stanislaus Zbyszko ante 12.000 espectadores en un combate que terminó sin vencedor (Sen, 2015, cap. 8). Hoy la lucha tradicional sigue viva en los *akharas* del norte de la India, casi siempre presididos por un altar a Hanuman, y en los torneos rurales o *dangals*, que supervisa nominalmente la Indian Style Wrestling Association, distinta de la Wrestling Federation of India, encargada de la lucha olímpica, mientras las normas internacionales y los tapices van transformando poco a poco el mundo del *kushti* (Sen, 2015, cap. 12)."
+   ],
+   "en": [
+    "*Kushti*, or *bharatiya kushti*, is the traditional wrestling of northern India, still practised in that region (Guttmann, 2004, p. 218) in the mud pits of the gymnasia called *akharas* (Sen, 2015, chap. 12). It belongs to the fighting traditions of the subcontinent, in which the *mushti* of the north stands alongside other regional arts that inherit ancient martial knowledge (Zarrilli, 1999, p. 239), and Hindus and Muslims alike have understood it as a manifestation of religious life (Guttmann, 2004, p. 44). Since medieval times, wrestlers or *pehalwans*, many of them peasants and from the lower castes, lived on the patronage of princes; the Mughal emperor Akbar kept in the sixteenth century a stable of Hindu and Muslim wrestlers from very diverse origins, and from the late Mughal period most of the famous champions were Muslims (Sen, 2015, chap. 8).",
+    "The wrestler's life is subject to the authority of a guru, who directs exercises such as swinging heavy clubs and breath control; push-ups and knee bends are accompanied by mantras, and diet, sexuality and even bodily functions are disciplined according to the Hindu struggle against pollution (Guttmann, 2004, p. 218). Inside the *akhara*, however, caste is ignored, so that a newly initiated Brahmin may massage the feet of a senior lower-caste wrestler (Guttmann, 2004, p. 218). The princes of the north, such as those of Baroda, Darbhanga, Datiya or Indore, protected wrestlers because they embodied discipline, strength, moral virtue and duty, and therefore served as political emblems (Sen, 2015, chap. 8).",
+    "At the beginning of the twentieth century *kushti* joined nationalism and physical culture. In 1910 a Bengali millionaire paid for Gama and three other wrestlers to travel to London for a world tournament; Gama defeated the American B. F. Roller and in September faced the Pole Stanislaus Zbyszko before 12,000 spectators in a bout that ended without a winner (Sen, 2015, chap. 8). Today traditional wrestling is still alive in the *akharas* of northern India, almost always presided over by a shrine to Hanuman, and in the rural tournaments or *dangals*, nominally overseen by the Indian Style Wrestling Association, separate from the Wrestling Federation of India, which is in charge of Olympic wrestling, while international rules and mats are slowly transforming the world of *kushti* (Sen, 2015, chap. 12)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/kushti.jpg",
+   "pie": {
+    "es": "Luchadores (*pahelwan*) ejercitándose por parejas en Hyderabad, hacia 1870.",
+    "en": "Wrestlers (*pahelwan*) training in pairs in Hyderabad, around 1870."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Pahelwans_in_Hyderabad,_c_1870.jpg"
+  },
+  "refs": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Sen, R. (2015). *Nation at play: A history of sport in India*. Columbia University Press.",
+   "Zarrilli, P. B. (1999). Martial arts, South Asia. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 239-240). Oxford University Press."
+  ],
+  "refs_en": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Sen, R. (2015). *Nation at play: A history of sport in India*. Columbia University Press.",
+   "Zarrilli, P. B. (1999). Martial arts, South Asia. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 239-240). Oxford University Press."
+  ]
+ },
+ {
+  "id": "bokator",
+  "name": {
+   "es": "Bokator",
+   "en": "Bokator"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Camboya; la candidatura ante la UNESCO lo remonta al siglo I d. C.; recuperación a comienzos del siglo XXI e ingreso en los Juegos del Sudeste Asiático en 2023",
+   "en": "Cambodia; the UNESCO nomination traces it back to the first century CE; revival in the early twenty-first century and entry into the Southeast Asian Games in 2023"
+  },
+  "body": {
+   "es": [
+    "El *kun lbokator*, conocido abreviadamente como *bokator*, es el arte marcial tradicional de Camboya. La ficha de la UNESCO, basada en la candidatura camboyana, lo describe como un arte marcial que se remonta al siglo I y que une el entrenamiento físico a unos principios filosóficos, puesto que busca el desarrollo mental y corporal mediante la defensa personal dentro de una filosofía de no violencia (UNESCO, s. f.). La enseñanza va más allá de la técnica de combate, dado que el alumno aprende a respetar la naturaleza y a comportarse con decoro en sociedad, y los maestros, algunos de ellos tenidos por sanadores, orientan a sus discípulos en el cumplimiento de sus responsabilidades sociales (UNESCO, s. f.).",
+    "El *bokator* sigue integrado en la vida cultural camboyana por medio de representaciones rituales en honor de las divinidades locales y de celebraciones festivas que incorporan danza, música y medicina tradicional, y lo practican personas de cualquier edad, sexo, formación o condición social (UNESCO, s. f.). Su historia reciente, sin embargo, fue la de una práctica perseguida. Los colonizadores franceses lo desalentaron primero, y después el régimen de los Jemeres Rojos lo persiguió porque veía una amenaza en luchadores organizados y entrenados dispuestos a defender la cultura nacional (Agence France-Presse, 2023). El gran maestro San Kim Sean, figura principal de su recuperación, declaró haber estado a punto de morir tres veces durante aquella persecución (Agence France-Presse, 2023).",
+    "La recuperación del *bokator* culminó en dos reconocimientos sucesivos. En 2022 la UNESCO lo inscribió en la Lista Representativa del Patrimonio Cultural Inmaterial de la Humanidad como expresión de los valores sociales, culturales y religiosos del país (UNESCO, s. f.), y al año siguiente entró en el programa de los Juegos del Sudeste Asiático organizados por Camboya, un paso que sus promotores entendían como el siguiente en su proyección internacional (Agence France-Presse, 2023). Con motivo de aquellos Juegos, San Kim Sean afirmó que en Camboya todo el mundo conoce el *bokator* (Agence France-Presse, 2023)."
+   ],
+   "en": [
+    "*Kun lbokator*, known in short as *bokator*, is the traditional martial art of Cambodia. The UNESCO entry, based on the Cambodian nomination, describes it as a martial art dating back to the first century that combines physical training with philosophical principles, since it seeks mental and physical development through self-defence within a philosophy of non-violence (UNESCO, n.d.). Teaching goes beyond fighting technique, since students learn to respect nature and to behave with decorum in society, and masters, some of them regarded as healers, guide their disciples in fulfilling their social responsibilities (UNESCO, n.d.).",
+    "*Bokator* remains part of Cambodian cultural life through ritual performances in honour of local deities and festive celebrations that include dance, music and traditional medicine, and people of any age, gender, education or social status practise it (UNESCO, n.d.). Its recent history, however, was that of a persecuted practice. French colonisers first discouraged it, and later the Khmer Rouge regime hunted it down because it saw a threat in organised and trained fighters with a stake in defending national culture (Agence France-Presse, 2023). Grand master San Kim Sean, the main figure of its revival, stated that he almost died three times during that persecution (Agence France-Presse, 2023).",
+    "The revival of *bokator* culminated in two successive recognitions. In 2022 UNESCO inscribed it on the Representative List of the Intangible Cultural Heritage of Humanity as an expression of the country's social, cultural and religious values (UNESCO, n.d.), and the following year it entered the programme of the Southeast Asian Games hosted by Cambodia, a step its promoters saw as the next one in its international projection (Agence France-Presse, 2023). On the occasion of those Games, San Kim Sean stated that in Cambodia everyone knows *bokator* (Agence France-Presse, 2023)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/bokator.jpg",
+   "pie": {
+    "es": "Combate de boxeo tradicional camboyano ante el público, fotografía fechada hacia 1920.",
+    "en": "Traditional Cambodian boxing bout before spectators, photograph dated around 1920."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Bokator_1920_(MMA).jpg"
+  },
+  "refs": [
+   "Agence France-Presse. (2023, 11 de mayo). Nearly wiped out Cambodian martial art hits SEA Games. *Taipei Times*. Recuperado el 29 de septiembre de 2026 de https://www.taipeitimes.com/News/sport/archives/2023/05/11/2003799587",
+   "UNESCO. (s. f.). *Kun Lbokator, traditional martial arts in Cambodia*. Recuperado el 29 de septiembre de 2026 de https://ich.unesco.org/en/RL/kun-lbokator-traditional-martial-arts-in-cambodia-01868"
+  ],
+  "refs_en": [
+   "Agence France-Presse. (2023, May 11). Nearly wiped out Cambodian martial art hits SEA Games. *Taipei Times*. Retrieved September 29, 2026, from https://www.taipeitimes.com/News/sport/archives/2023/05/11/2003799587",
+   "UNESCO. (n.d.). *Kun Lbokator, traditional martial arts in Cambodia*. Retrieved September 29, 2026, from https://ich.unesco.org/en/RL/kun-lbokator-traditional-martial-arts-in-cambodia-01868"
+  ]
+ }
+]

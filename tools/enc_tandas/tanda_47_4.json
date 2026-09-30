@@ -1,0 +1,750 @@
+[
+ {
+  "id": "go",
+  "name": {
+   "es": "Go",
+   "en": "Go"
+  },
+  "bloque": {
+   "es": "Deportes mentales y otros",
+   "en": "Mind sports and others"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "China, hace más de tres mil años según su federación internacional; forma institucional moderna en Japón, con la Nihon Ki-in (Tokio, 1924)",
+   "en": "China, more than three thousand years ago according to its international federation; modern institutional form in Japan, with the Nihon Ki-in (Tokyo, 1924)"
+  },
+  "body": {
+   "es": [
+    "El go, que en China recibe el nombre de *weiqi*, es un juego de estrategia en el que dos jugadores colocan piedras blancas y negras sobre un tablero cuadriculado para dominar territorio. La Federación Internacional de Go sitúa su invención en China hace más de tres mil años, aunque recoge que otros autores la llevan hasta cerca de cuatro mil, y recuerda que aparece en las *Analectas* de Confucio, del siglo VI a. C. (International Go Federation, s. f.-a). En los siglos que siguieron a la caída de la dinastía Han, el *weiqi* ganó aceptación entre los letrados, que lo jugaban en banquetes y tertulias, y con el apoyo de los emperadores se extendió a todas las clases sociales; se concertaban partidas entre jugadores afamados, se anotaban las jugadas para entretenimiento de otros y se celebraban evaluaciones públicas, a veces de varios cientos de participantes, que clasificaban a los jugadores en nueve grados según su nivel (Speak, 1999a, p. 37).",
+    "Según la federación internacional, el juego llegó a Japón hace unos mil quinientos años a través de la península de Corea, fue apreciado en la corte imperial, como muestra su presencia en la *Historia de Genji* del siglo XI, y desde allí se difundió entre los guerreros y las comunidades budistas (International Go Federation, s. f.-a). Durante el periodo Edo (1603-1868) adquirió en Japón una organización profesional amparada por el poder político, puesto que Sansa (1559-1623) fue nombrado jefe de la academia oficial de go (*Godokoro*) y estableció el sistema de escuelas hereditarias, de manera que las casas Honinbo, Yasui, Inoue y Hayashi rivalizaban en partidas celebradas ante el *shōgun* en el castillo de Edo (International Go Federation, s. f.-a). Desaparecido ese patrocinio con el fin del shogunato, las organizaciones japonesas de go se fusionaron en 1924 en la Nihon Ki-in, o Asociación Japonesa de Go (International Go Federation, s. f.-a).",
+    "En la era Meiji los occidentales que visitaban Japón aprendieron el juego y empezaron a enseñarlo en Europa y en América, donde quedó bien asentado en las décadas de 1920 y 1930 (International Go Federation, s. f.-a). La Federación Internacional de Go se fundó oficialmente el 18 de marzo de 1982 con veintinueve miembros y en 2012 agrupaba a setenta y cuatro federaciones de todos los continentes, la mitad de ellas europeas, si bien la mayor parte de sus más de cuarenta millones de jugadores sigue concentrada en Asia oriental (International Go Federation, s. f.-b). Su reconocimiento deportivo llegó por la vía de los deportes mentales, dado que la federación fue admitida como miembro provisional de SportAccord, la antigua GAISF, en 2004 y como miembro de pleno derecho en 2006, y figura entre los fundadores de la International Mind Sports Association (International Go Federation, s. f.-b). Las fuentes chinas muestran además que en época Tang el *weiqi* estaba entre los juegos de moda de las mujeres de los círculos cortesanos (Speak, 1999a, p. 42)."
+   ],
+   "en": [
+    "Go, known in China as *weiqi*, is a strategy game in which two players place white and black stones on a grid board in order to control territory. The International Go Federation places its invention in China more than three thousand years ago, while noting that some authors push it back to nearly four thousand, and recalls that it appears in the *Analects* of Confucius, from the 6th century BC (International Go Federation, n.d.-a). In the centuries that followed the fall of the Han dynasty, *weiqi* gained acceptance among the literati, who played it at banquets and gatherings, and with the support of the emperors it spread to all social classes; matches were arranged between well-known players, games were recorded for the entertainment of others and public appraisals were held, sometimes of several hundred contestants, which divided players into nine grades according to their level (Speak, 1999a, p. 37).",
+    "According to the international federation, the game reached Japan some fifteen hundred years ago by way of the Korean peninsula, found favour at the imperial court, as its presence in the 11th-century *Tale of Genji* shows, and from there spread among warriors and Buddhist communities (International Go Federation, n.d.-a). During the Edo period (1603-1868) it acquired in Japan a professional organisation sheltered by political power, since Sansa (1559-1623) was appointed head of the official Go academy (*Godokoro*) and established the system of hereditary schools, so that the Honinbo, Yasui, Inoue and Hayashi houses competed in games played before the *shōgun* at Edo Castle (International Go Federation, n.d.-a). Once that patronage disappeared with the end of the shogunate, the Japanese Go organisations merged in 1924 into the Nihon Ki-in, or Japan Go Association (International Go Federation, n.d.-a).",
+    "In the Meiji era Westerners visiting Japan learned the game and began to teach it in Europe and America, where it became well established in the 1920s and 1930s (International Go Federation, n.d.-a). The International Go Federation was officially founded on 18 March 1982 with twenty-nine members and by 2012 it brought together seventy-four federations on every continent, half of them European, although most of its more than forty million players remain concentrated in East Asia (International Go Federation, n.d.-b). Its recognition as a sport came through the route of mind sports, since the federation was admitted as a provisional member of SportAccord, the former GAISF, in 2004 and as a full member in 2006, and it is one of the founders of the International Mind Sports Association (International Go Federation, n.d.-b). Chinese sources also show that in the Tang period *weiqi* was among the fashionable games of women in court circles (Speak, 1999a, p. 42)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/go.jpg",
+   "pie": {
+    "es": "Dama jugando al *weiqi* (go), fragmento de una pintura sobre seda de época Tang (hacia 744) hallada en las tumbas de Astana (Turfán, China).",
+    "en": "Lady playing *weiqi* (go), fragment of a Tang-dynasty silk painting (c. 744) found in the Astana tombs (Turpan, China)."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Anonymous-Astana_Graves_Wei_Qi_Player.jpg"
+  },
+  "refs": [
+   "International Go Federation. (s. f.-a). *History of Go*. Recuperado el 29 de septiembre de 2026 de https://intergofed.org/history-of-go/",
+   "International Go Federation. (s. f.-b). *About the IGF*. Recuperado el 29 de septiembre de 2026 de https://intergofed.org/about-the-igf/",
+   "Speak, M. (1999a). Recreation and sport in ancient China: Primitive society to AD 960. En J. Riordan y R. Jones (Eds.), *Sport and physical education in China* (pp. 20-44). E & FN Spon."
+  ],
+  "refs_en": [
+   "International Go Federation. (n.d.-a). *History of Go*. Retrieved September 29, 2026, from https://intergofed.org/history-of-go/",
+   "International Go Federation. (n.d.-b). *About the IGF*. Retrieved September 29, 2026, from https://intergofed.org/about-the-igf/",
+   "Speak, M. (1999a). Recreation and sport in ancient China: Primitive society to AD 960. In J. Riordan & R. Jones (Eds.), *Sport and physical education in China* (pp. 20-44). E & FN Spon."
+  ]
+ },
+ {
+  "id": "bridge",
+  "name": {
+   "es": "Bridge",
+   "en": "Bridge"
+  },
+  "bloque": {
+   "es": "Deportes mentales y otros",
+   "en": "Mind sports and others"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Estambul, hacia 1860-1865, según varias fuentes; bridge de contrato, a bordo del vapor *Finland*, 1 de noviembre de 1925",
+   "en": "Istanbul, around 1860-1865, according to several sources; contract bridge, aboard the steamship *Finland*, 1 November 1925"
+  },
+  "body": {
+   "es": [
+    "El bridge pertenece a la familia de juegos de bazas que en Inglaterra desembocó en el whist, cuyos antecedentes se remontan a una referencia de 1529 en un sermón publicado del obispo Latimer y que en el siglo XVII se jugaba con nombres como *triumph*, *trump*, *ruff* o *slam*; en 1742 Edmond Hoyle publicó su *Short treatise on whist*, que fue un gran éxito editorial (English Bridge Union, s. f.). Del whist procede también el juego de duplicado, en el que distintas parejas juegan las mismas manos, practicado por primera vez en Londres en 1857 bajo la dirección de Cavendish y organizado en Estados Unidos con la American Whist League en 1891 (English Bridge Union, s. f.). El origen del bridge propiamente dicho es incierto; varias fuentes lo sitúan en Estambul hacia 1860-1865, quizá a partir de un juego ruso llamado *sibirskii ieralash*, y el Museo Británico conserva un folleto de 1886 titulado *Biritch or Russian whist* (English Bridge Union, s. f.).",
+    "La difusión en Occidente se hizo a través de los clubes, puesto que Henry Barbey fechó en 1892 unas leyes del bridge impresas de forma privada y llevó el juego a Nueva York en 1893, y en 1894 los socios del Portland Club de Londres empezaron a jugarlo, introducido por lord Brougham, que lo había conocido en la India (English Bridge Union, s. f.). Hacia 1904 apareció el principio de la subasta, que la tradición sitúa también en la India, y el bridge de subasta se extendió hasta 1927 (English Bridge Union, s. f.). La forma actual se debe al estadounidense Harold S. Vanderbilt, que perfeccionó el bridge de contrato durante un viaje en el vapor *Finland* de Los Ángeles a La Habana; su creación se fecha el 1 de noviembre de 1925 y fue una pasajera quien propuso el término *vulnerable* (English Bridge Union, s. f.). En 1927 aparecieron los primeros códigos, en 1928 lo adoptaron los grandes clubes neoyorquinos y en 1932 entró en vigor el primer Código Internacional de Leyes (English Bridge Union, s. f.).",
+    "La popularidad del bridge de contrato debió mucho a Ely Culbertson, que fundó en 1929 la revista *The Bridge World*, fijó en 1930 los principios de la subasta y protagonizó en 1931 el encuentro con Lenz que dio al juego resonancia internacional (English Bridge Union, s. f.). La Federación Mundial de Bridge (WBF) se constituyó en Oslo el 18 de agosto de 1958 con delegados de Europa, Estados Unidos y Sudamérica (World Bridge Federation, s. f.), y en 1960 se celebró la primera Olimpiada por equipos (English Bridge Union, s. f.). El Comité Olímpico Internacional la reconoció como federación deportiva internacional en 1999 y la WBF ingresó en la GAISF en 2000; forma parte de la International Mind Sports Association, creada en 2005, y reúne a un centenar de organizaciones nacionales con unos 530.000 afiliados (World Bridge Federation, s. f.). Su trayectoria muestra el paso de un pasatiempo de sociabilidad de club, cultivado en el Portland Club y en los clubes de whist neoyorquinos, a una competición reglada que busca su reconocimiento como deporte mental."
+   ],
+   "en": [
+    "Bridge belongs to the family of trick-taking games that in England culminated in whist, whose antecedents go back to a reference of 1529 in a published sermon by Bishop Latimer and which in the 17th century was played under names such as *triumph*, *trump*, *ruff* or *slam*; in 1742 Edmond Hoyle published his *Short treatise on whist*, which became a best-seller (English Bridge Union, n.d.). Duplicate play, in which different pairs play the same hands, also comes from whist; it was first played in London in 1857 under the direction of Cavendish and organised in the United States with the American Whist League in 1891 (English Bridge Union, n.d.). The origin of bridge proper is uncertain; several sources place it in Istanbul around 1860-1865, perhaps derived from a Russian game called *sibirskii ieralash*, and the British Museum holds an 1886 pamphlet entitled *Biritch or Russian whist* (English Bridge Union, n.d.).",
+    "Its spread in the West took place through clubs, since Henry Barbey dated to 1892 a privately printed set of laws of bridge and took the game to New York in 1893, and in 1894 members of the Portland Club in London began to play it, introduced by Lord Brougham, who had learned it in India (English Bridge Union, n.d.). Around 1904 the auction principle appeared, which tradition also places in India, and auction bridge spread until 1927 (English Bridge Union, n.d.). The present form is owed to the American Harold S. Vanderbilt, who perfected contract bridge during a voyage on the steamship *Finland* from Los Angeles to Havana; its creation is dated to 1 November 1925 and it was a woman passenger who suggested the term *vulnerable* (English Bridge Union, n.d.). In 1927 the first codes of laws appeared, in 1928 the major New York clubs adopted the game, and in 1932 the first International Code of Laws came into force (English Bridge Union, n.d.).",
+    "The popularity of contract bridge owed much to Ely Culbertson, who founded the magazine *The Bridge World* in 1929, set out the principles of bidding in 1930 and in 1931 played the match against Lenz that gave the game international resonance (English Bridge Union, n.d.). The World Bridge Federation (WBF) was constituted in Oslo on 18 August 1958 by delegates from Europe, the United States and South America (World Bridge Federation, n.d.), and in 1960 the first Team Olympiad was held (English Bridge Union, n.d.). The International Olympic Committee recognised it as an international sports federation in 1999 and the WBF joined GAISF in 2000; it belongs to the International Mind Sports Association, created in 2005, and brings together about a hundred national organisations with some 530,000 affiliated members (World Bridge Federation, n.d.). Its trajectory shows the passage from a pastime of club sociability, cultivated in the Portland Club and the New York whist clubs, to a regulated competition that seeks recognition as a mind sport."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/bridge.jpg",
+   "pie": {
+    "es": "Cuatro mujeres juegan una partida de bridge en Tallahassee (Florida), enero de 1954.",
+    "en": "Four women playing a game of bridge in Tallahassee, Florida, January 1954."
+   },
+   "autor": "Tallahassee Democrat",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Women_playing_bridge_in_Tallahassee,_Florida.jpg"
+  },
+  "refs": [
+   "English Bridge Union. (s. f.). *Origins and history of bridge*. Recuperado el 29 de septiembre de 2026 de https://www.ebu.co.uk/origins-and-history-bridge",
+   "World Bridge Federation. (s. f.). *History*. Recuperado el 29 de septiembre de 2026 de https://www.worldbridge.org/the-wbf/history/"
+  ],
+  "refs_en": [
+   "English Bridge Union. (n.d.). *Origins and history of bridge*. Retrieved September 29, 2026, from https://www.ebu.co.uk/origins-and-history-bridge",
+   "World Bridge Federation. (n.d.). *History*. Retrieved September 29, 2026, from https://www.worldbridge.org/the-wbf/history/"
+  ]
+ },
+ {
+  "id": "baile-deportivo",
+  "name": {
+   "es": "Baile deportivo",
+   "en": "DanceSport"
+  },
+  "bloque": {
+   "es": "Deportes mentales y otros",
+   "en": "Mind sports and others"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Europa, década de 1920, con la codificación del «estilo inglés» en 1929; primera federación internacional en Praga, 1935",
+   "en": "Europe, 1920s, with the codification of the «English style» in 1929; first international federation in Prague, 1935"
+  },
+  "body": {
+   "es": [
+    "El baile deportivo es la forma competitiva del baile de salón en pareja, y su federación internacional sitúa su nacimiento en la década de 1920, cuando varios países europeos fueron pioneros en la conversión gradual del baile en un deporte organizado (World DanceSport Federation, s. f.-b). El paso decisivo fue la fijación de un canon común, puesto que en 1929 los profesores de baile británicos definieron las normas de un «estilo inglés» que pronto se adoptó en todas partes (World DanceSport Federation, s. f.-b). De ese modo, una práctica de sociabilidad propia de los salones de baile quedó sometida a normas comunes, lo que permitía que parejas de distintos lugares se midieran entre sí ante un jurado.",
+    "La primera organización internacional fue la Fédération Internationale de Danse pour Amateurs (FIDA), fundada en Praga el 10 de septiembre de 1935 por nueve países europeos, que un año después celebró su primer campeonato del mundo en Bad Nauheim, en Alemania (World DanceSport Federation, s. f.-b). La FIDA suspendió su actividad en 1956, tras veinte años marcados por la Segunda Guerra Mundial y por los conflictos entre aficionados y profesionales, y el 12 de mayo de 1957, en la casa del campeón alemán Otto Teipel en Wiesbaden, ocho naciones europeas fundaron el International Council of Amateur Dancers (ICAD), del que Teipel fue elegido presidente (World DanceSport Federation, s. f.-b). El Acuerdo de Bremen, firmado el 3 de octubre de 1965 entre el ICAD y el International Council of Ballroom Dancing, dejó a los aficionados bajo la autoridad del primero y a los profesionales bajo la del segundo (World DanceSport Federation, s. f.-b).",
+    "En 1990 el ICAD adoptó el nombre de International DanceSport Federation, con el que subrayaba el carácter deportivo del baile, y el Comité Olímpico Internacional reconoció el baile deportivo de forma provisional en 1995 y de manera plena en su 106.ª sesión, celebrada en Lausana en 1997 (World DanceSport Federation, s. f.-a). En los Juegos Mundiales de Akita de 2001 fue el deporte que más ingresos obtuvo por venta de entradas, en 2005 el *rock and roll* se sumó a las modalidades estándar y latina en los Juegos Mundiales de Duisburgo y en 2008 la federación inició una cooperación formal con el Comité Paralímpico Internacional para desarrollar el baile deportivo en silla de ruedas (World DanceSport Federation, s. f.-c). Entre 2011 y 2012 pasó a llamarse World DanceSport Federation (WDSF), y fue esta federación, nacida del baile de salón aficionado europeo, la que llevó el breaking a los Juegos Olímpicos de París de 2024 (World DanceSport Federation, s. f.-a)."
+   ],
+   "en": [
+    "DanceSport is the competitive form of partnered ballroom dancing, and its international federation places its birth in the 1920s, when several European nations pioneered the gradual emergence of dance as an organised sport (World DanceSport Federation, n.d.-b). The decisive step was the establishment of a common canon, since in 1929 British dance teachers defined the standards of an «English style» that was soon adopted everywhere (World DanceSport Federation, n.d.-b). In this way a practice of sociability belonging to the ballroom became subject to common standards, which allowed couples from different places to compete against one another before a panel of judges.",
+    "The first international organisation was the Fédération Internationale de Danse pour Amateurs (FIDA), founded in Prague on 10 September 1935 by nine European countries, which a year later held its first world championship in Bad Nauheim, Germany (World DanceSport Federation, n.d.-b). FIDA suspended its activities in 1956, after twenty years marked by the Second World War and by conflicts between amateurs and professionals, and on 12 May 1957, at the home of the German champion Otto Teipel in Wiesbaden, eight European nations founded the International Council of Amateur Dancers (ICAD), with Teipel elected president (World DanceSport Federation, n.d.-b). The Bremen Agreement, signed on 3 October 1965 between ICAD and the International Council of Ballroom Dancing, placed amateurs under the authority of the former and professionals under that of the latter (World DanceSport Federation, n.d.-b).",
+    "In 1990 ICAD adopted the name International DanceSport Federation, stressing the sporting character of dance, and the International Olympic Committee recognised DanceSport provisionally in 1995 and fully at its 106th Session, held in Lausanne in 1997 (World DanceSport Federation, n.d.-a). At the 2001 World Games in Akita it was the sport that generated the highest ticket revenue, in 2005 rock 'n' roll joined the Standard and Latin disciplines at the World Games in Duisburg, and in 2008 the federation entered into formal cooperation with the International Paralympic Committee to develop wheelchair DanceSport (World DanceSport Federation, n.d.-c). In 2011-2012 it was renamed the World DanceSport Federation (WDSF), and it was this federation, born of European amateur ballroom dancing, that took breaking to the 2024 Paris Olympic Games (World DanceSport Federation, n.d.-a)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/baile-deportivo.jpg",
+   "pie": {
+    "es": "Una pareja compite en el campeonato del mundo de baile de salón celebrado en el Messuhalli de Helsinki, el 4 de marzo de 1948.",
+    "en": "A couple competing in the World Ballroom Dancing Championships at the Helsinki Fair Hall, 4 March 1948."
+   },
+   "autor": "Hugo Sundström",
+   "licencia": "CC BY 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:World_Championships_in_Ballroom_dancing_1948_Helsinki_(867D;_JOKAHBL3C_I06-6).tif"
+  },
+  "refs": [
+   "World DanceSport Federation. (s. f.-a). *History*. Recuperado el 29 de septiembre de 2026 de https://www.worlddancesport.org/wdsf/history",
+   "World DanceSport Federation. (s. f.-b). *How it all started*. Recuperado el 29 de septiembre de 2026 de https://www.worlddancesport.org/WDSF/History/How-It-All-Started",
+   "World DanceSport Federation. (s. f.-c). *How it continued*. Recuperado el 29 de septiembre de 2026 de https://www.worlddancesport.org/WDSF/History/How-It-Continued"
+  ],
+  "refs_en": [
+   "World DanceSport Federation. (n.d.-a). *History*. Retrieved September 29, 2026, from https://www.worlddancesport.org/wdsf/history",
+   "World DanceSport Federation. (n.d.-b). *How it all started*. Retrieved September 29, 2026, from https://www.worlddancesport.org/WDSF/History/How-It-All-Started",
+   "World DanceSport Federation. (n.d.-c). *How it continued*. Retrieved September 29, 2026, from https://www.worlddancesport.org/WDSF/History/How-It-Continued"
+  ]
+ },
+ {
+  "id": "esports",
+  "name": {
+   "es": "Esports",
+   "en": "Esports"
+  },
+  "bloque": {
+   "es": "Deportes mentales y otros",
+   "en": "Mind sports and others"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Siglo XXI como práctica deportiva institucionalizada; primera federación internacional, la International Esports Federation, fundada en 2008",
+   "en": "21st century as an institutionalised sporting practice; first international federation, the International Esports Federation, founded in 2008"
+  },
+  "body": {
+   "es": [
+    "Los esports, o deportes electrónicos, son competiciones organizadas de videojuegos, y su inclusión en el campo del deporte es uno de los casos que mejor muestran que el deporte es un concepto de contorno abierto, bajo el que conviven prácticas con una implicación física muy desigual; en la asignatura se discuten junto al ajedrez o la pesca como ejemplos de esa frontera discutida. Manzenreiter (2014, p. 259) sitúa los juegos virtuales y los esports entre los procesos de «deportivización» que difuminan la frontera entre el deporte y el entretenimiento, al lado de fenómenos tan distintos como los maratones de baile o la obsesión casi deportiva por las clasificaciones. Vamplew (2021, pp. 104-105) los cuenta entre los deportes nuevos del siglo XXI y señala que atraen a jugadores y espectadores de los que muchos apenas mostraban interés por los deportes convencionales.",
+    "La institucionalización siguió el modelo de las federaciones deportivas. La International Esports Federation (IESF) se fundó en 2008 con nueve naciones miembro de Europa y de Asia, tiene su sede en Busan, en Corea del Sur, y en 2020 alcanzó los setenta y un países miembro; se presenta como el mayor organismo unificador de los esports en el mundo y centra su actividad en la organización de campeonatos, en la gobernanza de la disciplina y en una cumbre anual de directivos (International Esports Federation, 2020).",
+    "Los esports entraron en el programa de los Juegos Asiáticos de 2022 (Vamplew, 2021, p. 104). En el movimiento olímpico, el Comité Olímpico Internacional firmó en julio de 2024 una alianza de doce años con Arabia Saudí para celebrar en Riad unos Juegos Olímpicos de Esports, cuya primera edición, prevista para 2025, se aplazó en febrero de 2025 a 2027; en octubre de 2025, ya bajo la presidencia de Kirsty Coventry, ambas partes acordaron poner fin a esa cooperación y el COI anunció que desarrollaría un nuevo enfoque y un nuevo modelo de colaboración, sin sede ni calendario confirmados (Dixon, 2025)."
+   ],
+   "en": [
+    "Esports, or electronic sports, are organised video game competitions, and their inclusion in the field of sport is one of the cases that best show that sport is an open-ended concept, under which practices with very unequal physical involvement coexist; in this course they are discussed alongside chess or fishing as examples of that contested boundary. Manzenreiter (2014, p. 259) places virtual games and esports among the processes of «sportification» that blur the boundary between sport and entertainment, alongside phenomena as different as marathon dancing or the sport-like obsession with charts and rankings. Vamplew (2021, pp. 104-105) counts them among the new sports of the 21st century and notes that they attract players and spectators, many of whom had little time for conventional sports.",
+    "Institutionalisation followed the model of sports federations. The International Esports Federation (IESF) was founded in 2008 with nine member nations from Europe and Asia, has its headquarters in Busan, South Korea, and in 2020 reached seventy-one member countries; it presents itself as the largest unifying body for esports in the world and focuses its activity on organising championships, on the governance of the discipline and on an annual executive summit (International Esports Federation, 2020).",
+    "Esports entered the programme of the 2022 Asian Games (Vamplew, 2021, p. 104). Within the Olympic movement, the International Olympic Committee signed a twelve-year partnership with Saudi Arabia in July 2024 to hold Olympic Esports Games in Riyadh, whose first edition, planned for 2025, was postponed in February 2025 to 2027; in October 2025, now under the presidency of Kirsty Coventry, both parties agreed to end that cooperation and the IOC announced that it would develop a new approach and a new partnership model, with no host or timeline confirmed (Dixon, 2025)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 1,
+    "f": "deporte-un-concepto-vivo",
+    "t": {
+     "es": "Deporte: un concepto vivo",
+     "en": "Sport: a living concept"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/esports.jpg",
+   "pie": {
+    "es": "Un jugador compite ante su ordenador en el torneo Intel Extreme Masters de San José (California), noviembre de 2015.",
+    "en": "A player competing at his computer in the Intel Extreme Masters tournament in San Jose, California, November 2015."
+   },
+   "autor": "Kevin Chang for Team Liquid",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:IEM_2015_San_Jose_Day_2_-_17.jpg"
+  },
+  "refs": [
+   "Dixon, E. (2025, 30 de octubre). IOC scraps partnership with Saudi Arabia to host Olympic Esports Games. *SportsPro*. https://www.sportspro.com/news/esports-and-digital-sport/ioc-olympic-esports-games-saudi-arabia-partnership-cancelled-october-2025/",
+   "International Esports Federation. (2020, 7 de agosto). *IESF grows to 71 member nations*. Recuperado el 29 de septiembre de 2026 de https://archive.iesf.org/iesf/document.do?mode=view&articleNo=388",
+   "Manzenreiter, W. (2014). *Sport and body politics in Japan*. Routledge.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Dixon, E. (2025, October 30). IOC scraps partnership with Saudi Arabia to host Olympic Esports Games. *SportsPro*. https://www.sportspro.com/news/esports-and-digital-sport/ioc-olympic-esports-games-saudi-arabia-partnership-cancelled-october-2025/",
+   "International Esports Federation. (2020, August 7). *IESF grows to 71 member nations*. Retrieved September 29, 2026, from https://archive.iesf.org/iesf/document.do?mode=view&articleNo=388",
+   "Manzenreiter, W. (2014). *Sport and body politics in Japan*. Routledge.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "bartitsu",
+  "name": {
+   "es": "Bartitsu",
+   "en": "Bartitsu"
+  },
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Londres, 1898-1899, creado por Edward William Barton-Wright; recuperado desde comienzos del siglo XXI",
+   "en": "London, 1898-1899, created by Edward William Barton-Wright; revived since the early twenty-first century"
+  },
+  "body": {
+   "es": [
+    "El bartitsu es un sistema de defensa personal que el ingeniero británico Edward William Barton-Wright, nacido en la India en 1860, presentó en Londres a finales del siglo XIX tras pasar tres años en Japón, donde había estudiado jujutsu y recibido lecciones en la escuela de Jigoro Kano (Noble, 2001). En marzo de 1899 publicó en *Pearson's Magazine* el artículo «The New Art of Self Defence», primero de una serie que continuó hasta 1901 (Noble, 2001). El nombre combinaba la primera parte de su apellido con la palabra *jujitsu* (Case, 2021), y el método reunía el jujutsu japonés con el boxeo inglés, la *savate* francesa, la lucha suiza y la defensa con bastón que enseñaba el maestro de armas suizo Pierre Vigny (Fernández Truan, s. f., p. 214).",
+    "El sistema tuvo su sede en el Bartitsu Club, la escuela de armas y cultura física que abrió en 1900 en el número 67b de Shaftesbury Avenue, en el Soho (Case, 2021), y que la periodista Mary Nugent describió en 1901 como una enorme sala subterránea de paredes de azulejo blanco y luz eléctrica (Case, 2021; Noble, 2001). Barton-Wright hizo venir de Japón a Yukio Tani y a Sadakazu Uyenishi y confió a Vigny la enseñanza del bastón (Noble, 2001), y el club funcionaba como un círculo deportivo victoriano, con admisión por comité y una clientela sobre todo de clase alta; admitía también alumnas, y el bastón y el jiu-jitsu se promovieron en buena medida como defensa personal femenina, línea que Edith Garrud prolongaría después en sus clases para mujeres y en la guardia de las sufragistas (Case, 2021).",
+    "La escuela cerró en 1903, cuando las cuotas se consideraron demasiado altas y el número de socios cayó (Budo Japan, 2021), y el bartitsu quedó casi olvidado, aunque su influencia sobrevivió por dos caminos. Barton-Wright fue el primero en introducir el jujutsu en Inglaterra y pionero en combinar elementos de distintas artes de combate en un sistema completo de defensa personal (Noble, 2001); Arthur Conan Doyle, por su parte, lo inmortalizó con la grafía *baritsu* como el arte con el que Sherlock Holmes se defendía (Fernández Truan, s. f., p. 213). La recuperación comenzó tras la reedición de los artículos de Barton-Wright en revistas digitales de artes marciales en 2001, que dio origen a la Bartitsu Society (Budo Japan, 2021)."
+   ],
+   "en": [
+    "Bartitsu is a self-defence system that the British engineer Edward William Barton-Wright, born in India in 1860, presented in London at the end of the nineteenth century after spending three years in Japan, where he had studied jujutsu and taken lessons at Jigoro Kano's school (Noble, 2001). In March 1899 he published in *Pearson's Magazine* the article «The New Art of Self Defence», the first of a series that continued until 1901 (Noble, 2001). The name combined the first part of his surname with the word *jujitsu* (Case, 2021), and the method brought together Japanese jujutsu with English boxing, French *savate*, Swiss wrestling and the stick defence taught by the Swiss master-at-arms Pierre Vigny (Fernández Truan, n.d., p. 214).",
+    "The system was based at the Bartitsu Club, the school of arms and physical culture that opened in 1900 at 67b Shaftesbury Avenue, in Soho (Case, 2021), and which the journalist Mary Nugent described in 1901 as a huge subterranean hall with white-tiled walls and electric light (Case, 2021; Noble, 2001). Barton-Wright brought Yukio Tani and Sadakazu Uyenishi over from Japan and entrusted the teaching of the stick to Vigny (Noble, 2001), and the club was run like a Victorian sporting club, with admission by committee and a mainly upper-class membership; it also admitted women, and stick fighting and jiu-jitsu were promoted largely as women's self-defence, a line that Edith Garrud later extended in her classes for women and for the suffragettes' bodyguard (Case, 2021).",
+    "The school closed in 1903, when its fees were considered too high and membership fell (Budo Japan, 2021), and bartitsu was almost forgotten, although its influence survived in two ways. Barton-Wright was the first to introduce jujutsu to England and a pioneer in combining elements from different combat arts into a complete self-defence system (Noble, 2001); Arthur Conan Doyle, for his part, immortalised it under the spelling *baritsu* as the art with which Sherlock Holmes defended himself (Fernández Truan, n.d., p. 213). The revival began after Barton-Wright's articles were republished in online martial arts journals in 2001, which gave rise to the Bartitsu Society (Budo Japan, 2021)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/bartitsu.jpg",
+   "pie": {
+    "es": "Fotomontaje de ilustraciones de técnicas de defensa personal con bastón del bartitsu, con un retrato de Edward William Barton-Wright en el centro.",
+    "en": "Photomontage of illustrations of Bartitsu walking-stick self-defence techniques, with a portrait of Edward William Barton-Wright in the centre."
+   },
+   "autor": "Artful Dodger (English Wikipedia)",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Bartitsu_montage.jpg"
+  },
+  "refs": [
+   "Budo Japan. (2021, 18 de noviembre). *«Bartitsu» The new art of self defence by E. W. Barton-Wright, part 2*. Recuperado el 29 de septiembre de 2026 de https://budojapan.com/feature-articles/20211118-2/",
+   "Case, R. (2021, 1 de marzo). Bartitsu: The art of self-defence, part 1. *Playing Pasts*. Recuperado el 29 de septiembre de 2026 de https://www.playingpasts.co.uk/articles/general/bartitsuthe-art-of-self-defencepart-1/",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Noble, G. (2001, marzo). An introduction to E. W. Barton-Wright (1860-1951) and the eclectic art of bartitsu. *Journal of Manly Arts*. Recuperado el 29 de septiembre de 2026 de https://ejmas.com/jmanly/articles/2001/jmanlyart_noble_0301.htm"
+  ],
+  "refs_en": [
+   "Budo Japan. (2021, November 18). *«Bartitsu» The new art of self defence by E. W. Barton-Wright, part 2*. Retrieved September 29, 2026, from https://budojapan.com/feature-articles/20211118-2/",
+   "Case, R. (2021, March 1). Bartitsu: The art of self-defence, part 1. *Playing Pasts*. Retrieved September 29, 2026, from https://www.playingpasts.co.uk/articles/general/bartitsuthe-art-of-self-defencepart-1/",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Noble, G. (2001, March). An introduction to E. W. Barton-Wright (1860-1951) and the eclectic art of bartitsu. *Journal of Manly Arts*. Retrieved September 29, 2026, from https://ejmas.com/jmanly/articles/2001/jmanlyart_noble_0301.htm"
+  ]
+ },
+ {
+  "id": "chunkey",
+  "name": {
+   "es": "Chunkey",
+   "en": "Chunkey"
+  },
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "American Bottom (valle central del Misisipi, junto a San Luis), hacia 600 d. C.; auge en Cahokia en el periodo misisipiense medio (1050-1400)",
+   "en": "American Bottom (central Mississippi Valley, near St. Louis), c. AD 600; peak at Cahokia in the Middle Mississippian period (1050-1400)"
+  },
+  "body": {
+   "es": [
+    "El chunkey es un juego indígena norteamericano en el que se lanzaban varas tras un disco de piedra rodante. Las pruebas más antiguas proceden del American Bottom, la llanura aluvial del Misisipi junto a la actual San Luis, en el periodo Woodland tardío, hacia 600 d. C., y los discos, de arcilla, caliza o rocas ígneas y metamórficas, cambiaron de forma con el tiempo y se extendieron por todo el interior del continente (Zych, 2017, p. 68). Con el comienzo del periodo misisipiense, hacia 1050, el chunkey pasó de juego doméstico de recreo a actividad asociada a la élite, y los especialistas sostienen que en la región de Cahokia, la gran ciudad indígena próxima a East St. Louis, alcanzó entre 1050 y 1400 un nivel de profesionalismo de élite (Zych, 2017, p. 63).",
+    "Las descripciones del juego proceden de viajeros europeos y estadounidenses de los siglos XVIII y XIX. El nombre deriva del término choctaw *chungke* (Zych, 2017, p. 65). Se jugaba en campos abiertos, lisos y construidos a propósito en el centro de los poblados o en sus márgenes, que los creek y los cherokee llamaban *chunky yards*, y James Adair describió en 1775 un campo choctaw junto a la casa de consejo cubierto de arena fina para que la piedra corriera más (Zych, 2017, pp. 65-67). Dos hombres corrían tras la piedra lanzada de canto y arrojaban sus varas marcadas para que se detuvieran lo más cerca posible de ella. Los jugadores apostaban joyas, ropas, armas e incluso a sí mismos, y las piedras, pulidas con gran esfuerzo, pertenecían a cada pueblo y se transmitían de generación en generación (Zych, 2017, p. 67).",
+    "El juego tenía además un sentido cosmológico, dado que el movimiento del disco se ha relacionado con el recorrido del sol por el cielo (Zych, 2017, p. 65). George Catlin lo vio practicar a los mandan del alto Misuri y lo consideró su diversión favorita, mientras que William Bartram, a finales del siglo XVIII, encontró muchos campos cherokee abandonados, construidos sobre ellos o convertidos en huertos (Zych, 2017, pp. 66-67). En el momento del contacto el chunkey se jugaba en toda la mitad oriental del continente, pero cayó casi en el olvido durante el periodo histórico posterior, y en muchos casos las piedras son lo único que queda de él (Zych, 2017, p. 68). Su recuperación es sobre todo arqueológica, a través de los discos hallados en Cahokia y en enterramientos del valle del Illinois (Zych, 2017, p. 68)."
+   ],
+   "en": [
+    "Chunkey is a Native North American game in which poles were thrown after a rolling stone disk. The earliest evidence comes from the American Bottom, the Mississippi floodplain next to present-day St. Louis, in the Late Woodland period, around AD 600, and the disks, made of clay, limestone or igneous and metamorphic rocks, changed shape over time and spread throughout the interior of the continent (Zych, 2017, p. 68). With the start of the Mississippian period, around 1050, chunkey changed from a household game of recreation into an activity associated with the elite, and specialists argue that in the region of Cahokia, the great Native city near East St. Louis, it reached a level of elite professionalism between 1050 and 1400 (Zych, 2017, p. 63).",
+    "Descriptions of the game come from European and American travellers of the 18th and 19th centuries. The name derives from the Choctaw term *chungke* (Zych, 2017, p. 65). It was played on open, smooth, purpose-built fields in the centre of villages or on their edges, which the Creek and Cherokee called *chunky yards*, and James Adair described in 1775 a Choctaw field next to the council house strewn with fine sand so that the stone would run faster (Zych, 2017, pp. 65-67). Two men ran after the stone, bowled on its edge, and threw their marked poles so that they stopped as close to it as possible. Players wagered jewellery, clothes, weapons and even themselves, and the stones, polished with great labour, belonged to each town and were handed down from generation to generation (Zych, 2017, p. 67).",
+    "The game also had a cosmological meaning, since the movement of the disk has been linked to the path of the sun across the sky (Zych, 2017, p. 65). George Catlin saw the Mandan of the upper Missouri play it and considered it their favourite amusement, while William Bartram, in the late 18th century, found many Cherokee fields abandoned, built over or turned into gardens (Zych, 2017, pp. 66-67). At the time of contact chunkey was played across the whole eastern half of the continent, but it was largely forgotten during the later historic period, and in many cases the stones are all that remain of it (Zych, 2017, p. 68). Its recovery has been above all archaeological, through the disks found at Cahokia and in burials of the Illinois Valley (Zych, 2017, p. 68)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/chunkey.jpg",
+   "pie": {
+    "es": "*Tchung-kee, juego mandan con aro y pértiga*, óleo de George Catlin (1832-1833); dos jugadores corren lanzando sus pértigas tras el disco ante un grupo de espectadores. Smithsonian American Art Museum.",
+    "en": "*Tchung-kee, a Mandan Game Played with a Ring and Pole*, oil by George Catlin (1832-1833); two players run and throw their poles after the rolling disc before a group of onlookers. Smithsonian American Art Museum."
+   },
+   "autor": "George Catlin",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:George_Catlin_-_Tchung-kee,_a_Mandan_Game_Played_with_a_Ring_and_Pole_-_1985.66.431_-_Smithsonian_American_Art_Museum.jpg"
+  },
+  "refs": [
+   "Zych, T. J. (2017). Chunkey and the historic experience in the Mississippian world. En B. Voorhies (Ed.), *Prehistoric games of North American Indians: Subarctic to Mesoamerica* (pp. 63-86). University of Utah Press."
+  ],
+  "refs_en": [
+   "Zych, T. J. (2017). Chunkey and the historic experience in the Mississippian world. In B. Voorhies (Ed.), *Prehistoric games of North American Indians: Subarctic to Mesoamerica* (pp. 63-86). University of Utah Press."
+  ]
+ },
+ {
+  "id": "wing-chun",
+  "name": {
+   "es": "Wing chun",
+   "en": "Wing chun"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Foshan (Cantón, China), documentado desde mediados del siglo XIX; enseñanza pública de Ip Man en Hong Kong desde 1950",
+   "en": "Foshan (Guangdong, China), documented from the mid-nineteenth century; public teaching by Ip Man in Hong Kong from 1950"
+  },
+  "body": {
+   "es": [
+    "El wing chun es un estilo de *kung fu* del sur de China orientado al combate a corta distancia y conocido por sus ejercicios en pareja de «manos pegajosas» (*chi sao*). La tradición, cuya versión escrita más antigua y completa recogió el maestro Ip Man en los años sesenta, cuenta que Ng Mui, una de las cinco supervivientes míticas de la destrucción del templo Shaolin por los Qing, adiestró durante un año a la joven Yim Wing-chun, que así pudo defender su honor frente a un matón del mercado que la pretendía, y que el estilo tomó el nombre de esa primera alumna (Judkins, 2019). Judkins (2019) considera ese relato ficticio, recuerda que los Qing nunca destruyeron el templo Shaolin de Henan y lo hace depender de una novela anónima de 1893 y de una edición pirata de los años treinta, en la línea de la ficción republicana sobre heroínas.",
+    "No hay documentación fiable del estilo ni de sus practicantes anterior a mediados del siglo XIX. El primer maestro atestiguado es Leung Jan, un médico de Foshan que solo enseñó a sus hijos y a un amigo de la familia; le siguió Chan Wah Shun, activo en los últimos años de la dinastía Qing, que cobraba cuotas elevadas y tuvo unos dieciséis alumnos, el último de ellos Ip Man (1893-1972). Foshan era una ciudad mercantil que tenía el monopolio imperial del hierro y exportaba seda y cerámica, y su economía atraía a expertos marciales y demandaba profesionales de la seguridad, de manera que el arte creció ligado a la protección del comercio y a la defensa personal (Judkins, 2019).",
+    "Ip Man huyó de Cantón a finales de 1949 y en 1950 empezó a enseñar de forma profesional en Hong Kong, en el sindicato de trabajadores de restaurantes, con un programa centrado en el *chi sao* (Judkins, 2019). Su alumno más célebre, Bruce Lee, elaboró su propio sistema a partir de artes chinas como el wing chun y de influencias occidentales (Sánchez García, 2019, p. 16), y tras el estreno de *Enter the Dragon* en 1973 los discípulos emigrados de Ip Man extendieron el estilo por Norteamérica, Australia y Europa (Judkins, 2019). A diferencia del judo, el *kung fu*, y con él el wing chun, no se sometió a una síntesis comparable y conserva una estructura informal de linajes encabezados por maestros (Kummels, 2013, p. 24), y muchas de sus asociaciones occidentales siguen buscando en Oriente su mito, su linaje y su identidad (Jennings et al., 2010, citado en Kummels, 2013, p. 25)."
+   ],
+   "en": [
+    "Wing chun is a southern Chinese style of *kung fu* oriented towards close-range combat and known for its paired «sticky hands» exercises (*chi sao*). The tradition, whose oldest and most complete written version was recorded by the master Ip Man in the 1960s, holds that Ng Mui, one of the five mythical survivors of the destruction of the Shaolin temple by the Qing, trained the young Yim Wing-chun for a year, so that she could defend her honour against a marketplace bully who was pressing unwanted advances on her, and that the style took the name of this first student (Judkins, 2019). Judkins (2019) regards the story as fictional, recalls that the Qing never destroyed the Shaolin temple in Henan, and traces it to an anonymous novel of 1893 and a pirate edition of the 1930s, in line with Republican fiction about heroines.",
+    "There is no reliable documentation of the style or its practitioners before the mid-nineteenth century. The first attested master is Leung Jan, a Foshan physician who taught only his sons and a family friend; he was followed by Chan Wah Shun, active in the last years of the Qing dynasty, who charged high fees and had some sixteen students, the last of them Ip Man (1893-1972). Foshan was a market town that held the imperial iron monopoly and exported silk and ceramics, and its economy attracted martial artists and needed security professionals, so the art grew up linked to the protection of trade and to self-defence (Judkins, 2019).",
+    "Ip Man fled Guangdong late in 1949 and in 1950 began teaching professionally in Hong Kong, at the restaurant workers' union, with a curriculum centred on *chi sao* (Judkins, 2019). His most famous student, Bruce Lee, built his own system from Chinese arts such as wing chun and from Western influences (Sánchez García, 2019, p. 16), and after the release of *Enter the Dragon* in 1973 Ip Man's emigrant students spread the style across North America, Australia and Europe (Judkins, 2019). Unlike judo, *kung fu*, and wing chun with it, did not undergo a comparable synthesis and keeps an informal structure of lineages headed by masters (Kummels, 2013, p. 24), and many of its Western associations still look to the East for their myth, lineage and identity (Jennings et al., 2010, as cited in Kummels, 2013, p. 25)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/wing-chun.png",
+   "pie": {
+    "es": "Sean Mann practica el *chi sau* (manos pegajosas), ejercicio característico del wing chun, con Ip Chun, hijo de Ip Man, en 2017.",
+    "en": "Sean Mann practising *chi sau* (sticky hands), the characteristic Wing Chun drill, with Ip Chun, son of Ip Man, in 2017."
+   },
+   "autor": "Mannsifu",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Wing_Chun_Sifu_Sean_Mann_playing_Chi_Sau_With_Grand_Master_Ip_Chun_-_Copy.png"
+  },
+  "refs": [
+   "Judkins, B. N. (2019, 29 de septiembre). The history and global transmission of Wing Chun (in less than five thousand words). *Kung Fu Tea*. Recuperado el 29 de septiembre de 2026 de https://chinesemartialstudies.com/2019/09/29/the-history-and-global-transmission-of-wing-chun-in-less-than-five-thousand-words/",
+   "Kummels, I. (2013). Anthropological perspectives on sport and culture: Against sports as the essence of Western modernity. En K. Bromber, B. Krawietz y J. Maguire (Eds.), *Sport across Asia: Politics, cultures, and identities* (pp. 7-30). Routledge.",
+   "Sánchez García, R. (2019). *The historical sociology of Japanese martial arts*. Routledge."
+  ],
+  "refs_en": [
+   "Judkins, B. N. (2019, September 29). The history and global transmission of Wing Chun (in less than five thousand words). *Kung Fu Tea*. Retrieved September 29, 2026, from https://chinesemartialstudies.com/2019/09/29/the-history-and-global-transmission-of-wing-chun-in-less-than-five-thousand-words/",
+   "Kummels, I. (2013). Anthropological perspectives on sport and culture: Against sports as the essence of Western modernity. In K. Bromber, B. Krawietz, & J. Maguire (Eds.), *Sport across Asia: Politics, cultures, and identities* (pp. 7-30). Routledge.",
+   "Sánchez García, R. (2019). *The historical sociology of Japanese martial arts*. Routledge."
+  ]
+ },
+ {
+  "id": "tahtib",
+  "name": {
+   "es": "Tahtib",
+   "en": "Tahtib"
+  },
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Egipto faraónico, con testimonios que se multiplican en el Imperio Nuevo; juego festivo actual del Alto Egipto, inscrito por la UNESCO en 2016",
+   "en": "Pharaonic Egypt, with evidence that multiplies in the New Kingdom; today a festive game of Upper Egypt, inscribed by UNESCO in 2016"
+  },
+  "body": {
+   "es": [
+    "El *tahtib*, la esgrima de bastón egipcia, tiene sus antecedentes en los combates con palos del Egipto faraónico, que Decker (1992, p. 71) cuenta, junto a la lucha y el pugilato, entre los tres deportes de combate documentados en las fuentes egipcias. La esgrima ganó popularidad en el Imperio Nuevo y aparece junto a la lucha y el tiro con arco en los programas deportivos del templo funerario de Ramsés III en Medinet Habu, en el siglo XII a. C., donde los esgrimistas llevan una banda que les cubre la frente y la barbilla y otros combatientes protegen el antebrazo con una tabla sujeta a él (Decker, 1992, p. 84). A mediados del siglo V a. C. Heródoto todavía presenció en Papremis, en el delta, combates con palos como parte central de una ceremonia de culto, un rito que según Decker tenía raíces muy antiguas (Decker, 1992, p. 87).",
+    "Decker (1992, p. 10) cita la esgrima de bastón como ejemplo de la fuerza de la tradición en Egipto, puesto que sobrevive en la cultura popular del país. La forma actual es un intercambio breve y no violento entre dos adversarios que empuñan un palo largo al son de música tradicional, y exige un control completo de los movimientos, dado que no se permite golpear al contrario (UNESCO, 2016). La UNESCO reconoce su origen marcial, ya que en el antiguo Egipto el *tahtib* se usaba como arte de combate, y señala que su función se transformó después en la de un juego festivo que conserva parte del simbolismo y de los valores asociados a la práctica. Lo practican sobre todo varones, jóvenes y mayores, de las poblaciones *saidi* del Alto Egipto, en particular en el medio rural, en reuniones sociales públicas y privadas y a veces en competiciones (UNESCO, 2016).",
+    "En 2016 el Comité Intergubernamental para la Salvaguardia del Patrimonio Cultural Inmaterial inscribió el *tahteeb*, o juego del palo, en la Lista Representativa del Patrimonio Cultural Inmaterial de la Humanidad. La decisión subraya que las comunidades de buena parte de Egipto lo reconocen como parte de su patrimonio porque encarna el respeto mutuo, la dignidad y la cohesión social y da a quienes lo practican un sentido de pertenencia, y que, si bien su origen es marcial, sus funciones actuales tienen que ver con el entretenimiento y la celebración festiva en comunidades rurales y urbanas (UNESCO, 2016). El juego transmite valores como la amistad, el valor, la fuerza, la caballerosidad y el orgullo, da confianza a los participantes al actuar ante su comunidad y refuerza los lazos familiares y las relaciones vecinales, y se aprende tanto por vías formales como informales (UNESCO, 2016)."
+   ],
+   "en": [
+    "*Tahtib*, Egyptian stick fencing, has its antecedents in the stick fights of pharaonic Egypt, which Decker (1992, p. 71) counts, together with wrestling and boxing, among the three combat sports documented in Egyptian sources. Stick fencing grew in popularity in the New Kingdom and appears alongside wrestling and archery in the sporting programmes of the mortuary temple of Ramesses III at Medinet Habu, in the twelfth century BCE, where the fencers wear a band covering forehead and chin and other fighters protect the forearm with a board fastened to it (Decker, 1992, p. 84). In the middle of the fifth century BCE Herodotus still witnessed stick fighting at Papremis, in the Delta, as the central part of a cult ceremony, a rite which according to Decker had very ancient roots (Decker, 1992, p. 87).",
+    "Decker (1992, p. 10) cites stick fencing as an example of the strength of tradition in Egypt, since it survives in the country's popular culture. Its present form is a brief, non-violent exchange between two opponents who wield a long stick to the sound of traditional music, and it demands complete control of movement, since striking the opponent is not allowed (UNESCO, 2016). UNESCO acknowledges its martial origin, as in ancient Egypt *tahtib* was used as a fighting art, and notes that its function later changed into that of a festive game which keeps part of the symbolism and values associated with the practice. It is played above all by men, young and old, of the *Saidi* populations of Upper Egypt, particularly in rural areas, at public and private social gatherings and sometimes in competitions (UNESCO, 2016).",
+    "In 2016 the Intergovernmental Committee for the Safeguarding of the Intangible Cultural Heritage inscribed *tahteeb*, or the stick game, on the Representative List of the Intangible Cultural Heritage of Humanity. The decision stresses that communities throughout much of Egypt recognise it as part of their heritage because it embodies mutual respect, dignity and social cohesion and gives practitioners a sense of belonging, and that, although its origin is martial, its present functions relate to entertainment and festive celebration in rural and urban communities (UNESCO, 2016). The game conveys values such as friendship, courage, strength, chivalry and pride, gives participants confidence when performing before their community, strengthens family ties and neighbourly relations, and is learnt through both formal and informal channels (UNESCO, 2016)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 2,
+    "f": "esgrima-y-combate-en-medinet-habu",
+    "t": {
+     "es": "Esgrima y combate en Medinet Habu",
+     "en": "Stick fencing and combat at Medinet Habu"
+    }
+   },
+   {
+    "num": 2,
+    "f": "los-deportes-de-combate",
+    "t": {
+     "es": "Los deportes de combate",
+     "en": "Combat sports"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/tahtib.jpg",
+   "pie": {
+    "es": "Dos jugadores se enfrentan con sus bastones en un corro de *tahtib* durante el *mawlid* de al-Ashi en Luxor, febrero de 2025, rodeados por el público.",
+    "en": "Two players face each other with their sticks in a *tahtib* ring during the *mawlid* of al-Ashi in Luxor, February 2025, surrounded by spectators."
+   },
+   "autor": "ولاء",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Tahtib,_Mawlid_Al-Ashi,_Luxor_10.jpg"
+  },
+  "refs": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trad.). Yale University Press.",
+   "UNESCO. (2016). *Decision of the Intergovernmental Committee: 11.COM 10.B.10* [Tahteeb, stick game]. Recuperado el 30 de septiembre de 2026 de https://ich.unesco.org/en/decisions/11.COM/10.B.10"
+  ],
+  "refs_en": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trans.). Yale University Press.",
+   "UNESCO. (2016). *Decision of the Intergovernmental Committee: 11.COM 10.B.10* [Tahteeb, stick game]. Retrieved September 30, 2026, from https://ich.unesco.org/en/decisions/11.COM/10.B.10"
+  ]
+ },
+ {
+  "id": "palio-de-siena",
+  "name": {
+   "es": "Palio de Siena",
+   "en": "Palio di Siena"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Siena (Italia), carreras de *palio* desde la Edad Media; primer palio «a la redonda» en la Piazza del Campo, 1633",
+   "en": "Siena (Italy), *palio* races since the Middle Ages; first palio run «in the round» in the Piazza del Campo, 1633"
+  },
+  "body": {
+   "es": [
+    "El Palio de Siena es el superviviente más célebre de una tradición que ocupó a casi todas las ciudades del norte y el centro de Italia. Las carreras de *palio*, documentadas desde el siglo XIII, tomaban el nombre del estandarte que se entregaba como premio (Renson, 1999, p. 413) y formaban un calendario que iba de febrero a noviembre; Roma, Bolonia, Siena y Ferrara celebraban varias al año, y Florencia llegó a organizar siete entre junio y octubre, desde el Palio di San Giovanni, el más prestigioso de Italia, hasta el del gremio de tintoreros (Vamplew, 2021, p. 138). Se corrían en las fiestas de los santos, dentro del tiempo de juego que concedía el calendario religioso (Baker, 1999, p. 319), y vivieron su apogeo a finales del siglo XV y comienzos del XVI (Vamplew, 2021, p. 138). En Siena las contradas, los barrios que hoy protagonizan la fiesta, dejan rastro documental desde el siglo XV (Comune di Siena, s. f.).",
+    "El paso decisivo fue trasladar la carrera a la plaza mayor. Según el Ayuntamiento de Siena, el primer palio corrido «a la redonda» en la Piazza del Campo parece remontarse a 1633 (Comune di Siena, s. f.), y a esa fecha asocia Vamplew (2021, pp. 138-139) el palio de julio, dedicado a la Virgen de Provenzano, al que desde 1701 se sumó el de agosto, coincidente con la fiesta de la Asunción. Sobre la plaza se extiende una gruesa capa de tierra, y la carrera, precedida de un cortejo histórico, consiste en tres vueltas de unos treinta segundos cada una, con jinetes que montan sin silla y caen con frecuencia en las curvas cerradas. En el siglo XVIII, por razones de seguridad, el número de caballos se limitó a diez, de modo que las siete contradas que se quedan fuera corren la edición siguiente y las tres plazas restantes se sortean (Vamplew, 2021, p. 139).",
+    "El Palio no depende de ninguna federación deportiva, puesto que lo organiza el Ayuntamiento y lo sostienen las diecisiete contradas, para las que la victoria es ante todo una cuestión de identidad de barrio. Hasta junio de 2013 las fuentes documentan 385 palios corridos en el Campo por las contradas actuales (Comune di Siena, s. f.). Su continuidad lo ha convertido en uno de los ejemplos más citados de juego tradicional europeo y en una atracción turística de alcance internacional (Renson, 1999, p. 413), sin que haya perdido su carácter de rito cívico, con una estética de raíz medieval y renacentista que se mantiene en los trajes, las banderas y el cortejo."
+   ],
+   "en": [
+    "The Palio of Siena is the most famous survivor of a tradition that involved almost every city in northern and central Italy. *Palio* races, documented since the thirteenth century, took their name from the banner given as a prize (Renson, 1999, p. 413) and formed a calendar running from February to November; Rome, Bologna, Siena and Ferrara held several each year, and Florence came to stage seven between June and October, from the Palio di San Giovanni, the most prestigious in Italy, to that of the dyers' guild (Vamplew, 2021, p. 138). They were run on saints' days, within the time for play that the religious calendar allowed (Baker, 1999, p. 319), and reached their heyday in the late fifteenth and early sixteenth centuries (Vamplew, 2021, p. 138). In Siena the contrade, the wards that lead the festival today, leave documentary traces from the fifteenth century (Comune di Siena, n.d.).",
+    "The decisive step was moving the race into the main square. According to the City of Siena, the first palio run «in the round» in the Piazza del Campo appears to date from 1633 (Comune di Siena, n.d.), and Vamplew (2021, pp. 138-139) links that date to the July palio, dedicated to the Madonna of Provenzano, which from 1701 was joined by the August race, coinciding with the Feast of the Assumption. A thick layer of earth is spread over the square, and the race, preceded by a historical pageant, consists of three laps of about thirty seconds each, with riders who ride bareback and frequently fall on the tight turns. In the eighteenth century, for safety reasons, the number of horses was limited to ten, so that the seven contrade left out run in the following edition and the three remaining places are drawn by lot (Vamplew, 2021, p. 139).",
+    "The Palio depends on no sports federation, since it is organised by the City Council and sustained by the seventeen contrade, for whom victory is above all a matter of neighbourhood identity. Up to June 2013 the sources document 385 palios run in the Campo by the present contrade (Comune di Siena, n.d.). Its continuity has made it one of the most frequently cited examples of European traditional games and an internationally known tourist attraction (Renson, 1999, p. 413), without losing its character as a civic rite, with an aesthetic of medieval and Renaissance roots that survives in the costumes, the banners and the pageant."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/palio-de-siena.jpg",
+   "pie": {
+    "es": "Vista general de la plaza de Siena (hoy Piazza del Campo) durante la carrera del Palio, con los caballos en la pista y la multitud en el centro; xilografía de 1888.",
+    "en": "General view of the main square of Siena (today Piazza del Campo) during the Palio race, with the horses on the track and the crowd in the centre; woodcut, 1888."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Siena,_veduta_generale_della_Piazza_Vittorio_Emanuele_nel_momento_delle_corse_(xilografia).jpg"
+  },
+  "refs": [
+   "Baker, W. J. (1999). Religion. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 317-322). Oxford University Press.",
+   "Comune di Siena. (s. f.). *La storia*. Recuperado el 29 de septiembre de 2026 de https://palio.comune.siena.it/node/77",
+   "Renson, R. (1999). Traditional sports, Europe. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 411-414). Oxford University Press.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Baker, W. J. (1999). Religion. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 317-322). Oxford University Press.",
+   "Comune di Siena. (n.d.). *La storia*. Retrieved September 29, 2026, from https://palio.comune.siena.it/node/77",
+   "Renson, R. (1999). Traditional sports, Europe. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 411-414). Oxford University Press.",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "fives",
+  "name": {
+   "es": "Fives",
+   "en": "Fives"
+  },
+  "bloque": {
+   "es": "De pelota",
+   "en": "Handball games and pelota"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Inglaterra, juegos de pelota a mano contra muros desde la Edad Media; forma escolar en Eton (primeras pistas en 1840) y Rugby; asociaciones en 1924 y 1927",
+   "en": "England, handball games against walls since the Middle Ages; school form at Eton (first courts in 1840) and Rugby; associations in 1924 and 1927"
+  },
+  "body": {
+   "es": [
+    "El fives agrupa varios juegos ingleses en los que se golpea con la mano, protegida por un guante, una pequeña pelota dura contra una pared. Sus antecedentes son los juegos de pelota a mano que los campesinos ingleses practicaban contra los muros de las iglesias en la Edad Media, y las referencias a juegos de *hand-tennis* y *hand-ball* son frecuentes desde el siglo XVI (Chandler, 1999, p. 332; Eton Fives Association, s. f.-a). El nombre, empleado desde el siglo XVII, alude con toda probabilidad a los cinco dedos de la mano, aunque existen otras explicaciones (Chandler, 1999, p. 332). Se trataba de un pasatiempo popular, que solo necesitaba un muro y una pelota.",
+    "La forma moderna del juego nació en las *public schools*, que lo convirtieron en un deporte escolar con reglas propias de cada centro. En Eton los alumnos jugaban en los huecos que formaban los contrafuertes de la capilla, y de ahí procede el diseño irregular de la pista de Eton fives, que reproduce aquel espacio; el director Hawtrey hizo construir en 1840 el primer bloque de cuatro pistas, y en 1877 A. C. Ainger y otros alumnos publicaron las reglas del juego tal como se practicaba en Eton (Eton Fives Association, s. f.-a). En Rugby School se desarrolló otra variante, jugada en una pista cerrada de cuatro paredes, y ambas modalidades se difundieron por los colegios privados, las universidades de Oxford y Cambridge y los clubes de antiguos alumnos (Chandler, 1999, p. 332).",
+    "La institucionalización llegó en el periodo de entreguerras. La Fives Association se formó en 1924 para organizar partidos entre clubes y promover el juego, y al fundarse en 1927 la Rugby Fives Association pasó a llamarse Eton Fives Association (Eton Fives Association, s. f.-b), mientras la Rugby Fives Association emprendió la unificación de reglas y pistas (Chandler, 1999, p. 332). El primer partido entre colegios, Eton contra Harrow, se jugó en 1885, el Kinnaird Cup se convirtió en campeonato amateur en 1931 y el primer campeonato femenino no se celebró hasta 1984 (Eton Fives Association, s. f.-a). El fives ha sido siempre un deporte minoritario ligado a las escuelas privadas y a Oxford y Cambridge, con escaso público (Chandler, 1999, p. 332), y su historia muestra cómo un juego campesino se convirtió en seña de identidad de un grupo social cerrado."
+   ],
+   "en": [
+    "Fives covers several English games in which a small hard ball is struck with the gloved hand against a wall. Its antecedents are the handball games that English peasants played against church walls in the Middle Ages, and references to hand-tennis and hand-ball are frequent from the sixteenth century onward (Chandler, 1999, p. 332; Eton Fives Association, n.d.-a). The name, used since the seventeenth century, most probably refers to the five fingers of the hand, although other explanations exist (Chandler, 1999, p. 332). It was a popular pastime, needing only a wall and a ball.",
+    "The modern form of the game was born in the public schools, which turned it into a school sport with rules specific to each institution. At Eton the boys played in the bays formed by the buttresses of the chapel, and the irregular design of the Eton fives court, which reproduces that space, derives from them; headmaster Hawtrey had the first block of four courts built in 1840, and in 1877 A. C. Ainger and other pupils published the rules of the game as played at Eton (Eton Fives Association, n.d.-a). At Rugby School another variant developed, played in an enclosed court with four walls, and both forms spread through the private schools, the universities of Oxford and Cambridge and the old boys' clubs (Chandler, 1999, p. 332).",
+    "Institutionalisation came in the interwar period. The Fives Association was formed in 1924 to organise club matches and promote the game, and when the Rugby Fives Association was founded in 1927 it was renamed the Eton Fives Association (Eton Fives Association, n.d.-b), while the Rugby Fives Association set about standardising rules and courts (Chandler, 1999, p. 332). The first inter-school match, Eton against Harrow, was played in 1885, the Kinnaird Cup became the amateur championship in 1931 and the first women's championship was not held until 1984 (Eton Fives Association, n.d.-a). Fives has always been a minority sport tied to the private schools and to Oxford and Cambridge, with few spectators (Chandler, 1999, p. 332), and its history shows how a peasant game became a mark of identity for a closed social group."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/fives.png",
+   "pie": {
+    "es": "Muchachos jugando al *fives* contra una pared, grabado de *A Little Pretty Pocket-Book*, libro infantil de juegos en la edición de Isaiah Thomas.",
+    "en": "Boys playing fives against a wall, woodcut from *A Little Pretty Pocket-Book*, a children's book of games, in Isaiah Thomas's edition."
+   },
+   "autor": "Isaiah Thomas",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:ALPP_-_Fives.png"
+  },
+  "refs": [
+   "Chandler, T. J. L. (1999). Rugby fives. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (p. 332). Oxford University Press.",
+   "Eton Fives Association. (s. f.-a). *A brief history of Eton fives*. Recuperado el 29 de septiembre de 2026 de https://www.etonfives.com/the-game/a-brief-history-of-eton-fives",
+   "Eton Fives Association. (s. f.-b). *History of the Association*. Recuperado el 29 de septiembre de 2026 de https://www.etonfives.com/efa/history"
+  ],
+  "refs_en": [
+   "Chandler, T. J. L. (1999). Rugby fives. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (p. 332). Oxford University Press.",
+   "Eton Fives Association. (n.d.-a). *A brief history of Eton fives*. Retrieved September 29, 2026, from https://www.etonfives.com/the-game/a-brief-history-of-eton-fives",
+   "Eton Fives Association. (n.d.-b). *History of the Association*. Retrieved September 29, 2026, from https://www.etonfives.com/efa/history"
+  ]
+ },
+ {
+  "id": "holua",
+  "name": {
+   "es": "Hōlua",
+   "en": "Hōlua (Hawaiian sledding)"
+  },
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Islas Hawái, práctica de la sociedad hawaiana anterior al contacto europeo, en declive desde la primera mitad del siglo XIX",
+   "en": "Hawaiian Islands, a practice of Hawaiian society before European contact, in decline from the first half of the nineteenth century"
+  },
+  "body": {
+   "es": [
+    "El *hōlua* era el descenso de colinas sobre un trineo estrecho por pistas construidas a propósito, y el historiador hawaiano David Malo (1795-1853) lo describe como un deporte muy en boga entre los jefes y la gente común, sobre cuyo resultado se cruzaban apuestas (Malo, 1903, p. 294). La pista, que recibía también el nombre de *hōlua*, bajaba por la pendiente de una colina hasta la llanura y se construía con una base de piedras cubierta de tierra apisonada y recubierta de hierba, mientras que los patines del trineo, de madera de *māmane* o de *uhiuhi*, terminaban en una punta curvada hacia arriba, se unían con travesaños como los cascos de una canoa doble y se lubricaban con aceite de nuez de *kukui* (Malo, 1903, pp. 294-295).",
+    "Tras cruzar las apuestas, los competidores salían uno detrás de otro desde lo alto de la pista y vencía quien llegaba más lejos, de modo que si ambos la recorrían entera la carrera quedaba sin decidir (Malo, 1903, p. 295). Howell (1999, pp. 419-420) lo cuenta entre los deportes tradicionales polinesios y lo considera uno de los más peligrosos y emocionantes de Hawái, puesto que se descendía de cabeza a gran velocidad, y lo sitúa entre las pruebas del *Makahiki*, un festival anual de cuatro meses lunares durante el cual cesaba el trabajo y la guerra quedaba prohibida. En sus notas a la traducción, Emerson describe los restos de una pista de unos 18 pies de anchura, pavimentada con losas planas, y un trineo del Bishop Museum con patines de doce pies y medio (Malo, 1903, p. 295).",
+    "Howell (1999, pp. 419-420) atribuye a este deporte un grado elevado de organización y de estatus social y explica que la americanización de las islas hizo desaparecer hacia 1830 la mayor parte de la cultura tradicional, con más de un centenar de juegos y deportes antiguos, aunque en el siglo XX hubo intentos de recuperarlos, como la recreación del *Makahiki* en 1935 o la construcción en 1977 de un recinto permanente para los juegos hawaianos en Waimea Falls Park, donde el festival se organiza cada año en octubre. Las pistas se han convertido en patrimonio de la identidad hawaiana, y la de Keauhou, en la isla de Hawái, figura desde el 15 de octubre de 1966 en el Registro Nacional de Lugares Históricos de Estados Unidos (National Park Service, s. f.)."
+   ],
+   "en": [
+    "*Hōlua* was the descent of hillsides on a narrow sled along purpose-built tracks, and the Hawaiian historian David Malo (1795-1853) describes it as a sport greatly in vogue among chiefs and common people, on whose outcome bets were placed (Malo, 1903, p. 294). The track, which was also called *hōlua*, ran down the slope of a hill onto the plain and was built with a base of stones covered with beaten earth and layered with grass, while the runners of the sled, made of *māmane* or *uhiuhi* wood, ended in an upturned point, were joined by crosspieces like the hulls of a double canoe and were lubricated with *kukui* nut oil (Malo, 1903, pp. 294-295).",
+    "Once the bets were placed, the competitors started one behind the other from the top of the track and victory went to whoever travelled furthest, so that if both covered the whole length the race was left undecided (Malo, 1903, p. 295). Howell (1999, pp. 419-420) counts it among the traditional Polynesian sports and considers it one of the most dangerous and exciting in Hawaii, since riders went down head first at great speed, and places it among the contests of the *Makahiki*, an annual festival lasting four lunar months during which work ceased and war was forbidden. In his notes to the translation, Emerson describes the remains of a track about 18 feet wide, paved with flat stones, and a sled in the Bishop Museum with runners twelve and a half feet long (Malo, 1903, p. 295).",
+    "Howell (1999, pp. 419-420) attributes to this sport a high level of organisation and social status and explains that the Americanisation of the islands had swept away most of the traditional culture by around 1830, including over a hundred ancient games and sports, although in the twentieth century there were attempts to revive them, such as the re-enactment of the *Makahiki* in 1935 or the building in 1977 of a permanent site for Hawaiian games at Waimea Falls Park, where the festival is organised every October. The tracks have become heritage of Hawaiian identity, and the one at Keauhou, on the island of Hawaii, has been listed since 15 October 1966 in the National Register of Historic Places of the United States (National Park Service, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/holua.jpg",
+   "pie": {
+    "es": "Dibujo de Herb Kawainui Kāne que muestra la salida de un descenso en *hōlua*: el deslizador toma carrerilla con el trineo y se lanza boca abajo sobre él por la pista.",
+    "en": "Drawing by Herb Kawainui Kāne showing the start of a *hōlua* run: the rider sprints with the sled and throws himself face down on it onto the slide."
+   },
+   "autor": "Herb Kawainui Kāne",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Holua_form.jpg"
+  },
+  "refs": [
+   "Howell, R. (1999). Traditional sports, Oceania. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 417-420). Oxford University Press.",
+   "Malo, D. (1903). *Hawaiian antiquities (Moolelo Hawaii)* (N. B. Emerson, Trad.). Hawaiian Gazette.",
+   "National Park Service. (s. f.). *Keauhou Holua Slide* [Registro del National Register of Historic Places]. NPGallery. Recuperado el 30 de septiembre de 2026 de https://npgallery.nps.gov/AssetDetail/NRIS/66000290"
+  ],
+  "refs_en": [
+   "Howell, R. (1999). Traditional sports, Oceania. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 417-420). Oxford University Press.",
+   "Malo, D. (1903). *Hawaiian antiquities (Moolelo Hawaii)* (N. B. Emerson, Trans.). Hawaiian Gazette.",
+   "National Park Service. (n.d.). *Keauhou Holua Slide* [National Register of Historic Places record]. NPGallery. Retrieved September 30, 2026, from https://npgallery.nps.gov/AssetDetail/NRIS/66000290"
+  ]
+ },
+ {
+  "id": "peleas-de-cometas",
+  "name": {
+   "es": "Peleas de cometas",
+   "en": "Kite fighting"
+  },
+  "bloque": {
+   "es": "Aéreos",
+   "en": "Air sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Asia oriental y meridional; las cometas proceden de China, donde se documentan desde la Antigüedad, y los combates se practican tradicionalmente en China, Tailandia, Corea e India",
+   "en": "East and South Asia; kites come from China, where they are recorded from antiquity, and kite fights are traditionally held in China, Thailand, Korea and India"
+  },
+  "body": {
+   "es": [
+    "Las peleas de cometas derivan del vuelo de cometas, que según Townes (1999, p. 217) se originó en China hace unos tres mil años y se adaptó después en otras culturas asiáticas, donde las cometas tuvieron usos ornamentales, rituales y militares, como transmitir señales a las tropas o medir distancias. Speak (1999a, p. 34) remonta la actividad al periodo de los Reinos Combatientes, cuando, según el *Han Fei Ji*, Mozi construyó una cometa de madera que tardó tres años en terminar y que voló un solo día, y señala que su popularidad fue enorme en la dinastía Tang (618-907). Guttmann (2004, p. 41) coincide en que se convirtió entonces en una obsesión nacional y describe la versión competitiva, en la que los contendientes maniobraban para cortar el hilo de las cometas rivales y derribarlas.",
+    "En Tailandia el vuelo de cometas fue una pasión durante el periodo de Sukhothai (1238-1347) y formaba parte, según la fuente que recoge Guttmann (2004, p. 7), del ritual para pedir el viento fresco de los meses de verano. La forma tailandesa de combate enfrenta dos tipos de cometa, la *chula*, masculina y con forma de estrella de cinco puntas, que puede medir 2,3 metros y requiere un equipo de ocho a diez muchachos dirigidos por un capitán, y la *pakpao*, femenina, romboidal y más pequeña, y reproduce un cortejo en el que la cometa masculina, armada con garras de bambú, invade el territorio de la femenina para capturarla, mientras esta, que no puede cruzar al lado masculino, se defiende con su maniobrabilidad hasta hacer caer a su rival (Trevithick, 1999, p. 410).",
+    "Trevithick (1999, p. 410) considera el combate tailandés la más conocida y popular de las actividades aéreas asiáticas y señala formas semejantes en Corea y China, y Townes (1999, p. 218) recuerda que en la India y en otros países las peleas de cometas son desde hace mucho un deporte popular, en el que los jugadores recubren con vidrio el hilo y la cola de sus cometas para cortar la del adversario. El caso tailandés muestra con claridad la función social del juego, porque traslada al aire una representación codificada de los papeles de género, que Trevithick califica de doble moral, y organiza a los participantes en equipos jerarquizados en torno a un capitán. En el siglo XX surgieron asociaciones como la American Kitefliers Association y en la década de 1990 se promovió la inclusión del vuelo de cometas en los Juegos Olímpicos (Townes, 1999, p. 218)."
+   ],
+   "en": [
+    "Kite fighting derives from kite flying, which according to Townes (1999, p. 217) originated in China about three thousand years ago and was later adapted by other Asian cultures, where kites had ornamental, ritual and military uses, such as signalling to troops or measuring distances. Speak (1999a, p. 34) traces the activity back to the Warring States period when, according to the *Han Fei Ji*, Mozi built a wooden kite that took him three years to complete and flew for a single day, and notes that it became extremely popular under the Tang dynasty (618-907). Guttmann (2004, p. 41) agrees that it then became a national obsession and describes the competitive version, in which contestants manoeuvred to cut the strings of rival kites and bring them down.",
+    "In Thailand kite flying was a passion during the Sukhothai period (1238-1347) and formed part, according to the source quoted by Guttmann (2004, p. 7), of the ritual of asking for the cool wind of the summer months. The Thai form of combat pits two types of kite against each other, the *chula*, male and shaped like a five-pointed star, which can be 2.3 metres long and requires a team of eight to ten boys commanded by a captain, and the *pakpao*, female, diamond-shaped and smaller, and it enacts a courtship in which the male kite, armed with bamboo claws, invades the female kite's territory to capture her, while she, not allowed to cross into male territory, defends herself with her manoeuvrability until her rival falls (Trevithick, 1999, p. 410).",
+    "Trevithick (1999, p. 410) regards Thai kite fighting as the best known and most popular of the Asian aerial activities and notes similar forms in Korea and China, and Townes (1999, p. 218) recalls that in India and other countries kite fighting has long been a popular sport, in which players coat the strings and tails of their kites with glass in order to cut down the opponent's kite. The Thai case shows clearly the social function of the game, because it carries into the air a codified representation of gender roles, which Trevithick describes as a double standard, and organises participants into hierarchical teams under a captain. In the twentieth century associations such as the American Kitefliers Association emerged, and in the 1990s efforts were made to have kite flying included in the Olympic Games (Townes, 1999, p. 218)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/peleas-de-cometas.jpg",
+   "pie": {
+    "es": "Un muchacho afgano hace volar su cometa en la competición de cometas de Senjaray (Afganistán), enero de 2010.",
+    "en": "An Afghan boy flies his kite at the Senjaray kite-flying competition, Afghanistan, January 2010."
+   },
+   "autor": "NATO Training Mission-Afghanistan",
+   "licencia": "CC BY-SA 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:DSC_5966-1_(6781703163).jpg"
+  },
+  "refs": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Speak, M. (1999a). Recreation and sport in ancient China: Primitive society to AD 960. En J. Riordan y R. Jones (Eds.), *Sport and physical education in China* (pp. 20-44). E & FN Spon.",
+   "Townes, J. (1999). Kite flying. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 217-218). Oxford University Press.",
+   "Trevithick, A. (1999). Traditional sports, Asia. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 409-411). Oxford University Press."
+  ],
+  "refs_en": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Speak, M. (1999a). Recreation and sport in ancient China: Primitive society to AD 960. In J. Riordan & R. Jones (Eds.), *Sport and physical education in China* (pp. 20-44). E & FN Spon.",
+   "Townes, J. (1999). Kite flying. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 217-218). Oxford University Press.",
+   "Trevithick, A. (1999). Traditional sports, Asia. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 409-411). Oxford University Press."
+  ]
+ },
+ {
+  "id": "lua",
+  "name": {
+   "es": "Lua",
+   "en": "Lua"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Islas Hawái, arte de combate de la sociedad hawaiana anterior al contacto europeo, clandestino durante el siglo XIX y transmitido hoy por varios linajes",
+   "en": "Hawaiian Islands, a combat art of Hawaiian society before European contact, clandestine during the nineteenth century and transmitted today through several lineages"
+  },
+  "body": {
+   "es": [
+    "El *lua* es el arte de combate cuerpo a cuerpo de los antiguos hawaianos, conocido también como *kapu kuʻialua*, *lua ʻōlohe* o *lua haʻihaʻi* (Manalo-Camp, 2023). En sus notas a la obra del historiador hawaiano David Malo (1795-1853), el traductor N. B. Emerson describe a los *ʻōlohe* como hombres muy diestros en el *lua* y el *haihai*, un arte que combinaba la lucha, la rotura de huesos y la dislocación de articulaciones, y los considera una parte muy importante del ejército (Malo, 1903, p. 266). El boxeo (*mokomoko*) y la lucha (*hakoko*) aparecen en la obra como deportes aparte, que se disputaban en medio de grandes concurrencias (Malo, 1903, p. 305).",
+    "Malo (1903, p. 306) incluye el *kuʻialua* entre los pasatiempos menores, y la glosa de la edición inglesa lo explica como una exhibición de *lua* con fines de entretenimiento y describe el *lua* como un sistema de combate que unía llaves de lucha, rotura de huesos y dislocación de miembros, con un juicio muy severo que lo sitúa fuera de la guerra civilizada y lo atribuye a los salteadores. Howell (1999, pp. 419-420) enmarca estas prácticas en los deportes de combate polinesios, que incluían el boxeo, la lucha y la esgrima con palos entre hawaianos, samoanos y maoríes, y explica que la americanización de Hawái hizo desaparecer hacia 1830 la mayor parte de los juegos y deportes tradicionales de las islas.",
+    "Durante el siglo XIX el *lua* pasó a practicarse en la clandestinidad, aunque la prensa en lengua hawaiana siguió dando noticia de él hasta la década de 1920, y hoy se transmite a través de varios linajes, cada uno con sus relatos de origen, sus protocolos y sus especialidades (Manalo-Camp, 2023). El mismo texto, publicado en el periódico de la Oficina de Asuntos Hawaianos, recuerda que muchas mujeres de la nobleza (*aliʻi*) recibieron alguna formación en *lua* y que Kekupuohi dirigió un regimiento femenino al servicio de Kamehameha I, y presenta la práctica actual como una disciplina física enraizada en la espiritualidad de los antepasados, lo que la vincula con la afirmación de la identidad nativa hawaiana (Manalo-Camp, 2023)."
+   ],
+   "en": [
+    "*Lua* is the hand-to-hand combat art of the ancient Hawaiians, also known as *kapu kuʻialua*, *lua ʻōlohe* or *lua haʻihaʻi* (Manalo-Camp, 2023). In his notes to the work of the Hawaiian historian David Malo (1795-1853), the translator N. B. Emerson describes the *ʻōlohe* as men highly skilled in *lua* and *haihai*, an art that combined wrestling, bone-breaking and the dislocation of joints, and considers them a very important part of the army (Malo, 1903, p. 266). Boxing (*mokomoko*) and wrestling (*hakoko*) appear in the work as separate sports, contested in the midst of large assemblies of people (Malo, 1903, p. 305).",
+    "Malo (1903, p. 306) includes *kuʻialua* among the minor pastimes, and the gloss of the English edition explains it as an exhibition of *lua* for amusement and describes *lua* as a combat system that joined wrestling holds, bone-breaking and the dislocation of limbs, with a very harsh judgement that places it outside civilised warfare and attributes it to robbers. Howell (1999, pp. 419-420) frames these practices within Polynesian combat sports, which included boxing, wrestling and stick fencing among Hawaiians, Samoans and Maori, and explains that the Americanisation of Hawaii had swept away most of the islands' traditional games and sports by around 1830.",
+    "During the nineteenth century *lua* came to be practised clandestinely, although the Hawaiian-language press continued to report on it until the 1920s, and today it is transmitted through several lineages, each with its own origin stories, protocols and specialisations (Manalo-Camp, 2023). The same text, published in the newspaper of the Office of Hawaiian Affairs, recalls that many women of the nobility (*aliʻi*) received some training in *lua* and that Kekupuohi led an all-women regiment under Kamehameha I, and presents present-day practice as a physical discipline rooted in the spirituality of the ancestors, which links it to the affirmation of Native Hawaiian identity (Manalo-Camp, 2023)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/lua.jpg",
+   "pie": {
+    "es": "Dos hombres hawaianos practican *lua*, fotografía de finales del siglo XIX.",
+    "en": "Two Hawaiian men practising *lua*, late nineteenth-century photograph."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Hawaiian_lua_(1899).jpg"
+  },
+  "refs": [
+   "Howell, R. (1999). Traditional sports, Oceania. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 417-420). Oxford University Press.",
+   "Malo, D. (1903). *Hawaiian antiquities (Moolelo Hawaii)* (N. B. Emerson, Trad.). Hawaiian Gazette.",
+   "Manalo-Camp, A. K. (2023, 1 de febrero). The enduring legacy of female warriors. *Ka Wai Ola*. Recuperado el 30 de septiembre de 2026 de https://kawaiola.news/moomeheu/the-enduring-legacy-of-female-warriors/"
+  ],
+  "refs_en": [
+   "Howell, R. (1999). Traditional sports, Oceania. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 417-420). Oxford University Press.",
+   "Malo, D. (1903). *Hawaiian antiquities (Moolelo Hawaii)* (N. B. Emerson, Trans.). Hawaiian Gazette.",
+   "Manalo-Camp, A. K. (2023, February 1). The enduring legacy of female warriors. *Ka Wai Ola*. Retrieved September 30, 2026, from https://kawaiola.news/moomeheu/the-enduring-legacy-of-female-warriors/"
+  ]
+ },
+ {
+  "id": "lucha-con-palos-nguni",
+  "name": {
+   "es": "Lucha con palos nguni",
+   "en": "Nguni stick fighting"
+  },
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Sur de África, pueblos nguni (zulúes, mpondo y otros); práctica precolonial, con reglas orales atestiguadas en el reino zulú del siglo XIX",
+   "en": "Southern Africa, Nguni peoples (Zulu, Mpondo and others); a precolonial practice, with oral rules attested in the nineteenth-century Zulu kingdom"
+  },
+  "body": {
+   "es": [
+    "En buena parte del África tradicional no había una línea clara entre la caza, la guerra y el impulso deportivo, y los africanos cazaban y peleaban con palos, cuando no con lanzas, del mismo modo que competían entre sí. Los zulúes y los mpondo del sur del continente organizaban con frecuencia combates con palos dentro de cada grupo y, en ocasiones, entre grupos vecinos, con un palo en una mano, sujeto por el centro para parar los golpes, y otro en la otra para golpear la cabeza del adversario (Baker, 1999, p. 407). Baker advierte, no obstante, que casi todo lo que se sabe de estas prácticas procede de exploradores, misioneros y antropólogos de comienzos del siglo XX. Entre los zulúes, los muchachos aprendían la lucha mientras cuidaban el ganado, por observación e imitación y con varas ligeras, antes de recibir los palos de combate (Coetzee, 2002).",
+    "Estos combates tenían desde antiguo un conjunto elaborado de reglas orales, y algunas las hacía cumplir la autoridad real, puesto que Cetshwayo, uno de los últimos reyes del reino zulú independiente, ordenó en la década de 1870 acabar con la costumbre, breve, de afilar un extremo del palo para pinchar al contrario (McDowell, 2021, p. 113). Coetzee (2002) describe el equipo habitual, formado por un palo de ataque (*induku*) y un bastón largo de defensa (*ubhoko*) o un pequeño escudo de piel de vaca (*ihawu*), y reglas como la prohibición de pinchar, de golpear con el escudo o de zancadillear, la costumbre de dejar que el rival recoja el palo caído y la presencia de un responsable que comprobaba la igualdad de las armas; el combate terminaba cuando uno quedaba claramente vencido o corría la primera sangre. La misma autora atribuye a Shaka el uso de la lucha para formar a los jóvenes en la defensa propia y en la guerra.",
+    "La lucha con palos servía para construir la masculinidad y la reputación de los jóvenes, formaba parte de las bodas y del cortejo, y los encuentros organizados entre distritos (*umgangela*) canalizaban y contenían la violencia entre comunidades vecinas (Coetzee, 2002). Los colonos europeos tendieron a ignorar la complejidad de estas reglas y vieron en la codificación deportiva un instrumento civilizador (McDowell, 2021, p. 113). En el siglo XX las leyes del *apartheid*, que prohibían exhibir armas tradicionales en público, llevaron a sustituir los palos por paraguas y bastones, los trabajadores zulúes emigrados a Johannesburgo la practicaron en los albergues y la lucha se convirtió en expresión de etnicidad y de afiliación política al Inkatha Freedom Party; la gravedad de las lesiones y esa asociación con la violencia explican su retroceso, aunque sobrevive en zonas rurales de KwaZulu-Natal (Coetzee, 2002)."
+   ],
+   "en": [
+    "In much of traditional Africa there was no clear line between hunting, war and the sporting impulse, and Africans hunted and fought with sticks, if not spears, just as they competed with one another. The Zulu and Mpondo of the south of the continent frequently organised stick fights within each group and occasionally between neighbouring groups, with a stick in one hand, held in the middle to parry blows, and another in the other hand to strike the opponent's head (Baker, 1999, p. 407). Baker warns, however, that almost everything known about these practices comes from explorers, missionaries and early twentieth-century anthropologists. Among the Zulu, boys learned to fight while herding cattle, through observation and imitation and with light switches, before receiving proper fighting sticks (Coetzee, 2002).",
+    "These fights had long had an elaborate set of oral rules, some of them enforced by royal authority, since Cetshwayo, one of the last kings of the independent Zulu kingdom, ordered in the 1870s an end to the brief custom of sharpening one end of the stick to jab the opponent (McDowell, 2021, p. 113). Coetzee (2002) describes the usual equipment, an attacking stick (*induku*) and a long defensive staff (*ubhoko*) or a small cowhide shield (*ihawu*), and rules such as the ban on stabbing, on hitting with the shield or on tripping, the custom of allowing an opponent to pick up a dropped stick and the presence of an official who checked that the weapons were equal; the fight ended when one man was clearly beaten or first blood was drawn. The same author credits Shaka with using stick fighting to train young men in self-defence and war.",
+    "Stick fighting served to build young men's masculinity and reputation, was part of weddings and courtship, and organised matches between districts (*umgangela*) channelled and contained violence between neighbouring communities (Coetzee, 2002). European settlers tended to ignore the complexity of these rules and saw sporting codification as a civilising instrument (McDowell, 2021, p. 113). In the twentieth century apartheid laws forbidding the public display of traditional weapons led to sticks being replaced by umbrellas and walking sticks, Zulu migrant workers in Johannesburg practised it in the hostels, and the fighting became an expression of ethnicity and of political affiliation with the Inkatha Freedom Party; the seriousness of injuries and this association with violence explain its decline, although it survives in rural areas of KwaZulu-Natal (Coetzee, 2002)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/lucha-con-palos-nguni.jpg",
+   "pie": {
+    "es": "Dos hombres se enfrentan con palos y escudos en una exhibición de lucha con palos en el poblado cultural de Lesedi (Hartbeespoort, Sudáfrica), julio de 2015.",
+    "en": "Two men face each other with sticks and shields in a stick-fighting display at Lesedi Cultural Village (Hartbeespoort, South Africa), July 2015."
+   },
+   "autor": "South African Tourism",
+   "licencia": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Lesedi_Cultural_Village,_Hartbeespoort,_North_West,_South_Africa_(20517297875).jpg"
+  },
+  "refs": [
+   "Baker, W. J. (1999). Traditional sports, Africa. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 407-409). Oxford University Press.",
+   "Coetzee, M.-H. (2002). Zulu stick fighting: A socio-historical overview. *InYo: Journal of Alternative Perspectives*. Recuperado el 30 de septiembre de 2026 de https://ejmas.com/jalt/jaltart_Coetzee_0902.htm",
+   "McDowell, M. L. (2021). Rules and order. En M. Huggins (Ed.), *A cultural history of sport in the age of industry* (pp. 99-118). Bloomsbury Academic."
+  ],
+  "refs_en": [
+   "Baker, W. J. (1999). Traditional sports, Africa. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 407-409). Oxford University Press.",
+   "Coetzee, M.-H. (2002). Zulu stick fighting: A socio-historical overview. *InYo: Journal of Alternative Perspectives*. Retrieved September 30, 2026, from https://ejmas.com/jalt/jaltart_Coetzee_0902.htm",
+   "McDowell, M. L. (2021). Rules and order. In M. Huggins (Ed.), *A cultural history of sport in the age of industry* (pp. 99-118). Bloomsbury Academic."
+  ]
+ }
+]
