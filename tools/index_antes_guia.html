@@ -343,13 +343,6 @@ details.slide li{font-size:13.5px;line-height:1.5;margin-bottom:6px}
 .enc-blq{font-size:12px;color:var(--muted);margin:8px 2px 0;text-transform:uppercase;letter-spacing:.05em;font-weight:700}
 .enc-body p{line-height:1.6;margin:12px 0;font-size:calc(17px * var(--encfs,1))}
 .enc-when{font-size:calc(15.5px * var(--encfs,1))}
-.guia details{background:var(--paper);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;box-shadow:var(--shadow)}
-.guia summary{list-style:none;cursor:pointer;padding:14px 16px;font-weight:800;color:var(--primary-2);font-size:16px;display:flex;align-items:center;gap:10px}
-.guia summary::-webkit-details-marker{display:none}
-.guia summary::after{content:"›";margin-left:auto;transform:rotate(90deg);transition:transform .2s}
-.guia details[open] summary::after{transform:rotate(270deg)}
-.guia .gi{font-size:20px}
-.guia p{margin:0;padding:0 16px 16px;line-height:1.55;font-size:15px}
 .enc-que{background:#EAF1F8;border-radius:12px;padding:12px 14px;margin-top:12px;line-height:1.5;font-size:calc(16px * var(--encfs,1));color:var(--ink)}
 .enc-que b{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--primary);margin-bottom:4px}
 .enc-refs p{font-size:calc(13px * var(--encfs,1)) !important}
@@ -555,7 +548,7 @@ const I18N = {
     author:"Historia del Deporte · Grado en CAFD · UCAM",
     fichasSearch:"Buscar en las fichas…", fichasEsOnly:"", practice:"Practicar este apartado", slideText:"En la diapositiva", refsL:"Fuentes", essayL:"Para el ensayo",
     prevF:"Anterior", nextF:"Siguiente", secOnly:"Apartado {s}", allSec:"Todo el tema", fichaIntro:"Presentación del tema", secIntro:"Por qué este apartado", fichaXP:"Ficha leída", noResults:"Sin resultados", fichasOf:"{n} fichas", codeL:"Código", paras:"párrafos", img1:"imagen", imgN:"imágenes",
-    daily:"Reto del día", exam:"Cómo preparar el examen", examSub:"Test, desarrollo y comentario de imagen, paso a paso", mapOpen:"Desplegar todo", mapClose:"Plegar todo", mapTema:"Tema {n}", mapFicha:"📖 Leer la ficha", setHome:"Ajustes y ayuda", setHomeSub:"Idioma, instalar en el móvil, privacidad y cerrar sesión", enc:"Enciclopedia del deporte", encShort:"Enciclopedia", encSub:"Origen e historia de {n} deportes", encDay:"Deporte del día", encPh:"Busca un deporte", encN:"{n} deportes", encNone:"No hay ningún deporte con ese nombre", encRand:"🎲 Otro deporte al azar", encRandBtn:"Deporte al azar", encQue:"Qué es", encRandShort:"Al azar", fsLbl:"Tamaño de letra", fsDown:"Letra más pequeña", fsUp:"Letra más grande", encCourse:"En la asignatura", encRefs:"Fuentes", encGrow:"La enciclopedia crece por tandas: {n} de {t} deportes publicados.", encImg:"Imagen", tabHome:"Inicio", tabTemas:"Temas", tabVid:"Vídeos", tabEnc:"Enciclopedia", tabExam:"Examen", tabSet:"Ajustes", tabSearch:"Buscar", guide:"Guía de la app", guideSub:"Qué hay en cada apartado y cómo se usa", contTitle:"Continuar", hoy:"Hoy", temasT:"Temas", dailyCard:"Reto del día", encCard:"Deporte del día", efeCard:"Tal día como hoy", pilCard:"Píldora del día", pilSub:"Un vídeo corto del tema", open:"Abrir", efePrev:"‹ Día anterior", efeNext:"Día siguiente ›", efeToday:"Hoy", efeNone:"Todavía no hay una curiosidad para este día.", allTemas:"Ver todos los temas ›", modeWord:"Modo", searchAll:"Buscar en Historiapp", searchHome:"Buscar en toda la app", sFicha:"Ficha", sEnc:"Enciclopedia", sGloss:"Glosario", sTime:"Cronología", sVid:"Vídeo", searchRes:"{n} resultados", searchAllSub:"Conceptos, autores, fechas y lugares de todos los temas", searchPh:"Escribe al menos 3 letras", searchN:"{n} fichas encontradas", searchNone:"No hay fichas con esa palabra", searchLoading:"Cargando los temas…", report:"⚑ Avisar de un error", reportHint:"Se abrirá tu correo con el mensaje preparado para el profesor.", reportWrite:"Explica aquí el error:", mapMore:"Para saber más", mapK:{concepto:"Concepto",autor:"Autor",fecha:"Fecha",ejemplo:"Ejemplo"}, mapPractice:"⚡ Practicar este apartado", mapHint:"Toca cada apartado para ver sus ideas y cada idea para leer el detalle.", dailySub:"Una prueba de cada tipo, distinta cada día, con el doble de XP", dailyStart:"Empezar el reto", dailyDone:"Reto de hoy completado", dailyScore:"{a} de {b} aciertos hoy", dailyBack:"Volver mañana para un reto nuevo", dailyStep:"Prueba {a} de {b}", dailyTitle:"Reto del día · {d}",
+    daily:"Reto del día", exam:"Cómo preparar el examen", examSub:"Test, desarrollo y comentario de imagen, paso a paso", mapOpen:"Desplegar todo", mapClose:"Plegar todo", mapTema:"Tema {n}", mapFicha:"📖 Leer la ficha", setHome:"Ajustes y ayuda", setHomeSub:"Idioma, instalar en el móvil, privacidad y cerrar sesión", enc:"Enciclopedia del deporte", encShort:"Enciclopedia", encSub:"Origen e historia de {n} deportes", encDay:"Deporte del día", encPh:"Busca un deporte", encN:"{n} deportes", encNone:"No hay ningún deporte con ese nombre", encRand:"🎲 Otro deporte al azar", encRandBtn:"Deporte al azar", encQue:"Qué es", encRandShort:"Al azar", fsLbl:"Tamaño de letra", fsDown:"Letra más pequeña", fsUp:"Letra más grande", encCourse:"En la asignatura", encRefs:"Fuentes", encGrow:"La enciclopedia crece por tandas: {n} de {t} deportes publicados.", encImg:"Imagen", tabHome:"Inicio", tabTemas:"Temas", tabVid:"Vídeos", tabEnc:"Enciclopedia", tabExam:"Examen", tabSet:"Ajustes", contTitle:"Continuar", hoy:"Hoy", temasT:"Temas", dailyCard:"Reto del día", encCard:"Deporte del día", efeCard:"Tal día como hoy", pilCard:"Píldora del día", pilSub:"Un vídeo corto del tema", open:"Abrir", efePrev:"‹ Día anterior", efeNext:"Día siguiente ›", efeToday:"Hoy", efeNone:"Todavía no hay una curiosidad para este día.", allTemas:"Ver todos los temas ›", modeWord:"Modo", searchAll:"Buscar en Historiapp", searchHome:"Buscar en toda la app", sFicha:"Ficha", sEnc:"Enciclopedia", sGloss:"Glosario", sTime:"Cronología", sVid:"Vídeo", searchRes:"{n} resultados", searchAllSub:"Conceptos, autores, fechas y lugares de todos los temas", searchPh:"Escribe al menos 3 letras", searchN:"{n} fichas encontradas", searchNone:"No hay fichas con esa palabra", searchLoading:"Cargando los temas…", report:"⚑ Avisar de un error", reportHint:"Se abrirá tu correo con el mensaje preparado para el profesor.", reportWrite:"Explica aquí el error:", mapMore:"Para saber más", mapK:{concepto:"Concepto",autor:"Autor",fecha:"Fecha",ejemplo:"Ejemplo"}, mapPractice:"⚡ Practicar este apartado", mapHint:"Toca cada apartado para ver sus ideas y cada idea para leer el detalle.", dailySub:"Una prueba de cada tipo, distinta cada día, con el doble de XP", dailyStart:"Empezar el reto", dailyDone:"Reto de hoy completado", dailyScore:"{a} de {b} aciertos hoy", dailyBack:"Volver mañana para un reto nuevo", dailyStep:"Prueba {a} de {b}", dailyTitle:"Reto del día · {d}",
     installBtn:"Instalar en el móvil", installIos:"En iPhone o iPad: pulsa el botón Compartir (el cuadrado con la flecha hacia arriba, abajo en Safari) y elige «Añadir a pantalla de inicio».", installAndroid:"En Android: abre el menú de Chrome (tres puntos) y elige «Instalar aplicación» o «Añadir a pantalla de inicio».", installDesktop:"Abre esta dirección en el móvil para instalarla; en el ordenador funciona igual desde el navegador.", installed:"La app ya está instalada.", close:"Cerrar"
   },
   en: {
@@ -582,7 +575,7 @@ const I18N = {
     author:"History of Sport · Sport Sciences degree · UCAM",
     fichasSearch:"Search the sheets…", fichasEsOnly:"Some sheets of this unit are not yet available in English and are shown in Spanish.", practice:"Practise this section", slideText:"On the slide", refsL:"Sources", essayL:"For the essay",
     prevF:"Previous", nextF:"Next", secOnly:"Section {s}", allSec:"Whole unit", fichaIntro:"About this unit", secIntro:"Why this section", fichaXP:"Sheet read", noResults:"No results", fichasOf:"{n} sheets", codeL:"Code", paras:"paragraphs", img1:"image", imgN:"images",
-    daily:"Daily challenge", exam:"How to prepare for the exam", examSub:"Multiple choice, essay and image commentary, step by step", mapOpen:"Expand all", mapClose:"Collapse all", mapTema:"Unit {n}", mapFicha:"📖 Read the study sheet", setHome:"Settings and help", setHomeSub:"Language, install on your phone, privacy and log out", enc:"Sports Encyclopedia", encShort:"Encyclopedia", encSub:"Origins and history of {n} sports", encDay:"Sport of the day", encPh:"Search for a sport", encN:"{n} sports", encNone:"No sport with that name", encRand:"🎲 Another random sport", encRandBtn:"Random sport", encQue:"What it is", encRandShort:"Random", fsLbl:"Text size", fsDown:"Smaller text", fsUp:"Larger text", encCourse:"In the course", encRefs:"Sources", encGrow:"The encyclopedia grows in batches: {n} of {t} sports published.", encImg:"Image", tabHome:"Home", tabTemas:"Units", tabVid:"Videos", tabEnc:"Encyclopedia", tabExam:"Exam", tabSet:"Settings", tabSearch:"Search", guide:"App guide", guideSub:"What each section contains and how to use it", contTitle:"Continue", hoy:"Today", temasT:"Units", dailyCard:"Daily challenge", encCard:"Sport of the day", efeCard:"On this day", pilCard:"Clip of the day", pilSub:"A short video from the unit", open:"Open", efePrev:"‹ Previous day", efeNext:"Next day ›", efeToday:"Today", efeNone:"There is no fact for this day yet.", allTemas:"See all units ›", modeWord:"Mode", searchAll:"Search Historiapp", searchHome:"Search the whole app", sFicha:"Study sheet", sEnc:"Encyclopedia", sGloss:"Glossary", sTime:"Timeline", sVid:"Video", searchRes:"{n} results", searchAllSub:"Concepts, authors, dates and places from every unit", searchPh:"Type at least 3 letters", searchN:"{n} study sheets found", searchNone:"No study sheets contain that word", searchLoading:"Loading the units…", report:"⚑ Report a mistake", reportHint:"Your email app will open with a message ready for the lecturer.", reportWrite:"Describe the mistake here:", mapMore:"Learn more", mapK:{concepto:"Concept",autor:"Author",fecha:"Date",ejemplo:"Example"}, mapPractice:"⚡ Practise this section", mapHint:"Tap each section to see its ideas and each idea to read the detail.", dailySub:"One task of each kind, new every day, double XP", dailyStart:"Start the challenge", dailyDone:"Today's challenge completed", dailyScore:"{a} of {b} correct today", dailyBack:"Come back tomorrow for a new one", dailyStep:"Task {a} of {b}", dailyTitle:"Daily challenge · {d}",
+    daily:"Daily challenge", exam:"How to prepare for the exam", examSub:"Multiple choice, essay and image commentary, step by step", mapOpen:"Expand all", mapClose:"Collapse all", mapTema:"Unit {n}", mapFicha:"📖 Read the study sheet", setHome:"Settings and help", setHomeSub:"Language, install on your phone, privacy and log out", enc:"Sports Encyclopedia", encShort:"Encyclopedia", encSub:"Origins and history of {n} sports", encDay:"Sport of the day", encPh:"Search for a sport", encN:"{n} sports", encNone:"No sport with that name", encRand:"🎲 Another random sport", encRandBtn:"Random sport", encQue:"What it is", encRandShort:"Random", fsLbl:"Text size", fsDown:"Smaller text", fsUp:"Larger text", encCourse:"In the course", encRefs:"Sources", encGrow:"The encyclopedia grows in batches: {n} of {t} sports published.", encImg:"Image", tabHome:"Home", tabTemas:"Units", tabVid:"Videos", tabEnc:"Encyclopedia", tabExam:"Exam", tabSet:"Settings", contTitle:"Continue", hoy:"Today", temasT:"Units", dailyCard:"Daily challenge", encCard:"Sport of the day", efeCard:"On this day", pilCard:"Clip of the day", pilSub:"A short video from the unit", open:"Open", efePrev:"‹ Previous day", efeNext:"Next day ›", efeToday:"Today", efeNone:"There is no fact for this day yet.", allTemas:"See all units ›", modeWord:"Mode", searchAll:"Search Historiapp", searchHome:"Search the whole app", sFicha:"Study sheet", sEnc:"Encyclopedia", sGloss:"Glossary", sTime:"Timeline", sVid:"Video", searchRes:"{n} results", searchAllSub:"Concepts, authors, dates and places from every unit", searchPh:"Type at least 3 letters", searchN:"{n} study sheets found", searchNone:"No study sheets contain that word", searchLoading:"Loading the units…", report:"⚑ Report a mistake", reportHint:"Your email app will open with a message ready for the lecturer.", reportWrite:"Describe the mistake here:", mapMore:"Learn more", mapK:{concepto:"Concept",autor:"Author",fecha:"Date",ejemplo:"Example"}, mapPractice:"⚡ Practise this section", mapHint:"Tap each section to see its ideas and each idea to read the detail.", dailySub:"One task of each kind, new every day, double XP", dailyStart:"Start the challenge", dailyDone:"Today's challenge completed", dailyScore:"{a} of {b} correct today", dailyBack:"Come back tomorrow for a new one", dailyStep:"Task {a} of {b}", dailyTitle:"Daily challenge · {d}",
     installBtn:"Install on your phone", installIos:"On iPhone or iPad: tap the Share button (the square with the upward arrow, at the bottom in Safari) and choose 'Add to Home Screen'.", installAndroid:"On Android: open the Chrome menu (three dots) and choose 'Install app' or 'Add to Home screen'.", installDesktop:"Open this address on your phone to install it; on a computer it works from the browser.", installed:"The app is already installed.", close:"Close"
   }
 };
@@ -660,9 +653,9 @@ async function getTema(num){
 
 /* ============ rendering ============ */
 const app=document.getElementById("app");
-function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="guia") return "guia"; if(v.name==="daily") return "reto"; if(v.name==="exam") return "examen"; if(v.name==="search") return "buscar"; if(v.name==="temas") return "temas"; if(v.name==="efe") return v.d?"hoy/"+v.d:"hoy"; if(v.name==="enc") return v.id?"enciclopedia/"+encodeURIComponent(v.id):"enciclopedia"; if(v.name==="tema") return "t"+v.num;
+function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="daily") return "reto"; if(v.name==="exam") return "examen"; if(v.name==="search") return "buscar"; if(v.name==="temas") return "temas"; if(v.name==="efe") return v.d?"hoy/"+v.d:"hoy"; if(v.name==="enc") return v.id?"enciclopedia/"+encodeURIComponent(v.id):"enciclopedia"; if(v.name==="tema") return "t"+v.num;
   if(v.name==="mode"){ if(v.mode==="fichas") return v.f?`t${v.num}/f/${v.f}`:`t${v.num}/fichas`; return `t${v.num}/${v.mode}`+(v.sec?"/"+v.sec:""); } return ""; }
-function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="guia") return {name:"guia"}; if(h==="reto") return {name:"daily"}; if(h==="examen") return {name:"exam"}; if(h==="buscar") return {name:"search"}; if(h==="temas") return {name:"temas"}; if(h==="hoy") return {name:"efe"}; if(h.startsWith("hoy/")) return {name:"efe",d:h.slice(4)}; if(h==="enciclopedia") return {name:"enc"}; if(h.startsWith("enciclopedia/")) return {name:"enc",id:decodeURIComponent(h.slice(13))};
+function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="reto") return {name:"daily"}; if(h==="examen") return {name:"exam"}; if(h==="buscar") return {name:"search"}; if(h==="temas") return {name:"temas"}; if(h==="hoy") return {name:"efe"}; if(h.startsWith("hoy/")) return {name:"efe",d:h.slice(4)}; if(h==="enciclopedia") return {name:"enc"}; if(h.startsWith("enciclopedia/")) return {name:"enc",id:decodeURIComponent(h.slice(13))};
   const p=h.split("/"); const mt=/^t(\d+)$/.exec(p[0]); if(!mt) return {name:"home"}; const num=+mt[1];
   if(p.length===1) return {name:"tema",num}; if(p[1]==="f"&&p[2]) return {name:"mode",num,mode:"fichas",f:decodeURIComponent(p[2])};
   if(MODES.includes(p[1])) return {name:"mode",num,mode:p[1],sec:p[2]||undefined}; return {name:"tema",num}; }
@@ -680,7 +673,6 @@ function render(){
   if(v.name==="settings") return renderSettings();
   if(v.name==="daily") return renderDaily();
   if(v.name==="exam") return renderExam();
-  if(v.name==="guia") return renderGuia();
   if(v.name==="search") return renderSearch();
   if(v.name==="enc") return v.id?renderEncFicha(v.id):renderEnc();
   if(v.name==="mode") return renderMode(v.num,v.mode);
@@ -688,11 +680,11 @@ function render(){
 function header(title,back,extra=""){
   return `<div class="top">${back?`<button class="back" id="hBack">‹</button>`:`<img src="icons/emblema_blanco.png" alt="" style="width:40px;height:40px;object-fit:contain">`}
     <div class="ttl${extra?" two":""}">${esc(title)}</div>${extra}<div class="xp" id="hXP"></div>
-    <button class="srch" id="hSearch" aria-label="${esc(t("settings"))}" title="${esc(t("settings"))}">⚙️</button></div>`;
+    <button class="srch" id="hSearch" aria-label="${esc(t("searchAll"))}">🔎</button></div>`;
 }
 function bindHeader(back){
   const b=document.getElementById("hBack"); if(b) b.onclick=back;
-  const g=document.getElementById("hSearch"); if(g) g.onclick=()=>nav({name:"settings",from:S.view});
+  const g=document.getElementById("hSearch"); if(g) g.onclick=()=>nav({name:"search",back:S.view});
   renderXP();
 }
 function renderXP(){ const e=document.getElementById("hXP"); if(e) e.textContent=`${S.prog.xp} ${t("xp")} · ${t("level")} ${levelOf(S.prog.xp)+1}`; }
@@ -716,8 +708,8 @@ function setLang(l){ S.lang=l; try{localStorage.setItem("historiapp.lang",l)}cat
 
 function scrollTop0(){ const m=document.querySelector("#app main"); if(m) m.scrollTo(0,0); }
 function celebrate(){ try{ if(matchMedia("(prefers-reduced-motion: reduce)").matches) return; const c=document.createElement("div"); c.className="confetti"; const col=["#004379","#EDAB00","#FBAE40","#002060","#7fb2e5"]; for(let i=0;i<26;i++){ const e=document.createElement("i"); e.style.left=(Math.random()*100)+"%"; e.style.background=col[i%col.length]; e.style.animationDelay=(Math.random()*.35)+"s"; e.style.transform="rotate("+(Math.random()*180)+"deg)"; c.appendChild(e); } document.body.appendChild(c); setTimeout(()=>c.remove(),2100); }catch(e){} }
-const TABS=[["home","🏠","tabHome"],["temas","📚","tabTemas"],["videos","▶️","tabVid"],["search","🔎","tabSearch"],["enc","📖","tabEnc"],["exam","🎓","tabExam"]];
-function tabOf(v){ const n=(v||{}).name; if(n==="tema"||n==="mode"||n==="temas") return "temas"; if(n==="enc") return "enc"; if(n==="exam") return "exam"; if(n==="search") return "search"; if(n==="settings"||n==="guia") return "settings"; return "home"; }
+const TABS=[["home","🏠","tabHome"],["temas","📚","tabTemas"],["videos","▶️","tabVid"],["enc","📖","tabEnc"],["exam","🎓","tabExam"],["settings","⚙️","tabSet"]];
+function tabOf(v){ const n=(v||{}).name; if(n==="tema"||n==="mode"||n==="temas") return "temas"; if(n==="enc") return "enc"; if(n==="exam") return "exam"; if(n==="settings") return "settings"; return "home"; }
 function updateTabbar(){ let tb=document.getElementById("tabbar"); if(!tb){ tb=document.createElement("nav"); tb.id="tabbar"; document.body.appendChild(tb); }
   const cur=tabOf(S.view); tb.innerHTML=TABS.map(([k,i,l])=>`<button data-k="${k}" class="${k===cur?"on":""}" aria-current="${k===cur?"page":"false"}"><span class="i">${i}</span>${esc(t(l))}</button>`).join("");
   tb.querySelectorAll("button").forEach(b=>b.onclick=()=>{ const k=b.dataset.k; if(k==="videos"){ openMixFeed(); return; } nav(k==="settings"?{name:"settings",from:{name:"home"}}:{name:k}); }); }
@@ -747,6 +739,7 @@ async function renderHome(){
   app.innerHTML=header("Historiapp",false)+`<main>
     <div class="strip"><span class="st" title="${esc(t("days"))}">🔥 ${S.prog.streak}</span><span class="st">⭐ ${S.prog.xp}</span><span class="st">🏅 ${nb}</span>
       <div class="lv"><b>${t("level")} ${lvl+1} · ${esc(t("levels")[lvl])}</b><div class="bar"><i style="width:${pct}%"></i></div></div></div>
+    <div id="contBox"></div>
     <div class="section-title">${t("hoy")}</div>
     <div class="hoy" id="hoy"></div>
     <div class="section-title">${t("temasT")}</div>
@@ -760,7 +753,7 @@ async function renderHome(){
   rc.innerHTML=`<div class="ic" aria-hidden="true">${done?"✅":"☀️"}</div><div class="tx"><small>${t("dailyCard")}</small><b>${done?t("dailyScore",{a:d.correct,b:d.total}):t("dailyStart")}</b><span>${done?t("dailyBack"):t("dailySub")}</span></div><div class="xp">${done?"✓":"×2 XP"}</div>`;
   rc.onclick=()=>nav({name:"daily"}); hoy.appendChild(rc);
   const slot=c=>{ const x=document.createElement("div"); x.className="card "+c; x.style.display="none"; hoy.appendChild(x); return x; };
-  const sDep=slot("dep"), sEfe=slot("efe");
+  const sDep=slot("dep"), sEfe=slot("efe"), sPil=slot("pil");
   fillTemaGrid(document.getElementById("tgrid"),true); document.getElementById("allT").onclick=()=>nav({name:"temas"});
   // continuar
   (async()=>{ const l=S.prog.last, box=document.getElementById("contBox"); if(!l||!box) return; let label="", sub="";
@@ -780,7 +773,12 @@ async function renderHome(){
   try{ const F=await getEfe(); const k=mmdd(new Date()); if(F&&F[k]&&document.getElementById("hoy")===hoy){ const f=F[k]; const c=sEfe; c.setAttribute("role","button");
     c.innerHTML=`<small>📅 ${t("efeCard")}</small><div class="yr">${esc(String(f.year||""))}</div><div class="dd">${esc(fmtDay(k))}</div><div class="tx">${md(L(f))}</div>`;
     c.onclick=()=>nav({name:"efe"}); c.style.display=""; } }catch(e){}
-
+  // píldora del día
+  try{ const idx=await getIndex(); const vids=[]; for(const m of idx.temas){ if(!m.available) continue; const tm=await getTema(m.num); (tm.videos||[]).forEach(v=>vids.push({num:m.num,v})); }
+    if(vids.length&&document.getElementById("hoy")===hoy){ const p=vids[dayHash(todayKey()+"v")%vids.length]; const c=sPil; c.setAttribute("role","button");
+      const po=p.v.poster?`style="background-image:url('${L(p.v.poster)}')"`:"";
+      c.innerHTML=`<div class="th" ${po}><div class="pb" aria-hidden="true">▶</div></div><div class="tx"><small>🎬 ${t("pilCard")} · ${t("tema")} ${p.num}</small><b>${esc(L(p.v.title))}</b><span>${t("pilSub")}</span></div>`;
+      c.onclick=()=>nav({name:"mode",num:p.num,mode:"videos"}); c.style.display=""; } }catch(e){}
 }
 async function renderTemas(){
   app.innerHTML=header(t("tabTemas"),false)+`<main><div class="tgrid" id="tgrid2"></div></main>`;
@@ -829,37 +827,6 @@ async function renderTema(num){
   bd.innerHTML=MODES.filter(x=>!MEDIA.includes(x)).map(m=>`<div class="b ${S.prog.badges[tema.id+"."+m]?"":"off"}">🏅 ${t("badgeName."+m)}</div>`).join("");
 }
 
-const GUIDE={
-es:[
- ["🏠","Inicio","Arriba ves tu racha de días seguidos (🔥), tus puntos de experiencia (⭐), las medallas que llevas (🏅) y la barra de nivel. En «Hoy» tienes tres propuestas que cambian cada día: el reto del día, el deporte del día de la Enciclopedia y una curiosidad de «Tal día como hoy». Más abajo aparecen los temas del curso con el porcentaje que llevas de cada uno."],
- ["☀️","Reto del día","Reúne una prueba de cada tipo sacada de los temas publicados y da el doble de puntos. Es distinto cada día, así que conviene hacerlo a diario para mantener la racha."],
- ["📅","Tal día como hoy","Cada día del año tiene una curiosidad de historia del deporte con su fuente. Con los botones de día anterior y día siguiente puedes recorrer el calendario entero."],
- ["📚","Temas","Cada tema se trabaja por modos. En las fichas está el manual de bolsillo, por apartados; el mapa ordena las ideas principales y secundarias; el análisis de imágenes plantea afirmaciones que se aceptan o se rechazan deslizando; el glosario repasa los términos clave; la cronología pide ordenar los hechos; en fuentes hay que reconocer de dónde procede un texto; relaciona empareja prácticas, grupos y funciones; mitos desmonta tópicos; las preguntas rápidas son un test con tiempo, y hay también vídeos y pódcast. Los temas con candado se abren a medida que avanza el curso."],
- ["▶️","Vídeos","Reúne los vídeos cortos de todos los temas y los reproduce al azar, uno detrás de otro, deslizando hacia arriba como en las redes sociales. En cada vídeo, «Saber más» amplía el contenido y «Test» plantea una pregunta sobre lo que acabas de ver."],
- ["🔎","Buscar","Busca a la vez en las fichas, la Enciclopedia, el glosario, la cronología y los vídeos. Basta con escribir tres letras; al tocar un resultado vas directamente a él."],
- ["📖","Enciclopedia","Recoge el origen y la historia de más de cuatrocientos deportes, de los olímpicos a los tradicionales y los más raros. Puedes buscar por nombre, saltar por letra con el índice de la derecha o pedir un deporte al azar con el dado. En cada deporte hay una foto, una breve explicación de qué es en los menos conocidos, cuándo y dónde nace, su historia, las fuentes y, si aparece en la asignatura, el enlace al tema. Los botones A− y A+ cambian el tamaño de la letra."],
- ["🎓","Examen","Explica cómo es el examen y cómo prepararlo, con indicaciones para el test, la pregunta de desarrollo y el comentario de imagen."],
- ["⭐","Puntos, racha y niveles","Cada acierto suma puntos de experiencia, y el reto del día los duplica. La racha cuenta los días seguidos que entras a estudiar. Con los puntos subes de nivel, de Aprendiz a Catedrático, y al completar cada modo de un tema ganas su medalla."],
- ["⚙️","Ajustes","Se abre con la rueda de la cabecera. Desde aquí cambias el idioma, instalas la app en el móvil y cierras la sesión, que borra el progreso guardado en ese dispositivo. Si encuentras un error en una ficha o en la Enciclopedia, el botón «Avisar de un error» prepara un correo para el profesor."]
-],
-en:[
- ["🏠","Home","At the top you see your streak of consecutive days (🔥), your experience points (⭐), the badges you have earned (🏅) and the level bar. «Today» offers three items that change every day: the daily challenge, the sport of the day from the Encyclopedia and a fact from «On this day». Further down are the course units with your progress in each one."],
- ["☀️","Daily challenge","It brings together one task of each kind from the published units and gives double points. It is different every day, so it is worth doing daily to keep your streak."],
- ["📅","On this day","Every day of the year has a sports history fact with its source. The previous day and next day buttons let you browse the whole calendar."],
- ["📚","Units","Each unit is studied through modes. The study sheets are the pocket manual, by section; the map sets out the main and secondary ideas; image analysis presents statements you accept or reject by swiping; the glossary reviews the key terms; the timeline asks you to put events in order; in sources you identify where a text comes from; match pairs practices, groups and functions; myths takes apart clichés; the quick quiz is a timed test, and there are also videos and a podcast. Locked units open as the course moves on."],
- ["▶️","Videos","It gathers the short videos from every unit and plays them at random, one after another, swiping up as on social media. On each video, «Learn more» expands the content and «Test» asks a question about what you have just watched."],
- ["🔎","Search","It searches the study sheets, the Encyclopedia, the glossary, the timeline and the videos at once. Three letters are enough; tapping a result takes you straight to it."],
- ["📖","Encyclopedia","It covers the origin and history of more than four hundred sports, from Olympic ones to traditional and rare ones. You can search by name, jump by letter with the index on the right or ask for a random sport with the dice. Each sport has a photo, a short explanation of what it is for the less known ones, when and where it began, its history, the sources and, if it appears in the course, a link to the unit. The A− and A+ buttons change the text size."],
- ["🎓","Exam","It explains what the exam is like and how to prepare it, with guidance for the multiple-choice test, the essay question and the image commentary."],
- ["⭐","Points, streak and levels","Every correct answer adds experience points, and the daily challenge doubles them. The streak counts the consecutive days you come in to study. Points take you up the levels, from Apprentice to Professor, and completing each mode of a unit earns its badge."],
- ["⚙️","Settings","Open it with the gear in the header. Here you change the language, install the app on your phone and log out, which deletes the progress saved on that device. If you find a mistake in a study sheet or in the Encyclopedia, the «Report a mistake» button prepares an email to the lecturer."]
-]};
-function renderGuia(){
-  const from=S.view.from||{name:"settings"}; const G=GUIDE[S.lang]||GUIDE.es;
-  app.innerHTML=header(t("guide"),true)+`<main><div class="guia">${G.map(([i,h,x],j)=>`<details${j===0?" open":""}><summary><span class="gi">${i}</span>${esc(h)}</summary><p>${esc(x)}</p></details>`).join("")}</div></main>`;
-  bindHeader(()=>nav({name:"settings",from:from.from||{name:"home"}}));
-}
-
 function renderSettings(){
   const from=S.view.from||{name:"home"};
   app.innerHTML=header(t("settings"),true)+`<main>
@@ -868,14 +835,12 @@ function renderSettings(){
       <div class="set-row"><span>${t("xp")}</span><b>${S.prog.xp}</b></div>
       <div class="set-row"><span>${t("streak")}</span><b>🔥 ${S.prog.streak}</b></div>
     </div>
-    <button class="tema" id="sGuide"><div class="num">🧭</div><div class="t"><b>${t("guide")}</b><span>${t("guideSub")}</span></div><div class="pct">›</div></button>
     <button class="btn" id="sInstall">📲 ${t("installBtn")}</button>
     <button class="btn sec" id="sReset" style="border-color:var(--ko);color:var(--ko)">${t("reset")}</button>
     <p style="font-size:12.5px;color:var(--muted);line-height:1.5;margin:0 4px">🔒 ${t("privacy")}</p>
     <p style="font-size:12px;color:var(--muted);text-align:center">${t("version")}: ${S.temasIndex?esc(S.temasIndex.version):"–"} · ${t("author")}</p></main>`;
   bindHeader(()=>nav(from));
   document.getElementById("sInstall").onclick=installApp;
-  document.getElementById("sGuide").onclick=()=>nav({name:"guia",from});
   document.getElementById("sEs").onclick=()=>{setLang("es");nav({name:"settings",from})};
   document.getElementById("sEn").onclick=()=>{setLang("en");nav({name:"settings",from})};
   document.getElementById("sReset").onclick=()=>{ if(confirm(t("resetConfirm"))){ track("sesion/cerrada","Cerrar sesión",true); try{ Object.keys(localStorage).filter(k=>k.startsWith("historiapp.")).forEach(k=>localStorage.removeItem(k)); }catch(e){} location.replace(location.pathname); } };
