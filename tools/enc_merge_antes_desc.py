@@ -20,18 +20,9 @@ for f in sorted(glob.glob(os.path.join(R,'tools/enc_tandas/tanda_*.json'))):
     if '—' in txt or '–' in txt: prob.append(f'{i}: guion largo')
     if re.search(r'\bsino\b',' '.join(e['body']['es'])): prob.append(f'{i}: sino')
     im=e.get('img') or {}
-    if im.get('src') and not os.path.exists(os.path.join(R,im['src'])):
-      _b=os.path.splitext(im['src'])[0]
-      for _x in ('.jpg','.png','.jpeg','.webp'):
-        if os.path.exists(os.path.join(R,_b+_x)): im['src']=_b+_x; break
     if im.get('src') and not os.path.exists(os.path.join(R,im['src'])): prob.append(f'{i}: falta imagen {im["src"]}')
     e['name']={'es':L[i]['es'],'en':L[i]['en']}; e['bloque']=L[i]['bloque']; e['tipo']=L[i]['tipo']
     cur[i]=e
-_DP=os.path.join(R,'tools/desc/desc_enciclopedia.json')
-if os.path.exists(_DP):
-  _DS=json.load(open(_DP))
-  for _i,_e in cur.items():
-    if _i in _DS: _e['que']={'es':_DS[_i]['es'],'en':_DS[_i]['en']}
 D['entries']=list(cur.values()); D['total']=sum(x.get('estado')!='excluida' for x in lista)
 json.dump(D,open(os.path.join(R,'data/enciclopedia.json'),'w'),ensure_ascii=False,indent=1)
 for x in lista:
