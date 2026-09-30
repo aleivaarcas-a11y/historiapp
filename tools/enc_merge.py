@@ -32,6 +32,11 @@ if os.path.exists(_DP):
   _DS=json.load(open(_DP))
   for _i,_e in cur.items():
     if _i in _DS: _e['que']={'es':_DS[_i]['es'],'en':_DS[_i]['en']}
+_CP=os.path.join(R,'tools/enciclopedia_continente.json')
+if os.path.exists(_CP):
+  _CT=json.load(open(_CP))
+  for _i,_e in cur.items():
+    if _i in _CT: _e['cont']=_CT[_i]
 D['entries']=list(cur.values()); D['total']=sum(x.get('estado')!='excluida' for x in lista)
 json.dump(D,open(os.path.join(R,'data/enciclopedia.json'),'w'),ensure_ascii=False,indent=1)
 for x in lista:
