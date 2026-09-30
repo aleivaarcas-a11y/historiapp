@@ -773,8 +773,8 @@ async function renderHome(){
   // deporte del día
   try{ const D=await getEnc(); const E=D.entries; if(E.length&&document.getElementById("hoy")===hoy){ const e=encDaily(E); const c=sDep; c.setAttribute("role","button");
     if(e.img&&e.img.src) c.style.backgroundImage=`url('${e.img.src}')`;
-    c.innerHTML=`<div class="ov"></div><small>🏅 ${t("encCard")}</small><b>${esc(L(e.name))}</b><span class="w">${esc(String(L(e.cuando)).replace(/\*+/g,""))}</span><button class="dice" aria-label="${esc(t("encRandBtn"))}"><i>🎲</i>${t("encRandShort")}</button>`; c.style.display="";
-    c.onclick=ev=>{ if(ev.target.closest(".dice")){ const r=encRandom(E); nav({name:"enc",id:r.id,back:{name:"home"}}); } else nav({name:"enc",id:e.id,back:{name:"home"}}); };
+    c.innerHTML=`<div class="ov"></div><small>🏅 ${t("encCard")}</small><b>${esc(L(e.name))}</b><span class="w">${esc(String(L(e.cuando)).replace(/\*+/g,""))}</span>`; c.style.display="";
+    c.onclick=()=>nav({name:"enc",id:e.id,back:{name:"home"}});
     } }catch(e){}
   // tal día como hoy
   try{ const F=await getEfe(); const k=mmdd(new Date()); if(F&&F[k]&&document.getElementById("hoy")===hoy){ const f=F[k]; const c=sEfe; c.setAttribute("role","button");
