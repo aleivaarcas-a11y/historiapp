@@ -1,0 +1,432 @@
+[
+ {
+  "id": "gorodki",
+  "name": {
+   "es": "Gorodki",
+   "en": "Gorodki"
+  },
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Rusia, juego popular documentado desde hace varios siglos; reglas unificadas en 1923 y federación de la URSS en 1936",
+   "en": "Russia, a folk game recorded for several centuries; unified rules in 1923 and a USSR federation in 1936"
+  },
+  "body": {
+   "es": [
+    "El gorodki (también llamado *riuji*) es un juego popular ruso de lanzamiento en el que cada jugador arroja por turnos un palo, la *bita*, contra figuras formadas por cinco pequeños cilindros de madera, los *gorodki*, con el propósito de expulsarlas de un cuadrado trazado en el suelo, el *gorod* o «ciudad» que da nombre al juego («Gorodki», 1979). La *Gran Enciclopedia Soviética* afirma que se jugaba en el territorio de la URSS desde hacía varios siglos, sin precisar su origen («Gorodki», 1979), y Riordan (1977, p. 30) lo incluye entre los juegos campesinos con bolas, palos, huesos y piedras que habían sobrevivido desde épocas anteriores, pese a que la Iglesia y el Estado persiguieron desde el siglo XVI esas diversiones como ociosas.",
+    "La conversión del juego popular en deporte reglado fue obra del periodo soviético. En 1923 se establecieron unas reglas comunes y en 1936 se creó la Federación de Gorodki de toda la Unión, que desde entonces organizó campeonatos de la URSS; el reglamento fijó un cuadrado de dos metros de lado, dos distancias de lanzamiento (13 y 6,5 metros), cilindros de 20 centímetros de alto y una serie de figuras que debían derribarse sucesivamente con el menor número de lanzamientos («Gorodki», 1979). Antes de la revolución el juego ya había entrado en la preparación física de las milicias obreras de Moscú, Járkov, Oriol o Ivánovo-Voznesensk, que lo alternaban con la lapta y con el adiestramiento militar encubierto bajo la apariencia deportiva (Riordan, 1977, p. 33).",
+    "El gorodki sirvió al régimen soviético como ejemplo de deporte nacional preservado, en un sistema que por lo demás adoptaba los deportes internacionales. Riordan (1977, pp. 61, 191, 306) recoge que Lenin lo contaba entre sus aficiones, que seguía siendo más popular entre los rusos del campo que entre los de la ciudad y que, junto con la lapta, se mantenía vivo entre los pueblos eslavos gracias a la tenacidad popular y, en ocasiones, al estímulo oficial. En 1970 lo practicaban más de 600.000 personas, de las cuales unas 2.000 tenían el título de maestro del deporte («Gorodki», 1979), cifra que muestra hasta qué punto la estructura deportiva soviética había absorbido un juego de aldea."
+   ],
+   "en": [
+    "Gorodki (also called *ryukhi*) is a Russian folk throwing game in which each player in turn hurls a stick, the *bita*, at figures made of five small wooden cylinders, the *gorodki*, in order to knock them out of a square marked on the ground, the *gorod* or \"town\" that gives the game its name (\"Gorodki,\" 1979). The *Great Soviet Encyclopedia* states that it had been played on the territory of the USSR for several centuries, without specifying its origin (\"Gorodki,\" 1979), and Riordan (1977, p. 30) includes it among the peasant games with balls, sticks, bones and stones that had survived from earlier times, even though Church and State persecuted such pastimes as idle from the sixteenth century onwards.",
+    "The conversion of the folk game into a regulated sport was the work of the Soviet period. Common rules were established in 1923 and the All-Union Gorodki Federation was created in 1936, which from then on organised USSR championships; the rules fixed a square with two-metre sides, two throwing distances (13 and 6.5 metres), cylinders 20 centimetres high and a series of figures that had to be knocked out in turn with the fewest possible throws (\"Gorodki,\" 1979). Before the revolution the game had already entered the physical training of the workers' militias of Moscow, Kharkov, Oryol and Ivanovo-Voznesensk, which combined it with lapta and with military drill disguised as sport (Riordan, 1977, p. 33).",
+    "Gorodki served the Soviet regime as an example of a preserved national sport, in a system that otherwise adopted international sports. Riordan (1977, pp. 61, 191, 306) records that Lenin counted it among his pastimes, that it remained more popular among rural than among urban Russians and that, together with lapta, it stayed alive among the Slavic peoples thanks to popular tenacity and, at times, official encouragement. In 1970 more than 600,000 people played it, some 2,000 of whom held the title of Master of Sport (\"Gorodki,\" 1979), a figure that shows how far the Soviet sports structure had absorbed a village game."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/gorodki.jpg",
+   "pie": {
+    "es": "*Juego de gorodki*, estampa de E. M. Karnéyev (1812) con campesinos rusos lanzando el palo contra las figuras.",
+    "en": "*Game of gorodki*, print by E. M. Karneev (1812) showing Russian peasants throwing the stick at the figures."
+   },
+   "autor": "E. M. Karnéyev",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D1%80%D0%BD%D0%B5%D0%B5%D0%B2_-_%D0%98%D0%B3%D1%80%D0%B0_%D0%B2_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BA%D0%B8,_1812.jpg"
+  },
+  "refs": [
+   "Gorodki. (1979). En *The Great Soviet Encyclopedia* (3.ª ed.). Recuperado el 30 de septiembre de 2026 de https://encyclopedia2.thefreedictionary.com/Gorodki",
+   "Riordan, J. (1977). *Sport in Soviet society: Development of sport and physical education in Russia and the USSR*. Cambridge University Press."
+  ],
+  "refs_en": [
+   "Gorodki. (1979). In *The Great Soviet Encyclopedia* (3rd ed.). Retrieved September 30, 2026, from https://encyclopedia2.thefreedictionary.com/Gorodki",
+   "Riordan, J. (1977). *Sport in Soviet society: Development of sport and physical education in Russia and the USSR*. Cambridge University Press."
+  ]
+ },
+ {
+  "id": "lapta",
+  "name": {
+   "es": "Lapta",
+   "en": "Lapta"
+  },
+  "bloque": {
+   "es": "Con bate",
+   "en": "Bat sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Rusia, juego campesino de bate y pelota de origen medieval; reglas unificadas desde 1926, primer campeonato de Rusia en 1958 y reconocimiento como deporte en 1994",
+   "en": "Russia, a peasant bat-and-ball game of medieval origin; unified rules from 1926, first Russian championship in 1958 and recognition as a sport in 1994"
+  },
+  "body": {
+   "es": [
+    "La lapta es un juego ruso de bate y pelota entre dos equipos, que Riordan (1977, p. 30) describe como semejante al *rounders* o al béisbol y sitúa entre los juegos populares heredados de épocas anteriores. Pertenece a una familia europea de juegos campesinos en los que una pelota lanzada se golpeaba con una tabla o un bate, como el juego finlandés del rey, el *Schlagball* alemán o el *långboll* nórdico, practicados al aire libre y abiertos en principio a cualquiera (Silvennoinen, 1999, p. 28). El portal Cultura.RF, del Ministerio de Cultura ruso, atribuye al juego una antigüedad de unos mil años, recuerda que en Nóvgorod se han hallado bates planos del siglo XIV, las *lapty* que dieron nombre al juego, y afirma que Pedro I lo empleó en la preparación física de los regimientos Semiónovski y Preobrazhenski (Martynenko, s. f.).",
+    "Guttmann (2004, p. 298) recuerda que los campesinos, que eran la inmensa mayoría de la población de la Rusia zarista, competían entre sí en carreras, saltos, lucha y lapta mientras las primeras federaciones deportivas del país nacían en círculos aristocráticos y de clase media. A comienzos del siglo XX las milicias obreras de varias ciudades industriales incluían la lapta y el gorodki en su preparación física (Riordan, 1977, p. 33). La regulación fue tardía, puesto que el Consejo Superior de Cultura Física de la República Rusa intentó en 1926 dar al juego unas reglas únicas y solo en 1958, cuando ya existían equipos estables en distintas ciudades, se disputó en Vorónezh el primer campeonato de Rusia (Martynenko, s. f.).",
+    "Como el gorodki, la lapta fue presentada en la URSS como un deporte nacional que se mantenía vivo entre los eslavos, más apreciado en el campo que en la ciudad (Riordan, 1977, pp. 191, 306). Según Cultura.RF, entró en 1959 en la segunda Espartaquiada de verano de la República Rusa, perdió seguidores en las décadas de 1960 y 1970, se recuperó en los años ochenta mediante torneos y en 1994 fue reconocida oficialmente como deporte, con un nuevo reglamento de competición al año siguiente (Martynenko, s. f.). El mismo portal subraya que la lapta es siglos anterior al béisbol, argumento que muestra el valor identitario que hoy se concede al juego."
+   ],
+   "en": [
+    "Lapta is a Russian bat-and-ball game between two teams, which Riordan (1977, p. 30) describes as similar to rounders or baseball and places among the folk games inherited from earlier times. It belongs to a European family of peasant games in which a pitched ball was struck with a board or bat, such as the Finnish king's ball, the German *Schlagball* or the Nordic *långboll*, played outdoors and open in principle to anyone (Silvennoinen, 1999, p. 28). The Culture.RF portal of the Russian Ministry of Culture attributes an age of about a thousand years to the game, notes that flat fourteenth-century bats, the *lapty* that gave the game its name, have been found in Novgorod, and states that Peter I used it in the physical training of the Semyonovsky and Preobrazhensky regiments (Martynenko, n.d.).",
+    "Guttmann (2004, p. 298) points out that the peasants, who made up the vast majority of the population of tsarist Russia, competed among themselves in running, jumping, wrestling and lapta while the country's first sports federations were being born in aristocratic and middle-class circles. At the beginning of the twentieth century the workers' militias of several industrial cities included lapta and gorodki in their physical training (Riordan, 1977, p. 33). Regulation came late, since the Supreme Council of Physical Culture of the Russian Republic attempted in 1926 to give the game a single set of rules, and only in 1958, when stable teams existed in several cities, was the first Russian championship held in Voronezh (Martynenko, n.d.).",
+    "Like gorodki, lapta was presented in the USSR as a national sport that remained alive among the Slavs and was more popular in the countryside than in the city (Riordan, 1977, pp. 191, 306). According to Culture.RF, it entered the second Summer Spartakiad of the Russian Republic in 1959, lost followers in the 1960s and 1970s, recovered in the 1980s through tournaments and was officially recognised as a sport in 1994, with new competition rules the following year (Martynenko, n.d.). The same portal stresses that lapta is centuries older than baseball, an argument that shows the value for identity now attached to the game."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/lapta.jpg",
+   "pie": {
+    "es": "Partido de lapta, dibujo del reglamento de M. Volkov publicado en San Petersburgo en 1915.",
+    "en": "A game of lapta, drawing from M. Volkov's rulebook published in St Petersburg in 1915."
+   },
+   "autor": "M. Volkov",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:%D0%98%D0%B3%D1%80%D0%B0_%D0%B2_%D0%BB%D0%B0%D0%BF%D1%82%D1%83_%D0%B2_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8.jpg"
+  },
+  "refs": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Martynenko, D. (s. f.). *Что общего у русской лапты c американским бейсболом и какая игра появилась раньше?* [Qué tienen en común la lapta rusa y el béisbol estadounidense]. Культура.РФ. Recuperado el 30 de septiembre de 2026 de https://www.culture.ru/s/vopros/lapta-ili-beysbol/",
+   "Riordan, J. (1977). *Sport in Soviet society: Development of sport and physical education in Russia and the USSR*. Cambridge University Press.",
+   "Silvennoinen, M. (1999). Baseball, Finnish. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 28-29). Oxford University Press."
+  ],
+  "refs_en": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Martynenko, D. (n.d.). *Что общего у русской лапты c американским бейсболом и какая игра появилась раньше?* [What Russian lapta and American baseball have in common]. Культура.РФ. Retrieved September 30, 2026, from https://www.culture.ru/s/vopros/lapta-ili-beysbol/",
+   "Riordan, J. (1977). *Sport in Soviet society: Development of sport and physical education in Russia and the USSR*. Cambridge University Press.",
+   "Silvennoinen, M. (1999). Baseball, Finnish. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 28-29). Oxford University Press."
+  ]
+ },
+ {
+  "id": "oina",
+  "name": {
+   "es": "Oina",
+   "en": "Oină"
+  },
+  "bloque": {
+   "es": "Con bate",
+   "en": "Bat sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Rumanía, juego campesino documentado desde mediados del siglo XIX; deporte escolar a comienzos del XX y federación nacional en 1932",
+   "en": "Romania, a peasant game recorded from the mid-nineteenth century; school sport in the early twentieth century and national federation in 1932"
+  },
+  "body": {
+   "es": [
+    "La oina es un juego rumano de bate y pelota entre dos equipos, emparentado con la familia europea de juegos campesinos en los que una pelota lanzada se golpea con un bate, como el *Schlagball* alemán, el *långboll* nórdico o la lapta rusa (Silvennoinen, 1999, p. 28). La Federación Rumana de Oina reúne sus testimonios más antiguos, entre ellos las notas de unos monjes que mencionan concursos de *hoina* en la fiesta celebrada en Piatra Neamț hacia 1852, al comenzar la construcción de la escuela principesca, la primera descripción del juego, publicada por el filólogo Alexandru Lambrior en 1875, y las variantes recogidas por el folclorista Petre Ispirescu en 1883 (Federația Română de Oină, s. f.). La tradición que hace jugador de oina al joven Mircea el Viejo en el siglo XIV procede de un drama histórico de Alexandru Davila escrito en 1888.",
+    "El paso del juego de aldea al deporte organizado se produjo a través de la escuela. Por iniciativa del ministro de Instrucción Spiru Haret la oina se introdujo con carácter obligatorio en la enseñanza, donde sustituyó a los ejercicios de orden que se practicaban junto a los pupitres y dio lugar a campeonatos entre liceos, y los testimonios de la época la presentaban como un excelente medio de educación física y como el juego deportivo propiamente rumano (Federația Română de Oină, s. f.). En junio de 1932 se fundó la Federación Rumana de Oina, que se constituyó de nuevo el 6 de septiembre de 1950 bajo la presidencia del ministro de Educación, N. Popescu Doreanu (Federația Română de Oină, s. f.).",
+    "La historia de la oina está ligada a la afirmación de la identidad nacional rumana, puesto que folcloristas y educadores la reivindicaron como juego propio desde el siglo XIX y su institucionalización partió del propio Ministerio de Instrucción, con la escuela como principal espacio de práctica. Según la federación, esta ha funcionado sin interrupción con el mismo nombre dentro de las sucesivas estructuras deportivas del Estado, desde los organismos de cultura física de la etapa socialista hasta el actual Ministerio del Deporte (Federația Română de Oină, s. f.). Esa continuidad, que atraviesa la monarquía, el régimen socialista y la etapa democrática, hace de la oina un caso de juego tradicional sostenido de forma permanente por el Estado."
+   ],
+   "en": [
+    "Oină is a Romanian bat-and-ball game between two teams, related to the European family of peasant games in which a pitched ball is struck with a bat, such as the German *Schlagball*, the Nordic *långboll* or Russian lapta (Silvennoinen, 1999, p. 28). The Romanian Oină Federation has gathered its earliest records, among them the notes of some monks mentioning *hoina* contests at the festivity held in Piatra Neamț around 1852, when the building of the princely school began, the first description of the game, published by the philologist Alexandru Lambrior in 1875, and the variants collected by the folklorist Petre Ispirescu in 1883 (Federația Română de Oină, n.d.). The tradition that makes the young Mircea the Elder an oină player in the fourteenth century comes from a historical drama by Alexandru Davila written in 1888.",
+    "The passage from village game to organised sport took place through the school. On the initiative of the Minister of Education Spiru Haret, oină was made compulsory in schools, where it replaced the drill exercises performed beside the desks and gave rise to championships between secondary schools, and the testimonies of the time presented it as an excellent means of physical education and as the truly Romanian sporting game (Federația Română de Oină, n.d.). The Romanian Oină Federation was founded in June 1932 and was constituted again on 6 September 1950 under the presidency of the Minister of Education, N. Popescu Doreanu (Federația Română de Oină, n.d.).",
+    "The history of oină is bound up with the assertion of Romanian national identity, since folklorists and educators claimed it as a game of their own from the nineteenth century and its institutionalisation started from the Ministry of Education itself, with the school as the main place of play. According to the federation, it has operated without interruption under the same name within the successive state sports structures, from the physical culture bodies of the socialist period to the present Ministry of Sport (Federația Română de Oină, n.d.). This continuity, which spans the monarchy, the socialist regime and the democratic period, makes oină a case of a traditional game permanently sustained by the state."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/oina.jpg",
+   "pie": {
+    "es": "Equipo de oina del liceo Nicolae Bălcescu de Brăila en una fotografía de finales del siglo XIX.",
+    "en": "The oină team of the Nicolae Bălcescu secondary school in Brăila in a late nineteenth-century photograph."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Echipa_de_oin%C4%83,_Liceul_N._B%C4%83lcescu_din_Br%C4%83ila,_Historia_sept10.jpg"
+  },
+  "refs": [
+   "Federația Română de Oină. (s. f.). *Istoric*. Recuperado el 30 de septiembre de 2026 de https://froina.ro/istoric/",
+   "Silvennoinen, M. (1999). Baseball, Finnish. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 28-29). Oxford University Press."
+  ],
+  "refs_en": [
+   "Federația Română de Oină. (n.d.). *Istoric*. Retrieved September 30, 2026, from https://froina.ro/istoric/",
+   "Silvennoinen, M. (1999). Baseball, Finnish. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 28-29). Oxford University Press."
+  ]
+ },
+ {
+  "id": "molkky",
+  "name": {
+   "es": "Mölkky",
+   "en": "Mölkky"
+  },
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Lahti (Finlandia), hacia 1989-1990, a partir del juego tradicional del kyykkä; campeonatos mundiales desde 2004",
+   "en": "Lahti (Finland), around 1989-1990, based on the traditional game of kyykkä; world championships since 2004"
+  },
+  "body": {
+   "es": [
+    "El mölkky es un juego finlandés de lanzamiento en el que se derriban con un palo de madera bolos numerados, y su historia oficial combina una tradición popular con una invención reciente. La Agencia Finlandesa del Patrimonio recoge la versión según la cual deriva del *kyykkä*, un juego de lanzamiento de palos de varios siglos de antigüedad, así como testimonios de veteranos que afirmaban haberlo jugado en la Carelia de la guerra, y señala que el verbo *mölkätä* figura ya en el diccionario finés-sueco de Elias Lönnrot de 1874 (Museovirasto, s. f.). La palabra *mölkky* designa en carelio el trasero de un niño, y ese nombre deliberadamente chocante fue el que eligieron sus creadores (Suomen Mölkkyliitto, s. f.).",
+    "El mölkky actual se desarrolló hacia 1989 y 1990 en el centro de trabajo protegido de Lahti, donde su director, Jouko Pylväs, y los trabajadores Pekka Paasivaara, Erkki Leskinen y Paavo Petäinen diseñaron, con madera sobrante, un juego parecido al *kyykkä*; la marca se registró en 1998 y las ventas alcanzaron los 100.000 juegos anuales en 2011 (Suomen Mölkkyliitto, s. f.). Las competiciones comenzaron en 1995, en 2000 reunían ya a 41 equipos y ese mismo año el centro de producción, las asociaciones juveniles de la región y una liga local fundaron una asociación de mölkky, que en 2010 pasó a llamarse Finnish International Mölkky Association (Museovirasto, s. f.), año en que se constituyó también la actual Suomen Mölkkyliitto (Suomen Mölkkyliitto, s. f.).",
+    "Desde 2004 se disputan campeonatos mundiales, celebrados en Finlandia hasta que en 2016 se jugaron por primera vez fuera de Finlandia, en Le Rheu (Francia), donde ese año se fundó la International Mölkky Organisation como sucesora de la asociación internacional finlandesa, con dieciocho países miembros en la actualidad (International Mölkky Organisation, s. f.). El juego ha sido incluido en el inventario nacional finlandés del patrimonio vivo, que subraya que pueden practicarlo personas de todas las edades y que se juega en casas y residencias de verano de todo el país (Museovirasto, s. f.). Su caso muestra cómo un producto comercial nacido en un taller de empleo protegido pudo presentarse en pocos años como tradición popular y como deporte internacional."
+   ],
+   "en": [
+    "Mölkky is a Finnish throwing game in which numbered wooden pins are knocked down with a wooden stick, and its official history combines a folk tradition with a recent invention. The Finnish Heritage Agency records the version according to which it derives from *kyykkä*, a centuries-old stick-throwing game, as well as testimonies of veterans who said they had played it in wartime Karelia, and notes that the verb *mölkätä* already appears in Elias Lönnrot's Finnish-Swedish dictionary of 1874 (Museovirasto, n.d.). The word *mölkky* means a child's bottom in Karelian, and this deliberately outlandish name was the one chosen by its creators (Suomen Mölkkyliitto, n.d.).",
+    "Present-day mölkky was developed around 1989 and 1990 at the sheltered workshop in Lahti, where its director, Jouko Pylväs, and the workers Pekka Paasivaara, Erkki Leskinen and Paavo Petäinen designed a game similar to *kyykkä* out of surplus wood; the trademark was registered in 1998 and sales reached 100,000 sets a year in 2011 (Suomen Mölkkyliitto, n.d.). Competitions began in 1995, by 2000 they brought together 41 teams, and that same year the workshop, the regional youth associations and a local league founded a mölkky association, which in 2010 was renamed the Finnish International Mölkky Association (Museovirasto, n.d.), the year in which the present Suomen Mölkkyliitto was also constituted (Suomen Mölkkyliitto, n.d.).",
+    "World championships have been held since 2004, in Finland until 2016, when they were played for the first time outside Finland, at Le Rheu (France), where that year the International Mölkky Organisation was founded as successor to the Finnish international association, with eighteen member countries today (International Mölkky Organisation, n.d.). The game has been included in the Finnish national inventory of living heritage, which stresses that it can be played by people of all ages and that it is played at homes and summer cottages throughout the country (Museovirasto, n.d.). Its case shows how a commercial product born in a sheltered workshop could within a few years be presented both as a folk tradition and as an international sport."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/molkky.jpg",
+   "pie": {
+    "es": "Bolos numerados y palo de lanzamiento del mölkky.",
+    "en": "Numbered pins and throwing stick of mölkky."
+   },
+   "autor": "YOUFACTORY",
+   "licencia": {
+    "es": "CC BY-SA 2.0",
+    "en": "CC BY-SA 2.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:M%C3%B6lkky_pins.jpg"
+  },
+  "refs": [
+   "International Mölkky Organisation. (s. f.). *World championships*. Recuperado el 30 de septiembre de 2026 de https://www.international-molkky.org/world-championships",
+   "Museovirasto. (s. f.). *Playing mölkky*. Elävän perinnön wikiluettelo. Recuperado el 30 de septiembre de 2026 de https://wiki.aineetonkulttuuriperinto.fi/wiki/Playing_m%C3%B6lkky",
+   "Suomen Mölkkyliitto. (s. f.). *Mölkky eilen, tänään ja huomenna*. Recuperado el 30 de septiembre de 2026 de https://www.molkkyliitto.fi/molkky/molkky-eilen-tanaan-ja-huomenna/"
+  ],
+  "refs_en": [
+   "International Mölkky Organisation. (n.d.). *World championships*. Retrieved September 30, 2026, from https://www.international-molkky.org/world-championships",
+   "Museovirasto. (n.d.). *Playing mölkky*. Elävän perinnön wikiluettelo. Retrieved September 30, 2026, from https://wiki.aineetonkulttuuriperinto.fi/wiki/Playing_m%C3%B6lkky",
+   "Suomen Mölkkyliitto. (n.d.). *Mölkky eilen, tänään ja huomenna*. Retrieved September 30, 2026, from https://www.molkkyliitto.fi/molkky/molkky-eilen-tanaan-ja-huomenna/"
+  ]
+ },
+ {
+  "id": "lucha-de-cornualles",
+  "name": {
+   "es": "Lucha de Cornualles",
+   "en": "Cornish wrestling"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Cornualles y Devon (suroeste de Inglaterra), práctica popular descrita ya en 1602; apogeo competitivo en la primera mitad del siglo XIX",
+   "en": "Cornwall and Devon (south-west England), a popular practice already described in 1602; competitive peak in the first half of the nineteenth century"
+  },
+  "body": {
+   "es": [
+    "La lucha de Cornualles es la forma tradicional de lucha de pie del extremo suroeste de Inglaterra, y su origen no puede fecharse. La primera descripción detallada la ofrece Richard Carew en su *Survey of Cornwall* de 1602, donde recoge la leyenda que la atribuía a Corineus, fundador mítico de Cornualles, la da por fábula y afirma que los de Cornualles se tenían por superiores a sus vecinos bretones, y que no había reunión de muchachos en Devon o Cornualles donde no se practicara (Carew, 1602/2003, fols. 75-76). Carew describe ya un reglamento consuetudinario, con el público formando un corro, agarres permitidos solo por encima de la cintura, un cinturón por el que asirse y la victoria para quien hacía tocar el suelo con la espalda, o con un hombro y el talón contrario, al rival.",
+    "Estas reglas separan el estilo de Cornualles de la lucha de Cumberland y Westmorland, en la que los luchadores empiezan ya agarrados con las manos enlazadas a la espalda (Hill, 2025, pp. 69-70), y el propio Carew menciona premios de plata que llevaban de feria en feria ciertos organizadores ambulantes (Carew, 1602/2003, fol. 77). La lucha alcanzó su mayor popularidad en la primera mitad del siglo XIX, cuando la prosperidad de la minería metálica sostenía numerosos torneos con premios lucrativos y grandes multitudes, también en Londres; su gran figura fue Tom Gundry, que ganó muchos torneos en Cornualles, Devon y Londres y que en ocasiones recurrió al amaño de combates con sus rivales, práctica conocida como *faggoting* (Tripp, 2023).",
+    "El hundimiento de la economía de Cornualles en la segunda mitad del siglo XIX redujo el número de luchadores, torneos, premios y espectadores, y la lucha desapareció de Londres (Tripp, 2023). Vamplew (2021, p. 423) advierte que la idea, repetida por los historiadores, de que la corrupción provocó el declive de esta lucha carece de pruebas, lo que concuerda con la explicación económica de Tripp. Para este autor, el hilo conductor del siglo es la persistencia de la diferencia, dado que la experiencia histórica de Cornualles se apartó de la del resto de Gran Bretaña y generó una identidad propia, a cuya construcción contribuyó la lucha (Tripp, 2023)."
+   ],
+   "en": [
+    "Cornish wrestling is the traditional form of standing wrestling of the far south-west of England, and its origin cannot be dated. The first detailed description is given by Richard Carew in his *Survey of Cornwall* of 1602, where he records the legend that attributed it to Corineus, the mythical founder of Cornwall, dismisses it as a fable and states that the Cornish considered themselves superior to their Breton neighbours, and that there was no gathering of boys in Devon or Cornwall where it was not practised (Carew, 1602/2003, fols. 75-76). Carew already describes a customary set of rules, with the spectators forming a ring, holds allowed only above the waist, a belt to take hold by and victory for whoever made the opponent touch the ground with the back, or with one shoulder and the opposite heel.",
+    "These rules set the Cornish style apart from Cumberland and Westmorland wrestling, in which the wrestlers start already gripped with their hands locked behind the back (Hill, 2025, pp. 69-70), and Carew himself mentions silver prizes carried from fair to fair by certain itinerant organisers (Carew, 1602/2003, fol. 77). Wrestling reached its greatest popularity in the first half of the nineteenth century, when the prosperity of metal mining supported numerous tournaments with lucrative prizes and large crowds, in London as well; its leading figure was Tom Gundry, who won many tournaments in Cornwall, Devon and London and who occasionally resorted to fixing bouts with his opponents, a practice known as *faggoting* (Tripp, 2023).",
+    "The collapse of the Cornish economy in the second half of the nineteenth century reduced the numbers of wrestlers, tournaments, prizes and spectators, and wrestling disappeared from London (Tripp, 2023). Vamplew (2021, p. 423) warns that the idea, repeated by historians, that corruption caused the decline of this wrestling lacks evidence, which agrees with Tripp's economic explanation. For Tripp, the common thread of the century is the persistence of difference, since Cornwall's historical experience departed from that of the rest of Britain and produced an identity of its own, to whose construction wrestling contributed (Tripp, 2023)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/lucha-de-cornualles.jpg",
+   "pie": {
+    "es": "Combate de lucha de Cornualles en Hackney Wick (Londres), grabado del *Illustrated Sporting News* de 14 de abril de 1866.",
+    "en": "Cornish wrestling bout at Hackney Wick (London), engraving from the *Illustrated Sporting News* of 14 April 1866."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Cornish_wrestling_scene_London_1866.jpg"
+  },
+  "refs": [
+   "Carew, R. (2003). *The survey of Cornwall* (Libro electrónico n.º 9878). Project Gutenberg. https://www.gutenberg.org/ebooks/9878 (Obra original publicada en 1602)",
+   "Hill, T. (2025). «Both sides of the Tweed»: Relations, tensions and identity of Scottish Backhold and Cumberland and Westmorland Wrestling. *Scottish Studies, 41*, 65-84. https://open.journals.ed.ac.uk/ScottishStudies/article/download/148/176/204",
+   "Tripp, M. (2023). Cornish wrestling in the nineteenth century. *Sport in History, 43*(2), 137-165. https://doi.org/10.1080/17460263.2022.2101022",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Carew, R. (2003). *The survey of Cornwall* (eBook No. 9878). Project Gutenberg. https://www.gutenberg.org/ebooks/9878 (Original work published 1602)",
+   "Hill, T. (2025). “Both sides of the Tweed”: Relations, tensions and identity of Scottish Backhold and Cumberland and Westmorland Wrestling. *Scottish Studies, 41*, 65-84. https://open.journals.ed.ac.uk/ScottishStudies/article/download/148/176/204",
+   "Tripp, M. (2023). Cornish wrestling in the nineteenth century. *Sport in History, 43*(2), 137-165. https://doi.org/10.1080/17460263.2022.2101022",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "irish-road-bowling",
+  "name": {
+   "es": "Irish road bowling",
+   "en": "Irish road bowling"
+  },
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Irlanda (sobre todo Armagh y Cork), documentado desde el siglo XVIII; organismo nacional en 1954 y asociación internacional en 1969",
+   "en": "Ireland (above all Armagh and Cork), recorded from the eighteenth century; national body in 1954 and international association in 1969"
+  },
+  "body": {
+   "es": [
+    "El *road bowling* irlandés consiste en recorrer un tramo de carretera pública con el menor número posible de lanzamientos de una bola, y su origen es incierto. Una de las explicaciones lo atribuye a los soldados holandeses que acompañaron a Guillermo de Orange en 1689 y otra a los trabajadores del lino llegados de Yorkshire al norte de Irlanda; entre las primeras referencias figuran un poema de Jonathan Swift de 1728, *A Pastoral Dialogue*, y un relato de 1812 sobre partidas en el condado de Down (Ask About Ireland, s. f.-a). El juego pertenece a una familia europea de lanzamiento de bolas por caminos que incluye el *klootschieten* holandés y el *bosseln* o *klootschiessen* de Frisia oriental, en Alemania (Renson, 1999, p. 412).",
+    "Durante mucho tiempo el juego se practicó al margen de la ley, dado que jugar en la vía pública llevaba a los jugadores ante los tribunales y a pagar multas, algo que todavía ocurría a comienzos de la década de 1950 (Ask About Ireland, s. f.-a). Su arraigo popular se apoyaba en las apuestas y en la rivalidad entre condados, como muestra el célebre desafío de 1928 entre Timmy Delargy, de Cork, y Peter Donnelly, de Armagh, con cien libras en juego por cada parte y más de diez mil espectadores (Ask About Ireland, s. f.-a). El 20 de noviembre de 1954 se fundó Ból Chumann na hÉireann, el organismo que rige desde entonces el juego en Irlanda (Ból Chumann na hÉireann, s. f.).",
+    "En 1969 los jugadores irlandeses, holandeses y alemanes, tres tradiciones hasta entonces independientes, se unieron en la International Bowl Playing Association, caso que Renson (1999, p. 412) presenta como ejemplo de la expresión de identidades étnicas regionales y, a la vez, de la creciente conciencia internacional de los juegos tradicionales. Ese mismo año se celebraron en Losser (Países Bajos) los primeros campeonatos internacionales, y Cork acogió en 1992 el noveno campeonato de Europa (Ask About Ireland, s. f.-b). El juego conserva sus principales focos en Cork y Armagh y en algunos condados vecinos (Ask About Ireland, s. f.-a), donde las carreteras rurales siguen siendo su terreno de juego."
+   ],
+   "en": [
+    "Irish road bowling consists of covering a stretch of public road with the fewest possible throws of a bowl, and its origin is uncertain. One explanation attributes it to the Dutch soldiers who accompanied William of Orange in 1689 and another to linen workers who came from Yorkshire to the north of Ireland; among the earliest references are a 1728 poem by Jonathan Swift, *A Pastoral Dialogue*, and an 1812 account of games in County Down (Ask About Ireland, n.d.-a). The game belongs to a European family of bowl-throwing along roads that includes Dutch *klootschieten* and the *bosseln* or *klootschiessen* of East Frisia, in Germany (Renson, 1999, p. 412).",
+    "For a long time the game was played outside the law, since playing on the public highway brought players before the courts and cost them fines, something that was still happening in the early 1950s (Ask About Ireland, n.d.-a). Its popular roots rested on betting and on rivalry between counties, as shown by the famous 1928 challenge between Timmy Delargy, from Cork, and Peter Donnelly, from Armagh, with a hundred pounds staked on each side and more than ten thousand spectators (Ask About Ireland, n.d.-a). On 20 November 1954 Ból Chumann na hÉireann was founded, the body that has governed the game in Ireland ever since (Ból Chumann na hÉireann, n.d.).",
+    "In 1969 Irish, Dutch and German players, three traditions that had until then been independent, joined together in the International Bowl Playing Association, a case that Renson (1999, p. 412) presents as an example of the expression of regional ethnic identity and, at the same time, of the growing international awareness of traditional games. That same year the first international championships were held in Losser (Netherlands), and Cork hosted the ninth European championships in 1992 (Ask About Ireland, n.d.-b). The game keeps its main strongholds in Cork and Armagh and some neighbouring counties (Ask About Ireland, n.d.-a), where country roads remain its playing ground."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/irish-road-bowling.jpg",
+   "pie": {
+    "es": "Señal que advierte a los conductores de una partida de *road bowls* en la carretera de Cullyhanna, en el condado de Armagh (2019).",
+    "en": "Sign warning drivers of a game of road bowls in progress on the Cullyhanna Road, County Armagh (2019)."
+   },
+   "autor": "Eric Jones",
+   "licencia": {
+    "es": "CC BY-SA 2.0",
+    "en": "CC BY-SA 2.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:%22Caution_Road_Bowls_in_Progress%22_warning_sign_on_the_Cullyhanna_Road_-_geograph.org.uk_-_6239744.jpg"
+  },
+  "refs": [
+   "Ask About Ireland. (s. f.-a). *Early history* [Road bowling]. Recuperado el 30 de septiembre de 2026 de https://www.askaboutireland.ie/reading-room/sports-recreation/sport/road-bowling/early-history/",
+   "Ask About Ireland. (s. f.-b). *International* [Road bowling]. Recuperado el 30 de septiembre de 2026 de https://www.askaboutireland.ie/reading-room/sports-recreation/sport/road-bowling/international/",
+   "Ból Chumann na hÉireann. (s. f.). *Irish Road Bowling Association*. Recuperado el 30 de septiembre de 2026 de https://www.irishroadbowling.ie/",
+   "Renson, R. (1999). Traditional sports, Europe. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 411-414). Oxford University Press."
+  ],
+  "refs_en": [
+   "Ask About Ireland. (n.d.-a). *Early history* [Road bowling]. Retrieved September 30, 2026, from https://www.askaboutireland.ie/reading-room/sports-recreation/sport/road-bowling/early-history/",
+   "Ask About Ireland. (n.d.-b). *International* [Road bowling]. Retrieved September 30, 2026, from https://www.askaboutireland.ie/reading-room/sports-recreation/sport/road-bowling/international/",
+   "Ból Chumann na hÉireann. (n.d.). *Irish Road Bowling Association*. Retrieved September 30, 2026, from https://www.irishroadbowling.ie/",
+   "Renson, R. (1999). Traditional sports, Europe. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 411-414). Oxford University Press."
+  ]
+ },
+ {
+  "id": "stoolball",
+  "name": {
+   "es": "Stoolball",
+   "en": "Stoolball"
+  },
+  "bloque": {
+   "es": "Con bate",
+   "en": "Bat sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Inglaterra, juego rural documentado desde 1450; reorganizado por W. W. Grantham durante y tras la Primera Guerra Mundial (asociación nacional en 1923)",
+   "en": "England, a rural game recorded from 1450; reorganised by W. W. Grantham during and after the First World War (national association in 1923)"
+  },
+  "body": {
+   "es": [
+    "El *stoolball* es un juego inglés de bate y pelota cuyo nombre alude a un taburete (*stool*), en el que un jugador lanza la pelota y otro la golpea, y que guarda un evidente parecido familiar con el críquet y el béisbol (Guttmann, 1991, p. 48). Stoolball England, el organismo que hoy lo rige, sitúa su primera referencia en 1450, en relación con un juego que ya se practicaba con regularidad y que podía ser bastante anterior (Stoolball England, s. f.-a). Era un juego de fiestas de la comunidad rural, y en 1621 el gobernador William Bradford encontró a varios colonos de Plymouth, en Nueva Inglaterra, jugando en la calle el día de Navidad a lanzar la barra y al *stool-ball*, y les quitó los aperos por considerar que no debían jugar mientras otros trabajaban (Guttmann, 2004, p. 118).",
+    "El rasgo más característico del *stoolball* es su larga asociación con las mujeres. En la Inglaterra medieval lo jugaban en Carnaval las lecheras y otras muchachas, a veces en las grandes ferias comerciales, y en el Renacimiento seguía siendo uno de los juegos en que competían las jóvenes campesinas, las más habituadas al trabajo físico (Guttmann, 1991, pp. 48, 79). El anticuario Joseph Strutt lo consideraba un juego más propio de las mujeres que de los hombres, aunque a veces lo practicaban jóvenes de ambos sexos, y un poema anónimo de finales del siglo XVII o comienzos del XVIII narra un partido de Pascua entre muchachos y doncellas; a lo largo del siglo XVIII el *stoolball* decayó mientras ascendía el críquet (Guttmann, 1991, p. 93).",
+    "La forma moderna procede de la iniciativa del comandante W. W. Grantham, que durante la Primera Guerra Mundial lo recuperó como deporte para los soldados heridos, a quienes el críquet y el tenis resultaban demasiado exigentes, publicó en 1919 un manual de juego, organizó con permiso del MCC una serie de partidos anuales en Lord's hasta 1927 y fundó en 1923 la Stoolball Association for Great Britain, que llegó a contar con más de mil clubes en 1927 y dejó de funcionar en 1942 (Stoolball England, s. f.-b). Stoolball England, que rige hoy el juego, conserva la memoria de esa trayectoria, en la que un antiguo juego de doncellas pasó a servir de rehabilitación para los heridos de guerra antes de convertirse en deporte de clubes."
+   ],
+   "en": [
+    "Stoolball is an English bat-and-ball game whose name refers to a stool, in which one player throws the ball and another strikes it, and which bears an evident family resemblance to cricket and baseball (Guttmann, 1991, p. 48). Stoolball England, the body that governs it today, places its first reference in 1450, concerning a game that was already being played regularly and may have been considerably older (Stoolball England, n.d.-a). It was a game of rural community festivities, and in 1621 Governor William Bradford found several settlers at Plymouth, in New England, playing in the street on Christmas Day at pitching the bar and stool-ball, and took away their implements because he held that they should not play while others worked (Guttmann, 2004, p. 118).",
+    "The most characteristic feature of stoolball is its long association with women. In medieval England it was played at Shrovetide by milkmaids and other girls, sometimes at the great commercial fairs, and in the Renaissance it was still one of the games at which young peasant women, those most accustomed to physical labour, competed (Guttmann, 1991, pp. 48, 79). The antiquarian Joseph Strutt considered it more properly a women's game than a men's, although young people of both sexes sometimes played it together, and an anonymous poem of the late seventeenth or early eighteenth century narrates an Easter match between youths and maids; over the eighteenth century stoolball declined while cricket rose (Guttmann, 1991, p. 93).",
+    "The modern form stems from the initiative of Major W. W. Grantham, who during the First World War revived it as a sport for wounded soldiers, for whom cricket and tennis were too strenuous, published a playing manual in 1919, organised with the MCC's permission a series of annual matches at Lord's until 1927 and founded in 1923 the Stoolball Association for Great Britain, which had more than a thousand clubs by 1927 and ceased to function in 1942 (Stoolball England, n.d.-b). Stoolball England, which governs the game today, preserves the memory of that trajectory, in which an old maidens' game came to serve as rehabilitation for the war wounded before becoming a club sport."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/stoolball.jpg",
+   "pie": {
+    "es": "Grabado «Stool-Ball» del libro infantil *A Little Pretty Pocket-Book* (siglo XVIII), con tres muchachos jugando y el taburete a la derecha.",
+    "en": "\"Stool-Ball\" engraving from the children's book *A Little Pretty Pocket-Book* (eighteenth century), with three boys playing and the stool on the right."
+   },
+   "autor": "Isaiah Thomas (ed.)",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:ALPP_-_Stool-Ball.png"
+  },
+  "refs": [
+   "Guttmann, A. (1991). *Women's sports: A history*. Columbia University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Stoolball England. (s. f.-a). *Stoolball's story*. Recuperado el 30 de septiembre de 2026 de https://www.stoolball.org.uk/history/story/",
+   "Stoolball England. (s. f.-b). *Major W W Grantham*. Recuperado el 30 de septiembre de 2026 de https://www.stoolball.org.uk/history/story/major-w-w-grantham/biography"
+  ],
+  "refs_en": [
+   "Guttmann, A. (1991). *Women's sports: A history*. Columbia University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Stoolball England. (n.d.-a). *Stoolball's story*. Retrieved September 30, 2026, from https://www.stoolball.org.uk/history/story/",
+   "Stoolball England. (n.d.-b). *Major W W Grantham*. Retrieved September 30, 2026, from https://www.stoolball.org.uk/history/story/major-w-w-grantham/biography"
+  ]
+ },
+ {
+  "id": "lanzamiento-de-barra",
+  "name": {
+   "es": "Lanzamiento de barra",
+   "en": "Bar throwing (lanzamiento de barra)"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "España (Aragón, Castilla y otras regiones del norte), juego de fuerza documentado en Aragón desde 1450; medidas reglamentarias de la barra aragonesa fijadas en 1957 y federación aragonesa en 1982",
+   "en": "Spain (Aragon, Castile and other northern regions), a strength game recorded in Aragon from 1450; regulation dimensions of the Aragonese bar fixed in 1957 and Aragonese federation in 1982"
+  },
+  "body": {
+   "es": [
+    "El lanzamiento de barra es un juego tradicional de fuerza que consiste en arrojar lo más lejos posible una barra de hierro, y pertenece a una familia de lanzamientos campesinos y marineros extendida por Europa. En Inglaterra se lanzaba la barra (*pitching the bar*) a bordo de los barcos, con la barra de hierro que servía de lastre a las velas (Struna, 1999, p. 226), y en 1621 el gobernador William Bradford sorprendió a unos colonos de Plymouth lanzando la barra el día de Navidad (Guttmann, 2004, p. 118). En Aragón existe constancia documental del tiro de barra desde 1450, y la Federación Aragonesa de Deportes Tradicionales relaciona el origen del instrumento con la reja del arado romano o con herramientas de cantería (Federación Aragonesa de Deportes Tradicionales, s. f.).",
+    "La práctica era rural y masculina, ligada al trabajo agrícola, y se desarrollaba en plazas y eras los domingos y días de fiesta; en 1802, durante el viaje de Carlos IV de Madrid a Barcelona, el rey preguntó en Villafranca de Ebro si había en el pueblo quien tirase a la barra, ejercicio del que era aficionado (Federación Aragonesa de Deportes Tradicionales, s. f.). En la barra aragonesa el lanzador gira con un movimiento parecido al de segar con guadaña, la barra no puede girar en el aire y el tiro solo vale si toca el suelo primero con la punta; en 1957 se fijaron su longitud en 81 centímetros y su peso en 7,257 kilos (Federación Aragonesa de Deportes Tradicionales, s. f.).",
+    "Cada región conserva su modalidad. La barra castellana, que su federación relaciona con una alusión de Cervantes en el *Quijote*, se lanza «a pecho» con los pies dentro de la zona de tiro, pesa al menos cinco kilos en la categoría general, mide como máximo 75 centímetros y se practica sobre todo en Palencia, Aranda de Duero y Laguna de Duero, con categorías desde alevines hasta mayores de sesenta años (Federación de Deportes Autóctonos de Castilla y León, s. f.). Renson (1999, p. 412) describe, en cambio, una barra del norte de España de 3,5 kilos y 1,5 metros lanzada tras varios giros del cuerpo. La creación de la federación aragonesa en 1982 dio un fuerte impulso al tiro de barra, en el que hoy participan también las mujeres con materiales adaptados (Federación Aragonesa de Deportes Tradicionales, s. f.)."
+   ],
+   "en": [
+    "Bar throwing is a traditional strength game that consists of hurling an iron bar as far as possible, and it belongs to a family of peasant and seafaring throws found across Europe. In England the bar was pitched on board ship, using the iron bar that weighed down the sails (Struna, 1999, p. 226), and in 1621 Governor William Bradford caught some settlers at Plymouth pitching the bar on Christmas Day (Guttmann, 2004, p. 118). In Aragon there is documentary evidence of bar throwing from 1450, and the Aragonese Federation of Traditional Sports links the origin of the implement to the share of the Roman plough or to quarrying tools (Federación Aragonesa de Deportes Tradicionales, n.d.).",
+    "The practice was rural and male, tied to farm work, and took place in village squares and threshing floors on Sundays and feast days; in 1802, during Charles IV's journey from Madrid to Barcelona, the king asked at Villafranca de Ebro whether anyone in the village could throw the bar, an exercise of which he was fond (Federación Aragonesa de Deportes Tradicionales, n.d.). In the Aragonese bar the thrower turns with a movement similar to mowing with a scythe, the bar must not spin in the air and the throw counts only if the point touches the ground first; in 1957 its length was fixed at 81 centimetres and its weight at 7.257 kilos (Federación Aragonesa de Deportes Tradicionales, n.d.).",
+    "Each region keeps its own variant. The Castilian bar, which its federation links to an allusion by Cervantes in *Don Quixote*, is thrown from the chest with the feet inside the throwing area, weighs at least five kilos in the senior category, measures at most 75 centimetres and is played above all in Palencia, Aranda de Duero and Laguna de Duero, with categories from under-elevens to over-sixties (Federación de Deportes Autóctonos de Castilla y León, n.d.). Renson (1999, p. 412), by contrast, describes a northern Spanish bar of 3.5 kilos and 1.5 metres thrown after several body rotations. The creation of the Aragonese federation in 1982 gave a strong boost to bar throwing, in which women now also take part with adapted implements (Federación Aragonesa de Deportes Tradicionales, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/lanzamiento-de-barra.jpg",
+   "pie": {
+    "es": "*El tiro de barra. Costumbres de Aragón*, dibujo de Valeriano Bécquer grabado por Bernardo Rico para *El Museo Universal* (8 de octubre de 1865), con un lanzador ante los vecinos del pueblo.",
+    "en": "*El tiro de barra. Costumbres de Aragón* (Bar throwing, customs of Aragon), drawing by Valeriano Bécquer engraved by Bernardo Rico for *El Museo Universal* (8 October 1865), with a thrower before the villagers."
+   },
+   "autor": "Valeriano Bécquer y Bernardo Rico",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:1865-10-08,_El_Museo_Universal,_El_tiro_de_barra,_Costumbres_de_Arag%C3%B3n,_Dibujo_de_don_Valeriano_B%C3%A9cquer.jpg"
+  },
+  "refs": [
+   "Federación Aragonesa de Deportes Tradicionales. (s. f.). *Tiro de barra*. Recuperado el 30 de septiembre de 2026 de https://faragondeportestradicionales.com/tiro-de-barra/",
+   "Federación de Deportes Autóctonos de Castilla y León. (s. f.). *Lanzamiento barra castellana*. Recuperado el 30 de septiembre de 2026 de https://www.deportesautoctonoscyl.es/barra/",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Renson, R. (1999). Traditional sports, Europe. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 411-414). Oxford University Press.",
+   "Struna, N. L. (1999). Leisure. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 225-228). Oxford University Press."
+  ],
+  "refs_en": [
+   "Federación Aragonesa de Deportes Tradicionales. (n.d.). *Tiro de barra*. Retrieved September 30, 2026, from https://faragondeportestradicionales.com/tiro-de-barra/",
+   "Federación de Deportes Autóctonos de Castilla y León. (n.d.). *Lanzamiento barra castellana*. Retrieved September 30, 2026, from https://www.deportesautoctonoscyl.es/barra/",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Renson, R. (1999). Traditional sports, Europe. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 411-414). Oxford University Press.",
+   "Struna, N. L. (1999). Leisure. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 225-228). Oxford University Press."
+  ]
+ }
+]

@@ -1,0 +1,466 @@
+[
+ {
+  "id": "ultramaraton",
+  "name": {
+   "es": "Ultramaratón",
+   "en": "Ultramarathon"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Antecedentes en la carrera militar egipcia (estela de Taharqa, 685-684 a. C.) y en el pedestrismo inglés del siglo XVIII; forma moderna en las carreras europeas de cien kilómetros de las décadas de 1970 y 1980; IAU, 1984",
+   "en": "Forerunners in Egyptian military running (Taharqa's stela, 685-684 BCE) and in eighteenth-century English pedestrianism; modern form in the European 100-kilometre races of the 1970s and 1980s; IAU, 1984"
+  },
+  "body": {
+   "es": [
+    "Se llama ultramaratón a toda carrera a pie más larga que el maratón, disputada sobre una distancia fija, como los 100 kilómetros, o durante un tiempo fijo, como las pruebas de veinticuatro horas o de varios días (World Athletics, s. f.). La carrera de gran distancia tiene precedentes antiguos ligados a la preparación militar. La estela del faraón Taharqa, fechada entre diciembre del 685 y enero del 684 a. C., conmemora una prueba de su tropa desde Menfis hasta El Fayum y vuelta, unos cien kilómetros que, según los cálculos de Decker, se cubrieron en unas nueve horas de carrera con una pausa de dos horas a mitad de camino (Decker, 1992, pp. 62-64). Los himnos del rey sumerio Shulgi le atribuyen una carrera de ida y vuelta entre Nippur y Ur en un solo día, y algunos autores ven en él al «primero de los ultramaratonianos», por embellecida que esté su hazaña (Crowther, 2007, pp. 17-18).",
+    "La forma moderna procede del pedestrismo inglés, en el que la aristocracia apostaba sobre la resistencia de lacayos y corredores profesionales. Foster Powell recorrió en 1773 el camino de Londres a York y vuelta en seis días, y Robert Barclay Allardice caminó mil millas en mil horas en 1809 (Guttmann, 2004, pp. 71-72). Después de la Guerra de Secesión, Edward Payson Weston impulsó en Estados Unidos las carreras de seis días *go as you please*, que combinaban marcha y carrera en pistas cerradas donde se cobraba la entrada y que decayeron a mediados de la década de 1880 por las apuestas y los rumores de amaño (Cooper, 1999, p. 234). En 1888 el británico George Littlewood superó los mil kilómetros en seis días en el Madison Square Garden (Bedkowski, 2024). Ya en el siglo XX, la Comrades sudafricana entre Pietermaritzburg y Durban reunió en 1921 a 34 corredores en su primera salida (Comrades Marathon Association, s. f.).",
+    "El ultrafondo actual se organizó a partir de las carreras de cien kilómetros en ruta que se multiplicaron en Europa a finales de los años setenta y comienzos de los ochenta, y de la recuperación en Estados Unidos, en 1980, de las carreras de seis días. La International Association of Ultrarunners (IAU) se fundó el 22 de abril de 1984, celebró su primer Campeonato del Mundo de 100 kilómetros en Torhout (Bélgica) en 1987 y obtuvo en 1988 el patrocinio de la IAAF, que en 1990 incorporó los cien kilómetros a sus distancias internacionales (Bedkowski, 2024). La IAU nació para ofrecer a los ultrafondistas una competición internacional y unificar reglamentos muy dispares (World Athletics, s. f.). El ultramaratón no figura en el programa olímpico y conserva del pedestrismo el carácter de desafío a la resistencia personal, ahora despojado de la apuesta y abierto a corredores de todas las condiciones."
+   ],
+   "en": [
+    "An ultramarathon is any footrace longer than the marathon, held over a fixed distance, such as 100 kilometres, or for a fixed time, such as twenty-four-hour or multi-day races (World Athletics, n.d.). Long-distance running has ancient precedents linked to military training. The stela of Pharaoh Taharqa, dated between December 685 and January 684 BCE, commemorates a run by his troops from Memphis to the Fayum and back, some hundred kilometres which, according to Decker's calculations, were covered in about nine hours of running with a two-hour pause halfway (Decker, 1992, pp. 62-64). The hymns of the Sumerian king Shulgi credit him with a round trip between Nippur and Ur in a single day, and some authors see him as «the first of the ultra-marathoners», however embellished his feat may be (Crowther, 2007, pp. 17-18).",
+    "The modern form derives from English pedestrianism, in which the aristocracy wagered on the endurance of their footmen and of professional runners. Foster Powell covered the road from London to York and back in six days in 1773, and Robert Barclay Allardice walked a thousand miles in a thousand hours in 1809 (Guttmann, 2004, pp. 71-72). After the Civil War, Edward Payson Weston promoted in the United States the six-day *go as you please* races, which combined walking and running on enclosed tracks where admission was charged and which declined in the mid-1880s because of gambling and rumours of fixed races (Cooper, 1999, p. 234). In 1888 the Briton George Littlewood exceeded a thousand kilometres in six days at Madison Square Garden (Bedkowski, 2024). In the twentieth century, South Africa's Comrades race between Pietermaritzburg and Durban brought 34 runners to its first start in 1921 (Comrades Marathon Association, n.d.).",
+    "Present-day ultrarunning took shape from the 100-kilometre road races that multiplied in Europe in the late 1970s and early 1980s, and from the revival of six-day races in the United States in 1980. The International Association of Ultrarunners (IAU) was founded on 22 April 1984, held its first 100-kilometre World Championships at Torhout (Belgium) in 1987 and obtained IAAF patronage in 1988, and in 1990 the IAAF added the 100 kilometres to its international distances (Bedkowski, 2024). The IAU was created to give ultrarunners an international competition and to standardise very disparate rules (World Athletics, n.d.). The ultramarathon is not on the Olympic programme and keeps from pedestrianism its character as a challenge to personal endurance, now stripped of the wager and open to runners of every kind."
+   ]
+  },
+  "tema": [
+   {
+    "num": 2,
+    "f": "la-carrera-de-fondo",
+    "t": {
+     "es": "La carrera de fondo",
+     "en": "Long-distance running"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/ultramaraton.jpg",
+   "pie": {
+    "es": "El pedestrista británico Charles Rowell, figura de las carreras de varios días del siglo XIX, en una litografía de Currier & Ives.",
+    "en": "The British pedestrian Charles Rowell, a leading figure in the multi-day races of the nineteenth century, in a Currier & Ives lithograph."
+   },
+   "autor": "Currier & Ives",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Celebrated_pedestrian_Charles_Rowell.jpg"
+  },
+  "refs": [
+   "Bedkowski, J. (2024, 18 de abril). *Beyond the marathon: The early years of IAU*. International Association of Ultrarunners. Recuperado el 30 de septiembre de 2026 de https://iau-ultramarathon.org/beyond-the-marathon-the-early-years-of-iau.html",
+   "Comrades Marathon Association. (s. f.). *Comrades Museum*. Recuperado el 30 de septiembre de 2026 de https://comrades.com/comrades-museum",
+   "Cooper, P. (1999). Marathon and distance running. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 234-236). Oxford University Press.",
+   "Crowther, N. B. (2007). *Sport in ancient times*. Praeger.",
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trad.). Yale University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "World Athletics. (s. f.). *Ultra running*. Recuperado el 30 de septiembre de 2026 de https://worldathletics.org/disciplines/ultra-running/ultra-running"
+  ],
+  "refs_en": [
+   "Bedkowski, J. (2024, April 18). *Beyond the marathon: The early years of IAU*. International Association of Ultrarunners. Retrieved September 30, 2026, from https://iau-ultramarathon.org/beyond-the-marathon-the-early-years-of-iau.html",
+   "Comrades Marathon Association. (n.d.). *Comrades Museum*. Retrieved September 30, 2026, from https://comrades.com/comrades-museum",
+   "Cooper, P. (1999). Marathon and distance running. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 234-236). Oxford University Press.",
+   "Crowther, N. B. (2007). *Sport in ancient times*. Praeger.",
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trans.). Yale University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "World Athletics. (n.d.). *Ultra running*. Retrieved September 30, 2026, from https://worldathletics.org/disciplines/ultra-running/ultra-running"
+  ]
+ },
+ {
+  "id": "marcha-atletica",
+  "name": {
+   "es": "Marcha atlética",
+   "en": "Race walking"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Inglaterra, pedestrismo de los siglos XVII al XIX; prueba olímpica individual desde los Juegos Intercalados de Atenas, 1906",
+   "en": "England, pedestrianism of the seventeenth to nineteenth centuries; individual Olympic event since the Intercalated Games in Athens, 1906"
+  },
+  "body": {
+   "es": [
+    "World Athletics remonta la marcha atlética a los siglos XVII y XVIII, cuando los lacayos caminaban junto a los carruajes de sus señores, y la sitúa después dentro del pedestrismo, la competición profesional de carrera y marcha que ganó popularidad en el siglo XIX (World Athletics, s. f.). En Inglaterra, las pruebas de marcha atraían apuestas y multitudes. Robert Barclay Allardice caminó seis millas en sesenta minutos en 1796 y mil millas en mil horas en 1809, y en 1822 unos quince mil espectadores se reunieron en Newcastle para ver a George Wilson, de cincuenta y seis años, caminar noventa millas en veinticuatro horas (Guttmann, 2004, p. 72). Las mujeres también marchaban por dinero, como la sexagenaria que en 1829 se comprometió en Falkirk a cubrir quince millas en tres horas, y ese ambiente de apuesta y de espectáculo acabó frenando, según Guttmann, la evolución del atletismo moderno (Guttmann, 2004, p. 72).",
+    "La marcha pasó del pedestrismo profesional al atletismo aficionado como prueba de distancia sometida a una técnica vigilada por jueces. El reglamento exige mantener siempre un pie en contacto con el suelo y llevar estirada la pierna que avanza desde que toca el suelo hasta que pasa bajo el cuerpo (World Athletics, s. f.). La marcha apareció en los Juegos de 1904 como una prueba de media milla dentro del *all-around*, antecesor del decatlón, se disputó como prueba individual desde los Juegos Intercalados de 1906 y desde entonces solo faltó en Ámsterdam 1928 (World Athletics, s. f.). Fuera del estadio, la marcha de Londres a Brighton, de unos 86 kilómetros, se había convertido en 1919 en una cita anual, con participación femenina desde 1932 (Crawford, 1999, p. 315).",
+    "La dificultad de juzgar a simple vista si el marchador pierde el contacto con el suelo ha acompañado siempre a la disciplina, y entre 1956 y 1984 provocó una serie de polémicas y descalificaciones (Crawford, 1999, p. 315). En 1961 se creó la Copa de Lugano, un campeonato mundial por equipos sobre 20 y 50 kilómetros (Crawford, 1999, p. 315). Los 20 kilómetros masculinos entraron en el programa olímpico en 1956; las mujeres compitieron por primera vez en 1992 sobre 10 kilómetros, distancia que pasó a 20 en Sídney 2000, y los 50 kilómetros masculinos desaparecieron después de Tokio 2020, sustituidos por un relevo mixto en distancia de maratón (World Athletics, s. f.). La marcha, que nació como apuesta sobre la resistencia de un criado, se convirtió así en una prueba olímpica reglada y abierta a ambos sexos."
+   ],
+   "en": [
+    "World Athletics traces race walking back to the seventeenth and eighteenth centuries, when footmen walked alongside their masters' coaches, and then places it within pedestrianism, the professional running and walking competition that grew in popularity in the nineteenth century (World Athletics, n.d.). In England, walking matches drew wagers and crowds. Robert Barclay Allardice walked six miles in sixty minutes in 1796 and a thousand miles in a thousand hours in 1809, and in 1822 some fifteen thousand spectators gathered at Newcastle to watch the fifty-six-year-old George Wilson walk ninety miles in twenty-four hours (Guttmann, 2004, p. 72). Women also walked for money, like the sixty-year-old who in 1829 undertook to cover fifteen miles in three hours at Falkirk, and this atmosphere of gambling and spectacle, according to Guttmann, eventually held back the evolution of modern athletics (Guttmann, 2004, p. 72).",
+    "Walking moved from professional pedestrianism to amateur athletics as a distance event subject to a technique monitored by judges. The rules require the walker to keep one foot in contact with the ground at all times and to straighten the advancing leg from the moment it touches the ground until it passes under the body (World Athletics, n.d.). Race walking appeared at the 1904 Games as a half-mile race within the all-around championship, a forerunner of the decathlon, was held as an individual event from the Intercalated Games of 1906 and since then has been missing only from Amsterdam 1928 (World Athletics, n.d.). Outside the stadium, the London to Brighton walk, of some 86 kilometres, had become an annual event by 1919, with women taking part from 1932 (Crawford, 1999, p. 315).",
+    "The difficulty of judging by eye whether a walker loses contact with the ground has always accompanied the discipline, and between 1956 and 1984 it caused a series of controversies and disqualifications (Crawford, 1999, p. 315). In 1961 the Lugano Trophy was created, a world team championship over 20 and 50 kilometres (Crawford, 1999, p. 315). The men's 20 kilometres entered the Olympic programme in 1956; women competed for the first time in 1992 over 10 kilometres, a distance raised to 20 at Sydney 2000, and the men's 50 kilometres disappeared after Tokyo 2020, replaced by a mixed relay over the marathon distance (World Athletics, n.d.). Walking, which was born as a wager on a servant's endurance, thus became a regulated Olympic event open to both sexes."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/marcha-atletica.jpg",
+   "pie": {
+    "es": "Salida de la marcha de Londres a Brighton sobre el puente de Westminster, en un grabado de prensa de 1903.",
+    "en": "Start of the London to Brighton walk over Westminster Bridge, in a 1903 newspaper engraving."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Start_of_the_London_to_Brighton_walk_1903.png"
+  },
+  "refs": [
+   "Crawford, S. A. G. M. (1999). Race walking. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (p. 315). Oxford University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "World Athletics. (s. f.). *20 kilometres race walk*. Recuperado el 30 de septiembre de 2026 de https://worldathletics.org/disciplines/race-walks/20-kilometres-race-walk"
+  ],
+  "refs_en": [
+   "Crawford, S. A. G. M. (1999). Race walking. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (p. 315). Oxford University Press.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "World Athletics. (n.d.). *20 kilometres race walk*. Retrieved September 30, 2026, from https://worldathletics.org/disciplines/race-walks/20-kilometres-race-walk"
+  ]
+ },
+ {
+  "id": "canicross",
+  "name": {
+   "es": "Canicross",
+   "en": "Canicross"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "breve",
+  "cuando": {
+   "es": "Francia, parque de Vincennes (París), 1982; primera carrera reglada en Saint-Pierre-d'Allevard, 1986",
+   "en": "France, Vincennes park (Paris), 1982; first race with rules at Saint-Pierre-d'Allevard, 1986"
+  },
+  "body": {
+   "es": [
+    "El canicross, carrera a pie en la que el corredor va unido a su perro mediante un arnés y una línea de tiro, nació en Francia con una finalidad educativa antes que competitiva. Según la International Canicross Federation, el estudiante de veterinaria Gilles Pernoud lo ideó en 1982 en el parque de Vincennes, en París, para ayudar a los dueños a socializar a sus perros, y la primera carrera con reglas se celebró el 14 de julio de 1986 en Saint-Pierre-d'Allevard, cerca de Grenoble, con una docena de participantes, mientras en Bélgica la práctica surgía por vías semejantes (International Canicross Federation, s. f.). Su crecimiento se apoyó en el *mushing* sobre tierra, y en 2005 la federación belga organizó con la de *mushing* un Campeonato del Mundo de pruebas sobre tierra de la IFSS. En 2004 siete federaciones nacionales crearon la European Canicross Federation, que en 2016 se convirtió en la International Canicross Federation y celebró su primer Campeonato del Mundo en Polonia en 2018 (International Canicross Federation, s. f.)."
+   ],
+   "en": [
+    "Canicross, a footrace in which the runner is attached to his or her dog by a harness and a towline, was born in France with an educational rather than a competitive purpose. According to the International Canicross Federation, the veterinary student Gilles Pernoud devised it in 1982 in the park of Vincennes, in Paris, to help owners socialise their dogs, and the first race with rules was held on 14 July 1986 at Saint-Pierre-d'Allevard, near Grenoble, with about a dozen participants, while in Belgium the practice emerged along similar lines (International Canicross Federation, n.d.). Its growth relied on dryland mushing, and in 2005 the Belgian federation, together with the Belgian mushing federation, organised an IFSS Dryland World Championship. In 2004 seven national federations created the European Canicross Federation, which in 2016 became the International Canicross Federation and held its first World Championship in Poland in 2018 (International Canicross Federation, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/canicross.jpg",
+   "pie": {
+    "es": "Una corredora practica canicross con su perro, unida a él por una línea de tiro, en un camino arbolado junto al agua.",
+    "en": "A runner practises canicross with her dog, attached to it by a towline, on a tree-lined path beside the water."
+   },
+   "autor": "Pocketjfr",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Canicross_blog_bete_de_course.jpg"
+  },
+  "refs": [
+   "International Canicross Federation. (s. f.). *History*. Recuperado el 30 de septiembre de 2026 de https://canicross.international/?page_id=3643"
+  ],
+  "refs_en": [
+   "International Canicross Federation. (n.d.). *History*. Retrieved September 30, 2026, from https://canicross.international/?page_id=3643"
+  ]
+ },
+ {
+  "id": "agility-canino",
+  "name": {
+   "es": "Agility canino",
+   "en": "Dog agility"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "breve",
+  "cuando": {
+   "es": "Reino Unido, exposición canina de Crufts (Londres), 1978; reconocido por el Kennel Club en 1980",
+   "en": "United Kingdom, Crufts dog show (London), 1978; recognised by the Kennel Club in 1980"
+  },
+  "body": {
+   "es": [
+    "El agility canino nació en el Reino Unido como número de exhibición. En 1978 los responsables de la exposición de Crufts encargaron a John Varley un espectáculo que entretuviera al público entre las pruebas de morfología y las de obediencia, y Varley, que tenía experiencia en el mundo del caballo, lo diseñó junto al adiestrador Peter Meanwell tomando como modelo el concurso de saltos hípico, de manera que el perro, guiado por su conductor, debía superar un recorrido de obstáculos (Patterdale, 2026). El Kennel Club británico lo reconoció como deporte en 1980 y empezó a autorizar pruebas, y en Estados Unidos el American Kennel Club celebró su primera prueba oficial el 11 de agosto de 1994 en Houston, con 192 perros de 58 razas, y formó en 1996 su primer equipo para competir en el extranjero (Patterdale, 2026). En el plano internacional, la Fédération Cynologique Internationale (FCI) dicta el reglamento de la disciplina y organiza el Campeonato del Mundo de agility (Fédération Cynologique Internationale, s. f.)."
+   ],
+   "en": [
+    "Dog agility was born in the United Kingdom as an exhibition act. In 1978 the organisers of the Crufts show asked John Varley for an entertainment to fill the interval between the conformation and obedience events, and Varley, who had experience of the horse world, designed it together with the trainer Peter Meanwell on the model of show jumping, so that the dog, guided by its handler, had to complete a course of obstacles (Patterdale, 2026). The British Kennel Club recognised it as a sport in 1980 and began to license trials, and in the United States the American Kennel Club held its first official trial on 11 August 1994 in Houston, with 192 dogs of 58 breeds, and in 1996 formed its first team to compete abroad (Patterdale, 2026). At the international level, the Fédération Cynologique Internationale (FCI) issues the rules of the discipline and organises the Agility World Championship (Fédération Cynologique Internationale, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/agility-canino.jpg",
+   "pie": {
+    "es": "Un perro crestado chino salta una valla durante una prueba de agility.",
+    "en": "A Chinese Crested dog clears a jump during an agility trial."
+   },
+   "autor": "Ron Armstrong",
+   "licencia": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Chinese_Crested_hairless_agility.jpg"
+  },
+  "refs": [
+   "Fédération Cynologique Internationale. (s. f.). *Agility*. Recuperado el 30 de septiembre de 2026 de https://www.fci.be/en/Agility-45.html",
+   "Patterdale, S. (2026, 25 de febrero). *History of dog agility: The evolution of the fast-paced AKC sport*. American Kennel Club. Recuperado el 30 de septiembre de 2026 de https://www.akc.org/expert-advice/sports/dog-agility-history/"
+  ],
+  "refs_en": [
+   "Fédération Cynologique Internationale. (n.d.). *Agility*. Retrieved September 30, 2026, from https://www.fci.be/en/Agility-45.html",
+   "Patterdale, S. (2026, February 25). *History of dog agility: The evolution of the fast-paced AKC sport*. American Kennel Club. Retrieved September 30, 2026, from https://www.akc.org/expert-advice/sports/dog-agility-history/"
+  ]
+ },
+ {
+  "id": "tent-pegging",
+  "name": {
+   "es": "Tent pegging",
+   "en": "Tent pegging"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "breve",
+  "cuando": {
+   "es": "Caballería del norte de la India, origen incierto; deporte del ejército británico en la India colonial, siglos XIX y XX; Juegos Asiáticos de Delhi, 1982",
+   "en": "Cavalry of northern India, uncertain origin; British Army sport in colonial India, nineteenth and twentieth centuries; Asian Games in Delhi, 1982"
+  },
+  "body": {
+   "es": [
+    "En el *tent pegging* el jinete, lanzado al galope, debe clavar la lanza o la espada en una pequeña estaca de madera y arrancarla del suelo. Es un ejercicio de la caballería asiática cuyo origen no está documentado, y la Federación Ecuestre de la India recoge dos explicaciones. Según la primera, derivaría de una táctica medieval de la caballería contra tropas montadas en elefantes, a los que los lanceros herían en las patas delanteras, y según la segunda, de las incursiones al amanecer contra campamentos enemigos del norte de la India, en las que los jinetes cruzaban al galope las filas de tiendas y arrancaban con la lanza sus estacas (Equestrian Federation of India, s. f.). El ejército británico adoptó el ejercicio con entusiasmo durante el periodo colonial, y en la primera mitad del siglo XX fue una de las actividades deportivas más populares entre los soldados de caballería destinados en la India. Su recuperación llegó con su inclusión en los Juegos Asiáticos de Delhi de 1982, tras la cual, y después de una demostración ante el príncipe Felipe de Edimburgo, presidente de la FEI, obtuvo reconocimiento oficial (Equestrian Federation of India, s. f.)."
+   ],
+   "en": [
+    "In tent pegging the rider, at full gallop, must strike a small wooden peg with a lance or sword and carry it away from the ground. It is an exercise of Asian cavalry whose origin is undocumented, and the Equestrian Federation of India records two explanations. According to the first, it would derive from a medieval tactic used by cavalry against troops mounted on elephants, which the lancers wounded in the forelegs, and according to the second, from dawn raids on enemy camps in northern India, in which riders galloped through the lines of tents and pulled out their pegs with the lance (Equestrian Federation of India, n.d.). The British Army took up the exercise with enthusiasm during the colonial period, and in the first half of the twentieth century it was one of the most popular sporting activities of cavalrymen serving in India. Its revival came with its inclusion in the Asian Games in Delhi in 1982, after which, and following a demonstration before Prince Philip, Duke of Edinburgh, president of the FEI, it gained official recognition (Equestrian Federation of India, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/tent-pegging.jpg",
+   "pie": {
+    "es": "Un lancero de caballería al galope se dispone a clavar la lanza en la estaca, en un grabado titulado «Calcutta. Tent-pegging», de 1875-1876.",
+    "en": "A cavalry lancer at the gallop prepares to strike the peg with his lance, in an engraving entitled «Calcutta. Tent-pegging», from 1875-1876."
+   },
+   "autor": "Sydney P. Hall",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Tent-Pegging,_Calcutta,_1875-76.jpg"
+  },
+  "refs": [
+   "Equestrian Federation of India. (s. f.). *Tent pegging*. Recuperado el 30 de septiembre de 2026 de https://efinf.org/Tent_Pegging.php"
+  ],
+  "refs_en": [
+   "Equestrian Federation of India. (n.d.). *Tent pegging*. Retrieved September 30, 2026, from https://efinf.org/Tent_Pegging.php"
+  ]
+ },
+ {
+  "id": "doma-vaquera",
+  "name": {
+   "es": "Doma vaquera",
+   "en": "Doma vaquera"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Andalucía, valle del Guadalquivir, siglo XVIII, a partir de la monta a la jineta; disciplina reglada por la Real Federación Hípica Española",
+   "en": "Andalusia, Guadalquivir valley, eighteenth century, from riding a la jineta; discipline regulated by the Royal Spanish Equestrian Federation"
+  },
+  "body": {
+   "es": [
+    "La doma vaquera hunde sus raíces en la monta a la jineta, el arte de montar de procedencia árabe que se caracterizaba por una silla de arzones altos que dejaba libres las manos del jinete para manejar las armas, por estribos cortos y ceñidos y por un caballo andaluz de alzada media, ligero y fuerte, domado de manera más natural (Hernández Vázquez et al., s. f., p. 4). Esa monta fue la de los caballeros que jugaban a las cañas, y generó en los siglos XVI y XVII una literatura propia, con tratados como el de Fernando Chacón (Sevilla, 1551), el de Pedro de Aguilar (Sevilla, 1572) o los *Exercicios de la gineta* de Gregorio Tapia y Salcedo (Madrid, 1643) (Hernández Vázquez, s. f., p. 7). La Junta de Andalucía considera la doma vaquera heredera directa de la jineta por sus formas y sus arreos, y recuerda que esta revolucionó los estilos medievales de la brida y la estradiota (Junta de Andalucía, 2022).",
+    "Según la misma resolución, la doma vaquera como tal surgió en el siglo XVIII en el valle del Guadalquivir, ligada a la cría y selección del toro bravo y a las necesidades del trabajo con el ganado vacuno, y de ella derivan el rejoneo y el acoso y derribo (Junta de Andalucía, 2022). Su equipo responde a esa función campera. La montura tradicional se define por la zalea de borreguillo, y los grandes estribos de hierro pavonado protegen el pie del jinete (Junta de Andalucía, 2022). La Real Federación Hípica Española (RFHE) fija como finalidad de la disciplina llevar a la pista de competición los trabajos del campo a caballo con el manejo del ganado bravo, y su reglamento conserva ejercicios de nombre vaquero como «volver y revolver», «arrear, templar y doblar» o «arrear y parar a raya» (RFHE, 2023, arts. 36, 50, 52 y 53).",
+    "Como deporte, la doma vaquera se disputa en un cuadrilongo donde el jinete ejecuta en sucesión ejercicios tomados de la faena con el ganado (RFHE, s. f.). La RFHE organiza campeonatos de España para adultos, menores y caballos jóvenes y la Copa de S. M. el Rey (RFHE, 2023, arts. 30-35), y entre los concursos nacionales destacan los de Jerez, Córdoba y el Gran Premio Ciudad de Sevilla (Junta de Andalucía, 2022). Hombres y mujeres compiten en igualdad, y el reglamento prescribe para las amazonas la falda campera y una vara en la mano derecha (Junta de Andalucía, 2022; RFHE, 2023, art. 7). En 2022 la Junta de Andalucía incoó su inscripción como Bien de Interés Cultural en la categoría de actividad de interés etnológico, lo que reconoce en esta disciplina una seña de identidad del mundo rural andaluz (Junta de Andalucía, 2022)."
+   ],
+   "en": [
+    "Doma vaquera has its roots in riding *a la jineta*, the style of Arab origin characterised by a saddle with high bows that left the rider's hands free to handle weapons, by short stirrups held close to the saddle and by a medium-sized Andalusian horse, light and strong, trained in a more natural way (Hernández Vázquez et al., n.d., p. 4). This was the riding of the knights who played the *juego de cañas*, and in the sixteenth and seventeenth centuries it produced a literature of its own, with treatises such as those of Fernando Chacón (Seville, 1551) and Pedro de Aguilar (Seville, 1572) or the *Exercicios de la gineta* of Gregorio Tapia y Salcedo (Madrid, 1643) (Hernández Vázquez, n.d., p. 7). The Regional Government of Andalusia regards doma vaquera as the direct heir of the jineta in its forms and tack, and notes that the jineta revolutionised the medieval styles of the *brida* and the *estradiota* (Junta de Andalucía, 2022).",
+    "According to the same resolution, doma vaquera as such arose in the eighteenth century in the Guadalquivir valley, linked to the breeding and selection of fighting bulls and to the needs of work with cattle, and from it derive *rejoneo* and *acoso y derribo* (Junta de Andalucía, 2022). Its equipment reflects that working function. The traditional saddle is defined by its natural sheepskin cover, and the large burnished iron stirrups protect the rider's foot (Junta de Andalucía, 2022). The Royal Spanish Equestrian Federation (RFHE) defines the purpose of the discipline as bringing to the competition arena the mounted field work of handling fighting cattle, and its rules retain exercises with cattle-work names such as «volver y revolver», «arrear, templar y doblar» and «arrear y parar a raya» (RFHE, 2023, arts. 36, 50, 52 and 53).",
+    "As a sport, doma vaquera is contested in a rectangular arena where the rider performs in succession a series of exercises taken from work with cattle (RFHE, n.d.). The RFHE organises Spanish championships for adults, young riders and young horses and the King's Cup (RFHE, 2023, arts. 30-35), and the leading national shows include those of Jerez, Córdoba and the Gran Premio Ciudad de Sevilla (Junta de Andalucía, 2022). Men and women compete on equal terms, and the rules prescribe for women riders the traditional country skirt and a switch in the right hand (Junta de Andalucía, 2022; RFHE, 2023, art. 7). In 2022 the Regional Government of Andalusia began the procedure to list it as a Site of Cultural Interest in the category of activity of ethnological interest, which recognises in this discipline a mark of identity of the Andalusian countryside (Junta de Andalucía, 2022)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/doma-vaquera.jpg",
+   "pie": {
+    "es": "Jinete de doma vaquera, con sombrero de ala ancha, montura con zalea y estribos vaqueros, galopando en la arena de una plaza.",
+    "en": "A doma vaquera rider, wearing a wide-brimmed hat and using a sheepskin-covered saddle and vaquero stirrups, cantering in the ring of a bullring."
+   },
+   "autor": "Manuel Gómez",
+   "licencia": "CC BY-SA 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Doma_vaquera_2.jpg"
+  },
+  "refs": [
+   "Hernández Vázquez, M. (s. f.). *El juego de cañas en la España medieval y moderna*. Museo del Juego.",
+   "Hernández Vázquez, M., Ruiz Vicente, D. B., Rizo Estrada, G., Parra Arroyo, M., y Rodríguez Menéndez, J. A. (s. f.). *Del torneo medieval al juego de cañas*. Universidad Politécnica de Madrid.",
+   "Junta de Andalucía. (2022). Corrección de errores de la Resolución de 17 de febrero de 2022, de la Dirección General de Patrimonio Histórico y Documental, por la que se incoa el procedimiento para la inscripción, en el Catálogo General del Patrimonio Histórico Andaluz, como Bien de Interés Cultural, de la actividad de interés etnológico denominada Doma Vaquera en Andalucía. *Boletín Oficial de la Junta de Andalucía*, (42). Recuperado el 30 de septiembre de 2026 de https://www.juntadeandalucia.es/boja/2022/42/25",
+   "Real Federación Hípica Española. (s. f.). *Doma vaquera*. Recuperado el 30 de septiembre de 2026 de https://rfhe.com/doma-vaquera/",
+   "Real Federación Hípica Española. (2023). *Reglamento para los concursos de doma vaquera*. Recuperado el 30 de septiembre de 2026 de https://www.rfhe.com/wp-content/uploads/2023/02/Reglamento-Doma-Vaquera-2023.pdf"
+  ],
+  "refs_en": [
+   "Hernández Vázquez, M. (n.d.). *El juego de cañas en la España medieval y moderna*. Museo del Juego.",
+   "Hernández Vázquez, M., Ruiz Vicente, D. B., Rizo Estrada, G., Parra Arroyo, M., & Rodríguez Menéndez, J. A. (n.d.). *Del torneo medieval al juego de cañas*. Universidad Politécnica de Madrid.",
+   "Junta de Andalucía. (2022). Corrección de errores de la Resolución de 17 de febrero de 2022, de la Dirección General de Patrimonio Histórico y Documental, por la que se incoa el procedimiento para la inscripción, en el Catálogo General del Patrimonio Histórico Andaluz, como Bien de Interés Cultural, de la actividad de interés etnológico denominada Doma Vaquera en Andalucía. *Boletín Oficial de la Junta de Andalucía*, (42). Retrieved September 30, 2026, from https://www.juntadeandalucia.es/boja/2022/42/25",
+   "Real Federación Hípica Española. (n.d.). *Doma vaquera*. Retrieved September 30, 2026, from https://rfhe.com/doma-vaquera/",
+   "Real Federación Hípica Española. (2023). *Reglamento para los concursos de doma vaquera*. Retrieved September 30, 2026, from https://www.rfhe.com/wp-content/uploads/2023/02/Reglamento-Doma-Vaquera-2023.pdf"
+  ]
+ },
+ {
+  "id": "equitacion-de-trabajo",
+  "name": {
+   "es": "Equitación de trabajo",
+   "en": "Working equitation"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "breve",
+  "cuando": {
+   "es": "Italia, Francia y España, 1996 (primer Campeonato de Europa, en España); Portugal, 1997; WAWE, 2004",
+   "en": "Italy, France and Spain, 1996 (first European Championship, in Spain); Portugal, 1997; WAWE, 2004"
+  },
+  "body": {
+   "es": [
+    "La equitación de trabajo nació del manejo cotidiano del ganado a caballo en los países del sur de Europa. Según la World Association for Working Equitation (WAWE), Italia, Francia y España la pusieron en marcha como disciplina internacional en 1996, año en que se celebró en España el primer Campeonato de Europa, Portugal se incorporó en 1997 como cuarta nación fundadora, y la WAWE se creó en 2004 para promover el deporte y regularlo con un reglamento común (WAWE, s. f.). La Real Federación Hípica Española la define como el adiestramiento que recibe el caballo para adquirir las destrezas del trabajo con el ganado en el campo, y sus competiciones nacionales constan de cuatro pruebas, la doma, la manejabilidad, la velocidad y el apartado de la vaca, que se disputan de forma individual o por equipos (Real Federación Hípica Española, s. f.). La WAWE conserva los trajes y las monturas tradicionales de cada país, de modo que la competición sirve también para mantener vivas las distintas tradiciones de la monta de trabajo (WAWE, s. f.)."
+   ],
+   "en": [
+    "Working equitation was born of the everyday handling of cattle on horseback in the countries of southern Europe. According to the World Association for Working Equitation (WAWE), Italy, France and Spain launched it as an international discipline in 1996, the year in which the first European Championship was held in Spain, Portugal joined in 1997 as the fourth founding nation, and WAWE was created in 2004 to promote the sport and regulate it under a common rulebook (WAWE, n.d.). The Royal Spanish Equestrian Federation defines it as the training a horse receives to acquire the skills needed for work with cattle in the field, and its national competitions consist of four tests, dressage, ease of handling, speed and cattle sorting, contested individually or by teams (Real Federación Hípica Española, n.d.). WAWE preserves the traditional costumes and saddlery of each country, so that competition also serves to keep alive the different traditions of working riding (WAWE, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/equitacion-de-trabajo.jpg",
+   "pie": {
+    "es": "Silla vaquera andaluza, uno de los arreos tradicionales que los jinetes conservan en la equitación de trabajo.",
+    "en": "Andalusian vaquero saddle, one of the traditional pieces of tack that riders retain in working equitation."
+   },
+   "autor": "Jebulon",
+   "licencia": "CC0",
+   "url": "https://commons.wikimedia.org/wiki/File:Andalusian_vaquero_saddle.jpg"
+  },
+  "refs": [
+   "Real Federación Hípica Española. (s. f.). *Equitación de trabajo*. Recuperado el 30 de septiembre de 2026 de https://rfhe.com/equitacion-de-trabajo/",
+   "World Association for Working Equitation. (s. f.). *History of WAWE: Three decades of working equitation*. Recuperado el 30 de septiembre de 2026 de https://wawe-workingequitation.com/history"
+  ],
+  "refs_en": [
+   "Real Federación Hípica Española. (n.d.). *Equitación de trabajo*. Retrieved September 30, 2026, from https://rfhe.com/equitacion-de-trabajo/",
+   "World Association for Working Equitation. (n.d.). *History of WAWE: Three decades of working equitation*. Retrieved September 30, 2026, from https://wawe-workingequitation.com/history"
+  ]
+ },
+ {
+  "id": "tiro-con-arco-a-caballo",
+  "name": {
+   "es": "Tiro con arco a caballo",
+   "en": "Horseback archery"
+  },
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Estepas de Asia central y pueblos jinetes de Eurasia, Antigüedad; ritual cortesano en Japón desde el siglo VIII; forma deportiva actual con la World Horseback Archery Federation (Sokcho, Corea del Sur, 2006)",
+   "en": "Central Asian steppes and the horse-riding peoples of Eurasia, Antiquity; court ritual in Japan from the eighth century; present sporting form with the World Horseback Archery Federation (Sokcho, South Korea, 2006)"
+  },
+  "body": {
+   "es": [
+    "El tiro con arco a caballo nació como técnica de caza y de guerra de los pueblos jinetes de Eurasia, y las competiciones tradicionales de Asia central que combinan la carrera y el disparo desde el caballo derivan, según Trevithick, de actividades de subsistencia de pueblos nómadas y pastores (Trevithick, 1999, p. 410). En la Persia aqueménida formaba parte de la educación de la élite, puesto que Heródoto (1.136) escribe que los jóvenes persas aprendían a montar a caballo, a disparar el arco y a decir la verdad. La destreza del arquero montado fue durante siglos la base militar de los imperios de la estepa, y en la conquista mongola de China, concluida en 1279, los arqueros a caballo formaron la columna vertebral del ejército (Guttmann, 2004, p. 41). La habilidad exigía disponer de caballo y de un largo adiestramiento desde la infancia, lo que la vinculaba a las aristocracias guerreras.",
+    "Allí donde el arquero montado decidía las batallas, su ejercicio se convirtió en ceremonia y en espectáculo. En la corte japonesa, el *kisha* se celebró desde comienzos del siglo VIII como ritual anual en el que los guardias de palacio, montados en caballos ofrecidos al emperador por las provincias, disparaban contra blancos de unos 42 centímetros, en una exhibición de lealtad militar que decayó en el siglo X y se suspendió en 986 (Guttmann y Thompson, 2001, pp. 45-46). De esa tradición guerrera procede el *yabusame* de los samuráis de Kamakura, que aún se celebra en algunos santuarios. En China, los emperadores manchúes de la dinastía Qing fueron entusiastas de los deportes ecuestres y del tiro con arco a caballo, aunque no querían que sus súbditos chinos practicaran las artes marciales armadas (Guttmann, 2004, p. 40). En América, los pueblos indígenas adoptaron el disparo desde el caballo después de que los españoles introdujeran este animal en el siglo XVI (Renson, 1999, p. 17).",
+    "Las armas de fuego acabaron con el valor militar del arquero a caballo, y su práctica sobrevivió como tradición festiva hasta su recuperación como deporte reglado a comienzos del siglo XXI. Corea del Sur desempeñó un papel destacado en esa organización internacional. En 2004 se celebró en Sokcho la primera competición coreana de tiro con arco a caballo Hwarang, en 2005 la misma ciudad acogió la primera competición internacional y el 22 de octubre de 2006 se fundó la World Horseback Archery Federation (WHAF), con Kim Young-Sup como primer presidente, que ha celebrado en Sokcho sus campeonatos del mundo (WHAF, s. f.). El tiro con arco a caballo no forma parte del programa olímpico, y su práctica deportiva conserva la doble exigencia de dominar el caballo y el arco que durante siglos definió al guerrero de la estepa."
+   ],
+   "en": [
+    "Horseback archery was born as a hunting and warfare technique of the horse-riding peoples of Eurasia, and the traditional competitions of Central Asia that combine racing and shooting from horseback derive, according to Trevithick, from the subsistence activities of nomadic pastoral peoples (Trevithick, 1999, p. 410). In Achaemenid Persia it formed part of the education of the elite, since Herodotus (1.136) writes that young Persians learned to ride, to draw the bow and to tell the truth. The skill of the mounted archer was for centuries the military foundation of the steppe empires, and in the Mongol conquest of China, completed in 1279, mounted archers were the backbone of the army (Guttmann, 2004, p. 41). The skill required owning a horse and long training from childhood, which tied it to warrior aristocracies.",
+    "Wherever the mounted archer decided battles, his exercise became ceremony and spectacle. At the Japanese court, *kisha* was held from the early eighth century as an annual ritual in which the palace guards, mounted on horses presented to the emperor by the provinces, shot at targets about 42 centimetres across, in a display of military loyalty that declined in the tenth century and was discontinued in 986 (Guttmann & Thompson, 2001, pp. 45-46). From this warrior tradition comes the *yabusame* of the Kamakura samurai, still performed at some shrines. In China, the Manchu emperors of the Qing dynasty were enthusiasts for equestrian sports and mounted archery, although they did not want their Chinese subjects to practise the armed martial arts (Guttmann, 2004, p. 40). In the Americas, indigenous peoples took up shooting from horseback after the Spanish introduced the horse in the sixteenth century (Renson, 1999, p. 17).",
+    "Firearms ended the military value of the mounted archer, and the practice survived as a festive tradition until its revival as an organised sport at the beginning of the twenty-first century. South Korea played a leading role in that international organisation. In 2004 the first Korean Hwarang horseback archery competition was held at Sokcho, in 2005 the same city hosted the first international competition, and on 22 October 2006 the World Horseback Archery Federation (WHAF) was founded, with Kim Young-Sup as its first president, which has held its world championships at Sokcho (WHAF, n.d.). Horseback archery is not part of the Olympic programme, and its sporting practice retains the double demand of mastering both horse and bow that for centuries defined the warrior of the steppe."
+   ]
+  },
+  "tema": [
+   {
+    "num": 2,
+    "f": "educacion-fisica-persa",
+    "t": {
+     "es": "Educación física persa",
+     "en": "Persian physical education"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/tiro-con-arco-a-caballo.jpg",
+   "pie": {
+    "es": "Arquero a caballo disparando al galope, en una miniatura de un manuscrito persa del siglo XV conservado en el Museo del Palacio de Topkapı (Estambul).",
+    "en": "A mounted archer shooting at the gallop, in a miniature from a fifteenth-century Persian manuscript held in the Topkapı Palace Museum (Istanbul)."
+   },
+   "autor": {
+    "es": "Artista anónimo del siglo XV",
+    "en": "Anonymous fifteenth-century artist"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Parthian_shot_from_a_fifteenth-century_Persian_manuscript._Istanbul,_Topkap%C4%B1_Saray%C4%B1_M%C3%BCzesi_H.2153.jpg"
+  },
+  "refs": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Guttmann, A., y Thompson, L. (2001). *Japanese sports: A history*. University of Hawai'i Press.",
+   "Renson, R. (1999). Archery. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 14-18). Oxford University Press.",
+   "Trevithick, A. (1999). Traditional sports, Asia. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 409-411). Oxford University Press.",
+   "World Horseback Archery Federation. (s. f.). *History*. Recuperado el 30 de septiembre de 2026 de https://whaf.webnode.kr/history/"
+  ],
+  "refs_en": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Guttmann, A., & Thompson, L. (2001). *Japanese sports: A history*. University of Hawai'i Press.",
+   "Renson, R. (1999). Archery. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 14-18). Oxford University Press.",
+   "Trevithick, A. (1999). Traditional sports, Asia. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 409-411). Oxford University Press.",
+   "World Horseback Archery Federation. (n.d.). *History*. Retrieved September 30, 2026, from https://whaf.webnode.kr/history/"
+  ]
+ },
+ {
+  "id": "tiro-con-ballesta",
+  "name": {
+   "es": "Tiro con ballesta",
+   "en": "Crossbow shooting"
+  },
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "tipo": "breve",
+  "cuando": {
+   "es": "Europa occidental, gremios urbanos de ballesteros de finales del siglo XIII y del siglo XIV; Internationale Armbrustschützen Union, 1956",
+   "en": "Western Europe, urban crossbow guilds of the late thirteenth and fourteenth centuries; Internationale Armbrustschützen Union, 1956"
+  },
+  "body": {
+   "es": [
+    "La ballesta, un arco montado en ángulo recto sobre una caja, resultó tan mortífera que el segundo Concilio de Letrán prohibió en 1139 su empleo entre cristianos, prohibición que nunca se respetó. A finales del siglo XIII las milicias urbanas de Europa occidental contaban con cuerpos selectos de ballesteros, organizados en gremios que obtuvieron cartas y privilegios en el siglo XIV y que, cuando las armas de fuego les restaron valor militar en el XV, pasaron a representar el prestigio de los principales ciudadanos (Renson, 1999, p. 17). Guttmann subraya que su razón de ser era sobre todo recreativa y que sus miembros, a menudo bajo el patronazgo de san Jorge, solían ser funcionarios municipales, comerciantes y maestros artesanos (Guttmann, 2004, p. 60). La tradición pervive en Flandes y en el *Palio della Balestra* de Gubbio o San Marino (Renson, 1999, pp. 17-18). El tiro deportivo lo rige la Internationale Armbrustschützen Union (IAU), fundada en 1956, que Renson sitúa en Suiza y el anuario de la Union of International Associations en la República Federal de Alemania (Renson, 1999, p. 16; Union of International Associations, s. f.)."
+   ],
+   "en": [
+    "The crossbow, a bow mounted at right angles on a stock, proved so deadly that the Second Lateran Council banned its use among Christians in 1139, a ban that was never observed. By the end of the thirteenth century the urban militias of western Europe had elite corps of crossbowmen, organised in guilds that obtained charters and privileges in the fourteenth century and which, when firearms reduced their military value in the fifteenth, came to represent the prestige of the leading citizens (Renson, 1999, p. 17). Guttmann stresses that their raison d'être was above all recreational and that their members, often under the patronage of Saint George, tended to be civic officials, merchants and master craftsmen (Guttmann, 2004, p. 60). The tradition lives on in Flanders and in the *Palio della Balestra* of Gubbio and San Marino (Renson, 1999, pp. 17-18). The sport is governed by the Internationale Armbrustschützen Union (IAU), founded in 1956, which Renson places in Switzerland and the yearbook of the Union of International Associations in the Federal Republic of Germany (Renson, 1999, p. 16; Union of International Associations, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/tiro-con-ballesta.jpg",
+   "pie": {
+    "es": "Carlos de Lorena asiste al tiro al papagayo del gremio de San Jorge en el Kouter de Gante, en 1752, con el mástil del blanco en el centro de la plaza.",
+    "en": "Charles of Lorraine attends the popinjay shoot of the Guild of Saint George on the Kouter in Ghent, in 1752, with the target mast in the centre of the square."
+   },
+   "autor": "Philips Karel Marissal",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Filips_Karel_Marissal_-_Prince_Charles_of_Lorraine_at_the_jay-shooting_of_the_St_George_Guild_on_the_Kouter_in_Gent_in_1752.jpeg"
+  },
+  "refs": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Renson, R. (1999). Archery. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 14-18). Oxford University Press.",
+   "Union of International Associations. (s. f.). *International Crossbow Shooting Union (IAU)*. Recuperado el 30 de septiembre de 2026 de https://uia.org/s/or/en/1100021084"
+  ],
+  "refs_en": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Renson, R. (1999). Archery. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 14-18). Oxford University Press.",
+   "Union of International Associations. (n.d.). *International Crossbow Shooting Union (IAU)*. Retrieved September 30, 2026, from https://uia.org/s/or/en/1100021084"
+  ]
+ }
+]

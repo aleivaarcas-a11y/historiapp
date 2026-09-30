@@ -1,0 +1,619 @@
+[
+ {
+  "id": "badminton",
+  "name": {
+   "es": "Bádminton",
+   "en": "Badminton"
+  },
+  "bloque": {
+   "es": "De raqueta y pala",
+   "en": "Racket and paddle sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Inglaterra e India británica, segunda mitad del siglo XIX (nombre tomado de Badminton House, Gloucestershire); asociación inglesa, 1893",
+   "en": "England and British India, second half of the 19th century (named after Badminton House, Gloucestershire); English association, 1893"
+  },
+  "body": {
+   "es": [
+    "El bádminton procede de una larga tradición de juegos de volante. En China se practicaba desde antiguo un juego en el que el volante se golpeaba con los pies o las manos, y en Europa el juego de pala y volante, conocido en Inglaterra como *battledore and shuttlecock*, consistía en mantener el volante en el aire el mayor tiempo posible, sin red ni límites de campo (Spence, 1999, p. 24). Desde finales del siglo XVI fue sobre todo un juego infantil, y en el siglo XVII se convirtió también en pasatiempo de la realeza británica y de las clases acomodadas (Spence, 1999, p. 24).",
+    "El juego moderno, con red y campo delimitado, tomó el nombre de Badminton House, la residencia de los duques de Beaufort en Gloucestershire, donde la familia lo jugaba en el siglo XIX, y en 1867 los oficiales británicos y sus familias ya lo practicaban de manera reglada en la India, donde redactaron las primeras reglas (Spence, 1999, p. 24). En las décadas siguientes se convirtió en un deporte de sala con clubes en todas las islas británicas (Spence, 1999, p. 24). El 13 de septiembre de 1893 nueve clubes reunidos en Southsea, cerca de Portsmouth, fundaron la Badminton Association, primera asociación nacional de bádminton del mundo, que aprobó un reglamento común y reunió catorce clubes en su primer año, y en 1899 se disputaron en Londres los primeros campeonatos de All England (The Badminton Museum, s. f.).",
+    "A partir de la década de 1920 el juego se extendió por el norte de Europa y Norteamérica, y desde la India al resto de Asia (Spence, 1999, p. 24). El 5 de julio de 1934 representantes de Canadá, Dinamarca, Inglaterra, Francia, Países Bajos, Irlanda, Nueva Zelanda, Escocia y Gales fundaron en Londres la International Badminton Federation, hoy Badminton World Federation, como organismo rector del reglamento y de las competiciones internacionales (BWF, s. f.). El bádminton entró en el programa olímpico en Barcelona 1992 y llegó a ser casi un deporte nacional en Indonesia y en otros países del sudeste asiático, un desplazamiento de su centro de gravedad que convirtió un pasatiempo de la élite colonial británica en uno de los deportes de mayor arraigo popular en Asia (Spence, 1999, p. 24)."
+   ],
+   "en": [
+    "Badminton comes from a long tradition of shuttlecock games. In China a game in which the shuttlecock was struck with the feet or hands had been played since ancient times, and in Europe the game known in England as *battledore and shuttlecock* consisted of keeping the shuttlecock in the air for as long as possible, with no net and no court boundaries (Spence, 1999, p. 24). From the late sixteenth century it was above all a children's game, and in the seventeenth century it also became a pastime of British royalty and of the well-to-do (Spence, 1999, p. 24).",
+    "The modern game, with a net and a marked court, took its name from Badminton House, the seat of the Dukes of Beaufort in Gloucestershire, where the family played it in the nineteenth century, and by 1867 British officers and their families were already playing it in a regulated form in India, where they drew up the first rules (Spence, 1999, p. 24). In the following decades it became an indoor sport with clubs throughout the British Isles (Spence, 1999, p. 24). On 13 September 1893 nine clubs meeting at Southsea, near Portsmouth, founded the Badminton Association, the first national badminton association in the world, which approved common rules and gathered fourteen clubs in its first year, and in 1899 the first All England Championships were played in London (The Badminton Museum, n.d.).",
+    "From the 1920s the game spread through northern Europe and North America, and from India to the rest of Asia (Spence, 1999, p. 24). On 5 July 1934 representatives of Canada, Denmark, England, France, the Netherlands, Ireland, New Zealand, Scotland and Wales founded the International Badminton Federation in London, today the Badminton World Federation, as the governing body for the rules and for international competition (BWF, n.d.). Badminton joined the Olympic programme at Barcelona 1992 and became almost a national sport in Indonesia and in other countries of Southeast Asia, a shift in its centre of gravity that turned a pastime of the British colonial elite into one of the most popular sports in Asia (Spence, 1999, p. 24)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/badminton.jpg",
+   "pie": {
+    "es": "*Niña con raqueta y volante*, óleo de Jean-Siméon Chardin (1737), Galería de los Uffizi.",
+    "en": "*Girl with Racket and Shuttlecock*, oil painting by Jean-Siméon Chardin (1737), Uffizi Gallery."
+   },
+   "autor": "Jean-Siméon Chardin",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Jean_Sim%C3%A9on_Chardin_-_Girl_with_Racket_and_Shuttlecock_-_WGA04765.jpg"
+  },
+  "refs": [
+   "The Badminton Museum. (s. f.). *The history of the Badminton Association*. Recuperado el 30 de septiembre de 2026 de https://badmintonmuseum.org/history-badminton-association/",
+   "BWF. (s. f.). *BWF 1934-2024*. Recuperado el 29 de septiembre de 2026 de https://corporate.bwfbadminton.com/bwf-1934-2024/",
+   "Spence, K. M. (1999). Badminton. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 24-25). Oxford University Press."
+  ],
+  "refs_en": [
+   "The Badminton Museum. (n.d.). *The history of the Badminton Association*. Retrieved September 30, 2026, from https://badmintonmuseum.org/history-badminton-association/",
+   "BWF. (n.d.). *BWF 1934-2024*. Retrieved September 29, 2026, from https://corporate.bwfbadminton.com/bwf-1934-2024/",
+   "Spence, K. M. (1999). Badminton. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 24-25). Oxford University Press."
+  ]
+ },
+ {
+  "id": "curling",
+  "name": {
+   "es": "Curling",
+   "en": "Curling"
+  },
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Escocia, siglo XVI; reglas comunes, Grand Caledonian Curling Club, 1838",
+   "en": "Scotland, sixteenth century; common rules, Grand Caledonian Curling Club, 1838"
+  },
+  "body": {
+   "es": [
+    "El curling, juego en el que dos equipos de cuatro jugadores deslizan piedras de granito sobre una pista de hielo hacia una diana circular, la *house*, se formó sobre todo en Escocia, aunque durante casi dos siglos los estudiosos discutieron si se había inventado allí o en el continente europeo (Mott, 1999, p. 95). Desde comienzos del siglo XVI hasta principios del XIX los escoceses lo jugaron sobre ríos, arroyos y lagos helados con reglas locales que fijaban de manera distinta el número de jugadores y de lanzamientos, las dimensiones de la pista y la forma y el tamaño de las piedras, y cada jugador llevaba consigo un apoyo portátil para el pie, el *crampit*, que obligaba a lanzar de costado (Mott, 1999, pp. 95-96).",
+    "La unificación de las reglas se hizo necesaria cuando la mejora de los transportes permitió a los clubes enfrentarse con rivales lejanos, y se logró en gran parte con la fundación en 1838 del Grand Caledonian Curling Club, que en 1843 recibió el patrocinio real y pasó a llamarse Royal Caledonian Curling Club. Entre las décadas de 1760 y 1910 los escoceses llevaron el juego a Inglaterra, Suecia, Suiza, Noruega, Nueva Zelanda y Estados Unidos, y sobre todo a Canadá, donde los inmigrantes escoceses de las praderas, con inviernos largos y ociosos y hielo natural bajo techo durante tres o cuatro meses, lo convirtieron en un deporte más practicado y más exigente que en ningún otro lugar; allí nacieron el apoyo fijo excavado en el hielo, el *hack*, y el lanzamiento deslizado (Mott, 1999, pp. 95-96).",
+    "La difusión internacional llegó sobre todo después de la Segunda Guerra Mundial gracias al hielo artificial, que liberó el juego del clima, y en la Europa continental el curling arraigó a comienzos del siglo XX como deporte al aire libre de las estaciones alpinas que atendían a turistas escoceses e ingleses. La federación internacional, hoy World Curling Federation, se fundó en 1966 como International Curling Association, en parte para tutelar el campeonato mundial masculino que la Scotch Whisky Association organizaba desde 1959 y en parte para llevar el curling a los Juegos Olímpicos de Invierno, objetivo que se cumplió en Nagano en 1998 (Mott, 1999, pp. 96-97); en 2006 el COI reconoció con carácter retroactivo como estreno olímpico del curling el torneo masculino de Chamonix de 1924, que había ganado Gran Bretaña ante Suecia y Francia (World Curling, s. f.). Las mujeres empezaron a jugar en número significativo a comienzos del siglo XX, y en la década de 1980 eran en Canadá casi tantas como los hombres (Mott, 1999, p. 96)."
+   ],
+   "en": [
+    "Curling, a game in which two teams of four players slide granite stones along a sheet of ice towards a circular target, the *house*, took shape mainly in Scotland, although for almost two centuries scholars argued over whether it had been invented there or on the European continent (Mott, 1999, p. 95). From the early sixteenth century to the early nineteenth the Scots played it on frozen rivers, streams and lakes under local rules that set in different ways the number of players and shots, the size of the rink and the shape and size of the stones, and each player carried a portable foothold, the *crampit*, which forced a sideways delivery (Mott, 1999, pp. 95-96).",
+    "Uniform rules became necessary when better transport allowed clubs to play distant opponents, and they were achieved largely through the founding in 1838 of the Grand Caledonian Curling Club, which received royal patronage in 1843 and was renamed the Royal Caledonian Curling Club. Between the 1760s and the 1910s the Scots took the game to England, Sweden, Switzerland, Norway, New Zealand and the United States, and above all to Canada, where Scottish settlers on the prairies, with long idle winters and natural indoor ice for three or four months, made it a more widely played and more demanding sport than anywhere else; there the fixed foothold cut into the ice, the *hack*, and the sliding delivery were born (Mott, 1999, pp. 95-96).",
+    "International diffusion came mainly after the Second World War thanks to artificial ice, which freed the game from the climate, and in continental Europe curling took root in the early twentieth century as an outdoor sport at Alpine resorts catering to Scottish and English tourists. The international federation, today the World Curling Federation, was founded in 1966 as the International Curling Association, partly to oversee the men's world championship that the Scotch Whisky Association had organised since 1959 and partly to bring curling into the Winter Olympic Games, a goal achieved at Nagano in 1998 (Mott, 1999, pp. 96-97); in 2006 the IOC retroactively recognised the 1924 men's tournament at Chamonix, won by Great Britain against Sweden and France, as curling's Olympic debut (World Curling, n.d.). Women began to play in significant numbers in the early twentieth century, and by the 1980s they were almost as numerous as men in Canada (Mott, 1999, p. 96)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/curling.jpg",
+   "pie": {
+    "es": "*Curling en Carsebreck*, óleo de Charles Martin Hardie (1899), National Galleries of Scotland.",
+    "en": "*Curling at Carsebreck*, oil painting by Charles Martin Hardie (1899), National Galleries of Scotland."
+   },
+   "autor": "Charles Martin Hardie",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Charles_Martin_Hardie_-_Curling_at_Carsebreck_-_Google_Art_Project.jpg"
+  },
+  "refs": [
+   "Mott, M. (1999). Curling. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 95-97). Oxford University Press.",
+   "World Curling. (s. f.). *History of curling*. Recuperado el 30 de septiembre de 2026 de https://worldcurling.org/about/history/"
+  ],
+  "refs_en": [
+   "Mott, M. (1999). Curling. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 95-97). Oxford University Press.",
+   "World Curling. (n.d.). *History of curling*. Retrieved September 30, 2026, from https://worldcurling.org/about/history/"
+  ]
+ },
+ {
+  "id": "balonkorf",
+  "name": {
+   "es": "Balonkorf",
+   "en": "Korfball"
+  },
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Ámsterdam (Países Bajos), 1902",
+   "en": "Amsterdam (Netherlands), 1902"
+  },
+  "body": {
+   "es": [
+    "El balonkorf nació en la escuela y con un propósito educativo. En 1902 el maestro neerlandés Nico Broekhuysen, inspirado por un juego que había visto durante un curso de verano en Suecia, lo desarrolló en Ámsterdam como deporte al aire libre para grupos mixtos de chicos y chicas (International Korfball Federation [IKF], s. f.). Según la federación neerlandesa, el curso se celebró en Nääs y el juego sueco era el *ringboll*, en el que se puntuaba lanzando el balón a través de un aro fijado a un poste de tres metros, con los jugadores repartidos en tres zonas de las que no podían salir y con equipos mixtos por la razón práctica de que a aquellos cursos asistían hombres y mujeres; Broekhuysen sustituyó el aro por una cesta de mimbre, la *korf* que da nombre al deporte, porque permitía juzgar mejor si había tanto (Koninklijk Nederlands Korfbalverbond [KNKV], s. f.).",
+    "En 1903 se fundó una asociación neerlandesa de korfbal que llevó el juego a todo el país y después fuera de él (IKF, 2019). La regla que define el balonkorf desde su origen es la composición mixta de los equipos, cuatro jugadoras y cuatro jugadores que intentan introducir el balón en la cesta (IKF, s. f.), de modo que es un deporte mixto por definición, en el que hombres y mujeres comparten equipo y campo. Su difusión fue sobre todo neerlandesa y belga; en los territorios coloniales de las Indias Orientales Neerlandesas los colonos intentaron promoverlo sin éxito (Guttmann, 2004, p. 237).",
+    "El balonkorf se exhibió en los Juegos Olímpicos de Amberes en 1920, lo que dio lugar a la fundación de la asociación belga en 1921, y de nuevo en los de Ámsterdam en 1928. En 1924 se creó una Oficina Internacional de Korfball, que en 1933 se convirtió en la federación internacional (IKF, s. f., 2019). El primer torneo internacional de selecciones se disputó en 1963, la Copa de Europa de clubes en 1967 y el primer campeonato del mundo en 1978; el deporte entró en los Juegos Mundiales en 1985 y el Comité Olímpico Internacional reconoció a la IKF en septiembre de 1993 (IKF, s. f., 2019)."
+   ],
+   "en": [
+    "Korfball was born in school and for an educational purpose. In 1902 the Dutch teacher Nico Broekhuysen, inspired by a game he had seen during a summer course in Sweden, developed it in Amsterdam as an outdoor sport for mixed groups of boys and girls (International Korfball Federation [IKF], n.d.). According to the Dutch federation, the course was held at Nääs and the Swedish game was *ringboll*, in which a goal was scored by throwing the ball through a ring fixed to a three-metre post, with the players divided into three zones they could not leave and with mixed teams for the practical reason that both men and women attended those courses; Broekhuysen replaced the ring with a wicker basket, the *korf* that gives the sport its name, because it made it easier to judge whether a goal had been scored (Koninklijk Nederlands Korfbalverbond [KNKV], n.d.).",
+    "In 1903 a Netherlands Korfball Association was founded which took the game all over the country and then beyond (IKF, 2019). The rule that has defined korfball from the start is the mixed composition of teams, four women and four men who try to put the ball into the basket (IKF, n.d.), so that it is a mixed sport by definition, in which men and women share team and court. Its spread was mainly Dutch and Belgian; in the colonial territories of the Dutch East Indies the colonists tried to promote it without success (Guttmann, 2004, p. 237).",
+    "Korfball was demonstrated at the Antwerp Olympic Games in 1920, which led to the foundation of the Belgian association in 1921, and again at Amsterdam in 1928. An International Korfball Bureau was set up in 1924 and became the international federation in 1933 (IKF, n.d., 2019). The first international tournament for national teams was held in 1963, the European club cup in 1967 and the first world championship in 1978; the sport entered the World Games in 1985 and the International Olympic Committee recognised the IKF in September 1993 (IKF, n.d., 2019)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/balonkorf.jpg",
+   "pie": {
+    "es": "Exhibición de balonkorf en los Juegos Olímpicos de Ámsterdam de 1928.",
+    "en": "Korfball demonstration at the 1928 Amsterdam Olympic Games."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Korfbal_at_the_1928_Summer_Olympics,_Team_White-Red.jpg"
+  },
+  "refs": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "International Korfball Federation. (s. f.). *This is korfball*. Recuperado el 29 de septiembre de 2026 de https://korfball.sport/this-is-korfball-v2/",
+   "International Korfball Federation. (2019). *History of the IKF and the World Games*. Recuperado el 29 de septiembre de 2026 de https://korfball.sport/wp-content/uploads/2019/05/WorldGamesHistory-December-2019.pdf",
+   "Koninklijk Nederlands Korfbalverbond. (s. f.). *Ontstaan van korfbal*. Recuperado el 30 de septiembre de 2026 de https://www.knkv.nl/kennisbank/ontstaan-van-korfbal/"
+  ],
+  "refs_en": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "International Korfball Federation. (n.d.). *This is korfball*. Retrieved September 29, 2026, from https://korfball.sport/this-is-korfball-v2/",
+   "International Korfball Federation. (2019). *History of the IKF and the World Games*. Retrieved September 29, 2026, from https://korfball.sport/wp-content/uploads/2019/05/WorldGamesHistory-December-2019.pdf",
+   "Koninklijk Nederlands Korfbalverbond. (n.d.). *Ontstaan van korfbal*. Retrieved September 30, 2026, from https://www.knkv.nl/kennisbank/ontstaan-van-korfbal/"
+  ]
+ },
+ {
+  "id": "parkour",
+  "name": {
+   "es": "Parkour",
+   "en": "Parkour"
+  },
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Lisses y Évry (afueras de París, Francia), décadas de 1980 y 1990; disciplina de la federación internacional de gimnasia, 2017",
+   "en": "Lisses and Évry (outskirts of Paris, France), 1980s and 1990s; discipline of the international gymnastics federation, 2017"
+  },
+  "body": {
+   "es": [
+    "El parkour tiene un antecedente reconocido en el método natural de Georges Hébert, oficial de la Marina francesa que, tras observar desde 1896 la destreza de movimiento de los pueblos que conoció en sus destinos, empezó a probar hacia 1904 un sistema de ejercicios destinado a recuperar las habilidades prácticas del cuerpo. Raymond Belle, nacido en 1939 en la Indochina francesa y miembro desde 1954 de los bomberos militares de París, se formó en esos métodos y en el entrenamiento en recorridos de obstáculos, a los que llamaba *parcours*, palabra de la que su hijo David y sus compañeros derivaron el término *parkour* (Parkour UK, s. f.). El origen militar del método, que Hébert desarrolló como instructor de los fusileros navales de Lorient, y su carácter utilitario, basado en ejercicios naturales como la marcha, la carrera, el salto, el trepar o el equilibrio encadenados en un recorrido, acompañan al parkour desde su nacimiento (Ramírez Macías, 2013, pp. 96-98).",
+    "David Belle, nacido en 1973, empezó a entrenar por su cuenta en la década de 1980 y, tras trasladarse a Lisses, reunió a un grupo de jóvenes que practicaban en el entorno urbano de esa localidad y de Évry, en las afueras de París (Parkour UK, s. f.). La federación internacional de gimnasia sitúa el comienzo de la disciplina en la década de 1990, cuando aquellos jóvenes saltaban escaleras, barreras, muros y mobiliario urbano (World Gymnastics, s. f.). En 1997 el grupo adoptó el nombre de Yamakasi; después Belle se separó y acuñó el término parkour, mientras que el resto continuó bajo la denominación de *art du déplacement* (Parkour UK, s. f.). La práctica nació, por tanto, como una forma de apropiarse del espacio de la periferia urbana.",
+    "La difusión mundial se debió al cine y a la televisión, con la película *Yamakasi* en 2001, el documental *Jump London* en 2003 y *Banlieue 13* en 2004 (Parkour UK, s. f.). En febrero de 2017 el comité ejecutivo de la federación internacional de gimnasia aprobó el desarrollo del parkour como disciplina propia, y en 2018 se lanzó su primera Copa del Mundo (World Gymnastics, s. f.). Esa decisión encontró la oposición de Parkour Earth, que agrupaba a federaciones de parkour de varios países, entre ellos Francia, Gran Bretaña y Australia, y que en agosto de 2017 reclamó ser la custodia de la filosofía y la soberanía de la disciplina frente a la gimnasia (Grassie, 2017)."
+   ],
+   "en": [
+    "Parkour has an acknowledged forerunner in the natural method of Georges Hébert, a French Navy officer who, after observing from 1896 the movement skills of the peoples he met on his postings, began around 1904 to test a system of exercises intended to recover the practical abilities of the body. Raymond Belle, born in 1939 in French Indochina and a member of the Paris military fire service from 1954, was trained in these methods and in obstacle-course training, which he called *parcours*, a word from which his son David and his companions derived the term *parkour* (Parkour UK, n.d.). The military origin of the method, which Hébert developed as instructor of the naval riflemen at Lorient, and its utilitarian character, based on natural exercises such as walking, running, jumping, climbing or balancing linked together along a course, have accompanied parkour since its birth (Ramírez Macías, 2013, pp. 96-98).",
+    "David Belle, born in 1973, began training on his own in the 1980s and, after moving to Lisses, gathered a group of young people who practised in the urban setting of that town and of Évry, on the outskirts of Paris (Parkour UK, n.d.). The international gymnastics federation places the beginning of the discipline in the 1990s, when those young people jumped over stairs, barriers, walls and street furniture (World Gymnastics, n.d.). In 1997 the group adopted the name Yamakasi; Belle later left and coined the term parkour, while the rest continued under the name *art du déplacement* (Parkour UK, n.d.). The practice was thus born as a way of appropriating the space of the urban periphery.",
+    "Its worldwide spread was due to cinema and television, with the film *Yamakasi* in 2001, the documentary *Jump London* in 2003 and *Banlieue 13* in 2004 (Parkour UK, n.d.). In February 2017 the executive committee of the international gymnastics federation approved the development of parkour as a discipline of its own, and in 2018 its first World Cup was launched (World Gymnastics, n.d.). That decision met with the opposition of Parkour Earth, which brought together parkour federations from several countries, among them France, Britain and Australia, and which in August 2017 claimed to be the custodian of the philosophy and sovereignty of the discipline against gymnastics (Grassie, 2017)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/parkour.jpg",
+   "pie": {
+    "es": "Atletas haciendo ejercicios en el Collège d'athlètes de Reims, centro dirigido por Georges Hébert, en octubre de 1913.",
+    "en": "Athletes exercising at the Collège d'athlètes in Reims, a centre directed by Georges Hébert, in October 1913."
+   },
+   "autor": "Agence Rol",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:1-10-13,_Reims,_coll%C3%A8ge_d%27athl%C3%A8tes_(un_groupe_d%27athl%C3%A8tes_effectuant_des_exercices)_-_btv1b6927325f.jpg"
+  },
+  "refs": [
+   "Grassie, J. (2017, 25 de agosto). Parkour organizers tell International Gymnastics Federation to back off. *NBC Sports*. https://www.nbcsports.com/olympics/news/parkour-organizers-tell-international-gymnastics-federation-to-back-off",
+   "Parkour UK. (s. f.). *A brief history of parkour*. Recuperado el 29 de septiembre de 2026 de https://parkour.uk/hub/a-brief-history-of-parkour",
+   "Ramírez Macías, G. (2013). *Manual de teoría e historia de la educación física y el deporte contemporáneos*. Wanceulen.",
+   "World Gymnastics. (s. f.). *Parkour: History*. Recuperado el 29 de septiembre de 2026 de https://www.gymnastics.sport/site/pages/disciplines/pk-history.php"
+  ],
+  "refs_en": [
+   "Grassie, J. (2017, August 25). Parkour organizers tell International Gymnastics Federation to back off. *NBC Sports*. https://www.nbcsports.com/olympics/news/parkour-organizers-tell-international-gymnastics-federation-to-back-off",
+   "Parkour UK. (n.d.). *A brief history of parkour*. Retrieved September 29, 2026, from https://parkour.uk/hub/a-brief-history-of-parkour",
+   "Ramírez Macías, G. (2013). *Manual de teoría e historia de la educación física y el deporte contemporáneos*. Wanceulen.",
+   "World Gymnastics. (n.d.). *Parkour: History*. Retrieved September 29, 2026, from https://www.gymnastics.sport/site/pages/disciplines/pk-history.php"
+  ]
+ },
+ {
+  "id": "slackline",
+  "name": {
+   "es": "Slackline",
+   "en": "Slackline"
+  },
+  "bloque": {
+   "es": "En la naturaleza",
+   "en": "Outdoor sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Valle de Yosemite (California, Estados Unidos), comienzos de la década de 1980; asociación internacional, 2015",
+   "en": "Yosemite Valley (California, United States), early 1980s; international association, 2015"
+  },
+  "body": {
+   "es": [
+    "Caminar en equilibrio sobre cables, cuerdas o vigas es una práctica muy antigua, y el propio término acróbata terminó designando al gimnasta que caminaba sobre cuerdas o se exhibía colgado de ellas, un ejercicio que siempre pareció moral y físicamente peligroso porque el artista desafiaba a la muerte (McClelland, 1999, p. 1). El slackline suele confundirse con ese funambulismo, hoy asociado al circo, aunque tiene un origen distinto y mucho más reciente en el mundo de la escalada (International Slackline Association [ISA], s. f.; UIAA, 2019).",
+    "En el valle de Yosemite los escaladores ocupaban sus días de descanso manteniendo el equilibrio sobre las cadenas de los aparcamientos, y a comienzos de los años ochenta Adam Grosowsky y Jeff Ellington tuvieron la idea de usar su material de escalada, en particular la cinta plana, para caminar sobre ella, y llevaron la práctica a los campamentos de escaladores del valle (ISA, s. f.; UIAA, 2019). En el verano de 1983 ambos tendieron una línea en la aguja de Lost Arrow, en Yosemite, sin llegar a cruzarla, y el 13 de julio de 1985 Scott Balcom se convirtió en el primero en atravesarla sobre cinta, lo que dio origen a la modalidad en altura o *highline* (Fernández Truan, s. f., p. 88).",
+    "Desde Yosemite el slackline se extendió lentamente a otros países a través de los ambientes de escalada, y hacia 2006 se popularizó en Europa gracias a la venta de equipos sencillos (ISA, s. f.). En agosto de 2015 las asociaciones nacionales de Suiza, Austria, Alemania y los Estados Unidos fundaron la International Slackline Association (ISA), con sede en el Club Alpino Suizo, que en 2018 ingresó como miembro observador en la UIAA (UIAA, 2019). Su práctica ha dado lugar a disciplinas muy diversas, desde las acrobacias del *trickline* hasta las líneas largas, las tendidas sobre el agua o las travesías en altura (ISA, s. f.)."
+   ],
+   "en": [
+    "Balancing on cables, ropes or beams is a very old practice, and the word acrobat itself came to designate the gymnast who walked on ropes or performed hanging from them, an exercise that always seemed morally and physically dangerous because the performer was defying death (McClelland, 1999, p. 1). Slacklining is often confused with this tightrope walking, now associated with the circus, although it has a different and much more recent origin in the world of climbing (International Slackline Association [ISA], n.d.; UIAA, 2019).",
+    "In Yosemite Valley climbers spent their rest days balancing on the chains of car parks, and in the early 1980s Adam Grosowsky and Jeff Ellington had the idea of using their climbing gear, in particular flat webbing, to walk on, and introduced the practice to the climbers' camps in the valley (ISA, n.d.; UIAA, 2019). In the summer of 1983 the two rigged a line on Lost Arrow Spire in Yosemite without managing to cross it, and on 13 July 1985 Scott Balcom became the first to cross it on webbing, which gave rise to the high-altitude form known as highlining (Fernández Truan, n.d., p. 88).",
+    "From Yosemite slacklining spread slowly to other countries through the climbing scene, and around 2006 it became popular in Europe thanks to the sale of simple kits (ISA, n.d.). In August 2015 the national associations of Switzerland, Austria, Germany and the United States founded the International Slackline Association (ISA), based at the Swiss Alpine Club, which in 2018 joined the UIAA as an observer member (UIAA, 2019). The practice has given rise to very diverse disciplines, from *trickline* acrobatics to long lines, lines rigged over water and high-altitude crossings (ISA, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/slackline.jpg",
+   "pie": {
+    "es": "Un practicante de *highline* en el Parque Nacional de Yosemite, con El Capitán al fondo.",
+    "en": "A highliner in Yosemite National Park, with El Capitan in the background."
+   },
+   "autor": {
+    "es": "LiAnna Davis",
+    "en": "LiAnna Davis"
+   },
+   "licencia": {
+    "es": "CC BY-SA 3.0",
+    "en": "CC BY-SA 3.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Man_highlining_in_Yosemite_National_Park_with_El_Capitan_in_the_background.JPG"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Slackline Association. (s. f.). *What is slacklining?* Recuperado el 29 de septiembre de 2026 de https://www.slacklineinternational.org/what-is-slacklining/",
+   "McClelland, J. (1999). Acrobatics. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 1-2). Oxford University Press.",
+   "UIAA. (2019, 15 de febrero). *Slackliners join the UIAA community*. Recuperado el 29 de septiembre de 2026 de https://www.theuiaa.org/slackliners-join-the-uiaa-community/"
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Slackline Association. (n.d.). *What is slacklining?* Retrieved September 29, 2026, from https://www.slacklineinternational.org/what-is-slacklining/",
+   "McClelland, J. (1999). Acrobatics. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 1-2). Oxford University Press.",
+   "UIAA. (2019, February 15). *Slackliners join the UIAA community*. Retrieved September 29, 2026, from https://www.theuiaa.org/slackliners-join-the-uiaa-community/"
+  ]
+ },
+ {
+  "id": "senderismo",
+  "name": {
+   "es": "Senderismo",
+   "en": "Hiking"
+  },
+  "bloque": {
+   "es": "En la naturaleza",
+   "en": "Outdoor sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Europa, siglo XIX (senderos balizados de Fontainebleau, Francia, 1842; *Wandervögel*, Berlín, 1901); Grandes Rutas francesas, 1947, y senderos europeos, 1972",
+   "en": "Europe, nineteenth century (waymarked paths at Fontainebleau, France, 1842; *Wandervögel*, Berlin, 1901); French Grandes Randonnées, 1947, and European long-distance paths, 1972"
+  },
+  "body": {
+   "es": [
+    "Caminar por placer es una práctica muy antigua, pero el senderismo como actividad organizada procede de la nueva mirada sobre la naturaleza que difundió el Romanticismo, con Rousseau como referente, y que convirtió el paisaje de montaña en objeto de contemplación (Guttmann, 1988, p. 174). Uno de los primeros hitos fue el bosque de Fontainebleau, cerca de París, donde Claude-François Denecourt trazó desde 1842, para que los paseantes pudieran recorrerlo sin perderse, unos 150 kilómetros de caminos señalizados con flechas azules, los *sentiers bleus*, que el organismo forestal francés considera los primeros senderos balizados del mundo (Office national des forêts [ONF], s. f.).",
+    "A finales del siglo XIX el caminar en grupo adquirió además un sentido generacional. En Berlín, en el cambio de siglo, los jóvenes de la burguesía convirtieron la marcha en una forma de escapar de la ciudad, de la familia autoritaria y de la modernización, y en 1901 fundaron una asociación con el nombre de *Wandervögel* (aves migratorias). Sus grupos caminaban durante días o semanas, dormían al raso o en pajares, cantaban canciones populares y vestían de manera informal, y aunque la mayoría eran varones algunos clubes admitían a muchachas o estaban formados solo por ellas; en 1913 tres mil de ellos se reunieron en el Hoher Meissner (Gems et al., 2008, p. 190).",
+    "En Francia, la llegada de las vacaciones pagadas en 1936 animó a Jean Loiseau, caminante que se había interesado por los senderos marcados con colores de los Apalaches, a compartir su afición; en 1946 fijó el balizado de los senderos de gran recorrido, una raya roja sobre otra blanca, y en 1947 se creó el Comité Nacional de Senderos de Gran Recorrido y se inauguró en Orleans el primer tramo del GR 3 (Fédération Française de la Randonnée Pédestre [FFRandonnée], s. f.). El 19 de octubre de 1969 representantes de ocho clubes fundaron la Asociación Europea de Senderismo (ERA), presidida por Georg Fahrbach, en el refugio del Schwäbischer Albverein en el Raichberg (Alemania), y el 16 de julio de 1972 se inauguraron en Constanza los primeros senderos europeos, el E1 y el E5 (ERA, s. f.). El senderismo se ha mantenido como práctica recreativa, sin competición, ligada al turismo, a la salud y a la protección del paisaje."
+   ],
+   "en": [
+    "Walking for pleasure is a very old practice, but hiking as an organised activity stems from the new view of nature spread by Romanticism, with Rousseau as its reference point, which turned mountain scenery into an object of contemplation (Guttmann, 1988, p. 174). One of the first landmarks was the forest of Fontainebleau, near Paris, where from 1842 Claude-François Denecourt laid out, so that walkers could explore it without getting lost, some 150 kilometres of paths marked with blue arrows, the *sentiers bleus*, which the French forestry agency regards as the first waymarked footpaths in the world (Office national des forêts [ONF], n.d.).",
+    "At the end of the nineteenth century walking in groups also took on a generational meaning. In Berlin, at the turn of the century, bourgeois youths turned hiking into a way of escaping the city, the authoritarian family and modernisation, and in 1901 they founded an association called the *Wandervögel* (migrating birds). Their groups walked for days or weeks, slept in the open or in barns, sang folk songs and dressed informally, and although most were young men some clubs admitted girls or consisted entirely of them; in 1913 three thousand of them gathered on the Hoher Meissner (Gems et al., 2008, p. 190).",
+    "In France, the arrival of paid holidays in 1936 encouraged Jean Loiseau, a walker who had taken an interest in the colour-marked trails of the Appalachians, to share his passion; in 1946 he set the waymarking of the long-distance footpaths, a red stripe above a white one, and in 1947 the National Committee for Long-Distance Footpaths was created and the first section of the GR 3 was opened at Orléans (Fédération Française de la Randonnée Pédestre [FFRandonnée], n.d.). On 19 October 1969 representatives of eight clubs founded the European Ramblers' Association (ERA), chaired by Georg Fahrbach, at the Schwäbischer Albverein hut on the Raichberg (Germany), and on 16 July 1972 the first European long-distance paths, the E1 and the E5, were opened in Konstanz (ERA, n.d.). Hiking has remained a recreational practice, without competition, linked to tourism, health and the protection of the landscape."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/senderismo.jpg",
+   "pie": {
+    "es": "Un grupo de *Wandervögel* de Steglitz (Berlín) en una larga marcha, hacia 1930 (Bundesarchiv).",
+    "en": "A group of *Wandervögel* from Steglitz (Berlin) on a long hike, around 1930 (Bundesarchiv)."
+   },
+   "autor": {
+    "es": "Autor anónimo (Scherl Bilderdienst, Bundesarchiv)",
+    "en": "Anonymous (Scherl Bilderdienst, Bundesarchiv)"
+   },
+   "licencia": {
+    "es": "CC BY-SA 3.0 DE",
+    "en": "CC BY-SA 3.0 DE"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-R24553,_Gruppe_des_Wandervogels_aus_Berlin.jpg"
+  },
+  "refs": [
+   "ERA. (s. f.). *The history of E-paths and European Hiking Federation (ERA)*. Recuperado el 29 de septiembre de 2026 de https://www.era-ewv-ferp.org/history-of-the-e-paths-and-era/",
+   "Fédération Française de la Randonnée Pédestre. (s. f.). *L'histoire des GR®*. Recuperado el 30 de septiembre de 2026 de https://www.ffrandonnee.fr/randonner/sentiers/l-histoire-des-gr",
+   "Gems, G. R., Borish, L. J., y Pfister, G. (2008). *Sports in American history: From colonization to globalization*. Human Kinetics.",
+   "Guttmann, A. (1988). *A whole new ball game: An interpretation of American sports*. University of North Carolina Press.",
+   "Office national des forêts. (s. f.). *Claude-François Denecourt, le pionnier de la randonnée pédestre*. Recuperado el 30 de septiembre de 2026 de https://www.onf.fr/foret-exception/+/12e3::foret-de-fontainebleau-claude-francois-denecourt-le-pionner-de-la-randonnee-pedestre.html"
+  ],
+  "refs_en": [
+   "ERA. (n.d.). *The history of E-paths and European Hiking Federation (ERA)*. Retrieved September 29, 2026, from https://www.era-ewv-ferp.org/history-of-the-e-paths-and-era/",
+   "Fédération Française de la Randonnée Pédestre. (n.d.). *L'histoire des GR®*. Retrieved September 30, 2026, from https://www.ffrandonnee.fr/randonner/sentiers/l-histoire-des-gr",
+   "Gems, G. R., Borish, L. J., & Pfister, G. (2008). *Sports in American history: From colonization to globalization*. Human Kinetics.",
+   "Guttmann, A. (1988). *A whole new ball game: An interpretation of American sports*. University of North Carolina Press.",
+   "Office national des forêts. (n.d.). *Claude-François Denecourt, le pionnier de la randonnée pédestre*. Retrieved September 30, 2026, from https://www.onf.fr/foret-exception/+/12e3::foret-de-fontainebleau-claude-francois-denecourt-le-pionner-de-la-randonnee-pedestre.html"
+  ]
+ },
+ {
+  "id": "esqui-de-montana",
+  "name": {
+   "es": "Esquí de montaña",
+   "en": "Ski mountaineering"
+  },
+  "bloque": {
+   "es": "De invierno",
+   "en": "Winter sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Alpes, décadas de 1890 y 1900 (primeras travesías y ascensiones con esquís); olímpico en Milano Cortina 2026",
+   "en": "The Alps, 1890s and 1900s (first ski traverses and ascents); Olympic at Milano Cortina 2026"
+  },
+  "body": {
+   "es": [
+    "El esquí de montaña nació en los Alpes, al cruzarse el alpinismo con el esquí noruego, y tuvo poco que ver con la tradición escandinava, hasta el punto de que el británico Cecil Slingsby, que en 1880 recorrió con esquís collados noruegos, no consiguió interesar a los noruegos por la travesía de alta montaña (Allen, 2007, p. 95). En 1893 el ingeniero noruego Olaf Kjelsberg cruzó el paso del Pragel, hazaña que animó a fundar el club de esquí de Glaris y que demostró la superioridad del esquí sobre las raquetas; en 1894 Wilhelm von Arlt subió al Hoher Sonnblick y en 1897 Wilhelm Paulcke y sus compañeros atravesaron en cinco días el Oberland bernés, travesía que inspiró a muchos otros a practicar el esquí de montaña (Allen, 2007, pp. 98-99).",
+    "En la vertiente francesa, el doctor Payot, médico de Chamonix, que visitaba a sus pacientes con esquís, cruzó el Col de Balme en febrero de 1902 y en la temporada siguiente hizo la travesía de Chamonix a Zermatt, con la que se inauguró la Haute Route (Allen, 2007, p. 79). En febrero de 1904 Hugo Mylius subió al Mont Blanc con esquís y ese mismo año el Club Alpino Francés incluyó en su manual de alpinismo un capítulo sobre su uso (Allen, 2007, p. 97). La práctica procedía de una clase alta imbuida del cristianismo muscular victoriano, que trasladó al invierno sus escaladas estivales, y chocó con la vieja guardia del alpinismo, que despreciaba a aquellos «excursionistas artísticos» porque el placer del descenso le parecía sospechoso (Allen, 2007, pp. 96 y 99).",
+    "La competición llegó mucho después. Fernández Truan fecha las primeras carreras en 1893 en Alemania y afirma que el esquí de montaña formó parte de los Juegos de Chamonix de 1924, aunque la prueba que se disputó allí fue la patrulla militar, que la Unión Internacional de Biatlón considera antecedente del biatlón (Fernández Truan, s. f., p. 1046; International Biathlon Union, s. f.). Hoy regula las competiciones la International Ski Mountaineering Federation (ISMF), y el esquí de montaña debutó en los Juegos Olímpicos de Invierno de Milano Cortina 2026 con dos pruebas, el esprint y el relevo mixto, disputadas en Bormio en febrero de ese año (International Ski Mountaineering Federation [ISMF], 2026)."
+   ],
+   "en": [
+    "Ski mountaineering was born in the Alps, where mountaineering met Norwegian skiing, and it had little to do with the Scandinavian tradition, so much so that the Englishman Cecil Slingsby, who crossed Norwegian passes on skis in 1880, failed to interest Norwegians in high-mountain touring (Allen, 2007, p. 95). In 1893 the Norwegian engineer Olaf Kjelsberg crossed the Pragel pass, a feat that prompted the founding of the Glarus ski club and proved the superiority of skis over snowshoes; in 1894 Wilhelm von Arlt climbed the Hoher Sonnblick, and in 1897 Wilhelm Paulcke and his companions crossed the Bernese Oberland in five days, a traverse that inspired many others to take up ski mountaineering (Allen, 2007, pp. 98-99).",
+    "On the French side, Dr Payot, a Chamonix physician, who visited his patients on skis, crossed the Col de Balme in February 1902 and the following season made the traverse from Chamonix to Zermatt, which inaugurated the Haute Route (Allen, 2007, p. 79). In February 1904 Hugo Mylius climbed Mont Blanc on skis, and that same year the French Alpine Club included a chapter on their use in its mountaineering manual (Allen, 2007, p. 97). The practice came from an upper class steeped in Victorian muscular Christianity, which carried its summer climbs into winter, and it clashed with the old guard of mountaineering, who scorned these \"artistic excursionists\" because they found the pleasure of the descent suspect (Allen, 2007, pp. 96 and 99).",
+    "Competition came much later. Fernández Truan dates the first races to 1893 in Germany and states that ski mountaineering was part of the 1924 Chamonix Games, although the event held there was the military patrol, which the International Biathlon Union regards as a forerunner of biathlon (Fernández Truan, n.d., p. 1046; International Biathlon Union, n.d.). Competitions are now governed by the International Ski Mountaineering Federation (ISMF), and ski mountaineering made its debut at the Milano Cortina 2026 Olympic Winter Games with two events, the sprint and the mixed relay, held at Bormio in February of that year (International Ski Mountaineering Federation [ISMF], 2026)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/esqui-de-montana.jpg",
+   "pie": {
+    "es": "Tres esquiadores al atardecer en St. Christoph am Arlberg, fotografía del fondo de Wilhelm Paulcke.",
+    "en": "Three skiers at dusk in St. Christoph am Arlberg, photograph from the Wilhelm Paulcke collection."
+   },
+   "autor": {
+    "es": "Autor anónimo (fondo Paulcke, Landesarchiv Baden-Württemberg)",
+    "en": "Anonymous (Paulcke collection, Landesarchiv Baden-Württemberg)"
+   },
+   "licencia": {
+    "es": "CC BY 4.0",
+    "en": "CC BY 4.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Drei_Skil%C3%A4ufer_bei_Abendstimmung_in_St._Christoph_am_Arlberg_-_LABW_-_Generallandesarchiv_Karlsruhe_F-S_Paulcke_Nr._3588.jpg"
+  },
+  "refs": [
+   "Allen, E. J. B. (2007). *The culture and sport of skiing: From antiquity to World War II*. University of Massachusetts Press.",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Biathlon Union. (s. f.). *Military origins*. Recuperado el 29 de septiembre de 2026 de https://www.biathlonworld.com/discover-biathlon/history/military-origins",
+   "International Ski Mountaineering Federation. (2026, 12 de febrero). *History in the making: 7 days to the Olympic debut of ski mountaineering!* Recuperado el 30 de septiembre de 2026 de https://ismf-ski.com/history-in-the-making-7-days-to-the-olympic-debut-of-ski-mountaineering/"
+  ],
+  "refs_en": [
+   "Allen, E. J. B. (2007). *The culture and sport of skiing: From antiquity to World War II*. University of Massachusetts Press.",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Biathlon Union. (n.d.). *Military origins*. Retrieved September 29, 2026, from https://www.biathlonworld.com/discover-biathlon/history/military-origins",
+   "International Ski Mountaineering Federation. (2026, February 12). *History in the making: 7 days to the Olympic debut of ski mountaineering!* Retrieved September 30, 2026, from https://ismf-ski.com/history-in-the-making-7-days-to-the-olympic-debut-of-ski-mountaineering/"
+  ]
+ },
+ {
+  "id": "pesca-deportiva",
+  "name": {
+   "es": "Pesca deportiva",
+   "en": "Sport fishing"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Tradición antigua (Egipto, Japón); forma moderna en Inglaterra entre 1496 y 1653, con los primeros tratados de pesca con caña; competición y récords en el siglo XX",
+   "en": "Ancient tradition (Egypt, Japan); modern form in England between 1496 and 1653, with the first treatises on angling; competition and records in the twentieth century"
+  },
+  "body": {
+   "es": [
+    "La pesca por alimento es la madre de la pesca deportiva, y la distinción entre ambas depende sobre todo de quién pesca y para qué. En Egipto, la pesca con arpón que decora las tumbas nobles del Imperio Antiguo debía proporcionar un placer contemplativo al difunto (Decker, 1992), de modo que la misma actividad que para el campesino era sustento servía al noble como ocio y distinción. Los primeros escritos sobre pesca deportiva proceden del Japón del siglo VIII, donde ya era una práctica de prestigio social (Yoder, 1999, p. 129), y Fernández Truan (s. f., p. 168) recuerda que Claudio Eliano describió en el siglo III el uso de moscas artificiales por los pescadores de truchas de Macedonia.",
+    "La forma moderna se fijó en Inglaterra. El *Treatyse of Fysshynge wyth an Angle*, impreso en 1496 y atribuido a Dame Juliana Berners, presentaba la pesca con caña como un pasatiempo aristocrático, y *The Compleat Angler*, de Izaak Walton, publicado en 1653, trató a la vez la técnica y la filosofía del pescador y se convirtió en el libro más influyente del género (Salvador Alonso, 2006, p. 592; Yoder, 1999, p. 129). La jerarquía social pasó también a las especies, hasta el punto de que muchos ingleses siguen considerando pesca basta cualquier pez que no sea la trucha o el salmón. En Estados Unidos, donde los puritanos habían visto la pesca como una pérdida de tiempo, la afición creció desde comienzos del siglo XIX con el carrete de Kentucky y la caña de bambú, y la pesca con mosca conservó el mayor prestigio (Yoder, 1999, pp. 129-130).",
+    "La competición llegó en el siglo XX con el registro de récords y los torneos. La International Game Fish Association, que homologa los récords de agua salada y dulce, nació en 1939 con sede en el American Museum of Natural History (International Game Fish Association [IGFA], s. f.), aunque Yoder (1999, p. 133) fecha su fundación en 1940. En 1967 se celebró el primer torneo de pesca del black bass y en 1968 nació la Bass Anglers Sportsman Society, que convirtió a un pequeño grupo de profesionales, casi todos varones blancos de mediana edad, en figuras patrocinadas por la industria del material de pesca (Yoder, 1999, p. 129). El agotamiento de las poblaciones y las críticas de los defensores de los animales han extendido la captura y suelta, y la pesca conserva a menudo su antigua consideración de deporte de élite (Yoder, 1999, p. 129)."
+   ],
+   "en": [
+    "Fishing for food is the mother of sport fishing, and the distinction between the two depends above all on who fishes and why. In Egypt, the harpoon fishing that decorates the noble tombs of the Old Kingdom was meant to give the deceased a contemplative pleasure (Decker, 1992), so the same activity that meant sustenance for the peasant served the noble as leisure and distinction. The earliest writing on sport fishing comes from eighth-century Japan, where it was already a socially prestigious practice (Yoder, 1999, p. 129), and Fernández Truan (n.d., p. 168) notes that Claudius Aelianus described in the third century the use of artificial flies by trout fishermen in Macedonia.",
+    "The modern form took shape in England. The *Treatyse of Fysshynge wyth an Angle*, printed in 1496 and attributed to Dame Juliana Berners, presented angling as an aristocratic pastime, and Izaak Walton's *The Compleat Angler*, published in 1653, dealt with both the technique and the philosophy of the angler and became the most influential book of its kind (Salvador Alonso, 2006, p. 592; Yoder, 1999, p. 129). Social hierarchy was also transferred to the species, to the point that many English people still regard every fish except trout and salmon as coarse fish. In the United States, where the Puritans had seen fishing as a waste of time, the pastime grew from the early nineteenth century with the Kentucky reel and the split bamboo rod, and fly fishing kept the greatest prestige (Yoder, 1999, pp. 129-130).",
+    "Competition arrived in the twentieth century with record keeping and tournaments. The International Game Fish Association, which ratifies saltwater and freshwater records, was born in 1939, housed at the American Museum of Natural History (International Game Fish Association [IGFA], n.d.), although Yoder (1999, p. 133) dates its foundation to 1940. The first bass tournament was held in 1967 and the Bass Anglers Sportsman Society was born in 1968, turning a small group of professionals, almost all white middle-aged men, into figures sponsored by the fishing tackle industry (Yoder, 1999, p. 129). Depleted stocks and criticism from animal rights activists have spread catch-and-release, and fishing often keeps its old standing as an elite sport (Yoder, 1999, p. 129)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 2,
+    "f": "la-caza-en-las-marismas",
+    "t": {
+     "es": "La caza en las marismas",
+     "en": "Hunting in the marshes"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/pesca-deportiva.jpg",
+   "pie": {
+    "es": "Portada de la primera edición de *The Compleat Angler*, de Izaak Walton (Londres, 1653).",
+    "en": "Title page of the first edition of Izaak Walton's *The Compleat Angler* (London, 1653)."
+   },
+   "autor": "Izaak Walton",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:The_Compleat_Angler,_by_Izaak_Walton_(1653)_(title_page).jpg"
+  },
+  "refs": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trad.). Yale University Press.",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Game Fish Association. (s. f.). *About us*. Recuperado el 30 de septiembre de 2026 de https://igfa.org/about-us/",
+   "Salvador Alonso, J. L. (2006). *El deporte en Occidente: Historia, cultura, política y espacios* (Tomo II) [Tesis doctoral, Universidade da Coruña].",
+   "Yoder, D. G. (1999). Fishing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 129-134). Oxford University Press."
+  ],
+  "refs_en": [
+   "Decker, W. (1992). *Sports and games of ancient Egypt* (A. Guttmann, Trans.). Yale University Press.",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Game Fish Association. (n.d.). *About us*. Retrieved September 30, 2026, from https://igfa.org/about-us/",
+   "Salvador Alonso, J. L. (2006). *El deporte en Occidente: Historia, cultura, política y espacios* (Tomo II) [Doctoral dissertation, Universidade da Coruña].",
+   "Yoder, D. G. (1999). Fishing. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 129-134). Oxford University Press."
+  ]
+ },
+ {
+  "id": "artes-marciales-mixtas",
+  "name": {
+   "es": "Artes marciales mixtas",
+   "en": "Mixed martial arts"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Brasil (vale tudo) y Estados Unidos, siglo XX; forma moderna con el Ultimate Fighting Championship, Estados Unidos, 1993, y reglas unificadas desde 2001",
+   "en": "Brazil (vale tudo) and the United States, twentieth century; modern form with the Ultimate Fighting Championship, United States, 1993, and unified rules from 2001"
+  },
+  "body": {
+   "es": [
+    "Las artes marciales mixtas combinan la lucha con los golpes de las artes marciales de percusión y reúnen técnicas del boxeo tailandés, el judo, el jiu-jitsu brasileño y el boxeo; la federación internacional les busca raíces en el pancracio de los Juegos Olímpicos antiguos (IMMAF, s. f.-b), una prueba introducida en Olimpia en 648 a. C. y tan brutal que solo prohibía morder y hundir los ojos al rival (Guttmann, 2004, p. 21). Su antecedente inmediato fueron los combates de *vale tudo* nacidos en el entorno del jiu-jitsu brasileño, en los que sus practicantes ponían a prueba su técnica frente a otros deportes de combate (IMMAF, s. f.-b). Fernández Truan considera además precursores los encuentros entre especialistas de distintos estilos que organizó en Inglaterra, a comienzos del siglo XX, Edward Barton-Wright (Fernández Truan, s. f., p. 217).",
+    "La forma contemporánea se dio a conocer a través de un programa de televisión estadounidense, el Ultimate Fighting Championship (UFC), que comenzó en 1993 y enfrentaba a especialistas de distintas disciplinas para decidir qué estilo era superior (IMMAF, s. f.-b). Aquellos primeros torneos, que llevaban a Estados Unidos el desafío que la familia Gracie venía lanzando desde Brasil, se emitían en pago por visión, tenían muy pocas reglas y admitían todos los estilos, y su dureza atrajo al público televisivo tanto como provocó la prohibición en varios estados (Vamplew, 2021, p. 121); en 2001 la empresa Zuffa asumió el UFC y trabajó con los organismos reguladores de los estados para elaborar e implantar las reglas unificadas de las artes marciales mixtas, que lo convirtieron en un deporte reglado, con normas sobre arbitraje y seguridad médica y un vallado que impide que los luchadores caigan fuera del ring (IMMAF, s. f.-b). Según Fernández Truan, el primer uso documentado de la expresión «artes marciales mixtas» aparece en una crítica televisiva del UFC de 1993 (Fernández Truan, s. f., p. 799).",
+    "La organización deportiva llegó tarde y desde el profesionalismo. En 2012 se fundaron dos organismos rivales, la International Mixed Martial Arts Federation (IMMAF), en Suecia, con apoyo del UFC, y la World Mixed Martial Arts Association (WMMAA), en Mónaco; la IMMAF celebró su primer campeonato del mundo aficionado en Las Vegas en 2014 y, después de que la Asociación Global de Federaciones Deportivas Internacionales (GAISF) les advirtiera en junio de 2017 de que solo podía considerarse un solicitante por deporte, ambas cerraron a finales de 2018 un acuerdo de unificación (IMMAF, s. f.-a). La federación reúne hoy más de 120 federaciones nacionales y aspira al reconocimiento olímpico (IMMAF, s. f.-a). Su historia está marcada por la búsqueda de legitimidad frente a la acusación de violencia, como muestra el caso de Suecia, donde en 2006 un proyecto de ley pretendía extender a las artes marciales mixtas la prohibición vigente del boxeo profesional (IMMAF, s. f.-a)."
+   ],
+   "en": [
+    "Mixed martial arts combine wrestling with the strikes of the percussive martial arts and bring together techniques from Thai boxing, judo, Brazilian jiu-jitsu and boxing; the international federation traces their roots to the pankration of the ancient Olympic Games (IMMAF, n.d.-b), an event introduced at Olympia in 648 BCE and so brutal that it forbade only biting and gouging the opponent's eyes (Guttmann, 2004, p. 21). Their immediate forerunner was the *vale tudo* bouts that arose around Brazilian jiu-jitsu, in which its practitioners tested their technique against other combat sports (IMMAF, n.d.-b). Fernández Truan also regards as precursors the contests between specialists of different styles organized in England in the early twentieth century by Edward Barton-Wright (Fernández Truan, n.d., p. 217).",
+    "The contemporary form became known through an American television contest, the Ultimate Fighting Championship (UFC), which began in 1993 and pitted specialists from different disciplines against each other to decide which style was superior (IMMAF, n.d.-b). Those first tournaments, which brought to the United States the challenge the Gracie family had been issuing in Brazil, were broadcast on pay-per-view, had very few rules and admitted every style, and their brutality appealed to the television audience as much as it led several states to ban them (Vamplew, 2021, p. 121); in 2001 the company Zuffa took over the UFC and worked with state regulatory bodies to develop and implement the Unified Rules of Mixed Martial Arts, which turned it into a regulated sport, with rules on officiating and medical safety and a fence that prevents athletes from tumbling out of the ring (IMMAF, n.d.-b). According to Fernández Truan, the first documented use of the phrase «mixed martial arts» appears in a television review of the 1993 UFC (Fernández Truan, n.d., p. 799).",
+    "Sporting organization came late and from within professionalism. In 2012 two rival bodies were founded, the International Mixed Martial Arts Federation (IMMAF), in Sweden, with UFC support, and the World Mixed Martial Arts Association (WMMAA), in Monaco; IMMAF held its first amateur world championship in Las Vegas in 2014 and, after the Global Association of International Sports Federations (GAISF) advised them in June 2017 that only one applicant per sport could be considered, the two concluded a unification agreement at the end of 2018 (IMMAF, n.d.-a). The federation now brings together more than 120 national federations and seeks Olympic recognition (IMMAF, n.d.-a). Its history is marked by the search for legitimacy against the charge of violence, as shown by the case of Sweden, where in 2006 proposed legislation sought to extend the existing ban on professional boxing to mixed martial arts (IMMAF, n.d.-a)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/artes-marciales-mixtas.jpg",
+   "pie": {
+    "es": "Retrato de Royce Gracie, practicante de jiu-jitsu brasileño, tomado al colodión húmedo por Shane Balkowitsch (2025).",
+    "en": "Portrait of Royce Gracie, Brazilian jiu-jitsu practitioner, taken in wet plate collodion by Shane Balkowitsch (2025)."
+   },
+   "autor": "Shane Balkowitsch",
+   "licencia": {
+    "es": "CC BY 4.0",
+    "en": "CC BY 4.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Royce_Gracie_Carrying_on_the_BJJ_Tradition_Wet_Plate_Collodion_by_Shane_Balkowitsch.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "IMMAF. (s. f.-a). *History*. International Mixed Martial Arts Federation. Recuperado el 29 de septiembre de 2026 de https://immaf.org/about/history/",
+   "IMMAF. (s. f.-b). *What is MMA?* International Mixed Martial Arts Federation. Recuperado el 29 de septiembre de 2026 de https://immaf.org/about/what-is-mma/",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "IMMAF. (n.d.-a). *History*. International Mixed Martial Arts Federation. Retrieved September 29, 2026, from https://immaf.org/about/history/",
+   "IMMAF. (n.d.-b). *What is MMA?* International Mixed Martial Arts Federation. Retrieved September 29, 2026, from https://immaf.org/about/what-is-mma/",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "ciclismo-artistico",
+  "name": {
+   "es": "Ciclismo artístico",
+   "en": "Artistic cycling"
+  },
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Estados Unidos y Alemania, finales del siglo XIX; campeonato del mundo de la UCI desde 1956",
+   "en": "United States and Germany, late nineteenth century; UCI world championship since 1956"
+  },
+  "body": {
+   "es": [
+    "El ciclismo artístico procede de los números de acrobacia en bicicleta que se exhibían en los espectáculos de finales del siglo XIX. Antes de 1900 ya lo practicaban en Estados Unidos acróbatas ciclistas como Nicholas Edward Kaufmann y John Featherly, cuyos números sentaron las bases de una disciplina que después se desarrolló en Europa (UCI, s. f.-b). Kaufmann, ciclista artístico de origen alemán emigrado a Estados Unidos, es también el autor al que la UCI atribuye el primer partido de ciclobol, jugado en Rochester en 1883 (UCI, s. f.-c). La propia federación la describe como una mezcla de gimnasia artística, volteo ecuestre y patinaje artístico, en la que los participantes ejecutan sus ejercicios ante comisarios sobre una bicicleta especial, casi siempre hecha a mano, de acero o aluminio y con piñón fijo (UCI, s. f.-b).",
+    "Alemania fue el país donde el ciclismo artístico arraigó con más fuerza, hasta reunir unas diez mil licencias, y algún manual sitúa en Leipzig, en 1884, las primeras competiciones y en 1895 el primer campeonato de Europa (Fernández Truan, s. f., p. 1226), datos que no ha sido posible contrastar con la federación internacional. Del mismo ambiente salió el juego de pelota en bicicleta, y en 1901 los hermanos Paul y Otto Lüders, dos acróbatas de Berlín, presentaron el ciclobol al público alemán (UCI, s. f.-c). La UCI celebró en Leipzig en 1930 sus primeros campeonatos del mundo de ciclismo en sala (UCI, s. f.-a), aunque el ciclismo artístico no tuvo un campeonato mundial propio hasta 1956 (UCI, s. f.-b).",
+    "Los campeonatos del mundo anuales de la UCI comenzaron en 1956 solo con la prueba individual masculina; la individual femenina se añadió en 1959, las parejas en 1986 y el conjunto de cuatro ciclistas en 2005, y en 2018 se creó una copa del mundo (UCI, s. f.-b). Algún manual retrasa el primer mundial femenino hasta 1970 (Fernández Truan, s. f., p. 1226), una fecha que contradice la de la federación. Cada deportista elige entre unas 120 figuras y dispone de cinco minutos para ejecutar hasta 30 en la modalidad individual y hasta 25 en parejas y conjuntos, y tres parejas de comisarios puntúan el ejercicio y descuentan los errores técnicos, las caídas y la falta de precisión (UCI, s. f.-b)."
+   ],
+   "en": [
+    "Artistic cycling derives from the bicycle acrobatics shown in late nineteenth-century entertainments. Before 1900 it was already practised in the United States by cycling acrobats such as Nicholas Edward Kaufmann and John Featherly, whose acts laid the foundations of a discipline that later developed in Europe (UCI, n.d.-b). Kaufmann, an artistic cyclist of German origin who had emigrated to the United States, is also the man the UCI credits with the first game of cycle-ball, played in Rochester in 1883 (UCI, n.d.-c). The federation itself describes it as a mixture of artistic gymnastics, equestrian vaulting and figure skating, in which participants perform their routines before commissaires on a special bicycle, mostly handmade, of steel or aluminium and with a fixed gear (UCI, n.d.-b).",
+    "Germany was the country where artistic cycling took the strongest root, reaching some ten thousand licence holders, and one textbook places the first competitions in Leipzig in 1884 and the first European championship in 1895 (Fernández Truan, n.d., p. 1226), data that could not be checked against the international federation. The game of ball on bicycles came from the same milieu, and in 1901 the brothers Paul and Otto Lüders, two acrobats from Berlin, presented cycle-ball to the German public (UCI, n.d.-c). The UCI held its first Indoor Cycling World Championships in Leipzig in 1930 (UCI, n.d.-a), although artistic cycling did not have a world championship of its own until 1956 (UCI, n.d.-b).",
+    "The annual UCI World Championships began in 1956 with only the men's single event; the women's single was added in 1959, pairs in 1986 and the four-rider team event in 2005, and a World Cup was created in 2018 (UCI, n.d.-b). One textbook delays the first women's world championship to 1970 (Fernández Truan, n.d., p. 1226), a date that contradicts the federation's. Each athlete chooses from some 120 figures and has five minutes to perform up to 30 in the single event and up to 25 in pairs and teams, and three pairs of commissaires score the routine and deduct for technical errors, falls and imprecision (UCI, n.d.-b)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/ciclismo-artistico.jpg",
+   "pie": {
+    "es": "Compañía femenina de ciclismo artístico vinculada a Nicholas Edward Kaufmann, hacia 1890.",
+    "en": "Women's artistic cycling troupe associated with Nicholas Edward Kaufmann, around 1890."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Kaufmann%27s_Cycling_Beauties.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "UCI. (s. f.-a). *125th anniversary of the UCI: The institution's road to coherence and universality*. Recuperado el 29 de septiembre de 2026 de https://www.uci.org/article/125th-anniversary-of-the-uci-the-institutions-road-to-coherence-and/6yn9QpBSHeP7P1QGw1R4rh",
+   "UCI. (s. f.-b). *What is artistic cycling?* Recuperado el 29 de septiembre de 2026 de https://www.uci.org/article/what-is-artistic-cycling/1tFbM5IBYXLLYen7BbIVor",
+   "UCI. (s. f.-c). *What is cycle-ball?* Recuperado el 29 de septiembre de 2026 de https://www.uci.org/article/what-is-cycle-ball/545EYyXdrXMhOTvuyjR0u3"
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "UCI. (n.d.-a). *125th anniversary of the UCI: The institution's road to coherence and universality*. Retrieved September 29, 2026, from https://www.uci.org/article/125th-anniversary-of-the-uci-the-institutions-road-to-coherence-and/6yn9QpBSHeP7P1QGw1R4rh",
+   "UCI. (n.d.-b). *What is artistic cycling?* Retrieved September 29, 2026, from https://www.uci.org/article/what-is-artistic-cycling/1tFbM5IBYXLLYen7BbIVor",
+   "UCI. (n.d.-c). *What is cycle-ball?* Retrieved September 29, 2026, from https://www.uci.org/article/what-is-cycle-ball/545EYyXdrXMhOTvuyjR0u3"
+  ]
+ },
+ {
+  "id": "palo-canario",
+  "name": {
+   "es": "Palo canario",
+   "en": "Juego del palo canario"
+  },
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Islas Canarias, con antecedentes aborígenes descritos por los cronistas (siglos XV-XVI); recuperación desde la década de 1970 y federación canaria en 1997",
+   "en": "Canary Islands, with aboriginal antecedents described by the chroniclers (fifteenth and sixteenth centuries); revival from the 1970s and Canarian federation in 1997"
+  },
+  "body": {
+   "es": [
+    "El juego del palo canario es un juego de oposición en el que dos jugadores combaten cuerpo a cuerpo con un palo, tratando de golpear al adversario sin ser golpeados, y en el que la distancia entre ellos y la forma de empuñar dependen del tamaño del palo y de la estrategia (Gobierno de Canarias, s. f.-a). Se le atribuye un origen aborigen. Fernández Truan recoge como primeras noticias la *Crónica* de la conquista betancuriana, que menciona los palos de los bimbaches de El Hierro, y la *Historia* de Leonardo Torriani (1590), que describe los duelos de los canarios sobre dos piedras llanas situadas en los extremos de una plazoleta, desde las que bajaban a combatir con sus bastones (Fernández Truan, s. f., p. 253). Los cronistas de los siglos XIV al XVII, de Nicolás da Recco a Abreu Galindo y Marín de Cubas, describen además varas largas endurecidas al fuego (Decreto PH 27/2023, 2023).",
+    "Tras la conquista, el palo siguió vinculado a la vida de pastores y camelleros, como instrumento para manejar el ganado y apoyo para recorrer los caminos (Gobierno de Canarias, s. f.-a, s. f.-b), y su enseñanza quedó en manos de familias y maestros que dieron nombre a estilos propios. La bibliografía que reúne el Gobierno de Canarias dedica estudios a los estilos Déniz y Quintero, a la escuela de los Morales, a los Verga o a la escuela conejera de Lanzarote, y distingue modalidades según el tamaño del palo (Gobierno de Canarias, s. f.-a), que se resumen en palo grande o garrote, palo medio o vara y palo chico o tolete (Gobierno de Canarias, s. f.-b). Es una esgrima de técnicas rápidas, sin forma explícita de terminación, en la que los jugadores definen el espacio del combate (Fernández Truan, s. f., p. 253).",
+    "En la década de 1970 el juego vivió un relanzamiento gracias al maestro Tomás Déniz, que creó escuelas en varias islas, y en 1997 se constituyeron la Federación Canaria de Juego del Palo y la Federación Canaria de Lucha del Garrote (Gobierno de Canarias, s. f.-b). En Gran Canaria, el garrote tradicional se recuperó desde los años ochenta en torno a maestros de Telde, Santa Lucía y Valsequillo, aunque en 2023 apenas contaba con unos cincuenta practicantes (Decreto PH 27/2023, 2023). La protección patrimonial ha seguido a la deportiva, puesto que el Gobierno de Canarias declaró en julio de 2026 bien de interés cultural el juego del palo estilo Quintero de El Hierro, heredero de las enseñanzas del maestro Juan Francisco Quintero Zamora (Gobierno de Canarias, 2026)."
+   ],
+   "en": [
+    "The Canarian stick game is a game of opposition in which two players fight at close quarters with a stick, trying to strike the opponent without being struck, and in which the distance between them and the grip depend on the size of the stick and on strategy (Gobierno de Canarias, n.d.-a). It is attributed an aboriginal origin. Fernández Truan cites as the earliest references the chronicle of the Béthencourt conquest, which mentions the sticks of the Bimbaches of El Hierro, and the *Historia* of Leonardo Torriani (1590), which describes the duels of the Canarians on two flat stones at the ends of a small raised square, from which they came down to fight with their staffs (Fernández Truan, n.d., p. 253). The chroniclers of the fourteenth to seventeenth centuries, from Nicolás da Recco to Abreu Galindo and Marín de Cubas, also describe long fire-hardened poles (Decreto PH 27/2023, 2023).",
+    "After the conquest the stick remained tied to the life of shepherds and camel drivers, as a tool for handling livestock and a support for walking the paths (Gobierno de Canarias, n.d.-a, n.d.-b), and its teaching remained in the hands of families and masters who gave their names to distinct styles. The bibliography gathered by the Government of the Canary Islands includes studies of the Déniz and Quintero styles, the Morales school, the Vergas and the *conejero* school of Lanzarote, and distinguishes forms according to the size of the stick (Gobierno de Canarias, n.d.-a), which are summarised as large stick or *garrote*, medium stick or *vara* and small stick or *tolete* (Gobierno de Canarias, n.d.-b). It is a fencing of fast techniques, with no explicit end, in which the players define the space of the bout (Fernández Truan, n.d., p. 253).",
+    "In the 1970s the game was relaunched thanks to master Tomás Déniz, who created schools on several islands, and in 1997 the Canarian Stick Game Federation and the Canarian Garrote Fighting Federation were established (Gobierno de Canarias, n.d.-b). In Gran Canaria the traditional garrote was recovered from the 1980s around masters from Telde, Santa Lucía and Valsequillo, although in 2023 it had only about fifty practitioners (Decreto PH 27/2023, 2023). Heritage protection has followed sporting organisation, since in July 2026 the Government of the Canary Islands declared the Quintero style of stick play from El Hierro, heir to the teachings of master Juan Francisco Quintero Zamora, an asset of cultural interest (Gobierno de Canarias, 2026)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/palo-canario.jpg",
+   "pie": {
+    "es": "Exhibición de juego del palo canario, 2011.",
+    "en": "Exhibition of the Canarian stick game, 2011."
+   },
+   "autor": "El coleccionista de instantes",
+   "licencia": "CC BY-SA 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Palo_canario_0001.jpg"
+  },
+  "refs": [
+   "Decreto PH 27/2023, de 23 de agosto, de incoación del expediente de declaración de bien de interés cultural «Juego del Garrote Tradicional de la isla de Gran Canaria» (BIC 06/2022). Cabildo de Gran Canaria. *Boletín Oficial de Canarias*, 205, de 18 de octubre de 2023. Recuperado el 29 de septiembre de 2026 de https://www.gobiernodecanarias.org/boc/2023/205/013.html",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Gobierno de Canarias. (s. f.-a). *Juegos motores tradicionales de Canarias*. Recuperado el 29 de septiembre de 2026 de https://www.gobiernodecanarias.org/deportes/materias/programas-proyectos/juegos-deportes-tradicionales/juegos-motores-tradicionales/index.html",
+   "Gobierno de Canarias. (s. f.-b). Palo canario. En *CanariWiki*. Recuperado el 29 de septiembre de 2026 de https://www3.gobiernodecanarias.org/medusa/wiki/index.php?title=Palo_canario",
+   "Gobierno de Canarias. (2026, 13 de julio). *El juego del palo estilo Quintero, declarado Bien de Interés Cultural*. Recuperado el 29 de septiembre de 2026 de https://www3.gobiernodecanarias.org/noticias/hemeroteca/el-juego-del-palo-estilo-quintero-declarado-bien-de-interes-cultural/"
+  ],
+  "refs_en": [
+   "Decreto PH 27/2023, de 23 de agosto, de incoación del expediente de declaración de bien de interés cultural «Juego del Garrote Tradicional de la isla de Gran Canaria» (BIC 06/2022). Cabildo de Gran Canaria. *Boletín Oficial de Canarias*, 205, October 18, 2023. Retrieved September 29, 2026, from https://www.gobiernodecanarias.org/boc/2023/205/013.html",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Gobierno de Canarias. (n.d.-a). *Juegos motores tradicionales de Canarias*. Retrieved September 29, 2026, from https://www.gobiernodecanarias.org/deportes/materias/programas-proyectos/juegos-deportes-tradicionales/juegos-motores-tradicionales/index.html",
+   "Gobierno de Canarias. (n.d.-b). Palo canario. In *CanariWiki*. Retrieved September 29, 2026, from https://www3.gobiernodecanarias.org/medusa/wiki/index.php?title=Palo_canario",
+   "Gobierno de Canarias. (2026, July 13). *El juego del palo estilo Quintero, declarado Bien de Interés Cultural*. Retrieved September 29, 2026, from https://www3.gobiernodecanarias.org/noticias/hemeroteca/el-juego-del-palo-estilo-quintero-declarado-bien-de-interes-cultural/"
+  ]
+ }
+]

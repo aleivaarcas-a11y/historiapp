@@ -1,0 +1,430 @@
+[
+ {
+  "id": "kayak-polo",
+  "name": {
+   "es": "Kayak polo",
+   "en": "Canoe polo"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Gran Bretaña, juegos de pelota en canoa desde finales del siglo XIX; reglamento internacional de la ICF, 1986-1990; primer campeonato del mundo, Sheffield, 1994",
+   "en": "Britain, canoe ball games since the late nineteenth century; international ICF rules, 1986-1990; first world championship, Sheffield, 1994"
+  },
+  "body": {
+   "es": [
+    "El kayak polo es un deporte de equipo en el que los jugadores, cada uno en un kayak individual pequeño, tratan de marcar maniobrando y pasándose un balón hasta introducirlo en la portería contraria (Townes, 1999, p. 73). Sus antecedentes son los juegos de pelota a bordo de canoas que se practicaban en Gran Bretaña desde finales del siglo XIX, y durante la primera mitad del siglo XX aparecieron formas parecidas en Estados Unidos y en otros países europeos (Paddle Worldwide, s. f.). Se trataba de juegos practicados en el marco del piragüismo de recreo, y durante casi un siglo no tuvieron unas reglas comunes a todos los países (Paddle Worldwide, s. f.).",
+    "La forma moderna se consolidó en Inglaterra, donde en 1971 se celebró el primer campeonato nacional (Paddle Worldwide, s. f.). La Federación Internacional de Piragüismo (ICF, hoy Paddle Worldwide) aprobó en 1986 unas reglas de juego comunes, presentó la modalidad como exhibición en el campeonato del mundo de velocidad celebrado en Duisburgo (Alemania) en 1987 y cerró el reglamento internacional en 1990 (Paddle Worldwide, s. f.). El primer campeonato del mundo se disputó en Sheffield (Inglaterra) en 1994, con dieciocho equipos masculinos y seis femeninos, de modo que la competición internacional incluyó a las mujeres desde su primera edición (Paddle Worldwide, s. f.).",
+    "La modalidad entró en los Juegos Mundiales, el gran acontecimiento de los deportes no olímpicos, en Duisburgo en 2005, dieciocho años después de la exhibición celebrada en esa misma ciudad (Paddle Worldwide, s. f.), y ha seguido en todas las ediciones posteriores, mientras la federación de piragüismo es miembro de la asociación que organiza esos juegos desde 1999 (International World Games Association, s. f.). El kayak polo no forma parte del programa olímpico."
+   ],
+   "en": [
+    "Canoe polo is a team sport in which players, each in a small one-person kayak, try to score by manoeuvring and passing a ball into the opponents' goal (Townes, 1999, p. 73). Its antecedents are the ball games played in canoes in Britain since the late nineteenth century, and during the first half of the twentieth century similar forms appeared in the United States and in other European countries (Paddle Worldwide, n.d.). They were games played within recreational canoeing, and for almost a century they had no rules common to all countries (Paddle Worldwide, n.d.).",
+    "The modern form took shape in England, where the first national championship was held in 1971 (Paddle Worldwide, n.d.). The International Canoe Federation (ICF, today Paddle Worldwide) approved common playing rules in 1986, presented the discipline as a demonstration at the sprint world championship held in Duisburg (Germany) in 1987 and finalised the international rules in 1990 (Paddle Worldwide, n.d.). The first world championship was held in Sheffield (England) in 1994, with eighteen men's teams and six women's teams, so that international competition included women from its first edition (Paddle Worldwide, n.d.).",
+    "The discipline entered the World Games, the great event of non-Olympic sports, at Duisburg in 2005, eighteen years after the demonstration held in the same city (Paddle Worldwide, n.d.), and has remained in every later edition, while the canoe federation has been a member of the association that organises those Games since 1999 (International World Games Association, n.d.). Canoe polo is not on the Olympic programme."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/kayak-polo.jpg",
+   "pie": {
+    "es": "Partido de kayak polo de la liga alemana en Radolfzell, junto al lago de Constanza (2012).",
+    "en": "A German league canoe polo match in Radolfzell, on Lake Constance (2012)."
+   },
+   "autor": "Andreas Köberle",
+   "licencia": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Kanupolo_Bundesliga.jpg"
+  },
+  "refs": [
+   "International World Games Association. (s. f.). *Canoe*. Recuperado el 30 de septiembre de 2026 de https://www.theworldgames.org/sports/Canoe-62",
+   "Paddle Worldwide. (s. f.). *Canoe polo*. Recuperado el 30 de septiembre de 2026 de https://paddleworldwide.com/disciplines/canoe-polo",
+   "Townes, J. (1999). Canoeing and kayaking. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 71-73). Oxford University Press."
+  ],
+  "refs_en": [
+   "International World Games Association. (n.d.). *Canoe*. Retrieved September 30, 2026, from https://www.theworldgames.org/sports/Canoe-62",
+   "Paddle Worldwide. (n.d.). *Canoe polo*. Retrieved September 30, 2026, from https://paddleworldwide.com/disciplines/canoe-polo",
+   "Townes, J. (1999). Canoeing and kayaking. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 71-73). Oxford University Press."
+  ]
+ },
+ {
+  "id": "piraguismo-en-eslalon",
+  "name": {
+   "es": "Piragüismo en eslalon",
+   "en": "Canoe slalom"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Suiza, 1932-1933; primer campeonato del mundo, Ginebra, 1949; olímpico en Múnich 1972 y desde Barcelona 1992",
+   "en": "Switzerland, 1932-1933; first world championship, Geneva, 1949; Olympic at Munich 1972 and since Barcelona 1992"
+  },
+  "body": {
+   "es": [
+    "El eslalon en piragua nació en Suiza a comienzos de los años treinta como una alternativa de verano al eslalon del esquí, la carrera entre puertas que Arnold Lunn había reglamentado hacia 1922-1923 para los esquiadores alpinos (Allen, 2007, pp. 103-106; International Canoe Federation, s. f.). Según la propia federación internacional, la primera carrera se disputó en 1932 en las aguas tranquilas del lago de Hallwil, cerca de Zúrich, y al año siguiente los palistas suizos la trasladaron a los rápidos de los ríos, que les resultaron más de su gusto (Paddle Worldwide, s. f.); otra página de la misma federación da 1933 como año de origen (International Canoe Federation, s. f.).",
+    "La competición consiste en recorrer un tramo de aguas bravas pasando por una serie de puertas, lo que exige frenar, detenerse y girar con rapidez entre rocas y corrientes, aprovechar los remansos para descansar y apuntar la embarcación hacia el tramo siguiente, y estudiar el río antes de cada bajada (Townes, 1999, p. 73). En 1949 la Federación Internacional de Piragüismo (ICF, hoy Paddle Worldwide) reunió en Ginebra a 96 competidores de siete países en el primer campeonato del mundo, que se celebró cada dos años hasta 1999 y desde 2001 cada año, salvo los olímpicos (Paddle Worldwide, s. f.; International Canoe Federation, s. f.). Desde la década de 1960 empezaron a construirse canales artificiales alimentados con agua desviada de los ríos, como el Eiskanal de Augsburgo, primer recorrido artificial (International Canoe Federation, s. f.).",
+    "El eslalon debutó en los Juegos Olímpicos de Múnich 1972, en los que los palistas de la República Democrática Alemana ganaron las cuatro pruebas, desapareció del programa en Montreal 1976 y no regresó hasta Barcelona 1992, desde cuando es una disciplina olímpica fija (Paddle Worldwide, s. f.; International Canoe Federation, s. f.). La evolución reciente ha estado marcada por la igualdad entre hombres y mujeres, puesto que la canoa individual femenina se estrenó en el campeonato del mundo de 2010 y llegó a los Juegos en Tokio 2020 en sustitución de la canoa biplaza masculina, y por la búsqueda de formatos más espectaculares, como el *kayak cross*, con salidas conjuntas, que apareció en la Copa del Mundo en 2015 y entró en el programa olímpico en París 2024 (International Canoe Federation, s. f.)."
+   ],
+   "en": [
+    "Canoe slalom was born in Switzerland in the early 1930s as a summer alternative to ski slalom, the race between gates that Arnold Lunn had codified around 1922-1923 for alpine skiers (Allen, 2007, pp. 103-106; International Canoe Federation, n.d.). According to the international federation itself, the first race was held in 1932 on the calm waters of Lake Hallwil, near Zurich, and the following year Swiss paddlers moved it to river rapids, which they found more to their liking (Paddle Worldwide, n.d.); another page of the same federation gives 1933 as the year of origin (International Canoe Federation, n.d.).",
+    "The competition consists of running a stretch of whitewater through a series of gates, which requires slowing down, stopping and turning quickly among rocks and currents, using eddies to rest and to aim the boat at the next stage, and studying the river before each run (Townes, 1999, p. 73). In 1949 the International Canoe Federation (ICF, today Paddle Worldwide) brought 96 competitors from seven countries to Geneva for the first world championship, which was held every two years until 1999 and every year since 2001, except in Olympic years (Paddle Worldwide, n.d.; International Canoe Federation, n.d.). From the 1960s artificial channels fed with water diverted from rivers began to be built, such as the Augsburg Eiskanal, the first artificial course (International Canoe Federation, n.d.).",
+    "Slalom made its Olympic debut at Munich 1972, where paddlers from the German Democratic Republic won all four events, disappeared from the programme at Montreal 1976 and did not return until Barcelona 1992, since when it has been a permanent Olympic discipline (Paddle Worldwide, n.d.; International Canoe Federation, n.d.). Its recent evolution has been shaped by equality between men and women, since the women's single canoe made its debut at the 2010 world championship and reached the Games at Tokyo 2020, replacing the men's double canoe, and by the search for more spectacular formats, such as *kayak cross*, with mass starts, which appeared on the World Cup circuit in 2015 and entered the Olympic programme at Paris 2024 (International Canoe Federation, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/piraguismo-en-eslalon.jpg",
+   "pie": {
+    "es": "Mònica Doria en el campeonato del mundo de eslalon de La Seu d'Urgell (2019).",
+    "en": "Mònica Doria at the canoe slalom world championships in La Seu d'Urgell (2019)."
+   },
+   "autor": "Antoine Lamielle",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:2019_ICF_Canoe_slalom_World_Championships_017_-_Monica_Doria_Vilarrubla.jpg"
+  },
+  "refs": [
+   "Allen, E. J. B. (2007). *The culture and sport of skiing: From antiquity to World War II*. University of Massachusetts Press.",
+   "International Canoe Federation. (s. f.). *Canoe slalom*. Recuperado el 30 de septiembre de 2026 de https://www.canoeicf.com/discipline/canoe-slalom",
+   "Paddle Worldwide. (s. f.). *Olympic canoe slalom history*. Recuperado el 30 de septiembre de 2026 de https://paddleworldwide.com/olympic-canoe-slalom-history",
+   "Townes, J. (1999). Canoeing and kayaking. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 71-73). Oxford University Press."
+  ],
+  "refs_en": [
+   "Allen, E. J. B. (2007). *The culture and sport of skiing: From antiquity to World War II*. University of Massachusetts Press.",
+   "International Canoe Federation. (n.d.). *Canoe slalom*. Retrieved September 30, 2026, from https://www.canoeicf.com/discipline/canoe-slalom",
+   "Paddle Worldwide. (n.d.). *Olympic canoe slalom history*. Retrieved September 30, 2026, from https://paddleworldwide.com/olympic-canoe-slalom-history",
+   "Townes, J. (1999). Canoeing and kayaking. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 71-73). Oxford University Press."
+  ]
+ },
+ {
+  "id": "apnea",
+  "name": {
+   "es": "Apnea",
+   "en": "Freediving"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Buceo a pulmón de oficio desde la Antigüedad; récords de profundidad en el Mediterráneo desde 1913 y 1950; competición reglada por la CMAS en los años setenta; AIDA, 1992",
+   "en": "Breath-hold diving as a trade since antiquity; depth records in the Mediterranean from 1913 and 1950; competition regulated by CMAS in the 1970s; AIDA, 1992"
+  },
+  "body": {
+   "es": [
+    "Durante milenios la inmersión a pulmón fue un medio de subsistencia, practicado por las *ama* japonesas y las *haenyeo* coreanas para recoger perlas, conchas y esponjas y, en el Mediterráneo, por los pescadores de esponjas (CMAS, s. f.). Su conversión en marca deportiva nació de ese mismo mundo del trabajo. La federación mundial de actividades subacuáticas considera primer récord registrado el de Stathis Hatzis, un pescador de esponjas griego de la isla de Symi que en 1913 descendió a 88 metros con una sola inspiración (CMAS, s. f.).",
+    "La apnea de competición surgió en Italia a mediados de siglo, en el entorno de la pesca submarina. El 5 de noviembre de 1950 el piloto de caza italiano y pescador submarino Raimondo Bucher anunció que había alcanzado 30 metros de profundidad con ayuda de un lastre frente a Nápoles, y en las décadas siguientes el italiano Enzo Maiorca y el francés Jacques Mayol rivalizaron en inmersiones cada vez más profundas, una rivalidad que inspiró en 1988 la película *Le Grand Bleu* (CMAS, s. f.). La competición formal, con reglas y campeonatos, no llegó hasta la década de 1970, de la mano de la Confédération Mondiale des Activités Subaquatiques (CMAS, s. f.).",
+    "La película de Luc Besson despertó un interés masivo por la apnea y multiplicó los intentos de récord sin organización, y en 1992 un grupo de apneístas fundó la Association Internationale pour le Développement de l'Apnée (AIDA), con el propósito de hacerse oír, crear normas estables de seguridad para competiciones y récords, organizar pruebas y desarrollar un sistema de enseñanza (AIDA International, s. f.). La propia asociación calcula que tardó unos veinte años en completar ese reglamento y su sistema educativo, y hoy se presenta como el mayor organizador de competiciones internacionales de apnea (AIDA International, s. f.). Desde entonces la apnea deportiva tiene dos organismos internacionales, la CMAS y la AIDA, con reglamentos y listas de récords propios."
+   ],
+   "en": [
+    "For millennia breath-hold diving was a means of subsistence, practised by the Japanese *ama* and the Korean *haenyeo* to gather pearls, shells and sponges and, in the Mediterranean, by sponge divers (CMAS, n.d.). Its conversion into a sporting mark was born of that same world of work. The world underwater federation regards as the first recorded record that of Stathis Hatzis, a Greek sponge diver from the island of Symi who in 1913 descended to 88 metres on a single breath (CMAS, n.d.).",
+    "Competitive freediving emerged in Italy in the mid-century, in the milieu of spearfishing. On 5 November 1950 the Italian fighter pilot and spearfisher Raimondo Bucher announced that he had reached a depth of 30 metres with the help of ballast off Naples, and in the following decades the Italian Enzo Maiorca and the Frenchman Jacques Mayol vied with each other in ever deeper dives, a rivalry that inspired the 1988 film *Le Grand Bleu* (CMAS, n.d.). Formal competition, with rules and championships, did not arrive until the 1970s, through the Confédération Mondiale des Activités Subaquatiques (CMAS, n.d.).",
+    "Luc Besson's film aroused mass interest in freediving and multiplied unorganised record attempts, and in 1992 a group of freedivers founded the Association Internationale pour le Développement de l'Apnée (AIDA), with the aim of making themselves heard, creating stable safety rules for competitions and records, organising events and developing a teaching system (AIDA International, n.d.). The association itself estimates that it took some twenty years to complete those rules and its educational system, and it now presents itself as the largest organiser of international freediving competitions (AIDA International, n.d.). Since then competitive freediving has had two international bodies, CMAS and AIDA, each with its own rules and record lists."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/apnea.jpg",
+   "pie": {
+    "es": "Enzo Maiorca prepara en Sorrento un intento de récord mundial de inmersión en apnea a 90 metros, 21 de septiembre de 1974.",
+    "en": "Enzo Maiorca in Sorrento preparing an attempt at the world freediving record at 90 metres, 21 September 1974."
+   },
+   "autor": "ANSA",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Enzo_Maiorca_(Sorrento,_1974).jpg"
+  },
+  "refs": [
+   "AIDA International. (s. f.). *About*. Recuperado el 30 de septiembre de 2026 de https://www.aidainternational.org/about",
+   "CMAS. (s. f.). *Freediving: Fun facts*. Confédération Mondiale des Activités Subaquatiques. Recuperado el 30 de septiembre de 2026 de https://www.cmas.org/freediving/fun-facts.html"
+  ],
+  "refs_en": [
+   "AIDA International. (n.d.). *About*. Retrieved September 30, 2026, from https://www.aidainternational.org/about",
+   "CMAS. (n.d.). *Freediving: Fun facts*. Confédération Mondiale des Activités Subaquatiques. Retrieved September 30, 2026, from https://www.cmas.org/freediving/fun-facts.html"
+  ]
+ },
+ {
+  "id": "natacion-con-aletas",
+  "name": {
+   "es": "Natación con aletas",
+   "en": "Finswimming"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Aletas de Louis de Corlieu (Francia), 1914-1933; primera competición, Génova, 1951; primer campeonato del mundo, Hannover, 1976",
+   "en": "Louis de Corlieu's fins (France), 1914-1933; first competition, Genoa, 1951; first world championship, Hanover, 1976"
+  },
+  "body": {
+   "es": [
+    "La natación con aletas depende de un invento técnico con autor conocido. Según la federación mundial de actividades subacuáticas, el francés Louis de Corlieu observó en Tahití a pescadores que nadaban con hojas de palmera trenzadas atadas a los pies, construyó en 1914 unas primeras aletas rígidas de rodoide y en 1933 fabricó las primeras de caucho, con un alma metálica para darles rigidez, que patentó como *propulseurs de natation et de sauvetage* (CMAS, s. f.). Hacia 1938-1939 el estadounidense Owen Churchill compró los derechos de la patente para Estados Unidos, comercializó el producto como *swim fins* y durante la Segunda Guerra Mundial equipó con sus aletas a los equipos de demolición submarina de la marina estadounidense (CMAS, s. f.). La aleta nació, por tanto, ligada al salvamento, a la pesca y al uso militar.",
+    "La competición llegó después de la guerra y tuvo en Italia su primer escenario. La primera prueba se celebró en 1951 frente a Génova, entre el Lido y Nervi, en cuatro etapas, y en 1960 Palermo acogió la primera competición internacional, presentada con el nombre algo presuntuoso de campeonato del mundo (CMAS, s. f.). En 1967 se disputó en Angera (Italia) el primer campeonato de Europa de natación con aletas y técnicas subacuáticas, y a finales de esa década el soviético B. Porotov diseñó una monoaleta de alta velocidad, de 80 centímetros, tensando una lámina de caucho sobre un armazón de aleación de titanio, con la que su nadador N. Turukalo batió récords del mundo ya en 1969 (CMAS, s. f.).",
+    "El primer campeonato del mundo se organizó en Hannover en 1976 con trece países, todos europeos, y la natación con aletas fue invitada a los primeros Juegos Mundiales, celebrados en Santa Clara (Estados Unidos) en 1981 (CMAS, s. f.). La expansión fuera de Europa llegó en los años ochenta y noventa, con el primer campeonato de Asia, en Tokai (Japón), en 1989, los 38 países presentes en el campeonato del mundo de Roma de 1990 y el celebrado en Dongguan (China) en 1994 (CMAS, s. f.). Las mujeres compitieron desde los primeros campeonatos, aunque con distancias distintas, puesto que en la prueba de apnea no pasaron a los 50 metros que ya nadaban los hombres hasta 1976 (CMAS, s. f.). La modalidad, gobernada por la CMAS, no forma parte del programa olímpico."
+   ],
+   "en": [
+    "Finswimming depends on a technical invention with a known author. According to the world underwater federation, the Frenchman Louis de Corlieu observed fishermen in Tahiti who swam with woven palm leaves tied to their feet, built a first pair of rigid rhodoid fins in 1914 and in 1933 produced the first rubber fins, with a metal core to make them rigid, which he patented as *propulseurs de natation et de sauvetage* (CMAS, n.d.). Around 1938-1939 the American Owen Churchill bought the patent rights for the United States, marketed the product as *swim fins* and during the Second World War equipped the US Navy's underwater demolition teams with his fins (CMAS, n.d.). The fin was therefore born linked to lifesaving, fishing and military use.",
+    "Competition came after the war, and Italy was its first setting. The first race was held in 1951 off Genoa, from the Lido to Nervi, in four stages, and in 1960 Palermo hosted the first international competition, presented under the somewhat presumptuous name of world championship (CMAS, n.d.). In 1967 the first European Championships of finswimming and underwater techniques were held in Angera (Italy), and at the end of that decade the Soviet B. Porotov designed a high-speed monofin, 80 centimetres long, by stretching a sheet of rubber over a titanium alloy frame, with which his swimmer N. Turukalo broke world records as early as 1969 (CMAS, n.d.).",
+    "The first world championship was organised in Hanover in 1976 with thirteen countries, all of them European, and finswimming was invited to the first World Games, held in Santa Clara (United States) in 1981 (CMAS, n.d.). Expansion beyond Europe came in the 1980s and 1990s, with the first Asian championship, in Tokai (Japan), in 1989, the 38 countries present at the 1990 world championship in Rome and the one held in Dongguan (China) in 1994 (CMAS, n.d.). Women competed from the first championships, although over different distances, since in the apnoea event they did not move up to the 50 metres already swum by men until 1976 (CMAS, n.d.). The discipline, governed by CMAS, is not on the Olympic programme."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/natacion-con-aletas.jpg",
+   "pie": {
+    "es": "Prueba de natación con aletas en los primeros Juegos Mundiales, Santa Clara (Estados Unidos), julio de 1981.",
+    "en": "Finswimming race at the first World Games, Santa Clara (United States), July 1981."
+   },
+   "autor": "Jeff in CA",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:WG_Finswimming_July_1981.jpg"
+  },
+  "refs": [
+   "CMAS. (s. f.). *Finswimming: Fun facts*. Confédération Mondiale des Activités Subaquatiques. Recuperado el 30 de septiembre de 2026 de https://www.cmas.org/finswimming/fun-facts.html"
+  ],
+  "refs_en": [
+   "CMAS. (n.d.). *Finswimming: Fun facts*. Confédération Mondiale des Activités Subaquatiques. Retrieved September 30, 2026, from https://www.cmas.org/finswimming/fun-facts.html"
+  ]
+ },
+ {
+  "id": "motos-de-agua",
+  "name": {
+   "es": "Motos de agua",
+   "en": "Aquabike (jet ski racing)"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "breve",
+  "cuando": {
+   "es": "Estados Unidos, 1973 (Jet Ski de Kawasaki); asociación de carreras, 1981-1982; campeonato del mundo de la UIM desde 1995",
+   "en": "United States, 1973 (Kawasaki Jet Ski); racing association, 1981-1982; UIM world championship since 1995"
+  },
+  "body": {
+   "es": [
+    "La moto de agua fue un producto industrial antes de convertirse en deporte. En 1973 Kawasaki presentó en Estados Unidos su *Jet Ski*, una embarcación de fibra de vidrio de poco más de dos metros que se conducía de pie o de rodillas y se movía con un motor de dos tiempos de 400 cc que accionaba un chorro de agua orientable, y la marca la anunció como una sensación enteramente nueva en los deportes acuáticos, con prestaciones comparables a las de una moto de campo (Cycle World, 2016). El fabricante impulsó la United States Jet Ski Boating Association para promover las carreras, cuyo campeonato nacional de 1981, en Lincoln (Nebraska), reunió a 10.000 espectadores, y el interés que despertaron fuera del país la convirtió en 1982 en la International Jet Sports Boating Association (Cycle World, 2016). La Union Internationale Motonautique, que gobierna también la motonáutica, homologó en 1995 un campeonato del mundo, el actual Aquabike, confió en 2011 su promoción a una empresa privada y lo organiza en categorías de pie, de asiento y de estilo libre, con una clase femenina (UIM-ABP Aquabike World Championship, s. f.)."
+   ],
+   "en": [
+    "The personal watercraft was an industrial product before it became a sport. In 1973 Kawasaki launched its *Jet Ski* in the United States, a fibreglass craft just over two metres long that was ridden standing or kneeling and driven by a 400 cc two-stroke engine powering a steerable water jet, and the company advertised it as an entirely new sensation in water sports, with performance comparable to that of a dirt bike (Cycle World, 2016). The manufacturer backed the United States Jet Ski Boating Association to promote racing, whose 1981 national event in Lincoln (Nebraska) drew 10,000 spectators, and the interest it aroused abroad turned it in 1982 into the International Jet Sports Boating Association (Cycle World, 2016). The Union Internationale Motonautique, which also governs powerboating, sanctioned a world championship in 1995, today's Aquabike, entrusted its promotion to a private company in 2011 and organises it in stand-up, seated and freestyle categories, with a women's class (UIM-ABP Aquabike World Championship, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/motos-de-agua.jpg",
+   "pie": {
+    "es": "Carrera del campeonato de Alemania de motos de agua en el Elba, en Krautsand (2007).",
+    "en": "A race in the German jet ski championship on the Elbe at Krautsand (2007)."
+   },
+   "autor": "Backlit",
+   "licencia": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Jetboot_Jetski_DM_2007_Krautsand_2.jpg"
+  },
+  "refs": [
+   "Cycle World. (2016, 20 de junio). *Retrospective: Kawasaki 1973 Jet Ski*. Recuperado el 30 de septiembre de 2026 de https://www.cycleworld.com/sport-rider/kawasakis-1973-jet-ski/",
+   "UIM-ABP Aquabike World Championship. (s. f.). *Championship*. Recuperado el 30 de septiembre de 2026 de https://www.aquabike.net/championship"
+  ],
+  "refs_en": [
+   "Cycle World. (2016, June 20). *Retrospective: Kawasaki 1973 Jet Ski*. Retrieved September 30, 2026, from https://www.cycleworld.com/sport-rider/kawasakis-1973-jet-ski/",
+   "UIM-ABP Aquabike World Championship. (n.d.). *Championship*. Retrieved September 30, 2026, from https://www.aquabike.net/championship"
+  ]
+ },
+ {
+  "id": "baloncesto-3x3",
+  "name": {
+   "es": "Baloncesto 3x3",
+   "en": "3x3 basketball"
+  },
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Canchas callejeras, sin fecha de origen documentada; modalidad reglada por la FIBA, primer acontecimiento oficial en Singapur, 2010",
+   "en": "Street courts, with no documented date of origin; discipline codified by FIBA, first official event in Singapore, 2010"
+  },
+  "body": {
+   "es": [
+    "El baloncesto de tres contra tres procede de la práctica informal en canchas callejeras y patios urbanos, donde bastan una canasta, media pista y seis jugadores para organizar un partido, y la FIBA lo presenta todavía como el primer deporte urbano de equipo del mundo (FIBA, s. f.). Esa cultura de la cancha al aire libre tuvo en Estados Unidos un peso social propio, puesto que los patios de las grandes ciudades funcionaron como semillero de jugadores para el baloncesto universitario y profesional, como escaparate de una estética afroamericana del juego y como promesa de ascenso social para muchos jóvenes (Baker y Pope, 1999, p. 45). A diferencia del baloncesto de Naismith, que tiene fecha y lugar de invención, el juego de media pista carece de un momento fundacional documentado, y su historia como deporte reglado empieza cuando la federación internacional decidió codificarlo.",
+    "En 2007 la FIBA propuso incluir el 3x3 en los Juegos Olímpicos de la Juventud, y el primer acontecimiento oficial de la modalidad se celebró en Singapur en 2010, en la primera edición de esos juegos, a la que siguió la de Nankín en 2014 (FIBA, 2017; FIBA, s. f.). El secretario general de la federación, Patrick Baumann, resumió después aquel proceso como diez años de trabajo para codificar las reglas y crear una plataforma digital propia con una clasificación individual de jugadores (FIBA, 2017). El reglamento fija equipos de tres jugadores y un suplente que atacan una sola canasta, partidos de diez minutos que gana antes quien llegue a 21 puntos, un punto por canasta dentro del arco y dos desde fuera, y doce segundos de posesión para lanzar (FIBA, s. f.).",
+    "El 9 de junio de 2017 el 3x3 fue incluido en el programa olímpico a partir de Tokio 2020, apenas siete años después de su primer torneo oficial (FIBA 3x3, s. f.), con 64 deportistas repartidos a partes iguales entre hombres y mujeres (FIBA, 2017). El torneo olímpico reunió en el Aomi Urban Sports Park de Tokio a los ocho mejores equipos masculinos y femeninos (FIBA 3x3, s. f.), y la modalidad volvió a los Juegos en París 2024 (FIBA, s. f.). La federación justificó su apuesta con argumentos que dicen mucho de la función que atribuía al nuevo deporte, puesto que su presidente, Horacio Muratore, lo describió como una disciplina urbana idónea para llegar a los jóvenes a través de las redes sociales y tan sencilla que cualquiera puede jugarla en cualquier lugar, y los dirigentes subrayaron que, al carecer de potencias tradicionales, permitía el ascenso de países nuevos (FIBA, 2017)."
+   ],
+   "en": [
+    "Three-on-three basketball derives from informal play on street courts and urban playgrounds, where a basket, half a court and six players are enough to organise a game, and FIBA still presents it as the number one urban team sport in the world (FIBA, n.d.). That outdoor court culture carried a social weight of its own in the United States, since the playgrounds of the big cities served as breeding grounds for college and professional players, as a showcase for a Black aesthetic of the game and as a promise of social mobility for many young people (Baker & Pope, 1999, p. 45). Unlike Naismith's basketball, which has a date and place of invention, the half-court game has no documented founding moment, and its history as a regulated sport begins when the international federation decided to codify it.",
+    "In 2007 FIBA proposed adding 3x3 to the Youth Olympic Games, and the first official event of the discipline was held in Singapore in 2010, at the first edition of those Games, followed by Nanjing in 2014 (FIBA, 2017; FIBA, n.d.). The federation's Secretary General, Patrick Baumann, later summed up that process as ten years of work to codify the rules and create a dedicated digital platform with an individual player ranking (FIBA, 2017). The rules provide for teams of three players and one substitute attacking a single basket, ten-minute games won earlier by the first side to reach 21 points, one point for a basket inside the arc and two from outside, and twelve seconds of possession to shoot (FIBA, n.d.).",
+    "On 9 June 2017 3x3 was added to the Olympic programme from Tokyo 2020, just seven years after its first official tournament (FIBA 3x3, n.d.), with 64 athletes split equally between men and women (FIBA, 2017). The Olympic tournament brought together the eight best men's and women's teams at the Aomi Urban Sports Park in Tokyo (FIBA 3x3, n.d.), and the discipline returned to the Games at Paris 2024 (FIBA, n.d.). The federation justified its bet with arguments that reveal the function it attributed to the new sport, since its president, Horacio Muratore, described it as an urban discipline ideal for reaching young people through social media and simple enough to be played anywhere by anybody, and its leaders stressed that, having no traditional powerhouses, it allowed new countries to emerge (FIBA, 2017)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/baloncesto-3x3.jpg",
+   "pie": {
+    "es": "Torneo femenino de baloncesto 3x3 en Portland (Oregón), julio de 2011.",
+    "en": "Women's 3x3 basketball tournament in Portland (Oregon), July 2011."
+   },
+   "autor": "Marty Davis",
+   "licencia": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:3X3_Women%27s_Basketball_Tournament_-_2011.jpg"
+  },
+  "refs": [
+   "Baker, W. J., y Pope, S. W. (1999). Basketball. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 40-45). Oxford University Press.",
+   "FIBA. (2017). *Historic day for basketball as 3x3 added to Olympic Program*. Recuperado el 30 de septiembre de 2026 de https://www.fiba.basketball/en/news/historic-day-for-basketball-as-3x3-added-to-olympic-program",
+   "FIBA. (s. f.). *3x3 basketball*. Recuperado el 30 de septiembre de 2026 de https://about.fiba.basketball/en/our-sport/3x3-basketball",
+   "FIBA 3x3. (s. f.). *History: 3x3 basketball, Olympic Games tournament*. Recuperado el 30 de septiembre de 2026 de https://fiba3x3.com/2024/olympics/history"
+  ],
+  "refs_en": [
+   "Baker, W. J., & Pope, S. W. (1999). Basketball. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 40-45). Oxford University Press.",
+   "FIBA. (2017). *Historic day for basketball as 3x3 added to Olympic Program*. Retrieved September 30, 2026, from https://www.fiba.basketball/en/news/historic-day-for-basketball-as-3x3-added-to-olympic-program",
+   "FIBA. (n.d.). *3x3 basketball*. Retrieved September 30, 2026, from https://about.fiba.basketball/en/our-sport/3x3-basketball",
+   "FIBA 3x3. (n.d.). *History: 3x3 basketball, Olympic Games tournament*. Retrieved September 30, 2026, from https://fiba3x3.com/2024/olympics/history"
+  ]
+ },
+ {
+  "id": "rugby-7",
+  "name": {
+   "es": "Rugby 7",
+   "en": "Rugby sevens"
+  },
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Melrose (Escocia), 1883; programa olímpico desde Río de Janeiro 2016",
+   "en": "Melrose (Scotland), 1883; on the Olympic programme since Rio de Janeiro 2016"
+  },
+  "body": {
+   "es": [
+    "El rugby a siete nació en 1883 en Melrose, en la frontera escocesa, como remedio a las dificultades económicas de su club. Según el relato que recoge World Rugby, Ned Haig, jugador del Melrose Rugby Club, propuso organizar un torneo de rugby dentro de la fiesta deportiva anual del club para recaudar fondos, idea que la junta rechazó al principio por el número de jugadores que exigía. La solución vino de David Sanderson, antiguo capitán del club y patrón de Haig en su carnicería, que recordaba haber jugado en Inglaterra un torneo con equipos reducidos, de modo que la junta aprobó por unanimidad enfrentar a conjuntos de siete jugadores en lugar de quince, en partidos de dos tiempos de siete minutos (World Rugby, s. f.-a).",
+    "El torneo de Melrose, que todavía se celebra cada primavera, dio al rugby una modalidad breve, pensada para llenar una jornada con muchos partidos y atraer espectadores de pago. En Inglaterra ese valor se hizo visible en el torneo de Middlesex, cuyas entradas pasaron de 20.000 a 50.000 espectadores tras los cambios de reglamento pensados para el público hacia 1970, y en 1974 la taquilla del Middlesex Seven-a-Side Competition aportó unas 14.000 libras a unos ingresos totales de la Rugby Football Union cercanos a 148.000 (Dunning y Sheard, 2005, pp. 180, 182). El formato favoreció además a equipos ajenos a los clubes tradicionales, y en 1957 el St Luke's College de Exeter, un centro de formación de profesores de educación física, sorprendió al ganar en Middlesex, seguido en 1959 por Loughborough, que aprovechaba instalaciones y métodos de preparación física ajenos al rugby de club (Collins, 2009, p. 187).",
+    "La difusión internacional del rugby a siete tuvo en Hong Kong su gran escaparate, con un torneo iniciado en 1976 en el campo del Hong Kong Football Club que los propios jugadores consideran el más prestigioso del calendario (SVNS, s. f.). La consagración llegó con los Juegos Olímpicos, puesto que el 9 de octubre de 2009, en la 121.ª sesión del Comité Olímpico Internacional celebrada en Copenhague, la inclusión del rugby a siete se aprobó por 81 votos a favor y ocho en contra, y la modalidad debutó en Río de Janeiro 2016 con veinticuatro equipos, doce masculinos y doce femeninos (World Rugby, s. f.-b). World Rugby atribuye a aquella primera edición, con hombres y mujeres en igualdad de condiciones, unos treinta millones de nuevos aficionados (World Rugby, s. f.-b)."
+   ],
+   "en": [
+    "Rugby sevens was born in 1883 in Melrose, in the Scottish Borders, as a remedy for its club's financial difficulties. According to the account recorded by World Rugby, Ned Haig, a player at Melrose Rugby Club, proposed organising a rugby tournament as part of the club's annual sports day to raise funds, an idea the committee at first rejected because of the number of players it required. The solution came from David Sanderson, a former club captain and Haig's employer at his butcher's shop, who remembered playing a tournament with reduced teams in England, so the committee unanimously agreed to field sides of seven players instead of fifteen, in matches of two seven-minute halves (World Rugby, n.d.-a).",
+    "The Melrose tournament, still held every spring, gave rugby a short format, designed to fill a day with many matches and to draw paying spectators. In England that value became visible in the Middlesex tournament, whose gates rose from 20,000 to 50,000 spectators after the spectator-oriented law changes around 1970, and in 1974 gate receipts from the Middlesex Seven-a-Side Competition brought in about 14,000 pounds out of a total Rugby Football Union income of around 148,000 (Dunning & Sheard, 2005, pp. 180, 182). The format also favoured teams from outside the traditional clubs, and in 1957 St Luke's College in Exeter, a physical education teacher-training college, caused a surprise by winning at Middlesex, followed in 1959 by Loughborough, which drew on fitness facilities and training methods foreign to club rugby (Collins, 2009, p. 187).",
+    "The international spread of rugby sevens found its great showcase in Hong Kong, with a tournament begun in 1976 at the ground of the Hong Kong Football Club that players themselves regard as the most prestigious on the calendar (SVNS, n.d.). Its consecration came with the Olympic Games, since on 9 October 2009, at the 121st Session of the International Olympic Committee held in Copenhagen, the inclusion of rugby sevens was approved by 81 votes to eight, and the discipline made its debut at Rio de Janeiro 2016 with twenty-four teams, twelve men's and twelve women's (World Rugby, n.d.-b). World Rugby attributes to that first edition, with men and women on equal terms, an estimated thirty million new fans (World Rugby, n.d.-b)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/rugby-7.jpg",
+   "pie": {
+    "es": "El torneo de rugby a siete de Melrose en The Greenyards, campo del Melrose Rugby Football Club, en su 127.ª edición (2010).",
+    "en": "The Melrose Sevens tournament at The Greenyards, home of Melrose Rugby Football Club, in its 127th edition (2010)."
+   },
+   "autor": "Walter Baxter",
+   "licencia": "CC BY-SA 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Melrose_Sevens_at_The_Greenyards_-_geograph.org.uk_-_1805252.jpg"
+  },
+  "refs": [
+   "Collins, T. (2009). *A social history of English rugby union*. Routledge.",
+   "Dunning, E., y Sheard, K. (2005). *Barbarians, gentlemen and players: A sociological study of the development of rugby football* (2.ª ed.). Routledge.",
+   "SVNS. (s. f.). *Only in Hong Kong: 50 years of sevens rugby history*. World Rugby. Recuperado el 30 de septiembre de 2026 de https://www.svns.com/en/news/1043307/only-in-hong-kong-50-years-of-sevens-rugby-history",
+   "World Rugby. (s. f.-a). *Ned Haig*. World Rugby Hall of Fame. Recuperado el 30 de septiembre de 2026 de https://www.world.rugby/halloffame/inductees/704782",
+   "World Rugby. (s. f.-b). *Rugby Olympic history*. Recuperado el 30 de septiembre de 2026 de https://www.world.rugby/tournaments/olympics/history"
+  ],
+  "refs_en": [
+   "Collins, T. (2009). *A social history of English rugby union*. Routledge.",
+   "Dunning, E., & Sheard, K. (2005). *Barbarians, gentlemen and players: A sociological study of the development of rugby football* (2nd ed.). Routledge.",
+   "SVNS. (n.d.). *Only in Hong Kong: 50 years of sevens rugby history*. World Rugby. Retrieved September 30, 2026, from https://www.svns.com/en/news/1043307/only-in-hong-kong-50-years-of-sevens-rugby-history",
+   "World Rugby. (n.d.-a). *Ned Haig*. World Rugby Hall of Fame. Retrieved September 30, 2026, from https://www.world.rugby/halloffame/inductees/704782",
+   "World Rugby. (n.d.-b). *Rugby Olympic history*. Retrieved September 30, 2026, from https://www.world.rugby/tournaments/olympics/history"
+  ]
+ },
+ {
+  "id": "padbol",
+  "name": {
+   "es": "Padbol",
+   "en": "Padbol"
+  },
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "tipo": "breve",
+  "cuando": {
+   "es": "La Plata (Argentina), 2008",
+   "en": "La Plata (Argentina), 2008"
+  },
+  "body": {
+   "es": [
+    "El padbol es un deporte de invención reciente y de autor conocido, que une el fútbol y el pádel, como indica su nombre. Lo creó en 2008 Gustavo Miguens en La Plata (Argentina), una ciudad de fuerte cultura deportiva donde el fútbol y el pádel eran muy populares, y los primeros partidos se jugaron en una pista de squash de medidas parecidas a las que después serían oficiales; uno de aquellos primeros jugadores recuerda que sirvieron de conejillos de Indias mientras el inventor ajustaba el reglamento, las medidas y la dinámica del juego hasta registrarlo y patentarlo (El Día, 2026). El segundo campeonato del mundo se disputó en Alicante en 2014 (El Día, 2026), y la empresa que gestiona la marca declara hoy actividad en más de treinta países y más de ochocientas pistas, ofrece licencias a clubes e inversores y ha puesto en marcha una Federación Internacional de Padbol y Asociados para reunir a las asociaciones nacionales (Padbol, s. f.). Su caso ilustra un deporte nacido como producto patentado y difundido mediante licencias comerciales."
+   ],
+   "en": [
+    "Padbol is a recently invented sport with a known author, combining football and padel, as its name indicates. It was created in 2008 by Gustavo Miguens in La Plata (Argentina), a city with a strong sporting culture where football and padel were very popular, and the first games were played on a squash court of dimensions similar to those that would later become official; one of those early players recalls that they served as guinea pigs while the inventor adjusted the rules, measurements and dynamics of the game until it was registered and patented (El Día, 2026). The second world championship was held in Alicante in 2014 (El Día, 2026), and the company that manages the brand today reports activity in more than thirty countries and more than eight hundred courts, offers licences to clubs and investors and has launched an International Federation of Padbol Associates to bring together the national associations (Padbol, n.d.). Its case illustrates a sport born as a patented product and spread through commercial licences."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/padbol.jpg",
+   "pie": {
+    "es": "Partido entre Argentina y España en el campeonato del mundo de padbol de 2014.",
+    "en": "Match between Argentina and Spain at the 2014 padbol world championship."
+   },
+   "autor": "Rodri lp5",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Partido_de_Padbol.jpg"
+  },
+  "refs": [
+   "El Día. (2026, 25 de enero). El platense que convirtió un invento de la Ciudad en un deporte mundial. *El Día*. Recuperado el 30 de septiembre de 2026 de https://www.eldia.com/nota/2026-1-25-6-27-36-el-platense-que-convirtio-un-invento-de-la-ciudad-en-un-deporte-mundial-temas",
+   "Padbol. (s. f.). *Padbol*. Entertainment and Sports Services LLC. Recuperado el 30 de septiembre de 2026 de https://www.padbol.com/"
+  ],
+  "refs_en": [
+   "El Día. (2026, January 25). El platense que convirtió un invento de la Ciudad en un deporte mundial. *El Día*. Retrieved September 30, 2026, from https://www.eldia.com/nota/2026-1-25-6-27-36-el-platense-que-convirtio-un-invento-de-la-ciudad-en-un-deporte-mundial-temas",
+   "Padbol. (n.d.). *Padbol*. Entertainment and Sports Services LLC. Retrieved September 30, 2026, from https://www.padbol.com/"
+  ]
+ },
+ {
+  "id": "rugby-playa",
+  "name": {
+   "es": "Rugby playa",
+   "en": "Beach rugby"
+  },
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "tipo": "breve",
+  "cuando": {
+   "es": "Origen informal sin fecha documentada; circuito europeo organizado desde 2005 y 2012; reglas de World Rugby para el *Beach Fives*",
+   "en": "Informal origin with no documented date; European circuit organised from 2005 and 2012; World Rugby rules for Beach Fives"
+  },
+  "body": {
+   "es": [
+    "Las fuentes consultadas no permiten fechar el origen del rugby en la arena, y su historia documentada empieza con la organización de circuitos y con la codificación de una modalidad reducida por parte del organismo mundial del rugby. En Europa, la European Beach Rugby Association comenzó a trabajar en 2005 para promover el rugby de playa de competición y desde 2012 organiza cada año las EBRA Series, un circuito de torneos en distintos países del continente (European Beach Rugby Association, s. f.). World Rugby recoge entre sus formas modificadas del juego el *Beach Fives*, que se juega obligatoriamente sobre arena en un campo de 31 por 25 metros, con equipos de cinco jugadores en el campo y hasta siete suplentes con cambios ilimitados, partidos de dos tiempos de cinco minutos, prohibición de patear el balón en juego abierto y ensayos que valen un solo punto (World Rugby, s. f.)."
+   ],
+   "en": [
+    "The sources consulted do not allow the origin of rugby on sand to be dated, and its documented history begins with the organisation of circuits and with the codification of a reduced form by rugby's world governing body. In Europe, the European Beach Rugby Association began working in 2005 to promote competitive beach rugby and since 2012 has organised each year the EBRA Series, a circuit of tournaments in several countries of the continent (European Beach Rugby Association, n.d.). World Rugby includes among its modified forms of the game Beach Fives, which must be played on sand on a pitch 31 by 25 metres, with teams of five players on the field and up to seven substitutes with unlimited changes, matches of two five-minute halves, a ban on kicking the ball in open play and tries worth a single point (World Rugby, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/rugby-playa.jpg",
+   "pie": {
+    "es": "Un jugador en el festival estonio de rugby playa de 2009.",
+    "en": "A player at the 2009 Estonian beach rugby festival."
+   },
+   "autor": "Prosimian",
+   "licencia": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Karl_-_Henry_Korjus_@_Eesti_Rannaragbi_Festival_2009.jpg"
+  },
+  "refs": [
+   "European Beach Rugby Association. (s. f.). *EBRA*. Recuperado el 30 de septiembre de 2026 de https://www.beach-rugby.eu/",
+   "World Rugby. (s. f.). *Beach fives rugby*. World Rugby Passport. Recuperado el 30 de septiembre de 2026 de https://passport.world.rugby/laws-of-the-game/modified-forms-t1-xrugby-beach-touch-tag/beach-fives-rugby/"
+  ],
+  "refs_en": [
+   "European Beach Rugby Association. (n.d.). *EBRA*. Retrieved September 30, 2026, from https://www.beach-rugby.eu/",
+   "World Rugby. (n.d.). *Beach fives rugby*. World Rugby Passport. Retrieved September 30, 2026, from https://passport.world.rugby/laws-of-the-game/modified-forms-t1-xrugby-beach-touch-tag/beach-fives-rugby/"
+  ]
+ }
+]

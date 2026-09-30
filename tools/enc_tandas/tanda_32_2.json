@@ -1,0 +1,577 @@
+[
+ {
+  "id": "tiro-con-arco",
+  "name": {
+   "es": "Tiro con arco",
+   "en": "Archery"
+  },
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Prehistoria; como deporte reglado, Inglaterra, siglos XVI-XVIII",
+   "en": "Prehistory; as an organised sport, England, 16th-18th centuries"
+  },
+  "body": {
+   "es": [
+    "El arco es una de las armas más antiguas de la humanidad. Las cuevas de Valltorta y Morella, en Castellón, conservan lo que se ha propuesto como la evidencia más antigua y segura de arco y flecha en Europa, dentro de un arte rupestre levantino cuya cronología sigue abierta entre el 10.000 y el 5.000 a. C., margen que desmiente la fecha de hace 40.000 años que aparece en algún manual (Fernández Truan, s. f., p. 260). En el Egipto del Imperio Nuevo, la introducción del arco compuesto convirtió el tiro sobre lingotes de cobre en la disciplina favorita del deporte real, si bien ninguna flecha podía atravesar de verdad esos lingotes, de manera que la hazaña pertenecía al rey ideal (Decker, 2021, p. 35).",
+    "En Europa el tiro con arco sobrevivió a su declive militar como pasatiempo y como competición. Roger Ascham publicó en 1545 *Toxophilus*, un tratado dedicado por entero al tiro con arco (Renson, 1999, p. 17); en 1673 se disputó por primera vez en Scorton (Yorkshire del Norte) la Scorton Arrow, que se sigue celebrando (Archery GB, 2020), y la fundación de la Toxophilite Society en 1781 convirtió la arquería en una moda de la aristocracia (Guttmann, 2004, p. 340; Renson, 1999, p. 15).",
+    "El tiro con arco figuró en los Juegos Olímpicos de 1900, 1904, 1908 y 1920, desapareció después del programa y volvió en Múnich 1972, ya para hombres y mujeres (World Archery, s. f.-b). La Fédération Internationale de Tir à l'Arc (FITA) se fundó el 4 de septiembre de 1931 en Lwów, entonces ciudad polaca y hoy Leópolis (Ucrania), por delegados de siete países, y entre sus objetivos fundacionales figuraba recuperar un lugar en el programa olímpico, cosa que logró en 1972. En 1961 eligió presidenta a la británica Inger Frith, lo que la convirtió en una de las primeras federaciones internacionales presididas por una mujer; en 2009 abandonó la denominación FITA y adoptó la marca World Archery, que dos años después, en 2011, pasó a ser su nombre oficial (World Archery, s. f.-a)."
+   ],
+   "en": [
+    "The bow is one of humanity's oldest weapons. The caves of Valltorta and Morella, in Castellón, preserve what has been proposed as the oldest secure evidence of bow and arrow in Europe, within a Levantine rock art whose chronology remains open between 10,000 and 5,000 BCE, a range that contradicts the date of 40,000 years ago given in some textbooks (Fernández Truan, n.d., p. 260). In New Kingdom Egypt, the introduction of the composite bow made shooting at copper ingots the favourite discipline of royal sport, although no arrow could really pierce those ingots, so the feat belonged to the ideal king (Decker, 2021, p. 35).",
+    "In Europe archery survived its military decline as a pastime and as a competition. Roger Ascham published *Toxophilus* in 1545, a treatise devoted entirely to archery (Renson, 1999, p. 17); in 1673 the Scorton Arrow was first contested at Scorton (North Yorkshire), and it is still held (Archery GB, 2020), and the founding of the Toxophilite Society in 1781 turned archery into a fashion among the aristocracy (Guttmann, 2004, p. 340; Renson, 1999, p. 15).",
+    "Archery was part of the Olympic Games in 1900, 1904, 1908 and 1920, then disappeared from the programme and returned at Munich 1972, now for both men and women (World Archery, n.d.-b). The Fédération Internationale de Tir à l'Arc (FITA) was founded on 4 September 1931 in Lwów, then a Polish city and today Lviv (Ukraine), by delegates from seven countries, and among its founding aims was to regain a place on the Olympic programme, which it achieved in 1972. In 1961 it elected Inger Frith of Great Britain as president, making it one of the first international federations headed by a woman; in 2009 it retired the FITA name and adopted the World Archery brand, which two years later, in 2011, became its official name (World Archery, n.d.-a)."
+   ]
+  },
+  "tema": [
+   {
+    "num": 1,
+    "f": "cazar-y-pescar",
+    "t": {
+     "es": "Cazar y pescar",
+     "en": "Hunting and fishing"
+    }
+   },
+   {
+    "num": 2,
+    "f": "el-tiro-con-arco-sobre-dianas-de-cobre",
+    "t": {
+     "es": "El tiro con arco sobre dianas de cobre",
+     "en": "Archery at copper targets"
+    }
+   }
+  ],
+  "img": {
+   "src": "img/enc/tiro-con-arco.jpg",
+   "pie": {
+    "es": "Reunión de los Royal British Bowmen, grabado según J. Townshend (1823).",
+    "en": "Meeting of the Royal British Bowmen, engraving after J. Townshend (1823)."
+   },
+   "autor": {
+    "es": "Grabado según J. Townshend",
+    "en": "Engraving after J. Townshend"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:1823_Royal_British_Bowmen_archery_club.jpg"
+  },
+  "refs": [
+   "Archery GB. (2020, 7 de mayo). *Archery clubs with ancient traditions*. Recuperado el 30 de septiembre de 2026 de https://archerygb.org/news/archery-clubs-with-ancient-traditions",
+   "Decker, W. (2021). Sport in ancient Egypt and the ancient Near East. En A. Futrell y T. F. Scanlon (Eds.), *The Oxford handbook of sport and spectacle in the ancient world* (pp. 31-46). Oxford University Press.",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Renson, R. (1999). Archery. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 14-18). Oxford University Press.",
+   "World Archery. (s. f.-a). *History of the federation*. Recuperado el 29 de septiembre de 2026 de https://www.worldarchery.sport/about-us/organisation/history",
+   "World Archery. (s. f.-b). *Archery at the Olympics*. Recuperado el 30 de septiembre de 2026 de https://www.worldarchery.sport/sport/history/archery-olympic-games"
+  ],
+  "refs_en": [
+   "Archery GB. (2020, May 7). *Archery clubs with ancient traditions*. Retrieved September 30, 2026, from https://archerygb.org/news/archery-clubs-with-ancient-traditions",
+   "Decker, W. (2021). Sport in ancient Egypt and the ancient Near East. In A. Futrell & T. F. Scanlon (Eds.), *The Oxford handbook of sport and spectacle in the ancient world* (pp. 31-46). Oxford University Press.",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Renson, R. (1999). Archery. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 14-18). Oxford University Press.",
+   "World Archery. (n.d.-a). *History of the federation*. Retrieved September 29, 2026, from https://www.worldarchery.sport/about-us/organisation/history",
+   "World Archery. (n.d.-b). *Archery at the Olympics*. Retrieved September 30, 2026, from https://www.worldarchery.sport/sport/history/archery-olympic-games"
+  ]
+ },
+ {
+  "id": "cestoball",
+  "name": {
+   "es": "Cestoball",
+   "en": "Cestoball"
+  },
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Buenos Aires (Argentina), comienzos del siglo XX (programa escolar de 1903); nombre de cestoball desde la década de 1980",
+   "en": "Buenos Aires (Argentina), early 20th century (school programme of 1903); named cestoball since the 1980s"
+  },
+  "body": {
+   "es": [
+    "El cestoball, llamado originalmente pelota al cesto, es un deporte de equipo argentino de origen escolar. Lo creó a comienzos del siglo XX Enrique Romero Brest (Gobierno de Argentina, s. f.), a quien se considera el padre de la educación física en Argentina (Fernández Truan, s. f., p. 281), y los docentes que asistían a sus clases lo aprendían y lo llevaban después a las escuelas (Confederación Argentina de Cestoball [CAC], s. f.). Fernández Truan (s. f., p. 281) precisa que Romero Brest empezó a fijar sus reglas en 1897 y que el juego apareció formalizado en un programa de educación física para la enseñanza secundaria aprobado el 17 de marzo de 1903, aunque la Confederación no recoge esas fechas.",
+    "El juego se difundió desde las aulas hacia los clubes, y en 1932 se asoció con el voleibol, que empezaba entonces a conocerse en el país, en la Federación Argentina de Voleibol y Pelota al Cesto. Más tarde los dos deportes siguieron caminos institucionales separados, y el 10 de julio de 1952 se fundó la Confederación Argentina de Pelota al Cesto, reconocida y afiliada en 1957 a la Confederación Argentina de Deportes (CAC, s. f.). Se juega entre equipos de seis jugadoras o jugadores (CAC, s. f.), que buscan introducir el balón en un aro de cincuenta centímetros de diámetro situado a 3,30 metros de altura en un campo de 28 por 16 metros (CAC, s. f.).",
+    "La proyección internacional empezó en 1974, cuando un equipo de Paraguay participó en el campeonato argentino, y en 1975 se celebró en Buenos Aires el primer Congreso Internacional, con representantes de Paraguay, Uruguay, Chile y Perú. En 1985 se adoptó el nombre de cestoball y se constituyó el organismo internacional, con dirigentes de Suiza y Argentina (CAC, s. f.); la prensa deportiva argentina fecha el cambio de nombre en 1986 y lo relaciona con el propósito de iniciar la expansión internacional (Gutiérrez, 2023). En mayo de 2023 se disputó en la India el primer campeonato mundial, con Argentina, India, Francia, Zimbabue, Kenia, Bután y Bangladés (Gutiérrez, 2023)."
+   ],
+   "en": [
+    "Cestoball, originally called *pelota al cesto*, is an Argentine team sport of school origin. It was created in the early twentieth century by Enrique Romero Brest (Gobierno de Argentina, n.d.), who is regarded as the father of physical education in Argentina (Fernández Truan, n.d., p. 281), and the teachers who attended his classes learned it and then took it to the schools (Confederación Argentina de Cestoball [CAC], n.d.). Fernández Truan (n.d., p. 281) states that Romero Brest began to set its rules in 1897 and that the game appeared in formal form in a secondary-school physical education programme approved on 17 March 1903, although the Confederation does not give those dates.",
+    "The game spread from the classroom to the clubs, and in 1932 it joined volleyball, which was then becoming known in the country, in the Federación Argentina de Voleibol y Pelota al Cesto. Later the two sports followed separate institutional paths, and on 10 July 1952 the Confederación Argentina de Pelota al Cesto was founded, recognised by and affiliated to the Confederación Argentina de Deportes in 1957 (CAC, n.d.). It is played by teams of six women or men (CAC, n.d.), who try to put the ball through a ring fifty centimetres in diameter placed 3.30 metres high on a court of 28 by 16 metres (CAC, n.d.).",
+    "International projection began in 1974, when a team from Paraguay took part in the Argentine championship, and in 1975 the first International Congress was held in Buenos Aires, with representatives of Paraguay, Uruguay, Chile and Peru. In 1985 the name cestoball was adopted and the international body was set up, with leaders from Switzerland and Argentina (CAC, n.d.); the Argentine sports press dates the name change to 1986 and links it to the aim of beginning international expansion (Gutiérrez, 2023). In May 2023 the first world championship was held in India, with Argentina, India, France, Zimbabwe, Kenya, Bhutan and Bangladesh (Gutiérrez, 2023)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/cestoball.jpg",
+   "pie": {
+    "es": "Partido de cestoball entre Ferro de General Pico y Vélez Sarsfield (Argentina), 2008.",
+    "en": "Cestoball match between Ferro de General Pico and Vélez Sarsfield (Argentina), 2008."
+   },
+   "autor": "Cramerman",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Cestoball.jpg"
+  },
+  "refs": [
+   "Confederación Argentina de Cestoball. (s. f.). *El cestoball*. Recuperado el 29 de septiembre de 2026 de https://cestoball.ar/el-cestoball/",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Gobierno de Argentina. (s. f.). *Cestoball*. Juegos Nacionales Evita. Recuperado el 29 de septiembre de 2026 de https://www.argentina.gob.ar/turismoydeportes/juegosevita/cestoball",
+   "Gutiérrez, S. (2023, 22 de mayo). El primer mundial de cestoball, con mucha impronta argentina. *El Equipo Deportea*. https://elequipo-deportea.com/2023/05/22/el-primer-mundial-de-cestoball-con-mucha-impronta-argentina/"
+  ],
+  "refs_en": [
+   "Confederación Argentina de Cestoball. (n.d.). *El cestoball*. Retrieved September 29, 2026, from https://cestoball.ar/el-cestoball/",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Gobierno de Argentina. (n.d.). *Cestoball*. Juegos Nacionales Evita. Retrieved September 29, 2026, from https://www.argentina.gob.ar/turismoydeportes/juegosevita/cestoball",
+   "Gutiérrez, S. (2023, May 22). El primer mundial de cestoball, con mucha impronta argentina. *El Equipo Deportea*. https://elequipo-deportea.com/2023/05/22/el-primer-mundial-de-cestoball-con-mucha-impronta-argentina/"
+  ]
+ },
+ {
+  "id": "paddle-tennis",
+  "name": {
+   "es": "Paddle tennis",
+   "en": "Paddle tennis"
+  },
+  "bloque": {
+   "es": "De raqueta y pala",
+   "en": "Racket and paddle sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Estados Unidos, entre 1898 (Michigan) y 1915 (Nueva York), según las fuentes; asociación nacional, 1923",
+   "en": "United States, between 1898 (Michigan) and 1915 (New York), depending on the source; national association, 1923"
+  },
+  "body": {
+   "es": [
+    "El paddle tennis es una versión reducida del tenis, con pista más pequeña, palas macizas y ligeras y pelotas de menor presión, y su invención se atribuye al pastor episcopaliano Frank Peer Beal, aunque las fuentes discrepan sobre el lugar y la fecha. Según Townes, Beal lo ideó en Michigan en 1898 para iniciar a los jóvenes en el tenis y redujo el tamaño de la pista para hacerla manejable por los niños (Townes, 1999a, p. 396). Fernández Truan lo sitúa en 1915 en el bajo Manhattan, cuando Beal quiso organizar actividades recreativas para los niños del barrio y consiguió que el departamento de parques de la ciudad construyera pistas en Washington Square (Fernández Truan, s. f., p. 1122).",
+    "Coinciden ambas versiones en que el juego arraigó en Nueva York como juego de patio de recreo durante la década de 1920, desde donde se extendió a otras partes de Estados Unidos, en particular a California, y en que los adultos lo adoptaron pronto (Townes, 1999a, p. 396). En 1922 se celebró el primer torneo y en 1923 se fundó la American Paddle Tennis Association (Fernández Truan, s. f., p. 1122; Townes, 1999a, p. 396). La coexistencia de versiones distintas del juego y de la pista dificultó durante décadas la organización de torneos nacionales, hasta que en 1959 se fijó una pista de 50 por 20 pies, una red de 31 pulgadas, un único saque y la obligación de dejar botar la pelota antes de volear (Townes, 1999a, p. 396).",
+    "A comienzos de la década de 1980 las organizaciones regionales se fusionaron y adoptaron un reglamento más uniforme, sin que el deporte llegara a contar con una federación internacional (Townes, 1999a, p. 396). Su interés histórico reside en su función de origen, puesto que nació como instrumento de recreo infantil en el espacio público de la ciudad y como escalón hacia el tenis, un deporte de club y de clase acomodada, y en su descendencia, ya que sus palas y pelotas sirvieron en 1928 para crear el platform tennis (Townes, 1999b, p. 396). No debe confundirse con el pádel, nacido en 1969 en Acapulco, en la pista rodeada de paredes que Enrique Corcuera construyó en su casa (International Padel Federation [FIP], s. f.)."
+   ],
+   "en": [
+    "Paddle tennis is a scaled-down version of tennis, with a smaller court, solid light paddles and lower-pressure balls, and its invention is credited to the Episcopal minister Frank Peer Beal, although the sources disagree on place and date. According to Townes, Beal devised it in Michigan in 1898 to introduce young people to tennis and reduced the size of the court to make it manageable for children (Townes, 1999a, p. 396). Fernández Truan places it in 1915 in Lower Manhattan, when Beal wanted to organise recreational activities for the neighbourhood children and persuaded the city parks department to build courts in Washington Square (Fernández Truan, n.d., p. 1122).",
+    "Both versions agree that the game took root in New York as a playground game during the 1920s, from where it spread to other parts of the United States, especially California, and that adults soon took it up (Townes, 1999a, p. 396). The first tournament was held in 1922 and the American Paddle Tennis Association was founded in 1923 (Fernández Truan, n.d., p. 1122; Townes, 1999a, p. 396). The coexistence of different versions of the game and the court made it difficult for decades to organise national tournaments, until in 1959 a court of 50 by 20 feet, a 31-inch net, a single serve and the requirement to let the ball bounce before volleying were adopted (Townes, 1999a, p. 396).",
+    "In the early 1980s the regional organisations merged and adopted more uniform rules, although the sport never acquired an international federation (Townes, 1999a, p. 396). Its historical interest lies in its original function, since it was born as an instrument of children's recreation in the public space of the city and as a stepping stone towards tennis, a club sport of the well-to-do, and in its offspring, since its paddles and balls were used in 1928 to create platform tennis (Townes, 1999b, p. 396). It should not be confused with padel, born in 1969 in Acapulco, on the walled court that Enrique Corcuera built at his house (International Padel Federation [FIP], n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/paddle-tennis.jpg",
+   "pie": {
+    "es": "Pala actual de paddle tennis, comercializado hoy en Estados Unidos con el nombre de *POP tennis*.",
+    "en": "Present-day paddle tennis paddle, a game now marketed in the United States as *POP tennis*."
+   },
+   "autor": "Nick77664",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:POP_Tennis_paddle.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Padel Federation. (s. f.). *History*. Recuperado el 30 de septiembre de 2026 de https://www.padelfip.com/history/",
+   "Townes, J. (1999a). Tennis, paddle. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (p. 396). Oxford University Press.",
+   "Townes, J. (1999b). Tennis, platform. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 396-397). Oxford University Press."
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "International Padel Federation. (n.d.). *History*. Retrieved September 30, 2026, from https://www.padelfip.com/history/",
+   "Townes, J. (1999a). Tennis, paddle. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (p. 396). Oxford University Press.",
+   "Townes, J. (1999b). Tennis, platform. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 396-397). Oxford University Press."
+  ]
+ },
+ {
+  "id": "saltos-de-esqui",
+  "name": {
+   "es": "Saltos de esquí",
+   "en": "Ski jumping"
+  },
+  "bloque": {
+   "es": "De invierno",
+   "en": "Winter sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Noruega; primera competición de saltos conocida en Trysil, 1862; trampolín de Holmenkollen (Oslo) desde 1892",
+   "en": "Norway; first known jumping competition at Trysil, 1862; Holmenkollen hill (Oslo) from 1892"
+  },
+  "body": {
+   "es": [
+    "El salto con esquís surgió en el ámbito nórdico y como deporte es una invención noruega. Las compañías militares de esquiadores practicaban ya el salto en el siglo XVIII (Goksøyr, 1999, p. 357), y en las competiciones del ejército noruego de la segunda mitad de ese siglo el salto figuraba entre las pruebas premiadas según su valor militar (Allen, 2007, p. 31). Las primeras competiciones civiles combinaban el salto con el descenso o con el fondo, y la carrera de Trysil de 1862 es la primera competición de saltos puros que se conoce (Goksøyr, 1999, p. 357). Sondre Norheim y los esquiadores de Telemark, que llegaron a Christiania en 1868, entusiasmaron a la burguesía de la capital con su velocidad y su estilo de salto (Allen, 2007, pp. 32 y 182).",
+    "La burguesía de Christiania, impresionada por lo que veía, quiso controlarlo; se erigió en juez del nuevo deporte y lo encuadró en el ideal del *idrett*, camino a la vez de desarrollo físico y moral, en el que los jueces valoraban tanto la longitud como el estilo (Goksøyr, 1999, p. 357). El gran concurso de la capital empezó en la colina de Huseby, en 1883 el salto se separó del fondo, en 1890 se trasladó a Ullbakken y en 1892 encontró su sede definitiva en Holmenkollen, con el salto como centro de la fiesta (Allen, 2007, pp. 44-45). El trampolín construido permitía medir con exactitud y atraer a multitudes, y el salto se convirtió en espectáculo; el cartero austriaco Josef Wallner llegó a decir que era un arte para los huéspedes de los hoteles y para el cine (Allen, 2007, p. 45).",
+    "En las últimas décadas del siglo XIX los noruegos vieron en el salto su deporte nacional, parte de la afirmación de una cultura propia frente a Suecia, y en 1905 una de las primeras apariciones públicas de los nuevos reyes fue el festival de Holmenkollen (Goksøyr, 1999, p. 357). Soldados noruegos lo llevaron a Suecia, donde en 1886 se celebró el que se presentó como primer concurso internacional, y los emigrantes a Norteamérica; después pasó a Finlandia, los Alpes y Europa central (Goksøyr, 1999, p. 357). La FIS organizó desde 1926 campeonatos del mundo de esquí nórdico, y el estilo en V que introdujo el sueco Jan Boklöv en 1986 terminó por imponerse pese a romper el ideal estético de los esquís paralelos (Goksøyr, 1999, p. 358)."
+   ],
+   "en": [
+    "Ski jumping arose in the Nordic region, and as a sport it is a Norwegian invention. Military ski companies were already jumping in the eighteenth century (Goksøyr, 1999, p. 357), and in the Norwegian army competitions of the second half of that century jumping was among the events rewarded according to their military value (Allen, 2007, p. 31). The first civilian competitions combined jumping with downhill or cross-country, and the Trysil race of 1862 is the first known pure jumping competition (Goksøyr, 1999, p. 357). Sondre Norheim and the skiers from Telemark, who came to Christiania in 1868, thrilled the capital's bourgeoisie with their speed and jumping style (Allen, 2007, pp. 32 and 182).",
+    "The bourgeoisie of Christiania, impressed by what it saw, wanted to control it; it made itself the judge of the new sport and framed it within the ideal of *idrett*, a path to both physical and moral development, in which judges assessed style as well as length (Goksøyr, 1999, p. 357). The capital's great meet began on Huseby Hill, in 1883 jumping was separated from cross-country, in 1890 the event moved to Ullbakken, and in 1892 it found its permanent home at Holmenkollen, with the jump as the centrepiece of the festival (Allen, 2007, pp. 44-45). The constructed hill allowed exact measurement and drew crowds, and jumping became a spectacle; the Austrian postman Josef Wallner went so far as to call it an art form for hotel guests and the cinema (Allen, 2007, p. 45).",
+    "In the last decades of the nineteenth century Norwegians came to see jumping as their national sport, part of asserting a culture of their own against Sweden, and in 1905 one of the first public appearances of the new king and queen was at the Holmenkollen festival (Goksøyr, 1999, p. 357). Norwegian soldiers took it to Sweden, where the event billed as the first international contest was held in 1886, and emigrants took it to North America; it then spread to Finland, the Alps and central Europe (Goksøyr, 1999, p. 357). The FIS has held Nordic world championships since 1926, and the V-style introduced by the Swede Jan Boklöv in 1986 eventually prevailed, although it broke the aesthetic ideal of parallel skis (Goksøyr, 1999, p. 358)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/saltos-de-esqui.jpg",
+   "pie": {
+    "es": "Esquiadores y público en el concurso de Holmenkollen (Oslo), fotografía de Peter Elfelt, 1900.",
+    "en": "Skiers and spectators at the Holmenkollen meet (Oslo), photograph by Peter Elfelt, 1900."
+   },
+   "autor": "Peter Elfelt",
+   "licencia": {
+    "es": "CC BY-SA 4.0",
+    "en": "CC BY-SA 4.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Skil%C3%B8b_p%C3%A5_Holmenkollen,_1900.jpg"
+  },
+  "refs": [
+   "Allen, E. J. B. (2007). *The culture and sport of skiing: From antiquity to World War II*. University of Massachusetts Press.",
+   "Goksøyr, M. (1999). Ski jumping. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 357-358). Oxford University Press."
+  ],
+  "refs_en": [
+   "Allen, E. J. B. (2007). *The culture and sport of skiing: From antiquity to World War II*. University of Massachusetts Press.",
+   "Goksøyr, M. (1999). Ski jumping. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 357-358). Oxford University Press."
+  ]
+ },
+ {
+  "id": "schwingen",
+  "name": {
+   "es": "Schwingen",
+   "en": "Schwingen"
+  },
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Suiza (Suiza central y Mittelland), primer testimonio en el siglo XIII; relanzado en Unspunnen en 1805 y organizado por el Eidgenössischer Schwingerverband desde 1895",
+   "en": "Switzerland (central Switzerland and Mittelland), first evidence in the thirteenth century; revived at Unspunnen in 1805 and organized by the Eidgenössischer Schwingerverband from 1895"
+  },
+  "body": {
+   "es": [
+    "El schwingen es la lucha tradicional suiza, una lucha agarrada por el pantalón y el cinturón en la que cada luchador trata de derribar al otro. La historia que publica el Nordwestschweizer Schwingerverband, una de las asociaciones regionales del Eidgenössischer Schwingerverband (ESV), admite que sus raíces no pueden fecharse con precisión y señala como primer testimonio una representación del siglo XIII en la catedral de Lausana que muestra ya la forma típica de agarrar (Nordwestschweizer Schwingerverband, s. f.). En Suiza central y en el Mittelland el *Hosenlupf* formaba parte de la cultura festiva; en numerosas fiestas de los pastos de montaña y de las posadas se luchaba por un trozo de tela para pantalón, una oveja u otros bienes en especie, aunque la gloria de la victoria contaba mucho más que el premio (Nordwestschweizer Schwingerverband, s. f.).",
+    "Las autoridades de la Edad Moderna miraron el schwingen con recelo. Desde el siglo XVI las ordenanzas urbanas de costumbres lo regularon cada vez más o lo prohibieron del todo, porque el clero, tanto protestante como católico, creía que apartaba a los jóvenes de la iglesia y las autoridades temían los tumultos de las grandes concentraciones (Jucker, 2021). Una carta de 1611 de un tribunal suizo a su gobierno, que recoge Eichberg, denunciaba que los campesinos y mozos de Schwarzenburg se reunían la noche de Navidad para luchar hasta medianoche, en la creencia de que quien se ejercitaba esa noche estaría fuerte y sano todo el año, entre gritos, maldiciones y juramentos, y recordaba que la costumbre ya había sido prohibida por decreto (Eichberg, 1999, p. 434). El schwingen formaba así parte de una cultura festiva popular que los poderes civiles y religiosos intentaban disciplinar.",
+    "El paso a deporte nacional fue deliberado. La primera fiesta de los pastores alpinos de Unspunnen, en 1805, se celebró cuando Suiza había perdido su independencia tras la invasión francesa y tuvo por objeto fortalecer el sentimiento nacional (Fernández Truan, s. f., pp. 779-780). A lo largo del siglo XIX las grandes fiestas de lucha y unos profesores de deporte ambiciosos llevaron el schwingen a las ciudades, de modo que el juego de pastores y campesinos se convirtió en un deporte nacional que abarca a todas las capas sociales (Nordwestschweizer Schwingerverband, s. f.). El ESV, fundado en 1895, integró las particularidades regionales, publicó manuales de enseñanza y fijó reglas modernas para los torneos (Fernández Truan, s. f., p. 780), y Eichberg cita el schwingen entre los ejercicios populares que el siglo XIX recuperó como exhibición de regionalidad y de nacionalidad (Eichberg, 1999, p. 434)."
+   ],
+   "en": [
+    "Schwingen is the traditional Swiss wrestling, a form of wrestling gripping the trousers and belt in which each wrestler tries to throw the other. The history published by the Nordwestschweizer Schwingerverband, one of the regional associations of the Eidgenössischer Schwingerverband (ESV), admits that its roots cannot be dated precisely and points as first evidence to a thirteenth-century depiction in Lausanne cathedral that already shows the typical way of gripping (Nordwestschweizer Schwingerverband, n.d.). In central Switzerland and the Mittelland the *Hosenlupf* was part of festive culture; at numerous mountain-pasture and inn festivals men wrestled for a piece of trouser cloth, a sheep or other goods in kind, although the glory of victory counted for far more than the prize (Nordwestschweizer Schwingerverband, n.d.).",
+    "The authorities of the early modern period viewed schwingen with suspicion. From the sixteenth century onwards urban laws on moral conduct increasingly regulated it or banned it outright, because the clergy, Protestant and Catholic alike, believed that it kept young men away from church and the authorities feared the disorder of large gatherings (Jucker, 2021). A letter of 1611 from a Swiss court to its government, quoted by Eichberg, complained that the peasants and farmhands of Schwarzenburg met on Christmas night to wrestle until midnight, in the belief that whoever trained that night would be vigorous and healthy all year, amid loud crying, cursing and swearing, and recalled that the custom had already been forbidden by decree (Eichberg, 1999, p. 434). Schwingen was thus part of a popular festive culture that civil and religious powers tried to discipline.",
+    "The move to a national sport was deliberate. The first Alpine herdsmen's festival at Unspunnen, in 1805, was held when Switzerland had lost its independence after the French invasion and was meant to strengthen national feeling (Fernández Truan, n.d., pp. 779-780). Over the nineteenth century the great wrestling festivals and ambitious sports teachers brought schwingen to the cities, so that the game of herdsmen and peasants became a national sport embracing all social strata (Nordwestschweizer Schwingerverband, n.d.). The ESV, founded in 1895, integrated the regional particularities, published teaching manuals and set modern rules for tournaments (Fernández Truan, n.d., p. 780), and Eichberg cites schwingen among the popular exercises that the nineteenth century recovered as displays of regionality and nationality (Eichberg, 1999, p. 434)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/schwingen.jpg",
+   "pie": {
+    "es": "*Fête des bergers suisses à Unspunnen*, aguafuerte coloreado de Franz Niklaus König sobre la fiesta de 1805, con parejas de luchadores en el centro de un gran corro de espectadores.",
+    "en": "*Fête des bergers suisses à Unspunnen*, coloured etching by Franz Niklaus König of the 1805 festival, with pairs of wrestlers at the centre of a large ring of spectators."
+   },
+   "autor": "Franz Niklaus König",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:CH-NB_-_Unspunnen,_Alphirtenfest_vom_17._August_1805_(1._Unspunnenfest)_-_Collection_Gugelmann_-_GS-GUGE-K%C3%96NIG-B-9.tif"
+  },
+  "refs": [
+   "Eichberg, H. (1999). Volkssport. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 433-436). Oxford University Press.",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Jucker, M. (2021, mayo). *Rural sport, or urban commercial activity?* Blog del Museo Nacional Suizo. Recuperado el 30 de septiembre de 2026 de https://blog.nationalmuseum.ch/en/2021/05/the-history-of-schwingen-traditional-swiss-wrestling/",
+   "Nordwestschweizer Schwingerverband. (s. f.). *Geschichte*. Recuperado el 29 de septiembre de 2026 de https://nwsv.esv.ch/schwingen/geschichte/"
+  ],
+  "refs_en": [
+   "Eichberg, H. (1999). Volkssport. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 433-436). Oxford University Press.",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Jucker, M. (2021, May). *Rural sport, or urban commercial activity?* Swiss National Museum Blog. Retrieved September 30, 2026, from https://blog.nationalmuseum.ch/en/2021/05/the-history-of-schwingen-traditional-swiss-wrestling/",
+   "Nordwestschweizer Schwingerverband. (n.d.). *Geschichte*. Retrieved September 29, 2026, from https://nwsv.esv.ch/schwingen/geschichte/"
+  ]
+ },
+ {
+  "id": "salvamento-y-socorrismo",
+  "name": {
+   "es": "Salvamento y socorrismo",
+   "en": "Lifesaving"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Europa, sociedades de rescate desde 1767; federación internacional en Saint-Ouen (Francia), 1910; salvamento en playa, Sídney (Australia), 1907",
+   "en": "Europe, rescue societies from 1767; international federation in Saint-Ouen (France), 1910; surf lifesaving, Sydney (Australia), 1907"
+  },
+  "body": {
+   "es": [
+    "El salvamento acuático nació como una actividad humanitaria mucho antes de convertirse en deporte. En 1767 se fundó en Ámsterdam la Sociedad para el Rescate de Ahogados (*Maatschappij tot Redding van Drenkelingen*), dedicada a difundir la reanimación de las personas ahogadas (ILS, s. f.-b; KNRM, 2017). En Gran Bretaña la Royal Humane Society premiaba a quienes arriesgaban su vida en el agua, y concedió su primera medalla Stanhope a Matthew Webb por lanzarse en pleno Atlántico a rescatar a un marinero caído por la borda (Vamplew, 2021, p. 196). El valor del salvamento sirvió además para que la natación resultara aceptable para las mujeres en el siglo XIX (Vamplew, 2021, p. 194).",
+    "La Federación Internacional de Salvamento Acuático (FIS) se fundó el 27 de marzo de 1910 en Saint-Ouen, junto a París (ILS, s. f.-a), para promover el rescate en aguas tranquilas y en el mar (Fernández Truan, s. f., p. 1004). En Australia el movimiento siguió otro camino. A comienzos del siglo XX los bañistas de Sídney se enfrentaban a leyes y a una moral que censuraban sus trajes, los baños de sol y el baño mixto, y formaron patrullas de salvamento para demostrar su respetabilidad, de modo que en 1907 doce clubes crearon la Surf Bathing Association of New South Wales, que en 1920 pasó a llamarse Surf Life Saving Association of Australia (Vamplew, 2021, p. 201).",
+    "Vamplew (2021, p. 201) discute el relato oficial según el cual el salvamento nació por razones humanitarias y derivó después en deporte, puesto que muchos voluntarios australianos se unían a los clubes por el compañerismo y la competición, organizados con una disciplina de estilo militar, y el rescate de bañistas se convirtió para ellos en un derivado del deporte. De aquellas pruebas salieron las competiciones de *ironman*, que combinan carrera, natación y tabla y que en la década de 1980 atrajeron circuitos televisados y patrocinio. El 24 de febrero de 1993, en Lovaina, la FIS y World Life Saving firmaron su fusión en la International Life Saving Federation (ILS), que quedó constituida en Cardiff el 3 de septiembre de 1994 (ILS, s. f.-a)."
+   ],
+   "en": [
+    "Water lifesaving was born as a humanitarian activity long before it became a sport. In 1767 the Society for the Rescue of Drowning Persons (*Maatschappij tot Redding van Drenkelingen*) was founded in Amsterdam, devoted to promoting the resuscitation of drowned persons (ILS, n.d.-b; KNRM, 2017). In Britain the Royal Humane Society rewarded those who risked their lives in the water, and it awarded its first Stanhope Medal to Matthew Webb for diving into the middle of the Atlantic to rescue a sailor who had fallen overboard (Vamplew, 2021, p. 196). The value of lifesaving also helped make swimming acceptable for women in the nineteenth century (Vamplew, 2021, p. 194).",
+    "The International Federation of Aquatic Lifesaving (FIS) was founded on 27 March 1910 in Saint-Ouen, near Paris (ILS, n.d.-a), to promote rescue in still water and in the sea (Fernández Truan, n.d., p. 1004). In Australia the movement took another path. At the beginning of the twentieth century Sydney beachgoers faced laws and a morality that condemned their costumes, sunbathing and mixed bathing, and they formed lifesaving patrols to demonstrate their respectability, so that in 1907 twelve clubs created the Surf Bathing Association of New South Wales, renamed the Surf Life Saving Association of Australia in 1920 (Vamplew, 2021, p. 201).",
+    "Vamplew (2021, p. 201) questions the official narrative according to which lifesaving arose for humanitarian reasons and later developed into a sport, since many Australian volunteers joined the clubs for camaraderie and competition, organised with military-style discipline, and rescuing bathers became for them an offshoot of the sport. Those events gave rise to ironman competitions, which combine running, swimming and board paddling and which in the 1980s attracted televised circuits and sponsorship. On 24 February 1993, in Leuven, FIS and World Life Saving signed their merger into the International Life Saving Federation (ILS), which was constituted in Cardiff on 3 September 1994 (ILS, n.d.-a)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/salvamento-y-socorrismo.jpg",
+   "pie": {
+    "es": "Desfile de socorristas en la playa de Currumbin (Queensland, Australia), 1937.",
+    "en": "Surf lifesavers in a march past at Currumbin Beach (Queensland, Australia), 1937."
+   },
+   "autor": {
+    "es": "Autor anónimo (State Library of Queensland)",
+    "en": "Anonymous (State Library of Queensland)"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:StateLibQld_2_132528_Surf-lifesavers_in_a_march_past_at_Currumbin_Beach,_1937.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "ILS. (s. f.-a). *ILS history*. Recuperado el 29 de septiembre de 2026 de https://www.ilsf.org/about/history/ils/",
+   "ILS. (s. f.-b). *Maatschappij tot Redding van Drenkelingen*. Recuperado el 30 de septiembre de 2026 de https://www.ilsf.org/organisation/netherlands-drenkeling/",
+   "KNRM. (2017, 3 de febrero). *Maatschappij tot Redding van Drenkelingen bestaat 250 jaar*. Recuperado el 30 de septiembre de 2026 de https://www.knrm.nl/blog/historie/mrd-250-jaar",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "ILS. (n.d.-a). *ILS history*. Retrieved September 29, 2026, from https://www.ilsf.org/about/history/ils/",
+   "ILS. (n.d.-b). *Maatschappij tot Redding van Drenkelingen*. Retrieved September 30, 2026, from https://www.ilsf.org/organisation/netherlands-drenkeling/",
+   "KNRM. (2017, February 3). *Maatschappij tot Redding van Drenkelingen bestaat 250 jaar*. Retrieved September 30, 2026, from https://www.knrm.nl/blog/historie/mrd-250-jaar",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ },
+ {
+  "id": "parapente",
+  "name": {
+   "es": "Parapente",
+   "en": "Paragliding"
+  },
+  "bloque": {
+   "es": "Aéreos",
+   "en": "Air sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Mieussy (Alta Saboya, Francia), junio de 1978; primera escuela, 1985; Campeonato del Mundo de la FAI, 1989-1991",
+   "en": "Mieussy (Haute-Savoie, France), June 1978; first school, 1985; FAI World Championships, 1989-1991"
+  },
+  "body": {
+   "es": [
+    "El parapente comparte sus antecedentes con el ala delta y con el paracaidismo. El ingeniero alemán Otto Lilienthal construyó a finales del siglo XIX las primeras alas prácticas, que controlaba desplazando el peso del cuerpo y con las que despegaba a pie desde una colina cerca de Berlín, y a finales de los años cuarenta el científico Francis Rogallo y su esposa Gertrude desarrollaron un ala flexible con la que el estadounidense Richard Miller despegó a pie en 1965 desde una ladera californiana (Pagen, 1999, p. 165). En esos mismos años se diseñaron alas flexibles sin armazón, como el *parafoil*, con cajones que se inflaban con la presión del aire, que Domina Jalbert patentó en 1964 a partir de un concepto propio registrado en enero de 1963, o la *Sail Wing* de David Barish, con la que este hizo en 1965 cortos vuelos planeados e intentó difundir la nueva práctica en las estaciones de esquí de Estados Unidos (Caspani, 2010).",
+    "El nacimiento del parapente se sitúa en junio de 1978 en Mieussy, en la Alta Saboya, cuando Jean-Claude Bétemps, André Bohn y Gérard Bosson, inspirados por un artículo sobre el vuelo de ladera publicado en la revista *Parachute*, se lanzaron por la pendiente de la montaña con un paracaídas de cajones; Bohn aterrizó en el campo de fútbol del valle, mil metros más abajo (Fernández Truan, s. f., pp. 64-65). La nueva práctica atrajo enseguida a los montañeros, que veían en ella una forma rápida de bajar tras una ascensión, y en 1985 se abrió en Mieussy la primera escuela; el propio nombre de parapente une *para*, de paracaídas, y *pente*, pendiente en francés (Fernández Truan, s. f., pp. 64-65).",
+    "Muchos pilotos de ala delta se pasaron al parapente por lo fácil que resultaba transportarlo, y los fabricantes respondieron a la demanda con nuevas marcas (Fernández Truan, s. f., p. 65). La Comisión de Ala Delta y Parapente (CIVL) de la Federación Aeronáutica Internacional rige el vuelo libre (Pagen, 1999, p. 165); su palmarés recoge un primer campeonato mundial en Kössen (Austria) en 1989, que figura como no validado, y sitúa el primero validado en Digne (Francia) en 1991 (Fédération Aéronautique Internationale, s. f.). En España, el montañero Gerardo Bielsa, formado en Mieussy, abrió en 1985 la primera escuela en Castejón de Sos (Huesca), localidad que acogió el Campeonato del Mundo en 1997 (Fernández Truan, s. f., p. 66)."
+   ],
+   "en": [
+    "Paragliding shares its antecedents with hang gliding and parachuting. The German engineer Otto Lilienthal built the first practical wings in the late nineteenth century, controlling them by shifting his body weight and launching on foot from a hill near Berlin, and in the late 1940s the scientist Francis Rogallo and his wife Gertrude developed a flexible wing with which the American Richard Miller foot-launched from a Californian slope in 1965 (Pagen, 1999, p. 165). In those same years frameless flexible wings were designed, such as the *parafoil*, with cells inflated by air pressure, which Domina Jalbert patented in 1964 on the basis of a concept of his own registered in January 1963, or David Barish's *Sail Wing*, with which he made short gliding flights in 1965 and tried to spread the new activity at ski resorts in the United States (Caspani, 2010).",
+    "The birth of paragliding is placed in June 1978 at Mieussy, in Haute-Savoie, when Jean-Claude Bétemps, André Bohn and Gérard Bosson, inspired by an article on slope soaring published in the magazine *Parachute*, launched themselves down the mountainside with a ram-air canopy; Bohn landed on the football pitch in the valley, a thousand metres below (Fernández Truan, n.d., pp. 64-65). The new practice at once attracted mountaineers, who saw it as a quick way down after a climb, and in 1985 the first school opened at Mieussy; the very name *parapente* combines *para*, from parachute, and *pente*, French for slope (Fernández Truan, n.d., pp. 64-65).",
+    "Many hang-glider pilots switched to paragliding because it was so easy to carry, and manufacturers responded to the demand with new brands (Fernández Truan, n.d., p. 65). The Hang Gliding and Paragliding Commission (CIVL) of the Fédération Aéronautique Internationale governs free flight (Pagen, 1999, p. 165); its roll of honour records a first world championship at Kössen (Austria) in 1989, listed as not validated, and places the first validated one at Digne (France) in 1991 (Fédération Aéronautique Internationale, n.d.). In Spain, the mountaineer Gerardo Bielsa, trained at Mieussy, opened the first school at Castejón de Sos (Huesca) in 1985, a town that hosted the World Championships in 1997 (Fernández Truan, n.d., p. 66)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/parapente.jpg",
+   "pie": {
+    "es": "Un parapente ante el macizo del Mont Blanc, en los Alpes franceses.",
+    "en": "A paraglider in front of the Mont Blanc massif, in the French Alps."
+   },
+   "autor": {
+    "es": "Solarturtle",
+    "en": "Solarturtle"
+   },
+   "licencia": {
+    "es": "CC BY-SA 3.0",
+    "en": "CC BY-SA 3.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Paraglider_In_Front_Of_Mont_Blanc_(172574147).jpeg"
+  },
+  "refs": [
+   "Caspani, R. (2010). Lorsque voler était secondaire. *Les Alpes*, (8). Club Alpin Suisse. Recuperado el 30 de septiembre de 2026 de https://www.sac-cas.ch/fr/les-alpes/lorsque-voler-etait-secondaire-19401/",
+   "Fédération Aéronautique Internationale. (s. f.). *Paragliding XC world champions*. Recuperado el 29 de septiembre de 2026 de https://www.fai.org/page/paragliding-xc-world-champions",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Pagen, D. (1999). Hang gliding. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 165-166). Oxford University Press."
+  ],
+  "refs_en": [
+   "Caspani, R. (2010). Lorsque voler était secondaire. *Les Alpes*, (8). Swiss Alpine Club. Retrieved September 30, 2026, from https://www.sac-cas.ch/fr/les-alpes/lorsque-voler-etait-secondaire-19401/",
+   "Fédération Aéronautique Internationale. (n.d.). *Paragliding XC world champions*. Retrieved September 29, 2026, from https://www.fai.org/page/paragliding-xc-world-champions",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Pagen, D. (1999). Hang gliding. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 165-166). Oxford University Press."
+  ]
+ },
+ {
+  "id": "ciclobol",
+  "name": {
+   "es": "Ciclobol",
+   "en": "Cycle ball"
+  },
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Rochester (Nueva York, EE. UU.), 1883; difusión en Alemania desde 1901",
+   "en": "Rochester (New York, USA), 1883; spread in Germany from 1901"
+  },
+  "body": {
+   "es": [
+    "El ciclobol, conocido en alemán como *Radball*, nació en el ambiente del ciclismo acrobático. Según la UCI, el ciclista artístico Nick Kaufmann, emigrante alemán en Estados Unidos, jugó el primer partido de pelota en bicicleta en Rochester (Nueva York) en 1883 junto a su compañero John Featherly, y una leyenda atribuye la idea a un perro pequeño que se cruzó delante de su rueda (UCI, s. f.-b). La fecha de origen no es unánime, puesto que un mismo manual la sitúa en 1899 en un pasaje y en 1893 en otro (Fernández Truan, s. f., pp. 77, 1227), si bien todas las versiones coinciden en atribuir la invención a Kaufmann.",
+    "En Europa, los hermanos Paul y Otto Lüders, dos ciclistas artísticos de Berlín, fueron oficialmente los primeros en presentar el ciclobol al público alemán, en 1901 (UCI, s. f.-b). El juego se desarrolló en dos variantes, una de dos jugadores por equipo para pista cubierta y otra de seis para el aire libre, y en los primeros campeonatos del mundo de la UCI, en 1930, Alemania ganó el título de dos jugadores y Francia la final de seis (UCI, s. f.-b); ese mismo año se celebraron en Leipzig los primeros campeonatos del mundo de ciclismo en sala (UCI, s. f.-a). Algún manual adelanta el primer mundial a 1929 (Fernández Truan, s. f., p. 77). El deporte arraigó sobre todo en Europa central, y en el medallero histórico de los mundiales de la UCI destacan Alemania, la República Checa, Suiza, Austria, Francia y Bélgica (UCI, s. f.-b).",
+    "Hoy la UCI solo reconoce la variante de dos jugadores, con competiciones masculinas y femeninas (UCI, s. f.-b), lo que desmiente la idea, presente en algún manual, de que se trata de un deporte exclusivamente masculino (Fernández Truan, s. f., p. 1227). Cada equipo tiene un portero y un jugador de campo, que controlan y golpean el balón con la rueda delantera o la trasera y con la cabeza, sin que las manos ni los pies puedan tocarlo. Se juega en una pista de 14 por 11 metros rodeada de vallas de 30 centímetros, con porterías de 2 por 2 metros, en dos partes de siete minutos, y la pelota, de 17 a 18 centímetros de diámetro y entre 500 y 600 gramos, se rellena de pelo animal, por lo general de caballo (UCI, s. f.-b)."
+   ],
+   "en": [
+    "Cycle-ball, known in German as *Radball*, was born in the world of trick cycling. According to the UCI, the artistic cyclist Nick Kaufmann, a German immigrant in the United States, played the first game of ball on bicycles in Rochester (New York) in 1883 with his fellow cyclist John Featherly, and a legend attributes the idea to a small dog that ran in front of his wheel (UCI, n.d.-b). The date of origin is not agreed, since a single textbook places it in 1899 in one passage and in 1893 in another (Fernández Truan, n.d., pp. 77, 1227), although all versions agree in crediting Kaufmann with the invention.",
+    "In Europe the brothers Paul and Otto Lüders, two artistic cyclists from Berlin, were officially the first to present cycle-ball to the German public, in 1901 (UCI, n.d.-b). The game developed in two variants, one with two players per team for indoor play and another with six for outdoor play, and at the first UCI World Championships, in 1930, Germany won the two-player title and France the six-player final (UCI, n.d.-b); that same year the first Indoor Cycling World Championships were held in Leipzig (UCI, n.d.-a). One textbook brings the first world championship forward to 1929 (Fernández Truan, n.d., p. 77). The sport took root above all in Central Europe, and the all-time medal table of the UCI World Championships is led by Germany, the Czech Republic, Switzerland, Austria, France and Belgium (UCI, n.d.-b).",
+    "Today the UCI recognises only the two-player variant, with men's and women's competitions (UCI, n.d.-b), which refutes the idea, found in one textbook, that it is an exclusively male sport (Fernández Truan, n.d., p. 1227). Each team has a goalkeeper and an outfield player, who control and strike the ball with the front or back wheel and with the head, while hands and feet may not touch it. The game is played on a 14 by 11 metre court surrounded by 30-centimetre boards, with 2 by 2 metre goals, in two halves of seven minutes, and the ball, 17 to 18 centimetres in diameter and weighing 500 to 600 grams, is filled with animal hair, usually horsehair (UCI, n.d.-b)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/ciclobol.jpg",
+   "pie": {
+    "es": "Partido de ciclobol en la revista polaca *Nowości Illustrowane*, 1913.",
+    "en": "Cycle-ball match in the Polish magazine *Nowości Illustrowane*, 1913."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Cycle_ball_(1913).jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "UCI. (s. f.-a). *125th anniversary of the UCI: The institution's road to coherence and universality*. Recuperado el 29 de septiembre de 2026 de https://www.uci.org/article/125th-anniversary-of-the-uci-the-institutions-road-to-coherence-and/6yn9QpBSHeP7P1QGw1R4rh",
+   "UCI. (s. f.-b). *What is cycle-ball?* Recuperado el 29 de septiembre de 2026 de https://www.uci.org/article/what-is-cycle-ball/545EYyXdrXMhOTvuyjR0u3"
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "UCI. (n.d.-a). *125th anniversary of the UCI: The institution's road to coherence and universality*. Retrieved September 29, 2026, from https://www.uci.org/article/125th-anniversary-of-the-uci-the-institutions-road-to-coherence-and/6yn9QpBSHeP7P1QGw1R4rh",
+   "UCI. (n.d.-b). *What is cycle-ball?* Retrieved September 29, 2026, from https://www.uci.org/article/what-is-cycle-ball/545EYyXdrXMhOTvuyjR0u3"
+  ]
+ },
+ {
+  "id": "bartitsu",
+  "name": {
+   "es": "Bartitsu",
+   "en": "Bartitsu"
+  },
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Londres, 1898-1899, creado por Edward William Barton-Wright; recuperado desde comienzos del siglo XXI",
+   "en": "London, 1898-1899, created by Edward William Barton-Wright; revived since the early twenty-first century"
+  },
+  "body": {
+   "es": [
+    "El bartitsu es un sistema de defensa personal que el ingeniero británico Edward William Barton-Wright, nacido en la India en 1860, presentó en Londres a finales del siglo XIX tras pasar tres años en Japón, donde había estudiado jujutsu y recibido lecciones en la escuela de Jigoro Kano (Noble, 2001). En marzo de 1899 publicó en *Pearson's Magazine* el artículo «The New Art of Self Defence», primero de una serie que continuó hasta 1901 (Noble, 2001). El nombre combinaba la primera parte de su apellido con la palabra *jujitsu* (Case, 2021), y el método reunía el jujutsu japonés con el boxeo inglés, la *savate* francesa, la lucha suiza y la defensa con bastón que enseñaba el maestro de armas suizo Pierre Vigny (Fernández Truan, s. f., p. 214).",
+    "El sistema tuvo su sede en el Bartitsu Club, la escuela de armas y cultura física que abrió en 1900 en el número 67b de Shaftesbury Avenue, en el Soho (Case, 2021), y que la periodista Mary Nugent describió en 1901 como una enorme sala subterránea de paredes de azulejo blanco y luz eléctrica (Case, 2021; Noble, 2001). Barton-Wright hizo venir de Japón a Yukio Tani y a Sadakazu Uyenishi y confió a Vigny la enseñanza del bastón (Noble, 2001), y el club funcionaba como un círculo deportivo victoriano, con admisión por comité y una clientela sobre todo de clase alta; admitía también alumnas, y el bastón y el jiu-jitsu se promovieron en buena medida como defensa personal femenina, línea que Edith Garrud prolongaría después en sus clases para mujeres y en la guardia de las sufragistas (Case, 2021).",
+    "La escuela cerró en 1903, cuando las cuotas se consideraron demasiado altas y el número de socios cayó (Budo Japan, 2021), y el bartitsu quedó casi olvidado, aunque su influencia sobrevivió por dos caminos. Barton-Wright fue el primero en introducir el jujutsu en Inglaterra y pionero en combinar elementos de distintas artes de combate en un sistema completo de defensa personal (Noble, 2001); Arthur Conan Doyle, por su parte, lo inmortalizó con la grafía *baritsu* como el arte con el que Sherlock Holmes se defendía (Fernández Truan, s. f., p. 213). La recuperación comenzó tras la reedición de los artículos de Barton-Wright en revistas digitales de artes marciales en 2001, que dio origen a la Bartitsu Society (Budo Japan, 2021)."
+   ],
+   "en": [
+    "Bartitsu is a self-defence system that the British engineer Edward William Barton-Wright, born in India in 1860, presented in London at the end of the nineteenth century after spending three years in Japan, where he had studied jujutsu and taken lessons at Jigoro Kano's school (Noble, 2001). In March 1899 he published in *Pearson's Magazine* the article «The New Art of Self Defence», the first of a series that continued until 1901 (Noble, 2001). The name combined the first part of his surname with the word *jujitsu* (Case, 2021), and the method brought together Japanese jujutsu with English boxing, French *savate*, Swiss wrestling and the stick defence taught by the Swiss master-at-arms Pierre Vigny (Fernández Truan, n.d., p. 214).",
+    "The system was based at the Bartitsu Club, the school of arms and physical culture that opened in 1900 at 67b Shaftesbury Avenue, in Soho (Case, 2021), and which the journalist Mary Nugent described in 1901 as a huge subterranean hall with white-tiled walls and electric light (Case, 2021; Noble, 2001). Barton-Wright brought Yukio Tani and Sadakazu Uyenishi over from Japan and entrusted the teaching of the stick to Vigny (Noble, 2001), and the club was run like a Victorian sporting club, with admission by committee and a mainly upper-class membership; it also admitted women, and stick fighting and jiu-jitsu were promoted largely as women's self-defence, a line that Edith Garrud later extended in her classes for women and for the suffragettes' bodyguard (Case, 2021).",
+    "The school closed in 1903, when its fees were considered too high and membership fell (Budo Japan, 2021), and bartitsu was almost forgotten, although its influence survived in two ways. Barton-Wright was the first to introduce jujutsu to England and a pioneer in combining elements from different combat arts into a complete self-defence system (Noble, 2001); Arthur Conan Doyle, for his part, immortalised it under the spelling *baritsu* as the art with which Sherlock Holmes defended himself (Fernández Truan, n.d., p. 213). The revival began after Barton-Wright's articles were republished in online martial arts journals in 2001, which gave rise to the Bartitsu Society (Budo Japan, 2021)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/bartitsu.jpg",
+   "pie": {
+    "es": "Pierre Vigny, instructor de bastón del Bartitsu Club, en una fotografía publicada en *The Sketch* el 10 de abril de 1901.",
+    "en": "Pierre Vigny, stick instructor at the Bartitsu Club, in a photograph published in *The Sketch* on 10 April 1901."
+   },
+   "autor": "Hana Studios",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Pierre_Vigny_(1866%E2%80%931943)_stick_fighting.png"
+  },
+  "refs": [
+   "Budo Japan. (2021, 18 de noviembre). *«Bartitsu» The new art of self defence by E. W. Barton-Wright, part 2*. Recuperado el 29 de septiembre de 2026 de https://budojapan.com/feature-articles/20211118-2/",
+   "Case, R. (2021, 1 de marzo). Bartitsu: The art of self-defence, part 1. *Playing Pasts*. Recuperado el 29 de septiembre de 2026 de https://www.playingpasts.co.uk/articles/general/bartitsuthe-art-of-self-defencepart-1/",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Noble, G. (2001, marzo). An introduction to E. W. Barton-Wright (1860-1951) and the eclectic art of bartitsu. *Journal of Manly Arts*. Recuperado el 29 de septiembre de 2026 de https://ejmas.com/jmanly/articles/2001/jmanlyart_noble_0301.htm"
+  ],
+  "refs_en": [
+   "Budo Japan. (2021, November 18). *«Bartitsu» The new art of self defence by E. W. Barton-Wright, part 2*. Retrieved September 29, 2026, from https://budojapan.com/feature-articles/20211118-2/",
+   "Case, R. (2021, March 1). Bartitsu: The art of self-defence, part 1. *Playing Pasts*. Retrieved September 29, 2026, from https://www.playingpasts.co.uk/articles/general/bartitsuthe-art-of-self-defencepart-1/",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Noble, G. (2001, March). An introduction to E. W. Barton-Wright (1860-1951) and the eclectic art of bartitsu. *Journal of Manly Arts*. Retrieved September 29, 2026, from https://ejmas.com/jmanly/articles/2001/jmanlyart_noble_0301.htm"
+  ]
+ },
+ {
+  "id": "cetreria",
+  "name": {
+   "es": "Cetrería",
+   "en": "Falconry"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Asia y Oriente Próximo, posiblemente hacia el 2000 a. C.; auge en la Europa medieval; patrimonio inmaterial de la UNESCO desde 2010",
+   "en": "Asia and the Middle East, possibly around 2000 BCE; heyday in medieval Europe; UNESCO intangible heritage since 2010"
+  },
+  "body": {
+   "es": [
+    "La cetrería es la caza con aves de presa adiestradas, halcones y, en ocasiones, águilas, azores, gavilanes o busardos, que el cetrero suelta para que capturen la pieza y vuelvan a su puño (Townes, 1999, p. 125; UNESCO, s. f.). Se cree que nació en Asia y en Oriente Próximo, quizá hacia el 2000 a. C., y la UNESCO le atribuye más de cuatro mil años de práctica; en su origen fue un medio de obtener alimento y con el tiempo adquirió valores sociales y recreativos (Townes, 1999, p. 125; UNESCO, s. f.). A Europa llegó en los siglos posteriores al cambio de era (Townes, 1999, p. 125), y ya en el siglo I Plinio el Viejo describía en la Tracia situada al norte de Anfípolis una caza en sociedad entre hombres y halcones, en la que los cazadores espantaban las aves de los bosques y los cañaverales, los halcones las abatían en vuelo y el botín se repartía con ellos (Plinio el Viejo, ca. 77/1855, libro 10, cap. 10). Su adiestramiento, lento y minucioso, generó un vocabulario técnico propio que se remonta a sus primeros tiempos (Townes, 1999, p. 126).",
+    "En la Europa medieval la cetrería se convirtió en el deporte de estatus por excelencia. Los grandes linajes tenían halconeros profesionales, intercambiaban aves y las regalaban al monarca, y la heráldica recurrió al halcón para expresar poder (Vamplew, 2021, p. 122). La jerarquía social se leía incluso en el ave, puesto que la realeza cazaba con el gerifalte, los condes con el peregrino, las damas con el esmerejón y los criados con el cernícalo, y tratados como el *Boke of St. Albans* (1486) codificaron sus normas (Guttmann, 2004, p. 58). Las mujeres de la nobleza eran bien recibidas en la caza, hasta el punto de que los caballeros preferían por esposa a las doncellas que sabían montar y cazar con halcón, y los manuscritos iluminados abundan en damas con halcones, en lo que Guttmann (2004, p. 58) llama una iconografía de la jerarquía.",
+    "A finales del siglo XVII la cetrería perdió importancia. La monarquía dejó de practicarla y las fincas sustituyeron a los halconeros por guardas, perreros y armeros, porque el arma de fuego, que tenía una utilidad militar y mejoraba sin cesar, dio lugar a la caza con escopeta, mientras la cetrería conservaba una técnica casi medieval (Vamplew, 2021, p. 122). Sobrevivió gracias a practicantes individuales y a asociaciones regionales y nacionales, y en el siglo XX tuvo que adaptarse a la protección legal de las rapaces y a programas de cría en cautividad (Townes, 1999, p. 125). En 2010 el Comité del Patrimonio Inmaterial de la UNESCO inscribió la cetrería en su Lista Representativa a propuesta de once Estados, entre ellos España, y en 2021 la candidatura ampliada reunía a veinticuatro países que la transmiten en familias, mediante tutores o en clubes (UNESCO, 2010, s. f.)."
+   ],
+   "en": [
+    "Falconry is hunting with trained birds of prey, falcons and sometimes eagles, goshawks, sparrowhawks or buzzards, which the falconer releases to catch the quarry and return to the fist (Townes, 1999, p. 125; UNESCO, n.d.). It is believed to have originated in Asia and the Middle East, perhaps around 2000 BCE, and UNESCO credits it with more than four thousand years of practice; originally a means of obtaining food, it acquired social and recreational values over time (Townes, 1999, p. 125; UNESCO, n.d.). It reached Europe in the centuries after the start of the common era (Townes, 1999, p. 125), and as early as the first century Pliny the Elder described, in the part of Thrace above Amphipolis, a hunt in partnership between men and hawks, in which the hunters drove the birds out of the woods and reed-beds, the hawks brought them down in flight and the game was shared with them (Pliny the Elder, ca. 77/1855, book 10, chap. 10). Its slow and meticulous training produced a technical vocabulary of its own that dates back to its early days (Townes, 1999, p. 126).",
+    "In medieval Europe falconry became the status sport par excellence. Great families kept professional falconers, exchanged birds and gave them to the monarch, and heraldry used the falcon to express power (Vamplew, 2021, p. 122). Social hierarchy could be read even in the bird, since royalty hunted with the gyrfalcon, earls with the peregrine, ladies with the merlin and servants with the kestrel, and treatises such as the *Boke of St. Albans* (1486) codified its rules (Guttmann, 2004, p. 58). Noblewomen were welcomed in the hunt, to the point that knights preferred as brides maidens who knew how to ride and to hawk, and illuminated manuscripts abound with ladies holding falcons, in what Guttmann (2004, p. 58) calls an iconography of hierarchy.",
+    "By the end of the seventeenth century falconry had lost importance. The monarchy stopped practising it and estates replaced falconers with gamekeepers, houndsmen and gunsmiths, because the firearm, which had a military use and kept improving, gave rise to shooting, while falconry kept an almost medieval technique (Vamplew, 2021, p. 122). It survived thanks to individual practitioners and to regional and national associations, and in the twentieth century it had to adapt to the legal protection of raptors and to captive breeding programmes (Townes, 1999, p. 125). In 2010 UNESCO's Intangible Heritage Committee inscribed falconry on its Representative List at the proposal of eleven States, Spain among them, and by 2021 the extended nomination brought together twenty-four countries that transmit it within families, through mentors or in clubs (UNESCO, 2010, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/cetreria.jpg",
+   "pie": {
+    "es": "Halconeros con sus aves, detalle de una miniatura del tratado de cetrería de Federico II, *De arte venandi cum avibus* (siglo XIII).",
+    "en": "Falconers with their birds, detail of a miniature from Frederick II's falconry treatise, *De arte venandi cum avibus* (13th century)."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Falconry_Book_of_Frederick_II_1240s_detail_falconers.jpg"
+  },
+  "refs": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Plinio el Viejo. (1855). *The natural history* (J. Bostock y H. T. Riley, Trads.). Taylor and Francis. (Obra original publicada ca. 77). Recuperado el 30 de septiembre de 2026 de https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0137:book=10:chapter=10",
+   "Townes, J. (1999). Falconry. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 125-126). Oxford University Press.",
+   "UNESCO. (2010). *Decision of the Intergovernmental Committee: 5.COM 6.45*. Recuperado el 29 de septiembre de 2026 de https://ich.unesco.org/en/decisions/5.COM/6.45",
+   "UNESCO. (s. f.). *Falconry, a living human heritage*. Recuperado el 29 de septiembre de 2026 de https://ich.unesco.org/en/RL/falconry-a-living-human-heritage-01708",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ],
+  "refs_en": [
+   "Guttmann, A. (2004). *Sports: The first five millennia*. University of Massachusetts Press.",
+   "Pliny the Elder. (1855). *The natural history* (J. Bostock & H. T. Riley, Trans.). Taylor and Francis. (Original work published ca. 77). Retrieved September 30, 2026, from https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0137:book=10:chapter=10",
+   "Townes, J. (1999). Falconry. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 125-126). Oxford University Press.",
+   "UNESCO. (2010). *Decision of the Intergovernmental Committee: 5.COM 6.45*. Retrieved September 29, 2026, from https://ich.unesco.org/en/decisions/5.COM/6.45",
+   "UNESCO. (n.d.). *Falconry, a living human heritage*. Retrieved September 29, 2026, from https://ich.unesco.org/en/RL/falconry-a-living-human-heritage-01708",
+   "Vamplew, W. (2021). *Games people played: A global history of sport*. Reaktion Books."
+  ]
+ }
+]

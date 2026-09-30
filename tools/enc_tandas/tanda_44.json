@@ -1,0 +1,390 @@
+[
+ {
+  "id": "escalada-en-hielo",
+  "name": {
+   "es": "Escalada en hielo",
+   "en": "Ice climbing"
+  },
+  "bloque": {
+   "es": "De invierno",
+   "en": "Winter sports"
+  },
+  "tipo": "breve",
+  "cuando": {
+   "es": "Nace del alpinismo; primera competición conocida, Courmayeur (Italia), 1912; competición moderna, década de 1990 (primera Copa del Mundo, 2000)",
+   "en": "Grew out of mountaineering; first known competition, Courmayeur (Italy), 1912; modern competition, 1990s (first World Cup, 2000)"
+  },
+  "body": {
+   "es": [
+    "La escalada en hielo procede del alpinismo, en el que servía para superar glaciares, corredores y cascadas heladas, y la Union Internationale des Associations d'Alpinisme (UIAA) sitúa su primera competición conocida en 1912, en el glaciar de la Brenva, en Courmayeur (Italia) (UIAA, s. f.). La competición moderna surgió en la década de 1990, cuando algunos alpinistas empezaron a desafiarse sobre estructuras de hielo preparadas para ello, con su propio material de montaña; las primeras reglas comunes aparecieron en 1998 y en 2000 una empresa privada alemana organizó la primera Copa del Mundo (UIAA, s. f.). En 2002 la Comisión Internacional de Escalada en Hielo de la UIAA asumió la organización de las pruebas, y desde entonces celebra cada año un circuito de Copas del Mundo, Campeonatos del Mundo y pruebas juveniles y continentales, con una modalidad de dificultad y otra de velocidad, esta última de origen ruso (UIAA, s. f.)."
+   ],
+   "en": [
+    "Ice climbing comes from mountaineering, where it was used to overcome glaciers, gullies and frozen waterfalls, and the Union Internationale des Associations d'Alpinisme (UIAA) places its first known competition in 1912, on the Brenva glacier at Courmayeur (Italy) (UIAA, n.d.). Modern competition emerged in the 1990s, when some mountaineers began to challenge one another on specially prepared ice structures using their own mountain equipment; the first common rules appeared in 1998, and in 2000 a private German company organised the first World Cup (UIAA, n.d.). In 2002 the UIAA International Ice Climbing Commission took over the organisation of events, and since then it has held an annual circuit of World Cups, World Championships and youth and continental competitions, with a lead (difficulty) discipline and a speed discipline, the latter of Russian origin (UIAA, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/escalada-en-hielo.jpg",
+   "pie": {
+    "es": "Escaladores en hielo en el contrafuerte izquierdo de la cascada helada de Kinder Downfall (Derbyshire, Inglaterra), 2009.",
+    "en": "Ice climbers on the left-hand buttress of the frozen Kinder Downfall (Derbyshire, England), 2009."
+   },
+   "autor": "John Fielding",
+   "licencia": "CC BY-SA 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Ice_Climbing_-_geograph.org.uk_-_1628668.jpg"
+  },
+  "refs": [
+   "UIAA. (s. f.). *About*. Recuperado el 30 de septiembre de 2026 de https://iceclimbing.sport/about/"
+  ],
+  "refs_en": [
+   "UIAA. (n.d.). *About*. Retrieved September 30, 2026, from https://iceclimbing.sport/about/"
+  ]
+ },
+ {
+  "id": "vuelo-con-traje-de-alas",
+  "name": {
+   "es": "Vuelo con traje de alas",
+   "en": "Wingsuit flying"
+  },
+  "bloque": {
+   "es": "Aéreos",
+   "en": "Air sports"
+  },
+  "tipo": "breve",
+  "cuando": {
+   "es": "Década de 1990 (trajes de Patrick de Gayardon, probados en Chamonix en 1997); reconocimiento de la FAI y primera Copa del Mundo, Netheravon (Reino Unido), 2015",
+   "en": "1990s (Patrick de Gayardon's suits, tested at Chamonix in 1997); FAI recognition and first World Cup, Netheravon (United Kingdom), 2015"
+  },
+  "body": {
+   "es": [
+    "El vuelo con traje de alas procede del paracaidismo en caída libre, utiliza un traje cuyas membranas de tela unen brazos, piernas y tronco para planear antes de abrir el paracaídas. Su desarrollo moderno se asocia al paracaidista francés Patrick de Gayardon, que en 1997 probó en Chamonix un diseño propio con el que planeó más de tres millas y media en tres minutos de caída libre, y que murió en Hawái el 13 de abril de 1998 durante un salto; sus diseños animaron a Jari Kuosma y Robert Pečnik, fundadores de Birdman y Phoenix-Fly, a desarrollar estos trajes (International Skydiving Museum & Hall of Fame, s. f.). La Federación Aeronáutica Internacional reconoció en 2015 las modalidades de rendimiento y de acrobacia, celebró ese año en Netheravon (Reino Unido) la primera Copa del Mundo y en 2016, en Zephyrhills (Estados Unidos), el primer Campeonato del Mundo (Fédération Aéronautique Internationale [FAI], s. f.)."
+   ],
+   "en": [
+    "Wingsuit flying comes from freefall skydiving and uses a suit whose fabric membranes join the arms, legs and torso so as to glide before opening the parachute. Its modern development is associated with the French skydiver Patrick de Gayardon, who in 1997 tested a design of his own at Chamonix, gliding more than three and a half miles in a three-minute freefall, and who died in Hawaii on 13 April 1998 during a jump; his designs encouraged Jari Kuosma and Robert Pečnik, founders of Birdman and Phoenix-Fly, to develop such suits (International Skydiving Museum & Hall of Fame, n.d.). The Fédération Aéronautique Internationale recognised the performance and acrobatic disciplines in 2015, held the first World Cup that year at Netheravon (United Kingdom) and the first World Championships in 2016 at Zephyrhills (United States) (Fédération Aéronautique Internationale [FAI], n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/vuelo-con-traje-de-alas.jpg",
+   "pie": {
+    "es": "Paracaidista con traje de alas en vuelo sobre los campos del aeródromo de Langar (Reino Unido), 2012.",
+    "en": "A wingsuit flyer over the fields of Langar Airfield (United Kingdom), 2012."
+   },
+   "autor": "Wingsuiting",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Wingsuit_Flying_over_Langar_Airfield_UK.jpg"
+  },
+  "refs": [
+   "Fédération Aéronautique Internationale. (s. f.). *Wingsuit flying*. Recuperado el 30 de septiembre de 2026 de https://www.fai.org/page/isc-wingsuit-flying",
+   "International Skydiving Museum & Hall of Fame. (s. f.). *Patrick de Gayardon*. Recuperado el 30 de septiembre de 2026 de https://skydivingmuseum.org/member/patrick-de-gayardon/"
+  ],
+  "refs_en": [
+   "Fédération Aéronautique Internationale. (n.d.). *Wingsuit flying*. Retrieved September 30, 2026, from https://www.fai.org/page/isc-wingsuit-flying",
+   "International Skydiving Museum & Hall of Fame. (n.d.). *Patrick de Gayardon*. Retrieved September 30, 2026, from https://skydivingmuseum.org/member/patrick-de-gayardon/"
+  ]
+ },
+ {
+  "id": "paramotor",
+  "name": {
+   "es": "Paramotor",
+   "en": "Paramotoring"
+  },
+  "bloque": {
+   "es": "Aéreos",
+   "en": "Air sports"
+  },
+  "tipo": "breve",
+  "cuando": {
+   "es": "Essex (Inglaterra), 8 de junio de 1980; primer Campeonato del Mundo de la FAI, Sudáfrica, 1996",
+   "en": "Essex (England), 8 June 1980; first FAI World Championships, South Africa, 1996"
+  },
+  "body": {
+   "es": [
+    "El paramotor, o parapente con motor, une un ala flexible a un pequeño motor que el piloto lleva a la espalda, de modo que puede despegar desde terreno llano. Según la Federación Aeronáutica Internacional, nació a comienzos de los años ochenta, cuando el piloto británico Mike Byrne, atraído por el parapente que entonces empezaba a practicarse, buscó una unidad de propulsión y el 8 de junio de 1980 voló en Essex durante unos cuatro minutos y medio con un equipo casero de unos 37 kilos (Fédération Aéronautique Internationale [FAI], s. f.). El deporte depende de la Comisión de Ultraligeros y Paramotores de la FAI (CIMA), que distingue las categorías por la forma de despegue, a pie o en triciclo, y por el número de tripulantes, y el primer Campeonato del Mundo de la FAI se disputó en Sudáfrica en 1996 (FAI, s. f.)."
+   ],
+   "en": [
+    "The paramotor, or powered paraglider, joins a flexible wing to a small engine carried on the pilot's back, so that take-off is possible from flat ground. According to the Fédération Aéronautique Internationale, it was born in the early 1980s, when the British pilot Mike Byrne, drawn to the paragliding that was then emerging, looked for a power unit and on 8 June 1980 flew in Essex for about four and a half minutes with home-made equipment weighing some 37 kilos (Fédération Aéronautique Internationale [FAI], n.d.). The sport is governed by the FAI Microlight and Paramotor Commission (CIMA), which divides the classes by launch method, on foot or by trike, and by the number of crew, and the first FAI World Championships were held in South Africa in 1996 (FAI, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/paramotor.jpg",
+   "pie": {
+    "es": "Piloto de paramotor en vuelo sobre Brno-Bystrc (República Checa), 2012.",
+    "en": "A paramotor pilot flying over Brno-Bystrc (Czech Republic), 2012."
+   },
+   "autor": "HTO",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Powered_paragliding_in_Brno-Bystrc.jpg"
+  },
+  "refs": [
+   "Fédération Aéronautique Internationale. (s. f.). *Paramotors*. Recuperado el 30 de septiembre de 2026 de https://www.fai.org/page/paramotors-0"
+  ],
+  "refs_en": [
+   "Fédération Aéronautique Internationale. (n.d.). *Paramotors*. Retrieved September 30, 2026, from https://www.fai.org/page/paramotors-0"
+  ]
+ },
+ {
+  "id": "aeromodelismo",
+  "name": {
+   "es": "Aeromodelismo",
+   "en": "Aeromodelling"
+  },
+  "bloque": {
+   "es": "Aéreos",
+   "en": "Air sports"
+  },
+  "tipo": "breve",
+  "cuando": {
+   "es": "Competiciones internacionales desde finales de la década de 1920 (trofeo Wakefield, 1927); reglas de la FAI, 1936; comisión de aeromodelismo, 1947",
+   "en": "International competitions from the late 1920s (Wakefield Trophy, 1927); FAI rules, 1936; aeromodelling commission, 1947"
+  },
+  "body": {
+   "es": [
+    "El aeromodelismo, que consiste en diseñar, construir y hacer volar en competición modelos reducidos de aeronaves, se organizó internacionalmente en el periodo de entreguerras. El trofeo que Sir Charles Wakefield donó en 1927 para modelos propulsados por gomas elásticas se disputó cada año hasta 1939, y en 1937 se celebraron en Austria los primeros concursos internacionales de modelos planeadores (Fédération Aéronautique Internationale [FAI], s. f.-b). La Federación Aeronáutica Internacional aprobó en 1936 las primeras reglas para los récords de modelos, aunque antes de la guerra dejó estos asuntos en manos de representantes de la aviación a escala real con poca experiencia en ellos (FAI, s. f.-a, s. f.-b). En 1947 constituyó su comité de aeromodelismo (CIAM), presidido por el británico Alex F. Houlberg, que al año siguiente creó nuevas clases de récord, como los planeadores sin cola, el vuelo circular controlado y los modelos de interior (FAI, s. f.-b)."
+   ],
+   "en": [
+    "Aeromodelling, which consists of designing, building and flying scale models of aircraft in competition, was organised internationally in the interwar period. The trophy donated by Sir Charles Wakefield in 1927 for rubber-powered models was contested every year until 1939, and in 1937 the first international contests for model gliders were held in Austria (Fédération Aéronautique Internationale [FAI], n.d.-b). The Fédération Aéronautique Internationale approved the first rules for model aircraft records in 1936, although before the war it left these matters to representatives of full-size aviation with little experience of models (FAI, n.d.-a, n.d.-b). In 1947 it set up its aeromodelling committee (CIAM), chaired by the Briton Alex F. Houlberg, which the following year created new record classes, such as tailless gliders, control line and indoor models (FAI, n.d.-b)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/aeromodelismo.jpg",
+   "pie": {
+    "es": "Concurso de aeromodelismo fotografiado por la agencia Bain News Service hacia 1910.",
+    "en": "A model aeroplane contest photographed by the Bain News Service around 1910."
+   },
+   "autor": "Bain News Service",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Model_Aeroplane_Contest_LCCN2014691233.jpg"
+  },
+  "refs": [
+   "Fédération Aéronautique Internationale. (s. f.-a). *History*. Recuperado el 30 de septiembre de 2026 de https://www.fai.org/page/ciam-history",
+   "Fédération Aéronautique Internationale. (s. f.-b). *Years 1936-1949*. Recuperado el 30 de septiembre de 2026 de https://www.fai.org/page/years-1936-1949"
+  ],
+  "refs_en": [
+   "Fédération Aéronautique Internationale. (n.d.-a). *History*. Retrieved September 30, 2026, from https://www.fai.org/page/ciam-history",
+   "Fédération Aéronautique Internationale. (n.d.-b). *Years 1936-1949*. Retrieved September 30, 2026, from https://www.fai.org/page/years-1936-1949"
+  ]
+ },
+ {
+  "id": "acuatlon",
+  "name": {
+   "es": "Acuatlón",
+   "en": "Aquathlon"
+  },
+  "bloque": {
+   "es": "Combinados",
+   "en": "Combined events"
+  },
+  "tipo": "breve",
+  "cuando": {
+   "es": "Australia, década de 1950 (carreras de socorristas); primer Campeonato del Mundo, Noosa (Queensland), 1998",
+   "en": "Australia, 1950s (lifeguard racing); first World Championships, Noosa (Queensland), 1998"
+  },
+  "body": {
+   "es": [
+    "El acuatlón es una prueba continua que combina carrera a pie y natación en aguas abiertas, sin el tramo de bicicleta del triatlón, y World Triathlon sitúa sus raíces modernas en las carreras de socorristas de la Australia de los años cincuenta (World Triathlon, s. f.). El formato oficial de la federación encadena 2,5 kilómetros de carrera, 1 kilómetro de natación y otros 2,5 kilómetros de carrera, y cuando el agua está por debajo de 22 °C la prueba pasa a ser un kilómetro de natación con traje de neopreno seguido de cinco de carrera, de modo que nadie tiene que ponérselo en plena competición (World Triathlon, s. f.). El primer Campeonato del Mundo se celebró en 1998 en Noosa (Queensland), se ha disputado desde entonces todos los años y desde 2017 forma parte de los campeonatos del mundo multideporte de World Triathlon, junto al duatlón (World Triathlon, s. f.)."
+   ],
+   "en": [
+    "Aquathlon is a continuous race combining running and open-water swimming, without the bike leg of triathlon, and World Triathlon traces its modern roots to lifeguard racing in 1950s Australia (World Triathlon, n.d.). The federation's official format links a 2.5-kilometre run, a 1-kilometre swim and another 2.5-kilometre run, and when the water is below 22 °C the race becomes a 1-kilometre wetsuit swim followed by a 5-kilometre run, so that nobody has to put a wetsuit on mid-race (World Triathlon, n.d.). The first World Championships were held in 1998 in Noosa (Queensland), have been contested every year since, and since 2017 have formed part of World Triathlon's multisport world championships, alongside duathlon (World Triathlon, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/acuatlon.jpg",
+   "pie": {
+    "es": "Una nadadora del club Okinawa Dolphins durante el acuatlón de verano de Camp Foster (Okinawa, Japón), 2011.",
+    "en": "A swimmer from the Okinawa Dolphins club during the summer aquathlon at Camp Foster (Okinawa, Japan), 2011."
+   },
+   "autor": "Matthew Manning",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Summer_aquathlon_brings_friendly_competition_DVIDS447660.jpg"
+  },
+  "refs": [
+   "World Triathlon. (s. f.). *Aquathlon*. Recuperado el 30 de septiembre de 2026 de https://triathlon.org/multisports/aquathlon"
+  ],
+  "refs_en": [
+   "World Triathlon. (n.d.). *Aquathlon*. Retrieved September 30, 2026, from https://triathlon.org/multisports/aquathlon"
+  ]
+ },
+ {
+  "id": "swimrun",
+  "name": {
+   "es": "Swimrun",
+   "en": "Swimrun"
+  },
+  "bloque": {
+   "es": "Combinados",
+   "en": "Combined events"
+  },
+  "tipo": "breve",
+  "cuando": {
+   "es": "Archipiélago de Estocolmo (Suecia), 2002; primera carrera ÖTILLÖ, 2006",
+   "en": "Stockholm archipelago (Sweden), 2002; first ÖTILLÖ race, 2006"
+  },
+  "body": {
+   "es": [
+    "El *swimrun* alterna tramos de carrera por el campo y de natación en aguas abiertas sin zonas de transición, de modo que los deportistas, en parejas, nadan con las zapatillas puestas y corren con el traje de neopreno. Según la organización ÖTILLÖ, nació en 2002 en la isla de Utö, en el archipiélago de Estocolmo, cuando cuatro amigos suecos apostaron que el último equipo de dos en llegar a Sandhamn, tras pasar por tres restaurantes, pagaría el hotel, la cena y la bebida, un desafío que les llevó unas veintiséis horas (ÖTILLÖ, s. f.-a). En 2006 Michael Lemmel y Mats Skott convirtieron aquella apuesta en una carrera comercial llamada ÖTILLÖ («de isla a isla» en sueco), que hoy recorre unos 70 kilómetros, 61 de carrera y 9 de natación, a través de más de veinticuatro islas; desde 2015 una serie mundial ha llevado el formato a otros países (ÖTILLÖ, s. f.-a, s. f.-b)."
+   ],
+   "en": [
+    "Swimrun alternates cross-country running and open-water swimming with no transition zones, so that athletes, racing in pairs, swim in their running shoes and run in their wetsuits. According to the ÖTILLÖ organisation, it was born in 2002 on the island of Utö, in the Stockholm archipelago, when four Swedish friends bet that the last team of two to reach Sandhamn, after passing three restaurants, would pay for the hotel, dinner and drinks, a challenge that took them some twenty-six hours (ÖTILLÖ, n.d.-a). In 2006 Michael Lemmel and Mats Skott turned that bet into a commercial race called ÖTILLÖ (Swedish for \"island to island\"), which today covers some 70 kilometres, 61 running and 9 swimming, across more than twenty-four islands; since 2015 a world series has taken the format to other countries (ÖTILLÖ, n.d.-a, n.d.-b)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/swimrun.jpg",
+   "pie": {
+    "es": "Paso de la natación a la carrera en la prueba SwimRun Georgia (Estados Unidos), 2018.",
+    "en": "Transition from swim to run at SwimRun Georgia (United States), 2018."
+   },
+   "autor": "Tim Nettleton",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Swimruntransition.jpg"
+  },
+  "refs": [
+   "ÖTILLÖ. (s. f.-a). *The origins of swimrun*. Recuperado el 30 de septiembre de 2026 de https://otilloswimrun.com/news/the-origins-of-swimrun/",
+   "ÖTILLÖ. (s. f.-b). *ÖTILLÖ, the Swimrun World Championship*. Recuperado el 30 de septiembre de 2026 de https://otilloswimrun.com/races/otillo-swimrun-world-championship-sweden/"
+  ],
+  "refs_en": [
+   "ÖTILLÖ. (n.d.-a). *The origins of swimrun*. Retrieved September 30, 2026, from https://otilloswimrun.com/news/the-origins-of-swimrun/",
+   "ÖTILLÖ. (n.d.-b). *ÖTILLÖ, the Swimrun World Championship*. Retrieved September 30, 2026, from https://otilloswimrun.com/races/otillo-swimrun-world-championship-sweden/"
+  ]
+ },
+ {
+  "id": "speedcubing",
+  "name": {
+   "es": "Speedcubing",
+   "en": "Speedcubing"
+  },
+  "bloque": {
+   "es": "Deportes mentales y otros",
+   "en": "Mind sports and others"
+  },
+  "tipo": "breve",
+  "cuando": {
+   "es": "Budapest (Hungría), 5 de junio de 1982 (primer campeonato del mundo); reglamento y World Cube Association, agosto de 2004",
+   "en": "Budapest (Hungary), 5 June 1982 (first world championship); rules and World Cube Association, August 2004"
+  },
+  "body": {
+   "es": [
+    "El *speedcubing* es la resolución en competición, en el menor tiempo posible, del cubo que el húngaro Ernő Rubik inventó en la primavera de 1974 y que llegó al mercado a finales de 1977 (World Cube Association [WCA], s. f.-a). El 5 de junio de 1982 se celebró en Budapest el primer campeonato del mundo, con diecinueve participantes, que ganó Minh Thai con una resolución de 22,95 segundos, si bien las competiciones se interrumpieron después de 1983, cuando pasó la moda del cubo (WCA, s. f.-a, s. f.-b). La práctica revivió a mediados de los noventa gracias a las páginas personales de internet, y en 2000 Ron van Bruchem abrió speedcubing.com, con récords no oficiales; tras el campeonato del mundo de Toronto de 2003, con 89 participantes, van Bruchem y Tyson Mao publicaron en agosto de 2004 el primer reglamento y fundaron la WCA, que en 2014 había llevado ya las competiciones a África (WCA, s. f.-a)."
+   ],
+   "en": [
+    "Speedcubing is the competitive solving, in the shortest possible time, of the cube that the Hungarian Ernő Rubik invented in the spring of 1974 and that reached the market at the end of 1977 (World Cube Association [WCA], n.d.-a). The first world championship was held in Budapest on 5 June 1982, with nineteen competitors, and was won by Minh Thai with a solve of 22.95 seconds, although competitions stopped after 1983, when the cube craze faded (WCA, n.d.-a, n.d.-b). The activity revived in the mid-1990s thanks to personal websites, and in 2000 Ron van Bruchem launched speedcubing.com, with unofficial records; after the 2003 world championship in Toronto, with 89 competitors, van Bruchem and Tyson Mao released the first regulations in August 2004 and founded the WCA, which by 2014 had taken competitions to Africa (WCA, n.d.-a)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/speedcubing.jpg",
+   "pie": {
+    "es": "Participantes en la competición de *speedcubing* Tartu Open (Estonia), 2017.",
+    "en": "Competitors at the Tartu Open speedcubing competition (Estonia), 2017."
+   },
+   "autor": "Ivo Kruusamägi",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Tartu_Open_2017_speedcubing_competition.jpg"
+  },
+  "refs": [
+   "World Cube Association. (s. f.-a). *Speedcubing history*. Recuperado el 30 de septiembre de 2026 de https://www.worldcubeassociation.org/speedcubing-history",
+   "World Cube Association. (s. f.-b). *World Rubik's Cube Championship 1982*. Recuperado el 30 de septiembre de 2026 de https://www.worldcubeassociation.org/competitions/WC1982"
+  ],
+  "refs_en": [
+   "World Cube Association. (n.d.-a). *Speedcubing history*. Retrieved September 30, 2026, from https://www.worldcubeassociation.org/speedcubing-history",
+   "World Cube Association. (n.d.-b). *World Rubik's Cube Championship 1982*. Retrieved September 30, 2026, from https://www.worldcubeassociation.org/competitions/WC1982"
+  ]
+ },
+ {
+  "id": "carreras-de-cortacesped",
+  "name": {
+   "es": "Carreras de cortacésped",
+   "en": "Lawn mower racing"
+  },
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "tipo": "breve",
+  "cuando": {
+   "es": "Wisborough Green (West Sussex, Inglaterra), 1973",
+   "en": "Wisborough Green (West Sussex, England), 1973"
+  },
+  "body": {
+   "es": [
+    "Las carreras de cortacésped nacieron en 1973 en el pub The Cricketers Arms de Wisborough Green (West Sussex), donde el irlandés Jim Gavin y sus amigos idearon una forma de automovilismo barata y al alcance de cualquiera, al margen del dinero y del patrocinio que dominaban las carreras de motor (British Lawn Mower Racing Association [BLMRA], s. f.). La primera carrera, disputada en un prado de la zona, reunió a unos ochenta cortacéspedes, y la asociación que surgió de ella mantuvo como principios la ausencia de patrocinio, de comercialización y de premios en metálico, la prohibición de modificar los motores y la entrega de sus beneficios a causas benéficas (BLMRA, s. f.). Su temporada, de mayo a octubre, incluye un campeonato británico, un campeonato del mundo y una carrera de resistencia de doce horas, en la que han competido pilotos profesionales como Stirling Moss o Derek Bell junto a aficionados (BLMRA, s. f.)."
+   ],
+   "en": [
+    "Lawn mower racing was born in 1973 at The Cricketers Arms pub in Wisborough Green (West Sussex), where the Irishman Jim Gavin and his friends devised a form of motorsport that was cheap and open to anyone, away from the money and sponsorship that dominated motor racing (British Lawn Mower Racing Association [BLMRA], n.d.). The first race, held in a local field, brought together some eighty mowers, and the association that grew out of it kept as its principles no sponsorship, no commercialism and no cash prizes, a ban on modifying engines and the donation of any profits to charity (BLMRA, n.d.). Its season, from May to October, includes a British championship, a world championship and a twelve-hour endurance race, in which professional drivers such as Stirling Moss and Derek Bell have competed alongside amateurs (BLMRA, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/carreras-de-cortacesped.jpg",
+   "pie": {
+    "es": "Cortacéspedes de carreras en el desfile de la 32.ª edición de la fiesta Bois d'Arc Bash en Commerce (Texas, Estados Unidos), 2017.",
+    "en": "Racing lawn mowers in the parade of the 32nd Bois d'Arc Bash in Commerce (Texas, United States), 2017."
+   },
+   "autor": "Michael Barera",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:2017_Bois_d%27Arc_Bash_parade_30_(racing_lawn_mowers).jpg"
+  },
+  "refs": [
+   "British Lawn Mower Racing Association. (s. f.). *How did it start?* Recuperado el 30 de septiembre de 2026 de https://www.blmra.co.uk/howdiditstart"
+  ],
+  "refs_en": [
+   "British Lawn Mower Racing Association. (n.d.). *How did it start?* Retrieved September 30, 2026, from https://www.blmra.co.uk/howdiditstart"
+  ]
+ },
+ {
+  "id": "tractor-pulling",
+  "name": {
+   "es": "Tractor pulling",
+   "en": "Tractor pulling"
+  },
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "tipo": "breve",
+  "cuando": {
+   "es": "Medio Oeste de Estados Unidos, mediados del siglo XX; reglas comunes, Indianápolis, 1969; Europa, Países Bajos, 1977",
+   "en": "US Midwest, mid-twentieth century; common rules, Indianapolis, 1969; Europe, Netherlands, 1977"
+  },
+  "body": {
+   "es": [
+    "El *tractor pulling* nació en las zonas agrícolas del Medio Oeste de Estados Unidos, donde los granjeros, acostumbrados a medir la fuerza de tiro de sus caballos, empezaron a enfrentar sus tractores arrastrando un trineo lastrado con el mismo vehículo con el que araban al día siguiente, y esa raíz rural explica la fidelidad de su público (Camillo, 1999, p. 423). En 1969 representantes de ocho estados del Medio Oeste se reunieron en Indianápolis para unificar las reglas y fundaron la National Tractor Pullers Association, y la supresión en 1974 del límite de velocidad de ocho millas por hora convirtió los tractores en máquinas de competición (Camillo, 1999, p. 423). El organismo europeo sitúa la presentación del deporte en Europa en octubre de 1977, en el recinto neerlandés de Flevohof y ante unos veinte mil espectadores (European Tractor Pulling Committee [ETPC], s. f.), mientras que Camillo (1999, p. 424) la fecha en 1978."
+   ],
+   "en": [
+    "Tractor pulling was born in the farming areas of the US Midwest, where farmers, used to measuring the pulling power of their horses, began to pit their tractors against one another by dragging a weighted sled with the same vehicle they ploughed with the next day, and this rural root explains the loyalty of its audience (Camillo, 1999, p. 423). In 1969 representatives of eight Midwestern states met in Indianapolis to unify the rules and founded the National Tractor Pullers Association, and the abolition in 1974 of the eight-mile-per-hour speed limit turned tractors into competition machines (Camillo, 1999, p. 423). The European governing body dates the sport's introduction to Europe to October 1977, at the Dutch Flevohof site and before some twenty thousand spectators (European Tractor Pulling Committee [ETPC], n.d.), whereas Camillo (1999, p. 424) dates it to 1978."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/tractor-pulling.jpg",
+   "pie": {
+    "es": "Tractor preparado para una prueba de *tractor pulling*.",
+    "en": "A tractor prepared for a tractor pulling event."
+   },
+   "autor": "Rasbak",
+   "licencia": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Tractor_bij_tractorpulling.jpg"
+  },
+  "refs": [
+   "Camillo, M. B. (1999). Truck and tractor pulling. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 423-424). Oxford University Press.",
+   "European Tractor Pulling Committee. (s. f.). *History*. Recuperado el 30 de septiembre de 2026 de https://tractorpulling.com/history/"
+  ],
+  "refs_en": [
+   "Camillo, M. B. (1999). Truck and tractor pulling. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 423-424). Oxford University Press.",
+   "European Tractor Pulling Committee. (n.d.). *History*. Retrieved September 30, 2026, from https://tractorpulling.com/history/"
+  ]
+ }
+]

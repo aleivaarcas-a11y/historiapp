@@ -1,0 +1,314 @@
+[
+ {
+  "id": "futbol-playa",
+  "name": {
+   "es": "Fútbol playa",
+   "en": "Beach soccer"
+  },
+  "bloque": {
+   "es": "De playa",
+   "en": "Beach sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Playas de Río de Janeiro (Brasil), torneos desde 1957; reglas modernas en Estados Unidos, 1992",
+   "en": "Beaches of Rio de Janeiro (Brazil), tournaments from 1957; modern rules in the United States, 1992"
+  },
+  "body": {
+   "es": [
+    "El fútbol sobre la arena es tan antiguo como la costumbre de jugar al fútbol en cualquier espacio abierto, y la FIFA recoge la tradición según la cual lo introdujeron a finales del siglo XIX marineros europeos que jugaban en las costas de Brasil (FIFA, 2020). La práctica arraigó en las playas de Río de Janeiro, donde la arena de Copacabana se considera la cuna del juego a mediados de la década de 1950, y allí se celebraron en 1957 los primeros torneos oficiales (Beach Soccer Worldwide, s. f.; FIFA, 2020). En ese contexto el fútbol playa era una forma de ocio popular y urbano, abierta a cualquiera que tuviera acceso a la playa y sin más material que un balón.",
+    "La forma moderna nació de una iniciativa empresarial. A comienzos de la década de 1990, Giancarlo Signorini impulsó la creación de la Beach Soccer Company, cuyos socios fijaron las reglas en 1992 y las probaron en un torneo en la playa Will Rogers de Los Ángeles (Beach Soccer Worldwide, s. f.; FIFA, 2020). En 1993 se celebró en Miami la primera competición internacional, con 6.000 espectadores, y en 1995 se disputó en Copacabana un primer campeonato del mundo sin carácter oficial (FIFA, 2020). La televisión estadounidense siguió ya el torneo de Miami (FIFA, 2020), y la presencia de antiguas figuras del fútbol, como Eric Cantona, en torneos concebidos como fiestas con celebridades lo convirtió en un espectáculo comercial internacional, que sus organizadores presentan como especialmente atractivo para los medios y los patrocinadores (Beach Soccer Worldwide, s. f.).",
+    "La expansión la organizó la misma empresa, convertida en Beach Soccer Worldwide (BSWW), mediante el Pro Beach Soccer Tour, iniciado en 1996, y la Euro Beach Soccer League, creada en 1998 (Beach Soccer Worldwide, s. f.). En 2004 el fútbol playa se integró en la FIFA, que organizó en 2005 la primera Copa Mundial de Fútbol Playa de la FIFA en Copacabana, ganada por una selección francesa en la que jugaba Eric Cantona (Beach Soccer Worldwide, s. f.; FIFA, 2020). Su caso muestra un deporte gobernado por una federación ajena, la del fútbol, y promovido por una empresa privada, y BSWW declara hoy su práctica en más de doscientos países, con competiciones masculinas y femeninas (Beach Soccer Worldwide, s. f.)."
+   ],
+   "en": [
+    "Football on sand is as old as the habit of playing football in any open space, and FIFA records the tradition according to which it was introduced at the end of the nineteenth century by European sailors who played on the coasts of Brazil (FIFA, 2020). The practice took root on the beaches of Rio de Janeiro, where the sand of Copacabana is considered the cradle of the game in the mid-1950s, and the first official tournaments were held there in 1957 (Beach Soccer Worldwide, n.d.; FIFA, 2020). In that setting beach soccer was a form of popular urban leisure, open to anyone with access to the beach and requiring nothing more than a ball.",
+    "The modern form was born of a business initiative. In the early 1990s Giancarlo Signorini led the creation of the Beach Soccer Company, whose partners set the rules in 1992 and tested them in a tournament at Will Rogers Beach in Los Angeles (Beach Soccer Worldwide, n.d.; FIFA, 2020). In 1993 the first international competition was held in Miami, with 6,000 spectators, and in 1995 a first, unofficial world championship was played at Copacabana (FIFA, 2020). American television already followed the Miami tournament (FIFA, 2020), and the presence of former football stars, such as Eric Cantona, in tournaments conceived as festive events with celebrities turned it into an international commercial spectacle, which its organisers present as particularly attractive to the media and sponsors (Beach Soccer Worldwide, n.d.).",
+    "Its expansion was organised by the same company, which became Beach Soccer Worldwide (BSWW), through the Pro Beach Soccer Tour, launched in 1996, and the Euro Beach Soccer League, created in 1998 (Beach Soccer Worldwide, n.d.). In 2004 beach soccer joined FIFA, which organised the first FIFA Beach Soccer World Cup at Copacabana in 2005, won by a French team that included Eric Cantona (Beach Soccer Worldwide, n.d.; FIFA, 2020). Its case shows a sport governed by the federation of another sport, football, and promoted by a private company, and BSWW today reports that it is played in more than two hundred countries, with men's and women's competitions (Beach Soccer Worldwide, n.d.)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/futbol-playa.jpg",
+   "pie": {
+    "es": "Partido informal de fútbol en la playa de Copacabana (Río de Janeiro), 2008.",
+    "en": "An informal football match on Copacabana beach (Rio de Janeiro), 2008."
+   },
+   "autor": "Jorge Láscar",
+   "licencia": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Lascar_Beach_soccer_-_Copacabana_beach_(4551895402).jpg"
+  },
+  "refs": [
+   "Beach Soccer Worldwide. (s. f.). *History*. Recuperado el 29 de septiembre de 2026 de https://beachsoccer.com/history",
+   "FIFA. (2020, 29 de agosto). *The history of beach soccer*. Recuperado el 29 de septiembre de 2026 de https://inside.fifa.com/news/the-history-of-beach-soccer"
+  ],
+  "refs_en": [
+   "Beach Soccer Worldwide. (n.d.). *History*. Retrieved September 29, 2026, from https://beachsoccer.com/history",
+   "FIFA. (2020, August 29). *The history of beach soccer*. Retrieved September 29, 2026, from https://inside.fifa.com/news/the-history-of-beach-soccer"
+  ]
+ },
+ {
+  "id": "hockey-sala",
+  "name": {
+   "es": "Hockey sala",
+   "en": "Indoor hockey"
+  },
+  "bloque": {
+   "es": "Con stick o mazo",
+   "en": "Stick and mallet sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Alemania, mediados del siglo XX; reconocido por la FIH en 1968",
+   "en": "Germany, mid-twentieth century; recognised by the FIH in 1968"
+  },
+  "body": {
+   "es": [
+    "El hockey sala nació como una prolongación invernal del hockey sobre hierba. La Federación Internacional de Hockey sitúa su origen en Alemania a mediados del siglo XX, cuando los jugadores buscaron una manera de seguir practicando durante los meses en que el frío impedía jugar al aire libre (FIH, 2023a). Los clubes trasladaron el entrenamiento a pabellones cubiertos porque los campos de otoño e invierno quedaban embarrados y encharcados, y en esa primera etapa se jugó sobre superficies muy diversas, de madera, cemento u hormigón, y con porterías de medidas distintas (Fernández Truan, s. f., p. 1184). Su función inicial fue, por tanto, la de mantener la temporada y la forma de los mismos jugadores de hierba, que durante años alternaron ambas modalidades.",
+    "El paso de práctica de entrenamiento a disciplina con reglamento propio llegó cuando la FIH incorporó el hockey sala a sus estatutos en 1968, y desde 1972 la federación organiza competiciones internacionales de la modalidad (FIH, 2023a). El juego se adaptó a las dimensiones de un pabellón, con equipos de seis jugadores (FIH, s. f.), un stick curvado en uno solo de sus lados y una bola de caucho (Fernández Truan, s. f., p. 1184), y los partidos duran hoy cuarenta minutos, repartidos en cuatro cuartos de diez, sobre una pista de 40 por 20 metros con vallas laterales que mantienen la bola en juego (FIH, 2023b). Según Fernández Truan (s. f., p. 1184), las dimensiones reducidas de la pista, similares a las de un campo de balonmano o de fútbol sala, facilitaron que se practicara en los centros escolares y explican en parte su difusión.",
+    "El primer Campeonato de Europa masculino se disputó en Berlín en 1974, con victoria de la selección anfitriona, que ha seguido siendo la más laureada de la competición (Fernández Truan, s. f., p. 1184). La primera Copa del Mundo organizada por la FIH, masculina y femenina a la vez, se celebró en Leipzig en febrero de 2003 y desde entonces se repite cada cuatro años (FIH, 2023a); el mismo manual menciona una copa del mundo en 1957, dato que la federación no recoge. La FIH presenta hoy el hockey sala como una modalidad practicada en más de ochenta países y con una participación equilibrada de hombres y mujeres (FIH, s. f.). No forma parte del programa olímpico."
+   ],
+   "en": [
+    "Indoor hockey was born as a winter extension of field hockey. The International Hockey Federation places its origin in Germany in the mid-twentieth century, when players looked for a way to keep playing during the months when the cold made outdoor play impossible (FIH, 2023a). Clubs moved training into indoor halls because autumn and winter pitches were muddy and waterlogged, and in this first stage the game was played on very different surfaces, wood, cement or concrete, and with goals of different sizes (Fernández Truan, n.d., p. 1184). Its initial function was therefore to sustain the season and the fitness of the same field players, who for years alternated between both forms.",
+    "The step from training practice to a discipline with its own rules came when the FIH incorporated indoor hockey into its statutes in 1968, and since 1972 the federation has organised international competitions in this form (FIH, 2023a). The game was adapted to the dimensions of a sports hall, with teams of six players (FIH, n.d.), a stick curved on one side only and a rubber ball (Fernández Truan, n.d., p. 1184), and matches now last forty minutes, divided into four quarters of ten, on a 40 by 20 metre pitch with side boards that keep the ball in play (FIH, 2023b). According to Fernández Truan (n.d., p. 1184), the small size of the court, similar to that of a handball or futsal court, made it easy to play in schools and partly explains its spread.",
+    "The first men's European Championship was played in Berlin in 1974 and won by the host nation, which has remained the most successful team in the competition (Fernández Truan, n.d., p. 1184). The first World Cup organised by the FIH, for men and women at the same time, was held in Leipzig in February 2003 and has been repeated every four years since (FIH, 2023a); the same textbook mentions a world cup in 1957, a date the federation does not record. The FIH presents indoor hockey today as a form played in more than eighty countries with balanced participation of men and women (FIH, n.d.). It is not part of the Olympic programme."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/hockey-sala.jpg",
+   "pie": {
+    "es": "Copa del Mundo de hockey sala de 2018 en la Max-Schmeling-Halle de Berlín.",
+    "en": "The 2018 Indoor Hockey World Cup at the Max-Schmeling-Halle in Berlin."
+   },
+   "autor": "Berlinschneid",
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:2018_Indoor_Hockey_World_Cup_Berlin_01.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "FIH. (s. f.). *Indoor hockey*. FIH Academy. Recuperado el 29 de septiembre de 2026 de https://academy.fih.hockey/hockey-indoor",
+   "FIH. (2023a, 18 de enero). *FIH Indoor Hockey World Cup: A history*. Recuperado el 29 de septiembre de 2026 de https://www.fih.hockey/fih-indoor-world-cup-event/news/fih-indoor-hockey-world-cup-a-history",
+   "FIH. (2023b, 30 de enero). *Indoor hockey: The rules of the game*. Recuperado el 30 de septiembre de 2026 de https://www.fih.hockey/fih-indoor-world-cup-event/news/indoor-hockey-the-rules-of-the-game"
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "FIH. (n.d.). *Indoor hockey*. FIH Academy. Retrieved September 29, 2026, from https://academy.fih.hockey/hockey-indoor",
+   "FIH. (2023a, January 18). *FIH Indoor Hockey World Cup: A history*. Retrieved September 29, 2026, from https://www.fih.hockey/fih-indoor-world-cup-event/news/fih-indoor-hockey-world-cup-a-history",
+   "FIH. (2023b, January 30). *Indoor hockey: The rules of the game*. Retrieved September 30, 2026, from https://www.fih.hockey/fih-indoor-world-cup-event/news/indoor-hockey-the-rules-of-the-game"
+  ]
+ },
+ {
+  "id": "galgos",
+  "name": {
+   "es": "Galgos",
+   "en": "Greyhound racing"
+  },
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Inglaterra, *coursing* organizado desde 1776 (Swaffham); carrera en pista con liebre mecánica en Estados Unidos, 1912-1920",
+   "en": "England, organised coursing from 1776 (Swaffham); track racing with a mechanical hare in the United States, 1912-1920"
+  },
+  "body": {
+   "es": [
+    "Las carreras de galgos derivan del *coursing*, la persecución de una liebre viva por dos perros, una de las prácticas deportivas más antiguas; el perro adiestrado ocupaba ya un lugar destacado en Egipto y en Asiria, y el galgo terminó imponiéndose como el animal doméstico más veloz (Crawford, 1999, p. 85). Lord Orford fundó el primer club de *coursing* en Swaffham en 1776, en 1836 nació la Waterloo Cup, que funcionó como campeonato nacional oficioso, y en 1858 se creó el National Coursing Club para vigilar un deporte propenso a la trampa, como la sustitución de un perro por otro. Los taberneros y hoteleros promovían las reuniones, rodeadas de apuestas sin límite, y la muerte de la liebre acabó provocando la oposición de algunos grupos (Crawford, 1999, p. 85).",
+    "La liebre mecánica permitió llevar la carrera a una pista cerrada. El primer ensayo se hizo en 1876 en Welsh Harp, en Hendon, con una liebre movida por cuerdas y poleas sobre una recta de 400 yardas, y fracasó porque el perro más rápido ganaba siempre y desaparecían la suerte y la táctica de las que vivían las apuestas (Crawford, 1999, p. 85); Fernández Truan (s. f., p. 153) sitúa Hendon en Gales, por una lectura errónea del nombre del lugar, que está en Londres. El estadounidense Owen Patrick Smith probó con éxito una liebre mecánica en Dakota del Sur en 1912, la llevó después a una pista de Tucson y en 1920 se disputó en Emeryville (California) la primera carrera registrada con liebre eléctrica sobre pista circular (Crawford, 1999, p. 86).",
+    "Charles Munn y el general Critchley introdujeron la nueva modalidad en Gran Bretaña con la pista experimental de Belle Vue, en Mánchester, en 1926. El éxito fue inmediato entre los obreros, que encontraban en los canódromos una noche de ocio y apuestas baratas, en contraste con el hipódromo, que les quedaba lejos, y hacia 1932 la asistencia anual a las pistas londinenses había alcanzado los 6,5 millones (Crawford, 1999, p. 86). En España la tradición del galgo en campo se organizó en sociedades como la del Coto La Ina, creada en Jerez de la Frontera en 1910, y tras un primer organismo nacional, el Club Deportivo Español (1929-1932), en 1939 se constituyó la actual Federación Española de Galgos, que desde 1986 acoge también como actividad federada la carrera con liebre mecánica (Federación Española de Galgos, s. f.). En Argentina, la Ley 27.330, sancionada en noviembre de 2016, prohibió en todo el territorio nacional las carreras de perros de cualquier raza (Ley 27.330, 2016)."
+   ],
+   "en": [
+    "Greyhound racing derives from coursing, the pursuit of a live hare by two dogs, one of the oldest sporting practices; the trained dog already held a prominent place in Egypt and Assyria, and the greyhound eventually prevailed as the swiftest domesticated animal (Crawford, 1999, p. 85). Lord Orford founded the first coursing club at Swaffham in 1776, the Waterloo Cup, which served as an unofficial national championship, began in 1836, and in 1858 the National Coursing Club was set up to police a sport prone to cheating, such as substituting one dog for another. Innkeepers and publicans promoted the meetings, surrounded by unlimited gambling, and the killing of the hare eventually aroused opposition from some groups (Crawford, 1999, p. 85).",
+    "The mechanical hare made it possible to move the race onto an enclosed track. The first attempt was made in 1876 at Welsh Harp, Hendon, with a hare pulled by ropes and pulleys along a 400-yard straight, and it failed because the fastest dog always won and the luck and tactics on which betting depended disappeared (Crawford, 1999, p. 85); Fernández Truan (n.d., p. 153) places Hendon in Wales, misreading the name of the site, which is in London. The American Owen Patrick Smith successfully tested a mechanical hare in South Dakota in 1912, later used it on a track in Tucson, and in 1920 the first recorded race with an electric hare on a circular track was held at Emeryville (California) (Crawford, 1999, p. 86).",
+    "Charles Munn and General Critchley introduced the new form to Britain with an experimental track at Belle Vue, Manchester, in 1926. Success among workers was immediate, since the tracks offered them a night out and cheap betting, in contrast with the racecourse, which was hard for them to reach, and by 1932 annual attendance at London tracks had reached 6.5 million (Crawford, 1999, p. 86). In Spain the tradition of open-field coursing was organised in societies such as the Coto La Ina, founded in Jerez de la Frontera in 1910, and after a first national body, the Club Deportivo Español (1929-1932), the present Spanish Greyhound Federation was established in 1939, which since 1986 has also included racing with a mechanical hare as a federated activity (Federación Española de Galgos, n.d.). In Argentina, Law 27,330, passed in November 2016, banned dog racing of any breed throughout the national territory (Ley 27.330, 2016)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/galgos.jpg",
+   "pie": {
+    "es": "*Dos galgos persiguiendo una liebre*, óleo de Samuel Henry Alken (siglo XIX), escena de *coursing*.",
+    "en": "*Two Greyhounds Coursing a Hare*, oil painting by Samuel Henry Alken (19th century), a coursing scene."
+   },
+   "autor": "Samuel Henry Alken",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Samuel_Henry_Alken_(1810-1894)_-_Two_Greyhounds_Coursing_a_Hare_-_WAG_2289_-_Walker_Art_Gallery.jpg"
+  },
+  "refs": [
+   "Crawford, S. A. G. M. (1999). Coursing. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 85-87). Oxford University Press.",
+   "Federación Española de Galgos. (s. f.). *Historia*. Recuperado el 30 de septiembre de 2026 de https://www.fedegalgos.com/federacion-espanola-galgos/historia/",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Ley 27.330. (2016, 16 de noviembre). Carreras de perros. *Boletín Oficial de la República Argentina*, 2 de diciembre de 2016. Recuperado el 30 de septiembre de 2026 de https://www.argentina.gob.ar/normativa/nacional/ley-27330-268503/texto"
+  ],
+  "refs_en": [
+   "Crawford, S. A. G. M. (1999). Coursing. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 85-87). Oxford University Press.",
+   "Federación Española de Galgos. (n.d.). *Historia*. Retrieved September 30, 2026, from https://www.fedegalgos.com/federacion-espanola-galgos/historia/",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Ley 27.330. (2016, November 16). Carreras de perros [Dog racing]. *Boletín Oficial de la República Argentina*, December 2, 2016. Retrieved September 30, 2026, from https://www.argentina.gob.ar/normativa/nacional/ley-27330-268503/texto"
+  ]
+ },
+ {
+  "id": "motonautica",
+  "name": {
+   "es": "Motonáutica",
+   "en": "Powerboating"
+  },
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Europa y Estados Unidos, hacia 1900 (Trofeo Harmsworth, 1903-1904); federación internacional, Bélgica, 1922",
+   "en": "Europe and the United States, around 1900 (Harmsworth Trophy, 1903-1904); international federation, Belgium, 1922"
+  },
+  "body": {
+   "es": [
+    "A lo largo de los siglos XIX y XX las embarcaciones a motor sustituyeron a los veleros en el transporte, el comercio y la guerra. La primera generación funcionó con máquinas de vapor, que también se instalaron en yates privados cuyos dueños, por lo general ricos, se desafiaban de vez en cuando en carreras. La motonáutica moderna, sin embargo, suele fecharse a partir del motor de combustión interna, con una de las primeras lanchas de este tipo construida en Francia hacia 1865 por Jean Lenoir y con los motores de gasolina que Gottlieb Daimler desarrolló en la década de 1880 y que se montaron tanto en vehículos como en barcos (Townes, 1999, p. 258).",
+    "Las carreras se multiplicaron después de 1900, y desde el principio sirvieron de banco de pruebas para motores y cascos que después pasaban al mercado (Townes, 1999, p. 258). El magnate de la prensa británico Alfred Harmsworth dotó el trofeo de motonáutica más antiguo, que la federación fecha en 1904 y algún manual en 1903 (Union Internationale Motonautique, s. f.; Fernández Truan, s. f., p. 971), y antes de la Primera Guerra Mundial se corría con regularidad en Niza, Palermo, Montecarlo, Argel, Tolón y Arcachón (Union Internationale Motonautique, s. f.). En Estados Unidos los clubes náuticos del nordeste fundaron en 1903 la American Power Boat Association, que desde 1904 organiza la Gold Cup (Townes, 1999, pp. 258-259), y en Londres 1908 la motonáutica figuró en el programa olímpico (Olympedia, s. f.).",
+    "En septiembre de 1922 se creó en Bélgica la Union Internationale du Yachting Automobile, que en 1927 ya se llamaba Union Internationale Motonautique y había publicado sus primeras reglas y su primer calendario de carreras; en 1988 trasladó su sede de Bruselas a Mónaco (Union Internationale Motonautique, s. f.; UIM-ABP Aquabike World Championship, 2022). La federación, reconocida por el Comité Olímpico Internacional, gobierna hoy la motonáutica y las motos de agua (Union Internationale Motonautique, s. f.). La creciente variedad de cascos y motores obligó a dividir las carreras en categorías cada vez más numerosas, desde lanchas fueraborda modestas hasta los hidroplanos sin límite de potencia (Townes, 1999, p. 259)."
+   ],
+   "en": [
+    "Over the nineteenth and twentieth centuries motor vessels replaced sailing ships in transport, trade and war. The first generation ran on steam engines, which were also fitted to private yachts whose owners, usually wealthy, occasionally raced one another. Modern powerboating, however, is usually dated from the internal-combustion engine, with one of the first boats of this type built in France around 1865 by Jean Lenoir and with the petrol engines that Gottlieb Daimler developed in the 1880s and that were fitted to both vehicles and boats (Townes, 1999, p. 258).",
+    "Races multiplied after 1900, and from the start they served as a proving ground for engines and hulls that later reached the market (Townes, 1999, p. 258). The British press magnate Alfred Harmsworth endowed the oldest powerboat trophy, which the federation dates to 1904 and one textbook to 1903 (Union Internationale Motonautique, n.d.; Fernández Truan, n.d., p. 971), and before the First World War races were held regularly in Nice, Palermo, Monte Carlo, Algiers, Toulon and Arcachon (Union Internationale Motonautique, n.d.). In the United States the yacht clubs of the north-east founded the American Power Boat Association in 1903, which has organised the Gold Cup since 1904 (Townes, 1999, pp. 258-259), and at London 1908 powerboating was on the Olympic programme (Olympedia, n.d.).",
+    "In September 1922 the Union Internationale du Yachting Automobile was created in Belgium; by 1927 it was already called the Union Internationale Motonautique and had issued its first rules and its first racing calendar, and in 1988 it moved its seat from Brussels to Monaco (Union Internationale Motonautique, n.d.; UIM-ABP Aquabike World Championship, 2022). The federation, recognised by the International Olympic Committee, today governs powerboating and personal watercraft (Union Internationale Motonautique, n.d.). The growing variety of hulls and engines made it necessary to divide racing into ever more numerous categories, from modest outboard boats to unlimited hydroplanes (Townes, 1999, p. 259)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/motonautica.jpg",
+   "pie": {
+    "es": "La lancha de carreras *Princesse Elisabeth*, participante en las carreras de canoas automóviles de Mónaco, abril de 1904.",
+    "en": "The racing boat *Princesse Elisabeth*, a competitor in the motorboat races at Monaco, April 1904."
+   },
+   "autor": "Agence Rol",
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:(Le_racer)_Princesse_Elisabeth_(participant_aux_courses_de_canots_automobiles_%C3%A0_Monaco,_en_avril_1904)_-_btv1b6914005f.jpg"
+  },
+  "refs": [
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Olympedia. (s. f.). *Motorboating*. Recuperado el 30 de septiembre de 2026 de https://www.olympedia.org/sports/PBT",
+   "Townes, J. (1999). Motor boating. En D. Levinson y K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 258-260). Oxford University Press.",
+   "UIM-ABP Aquabike World Championship. (2022, 8 de febrero). *UIM celebrates 100 years of excellence in the powerboat sport*. Recuperado el 29 de septiembre de 2026 de https://www.aquabike.net/news/2022/uim-celebrates-100-years-of-excellence-in-the-powerboat-sport",
+   "Union Internationale Motonautique. (s. f.). *Union internationale motonautique*. Recuperado el 29 de septiembre de 2026 de https://www.uim.sport/Wys.aspx?num=1"
+  ],
+  "refs_en": [
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "Olympedia. (n.d.). *Motorboating*. Retrieved September 30, 2026, from https://www.olympedia.org/sports/PBT",
+   "Townes, J. (1999). Motor boating. In D. Levinson & K. Christensen (Eds.), *Encyclopedia of world sport: From ancient times to the present* (pp. 258-260). Oxford University Press.",
+   "UIM-ABP Aquabike World Championship. (2022, February 8). *UIM celebrates 100 years of excellence in the powerboat sport*. Retrieved September 29, 2026, from https://www.aquabike.net/news/2022/uim-celebrates-100-years-of-excellence-in-the-powerboat-sport",
+   "Union Internationale Motonautique. (n.d.). *Union internationale motonautique*. Retrieved September 29, 2026, from https://www.uim.sport/Wys.aspx?num=1"
+  ]
+ },
+ {
+  "id": "espeleologia",
+  "name": {
+   "es": "Espeleología",
+   "en": "Caving"
+  },
+  "bloque": {
+   "es": "En la naturaleza",
+   "en": "Outdoor sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Francia, 1888-1895 (exploraciones de Édouard-Alfred Martel y Sociedad de Espeleología); unión internacional, Liubliana, 1965",
+   "en": "France, 1888-1895 (explorations of Édouard-Alfred Martel and the Société de spéléologie); international union, Ljubljana, 1965"
+  },
+  "body": {
+   "es": [
+    "Los seres humanos entraron en las cuevas desde la prehistoria en busca de refugio y protección, pero la exploración de las cavidades para conocerlas empezó en la Edad Moderna, con obras como la del jesuita alemán Athanasius Kircher, que en 1657 publicó un primer intento de análisis sistemático del mundo subterráneo, poblado todavía de dragones y monstruos. En el siglo XVIII siguieron los estudios de naturalistas como Vallisneri, Leibniz o Volta, y en 1841 el italiano Lindner alcanzó el curso subterráneo del río Timavo (Fernández Truan, s. f., pp. 1043-1044).",
+    "La espeleología moderna nació en Francia con Édouard-Alfred Martel, que en 1888 recorrió con varios compañeros un río subterráneo del Languedoc durante dos días, en 1894 publicó *Les abîmes* y fue el primero en considerar la exploración directa como medio para estudiar las cavidades con rigor científico, colgado de una cuerda de cáñamo y con una vela en la mano (Fernández Truan, s. f., pp. 1035 y 1044). En 1895 fundó la Société de spéléologie, que publicó el boletín *Spelunca* hasta la Primera Guerra Mundial (Fédération Française de Spéléologie [FFS], s. f.). Durante décadas las expediciones con escalas exigieron muchos porteadores y quedaron al alcance de unos pocos con recursos, hasta que en los años setenta la técnica de la cuerda sola permitió a grupos pequeños abordar exploraciones antes impensables (Fernández Truan, s. f., p. 1044).",
+    "En Francia, al Spéléo Club de France (1930) y a la Société spéléologique de France (1936) siguieron el Comité nacional de espeleología (1948) y, el 1 de junio de 1963 en Millau, la Fédération Française de Spéléologie (FFS, s. f.). En el plano internacional, una reunión celebrada en Valence en 1949 preparó el primer congreso, que tuvo lugar en París en 1953, y la Unión Internacional de Espeleología (UIS) se fundó el 16 de septiembre de 1965 en la Universidad de Liubliana, durante el IV Congreso Internacional, como organización que reúne a espeleólogos científicos y técnicos (UIS, s. f.). En España, el sacerdote y geólogo Norbert Font i Sagué, considerado el introductor de la espeleología en Cataluña y en el resto del país, publicó en 1897, con el patrocinio del Centre Excursionista de Catalunya, el primer catálogo espeleológico de Cataluña (Federació Catalana d'Espeleologia, s. f.), y la Federación Española de Espeleología se constituyó en 1983 (Fernández Truan, s. f., p. 1046)."
+   ],
+   "en": [
+    "Human beings entered caves from prehistoric times in search of shelter and protection, but the exploration of caves in order to know them began in the early modern period, with works such as that of the German Jesuit Athanasius Kircher, who in 1657 published a first attempt at a systematic analysis of the underground world, still peopled with dragons and monsters. In the eighteenth century naturalists such as Vallisneri, Leibniz and Volta continued this work, and in 1841 the Italian Lindner reached the underground course of the river Timavo (Fernández Truan, n.d., pp. 1043-1044).",
+    "Modern speleology was born in France with Édouard-Alfred Martel, who in 1888 followed an underground river in Languedoc with several companions over two days, published *Les abîmes* in 1894 and was the first to regard direct exploration as a means of studying caves with scientific rigour, hanging from a hemp rope with a candle in his hand (Fernández Truan, n.d., pp. 1035 and 1044). In 1895 he founded the Société de spéléologie, which published the bulletin *Spelunca* until the First World War (Fédération Française de Spéléologie [FFS], n.d.). For decades expeditions using ladders required many porters and remained within reach of a wealthy few, until in the 1970s the single-rope technique allowed small groups to undertake explorations that had been unthinkable before (Fernández Truan, n.d., p. 1044).",
+    "In France, the Spéléo Club de France (1930) and the Société spéléologique de France (1936) were followed by the National Speleology Committee (1948) and, on 1 June 1963 in Millau, by the Fédération Française de Spéléologie (FFS, n.d.). At the international level, a meeting held in Valence in 1949 prepared the first congress, which took place in Paris in 1953, and the International Union of Speleology (UIS) was founded on 16 September 1965 at the University of Ljubljana, during the 4th International Congress, as an organisation bringing together scientific and technical speleologists (UIS, n.d.). In Spain, the priest and geologist Norbert Font i Sagué, regarded as the introducer of speleology in Catalonia and the rest of the country, published in 1897, under the patronage of the Centre Excursionista de Catalunya, the first speleological catalogue of Catalonia (Federació Catalana d'Espeleologia, n.d.), and the Spanish Speleology Federation was established in 1983 (Fernández Truan, n.d., p. 1046)."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/espeleologia.jpg",
+   "pie": {
+    "es": "Retrato de Édouard-Alfred Martel en 1895, el año en que fundó la Société de spéléologie.",
+    "en": "Portrait of Édouard-Alfred Martel in 1895, the year he founded the Société de spéléologie."
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": {
+    "es": "Dominio público",
+    "en": "Public domain"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:%C3%89douard-Alfred_Martel_(1895).jpg"
+  },
+  "refs": [
+   "Federació Catalana d'Espeleologia. (s. f.). *Font i Sagué*. Recuperado el 30 de septiembre de 2026 de https://www.espeleologia.cat/en/font-i-sague/",
+   "Fédération Française de Spéléologie. (s. f.). *Histoire de la fédération*. Recuperado el 29 de septiembre de 2026 de https://ffspeleo.fr/historique.html",
+   "Fernández Truan, J. C. (s. f.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "UIS. (s. f.). *What is the UIS?* Recuperado el 29 de septiembre de 2026 de https://uis-speleo.org/index.php/what-is-the-uis/"
+  ],
+  "refs_en": [
+   "Federació Catalana d'Espeleologia. (n.d.). *Font i Sagué*. Retrieved September 30, 2026, from https://www.espeleologia.cat/en/font-i-sague/",
+   "Fédération Française de Spéléologie. (n.d.). *Histoire de la fédération*. Retrieved September 29, 2026, from https://ffspeleo.fr/historique.html",
+   "Fernández Truan, J. C. (n.d.). *Manual de historia de la actividad física y del deporte* (Tomo IV: Orígenes de los deportes modernos). Universidad Pablo de Olavide.",
+   "UIS. (n.d.). *What is the UIS?* Retrieved September 29, 2026, from https://uis-speleo.org/index.php/what-is-the-uis/"
+  ]
+ },
+ {
+  "id": "bitlles-catalanes",
+  "name": {
+   "es": "Bitlles catalanes",
+   "en": "Catalan bitlles"
+  },
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "tipo": "completa",
+  "cuando": {
+   "es": "Cataluña, documentadas desde la Baja Edad Media (Torroja del Priorat, 1376; Igualada, 1402); deporte federado desde finales de la década de 1980",
+   "en": "Catalonia, documented from the late Middle Ages (Torroja del Priorat, 1376; Igualada, 1402); federated sport since the late 1980s"
+  },
+  "body": {
+   "es": [
+    "Las bitlles catalanas son un juego de derribo en el que se lanzan unos palos cortos, los *bitllots*, contra seis bolos de madera, las *bitlles*, plantados a cierta distancia. La Federació Catalana de Bitlles i Bowling vincula su popularidad a la Baja Edad Media y considera que dos documentos catalanes acreditan esa dimensión popular, el de Torroja, en el Priorat, de 1376, y el de Igualada, en l'Anoia, de 1402 (Federació Catalana de Bitlles i Bowling, s. f.). La Enciclopèdia Catalana remonta el rastro léxico aún más atrás, a las voces *bilai* y *bilador* que emplea Ramon Llull en el *Llibre de contemplació* (1273), y documenta la palabra *bitlla* en Reus en 1416 y en Barcelona en 1520 (Enciclopèdia Catalana, s. f.).",
+    "Durante siglos fue un juego del pueblo llano, ligado a las fiestas y a las reuniones de los pueblos y acompañado de apuestas, y así se mantuvo hasta bien entrado el siglo XX (Enciclopèdia Catalana, s. f.). La ruptura llegó en 1939, cuando el franquismo prohibió los juegos de apuestas y las bitlles, perseguidas como juego de dinero, perdieron el interés de los jugadores y quedaron poco a poco olvidadas (Enciclopèdia Catalana, s. f.; Federació Catalana de Bitlles i Bowling, s. f.). Hacia el final de los años setenta el juego volvió tímidamente al ocio popular, y en 1987 se constituyó el Bitlles Club La Cava-Guinardó 87, primer club de bitlles federado de Cataluña, hecho que la federación considera el arranque de su transformación de actividad popular en deporte de competición (Federació Catalana de Bitlles i Bowling, s. f.).",
+    "La modalidad reglamentada se juega con seis bitlles, tres bitllots y una explanada de tierra o arena compactada; cada jugador lanza desde 11,5 metros, o desde 9,5 en categoría femenina, y la jugada de más valor, que vale diez puntos, consiste en derribar cinco de las seis bitlles (Federació Catalana de Bitlles i Bowling, s. f.). La federación organizó en 1988 la primera liga territorial oficial con once clubes federados, y en 2011 contaba ya con 129 clubes repartidos en seis ligas territoriales (Enciclopèdia Catalana, s. f.). La federación devolvió así al calendario festivo y deportivo de los pueblos catalanes un juego que la prohibición de la dictadura había dejado al borde de la desaparición."
+   ],
+   "en": [
+    "Catalan *bitlles* is a knock-down game in which short sticks, the *bitllots*, are thrown at six wooden pins, the *bitlles*, set up at a certain distance. The Catalan Bitlles and Bowling Federation links its popularity to the late Middle Ages and considers that two Catalan documents attest this popular dimension, that of Torroja, in the Priorat, from 1376, and that of Igualada, in the Anoia, from 1402 (Federació Catalana de Bitlles i Bowling, n.d.). The Enciclopèdia Catalana traces the lexical record further back, to the words *bilai* and *bilador* used by Ramon Llull in the *Llibre de contemplació* (1273), and documents the word *bitlla* in Reus in 1416 and in Barcelona in 1520 (Enciclopèdia Catalana, n.d.).",
+    "For centuries it was a game of ordinary people, tied to village festivals and gatherings and accompanied by betting, and it remained so well into the twentieth century (Enciclopèdia Catalana, n.d.). The break came in 1939, when the Franco regime banned gambling games and bitlles, pursued as a money game, lost the interest of players and gradually fell into oblivion (Enciclopèdia Catalana, n.d.; Federació Catalana de Bitlles i Bowling, n.d.). Towards the end of the 1970s the game timidly returned to popular leisure, and in 1987 the Bitlles Club La Cava-Guinardó 87 was established, the first federated bitlles club in Catalonia, an event the federation regards as the starting point of its transformation from a popular pastime into a competitive sport (Federació Catalana de Bitlles i Bowling, n.d.).",
+    "The regulated game is played with six bitlles, three bitllots and a ground of compacted earth or sand; each player throws from 11.5 metres, or from 9.5 in the women's category, and the most valuable play, worth ten points, consists of knocking down five of the six bitlles (Federació Catalana de Bitlles i Bowling, n.d.). The federation organised the first official territorial league in 1988 with eleven federated clubs, and by 2011 it had 129 clubs spread over six territorial leagues (Enciclopèdia Catalana, n.d.). The federation thus returned to the festive and sporting calendar of Catalan towns a game that the dictatorship's ban had left on the verge of disappearance."
+   ]
+  },
+  "tema": [],
+  "img": {
+   "src": "img/enc/bitlles-catalanes.jpg",
+   "pie": {
+    "es": "Partida de bitlles catalanas en Sant Cugat del Vallès (Barcelona).",
+    "en": "Game of Catalan bitlles at Sant Cugat del Vallès (Barcelona)."
+   },
+   "autor": "Josep Renalias",
+   "licencia": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Bitlles_catalanes_a_Sant_Cugat.JPG"
+  },
+  "refs": [
+   "Enciclopèdia Catalana. (s. f.). Bitlles catalanes. En *Esportpèdia*. Recuperado el 29 de septiembre de 2026 de https://www.enciclopedia.cat/esportpedia/bitlles-catalanes",
+   "Federació Catalana de Bitlles i Bowling. (s. f.). *Material didàctic*. Recuperado el 29 de septiembre de 2026 de https://www.fcbb.cat/material-didactic/Material%20didactic.pdf"
+  ],
+  "refs_en": [
+   "Enciclopèdia Catalana. (n.d.). Bitlles catalanes. In *Esportpèdia*. Retrieved September 29, 2026, from https://www.enciclopedia.cat/esportpedia/bitlles-catalanes",
+   "Federació Catalana de Bitlles i Bowling. (n.d.). *Material didàctic*. Retrieved September 29, 2026, from https://www.fcbb.cat/material-didactic/Material%20didactic.pdf"
+  ]
+ }
+]

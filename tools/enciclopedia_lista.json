@@ -3778,5 +3778,1457 @@
   "ft": false,
   "tipo": "completa",
   "estado": "lista"
+ },
+ {
+  "id": "engolo",
+  "es": "Engolo",
+  "en": "Engolo (n'golo)",
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "moraingy",
+  "es": "Moraingy",
+  "en": "Moraingy",
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "excluida"
+ },
+ {
+  "id": "gidigbo",
+  "es": "Gidigbo",
+  "en": "Gidigbo",
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "excluida"
+ },
+ {
+  "id": "donga",
+  "es": "Donga",
+  "en": "Donga (Suri stick fighting)",
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "istunka",
+  "es": "Istunka",
+  "en": "Istunka",
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "excluida"
+ },
+ {
+  "id": "lucha-con-palos-nguni",
+  "es": "Lucha con palos nguni",
+  "en": "Nguni stick fighting",
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "musangwe",
+  "es": "Musangwe",
+  "en": "Musangwe",
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "jukskei",
+  "es": "Jukskei",
+  "en": "Jukskei",
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "genna",
+  "es": "Genna",
+  "en": "Genna",
+  "bloque": {
+   "es": "Con stick o mazo",
+   "en": "Stick and mallet sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "excluida"
+ },
+ {
+  "id": "tahtib",
+  "es": "Tahtib",
+  "en": "Tahtib",
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "regatas-de-piraguas-del-ubangui",
+  "es": "Regatas de piraguas del Ubangui",
+  "en": "Ubangi canoe racing",
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "excluida"
+ },
+ {
+  "id": "ampe",
+  "es": "Ampe",
+  "en": "Ampe",
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "excluida"
+ },
+ {
+  "id": "kigumi",
+  "es": "Kigumi",
+  "en": "Kigumi",
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "excluida"
+ },
+ {
+  "id": "waka-ama",
+  "es": "Waka ama",
+  "en": "Waka ama (outrigger canoeing)",
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "touch",
+  "es": "Touch",
+  "en": "Touch football",
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "ki-o-rahi",
+  "es": "Ki-o-rahi",
+  "en": "Ki-o-rahi",
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "mau-rakau",
+  "es": "Mau rakau",
+  "en": "Mau rākau",
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "marn-grook",
+  "es": "Marn grook",
+  "en": "Marn grook",
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "woggabaliri",
+  "es": "Woggabaliri",
+  "en": "Woggabaliri",
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "vigoro",
+  "es": "Vigoro",
+  "en": "Vigoro",
+  "bloque": {
+   "es": "Con bate",
+   "en": "Bat sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "kilikiti",
+  "es": "Kilikiti",
+  "en": "Kilikiti",
+  "bloque": {
+   "es": "Con bate",
+   "en": "Bat sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "criquet-de-las-trobriand",
+  "es": "Críquet de las Trobriand",
+  "en": "Trobriand cricket",
+  "bloque": {
+   "es": "Con bate",
+   "en": "Bat sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "holua",
+  "es": "Hōlua",
+  "en": "Hōlua (Hawaiian sledding)",
+  "bloque": {
+   "es": "Juegos y espectáculos históricos",
+   "en": "Historical games and spectacles"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "lua",
+  "es": "Lua",
+  "en": "Lua",
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "sipa",
+  "es": "Sipa",
+  "en": "Sipa",
+  "bloque": {
+   "es": "De pelota",
+   "en": "Handball games and pelota"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "peleas-de-cometas",
+  "es": "Peleas de cometas",
+  "en": "Kite fighting",
+  "bloque": {
+   "es": "Aéreos",
+   "en": "Air sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "tuho",
+  "es": "Tuho",
+  "en": "Pitch-pot (touhu, tuho)",
+  "bloque": {
+   "es": "Deportes mentales y otros",
+   "en": "Mind sports and others"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "jegichagi",
+  "es": "Jegichagi",
+  "en": "Jegichagi",
+  "bloque": {
+   "es": "De pelota",
+   "en": "Handball games and pelota"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "excluida"
+ },
+ {
+  "id": "gukgung",
+  "es": "Gukgung",
+  "en": "Gukgung (Korean archery)",
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "excluida"
+ },
+ {
+  "id": "yabusame",
+  "es": "Yabusame",
+  "en": "Yabusame",
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "ekiden",
+  "es": "Ekiden",
+  "en": "Ekiden",
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "krabi-krabong",
+  "es": "Krabi krabong",
+  "en": "Krabi krabong",
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "thang-ta",
+  "es": "Thang-ta",
+  "en": "Thang-ta",
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "excluida"
+ },
+ {
+  "id": "vallam-kali",
+  "es": "Vallam kali",
+  "en": "Vallam kali (snake boat race)",
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "lagori",
+  "es": "Lagori",
+  "en": "Lagori (pitthu)",
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "excluida"
+ },
+ {
+  "id": "gilli-danda",
+  "es": "Gilli-danda",
+  "en": "Gilli-danda",
+  "bloque": {
+   "es": "Con bate",
+   "en": "Bat sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "excluida"
+ },
+ {
+  "id": "kok-boru",
+  "es": "Kok-boru",
+  "en": "Kok-boru",
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "kyz-kuu",
+  "es": "Kyz kuu",
+  "en": "Kyz kuu",
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "excluida"
+ },
+ {
+  "id": "er-enish",
+  "es": "Er enish",
+  "en": "Er enish (horseback wrestling)",
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "lucha-de-cinturon",
+  "es": "Lucha de cinturón",
+  "en": "Belt wrestling (alysh)",
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "mas-wrestling",
+  "es": "Mas-wrestling",
+  "en": "Mas-wrestling",
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "tejo",
+  "es": "Tejo",
+  "en": "Tejo",
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "bolas-criollas",
+  "es": "Bolas criollas",
+  "en": "Bolas criollas",
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "pelota-purepecha",
+  "es": "Pelota purépecha",
+  "en": "Purépecha ball game (uarhukua)",
+  "bloque": {
+   "es": "Con stick o mazo",
+   "en": "Stick and mallet sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "pelota-mixteca",
+  "es": "Pelota mixteca",
+  "en": "Pelota mixteca",
+  "bloque": {
+   "es": "De pelota",
+   "en": "Handball games and pelota"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "rarajipari",
+  "es": "Rarajípari",
+  "en": "Rarajípari",
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "juegos-inuit",
+  "es": "Juegos inuit",
+  "en": "Inuit games",
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "snowsnake",
+  "es": "Snowsnake",
+  "en": "Snowsnake",
+  "bloque": {
+   "es": "De invierno",
+   "en": "Winter sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "double-ball",
+  "es": "Double ball",
+  "en": "Double ball",
+  "bloque": {
+   "es": "Con stick o mazo",
+   "en": "Stick and mallet sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "chaza",
+  "es": "Chaza",
+  "en": "Chaza",
+  "bloque": {
+   "es": "De pelota",
+   "en": "Handball games and pelota"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "excluida"
+ },
+ {
+  "id": "gorodki",
+  "es": "Gorodki",
+  "en": "Gorodki",
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "lapta",
+  "es": "Lapta",
+  "en": "Lapta",
+  "bloque": {
+   "es": "Con bate",
+   "en": "Bat sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "oina",
+  "es": "Oina",
+  "en": "Oină",
+  "bloque": {
+   "es": "Con bate",
+   "en": "Bat sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "kubb",
+  "es": "Kubb",
+  "en": "Kubb",
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "excluida"
+ },
+ {
+  "id": "molkky",
+  "es": "Mölkky",
+  "en": "Mölkky",
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "lucha-de-cornualles",
+  "es": "Lucha de Cornualles",
+  "en": "Cornish wrestling",
+  "bloque": {
+   "es": "Lucha, combate y artes marciales",
+   "en": "Combat sports and martial arts"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "irish-road-bowling",
+  "es": "Irish road bowling",
+  "en": "Irish road bowling",
+  "bloque": {
+   "es": "Con bola",
+   "en": "Bowling and target sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "stoolball",
+  "es": "Stoolball",
+  "en": "Stoolball",
+  "bloque": {
+   "es": "Con bate",
+   "en": "Bat sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "lanzamiento-de-barra",
+  "es": "Lanzamiento de barra",
+  "en": "Bar throwing (lanzamiento de barra)",
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "ajedrez-boxeo",
+  "es": "Ajedrez boxeo",
+  "en": "Chess boxing",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "bike-polo",
+  "es": "Bike polo",
+  "en": "Bike polo",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "slamball",
+  "es": "Slamball",
+  "en": "SlamBall",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "headis",
+  "es": "Headis",
+  "en": "Headis",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "futvoley",
+  "es": "Futvóley",
+  "en": "Footvolley",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "jugger",
+  "es": "Jugger",
+  "en": "Jugger",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "segway-polo",
+  "es": "Segway polo",
+  "en": "Segway polo",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "fierljeppen",
+  "es": "Fierljeppen",
+  "en": "Fierljeppen (canal pole vaulting)",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "carrera-de-hombre-contra-caballo",
+  "es": "Carrera de hombre contra caballo",
+  "en": "Man versus Horse Marathon",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "carrera-de-esposas",
+  "es": "Carrera de esposas",
+  "en": "Wife carrying",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "buceo-en-cienaga",
+  "es": "Buceo en ciénaga",
+  "en": "Bog snorkelling",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "carrera-del-queso",
+  "es": "Carrera del queso",
+  "en": "Cheese rolling",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "patadas-en-la-espinilla",
+  "es": "Patadas en la espinilla",
+  "en": "Shin-kicking",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "lucha-de-dedos-del-pie",
+  "es": "Lucha de dedos del pie",
+  "en": "Toe wrestling",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "lanzamiento-de-piedras-al-agua",
+  "es": "Lanzamiento de piedras al agua",
+  "en": "Stone skimming",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "futbol-en-el-barro",
+  "es": "Fútbol en el barro",
+  "en": "Swamp soccer",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "planchado-extremo",
+  "es": "Planchado extremo",
+  "en": "Extreme ironing",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "carreras-de-drones",
+  "es": "Carreras de drones",
+  "en": "Drone racing",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "joggling",
+  "es": "Joggling",
+  "en": "Joggling",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "kayak-polo",
+  "es": "Kayak polo",
+  "en": "Canoe polo",
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "piraguismo-en-eslalon",
+  "es": "Piragüismo en eslalon",
+  "en": "Canoe slalom",
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "apnea",
+  "es": "Apnea",
+  "en": "Freediving",
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "natacion-con-aletas",
+  "es": "Natación con aletas",
+  "en": "Finswimming",
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "motos-de-agua",
+  "es": "Motos de agua",
+  "en": "Aquabike (jet ski racing)",
+  "bloque": {
+   "es": "Náuticos y acuáticos",
+   "en": "Water sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "baloncesto-3x3",
+  "es": "Baloncesto 3x3",
+  "en": "3x3 basketball",
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "rugby-7",
+  "es": "Rugby 7",
+  "en": "Rugby sevens",
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "padbol",
+  "es": "Padbol",
+  "en": "Padbol",
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "rugby-playa",
+  "es": "Rugby playa",
+  "en": "Beach rugby",
+  "bloque": {
+   "es": "Con balón",
+   "en": "Ball sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "ultramaraton",
+  "es": "Ultramaratón",
+  "en": "Ultramarathon",
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "marcha-atletica",
+  "es": "Marcha atlética",
+  "en": "Race walking",
+  "bloque": {
+   "es": "Atletismo, gimnasia y fuerza",
+   "en": "Athletics, gymnastics and strength"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "canicross",
+  "es": "Canicross",
+  "en": "Canicross",
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "agility-canino",
+  "es": "Agility canino",
+  "en": "Dog agility",
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "tent-pegging",
+  "es": "Tent pegging",
+  "en": "Tent pegging",
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "doma-vaquera",
+  "es": "Doma vaquera",
+  "en": "Doma vaquera",
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "equitacion-de-trabajo",
+  "es": "Equitación de trabajo",
+  "en": "Working equitation",
+  "bloque": {
+   "es": "Con animales",
+   "en": "Animal sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "tiro-con-arco-a-caballo",
+  "es": "Tiro con arco a caballo",
+  "en": "Horseback archery",
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "tiro-con-ballesta",
+  "es": "Tiro con ballesta",
+  "en": "Crossbow shooting",
+  "bloque": {
+   "es": "Con armas",
+   "en": "Weapon sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "ciclocros",
+  "es": "Ciclocrós",
+  "en": "Cyclo-cross",
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "trial-en-bicicleta",
+  "es": "Trial en bicicleta",
+  "en": "Trials cycling",
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "speedway",
+  "es": "Speedway",
+  "en": "Motorcycle speedway",
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "motocross",
+  "es": "Motocross",
+  "en": "Motocross",
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "rally",
+  "es": "Rally",
+  "en": "Rally",
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "formula-1",
+  "es": "Fórmula 1",
+  "en": "Formula One",
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "carreras-de-motos-de-nieve",
+  "es": "Carreras de motos de nieve",
+  "en": "Snowmobile racing",
+  "bloque": {
+   "es": "De invierno",
+   "en": "Winter sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "excluida"
+ },
+ {
+  "id": "kilometro-lanzado",
+  "es": "Kilómetro lanzado",
+  "en": "Speed skiing",
+  "bloque": {
+   "es": "De invierno",
+   "en": "Winter sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "esqui-freeride",
+  "es": "Esquí freeride",
+  "en": "Freeride skiing",
+  "bloque": {
+   "es": "De invierno",
+   "en": "Winter sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "escalada-en-hielo",
+  "es": "Escalada en hielo",
+  "en": "Ice climbing",
+  "bloque": {
+   "es": "De invierno",
+   "en": "Winter sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "vuelo-con-traje-de-alas",
+  "es": "Vuelo con traje de alas",
+  "en": "Wingsuit flying",
+  "bloque": {
+   "es": "Aéreos",
+   "en": "Air sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "paramotor",
+  "es": "Paramotor",
+  "en": "Paramotoring",
+  "bloque": {
+   "es": "Aéreos",
+   "en": "Air sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "aeromodelismo",
+  "es": "Aeromodelismo",
+  "en": "Aeromodelling",
+  "bloque": {
+   "es": "Aéreos",
+   "en": "Air sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "acuatlon",
+  "es": "Acuatlón",
+  "en": "Aquathlon",
+  "bloque": {
+   "es": "Combinados",
+   "en": "Combined events"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "swimrun",
+  "es": "Swimrun",
+  "en": "Swimrun",
+  "bloque": {
+   "es": "Combinados",
+   "en": "Combined events"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "speedcubing",
+  "es": "Speedcubing",
+  "en": "Speedcubing",
+  "bloque": {
+   "es": "Deportes mentales y otros",
+   "en": "Mind sports and others"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "carreras-de-cortacesped",
+  "es": "Carreras de cortacésped",
+  "en": "Lawn mower racing",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "tractor-pulling",
+  "es": "Tractor pulling",
+  "en": "Tractor pulling",
+  "bloque": {
+   "es": "Deportes insólitos",
+   "en": "Unusual sports"
+  },
+  "ft": false,
+  "tipo": "breve",
+  "estado": "lista"
+ },
+ {
+  "id": "motogp",
+  "es": "MotoGP",
+  "en": "MotoGP",
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "nascar",
+  "es": "NASCAR",
+  "en": "NASCAR",
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "indycar",
+  "es": "IndyCar y las 500 Millas de Indianápolis",
+  "en": "IndyCar and the Indianapolis 500",
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "rally-raid",
+  "es": "Rally raid",
+  "en": "Rally raid",
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "excluida"
+ },
+ {
+  "id": "carreras-de-resistencia",
+  "es": "Carreras de resistencia",
+  "en": "Endurance racing",
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "trial-en-moto",
+  "es": "Trial en moto",
+  "en": "Motorcycle trials",
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
+ },
+ {
+  "id": "carreras-de-aceleracion",
+  "es": "Carreras de aceleración",
+  "en": "Drag racing",
+  "bloque": {
+   "es": "De motor y máquinas",
+   "en": "Motor and machine sports"
+  },
+  "ft": false,
+  "tipo": "completa",
+  "estado": "lista"
  }
 ]
