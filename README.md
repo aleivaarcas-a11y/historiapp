@@ -59,6 +59,9 @@ Las notas del orador se leen del Markdown con un bloque `### Diapositiva N · T�
 
 ## Añadir un tema nuevo
 
+El procedimiento completo, con todos los puntos de la app que hay que tocar (fichas, modos, palabra del día, Enciclopedia, efemérides, QR y pruebas), está en «WORKFLOW - Integrar un tema nuevo en Historiapp.md». Lo que sigue es el resumen mínimo.
+
+
 1. Crea `data/tema03.json` con la misma estructura que `tema02.json` (secciones `cards`, `glossary`, `timeline`, `sources`, `match`, `myths`, `quiz`, `videos`; cada texto lleva sus versiones `es` y `en`, y cada elemento su apartado en `sec`). Las fichas se generan con los scripts de arriba.
 2. Copia sus imágenes a `img/t3/`.
 3. En `data/temas.json`, cambia el tema 3 a `"available": true` y actualiza el campo `version` con la fecha.
