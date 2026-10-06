@@ -707,20 +707,12 @@ body.podon .deck{height:calc(100dvh - 406px - var(--safe-top) - var(--safe-botto
   main>*{max-width:1000px}
 }
 /* iPad-FIN */
-/* podbar-INI */
-#podbar{gap:6px;overflow:hidden;padding:8px 8px 10px}
-#podbar button{width:36px;height:36px;font-size:13px;flex-shrink:0;padding:0}
-#podbar .pp{width:40px;height:40px;background:#fff;color:#002060;font-size:15px}
-#podbar .sp{width:auto;min-width:40px;padding:0 8px;background:#EDAB00;color:#002060}
-#pbL{position:absolute;left:0;bottom:0;height:3px;width:0;background:#FBAE40;transition:width .3s linear}
-@media (max-width:420px){#podbar img{display:none}}
-/* podbar-FIN */
 </style>
 </head>
 <body>
 <div id="splash"><img src="icons/logo_oro.png" alt="Historiapp"><small>Historia del Deporte · UCAM</small><div class="sp-bar"><i id="spBar"></i></div><div class="sp-msg" id="spMsg"></div></div>
 <div id="app"></div>
-<div id="podbar"><img src="icons/icon-192.png?v=2" alt=""><div class="tt" id="pbT"></div><button id="pbB" aria-label="-15 s">−15</button><button id="pbP" class="pp">▶</button><button id="pbF" aria-label="+30 s">+30</button><button id="pbS" class="sp">1×</button><button id="pbX" aria-label="Cerrar">✕</button><i id="pbL"></i></div>
+<div id="podbar"><img src="icons/icon-192.png?v=2" alt=""><div class="tt" id="pbT"></div><button id="pbB">−15</button><button id="pbP">▶</button><button id="pbX">✕</button></div>
 <div class="toast" id="toast"></div>
 <div class="sheet" id="sheet"><div class="in" id="sheetIn"></div></div>
 
@@ -1852,9 +1844,7 @@ function podAudio(){
   document.getElementById("pbP").onclick=()=>{ a.paused?a.play():a.pause(); };
   document.getElementById("pbB").onclick=()=>{ a.currentTime=Math.max(0,a.currentTime-15); };
   document.getElementById("pbX").onclick=()=>{ a.pause(); if(POD.ep){ podState(POD.ep.id).t=a.currentTime; save(); } POD.ep=null; a.removeAttribute("src"); a.load(); podUI(); };
-  document.getElementById("pbF").onclick=()=>{ a.currentTime=Math.min((a.duration||1e9)-1,a.currentTime+30); };
-  document.getElementById("pbS").onclick=()=>{ if(!POD.ep) return; const st=podState(POD.ep.id), r=[0.75,1,1.25,1.5,1.75], n=r[(r.indexOf(st.rate||1)+1)%r.length]; st.rate=n; a.playbackRate=n; save(); podUI(); };
-  document.getElementById("pbT").onclick=()=>{ const it=(typeof PD_L!=="undefined"&&POD.ep)?PD_L.find(x=>x&&x.ep&&x.ep.id===POD.ep.id):null; if(it){ pdOpenFull(it); return; } if(POD.tema) nav({name:"mode",num:POD.tema,mode:"podcast"}); };
+  document.getElementById("pbT").onclick=()=>{ if(POD.tema) nav({name:"mode",num:POD.tema,mode:"podcast"}); };
   return a;
 }
 function podPlay(tema,ep){
@@ -1870,9 +1860,7 @@ function podUI(){
   document.body.classList.toggle("podon",!!(a&&POD.ep));
   if(!a||!POD.ep){ bar.classList.remove("on"); } else { bar.classList.add("on");
     document.getElementById("pbT").innerHTML=`${esc(L(POD.ep.title))}<small>${fmtT(a.currentTime)} / ${fmtT(a.duration||POD.ep.dur)}</small>`;
-    document.getElementById("pbP").textContent=a.paused?"▶":"❚❚";
-    const r0=podState(POD.ep.id).rate||1; document.getElementById("pbS").textContent=String(r0).replace(".",S.lang==="es"?",":".")+"×";
-    const dd=a.duration||POD.ep.dur||0; document.getElementById("pbL").style.width=(dd?Math.min(100,a.currentTime/dd*100):0)+"%"; }
+    document.getElementById("pbP").textContent=a.paused?"▶":"❚❚"; }
   document.querySelectorAll(".pod[data-id]").forEach(c=>{ const id=c.dataset.id, st=podState(id), cur=POD.ep&&POD.ep.id===id&&a;
     const dur=+c.dataset.dur, t0=cur?a.currentTime:st.t, d=cur&&a.duration?a.duration:dur;
     const r=c.querySelector("input[type=range]"); if(r&&!r._drag){ r.max=d; r.value=t0; }
