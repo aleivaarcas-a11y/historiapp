@@ -676,37 +676,6 @@ html.dark{--ln-per:#3d7cc0;--ln-per2:#2a5a8c;--ln-fen2:#46525e;--ln-egi2:#9c7a12
 #pdFull .ctrl .pp{width:66px;height:66px;border-radius:50%;background:#fff;color:#121417;font-size:26px}
 #pdFull .spd{border:1px solid #777;border-radius:14px;padding:3px 10px}
 #pdFull .ds{font-size:14px;line-height:1.45;color:#d0d4d9;background:#22262c;border-radius:10px;padding:12px 14px;margin-top:10px}
-/* iPad-INI */
-/* Menú inferior fijo: que nada quede tapado (todas las pantallas) */
-.deck{height:calc(100dvh - 340px - var(--safe-top) - var(--safe-bottom));min-height:300px}
-.sheet .sq{display:flex;gap:10px;align-items:center;font-size:14px;line-height:1.4;font-style:italic;color:var(--muted);border-left:3px solid var(--accent);padding:2px 0 2px 10px;margin:0 0 10px}
-.sheet .sq img{width:56px;height:56px;object-fit:cover;border-radius:8px;flex-shrink:0;font-style:normal}
-body.podon main{padding-bottom:calc(156px + var(--safe-bottom))}
-body.podon .deck{height:calc(100dvh - 406px - var(--safe-top) - var(--safe-bottom))}
-@media (min-width:768px){
-  #app{max-width:1100px}
-  #tabbar{max-width:1100px}
-  #podbar{max-width:640px}
-  .sheet .in{max-width:640px}
-  main{padding:24px 32px calc(100px + var(--safe-bottom))}
-  main>*{width:100%;max-width:900px;margin-left:auto;margin-right:auto}
-  .grid,.vlist,.tgrid{grid-template-columns:repeat(3,1fr);gap:16px}
-  .lg-ach{grid-template-columns:repeat(3,1fr)}
-  .ficha{max-width:760px}
-  .deck,.swipe-btns,.swipe-hint{max-width:680px}
-  .ficha h2{font-size:26px}
-  .ficha .body p{font-size:17px;line-height:1.65}
-  .vplayer{max-width:440px;margin-left:auto;margin-right:auto}
-  .vplayer video{max-height:78vh}
-  /* feed: botones y rótulo junto al vídeo vertical, no en los bordes de la pantalla */
-  .fside{right:max(10px,calc(50% - 28.125dvh - 76px))}
-  .fcap{left:max(14px,calc(50% - 28.125dvh + 14px));right:max(86px,calc(50% - 28.125dvh + 14px))}
-}
-@media (min-width:1100px){
-  .grid,.vlist,.tgrid{grid-template-columns:repeat(4,1fr)}
-  main>*{max-width:1000px}
-}
-/* iPad-FIN */
 </style>
 </head>
 <body>
@@ -828,10 +797,10 @@ function glBox(temaId,i){ return (S.prog.gl[temaId]||{})[i]||0; }
 function glSet(temaId,i,v){ S.prog.gl[temaId]=S.prog.gl[temaId]||{}; S.prog.gl[temaId][i]=Math.max(0,Math.min(4,v)); save(); }
 
 let toastT; function toast(msg,ms=1800){const e=document.getElementById("toast");e.textContent=msg;e.classList.add("show");clearTimeout(toastT);toastT=setTimeout(()=>e.classList.remove("show"),ms)}
-function sheet(ok,title,explain,xp,onNext,q,qimg){
+function sheet(ok,title,explain,xp,onNext){
   const el=document.getElementById("sheet"), inn=document.getElementById("sheetIn");
   el.className="sheet "+(ok?"ok":"ko");
-  inn.innerHTML=`<div class="verdict"><span class="dot">${ok?"✓":"✗"}</span>${esc(title)}</div>${q?`<div class="sq">${qimg?`<img src="${esc(qimg)}" alt="">`:""}<span>${esc(q)}</span></div>`:""}
+  inn.innerHTML=`<div class="verdict"><span class="dot">${ok?"✓":"✗"}</span>${esc(title)}</div>
     <div class="exp">${esc(explain)}</div>${xp?`<div class="xpgain">${t("gained",{n:xp})}</div>`:""}
     <button class="btn" id="sheetNext">${t("next")}</button><button class="rep" id="sheetRep">${t("report")}</button>`;
   requestAnimationFrame(()=>el.classList.add("show"));
@@ -1345,7 +1314,7 @@ function modeSwipe(tema,mode,m,opts={}){
     const it=items[order[pos]]; const ok=(val===it.answer);
     if(c){ c.style.transition="transform .35s ease, opacity .35s"; c.style.transform=`translate(${val?600:-600}px,-40px) rotate(${val?30:-30}deg)`; c.style.opacity=0; }
     markSeen(tema.id,mode,order[pos]); const xp=ok?10:2; addXP(xp); if(ok) correct++;
-    sheet(ok, ok?t("correct"):t("wrong")+` · ${it.answer?t("trueL"):t("falseL")}`, L(it.explain), xp, ()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeSwipe(tema,mode,m),opts); else draw(); }, L(it.claim), it.img||"");
+    sheet(ok, ok?t("correct"):t("wrong")+` · ${it.answer?t("trueL"):t("falseL")}`, L(it.explain), xp, ()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeSwipe(tema,mode,m),opts); else draw(); });
   }
   document.getElementById("bNo").onclick=()=>answer(false,deck.lastElementChild);
   document.getElementById("bYes").onclick=()=>answer(true,deck.lastElementChild);
@@ -1365,7 +1334,7 @@ function modeChoice(tema,mode,m,opts={}){
     const finish=(chosen)=>{ if(done) return; done=true; clearInterval(timer);
       const ok=chosen===it.answer; m.querySelectorAll(".opt").forEach(b=>{ b.disabled=true; const i=+b.dataset.i; if(i===it.answer) b.classList.add("ok"); else if(i===chosen) b.classList.add("ko"); });
       markSeen(tema.id,mode,order[pos]); const xp=ok?(mode==="quiz"?15:10):2; addXP(xp); if(ok) correct++;
-      sheet(ok, ok?t("correct"):(chosen===-1?t("timeUp"):t("wrong")), L(it.explain), xp, ()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeChoice(tema,mode,m),opts); else draw(); }, L(mode==="sources"?it.question:it.q)); };
+      sheet(ok, ok?t("correct"):(chosen===-1?t("timeUp"):t("wrong")), L(it.explain), xp, ()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeChoice(tema,mode,m),opts); else draw(); }); };
     m.querySelectorAll(".opt").forEach(b=>b.onclick=()=>finish(+b.dataset.i));
     if(mode==="quiz"){ let left=20; const bar=document.getElementById("tm"); bar.style.width="100%";
       timer=setInterval(()=>{ left--; bar.style.width=(left/20*100)+"%"; if(left<=0) finish(-1); },1000); }
@@ -1877,7 +1846,7 @@ function modePodcast(tema,mode,m){
     ${ep.lang&&ep.lang!==S.lang&&t("pEsOnly")?`<p class="note">${t("pEsOnly")}</p>`:""}
     <input type="range" min="0" step="1" value="0"><div class="tm"><span class="t0">0:00</span><span class="t1"></span></div>
     <div class="ctl"><button data-a="b">−15</button><button class="main" data-a="p"></button><button data-a="f">+30</button></div>
-    <div class="spd">${t("pSpeed")} ${[0.75,1,1.25,1.5,1.75].map(r=>`<button data-r="${r}">${String(r).replace(".",",")}×</button>`).join("")}</div>
+    <div class="spd">${t("pSpeed")} ${[1,1.25,1.5,1.75].map(r=>`<button data-r="${r}">${String(r).replace(".",",")}×</button>`).join("")}</div>
   </div>`).join("")+`<p class="note" style="text-align:center;margin:12px 8px">🔒 ${t("pBg")}</p>`;
   m.querySelectorAll(".pod").forEach(c=>{ const ep=eps.find(e=>e.id===c.dataset.id), st=podState(ep.id);
     const isCur=()=>POD.ep&&POD.ep.id===ep.id&&POD.audio;
@@ -2060,7 +2029,7 @@ function pdFull(){ const it=PD_CUR; if(!it) return; const f=pdFullEl(), d=pdDur(
   f.querySelector("#pfP").onclick=()=>{ if(pdIsCur(it)&&!POD.audio.paused) POD.audio.pause(); else podPlay(it.tema,it.ep); };
   f.querySelector("#pfB").onclick=()=>{ if(pdIsCur(it)) POD.audio.currentTime=Math.max(0,POD.audio.currentTime-15); else { st.t=Math.max(0,(st.t||0)-15); save(); pdFull(); } };
   f.querySelector("#pfF").onclick=()=>{ if(pdIsCur(it)) POD.audio.currentTime+=30; else { st.t=Math.min(it.ep.dur-5,(st.t||0)+30); save(); pdFull(); } };
-  f.querySelector("#pfS").onclick=()=>{ const r=[0.75,1,1.25,1.5,1.75], n=r[(r.indexOf(st.rate||1)+1)%r.length]; st.rate=n; if(pdIsCur(it)) POD.audio.playbackRate=n; save(); pdFull(); };
+  f.querySelector("#pfS").onclick=()=>{ const r=[1,1.25,1.5,1.75], n=r[(r.indexOf(st.rate||1)+1)%r.length]; st.rate=n; if(pdIsCur(it)) POD.audio.playbackRate=n; save(); pdFull(); };
   const R=f.querySelector("#pfR"); R.oninput=()=>{ R._drag=true; f.querySelector("#pfC").textContent=fmtT(+R.value); };
   R.onchange=()=>{ R._drag=false; if(pdIsCur(it)) POD.audio.currentTime=+R.value; else { st.t=+R.value; save(); } pdUI(); };
 }
