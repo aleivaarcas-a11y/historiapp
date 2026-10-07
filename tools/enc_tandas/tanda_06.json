@@ -385,12 +385,15 @@
   "img": {
    "src": "img/enc/batey-taino.jpg",
    "pie": {
-    "es": "*Duho* taíno de La Española (siglos XIV-XV), asiento ceremonial como los que, según Oviedo, ocupaban los caciques junto al batey. Museo del Louvre.",
-    "en": "Taíno *duho* from Hispaniola (14th-15th century), a ceremonial seat of the kind that, according to Oviedo, caciques occupied beside the batey. Louvre Museum."
+    "es": "Recreación pictórica del juego de pelota taíno en un batey, con los jugadores golpeando la pelota ante el público.",
+    "en": "Painted reconstruction of the Taíno ball game in a batey, with players striking the ball before the spectators."
    },
-   "autor": "Sailko",
-   "licencia": "CC BY 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Haiti,_taino,_sedile_cerimoniale_duho,_xiv-xv_sec._01.JPG"
+   "autor": "",
+   "licencia": {
+    "es": "",
+    "en": ""
+   },
+   "url": ""
   },
   "refs": [
    "Fernández de Oviedo, G. (1851). *Historia general y natural de las Indias, islas y tierra-firme del mar océano* (J. Amador de los Ríos, Ed.; Vol. 1). Real Academia de la Historia. (Obra original publicada en 1535)",
