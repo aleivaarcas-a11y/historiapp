@@ -181,12 +181,15 @@
   "img": {
    "src": "img/enc/racketlon.jpg",
    "pie": {
-    "es": "Las cuatro pelotas que se usan en el racketlon.",
-    "en": "The four balls used in racketlon."
+    "es": "Las cuatro disciplinas del racketlon, tenis de mesa, bádminton, squash y tenis, en un mismo montaje.",
+    "en": "The four racketlon disciplines, table tennis, badminton, squash and tennis, in a single montage."
    },
-   "autor": "Troddel",
-   "licencia": "CC BY-SA 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Racketlon_balls.jpg"
+   "autor": "",
+   "licencia": {
+    "es": "",
+    "en": ""
+   },
+   "url": ""
   },
   "refs": [
    "FIR. (s. f.). *History*. Recuperado el 29 de septiembre de 2026 de https://www.racketlon.net/about-fir/history/"
