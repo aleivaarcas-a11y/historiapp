@@ -287,12 +287,15 @@
   "img": {
    "src": "img/enc/speedcubing.jpg",
    "pie": {
-    "es": "Participantes en la competición de *speedcubing* Tartu Open (Estonia), 2017.",
-    "en": "Competitors at the Tartu Open speedcubing competition (Estonia), 2017."
+    "es": "Competidores resolviendo el cubo de Rubik en el campeonato nacional de Bélgica, 2023.",
+    "en": "Competitors solving the Rubik's cube at the Belgian national championship, 2023."
    },
-   "autor": "Ivo Kruusamägi",
-   "licencia": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Tartu_Open_2017_speedcubing_competition.jpg"
+   "autor": "Emanueluss",
+   "licencia": {
+    "es": "CC BY 4.0",
+    "en": "CC BY 4.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Belgian_Nationals_Venue.png"
   },
   "refs": [
    "World Cube Association. (s. f.-a). *Speedcubing history*. Recuperado el 30 de septiembre de 2026 de https://www.worldcubeassociation.org/speedcubing-history",

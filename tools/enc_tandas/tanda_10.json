@@ -370,6 +370,14 @@
      "es": "Beni Hasan: registros de lucha",
      "en": "Beni Hasan: wrestling records"
     }
+   },
+   {
+    "num": 3,
+    "f": "la-lucha",
+    "t": {
+     "es": "La lucha",
+     "en": "Wrestling"
+    }
    }
   ],
   "img": {
@@ -443,6 +451,14 @@
      "es": "Beni Hasan: registros de lucha",
      "en": "Beni Hasan: wrestling records"
     }
+   },
+   {
+    "num": 3,
+    "f": "la-lucha",
+    "t": {
+     "es": "La lucha",
+     "en": "Wrestling"
+    }
    }
   ],
   "img": {
@@ -494,7 +510,16 @@
     "Pankration expressed an ideal of courage that scorned death, and ancient accounts praised Arrichion for refusing to yield, to the point that one of them presents his victory as a triumph over the whole Greek nation (Poliakoff, 1987, p. 91). Several victorious pankratiasts, such as Promachos of Pellene or Timasitheos of Delphi, also distinguished themselves in war, and the Athenian Dioxippos, Olympic victor in 336 BCE, defeated in the camp of Alexander the Great, naked and armed only with a club, a Macedonian who had challenged him in full armour (Poliakoff, 1987, p. 98). Despite its harshness, the Greeks considered it less dangerous than boxing, and an athlete who wished to compete in both events at Olympia asked for the pankration to be held first so as not to arrive wounded (Poliakoff, 1987, p. 63)."
    ]
   },
-  "tema": [],
+  "tema": [
+   {
+    "num": 3,
+    "f": "el-pancracio",
+    "t": {
+     "es": "El pancracio",
+     "en": "The pankration"
+    }
+   }
+  ],
   "img": {
    "src": "img/enc/pancracio.jpg",
    "pie": {

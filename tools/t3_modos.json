@@ -1,0 +1,3042 @@
+{
+ "cards": [
+  {
+   "img": "img/t3/mapa_creta.jpg",
+   "caption": {
+    "es": "Creta y sus principales palacios minoicos",
+    "en": "Crete and its main Minoan palaces"
+   },
+   "claim": {
+    "es": "Creta tuvo varios palacios a la vez, como Cnoso, Festo o Malia.",
+    "en": "Crete had several palaces at the same time, such as Knossos, Phaistos and Malia."
+   },
+   "answer": true,
+   "explain": {
+    "es": "La geografía y el relieve fragmentados de la isla le dieron protección natural y propiciaron la convivencia de varios palacios. Es algo inusual en un territorio tan reducido.",
+    "en": "The fragmented geography and relief of the island gave it natural protection and allowed several palaces to coexist. This is unusual in such a small territory."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/cnoso_reconstruccion.jpg",
+   "caption": {
+    "es": "Reconstrucción del palacio de Cnoso, hacia 1750-1450 a. C.",
+    "en": "Reconstruction of the palace of Knossos, c. 1750-1450 BC"
+   },
+   "claim": {
+    "es": "Los palacios minoicos estaban rodeados de grandes murallas.",
+    "en": "The Minoan palaces were surrounded by great walls."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Se organizaban en torno a un gran patio central y carecían de murallas. Esa ausencia llevó a Evans a imaginar una «Pax Minoica», hipótesis que hoy debe matizarse, puesto que las primeras armas del Egeo son cretenses.",
+    "en": "They were arranged around a large central court and had no walls. That absence led Evans to imagine a 'Pax Minoica', a hypothesis that must be qualified today, since the first weapons of the Aegean are Cretan."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/disco_festo.jpg",
+   "caption": {
+    "es": "Disco de Festo, Museo Arqueológico de Heraclión",
+    "en": "Phaistos Disc, Heraklion Archaeological Museum"
+   },
+   "claim": {
+    "es": "Las escrituras cretenses nos han dejado textos que describen el deporte minoico.",
+    "en": "The Cretan scripts have left us texts that describe Minoan sport."
+   },
+   "answer": false,
+   "explain": {
+    "es": "El jeroglífico cretense y el lineal A siguen sin descifrar, y el lineal B se empleó sobre todo para la contabilidad del palacio. Ninguna de las tres ha dejado un solo texto sobre deporte, de ahí que todo lo que sabemos proceda de imágenes.",
+    "en": "Cretan hieroglyphic and Linear A remain undeciphered, and Linear B was used mainly for palace accounting. None of the three has left a single text about sport, which is why everything we know comes from images."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/fresco_procesion.jpg",
+   "caption": {
+    "es": "Fresco de la Procesión, Cnoso, hacia 1450-1350 a. C.",
+    "en": "Procession Fresco, Knossos, c. 1450-1350 BC"
+   },
+   "claim": {
+    "es": "En Creta el palacio era también el centro religioso de la comunidad.",
+    "en": "In Crete the palace was also the religious centre of the community."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Creta no levantó templos monumentales, de modo que el palacio reunía el culto, la residencia y el almacén en torno a un gran patio central.",
+    "en": "Crete built no monumental temples, so the palace brought together worship, residence and storage around a large central court."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/damas_azul.jpg",
+   "caption": {
+    "es": "Damas de azul, palacio de Cnoso, hacia 1600-1450 a. C.",
+    "en": "Ladies in Blue, palace of Knossos, c. 1600-1450 BC"
+   },
+   "claim": {
+    "es": "La pintura minoica pinta en blanco a la mujer y en rojo al varón.",
+    "en": "Minoan painting depicts women in white and men in red."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Es una convención heredada de Egipto y el código más evidente para reconocer a las mujeres en los frescos.",
+    "en": "It is a convention inherited from Egypt and the most obvious code for recognising women in the frescoes."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/danza_arboleda.jpg",
+   "caption": {
+    "es": "Danza en la arboleda sagrada, Cnoso, hacia 1600 a. C.",
+    "en": "Dance in the sacred grove, Knossos, c. 1600 BC"
+   },
+   "claim": {
+    "es": "La danza de la arboleda sagrada muestra a mujeres que bailan ante una multitud.",
+    "en": "The dance in the sacred grove shows women dancing before a crowd."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Los estudios vinculan este acto al culto a la naturaleza, concebida como divinidad femenina, y a los ritos de iniciación.",
+    "en": "Scholars link this act to the worship of nature, conceived as a female deity, and to initiation rites."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/pescador_akrotiri.jpg",
+   "caption": {
+    "es": "Pescador de Akrotiri, Tera, anterior a hacia 1628 a. C.",
+    "en": "Fisherman of Akrotiri, Thera, before c. 1628 BC"
+   },
+   "claim": {
+    "es": "El arte minoico representa cuerpos pesados y macizos, propios de la fuerza.",
+    "en": "Minoan art depicts heavy, massive bodies built for strength."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Muestra figuras gráciles, estilizadas, de cintura estrecha y dinámicas, como este pescador. Esa visión sugiere que la élite cretense valoraba la agilidad, la destreza y la belleza del cuerpo en acción.",
+    "en": "It shows graceful, slender, narrow-waisted and dynamic figures, like this fisherman. That vision suggests that the Cretan elite valued agility, skill and the beauty of the body in action."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/ninos_pugiles_akrotiri.jpg",
+   "caption": {
+    "es": "Fresco de los niños púgiles, Akrotiri, finales del siglo XVII a. C.",
+    "en": "Boxing Boys fresco, Akrotiri, late 17th century BC"
+   },
+   "claim": {
+    "es": "Los niños púgiles de Akrotiri llevan un guante en cada mano.",
+    "en": "The boxing boys of Akrotiri wear a glove on each hand."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Boxean con un solo guante en la mano derecha, con cinturón y taparrabos, y llevan la cabeza rapada salvo algunos mechones, el peinado de los muchachos de familia privilegiada.",
+    "en": "They box with a single glove on the right hand, with a belt and loincloth, and their heads are shaved except for a few locks, the hairstyle of boys from privileged families."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/ninos_pugiles_akrotiri.jpg",
+   "caption": {
+    "es": "Fresco de los niños púgiles, Akrotiri, finales del siglo XVII a. C.",
+    "en": "Boxing Boys fresco, Akrotiri, late 17th century BC"
+   },
+   "claim": {
+    "es": "El niño con collar, pulseras y pendientes se lee como el vencedor del combate.",
+    "en": "The boy wearing a necklace, bracelets and earrings is read as the winner of the bout."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Su rival viste con sencillez. ¿Qué nos dice esa diferencia? Que el juego marcaba ya la jerarquía entre los hijos de la élite.",
+    "en": "His opponent is simply dressed. What does that difference tell us? That the game already marked the hierarchy among the children of the elite."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/riton_boxeadores.jpg",
+   "caption": {
+    "es": "Ritón de los boxeadores, Hagia Triada, hacia 1550-1500 a. C.",
+    "en": "Boxer Rhyton, Hagia Triada, c. 1550-1500 BC"
+   },
+   "claim": {
+    "es": "El ritón de Hagia Triada es un vaso de piedra para las libaciones decorado con escenas deportivas.",
+    "en": "The Hagia Triada rhyton is a stone vessel for libations decorated with sporting scenes."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Mide unos 46 cm, servía para las ofrendas líquidas a los dioses y es el único vaso de su clase con escenas deportivas que se conserva casi entero.",
+    "en": "It is about 46 cm high, was used for liquid offerings to the gods and is the only vessel of its kind with sporting scenes that survives almost complete."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/riton_boxeadores_bandas.jpg",
+   "caption": {
+    "es": "Desarrollo de las cuatro bandas del ritón de Hagia Triada",
+    "en": "The four registers of the Hagia Triada rhyton"
+   },
+   "claim": {
+    "es": "Los púgiles del ritón son niños que aprenden a combatir.",
+    "en": "The boxers on the rhyton are children learning to fight."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Son adultos, esbeltos pero musculados, con la melena del aristócrata minoico. Sus cascos, guantes, botas y vendajes cambian de una banda a otra, señal de un entrenamiento sistemático con reglas para cada modalidad.",
+    "en": "They are adults, slender but muscular, with the long hair of the Minoan aristocrat. Their helmets, gloves, boots and bandages change from one band to another, a sign of systematic training with rules for each discipline."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/fresco_salto_toro.jpg",
+   "caption": {
+    "es": "Fresco del salto del toro, Cnoso, hacia 1450-1375 a. C.",
+    "en": "Bull-Leaping Fresco, Knossos, c. 1450-1375 BC"
+   },
+   "claim": {
+    "es": "Casi todas las imágenes de taurocatapsia cretense proceden del palacio de Cnoso.",
+    "en": "Almost all images of Cretan bull-leaping come from the palace of Knossos."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Proceden de su fresco y de sus sellos oficiales, de ahí que el salto se convirtiera en emblema del poder de ese centro palacial.",
+    "en": "They come from its fresco and its official seals, which is why the leap became the emblem of the power of that palatial centre."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/fresco_salto_toro.jpg",
+   "caption": {
+    "es": "Fresco del salto del toro, Cnoso, hacia 1450-1375 a. C.",
+    "en": "Bull-Leaping Fresco, Knossos, c. 1450-1375 BC"
+   },
+   "claim": {
+    "es": "Hoy está demostrado que en Cnoso saltaban mujeres.",
+    "en": "It is now proven that women leapt at Knossos."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Nueve de los dieciséis saltadores conservados tienen la piel blanca, si bien otras hipótesis leen ese color como una marca de edad o de función social entre varones. La presencia de mujeres no puede afirmarse ni descartarse.",
+    "en": "Nine of the sixteen surviving leapers have white skin, although other hypotheses read that colour as a mark of age or social role among men. The presence of women can be neither affirmed nor ruled out."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/salto_toro_secuencia.jpg",
+   "caption": {
+    "es": "Reconstrucción del salto del toro",
+    "en": "Reconstruction of the bull-leap"
+   },
+   "claim": {
+    "es": "Evans reconstruyó un salto que empezaba agarrando los cuernos del toro.",
+    "en": "Evans reconstructed a leap that began by grasping the bull's horns."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Según Evans (1930), el saltador aprovechaba la embestida para tomar impulso. Younger (1995) propuso después que el salto más frecuente fuera en picado.",
+    "en": "According to Evans (1930), the leaper used the bull's charge to gain momentum. Younger (1995) later proposed that the most frequent leap was the diving leap."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/saltador_marfil.jpg",
+   "caption": {
+    "es": "Saltador de marfil del palacio de Cnoso, hacia 1750-1450 a. C.",
+    "en": "Ivory leaper from the palace of Knossos, c. 1750-1450 BC"
+   },
+   "claim": {
+    "es": "Según Younger (1995), el salto en picado es el esquema más frecuente del salto del toro.",
+    "en": "According to Younger (1995), the diving leap is the most frequent scheme of bull-leaping."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Reúne una treintena de ejemplos frente a las pocas imágenes, más antiguas, que encajan con la reconstrucción de Evans.",
+    "en": "He gathers some thirty examples against the few, older images that fit Evans's reconstruction."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/acrobata_toro_bronce.jpg",
+   "caption": {
+    "es": "Acróbata sobre un toro, bronce, hacia 1600-1450 a. C. (British Museum)",
+    "en": "Acrobat on a bull, bronze, c. 1600-1450 BC (British Museum)"
+   },
+   "claim": {
+    "es": "En el salto en picado el saltador terminaba sentado sobre el lomo del toro.",
+    "en": "In the diving leap the leaper ended up sitting on the bull's back."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Tras apoyar las manos en los hombros del animal y arquear el cuerpo, daba una voltereta hacia atrás y caía de pie detrás del toro.",
+    "en": "After placing his hands on the animal's shoulders and arching his body, he made a backward somersault and landed on his feet behind the bull."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/tazas_vafio.jpg",
+   "caption": {
+    "es": "Tazas de oro de Vafio (Laconia), hacia 1750-1450 a. C.",
+    "en": "Gold cups from Vapheio (Laconia), c. 1750-1450 BC"
+   },
+   "claim": {
+    "es": "Las tazas de Vafio muestran la captura de toros con una red y con una vaca como señuelo.",
+    "en": "The Vapheio cups show bulls being captured with a net and with a cow as a decoy."
+   },
+   "answer": true,
+   "explain": {
+    "es": "El salto era solo la parte más vistosa de un ciclo que empezaba con la captura del toro, una empresa colectiva y peligrosa.",
+    "en": "The leap was only the most spectacular part of a cycle that began with the capture of the bull, a collective and dangerous undertaking."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/tazas_vafio_dibujo.jpg",
+   "caption": {
+    "es": "Dibujo de los frisos de las tazas de Vafio",
+    "en": "Drawing of the friezes of the Vapheio cups"
+   },
+   "claim": {
+    "es": "Las imágenes minoicas unen el salto con la muerte del toro.",
+    "en": "Minoan images link the leap with the death of the bull."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Se especula con que la taurocatapsia terminara en el sacrificio y el banquete, si bien las imágenes minoicas no unen el salto con la muerte del animal.",
+    "en": "It has been speculated that bull-leaping ended in sacrifice and a banquet, although Minoan images do not link the leap with the animal's death."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/riton_cabeza_toro.jpg",
+   "caption": {
+    "es": "Ritón en forma de cabeza de toro, Pequeño Palacio de Cnoso, hacia 1550-1500 a. C.",
+    "en": "Bull's-head rhyton, Little Palace of Knossos, c. 1550-1500 BC"
+   },
+   "claim": {
+    "es": "Las cuatro lecturas del salto del toro se excluyen entre sí.",
+    "en": "The four readings of bull-leaping are mutually exclusive."
+   },
+   "answer": false,
+   "explain": {
+    "es": "El salto pudo ser, a la vez y en el mismo acto, ofrenda a los dioses, paso a la edad adulta, emblema del palacio y exhibición de destreza ante la comunidad.",
+    "en": "The leap could be, at once and in the same act, an offering to the gods, a passage to adulthood, an emblem of the palace and a display of skill before the community."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/patio_gradas_minoico.jpg",
+   "caption": {
+    "es": "Patio y graderío del palacio de Festo, Creta",
+    "en": "Court and stepped area of the palace of Phaistos, Crete"
+   },
+   "claim": {
+    "es": "Festo tenía un área teatral con una grada para espectadores en pie.",
+    "en": "Phaistos had a theatral area with steps for standing spectators."
+   },
+   "answer": true,
+   "explain": {
+    "es": "La grada tiene nueve escalones. Sea cual sea el lugar del salto, el deporte cretense tenía vocación de espectáculo público ligado a los centros del poder.",
+    "en": "The steps number nine. Wherever the leap took place, Cretan sport was meant as a public spectacle tied to the centres of power."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/caldera_santorini.jpg",
+   "caption": {
+    "es": "Caldera de Santorini, la antigua Tera",
+    "en": "Caldera of Santorini, ancient Thera"
+   },
+   "claim": {
+    "es": "La erupción del volcán de Tera acabó de inmediato con los palacios cretenses.",
+    "en": "The eruption of the Thera volcano immediately ended the Cretan palaces."
+   },
+   "answer": false,
+   "explain": {
+    "es": "La erupción se produjo hacia 1628 a. C., unos ciento cincuenta años antes del final de los palacios. Cubrió de ceniza el este de la isla, pero Creta se rehízo y llegó próspera a su última etapa.",
+    "en": "The eruption took place c. 1628 BC, some 150 years before the end of the palaces. It covered the east of the island with ash, but Crete recovered and reached its last stage in prosperity."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/sala_trono_cnoso.jpg",
+   "caption": {
+    "es": "Sala del trono del palacio de Cnoso",
+    "en": "Throne room of the palace of Knossos"
+   },
+   "claim": {
+    "es": "Hacia 1450-1375 a. C. Cnoso fue el único palacio de Creta, en manos de los micénicos.",
+    "en": "C. 1450-1375 BC Knossos was the only palace in Crete, in the hands of the Mycenaeans."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Durante esos setenta y cinco años la taurocatapsia siguió practicándose bajo dominio micénico, hasta que el palacio ardió hacia 1375 a. C.",
+    "en": "During those seventy-five years bull-leaping continued under Mycenaean rule, until the palace burned c. 1375 BC."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/enocoe_dipilon.jpg",
+   "caption": {
+    "es": "Enócoe del Dipilón, Atenas, hacia 740-725 a. C.",
+    "en": "Dipylon oinochoe, Athens, c. 740-725 BC"
+   },
+   "claim": {
+    "es": "La enócoe del Dipilón lleva una inscripción que la declara premio de un concurso de baile.",
+    "en": "The Dipylon oinochoe bears an inscription declaring it the prize of a dancing contest."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Es una de las inscripciones griegas más antiguas, escrita con el alfabeto tomado de los fenicios, y premia al mejor bailarín.",
+    "en": "It is one of the oldest Greek inscriptions, written in the alphabet taken from the Phoenicians, and rewards the best dancer."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/fresco_guerreros_carro.jpg",
+   "caption": {
+    "es": "Fresco micénico con guerreros en carro, siglo XIII a. C.",
+    "en": "Mycenaean fresco with warriors in a chariot, 13th century BC"
+   },
+   "claim": {
+    "es": "En el mundo micénico el carro y la caza del jabalí estaban reservados al señor.",
+    "en": "In the Mycenaean world the chariot and the boar hunt were reserved for the lord."
+   },
+   "answer": true,
+   "explain": {
+    "es": "El pugilato, en cambio, quedaba a cargo de púgiles pagados que animaban los banquetes y los funerales del señor.",
+    "en": "Boxing, by contrast, was left to paid boxers who entertained at the lord's banquets and funerals."
+   },
+   "sec": "3.1"
+  },
+  {
+   "img": "img/t3/mapa_grecia_arcaica.jpg",
+   "caption": {
+    "es": "El mundo griego en época arcaica, con Olimpia y Élide",
+    "en": "The Greek world in the Archaic period, with Olympia and Elis"
+   },
+   "claim": {
+    "es": "Grecia fue un Estado unificado con capital en Olimpia.",
+    "en": "Greece was a unified state with its capital at Olympia."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Grecia nunca fue un Estado unificado. Sus cientos de poleis compartían lengua, dioses y santuarios, y Olimpia, en el territorio de Élide, era de todos los griegos aunque la gobernara Élide.",
+    "en": "Greece was never a unified state. Its hundreds of poleis shared language, gods and sanctuaries, and Olympia, in the territory of Elis, belonged to all Greeks although Elis governed it."
+   },
+   "sec": "3.2.1"
+  },
+  {
+   "img": "img/t3/copa_atleta_pozo.jpg",
+   "caption": {
+    "es": "Copa ática con atleta sacando agua de un pozo, hacia 500-470 a. C.",
+    "en": "Attic cup with an athlete drawing water from a well, c. 500-470 BC"
+   },
+   "claim": {
+    "es": "Hacia 500 a. C. la mayoría de los habitantes de Atenas eran ciudadanos varones adultos.",
+    "en": "C. 500 BC most of the inhabitants of Athens were adult male citizens."
+   },
+   "answer": false,
+   "explain": {
+    "es": "De unos 175.000 habitantes, solo unos 25.000 eran ciudadanos varones adultos. La ley distinguía además entre ciudadanos, metecos y esclavos, y a estos últimos les vedaba el deporte.",
+    "en": "Of some 175,000 inhabitants, only about 25,000 were adult male citizens. The law also distinguished citizens, metics and slaves, and barred the last from sport."
+   },
+   "sec": "3.2.1"
+  },
+  {
+   "img": "img/t3/fronton_oriental_zeus.jpg",
+   "caption": {
+    "es": "Frontón oriental del templo de Zeus, Olimpia, mediados del siglo V a. C.",
+    "en": "East pediment of the temple of Zeus, Olympia, mid-5th century BC"
+   },
+   "claim": {
+    "es": "El frontón muestra los preparativos de la carrera de carros de Pélope y Enómao.",
+    "en": "The pediment shows the preparations for the chariot race of Pelops and Oinomaos."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Pélope gana la carrera al rey de Pisa, una de las dos versiones más repetidas de la fundación de los Juegos junto a la de Heracles.",
+    "en": "Pelops wins the race against the king of Pisa, one of the two most repeated versions of the founding of the Games together with that of Heracles."
+   },
+   "sec": "3.2.2"
+  },
+  {
+   "img": "img/t3/tumulo_prehistorico.jpg",
+   "caption": {
+    "es": "Ejemplo de túmulo prehistórico griego",
+    "en": "Example of a prehistoric Greek tumulus"
+   },
+   "claim": {
+    "es": "El túmulo que los griegos veneraban como tumba de Pélope era de época micénica.",
+    "en": "The tumulus the Greeks venerated as the tomb of Pelops dated from the Mycenaean period."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Era prehistórico, de mediados del III milenio a. C. De los relatos de fundación solo es cierto el escenario.",
+    "en": "It was prehistoric, from the middle of the third millennium BC. Of the foundation stories only the setting is true."
+   },
+   "sec": "3.2.2"
+  },
+  {
+   "img": "img/t3/olimpia_reconstruccion.jpg",
+   "caption": {
+    "es": "Reconstrucción del santuario de Olimpia en su máximo esplendor",
+    "en": "Reconstruction of the sanctuary of Olympia at its height"
+   },
+   "claim": {
+    "es": "El primer estadio de Olimpia se levantó siglos después de iniciarse el culto a Zeus.",
+    "en": "The first stadium at Olympia was built centuries after the cult of Zeus began."
+   },
+   "answer": true,
+   "explain": {
+    "es": "El culto empieza a finales del siglo XI a. C. y el primer estadio se levantó hacia 700 a. C. Primero fue el rito y al final el certamen atlético.",
+    "en": "The cult begins at the end of the 11th century BC and the first stadium was built c. 700 BC. First came the rite and, last, the athletic contest."
+   },
+   "sec": "3.2.2"
+  },
+  {
+   "img": "img/t3/palestra_olimpia.jpg",
+   "caption": {
+    "es": "Restos de una palestra con pórticos",
+    "en": "Remains of a palaestra with porticoes"
+   },
+   "claim": {
+    "es": "Las palestras eran espacios rectangulares con una explanada central rodeada de pórticos.",
+    "en": "Palaestrae were rectangular spaces with a central open area surrounded by porticoes."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Eran espacios sobrios, con pórticos en sus cuatro costados, dedicados sobre todo a los deportes de combate, mientras el gimnasio acogía las disciplinas atléticas.",
+    "en": "They were plain spaces with porticoes on all four sides, used mainly for combat sports, while the gymnasium housed the athletic disciplines."
+   },
+   "sec": "3.2.3"
+  },
+  {
+   "img": "img/t3/pentatleta_entrenando.jpg",
+   "caption": {
+    "es": "Pentatleta entrenando la jabalina, hacia 510-500 a. C. (Boston)",
+    "en": "Pentathlete training with the javelin, c. 510-500 BC (Boston)"
+   },
+   "claim": {
+    "es": "Una ley atribuida a Solón permitía a los esclavos entrenar en el gimnasio si pagaban al paidotriba.",
+    "en": "A law attributed to Solon allowed slaves to train in the gymnasium if they paid the trainer."
+   },
+   "answer": false,
+   "explain": {
+    "es": "La ley prohibía a los esclavos ejercitarse en el gimnasio y untarse de aceite en las palestras bajo pena de 50 azotes. Según Plutarco, así situaba la gimnasia entre las prácticas honorables.",
+    "en": "The law forbade slaves to exercise in the gymnasium and to anoint themselves with oil in the palaestrae on pain of 50 lashes. According to Plutarch, it thus placed gymnastics among honourable practices."
+   },
+   "sec": "3.2.3"
+  },
+  {
+   "img": "img/t3/milon_crotona_puget.jpg",
+   "caption": {
+    "es": "Milón de Crotona por P. Puget (Louvre)",
+    "en": "Milo of Croton by P. Puget (Louvre)"
+   },
+   "claim": {
+    "es": "Según una tradición, el luchador Milón de Crotona comía veinte libras de carne al día.",
+    "en": "According to one tradition, the wrestler Milo of Croton ate twenty pounds of meat a day."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Unos 9 kg de carne y otros tantos de pan. El mito del atleta glotón se extendió cuando, hacia 500 a. C., se impuso una dieta abundante en carne.",
+    "en": "About 9 kg of meat and as much bread. The myth of the gluttonous athlete spread when, c. 500 BC, a meat-rich diet became the norm."
+   },
+   "sec": "3.2.3"
+  },
+  {
+   "img": "img/t3/corredores_perizoma.jpg",
+   "caption": {
+    "es": "Corredores con perizoma, vaso ático de figuras negras",
+    "en": "Runners wearing the perizoma, Attic black-figure vase"
+   },
+   "claim": {
+    "es": "En las primeras ediciones de los Juegos los atletas competían con perizoma.",
+    "en": "In the first editions of the Games athletes competed wearing the perizoma."
+   },
+   "answer": true,
+   "explain": {
+    "es": "El perizoma era una pequeña túnica atada a modo de cinturón o taparrabos.",
+    "en": "The perizoma was a small tunic tied like a belt or loincloth."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "img": "img/t3/corredores_desnudos.jpg",
+   "caption": {
+    "es": "Corredores desnudos, vaso ático de figuras negras",
+    "en": "Naked runners, Attic black-figure vase"
+   },
+   "claim": {
+    "es": "Tras correr Orsipo desnudo en 720 a. C., la desnudez se impuso de inmediato.",
+    "en": "After Orsippos ran naked in 720 BC, nudity became the rule at once."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Orsipo de Mégara inició un cambio que tardó más de un siglo en generalizarse y que se mantuvo hasta el final del olimpismo, salvo en las pruebas hípicas.",
+    "en": "Orsippos of Megara began a change that took more than a century to become general and lasted until the end of the Games, except in the equestrian events."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "img": "img/t3/psicter_oltos.jpg",
+   "caption": {
+    "es": "Psictér atribuido a Oltos, hacia 520-510 a. C. (Nueva York)",
+    "en": "Psykter attributed to Oltos, c. 520-510 BC (New York)"
+   },
+   "claim": {
+    "es": "En Olimpia el vencedor recibía ánforas de aceite y dinero.",
+    "en": "At Olympia the victor received amphorae of oil and money."
+   },
+   "answer": false,
+   "explain": {
+    "es": "El santuario solo daba una corona de olivo. Las recompensas materiales llegaban después, de su ciudad o de otros juegos.",
+    "en": "The sanctuary gave only an olive wreath. Material rewards came later, from his city or from other games."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "img": "img/t3/anfora_panatenaica.jpg",
+   "caption": {
+    "es": "Ánfora panatenaica con corredores, hacia 480-460 a. C.",
+    "en": "Panathenaic amphora with runners, c. 480-460 BC"
+   },
+   "claim": {
+    "es": "En las Panateneas el vencedor del estadio recibía probablemente 80 ánforas de aceite.",
+    "en": "At the Panathenaia the winner of the stadion probably received 80 amphorae of oil."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Unos 2.900 litros, por valor de unas 1.247 dracmas, más de un año de jornal de un artesano cualificado.",
+    "en": "Some 2,900 litres, worth about 1,247 drachmas, more than a year's wages of a skilled craftsman."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "img": "img/t3/estadio_olimpia.jpg",
+   "caption": {
+    "es": "Estadio de Olimpia, estado de hacia 350 a. C.",
+    "en": "Stadium of Olympia, state of c. 350 BC"
+   },
+   "claim": {
+    "es": "El estadio de Olimpia tenía gradas de piedra para todo el público.",
+    "en": "The stadium of Olympia had stone stands for the whole crowd."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Olimpia no tuvo gradas de piedra. El público seguía las carreras de pie o sobre la hierba de los taludes, y solo los jueces y la sacerdotisa de Deméter Cámine tenían asiento fijo.",
+    "en": "Olympia had no stone stands. The crowd watched the races standing or on the grass of the embankments, and only the judges and the priestess of Demeter Chamyne had fixed seats."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "img": "img/t3/balbis_olimpia.jpg",
+   "caption": {
+    "es": "Balbís, línea de salida del estadio de Olimpia",
+    "en": "Balbis, starting line of the stadium of Olympia"
+   },
+   "claim": {
+    "es": "La balbís era el umbral de piedra de la salida, con dos ranuras para encajar los dedos de los pies.",
+    "en": "The balbis was the stone starting sill, with two grooves for the toes."
+   },
+   "answer": true,
+   "explain": {
+    "es": "El corredor se colocaba descalzo y de pie, con un pie algo adelantado y los brazos extendidos, una postura muy distinta de la del velocista actual.",
+    "en": "The runner stood barefoot and upright, with one foot slightly forward and arms outstretched, a posture very different from that of today's sprinter."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "img": "img/t3/hysplex_reconstruccion.jpg",
+   "caption": {
+    "es": "Reconstrucción del hýsplex",
+    "en": "Reconstruction of the hysplex"
+   },
+   "claim": {
+    "es": "El hýsplex era una barrera de cuerdas que caía a la vez ante todos los corredores.",
+    "en": "The hysplex was a barrier of ropes that dropped at the same moment in front of all the runners."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Se ideó para que la salida no dependiera del ojo del juez. Quien se adelantaba cometía una salida falsa y era azotado en público.",
+    "en": "It was devised so that the start would not depend on the judge's eye. Anyone who went early made a false start and was publicly flogged."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "img": "img/t3/saltador_halteras.jpg",
+   "caption": {
+    "es": "Saltador con halteras en una copa de figuras rojas",
+    "en": "Jumper with halteres on a red-figure cup"
+   },
+   "claim": {
+    "es": "Los saltadores griegos usaban pesos de piedra, plomo o bronce llamados halteras.",
+    "en": "Greek jumpers used weights of stone, lead or bronze called halteres."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Pesaban de 1,4 a 4,5 kg. Según Minetti y Ardigò (2002), un par de 5 a 6 kg alarga al menos 17 cm un salto de 3 metros sin carrera.",
+    "en": "They weighed 1.4 to 4.5 kg. According to Minetti and Ardigò (2002), a pair of 5 to 6 kg lengthens a 3-metre standing jump by at least 17 cm."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "img": "img/t3/ankyle_lanzamiento.jpg",
+   "caption": {
+    "es": "Lanzamiento de jabalina con la ankýle",
+    "en": "Javelin throw with the ankyle"
+   },
+   "claim": {
+    "es": "La ankýle era una correa de cuero que hacía girar la jabalina y alargaba el tiro.",
+    "en": "The ankyle was a leather thong that made the javelin spin and lengthened the throw."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Medía de 30 a 45 cm y se enrollaba en el asta. Solo valían los tiros en los que la jabalina se clavaba en el suelo.",
+    "en": "It was 30 to 45 cm long and wound round the shaft. Only throws in which the javelin stuck in the ground were valid."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "img": "img/t3/disco_asclepiades.jpg",
+   "caption": {
+    "es": "Disco de Publio Asclepíades, 241 d. C., Olimpia",
+    "en": "Discus of Publius Asclepiades, AD 241, Olympia"
+   },
+   "claim": {
+    "es": "En Olimpia cada atleta lanzaba su propio disco.",
+    "en": "At Olympia each athlete threw his own discus."
+   },
+   "answer": false,
+   "explain": {
+    "es": "En cada prueba todos lanzaban el mismo disco el mismo día. Un viajero griego del siglo II d. C. vio en Olimpia los tres discos del pentatlón.",
+    "en": "In each contest everyone threw the same discus on the same day. A Greek traveller of the second century AD saw the three pentathlon discuses at Olympia."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "img": "img/t3/pugil_rendicion.jpg",
+   "caption": {
+    "es": "Púgil que levanta el índice en señal de rendición, hacia 500 a. C.",
+    "en": "Boxer raising his index finger in surrender, c. 500 BC"
+   },
+   "claim": {
+    "es": "En el pugilato el combatiente levantaba el dedo índice para abandonar.",
+    "en": "In boxing a fighter raised his index finger to concede."
+   },
+   "answer": true,
+   "explain": {
+    "es": "No había asaltos ni descansos, y el combate seguía hasta que uno quedaba incapacitado o se rendía con ese gesto.",
+    "en": "There were no rounds or breaks, and the fight went on until one man was incapacitated or surrendered with that gesture."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "img": "img/t3/caestus_dibujo.jpg",
+   "caption": {
+    "es": "Representación del caestus romano",
+    "en": "Depiction of the Roman caestus"
+   },
+   "claim": {
+    "es": "El caestus, reforzado con plomo y hierro, es el guante de los primeros pugilatos olímpicos.",
+    "en": "The caestus, reinforced with lead and iron, is the glove of the first Olympic boxing bouts."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Los primeros púgiles se enrollaban las manos con himantes, tiras de cuero. Las correas duras llegaron a mediados del siglo IV a. C. y el caestus en época romana.",
+    "en": "The first boxers wrapped their hands with himantes, leather thongs. Hard thongs arrived in the mid-fourth century BC and the caestus in the Roman period."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "img": "img/t3/pancratistas_juez.jpg",
+   "caption": {
+    "es": "Pancratistas y juez con la vara, hacia 500 a. C. (Nueva York)",
+    "en": "Pankratiasts and judge with his rod, c. 500 BC (New York)"
+   },
+   "claim": {
+    "es": "En el pancracio de Olimpia estaba permitido morder al rival.",
+    "en": "In the pankration at Olympia biting the opponent was allowed."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Morder y meter los dedos en los ojos eran las únicas prohibiciones en Olimpia, aunque, según Filóstrato, los espartanos lo permitían en su tierra.",
+    "en": "Biting and gouging the eyes were the only prohibitions at Olympia, although, according to Philostratus, the Spartans allowed them at home."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "img": "img/t3/cuadrigas_museo_britanico.jpg",
+   "caption": {
+    "es": "Carrera de cuadrigas, hacia 410-400 a. C. (Museo Británico)",
+    "en": "Four-horse chariot race, c. 410-400 BC (British Museum)"
+   },
+   "claim": {
+    "es": "En las pruebas hípicas la corona de olivo era para el auriga.",
+    "en": "In the equestrian events the olive wreath went to the charioteer."
+   },
+   "answer": false,
+   "explain": {
+    "es": "La corona era para el dueño de las monturas. Por eso hubo mujeres campeonas olímpicas, como la princesa espartana Cinisca, que ganó la cuadriga en 396 a. C.",
+    "en": "The wreath went to the owner of the horses. That is why there were female Olympic champions, such as the Spartan princess Kyniska, who won the four-horse chariot race in 396 BC."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "img": "img/t3/mujer_quiton.jpg",
+   "caption": {
+    "es": "Mujer con quitón, escultura griega (Musei Capitolini)",
+    "en": "Woman in a chiton, Greek sculpture (Musei Capitolini)"
+   },
+   "claim": {
+    "es": "En la polis la maternidad y la casa familiar delimitaban casi por completo el papel de la mujer libre.",
+    "en": "In the polis motherhood and the household almost entirely defined the role of the free woman."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Carecía de derechos políticos y pertenecía a la comunidad como madre y esposa. Esparta constituía la excepción en el deporte femenino.",
+    "en": "She had no political rights and belonged to the community as mother and wife. Sparta was the exception in women's sport."
+   },
+   "sec": "3.2.6"
+  },
+  {
+   "img": "img/t3/zanes.jpg",
+   "caption": {
+    "es": "Reconstrucción de los zanes",
+    "en": "Reconstruction of the Zanes"
+   },
+   "claim": {
+    "es": "Los zanes eran estatuas de Zeus pagadas con las multas de los infractores.",
+    "en": "The Zanes were statues of Zeus paid for with the fines of offenders."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Se levantaban junto a la entrada del estadio y su pedestal llevaba grabado el nombre del infractor. Los seis primeros se pagaron en 388 a. C. por un soborno en el pugilato.",
+    "en": "They stood by the entrance to the stadium and their pedestal bore the offender's name. The first six were paid for in 388 BC because of a bribe in boxing."
+   },
+   "sec": "3.2.6"
+  },
+  {
+   "img": "img/t3/tablilla_maldicion.jpg",
+   "caption": {
+    "es": "Tablillas de plomo con maldiciones, Nemea, siglo III a. C.",
+    "en": "Lead curse tablets, Nemea, third century BC"
+   },
+   "claim": {
+    "es": "Algunos atletas grababan maldiciones contra sus rivales en tablillas de plomo.",
+    "en": "Some athletes inscribed curses against their rivals on lead tablets."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Las de Nemea aparecieron enrolladas y perforadas, y piden que los corredores no tengan fuerza y queden en último lugar.",
+    "en": "Those from Nemea were found rolled up and pierced, and ask that the runners have no strength and come last."
+   },
+   "sec": "3.2.6"
+  },
+  {
+   "img": "img/t3/busto_neron.jpg",
+   "caption": {
+    "es": "Busto de Nerón (Musei Capitolini)",
+    "en": "Bust of Nero (Musei Capitolini)"
+   },
+   "claim": {
+    "es": "Nerón terminó la carrera del carro de diez caballos y ganó en buena lid.",
+    "en": "Nero finished the ten-horse chariot race and won fairly."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Se cayó del carro y no terminó la carrera, y aun así fue proclamado vencedor tras pagar con generosidad a los jueces. Tras su muerte, Élide borró aquella Olimpiada de sus registros.",
+    "en": "He fell from the chariot and did not finish the race, yet he was proclaimed victor after paying the judges generously. After his death, Elis struck that Olympiad from its records."
+   },
+   "sec": "3.2.7"
+  },
+  {
+   "img": "img/t3/ninfeo_herodes.jpg",
+   "caption": {
+    "es": "Ninfeo de Herodes Ático, Olimpia, hacia 150 d. C.",
+    "en": "Nymphaeum of Herodes Atticus, Olympia, c. AD 150"
+   },
+   "claim": {
+    "es": "Bajo Roma, Olimpia vivió su máximo apogeo arquitectónico mientras declinaba su deporte.",
+    "en": "Under Rome, Olympia reached its architectural peak while its sport declined."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Herodes Ático costeó un acueducto con su fuente monumental hacia 150, y hacia 170 el santuario alcanzó su máximo esplendor constructivo.",
+    "en": "Herodes Atticus paid for an aqueduct with its monumental fountain c. AD 150, and by c. AD 170 the sanctuary reached its greatest architectural splendour."
+   },
+   "sec": "3.2.7"
+  },
+  {
+   "img": "img/t3/atleta_mosaico_caracalla.jpg",
+   "caption": {
+    "es": "Atleta, mosaico de las termas de Caracalla, siglo III d. C.",
+    "en": "Athlete, mosaic from the Baths of Caracalla, third century AD"
+   },
+   "claim": {
+    "es": "Desde finales del siglo V a. C. aparece el atleta profesional, que vive de sus premios.",
+    "en": "From the late fifth century BC the professional athlete appears, living off his prizes."
+   },
+   "answer": true,
+   "explain": {
+    "es": "Para Durántez (2010), la decadencia de Olimpia empezó antes de la llegada de Roma, y con el profesional llegaron los fraudes.",
+    "en": "For Durántez (2010), the decline of Olympia began before the arrival of Rome, and frauds came with the professional athlete."
+   },
+   "sec": "3.2.7"
+  }
+ ],
+ "glossary": [
+  {
+   "term": {
+    "es": "Taurocatapsia",
+    "en": "Taurokathapsia (bull-leaping)"
+   },
+   "def": {
+    "es": "Salto sobre un toro vivo y a la carrera, la práctica más representada del arte minoico.",
+    "en": "Leaping over a live, charging bull, the most frequently depicted practice in Minoan art."
+   },
+   "sec": "3.1"
+  },
+  {
+   "term": {
+    "es": "Ritón",
+    "en": "Rhyton"
+   },
+   "def": {
+    "es": "Vaso para las libaciones, esto es, las ofrendas líquidas a los dioses.",
+    "en": "Vessel for libations, that is, liquid offerings to the gods."
+   },
+   "sec": "3.1"
+  },
+  {
+   "term": {
+    "es": "Lineal B",
+    "en": "Linear B"
+   },
+   "def": {
+    "es": "Escritura del griego micénico, empleada sobre todo para la contabilidad del palacio.",
+    "en": "Script of Mycenaean Greek, used mainly for palace accounting."
+   },
+   "sec": "3.1"
+  },
+  {
+   "term": {
+    "es": "Pax Minoica",
+    "en": "Pax Minoica"
+   },
+   "def": {
+    "es": "Hipótesis de Evans de una Creta pacífica protegida por su flota, que hoy debe matizarse.",
+    "en": "Evans's hypothesis of a peaceful Crete protected by its fleet, which must now be qualified."
+   },
+   "sec": "3.1"
+  },
+  {
+   "term": {
+    "es": "Salto en picado",
+    "en": "Diving leap"
+   },
+   "def": {
+    "es": "Esquema más frecuente del salto del toro según Younger (1995): entrada de cabeza, apoyo en los hombros del toro y salida de pie detrás.",
+    "en": "Most frequent scheme of bull-leaping according to Younger (1995): head-first entry, support on the bull's shoulders and landing on the feet behind it."
+   },
+   "sec": "3.1"
+  },
+  {
+   "term": {
+    "es": "Wanax",
+    "en": "Wanax"
+   },
+   "def": {
+    "es": "Rey micénico que gobernaba desde palacios fortificados como Micenas o Tirinto.",
+    "en": "Mycenaean king who ruled from fortified palaces such as Mycenae or Tiryns."
+   },
+   "sec": "3.1"
+  },
+  {
+   "term": {
+    "es": "Basileis",
+    "en": "Basileis"
+   },
+   "def": {
+    "es": "Hombres influyentes de cada aldea que asumieron el poder local tras la caída de los palacios micénicos.",
+    "en": "Influential men of each village who took local power after the fall of the Mycenaean palaces."
+   },
+   "sec": "3.1"
+  },
+  {
+   "term": {
+    "es": "Túmulo",
+    "en": "Tumulus"
+   },
+   "def": {
+    "es": "Montículo de tierra levantado sobre una tumba, como el del gran señor de Lefkandi.",
+    "en": "Mound of earth raised over a tomb, like that of the great lord of Lefkandi."
+   },
+   "sec": "3.1"
+  },
+  {
+   "term": {
+    "es": "Polis",
+    "en": "Polis"
+   },
+   "def": {
+    "es": "Ciudad-estado griega con sus tierras y sus magistraturas (órganos de gobierno).",
+    "en": "Greek city-state with its territory and its magistracies (governing bodies)."
+   },
+   "sec": "3.2.1"
+  },
+  {
+   "term": {
+    "es": "Plousioi",
+    "en": "Plousioi"
+   },
+   "def": {
+    "es": "Ciudadanos que no trabajaban, el 4 o 5 % de los hogares atenienses.",
+    "en": "Citizens who did not work, 4 to 5% of Athenian households."
+   },
+   "sec": "3.2.1"
+  },
+  {
+   "term": {
+    "es": "Penêtes",
+    "en": "Penêtes"
+   },
+   "def": {
+    "es": "Ciudadanos que trabajaban su tierra parte del año, entre el 30 y el 50 % de los hogares.",
+    "en": "Citizens who worked their land part of the year, 30 to 50% of households."
+   },
+   "sec": "3.2.1"
+  },
+  {
+   "term": {
+    "es": "Ptôchoi",
+    "en": "Ptôchoi"
+   },
+   "def": {
+    "es": "Ciudadanos que trabajaban a diario y apenas podían hacer deporte.",
+    "en": "Citizens who worked every day and could hardly do sport."
+   },
+   "sec": "3.2.1"
+  },
+  {
+   "term": {
+    "es": "Metecos",
+    "en": "Metics"
+   },
+   "def": {
+    "es": "Extranjeros residentes en una polis.",
+    "en": "Resident foreigners in a polis."
+   },
+   "sec": "3.2.1"
+  },
+  {
+   "term": {
+    "es": "Homoioi",
+    "en": "Homoioi"
+   },
+   "def": {
+    "es": "Los «iguales», ciudadanos de Esparta que vivían del trabajo de los hilotas.",
+    "en": "The 'equals', citizens of Sparta who lived off the labour of the helots."
+   },
+   "sec": "3.2.1"
+  },
+  {
+   "term": {
+    "es": "Paidotriba",
+    "en": "Paidotribes"
+   },
+   "def": {
+    "es": "Maestro de gimnasia; el corriente cobraba de 10 a 15 dracmas por alumno y año.",
+    "en": "Gymnastics teacher; an ordinary one charged 10 to 15 drachmas per pupil a year."
+   },
+   "sec": "3.2.1"
+  },
+  {
+   "term": {
+    "es": "Falange",
+    "en": "Phalanx"
+   },
+   "def": {
+    "es": "Infantería pesada que defendía la ciudad, formada en su grueso por los penêtes.",
+    "en": "Heavy infantry that defended the city, made up mostly of the penêtes."
+   },
+   "sec": "3.2.1"
+  },
+  {
+   "term": {
+    "es": "Ekecheiría",
+    "en": "Ekecheiria"
+   },
+   "def": {
+    "es": "Tregua sagrada o «detención de manos» que protegía el territorio de Élide y a los peregrinos.",
+    "en": "Sacred truce or 'holding of hands' that protected the territory of Elis and the pilgrims."
+   },
+   "sec": "3.2.2"
+  },
+  {
+   "term": {
+    "es": "Espondóforos",
+    "en": "Spondophoroi"
+   },
+   "def": {
+    "es": "Heraldos que recorrían Grecia anunciando los Juegos y la tregua.",
+    "en": "Heralds who travelled through Greece announcing the Games and the truce."
+   },
+   "sec": "3.2.2"
+  },
+  {
+   "term": {
+    "es": "Anolimpiada",
+    "en": "Anolympiad"
+   },
+   "def": {
+    "es": "«No-olimpiada»: así registró Élide la edición de 364 a. C., organizada por los arcadios.",
+    "en": "'Non-Olympiad': the name Elis gave to the edition of 364 BC, organised by the Arcadians."
+   },
+   "sec": "3.2.2"
+  },
+  {
+   "term": {
+    "es": "Stádion",
+    "en": "Stadion"
+   },
+   "def": {
+    "es": "Medida de 600 pies, la carrera de esa longitud y el recinto donde se corría.",
+    "en": "Measure of 600 feet, the race of that length and the venue where it was run."
+   },
+   "sec": "3.2.2"
+  },
+  {
+   "term": {
+    "es": "Tetras",
+    "en": "Tetrad"
+   },
+   "def": {
+    "es": "Microciclo de entrenamiento de cuatro días: preparación, esfuerzo total, relajación y esfuerzo moderado.",
+    "en": "Four-day training microcycle: preparation, all-out effort, relaxation and moderate effort."
+   },
+   "sec": "3.2.3"
+  },
+  {
+   "term": {
+    "es": "Gimnasiarca",
+    "en": "Gymnasiarch"
+   },
+   "def": {
+    "es": "Ciudadano, habitualmente adinerado, al cargo del gimnasio.",
+    "en": "Citizen, usually wealthy, in charge of the gymnasium."
+   },
+   "sec": "3.2.3"
+  },
+  {
+   "term": {
+    "es": "Gymnasion",
+    "en": "Gymnasion"
+   },
+   "def": {
+    "es": "Literalmente «lugar de la desnudez»; espacio de las disciplinas atléticas.",
+    "en": "Literally 'place of nakedness'; space for the athletic disciplines."
+   },
+   "sec": "3.2.3"
+  },
+  {
+   "term": {
+    "es": "Helanódicas",
+    "en": "Hellanodikai"
+   },
+   "def": {
+    "es": "Jueces de los Juegos, ciudadanos de Élide.",
+    "en": "Judges of the Games, citizens of Elis."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "term": {
+    "es": "Periodonikes",
+    "en": "Periodonikes"
+   },
+   "def": {
+    "es": "«Vencedor del circuito», título del que ganaba en Olimpia, Delfos, el Istmo y Nemea.",
+    "en": "'Circuit victor', title of whoever won at Olympia, Delphi, the Isthmus and Nemea."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "term": {
+    "es": "Victoria «sin polvo»",
+    "en": "Victory 'without dust'"
+   },
+   "def": {
+    "es": "Triunfo sin competir cuando todos los rivales abandonaban ante la superioridad de uno.",
+    "en": "Victory without competing when all rivals withdrew before one man's superiority."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "term": {
+    "es": "Perizoma",
+    "en": "Perizoma"
+   },
+   "def": {
+    "es": "Pequeña túnica atada a modo de cinturón o taparrabos de los primeros atletas olímpicos.",
+    "en": "Small tunic tied like a belt or loincloth worn by the first Olympic athletes."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "term": {
+    "es": "Kléos",
+    "en": "Kleos"
+   },
+   "def": {
+    "es": "Gloria eterna que sobrevivía a la muerte del vencedor.",
+    "en": "Eternal glory that outlived the victor."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "term": {
+    "es": "Agón",
+    "en": "Agon"
+   },
+   "def": {
+    "es": "«Contienda»; competición que exige un adversario.",
+    "en": "'Contest'; competition that requires an opponent."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "term": {
+    "es": "Kalokagathía",
+    "en": "Kalokagathia"
+   },
+   "def": {
+    "es": "Equilibrio entre lo bello (kalos) y lo bueno (agathos), modelo de conducta del noble griego.",
+    "en": "Balance between the beautiful (kalos) and the good (agathos), the model of conduct of the Greek noble."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "term": {
+    "es": "Areté",
+    "en": "Arete"
+   },
+   "def": {
+    "es": "«Excelencia», el valor más alto de la sociedad griega.",
+    "en": "'Excellence', the highest value of Greek society."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "term": {
+    "es": "Aidós",
+    "en": "Aidos"
+   },
+   "def": {
+    "es": "Compostura, humildad y reconocimiento del favor de los dioses que se esperaban del vencedor.",
+    "en": "Composure, humility and acknowledgement of divine favour expected of the victor."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "term": {
+    "es": "Díaulos",
+    "en": "Diaulos"
+   },
+   "def": {
+    "es": "Carrera de dos estadios (384,56 m), añadida en 724 a. C.",
+    "en": "Two-stadion race (384.56 m), added in 724 BC."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "term": {
+    "es": "Dólico",
+    "en": "Dolichos"
+   },
+   "def": {
+    "es": "Carrera de fondo de 20 a 24 estadios, añadida en 720 a. C.",
+    "en": "Long-distance race of 20 to 24 stadia, added in 720 BC."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "term": {
+    "es": "Hoplitódromo",
+    "en": "Hoplitodromos"
+   },
+   "def": {
+    "es": "Carrera de dos estadios con armamento de hoplita, desde 520 a. C.",
+    "en": "Two-stadion race in hoplite equipment, from 520 BC."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "term": {
+    "es": "Balbís",
+    "en": "Balbis"
+   },
+   "def": {
+    "es": "Umbral de piedra de la salida, con dos ranuras para los dedos de los pies.",
+    "en": "Stone starting sill with two grooves for the toes."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "term": {
+    "es": "Hýsplex",
+    "en": "Hysplex"
+   },
+   "def": {
+    "es": "Barrera de cuerdas que caía a la vez ante todos los corredores en la salida.",
+    "en": "Barrier of ropes that dropped at the same moment before all the runners at the start."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "term": {
+    "es": "Kamptér",
+    "en": "Kampter"
+   },
+   "def": {
+    "es": "Poste de giro de las carreras.",
+    "en": "Turning post in the races."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "term": {
+    "es": "Halteras",
+    "en": "Halteres"
+   },
+   "def": {
+    "es": "Pesos de piedra, plomo o bronce, de 1,4 a 4,5 kg, para el salto.",
+    "en": "Weights of stone, lead or bronze, 1.4 to 4.5 kg, used in the jump."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "term": {
+    "es": "Skamma",
+    "en": "Skamma"
+   },
+   "def": {
+    "es": "Foso de tierra removida donde caía el saltador.",
+    "en": "Pit of dug earth where the jumper landed."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "term": {
+    "es": "Ankýle",
+    "en": "Ankyle"
+   },
+   "def": {
+    "es": "Correa de cuero de 30 a 45 cm enrollada en el asta de la jabalina.",
+    "en": "Leather thong 30 to 45 cm long wound round the javelin shaft."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "term": {
+    "es": "Palé",
+    "en": "Pale"
+   },
+   "def": {
+    "es": "Lucha de pie; vencía el primero en sumar tres caídas.",
+    "en": "Upright wrestling; the first to score three falls won."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "term": {
+    "es": "Himantes",
+    "en": "Himantes"
+   },
+   "def": {
+    "es": "Tiras de cuero con las que se enrollaban las manos los primeros púgiles.",
+    "en": "Leather thongs that the first boxers wrapped round their hands."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "term": {
+    "es": "Klímax",
+    "en": "Klimax"
+   },
+   "def": {
+    "es": "Barrera con la que los jueces reducían el espacio si los púgiles rehuían el combate.",
+    "en": "Barrier with which the judges reduced the space if the boxers avoided fighting."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "term": {
+    "es": "Pancracio",
+    "en": "Pankration"
+   },
+   "def": {
+    "es": "Combate que mezclaba golpes, patadas y agarres, desde 648 a. C.",
+    "en": "Combat mixing blows, kicks and holds, from 648 BC."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "term": {
+    "es": "Kéles",
+    "en": "Keles"
+   },
+   "def": {
+    "es": "Carrera de caballos montados a pelo, desde 648 a. C.",
+    "en": "Horse race ridden bareback, from 648 BC."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "term": {
+    "es": "Kálpe",
+    "en": "Kalpe"
+   },
+   "def": {
+    "es": "Carrera en la que el jinete corría la última vuelta al lado del caballo.",
+    "en": "Race in which the rider ran the last lap beside the horse."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "term": {
+    "es": "Oikos",
+    "en": "Oikos"
+   },
+   "def": {
+    "es": "Casa familiar, que con la maternidad delimitaba el papel de la mujer libre.",
+    "en": "Family household, which with motherhood defined the role of the free woman."
+   },
+   "sec": "3.2.6"
+  },
+  {
+   "term": {
+    "es": "Juegos Hereos",
+    "en": "Heraia"
+   },
+   "def": {
+    "es": "Carrera de muchachas solteras en honor de Hera, instituida hacia 580 a. C.",
+    "en": "Race of unmarried girls in honour of Hera, established c. 580 BC."
+   },
+   "sec": "3.2.6"
+  },
+  {
+   "term": {
+    "es": "Mastigóforos",
+    "en": "Mastigophoroi"
+   },
+   "def": {
+    "es": "«Portadores del látigo», que azotaban al atleta infractor.",
+    "en": "'Whip-bearers', who flogged offending athletes."
+   },
+   "sec": "3.2.6"
+  },
+  {
+   "term": {
+    "es": "Zanes",
+    "en": "Zanes"
+   },
+   "def": {
+    "es": "Estatuas de Zeus pagadas con las multas, con el nombre del infractor en el pedestal.",
+    "en": "Statues of Zeus paid for with fines, with the offender's name on the pedestal."
+   },
+   "sec": "3.2.6"
+  }
+ ],
+ "timeline": [
+  {
+   "title": {
+    "es": "Creta y Micenas: del palacio a la aldea",
+    "en": "Crete and Mycenae: from palace to village"
+   },
+   "sec": "3.1",
+   "items": [
+    {
+     "label": {
+      "es": "Primeros palacios cretenses",
+      "en": "First Cretan palaces"
+     },
+     "year": -1950,
+     "date": {
+      "es": "h. 1950 a. C.",
+      "en": "c. 1950 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Erupción del volcán de Tera",
+      "en": "Eruption of the Thera volcano"
+     },
+     "year": -1628,
+     "date": {
+      "es": "h. 1628 a. C.",
+      "en": "c. 1628 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Ritón de los boxeadores de Hagia Triada",
+      "en": "Boxer Rhyton of Hagia Triada"
+     },
+     "year": -1550,
+     "date": {
+      "es": "h. 1550-1500 a. C.",
+      "en": "c. 1550-1500 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Los micénicos toman Cnoso",
+      "en": "The Mycenaeans take Knossos"
+     },
+     "year": -1450,
+     "date": {
+      "es": "h. 1450 a. C.",
+      "en": "c. 1450 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Arde el palacio de Cnoso",
+      "en": "The palace of Knossos burns"
+     },
+     "year": -1375,
+     "date": {
+      "es": "h. 1375 a. C.",
+      "en": "c. 1375 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Arden los palacios micénicos",
+      "en": "The Mycenaean palaces burn"
+     },
+     "year": -1200,
+     "date": {
+      "es": "1200-1150 a. C.",
+      "en": "1200-1150 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Tumba del gran señor de Lefkandi",
+      "en": "Tomb of the great lord of Lefkandi"
+     },
+     "year": -950,
+     "date": {
+      "es": "h. 950 a. C.",
+      "en": "c. 950 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Enócoe del Dipilón, premio de baile",
+      "en": "Dipylon oinochoe, a dancing prize"
+     },
+     "year": -740,
+     "date": {
+      "es": "h. 740-725 a. C.",
+      "en": "c. 740-725 BC"
+     }
+    }
+   ]
+  },
+  {
+   "title": {
+    "es": "Los periodos de Grecia",
+    "en": "The periods of Greece"
+   },
+   "sec": "3.2.1",
+   "items": [
+    {
+     "label": {
+      "es": "Primeros Juegos de Olimpia, según la tradición",
+      "en": "First Olympic Games, according to tradition"
+     },
+     "year": -776,
+     "date": {
+      "es": "776 a. C.",
+      "en": "776 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Fundación de Siracusa",
+      "en": "Foundation of Syracuse"
+     },
+     "year": -734,
+     "date": {
+      "es": "734 a. C.",
+      "en": "734 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Reformas de Solón",
+      "en": "Reforms of Solon"
+     },
+     "year": -594,
+     "date": {
+      "es": "594/593 a. C.",
+      "en": "594/593 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Reformas de Clístenes",
+      "en": "Reforms of Cleisthenes"
+     },
+     "year": -508,
+     "date": {
+      "es": "508 a. C.",
+      "en": "508 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Batalla de Salamina, inicio de la época clásica",
+      "en": "Battle of Salamis, start of the Classical period"
+     },
+     "year": -480,
+     "date": {
+      "es": "480 a. C.",
+      "en": "480 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Muerte de Alejandro Magno, inicio de la época helenística",
+      "en": "Death of Alexander the Great, start of the Hellenistic period"
+     },
+     "year": -323,
+     "date": {
+      "es": "323 a. C.",
+      "en": "323 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Grecia queda bajo el dominio de Roma",
+      "en": "Greece falls under Roman rule"
+     },
+     "year": -146,
+     "date": {
+      "es": "146 a. C.",
+      "en": "146 BC"
+     }
+    }
+   ]
+  },
+  {
+   "title": {
+    "es": "El programa olímpico crece",
+    "en": "The Olympic programme grows"
+   },
+   "sec": "3.2.5",
+   "items": [
+    {
+     "label": {
+      "es": "Estadio (stádion)",
+      "en": "Stadion"
+     },
+     "year": -776,
+     "date": {
+      "es": "776 a. C.",
+      "en": "776 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Díaulos",
+      "en": "Diaulos"
+     },
+     "year": -724,
+     "date": {
+      "es": "724 a. C.",
+      "en": "724 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Dólico",
+      "en": "Dolichos"
+     },
+     "year": -720,
+     "date": {
+      "es": "720 a. C.",
+      "en": "720 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Pentatlón y lucha",
+      "en": "Pentathlon and wrestling"
+     },
+     "year": -708,
+     "date": {
+      "es": "708 a. C.",
+      "en": "708 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Pugilato",
+      "en": "Boxing"
+     },
+     "year": -688,
+     "date": {
+      "es": "688 a. C.",
+      "en": "688 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Carrera de cuadrigas",
+      "en": "Four-horse chariot race"
+     },
+     "year": -680,
+     "date": {
+      "es": "680 a. C.",
+      "en": "680 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Pancracio y carrera de caballos",
+      "en": "Pankration and horse race"
+     },
+     "year": -648,
+     "date": {
+      "es": "648 a. C.",
+      "en": "648 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Carrera de hoplitas",
+      "en": "Hoplite race"
+     },
+     "year": -520,
+     "date": {
+      "es": "520 a. C.",
+      "en": "520 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Carrera de bigas",
+      "en": "Two-horse chariot race"
+     },
+     "year": -408,
+     "date": {
+      "es": "408 a. C.",
+      "en": "408 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Pancracio de muchachos",
+      "en": "Boys' pankration"
+     },
+     "year": -200,
+     "date": {
+      "es": "200 a. C.",
+      "en": "200 BC"
+     }
+    }
+   ]
+  },
+  {
+   "title": {
+    "es": "Olimpia, del rito al final",
+    "en": "Olympia, from rite to end"
+   },
+   "sec": "3.2.7",
+   "items": [
+    {
+     "label": {
+      "es": "Primer estadio de Olimpia",
+      "en": "First stadium at Olympia"
+     },
+     "year": -700,
+     "date": {
+      "es": "h. 700 a. C.",
+      "en": "c. 700 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Primeros zanes, pagados con multas",
+      "en": "First Zanes, paid for with fines"
+     },
+     "year": -388,
+     "date": {
+      "es": "388 a. C.",
+      "en": "388 BC"
+     }
+    },
+    {
+     "label": {
+      "es": "Tiberio gana la carrera de carros",
+      "en": "Tiberius wins the chariot race"
+     },
+     "year": 4,
+     "date": {
+      "es": "4 d. C.",
+      "en": "AD 4"
+     }
+    },
+    {
+     "label": {
+      "es": "Nerón compite en Olimpia",
+      "en": "Nero competes at Olympia"
+     },
+     "year": 67,
+     "date": {
+      "es": "67 d. C.",
+      "en": "AD 67"
+     }
+    },
+    {
+     "label": {
+      "es": "Ninfeo de Herodes Ático",
+      "en": "Nymphaeum of Herodes Atticus"
+     },
+     "year": 150,
+     "date": {
+      "es": "h. 150 d. C.",
+      "en": "c. AD 150"
+     }
+    },
+    {
+     "label": {
+      "es": "La estatua de Zeus se lleva a Constantinopla",
+      "en": "The statue of Zeus is taken to Constantinople"
+     },
+     "year": 420,
+     "date": {
+      "es": "h. 420-440 d. C.",
+      "en": "c. AD 420-440"
+     }
+    },
+    {
+     "label": {
+      "es": "Constitución de Teodosio II contra los templos",
+      "en": "Constitution of Theodosius II against the temples"
+     },
+     "year": 435,
+     "date": {
+      "es": "435 d. C.",
+      "en": "AD 435"
+     }
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "text": {
+    "es": "«¿Contra qué clase de hombres nos has traído a luchar, que no compiten por dinero, sino por la excelencia?»",
+    "en": "'What kind of men have you brought us to fight against, who compete not for money but for excellence?'"
+   },
+   "question": {
+    "es": "Según Heródoto, ¿quién dijo esta frase y cuándo?",
+    "en": "According to Herodotus, who said this and when?"
+   },
+   "options": [
+    {
+     "es": "Un noble persa ante su general, durante la invasión de Jerjes",
+     "en": "A Persian noble to his general, during Xerxes's invasion"
+    },
+    {
+     "es": "Un juez de Olimpia al coronar a un vencedor",
+     "en": "An Olympic judge crowning a victor"
+    },
+    {
+     "es": "Leónidas ante sus 300 espartanos",
+     "en": "Leonidas to his 300 Spartans"
+    },
+    {
+     "es": "Un embajador de Élide en Esparta",
+     "en": "An ambassador of Elis in Sparta"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "Unos desertores griegos contaron a los persas que sus compatriotas estaban en Olimpia, en 480 a. C., compitiendo por una simple corona de olivo. Los Juegos no se suspendieron por la guerra.",
+    "en": "Some Greek deserters told the Persians that their compatriots were at Olympia, in 480 BC, competing for a mere olive wreath. The Games were not suspended because of the war."
+   },
+   "sec": "3.2.2"
+  },
+  {
+   "text": {
+    "es": "«…abierto a cualquier griego que quisiera acceder».",
+    "en": "'…open to any Greek who wished to enter.'"
+   },
+   "question": {
+    "es": "¿A qué se refiere Heródoto con estas palabras?",
+    "en": "What does Herodotus refer to with these words?"
+   },
+   "options": [
+    {
+     "es": "Al santuario de Olimpia",
+     "en": "The sanctuary of Olympia"
+    },
+    {
+     "es": "Al gimnasio de Atenas",
+     "en": "The gymnasium of Athens"
+    },
+    {
+     "es": "A la ciudadanía espartana",
+     "en": "Spartan citizenship"
+    },
+    {
+     "es": "Al palacio de Cnoso",
+     "en": "The palace of Knossos"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "Olimpia era de todos los griegos, si bien lo administraba una sola polis, Élide, que controlaba la admisión, fijaba el reglamento y nombraba al personal.",
+    "en": "Olympia belonged to all Greeks, although a single polis, Elis, administered it, controlling admission, setting the rules and appointing the staff."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "text": {
+    "es": "«Poda para poda… hétoimoi… ápite».",
+    "en": "'Poda para poda… hetoimoi… apite.'"
+   },
+   "question": {
+    "es": "¿Qué recogen estas tres voces?",
+    "en": "What do these three calls record?"
+   },
+   "options": [
+    {
+     "es": "La salida de las carreras a pie en Olimpia",
+     "en": "The start of the foot races at Olympia"
+    },
+    {
+     "es": "El juramento de los atletas ante Zeus",
+     "en": "The athletes' oath before Zeus"
+    },
+    {
+     "es": "La proclamación de la tregua",
+     "en": "The proclamation of the truce"
+    },
+    {
+     "es": "El final del combate de pancracio",
+     "en": "The end of the pankration bout"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "«Pie junto a pie», «¡listos!» y «¡partid!». En Olimpia la salida se daba de viva voz hasta el siglo IV a. C.",
+    "en": "'Foot by foot', 'ready!' and 'go!'. At Olympia the start was given by voice until the fourth century BC."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "text": {
+    "es": "«Los atletas más bellos».",
+    "en": "'The most beautiful athletes.'"
+   },
+   "question": {
+    "es": "¿A quiénes llamaba así Aristóteles?",
+    "en": "Whom did Aristotle call this?"
+   },
+   "options": [
+    {
+     "es": "A los pentatletas",
+     "en": "The pentathletes"
+    },
+    {
+     "es": "A los pancratistas",
+     "en": "The pankratiasts"
+    },
+    {
+     "es": "A los aurigas",
+     "en": "The charioteers"
+    },
+    {
+     "es": "A los corredores de dólico",
+     "en": "The dolichos runners"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "El pentatlón premiaba la versatilidad, puesto que había que dominar cinco pruebas muy distintas. Filóstrato los llamaba «los mejor proporcionados».",
+    "en": "The pentathlon rewarded versatility, since one had to master five very different events. Philostratus called them 'the best proportioned'."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "text": {
+    "es": "«Nalgas blancas» y «nalgas oscuras».",
+    "en": "'White buttocks' and 'dark buttocks'."
+   },
+   "question": {
+    "es": "¿Qué distinguían los griegos con estas expresiones coloquiales?",
+    "en": "What did the Greeks distinguish with these colloquial expressions?"
+   },
+   "options": [
+    {
+     "es": "A los cobardes y poco viriles frente a los valientes",
+     "en": "Cowards and the unmanly versus the brave"
+    },
+    {
+     "es": "A los atletas de Esparta frente a los de Atenas",
+     "en": "Athletes from Sparta versus those from Athens"
+    },
+    {
+     "es": "A los esclavos frente a los metecos",
+     "en": "Slaves versus metics"
+    },
+    {
+     "es": "A los muchachos frente a los hombres",
+     "en": "Boys versus men"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "Como se entrenaba desnudo y al sol, el moreno uniforme delataba a quien disponía de ocio. En la palestra el cuerpo decía a qué grupo pertenecía cada uno.",
+    "en": "Because training was done naked and in the sun, an even tan revealed who had leisure. In the palaestra the body told which group each man belonged to."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "text": {
+    "es": "«Ato y encadeno los tendones, las partes del cuerpo, la mente y la inteligencia de los corredores para que no tengan fuerza […] y queden en último lugar».",
+    "en": "'I bind and chain the tendons, the limbs, the mind and the intelligence of the runners so that they have no strength […] and come last.'"
+   },
+   "question": {
+    "es": "¿De dónde procede este texto?",
+    "en": "Where does this text come from?"
+   },
+   "options": [
+    {
+     "es": "De unas tablillas de plomo con maldiciones halladas en Nemea",
+     "en": "From lead curse tablets found at Nemea"
+    },
+    {
+     "es": "De la inscripción de un zan de Olimpia",
+     "en": "From the inscription on a Zan at Olympia"
+    },
+    {
+     "es": "De una oda de Píndaro",
+     "en": "From an ode by Pindar"
+    },
+    {
+     "es": "Del reglamento de los helanódicas",
+     "en": "From the rules of the Hellanodikai"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "Son del siglo III a. C. y aparecieron enrolladas y perforadas. Los atletas recurrían a la magia para hechizar a sus rivales antes de la prueba.",
+    "en": "They date from the third century BC and were found rolled up and pierced. Athletes resorted to magic to bewitch their rivals before the contest."
+   },
+   "sec": "3.2.6"
+  },
+  {
+   "text": {
+    "es": "«Verbena, mercado, acróbatas, diversión, ladrones».",
+    "en": "'Fair, market, acrobats, fun, thieves.'"
+   },
+   "question": {
+    "es": "¿Qué describía así un comediógrafo ateniense a comienzos del siglo III a. C.?",
+    "en": "What did an Athenian comic playwright describe in these words in the early third century BC?"
+   },
+   "options": [
+    {
+     "es": "El ambiente de Olimpia durante los Juegos",
+     "en": "The atmosphere at Olympia during the Games"
+    },
+    {
+     "es": "El ágora de Atenas",
+     "en": "The agora of Athens"
+    },
+    {
+     "es": "El circo de Roma",
+     "en": "The circus of Rome"
+    },
+    {
+     "es": "Las Panateneas",
+     "en": "The Panathenaia"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "En época helenística los valores fundacionales se debilitaron y el festival ganó aire de espectáculo, un proceso que Roma aceleró.",
+    "en": "In the Hellenistic period the founding values weakened and the festival took on the air of a spectacle, a process that Rome accelerated."
+   },
+   "sec": "3.2.7"
+  }
+ ],
+ "match": [
+  {
+   "title": {
+    "es": "Las cuatro lecturas del salto del toro",
+    "en": "The four readings of bull-leaping"
+   },
+   "sec": "3.1",
+   "pairs": [
+    {
+     "a": {
+      "es": "Lectura ritual",
+      "en": "Ritual reading"
+     },
+     "b": {
+      "es": "Ofrenda a los dioses, desde Evans",
+      "en": "Offering to the gods, since Evans"
+     }
+    },
+    {
+     "a": {
+      "es": "Lectura iniciática",
+      "en": "Initiatory reading"
+     },
+     "b": {
+      "es": "Paso de los jóvenes a la edad adulta",
+      "en": "Passage of the young to adulthood"
+     }
+    },
+    {
+     "a": {
+      "es": "Lectura de poder",
+      "en": "Power reading"
+     },
+     "b": {
+      "es": "Emblema del palacio de Cnoso",
+      "en": "Emblem of the palace of Knossos"
+     }
+    },
+    {
+     "a": {
+      "es": "Lectura atlética",
+      "en": "Athletic reading"
+     },
+     "b": {
+      "es": "Exhibición de destreza ante la comunidad",
+      "en": "Display of skill before the community"
+     }
+    }
+   ]
+  },
+  {
+   "title": {
+    "es": "Quién podía hacer deporte en Atenas",
+    "en": "Who could do sport in Athens"
+   },
+   "sec": "3.2.1",
+   "pairs": [
+    {
+     "a": {
+      "es": "Plousioi",
+      "en": "Plousioi"
+     },
+     "b": {
+      "es": "No trabajaban; 4 o 5 % de los hogares",
+      "en": "Did not work; 4 to 5% of households"
+     }
+    },
+    {
+     "a": {
+      "es": "Penêtes",
+      "en": "Penêtes"
+     },
+     "b": {
+      "es": "Trabajaban su tierra parte del año y podían pagar al paidotriba",
+      "en": "Worked their land part of the year and could pay the trainer"
+     }
+    },
+    {
+     "a": {
+      "es": "Ptôchoi",
+      "en": "Ptôchoi"
+     },
+     "b": {
+      "es": "Trabajaban a diario y apenas hacían deporte",
+      "en": "Worked daily and hardly did sport"
+     }
+    },
+    {
+     "a": {
+      "es": "Esclavos",
+      "en": "Slaves"
+     },
+     "b": {
+      "es": "La ley les vedaba el deporte",
+      "en": "The law barred them from sport"
+     }
+    }
+   ]
+  },
+  {
+   "title": {
+    "es": "Los valores del olimpismo",
+    "en": "The values of the Olympic Games"
+   },
+   "sec": "3.2.4",
+   "pairs": [
+    {
+     "a": {
+      "es": "Kléos",
+      "en": "Kleos"
+     },
+     "b": {
+      "es": "Gloria eterna",
+      "en": "Eternal glory"
+     }
+    },
+    {
+     "a": {
+      "es": "Agón",
+      "en": "Agon"
+     },
+     "b": {
+      "es": "Contienda que exige un adversario",
+      "en": "Contest that requires an opponent"
+     }
+    },
+    {
+     "a": {
+      "es": "Kalokagathía",
+      "en": "Kalokagathia"
+     },
+     "b": {
+      "es": "Equilibrio entre lo bello y lo bueno",
+      "en": "Balance between the beautiful and the good"
+     }
+    },
+    {
+     "a": {
+      "es": "Areté",
+      "en": "Arete"
+     },
+     "b": {
+      "es": "Excelencia",
+      "en": "Excellence"
+     }
+    },
+    {
+     "a": {
+      "es": "Aidós",
+      "en": "Aidos"
+     },
+     "b": {
+      "es": "Compostura y humildad del vencedor",
+      "en": "Composure and humility of the victor"
+     }
+    }
+   ]
+  },
+  {
+   "title": {
+    "es": "Cada prueba, su año de entrada",
+    "en": "Each event, its year of entry"
+   },
+   "sec": "3.2.5",
+   "pairs": [
+    {
+     "a": {
+      "es": "Estadio",
+      "en": "Stadion"
+     },
+     "b": {
+      "es": "776 a. C.",
+      "en": "776 BC"
+     }
+    },
+    {
+     "a": {
+      "es": "Díaulos",
+      "en": "Diaulos"
+     },
+     "b": {
+      "es": "724 a. C.",
+      "en": "724 BC"
+     }
+    },
+    {
+     "a": {
+      "es": "Lucha y pentatlón",
+      "en": "Wrestling and pentathlon"
+     },
+     "b": {
+      "es": "708 a. C.",
+      "en": "708 BC"
+     }
+    },
+    {
+     "a": {
+      "es": "Pugilato",
+      "en": "Boxing"
+     },
+     "b": {
+      "es": "688 a. C.",
+      "en": "688 BC"
+     }
+    },
+    {
+     "a": {
+      "es": "Carrera de hoplitas",
+      "en": "Hoplite race"
+     },
+     "b": {
+      "es": "520 a. C.",
+      "en": "520 BC"
+     }
+    }
+   ]
+  },
+  {
+   "title": {
+    "es": "Faltas y castigos en Olimpia",
+    "en": "Offences and punishments at Olympia"
+   },
+   "sec": "3.2.6",
+   "pairs": [
+    {
+     "a": {
+      "es": "Salida falsa",
+      "en": "False start"
+     },
+     "b": {
+      "es": "Azotes de los mastigóforos",
+      "en": "Flogging by the mastigophoroi"
+     }
+    },
+    {
+     "a": {
+      "es": "Mentir a los jueces",
+      "en": "Lying to the judges"
+     },
+     "b": {
+      "es": "Expulsión de los Juegos",
+      "en": "Expulsion from the Games"
+     }
+    },
+    {
+     "a": {
+      "es": "Soborno",
+      "en": "Bribery"
+     },
+     "b": {
+      "es": "Multa que costeaba un zan",
+      "en": "Fine that paid for a Zan"
+     }
+    },
+    {
+     "a": {
+      "es": "Mujer casada en el festival",
+      "en": "Married woman at the festival"
+     },
+     "b": {
+      "es": "Pena de muerte desde un monte cercano",
+      "en": "Death penalty from a nearby mountain"
+     }
+    }
+   ]
+  }
+ ],
+ "myths": [
+  {
+   "claim": {
+    "es": "Los palacios cretenses no tenían murallas porque Creta fue una isla sin guerras.",
+    "en": "The Cretan palaces had no walls because Crete was an island without wars."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Las primeras armas del Egeo son cretenses, había preparación para la guerra y algunos centros tuvieron fortificaciones. La «Pax Minoica» de Evans debe matizarse.",
+    "en": "The first weapons of the Aegean are Cretan, there was preparation for war and some centres had fortifications. Evans's 'Pax Minoica' must be qualified."
+   },
+   "sec": "3.1"
+  },
+  {
+   "claim": {
+    "es": "Los minoicos competían por premios, como muestran sus imágenes.",
+    "en": "The Minoans competed for prizes, as their images show."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Ningún objeto representa un premio ni una lista de vencedores. El deporte servía para la iniciación, el culto y el prestigio de las grandes casas.",
+    "en": "No object shows a prize or a list of victors. Sport served initiation, worship and the prestige of the great houses."
+   },
+   "sec": "3.1"
+  },
+  {
+   "claim": {
+    "es": "Los toros del salto eran uros salvajes.",
+    "en": "The bulls in the leap were wild aurochs."
+   },
+   "answer": false,
+   "explain": {
+    "es": "El pelaje moteado de los toros de Cnoso solo se da en animales domésticos, de modo que no eran tan fieros como se ha propuesto.",
+    "en": "The spotted coat of the Knossos bulls occurs only in domestic animals, so they were not as fierce as has been suggested."
+   },
+   "sec": "3.1"
+  },
+  {
+   "claim": {
+    "es": "La erupción de Tera puso fin a la Creta de los palacios.",
+    "en": "The eruption of Thera ended palatial Crete."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Fue hacia 1628 a. C., unos ciento cincuenta años antes del final. Hoy la tesis más aceptada atribuye la destrucción de hacia 1450 a. C. a las invasiones micénicas.",
+    "en": "It happened c. 1628 BC, some 150 years before the end. Today the most accepted thesis attributes the destruction of c. 1450 BC to the Mycenaean invasions."
+   },
+   "sec": "3.1"
+  },
+  {
+   "claim": {
+    "es": "La tregua sagrada detenía todas las guerras de Grecia durante los Juegos.",
+    "en": "The sacred truce stopped all wars in Greece during the Games."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Protegía el territorio de Élide y a los peregrinos. La Olimpiada de 480 a. C. se celebró mientras Leónidas resistía en las Termópilas.",
+    "en": "It protected the territory of Elis and the pilgrims. The Olympiad of 480 BC was held while Leonidas held out at Thermopylae."
+   },
+   "sec": "3.2.2"
+  },
+  {
+   "claim": {
+    "es": "Los Juegos de Olimpia continúan los juegos de la época micénica.",
+    "en": "The Olympic Games continue the games of the Mycenaean period."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Más de mil años de vacío separan el túmulo prehistórico del santuario de Zeus, nacido a finales del siglo XI a. C. No hubo continuidad.",
+    "en": "More than a thousand years separate the prehistoric tumulus from the sanctuary of Zeus, founded at the end of the 11th century BC. There was no continuity."
+   },
+   "sec": "3.2.2"
+  },
+  {
+   "claim": {
+    "es": "Está probado que los Juegos empezaron en 776 a. C.",
+    "en": "It is proven that the Games began in 776 BC."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Es la fecha de una lista de vencedores compilada hacia 400 a. C. y poco fiable en sus primeros siglos. Se han propuesto también 884 (leyenda) y 704 a. C. (arqueología).",
+    "en": "It is the date of a list of victors compiled c. 400 BC and unreliable for its first centuries. Dates of 884 (legend) and 704 BC (archaeology) have also been proposed."
+   },
+   "sec": "3.2.2"
+  },
+  {
+   "claim": {
+    "es": "Las ciudades griegas seleccionaban y pagaban a sus atletas.",
+    "en": "Greek cities selected and paid their athletes."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Cada atleta acudía por iniciativa propia y costeaba entrenador, dieta, viaje y el mes en Élide. Ástilo llegó a cambiar de patria deportiva.",
+    "en": "Each athlete went on his own initiative and paid for coach, diet, travel and the month at Elis. Astylos even changed his sporting homeland."
+   },
+   "sec": "3.2.3"
+  },
+  {
+   "claim": {
+    "es": "Como Olimpia solo daba una corona de olivo, el atleta no ganaba dinero.",
+    "en": "Since Olympia gave only an olive wreath, the athlete earned no money."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Su ciudad lo recibía con estatuas, manutención y premios: Solón daba 500 dracmas al ateniense vencedor en Olimpia.",
+    "en": "His city welcomed him with statues, maintenance and rewards: Solon gave 500 drachmas to any Athenian who won at Olympia."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "claim": {
+    "es": "Está demostrado que la carrera de hoplitas preparaba para la guerra.",
+    "en": "It is proven that the hoplite race was preparation for war."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Su utilidad militar se discute: Mann (2021) no halla fuentes en ese sentido antes del siglo IV a. C. y Spivey (2021) cree que premiaba al corredor aislado y no la cohesión de la falange.",
+    "en": "Its military usefulness is debated: Mann (2021) finds no sources to that effect before the fourth century BC and Spivey (2021) thinks it rewarded the lone runner, not the cohesion of the phalanx."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "claim": {
+    "es": "Los griegos medían y registraban las marcas del salto, la jabalina y el disco.",
+    "en": "The Greeks measured and recorded the marks in the jump, javelin and discus."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Solo se marcaba con una estaca el mejor intento, que se movía si otro lo superaba. No sabemos si sus marcas eran comparables a las actuales.",
+    "en": "Only the best attempt was marked with a stake, moved if someone bettered it. We do not know whether their marks were comparable to today's."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "claim": {
+    "es": "Los combates griegos tenían categorías de peso, como el boxeo actual.",
+    "en": "Greek combat sports had weight classes, like modern boxing."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Solo había categorías de edad, sin asaltos ni descansos, de ahí que llevaran ventaja el más resistente y el más pesado.",
+    "en": "There were only age categories, with no rounds or breaks, which is why the most enduring and heaviest had the advantage."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "claim": {
+    "es": "Hubo campeonas olímpicas aunque las mujeres casadas no podían entrar en Olimpia.",
+    "en": "There were female Olympic champions although married women could not enter Olympia."
+   },
+   "answer": true,
+   "explain": {
+    "es": "En la hípica la corona era para el dueño de las monturas, y Cinisca de Esparta ganó la cuadriga en 396 a. C.",
+    "en": "In the equestrian events the wreath went to the owner, and Kyniska of Sparta won the four-horse chariot race in 396 BC."
+   },
+   "sec": "3.2.6"
+  },
+  {
+   "claim": {
+    "es": "Ninguna mujer corrió nunca en el estadio de Olimpia.",
+    "en": "No woman ever ran in the stadium of Olympia."
+   },
+   "answer": false,
+   "explain": {
+    "es": "En los Juegos Hereos, desde hacia 580 a. C., muchachas solteras corrían unos 160 m en el estadio en honor de Hera.",
+    "en": "In the Heraia, from c. 580 BC, unmarried girls ran about 160 m in the stadium in honour of Hera."
+   },
+   "sec": "3.2.6"
+  },
+  {
+   "claim": {
+    "es": "Teodosio I prohibió los Juegos Olímpicos en 393 d. C.",
+    "en": "Theodosius I banned the Olympic Games in AD 393."
+   },
+   "answer": false,
+   "explain": {
+    "es": "Remijsen (2015) comprobó que esa ley no menciona los Juegos; el vínculo lo estableció un cronista del siglo XI. Los Juegos se apagaron porque las élites dejaron de costearlos.",
+    "en": "Remijsen (2015) showed that this law does not mention the Games; the link was made by an 11th-century chronicler. The Games faded because the elites stopped paying for them."
+   },
+   "sec": "3.2.7"
+  }
+ ],
+ "quiz": [
+  {
+   "q": {
+    "es": "¿Qué escritura de Creta corresponde al griego micénico?",
+    "en": "Which Cretan script corresponds to Mycenaean Greek?"
+   },
+   "options": [
+    {
+     "es": "El lineal B",
+     "en": "Linear B"
+    },
+    {
+     "es": "El lineal A",
+     "en": "Linear A"
+    },
+    {
+     "es": "El jeroglífico cretense",
+     "en": "Cretan hieroglyphic"
+    },
+    {
+     "es": "La escritura del Disco de Festo",
+     "en": "The script of the Phaistos Disc"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "El lineal B se usó sobre todo para la contabilidad del palacio. Ninguna escritura cretense dejó textos sobre deporte.",
+    "en": "Linear B was used mainly for palace accounting. No Cretan script left texts about sport."
+   },
+   "sec": "3.1"
+  },
+  {
+   "q": {
+    "es": "¿Qué representan casi todas las escenas deportivas minoicas?",
+    "en": "What do almost all Minoan sporting scenes depict?"
+   },
+   "options": [
+    {
+     "es": "El salto del toro",
+     "en": "Bull-leaping"
+    },
+    {
+     "es": "La carrera a pie",
+     "en": "The foot race"
+    },
+    {
+     "es": "La carrera de carros",
+     "en": "Chariot racing"
+    },
+    {
+     "es": "La natación",
+     "en": "Swimming"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "De unos cien objetos, casi todos muestran el salto del toro y entre un 10 y un 20 % combates sin armas.",
+    "en": "Of some hundred objects, almost all show bull-leaping and 10 to 20% unarmed combat."
+   },
+   "sec": "3.1"
+  },
+  {
+   "q": {
+    "es": "¿Quién gobernaba los reinos micénicos?",
+    "en": "Who ruled the Mycenaean kingdoms?"
+   },
+   "options": [
+    {
+     "es": "El wanax",
+     "en": "The wanax"
+    },
+    {
+     "es": "Los basileis",
+     "en": "The basileis"
+    },
+    {
+     "es": "Los helanódicas",
+     "en": "The Hellanodikai"
+    },
+    {
+     "es": "El arconte",
+     "en": "The archon"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "El wanax gobernaba desde palacios fortificados como Micenas o Tirinto.",
+    "en": "The wanax ruled from fortified palaces such as Mycenae or Tiryns."
+   },
+   "sec": "3.1"
+  },
+  {
+   "q": {
+    "es": "¿Qué texto narra los juegos fúnebres de Patroclo?",
+    "en": "Which text narrates the funeral games of Patroclus?"
+   },
+   "options": [
+    {
+     "es": "El canto 23 de la Ilíada",
+     "en": "Book 23 of the Iliad"
+    },
+    {
+     "es": "La Odisea",
+     "en": "The Odyssey"
+    },
+    {
+     "es": "Las Historias de Heródoto",
+     "en": "Herodotus's Histories"
+    },
+    {
+     "es": "Una oda de Píndaro",
+     "en": "An ode by Pindar"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "Aquiles organiza ocho pruebas premiadas con calderos, trípodes, caballos, bueyes y mujeres, y actúa como juez.",
+    "en": "Achilles organises eight events rewarded with cauldrons, tripods, horses, oxen and women, and acts as judge."
+   },
+   "sec": "3.1"
+  },
+  {
+   "q": {
+    "es": "¿Cuánto cobraba un paidotriba corriente en Atenas?",
+    "en": "How much did an ordinary trainer charge in Athens?"
+   },
+   "options": [
+    {
+     "es": "De 10 a 15 dracmas por alumno y año",
+     "en": "10 to 15 drachmas per pupil a year"
+    },
+    {
+     "es": "100 dracmas al año",
+     "en": "100 drachmas a year"
+    },
+    {
+     "es": "1.200 dracmas",
+     "en": "1,200 drachmas"
+    },
+    {
+     "es": "Nada, era un servicio público",
+     "en": "Nothing, it was a public service"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "Una familia de cuatro vivía con media dracma diaria, y a la clase se sumaban el aceite y las horas sin trabajar.",
+    "en": "A family of four lived on half a drachma a day, and oil and hours without work were added to the fee."
+   },
+   "sec": "3.2.1"
+  },
+  {
+   "q": {
+    "es": "¿Qué polis administraba el santuario de Olimpia?",
+    "en": "Which polis administered the sanctuary of Olympia?"
+   },
+   "options": [
+    {
+     "es": "Élide",
+     "en": "Elis"
+    },
+    {
+     "es": "Pisa",
+     "en": "Pisa"
+    },
+    {
+     "es": "Esparta",
+     "en": "Sparta"
+    },
+    {
+     "es": "Atenas",
+     "en": "Athens"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "Élide controlaba la admisión, fijaba el reglamento y nombraba entre sus ciudadanos a los jueces.",
+    "en": "Elis controlled admission, set the rules and appointed the judges from among its citizens."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "q": {
+    "es": "¿Qué eran los tetras?",
+    "en": "What was the tetrad?"
+   },
+   "options": [
+    {
+     "es": "Un microciclo de entrenamiento de cuatro días",
+     "en": "A four-day training microcycle"
+    },
+    {
+     "es": "Una dieta rica en carne",
+     "en": "A meat-rich diet"
+    },
+    {
+     "es": "Una carrera de cuatro estadios",
+     "en": "A four-stadion race"
+    },
+    {
+     "es": "Un tribunal de cuatro jueces",
+     "en": "A court of four judges"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "Preparación, esfuerzo total, relajación y esfuerzo moderado. Filóstrato los criticó por excesivos.",
+    "en": "Preparation, all-out effort, relaxation and moderate effort. Philostratus criticised it as excessive."
+   },
+   "sec": "3.2.3"
+  },
+  {
+   "q": {
+    "es": "¿Cuánto duraba la concentración obligatoria en Élide?",
+    "en": "How long did the compulsory gathering at Elis last?"
+   },
+   "options": [
+    {
+     "es": "Treinta días",
+     "en": "Thirty days"
+    },
+    {
+     "es": "Una semana",
+     "en": "One week"
+    },
+    {
+     "es": "Tres meses",
+     "en": "Three months"
+    },
+    {
+     "es": "Un año",
+     "en": "One year"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "De una luna llena a la siguiente, bajo la vigilancia de los helanódicas. Servía para filtrar a los aspirantes.",
+    "en": "From one full moon to the next, under the watch of the Hellanodikai. It served to filter the candidates."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "q": {
+    "es": "¿Qué título recibía quien vencía en Olimpia, Delfos, el Istmo y Nemea?",
+    "en": "What title did someone who won at Olympia, Delphi, the Isthmus and Nemea receive?"
+   },
+   "options": [
+    {
+     "es": "Periodonikes",
+     "en": "Periodonikes"
+    },
+    {
+     "es": "Áristos",
+     "en": "Aristos"
+    },
+    {
+     "es": "Helanódica",
+     "en": "Hellanodikes"
+    },
+    {
+     "es": "Espondóforo",
+     "en": "Spondophoros"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "«Vencedor del circuito» panhelénico.",
+    "en": "'Victor of the Panhellenic circuit'."
+   },
+   "sec": "3.2.4"
+  },
+  {
+   "q": {
+    "es": "¿Cuánto medía la pista del estadio de Olimpia?",
+    "en": "How long was the track of the stadium of Olympia?"
+   },
+   "options": [
+    {
+     "es": "192,27 metros",
+     "en": "192.27 metres"
+    },
+    {
+     "es": "384,56 metros",
+     "en": "384.56 metres"
+    },
+    {
+     "es": "600 metros",
+     "en": "600 metres"
+    },
+    {
+     "es": "100 metros",
+     "en": "100 metres"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "Un estadio eran 600 pies, y como el pie variaba de una ciudad a otra, la pista de Olimpia medía 192,27 m.",
+    "en": "A stadion was 600 feet, and since the foot varied from city to city, the track at Olympia measured 192.27 m."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "q": {
+    "es": "¿Cuántas victorias daban el triunfo en el pentatlón?",
+    "en": "How many victories gave the win in the pentathlon?"
+   },
+   "options": [
+    {
+     "es": "Tres de cinco",
+     "en": "Three out of five"
+    },
+    {
+     "es": "Dos de cinco",
+     "en": "Two out of five"
+    },
+    {
+     "es": "Las cinco",
+     "en": "All five"
+    },
+    {
+     "es": "Cuatro de cinco",
+     "en": "Four out of five"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "Es la regla mejor documentada. La lucha cerraba siempre la prueba.",
+    "en": "It is the best-documented rule. Wrestling always closed the event."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "q": {
+    "es": "¿Cómo se vencía en la lucha?",
+    "en": "How was a wrestling bout won?"
+   },
+   "options": [
+    {
+     "es": "Sumando tres caídas",
+     "en": "By scoring three falls"
+    },
+    {
+     "es": "Por fuera de combate",
+     "en": "By knockout"
+    },
+    {
+     "es": "Por puntos de los jueces",
+     "en": "On the judges' points"
+    },
+    {
+     "es": "Al caer la noche",
+     "en": "When night fell"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "Contaba la caída que tocaba el suelo con cadera, espalda u hombros.",
+    "en": "A fall counted when the hip, back or shoulders touched the ground."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "q": {
+    "es": "¿Quién murió en la final de pancracio de 564 a. C. y fue coronado?",
+    "en": "Who died in the pankration final of 564 BC and was crowned?"
+   },
+   "options": [
+    {
+     "es": "Arriquión",
+     "en": "Arrhichion"
+    },
+    {
+     "es": "Milón de Crotona",
+     "en": "Milo of Croton"
+    },
+    {
+     "es": "Corebo de Élide",
+     "en": "Koroibos of Elis"
+    },
+    {
+     "es": "Orsipo de Mégara",
+     "en": "Orsippos of Megara"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "Murió asfixiado mientras dislocaba el pie de su rival, que se rindió. Los jueces coronaron su cadáver.",
+    "en": "He died of strangulation while dislocating his opponent's foot; the opponent conceded. The judges crowned his corpse."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "q": {
+    "es": "¿Quién ganó la carrera de cuadrigas de 396 a. C.?",
+    "en": "Who won the four-horse chariot race of 396 BC?"
+   },
+   "options": [
+    {
+     "es": "Cinisca, princesa espartana",
+     "en": "Kyniska, a Spartan princess"
+    },
+    {
+     "es": "Calipátira de Rodas",
+     "en": "Kallipateira of Rhodes"
+    },
+    {
+     "es": "Alcibíades",
+     "en": "Alcibiades"
+    },
+    {
+     "es": "Tiberio",
+     "en": "Tiberius"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "La corona de la hípica era para el dueño de las monturas, aunque fuera una mujer.",
+    "en": "The equestrian wreath went to the owner of the horses, even if she was a woman."
+   },
+   "sec": "3.2.5"
+  },
+  {
+   "q": {
+    "es": "¿Con qué se pagaban los zanes?",
+    "en": "What paid for the Zanes?"
+   },
+   "options": [
+    {
+     "es": "Con las multas a los infractores",
+     "en": "With the fines of offenders"
+    },
+    {
+     "es": "Con el tesoro de Élide",
+     "en": "With the treasury of Elis"
+    },
+    {
+     "es": "Con donativos de los vencedores",
+     "en": "With donations from victors"
+    },
+    {
+     "es": "Con la venta de entradas",
+     "en": "With ticket sales"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "Los seis primeros se pagaron en 388 a. C. con las multas a un púgil que compró a sus rivales y a los tres que aceptaron su dinero.",
+    "en": "The first six were paid for in 388 BC with the fines of a boxer who bought his rivals and of the three who took his money."
+   },
+   "sec": "3.2.6"
+  },
+  {
+   "q": {
+    "es": "Según la tradición, ¿cuántas coronas trajo Nerón de Grecia?",
+    "en": "According to tradition, how many wreaths did Nero bring back from Greece?"
+   },
+   "options": [
+    {
+     "es": "1.808",
+     "en": "1,808"
+    },
+    {
+     "es": "12",
+     "en": "12"
+    },
+    {
+     "es": "3",
+     "en": "3"
+    },
+    {
+     "es": "300",
+     "en": "300"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "Hizo aplazar la Olimpiada, añadió pruebas nuevas y ganó todas aquellas en las que se inscribió.",
+    "en": "He had the Olympiad postponed, added new events and won every one he entered."
+   },
+   "sec": "3.2.7"
+  },
+  {
+   "q": {
+    "es": "¿Por qué terminaron los Juegos de Olimpia, según Remijsen (2015)?",
+    "en": "Why did the Olympic Games end, according to Remijsen (2015)?"
+   },
+   "options": [
+    {
+     "es": "Porque las élites dejaron de costearlos y prefirieron las carreras del circo",
+     "en": "Because the elites stopped funding them and preferred circus races"
+    },
+    {
+     "es": "Por una ley de Teodosio I en 393",
+     "en": "Because of a law of Theodosius I in 393"
+    },
+    {
+     "es": "Por la erupción de un volcán",
+     "en": "Because of a volcanic eruption"
+    },
+    {
+     "es": "Por la invasión persa",
+     "en": "Because of the Persian invasion"
+    }
+   ],
+   "answer": 0,
+   "explain": {
+    "es": "En los siglos IV y V las familias ricas financiaron las carreras de carros del circo, con más público y más rédito social.",
+    "en": "In the fourth and fifth centuries wealthy families funded chariot races in the circus, with larger crowds and greater social return."
+   },
+   "sec": "3.2.7"
+  }
+ ]
+}

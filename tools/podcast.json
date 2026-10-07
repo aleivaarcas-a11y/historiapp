@@ -46,5 +46,29 @@
     "en": 1590
    }
   }
+ ],
+ "3": [
+  {
+   "id": "t3_ep1",
+   "sec": "3",
+   "lang": "es",
+   "dur": 2055,
+   "src": {
+    "es": "audio/t3_ep1.m4a?v=1",
+    "en": "audio/t3_ep1_en.m4a?v=1"
+   },
+   "title": {
+    "es": "Saltos del toro, coronas de olivo y una tregua sagrada",
+    "en": "Bull-Leaping, Olive Crowns and a Sacred Truce"
+   },
+   "desc": {
+    "es": "Repaso del Tema 3 en forma de conversación y en el mismo orden que las clases, desde los palacios de Creta, con el pugilato y el salto del toro, hasta el final de los Juegos de Olimpia, pasando por Micenas y los juegos de Homero, la sociedad de las poleis, el origen del santuario y su tregua, la vida del atleta, las pruebas, las mujeres y las sanciones.",
+    "en": "A conversational review of Unit 3 that follows the order of the lectures, from the palaces of Crete, with boxing and bull-leaping, to the end of the Olympic Games, by way of Mycenae and the games of Homer, the society of the poleis, the origin of the sanctuary and its truce, the athlete's life, the events, women and sanctions."
+   },
+   "durs": {
+    "es": 2055,
+    "en": 4258
+   }
+  }
  ]
 }

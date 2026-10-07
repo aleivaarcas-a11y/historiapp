@@ -245,12 +245,15 @@
   "img": {
    "src": "img/enc/floorball.jpg",
    "pie": {
-    "es": "Final de la Superliga checa de floorball entre Mladá Boleslav y Vítkovice.",
-    "en": "Final of the Czech floorball Superliga between Mladá Boleslav and Vítkovice."
+    "es": "Lance de un partido de floorball ante la portería, 2007.",
+    "en": "Action in front of goal in a floorball match, 2007."
    },
-   "autor": "Prikryl",
-   "licencia": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Boleslav_-_Vitkovice_Superliga_superfinal_floorball_match_2021.jpg"
+   "autor": "M. Otorowski",
+   "licencia": {
+    "es": "CC BY 3.0",
+    "en": "CC BY 3.0"
+   },
+   "url": "https://commons.wikimedia.org/wiki/File:Floorball_Game_2.JPG"
   },
   "refs": [
    "IFF. (s. f.). *IFF & floorball history in short*. Recuperado el 29 de septiembre de 2026 de https://archive.floorball.sport/this-is-floorball/history-in-short/",

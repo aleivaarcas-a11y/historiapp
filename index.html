@@ -601,8 +601,8 @@ body.podon main{padding-bottom:84px}
 /* --- línea del tiempo y pódcast (patch_linea) --- */
 #tabbar button{font-size:9.5px;letter-spacing:-.02em;padding:6px 0 4px}
 #tabbar button .i{font-size:19px}
-:root{--ln-egi:#EDAB00;--ln-egi2:#F7D77A;--ln-per:#004379;--ln-per2:#5B8DB8;--ln-fen:#5E6B78;--ln-fen2:#A9B4BF;--ln-inter:#e3e7ec}
-html.dark{--ln-per:#3d7cc0;--ln-per2:#2a5a8c;--ln-fen2:#46525e;--ln-egi2:#9c7a12;--ln-inter:#26313c}
+:root{--ln-egi:#EDAB00;--ln-egi2:#F7D77A;--ln-per:#004379;--ln-per2:#5B8DB8;--ln-fen:#5E6B78;--ln-fen2:#A9B4BF;--ln-ege:#6A3D9A;--ln-ege2:#C3A6DA;--ln-gre:#1B7F79;--ln-gre2:#8FCBC6;--ln-inter:#e3e7ec}
+html.dark{--ln-ege:#9A6FC4;--ln-ege2:#4A2E66;--ln-gre:#3BA79F;--ln-gre2:#1F5552;--ln-per:#3d7cc0;--ln-per2:#2a5a8c;--ln-fen2:#46525e;--ln-egi2:#9c7a12;--ln-inter:#26313c}
 .lnmain{padding-left:0!important;padding-right:0!important}
 .lnsub{margin:0 16px 8px;color:var(--muted);font-size:14px}
 .lnbar{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 8px;align-items:center}
@@ -647,7 +647,7 @@ html.dark{--ln-per:#3d7cc0;--ln-per2:#2a5a8c;--ln-fen2:#46525e;--ln-egi2:#9c7a12
 #lnSh .res{font-size:14px;margin-top:6px;font-weight:700}
 #lnSh .nav2{display:flex;justify-content:space-between;margin-top:14px}
 #lnSh .nav2 button{font:inherit;font-size:14px;background:var(--primary);color:#fff;border-radius:18px;padding:7px 14px}#lnSh .nav2 button[disabled]{opacity:.35}
-.ln-sw.c-egi{background:var(--ln-egi)}.ln-sw.c-per{background:var(--ln-per)}.ln-sw.c-fen{background:var(--ln-fen)}
+.ln-sw.c-egi{background:var(--ln-egi)}.ln-sw.c-per{background:var(--ln-per)}.ln-sw.c-fen{background:var(--ln-fen)}.ln-era.c-ege{background:var(--ln-ege)}.ln-era.c-ege.alt{background:var(--ln-ege2);color:#1d252d}.ln-sw.c-ege{background:var(--ln-ege)}.ln-era.c-gre{background:var(--ln-gre)}.ln-era.c-gre.alt{background:var(--ln-gre2);color:#1d252d}.ln-sw.c-gre{background:var(--ln-gre)}
 /* biblioteca de pódcast */
 .pdmain{padding:0!important;background:#121417;color:#fff;min-height:calc(100vh - 60px)}
 .pdhero{background:linear-gradient(180deg,#0b4d86 0%,#0b2a4a 55%,#121417 100%);padding:22px 16px 18px}
@@ -715,6 +715,17 @@ body.podon .deck{height:calc(100dvh - 406px - var(--safe-top) - var(--safe-botto
 #pbL{position:absolute;left:0;bottom:0;height:3px;width:0;background:#FBAE40;transition:width .3s linear}
 @media (max-width:420px){#podbar img{display:none}}
 /* podbar-FIN */
+/* iPad13-INI */
+@media (min-width:1000px){
+  #app main{zoom:1.12}
+  #tabbar{zoom:1.1}
+}
+@media (min-width:1200px){
+  #app{max-width:none}
+  #tabbar{max-width:none}
+  main>*{max-width:1080px}
+}
+/* iPad13-FIN */
 </style>
 </head>
 <body>
@@ -825,7 +836,7 @@ function markSeen(temaId,mode,key){ const k=temaId+"."+mode; S.prog.seen[k]=S.pr
 function seenCount(temaId,mode){ const k=temaId+"."+mode; return Object.keys(S.prog.seen[k]||{}).length; }
 function modeTotal(tema,mode){ if(mode==="glossary") return tema.glossary.length; if(mode==="mapa") return tema.mapa?tema.mapa.ramas.reduce((a,r)=>a+r.nodos.length,0):0; const a=tema[mode]; return a?a.filter(x=>!x.lang||x.lang===S.lang).length:0; }
 function secMatch(a,b){ if(!a||!b) return !b; return a===b || a.startsWith(b+".") || b.startsWith(a+"."); }
-function modeIdxs(tema,mode){ const a=tema[mode]||[]; const sec=S.view.sec; return a.map((it,i)=>i).filter(i=>(!a[i].lang||a[i].lang===S.lang) && (!sec || secMatch(a[i].sec,sec))); }
+function modeIdxs(tema,mode){ const a=tema[mode]||[]; const sec=S.view.sec; return a.map((it,i)=>i).filter(i=>(mode==="podcast"||!a[i].lang||a[i].lang===S.lang) && (!sec || secMatch(a[i].sec,sec))); }
 function md(s){ return esc(s).replace(/\*\*([^*]+)\*\*/g,"<b>$1</b>").replace(/\*([^*]+)\*/g,"<em>$1</em>").replace(/(https?:\/\/[^\s<)]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>'); }
 function LL(o){ if(!o) return []; const a=o[S.lang]; return (a&&a.length)?a:(o.es||[]); }
 function norm(s){ return String(s).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase(); }
@@ -941,7 +952,7 @@ async function getEfe(){ if(S.efe===undefined){ try{ S.efe=await fetch("data/efe
 function mmdd(d){ return String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
 function fmtDay(k){ const [m,d]=k.split("-").map(Number); return new Date(2024,m-1,d).toLocaleDateString(S.lang==="en"?"en-GB":"es-ES",{day:"numeric",month:"long"}); }
 function ringSVG(p){ const r=18,c=2*Math.PI*r; return `<svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="${r}" fill="rgba(0,0,0,.35)" stroke="rgba(255,255,255,.3)" stroke-width="4"/><circle cx="22" cy="22" r="${r}" fill="none" stroke="#EDAB00" stroke-width="4" stroke-linecap="round" stroke-dasharray="${(c*p/100).toFixed(1)} ${c.toFixed(1)}"/></svg><span>${p}%</span>`; }
-const TEMA_IMG={1:"img/t1/valltorta_caza.jpg",2:"img/t2/hatshepsut_hebsed.jpg"};
+const TEMA_IMG={1:"img/t1/valltorta_caza.jpg",2:"img/t2/hatshepsut_hebsed.jpg",3:"img/t3/fresco_salto_toro.jpg"};
 function temaPct(num){ const tm=S.temaCache[num]; if(!tm) return 0; return Math.round(MODES.filter(x=>!MEDIA.includes(x)).reduce((a,x)=>a+modePct(tm,x),0)/(MODES.length-MEDIA.length)); }
 async function fillTemaGrid(box,short){
   try{ const idx=await getIndex(); box.innerHTML=""; let locked=0;
@@ -1145,7 +1156,23 @@ es:[
  {w:"MAZAS",t:2,d:"Piezas de madera que en la zurkhaneh se voltean por detrás de los hombros, siguiendo el ritmo del tambor."},
  {w:"NUBIA",t:2,d:"Tierra de origen del rey Taharqa, cuya estela aporta una de las evidencias de la carrera de fondo."},
  {w:"LUXOR",t:2,d:"Junto a ella, en Medamud, una inscripción del santuario de Montu narra los tiros con arco de Amenofis II."},
- {w:"NADAR",t:2,d:"En un pueblo fluvial nadaban barqueros y pescadores; nadar era destreza de élite si se aprendía con instructor."}
+ {w:"NADAR",t:2,d:"En un pueblo fluvial nadaban barqueros y pescadores; nadar era destreza de élite si se aprendía con instructor."},
+ {w:"SALTO",t:3,d:"El de la taurocatapsia, sobre un toro vivo y a la carrera; Younger (1995) ve en el salto en picado su esquema más frecuente."},
+ {w:"CRETA",t:3,d:"Isla montañosa entre Grecia, Egipto y Asia Menor cuya civilización minoica floreció hacia 1950-1450 a. C."},
+ {w:"CNOSO",t:3,d:"Palacio principal de Creta, excavado por Evans; de él proceden casi todas las imágenes del salto del toro."},
+ {w:"RITON",t:3,d:"Vaso para las libaciones; el de Hagia Triada muestra púgiles y el salto del toro en cuatro bandas."},
+ {w:"PUGIL",t:3,d:"Combatiente del pugilato; los de Micenas eran púgiles pagados que animaban los banquetes y funerales del señor."},
+ {w:"PATIO",t:3,d:"El central de los palacios cretenses medía entre un cuarto y un tercio de estadio y acogía público tras barreras de madera."},
+ {w:"POLIS",t:3,d:"Ciudad-estado griega con sus tierras y sus magistraturas; la victoria del atleta era también la de su polis."},
+ {w:"ELIDE",t:3,d:"Polis que administraba Olimpia, nombraba a los jueces y acogía el mes de concentración de los atletas."},
+ {w:"OLIVO",t:3,d:"De él era la corona, único premio material que daba el santuario de Olimpia al vencedor."},
+ {w:"KLEOS",t:3,d:"La gloria eterna que el noble griego buscaba con la victoria y que sobrevivía a su muerte."},
+ {w:"ARETE",t:3,d:"«Excelencia», el valor más alto de la sociedad griega, al que daba acceso la victoria olímpica."},
+ {w:"DIETA",t:3,d:"Hacia 500 a. C. se impuso una rica en carne, que daba ventaja en la lucha, el pugilato y el pancracio."},
+ {w:"PISTA",t:3,d:"La del estadio de Olimpia medía 192,27 metros entre las líneas de salida y llegada."},
+ {w:"DISCO",t:3,d:"Prueba del pentatlón; en Olimpia todos lanzaban el mismo el mismo día."},
+ {w:"PLOMO",t:3,d:"Material de las tablillas con maldiciones contra los rivales halladas en Nemea."},
+ {w:"ZANES",t:3,d:"Estatuas de Zeus pagadas con las multas, con el nombre del infractor grabado en el pedestal."},
 ],
 en:[
  {w:"GAMES",t:1,d:"For Popplow, together with dance, the ground that supports human movement."},
@@ -1168,7 +1195,19 @@ en:[
  {w:"CRAWL",t:2,d:"Some authors have seen the crawl and breaststroke in Egyptian images, though others dispute it."},
  {w:"BOXER",t:2,d:"Boxing was marginal in Egypt; the only undisputed evidence is a scene in the tomb of Kheruef at Thebes."},
  {w:"LUXOR",t:2,d:"Near it, at Medamud, an inscription in the shrine of Montu tells of Amenhotep II's archery."},
- {w:"BOATS",t:2,d:"Handling the poles that moved the boats is one of the origins of the Egyptian joust."}
+ {w:"BOATS",t:2,d:"Handling the poles that moved the boats is one of the origins of the Egyptian joust."},
+ {w:"CRETE",t:3,d:"Mountainous island between Greece, Egypt and Asia Minor whose Minoan civilisation flourished c. 1950-1450 BC."},
+ {w:"TRUCE",t:3,d:"The ekecheiria, proclaimed by heralds before each edition; it protected Elis and the pilgrims, not all of Greece."},
+ {w:"NAKED",t:3,d:"How athletes competed after Orsippos of Megara ran so in 720 BC; nudity took over a century to spread."},
+ {w:"TUNIC",t:3,d:"The perizoma, the small tunic tied like a loincloth worn in the first Olympic editions."},
+ {w:"OLIVE",t:3,d:"The wreath made of it was the only material prize the sanctuary of Olympia gave the victor."},
+ {w:"CROWN",t:3,d:"Kyniska won it in 396 BC because in the equestrian events it went to the owner of the horses."},
+ {w:"PRIZE",t:3,d:"At the Panathenaia the stadion winner's one was probably 80 amphorae of oil, about 1,247 drachmas."},
+ {w:"GLORY",t:3,d:"Kleos, the eternal fame the Greek noble sought through victory."},
+ {w:"THONG",t:3,d:"The ankyle, a leather one wound round the javelin shaft to make it spin."},
+ {w:"JUDGE",t:3,d:"Achilles acts as one at Patroclus's games; at Olympia the Hellanodikai of Elis did so."},
+ {w:"FINES",t:3,d:"For bribery they paid for the Zanes, statues of Zeus by the stadium entrance."},
+ {w:"CURSE",t:3,d:"Athletes inscribed them on lead tablets, like those from Nemea, against their rivals."}
 ]};
 function wdKey(W){ return todayKey()+"|"+S.lang+"|"+(W?W.w:""); }
 async function wdPool(){ const idx=await getIndex(); const av=new Set(idx.temas.filter(x=>x.available).map(x=>x.num)); return (WORDS[S.lang]||WORDS.es).filter(x=>av.has(x.t)); }

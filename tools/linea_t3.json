@@ -1,0 +1,1132 @@
+{
+ "civs": [
+  {
+   "id": "ege",
+   "name": {
+    "es": "Creta y Micenas",
+    "en": "Crete and Mycenae"
+   }
+  },
+  {
+   "id": "gre",
+   "name": {
+    "es": "Grecia",
+    "en": "Greece"
+   }
+  }
+ ],
+ "eras": [
+  {
+   "tema": 3,
+   "civ": "ege",
+   "from": -1950,
+   "to": -1750,
+   "n": {
+    "es": "Primeros palacios cretenses",
+    "en": "First Cretan palaces"
+   },
+   "f": {
+    "es": "h. 1950-1750 a. C.",
+    "en": "c. 1950-1750 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 3,
+   "civ": "ege",
+   "from": -1750,
+   "to": -1450,
+   "n": {
+    "es": "Época de los grandes palacios",
+    "en": "Age of the great palaces"
+   },
+   "f": {
+    "es": "h. 1750-1450 a. C.",
+    "en": "c. 1750-1450 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 3,
+   "civ": "ege",
+   "from": -1450,
+   "to": -1200,
+   "n": {
+    "es": "Dominio micénico",
+    "en": "Mycenaean dominance"
+   },
+   "f": {
+    "es": "h. 1450-1200 a. C.",
+    "en": "c. 1450-1200 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 3,
+   "civ": "ege",
+   "from": -1200,
+   "to": -1100,
+   "n": {
+    "es": "Colapso de los palacios",
+    "en": "Collapse of the palaces"
+   },
+   "f": {
+    "es": "h. 1200-1100 a. C.",
+    "en": "c. 1200-1100 BC"
+   },
+   "inter": 1
+  },
+  {
+   "tema": 3,
+   "civ": "gre",
+   "from": -1100,
+   "to": -700,
+   "n": {
+    "es": "Edad Oscura",
+    "en": "Dark Age"
+   },
+   "f": {
+    "es": "h. 1100-700 a. C.",
+    "en": "c. 1100-700 BC"
+   },
+   "inter": 1
+  },
+  {
+   "tema": 3,
+   "civ": "gre",
+   "from": -700,
+   "to": -480,
+   "n": {
+    "es": "Época arcaica",
+    "en": "Archaic period"
+   },
+   "f": {
+    "es": "h. 700-480 a. C.",
+    "en": "c. 700-480 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 3,
+   "civ": "gre",
+   "from": -480,
+   "to": -323,
+   "n": {
+    "es": "Época clásica",
+    "en": "Classical period"
+   },
+   "f": {
+    "es": "480-323 a. C.",
+    "en": "480-323 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 3,
+   "civ": "gre",
+   "from": -323,
+   "to": -31,
+   "n": {
+    "es": "Época helenística",
+    "en": "Hellenistic period"
+   },
+   "f": {
+    "es": "323-31 a. C.",
+    "en": "323-31 BC"
+   },
+   "inter": 0
+  }
+ ],
+ "hitos": [
+  {
+   "id": "ege-clase",
+   "tema": 3,
+   "civ": "ege",
+   "k": "h",
+   "y": -1950,
+   "sl": 7,
+   "s": "",
+   "es": {
+    "d": "h. 1950 a. C.",
+    "t": "Surge una nueva clase dirigente en Creta",
+    "x": "Se reconoce en el paso de los enterramientos colectivos a los individuales, y con ella aparece un grupo estable de sacerdotes. Los palacios fueron residencia, almacén y centro religioso, puesto que Creta no levantó templos monumentales.",
+    "q": "¿En qué se reconoce la nueva clase dirigente cretense?",
+    "o": [
+     "En el paso de los enterramientos colectivos a los individuales",
+     "En la construcción de templos monumentales",
+     "En las listas de vencedores",
+     "En las murallas de los palacios"
+    ]
+   },
+   "en": {
+    "d": "c. 1950 BC",
+    "t": "A new ruling class emerges in Crete",
+    "x": "It can be recognised in the shift from collective to individual burials, and with it a stable group of priests appears. The palaces were residence, storehouse and religious centre, since Crete built no monumental temples.",
+    "q": "How is the new Cretan ruling class recognised?",
+    "o": [
+     "In the shift from collective to individual burials",
+     "In the building of monumental temples",
+     "In victor lists",
+     "In the palace walls"
+    ]
+   }
+  },
+  {
+   "id": "ege-salto",
+   "tema": 3,
+   "civ": "ege",
+   "k": "d",
+   "y": -1750,
+   "sl": 14,
+   "s": "",
+   "es": {
+    "d": "h. 1750-1450 a. C.",
+    "t": "Época de los grandes palacios: la taurocatapsia",
+    "x": "El salto sobre un toro vivo y a la carrera se practicó sobre todo en torno al palacio de Cnoso, en fiestas que reunían a la comunidad. Con los palacios adquirió su grandeza escénica y ritual, y se convirtió en emblema del poder de Cnoso.",
+    "q": "¿De dónde proceden casi todas las imágenes de taurocatapsia?",
+    "o": [
+     "Del palacio de Cnoso",
+     "De Olimpia",
+     "De Micenas",
+     "De Egipto"
+    ]
+   },
+   "en": {
+    "d": "c. 1750-1450 BC",
+    "t": "Age of the great palaces: bull-leaping",
+    "x": "The leap over a live, charging bull was practised above all around the palace of Knossos, at festivals that gathered the community. With the palaces it acquired its scenic and ritual grandeur and became the emblem of Knossos's power.",
+    "q": "Where do almost all images of bull-leaping come from?",
+    "o": [
+     "The palace of Knossos",
+     "Olympia",
+     "Mycenae",
+     "Egypt"
+    ]
+   }
+  },
+  {
+   "id": "ege-danza",
+   "tema": 3,
+   "civ": "ege",
+   "k": "d",
+   "y": -1600,
+   "sl": 8,
+   "s": "",
+   "es": {
+    "d": "h. 1600 a. C.",
+    "t": "Danza en la arboleda sagrada",
+    "x": "En el fresco de Cnoso las mujeres bailan ante una multitud, en un acto que los estudios vinculan al culto a la naturaleza, concebida como divinidad femenina, y a los ritos de iniciación.",
+    "q": "¿Con qué vinculan los estudios la danza de la arboleda sagrada?",
+    "o": [
+     "Con el culto a la naturaleza y los ritos de iniciación",
+     "Con los juegos fúnebres",
+     "Con la preparación militar",
+     "Con los Juegos de Olimpia"
+    ]
+   },
+   "en": {
+    "d": "c. 1600 BC",
+    "t": "Dance in the sacred grove",
+    "x": "In the Knossos fresco women dance before a crowd, in an act that scholars link to the worship of nature, conceived as a female deity, and to initiation rites.",
+    "q": "What do scholars link the dance in the sacred grove with?",
+    "o": [
+     "The worship of nature and initiation rites",
+     "Funeral games",
+     "Military training",
+     "The Olympic Games"
+    ]
+   }
+  },
+  {
+   "id": "ege-tera",
+   "tema": 3,
+   "civ": "ege",
+   "k": "h",
+   "y": -1628,
+   "sl": 20,
+   "s": "",
+   "es": {
+    "d": "h. 1628 a. C.",
+    "t": "Erupción del volcán de Tera",
+    "x": "Durante décadas se explicó con ella el fin de la Creta minoica. Hoy sabemos que fue unos ciento cincuenta años anterior al final de los palacios y que, si bien cubrió de ceniza el este de la isla, Creta se rehízo.",
+    "q": "¿Acabó la erupción de Tera con los palacios cretenses?",
+    "o": [
+     "No, fue unos ciento cincuenta años anterior a su final",
+     "Sí, los destruyó de inmediato",
+     "Sí, por el maremoto",
+     "No, fue posterior a su final"
+    ]
+   },
+   "en": {
+    "d": "c. 1628 BC",
+    "t": "Eruption of the Thera volcano",
+    "x": "For decades it was used to explain the end of Minoan Crete. Today we know it came some 150 years before the end of the palaces and that, although it covered the east of the island with ash, Crete recovered.",
+    "q": "Did the eruption of Thera end the Cretan palaces?",
+    "o": [
+     "No, it came some 150 years before their end",
+     "Yes, it destroyed them at once",
+     "Yes, through the tsunami",
+     "No, it came after their end"
+    ]
+   }
+  },
+  {
+   "id": "ege-akrotiri",
+   "tema": 3,
+   "civ": "ege",
+   "k": "d",
+   "y": -1625,
+   "sl": 11,
+   "s": "",
+   "es": {
+    "d": "finales del siglo XVII a. C.",
+    "t": "Fresco de los niños púgiles de Akrotiri",
+    "x": "Dos niños de entre seis y diez años boxean con un solo guante, en una de las escenas deportivas más antiguas del Egeo. El vencedor lleva collar, pulseras y pendientes y su rival viste con sencillez, de modo que el juego marcaba ya la jerarquía entre los hijos de la élite.",
+    "q": "¿Por qué se ha conservado el fresco de Akrotiri?",
+    "o": [
+     "Porque la ceniza del volcán sepultó la ciudad",
+     "Porque se guardó en una tumba real",
+     "Porque lo trasladaron a Egipto",
+     "Porque se pintó en una cueva"
+    ]
+   },
+   "en": {
+    "d": "late 17th century BC",
+    "t": "Boxing Boys fresco of Akrotiri",
+    "x": "Two boys aged six to ten box with a single glove, in one of the oldest sporting scenes of the Aegean. The winner wears a necklace, bracelets and earrings and his opponent is simply dressed, so the game already marked the hierarchy among the children of the elite.",
+    "q": "Why has the Akrotiri fresco survived?",
+    "o": [
+     "Because the volcano's ash buried the city",
+     "Because it was kept in a royal tomb",
+     "Because it was taken to Egypt",
+     "Because it was painted in a cave"
+    ]
+   }
+  },
+  {
+   "id": "ege-riton",
+   "tema": 3,
+   "civ": "ege",
+   "k": "d",
+   "y": -1550,
+   "sl": 12,
+   "s": "",
+   "es": {
+    "d": "h. 1550-1500 a. C.",
+    "t": "Ritón de los boxeadores de Hagia Triada",
+    "x": "Vaso de piedra de unos 46 cm para las libaciones, con cuatro bandas en relieve de púgiles adultos y del salto del toro. Su equipo cambia de una banda a otra, señal de un entrenamiento sistemático con reglas.",
+    "q": "¿Para qué servía un ritón?",
+    "o": [
+     "Para las libaciones a los dioses",
+     "Para guardar los premios",
+     "Para medir las carreras",
+     "Para el aceite de los atletas"
+    ]
+   },
+   "en": {
+    "d": "c. 1550-1500 BC",
+    "t": "Boxer Rhyton of Hagia Triada",
+    "x": "Stone vessel about 46 cm high for libations, with four relief bands of adult boxers and bull-leaping. Their equipment changes from band to band, a sign of systematic rule-based training.",
+    "q": "What was a rhyton used for?",
+    "o": [
+     "For libations to the gods",
+     "To keep prizes",
+     "To measure races",
+     "For athletes' oil"
+    ]
+   }
+  },
+  {
+   "id": "ege-cnoso",
+   "tema": 3,
+   "civ": "ege",
+   "k": "h",
+   "y": -1450,
+   "sl": 20,
+   "s": "",
+   "es": {
+    "d": "h. 1450 a. C.",
+    "t": "Los micénicos toman Cnoso",
+    "x": "Ardieron casi todos los palacios de Creta salvo el de Cnoso, que pasó a manos de los micénicos. Durante unos setenta y cinco años fue el único palacio de la isla, y la taurocatapsia siguió bajo dominio micénico.",
+    "q": "¿Qué ocurrió con la taurocatapsia tras la toma micénica de Cnoso?",
+    "o": [
+     "Siguió practicándose bajo dominio micénico",
+     "Se prohibió de inmediato",
+     "Se trasladó a Olimpia",
+     "Se convirtió en prueba olímpica"
+    ]
+   },
+   "en": {
+    "d": "c. 1450 BC",
+    "t": "The Mycenaeans take Knossos",
+    "x": "Almost all the palaces of Crete burned except Knossos, which passed to the Mycenaeans. For some seventy-five years it was the island's only palace, and bull-leaping continued under Mycenaean rule.",
+    "q": "What happened to bull-leaping after the Mycenaean seizure of Knossos?",
+    "o": [
+     "It continued under Mycenaean rule",
+     "It was banned at once",
+     "It moved to Olympia",
+     "It became an Olympic event"
+    ]
+   }
+  },
+  {
+   "id": "ege-fincnoso",
+   "tema": 3,
+   "civ": "ege",
+   "k": "h",
+   "y": -1375,
+   "sl": 20,
+   "s": "",
+   "es": {
+    "d": "h. 1375 a. C.",
+    "t": "Arde el palacio de Cnoso",
+    "x": "Con él terminó la Creta de los palacios. El salto del toro continuó, no obstante, en la Grecia continental hasta la caída de los palacios micénicos.",
+    "q": "¿Dónde continuó el salto del toro tras el incendio de Cnoso?",
+    "o": [
+     "En la Grecia continental micénica",
+     "En Egipto",
+     "En Olimpia",
+     "En ninguna parte"
+    ]
+   },
+   "en": {
+    "d": "c. 1375 BC",
+    "t": "The palace of Knossos burns",
+    "x": "With it palatial Crete came to an end. Bull-leaping nevertheless continued in mainland Greece until the fall of the Mycenaean palaces.",
+    "q": "Where did bull-leaping continue after the burning of Knossos?",
+    "o": [
+     "In Mycenaean mainland Greece",
+     "In Egypt",
+     "At Olympia",
+     "Nowhere"
+    ]
+   }
+  },
+  {
+   "id": "ege-colapso",
+   "tema": 3,
+   "civ": "ege",
+   "k": "h",
+   "y": -1200,
+   "sl": 22,
+   "s": "",
+   "es": {
+    "d": "1200-1150 a. C.",
+    "t": "Arden los palacios micénicos",
+    "x": "Cline (2015) habla de una «tormenta perfecta» de terremotos, sequía, gentes desplazadas, revueltas y ataques de los «pueblos del mar». Con la caída del palacio, Grecia se quedó cuatro siglos sin escribir y sin quien pagara los carros, la caza señorial y los púgiles a sueldo.",
+    "q": "¿Cómo explica Cline (2015) la caída de los palacios?",
+    "o": [
+     "Como una «tormenta perfecta» de varias causas",
+     "Por la erupción de Tera",
+     "Por una invasión persa",
+     "Por una epidemia"
+    ]
+   },
+   "en": {
+    "d": "1200-1150 BC",
+    "t": "The Mycenaean palaces burn",
+    "x": "Cline (2015) speaks of a 'perfect storm' of earthquakes, drought, displaced peoples, revolts and attacks by the 'Sea Peoples'. With the fall of the palace, Greece went four centuries without writing and without anyone to pay for chariots, lordly hunting and paid boxers.",
+    "q": "How does Cline (2015) explain the fall of the palaces?",
+    "o": [
+     "As a 'perfect storm' of several causes",
+     "By the eruption of Thera",
+     "By a Persian invasion",
+     "By an epidemic"
+    ]
+   }
+  },
+  {
+   "id": "gre-lefkandi",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -950,
+   "sl": 23,
+   "s": "",
+   "es": {
+    "d": "h. 950 a. C.",
+    "t": "Tumba del gran señor de Lefkandi",
+    "x": "Un gran señor fue incinerado y enterrado bajo un túmulo con sus armas y sus caballos sacrificados, como Patroclo en la Ilíada. El funeral de un jefe era la ocasión de exhibir el prestigio de la élite.",
+    "q": "¿Con qué relato homérico se compara la tumba de Lefkandi?",
+    "o": [
+     "El funeral de Patroclo",
+     "El regreso de Ulises",
+     "La carrera de Pélope",
+     "La tregua de Ífito"
+    ]
+   },
+   "en": {
+    "d": "c. 950 BC",
+    "t": "Tomb of the great lord of Lefkandi",
+    "x": "A great lord was cremated and buried under a tumulus with his weapons and sacrificed horses, like Patroclus in the Iliad. A chieftain's funeral was the occasion to display the prestige of the elite.",
+    "q": "Which Homeric story is the Lefkandi tomb compared with?",
+    "o": [
+     "The funeral of Patroclus",
+     "The return of Odysseus",
+     "The race of Pelops",
+     "The truce of Iphitos"
+    ]
+   }
+  },
+  {
+   "id": "gre-ifito",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -884,
+   "sl": 39,
+   "s": "",
+   "es": {
+    "d": "884 a. C. (leyenda)",
+    "t": "Tregua de Ífito, según la leyenda",
+    "x": "Los autores antiguos situaban el origen del olimpismo en un pacto de tregua del rey Ífito de Élide con Esparta y Pisa. El relato procede de un autor del siglo II d. C., más de mil años posterior, y pertenece a la leyenda.",
+    "q": "¿Por qué se considera legendaria la fecha de 884 a. C.?",
+    "o": [
+     "Porque procede de un autor más de mil años posterior",
+     "Porque la confirma la arqueología",
+     "Porque figura en la Ilíada",
+     "Porque la grabó Ífito en piedra"
+    ]
+   },
+   "en": {
+    "d": "884 BC (legend)",
+    "t": "Truce of Iphitos, according to legend",
+    "x": "Ancient authors placed the origin of the Olympic Games in a truce made by King Iphitos of Elis with Sparta and Pisa. The story comes from a second-century AD author, more than a thousand years later, and belongs to legend.",
+    "q": "Why is the date of 884 BC considered legendary?",
+    "o": [
+     "Because it comes from an author over a thousand years later",
+     "Because archaeology confirms it",
+     "Because it appears in the Iliad",
+     "Because Iphitos carved it in stone"
+    ]
+   }
+  },
+  {
+   "id": "gre-776",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -776,
+   "sl": 44,
+   "s": "",
+   "es": {
+    "d": "776 a. C.",
+    "t": "Corebo de Élide, primer vencedor registrado",
+    "x": "La lista de vencedores que escribió Hipias a partir de la tradición oral se inicia con Corebo, ganador del stádion. Es poco fiable en sus primeros siglos, y la tradición sitúa en este año los primeros Juegos.",
+    "q": "¿En qué prueba venció Corebo?",
+    "o": [
+     "El stádion",
+     "El pancracio",
+     "La cuadriga",
+     "El pentatlón"
+    ]
+   },
+   "en": {
+    "d": "776 BC",
+    "t": "Koroibos of Elis, first recorded victor",
+    "x": "The victor list that Hippias wrote from oral tradition begins with Koroibos, winner of the stadion. It is unreliable for its first centuries, and tradition places the first Games in this year.",
+    "q": "In which event did Koroibos win?",
+    "o": [
+     "The stadion",
+     "The pankration",
+     "The four-horse chariot",
+     "The pentathlon"
+    ]
+   }
+  },
+  {
+   "id": "gre-dipilon",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -740,
+   "sl": 22,
+   "s": "",
+   "es": {
+    "d": "h. 740-725 a. C.",
+    "t": "Enócoe del Dipilón",
+    "x": "En el siglo VIII a. C. regresa la escritura con el alfabeto fenicio. Esta jarra de vino lleva una de las inscripciones griegas más antiguas, que la declara premio del mejor bailarín de un concurso.",
+    "q": "¿Qué premiaba la enócoe del Dipilón?",
+    "o": [
+     "Al mejor bailarín de un concurso",
+     "Al vencedor del stádion",
+     "Al mejor auriga",
+     "Al mejor púgil"
+    ]
+   },
+   "en": {
+    "d": "c. 740-725 BC",
+    "t": "Dipylon oinochoe",
+    "x": "In the eighth century BC writing returns with the Phoenician alphabet. This wine jug bears one of the oldest Greek inscriptions, which declares it the prize for the best dancer in a contest.",
+    "q": "What did the Dipylon oinochoe reward?",
+    "o": [
+     "The best dancer in a contest",
+     "The winner of the stadion",
+     "The best charioteer",
+     "The best boxer"
+    ]
+   }
+  },
+  {
+   "id": "gre-orsipo",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -720,
+   "sl": 59,
+   "s": "",
+   "es": {
+    "d": "720 a. C.",
+    "t": "Orsipo de Mégara corre desnudo",
+    "x": "Hasta entonces se competía con perizoma. El cambio tardó más de un siglo en generalizarse y se mantuvo hasta el final del olimpismo, salvo en las pruebas hípicas.",
+    "q": "¿Cuánto tardó en generalizarse la desnudez atlética?",
+    "o": [
+     "Más de un siglo",
+     "Una sola edición",
+     "Diez años",
+     "Nunca se generalizó"
+    ]
+   },
+   "en": {
+    "d": "720 BC",
+    "t": "Orsippos of Megara runs naked",
+    "x": "Until then athletes competed in the perizoma. The change took more than a century to become general and lasted until the end of the Games, except in the equestrian events.",
+    "q": "How long did athletic nudity take to become general?",
+    "o": [
+     "More than a century",
+     "A single edition",
+     "Ten years",
+     "It never became general"
+    ]
+   }
+  },
+  {
+   "id": "gre-iliada",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -725,
+   "sl": 23,
+   "s": "",
+   "es": {
+    "d": "h. 725-675 a. C.",
+    "t": "Se fijan los poemas homéricos",
+    "x": "El canto 23 de la Ilíada narra los juegos fúnebres de Patroclo, ocho pruebas en las que compiten casi solo príncipes. La trama se sitúa en el siglo XIII a. C., pero retrata la sociedad de los basileis de los siglos IX y VIII a. C.",
+    "q": "¿Qué sociedad retratan los juegos de la Ilíada?",
+    "o": [
+     "La de los basileis de los siglos IX y VIII a. C.",
+     "La de los palacios cretenses",
+     "La de la Atenas democrática",
+     "La de la Grecia romana"
+    ]
+   },
+   "en": {
+    "d": "c. 725-675 BC",
+    "t": "The Homeric poems are fixed",
+    "x": "Book 23 of the Iliad narrates the funeral games of Patroclus, eight events in which almost only princes compete. The plot is set in the 13th century BC, but it portrays the society of the basileis of the ninth and eighth centuries BC.",
+    "q": "Which society do the games of the Iliad portray?",
+    "o": [
+     "That of the basileis of the ninth and eighth centuries BC",
+     "That of the Cretan palaces",
+     "That of democratic Athens",
+     "That of Roman Greece"
+    ]
+   }
+  },
+  {
+   "id": "gre-estadio",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -700,
+   "sl": 41,
+   "s": "",
+   "es": {
+    "d": "h. 700 a. C.",
+    "t": "Primer estadio de Olimpia",
+    "x": "El santuario de Zeus había nacido a finales del siglo XI a. C., y durante siglos recibió figurillas de animales y trípodes de bronce sin relación con el atletismo. Primero fue el rito, después la distinción de las élites y al final el certamen.",
+    "q": "¿Qué fue primero en Olimpia, según la arqueología?",
+    "o": [
+     "El rito",
+     "El certamen atlético",
+     "El estadio",
+     "La lista de vencedores"
+    ]
+   },
+   "en": {
+    "d": "c. 700 BC",
+    "t": "First stadium at Olympia",
+    "x": "The sanctuary of Zeus had been founded at the end of the 11th century BC, and for centuries it received animal figurines and bronze tripods unrelated to athletics. First came the rite, then the distinction of the elites and finally the contest.",
+    "q": "What came first at Olympia, according to archaeology?",
+    "o": [
+     "The rite",
+     "The athletic contest",
+     "The stadium",
+     "The victor list"
+    ]
+   }
+  },
+  {
+   "id": "gre-solon",
+   "tema": 3,
+   "civ": "gre",
+   "k": "h",
+   "y": -594,
+   "sl": 29,
+   "s": "",
+   "es": {
+    "d": "594/593 a. C.",
+    "t": "Reformas de Solón en Atenas",
+    "x": "Junto a las de Clístenes (508 a. C.), abren paso a la democracia. En la época arcaica se fijan el programa de Olimpia y el circuito panhelénico, de modo que casi todo el deporte griego se configura entonces.",
+    "q": "¿En qué época se configura casi todo el deporte griego?",
+    "o": [
+     "En la arcaica",
+     "En la Edad Oscura",
+     "En la helenística",
+     "En la romana"
+    ]
+   },
+   "en": {
+    "d": "594/593 BC",
+    "t": "Reforms of Solon in Athens",
+    "x": "Together with those of Cleisthenes (508 BC), they open the way to democracy. In the Archaic period the Olympic programme and the Panhellenic circuit are fixed, so almost all Greek sport takes shape then.",
+    "q": "In which period does almost all Greek sport take shape?",
+    "o": [
+     "The Archaic",
+     "The Dark Age",
+     "The Hellenistic",
+     "The Roman"
+    ]
+   }
+  },
+  {
+   "id": "gre-hereos",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -580,
+   "sl": 102,
+   "s": "",
+   "es": {
+    "d": "h. 580 a. C.",
+    "t": "Se instituyen los Juegos Hereos",
+    "x": "Carrera de muchachas solteras en honor de Hera, de unos 160 m, en el estadio de Olimpia y en tres categorías de edad. La ganadora recibía, como los varones, una corona de olivo.",
+    "q": "¿Quiénes corrían en los Juegos Hereos?",
+    "o": [
+     "Muchachas solteras",
+     "Mujeres casadas",
+     "Sacerdotisas de Deméter",
+     "Esclavas"
+    ]
+   },
+   "en": {
+    "d": "c. 580 BC",
+    "t": "The Heraia are established",
+    "x": "Race of unmarried girls in honour of Hera, about 160 m long, in the stadium of Olympia and in three age categories. The winner received, like the men, an olive wreath.",
+    "q": "Who ran in the Heraia?",
+    "o": [
+     "Unmarried girls",
+     "Married women",
+     "Priestesses of Demeter",
+     "Slave women"
+    ]
+   }
+  },
+  {
+   "id": "gre-arriquion",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -564,
+   "sl": 91,
+   "s": "",
+   "es": {
+    "d": "564 a. C.",
+    "t": "Arriquión, coronado muerto",
+    "x": "Buscaba su tercera corona seguida y murió asfixiado en la final de pancracio mientras dislocaba el pie de su rival, que se rindió. Los jueces coronaron su cadáver.",
+    "q": "¿Qué hicieron los jueces con Arriquión?",
+    "o": [
+     "Coronaron su cadáver",
+     "Lo descalificaron",
+     "Declararon nulo el combate",
+     "Coronaron a su rival"
+    ]
+   },
+   "en": {
+    "d": "564 BC",
+    "t": "Arrhichion, crowned in death",
+    "x": "He was seeking his third successive wreath and died of strangulation in the pankration final while dislocating his opponent's foot; the opponent conceded. The judges crowned his corpse.",
+    "q": "What did the judges do with Arrhichion?",
+    "o": [
+     "Crowned his corpse",
+     "Disqualified him",
+     "Declared the bout void",
+     "Crowned his opponent"
+    ]
+   }
+  },
+  {
+   "id": "gre-480",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -480,
+   "sl": 39,
+   "s": "",
+   "es": {
+    "d": "480 a. C.",
+    "t": "Olimpiada durante la invasión de Jerjes",
+    "x": "La 75.ª Olimpiada se celebró mientras Leónidas resistía en las Termópilas. La ekecheiría no implicaba una paz general ni frenaba las guerras en toda Grecia.",
+    "q": "¿Detenía la tregua olímpica las guerras de Grecia?",
+    "o": [
+     "No, protegía Élide, el santuario y a los peregrinos",
+     "Sí, en toda Grecia",
+     "Sí, pero solo en el Peloponeso",
+     "Solo las guerras contra Persia"
+    ]
+   },
+   "en": {
+    "d": "480 BC",
+    "t": "An Olympiad during Xerxes's invasion",
+    "x": "The 75th Olympiad was held while Leonidas held out at Thermopylae. The ekecheiria implied no general peace and did not halt wars throughout Greece.",
+    "q": "Did the Olympic truce stop the wars of Greece?",
+    "o": [
+     "No, it protected Elis, the sanctuary and the pilgrims",
+     "Yes, throughout Greece",
+     "Yes, but only in the Peloponnese",
+     "Only wars against Persia"
+    ]
+   }
+  },
+  {
+   "id": "gre-esparta",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -420,
+   "sl": 40,
+   "s": "",
+   "es": {
+    "d": "420 a. C.",
+    "t": "Esparta, multada y excluida",
+    "x": "Durante la Guerra del Peloponeso, Élide multó a Esparta con 200.000 dracmas, 200 por soldado, por enviar tropas a Lepreo durante la tregua. Los espartanos no pagaron y fueron excluidos de esa edición.",
+    "q": "¿Por qué fue multada Esparta en 420 a. C.?",
+    "o": [
+     "Por enviar tropas durante la tregua",
+     "Por sobornar a los jueces",
+     "Por inscribir a mujeres",
+     "Por llegar tarde a Élide"
+    ]
+   },
+   "en": {
+    "d": "420 BC",
+    "t": "Sparta fined and excluded",
+    "x": "During the Peloponnesian War, Elis fined Sparta 200,000 drachmas, 200 per soldier, for sending troops to Lepreon during the truce. The Spartans did not pay and were excluded from that edition.",
+    "q": "Why was Sparta fined in 420 BC?",
+    "o": [
+     "For sending troops during the truce",
+     "For bribing the judges",
+     "For entering women",
+     "For arriving late at Elis"
+    ]
+   }
+  },
+  {
+   "id": "gre-cinisca",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -396,
+   "sl": 94,
+   "s": "",
+   "es": {
+    "d": "396 a. C.",
+    "t": "Cinisca gana la cuadriga",
+    "x": "En las pruebas hípicas la corona era para el dueño de las monturas, de modo que hubo campeonas olímpicas aunque las mujeres tenían vetado el acceso a Olimpia.",
+    "q": "¿Por qué pudo vencer Cinisca?",
+    "o": [
+     "Porque la corona era para el dueño de los caballos",
+     "Porque condujo el carro",
+     "Porque se disfrazó",
+     "Porque era sacerdotisa"
+    ]
+   },
+   "en": {
+    "d": "396 BC",
+    "t": "Kyniska wins the four-horse chariot race",
+    "x": "In the equestrian events the wreath went to the owner of the horses, so there were female Olympic champions although women were barred from Olympia.",
+    "q": "Why could Kyniska win?",
+    "o": [
+     "Because the wreath went to the owner of the horses",
+     "Because she drove the chariot",
+     "Because she was in disguise",
+     "Because she was a priestess"
+    ]
+   }
+  },
+  {
+   "id": "gre-zanes",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -388,
+   "sl": 104,
+   "s": "",
+   "es": {
+    "d": "388 a. C.",
+    "t": "Los primeros zanes",
+    "x": "Seis estatuas de Zeus pagadas con las multas a un púgil que compró a sus rivales y a los tres que aceptaron su dinero. Llevaban el nombre del infractor en el pedestal.",
+    "q": "¿Con qué se pagaron los primeros zanes?",
+    "o": [
+     "Con las multas por soborno",
+     "Con el botín de una guerra",
+     "Con donativos de Esparta",
+     "Con el tesoro de Zeus"
+    ]
+   },
+   "en": {
+    "d": "388 BC",
+    "t": "The first Zanes",
+    "x": "Six statues of Zeus paid for with the fines of a boxer who bought his rivals and of the three who took his money. They bore the offender's name on the pedestal.",
+    "q": "What paid for the first Zanes?",
+    "o": [
+     "With fines for bribery",
+     "With war booty",
+     "With donations from Sparta",
+     "With the treasury of Zeus"
+    ]
+   }
+  },
+  {
+   "id": "gre-anolimpiada",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -364,
+   "sl": 40,
+   "s": "",
+   "es": {
+    "d": "364 a. C.",
+    "t": "Batalla en el Altis: la anolimpiada",
+    "x": "Durante el pentatlón de la 104.ª Olimpiada, arcadios y eleos combatieron en el recinto sagrado. Al recuperar la administración, Élide registró la edición como «no-olimpiada», aunque respetó los triunfos individuales.",
+    "q": "¿Cómo registró Élide la edición de 364 a. C.?",
+    "o": [
+     "Como anolimpiada",
+     "Como la mejor de su historia",
+     "Como olimpiada espartana",
+     "No la registró en absoluto"
+    ]
+   },
+   "en": {
+    "d": "364 BC",
+    "t": "Battle in the Altis: the anolympiad",
+    "x": "During the pentathlon of the 104th Olympiad, Arcadians and Eleans fought in the sacred precinct. On regaining control, Elis recorded the edition as a 'non-Olympiad', although it respected the individual victories.",
+    "q": "How did Elis record the edition of 364 BC?",
+    "o": [
+     "As an anolympiad",
+     "As the best in its history",
+     "As a Spartan Olympiad",
+     "It did not record it at all"
+    ]
+   }
+  },
+  {
+   "id": "gre-queronea",
+   "tema": 3,
+   "civ": "gre",
+   "k": "h",
+   "y": -338,
+   "sl": 29,
+   "s": "",
+   "es": {
+    "d": "338 a. C.",
+    "t": "Batalla de Queronea",
+    "x": "Filipo II de Macedonia vence y termina el dominio de Atenas y Esparta. De la época clásica procede la mayoría de los testimonios sobre atletas y gimnasios, incluso sobre siglos anteriores, y hay que leerlos con cuidado.",
+    "q": "¿Quién venció en Queronea?",
+    "o": [
+     "Filipo II de Macedonia",
+     "Jerjes",
+     "Leónidas",
+     "Alejandro de Élide"
+    ]
+   },
+   "en": {
+    "d": "338 BC",
+    "t": "Battle of Chaeronea",
+    "x": "Philip II of Macedon wins and the dominance of Athens and Sparta ends. Most of the evidence on athletes and gymnasia, even about earlier centuries, comes from the Classical period and must be read with care.",
+    "q": "Who won at Chaeronea?",
+    "o": [
+     "Philip II of Macedon",
+     "Xerxes",
+     "Leonidas",
+     "Alexander of Elis"
+    ]
+   }
+  },
+  {
+   "id": "gre-corinto",
+   "tema": 3,
+   "civ": "gre",
+   "k": "h",
+   "y": -146,
+   "sl": 29,
+   "s": "",
+   "es": {
+    "d": "146 a. C.",
+    "t": "Grecia queda bajo el dominio de Roma",
+    "x": "Tras perder la batalla de Corinto, Grecia pasa a depender de Roma, y Olimpia de sus generales y, más tarde, de sus emperadores.",
+    "q": "¿De quién dependió Olimpia desde 146 a. C.?",
+    "o": [
+     "De los generales y emperadores romanos",
+     "De Esparta",
+     "De Macedonia",
+     "De Atenas"
+    ]
+   },
+   "en": {
+    "d": "146 BC",
+    "t": "Greece falls under Roman rule",
+    "x": "After losing the battle of Corinth, Greece comes to depend on Rome, and Olympia on its generals and, later, its emperors.",
+    "q": "On whom did Olympia depend from 146 BC?",
+    "o": [
+     "Roman generals and emperors",
+     "Sparta",
+     "Macedon",
+     "Athens"
+    ]
+   }
+  },
+  {
+   "id": "gre-neron",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": 67,
+   "sl": 108,
+   "s": "",
+   "es": {
+    "d": "67 d. C.",
+    "t": "Nerón compite en Olimpia",
+    "x": "Hizo aplazar dos años la Olimpiada, añadió el carro de diez caballos y concursos de tragedia y música, se cayó del carro y fue proclamado vencedor tras pagar a los jueces. Tras su muerte, Élide borró aquella Olimpiada.",
+    "q": "¿Qué revela el episodio de Nerón?",
+    "o": [
+     "Que el agón se había convertido en exhibición del poder del emperador",
+     "Que Roma respetaba las reglas griegas",
+     "Que el pancracio era la prueba favorita",
+     "Que los jueces eran incorruptibles"
+    ]
+   },
+   "en": {
+    "d": "AD 67",
+    "t": "Nero competes at Olympia",
+    "x": "He had the Olympiad postponed two years, added the ten-horse chariot race and contests in tragedy and music, fell from the chariot and was proclaimed victor after paying the judges. After his death, Elis struck that Olympiad from the record.",
+    "q": "What does the Nero episode reveal?",
+    "o": [
+     "That the agon had become a display of the emperor's power",
+     "That Rome respected Greek rules",
+     "That the pankration was the favourite event",
+     "That the judges were incorruptible"
+    ]
+   }
+  },
+  {
+   "id": "gre-ninfeo",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": 150,
+   "sl": 107,
+   "s": "",
+   "es": {
+    "d": "h. 150 d. C.",
+    "t": "Ninfeo de Herodes Ático",
+    "x": "El benefactor griego costeó un acueducto con su fuente monumental para el santuario. Hacia 170, mientras declinaba el deporte, Olimpia vivió su máximo apogeo arquitectónico.",
+    "q": "¿Qué costeó Herodes Ático en Olimpia?",
+    "o": [
+     "Un acueducto con una fuente monumental",
+     "El primer estadio",
+     "Los zanes",
+     "El templo de Hera"
+    ]
+   },
+   "en": {
+    "d": "c. AD 150",
+    "t": "Nymphaeum of Herodes Atticus",
+    "x": "The Greek benefactor paid for an aqueduct with its monumental fountain for the sanctuary. By c. 170, while sport declined, Olympia reached its architectural peak.",
+    "q": "What did Herodes Atticus pay for at Olympia?",
+    "o": [
+     "An aqueduct with a monumental fountain",
+     "The first stadium",
+     "The Zanes",
+     "The temple of Hera"
+    ]
+   }
+  },
+  {
+   "id": "gre-393",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": 393,
+   "sl": 109,
+   "s": "",
+   "es": {
+    "d": "393 d. C.",
+    "t": "La ley de Teodosio I contra los cultos paganos",
+    "x": "Durante más de un siglo se fechó en ella el final de los Juegos. Remijsen (2015) comprobó que no los menciona y que el vínculo lo estableció un cronista del siglo XI; en 399 un poeta de la corte aún esperaba ver a los vencedores de Olimpia.",
+    "q": "¿Menciona la ley de 393 los Juegos Olímpicos?",
+    "o": [
+     "No",
+     "Sí, los prohíbe expresamente",
+     "Sí, los traslada a Roma",
+     "Sí, los reduce a un día"
+    ]
+   },
+   "en": {
+    "d": "AD 393",
+    "t": "Theodosius I's law against pagan cults",
+    "x": "For more than a century the end of the Games was dated to it. Remijsen (2015) showed that it does not mention them and that the link was made by an 11th-century chronicler; in 399 a court poet still hoped to see the Olympic victors.",
+    "q": "Does the law of 393 mention the Olympic Games?",
+    "o": [
+     "No",
+     "Yes, it expressly bans them",
+     "Yes, it moves them to Rome",
+     "Yes, it reduces them to one day"
+    ]
+   }
+  },
+  {
+   "id": "gre-435",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": 435,
+   "sl": 109,
+   "s": "",
+   "es": {
+    "d": "435 d. C.",
+    "t": "Constitución de Teodosio II contra los templos",
+    "x": "Según Arrechea et al. (2019), pudo desencadenar el incendio del templo de Zeus, y tras ello los Juegos no volvieron a celebrarse en Olimpia. Hacia 420-440 la estatua de Zeus se había llevado a Constantinopla.",
+    "q": "¿Qué pudo desencadenar la constitución de 435?",
+    "o": [
+     "El incendio del templo de Zeus",
+     "La restauración de los Juegos",
+     "La fundación de Élide",
+     "La llegada de Nerón"
+    ]
+   },
+   "en": {
+    "d": "AD 435",
+    "t": "Constitution of Theodosius II against the temples",
+    "x": "According to Arrechea et al. (2019), it may have triggered the fire that destroyed the temple of Zeus, after which the Games were no longer held at Olympia. C. 420-440 the statue of Zeus had been taken to Constantinople.",
+    "q": "What may the constitution of 435 have triggered?",
+    "o": [
+     "The fire at the temple of Zeus",
+     "The restoration of the Games",
+     "The foundation of Elis",
+     "Nero's arrival"
+    ]
+   }
+  }
+ ]
+}

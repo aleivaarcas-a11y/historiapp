@@ -1,0 +1,409 @@
+{
+ "tesis": {
+  "es": "De Creta a Olimpia el deporte cambia de dueño y de función: en Creta lo exhibe la élite del palacio, en Micenas lo paga el señor y en Grecia se convierte en certamen abierto a todo griego libre, aunque reservado en la práctica a quien tenía tiempo y dinero.",
+  "en": "From Crete to Olympia sport changes owner and function: in Crete the palace elite displays it, in Mycenae the lord pays for it and in Greece it becomes a contest open to every free Greek, though reserved in practice for those with time and money."
+ },
+ "ramas": [
+  {
+   "code": "3.1",
+   "t": {
+    "es": "El deporte en Creta y Micenas",
+    "en": "Sport in Crete and Mycenae"
+   },
+   "idea": {
+    "es": "Sin textos, el deporte minoico solo se conoce por imágenes encargadas por la élite de los palacios; con la caída de estos, el deporte pasa a girar en torno a los jefes y sus funerales.",
+    "en": "Without texts, Minoan sport is known only through images commissioned by the palace elite; when the palaces fell, sport came to revolve around chieftains and their funerals."
+   },
+   "nodos": [
+    {
+     "t": {
+      "es": "Fuentes, palacio y sociedad",
+      "en": "Sources, palace and society"
+     },
+     "d": {
+      "es": "Ninguna de las tres escrituras cretenses registró un evento deportivo; el palacio era residencia, almacén y centro religioso, y el deporte exhibía el prestigio de la élite.",
+      "en": "None of the three Cretan scripts recorded a sporting event; the palace was residence, storehouse and religious centre, and sport displayed the prestige of the elite."
+     },
+     "f": "actividades-fisico-deportivas-de-los-cre",
+     "sec": "3.1",
+     "fs": [
+      "introduccion-historica",
+      "sociedad-poder-y-economia",
+      "actividades-fisico-deportivas-de-los-cre"
+     ]
+    },
+    {
+     "t": {
+      "es": "La mujer minoica",
+      "en": "Minoan women"
+     },
+     "d": {
+      "es": "Las mujeres aparecen con una visibilidad pública notable, como espectadoras de honor y en ritos como la danza de la arboleda sagrada.",
+      "en": "Women appear with notable public visibility, as honoured spectators and in rites such as the dance in the sacred grove."
+     },
+     "f": "la-mujer-minoica",
+     "sec": "3.1"
+    },
+    {
+     "t": {
+      "es": "El pugilato",
+      "en": "Boxing"
+     },
+     "d": {
+      "es": "Los niños de Akrotiri aprenden jugando a dominarse; los adultos del ritón de Hagia Triada combaten con reglas en un contexto de iniciación militarizada.",
+      "en": "The Akrotiri boys learn self-control through play; the adults on the Hagia Triada rhyton fight with rules in a context of militarised initiation."
+     },
+     "f": "pugilato",
+     "sec": "3.1",
+     "fs": [
+      "un-deporte-dos-combates-dos-edades-mismo",
+      "pugilato",
+      "el-riton-de-los-boxeadores"
+     ]
+    },
+    {
+     "t": {
+      "es": "El salto del toro",
+      "en": "Bull-leaping"
+     },
+     "d": {
+      "es": "La taurocatapsia, salto sobre un toro vivo, es la práctica más representada del arte minoico y el emblema del palacio de Cnoso.",
+      "en": "Bull-leaping, a leap over a live bull, is the most frequently depicted practice in Minoan art and the emblem of the palace of Knossos."
+     },
+     "f": "salto-del-toro",
+     "sec": "3.1",
+     "fs": [
+      "quien-salta",
+      "salto-del-toro",
+      "quienes-saltaban-y-como",
+      "el-salto-en-picado",
+      "el-toro-de-la-captura-al-salto",
+      "que-significaba-el-salto-del-toro"
+     ]
+    },
+    {
+     "t": {
+      "es": "Espacios y fin de la Creta palacial",
+      "en": "Spaces and the end of palatial Crete"
+     },
+     "d": {
+      "es": "Patios, gradas y la Vía Real acogían un deporte de vocación pública; la toma micénica de Cnoso hacia 1450 a. C. y su incendio hacia 1375 a. C. cierran la etapa.",
+      "en": "Courts, stepped areas and the Royal Road housed a sport meant for the public; the Mycenaean seizure of Knossos c. 1450 BC and its burning c. 1375 BC close the period."
+     },
+     "f": "espacios-ludico-deportivos",
+     "sec": "3.1",
+     "fs": [
+      "espacios-ludico-deportivos",
+      "el-fin-de-la-creta-minoica",
+      "el-relevo-del-deporte-de-egipto-a-creta"
+     ]
+    },
+    {
+     "t": {
+      "es": "Micenas, la Edad Oscura y Homero",
+      "en": "Mycenae, the Dark Age and Homer"
+     },
+     "d": {
+      "es": "El señor micénico se reserva el carro y la caza y paga a los púgiles; tras la caída de los palacios, el deporte gira en torno a los basileis y sus funerales.",
+      "en": "The Mycenaean lord keeps the chariot and the hunt and pays the boxers; after the fall of the palaces, sport revolves around the basileis and their funerals."
+     },
+     "f": "micenas-y-la-edad-oscura",
+     "sec": "3.1",
+     "fs": [
+      "micenas-y-la-edad-oscura",
+      "los-juegos-funebres-de-patroclo",
+      "el-relevo-del-deporte-de-creta-a-olimpia"
+     ]
+    }
+   ]
+  },
+  {
+   "code": "3.2",
+   "t": {
+    "es": "Las poleis y el origen de Olimpia",
+    "en": "The poleis and the origin of Olympia"
+   },
+   "idea": {
+    "es": "Grecia nunca fue un Estado unificado; Olimpia, santuario de Zeus gobernado por Élide, nace del rito y solo después se convierte en certamen.",
+    "en": "Greece was never a unified state; Olympia, a sanctuary of Zeus governed by Elis, grew out of ritual and only later became a contest."
+   },
+   "nodos": [
+    {
+     "t": {
+      "es": "Poleis, periodos y sociedad",
+      "en": "Poleis, periods and society"
+     },
+     "d": {
+      "es": "Hacer deporte exigía tiempo libre y dinero, de modo que el acceso dependía del grupo social y del régimen de cada polis.",
+      "en": "Doing sport required free time and money, so access depended on social group and on the regime of each polis."
+     },
+     "f": "la-sociedad-griega",
+     "sec": "3.2.1",
+     "fs": [
+      "introduccion-historica-de-grecia",
+      "introduccion-historica-los-periodos",
+      "la-sociedad-griega",
+      "la-politica-de-las-poleis"
+     ]
+    },
+    {
+     "t": {
+      "es": "Relatos de fundación y tregua",
+      "en": "Foundation stories and truce"
+     },
+     "d": {
+      "es": "Élide y Pisa defendieron fundadores distintos; la tregua sagrada protegía el santuario y a los peregrinos, sin detener las guerras de Grecia.",
+      "en": "Elis and Pisa championed different founders; the sacred truce protected the sanctuary and the pilgrims without halting the wars of Greece."
+     },
+     "f": "la-tregua-sagrada",
+     "sec": "3.2.2",
+     "fs": [
+      "origenes-del-olimpismo",
+      "los-relatos-de-fundacion",
+      "la-tregua-sagrada",
+      "las-violaciones-de-la-tregua-sagrada"
+     ]
+    },
+    {
+     "t": {
+      "es": "Lo que dice la arqueología",
+      "en": "What archaeology says"
+     },
+     "d": {
+      "es": "Primero fue el rito, después la distinción de las élites que ofrecían trípodes y al final el certamen atlético.",
+      "en": "First came the rite, then the distinction of the elites who offered tripods and finally the athletic contest."
+     },
+     "f": "lo-que-dicen-la-historia-y-la-arqueologi",
+     "sec": "3.2.2",
+     "fs": [
+      "lo-que-dicen-la-historia-y-la-arqueologi",
+      "olimpia-antes-de-los-juegos",
+      "de-donde-salieron-los-juegos",
+      "corebo-de-elide-el-primer-vencedor"
+     ]
+    }
+   ]
+  },
+  {
+   "code": "3.2.3",
+   "t": {
+    "es": "El atleta y la organización de los Juegos",
+    "en": "The athlete and the organisation of the Games"
+   },
+   "idea": {
+    "es": "Competir era una decisión privada y cara; Élide organizaba los Juegos y los valores aristocráticos daban sentido a la victoria.",
+    "en": "Competing was a private and costly decision; Elis organised the Games and aristocratic values gave meaning to victory."
+   },
+   "nodos": [
+    {
+     "t": {
+      "es": "Quién competía y cómo entrenaba",
+      "en": "Who competed and how he trained"
+     },
+     "d": {
+      "es": "Cada atleta acudía por iniciativa propia y costeaba entrenador, dieta, viaje y estancia; entrenaba en palestras y gimnasios con sus propios ciclos.",
+      "en": "Each athlete went on his own initiative and paid for coach, diet, travel and stay; he trained in palaestrae and gymnasia with their own cycles."
+     },
+     "f": "quien-podia-competir-en-los-juegos",
+     "sec": "3.2.3",
+     "fs": [
+      "quien-podia-competir-en-los-juegos",
+      "el-entrenamiento",
+      "palestras-y-gimnasios",
+      "quien-entraba-en-el-gimnasio",
+      "la-alimentacion"
+     ]
+    },
+    {
+     "t": {
+      "es": "Élide organiza los Juegos",
+      "en": "Elis organises the Games"
+     },
+     "d": {
+      "es": "Élide administraba el santuario, convocaba los Juegos cada cuatro años y vigilaba durante un mes a los aspirantes.",
+      "en": "Elis administered the sanctuary, called the Games every four years and watched over the candidates for a month."
+     },
+     "f": "la-concentracion-en-elide",
+     "sec": "3.2.4",
+     "fs": [
+      "el-circuito-panhelenico",
+      "niveles-de-direccion-en-olimpia",
+      "quien-gobernaba-olimpia",
+      "el-calendario-de-los-juegos",
+      "la-concentracion-en-elide"
+     ]
+    },
+    {
+     "t": {
+      "es": "Desnudez, valores y premios",
+      "en": "Nudity, values and prizes"
+     },
+     "d": {
+      "es": "La desnudez marcó al griego frente al bárbaro; la victoria daba kléos y, aunque Olimpia solo premiaba con olivo, a la vuelta llegaban las recompensas.",
+      "en": "Nudity marked the Greek off from the barbarian; victory brought kleos and, although Olympia gave only olive, rewards came on the return home."
+     },
+     "f": "significado-de-la-victoria",
+     "sec": "3.2.4",
+     "fs": [
+      "con-tunica-o-desnudos-que-cambio",
+      "desnudos-en-el-estadio",
+      "valores-asociados-al-olimpismo",
+      "cuanto-vale-una-corona-de-olivo",
+      "significado-de-la-victoria",
+      "lo-que-valia-ganar"
+     ]
+    }
+   ]
+  },
+  {
+   "code": "3.2.5",
+   "t": {
+    "es": "Las pruebas deportivas",
+    "en": "The sporting events"
+   },
+   "idea": {
+    "es": "El programa creció desde una sola carrera en 776 a. C.; con la hípica llegó la aristocracia y Olimpia acabó siendo un coto de las élites.",
+    "en": "The programme grew from a single race in 776 BC; with the equestrian events came the aristocracy, and Olympia became a preserve of the elites."
+   },
+   "nodos": [
+    {
+     "t": {
+      "es": "El estadio y las carreras",
+      "en": "The stadium and the races"
+     },
+     "d": {
+      "es": "El stádion medía 192,27 m en Olimpia; a la carrera del estadio se sumaron el díaulos, el dólico y la carrera de hoplitas.",
+      "en": "The stadion measured 192.27 m at Olympia; the stadion race was joined by the diaulos, the dolichos and the hoplite race."
+     },
+     "f": "la-carrera-del-estadio",
+     "sec": "3.2.5",
+     "fs": [
+      "las-pruebas-de-olimpia",
+      "el-estadio-de-olimpia",
+      "la-salida",
+      "la-carrera-del-estadio",
+      "el-diaulos",
+      "el-dolico",
+      "la-carrera-de-hoplitas",
+      "cuadro-resumen-carreras"
+     ]
+    },
+    {
+     "t": {
+      "es": "El pentatlón",
+      "en": "The pentathlon"
+     },
+     "d": {
+      "es": "Salto, jabalina, estadio, disco y lucha: tres victorias daban el triunfo y la lucha cerraba siempre la prueba.",
+      "en": "Jump, javelin, stadion, discus and wrestling: three wins gave victory and wrestling always closed the event."
+     },
+     "f": "el-pentatlon",
+     "sec": "3.2.5",
+     "fs": [
+      "el-pentatlon",
+      "como-se-ganaba-el-pentatlon",
+      "el-salto",
+      "la-jabalina",
+      "el-disco"
+     ]
+    },
+    {
+     "t": {
+      "es": "Los deportes de combate",
+      "en": "Combat sports"
+     },
+     "d": {
+      "es": "Lucha, pugilato y pancracio, sin asaltos ni categorías de peso, hasta la incapacidad o el índice levantado.",
+      "en": "Wrestling, boxing and pankration, with no rounds or weight classes, until incapacity or the raised index finger."
+     },
+     "f": "deportes-de-combate",
+     "sec": "3.2.5",
+     "fs": [
+      "deportes-de-combate",
+      "la-lucha",
+      "el-pugilato",
+      "el-pancracio",
+      "cuadro-resumen-deportes-de-combate"
+     ]
+    },
+    {
+     "t": {
+      "es": "La hípica",
+      "en": "Equestrian events"
+     },
+     "d": {
+      "es": "La prueba de mayor prestigio, reservada a quien podía pagar caballos y carros; la corona era para el dueño.",
+      "en": "The most prestigious contest, reserved for those who could pay for horses and chariots; the wreath went to the owner."
+     },
+     "f": "la-hipica",
+     "sec": "3.2.5",
+     "fs": [
+      "la-hipica",
+      "duenos-y-aurigas",
+      "carros-y-caballos"
+     ]
+    }
+   ]
+  },
+  {
+   "code": "3.2.6",
+   "t": {
+    "es": "Mujeres, sanciones y fin del olimpismo",
+    "en": "Women, sanctions and the end of the Games"
+   },
+   "idea": {
+    "es": "La frontera del deporte femenino fue el matrimonio; los fraudes se castigaban en público, y los Juegos se apagaron cuando las élites dejaron de costearlos.",
+    "en": "The boundary of women's sport was marriage; fraud was punished in public, and the Games faded when the elites stopped funding them."
+   },
+   "nodos": [
+    {
+     "t": {
+      "es": "La mujer y Olimpia",
+      "en": "Women and Olympia"
+     },
+     "d": {
+      "es": "La mujer casada tenía vetado el festival; las solteras corrían en los Juegos Hereos y Esparta fue la excepción.",
+      "en": "Married women were barred from the festival; unmarried girls ran in the Heraia and Sparta was the exception."
+     },
+     "f": "la-prohibicion-de-olimpia",
+     "sec": "3.2.6",
+     "fs": [
+      "la-mujer-en-la-polis",
+      "la-prohibicion-de-olimpia",
+      "resumen-donde-podia-estar-una-mujer-en-o"
+     ]
+    },
+    {
+     "t": {
+      "es": "Sanciones y malas praxis",
+      "en": "Sanctions and malpractice"
+     },
+     "d": {
+      "es": "Azotes, expulsión y multas; con las multas se levantaban los zanes, estatuas de Zeus con el nombre del infractor.",
+      "en": "Flogging, expulsion and fines; the fines paid for the Zanes, statues of Zeus bearing the offender's name."
+     },
+     "f": "sanciones-y-malas-praxis",
+     "sec": "3.2.6"
+    },
+    {
+     "t": {
+      "es": "Del rito al espectáculo y el final",
+      "en": "From ritual to spectacle and the end"
+     },
+     "d": {
+      "es": "Profesionales, fraudes y gusto por la violencia; bajo Roma, Olimpia vivió su apogeo arquitectónico y los Juegos se apagaron en el siglo V.",
+      "en": "Professionals, fraud and a taste for violence; under Rome, Olympia reached its architectural peak and the Games faded in the fifth century."
+     },
+     "f": "cual-fue-la-ultima-edicion-de-los-juegos",
+     "sec": "3.2.7",
+     "fs": [
+      "del-rito-al-espectaculo",
+      "olimpia-bajo-roma",
+      "neron-en-olimpia",
+      "cual-fue-la-ultima-edicion-de-los-juegos"
+     ]
+    }
+   ]
+  }
+ ]
+}

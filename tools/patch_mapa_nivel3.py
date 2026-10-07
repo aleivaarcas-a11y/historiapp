@@ -4,7 +4,7 @@ Añade el campo x (lista de {k,v} en es/en) a los nodos de data/temaNN.json y to
 y el código que lo muestra en index.html. Uso: python3 tools/patch_mapa_nivel3.py"""
 import json, os
 R = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
-X = {1: json.load(open(os.path.join(R, 'tools', 'mapa_x_tema01.json'))), 2: json.load(open(os.path.join(R, 'tools', 'mapa_x_tema02.json')))}
+X = {n: json.load(open(os.path.join(R, "tools", f"mapa_x_tema{n:02d}.json"))) for n in (1, 2, 3)}
 def add(mapa, x):
     for r in mapa['ramas']:
         for i, n in enumerate(r['nodos']):

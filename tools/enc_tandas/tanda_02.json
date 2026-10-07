@@ -378,17 +378,26 @@
   },
   "body": {
    "es": [
-    "El pentatlón moderno toma su nombre y su idea del pentatlón de los Juegos Olímpicos antiguos, introducido en el año 708 a. C. y formado por la carrera del estadio, el salto, el lanzamiento de jabalina, el de disco y la lucha, cuyo vencedor recibía el título de *Victor Ludorum* (UIPM, s. f.). La forma en que se determinaba el ganador de aquella prueba sigue sin aclararse, y los historiadores solo coinciden en que la lucha cerraba la competición (Guttmann, 2004, p. 21). Pierre de Coubertin, fundador de los Juegos modernos, admiraba ese modelo de deportista completo y promovió una versión actualizada que pusiera a prueba tanto las cualidades morales como los recursos físicos y técnicos del competidor (UIPM, s. f.).",
+    "El pentatlón moderno toma su nombre y su idea del pentatlón de los Juegos Olímpicos antiguos, introducido en el año 708 a. C. y formado por el salto, la jabalina, el estadio, el disco y la lucha (UIPM, s. f.). La forma en que se determinaba el ganador de aquella prueba sigue sin aclararse, y los historiadores solo coinciden en que la lucha cerraba la competición (Guttmann, 2004, p. 21). Pierre de Coubertin, fundador de los Juegos modernos, admiraba ese modelo de deportista completo y promovió una versión actualizada que pusiera a prueba tanto las cualidades morales como los recursos físicos y técnicos del competidor (UIPM, s. f.).",
     "La nueva prueba debutó en los Juegos de Estocolmo de 1912 con cinco disciplinas, tiro con pistola, esgrima, natación, equitación y carrera a pie, cuya combinación respondía a la figura de un soldado que debía actuar tras las líneas enemigas con recursos muy diversos (UIPM, s. f.). El participante más recordado de aquella primera edición es el estadounidense George S. Patton, futuro general, que terminó quinto (UIPM, s. f.). Algún manual hace derivar el pentatlón moderno de las patrullas militares noruegas del siglo XIX, antecedente del biatlón, relación que la federación internacional no recoge (Fernández Truan, s. f., p. 405).",
     "La Unión Internacional de Pentatlón Moderno (UIPM) se fundó en Londres el 3 de agosto de 1948. Durante décadas fue un deporte exclusivamente masculino; el primer campeonato del mundo femenino se celebró en 1981 y las mujeres entraron en el programa olímpico en Sídney 2000 (UIPM, s. f.). Para conservar su lugar en los Juegos, la federación redujo la competición a una sola jornada en Atlanta 1996 y sustituyó la pistola de aire por la de láser entre 2009 y 2012. En 2023 el COI confirmó el deporte rediseñado para Los Ángeles 2028, y en 2024 la equitación, vínculo directo con el origen militar de la prueba, dio paso a una disciplina de obstáculos (UIPM, s. f.)."
    ],
    "en": [
-    "Modern pentathlon takes its name and its idea from the pentathlon of the ancient Olympic Games, introduced in 708 BCE and made up of the stadium race, jumping, the javelin, the discus and wrestling, whose winner received the title *Victor Ludorum* (UIPM, n.d.). How the winner of that event was determined remains unclear, and historians agree only that wrestling was the last event (Guttmann, 2004, p. 21). Pierre de Coubertin, founder of the modern Games, admired this model of the complete athlete and promoted an updated version that would test the competitor's moral qualities as much as his physical resources and skills (UIPM, n.d.).",
+    "Modern pentathlon takes its name and its idea from the pentathlon of the ancient Olympic Games, introduced in 708 BCE and made up of the jump, the javelin, the stadion race, the discus and wrestling (UIPM, n.d.). How the winner of that event was determined remains unclear, and historians agree only that wrestling was the last event (Guttmann, 2004, p. 21). Pierre de Coubertin, founder of the modern Games, admired this model of the complete athlete and promoted an updated version that would test the competitor's moral qualities as much as his physical resources and skills (UIPM, n.d.).",
     "The new event made its debut at the Stockholm Games of 1912 with five disciplines, pistol shooting, fencing, swimming, riding and running, a combination that corresponded to the figure of a soldier who had to act behind enemy lines with very diverse resources (UIPM, n.d.). The best remembered participant of that first edition is the American George S. Patton, later a general, who finished fifth (UIPM, n.d.). One textbook derives modern pentathlon from the nineteenth-century Norwegian military patrols, forerunners of biathlon, a link that the international federation does not mention (Fernández Truan, n.d., p. 405).",
     "The Union Internationale de Pentathlon Moderne (UIPM) was founded in London on 3 August 1948. For decades it was an exclusively male sport; the first women's world championships were held in 1981 and women entered the Olympic programme at Sydney 2000 (UIPM, n.d.). To keep its place in the Games, the federation reduced the competition to a single day at Atlanta 1996 and replaced the air pistol with the laser pistol between 2009 and 2012. In 2023 the IOC confirmed the redesigned sport for Los Angeles 2028, and in 2024 riding, a direct link with the military origin of the event, gave way to an obstacle discipline (UIPM, n.d.)."
    ]
   },
-  "tema": [],
+  "tema": [
+   {
+    "num": 3,
+    "f": "el-pentatlon",
+    "t": {
+     "es": "El pentatlón",
+     "en": "The pentathlon"
+    }
+   }
+  ],
   "img": {
    "src": "img/enc/pentatlon-moderno.jpg",
    "pie": {

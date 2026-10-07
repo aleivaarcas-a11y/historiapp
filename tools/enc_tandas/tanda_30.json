@@ -34,6 +34,22 @@
      "es": "El carro y los caballos",
      "en": "The chariot and the horses"
     }
+   },
+   {
+    "num": 3,
+    "f": "carros-y-caballos",
+    "t": {
+     "es": "Carros y caballos",
+     "en": "Chariots and horses"
+    }
+   },
+   {
+    "num": 3,
+    "f": "los-juegos-funebres-de-patroclo",
+    "t": {
+     "es": "Los juegos fúnebres de Patroclo",
+     "en": "The funeral games of Patroclus"
+    }
    }
   ],
   "img": {
@@ -125,22 +141,39 @@
   },
   "tipo": "completa",
   "cuando": {
-   "es": "Creta minoica, sobre todo Cnoso, hacia 1600-1400 a. C., con precedentes en sellos del Próximo Oriente del siglo XVII a. C.",
-   "en": "Minoan Crete, above all Knossos, c. 1600-1400 BC, with precedents on Near Eastern seals of the 17th century BC"
+   "es": "Creta minoica, sobre todo Cnoso, hacia 1750-1450 a. C., con precedentes en sellos del Próximo Oriente del siglo XVII a. C.",
+   "en": "Minoan Crete, above all Knossos, c. 1750-1450 BC, with precedents on Near Eastern seals of the 17th century BC"
   },
   "body": {
    "es": [
-    "El salto del toro o taurocatapsia es la práctica más representada del arte minoico y aparece en frescos, anillos de oro, sellos, marfiles y bronces, como el grupo del Museo Británico de hacia 1600 a. C. en el que un acróbata voltea sobre la cabeza del animal (Shapland, 2013, p. 195). La mayoría de las imágenes procede de Cnoso y se concentra en un periodo corto (Shapland, 2013, p. 199), con el célebre fresco del palacio, del periodo palacial final, como imagen de referencia (McInerney, 2011, p. 11). La práctica tenía, con todo, precedentes orientales, puesto que en sellos cilíndricos de hacia 1700 a. C. dos acróbatas hacen el pino sobre un mismo toro (Younger, 2021, p. 56) y sellos cananeos del siglo XVII a. C. hallados en Alalakh reflejan que se conocía (McInerney, 2011, p. 13). La imagen viajó también hacia el sur, hasta los frescos de Tell el-Dab'a (Avaris), en el delta del Nilo, de diseño y ejecución cretenses (Shapland, 2013, p. 198).",
+    "El salto del toro o taurocatapsia es la práctica más representada del arte minoico y aparece en frescos, anillos de oro, sellos, marfiles y bronces, como el bronce del Museo Británico, de hacia 1600-1450 a. C., en el que un acróbata voltea sobre la cabeza del animal (Shapland, 2013, p. 195). La mayoría de las imágenes procede de Cnoso y se concentra en un periodo corto (Shapland, 2013, p. 199), con el célebre fresco del palacio, del periodo palacial final, como imagen de referencia (McInerney, 2011, p. 11). La práctica tenía, con todo, precedentes orientales, puesto que en sellos cilíndricos de hacia 1700 a. C. dos acróbatas hacen el pino sobre un mismo toro (Younger, 2021, p. 56) y sellos cananeos del siglo XVII a. C. hallados en Alalakh reflejan que se conocía (McInerney, 2011, p. 13). La imagen viajó también hacia el sur, hasta los frescos de Tell el-Dab'a (Avaris), en el delta del Nilo, de diseño y ejecución cretenses (Shapland, 2013, p. 198).",
     "Las imágenes muestran a una figura que voltea sobre los cuernos del toro o se apoya en ellos para saltar sobre su lomo, con ayudantes que sujetan al animal (Golden, 2004, p. 29), y un sello presenta a un saltador que se lanza en picado desde una plataforma, semejante a la escalonada del patio central de Festo (Younger, 2021, p. 56). Las figuras de piel blanca de los frescos de Cnoso, color que el arte egeo reservaba a las mujeres, han abierto un debate todavía sin cerrar, dado que llevan el faldellín masculino y no muestran pecho (Younger, 2021, p. 56). Los anillos de oro con escenas de salto servían para que la élite se identificara, mientras que el espectáculo lo presenciaban muchos más (Shapland, 2013, p. 203), y seis de los diez anillos de Cnoso cuyas copias se usaron para sellar en otros lugares de la isla representan el salto (McInerney, 2011, p. 13). El pelaje moteado de los toros indica animales domésticos, menos fieros que el uro (Shapland, 2013, p. 204).",
     "La taurocatapsia no sobrevivió a la Edad del Bronce. En la Grecia continental micénica las escenas de salto son escasas y, salvo en Micenas, casi todos los yacimientos lo representan una sola vez, de modo que los juegos con toros quedaron limitados al Egeo de la Edad del Bronce y, sobre todo, a Creta (Younger, 2021, pp. 56-57). Tampoco hay pruebas de que el salto terminara con el sacrificio del toro (Shapland, 2013, p. 198). Su herencia es sobre todo historiográfica, puesto que Arthur Evans relacionó las escenas halladas en Cnoso con el mito del Minotauro (Shapland, 2013, p. 197) y se han buscado paralelos en la corrida española, en los recortadores y en la *course landaise* del suroeste de Francia, cuyos saltadores esquivan o saltan sobre vacas sin herirlas (McInerney, 2011, pp. 10-11; Shapland, 2013, p. 199). Ambos autores advierten, no obstante, que el contexto social de esas prácticas es muy distinto."
    ],
    "en": [
-    "Bull-leaping or taurokathapsia is the most frequently depicted practice in Minoan art and appears on frescoes, gold rings, seals, ivories and bronzes, such as the British Museum group of about 1600 BC in which an acrobat somersaults over the animal's head (Shapland, 2013, p. 195). Most images come from Knossos and cluster in a short period (Shapland, 2013, p. 199), with the famous palace fresco, of the Final Palace period, as the reference image (McInerney, 2011, p. 11). The practice had eastern precedents, however, since on cylinder seals of about 1700 BC two acrobats perform handstands on the same bull (Younger, 2021, p. 56) and Canaanite seals of the 17th century BC found at Alalakh show that it was known there (McInerney, 2011, p. 13). The image also travelled south, to the frescoes of Tell el-Dab'a (Avaris) in the Nile Delta, Cretan in design and execution (Shapland, 2013, p. 198).",
+    "Bull-leaping or taurokathapsia is the most frequently depicted practice in Minoan art and appears on frescoes, gold rings, seals, ivories and bronzes, such as the British Museum bronze of c. 1600-1450 BC, in which an acrobat somersaults over the animal's head (Shapland, 2013, p. 195). Most images come from Knossos and cluster in a short period (Shapland, 2013, p. 199), with the famous palace fresco, of the Final Palace period, as the reference image (McInerney, 2011, p. 11). The practice had eastern precedents, however, since on cylinder seals of about 1700 BC two acrobats perform handstands on the same bull (Younger, 2021, p. 56) and Canaanite seals of the 17th century BC found at Alalakh show that it was known there (McInerney, 2011, p. 13). The image also travelled south, to the frescoes of Tell el-Dab'a (Avaris) in the Nile Delta, Cretan in design and execution (Shapland, 2013, p. 198).",
     "The images show a figure who somersaults over the bull's horns or uses them to vault over its back, with helpers holding the animal (Golden, 2004, p. 29), and one seal shows a leaper diving from a platform like the stepped one in the central court at Phaistos (Younger, 2021, p. 56). The white-skinned figures of the Knossos frescoes, a colour that Aegean art reserved for women, have opened a debate that is still unresolved, since they wear the male kilt and show no breasts (Younger, 2021, p. 56). Gold rings with leaping scenes served the self-identification of the elite, while the spectacle itself was watched by many more people (Shapland, 2013, p. 203), and six of the ten Knossos rings whose replicas were used for sealing elsewhere on the island depict the leap (McInerney, 2011, p. 13). The piebald coats of the bulls indicate domestic animals, less ferocious than the aurochs (Shapland, 2013, p. 204).",
     "Bull-leaping did not outlive the Bronze Age. On the Mycenaean mainland leaping scenes are scarce and, apart from Mycenae, almost every site depicts it only once, so bull sports remained confined to the Bronze Age Aegean and above all to Crete (Younger, 2021, pp. 56-57). Nor is there evidence that the leap ended with the sacrifice of the bull (Shapland, 2013, p. 198). Its legacy is above all historiographical, since Arthur Evans linked the scenes found at Knossos to the myth of the Minotaur (Shapland, 2013, p. 197) and parallels have been sought in the Spanish bullfight, in the *recortadores* and in the *course landaise* of south-western France, whose leapers dodge or jump over cows without harming them (McInerney, 2011, pp. 10-11; Shapland, 2013, p. 199). Both authors warn, however, that the social context of these practices is very different."
    ]
   },
-  "tema": [],
+  "tema": [
+   {
+    "num": 3,
+    "f": "salto-del-toro",
+    "t": {
+     "es": "Salto del toro",
+     "en": "Bull-leaping"
+    }
+   },
+   {
+    "num": 3,
+    "f": "que-significaba-el-salto-del-toro",
+    "t": {
+     "es": "¿Qué significaba el salto del toro?",
+     "en": "What did bull-leaping mean?"
+    }
+   }
+  ],
   "img": {
    "src": "img/enc/salto-del-toro.jpg",
    "pie": {
@@ -359,15 +392,15 @@
   "img": {
    "src": "img/enc/harpastum.jpg",
    "pie": {
-    "es": "Estela funeraria del niño Gayo Laberio, muerto a los siete años, que sostiene una pelota, procedente de la colonia romana de Tilurium y hoy empotrada en una casa de Sinj (Croacia).",
-    "en": "Funerary stele of the boy Gaius Laberius, who died aged seven, holding a ball, from the Roman colony of Tilurium and now set into a house wall in Sinj (Croatia)."
+    "es": "Fresco romano con jugadores de pelota, identificado a menudo con el *harpastum*.",
+    "en": "Roman fresco with ball players, often identified with *harpastum*."
    },
-   "autor": "Lovrepalos",
+   "autor": "Autor desconocido",
    "licencia": {
-    "es": "CC BY-SA 3.0",
-    "en": "CC BY-SA 3.0"
+    "es": "Dominio público",
+    "en": "Public domain"
    },
-   "url": "https://commons.wikimedia.org/wiki/File:Tombstone_of_Gaius_Laberius_with_harpastum_ball_in_Sinj,_Croatia.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Harpastum_romain.jpg"
   },
   "refs": [
    "Crowther, N. B. (2007). *Sport in ancient times*. Praeger.",

@@ -34,6 +34,14 @@
      "es": "El carro y los caballos",
      "en": "The chariot and the horses"
     }
+   },
+   {
+    "num": 3,
+    "f": "carros-y-caballos",
+    "t": {
+     "es": "Carros y caballos",
+     "en": "Chariots and horses"
+    }
    }
   ],
   "img": {
@@ -398,18 +406,15 @@
   "img": {
    "src": "img/enc/lanzamiento-de-herraduras.jpg",
    "pie": {
-    "es": "Concurso de lanzamiento de herraduras en la jornada deportiva anual de la comunidad de jornaleros agrícolas de la Farm Security Administration en Yuma (Arizona), marzo de 1942.",
-    "en": "Horseshoe pitching contest at the annual field day of the Farm Security Administration farmworkers' community in Yuma (Arizona), March 1942."
+    "es": "Torneo de lanzamiento de herraduras en la fiesta del Día del Trabajo de Sheffield (Vermont), septiembre de 2017.",
+    "en": "Horseshoe pitching tournament at the Labor Day field day in Sheffield, Vermont, September 2017."
    },
-   "autor": {
-    "es": "Russell Lee",
-    "en": "Russell Lee"
-   },
+   "autor": "Artaxerxes",
    "licencia": {
-    "es": "Dominio público",
-    "en": "Public domain"
+    "es": "CC BY-SA 4.0",
+    "en": "CC BY-SA 4.0"
    },
-   "url": "https://commons.wikimedia.org/wiki/File:Horseshoes.jpg"
+   "url": "https://commons.wikimedia.org/wiki/File:Horseshoe_tournament_Sheffield_Field_Day_2017_Sheffield_VT_September_2017.jpg"
   },
   "refs": [
    "National Horseshoe Pitchers Association. (s. f.). *Horseshoe history*. Recuperado el 29 de septiembre de 2026 de https://www.horseshoepitching.com/gameinfo/history.html",

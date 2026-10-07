@@ -1,1 +1,2693 @@
-{"v":1,"civs":[{"id":"egi","name":{"es":"Egipto","en":"Egypt"}},{"id":"per","name":{"es":"Persia","en":"Persia"}},{"id":"fen","name":{"es":"Fenicia","en":"Phoenicia"}}],"eras":[{"tema":2,"civ":"egi","from":-3050,"to":-2663,"n":{"es":"Periodo arcaico","en":"Early Dynastic period"},"f":{"es":"3050-2663 a. C.","en":"3050-2663 BC"},"inter":0},{"tema":2,"civ":"egi","from":-2663,"to":-2195,"n":{"es":"Imperio Antiguo","en":"Old Kingdom"},"f":{"es":"2663-2195 a. C.","en":"2663-2195 BC"},"inter":0},{"tema":2,"civ":"egi","from":-2195,"to":-2066,"n":{"es":"Primer Periodo Intermedio","en":"First Intermediate Period"},"f":{"es":"","en":""},"inter":1},{"tema":2,"civ":"egi","from":-2066,"to":-1650,"n":{"es":"Imperio Medio","en":"Middle Kingdom"},"f":{"es":"2066-1650 a. C.","en":"2066-1650 BC"},"inter":0},{"tema":2,"civ":"egi","from":-1650,"to":-1549,"n":{"es":"Segundo Periodo Intermedio","en":"Second Intermediate Period"},"f":{"es":"","en":""},"inter":1},{"tema":2,"civ":"egi","from":-1549,"to":-1069,"n":{"es":"Imperio Nuevo","en":"New Kingdom"},"f":{"es":"1549-1069 a. C.","en":"1549-1069 BC"},"inter":0},{"tema":2,"civ":"egi","from":-1069,"to":-664,"n":{"es":"Tercer Periodo Intermedio","en":"Third Intermediate Period"},"f":{"es":"1064-664 a. C.","en":"1064-664 BC"},"inter":1},{"tema":2,"civ":"egi","from":-664,"to":-525,"n":{"es":"Época saíta","en":"Saite period"},"f":{"es":"","en":""},"inter":0},{"tema":2,"civ":"egi","from":-525,"to":-332,"n":{"es":"Baja Época","en":"Late Period"},"f":{"es":"","en":""},"inter":0},{"tema":2,"civ":"egi","from":-332,"to":-30,"n":{"es":"Época ptolemaica","en":"Ptolemaic period"},"f":{"es":"332-30 a. C.","en":"332-30 BC"},"inter":0},{"tema":2,"civ":"per","from":-550,"to":-330,"n":{"es":"Aqueménidas","en":"Achaemenids"},"f":{"es":"550-330 a. C.","en":"550-330 BC"},"inter":0},{"tema":2,"civ":"per","from":-330,"to":-247,"n":{"es":"Dominio macedonio","en":"Macedonian rule"},"f":{"es":"","en":""},"inter":1},{"tema":2,"civ":"per","from":-247,"to":224,"n":{"es":"Partos","en":"Parthians"},"f":{"es":"247 a. C.-224 d. C.","en":"247 BC-AD 224"},"inter":0},{"tema":2,"civ":"per","from":224,"to":651,"n":{"es":"Sasánidas","en":"Sasanians"},"f":{"es":"224-651 d. C.","en":"AD 224-651"},"inter":0},{"tema":2,"civ":"per","from":651,"to":1501,"n":{"es":"Persia islámica","en":"Islamic Persia"},"f":{"es":"","en":""},"inter":0},{"tema":2,"civ":"per","from":1501,"to":1736,"n":{"es":"Safávidas","en":"Safavids"},"f":{"es":"1501-1736 d. C.","en":"AD 1501-1736"},"inter":0},{"tema":2,"civ":"fen","from":-1100,"to":-800,"n":{"es":"Fase precolonial","en":"Pre-colonial phase"},"f":{"es":"siglos XI-IX a. C.","en":"11th-9th centuries BC"},"inter":0},{"tema":2,"civ":"fen","from":-800,"to":-539,"n":{"es":"Fase colonial","en":"Colonial phase"},"f":{"es":"desde el siglo VIII a. C.","en":"from the 8th century BC"},"inter":0},{"tema":2,"civ":"fen","from":-539,"to":-332,"n":{"es":"Bajo dominio persa","en":"Under Persian rule"},"f":{"es":"539-332 a. C.","en":"539-332 BC"},"inter":1},{"tema":2,"civ":"fen","from":-332,"to":-146,"n":{"es":"Cartago","en":"Carthage"},"f":{"es":"","en":""},"inter":0}],"hitos":[{"id":"egi-unif","tema":2,"civ":"egi","k":"h","y":-3050,"sl":9,"s":"Veldmeijer e Ikram (2018); Lull (2006)","es":{"d":"h. 3050 a. C.","t":"Unificación del Estado egipcio","x":"La unificación de Egipto abre la etapa de las primeras dinastías y de las primeras pirámides. Los egipcios fechaban por año de reinado, sin una era continua, de manera que la cronología se reconstruye sumando los reinados a partir de las listas reales, y por eso las fechas más antiguas se dan siempre como aproximadas.","q":"¿Por qué las fechas más antiguas de Egipto se dan como aproximadas?","o":["Porque se fechaba por año de reinado, sin era continua, y la cronología se suma con las listas reales","Porque los egipcios no tenían calendario","Porque todas proceden de autores griegos","Porque los templos se destruyeron en época romana"]},"en":{"d":"c. 3050 BC","t":"Unification of the Egyptian state","x":"The unification of Egypt opens the age of the first dynasties and the first pyramids. The Egyptians dated by regnal year, with no continuous era, so the chronology is rebuilt by adding up reigns from the king lists, and that is why the earliest dates are always given as approximate.","q":"Why are the earliest Egyptian dates given as approximate?","o":["Because dating was by regnal year, with no continuous era, and the chronology is added up from the king lists","Because the Egyptians had no calendar","Because they all come from Greek authors","Because the temples were destroyed in Roman times"]}},{"id":"egi-dyeser","tema":2,"civ":"egi","k":"d","y":-2650,"sl":19,"s":"Decker (1992); Caravaca (2017)","es":{"d":"h. 2650 a. C.","t":"La pista del Heb-Sed en Saqqara","x":"El elemento central del Heb-Sed era la carrera del faraón, de obligada realización, que se corría en el patio sur del recinto de la pirámide de Saqqara. La pista era una recta de 55 metros coronada por dos mojones semicirculares, el circuito completo sumaba 140 metros y se recorría de norte a sur y de sur a norte.","q":"¿Qué simbolizaba correr de norte a sur y de sur a norte?","o":["La unión de los dos reinos","El recorrido del sol","La crecida del Nilo","La victoria sobre los hicsos"]},"en":{"d":"c. 2650 BC","t":"The Heb-Sed track at Saqqara","x":"The central element of the Heb-Sed was the pharaoh's run, which had to be performed, in the southern court of the precinct of the pyramid of Saqqara. The track was a 55-metre straight crowned by two semicircular markers, the full circuit came to 140 metres, and it was run from north to south and from south to north.","q":"What did running from north to south and from south to north symbolise?","o":["The union of the two kingdoms","The course of the sun","The Nile flood","The victory over the Hyksos"]}},{"id":"egi-piramide","tema":2,"civ":"egi","k":"h","y":-2560,"sl":48,"s":"Crowther (2007)","es":{"d":"h. 2560 a. C.","t":"Gran Pirámide de Guiza","x":"La Gran Pirámide sirve de referencia para situar el Imperio Antiguo, la etapa en la que se consolida el culto, el sacerdocio gana control y se levantan las grandes obras. A esa misma etapa pertenece el relieve de las competiciones de obreros de Sahure.","q":"¿Qué testimonio deportivo pertenece, como la Gran Pirámide, al Imperio Antiguo?","o":["El relieve de las competiciones de Sahure","La lucha de Beni Hasan","La estela de Taharqa","Las marcas de Amenofis II"]},"en":{"d":"c. 2560 BC","t":"Great Pyramid of Giza","x":"The Great Pyramid is a reference point for the Old Kingdom, the period in which the cult is consolidated, the priesthood gains control and the great works are raised. The relief of Sahure's workers' competitions belongs to the same period.","q":"Which sporting evidence belongs, like the Great Pyramid, to the Old Kingdom?","o":["The relief of Sahure's competitions","The Beni Hasan wrestling","The Taharqa stela","Amenhotep II's records"]}},{"id":"egi-sahure","tema":2,"civ":"egi","k":"d","y":-2490,"sl":41,"s":"Decker y Förster (2011)","es":{"d":"2496-2483 a. C.","t":"Las competiciones de obreros de Sahure","x":"Un relieve de la calzada de la pirámide de Sahure reúne tiro con arco, esgrima de bastón, lucha y una regata, organizadas para las fiestas por la terminación del templo funerario y la pirámide. Compiten los obreros y los soldados que han levantado la obra, hay premios para los vencedores y el rey está presente sin competir.","q":"¿Qué cuatro elementos básicos del deporte aparecen de golpe en la fiesta de Sahure?","o":["Varias pruebas, público, un motivo festivo y recompensas","Reglamento escrito, árbitro, estadio y cronómetro","Atletas profesionales, apuestas, entrenadores y federación","Un rey que compite, sacerdotes, música y danza"]},"en":{"d":"2496-2483 BC","t":"Sahure's workers' competitions","x":"A relief from the causeway of Sahure's pyramid brings together archery, stick fencing, wrestling and a boat race, held for the festivities marking the completion of the king's funerary temple and pyramid. The workers and soldiers who built the monument compete, there are prizes for the winners, and the king is present without competing.","q":"Which four basic elements of sport appear all at once at Sahure's festival?","o":["Several events, an audience, a festive occasion and rewards","Written rules, a referee, a stadium and timing","Professional athletes, betting, coaches and a federation","A competing king, priests, music and dance"]}},{"id":"egi-justas","tema":2,"civ":"egi","k":"d","y":-2400,"sl":39,"s":"Guttmann (2004)","es":{"d":"dinastía V, h. 2400 a. C.","t":"Las justas de pescadores","x":"Se enfrentaban de dos a cuatro tripulaciones en canoas de juncos de papiro: los de popa timoneaban y los de proa empujaban a los rivales con las pértigas de navegación. No había reglamento ni árbitro, y para Guttmann es uno de los mejores ejemplos de cómo un trabajo cotidiano puede derivar en una disciplina deportiva de equipo.","q":"¿Cuál era el objetivo de la justa de pescadores?","o":["Hacer caer al agua a la tripulación contraria","Llegar el primero a la orilla","Pescar más peces que el rival","Romper la pértiga del contrario"]},"en":{"d":"5th Dynasty, c. 2400 BC","t":"The fishermen's jousts","x":"Two to four crews faced each other in papyrus-reed canoes: those at the stern steered and those at the bow pushed their rivals with the punting poles. There were no rules and no referee, and for Guttmann it is one of the best examples of how everyday work can give rise to a team sport.","q":"What was the aim of the fishermen's joust?","o":["To knock the opposing crew into the water","To reach the bank first","To catch more fish than the rival","To break the opponent's pole"]}},{"id":"egi-benihasan","tema":2,"civ":"egi","k":"d","y":-2000,"sl":31,"s":"Decker (2021)","es":{"d":"h. 2000 a. C.","t":"La lucha de Beni Hasan","x":"Las pinturas murales de los príncipes de Beni Hasan muestran 219 parejas de luchadores con un amplio repertorio de llaves, proyecciones, volteos, zancadillas y presas, sin puñetazos ni mordiscos. Se competía desnudo salvo un pequeño cinturón, y está documentada la presencia de árbitros.","q":"¿Qué proporción de los combates de Beni Hasan se libra en el suelo?","o":["Solo el 2 %","La mitad","Tres de cada cuatro","Ninguno"]},"en":{"d":"c. 2000 BC","t":"The Beni Hasan wrestling","x":"The wall paintings of the princes of Beni Hasan show 219 pairs of wrestlers with a wide repertoire of holds, throws, trips and leg grabs, with no punches or bites. Wrestlers competed naked except for a small belt, and the presence of referees is documented.","q":"What proportion of the Beni Hasan bouts is fought on the ground?","o":["Only 2%","Half","Three in four","None"]}},{"id":"egi-hicsos","tema":2,"civ":"egi","k":"h","y":-1549,"sl":9,"s":"Veldmeijer e Ikram (2018); Cook (2018)","es":{"d":"1549 a. C.","t":"Expulsión de los hicsos","x":"Durante el Segundo Periodo Intermedio los hicsos dominan el norte de Egipto, y con ellos llegan el carro ligero y el arco compuesto, que los egipcios comienzan a fabricar tras las guerras contra ellos. Su expulsión abre el Imperio Nuevo.","q":"¿Qué llega a Egipto con los hicsos?","o":["El carro ligero y el arco compuesto","El calendario solar","La lucha","El senet"]},"en":{"d":"1549 BC","t":"Expulsion of the Hyksos","x":"During the Second Intermediate Period the Hyksos rule the north of Egypt, and with them come the light chariot and the composite bow, which the Egyptians begin to make after the wars against them. Their expulsion opens the New Kingdom.","q":"What reached Egypt with the Hyksos?","o":["The light chariot and the composite bow","The solar calendar","Wrestling","Senet"]}},{"id":"egi-hatshepsut","tema":2,"civ":"egi","k":"d","y":-1464,"sl":19,"s":"Camilo (2024)","es":{"d":"h. 1464 a. C.","t":"Hatshepsut corre el Heb-Sed","x":"En la Capilla Roja de Karnak aparece la reina Hatshepsut, acompañada del toro Apis, realizando el Heb-Sed en el año dieciséis de su reinado, a los cuarenta años. Los egiptólogos explican el adelanto porque sumó sus años como gran esposa real y regente antes de ser nombrada faraón.","q":"¿Qué testimonia el Heb-Sed de Hatshepsut?","o":["Que las mujeres que gobernaban también debían mostrar su fortaleza física","Que el Heb-Sed se reservaba a las reinas","Que las mujeres competían contra los soldados","Que el rito se abolió en el Imperio Nuevo"]},"en":{"d":"c. 1464 BC","t":"Hatshepsut runs the Heb-Sed","x":"In the Red Chapel at Karnak, Queen Hatshepsut, accompanied by the Apis bull, performs the Heb-Sed in the sixteenth year of her reign, at the age of forty. Egyptologists explain the early date by suggesting that she counted her years as great royal wife and regent before being named pharaoh.","q":"What does Hatshepsut's Heb-Sed show?","o":["That women who ruled also had to display their physical strength","That the Heb-Sed was reserved for queens","That women competed against soldiers","That the rite was abolished in the New Kingdom"]}},{"id":"egi-tutmosis","tema":2,"civ":"egi","k":"d","y":-1452,"sl":23,"s":"Serrano (2021); Futrell y Scanlon (2021)","es":{"d":"1479-1425 a. C.","t":"Las cacerías de Tutmosis III","x":"Los faraones dejaron registros extraordinarios de sus hazañas de caza en carro, y de Tutmosis III se registró que abatió 120 toros salvajes en una hora y siete leones «en un abrir y cerrar de ojos». Su nombre abre también la tabla de marcas reales de tiro con arco del Imperio Nuevo.","q":"¿Para qué se utilizaba principalmente el carro en Egipto?","o":["Para la guerra y la caza; no se atestiguan carreras de carros","Para las carreras del hipódromo","Para el transporte de piedra","Para las procesiones del Heb-Sed"]},"en":{"d":"1479-1425 BC","t":"The hunts of Thutmose III","x":"The pharaohs left extraordinary records of their chariot hunts, and Thutmose III was recorded as killing 120 wild bulls in one hour and seven lions “in the blink of an eye”. His name also heads the table of New Kingdom royal archery records.","q":"What was the chariot mainly used for in Egypt?","o":["For war and hunting; no chariot races are attested","For races in the hippodrome","For carrying stone","For Heb-Sed processions"]}},{"id":"egi-amenofis","tema":2,"civ":"egi","k":"d","y":-1412,"sl":22,"s":"Decker y Klauck (1974); Futrell y Scanlon (2021)","es":{"d":"1428-1397 a. C.","t":"Las marcas imposibles de Amenofis II","x":"En la tabla de marcas reales del Imperio Nuevo cada rey supera al anterior y ninguno falla jamás, y Amenofis II llega a atravesar del todo una diana de cuatro dedos de grosor. Decker y Klauck simularon el disparo con arcos y flechas modernos contra planchas de cobre y las flechas penetraron solo unos milímetros.","q":"¿Qué se deduce de las marcas imposibles de los reyes?","o":["Que una fuente puede ser formalmente impecable y materialmente falsa","Que los egipcios tenían arcos más potentes que los actuales","Que las dianas eran de madera","Que los reyes entrenaban a diario con la tropa"]},"en":{"d":"1428-1397 BC","t":"Amenhotep II's impossible records","x":"In the table of New Kingdom royal records each king outdoes the previous one and none ever fails, and Amenhotep II even pierces right through a target four fingers thick. Decker and Klauck simulated the shot with modern bows and arrows against copper plates, and the arrows penetrated only a few millimetres.","q":"What can be deduced from the kings' impossible records?","o":["That a source can be formally flawless and materially false","That the Egyptians had bows more powerful than today's","That the targets were made of wood","That the kings trained daily with the troops"]}},{"id":"egi-tutankamon","tema":2,"civ":"egi","k":"d","y":-1330,"sl":21,"s":"Cook (2018)","es":{"d":"h. 1330 a. C.","t":"El arco compuesto de Tutankamón","x":"El arco compuesto se elaboraba con un núcleo de madera reforzado con cuerno y tendones unidos con cola, que podía tardar un año en secar. Era más ligero y manejable en los carros de guerra y lanzaba flechas hasta 300 metros. Uno de ellos, de la tumba de Tutankamón, se conserva en el Museo Egipcio de El Cairo.","q":"¿Qué alcance tenía el arco compuesto frente al arco simple?","o":["Hasta 300 metros frente a 150","El mismo alcance, pero más precisión","Hasta 1.000 metros frente a 300","Menos alcance, pero más fuerza"]},"en":{"d":"c. 1330 BC","t":"Tutankhamun's composite bow","x":"The composite bow was made from a wooden core reinforced with horn and sinew joined with glue, which could take a year to dry. It was lighter and easier to handle on war chariots and shot arrows up to 300 metres. One of them, from Tutankhamun's tomb, is kept in the Egyptian Museum in Cairo.","q":"What range did the composite bow have compared with the simple bow?","o":["Up to 300 metres against 150","The same range but more accuracy","Up to 1,000 metres against 300","Less range but more power"]}},{"id":"egi-ramses","tema":2,"civ":"egi","k":"d","y":-1279,"sl":18,"s":"Caravaca (2017); Flammini (2003)","es":{"d":"1279-1212 a. C.","t":"Los catorce jubileos de Ramsés II","x":"El Heb-Sed, la fiesta del jubileo más importante de Egipto, renovaba el poder del faraón a los treinta años de reinado y se repetía cada tres. Ramsés II celebró catorce. El ceremonial incluía la doble coronación, el disparo de flechas hacia los cuatro puntos cardinales y el alzamiento del pilar Djed.","q":"¿Qué representaba el disparo de flechas hacia los cuatro puntos cardinales?","o":["El dominio del rey sobre todo el reino","La caza de los animales sagrados","La guerra contra los hicsos","El paso de las estaciones"]},"en":{"d":"1279-1212 BC","t":"The fourteen jubilees of Ramesses II","x":"The Heb-Sed, the most important jubilee festival in Egypt, renewed the pharaoh's power after thirty years of reign and was repeated every three years. Ramesses II celebrated fourteen. The ceremony included the double coronation, shooting arrows towards the four cardinal points and raising the Djed pillar.","q":"What did shooting arrows towards the four cardinal points represent?","o":["The king's dominion over the whole kingdom","The hunting of sacred animals","The war against the Hyksos","The passing of the seasons"]}},{"id":"egi-taharqa","tema":2,"civ":"egi","k":"d","y":-685,"sl":36,"s":"Pruett (2026)","es":{"d":"685/684 a. C.","t":"La carrera de fondo de Taharqa","x":"La estela del año seis del rey nubio Taharqa describe una prueba de las tropas de élite: unos 50 kilómetros de Menfis al Fayum durante la noche, dos horas de descanso y otros 50 de regreso, cien kilómetros en unas nueve horas. El vencedor y los siguientes recibieron premios y el honor de comer junto a la guardia real.","q":"¿En qué se aparta Taharqa del dogma real durante la carrera?","o":["Desmontó del carro y corrió a pie junto a sus soldados","Ganó la carrera ante sus súbditos","Prohibió correr a los nubios","Corrió solo, sin la tropa"]},"en":{"d":"685/684 BC","t":"Taharqa's long-distance run","x":"The stela from the sixth year of the Nubian king Taharqa describes a test for the elite troops: about 50 kilometres from Memphis to the Fayum by night, a two-hour rest and another 50 back, a hundred kilometres in some nine hours. The winner and those who followed received prizes and the honour of dining with the royal guard.","q":"How does Taharqa depart from the royal dogma during the run?","o":["He got down from his chariot and ran on foot with his soldiers","He won the race before his subjects","He banned the Nubians from running","He ran alone, without the troops"]}},{"id":"egi-persas","tema":2,"civ":"egi","k":"h","y":-525,"sl":47,"s":"Decker (1992)","es":{"d":"525 a. C.","t":"Conquista persa de Egipto","x":"Egipto pasa a manos persas, y más tarde macedónicas y romanas. El deporte faraónico dependía de dos cosas, el rey como garante del orden del mundo y un Estado capaz de medir sus proezas y grabarlas en piedra, y las dos empiezan a desaparecer.","q":"¿De qué dos cosas dependía el deporte de los faraones?","o":["Del rey como garante del orden del mundo y de un Estado capaz de medir y grabar sus proezas","De los Juegos Olímpicos y de los atletas griegos","Del ejército nubio y de los mercenarios persas","De los sacerdotes de Amón y del comercio con Fenicia"]},"en":{"d":"525 BC","t":"Persian conquest of Egypt","x":"Egypt passes into Persian hands, and later Macedonian and Roman ones. Pharaonic sport depended on two things, the king as guarantor of the world order and a state able to measure his feats and carve them in stone, and both begin to disappear.","q":"What two things did the sport of the pharaohs depend on?","o":["The king as guarantor of the world order and a state able to measure and record his feats","The Olympic Games and Greek athletes","The Nubian army and Persian mercenaries","The priests of Amun and trade with Phoenicia"]}},{"id":"egi-alejandro","tema":2,"civ":"egi","k":"h","y":-332,"sl":9,"s":"Veldmeijer e Ikram (2018)","es":{"d":"332 a. C.","t":"Alejandro conquista Egipto","era":"Final de la Baja Época","x":"Alejandro Magno conquista Egipto en el 332 a. C. y abre la época grecorromana. La cronología egipcia cuenta treinta y una dinastías propias, más dos extranjeras, la macedónica y la ptolemaica.","q":"¿Cuántas dinastías egipcias se cuentan, sin las dos extranjeras?","o":["Treinta y una","Doce","Cuarenta","Dieciocho"]},"en":{"d":"332 BC","t":"Alexander conquers Egypt","era":"End of the Late Period","x":"Alexander the Great conquers Egypt in 332 BC and opens the Graeco-Roman period. Egyptian chronology counts thirty-one native dynasties, plus two foreign ones, the Macedonian and the Ptolemaic.","q":"How many Egyptian dynasties are counted, not including the two foreign ones?","o":["Thirty-one","Twelve","Forty","Eighteen"]}},{"id":"egi-roma","tema":2,"civ":"egi","k":"h","y":-30,"sl":47,"s":"Decker (1992)","es":{"d":"30 a. C.","t":"Egipto, provincia romana","era":"Final de la época ptolemaica","x":"Con la pérdida definitiva de la independencia y la conversión de Egipto en provincia romana desaparece la estructura ideológica y religiosa que justificaba las demostraciones físicas del rey. Sobreviven las prácticas que nunca dependieron del palacio: las que nacen del trabajo y del juego duran mucho más que las que el poder inventa.","q":"¿Qué práctica egipcia llega hasta hoy, convertida en un acto folclórico?","o":["La esgrima de bastón","El tiro con arco sobre cobre","La carrera del Heb-Sed","La caza en carro"]},"en":{"d":"30 BC","t":"Egypt becomes a Roman province","era":"End of the Ptolemaic period","x":"With the final loss of independence and Egypt's conversion into a Roman province, the ideological and religious structure that justified the king's physical displays disappears. The practices that never depended on the palace survive: those born of work and play last much longer than those invented by power.","q":"Which Egyptian practice survives today as a folk performance?","o":["Stick fencing","Archery at copper targets","The Heb-Sed run","Chariot hunting"]}},{"id":"per-ciro","tema":2,"civ":"per","k":"h","y":-550,"sl":52,"s":"Briant (2002)","es":{"d":"550 a. C.","t":"Ciro II funda el imperio aqueménida","x":"El origen de Persia se fija cuando Ciro II derrota a los medos y funda el imperio aqueménida, que en tres generaciones se extiende del Egeo al Indo. Cuatro pilares lo mantienen unido: la caballería, el arco, la educación y la gestión de la distancia, con satrapías, caminos y postas.","q":"¿Cuáles son los cuatro pilares que mantienen unido el imperio aqueménida?","o":["La caballería, el arco, la educación y la gestión de la distancia","La flota, el comercio, la escritura y la moneda","El templo, el palacio, el ejército y los juegos","La lucha, el polo, la caza y la carrera"]},"en":{"d":"550 BC","t":"Cyrus II founds the Achaemenid Empire","x":"The origin of Persia is placed when Cyrus II defeats the Medes and founds the Achaemenid Empire, which within three generations stretches from the Aegean to the Indus. Four pillars hold it together: cavalry, the bow, education and the management of distance, with satrapies, roads and staging posts.","q":"What are the four pillars holding the Achaemenid Empire together?","o":["Cavalry, the bow, education and the management of distance","The fleet, trade, writing and coinage","The temple, the palace, the army and games","Wrestling, polo, hunting and running"]}},{"id":"per-dario","tema":2,"civ":"per","k":"d","y":-505,"sl":57,"s":"Alcock (2001)","es":{"d":"reinado 521-486 a. C.","t":"El cuerpo de Darío I, escrito en piedra","x":"En Naqsh-e Rostam, Darío I mandó grabar en su tumba que su cuerpo es fuerte y está adiestrado, y que es buen jinete, buen arquero y buen lancero, capacidades que el dios persa depositó sobre él. Nunca aparece como luchador, porque un rey no puede permitirse ser derrotado delante de sus súbditos.","q":"¿Por qué la semejanza con el modelo egipcio puede leerse como un préstamo cultural?","o":["Porque Darío I reinó también sobre Egipto","Porque Darío se educó en Tebas","Porque el texto lo escribieron escribas griegos","Porque copia la estela de Taharqa"]},"en":{"d":"reign 521-486 BC","t":"The body of Darius I, written in stone","x":"At Naqsh-e Rostam, Darius I had it carved on his tomb that his body is strong and trained, and that he is a good horseman, a good archer and a good spearman, abilities placed in him by the Persian god. He never appears as a wrestler, because a king cannot afford to be defeated in front of his subjects.","q":"Why can the likeness to the Egyptian model be read as a cultural borrowing?","o":["Because Darius I also ruled over Egypt","Because Darius was educated in Thebes","Because Greek scribes wrote the text","Because it copies the Taharqa stela"]}},{"id":"per-jerjes","tema":2,"civ":"per","k":"h","y":-480,"sl":53,"s":"Jacobs y Rollinger (2021)","es":{"d":"480 a. C.","t":"Jerjes invade Grecia","x":"El imperio de Ciro, Darío y Jerjes, el de Maratón y las Termópilas, es solo la primera de seis etapas, y entre la primera y la última Persia median dos mil quinientos años. Lo común a los seis periodos es estable: el mundo equino, el tiro con arco y la lucha.","q":"¿Qué es común a los seis periodos de la historia persa?","o":["El mundo equino, el tiro con arco y la lucha","El zurkhaneh y el polo","Los Juegos Olímpicos","La escuela del Estado"]},"en":{"d":"480 BC","t":"Xerxes invades Greece","x":"The empire of Cyrus, Darius and Xerxes, that of Marathon and Thermopylae, is only the first of six stages, and two and a half thousand years separate the first Persia from the last. What the six periods share is stable: the world of the horse, archery and wrestling.","q":"What do the six periods of Persian history have in common?","o":["The world of the horse, archery and wrestling","The zurkhaneh and polo","The Olympic Games","The State school"]}},{"id":"per-persepolis","tema":2,"civ":"per","k":"h","y":-330,"sl":52,"s":"Briant (2002)","es":{"d":"330 a. C.","t":"Alejandro destruye Persépolis","era":"Final de los aqueménidas","x":"El imperio aqueménida termina con la destrucción de su capital, Persépolis, por Alejandro Magno. La meseta irania, no obstante, seguirá produciendo deporte durante los veintitrés siglos posteriores, y el deporte persa pertenece en su mayoría a las cinco etapas que vienen después.","q":"¿A qué etapas pertenece la mayor parte del deporte persa?","o":["A las cinco posteriores a los aqueménidas","Solo a la aqueménida","A la anterior a Ciro II","A la época de Jerjes"]},"en":{"d":"330 BC","t":"Alexander destroys Persepolis","era":"End of the Achaemenids","x":"The Achaemenid Empire ends with the destruction of its capital, Persepolis, by Alexander the Great. The Iranian plateau, however, will go on producing sport for the next twenty-three centuries, and most Persian sport belongs to the five stages that follow.","q":"To which stages does most Persian sport belong?","o":["To the five after the Achaemenids","Only to the Achaemenid one","To the one before Cyrus II","To the age of Xerxes"]}},{"id":"per-sasanidas","tema":2,"civ":"per","k":"h","y":224,"sl":53,"s":"Chehabi y Guttmann (2002)","es":{"d":"224 d. C.","t":"Comienza la dinastía sasánida","x":"Los sasánidas forman el último imperio persa antes del islam, contemporáneo de Bizancio. Con ellos se consolida el chovgan, el juego a caballo del que deriva el polo moderno.","q":"¿De qué imperio fueron contemporáneos los sasánidas?","o":["De Bizancio","Del Egipto faraónico","De los aqueménidas","De los safávidas"]},"en":{"d":"AD 224","t":"The Sasanian dynasty begins","x":"The Sasanians form the last Persian empire before Islam, contemporary with Byzantium. Under them chovgan, the game on horseback from which modern polo derives, becomes established.","q":"Which empire were the Sasanians contemporary with?","o":["Byzantium","Pharaonic Egypt","The Achaemenids","The Safavids"]}},{"id":"per-polo","tema":2,"civ":"per","k":"d","y":225,"sl":70,"s":"Chehabi y Guttmann (2002)","es":{"d":"desde el siglo III","t":"El chovgan en la corte sasánida","x":"El chovgan es el primer deporte colectivo a caballo con pelota y taco, y de él deriva el polo moderno. Se cree que pudo practicarlo la dinastía parta, pero es durante el periodo sasánida cuando se consolida el juego.","q":"¿Con qué dinastía se consolida el chovgan?","o":["Con la sasánida","Con la aqueménida","Con la safávida","Con la ptolemaica"]},"en":{"d":"from the 3rd century","t":"Chovgan at the Sasanian court","x":"Chovgan is the first team sport on horseback with ball and stick, and modern polo derives from it. The Parthian dynasty may have played it, but it is during the Sasanian period that the game becomes established.","q":"Under which dynasty does chovgan become established?","o":["The Sasanian","The Achaemenid","The Safavid","The Ptolemaic"]}},{"id":"per-arabes","tema":2,"civ":"per","k":"h","y":650,"sl":53,"s":"Chehabi y Guttmann (2002)","es":{"d":"650 d. C.","t":"Conquista árabe de Persia","era":"Final de los sasánidas","x":"La conquista árabe abre la Persia islámica. Persia conserva su lengua, y es la época de Avicena y de Ferdousí.","q":"¿Qué conserva Persia tras la conquista árabe?","o":["Su lengua","Su religión zoroástrica","Su dinastía sasánida","Su capital en Persépolis"]},"en":{"d":"AD 650","t":"Arab conquest of Persia","era":"End of the Sasanians","x":"The Arab conquest opens Islamic Persia. Persia keeps its language, and this is the age of Avicenna and Ferdowsi.","q":"What does Persia keep after the Arab conquest?","o":["Its language","Its Zoroastrian religion","Its Sasanian dynasty","Its capital at Persepolis"]}},{"id":"per-texto","tema":2,"civ":"per","k":"d","y":651,"sl":70,"s":"Chehabi y Guttmann (2002)","es":{"d":"siglo VII","t":"Primer texto sobre el polo","era":"Final de los sasánidas","x":"El reglamento exacto del chovgan se desconoce. Se golpeaba la pelota al galope, agachándose por debajo del cuello del caballo porque el mazo era corto, y había una variante nocturna con pelotas prendidas en fuego.","q":"¿Cómo se lograban los tantos en el chovgan?","o":["Haciendo pasar la pelota entre dos pilares de madera o piedra","Derribando al jinete rival","Llevando la pelota en la mano hasta la meta","Lanzando el mazo contra una diana"]},"en":{"d":"7th century","t":"The first text on polo","era":"End of the Sasanians","x":"The exact rules of chovgan are unknown. The ball was struck at the gallop, ducking below the horse's neck because the mallet was short, and there was a night version played with flaming balls.","q":"How were points scored in chovgan?","o":["By sending the ball between two pillars of wood or stone","By unseating the rival rider","By carrying the ball by hand to the goal","By throwing the mallet at a target"]}},{"id":"per-safavidas","tema":2,"civ":"per","k":"h","y":1501,"sl":53,"s":"Floor (2023)","es":{"d":"1501 d. C.","t":"Comienza la dinastía safávida","x":"La etapa safávida y qajar es contemporánea de la Edad Moderna europea y de la Revolución Industrial. A ella pertenece la prueba de los correos reales, el chatir de Isfahán.","q":"¿De qué etapa europea es contemporánea la Persia safávida y qajar?","o":["De la Edad Moderna y la Revolución Industrial","De la Antigüedad clásica","De la Alta Edad Media","De la Prehistoria"]},"en":{"d":"AD 1501","t":"The Safavid dynasty begins","x":"The Safavid and Qajar stage is contemporary with the European early modern period and the Industrial Revolution. The test of the royal messengers, the chatir of Isfahan, belongs to it.","q":"Which European period is Safavid and Qajar Persia contemporary with?","o":["The early modern period and the Industrial Revolution","Classical antiquity","The early Middle Ages","Prehistory"]}},{"id":"per-shater","tema":2,"civ":"per","k":"d","y":1587,"sl":68,"s":"Floor (2023)","es":{"d":"1587","t":"La carrera del corredor Shater Ali","x":"Los shatir eran los mensajeros reales de la corte persa, que transportaban mensajes o corrían delante del caballo del monarca para alertar de posibles peligros. Pertenecer a este cuerpo era un inmenso honor, y para entrar había que superar una prueba de larga distancia.","q":"¿Qué función tenían los shatir?","o":["Llevar mensajes y correr delante del caballo del rey para alertar de peligros","Jugar al chovgan en la corte","Entrenar a los luchadores del zurkhaneh","Custodiar los caballos reales"]},"en":{"d":"1587","t":"The run of Shater Ali","x":"The shatir were the royal messengers of the Persian court, who carried messages or ran ahead of the monarch's horse to warn of danger. Belonging to this corps was a great honour, and entry required passing a long-distance test.","q":"What was the role of the shatir?","o":["Carrying messages and running ahead of the king's horse to warn of danger","Playing chovgan at court","Training the zurkhaneh wrestlers","Guarding the royal horses"]}},{"id":"per-chardin","tema":2,"civ":"per","k":"d","y":1667,"sl":68,"s":"Chardin (1811); Floor (2023)","es":{"d":"1667","t":"La prueba del chatir en Isfahán","x":"El aspirante debía traer a pie doce flechas, una a una, desde un pilar situado a legua y media del palacio de Isfahán, unos 174 kilómetros entre la salida y la puesta del sol. Ese día era fiesta pública, y un comerciante francés que presenció la prueba en 1667 anotó el tiempo del vencedor.","q":"¿Cuánto tardó el vencedor de 1667 en superar la prueba?","o":["Catorce horas","Cuatro horas","Dos días","Nueve horas"]},"en":{"d":"1667","t":"The chatir test in Isfahan","x":"The candidate had to bring back on foot twelve arrows, one by one, from a pillar a league and a half from the palace of Isfahan, some 174 kilometres between sunrise and sunset. The day was a public holiday, and a French merchant who watched the test in 1667 noted the winner's time.","q":"How long did the 1667 winner take to complete the test?","o":["Fourteen hours","Four hours","Two days","Nine hours"]}},{"id":"per-zurkhaneh","tema":2,"civ":"per","k":"d","y":1690,"sl":64,"s":"Mohammadi et al. (2023); Krawietz (2013)","es":{"d":"finales del siglo XVII","t":"Primeras noticias del zurkhaneh","x":"El zurkhaneh, «la casa de fuerza», es una sala abovedada con un foso central de arcilla blanda y una puerta deliberadamente baja, de manera que la primera lección, la de humildad, se da antes de entrar. Estaba inserto en la vida de los barrios y funcionaba también como instancia de autoridad vecinal.","q":"¿Qué hay de la leyenda de un origen clandestino del zurkhaneh frente a árabes y mongoles?","o":["Es falsa: nunca fue un recinto secreto","Está probada por fuentes aqueménidas","Explica por qué se jugaba de noche","Procede de la Ciropedia"]},"en":{"d":"late 17th century","t":"First reports of the zurkhaneh","x":"The zurkhaneh, the “house of strength”, is a domed hall with a sunken central pit of soft clay and a deliberately low door, so that the first lesson, humility, is given before entering. It was embedded in neighbourhood life and also served as a local authority.","q":"What about the legend of a clandestine origin of the zurkhaneh against Arabs and Mongols?","o":["It is false: it was never a secret place","It is proven by Achaemenid sources","It explains why it was played at night","It comes from the Cyropaedia"]}},{"id":"fen-cartago","tema":2,"civ":"fen","k":"h","y":-814,"sl":79,"s":"López-Ruiz y Doak (2019); Docter et al. (2008)","es":{"d":"814 a. C. (tradición)","t":"Fundación de Cartago","x":"La expansión fenicia alcanza el norte de África, Malta, Sicilia occidental, Cerdeña, las Baleares y el sur de la península ibérica con factorías y puertos seguros. Entre ellos destaca Cartago, fundada por colonos de Tiro en el actual Túnez, según la tradición en el 814 a. C.","q":"¿Dónde se emplaza Cartago?","o":["En el punto medio del trayecto entre Tiro y Cádiz","En la desembocadura del Nilo","Junto a Persépolis","En la costa de Cerdeña"]},"en":{"d":"814 BC (tradition)","t":"Foundation of Carthage","x":"Phoenician expansion reaches North Africa, Malta, western Sicily, Sardinia, the Balearics and the south of the Iberian Peninsula with trading posts and safe harbours. Among them Carthage stands out, founded by settlers from Tyre in present-day Tunisia, according to tradition in 814 BC.","q":"Where does Carthage lie?","o":["Halfway along the route between Tyre and Cádiz","At the mouth of the Nile","Next to Persepolis","On the coast of Sardinia"]}},{"id":"fen-sargon","tema":2,"civ":"fen","k":"d","y":-713,"sl":83,"s":"Casson (1971)","es":{"d":"721-705 a. C.","t":"Las naves de Sargón II","x":"La actividad física fenicia que sí admite documentación es el trabajo. Los relieves del palacio de Sargón II en Dur-Sharrukin muestran pequeñas embarcaciones a remo que remolcan troncos de cedro, con una cabeza de caballo tallada en la proa.","q":"¿Por qué los griegos llamaron hippoi a estas naves fenicias?","o":["Por la cabeza de caballo tallada en la proa","Porque transportaban caballos","Porque eran tan rápidas como un caballo","Por el nombre de su constructor"]},"en":{"d":"721-705 BC","t":"The ships of Sargon II","x":"The Phoenician physical activity that can be documented is work. The reliefs of Sargon II's palace at Dur-Sharrukin show small rowing boats towing cedar logs, with a horse's head carved on the prow.","q":"Why did the Greeks call these Phoenician ships hippoi?","o":["Because of the horse's head carved on the prow","Because they carried horses","Because they were as fast as a horse","After the name of their builder"]}},{"id":"fen-mazarron","tema":2,"civ":"fen","k":"d","y":-595,"sl":86,"s":"De Juan y Sabio (2025)","es":{"d":"h. 610-580 a. C.","t":"El pecio Mazarrón 2","x":"La mejor prueba material de la navegación fenicia está a cuarenta minutos de la facultad. Mazarrón 2 apareció en 1995 con el casco casi entero, mide 8,15 metros y se sacó del agua en 2024, desmontado en veintidós piezas. Hoy se conserva en el Museo Nacional de Arqueología Subacuática, en Cartagena.","q":"¿Qué carga llevaba el pecio Mazarrón 2?","o":["Unos 2.800 kilos de lingotes de plomo","Ánforas de vino griego","Troncos de cedro","Estatuas de bronce"]},"en":{"d":"c. 610-580 BC","t":"The Mazarrón 2 shipwreck","x":"The best material evidence of Phoenician seafaring lies forty minutes from the faculty. Mazarrón 2 was found in 1995 with its hull almost complete, is 8.15 metres long and was raised in 2024, dismantled into twenty-two pieces. It is now kept in the National Museum of Underwater Archaeology in Cartagena.","q":"What cargo did the Mazarrón 2 ship carry?","o":["Some 2,800 kilos of lead ingots","Greek wine amphorae","Cedar logs","Bronze statues"]}},{"id":"fen-persas","tema":2,"civ":"fen","k":"h","y":-539,"sl":79,"s":"López-Ruiz y Doak (2019)","es":{"d":"539 a. C.","t":"El Levante pasa a Persia","x":"Cuando Tiro es sometida, Cartago hereda la red de factorías gracias a su riqueza y a su posición central en la ruta, y pasa a dirigirla por su cuenta. Lo que había nacido como empresa comercial dependiente de Oriente se convierte en una potencia autónoma.","q":"¿Qué ciudad hereda la red de factorías cuando Tiro es sometida?","o":["Cartago","Sidón","Cádiz","Biblos"]},"en":{"d":"539 BC","t":"The Levant passes to Persia","x":"When Tyre is subdued, Carthage inherits the network of trading posts thanks to its wealth and central position on the route, and comes to run it on its own. What had begun as a trading venture dependent on the East becomes an independent power.","q":"Which city inherits the network of trading posts when Tyre is subdued?","o":["Carthage","Sidon","Cádiz","Byblos"]}},{"id":"fen-kharayeb","tema":2,"civ":"fen","k":"d","y":-250,"sl":89,"s":"Castiglione (2020)","es":{"d":"época helenística","t":"Los niños de Kharayeb","era":"Época helenística","x":"El santuario de Kharayeb, en el interior de Tiro, ha dado 16.400 fragmentos de terracota, y las figuras de niños suponen el 35 %. Ordenan una secuencia por edades: de los 2 a los 4 años juegan con pájaros y perros, y de los 12 a los 14 aparecen con estrígil y frasco de aceite, necesarios para entrenar en el gimnasio.","q":"Entre los 5 y los 8 años, ¿qué sustituye al perro en las figuritas?","o":["Una pelota, el paso del juego libre al juego reglado","Un estrígil","Un arco","Un caballo"]},"en":{"d":"Hellenistic period","t":"The children of Kharayeb","era":"Hellenistic period","x":"The sanctuary of Kharayeb, inland from Tyre, has yielded 16,400 terracotta fragments, and figures of children make up 35% of them. They set out a sequence by age: from 2 to 4, children play with birds and dogs, and from 12 to 14 they appear with a strigil and an oil flask, needed for training in the gymnasium.","q":"Between the ages of 5 and 8, what replaces the dog in the figurines?","o":["A ball, the step from free play to rule-based play","A strigil","A bow","A horse"]}},{"id":"fen-cartagena","tema":2,"civ":"fen","k":"h","y":-223,"sl":79,"s":"López-Ruiz y Doak (2019)","es":{"d":"h. 223 a. C.","t":"Fundación de Cartagena","x":"Cartago significa en fenicio «ciudad nueva», Qart-ḥadašt. Seiscientos años después, Asdrúbal el Bello estableció en la actual Cartagena una segunda Qart-ḥadašt, que los romanos tradujeron por Carthago Nova.","q":"¿Por qué se eligió el enclave de Cartagena?","o":["Por sus puertos, su laguna y sus minas de plata","Por sus bosques de cedro","Por estar frente a Tiro","Por su santuario de Kharayeb"]},"en":{"d":"c. 223 BC","t":"Foundation of Cartagena","x":"Carthage means “new city” in Phoenician, Qart-ḥadašt. Six hundred years later, Hasdrubal the Fair founded a second Qart-ḥadašt in present-day Cartagena, which the Romans translated as Carthago Nova.","q":"Why was the site of Cartagena chosen?","o":["For its harbours, its lagoon and its silver mines","For its cedar forests","Because it faced Tyre","For its Kharayeb sanctuary"]}},{"id":"fen-diotimo","tema":2,"civ":"fen","k":"d","y":-205,"sl":91,"s":"Remijsen (2015)","es":{"d":"h. 200 a. C.","t":"Diótimo de Sidón vence en Nemea","era":"Época helenística","x":"Las ciudades fenicias carecieron de un Estado que grabara proezas, de un rey que exhibiera su cuerpo y de un santuario común donde inscribir vencedores, de modo que lo que falta es un tipo de fuente. En la etapa final, con la influencia helena, los registros griegos recogen a fenicios vencedores en sus juegos.","q":"¿En qué prueba vence Diótimo de Sidón?","o":["En la carrera de carros de los Juegos Nemeos","En la lucha de Olimpia","En la regata de Cartago","En el pancracio de Delfos"]},"en":{"d":"c. 200 BC","t":"Diotimus of Sidon wins at Nemea","era":"Hellenistic period","x":"The Phoenician cities lacked a state that carved feats in stone, a king who displayed his body and a common sanctuary where victors were inscribed, so what is missing is a type of source. In the final stage, under Greek influence, Greek records list Phoenician victors in their games.","q":"In which event does Diotimus of Sidon win?","o":["The chariot race at the Nemean Games","Wrestling at Olympia","The regatta at Carthage","The pankration at Delphi"]}},{"id":"fen-destruccion","tema":2,"civ":"fen","k":"h","y":-146,"sl":79,"s":"Futrell (2006)","es":{"d":"146 a. C.","t":"Roma destruye Cartago","era":"Final de Cartago","x":"Roma destruye Cartago y pone fin a la potencia autónoma que, a la postre, le había disputado el dominio del Mediterráneo occidental.","q":"¿Qué disputó Cartago a Roma?","o":["El dominio del Mediterráneo occidental","Las minas de oro de Egipto","El control de Persia","La organización de los Juegos Olímpicos"]},"en":{"d":"146 BC","t":"Rome destroys Carthage","era":"End of Carthage","x":"Rome destroys Carthage and puts an end to the independent power that had ultimately contested its control of the western Mediterranean.","q":"What did Carthage contest with Rome?","o":["Control of the western Mediterranean","The gold mines of Egypt","Control of Persia","The running of the Olympic Games"]}},{"id":"fen-helix","tema":2,"civ":"fen","k":"d","y":215,"sl":91,"s":"Golden (2004)","es":{"d":"h. 213-217 d. C.","t":"Aurelio Hélix en Olimpia","era":"Época romana","x":"Aurelio Hélix, «el fenicio», vence en Olimpia a comienzos del siglo III d. C. La presencia de atletas fenicios en unos juegos ajenos resulta muy interesante para analizar el deporte griego, el contenido del próximo tema.","q":"¿En qué disciplina vence Aurelio Hélix en Olimpia?","o":["En la lucha","En la carrera de carros","En el estadio","En el lanzamiento de disco"]},"en":{"d":"c. AD 213-217","t":"Aurelius Helix at Olympia","era":"Roman period","x":"Aurelius Helix, “the Phoenician”, wins at Olympia in the early third century AD. The presence of Phoenician athletes at someone else's games is very revealing for the study of Greek sport, the subject of the next unit.","q":"In which discipline does Aurelius Helix win at Olympia?","o":["Wrestling","The chariot race","The stadion","The discus"]}}]}
+{
+ "v": 1,
+ "civs": [
+  {
+   "id": "egi",
+   "name": {
+    "es": "Egipto",
+    "en": "Egypt"
+   }
+  },
+  {
+   "id": "per",
+   "name": {
+    "es": "Persia",
+    "en": "Persia"
+   }
+  },
+  {
+   "id": "fen",
+   "name": {
+    "es": "Fenicia",
+    "en": "Phoenicia"
+   }
+  },
+  {
+   "id": "ege",
+   "name": {
+    "es": "Creta y Micenas",
+    "en": "Crete and Mycenae"
+   }
+  },
+  {
+   "id": "gre",
+   "name": {
+    "es": "Grecia",
+    "en": "Greece"
+   }
+  }
+ ],
+ "eras": [
+  {
+   "tema": 2,
+   "civ": "egi",
+   "from": -3050,
+   "to": -2663,
+   "n": {
+    "es": "Periodo arcaico",
+    "en": "Early Dynastic period"
+   },
+   "f": {
+    "es": "3050-2663 a. C.",
+    "en": "3050-2663 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 2,
+   "civ": "egi",
+   "from": -2663,
+   "to": -2195,
+   "n": {
+    "es": "Imperio Antiguo",
+    "en": "Old Kingdom"
+   },
+   "f": {
+    "es": "2663-2195 a. C.",
+    "en": "2663-2195 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 2,
+   "civ": "egi",
+   "from": -2195,
+   "to": -2066,
+   "n": {
+    "es": "Primer Periodo Intermedio",
+    "en": "First Intermediate Period"
+   },
+   "f": {
+    "es": "",
+    "en": ""
+   },
+   "inter": 1
+  },
+  {
+   "tema": 2,
+   "civ": "egi",
+   "from": -2066,
+   "to": -1650,
+   "n": {
+    "es": "Imperio Medio",
+    "en": "Middle Kingdom"
+   },
+   "f": {
+    "es": "2066-1650 a. C.",
+    "en": "2066-1650 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 2,
+   "civ": "egi",
+   "from": -1650,
+   "to": -1549,
+   "n": {
+    "es": "Segundo Periodo Intermedio",
+    "en": "Second Intermediate Period"
+   },
+   "f": {
+    "es": "",
+    "en": ""
+   },
+   "inter": 1
+  },
+  {
+   "tema": 2,
+   "civ": "egi",
+   "from": -1549,
+   "to": -1069,
+   "n": {
+    "es": "Imperio Nuevo",
+    "en": "New Kingdom"
+   },
+   "f": {
+    "es": "1549-1069 a. C.",
+    "en": "1549-1069 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 2,
+   "civ": "egi",
+   "from": -1069,
+   "to": -664,
+   "n": {
+    "es": "Tercer Periodo Intermedio",
+    "en": "Third Intermediate Period"
+   },
+   "f": {
+    "es": "1064-664 a. C.",
+    "en": "1064-664 BC"
+   },
+   "inter": 1
+  },
+  {
+   "tema": 2,
+   "civ": "egi",
+   "from": -664,
+   "to": -525,
+   "n": {
+    "es": "Época saíta",
+    "en": "Saite period"
+   },
+   "f": {
+    "es": "",
+    "en": ""
+   },
+   "inter": 0
+  },
+  {
+   "tema": 2,
+   "civ": "egi",
+   "from": -525,
+   "to": -332,
+   "n": {
+    "es": "Baja Época",
+    "en": "Late Period"
+   },
+   "f": {
+    "es": "",
+    "en": ""
+   },
+   "inter": 0
+  },
+  {
+   "tema": 2,
+   "civ": "egi",
+   "from": -332,
+   "to": -30,
+   "n": {
+    "es": "Época ptolemaica",
+    "en": "Ptolemaic period"
+   },
+   "f": {
+    "es": "332-30 a. C.",
+    "en": "332-30 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 2,
+   "civ": "per",
+   "from": -550,
+   "to": -330,
+   "n": {
+    "es": "Aqueménidas",
+    "en": "Achaemenids"
+   },
+   "f": {
+    "es": "550-330 a. C.",
+    "en": "550-330 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 2,
+   "civ": "per",
+   "from": -330,
+   "to": -247,
+   "n": {
+    "es": "Dominio macedonio",
+    "en": "Macedonian rule"
+   },
+   "f": {
+    "es": "",
+    "en": ""
+   },
+   "inter": 1
+  },
+  {
+   "tema": 2,
+   "civ": "per",
+   "from": -247,
+   "to": 224,
+   "n": {
+    "es": "Partos",
+    "en": "Parthians"
+   },
+   "f": {
+    "es": "247 a. C.-224 d. C.",
+    "en": "247 BC-AD 224"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 2,
+   "civ": "per",
+   "from": 224,
+   "to": 651,
+   "n": {
+    "es": "Sasánidas",
+    "en": "Sasanians"
+   },
+   "f": {
+    "es": "224-651 d. C.",
+    "en": "AD 224-651"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 2,
+   "civ": "per",
+   "from": 651,
+   "to": 1501,
+   "n": {
+    "es": "Persia islámica",
+    "en": "Islamic Persia"
+   },
+   "f": {
+    "es": "",
+    "en": ""
+   },
+   "inter": 0
+  },
+  {
+   "tema": 2,
+   "civ": "per",
+   "from": 1501,
+   "to": 1736,
+   "n": {
+    "es": "Safávidas",
+    "en": "Safavids"
+   },
+   "f": {
+    "es": "1501-1736 d. C.",
+    "en": "AD 1501-1736"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 2,
+   "civ": "fen",
+   "from": -1100,
+   "to": -800,
+   "n": {
+    "es": "Fase precolonial",
+    "en": "Pre-colonial phase"
+   },
+   "f": {
+    "es": "siglos XI-IX a. C.",
+    "en": "11th-9th centuries BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 2,
+   "civ": "fen",
+   "from": -800,
+   "to": -539,
+   "n": {
+    "es": "Fase colonial",
+    "en": "Colonial phase"
+   },
+   "f": {
+    "es": "desde el siglo VIII a. C.",
+    "en": "from the 8th century BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 2,
+   "civ": "fen",
+   "from": -539,
+   "to": -332,
+   "n": {
+    "es": "Bajo dominio persa",
+    "en": "Under Persian rule"
+   },
+   "f": {
+    "es": "539-332 a. C.",
+    "en": "539-332 BC"
+   },
+   "inter": 1
+  },
+  {
+   "tema": 2,
+   "civ": "fen",
+   "from": -332,
+   "to": -146,
+   "n": {
+    "es": "Cartago",
+    "en": "Carthage"
+   },
+   "f": {
+    "es": "",
+    "en": ""
+   },
+   "inter": 0
+  },
+  {
+   "tema": 3,
+   "civ": "ege",
+   "from": -1950,
+   "to": -1750,
+   "n": {
+    "es": "Primeros palacios cretenses",
+    "en": "First Cretan palaces"
+   },
+   "f": {
+    "es": "h. 1950-1750 a. C.",
+    "en": "c. 1950-1750 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 3,
+   "civ": "ege",
+   "from": -1750,
+   "to": -1450,
+   "n": {
+    "es": "Época de los grandes palacios",
+    "en": "Age of the great palaces"
+   },
+   "f": {
+    "es": "h. 1750-1450 a. C.",
+    "en": "c. 1750-1450 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 3,
+   "civ": "ege",
+   "from": -1450,
+   "to": -1200,
+   "n": {
+    "es": "Dominio micénico",
+    "en": "Mycenaean dominance"
+   },
+   "f": {
+    "es": "h. 1450-1200 a. C.",
+    "en": "c. 1450-1200 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 3,
+   "civ": "ege",
+   "from": -1200,
+   "to": -1100,
+   "n": {
+    "es": "Colapso de los palacios",
+    "en": "Collapse of the palaces"
+   },
+   "f": {
+    "es": "h. 1200-1100 a. C.",
+    "en": "c. 1200-1100 BC"
+   },
+   "inter": 1
+  },
+  {
+   "tema": 3,
+   "civ": "gre",
+   "from": -1100,
+   "to": -700,
+   "n": {
+    "es": "Edad Oscura",
+    "en": "Dark Age"
+   },
+   "f": {
+    "es": "h. 1100-700 a. C.",
+    "en": "c. 1100-700 BC"
+   },
+   "inter": 1
+  },
+  {
+   "tema": 3,
+   "civ": "gre",
+   "from": -700,
+   "to": -480,
+   "n": {
+    "es": "Época arcaica",
+    "en": "Archaic period"
+   },
+   "f": {
+    "es": "h. 700-480 a. C.",
+    "en": "c. 700-480 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 3,
+   "civ": "gre",
+   "from": -480,
+   "to": -323,
+   "n": {
+    "es": "Época clásica",
+    "en": "Classical period"
+   },
+   "f": {
+    "es": "480-323 a. C.",
+    "en": "480-323 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 3,
+   "civ": "gre",
+   "from": -323,
+   "to": -31,
+   "n": {
+    "es": "Época helenística",
+    "en": "Hellenistic period"
+   },
+   "f": {
+    "es": "323-31 a. C.",
+    "en": "323-31 BC"
+   },
+   "inter": 0
+  }
+ ],
+ "hitos": [
+  {
+   "id": "egi-unif",
+   "tema": 2,
+   "civ": "egi",
+   "k": "h",
+   "y": -3050,
+   "sl": 9,
+   "s": "Veldmeijer e Ikram (2018); Lull (2006)",
+   "es": {
+    "d": "h. 3050 a. C.",
+    "t": "Unificación del Estado egipcio",
+    "x": "La unificación de Egipto abre la etapa de las primeras dinastías y de las primeras pirámides. Los egipcios fechaban por año de reinado, sin una era continua, de manera que la cronología se reconstruye sumando los reinados a partir de las listas reales, y por eso las fechas más antiguas se dan siempre como aproximadas.",
+    "q": "¿Por qué las fechas más antiguas de Egipto se dan como aproximadas?",
+    "o": [
+     "Porque se fechaba por año de reinado, sin era continua, y la cronología se suma con las listas reales",
+     "Porque los egipcios no tenían calendario",
+     "Porque todas proceden de autores griegos",
+     "Porque los templos se destruyeron en época romana"
+    ]
+   },
+   "en": {
+    "d": "c. 3050 BC",
+    "t": "Unification of the Egyptian state",
+    "x": "The unification of Egypt opens the age of the first dynasties and the first pyramids. The Egyptians dated by regnal year, with no continuous era, so the chronology is rebuilt by adding up reigns from the king lists, and that is why the earliest dates are always given as approximate.",
+    "q": "Why are the earliest Egyptian dates given as approximate?",
+    "o": [
+     "Because dating was by regnal year, with no continuous era, and the chronology is added up from the king lists",
+     "Because the Egyptians had no calendar",
+     "Because they all come from Greek authors",
+     "Because the temples were destroyed in Roman times"
+    ]
+   }
+  },
+  {
+   "id": "egi-dyeser",
+   "tema": 2,
+   "civ": "egi",
+   "k": "d",
+   "y": -2650,
+   "sl": 19,
+   "s": "Decker (1992); Caravaca (2017)",
+   "es": {
+    "d": "h. 2650 a. C.",
+    "t": "La pista del Heb-Sed en Saqqara",
+    "x": "El elemento central del Heb-Sed era la carrera del faraón, de obligada realización, que se corría en el patio sur del recinto de la pirámide de Saqqara. La pista era una recta de 55 metros coronada por dos mojones semicirculares, el circuito completo sumaba 140 metros y se recorría de norte a sur y de sur a norte.",
+    "q": "¿Qué simbolizaba correr de norte a sur y de sur a norte?",
+    "o": [
+     "La unión de los dos reinos",
+     "El recorrido del sol",
+     "La crecida del Nilo",
+     "La victoria sobre los hicsos"
+    ]
+   },
+   "en": {
+    "d": "c. 2650 BC",
+    "t": "The Heb-Sed track at Saqqara",
+    "x": "The central element of the Heb-Sed was the pharaoh's run, which had to be performed, in the southern court of the precinct of the pyramid of Saqqara. The track was a 55-metre straight crowned by two semicircular markers, the full circuit came to 140 metres, and it was run from north to south and from south to north.",
+    "q": "What did running from north to south and from south to north symbolise?",
+    "o": [
+     "The union of the two kingdoms",
+     "The course of the sun",
+     "The Nile flood",
+     "The victory over the Hyksos"
+    ]
+   }
+  },
+  {
+   "id": "egi-piramide",
+   "tema": 2,
+   "civ": "egi",
+   "k": "h",
+   "y": -2560,
+   "sl": 48,
+   "s": "Crowther (2007)",
+   "es": {
+    "d": "h. 2560 a. C.",
+    "t": "Gran Pirámide de Guiza",
+    "x": "La Gran Pirámide sirve de referencia para situar el Imperio Antiguo, la etapa en la que se consolida el culto, el sacerdocio gana control y se levantan las grandes obras. A esa misma etapa pertenece el relieve de las competiciones de obreros de Sahure.",
+    "q": "¿Qué testimonio deportivo pertenece, como la Gran Pirámide, al Imperio Antiguo?",
+    "o": [
+     "El relieve de las competiciones de Sahure",
+     "La lucha de Beni Hasan",
+     "La estela de Taharqa",
+     "Las marcas de Amenofis II"
+    ]
+   },
+   "en": {
+    "d": "c. 2560 BC",
+    "t": "Great Pyramid of Giza",
+    "x": "The Great Pyramid is a reference point for the Old Kingdom, the period in which the cult is consolidated, the priesthood gains control and the great works are raised. The relief of Sahure's workers' competitions belongs to the same period.",
+    "q": "Which sporting evidence belongs, like the Great Pyramid, to the Old Kingdom?",
+    "o": [
+     "The relief of Sahure's competitions",
+     "The Beni Hasan wrestling",
+     "The Taharqa stela",
+     "Amenhotep II's records"
+    ]
+   }
+  },
+  {
+   "id": "egi-sahure",
+   "tema": 2,
+   "civ": "egi",
+   "k": "d",
+   "y": -2490,
+   "sl": 41,
+   "s": "Decker y Förster (2011)",
+   "es": {
+    "d": "2496-2483 a. C.",
+    "t": "Las competiciones de obreros de Sahure",
+    "x": "Un relieve de la calzada de la pirámide de Sahure reúne tiro con arco, esgrima de bastón, lucha y una regata, organizadas para las fiestas por la terminación del templo funerario y la pirámide. Compiten los obreros y los soldados que han levantado la obra, hay premios para los vencedores y el rey está presente sin competir.",
+    "q": "¿Qué cuatro elementos básicos del deporte aparecen de golpe en la fiesta de Sahure?",
+    "o": [
+     "Varias pruebas, público, un motivo festivo y recompensas",
+     "Reglamento escrito, árbitro, estadio y cronómetro",
+     "Atletas profesionales, apuestas, entrenadores y federación",
+     "Un rey que compite, sacerdotes, música y danza"
+    ]
+   },
+   "en": {
+    "d": "2496-2483 BC",
+    "t": "Sahure's workers' competitions",
+    "x": "A relief from the causeway of Sahure's pyramid brings together archery, stick fencing, wrestling and a boat race, held for the festivities marking the completion of the king's funerary temple and pyramid. The workers and soldiers who built the monument compete, there are prizes for the winners, and the king is present without competing.",
+    "q": "Which four basic elements of sport appear all at once at Sahure's festival?",
+    "o": [
+     "Several events, an audience, a festive occasion and rewards",
+     "Written rules, a referee, a stadium and timing",
+     "Professional athletes, betting, coaches and a federation",
+     "A competing king, priests, music and dance"
+    ]
+   }
+  },
+  {
+   "id": "egi-justas",
+   "tema": 2,
+   "civ": "egi",
+   "k": "d",
+   "y": -2400,
+   "sl": 39,
+   "s": "Guttmann (2004)",
+   "es": {
+    "d": "dinastía V, h. 2400 a. C.",
+    "t": "Las justas de pescadores",
+    "x": "Se enfrentaban de dos a cuatro tripulaciones en canoas de juncos de papiro: los de popa timoneaban y los de proa empujaban a los rivales con las pértigas de navegación. No había reglamento ni árbitro, y para Guttmann es uno de los mejores ejemplos de cómo un trabajo cotidiano puede derivar en una disciplina deportiva de equipo.",
+    "q": "¿Cuál era el objetivo de la justa de pescadores?",
+    "o": [
+     "Hacer caer al agua a la tripulación contraria",
+     "Llegar el primero a la orilla",
+     "Pescar más peces que el rival",
+     "Romper la pértiga del contrario"
+    ]
+   },
+   "en": {
+    "d": "5th Dynasty, c. 2400 BC",
+    "t": "The fishermen's jousts",
+    "x": "Two to four crews faced each other in papyrus-reed canoes: those at the stern steered and those at the bow pushed their rivals with the punting poles. There were no rules and no referee, and for Guttmann it is one of the best examples of how everyday work can give rise to a team sport.",
+    "q": "What was the aim of the fishermen's joust?",
+    "o": [
+     "To knock the opposing crew into the water",
+     "To reach the bank first",
+     "To catch more fish than the rival",
+     "To break the opponent's pole"
+    ]
+   }
+  },
+  {
+   "id": "egi-benihasan",
+   "tema": 2,
+   "civ": "egi",
+   "k": "d",
+   "y": -2000,
+   "sl": 31,
+   "s": "Decker (2021)",
+   "es": {
+    "d": "h. 2000 a. C.",
+    "t": "La lucha de Beni Hasan",
+    "x": "Las pinturas murales de los príncipes de Beni Hasan muestran 219 parejas de luchadores con un amplio repertorio de llaves, proyecciones, volteos, zancadillas y presas, sin puñetazos ni mordiscos. Se competía desnudo salvo un pequeño cinturón, y está documentada la presencia de árbitros.",
+    "q": "¿Qué proporción de los combates de Beni Hasan se libra en el suelo?",
+    "o": [
+     "Solo el 2 %",
+     "La mitad",
+     "Tres de cada cuatro",
+     "Ninguno"
+    ]
+   },
+   "en": {
+    "d": "c. 2000 BC",
+    "t": "The Beni Hasan wrestling",
+    "x": "The wall paintings of the princes of Beni Hasan show 219 pairs of wrestlers with a wide repertoire of holds, throws, trips and leg grabs, with no punches or bites. Wrestlers competed naked except for a small belt, and the presence of referees is documented.",
+    "q": "What proportion of the Beni Hasan bouts is fought on the ground?",
+    "o": [
+     "Only 2%",
+     "Half",
+     "Three in four",
+     "None"
+    ]
+   }
+  },
+  {
+   "id": "egi-hicsos",
+   "tema": 2,
+   "civ": "egi",
+   "k": "h",
+   "y": -1549,
+   "sl": 9,
+   "s": "Veldmeijer e Ikram (2018); Cook (2018)",
+   "es": {
+    "d": "1549 a. C.",
+    "t": "Expulsión de los hicsos",
+    "x": "Durante el Segundo Periodo Intermedio los hicsos dominan el norte de Egipto, y con ellos llegan el carro ligero y el arco compuesto, que los egipcios comienzan a fabricar tras las guerras contra ellos. Su expulsión abre el Imperio Nuevo.",
+    "q": "¿Qué llega a Egipto con los hicsos?",
+    "o": [
+     "El carro ligero y el arco compuesto",
+     "El calendario solar",
+     "La lucha",
+     "El senet"
+    ]
+   },
+   "en": {
+    "d": "1549 BC",
+    "t": "Expulsion of the Hyksos",
+    "x": "During the Second Intermediate Period the Hyksos rule the north of Egypt, and with them come the light chariot and the composite bow, which the Egyptians begin to make after the wars against them. Their expulsion opens the New Kingdom.",
+    "q": "What reached Egypt with the Hyksos?",
+    "o": [
+     "The light chariot and the composite bow",
+     "The solar calendar",
+     "Wrestling",
+     "Senet"
+    ]
+   }
+  },
+  {
+   "id": "egi-hatshepsut",
+   "tema": 2,
+   "civ": "egi",
+   "k": "d",
+   "y": -1464,
+   "sl": 19,
+   "s": "Camilo (2024)",
+   "es": {
+    "d": "h. 1464 a. C.",
+    "t": "Hatshepsut corre el Heb-Sed",
+    "x": "En la Capilla Roja de Karnak aparece la reina Hatshepsut, acompañada del toro Apis, realizando el Heb-Sed en el año dieciséis de su reinado, a los cuarenta años. Los egiptólogos explican el adelanto porque sumó sus años como gran esposa real y regente antes de ser nombrada faraón.",
+    "q": "¿Qué testimonia el Heb-Sed de Hatshepsut?",
+    "o": [
+     "Que las mujeres que gobernaban también debían mostrar su fortaleza física",
+     "Que el Heb-Sed se reservaba a las reinas",
+     "Que las mujeres competían contra los soldados",
+     "Que el rito se abolió en el Imperio Nuevo"
+    ]
+   },
+   "en": {
+    "d": "c. 1464 BC",
+    "t": "Hatshepsut runs the Heb-Sed",
+    "x": "In the Red Chapel at Karnak, Queen Hatshepsut, accompanied by the Apis bull, performs the Heb-Sed in the sixteenth year of her reign, at the age of forty. Egyptologists explain the early date by suggesting that she counted her years as great royal wife and regent before being named pharaoh.",
+    "q": "What does Hatshepsut's Heb-Sed show?",
+    "o": [
+     "That women who ruled also had to display their physical strength",
+     "That the Heb-Sed was reserved for queens",
+     "That women competed against soldiers",
+     "That the rite was abolished in the New Kingdom"
+    ]
+   }
+  },
+  {
+   "id": "egi-tutmosis",
+   "tema": 2,
+   "civ": "egi",
+   "k": "d",
+   "y": -1452,
+   "sl": 23,
+   "s": "Serrano (2021); Futrell y Scanlon (2021)",
+   "es": {
+    "d": "1479-1425 a. C.",
+    "t": "Las cacerías de Tutmosis III",
+    "x": "Los faraones dejaron registros extraordinarios de sus hazañas de caza en carro, y de Tutmosis III se registró que abatió 120 toros salvajes en una hora y siete leones «en un abrir y cerrar de ojos». Su nombre abre también la tabla de marcas reales de tiro con arco del Imperio Nuevo.",
+    "q": "¿Para qué se utilizaba principalmente el carro en Egipto?",
+    "o": [
+     "Para la guerra y la caza; no se atestiguan carreras de carros",
+     "Para las carreras del hipódromo",
+     "Para el transporte de piedra",
+     "Para las procesiones del Heb-Sed"
+    ]
+   },
+   "en": {
+    "d": "1479-1425 BC",
+    "t": "The hunts of Thutmose III",
+    "x": "The pharaohs left extraordinary records of their chariot hunts, and Thutmose III was recorded as killing 120 wild bulls in one hour and seven lions “in the blink of an eye”. His name also heads the table of New Kingdom royal archery records.",
+    "q": "What was the chariot mainly used for in Egypt?",
+    "o": [
+     "For war and hunting; no chariot races are attested",
+     "For races in the hippodrome",
+     "For carrying stone",
+     "For Heb-Sed processions"
+    ]
+   }
+  },
+  {
+   "id": "egi-amenofis",
+   "tema": 2,
+   "civ": "egi",
+   "k": "d",
+   "y": -1412,
+   "sl": 22,
+   "s": "Decker y Klauck (1974); Futrell y Scanlon (2021)",
+   "es": {
+    "d": "1428-1397 a. C.",
+    "t": "Las marcas imposibles de Amenofis II",
+    "x": "En la tabla de marcas reales del Imperio Nuevo cada rey supera al anterior y ninguno falla jamás, y Amenofis II llega a atravesar del todo una diana de cuatro dedos de grosor. Decker y Klauck simularon el disparo con arcos y flechas modernos contra planchas de cobre y las flechas penetraron solo unos milímetros.",
+    "q": "¿Qué se deduce de las marcas imposibles de los reyes?",
+    "o": [
+     "Que una fuente puede ser formalmente impecable y materialmente falsa",
+     "Que los egipcios tenían arcos más potentes que los actuales",
+     "Que las dianas eran de madera",
+     "Que los reyes entrenaban a diario con la tropa"
+    ]
+   },
+   "en": {
+    "d": "1428-1397 BC",
+    "t": "Amenhotep II's impossible records",
+    "x": "In the table of New Kingdom royal records each king outdoes the previous one and none ever fails, and Amenhotep II even pierces right through a target four fingers thick. Decker and Klauck simulated the shot with modern bows and arrows against copper plates, and the arrows penetrated only a few millimetres.",
+    "q": "What can be deduced from the kings' impossible records?",
+    "o": [
+     "That a source can be formally flawless and materially false",
+     "That the Egyptians had bows more powerful than today's",
+     "That the targets were made of wood",
+     "That the kings trained daily with the troops"
+    ]
+   }
+  },
+  {
+   "id": "egi-tutankamon",
+   "tema": 2,
+   "civ": "egi",
+   "k": "d",
+   "y": -1330,
+   "sl": 21,
+   "s": "Cook (2018)",
+   "es": {
+    "d": "h. 1330 a. C.",
+    "t": "El arco compuesto de Tutankamón",
+    "x": "El arco compuesto se elaboraba con un núcleo de madera reforzado con cuerno y tendones unidos con cola, que podía tardar un año en secar. Era más ligero y manejable en los carros de guerra y lanzaba flechas hasta 300 metros. Uno de ellos, de la tumba de Tutankamón, se conserva en el Museo Egipcio de El Cairo.",
+    "q": "¿Qué alcance tenía el arco compuesto frente al arco simple?",
+    "o": [
+     "Hasta 300 metros frente a 150",
+     "El mismo alcance, pero más precisión",
+     "Hasta 1.000 metros frente a 300",
+     "Menos alcance, pero más fuerza"
+    ]
+   },
+   "en": {
+    "d": "c. 1330 BC",
+    "t": "Tutankhamun's composite bow",
+    "x": "The composite bow was made from a wooden core reinforced with horn and sinew joined with glue, which could take a year to dry. It was lighter and easier to handle on war chariots and shot arrows up to 300 metres. One of them, from Tutankhamun's tomb, is kept in the Egyptian Museum in Cairo.",
+    "q": "What range did the composite bow have compared with the simple bow?",
+    "o": [
+     "Up to 300 metres against 150",
+     "The same range but more accuracy",
+     "Up to 1,000 metres against 300",
+     "Less range but more power"
+    ]
+   }
+  },
+  {
+   "id": "egi-ramses",
+   "tema": 2,
+   "civ": "egi",
+   "k": "d",
+   "y": -1279,
+   "sl": 18,
+   "s": "Caravaca (2017); Flammini (2003)",
+   "es": {
+    "d": "1279-1212 a. C.",
+    "t": "Los catorce jubileos de Ramsés II",
+    "x": "El Heb-Sed, la fiesta del jubileo más importante de Egipto, renovaba el poder del faraón a los treinta años de reinado y se repetía cada tres. Ramsés II celebró catorce. El ceremonial incluía la doble coronación, el disparo de flechas hacia los cuatro puntos cardinales y el alzamiento del pilar Djed.",
+    "q": "¿Qué representaba el disparo de flechas hacia los cuatro puntos cardinales?",
+    "o": [
+     "El dominio del rey sobre todo el reino",
+     "La caza de los animales sagrados",
+     "La guerra contra los hicsos",
+     "El paso de las estaciones"
+    ]
+   },
+   "en": {
+    "d": "1279-1212 BC",
+    "t": "The fourteen jubilees of Ramesses II",
+    "x": "The Heb-Sed, the most important jubilee festival in Egypt, renewed the pharaoh's power after thirty years of reign and was repeated every three years. Ramesses II celebrated fourteen. The ceremony included the double coronation, shooting arrows towards the four cardinal points and raising the Djed pillar.",
+    "q": "What did shooting arrows towards the four cardinal points represent?",
+    "o": [
+     "The king's dominion over the whole kingdom",
+     "The hunting of sacred animals",
+     "The war against the Hyksos",
+     "The passing of the seasons"
+    ]
+   }
+  },
+  {
+   "id": "egi-taharqa",
+   "tema": 2,
+   "civ": "egi",
+   "k": "d",
+   "y": -685,
+   "sl": 36,
+   "s": "Pruett (2026)",
+   "es": {
+    "d": "685/684 a. C.",
+    "t": "La carrera de fondo de Taharqa",
+    "x": "La estela del año seis del rey nubio Taharqa describe una prueba de las tropas de élite: unos 50 kilómetros de Menfis al Fayum durante la noche, dos horas de descanso y otros 50 de regreso, cien kilómetros en unas nueve horas. El vencedor y los siguientes recibieron premios y el honor de comer junto a la guardia real.",
+    "q": "¿En qué se aparta Taharqa del dogma real durante la carrera?",
+    "o": [
+     "Desmontó del carro y corrió a pie junto a sus soldados",
+     "Ganó la carrera ante sus súbditos",
+     "Prohibió correr a los nubios",
+     "Corrió solo, sin la tropa"
+    ]
+   },
+   "en": {
+    "d": "685/684 BC",
+    "t": "Taharqa's long-distance run",
+    "x": "The stela from the sixth year of the Nubian king Taharqa describes a test for the elite troops: about 50 kilometres from Memphis to the Fayum by night, a two-hour rest and another 50 back, a hundred kilometres in some nine hours. The winner and those who followed received prizes and the honour of dining with the royal guard.",
+    "q": "How does Taharqa depart from the royal dogma during the run?",
+    "o": [
+     "He got down from his chariot and ran on foot with his soldiers",
+     "He won the race before his subjects",
+     "He banned the Nubians from running",
+     "He ran alone, without the troops"
+    ]
+   }
+  },
+  {
+   "id": "egi-persas",
+   "tema": 2,
+   "civ": "egi",
+   "k": "h",
+   "y": -525,
+   "sl": 47,
+   "s": "Decker (1992)",
+   "es": {
+    "d": "525 a. C.",
+    "t": "Conquista persa de Egipto",
+    "x": "Egipto pasa a manos persas, y más tarde macedónicas y romanas. El deporte faraónico dependía de dos cosas, el rey como garante del orden del mundo y un Estado capaz de medir sus proezas y grabarlas en piedra, y las dos empiezan a desaparecer.",
+    "q": "¿De qué dos cosas dependía el deporte de los faraones?",
+    "o": [
+     "Del rey como garante del orden del mundo y de un Estado capaz de medir y grabar sus proezas",
+     "De los Juegos Olímpicos y de los atletas griegos",
+     "Del ejército nubio y de los mercenarios persas",
+     "De los sacerdotes de Amón y del comercio con Fenicia"
+    ]
+   },
+   "en": {
+    "d": "525 BC",
+    "t": "Persian conquest of Egypt",
+    "x": "Egypt passes into Persian hands, and later Macedonian and Roman ones. Pharaonic sport depended on two things, the king as guarantor of the world order and a state able to measure his feats and carve them in stone, and both begin to disappear.",
+    "q": "What two things did the sport of the pharaohs depend on?",
+    "o": [
+     "The king as guarantor of the world order and a state able to measure and record his feats",
+     "The Olympic Games and Greek athletes",
+     "The Nubian army and Persian mercenaries",
+     "The priests of Amun and trade with Phoenicia"
+    ]
+   }
+  },
+  {
+   "id": "egi-alejandro",
+   "tema": 2,
+   "civ": "egi",
+   "k": "h",
+   "y": -332,
+   "sl": 9,
+   "s": "Veldmeijer e Ikram (2018)",
+   "es": {
+    "d": "332 a. C.",
+    "t": "Alejandro conquista Egipto",
+    "era": "Final de la Baja Época",
+    "x": "Alejandro Magno conquista Egipto en el 332 a. C. y abre la época grecorromana. La cronología egipcia cuenta treinta y una dinastías propias, más dos extranjeras, la macedónica y la ptolemaica.",
+    "q": "¿Cuántas dinastías egipcias se cuentan, sin las dos extranjeras?",
+    "o": [
+     "Treinta y una",
+     "Doce",
+     "Cuarenta",
+     "Dieciocho"
+    ]
+   },
+   "en": {
+    "d": "332 BC",
+    "t": "Alexander conquers Egypt",
+    "era": "End of the Late Period",
+    "x": "Alexander the Great conquers Egypt in 332 BC and opens the Graeco-Roman period. Egyptian chronology counts thirty-one native dynasties, plus two foreign ones, the Macedonian and the Ptolemaic.",
+    "q": "How many Egyptian dynasties are counted, not including the two foreign ones?",
+    "o": [
+     "Thirty-one",
+     "Twelve",
+     "Forty",
+     "Eighteen"
+    ]
+   }
+  },
+  {
+   "id": "egi-roma",
+   "tema": 2,
+   "civ": "egi",
+   "k": "h",
+   "y": -30,
+   "sl": 47,
+   "s": "Decker (1992)",
+   "es": {
+    "d": "30 a. C.",
+    "t": "Egipto, provincia romana",
+    "era": "Final de la época ptolemaica",
+    "x": "Con la pérdida definitiva de la independencia y la conversión de Egipto en provincia romana desaparece la estructura ideológica y religiosa que justificaba las demostraciones físicas del rey. Sobreviven las prácticas que nunca dependieron del palacio: las que nacen del trabajo y del juego duran mucho más que las que el poder inventa.",
+    "q": "¿Qué práctica egipcia llega hasta hoy, convertida en un acto folclórico?",
+    "o": [
+     "La esgrima de bastón",
+     "El tiro con arco sobre cobre",
+     "La carrera del Heb-Sed",
+     "La caza en carro"
+    ]
+   },
+   "en": {
+    "d": "30 BC",
+    "t": "Egypt becomes a Roman province",
+    "era": "End of the Ptolemaic period",
+    "x": "With the final loss of independence and Egypt's conversion into a Roman province, the ideological and religious structure that justified the king's physical displays disappears. The practices that never depended on the palace survive: those born of work and play last much longer than those invented by power.",
+    "q": "Which Egyptian practice survives today as a folk performance?",
+    "o": [
+     "Stick fencing",
+     "Archery at copper targets",
+     "The Heb-Sed run",
+     "Chariot hunting"
+    ]
+   }
+  },
+  {
+   "id": "per-ciro",
+   "tema": 2,
+   "civ": "per",
+   "k": "h",
+   "y": -550,
+   "sl": 52,
+   "s": "Briant (2002)",
+   "es": {
+    "d": "550 a. C.",
+    "t": "Ciro II funda el imperio aqueménida",
+    "x": "El origen de Persia se fija cuando Ciro II derrota a los medos y funda el imperio aqueménida, que en tres generaciones se extiende del Egeo al Indo. Cuatro pilares lo mantienen unido: la caballería, el arco, la educación y la gestión de la distancia, con satrapías, caminos y postas.",
+    "q": "¿Cuáles son los cuatro pilares que mantienen unido el imperio aqueménida?",
+    "o": [
+     "La caballería, el arco, la educación y la gestión de la distancia",
+     "La flota, el comercio, la escritura y la moneda",
+     "El templo, el palacio, el ejército y los juegos",
+     "La lucha, el polo, la caza y la carrera"
+    ]
+   },
+   "en": {
+    "d": "550 BC",
+    "t": "Cyrus II founds the Achaemenid Empire",
+    "x": "The origin of Persia is placed when Cyrus II defeats the Medes and founds the Achaemenid Empire, which within three generations stretches from the Aegean to the Indus. Four pillars hold it together: cavalry, the bow, education and the management of distance, with satrapies, roads and staging posts.",
+    "q": "What are the four pillars holding the Achaemenid Empire together?",
+    "o": [
+     "Cavalry, the bow, education and the management of distance",
+     "The fleet, trade, writing and coinage",
+     "The temple, the palace, the army and games",
+     "Wrestling, polo, hunting and running"
+    ]
+   }
+  },
+  {
+   "id": "per-dario",
+   "tema": 2,
+   "civ": "per",
+   "k": "d",
+   "y": -505,
+   "sl": 57,
+   "s": "Alcock (2001)",
+   "es": {
+    "d": "reinado 521-486 a. C.",
+    "t": "El cuerpo de Darío I, escrito en piedra",
+    "x": "En Naqsh-e Rostam, Darío I mandó grabar en su tumba que su cuerpo es fuerte y está adiestrado, y que es buen jinete, buen arquero y buen lancero, capacidades que el dios persa depositó sobre él. Nunca aparece como luchador, porque un rey no puede permitirse ser derrotado delante de sus súbditos.",
+    "q": "¿Por qué la semejanza con el modelo egipcio puede leerse como un préstamo cultural?",
+    "o": [
+     "Porque Darío I reinó también sobre Egipto",
+     "Porque Darío se educó en Tebas",
+     "Porque el texto lo escribieron escribas griegos",
+     "Porque copia la estela de Taharqa"
+    ]
+   },
+   "en": {
+    "d": "reign 521-486 BC",
+    "t": "The body of Darius I, written in stone",
+    "x": "At Naqsh-e Rostam, Darius I had it carved on his tomb that his body is strong and trained, and that he is a good horseman, a good archer and a good spearman, abilities placed in him by the Persian god. He never appears as a wrestler, because a king cannot afford to be defeated in front of his subjects.",
+    "q": "Why can the likeness to the Egyptian model be read as a cultural borrowing?",
+    "o": [
+     "Because Darius I also ruled over Egypt",
+     "Because Darius was educated in Thebes",
+     "Because Greek scribes wrote the text",
+     "Because it copies the Taharqa stela"
+    ]
+   }
+  },
+  {
+   "id": "per-jerjes",
+   "tema": 2,
+   "civ": "per",
+   "k": "h",
+   "y": -480,
+   "sl": 53,
+   "s": "Jacobs y Rollinger (2021)",
+   "es": {
+    "d": "480 a. C.",
+    "t": "Jerjes invade Grecia",
+    "x": "El imperio de Ciro, Darío y Jerjes, el de Maratón y las Termópilas, es solo la primera de seis etapas, y entre la primera y la última Persia median dos mil quinientos años. Lo común a los seis periodos es estable: el mundo equino, el tiro con arco y la lucha.",
+    "q": "¿Qué es común a los seis periodos de la historia persa?",
+    "o": [
+     "El mundo equino, el tiro con arco y la lucha",
+     "El zurkhaneh y el polo",
+     "Los Juegos Olímpicos",
+     "La escuela del Estado"
+    ]
+   },
+   "en": {
+    "d": "480 BC",
+    "t": "Xerxes invades Greece",
+    "x": "The empire of Cyrus, Darius and Xerxes, that of Marathon and Thermopylae, is only the first of six stages, and two and a half thousand years separate the first Persia from the last. What the six periods share is stable: the world of the horse, archery and wrestling.",
+    "q": "What do the six periods of Persian history have in common?",
+    "o": [
+     "The world of the horse, archery and wrestling",
+     "The zurkhaneh and polo",
+     "The Olympic Games",
+     "The State school"
+    ]
+   }
+  },
+  {
+   "id": "per-persepolis",
+   "tema": 2,
+   "civ": "per",
+   "k": "h",
+   "y": -330,
+   "sl": 52,
+   "s": "Briant (2002)",
+   "es": {
+    "d": "330 a. C.",
+    "t": "Alejandro destruye Persépolis",
+    "era": "Final de los aqueménidas",
+    "x": "El imperio aqueménida termina con la destrucción de su capital, Persépolis, por Alejandro Magno. La meseta irania, no obstante, seguirá produciendo deporte durante los veintitrés siglos posteriores, y el deporte persa pertenece en su mayoría a las cinco etapas que vienen después.",
+    "q": "¿A qué etapas pertenece la mayor parte del deporte persa?",
+    "o": [
+     "A las cinco posteriores a los aqueménidas",
+     "Solo a la aqueménida",
+     "A la anterior a Ciro II",
+     "A la época de Jerjes"
+    ]
+   },
+   "en": {
+    "d": "330 BC",
+    "t": "Alexander destroys Persepolis",
+    "era": "End of the Achaemenids",
+    "x": "The Achaemenid Empire ends with the destruction of its capital, Persepolis, by Alexander the Great. The Iranian plateau, however, will go on producing sport for the next twenty-three centuries, and most Persian sport belongs to the five stages that follow.",
+    "q": "To which stages does most Persian sport belong?",
+    "o": [
+     "To the five after the Achaemenids",
+     "Only to the Achaemenid one",
+     "To the one before Cyrus II",
+     "To the age of Xerxes"
+    ]
+   }
+  },
+  {
+   "id": "per-sasanidas",
+   "tema": 2,
+   "civ": "per",
+   "k": "h",
+   "y": 224,
+   "sl": 53,
+   "s": "Chehabi y Guttmann (2002)",
+   "es": {
+    "d": "224 d. C.",
+    "t": "Comienza la dinastía sasánida",
+    "x": "Los sasánidas forman el último imperio persa antes del islam, contemporáneo de Bizancio. Con ellos se consolida el chovgan, el juego a caballo del que deriva el polo moderno.",
+    "q": "¿De qué imperio fueron contemporáneos los sasánidas?",
+    "o": [
+     "De Bizancio",
+     "Del Egipto faraónico",
+     "De los aqueménidas",
+     "De los safávidas"
+    ]
+   },
+   "en": {
+    "d": "AD 224",
+    "t": "The Sasanian dynasty begins",
+    "x": "The Sasanians form the last Persian empire before Islam, contemporary with Byzantium. Under them chovgan, the game on horseback from which modern polo derives, becomes established.",
+    "q": "Which empire were the Sasanians contemporary with?",
+    "o": [
+     "Byzantium",
+     "Pharaonic Egypt",
+     "The Achaemenids",
+     "The Safavids"
+    ]
+   }
+  },
+  {
+   "id": "per-polo",
+   "tema": 2,
+   "civ": "per",
+   "k": "d",
+   "y": 225,
+   "sl": 70,
+   "s": "Chehabi y Guttmann (2002)",
+   "es": {
+    "d": "desde el siglo III",
+    "t": "El chovgan en la corte sasánida",
+    "x": "El chovgan es el primer deporte colectivo a caballo con pelota y taco, y de él deriva el polo moderno. Se cree que pudo practicarlo la dinastía parta, pero es durante el periodo sasánida cuando se consolida el juego.",
+    "q": "¿Con qué dinastía se consolida el chovgan?",
+    "o": [
+     "Con la sasánida",
+     "Con la aqueménida",
+     "Con la safávida",
+     "Con la ptolemaica"
+    ]
+   },
+   "en": {
+    "d": "from the 3rd century",
+    "t": "Chovgan at the Sasanian court",
+    "x": "Chovgan is the first team sport on horseback with ball and stick, and modern polo derives from it. The Parthian dynasty may have played it, but it is during the Sasanian period that the game becomes established.",
+    "q": "Under which dynasty does chovgan become established?",
+    "o": [
+     "The Sasanian",
+     "The Achaemenid",
+     "The Safavid",
+     "The Ptolemaic"
+    ]
+   }
+  },
+  {
+   "id": "per-arabes",
+   "tema": 2,
+   "civ": "per",
+   "k": "h",
+   "y": 650,
+   "sl": 53,
+   "s": "Chehabi y Guttmann (2002)",
+   "es": {
+    "d": "650 d. C.",
+    "t": "Conquista árabe de Persia",
+    "era": "Final de los sasánidas",
+    "x": "La conquista árabe abre la Persia islámica. Persia conserva su lengua, y es la época de Avicena y de Ferdousí.",
+    "q": "¿Qué conserva Persia tras la conquista árabe?",
+    "o": [
+     "Su lengua",
+     "Su religión zoroástrica",
+     "Su dinastía sasánida",
+     "Su capital en Persépolis"
+    ]
+   },
+   "en": {
+    "d": "AD 650",
+    "t": "Arab conquest of Persia",
+    "era": "End of the Sasanians",
+    "x": "The Arab conquest opens Islamic Persia. Persia keeps its language, and this is the age of Avicenna and Ferdowsi.",
+    "q": "What does Persia keep after the Arab conquest?",
+    "o": [
+     "Its language",
+     "Its Zoroastrian religion",
+     "Its Sasanian dynasty",
+     "Its capital at Persepolis"
+    ]
+   }
+  },
+  {
+   "id": "per-texto",
+   "tema": 2,
+   "civ": "per",
+   "k": "d",
+   "y": 651,
+   "sl": 70,
+   "s": "Chehabi y Guttmann (2002)",
+   "es": {
+    "d": "siglo VII",
+    "t": "Primer texto sobre el polo",
+    "era": "Final de los sasánidas",
+    "x": "El reglamento exacto del chovgan se desconoce. Se golpeaba la pelota al galope, agachándose por debajo del cuello del caballo porque el mazo era corto, y había una variante nocturna con pelotas prendidas en fuego.",
+    "q": "¿Cómo se lograban los tantos en el chovgan?",
+    "o": [
+     "Haciendo pasar la pelota entre dos pilares de madera o piedra",
+     "Derribando al jinete rival",
+     "Llevando la pelota en la mano hasta la meta",
+     "Lanzando el mazo contra una diana"
+    ]
+   },
+   "en": {
+    "d": "7th century",
+    "t": "The first text on polo",
+    "era": "End of the Sasanians",
+    "x": "The exact rules of chovgan are unknown. The ball was struck at the gallop, ducking below the horse's neck because the mallet was short, and there was a night version played with flaming balls.",
+    "q": "How were points scored in chovgan?",
+    "o": [
+     "By sending the ball between two pillars of wood or stone",
+     "By unseating the rival rider",
+     "By carrying the ball by hand to the goal",
+     "By throwing the mallet at a target"
+    ]
+   }
+  },
+  {
+   "id": "per-safavidas",
+   "tema": 2,
+   "civ": "per",
+   "k": "h",
+   "y": 1501,
+   "sl": 53,
+   "s": "Floor (2023)",
+   "es": {
+    "d": "1501 d. C.",
+    "t": "Comienza la dinastía safávida",
+    "x": "La etapa safávida y qajar es contemporánea de la Edad Moderna europea y de la Revolución Industrial. A ella pertenece la prueba de los correos reales, el chatir de Isfahán.",
+    "q": "¿De qué etapa europea es contemporánea la Persia safávida y qajar?",
+    "o": [
+     "De la Edad Moderna y la Revolución Industrial",
+     "De la Antigüedad clásica",
+     "De la Alta Edad Media",
+     "De la Prehistoria"
+    ]
+   },
+   "en": {
+    "d": "AD 1501",
+    "t": "The Safavid dynasty begins",
+    "x": "The Safavid and Qajar stage is contemporary with the European early modern period and the Industrial Revolution. The test of the royal messengers, the chatir of Isfahan, belongs to it.",
+    "q": "Which European period is Safavid and Qajar Persia contemporary with?",
+    "o": [
+     "The early modern period and the Industrial Revolution",
+     "Classical antiquity",
+     "The early Middle Ages",
+     "Prehistory"
+    ]
+   }
+  },
+  {
+   "id": "per-shater",
+   "tema": 2,
+   "civ": "per",
+   "k": "d",
+   "y": 1587,
+   "sl": 68,
+   "s": "Floor (2023)",
+   "es": {
+    "d": "1587",
+    "t": "La carrera del corredor Shater Ali",
+    "x": "Los shatir eran los mensajeros reales de la corte persa, que transportaban mensajes o corrían delante del caballo del monarca para alertar de posibles peligros. Pertenecer a este cuerpo era un inmenso honor, y para entrar había que superar una prueba de larga distancia.",
+    "q": "¿Qué función tenían los shatir?",
+    "o": [
+     "Llevar mensajes y correr delante del caballo del rey para alertar de peligros",
+     "Jugar al chovgan en la corte",
+     "Entrenar a los luchadores del zurkhaneh",
+     "Custodiar los caballos reales"
+    ]
+   },
+   "en": {
+    "d": "1587",
+    "t": "The run of Shater Ali",
+    "x": "The shatir were the royal messengers of the Persian court, who carried messages or ran ahead of the monarch's horse to warn of danger. Belonging to this corps was a great honour, and entry required passing a long-distance test.",
+    "q": "What was the role of the shatir?",
+    "o": [
+     "Carrying messages and running ahead of the king's horse to warn of danger",
+     "Playing chovgan at court",
+     "Training the zurkhaneh wrestlers",
+     "Guarding the royal horses"
+    ]
+   }
+  },
+  {
+   "id": "per-chardin",
+   "tema": 2,
+   "civ": "per",
+   "k": "d",
+   "y": 1667,
+   "sl": 68,
+   "s": "Chardin (1811); Floor (2023)",
+   "es": {
+    "d": "1667",
+    "t": "La prueba del chatir en Isfahán",
+    "x": "El aspirante debía traer a pie doce flechas, una a una, desde un pilar situado a legua y media del palacio de Isfahán, unos 174 kilómetros entre la salida y la puesta del sol. Ese día era fiesta pública, y un comerciante francés que presenció la prueba en 1667 anotó el tiempo del vencedor.",
+    "q": "¿Cuánto tardó el vencedor de 1667 en superar la prueba?",
+    "o": [
+     "Catorce horas",
+     "Cuatro horas",
+     "Dos días",
+     "Nueve horas"
+    ]
+   },
+   "en": {
+    "d": "1667",
+    "t": "The chatir test in Isfahan",
+    "x": "The candidate had to bring back on foot twelve arrows, one by one, from a pillar a league and a half from the palace of Isfahan, some 174 kilometres between sunrise and sunset. The day was a public holiday, and a French merchant who watched the test in 1667 noted the winner's time.",
+    "q": "How long did the 1667 winner take to complete the test?",
+    "o": [
+     "Fourteen hours",
+     "Four hours",
+     "Two days",
+     "Nine hours"
+    ]
+   }
+  },
+  {
+   "id": "per-zurkhaneh",
+   "tema": 2,
+   "civ": "per",
+   "k": "d",
+   "y": 1690,
+   "sl": 64,
+   "s": "Mohammadi et al. (2023); Krawietz (2013)",
+   "es": {
+    "d": "finales del siglo XVII",
+    "t": "Primeras noticias del zurkhaneh",
+    "x": "El zurkhaneh, «la casa de fuerza», es una sala abovedada con un foso central de arcilla blanda y una puerta deliberadamente baja, de manera que la primera lección, la de humildad, se da antes de entrar. Estaba inserto en la vida de los barrios y funcionaba también como instancia de autoridad vecinal.",
+    "q": "¿Qué hay de la leyenda de un origen clandestino del zurkhaneh frente a árabes y mongoles?",
+    "o": [
+     "Es falsa: nunca fue un recinto secreto",
+     "Está probada por fuentes aqueménidas",
+     "Explica por qué se jugaba de noche",
+     "Procede de la Ciropedia"
+    ]
+   },
+   "en": {
+    "d": "late 17th century",
+    "t": "First reports of the zurkhaneh",
+    "x": "The zurkhaneh, the “house of strength”, is a domed hall with a sunken central pit of soft clay and a deliberately low door, so that the first lesson, humility, is given before entering. It was embedded in neighbourhood life and also served as a local authority.",
+    "q": "What about the legend of a clandestine origin of the zurkhaneh against Arabs and Mongols?",
+    "o": [
+     "It is false: it was never a secret place",
+     "It is proven by Achaemenid sources",
+     "It explains why it was played at night",
+     "It comes from the Cyropaedia"
+    ]
+   }
+  },
+  {
+   "id": "fen-cartago",
+   "tema": 2,
+   "civ": "fen",
+   "k": "h",
+   "y": -814,
+   "sl": 79,
+   "s": "López-Ruiz y Doak (2019); Docter et al. (2008)",
+   "es": {
+    "d": "814 a. C. (tradición)",
+    "t": "Fundación de Cartago",
+    "x": "La expansión fenicia alcanza el norte de África, Malta, Sicilia occidental, Cerdeña, las Baleares y el sur de la península ibérica con factorías y puertos seguros. Entre ellos destaca Cartago, fundada por colonos de Tiro en el actual Túnez, según la tradición en el 814 a. C.",
+    "q": "¿Dónde se emplaza Cartago?",
+    "o": [
+     "En el punto medio del trayecto entre Tiro y Cádiz",
+     "En la desembocadura del Nilo",
+     "Junto a Persépolis",
+     "En la costa de Cerdeña"
+    ]
+   },
+   "en": {
+    "d": "814 BC (tradition)",
+    "t": "Foundation of Carthage",
+    "x": "Phoenician expansion reaches North Africa, Malta, western Sicily, Sardinia, the Balearics and the south of the Iberian Peninsula with trading posts and safe harbours. Among them Carthage stands out, founded by settlers from Tyre in present-day Tunisia, according to tradition in 814 BC.",
+    "q": "Where does Carthage lie?",
+    "o": [
+     "Halfway along the route between Tyre and Cádiz",
+     "At the mouth of the Nile",
+     "Next to Persepolis",
+     "On the coast of Sardinia"
+    ]
+   }
+  },
+  {
+   "id": "fen-sargon",
+   "tema": 2,
+   "civ": "fen",
+   "k": "d",
+   "y": -713,
+   "sl": 83,
+   "s": "Casson (1971)",
+   "es": {
+    "d": "721-705 a. C.",
+    "t": "Las naves de Sargón II",
+    "x": "La actividad física fenicia que sí admite documentación es el trabajo. Los relieves del palacio de Sargón II en Dur-Sharrukin muestran pequeñas embarcaciones a remo que remolcan troncos de cedro, con una cabeza de caballo tallada en la proa.",
+    "q": "¿Por qué los griegos llamaron hippoi a estas naves fenicias?",
+    "o": [
+     "Por la cabeza de caballo tallada en la proa",
+     "Porque transportaban caballos",
+     "Porque eran tan rápidas como un caballo",
+     "Por el nombre de su constructor"
+    ]
+   },
+   "en": {
+    "d": "721-705 BC",
+    "t": "The ships of Sargon II",
+    "x": "The Phoenician physical activity that can be documented is work. The reliefs of Sargon II's palace at Dur-Sharrukin show small rowing boats towing cedar logs, with a horse's head carved on the prow.",
+    "q": "Why did the Greeks call these Phoenician ships hippoi?",
+    "o": [
+     "Because of the horse's head carved on the prow",
+     "Because they carried horses",
+     "Because they were as fast as a horse",
+     "After the name of their builder"
+    ]
+   }
+  },
+  {
+   "id": "fen-mazarron",
+   "tema": 2,
+   "civ": "fen",
+   "k": "d",
+   "y": -595,
+   "sl": 86,
+   "s": "De Juan y Sabio (2025)",
+   "es": {
+    "d": "h. 610-580 a. C.",
+    "t": "El pecio Mazarrón 2",
+    "x": "La mejor prueba material de la navegación fenicia está a cuarenta minutos de la facultad. Mazarrón 2 apareció en 1995 con el casco casi entero, mide 8,15 metros y se sacó del agua en 2024, desmontado en veintidós piezas. Hoy se conserva en el Museo Nacional de Arqueología Subacuática, en Cartagena.",
+    "q": "¿Qué carga llevaba el pecio Mazarrón 2?",
+    "o": [
+     "Unos 2.800 kilos de lingotes de plomo",
+     "Ánforas de vino griego",
+     "Troncos de cedro",
+     "Estatuas de bronce"
+    ]
+   },
+   "en": {
+    "d": "c. 610-580 BC",
+    "t": "The Mazarrón 2 shipwreck",
+    "x": "The best material evidence of Phoenician seafaring lies forty minutes from the faculty. Mazarrón 2 was found in 1995 with its hull almost complete, is 8.15 metres long and was raised in 2024, dismantled into twenty-two pieces. It is now kept in the National Museum of Underwater Archaeology in Cartagena.",
+    "q": "What cargo did the Mazarrón 2 ship carry?",
+    "o": [
+     "Some 2,800 kilos of lead ingots",
+     "Greek wine amphorae",
+     "Cedar logs",
+     "Bronze statues"
+    ]
+   }
+  },
+  {
+   "id": "fen-persas",
+   "tema": 2,
+   "civ": "fen",
+   "k": "h",
+   "y": -539,
+   "sl": 79,
+   "s": "López-Ruiz y Doak (2019)",
+   "es": {
+    "d": "539 a. C.",
+    "t": "El Levante pasa a Persia",
+    "x": "Cuando Tiro es sometida, Cartago hereda la red de factorías gracias a su riqueza y a su posición central en la ruta, y pasa a dirigirla por su cuenta. Lo que había nacido como empresa comercial dependiente de Oriente se convierte en una potencia autónoma.",
+    "q": "¿Qué ciudad hereda la red de factorías cuando Tiro es sometida?",
+    "o": [
+     "Cartago",
+     "Sidón",
+     "Cádiz",
+     "Biblos"
+    ]
+   },
+   "en": {
+    "d": "539 BC",
+    "t": "The Levant passes to Persia",
+    "x": "When Tyre is subdued, Carthage inherits the network of trading posts thanks to its wealth and central position on the route, and comes to run it on its own. What had begun as a trading venture dependent on the East becomes an independent power.",
+    "q": "Which city inherits the network of trading posts when Tyre is subdued?",
+    "o": [
+     "Carthage",
+     "Sidon",
+     "Cádiz",
+     "Byblos"
+    ]
+   }
+  },
+  {
+   "id": "fen-kharayeb",
+   "tema": 2,
+   "civ": "fen",
+   "k": "d",
+   "y": -250,
+   "sl": 89,
+   "s": "Castiglione (2020)",
+   "es": {
+    "d": "época helenística",
+    "t": "Los niños de Kharayeb",
+    "era": "Época helenística",
+    "x": "El santuario de Kharayeb, en el interior de Tiro, ha dado 16.400 fragmentos de terracota, y las figuras de niños suponen el 35 %. Ordenan una secuencia por edades: de los 2 a los 4 años juegan con pájaros y perros, y de los 12 a los 14 aparecen con estrígil y frasco de aceite, necesarios para entrenar en el gimnasio.",
+    "q": "Entre los 5 y los 8 años, ¿qué sustituye al perro en las figuritas?",
+    "o": [
+     "Una pelota, el paso del juego libre al juego reglado",
+     "Un estrígil",
+     "Un arco",
+     "Un caballo"
+    ]
+   },
+   "en": {
+    "d": "Hellenistic period",
+    "t": "The children of Kharayeb",
+    "era": "Hellenistic period",
+    "x": "The sanctuary of Kharayeb, inland from Tyre, has yielded 16,400 terracotta fragments, and figures of children make up 35% of them. They set out a sequence by age: from 2 to 4, children play with birds and dogs, and from 12 to 14 they appear with a strigil and an oil flask, needed for training in the gymnasium.",
+    "q": "Between the ages of 5 and 8, what replaces the dog in the figurines?",
+    "o": [
+     "A ball, the step from free play to rule-based play",
+     "A strigil",
+     "A bow",
+     "A horse"
+    ]
+   }
+  },
+  {
+   "id": "fen-cartagena",
+   "tema": 2,
+   "civ": "fen",
+   "k": "h",
+   "y": -223,
+   "sl": 79,
+   "s": "López-Ruiz y Doak (2019)",
+   "es": {
+    "d": "h. 223 a. C.",
+    "t": "Fundación de Cartagena",
+    "x": "Cartago significa en fenicio «ciudad nueva», Qart-ḥadašt. Seiscientos años después, Asdrúbal el Bello estableció en la actual Cartagena una segunda Qart-ḥadašt, que los romanos tradujeron por Carthago Nova.",
+    "q": "¿Por qué se eligió el enclave de Cartagena?",
+    "o": [
+     "Por sus puertos, su laguna y sus minas de plata",
+     "Por sus bosques de cedro",
+     "Por estar frente a Tiro",
+     "Por su santuario de Kharayeb"
+    ]
+   },
+   "en": {
+    "d": "c. 223 BC",
+    "t": "Foundation of Cartagena",
+    "x": "Carthage means “new city” in Phoenician, Qart-ḥadašt. Six hundred years later, Hasdrubal the Fair founded a second Qart-ḥadašt in present-day Cartagena, which the Romans translated as Carthago Nova.",
+    "q": "Why was the site of Cartagena chosen?",
+    "o": [
+     "For its harbours, its lagoon and its silver mines",
+     "For its cedar forests",
+     "Because it faced Tyre",
+     "For its Kharayeb sanctuary"
+    ]
+   }
+  },
+  {
+   "id": "fen-diotimo",
+   "tema": 2,
+   "civ": "fen",
+   "k": "d",
+   "y": -205,
+   "sl": 91,
+   "s": "Remijsen (2015)",
+   "es": {
+    "d": "h. 200 a. C.",
+    "t": "Diótimo de Sidón vence en Nemea",
+    "era": "Época helenística",
+    "x": "Las ciudades fenicias carecieron de un Estado que grabara proezas, de un rey que exhibiera su cuerpo y de un santuario común donde inscribir vencedores, de modo que lo que falta es un tipo de fuente. En la etapa final, con la influencia helena, los registros griegos recogen a fenicios vencedores en sus juegos.",
+    "q": "¿En qué prueba vence Diótimo de Sidón?",
+    "o": [
+     "En la carrera de carros de los Juegos Nemeos",
+     "En la lucha de Olimpia",
+     "En la regata de Cartago",
+     "En el pancracio de Delfos"
+    ]
+   },
+   "en": {
+    "d": "c. 200 BC",
+    "t": "Diotimus of Sidon wins at Nemea",
+    "era": "Hellenistic period",
+    "x": "The Phoenician cities lacked a state that carved feats in stone, a king who displayed his body and a common sanctuary where victors were inscribed, so what is missing is a type of source. In the final stage, under Greek influence, Greek records list Phoenician victors in their games.",
+    "q": "In which event does Diotimus of Sidon win?",
+    "o": [
+     "The chariot race at the Nemean Games",
+     "Wrestling at Olympia",
+     "The regatta at Carthage",
+     "The pankration at Delphi"
+    ]
+   }
+  },
+  {
+   "id": "fen-destruccion",
+   "tema": 2,
+   "civ": "fen",
+   "k": "h",
+   "y": -146,
+   "sl": 79,
+   "s": "Futrell (2006)",
+   "es": {
+    "d": "146 a. C.",
+    "t": "Roma destruye Cartago",
+    "era": "Final de Cartago",
+    "x": "Roma destruye Cartago y pone fin a la potencia autónoma que, a la postre, le había disputado el dominio del Mediterráneo occidental.",
+    "q": "¿Qué disputó Cartago a Roma?",
+    "o": [
+     "El dominio del Mediterráneo occidental",
+     "Las minas de oro de Egipto",
+     "El control de Persia",
+     "La organización de los Juegos Olímpicos"
+    ]
+   },
+   "en": {
+    "d": "146 BC",
+    "t": "Rome destroys Carthage",
+    "era": "End of Carthage",
+    "x": "Rome destroys Carthage and puts an end to the independent power that had ultimately contested its control of the western Mediterranean.",
+    "q": "What did Carthage contest with Rome?",
+    "o": [
+     "Control of the western Mediterranean",
+     "The gold mines of Egypt",
+     "Control of Persia",
+     "The running of the Olympic Games"
+    ]
+   }
+  },
+  {
+   "id": "fen-helix",
+   "tema": 2,
+   "civ": "fen",
+   "k": "d",
+   "y": 215,
+   "sl": 91,
+   "s": "Golden (2004)",
+   "es": {
+    "d": "h. 213-217 d. C.",
+    "t": "Aurelio Hélix en Olimpia",
+    "era": "Época romana",
+    "x": "Aurelio Hélix, «el fenicio», vence en Olimpia a comienzos del siglo III d. C. La presencia de atletas fenicios en unos juegos ajenos resulta muy interesante para analizar el deporte griego, el contenido del próximo tema.",
+    "q": "¿En qué disciplina vence Aurelio Hélix en Olimpia?",
+    "o": [
+     "En la lucha",
+     "En la carrera de carros",
+     "En el estadio",
+     "En el lanzamiento de disco"
+    ]
+   },
+   "en": {
+    "d": "c. AD 213-217",
+    "t": "Aurelius Helix at Olympia",
+    "era": "Roman period",
+    "x": "Aurelius Helix, “the Phoenician”, wins at Olympia in the early third century AD. The presence of Phoenician athletes at someone else's games is very revealing for the study of Greek sport, the subject of the next unit.",
+    "q": "In which discipline does Aurelius Helix win at Olympia?",
+    "o": [
+     "Wrestling",
+     "The chariot race",
+     "The stadion",
+     "The discus"
+    ]
+   }
+  },
+  {
+   "id": "ege-clase",
+   "tema": 3,
+   "civ": "ege",
+   "k": "h",
+   "y": -1950,
+   "sl": 7,
+   "s": "Shapland (2022); Schoep (2010)",
+   "es": {
+    "d": "h. 1950 a. C.",
+    "t": "Surge una nueva clase dirigente en Creta",
+    "x": "Se reconoce en el paso de los enterramientos colectivos a los individuales, y con ella aparece un grupo estable de sacerdotes. Los palacios fueron residencia, almacén y centro religioso, puesto que Creta no levantó templos monumentales.",
+    "q": "¿En qué se reconoce la nueva clase dirigente cretense?",
+    "o": [
+     "En el paso de los enterramientos colectivos a los individuales",
+     "En la construcción de templos monumentales",
+     "En las listas de vencedores",
+     "En las murallas de los palacios"
+    ]
+   },
+   "en": {
+    "d": "c. 1950 BC",
+    "t": "A new ruling class emerges in Crete",
+    "x": "It can be recognised in the shift from collective to individual burials, and with it a stable group of priests appears. The palaces were residence, storehouse and religious centre, since Crete built no monumental temples.",
+    "q": "How is the new Cretan ruling class recognised?",
+    "o": [
+     "In the shift from collective to individual burials",
+     "In the building of monumental temples",
+     "In victor lists",
+     "In the palace walls"
+    ]
+   }
+  },
+  {
+   "id": "ege-salto",
+   "tema": 3,
+   "civ": "ege",
+   "k": "d",
+   "y": -1750,
+   "sl": 14,
+   "s": "Shapland (2022); McInerney (2011); Soar (2014)",
+   "es": {
+    "d": "h. 1750-1450 a. C.",
+    "t": "Época de los grandes palacios: la taurocatapsia",
+    "x": "El salto sobre un toro vivo y a la carrera se practicó sobre todo en torno al palacio de Cnoso, en fiestas que reunían a la comunidad. Con los palacios adquirió su grandeza escénica y ritual, y se convirtió en emblema del poder de Cnoso.",
+    "q": "¿De dónde proceden casi todas las imágenes de taurocatapsia?",
+    "o": [
+     "Del palacio de Cnoso",
+     "De Olimpia",
+     "De Micenas",
+     "De Egipto"
+    ]
+   },
+   "en": {
+    "d": "c. 1750-1450 BC",
+    "t": "Age of the great palaces: bull-leaping",
+    "x": "The leap over a live, charging bull was practised above all around the palace of Knossos, at festivals that gathered the community. With the palaces it acquired its scenic and ritual grandeur and became the emblem of Knossos's power.",
+    "q": "Where do almost all images of bull-leaping come from?",
+    "o": [
+     "The palace of Knossos",
+     "Olympia",
+     "Mycenae",
+     "Egypt"
+    ]
+   }
+  },
+  {
+   "id": "ege-danza",
+   "tema": 3,
+   "civ": "ege",
+   "k": "d",
+   "y": -1600,
+   "sl": 8,
+   "s": "Newman (2017); Scanlon (2014)",
+   "es": {
+    "d": "h. 1600 a. C.",
+    "t": "Danza en la arboleda sagrada",
+    "x": "En el fresco de Cnoso las mujeres bailan ante una multitud, en un acto que los estudios vinculan al culto a la naturaleza, concebida como divinidad femenina, y a los ritos de iniciación.",
+    "q": "¿Con qué vinculan los estudios la danza de la arboleda sagrada?",
+    "o": [
+     "Con el culto a la naturaleza y los ritos de iniciación",
+     "Con los juegos fúnebres",
+     "Con la preparación militar",
+     "Con los Juegos de Olimpia"
+    ]
+   },
+   "en": {
+    "d": "c. 1600 BC",
+    "t": "Dance in the sacred grove",
+    "x": "In the Knossos fresco women dance before a crowd, in an act that scholars link to the worship of nature, conceived as a female deity, and to initiation rites.",
+    "q": "What do scholars link the dance in the sacred grove with?",
+    "o": [
+     "The worship of nature and initiation rites",
+     "Funeral games",
+     "Military training",
+     "The Olympic Games"
+    ]
+   }
+  },
+  {
+   "id": "ege-tera",
+   "tema": 3,
+   "civ": "ege",
+   "k": "h",
+   "y": -1628,
+   "sl": 20,
+   "s": "Crowther (2007); Kyle (2015); Rutter (2014)",
+   "es": {
+    "d": "h. 1628 a. C.",
+    "t": "Erupción del volcán de Tera",
+    "x": "Durante décadas se explicó con ella el fin de la Creta minoica. Hoy sabemos que fue unos ciento cincuenta años anterior al final de los palacios y que, si bien cubrió de ceniza el este de la isla, Creta se rehízo.",
+    "q": "¿Acabó la erupción de Tera con los palacios cretenses?",
+    "o": [
+     "No, fue unos ciento cincuenta años anterior a su final",
+     "Sí, los destruyó de inmediato",
+     "Sí, por el maremoto",
+     "No, fue posterior a su final"
+    ]
+   },
+   "en": {
+    "d": "c. 1628 BC",
+    "t": "Eruption of the Thera volcano",
+    "x": "For decades it was used to explain the end of Minoan Crete. Today we know it came some 150 years before the end of the palaces and that, although it covered the east of the island with ash, Crete recovered.",
+    "q": "Did the eruption of Thera end the Cretan palaces?",
+    "o": [
+     "No, it came some 150 years before their end",
+     "Yes, it destroyed them at once",
+     "Yes, through the tsunami",
+     "No, it came after their end"
+    ]
+   }
+  },
+  {
+   "id": "ege-akrotiri",
+   "tema": 3,
+   "civ": "ege",
+   "k": "d",
+   "y": -1625,
+   "sl": 11,
+   "s": "Younger (2021); Rutter (2014)",
+   "es": {
+    "d": "finales del siglo XVII a. C.",
+    "t": "Fresco de los niños púgiles de Akrotiri",
+    "x": "Dos niños de entre seis y diez años boxean con un solo guante, en una de las escenas deportivas más antiguas del Egeo. El vencedor lleva collar, pulseras y pendientes y su rival viste con sencillez, de modo que el juego marcaba ya la jerarquía entre los hijos de la élite.",
+    "q": "¿Por qué se ha conservado el fresco de Akrotiri?",
+    "o": [
+     "Porque la ceniza del volcán sepultó la ciudad",
+     "Porque se guardó en una tumba real",
+     "Porque lo trasladaron a Egipto",
+     "Porque se pintó en una cueva"
+    ]
+   },
+   "en": {
+    "d": "late 17th century BC",
+    "t": "Boxing Boys fresco of Akrotiri",
+    "x": "Two boys aged six to ten box with a single glove, in one of the oldest sporting scenes of the Aegean. The winner wears a necklace, bracelets and earrings and his opponent is simply dressed, so the game already marked the hierarchy among the children of the elite.",
+    "q": "Why has the Akrotiri fresco survived?",
+    "o": [
+     "Because the volcano's ash buried the city",
+     "Because it was kept in a royal tomb",
+     "Because it was taken to Egypt",
+     "Because it was painted in a cave"
+    ]
+   }
+  },
+  {
+   "id": "ege-riton",
+   "tema": 3,
+   "civ": "ege",
+   "k": "d",
+   "y": -1550,
+   "sl": 12,
+   "s": "Rutter (2014); Koehl (1986)",
+   "es": {
+    "d": "h. 1550-1500 a. C.",
+    "t": "Ritón de los boxeadores de Hagia Triada",
+    "x": "Vaso de piedra de unos 46 cm para las libaciones, con cuatro bandas en relieve de púgiles adultos y del salto del toro. Su equipo cambia de una banda a otra, señal de un entrenamiento sistemático con reglas.",
+    "q": "¿Para qué servía un ritón?",
+    "o": [
+     "Para las libaciones a los dioses",
+     "Para guardar los premios",
+     "Para medir las carreras",
+     "Para el aceite de los atletas"
+    ]
+   },
+   "en": {
+    "d": "c. 1550-1500 BC",
+    "t": "Boxer Rhyton of Hagia Triada",
+    "x": "Stone vessel about 46 cm high for libations, with four relief bands of adult boxers and bull-leaping. Their equipment changes from band to band, a sign of systematic rule-based training.",
+    "q": "What was a rhyton used for?",
+    "o": [
+     "For libations to the gods",
+     "To keep prizes",
+     "To measure races",
+     "For athletes' oil"
+    ]
+   }
+  },
+  {
+   "id": "ege-cnoso",
+   "tema": 3,
+   "civ": "ege",
+   "k": "h",
+   "y": -1450,
+   "sl": 20,
+   "s": "Crowther (2007); Kyle (2015); Rutter (2014)",
+   "es": {
+    "d": "h. 1450 a. C.",
+    "t": "Los micénicos toman Cnoso",
+    "x": "Ardieron casi todos los palacios de Creta salvo el de Cnoso, que pasó a manos de los micénicos. Durante unos setenta y cinco años fue el único palacio de la isla, y la taurocatapsia siguió bajo dominio micénico.",
+    "q": "¿Qué ocurrió con la taurocatapsia tras la toma micénica de Cnoso?",
+    "o": [
+     "Siguió practicándose bajo dominio micénico",
+     "Se prohibió de inmediato",
+     "Se trasladó a Olimpia",
+     "Se convirtió en prueba olímpica"
+    ]
+   },
+   "en": {
+    "d": "c. 1450 BC",
+    "t": "The Mycenaeans take Knossos",
+    "x": "Almost all the palaces of Crete burned except Knossos, which passed to the Mycenaeans. For some seventy-five years it was the island's only palace, and bull-leaping continued under Mycenaean rule.",
+    "q": "What happened to bull-leaping after the Mycenaean seizure of Knossos?",
+    "o": [
+     "It continued under Mycenaean rule",
+     "It was banned at once",
+     "It moved to Olympia",
+     "It became an Olympic event"
+    ]
+   }
+  },
+  {
+   "id": "ege-fincnoso",
+   "tema": 3,
+   "civ": "ege",
+   "k": "h",
+   "y": -1375,
+   "sl": 20,
+   "s": "Crowther (2007); Kyle (2015); Rutter (2014)",
+   "es": {
+    "d": "h. 1375 a. C.",
+    "t": "Arde el palacio de Cnoso",
+    "x": "Con él terminó la Creta de los palacios. El salto del toro continuó, no obstante, en la Grecia continental hasta la caída de los palacios micénicos.",
+    "q": "¿Dónde continuó el salto del toro tras el incendio de Cnoso?",
+    "o": [
+     "En la Grecia continental micénica",
+     "En Egipto",
+     "En Olimpia",
+     "En ninguna parte"
+    ]
+   },
+   "en": {
+    "d": "c. 1375 BC",
+    "t": "The palace of Knossos burns",
+    "x": "With it palatial Crete came to an end. Bull-leaping nevertheless continued in mainland Greece until the fall of the Mycenaean palaces.",
+    "q": "Where did bull-leaping continue after the burning of Knossos?",
+    "o": [
+     "In Mycenaean mainland Greece",
+     "In Egypt",
+     "At Olympia",
+     "Nowhere"
+    ]
+   }
+  },
+  {
+   "id": "ege-colapso",
+   "tema": 3,
+   "civ": "ege",
+   "k": "h",
+   "y": -1200,
+   "sl": 22,
+   "s": "Cline (2015); Perry (2014); Potter (2012); Rutter (2014)",
+   "es": {
+    "d": "1200-1150 a. C.",
+    "t": "Arden los palacios micénicos",
+    "x": "Cline (2015) habla de una «tormenta perfecta» de terremotos, sequía, gentes desplazadas, revueltas y ataques de los «pueblos del mar». Con la caída del palacio, Grecia se quedó cuatro siglos sin escribir y sin quien pagara los carros, la caza señorial y los púgiles a sueldo.",
+    "q": "¿Cómo explica Cline (2015) la caída de los palacios?",
+    "o": [
+     "Como una «tormenta perfecta» de varias causas",
+     "Por la erupción de Tera",
+     "Por una invasión persa",
+     "Por una epidemia"
+    ]
+   },
+   "en": {
+    "d": "1200-1150 BC",
+    "t": "The Mycenaean palaces burn",
+    "x": "Cline (2015) speaks of a 'perfect storm' of earthquakes, drought, displaced peoples, revolts and attacks by the 'Sea Peoples'. With the fall of the palace, Greece went four centuries without writing and without anyone to pay for chariots, lordly hunting and paid boxers.",
+    "q": "How does Cline (2015) explain the fall of the palaces?",
+    "o": [
+     "As a 'perfect storm' of several causes",
+     "By the eruption of Thera",
+     "By a Persian invasion",
+     "By an epidemic"
+    ]
+   }
+  },
+  {
+   "id": "gre-lefkandi",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -950,
+   "sl": 23,
+   "s": "Verde Castro (2011); Roller (1981)",
+   "es": {
+    "d": "h. 950 a. C.",
+    "t": "Tumba del gran señor de Lefkandi",
+    "x": "Un gran señor fue incinerado y enterrado bajo un túmulo con sus armas y sus caballos sacrificados, como Patroclo en la Ilíada. El funeral de un jefe era la ocasión de exhibir el prestigio de la élite.",
+    "q": "¿Con qué relato homérico se compara la tumba de Lefkandi?",
+    "o": [
+     "El funeral de Patroclo",
+     "El regreso de Ulises",
+     "La carrera de Pélope",
+     "La tregua de Ífito"
+    ]
+   },
+   "en": {
+    "d": "c. 950 BC",
+    "t": "Tomb of the great lord of Lefkandi",
+    "x": "A great lord was cremated and buried under a tumulus with his weapons and sacrificed horses, like Patroclus in the Iliad. A chieftain's funeral was the occasion to display the prestige of the elite.",
+    "q": "Which Homeric story is the Lefkandi tomb compared with?",
+    "o": [
+     "The funeral of Patroclus",
+     "The return of Odysseus",
+     "The race of Pelops",
+     "The truce of Iphitos"
+    ]
+   }
+  },
+  {
+   "id": "gre-ifito",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -884,
+   "sl": 39,
+   "s": "Nielsen (2023); Bromberg (2023); Christesen et al. (2021); Heródoto (1989)",
+   "es": {
+    "d": "884 a. C. (leyenda)",
+    "t": "Tregua de Ífito, según la leyenda",
+    "x": "Los autores antiguos situaban el origen del olimpismo en un pacto de tregua del rey Ífito de Élide con Esparta y Pisa. El relato procede de un autor del siglo II d. C., más de mil años posterior, y pertenece a la leyenda.",
+    "q": "¿Por qué se considera legendaria la fecha de 884 a. C.?",
+    "o": [
+     "Porque procede de un autor más de mil años posterior",
+     "Porque la confirma la arqueología",
+     "Porque figura en la Ilíada",
+     "Porque la grabó Ífito en piedra"
+    ]
+   },
+   "en": {
+    "d": "884 BC (legend)",
+    "t": "Truce of Iphitos, according to legend",
+    "x": "Ancient authors placed the origin of the Olympic Games in a truce made by King Iphitos of Elis with Sparta and Pisa. The story comes from a second-century AD author, more than a thousand years later, and belongs to legend.",
+    "q": "Why is the date of 884 BC considered legendary?",
+    "o": [
+     "Because it comes from an author over a thousand years later",
+     "Because archaeology confirms it",
+     "Because it appears in the Iliad",
+     "Because Iphitos carved it in stone"
+    ]
+   }
+  },
+  {
+   "id": "gre-776",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -776,
+   "sl": 44,
+   "s": "Christesen (2007); Crowther (2003)",
+   "es": {
+    "d": "776 a. C.",
+    "t": "Corebo de Élide, primer vencedor registrado",
+    "x": "La lista de vencedores que escribió Hipias a partir de la tradición oral se inicia con Corebo, ganador del stádion. Es poco fiable en sus primeros siglos, y la tradición sitúa en este año los primeros Juegos.",
+    "q": "¿En qué prueba venció Corebo?",
+    "o": [
+     "El stádion",
+     "El pancracio",
+     "La cuadriga",
+     "El pentatlón"
+    ]
+   },
+   "en": {
+    "d": "776 BC",
+    "t": "Koroibos of Elis, first recorded victor",
+    "x": "The victor list that Hippias wrote from oral tradition begins with Koroibos, winner of the stadion. It is unreliable for its first centuries, and tradition places the first Games in this year.",
+    "q": "In which event did Koroibos win?",
+    "o": [
+     "The stadion",
+     "The pankration",
+     "The four-horse chariot",
+     "The pentathlon"
+    ]
+   }
+  },
+  {
+   "id": "gre-dipilon",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -740,
+   "sl": 22,
+   "s": "Cline (2015); Perry (2014); Potter (2012); Rutter (2014)",
+   "es": {
+    "d": "h. 740-725 a. C.",
+    "t": "Enócoe del Dipilón",
+    "x": "En el siglo VIII a. C. regresa la escritura con el alfabeto fenicio. Esta jarra de vino lleva una de las inscripciones griegas más antiguas, que la declara premio del mejor bailarín de un concurso.",
+    "q": "¿Qué premiaba la enócoe del Dipilón?",
+    "o": [
+     "Al mejor bailarín de un concurso",
+     "Al vencedor del stádion",
+     "Al mejor auriga",
+     "Al mejor púgil"
+    ]
+   },
+   "en": {
+    "d": "c. 740-725 BC",
+    "t": "Dipylon oinochoe",
+    "x": "In the eighth century BC writing returns with the Phoenician alphabet. This wine jug bears one of the oldest Greek inscriptions, which declares it the prize for the best dancer in a contest.",
+    "q": "What did the Dipylon oinochoe reward?",
+    "o": [
+     "The best dancer in a contest",
+     "The winner of the stadion",
+     "The best charioteer",
+     "The best boxer"
+    ]
+   }
+  },
+  {
+   "id": "gre-orsipo",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -720,
+   "sl": 59,
+   "s": "McDonnell (1991); Christesen (2012); Garrison (2010)",
+   "es": {
+    "d": "720 a. C.",
+    "t": "Orsipo de Mégara corre desnudo",
+    "x": "Hasta entonces se competía con perizoma. El cambio tardó más de un siglo en generalizarse y se mantuvo hasta el final del olimpismo, salvo en las pruebas hípicas.",
+    "q": "¿Cuánto tardó en generalizarse la desnudez atlética?",
+    "o": [
+     "Más de un siglo",
+     "Una sola edición",
+     "Diez años",
+     "Nunca se generalizó"
+    ]
+   },
+   "en": {
+    "d": "720 BC",
+    "t": "Orsippos of Megara runs naked",
+    "x": "Until then athletes competed in the perizoma. The change took more than a century to become general and lasted until the end of the Games, except in the equestrian events.",
+    "q": "How long did athletic nudity take to become general?",
+    "o": [
+     "More than a century",
+     "A single edition",
+     "Ten years",
+     "It never became general"
+    ]
+   }
+  },
+  {
+   "id": "gre-iliada",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -725,
+   "sl": 23,
+   "s": "Verde Castro (2011); Roller (1981)",
+   "es": {
+    "d": "h. 725-675 a. C.",
+    "t": "Se fijan los poemas homéricos",
+    "x": "El canto 23 de la Ilíada narra los juegos fúnebres de Patroclo, ocho pruebas en las que compiten casi solo príncipes. La trama se sitúa en el siglo XIII a. C., pero retrata la sociedad de los basileis de los siglos IX y VIII a. C.",
+    "q": "¿Qué sociedad retratan los juegos de la Ilíada?",
+    "o": [
+     "La de los basileis de los siglos IX y VIII a. C.",
+     "La de los palacios cretenses",
+     "La de la Atenas democrática",
+     "La de la Grecia romana"
+    ]
+   },
+   "en": {
+    "d": "c. 725-675 BC",
+    "t": "The Homeric poems are fixed",
+    "x": "Book 23 of the Iliad narrates the funeral games of Patroclus, eight events in which almost only princes compete. The plot is set in the 13th century BC, but it portrays the society of the basileis of the ninth and eighth centuries BC.",
+    "q": "Which society do the games of the Iliad portray?",
+    "o": [
+     "That of the basileis of the ninth and eighth centuries BC",
+     "That of the Cretan palaces",
+     "That of democratic Athens",
+     "That of Roman Greece"
+    ]
+   }
+  },
+  {
+   "id": "gre-estadio",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -700,
+   "sl": 41,
+   "s": "Kyrieleis (2003); Sinn (2021); Kyle (2015)",
+   "es": {
+    "d": "h. 700 a. C.",
+    "t": "Primer estadio de Olimpia",
+    "x": "El santuario de Zeus había nacido a finales del siglo XI a. C., y durante siglos recibió figurillas de animales y trípodes de bronce sin relación con el atletismo. Primero fue el rito, después la distinción de las élites y al final el certamen.",
+    "q": "¿Qué fue primero en Olimpia, según la arqueología?",
+    "o": [
+     "El rito",
+     "El certamen atlético",
+     "El estadio",
+     "La lista de vencedores"
+    ]
+   },
+   "en": {
+    "d": "c. 700 BC",
+    "t": "First stadium at Olympia",
+    "x": "The sanctuary of Zeus had been founded at the end of the 11th century BC, and for centuries it received animal figurines and bronze tripods unrelated to athletics. First came the rite, then the distinction of the elites and finally the contest.",
+    "q": "What came first at Olympia, according to archaeology?",
+    "o": [
+     "The rite",
+     "The athletic contest",
+     "The stadium",
+     "The victor list"
+    ]
+   }
+  },
+  {
+   "id": "gre-solon",
+   "tema": 3,
+   "civ": "gre",
+   "k": "h",
+   "y": -594,
+   "sl": 29,
+   "s": "Pomeroy et al. (2001)",
+   "es": {
+    "d": "594/593 a. C.",
+    "t": "Reformas de Solón en Atenas",
+    "x": "Junto a las de Clístenes (508 a. C.), abren paso a la democracia. En la época arcaica se fijan el programa de Olimpia y el circuito panhelénico, de modo que casi todo el deporte griego se configura entonces.",
+    "q": "¿En qué época se configura casi todo el deporte griego?",
+    "o": [
+     "En la arcaica",
+     "En la Edad Oscura",
+     "En la helenística",
+     "En la romana"
+    ]
+   },
+   "en": {
+    "d": "594/593 BC",
+    "t": "Reforms of Solon in Athens",
+    "x": "Together with those of Cleisthenes (508 BC), they open the way to democracy. In the Archaic period the Olympic programme and the Panhellenic circuit are fixed, so almost all Greek sport takes shape then.",
+    "q": "In which period does almost all Greek sport take shape?",
+    "o": [
+     "The Archaic",
+     "The Dark Age",
+     "The Hellenistic",
+     "The Roman"
+    ]
+   }
+  },
+  {
+   "id": "gre-hereos",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -580,
+   "sl": 102,
+   "s": "García Romero (2015); Serwint (1993)",
+   "es": {
+    "d": "h. 580 a. C.",
+    "t": "Se instituyen los Juegos Hereos",
+    "x": "Carrera de muchachas solteras en honor de Hera, de unos 160 m, en el estadio de Olimpia y en tres categorías de edad. La ganadora recibía, como los varones, una corona de olivo.",
+    "q": "¿Quiénes corrían en los Juegos Hereos?",
+    "o": [
+     "Muchachas solteras",
+     "Mujeres casadas",
+     "Sacerdotisas de Deméter",
+     "Esclavas"
+    ]
+   },
+   "en": {
+    "d": "c. 580 BC",
+    "t": "The Heraia are established",
+    "x": "Race of unmarried girls in honour of Hera, about 160 m long, in the stadium of Olympia and in three age categories. The winner received, like the men, an olive wreath.",
+    "q": "Who ran in the Heraia?",
+    "o": [
+     "Unmarried girls",
+     "Married women",
+     "Priestesses of Demeter",
+     "Slave women"
+    ]
+   }
+  },
+  {
+   "id": "gre-arriquion",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -564,
+   "sl": 91,
+   "s": "Miller (2004b); Brophy (1978); Filóstrato (1996)",
+   "es": {
+    "d": "564 a. C.",
+    "t": "Arriquión, coronado muerto",
+    "x": "Buscaba su tercera corona seguida y murió asfixiado en la final de pancracio mientras dislocaba el pie de su rival, que se rindió. Los jueces coronaron su cadáver.",
+    "q": "¿Qué hicieron los jueces con Arriquión?",
+    "o": [
+     "Coronaron su cadáver",
+     "Lo descalificaron",
+     "Declararon nulo el combate",
+     "Coronaron a su rival"
+    ]
+   },
+   "en": {
+    "d": "564 BC",
+    "t": "Arrhichion, crowned in death",
+    "x": "He was seeking his third successive wreath and died of strangulation in the pankration final while dislocating his opponent's foot; the opponent conceded. The judges crowned his corpse.",
+    "q": "What did the judges do with Arrhichion?",
+    "o": [
+     "Crowned his corpse",
+     "Disqualified him",
+     "Declared the bout void",
+     "Crowned his opponent"
+    ]
+   }
+  },
+  {
+   "id": "gre-480",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -480,
+   "sl": 39,
+   "s": "Nielsen (2023); Bromberg (2023); Christesen et al. (2021); Heródoto (1989)",
+   "es": {
+    "d": "480 a. C.",
+    "t": "Olimpiada durante la invasión de Jerjes",
+    "x": "La 75.ª Olimpiada se celebró mientras Leónidas resistía en las Termópilas. La ekecheiría no implicaba una paz general ni frenaba las guerras en toda Grecia.",
+    "q": "¿Detenía la tregua olímpica las guerras de Grecia?",
+    "o": [
+     "No, protegía Élide, el santuario y a los peregrinos",
+     "Sí, en toda Grecia",
+     "Sí, pero solo en el Peloponeso",
+     "Solo las guerras contra Persia"
+    ]
+   },
+   "en": {
+    "d": "480 BC",
+    "t": "An Olympiad during Xerxes's invasion",
+    "x": "The 75th Olympiad was held while Leonidas held out at Thermopylae. The ekecheiria implied no general peace and did not halt wars throughout Greece.",
+    "q": "Did the Olympic truce stop the wars of Greece?",
+    "o": [
+     "No, it protected Elis, the sanctuary and the pilgrims",
+     "Yes, throughout Greece",
+     "Yes, but only in the Peloponnese",
+     "Only wars against Persia"
+    ]
+   }
+  },
+  {
+   "id": "gre-esparta",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -420,
+   "sl": 40,
+   "s": "Waterfield (2018)",
+   "es": {
+    "d": "420 a. C.",
+    "t": "Esparta, multada y excluida",
+    "x": "Durante la Guerra del Peloponeso, Élide multó a Esparta con 200.000 dracmas, 200 por soldado, por enviar tropas a Lepreo durante la tregua. Los espartanos no pagaron y fueron excluidos de esa edición.",
+    "q": "¿Por qué fue multada Esparta en 420 a. C.?",
+    "o": [
+     "Por enviar tropas durante la tregua",
+     "Por sobornar a los jueces",
+     "Por inscribir a mujeres",
+     "Por llegar tarde a Élide"
+    ]
+   },
+   "en": {
+    "d": "420 BC",
+    "t": "Sparta fined and excluded",
+    "x": "During the Peloponnesian War, Elis fined Sparta 200,000 drachmas, 200 per soldier, for sending troops to Lepreon during the truce. The Spartans did not pay and were excluded from that edition.",
+    "q": "Why was Sparta fined in 420 BC?",
+    "o": [
+     "For sending troops during the truce",
+     "For bribing the judges",
+     "For entering women",
+     "For arriving late at Elis"
+    ]
+   }
+  },
+  {
+   "id": "gre-cinisca",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -396,
+   "sl": 94,
+   "s": "García Romero (2015); Nicholson (2021); Papakonstantinou (2019)",
+   "es": {
+    "d": "396 a. C.",
+    "t": "Cinisca gana la cuadriga",
+    "x": "En las pruebas hípicas la corona era para el dueño de las monturas, de modo que hubo campeonas olímpicas aunque las mujeres tenían vetado el acceso a Olimpia.",
+    "q": "¿Por qué pudo vencer Cinisca?",
+    "o": [
+     "Porque la corona era para el dueño de los caballos",
+     "Porque condujo el carro",
+     "Porque se disfrazó",
+     "Porque era sacerdotisa"
+    ]
+   },
+   "en": {
+    "d": "396 BC",
+    "t": "Kyniska wins the four-horse chariot race",
+    "x": "In the equestrian events the wreath went to the owner of the horses, so there were female Olympic champions although women were barred from Olympia.",
+    "q": "Why could Kyniska win?",
+    "o": [
+     "Because the wreath went to the owner of the horses",
+     "Because she drove the chariot",
+     "Because she was in disguise",
+     "Because she was a priestess"
+    ]
+   }
+  },
+  {
+   "id": "gre-zanes",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -388,
+   "sl": 104,
+   "s": "Bertolín Cebrián (2020); Buraselis (2017); Kyle (2015)",
+   "es": {
+    "d": "388 a. C.",
+    "t": "Los primeros zanes",
+    "x": "Seis estatuas de Zeus pagadas con las multas a un púgil que compró a sus rivales y a los tres que aceptaron su dinero. Llevaban el nombre del infractor en el pedestal.",
+    "q": "¿Con qué se pagaron los primeros zanes?",
+    "o": [
+     "Con las multas por soborno",
+     "Con el botín de una guerra",
+     "Con donativos de Esparta",
+     "Con el tesoro de Zeus"
+    ]
+   },
+   "en": {
+    "d": "388 BC",
+    "t": "The first Zanes",
+    "x": "Six statues of Zeus paid for with the fines of a boxer who bought his rivals and of the three who took his money. They bore the offender's name on the pedestal.",
+    "q": "What paid for the first Zanes?",
+    "o": [
+     "With fines for bribery",
+     "With war booty",
+     "With donations from Sparta",
+     "With the treasury of Zeus"
+    ]
+   }
+  },
+  {
+   "id": "gre-anolimpiada",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": -364,
+   "sl": 40,
+   "s": "Waterfield (2018)",
+   "es": {
+    "d": "364 a. C.",
+    "t": "Batalla en el Altis: la anolimpiada",
+    "x": "Durante el pentatlón de la 104.ª Olimpiada, arcadios y eleos combatieron en el recinto sagrado. Al recuperar la administración, Élide registró la edición como «no-olimpiada», aunque respetó los triunfos individuales.",
+    "q": "¿Cómo registró Élide la edición de 364 a. C.?",
+    "o": [
+     "Como anolimpiada",
+     "Como la mejor de su historia",
+     "Como olimpiada espartana",
+     "No la registró en absoluto"
+    ]
+   },
+   "en": {
+    "d": "364 BC",
+    "t": "Battle in the Altis: the anolympiad",
+    "x": "During the pentathlon of the 104th Olympiad, Arcadians and Eleans fought in the sacred precinct. On regaining control, Elis recorded the edition as a 'non-Olympiad', although it respected the individual victories.",
+    "q": "How did Elis record the edition of 364 BC?",
+    "o": [
+     "As an anolympiad",
+     "As the best in its history",
+     "As a Spartan Olympiad",
+     "It did not record it at all"
+    ]
+   }
+  },
+  {
+   "id": "gre-queronea",
+   "tema": 3,
+   "civ": "gre",
+   "k": "h",
+   "y": -338,
+   "sl": 29,
+   "s": "Pomeroy et al. (2001)",
+   "es": {
+    "d": "338 a. C.",
+    "t": "Batalla de Queronea",
+    "x": "Filipo II de Macedonia vence y termina el dominio de Atenas y Esparta. De la época clásica procede la mayoría de los testimonios sobre atletas y gimnasios, incluso sobre siglos anteriores, y hay que leerlos con cuidado.",
+    "q": "¿Quién venció en Queronea?",
+    "o": [
+     "Filipo II de Macedonia",
+     "Jerjes",
+     "Leónidas",
+     "Alejandro de Élide"
+    ]
+   },
+   "en": {
+    "d": "338 BC",
+    "t": "Battle of Chaeronea",
+    "x": "Philip II of Macedon wins and the dominance of Athens and Sparta ends. Most of the evidence on athletes and gymnasia, even about earlier centuries, comes from the Classical period and must be read with care.",
+    "q": "Who won at Chaeronea?",
+    "o": [
+     "Philip II of Macedon",
+     "Xerxes",
+     "Leonidas",
+     "Alexander of Elis"
+    ]
+   }
+  },
+  {
+   "id": "gre-corinto",
+   "tema": 3,
+   "civ": "gre",
+   "k": "h",
+   "y": -146,
+   "sl": 29,
+   "s": "Pomeroy et al. (2001)",
+   "es": {
+    "d": "146 a. C.",
+    "t": "Grecia queda bajo el dominio de Roma",
+    "x": "Tras perder la batalla de Corinto, Grecia pasa a depender de Roma, y Olimpia de sus generales y, más tarde, de sus emperadores.",
+    "q": "¿De quién dependió Olimpia desde 146 a. C.?",
+    "o": [
+     "De los generales y emperadores romanos",
+     "De Esparta",
+     "De Macedonia",
+     "De Atenas"
+    ]
+   },
+   "en": {
+    "d": "146 BC",
+    "t": "Greece falls under Roman rule",
+    "x": "After losing the battle of Corinth, Greece comes to depend on Rome, and Olympia on its generals and, later, its emperors.",
+    "q": "On whom did Olympia depend from 146 BC?",
+    "o": [
+     "Roman generals and emperors",
+     "Sparta",
+     "Macedon",
+     "Athens"
+    ]
+   }
+  },
+  {
+   "id": "gre-neron",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": 67,
+   "sl": 108,
+   "s": "Durántez Corral (2010)",
+   "es": {
+    "d": "67 d. C.",
+    "t": "Nerón compite en Olimpia",
+    "x": "Hizo aplazar dos años la Olimpiada, añadió el carro de diez caballos y concursos de tragedia y música, se cayó del carro y fue proclamado vencedor tras pagar a los jueces. Tras su muerte, Élide borró aquella Olimpiada.",
+    "q": "¿Qué revela el episodio de Nerón?",
+    "o": [
+     "Que el agón se había convertido en exhibición del poder del emperador",
+     "Que Roma respetaba las reglas griegas",
+     "Que el pancracio era la prueba favorita",
+     "Que los jueces eran incorruptibles"
+    ]
+   },
+   "en": {
+    "d": "AD 67",
+    "t": "Nero competes at Olympia",
+    "x": "He had the Olympiad postponed two years, added the ten-horse chariot race and contests in tragedy and music, fell from the chariot and was proclaimed victor after paying the judges. After his death, Elis struck that Olympiad from the record.",
+    "q": "What does the Nero episode reveal?",
+    "o": [
+     "That the agon had become a display of the emperor's power",
+     "That Rome respected Greek rules",
+     "That the pankration was the favourite event",
+     "That the judges were incorruptible"
+    ]
+   }
+  },
+  {
+   "id": "gre-ninfeo",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": 150,
+   "sl": 107,
+   "s": "Kyle (2015); Spivey (2005)",
+   "es": {
+    "d": "h. 150 d. C.",
+    "t": "Ninfeo de Herodes Ático",
+    "x": "El benefactor griego costeó un acueducto con su fuente monumental para el santuario. Hacia 170, mientras declinaba el deporte, Olimpia vivió su máximo apogeo arquitectónico.",
+    "q": "¿Qué costeó Herodes Ático en Olimpia?",
+    "o": [
+     "Un acueducto con una fuente monumental",
+     "El primer estadio",
+     "Los zanes",
+     "El templo de Hera"
+    ]
+   },
+   "en": {
+    "d": "c. AD 150",
+    "t": "Nymphaeum of Herodes Atticus",
+    "x": "The Greek benefactor paid for an aqueduct with its monumental fountain for the sanctuary. By c. 170, while sport declined, Olympia reached its architectural peak.",
+    "q": "What did Herodes Atticus pay for at Olympia?",
+    "o": [
+     "An aqueduct with a monumental fountain",
+     "The first stadium",
+     "The Zanes",
+     "The temple of Hera"
+    ]
+   }
+  },
+  {
+   "id": "gre-393",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": 393,
+   "sl": 109,
+   "s": "Remijsen (2015); Spivey (2005); Arrechea et al. (2019)",
+   "es": {
+    "d": "393 d. C.",
+    "t": "La ley de Teodosio I contra los cultos paganos",
+    "x": "Durante más de un siglo se fechó en ella el final de los Juegos. Remijsen (2015) comprobó que no los menciona y que el vínculo lo estableció un cronista del siglo XI; en 399 un poeta de la corte aún esperaba ver a los vencedores de Olimpia.",
+    "q": "¿Menciona la ley de 393 los Juegos Olímpicos?",
+    "o": [
+     "No",
+     "Sí, los prohíbe expresamente",
+     "Sí, los traslada a Roma",
+     "Sí, los reduce a un día"
+    ]
+   },
+   "en": {
+    "d": "AD 393",
+    "t": "Theodosius I's law against pagan cults",
+    "x": "For more than a century the end of the Games was dated to it. Remijsen (2015) showed that it does not mention them and that the link was made by an 11th-century chronicler; in 399 a court poet still hoped to see the Olympic victors.",
+    "q": "Does the law of 393 mention the Olympic Games?",
+    "o": [
+     "No",
+     "Yes, it expressly bans them",
+     "Yes, it moves them to Rome",
+     "Yes, it reduces them to one day"
+    ]
+   }
+  },
+  {
+   "id": "gre-435",
+   "tema": 3,
+   "civ": "gre",
+   "k": "d",
+   "y": 435,
+   "sl": 109,
+   "s": "Remijsen (2015); Spivey (2005); Arrechea et al. (2019)",
+   "es": {
+    "d": "435 d. C.",
+    "t": "Constitución de Teodosio II contra los templos",
+    "x": "Según Arrechea et al. (2019), pudo desencadenar el incendio del templo de Zeus, y tras ello los Juegos no volvieron a celebrarse en Olimpia. Hacia 420-440 la estatua de Zeus se había llevado a Constantinopla.",
+    "q": "¿Qué pudo desencadenar la constitución de 435?",
+    "o": [
+     "El incendio del templo de Zeus",
+     "La restauración de los Juegos",
+     "La fundación de Élide",
+     "La llegada de Nerón"
+    ]
+   },
+   "en": {
+    "d": "AD 435",
+    "t": "Constitution of Theodosius II against the temples",
+    "x": "According to Arrechea et al. (2019), it may have triggered the fire that destroyed the temple of Zeus, after which the Games were no longer held at Olympia. C. 420-440 the statue of Zeus had been taken to Constantinople.",
+    "q": "What may the constitution of 435 have triggered?",
+    "o": [
+     "The fire at the temple of Zeus",
+     "The restoration of the Games",
+     "The foundation of Elis",
+     "Nero's arrival"
+    ]
+   }
+  }
+ ]
+}
