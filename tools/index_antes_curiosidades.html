@@ -420,23 +420,6 @@ details.slide li{font-size:13.5px;line-height:1.5;margin-bottom:6px}
 .lg-c.done{background:var(--tp);border-color:var(--tp);color:var(--paper)}
 .lg-c.now{border:2px solid var(--accent);background:var(--warm);color:var(--ink)}
 .lg-c.next{opacity:.55}
-.lg-hint{font-size:13px;color:var(--muted);margin:0 0 8px}
-.lvm{position:fixed;inset:0;z-index:210;background:rgba(0,20,50,.6);display:flex;align-items:center;justify-content:center;padding:16px;animation:achIn .25s ease}
-.lvm.out{opacity:0;transition:opacity .25s}
-.lvm-box{width:100%;max-width:420px;max-height:92vh;overflow:auto;background:var(--paper);border-radius:22px;padding:18px 18px 16px;box-shadow:0 20px 60px rgba(0,0,0,.35);border:3px solid var(--accent);animation:achPop .45s cubic-bezier(.2,1.4,.4,1)}
-.lvm-top{text-align:center;margin-bottom:12px}
-.lvm-top b{display:block;font-size:24px;font-weight:800;color:var(--tp2)}
-.lvm-top small{display:block;font-size:13px;font-weight:700;color:var(--wink);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
-.lvm-img{display:block;width:100%;max-height:36vh;object-fit:cover;border-radius:14px;background:var(--soft)}
-.lvm-era{font-size:12px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:12px}
-.lvm-t{font-size:20px;line-height:1.2;color:var(--tp2);margin:4px 0 8px}
-.lvm-x{font-size:15px;line-height:1.5;margin:0 0 10px}
-.lvm-src{font-size:12px;color:var(--muted);margin-bottom:12px}
-.lvm-src summary{cursor:pointer;font-weight:700}
-.lvm-src p{margin:6px 0}
-.lvm-nav{display:flex;gap:8px;margin-bottom:8px}.lvm-nav .btn{flex:1}
-.lvm .btn{width:100%}
-@media (prefers-reduced-motion: reduce){.lvm,.lvm-box{animation:none}}
 .lg-l{display:flex;align-items:center;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
 .lg-l .n{width:30px;height:30px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--tp2)}
 .lg-l b{flex:1}
@@ -785,7 +768,7 @@ const I18N = {
     settings:"Ajustes", language:"Idioma", reset:"Cerrar sesión y empezar de nuevo", resetConfirm:"Se borrarán el idioma, la XP, los niveles y el progreso de todos los temas en este móvil, y la app volverá a la pantalla de inicio. ¿Seguro?", resetDone:"Sesión cerrada",
     badges:"Insignias", badgeName:{fichas:"Lector",mapa:"Cartógrafo",cards:"Ojo de arqueólogo",glossary:"Escriba",timeline:"Cronista",sources:"Lector de fuentes",match:"Atacabos",myths:"Cazamitos",quiz:"Relámpago"},
     badgeHow:"Completa cada sección de un tema para ganar su insignia.",
-    levelUp:"¡Nivel {n}!", lvOf:"Nivel {n} de {t}", lvUpT:"¡Nivel {n}!", lvCur:"Curiosidad desbloqueada", lvSrc:"Fuentes e imagen", lvImg:"Imagen", lvLocked:"Se desbloquea en el nivel {n} ({x} XP)", lvHint:"Cada nivel desbloquea una curiosidad de la historia del deporte. Toca un nivel conseguido para releerla.", lvPrev:"‹ Anterior", lvNext:"Siguiente ›", complete:"Completado",
+    levelUp:"¡Nivel {n}!", lvOf:"Nivel {n} de {t}", complete:"Completado",
     levels:["Aprendiz","Paleolítico","Neolítico","Escriba","Pahlavan","Hoplita","Gladiador","Caballero","Gentleman","Catedrático"],
     noVideos:"Todavía no hay vídeos para este tema.", vFeed:"Modo scroll", vFeedSub:"Desliza hacia arriba y los vídeos pasan uno tras otro, como en TikTok o Reels", vTap:"Toca para activar el sonido", vNext:"Siguiente vídeo ›", vEnd:"Has llegado al último vídeo del tema", vClose:"Volver", vTestB:"Test", vMoreB:"Saber más", pListen:"▶ Escuchar", pResume:"▶ Continuar", pPause:"❚❚ Pausa", pDone:"✓ Escuchado", pLeft:"quedan {m} min", pMin:"{m} min", pBg:"Sigue sonando si apagas la pantalla o si pasas a otras secciones de la app. En iPhone, instala la app para que funcione mejor.", pEsOnly:"", noPod:"Todavía no hay pódcast para este tema.", pSpeed:"Velocidad", vMore:"Saber más", vTest:"Pon a prueba lo que has visto", vSeen:"✓ Visto", vNew:"Sin ver", vAll:"Todos los vídeos", vOk:"Correcto. +{n} XP", vKo:"La respuesta correcta está marcada", install:"Añade Historiapp a tu pantalla de inicio: en Safari, botón Compartir y «Añadir a pantalla de inicio»; en Chrome, menú y «Instalar aplicación».",
     privacy:"Tu progreso (XP, rachas, insignias) se guarda solo en este móvil y nadie más lo ve. Para no perderlo, instala la app y úsala siempre desde el icono. La app cuenta de forma anónima qué pantallas se visitan, sin cookies ni datos personales, para mejorar la asignatura.", version:"Contenido actualizado", offline:"Sin conexión: se muestran los datos guardados", loadError:"No se ha podido cargar el contenido. Comprueba la conexión.",
@@ -814,7 +797,7 @@ const I18N = {
     settings:"Settings", language:"Language", reset:"Log out and start again", resetConfirm:"Your language, XP, levels and progress for all units will be erased on this phone, and the app will go back to the start screen. Are you sure?", resetDone:"Logged out",
     badges:"Badges", badgeName:{fichas:"Reader",mapa:"Cartographer",cards:"Archaeologist's eye",glossary:"Scribe",timeline:"Chronicler",sources:"Source reader",match:"Dot-connector",myths:"Myth hunter",quiz:"Lightning"},
     badgeHow:"Complete each section of a unit to earn its badge.",
-    levelUp:"Level {n}!", lvOf:"Level {n} of {t}", lvUpT:"Level {n}!", lvCur:"Fact unlocked", lvSrc:"Sources and image", lvImg:"Image", lvLocked:"Unlocks at level {n} ({x} XP)", lvHint:"Each level unlocks a fact from the history of sport. Tap a level you have reached to read it again.", lvPrev:"‹ Previous", lvNext:"Next ›", complete:"Completed",
+    levelUp:"Level {n}!", lvOf:"Level {n} of {t}", complete:"Completed",
     levels:["Apprentice","Palaeolithic","Neolithic","Scribe","Pahlavan","Hoplite","Gladiator","Knight","Gentleman","Professor"],
     noVideos:"No videos for this unit yet.", vFeed:"Scroll mode", vFeedSub:"Swipe up and the videos play one after another, like TikTok or Reels", vTap:"Tap to turn the sound on", vNext:"Next video ›", vEnd:"That was the last video of this unit", vClose:"Back", vTestB:"Test", vMoreB:"Learn more", pListen:"▶ Listen", pResume:"▶ Resume", pPause:"❚❚ Pause", pDone:"✓ Listened", pLeft:"{m} min left", pMin:"{m} min", pBg:"It keeps playing if you switch the screen off or move to other sections of the app. On iPhone, install the app for best results.", pEsOnly:"This episode is in Spanish.", noPod:"No podcast for this unit yet.", pSpeed:"Speed", vMore:"Learn more", vTest:"Test what you have seen", vSeen:"✓ Watched", vNew:"Not watched", vAll:"All videos", vOk:"Correct. +{n} XP", vKo:"The right answer is marked", install:"Add Historiapp to your home screen: in Safari, tap Share and 'Add to Home Screen'; in Chrome, open the menu and 'Install app'.",
     privacy:"Your progress (XP, streaks, badges) is stored only on this phone and nobody else sees it. To keep it, install the app and always open it from its icon. The app counts anonymously which screens are visited, with no cookies or personal data, to improve the course.", version:"Content updated", offline:"Offline: showing saved data", loadError:"Could not load the content. Check your connection.",
@@ -851,7 +834,7 @@ function addXP(n){
     S.prog.streak = (S.prog.lastDay===y) ? S.prog.streak+1 : 1; S.prog.lastDay=today;
   }
   save(); const after=levelOf(S.prog.xp);
-  if(after>before) setTimeout(()=>{ celebrate(); showLevel(after+1,true); track("nivel/"+(after+1),"Nivel",true); },350);
+  if(after>before) setTimeout(()=>{ toast(t("levelUp",{n:after+1,name:t("levels")[after]}),2600); celebrate(); },350);
   renderXP(); try{ checkAch(); }catch(_){}
 }
 function markSeen(temaId,mode,key){ const k=temaId+"."+mode; S.prog.seen[k]=S.prog.seen[k]||{}; S.prog.seen[k][key]=1; save(); }
@@ -1297,32 +1280,7 @@ const ACH=[
 function checkAch(){ const p=S.prog; p.ach=p.ach||{}; if((p.streak||0)>(p.bestStreak||0)) p.bestStreak=p.streak; let n=[];
   ACH.forEach(([id,ic,f])=>{ if(!p.ach[id]&&f(p)){ p.ach[id]=todayKey(); n.push([id,ic]); } });
   if(n.length){ save(); if(S.lang) setTimeout(()=>showAch(n),900); } }
-let CUR=null, ACHQ=null;
-async function getCur(){ if(!CUR){ try{ CUR=await (await fetch("data/curiosidades.json")).json(); }catch(e){ CUR=null; } } return CUR; }
-async function showLevel(n,isUp){
-  const all=await getCur(); const c=all&&all[n-1];
-  if(!c){ if(isUp) toast(t("levelUp",{n}),2600); return; }
-  document.querySelectorAll(".lvm").forEach(x=>x.remove());
-  const reach=levelOf(S.prog.xp)+1, im=c.img;
-  const d=document.createElement("div"); d.className="lvm"; d.setAttribute("role","dialog"); d.setAttribute("aria-modal","true");
-  d.innerHTML=`<div class="lvm-box">
-    <div class="lvm-top">${isUp?`<b>🎉 ${esc(t("lvUpT",{n}))}</b><small>${esc(t("lvCur"))}</small>`:`<b>${esc(t("level"))} ${n}</b>`}</div>
-    ${im?`<img class="lvm-img" src="${esc(im.src)}" alt="${esc(L(im.pie))}">`:""}
-    <div class="lvm-era">${esc(L(c.era))} · ${esc(L(c.fecha))}</div>
-    <h3 class="lvm-t">${esc(L(c.titulo))}</h3>
-    <p class="lvm-x">${md(L(c.texto))}</p>
-    <details class="lvm-src"><summary>${esc(t("lvSrc"))}</summary>${((S.lang==="en"?c.refs_en:c.refs)||[]).map(r=>`<p>${md(r)}</p>`).join("")}
-      ${im?`<p><b>${esc(t("lvImg"))}.</b> ${esc(L(im.pie))} ${esc(L(im.autor)||"")}${im.licencia?", "+esc(im.licencia):""}. <a href="${esc(im.url)}" target="_blank" rel="noopener">Wikimedia Commons</a></p>`:""}</details>
-    ${isUp?"":`<div class="lvm-nav"><button class="btn sec" id="lvP" ${n<=1?"disabled":""}>${t("lvPrev")}</button><button class="btn sec" id="lvN" ${n>=reach||n>=all.length?"disabled":""}>${t("lvNext")}</button></div>`}
-    <button class="btn" id="lvOk">${t("achOk")}</button></div>`;
-  document.body.appendChild(d);
-  const close=()=>{ d.classList.add("out"); setTimeout(()=>{ d.remove(); if(ACHQ){ const q=ACHQ; ACHQ=null; showAch(q); } },250); };
-  d.querySelector("#lvOk").onclick=close; d.onclick=e=>{ if(e.target===d) close(); };
-  const P=d.querySelector("#lvP"), N=d.querySelector("#lvN");
-  if(P) P.onclick=()=>showLevel(n-1,false); if(N) N.onclick=()=>showLevel(n+1,false);
-  if(isUp){ const nx=all[n]; if(nx&&nx.img){ const i=new Image(); i.src=nx.img.src; } }
-}
-function showAch(list){ if(document.querySelector(".lvm")){ ACHQ=(ACHQ||[]).concat(list); return; } document.querySelectorAll(".achm").forEach(x=>x.remove());
+function showAch(list){ document.querySelectorAll(".achm").forEach(x=>x.remove());
   const d=document.createElement("div"); d.className="achm"; d.setAttribute("role","dialog"); d.setAttribute("aria-modal","true");
   d.innerHTML=`<div class="achm-box"><div class="achm-t">🏆 ${t(list.length>1?"achNewN":"achNew")}</div>${list.map(([id,ic])=>`<div class="achm-i"><span>${ic}</span><div><b>${esc(t("ach."+id+".n"))}</b><small>${esc(t("ach."+id+".d"))}</small></div></div>`).join("")}
     <div class="achm-b"><button class="btn" id="achOk">${t("achOk")}</button><button class="btn sec" id="achSee">${t("achSee")}</button></div></div>`;
@@ -1342,10 +1300,10 @@ function renderLogros(){
     <div class="section-title">${t("achT")}</div>
     <div class="lg-ach">${ACH.map(([id,ic])=>{ const on=p.ach&&p.ach[id]; return `<div class="lg-a ${on?"on":"off"}"><span class="ic">${on?ic:"🔒"}</span><div><b>${t("ach."+id+".n")}</b><small>${t("ach."+id+".d")}${on?" · ✓":""}</small></div></div>`; }).join("")}</div>
     <div class="section-title">${t("lgLevels")}</div>
-    <p class="lg-hint">${esc(t("lvHint"))}</p><div class="lg-grid">${LEVEL_XP.map((x,i)=>`<button class="lg-c ${i<lv?"done":i===lv?"now":"next"}" data-t="${esc(t("level")+" "+(i+1)+" · "+x+" "+t("xp"))}" aria-label="${esc(t("level")+" "+(i+1)+", "+x+" "+t("xp"))}">${i+1}</button>`).join("")}</div>
+    <div class="lg-grid">${LEVEL_XP.map((x,i)=>`<button class="lg-c ${i<lv?"done":i===lv?"now":"next"}" data-t="${esc(t("level")+" "+(i+1)+" · "+x+" "+t("xp"))}" aria-label="${esc(t("level")+" "+(i+1)+", "+x+" "+t("xp"))}">${i+1}</button>`).join("")}</div>
     <div class="section-title">${t("lgHow")}</div>
     <div class="card lg-how">${t("lgHowList").map(x=>`<p>${esc(x)}</p>`).join("")}</div></main>`;
-  app.querySelectorAll(".lg-c").forEach((c,i)=>c.onclick=()=>{ if(i<=lv) showLevel(i+1,false); else toast(t("lvLocked",{n:i+1,x:LEVEL_XP[i]}),2200); });
+  app.querySelectorAll(".lg-c").forEach(c=>c.onclick=()=>toast(c.dataset.t,1800));
   bindHeader(()=>nav(S.view.back||{name:"home"}));
 }
 

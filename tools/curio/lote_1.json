@@ -1,0 +1,812 @@
+[
+ {
+  "n": 1,
+  "era": {
+   "es": "Prehistoria",
+   "en": "Prehistory"
+  },
+  "fecha": {
+   "es": "c. 200 000 años",
+   "en": "c. 200,000 years ago"
+  },
+  "titulo": {
+   "es": "Las jabalinas de los neandertales",
+   "en": "The Neanderthals' javelins"
+  },
+  "texto": {
+   "es": "En una mina de carbón de Schöningen (Alemania) aparecieron en los años noventa nueve lanzas de madera, las armas de caza completas más antiguas que se conocen, fechadas hoy en unos 200 000 años y atribuidas a neandertales. En 2019 seis lanzadores de jabalina probaron réplicas y acertaron en dianas situadas hasta a 20 metros (Hutson et al., 2025; Milks et al., 2019).",
+   "en": "In the 1990s nine wooden spears turned up in a coal mine at Schöningen (Germany). They are the oldest complete hunting weapons known, now dated to about 200,000 years ago and attributed to Neanderthals. In 2019 six trained javelin throwers tested replicas and hit targets placed up to 20 metres away (Hutson et al., 2025; Milks et al., 2019)."
+  },
+  "refs": [
+   "Hutson, J. M., Bittmann, F., Fischer, P., García-Moreno, A., Gaudzinski-Windheuser, S., Nelson, E., Ortiz, J. E., Penkman, K. E. H., Perić, Z. M., Richter, D., Torres, T., Turner, E., Villaluenga, A., White, D. y Jöris, O. (2025). Revised age for Schöningen hunting spears indicates intensification of Neanderthal cooperative behavior around 200,000 years ago. Science Advances, 11(19), eadv0752. https://doi.org/10.1126/sciadv.adv0752",
+   "Milks, A., Parker, D. y Pope, M. (2019). External ballistics of Pleistocene hand-thrown spears: Experimental performance data and implications for human evolution. Scientific Reports, 9, 820. https://doi.org/10.1038/s41598-018-37904-w"
+  ],
+  "refs_en": [
+   "Hutson, J. M., Bittmann, F., Fischer, P., García-Moreno, A., Gaudzinski-Windheuser, S., Nelson, E., Ortiz, J. E., Penkman, K. E. H., Perić, Z. M., Richter, D., Torres, T., Turner, E., Villaluenga, A., White, D., & Jöris, O. (2025). Revised age for Schöningen hunting spears indicates intensification of Neanderthal cooperative behavior around 200,000 years ago. Science Advances, 11(19), eadv0752. https://doi.org/10.1126/sciadv.adv0752",
+   "Milks, A., Parker, D., & Pope, M. (2019). External ballistics of Pleistocene hand-thrown spears: Experimental performance data and implications for human evolution. Scientific Reports, 9, 820. https://doi.org/10.1038/s41598-018-37904-w"
+  ],
+  "img": {
+   "src": "img/curio/001.jpg",
+   "pie": {
+    "es": "La lanza VII de Schöningen en el sedimento donde se halló, 1997",
+    "en": "Schöningen spear VII in the sediment where it was found, 1997"
+   },
+   "autor": {
+    "es": "P. Pfarr (NLD)",
+    "en": "P. Pfarr (NLD)"
+   },
+   "licencia": "CC BY-SA 3.0 DE",
+   "url": "https://commons.wikimedia.org/wiki/File:Sch%C3%B6ningen_Speer_VII_im_Sediment_1997_%C2%A9_P._Pfarr_NLD.jpg",
+   "tipo": "hecho"
+  },
+  "nota": "La datación clásica de 300 000-400 000 años fue revisada a unos 200 000 en 2025 (Hutson et al.)."
+ },
+ {
+  "n": 2,
+  "era": {
+   "es": "Prehistoria",
+   "en": "Prehistory"
+  },
+  "fecha": {
+   "es": "Desde c. 7000 a. C.",
+   "en": "From c. 7000 BC"
+  },
+  "titulo": {
+   "es": "Diez mujeres bailando en Cogul",
+   "en": "Ten women dancing at Cogul"
+  },
+  "texto": {
+   "es": "En 1908 el párroco de Cogul (Lleida), Ramon Huguet, dio a conocer las pinturas de la Roca dels Moros, un abrigo pintado y repintado entre el 7000 y el 100 a. C. Su escena más original reúne a diez mujeres con largas faldas acampanadas en torno a una figura masculina desnuda, leída desde entonces como una danza ritual (Enciclopèdia Catalana, s. f.).",
+   "en": "In 1908 the parish priest of Cogul (Lleida), Ramon Huguet, made known the paintings of the Roca dels Moros, a rock shelter painted and repainted between 7000 and 100 BC. Its most original scene gathers ten women in long bell-shaped skirts around a naked male figure, read ever since as a ritual dance (Enciclopèdia Catalana, n.d.)."
+  },
+  "refs": [
+   "Enciclopèdia Catalana. (s. f.). Conjunt d'art rupestre de la Roca dels Moros. En Gran Enciclopèdia Catalana. https://www.enciclopedia.cat/gran-enciclopedia-catalana/conjunt-dart-rupestre-de-la-roca-dels-moros"
+  ],
+  "refs_en": [
+   "Enciclopèdia Catalana. (n.d.). Conjunt d'art rupestre de la Roca dels Moros. In Gran Enciclopèdia Catalana. https://www.enciclopedia.cat/gran-enciclopedia-catalana/conjunt-dart-rupestre-de-la-roca-dels-moros"
+  ],
+  "img": {
+   "src": "img/curio/002.jpg",
+   "pie": {
+    "es": "Reproducción de las pinturas de la Roca dels Moros (Cogul) expuesta en el Museu de Gavà",
+    "en": "Reproduction of the Roca dels Moros (Cogul) paintings on display at the Museu de Gavà"
+   },
+   "autor": {
+    "es": "Enric",
+    "en": "Enric"
+   },
+   "licencia": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:064_Pintures_de_la_cova_dels_Moros,_exposici%C3%B3_al_Museu_de_Gav%C3%A0.JPG",
+   "tipo": "hecho"
+  },
+  "nota": "La horquilla 7000-100 a. C. es la del conjunto del abrigo, no solo de la escena de las mujeres. El número de mujeres (diez) es el de la Enciclopèdia Catalana; otros autores cuentan nueve. La foto es una reproducción de museo (no vista directamente; de ella deriva el recorte de Commons «Danseuses de Roca dels Moros à Cogul»)."
+ },
+ {
+  "n": 3,
+  "era": {
+   "es": "Prehistoria",
+   "en": "Prehistory"
+  },
+  "fecha": {
+   "es": "c. 6500 a. C.",
+   "en": "c. 6500 BC"
+  },
+  "titulo": {
+   "es": "Nadadores pintados en pleno Sáhara",
+   "en": "Swimmers painted in the Sahara"
+  },
+  "texto": {
+   "es": "En octubre de 1933 el explorador húngaro László Almásy encontró en Wadi Sura, en el desierto occidental de Egipto, unas pinturas neolíticas de hacia el 6500 a. C. con figuras tendidas que él interpretó como nadadores. Aquel Sáhara recibía lluvias de monzón y tenía agua. La cueva inspiró una escena de la novela y la película «El paciente inglés» (Bradshaw Foundation, s. f.).",
+   "en": "In October 1933 the Hungarian explorer László Almásy found Neolithic paintings from around 6500 BC at Wadi Sura, in Egypt's Western Desert, with prone figures he read as swimmers. That Sahara received monsoon rains and had water. The cave inspired a scene in the novel and film «The English Patient» (Bradshaw Foundation, n.d.)."
+  },
+  "refs": [
+   "Bradshaw Foundation. (s. f.). Gilf Kebir: Cave of Swimmers. https://www.bradshawfoundation.com/africa/gilf_kebir_cave_of_swimmers",
+   "Universität zu Köln. (s. f.). About Wadi Sura. https://wadisura.phil-fak.uni-koeln.de/index.php?id=7263"
+  ],
+  "refs_en": [
+   "Bradshaw Foundation. (n.d.). Gilf Kebir: Cave of Swimmers. https://www.bradshawfoundation.com/africa/gilf_kebir_cave_of_swimmers",
+   "Universität zu Köln. (n.d.). About Wadi Sura. https://wadisura.phil-fak.uni-koeln.de/index.php?id=7263"
+  ],
+  "img": {
+   "src": "img/curio/003.jpg",
+   "pie": {
+    "es": "Figuras de «nadadores» en la Cueva de los Nadadores, Wadi Sura (Egipto)",
+    "en": "«Swimmer» figures in the Cave of Swimmers, Wadi Sura (Egypt)"
+   },
+   "autor": {
+    "es": "Roland Unger",
+    "en": "Roland Unger"
+   },
+   "licencia": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:WadiSuraSwimmers.jpg",
+   "tipo": "hecho"
+  },
+  "nota": "La lectura como nadadores es de Almásy y sigue discutida. La Bradshaw Foundation sitúa el estilo Wadi Sura hacia 6100-4800 a. C. y en la época Gilf B (c. 6500 a. C.); fecha aproximada."
+ },
+ {
+  "n": 4,
+  "era": {
+   "es": "Prehistoria",
+   "en": "Prehistory"
+  },
+  "fecha": {
+   "es": "c. 3000 a. C.",
+   "en": "c. 3000 BC"
+  },
+  "titulo": {
+   "es": "Patines de hueso para ahorrar energía",
+   "en": "Bone skates to save energy"
+  },
+  "texto": {
+   "es": "Los primeros patines, usados en el norte de Europa desde hace unos 5000 años, eran huesos de animal atados al pie. Unos voluntarios probaron réplicas y avanzaron a 1,2 metros por segundo, y los cálculos indican que en Finlandia, con su red de lagos helados, patinar pudo ahorrar hasta un 10 % de la energía de los desplazamientos invernales (Formenti y Minetti, 2008).",
+   "en": "The first skates, used in northern Europe from about 5,000 years ago, were animal bones tied to the foot. Volunteers who tested replicas moved at 1.2 metres per second, and calculations suggest that in Finland, with its dense network of frozen lakes, skating could save up to 10% of the energy spent on winter travel (Formenti & Minetti, 2008)."
+  },
+  "refs": [
+   "Formenti, F. y Minetti, A. E. (2008). The first humans travelling on ice: An energy-saving strategy? Biological Journal of the Linnean Society, 93(1), 1-7. https://doi.org/10.1111/j.1095-8312.2007.00991.x"
+  ],
+  "refs_en": [
+   "Formenti, F., & Minetti, A. E. (2008). The first humans travelling on ice: An energy-saving strategy? Biological Journal of the Linnean Society, 93(1), 1-7. https://doi.org/10.1111/j.1095-8312.2007.00991.x"
+  ],
+  "img": {
+   "src": "img/curio/004.jpg",
+   "pie": {
+    "es": "Patines de hueso de caballo del siglo XI, Bedford Museum (Inglaterra); la técnica prehistórica era la misma",
+    "en": "11th-century skates made from horse bones, Bedford Museum (England); the prehistoric technique was the same"
+   },
+   "autor": {
+    "es": "Simon Speed",
+    "en": "Simon Speed"
+   },
+   "licencia": "Dominio público",
+   "url": "https://commons.wikimedia.org/wiki/File:BoneSkatesBedfordMuseum.JPG",
+   "tipo": "genérica"
+  },
+  "nota": "Los «5000 años» proceden de la difusión del estudio (Live Science, 2008, declaraciones de Formenti); el resumen del artículo no da fecha. El 10 % es el ahorro máximo simulado por los autores; conviene comprobar en el texto completo si se refiere al coste del viaje o al gasto invernal total. La foto es medieval."
+ },
+ {
+  "n": 5,
+  "era": {
+   "es": "Mesopotamia",
+   "en": "Mesopotamia"
+  },
+  "fecha": {
+   "es": "c. 2090 a. C.",
+   "en": "c. 2090 BC"
+  },
+  "titulo": {
+   "es": "El rey que corrió 320 kilómetros",
+   "en": "The king who ran 320 kilometres"
+  },
+  "texto": {
+   "es": "Shulgi, rey de Ur entre 2094 y 2047 a. C., hizo cantar en sus himnos que había corrido en un solo día de Nippur a Ur y vuelta, unos 320 kilómetros, para asistir a las fiestas de las dos ciudades. Los mismos himnos lo presentan como luchador imbatible, porque ningún documento oficial iba a registrar la derrota de un rey (Crowther, 2007, pp. 17-18).",
+   "en": "Shulgi, king of Ur from 2094 to 2047 BC, had his hymns proclaim that he had run from Nippur to Ur and back in a single day, about 320 kilometres, to attend the festivals of both cities. The same hymns present him as an unbeatable wrestler, since no official record would ever register a king's defeat (Crowther, 2007, pp. 17-18)."
+  },
+  "refs": [
+   "Crowther, N. B. (2007). Sport in ancient times. Praeger."
+  ],
+  "refs_en": [
+   "Crowther, N. B. (2007). Sport in ancient times. Praeger."
+  ],
+  "img": {
+   "src": "img/curio/005.jpg",
+   "pie": {
+    "es": "Tablilla cuneiforme con un himno de autoalabanza de Shulgi (Shulgi D), según la edición de G. A. Barton",
+    "en": "Cuneiform tablet with a self-praise hymn of Shulgi (Shulgi D), from G. A. Barton's edition"
+   },
+   "autor": {
+    "es": "George A. Barton",
+    "en": "George A. Barton"
+   },
+   "licencia": "Dominio público",
+   "url": "https://commons.wikimedia.org/wiki/File:Self-praise_of_Shulgi_(Shulgi_D).jpg",
+   "tipo": "hecho"
+  },
+  "nota": "Crowther da 200 millas (unos 320 km) y advierte que la hazaña pudo exagerarse para glorificar al rey. La carrera aparece en el himno Shulgi A; la imagen es de otro himno del mismo rey (Shulgi D)."
+ },
+ {
+  "n": 6,
+  "era": {
+   "es": "Egipto",
+   "en": "Egypt"
+  },
+  "fecha": {
+   "es": "c. 2000 a. C.",
+   "en": "c. 2000 BC"
+  },
+  "titulo": {
+   "es": "Malabaristas en una tumba egipcia",
+   "en": "Jugglers in an Egyptian tomb"
+  },
+  "texto": {
+   "es": "En las tumbas de Beni Hasan, pintadas hacia el 2000 a. C., aparecen muchachas que mantienen tres pelotas en el aire, a veces recogiéndolas con los brazos cruzados, y otras que se lanzan la pelota subidas a hombros de una compañera. Siglos después estas jugadoras inspiraron a Thomas Mann una escena de «José y sus hermanos» (Decker, 1992, pp. 113-114).",
+   "en": "The tombs of Beni Hasan, painted around 2000 BC, show girls keeping three balls in the air, sometimes catching them with crossed arms, and others throwing a ball to each other while riding on a companion's back. Centuries later these players inspired a scene in Thomas Mann's «Joseph and His Brothers» (Decker, 1992, pp. 113-114)."
+  },
+  "refs": [
+   "Decker, W. (1992). Sports and games of ancient Egypt (A. Guttmann, Trad.). Yale University Press."
+  ],
+  "refs_en": [
+   "Decker, W. (1992). Sports and games of ancient Egypt (A. Guttmann, Trans.). Yale University Press."
+  ],
+  "img": {
+   "src": "img/curio/006.jpg",
+   "pie": {
+    "es": "Mujeres egipcias jugando con pelotas, grabado de la «Illustrerad verldshistoria» (1875)",
+    "en": "Egyptian women playing with balls, engraving from the «Illustrerad verldshistoria» (1875)"
+   },
+   "autor": {
+    "es": "Ernst Wallis et al.",
+    "en": "Ernst Wallis et al."
+   },
+   "licencia": "Dominio público",
+   "url": "https://commons.wikimedia.org/wiki/File:Illustrerad_Verldshistoria_band_I_Ill_013.jpg",
+   "tipo": "genérica"
+  },
+  "nota": "Decker sitúa la escena del juego a hombros en la tumba de Kheti (dinastía XI); la fecha c. 2000 a. C. es aproximada. El grabado de 1875 no indica de qué tumba copia la escena."
+ },
+ {
+  "n": 7,
+  "era": {
+   "es": "Hititas",
+   "en": "Hittites"
+  },
+  "fecha": {
+   "es": "c. 1600-1200 a. C.",
+   "en": "c. 1600-1200 BC"
+  },
+  "titulo": {
+   "es": "El arquero que perdía se desnudaba",
+   "en": "The losing archer stripped naked"
+  },
+  "texto": {
+   "es": "Un texto hitita antiguo describe un concurso de tiro con arco ante el rey en el que el ganador recibía vino y el perdedor debía desnudarse y llevar agua a los demás. En una fiesta de primavera, además, los guardias del rey corrían una carrera cuyo premio era un cargo de la corte, el de «portador de las riendas del carro real» (Crowther, 2007, p. 20).",
+   "en": "An early Hittite text describes an archery contest before the king in which the winner received wine and the loser had to strip naked and carry water for the others. At a spring festival the king's bodyguards also ran a footrace whose prize was a court office, «holder of the king's chariot reins» (Crowther, 2007, p. 20)."
+  },
+  "refs": [
+   "Crowther, N. B. (2007). Sport in ancient times. Praeger."
+  ],
+  "refs_en": [
+   "Crowther, N. B. (2007). Sport in ancient times. Praeger."
+  ],
+  "img": {
+   "src": "img/curio/007.jpg",
+   "pie": {
+    "es": "Arqueros en una escena de caza, relieve hitita del siglo XIV a. C. de la Puerta de las Esfinges de Alacahöyük (Museo de las Civilizaciones de Anatolia, Ankara)",
+    "en": "Archers in a hunting scene, 14th-century BC Hittite relief from the Sphinx Gate at Alacahöyük (Museum of Anatolian Civilizations, Ankara)"
+   },
+   "autor": {
+    "es": "Dosseman",
+    "en": "Dosseman"
+   },
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Ankara_Anatolian_Civilizations_Alacah%C3%B6y%C3%BCk_orthostat_Hunting_scene_in_2011_08.jpg",
+   "tipo": "genérica"
+  },
+  "nota": "Crowther no fecha el texto del concurso de arco con precisión («an early Hittite text»); la horquilla es la del Imperio hitita según el mismo autor (p. 19)."
+ },
+ {
+  "n": 8,
+  "era": {
+   "es": "Egipto",
+   "en": "Egypt"
+  },
+  "fecha": {
+   "es": "Siglo XV a. C.",
+   "en": "15th century BC"
+  },
+  "titulo": {
+   "es": "El faraón que batía sus propios récords",
+   "en": "The pharaoh who broke his own records"
+  },
+  "texto": {
+   "es": "Tutmosis III dejó escrito que su flecha atravesó una plancha de cobre de tres dedos de grosor. Su hijo Amenofis II igualó la marca, la superó y acabó proclamando que había atravesado cuatro planchas de un palmo, «algo nunca hecho». Como nadie podía vencer al faraón, solo competía consigo mismo o con reyes muertos (Decker, 1992, p. 57).",
+   "en": "Thutmose III recorded that his arrow pierced a copper plate three fingers thick. His son Amenhotep II matched the mark, surpassed it and finally proclaimed that he had pierced four plates a hand's breadth thick, «a deed that had not been done before». Since nobody could beat the pharaoh, he competed only against himself or dead kings (Decker, 1992, p. 57)."
+  },
+  "refs": [
+   "Decker, W. (1992). Sports and games of ancient Egypt (A. Guttmann, Trad.). Yale University Press."
+  ],
+  "refs_en": [
+   "Decker, W. (1992). Sports and games of ancient Egypt (A. Guttmann, Trans.). Yale University Press."
+  ],
+  "img": {
+   "src": "img/curio/008.jpg",
+   "pie": {
+    "es": "Relieve de Amenofis II disparando contra un blanco, Museo de Luxor",
+    "en": "Relief of Amenhotep II at target practice, Luxor Museum"
+   },
+   "autor": {
+    "es": "Marsupium",
+    "en": "Marsupium"
+   },
+   "licencia": "CC BY 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Relief_of_Amenhotep_II_at_target_practice_-_Luxor_Museum.jpg",
+   "tipo": "hecho"
+  },
+  "nota": "Decker (p. 46) recoge que los experimentos con arcos modernos solo lograron penetraciones de pocos milímetros, de modo que las marcas regias deben leerse como propaganda."
+ },
+ {
+  "n": 9,
+  "era": {
+   "es": "Egipto y Nubia",
+   "en": "Egypt and Nubia"
+  },
+  "fecha": {
+   "es": "685 a. C.",
+   "en": "685 BC"
+  },
+  "titulo": {
+   "es": "Cien kilómetros con el faraón nubio",
+   "en": "A hundred kilometres with the Nubian pharaoh"
+  },
+  "texto": {
+   "es": "Una estela fechada entre diciembre de 685 y enero de 684 a. C. cuenta que Taharqa, faraón de origen nubio, puso a sus soldados a correr de noche desde Menfis hasta el Fayum y de vuelta, unos 100 kilómetros con dos horas de descanso. El rey bajó del carro y corrió un tramo con ellos, y el primero en llegar comió con su guardia personal (Decker, 1992, pp. 62-64).",
+   "en": "A stela dated between December 685 and January 684 BC tells how Taharqa, a pharaoh of Nubian origin, had his soldiers run by night from Memphis to the Fayum and back, about 100 kilometres with a two-hour rest. The king stepped down from his chariot to run part of the way with them, and the first to arrive dined with his bodyguard (Decker, 1992, pp. 62-64)."
+  },
+  "refs": [
+   "Decker, W. (1992). Sports and games of ancient Egypt (A. Guttmann, Trad.). Yale University Press."
+  ],
+  "refs_en": [
+   "Decker, W. (1992). Sports and games of ancient Egypt (A. Guttmann, Trans.). Yale University Press."
+  ],
+  "img": {
+   "src": "img/curio/009.jpg",
+   "pie": {
+    "es": "Esfinge de Taharqa procedente de Kawa (Sudán), hacia 680 a. C., Museo Británico",
+    "en": "Sphinx of Taharqa from Kawa (Sudan), about 680 BC, British Museum"
+   },
+   "autor": {
+    "es": "BabelStone",
+    "en": "BabelStone"
+   },
+   "licencia": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Sphinx_of_Taharqo_oblique_view.jpg",
+   "tipo": "protagonista"
+  },
+  "nota": "Decker calcula la distancia y el tiempo (unos 100 km en unas nueve horas) a partir de las horas que da la estela; son estimaciones."
+ },
+ {
+  "n": 10,
+  "era": {
+   "es": "Persia",
+   "en": "Persia"
+  },
+  "fecha": {
+   "es": "Siglo V a. C.",
+   "en": "5th century BC"
+  },
+  "titulo": {
+   "es": "Montar, tirar con arco y no mentir",
+   "en": "Ride, shoot and tell the truth"
+  },
+  "texto": {
+   "es": "Heródoto contó en el siglo V a. C. que los persas educaban a los muchachos de los cinco a los veinte años en tres cosas, montar a caballo, tirar con arco y decir la verdad. Antes de los cinco años el niño vivía con las mujeres y no veía a su padre, y el rey premiaba cada año a quien más hijos tenía (Heródoto, ca. 430 a. C./1920, 1.136).",
+   "en": "Herodotus reported in the 5th century BC that the Persians educated boys from the age of five to twenty in three things, riding, archery and telling the truth. Before the age of five a boy lived among the women and did not see his father, and every year the king rewarded the man with the most sons (Herodotus, ca. 430 B.C.E./1920, 1.136)."
+  },
+  "refs": [
+   "Heródoto. (1920). Herodotus: Vol. 1. Books I-II (A. D. Godley, Trad.). Harvard University Press; William Heinemann. (Obra original publicada ca. 430 a. C.)"
+  ],
+  "refs_en": [
+   "Herodotus. (1920). Herodotus: Vol. 1. Books I-II (A. D. Godley, Trans.). Harvard University Press; William Heinemann. (Original work published ca. 430 B.C.E.)"
+  ],
+  "img": {
+   "src": "img/curio/010.jpg",
+   "pie": {
+    "es": "Friso de los arqueros del palacio de Darío I en Susa, ladrillo vidriado, hacia 510 a. C., Museo del Louvre",
+    "en": "Frieze of archers from the palace of Darius I at Susa, glazed brick, about 510 BC, Louvre Museum"
+   },
+   "autor": {
+    "es": "Autor anónimo",
+    "en": "Anonymous"
+   },
+   "licencia": "Dominio público",
+   "url": "https://commons.wikimedia.org/wiki/File:Archers_frieze_Louvre_AOD488.jpg",
+   "tipo": "genérica"
+  },
+  "nota": "Fuente primaria leída en la traducción de Godley (Loeb) a través de Perseids (cts.perseids.org, Hdt. 1.136.1-2). No hay edición castellana en la biblioteca; si se quiere citar la de Gredos, falta comprobar la página."
+ },
+ {
+  "n": 11,
+  "era": {
+   "es": "Creta minoica",
+   "en": "Minoan Crete"
+  },
+  "fecha": {
+   "es": "c. 1600-1450 a. C.",
+   "en": "c. 1600-1450 BC"
+  },
+  "titulo": {
+   "es": "Saltar sobre un toro en Cnosos",
+   "en": "Leaping over a bull at Knossos"
+  },
+  "texto": {
+   "es": "Entre 1600 y 1450 a. C. los minoicos de Creta saltaban por encima de toros en el patio del palacio de Cnosos ante un público de ambos sexos. Los frescos muestran a jóvenes que hacían el pino sobre el lomo del animal, y en el arte cretense las figuras de piel blanca, que también saltan o ayudan, suelen ser mujeres (Crowther, 2007, pp. 34-36).",
+   "en": "Between 1600 and 1450 BC the Minoans of Crete leapt over bulls in the courtyard of the palace at Knossos before spectators of both sexes. The frescoes show young people doing handstands on the animal's back, and in Cretan art the white-skinned figures, who also leap or assist, are usually women (Crowther, 2007, pp. 34-36)."
+  },
+  "refs": [
+   "Crowther, N. B. (2007). Sport in ancient times. Praeger."
+  ],
+  "refs_en": [
+   "Crowther, N. B. (2007). Sport in ancient times. Praeger."
+  ],
+  "img": {
+   "src": "img/curio/011.jpg",
+   "pie": {
+    "es": "Fresco del salto del toro, palacio de Cnosos, 1600-1450 a. C., Museo Arqueológico de Heraclión",
+    "en": "Bull-leaping fresco, palace of Knossos, 1600-1450 BC, Heraklion Archaeological Museum"
+   },
+   "autor": {
+    "es": "Jebulon",
+    "en": "Jebulon"
+   },
+   "licencia": "CC0",
+   "url": "https://commons.wikimedia.org/wiki/File:Bull_leaping_minoan_fresco_archmus_Heraklion_(cropped).jpg",
+   "tipo": "hecho"
+  },
+  "nota": "Que las figuras blancas sean mujeres es la lectura que defiende Crowther; otros autores ven en ellas a muchachos."
+ },
+ {
+  "n": 12,
+  "era": {
+   "es": "Grecia arcaica",
+   "en": "Archaic Greece"
+  },
+  "fecha": {
+   "es": "c. 750 a. C.",
+   "en": "c. 750 BC"
+  },
+  "titulo": {
+   "es": "Un trípode para el campeón de lucha",
+   "en": "A tripod for the wrestling champion"
+  },
+  "texto": {
+   "es": "En el canto XXIII de la «Ilíada», compuesta hacia el 750 a. C., Aquiles celebra juegos fúnebres por Patroclo y pone precio a cada premio. En la lucha el vencedor se llevaba un gran trípode que los aqueos valoraban en doce bueyes, y el vencido una mujer esclavizada «diestra en muchas labores», valorada en cuatro (Homero, ca. 750 a. C./2018, 23.700-705).",
+   "en": "In Book 23 of the «Iliad», composed around 750 BC, Achilles holds funeral games for Patroclus and puts a price on every prize. In wrestling the winner took a great tripod that the Achaeans valued at twelve oxen, and the loser an enslaved woman «skilled in many crafts», valued at four (Homer, ca. 750 B.C.E./2018, 23.700-705)."
+  },
+  "refs": [
+   "Homero. (2018). La Ilíada (L. Segalá y Estalella, Trad.). Proyecto Gutenberg. https://www.gutenberg.org/ebooks/57654 (Obra original compuesta ca. 750 a. C.)",
+   "Golden, M. (2004). Sport in the ancient world from A to Z. Routledge."
+  ],
+  "refs_en": [
+   "Homer. (2018). La Ilíada (L. Segalá y Estalella, Trans.). Project Gutenberg. https://www.gutenberg.org/ebooks/57654 (Original work composed ca. 750 B.C.E.)",
+   "Golden, M. (2004). Sport in the ancient world from A to Z. Routledge."
+  ],
+  "img": {
+   "src": "img/curio/012.jpg",
+   "pie": {
+    "es": "Fragmentos de un dino ático de Sófilo con los juegos fúnebres de Patroclo, Museo Arqueológico Nacional de Atenas",
+    "en": "Fragments of an Attic dinos by Sophilos showing the funeral games of Patroclus, National Archaeological Museum, Athens"
+   },
+   "autor": {
+    "es": "ArchaiOptix",
+    "en": "ArchaiOptix"
+   },
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Sophilos_-_ABV_39_16_-_funerary_games_of_Patroklos_-_animal_friezes_-_Athens_NM_15499.jpg",
+   "tipo": "hecho"
+  },
+  "nota": "La fecha c. 750 a. C. para la Ilíada es la de la cronología de Golden (2004, p. xvii). En el texto inglés la cita entrecomillada traduce la versión castellana de Segalá. La era se pone en Grecia arcaica porque el poema es del siglo VIII, aunque evoca el mundo micénico."
+ },
+ {
+  "n": 13,
+  "era": {
+   "es": "Grecia arcaica",
+   "en": "Archaic Greece"
+  },
+  "fecha": {
+   "es": "720 a. C.",
+   "en": "720 BC"
+  },
+  "titulo": {
+   "es": "El taparrabos que cayó en Olimpia",
+   "en": "The loincloth that fell at Olympia"
+  },
+  "texto": {
+   "es": "En los Juegos Olímpicos de 720 a. C. Orsipo de Mégara ganó la carrera del estadio desnudo, mientras sus rivales llevaban el taparrabos tradicional. Pausanias sospechaba que lo dejó caer a propósito, porque un hombre desnudo corre con más soltura. Otro autor antiguo, Dionisio de Halicarnaso, atribuía el primer desnudo a un espartano, Acanto, en esos mismos Juegos (Miller, 2004, p. 17).",
+   "en": "At the Olympic Games of 720 BC Orsippus of Megara won the stadion race naked, while his rivals wore the traditional loincloth. Pausanias suspected he let it fall on purpose, because a naked man runs more easily. Another ancient author, Dionysius of Halicarnassus, credited the first nude run to a Spartan, Acanthus, at those same Games (Miller, 2004, p. 17)."
+  },
+  "refs": [
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3.ª ed.). University of California Press."
+  ],
+  "refs_en": [
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3rd ed.). University of California Press."
+  ],
+  "img": {
+   "src": "img/curio/013.jpg",
+   "pie": {
+    "es": "Ánfora panatenaica con una carrera de cuatro corredores desnudos, atribuida al Pintor de Eufileto, c. 530-520 a. C., Museo Británico",
+    "en": "Panathenaic amphora with a race of four naked runners, attributed to the Euphiletos Painter, c. 530-520 BC, British Museum"
+   },
+   "autor": {
+    "es": "Atribuida al Pintor de Eufileto",
+    "en": "Attributed to the Euphiletos Painter"
+   },
+   "licencia": "Dominio público",
+   "url": "https://commons.wikimedia.org/wiki/File:Panathenaic_amphora_BM_B137.jpg",
+   "tipo": "genérica"
+  },
+  "nota": "Fuentes primarias recogidas por Miller: Pausanias 1.44.1 y Dionisio de Halicarnaso 7.72.2-3. Tucídides (1.6.5) da otra versión, más tardía, del fin del taparrabos."
+ },
+ {
+  "n": 14,
+  "era": {
+   "es": "Grecia arcaica",
+   "en": "Archaic Greece"
+  },
+  "fecha": {
+   "es": "c. 580 a. C.",
+   "en": "c. 580 BC"
+  },
+  "titulo": {
+   "es": "Las muchachas que corrían para Hera",
+   "en": "The girls who ran for Hera"
+  },
+  "texto": {
+   "es": "Cada cuatro años, en el estadio de Olimpia, las jóvenes solteras corrían las Hereas, una carrera en honor de Hera organizada por dieciséis mujeres de Élide. Corrían en tres categorías de edad, con el pelo suelto, la túnica por encima de la rodilla y el hombro derecho al aire, sobre una pista un sexto más corta que la de los hombres (Miller, 2004, p. 108).",
+   "en": "Every four years, in the stadium at Olympia, unmarried girls ran the Heraia, a race in honour of Hera organised by sixteen women of Elis. They ran in three age groups, with their hair loose, a tunic above the knee and the right shoulder bare, on a track one sixth shorter than the men's (Miller, 2004, p. 108)."
+  },
+  "refs": [
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3.ª ed.). University of California Press.",
+   "Golden, M. (2004). Sport in the ancient world from A to Z. Routledge."
+  ],
+  "refs_en": [
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3rd ed.). University of California Press.",
+   "Golden, M. (2004). Sport in the ancient world from A to Z. Routledge."
+  ],
+  "img": {
+   "src": "img/curio/014.jpg",
+   "pie": {
+    "es": "Muchacha corriendo con túnica corta (la llamada «Atalanta Barberini»), copia romana, Museos Vaticanos",
+    "en": "Running girl in a short tunic (the so-called «Atalanta Barberini»), Roman copy, Vatican Museums"
+   },
+   "autor": {
+    "es": "Carole Raddato",
+    "en": "Carole Raddato"
+   },
+   "licencia": "CC BY-SA 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Running_girl_(so-called_%E2%80%9CAtalanta_Barberini%E2%80%9D)_wearing_a_short_chiton,_either_Neo-Attic,_mid_1st_c._BCE,_or_Hadrianic,_Gallery_of_the_Candelabra,_Vatican_Museums_(32082828740).jpg",
+   "tipo": "genérica"
+  },
+  "nota": "La única fuente es Pausanias (5.16.2-7, siglo II d. C.). La fecha c. 580 a. C. es la que propone Golden (2004, p. xvii), que advierte que muchas fechas de su cronología son aproximadas o conjeturales."
+ },
+ {
+  "n": 15,
+  "era": {
+   "es": "Grecia arcaica",
+   "en": "Archaic Greece"
+  },
+  "fecha": {
+   "es": "536-512 a. C.",
+   "en": "536-512 BC"
+  },
+  "titulo": {
+   "es": "Milón cargó con su propia estatua",
+   "en": "Milo carried his own statue"
+  },
+  "texto": {
+   "es": "Milón de Crotona ganó seis veces la lucha en Olimpia, una de ellas en categoría infantil en 536 a. C., y se contaba que él mismo llevó a hombros su estatua hasta el santuario. En 512 a. C. buscó la séptima corona y la perdió ante Timasiteo, un paisano más joven que se negó a agarrarse con él (Miller, 2004, p. 111).",
+   "en": "Milo of Croton won the wrestling at Olympia six times, once in the boys' category in 536 BC, and it was said that he carried his own statue into the sanctuary on his shoulders. In 512 BC he sought a seventh crown and lost it to Timasitheus, a younger fellow citizen who refused to come to grips with him (Miller, 2004, p. 111)."
+  },
+  "refs": [
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3.ª ed.). University of California Press."
+  ],
+  "refs_en": [
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3rd ed.). University of California Press."
+  ],
+  "img": {
+   "src": "img/curio/015.jpg",
+   "pie": {
+    "es": "Luchadores en un ánfora seudopanatenaica, Museo Arqueológico Nacional (Madrid)",
+    "en": "Wrestlers on a pseudo-Panathenaic amphora, National Archaeological Museum (Madrid)"
+   },
+   "autor": {
+    "es": "Mark Landon",
+    "en": "Mark Landon"
+   },
+   "licencia": "CC BY 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Pseudo-Panathenaic_amphora_-_wrestlers_(Madrid_MAN_32647).jpg",
+   "tipo": "genérica"
+  },
+  "nota": "Fuente primaria: Pausanias 6.14.5-8, en la traducción de Miller."
+ },
+ {
+  "n": 16,
+  "era": {
+   "es": "Grecia clásica",
+   "en": "Classical Greece"
+  },
+  "fecha": {
+   "es": "Siglo V a. C.",
+   "en": "5th century BC"
+  },
+  "titulo": {
+   "es": "La estatua juzgada por homicidio",
+   "en": "The statue tried for murder"
+  },
+  "texto": {
+   "es": "Teágenes de Tasos, campeón olímpico de pugilato en 480 y de pancracio en 476 a. C., sumó según la tradición 1400 victorias. Muerto el atleta, un enemigo azotaba cada noche su estatua hasta que esta cayó sobre él y lo mató. La ciudad juzgó a la estatua y la arrojó al mar, aunque después la recuperó y veneró a Teágenes como sanador (Miller, 2004, pp. 113-114).",
+   "en": "Theagenes of Thasos, Olympic boxing champion in 480 and pankration champion in 476 BC, was credited with 1,400 victories. After his death an enemy flogged his statue every night until it fell on him and killed him. The city tried the statue and threw it into the sea, though it later recovered it and worshipped Theagenes as a healer (Miller, 2004, pp. 113-114)."
+  },
+  "refs": [
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3.ª ed.). University of California Press."
+  ],
+  "refs_en": [
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3rd ed.). University of California Press."
+  ],
+  "img": {
+   "src": "img/curio/016.jpg",
+   "pie": {
+    "es": "Altar circular de Teágenes en el ágora de Tasos",
+    "en": "Round altar of Theagenes in the agora of Thasos"
+   },
+   "autor": {
+    "es": "Heiko Fischer",
+    "en": "Heiko Fischer"
+   },
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Thasos,_Theogenes-Altar_2.jpg",
+   "tipo": "lugar"
+  },
+  "nota": "Fuente primaria: Pausanias 6.6.5-6 y 6.11.2-9, en la traducción de Miller. El año 480 del pugilato se deduce de Miller (la Olimpiada siguiente a la de 484 a. C.)."
+ },
+ {
+  "n": 17,
+  "era": {
+   "es": "Grecia clásica",
+   "en": "Classical Greece"
+  },
+  "fecha": {
+   "es": "Siglo V a. C.",
+   "en": "5th century BC"
+  },
+  "titulo": {
+   "es": "La madre disfrazada de entrenador",
+   "en": "The mother disguised as a trainer"
+  },
+  "texto": {
+   "es": "Las mujeres casadas tenían prohibido asistir a los Juegos de Olimpia bajo pena de ser despeñadas. Calipatira, viuda e hija del campeón Diágoras de Rodas, entró disfrazada de entrenador con su hijo Pisírodo y, al verlo ganar, saltó la valla y quedó al descubierto. La perdonaron por su familia de vencedores, pero desde entonces los entrenadores tuvieron que asistir desnudos (Miller, 2004, p. 105).",
+   "en": "Married women were barred from the Olympic Games on pain of being thrown off a cliff. Kallipateira, a widow and daughter of the champion Diagoras of Rhodes, got in disguised as a trainer with her son Peisirodos and, when he won, jumped the fence and was exposed. She was pardoned because of her family of victors, but from then on trainers had to attend naked (Miller, 2004, p. 105)."
+  },
+  "refs": [
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3.ª ed.). University of California Press."
+  ],
+  "refs_en": [
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3rd ed.). University of California Press."
+  ],
+  "img": {
+   "src": "img/curio/017.jpg",
+   "pie": {
+    "es": "Túnel de entrada al estadio de Olimpia",
+    "en": "Entrance tunnel to the stadium at Olympia"
+   },
+   "autor": {
+    "es": "Asier Barre",
+    "en": "Asier Barre"
+   },
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Picture_that_I_took_in_Olimpia_(entance_to_stadium).jpg",
+   "tipo": "lugar"
+  },
+  "nota": "Fuente primaria: Pausanias 5.6.7-8 (algunos la llaman Ferenice). Pausanias dice que las doncellas sí podían ver los Juegos (6.20.9), de ahí «casadas». No hay fecha exacta de la victoria de Pisírodo; Diágoras ganó en 464 a. C."
+ },
+ {
+  "n": 18,
+  "era": {
+   "es": "Grecia clásica",
+   "en": "Classical Greece"
+  },
+  "fecha": {
+   "es": "396 a. C.",
+   "en": "396 BC"
+  },
+  "titulo": {
+   "es": "Cinisca, la primera campeona olímpica",
+   "en": "Kyniska, the first female Olympic champion"
+  },
+  "texto": {
+   "es": "La espartana Cinisca, hija y hermana de reyes, ganó la carrera de cuadrigas de Olimpia en 396 y 392 a. C. como propietaria de los caballos, y dejó en su estatua que era la única mujer de Grecia con esa corona. Según Plutarco, su hermano Agesilao la animó a competir para demostrar que esas victorias se compraban con riqueza (Crowther, 2007, p. 148; Miller, 2004, p. 106).",
+   "en": "The Spartan Kyniska, daughter and sister of kings, won the four-horse chariot race at Olympia in 396 and 392 BC as owner of the horses, and her statue proclaimed her the only woman in Greece to win that crown. According to Plutarch, her brother Agesilaus urged her to compete to prove that such victories were bought with wealth (Crowther, 2007, p. 148; Miller, 2004, p. 106)."
+  },
+  "refs": [
+   "Crowther, N. B. (2007). Sport in ancient times. Praeger.",
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3.ª ed.). University of California Press."
+  ],
+  "refs_en": [
+   "Crowther, N. B. (2007). Sport in ancient times. Praeger.",
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3rd ed.). University of California Press."
+  ],
+  "img": {
+   "src": "img/curio/018.jpg",
+   "pie": {
+    "es": "Base de la estatua de Cinisca con su inscripción, Museo de los Juegos Olímpicos de la Antigüedad (Olimpia)",
+    "en": "Statue base of Kyniska with its inscription, Museum of the Olympic Games in Antiquity (Olympia)"
+   },
+   "autor": {
+    "es": "Peter J. Miller",
+    "en": "Peter J. Miller"
+   },
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Statue_base_of_Kyniska_(side-view),_Museum_of_the_Olympic_Games_in_Antiquity,_Ancient_Olympia.jpg",
+   "tipo": "hecho"
+  },
+  "nota": "Miller fecha la primera victoria en 396 a. C. con interrogante; Crowther da 396 y 392 a. C. Fuentes primarias: Pausanias 3.8.1, IvO 160 y Plutarco, Agesilao 20.1."
+ },
+ {
+  "n": 19,
+  "era": {
+   "es": "Grecia clásica",
+   "en": "Classical Greece"
+  },
+  "fecha": {
+   "es": "388 a. C.",
+   "en": "388 BC"
+  },
+  "titulo": {
+   "es": "Las estatuas pagadas por los tramposos",
+   "en": "Statues paid for by cheats"
+  },
+  "texto": {
+   "es": "En 388 a. C. el púgil Eupolo de Tesalia sobornó a tres rivales en Olimpia, y los jueces multaron a los cuatro. Con ese dinero se alzaron seis estatuas de bronce de Zeus, los Zanes, a la entrada del estadio, y sus inscripciones recordaban a los atletas que la victoria se ganaba con los pies o con la fuerza y no con dinero (Miller, 2004, p. 74).",
+   "en": "In 388 BC the boxer Eupolus of Thessaly bribed three rivals at Olympia, and the judges fined all four. The money paid for six bronze statues of Zeus, the Zanes, at the entrance to the stadium, and their inscriptions reminded athletes that victory was won with speed of foot or strength of body and not with money (Miller, 2004, p. 74)."
+  },
+  "refs": [
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3.ª ed.). University of California Press."
+  ],
+  "refs_en": [
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3rd ed.). University of California Press."
+  ],
+  "img": {
+   "src": "img/curio/019.jpg",
+   "pie": {
+    "es": "Bases de los Zanes junto al túnel de entrada al estadio de Olimpia",
+    "en": "Bases of the Zanes beside the entrance tunnel to the stadium at Olympia"
+   },
+   "autor": {
+    "es": "Mark Landon",
+    "en": "Mark Landon"
+   },
+   "licencia": "CC BY 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Olympia_Bases_of_the_Zanes_from_SW_(1993).jpg",
+   "tipo": "lugar"
+  },
+  "nota": "Fuente primaria: Pausanias 5.21.2-4, en la traducción de Miller."
+ },
+ {
+  "n": 20,
+  "era": {
+   "es": "Grecia clásica",
+   "en": "Classical Greece"
+  },
+  "fecha": {
+   "es": "Siglo IV a. C.",
+   "en": "4th century BC"
+  },
+  "titulo": {
+   "es": "Cincuenta ánforas de aceite por una carrera",
+   "en": "Fifty jars of oil for one race"
+  },
+  "texto": {
+   "es": "Una inscripción ateniense de la primera mitad del siglo IV a. C. conserva la lista de premios de las Panateneas. El niño que ganaba la carrera del estadio recibía 50 ánforas de aceite de oliva de los olivos sagrados, y el segundo, 10. Miller calcula que el premio del vencedor equivalía a unos 19 800 dólares de 2004 (Miller, 2004, pp. 81-82).",
+   "en": "An Athenian inscription from the first half of the 4th century BC preserves the prize list of the Panathenaic Games. The boy who won the stadion race received 50 amphoras of olive oil from the sacred olive trees, and the runner-up 10. Miller estimates the winner's prize at about 19,800 dollars of 2004 (Miller, 2004, pp. 81-82)."
+  },
+  "refs": [
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3.ª ed.). University of California Press."
+  ],
+  "refs_en": [
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3rd ed.). University of California Press."
+  ],
+  "img": {
+   "src": "img/curio/020.jpg",
+   "pie": {
+    "es": "Ánfora panatenaica de premio atribuida al Pintor de Cleofrades, c. 525-500 a. C., Museo Metropolitano de Arte (Nueva York)",
+    "en": "Panathenaic prize amphora attributed to the Kleophrades Painter, c. 525-500 BC, Metropolitan Museum of Art (New York)"
+   },
+   "autor": {
+    "es": "Pintor de Cleofrades",
+    "en": "Kleophrades Painter"
+   },
+   "licencia": "CC0",
+   "url": "https://commons.wikimedia.org/wiki/File:Terracotta_Panathenaic_prize_amphora_MET_DT5494.jpg",
+   "tipo": "genérica"
+  },
+  "nota": "Fuente primaria: IG II² 2311 (400-350 a. C.). El origen del aceite en los olivos sagrados procede de Aristóteles, Constitución de los atenienses 60, recogido por Miller en la misma página. La equivalencia en dólares es una estimación de Miller (2004). El ánfora de la foto es anterior a la inscripción."
+ }
+]

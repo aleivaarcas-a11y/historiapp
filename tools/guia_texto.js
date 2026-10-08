@@ -8,7 +8,7 @@ es:[
  ["🔎","Buscar","Busca a la vez en las fichas, la Enciclopedia, el glosario, la cronología y los vídeos. Basta con escribir tres letras; al tocar un resultado vas directamente a él."],
  ["📖","Enciclopedia","Recoge el origen y la historia de más de cuatrocientos deportes, de los olímpicos a los tradicionales y los más raros. Puedes buscar por nombre, saltar por letra con el índice de la derecha o pedir un deporte al azar con el dado. En cada deporte hay una foto, una breve explicación de qué es en los menos conocidos, cuándo y dónde nace, su historia, las fuentes y, si aparece en la asignatura, el enlace al tema. Los botones A− y A+ cambian el tamaño de la letra."],
  ["🎓","Examen","Explica cómo es el examen y cómo prepararlo, con indicaciones para el test, la pregunta de desarrollo y el comentario de imagen."],
- ["⭐","Puntos, racha y niveles","Cada acierto suma puntos de experiencia, y el reto del día los duplica. La racha cuenta los días seguidos que entras a estudiar. Con los puntos subes de nivel, de Aprendiz a Catedrático, y al completar cada modo de un tema ganas su medalla."],
+ ["⭐","Puntos, racha y niveles","Cada acierto suma puntos de experiencia, y el reto del día los duplica. La racha cuenta los días seguidos que entras a estudiar. Con los puntos subes de nivel, del 1 al 100, y al completar cada modo de un tema ganas su medalla."],
  ["⚙️","Ajustes","Se abre con la rueda de la cabecera. Desde aquí cambias el idioma, instalas la app en el móvil y cierras la sesión, que borra el progreso guardado en ese dispositivo. Si encuentras un error en una ficha o en la Enciclopedia, el botón «Avisar de un error» prepara un correo para el profesor."]
 ],
 en:[
@@ -20,7 +20,7 @@ en:[
  ["🔎","Search","It searches the study sheets, the Encyclopedia, the glossary, the timeline and the videos at once. Three letters are enough; tapping a result takes you straight to it."],
  ["📖","Encyclopedia","It covers the origin and history of more than four hundred sports, from Olympic ones to traditional and rare ones. You can search by name, jump by letter with the index on the right or ask for a random sport with the dice. Each sport has a photo, a short explanation of what it is for the less known ones, when and where it began, its history, the sources and, if it appears in the course, a link to the unit. The A− and A+ buttons change the text size."],
  ["🎓","Exam","It explains what the exam is like and how to prepare it, with guidance for the multiple-choice test, the essay question and the image commentary."],
- ["⭐","Points, streak and levels","Every correct answer adds experience points, and the daily challenge doubles them. The streak counts the consecutive days you come in to study. Points take you up the levels, from Apprentice to Professor, and completing each mode of a unit earns its badge."],
+ ["⭐","Points, streak and levels","Every correct answer adds experience points, and the daily challenge doubles them. The streak counts the consecutive days you come in to study. Points take you up the levels, from 1 to 100, and completing each mode of a unit earns its badge."],
  ["⚙️","Settings","Open it with the gear in the header. Here you change the language, install the app on your phone and log out, which deletes the progress saved on that device. If you find a mistake in a study sheet or in the Encyclopedia, the «Report a mistake» button prepares an email to the lecturer."]
 ]};
 function renderGuia(){
