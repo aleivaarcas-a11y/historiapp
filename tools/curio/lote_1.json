@@ -6,40 +6,38 @@
    "en": "Prehistory"
   },
   "fecha": {
-   "es": "c. 200 000 años",
-   "en": "c. 200,000 years ago"
+   "es": "Hace más de 40 000 años",
+   "en": "Over 40,000 years ago"
   },
   "titulo": {
-   "es": "Las jabalinas de los neandertales",
-   "en": "The Neanderthals' javelins"
+   "es": "Neandertales con oído de surfista",
+   "en": "Neanderthals with surfer's ear"
   },
   "texto": {
-   "es": "En una mina de carbón de Schöningen (Alemania) aparecieron en los años noventa nueve lanzas de madera, las armas de caza completas más antiguas que se conocen, fechadas hoy en unos 200 000 años y atribuidas a neandertales. En 2019 seis lanzadores de jabalina probaron réplicas y acertaron en dianas situadas hasta a 20 metros (Hutson et al., 2025; Milks et al., 2019).",
-   "en": "In the 1990s nine wooden spears turned up in a coal mine at Schöningen (Germany). They are the oldest complete hunting weapons known, now dated to about 200,000 years ago and attributed to Neanderthals. In 2019 six trained javelin throwers tested replicas and hit targets placed up to 20 metres away (Hutson et al., 2025; Milks et al., 2019)."
+   "es": "Trece de los veintitrés neandertales estudiados en 2019 por Erik Trinkaus y su equipo, que vivieron hace más de 40 000 años, tenían exostosis en el conducto auditivo, el crecimiento óseo que la medicina llama «oído de nadador» u «oído de surfista» y asocia al agua fría. Los autores creen que pescaban y se mojaban más de lo que se pensaba, aunque no descartan otras causas (Trinkaus et al., 2019).",
+   "en": "Thirteen of the twenty-three Neanderthals studied in 2019 by Erik Trinkaus and his team, who lived more than 40,000 years ago, had exostoses in the ear canal, the bony growth doctors call «swimmer's ear» or «surfer's ear» and link to cold water. The authors think they fished and got wet more often than was believed, although they do not rule out other causes (Trinkaus et al., 2019)."
   },
   "refs": [
-   "Hutson, J. M., Bittmann, F., Fischer, P., García-Moreno, A., Gaudzinski-Windheuser, S., Nelson, E., Ortiz, J. E., Penkman, K. E. H., Perić, Z. M., Richter, D., Torres, T., Turner, E., Villaluenga, A., White, D. y Jöris, O. (2025). Revised age for Schöningen hunting spears indicates intensification of Neanderthal cooperative behavior around 200,000 years ago. Science Advances, 11(19), eadv0752. https://doi.org/10.1126/sciadv.adv0752",
-   "Milks, A., Parker, D. y Pope, M. (2019). External ballistics of Pleistocene hand-thrown spears: Experimental performance data and implications for human evolution. Scientific Reports, 9, 820. https://doi.org/10.1038/s41598-018-37904-w"
+   "Trinkaus, E., Samsel, M. y Villotte, S. (2019). External auditory exostoses among western Eurasian late Middle and Late Pleistocene humans. PLOS ONE, 14(8), e0220464. https://doi.org/10.1371/journal.pone.0220464"
   ],
   "refs_en": [
-   "Hutson, J. M., Bittmann, F., Fischer, P., García-Moreno, A., Gaudzinski-Windheuser, S., Nelson, E., Ortiz, J. E., Penkman, K. E. H., Perić, Z. M., Richter, D., Torres, T., Turner, E., Villaluenga, A., White, D., & Jöris, O. (2025). Revised age for Schöningen hunting spears indicates intensification of Neanderthal cooperative behavior around 200,000 years ago. Science Advances, 11(19), eadv0752. https://doi.org/10.1126/sciadv.adv0752",
-   "Milks, A., Parker, D., & Pope, M. (2019). External ballistics of Pleistocene hand-thrown spears: Experimental performance data and implications for human evolution. Scientific Reports, 9, 820. https://doi.org/10.1038/s41598-018-37904-w"
+   "Trinkaus, E., Samsel, M., & Villotte, S. (2019). External auditory exostoses among western Eurasian late Middle and Late Pleistocene humans. PLOS ONE, 14(8), e0220464. https://doi.org/10.1371/journal.pone.0220464"
   ],
   "img": {
    "src": "img/curio/001.jpg",
    "pie": {
-    "es": "La lanza VII de Schöningen en el sedimento donde se halló, 1997",
-    "en": "Schöningen spear VII in the sediment where it was found, 1997"
+    "es": "Cráneo neandertal de Forbes' Quarry (Gibraltar), en la exposición «Welcome to the Neandertals», Brno",
+    "en": "Neanderthal skull from Forbes' Quarry (Gibraltar), in the exhibition «Welcome to the Neandertals», Brno"
    },
    "autor": {
-    "es": "P. Pfarr (NLD)",
-    "en": "P. Pfarr (NLD)"
+    "es": "Zde",
+    "en": "Zde"
    },
-   "licencia": "CC BY-SA 3.0 DE",
-   "url": "https://commons.wikimedia.org/wiki/File:Sch%C3%B6ningen_Speer_VII_im_Sediment_1997_%C2%A9_P._Pfarr_NLD.jpg",
-   "tipo": "hecho"
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Skull_of_Neanderthal_from_Gibraltar,_Welcome_to_the_Neandertals,_Brno,187896.jpg",
+   "tipo": "protagonista"
   },
-  "nota": "La datación clásica de 300 000-400 000 años fue revisada a unos 200 000 en 2025 (Hutson et al.)."
+  "nota": "Frecuencia: 56,5 % (13 de 23); baja a 47,8 % si se cuentan como normales dos casos anómalos. Los autores concluyen que el agua fría por sí sola explica mal la cifra. La foto es un cráneo neandertal genérico (Gibraltar 1); no consta que forme parte de la muestra del estudio."
  },
  {
   "n": 2,
@@ -206,42 +204,42 @@
  {
   "n": 6,
   "era": {
-   "es": "Egipto",
-   "en": "Egypt"
+   "es": "Mesopotamia",
+   "en": "Mesopotamia"
   },
   "fecha": {
-   "es": "c. 2000 a. C.",
-   "en": "c. 2000 BC"
+   "es": "Siglo XXI a. C.",
+   "en": "21st century BC"
   },
   "titulo": {
-   "es": "Malabaristas en una tumba egipcia",
-   "en": "Jugglers in an Egyptian tomb"
+   "es": "Un mulo contra un asno en Sumer",
+   "en": "A mule against a donkey in Sumer"
   },
   "texto": {
-   "es": "En las tumbas de Beni Hasan, pintadas hacia el 2000 a. C., aparecen muchachas que mantienen tres pelotas en el aire, a veces recogiéndolas con los brazos cruzados, y otras que se lanzan la pelota subidas a hombros de una compañera. Siglos después estas jugadoras inspiraron a Thomas Mann una escena de «José y sus hermanos» (Decker, 1992, pp. 113-114).",
-   "en": "The tombs of Beni Hasan, painted around 2000 BC, show girls keeping three balls in the air, sometimes catching them with crossed arms, and others throwing a ball to each other while riding on a companion's back. Centuries later these players inspired a scene in Thomas Mann's «Joseph and His Brothers» (Decker, 1992, pp. 113-114)."
+   "es": "Una tablilla de Girsu de época de Ur III (siglo XXI a. C.) anota el pan entregado a unos viajeros que fueron «a hacer competir un mulo con un asno». Entre ellos iban el hijo y el guardián del sugal-mah, al que se traduce como jefe del Estado. Jorge Hernández, que la estudió, cree que la prueba servía para evaluar animales para la administración más que para divertirse (Hernández, 2011, pp. 75-80).",
+   "en": "A Ur III tablet from Girsu (21st century BC) records the bread handed to some travellers who went «to make a mule compete with a donkey». Among them were the son and the guard of the sugal-mah, a title rendered as head of state. Jorge Hernández, who studied it, believes the contest served to assess animals for the administration rather than to entertain (Hernández, 2011, pp. 75-80)."
   },
   "refs": [
-   "Decker, W. (1992). Sports and games of ancient Egypt (A. Guttmann, Trad.). Yale University Press."
+   "Hernández, J. (2011). Una carrera de équidos en Ur III. Espacio, Tiempo y Forma. Serie II, Historia Antigua, 24, 73-82."
   ],
   "refs_en": [
-   "Decker, W. (1992). Sports and games of ancient Egypt (A. Guttmann, Trans.). Yale University Press."
+   "Hernández, J. (2011). Una carrera de équidos en Ur III [An equid race in Ur III]. Espacio, Tiempo y Forma. Serie II, Historia Antigua, 24, 73-82."
   ],
   "img": {
    "src": "img/curio/006.jpg",
    "pie": {
-    "es": "Mujeres egipcias jugando con pelotas, grabado de la «Illustrerad verldshistoria» (1875)",
-    "en": "Egyptian women playing with balls, engraving from the «Illustrerad verldshistoria» (1875)"
+    "es": "Tablilla cuneiforme de época de Ur III (c. 2100-2000 a. C.) con repartos de pan y harina, del mismo tipo administrativo que la de la carrera. Harvard Semitic Museum",
+    "en": "Ur III cuneiform tablet (c. 2100-2000 BC) recording bread and flour distributions, the same administrative type as the race tablet. Harvard Semitic Museum"
    },
    "autor": {
-    "es": "Ernst Wallis et al.",
-    "en": "Ernst Wallis et al."
+    "es": "Daderot",
+    "en": "Daderot"
    },
    "licencia": "Dominio público",
-   "url": "https://commons.wikimedia.org/wiki/File:Illustrerad_Verldshistoria_band_I_Ill_013.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Cuneiform_tablet_with_bread_and_flour_distributions,_Ur_III_Period,_c._2100-2000_BC_-_Harvard_Semitic_Museum_-_Cambridge,_MA_-_DSC06146.jpg",
    "tipo": "genérica"
   },
-  "nota": "Decker sitúa la escena del juego a hombros en la tumba de Kheti (dinastía XI); la fecha c. 2000 a. C. es aproximada. El grabado de 1875 no indica de qué tumba copia la escena."
+  "nota": "Tablilla TCTI 2 03785 (texto de mensajeros de Girsu, mes noveno, sin año conservado). Ur III abarca 2112-2004 a. C.; el artículo no da el rey, por eso se fecha por siglo. Hernández traduce sugal7-mah como «jefe del Estado» y anše-kunga como «mulo». Consultado en línea (revistas.uned.es); no he podido descargar el PDF para comprobar la paginación exacta de cada frase, solo el resumen por páginas."
  },
  {
   "n": 7,
@@ -290,16 +288,16 @@
    "en": "Egypt"
   },
   "fecha": {
-   "es": "Siglo XV a. C.",
-   "en": "15th century BC"
+   "es": "Siglo XIII a. C.",
+   "en": "13th century BC"
   },
   "titulo": {
-   "es": "El faraón que batía sus propios récords",
-   "en": "The pharaoh who broke his own records"
+   "es": "Saltar hasta la ventana de la princesa",
+   "en": "Leaping up to the princess's window"
   },
   "texto": {
-   "es": "Tutmosis III dejó escrito que su flecha atravesó una plancha de cobre de tres dedos de grosor. Su hijo Amenofis II igualó la marca, la superó y acabó proclamando que había atravesado cuatro planchas de un palmo, «algo nunca hecho». Como nadie podía vencer al faraón, solo competía consigo mismo o con reyes muertos (Decker, 1992, p. 57).",
-   "en": "Thutmose III recorded that his arrow pierced a copper plate three fingers thick. His son Amenhotep II matched the mark, surpassed it and finally proclaimed that he had pierced four plates a hand's breadth thick, «a deed that had not been done before». Since nobody could beat the pharaoh, he competed only against himself or dead kings (Decker, 1992, p. 57)."
+   "es": "En el cuento egipcio del «Príncipe predestinado», copiado en un papiro de comienzos de la dinastía XIX (siglo XIII a. C.), el príncipe de Naharin promete a su única hija a quien alcance de un salto su ventana, a unos treinta y siete metros del suelo. Tras meses de intentos de los jóvenes nobles del país, lo consigue un príncipe egipcio que ocultaba quién era (Decker, 1992, pp. 109-110).",
+   "en": "In the Egyptian tale of «The Doomed Prince», copied on a papyrus from the early Nineteenth Dynasty (13th century BC), the prince of Naharin promises his only daughter to whoever can leap up to her window, some thirty-seven metres above the ground. After months of attempts by the local noble youths, an Egyptian prince who had hidden his identity succeeds (Decker, 1992, pp. 109-110)."
   },
   "refs": [
    "Decker, W. (1992). Sports and games of ancient Egypt (A. Guttmann, Trad.). Yale University Press."
@@ -310,58 +308,58 @@
   "img": {
    "src": "img/curio/008.jpg",
    "pie": {
-    "es": "Relieve de Amenofis II disparando contra un blanco, Museo de Luxor",
-    "en": "Relief of Amenhotep II at target practice, Luxor Museum"
+    "es": "Carro egipcio de la dinastía XVIII hallado en una tumba tebana, probablemente usado para la caza y el deporte. Museo Arqueológico Nacional de Florencia",
+    "en": "Eighteenth Dynasty Egyptian chariot from a Theban tomb, probably used for hunting and sport. National Archaeological Museum, Florence"
    },
    "autor": {
-    "es": "Marsupium",
-    "en": "Marsupium"
+    "es": "Khruner",
+    "en": "Khruner"
    },
-   "licencia": "CC BY 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Relief_of_Amenhotep_II_at_target_practice_-_Luxor_Museum.jpg",
-   "tipo": "hecho"
+   "licencia": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Egyptian_chariot_Florence.JPG",
+   "tipo": "genérica"
   },
-  "nota": "Decker (p. 46) recoge que los experimentos con arcos modernos solo lograron penetraciones de pocos milímetros, de modo que las marcas regias deben leerse como propaganda."
+  "nota": "Decker (1992, p. 69) advierte que todo depende de una palabra (p3j) de significado incierto, de modo que el salto como prueba no es seguro. En el cuento el príncipe llega en carro, de ahí la foto. Decker interpreta el relato como reflejo de la confianza del Imperio Nuevo frente a sus vecinos (p. 110)."
  },
  {
   "n": 9,
   "era": {
-   "es": "Egipto y Nubia",
-   "en": "Egypt and Nubia"
+   "es": "Nubia y Persia",
+   "en": "Nubia and Persia"
   },
   "fecha": {
-   "es": "685 a. C.",
-   "en": "685 BC"
+   "es": "c. 525 a. C.",
+   "en": "c. 525 BC"
   },
   "titulo": {
-   "es": "Cien kilómetros con el faraón nubio",
-   "en": "A hundred kilometres with the Nubian pharaoh"
+   "es": "El arco que ningún persa podía tensar",
+   "en": "The bow no Persian could draw"
   },
   "texto": {
-   "es": "Una estela fechada entre diciembre de 685 y enero de 684 a. C. cuenta que Taharqa, faraón de origen nubio, puso a sus soldados a correr de noche desde Menfis hasta el Fayum y de vuelta, unos 100 kilómetros con dos horas de descanso. El rey bajó del carro y corrió un tramo con ellos, y el primero en llegar comió con su guardia personal (Decker, 1992, pp. 62-64).",
-   "en": "A stela dated between December 685 and January 684 BC tells how Taharqa, a pharaoh of Nubian origin, had his soldiers run by night from Memphis to the Fayum and back, about 100 kilometres with a two-hour rest. The king stepped down from his chariot to run part of the way with them, and the first to arrive dined with his bodyguard (Decker, 1992, pp. 62-64)."
+   "es": "Hacia el 525 a. C., según Heródoto, el rey persa Cambises envió espías al rey de los etíopes, al sur de Egipto. El rey destensó un arco enorme, se lo dio para Cambises y advirtió que los persas no le atacaran hasta que pudieran tensar uno igual con su misma facilidad. En Persia solo Esmerdis, hermano de Cambises, logró abrirlo dos dedos (Heródoto, 1921, 3.21, 3.30).",
+   "en": "Around 525 BC, according to Herodotus, the Persian king Cambyses sent spies to the king of the Ethiopians, south of Egypt. The king unstrung a huge bow, handed it over for Cambyses and warned that the Persians should not attack him until they could draw such a bow as easily as he did. In Persia only Smerdis, Cambyses' brother, managed to draw it two fingers' breadth (Herodotus, 1921, 3.21, 3.30)."
   },
   "refs": [
-   "Decker, W. (1992). Sports and games of ancient Egypt (A. Guttmann, Trad.). Yale University Press."
+   "Heródoto. (1921). Herodotus: Vol. 2. Books III-IV (A. D. Godley, Trad.). Harvard University Press; William Heinemann. (Obra original publicada ca. 430 a. C.)"
   ],
   "refs_en": [
-   "Decker, W. (1992). Sports and games of ancient Egypt (A. Guttmann, Trans.). Yale University Press."
+   "Herodotus. (1921). Herodotus: Vol. 2. Books III-IV (A. D. Godley, Trans.). Harvard University Press; William Heinemann. (Original work published ca. 430 B.C.E.)"
   ],
   "img": {
    "src": "img/curio/009.jpg",
    "pie": {
-    "es": "Esfinge de Taharqa procedente de Kawa (Sudán), hacia 680 a. C., Museo Británico",
-    "en": "Sphinx of Taharqa from Kawa (Sudan), about 680 BC, British Museum"
+    "es": "Arqueros del friso de ladrillo vidriado del palacio de Darío I en Susa, hacia el 510 a. C. Museo del Louvre",
+    "en": "Archers from the glazed-brick frieze of Darius I's palace at Susa, c. 510 BC. Louvre Museum"
    },
    "autor": {
-    "es": "BabelStone",
-    "en": "BabelStone"
+    "es": "Autor anónimo",
+    "en": "Anonymous"
    },
-   "licencia": "CC BY-SA 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Sphinx_of_Taharqo_oblique_view.jpg",
-   "tipo": "protagonista"
+   "licencia": "Dominio público",
+   "url": "https://commons.wikimedia.org/wiki/File:Archers_frieze_Darius_1st_Palace_Suse_Louvre_AOD_488_a.jpg",
+   "tipo": "genérica"
   },
-  "nota": "Decker calcula la distancia y el tiempo (unos 100 km en unas nueve horas) a partir de las horas que da la estela; son estimaciones."
+  "nota": "Texto verificado en la traducción de Godley (Perseus/Perseids). Los «etíopes longevos» de Heródoto son en parte legendarios; suelen identificarse con el reino de Kush. La fecha es la de la campaña etíope de Cambises (c. 525-522 a. C.). Esmerdis aparece en el PPT del tema 2 (muerte en una cacería); aquí solo se cita como secundario. La foto muestra arqueros persas, no etíopes."
  },
  {
   "n": 10,
@@ -370,56 +368,56 @@
    "en": "Persia"
   },
   "fecha": {
-   "es": "Siglo V a. C.",
-   "en": "5th century BC"
+   "es": "480 a. C.",
+   "en": "480 BC"
   },
   "titulo": {
-   "es": "Montar, tirar con arco y no mentir",
-   "en": "Ride, shoot and tell the truth"
+   "es": "Los remeros de Sidón ante Jerjes",
+   "en": "The oarsmen of Sidon before Xerxes"
   },
   "texto": {
-   "es": "Heródoto contó en el siglo V a. C. que los persas educaban a los muchachos de los cinco a los veinte años en tres cosas, montar a caballo, tirar con arco y decir la verdad. Antes de los cinco años el niño vivía con las mujeres y no veía a su padre, y el rey premiaba cada año a quien más hijos tenía (Heródoto, ca. 430 a. C./1920, 1.136).",
-   "en": "Herodotus reported in the 5th century BC that the Persians educated boys from the age of five to twenty in three things, riding, archery and telling the truth. Before the age of five a boy lived among the women and did not see his father, and every year the king rewarded the man with the most sons (Herodotus, ca. 430 B.C.E./1920, 1.136)."
+   "es": "En 480 a. C., camino de Grecia, Jerjes hizo que los de Abidos le levantaran un trono de piedra blanca en una colina para contemplar su ejército y su flota. Quiso ver competir a las naves y la regata la ganaron los fenicios de Sidón. Heródoto anota que el rey quedó complacido con la carrera y con su expedición (Heródoto, 1922, 7.44).",
+   "en": "In 480 BC, on his way to Greece, Xerxes had the people of Abydos build him a throne of white stone on a hill so that he could survey his army and fleet. He wished to see the ships compete, and the race was won by the Phoenicians of Sidon. Herodotus notes that the king was pleased with the race and with his expedition (Herodotus, 1922, 7.44)."
   },
   "refs": [
-   "Heródoto. (1920). Herodotus: Vol. 1. Books I-II (A. D. Godley, Trad.). Harvard University Press; William Heinemann. (Obra original publicada ca. 430 a. C.)"
+   "Heródoto. (1922). Herodotus: Vol. 3. Books V-VII (A. D. Godley, Trad.). Harvard University Press; William Heinemann. (Obra original publicada ca. 430 a. C.)"
   ],
   "refs_en": [
-   "Herodotus. (1920). Herodotus: Vol. 1. Books I-II (A. D. Godley, Trans.). Harvard University Press; William Heinemann. (Original work published ca. 430 B.C.E.)"
+   "Herodotus. (1922). Herodotus: Vol. 3. Books V-VII (A. D. Godley, Trans.). Harvard University Press; William Heinemann. (Original work published ca. 430 B.C.E.)"
   ],
   "img": {
    "src": "img/curio/010.jpg",
    "pie": {
-    "es": "Friso de los arqueros del palacio de Darío I en Susa, ladrillo vidriado, hacia 510 a. C., Museo del Louvre",
-    "en": "Frieze of archers from the palace of Darius I at Susa, glazed brick, about 510 BC, Louvre Museum"
+    "es": "Doble siclo de Sidón, hacia 425-401 a. C., con una galera fenicia ante las murallas de la ciudad y, en el reverso, el rey persa en su carro. Electrotipo (copia) del British Museum",
+    "en": "Double shekel of Sidon, c. 425-401 BC, with a Phoenician galley before the city walls and, on the reverse, the Persian king in his chariot. British Museum electrotype (copy)"
    },
    "autor": {
-    "es": "Autor anónimo",
-    "en": "Anonymous"
+    "es": "Subido por LouisAragon",
+    "en": "Uploaded by LouisAragon"
    },
-   "licencia": "Dominio público",
-   "url": "https://commons.wikimedia.org/wiki/File:Archers_frieze_Louvre_AOD488.jpg",
-   "tipo": "genérica"
+   "licencia": "CC BY-SA 2.5",
+   "url": "https://commons.wikimedia.org/wiki/File:Achaemenid_Phoenicia,_temp._Ba%60al%C5%A1illem_(Sakton)_I-Ba%E2%80%99ana.jpg",
+   "tipo": "lugar"
   },
-  "nota": "Fuente primaria leída en la traducción de Godley (Loeb) a través de Perseids (cts.perseids.org, Hdt. 1.136.1-2). No hay edición castellana en la biblioteca; si se quiere citar la de Gredos, falta comprobar la página."
+  "nota": "Texto verificado en la traducción de Godley (Perseus/Perseids). El PPT del tema 2 dice que de los fenicios «ha llegado antes su trabajo que su deporte»; esta regata no aparece allí y complementa esa idea. La moneda es posterior unos cincuenta años y es una copia moderna (electrotipo)."
  },
  {
   "n": 11,
   "era": {
-   "es": "Creta minoica",
-   "en": "Minoan Crete"
+   "es": "Grecia micénica",
+   "en": "Mycenaean Greece"
   },
   "fecha": {
-   "es": "c. 1600-1450 a. C.",
-   "en": "c. 1600-1450 BC"
+   "es": "Siglo XVI a. C.",
+   "en": "16th century BC"
   },
   "titulo": {
-   "es": "Saltar sobre un toro en Cnosos",
-   "en": "Leaping over a bull at Knossos"
+   "es": "Un carro tallado sobre una tumba",
+   "en": "A chariot carved above a grave"
   },
   "texto": {
-   "es": "Entre 1600 y 1450 a. C. los minoicos de Creta saltaban por encima de toros en el patio del palacio de Cnosos ante un público de ambos sexos. Los frescos muestran a jóvenes que hacían el pino sobre el lomo del animal, y en el arte cretense las figuras de piel blanca, que también saltan o ayudan, suelen ser mujeres (Crowther, 2007, pp. 34-36).",
-   "en": "Between 1600 and 1450 BC the Minoans of Crete leapt over bulls in the courtyard of the palace at Knossos before spectators of both sexes. The frescoes show young people doing handstands on the animal's back, and in Cretan art the white-skinned figures, who also leap or assist, are usually women (Crowther, 2007, pp. 34-36)."
+   "es": "Sobre las tumbas de fosa del círculo A de Micenas, del siglo XVI a. C., se alzaban estelas de piedra, y en una de ellas un auriga de pie guía un carro tirado por caballos al galope. Algunos especialistas han propuesto que la escena une la carrera de carros con los juegos en honor del difunto, una conexión que el relieve por sí solo no permite asegurar (Crowther, 2007, p. 40).",
+   "en": "Above the shaft graves of Grave Circle A at Mycenae, from the 16th century BC, stood stone stelae, and on one of them a standing charioteer drives a chariot pulled by galloping horses. Some scholars have suggested that the scene links chariot racing with games held in honour of the dead, a connection the relief alone cannot confirm (Crowther, 2007, p. 40)."
   },
   "refs": [
    "Crowther, N. B. (2007). Sport in ancient times. Praeger."
@@ -430,18 +428,18 @@
   "img": {
    "src": "img/curio/011.jpg",
    "pie": {
-    "es": "Fresco del salto del toro, palacio de Cnosos, 1600-1450 a. C., Museo Arqueológico de Heraclión",
-    "en": "Bull-leaping fresco, palace of Knossos, 1600-1450 BC, Heraklion Archaeological Museum"
+    "es": "Estela funeraria de piedra caliza porosa con relieve de un carro, tumba V del círculo A de Micenas, siglo XVI a. C. Museo Arqueológico Nacional de Atenas",
+    "en": "Poros stone funerary stele with a chariot relief, Grave V of Grave Circle A at Mycenae, 16th century BC. National Archaeological Museum, Athens"
    },
    "autor": {
-    "es": "Jebulon",
-    "en": "Jebulon"
+    "es": "Gary Todd",
+    "en": "Gary Todd"
    },
    "licencia": "CC0",
-   "url": "https://commons.wikimedia.org/wiki/File:Bull_leaping_minoan_fresco_archmus_Heraklion_(cropped).jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Poros_stone_funerary_stele_with_bas-relief_chariot_scene._Mycenae,_Grave_Circle_A,_Grave_V,_16th_cent._BC._(28172733230).jpg",
    "tipo": "hecho"
   },
-  "nota": "Que las figuras blancas sean mujeres es la lectura que defiende Crowther; otros autores ven en ellas a muchachos."
+  "nota": "Crowther habla de un relieve de las tumbas de fosa de Micenas (1600 a. C.) sin identificar la estela; la descripción del auriga de pie y los caballos al galope procede de la ficha del Museo recogida en Commons (NAMA 1428). El PPT del tema 3 menciona el carro micénico en general, no esta estela."
  },
  {
   "n": 12,
@@ -450,58 +448,16 @@
    "en": "Archaic Greece"
   },
   "fecha": {
-   "es": "c. 750 a. C.",
-   "en": "c. 750 BC"
+   "es": "c. 725 a. C.",
+   "en": "c. 725 BC"
   },
   "titulo": {
-   "es": "Un trípode para el campeón de lucha",
-   "en": "A tripod for the wrestling champion"
+   "es": "El náufrago que calló a los feacios",
+   "en": "The castaway who silenced the Phaeacians"
   },
   "texto": {
-   "es": "En el canto XXIII de la «Ilíada», compuesta hacia el 750 a. C., Aquiles celebra juegos fúnebres por Patroclo y pone precio a cada premio. En la lucha el vencedor se llevaba un gran trípode que los aqueos valoraban en doce bueyes, y el vencido una mujer esclavizada «diestra en muchas labores», valorada en cuatro (Homero, ca. 750 a. C./2018, 23.700-705).",
-   "en": "In Book 23 of the «Iliad», composed around 750 BC, Achilles holds funeral games for Patroclus and puts a price on every prize. In wrestling the winner took a great tripod that the Achaeans valued at twelve oxen, and the loser an enslaved woman «skilled in many crafts», valued at four (Homer, ca. 750 B.C.E./2018, 23.700-705)."
-  },
-  "refs": [
-   "Homero. (2018). La Ilíada (L. Segalá y Estalella, Trad.). Proyecto Gutenberg. https://www.gutenberg.org/ebooks/57654 (Obra original compuesta ca. 750 a. C.)",
-   "Golden, M. (2004). Sport in the ancient world from A to Z. Routledge."
-  ],
-  "refs_en": [
-   "Homer. (2018). La Ilíada (L. Segalá y Estalella, Trans.). Project Gutenberg. https://www.gutenberg.org/ebooks/57654 (Original work composed ca. 750 B.C.E.)",
-   "Golden, M. (2004). Sport in the ancient world from A to Z. Routledge."
-  ],
-  "img": {
-   "src": "img/curio/012.jpg",
-   "pie": {
-    "es": "Fragmentos de un dino ático de Sófilo con los juegos fúnebres de Patroclo, Museo Arqueológico Nacional de Atenas",
-    "en": "Fragments of an Attic dinos by Sophilos showing the funeral games of Patroclus, National Archaeological Museum, Athens"
-   },
-   "autor": {
-    "es": "ArchaiOptix",
-    "en": "ArchaiOptix"
-   },
-   "licencia": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Sophilos_-_ABV_39_16_-_funerary_games_of_Patroklos_-_animal_friezes_-_Athens_NM_15499.jpg",
-   "tipo": "hecho"
-  },
-  "nota": "La fecha c. 750 a. C. para la Ilíada es la de la cronología de Golden (2004, p. xvii). En el texto inglés la cita entrecomillada traduce la versión castellana de Segalá. La era se pone en Grecia arcaica porque el poema es del siglo VIII, aunque evoca el mundo micénico."
- },
- {
-  "n": 13,
-  "era": {
-   "es": "Grecia arcaica",
-   "en": "Archaic Greece"
-  },
-  "fecha": {
-   "es": "720 a. C.",
-   "en": "720 BC"
-  },
-  "titulo": {
-   "es": "El taparrabos que cayó en Olimpia",
-   "en": "The loincloth that fell at Olympia"
-  },
-  "texto": {
-   "es": "En los Juegos Olímpicos de 720 a. C. Orsipo de Mégara ganó la carrera del estadio desnudo, mientras sus rivales llevaban el taparrabos tradicional. Pausanias sospechaba que lo dejó caer a propósito, porque un hombre desnudo corre con más soltura. Otro autor antiguo, Dionisio de Halicarnaso, atribuía el primer desnudo a un espartano, Acanto, en esos mismos Juegos (Miller, 2004, p. 17).",
-   "en": "At the Olympic Games of 720 BC Orsippus of Megara won the stadion race naked, while his rivals wore the traditional loincloth. Pausanias suspected he let it fall on purpose, because a naked man runs more easily. Another ancient author, Dionysius of Halicarnassus, credited the first nude run to a Spartan, Acanthus, at those same Games (Miller, 2004, p. 17)."
+   "es": "En el canto VIII de la «Odisea», de hacia el 725 a. C., los feacios celebran juegos y el joven Euríalo se burla de Ulises, al que compara con un capitán mercante que solo piensa en cargas y ganancias. Ulises, aún vestido, coge un disco más pesado que los de ellos y lo lanza más allá de todas las marcas. Para Euríalo, quien vivía del comercio no era atleta (Miller, 2004, pp. 13-14).",
+   "en": "In Book VIII of the «Odyssey», from around 725 BC, the Phaeacians hold games and young Euryalus mocks Odysseus, comparing him to a merchant captain who thinks only of cargoes and profits. Odysseus, still in his clothes, picks up a discus heavier than theirs and hurls it beyond every mark. For Euryalus, a man who lived by trade was no athlete (Miller, 2004, pp. 13-14)."
   },
   "refs": [
    "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3.ª ed.). University of California Press."
@@ -510,20 +466,60 @@
    "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3rd ed.). University of California Press."
   ],
   "img": {
-   "src": "img/curio/013.jpg",
+   "src": "img/curio/012.jpg",
    "pie": {
-    "es": "Ánfora panatenaica con una carrera de cuatro corredores desnudos, atribuida al Pintor de Eufileto, c. 530-520 a. C., Museo Británico",
-    "en": "Panathenaic amphora with a race of four naked runners, attributed to the Euphiletos Painter, c. 530-520 BC, British Museum"
+    "es": "Francesco Hayez, «Ulises en la corte de Alcínoo» (1814-1815): Ulises llora mientras el aedo Demódoco canta, poco antes de los juegos de los feacios",
+    "en": "Francesco Hayez, «Odysseus at the Court of Alcinous» (1814-1815): Odysseus weeps as the bard Demodocus sings, shortly before the Phaeacian games"
    },
    "autor": {
-    "es": "Atribuida al Pintor de Eufileto",
-    "en": "Attributed to the Euphiletos Painter"
+    "es": "Francesco Hayez",
+    "en": "Francesco Hayez"
    },
    "licencia": "Dominio público",
-   "url": "https://commons.wikimedia.org/wiki/File:Panathenaic_amphora_BM_B137.jpg",
-   "tipo": "genérica"
+   "url": "https://commons.wikimedia.org/wiki/File:Francesco_Hayez_028.jpg",
+   "tipo": "hecho"
   },
-  "nota": "Fuentes primarias recogidas por Miller: Pausanias 1.44.1 y Dionisio de Halicarnaso 7.72.2-3. Tucídides (1.6.5) da otra versión, más tardía, del fin del taparrabos."
+  "nota": "Miller fecha el pasaje (Odisea 8.97-253) hacia el 725 a. C. El PPT cita la «Odisea» solo de pasada y no trata los juegos de los feacios."
+ },
+ {
+  "n": 13,
+  "era": {
+   "es": "Grecia arcaica",
+   "en": "Archaic Greece"
+  },
+  "fecha": {
+   "es": "640-632 a. C.",
+   "en": "640-632 BC"
+  },
+  "titulo": {
+   "es": "Campeón olímpico y golpista",
+   "en": "Olympic champion and coup plotter"
+  },
+  "texto": {
+   "es": "Cilón, ateniense de familia rica, ganó el diaulo en Olimpia en 640 a. C. y se casó con la hija de Teágenes, tirano de Mégara. El oráculo de Delfos le aconsejó actuar durante la gran fiesta de Zeus, y en la olimpiada de 632 a. C. ocupó la Acrópolis con tropas de su suegro. El pueblo ateniense lo sitió, él escapó y sus amigos murieron (Golden, 2004, p. 46).",
+   "en": "Cylon, an Athenian from a wealthy family, won the diaulos at Olympia in 640 BC and married the daughter of Theagenes, tyrant of Megara. The Delphic oracle advised him to act during the great festival of Zeus, and in the Olympiad of 632 BC he seized the Acropolis with his father-in-law's troops. The Athenian people besieged him, he escaped and his friends were killed (Golden, 2004, p. 46)."
+  },
+  "refs": [
+   "Golden, M. (2004). Sport in the ancient world from A to Z. Routledge."
+  ],
+  "refs_en": [
+   "Golden, M. (2004). Sport in the ancient world from A to Z. Routledge."
+  ],
+  "img": {
+   "src": "img/curio/013.jpg",
+   "pie": {
+    "es": "La Acrópolis de Atenas vista desde la colina de Filopapo",
+    "en": "The Acropolis of Athens seen from Philopappos Hill"
+   },
+   "autor": {
+    "es": "Jakub Hałun",
+    "en": "Jakub Hałun"
+   },
+   "licencia": "CC BY 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:View_of_the_Acropolis_from_Philopappos_Hill,_Athens,_20240601_1137_0117.jpg",
+   "tipo": "lugar"
+  },
+  "nota": "Golden añade que el oráculo seguramente se refería a otra fiesta (quizá las Diasias). No confundir este Teágenes, tirano de Mégara, con Teágenes de Tasos del nivel 16; si se prefiere evitar la coincidencia de nombre, puede decirse «el tirano de Mégara»."
  },
  {
   "n": 14,
@@ -532,40 +528,40 @@
    "en": "Archaic Greece"
   },
   "fecha": {
-   "es": "c. 580 a. C.",
-   "en": "c. 580 BC"
+   "es": "c. 572 a. C.",
+   "en": "c. 572 BC"
   },
   "titulo": {
-   "es": "Las muchachas que corrían para Hera",
-   "en": "The girls who ran for Hera"
+   "es": "Perdió la boda bailando",
+   "en": "He danced away his wedding"
   },
   "texto": {
-   "es": "Cada cuatro años, en el estadio de Olimpia, las jóvenes solteras corrían las Hereas, una carrera en honor de Hera organizada por dieciséis mujeres de Élide. Corrían en tres categorías de edad, con el pelo suelto, la túnica por encima de la rodilla y el hombro derecho al aire, sobre una pista un sexto más corta que la de los hombres (Miller, 2004, p. 108).",
-   "en": "Every four years, in the stadium at Olympia, unmarried girls ran the Heraia, a race in honour of Hera organised by sixteen women of Elis. They ran in three age groups, with their hair loose, a tunic above the knee and the right shoulder bare, on a track one sixth shorter than the men's (Miller, 2004, p. 108)."
+   "es": "Clístenes, tirano de Sición, ganó la carrera de cuadrigas en Olimpia hacia el 572 a. C. y aprovechó el triunfo para convocar a los pretendientes de su hija Agarista, a los que tuvo un año corriendo y luchando en su ciudad. En el banquete final, el favorito Hipoclides bailó sobre una mesa con las piernas al aire, y el tirano le dijo que había perdido la boda bailando (Miller, 2004, p. 97; Heródoto, 1922, 6.129).",
+   "en": "Cleisthenes, tyrant of Sicyon, won the four-horse chariot race at Olympia around 572 BC and used the victory to summon suitors for his daughter Agariste, whom he kept running and wrestling in his city for a year. At the final banquet the favourite, Hippocleides, danced on a table with his legs in the air, and the tyrant told him he had danced away his marriage (Miller, 2004, p. 97; Herodotus, 1922, 6.129)."
   },
   "refs": [
    "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3.ª ed.). University of California Press.",
-   "Golden, M. (2004). Sport in the ancient world from A to Z. Routledge."
+   "Heródoto. (1922). Herodotus: Vol. 3. Books V-VII (A. D. Godley, Trad.). Harvard University Press; William Heinemann. (Obra original publicada ca. 430 a. C.)"
   ],
   "refs_en": [
    "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3rd ed.). University of California Press.",
-   "Golden, M. (2004). Sport in the ancient world from A to Z. Routledge."
+   "Herodotus. (1922). Herodotus: Vol. 3. Books V-VII (A. D. Godley, Trans.). Harvard University Press; William Heinemann. (Original work published ca. 430 B.C.E.)"
   ],
   "img": {
    "src": "img/curio/014.jpg",
    "pie": {
-    "es": "Muchacha corriendo con túnica corta (la llamada «Atalanta Barberini»), copia romana, Museos Vaticanos",
-    "en": "Running girl in a short tunic (the so-called «Atalanta Barberini»), Roman copy, Vatican Museums"
+    "es": "Carro de carreras doblando la meta en un ánfora de figuras negras del Grupo E, 550-540 a. C. Museo Arqueológico Nacional de Tarento",
+    "en": "Racing chariot rounding the turning post on a black-figure amphora by the E Group, 550-540 BC. National Archaeological Museum, Taranto"
    },
    "autor": {
-    "es": "Carole Raddato",
-    "en": "Carole Raddato"
+    "es": "Jastrow",
+    "en": "Jastrow"
    },
-   "licencia": "CC BY-SA 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Running_girl_(so-called_%E2%80%9CAtalanta_Barberini%E2%80%9D)_wearing_a_short_chiton,_either_Neo-Attic,_mid_1st_c._BCE,_or_Hadrianic,_Gallery_of_the_Candelabra,_Vatican_Museums_(32082828740).jpg",
+   "licencia": "Dominio público",
+   "url": "https://commons.wikimedia.org/wiki/File:Chariot_race_MNA_Tarento.jpg",
    "tipo": "genérica"
   },
-  "nota": "La única fuente es Pausanias (5.16.2-7, siglo II d. C.). La fecha c. 580 a. C. es la que propone Golden (2004, p. xvii), que advierte que muchas fechas de su cronología son aproximadas o conjeturales."
+  "nota": "Miller da 572 a. C.; Golden (2004, p. 40) da 576 o 572. Hipoclides respondió «a Hipoclides le da igual», frase que se hizo proverbial; Agarista se casó con el ateniense Megacles (Heródoto 6.129-130, verificado en la traducción de Godley)."
  },
  {
   "n": 15,
@@ -654,16 +650,16 @@
    "en": "Classical Greece"
   },
   "fecha": {
-   "es": "Siglo V a. C.",
-   "en": "5th century BC"
+   "es": "420 a. C.",
+   "en": "420 BC"
   },
   "titulo": {
-   "es": "La madre disfrazada de entrenador",
-   "en": "The mother disguised as a trainer"
+   "es": "Azotado por atar una cinta",
+   "en": "Flogged for tying a ribbon"
   },
   "texto": {
-   "es": "Las mujeres casadas tenían prohibido asistir a los Juegos de Olimpia bajo pena de ser despeñadas. Calipatira, viuda e hija del campeón Diágoras de Rodas, entró disfrazada de entrenador con su hijo Pisírodo y, al verlo ganar, saltó la valla y quedó al descubierto. La perdonaron por su familia de vencedores, pero desde entonces los entrenadores tuvieron que asistir desnudos (Miller, 2004, p. 105).",
-   "en": "Married women were barred from the Olympic Games on pain of being thrown off a cliff. Kallipateira, a widow and daughter of the champion Diagoras of Rhodes, got in disguised as a trainer with her son Peisirodos and, when he won, jumped the fence and was exposed. She was pardoned because of her family of victors, but from then on trainers had to attend naked (Miller, 2004, p. 105)."
+   "es": "En 420 a. C. Esparta estaba excluida de los Juegos de Olimpia, y el espartano Licas inscribió su carro a nombre del pueblo de Beocia. Cuando ganó, se acercó al auriga y le ató la cinta de vencedor para dejar claro que el carro era suyo, y por ello fue azotado en público. Los registros de Élide dieron la victoria a los tebanos (Miller, 2004, pp. 186-187).",
+   "en": "In 420 BC Sparta was barred from the Olympic Games, so the Spartan Lichas entered his chariot in the name of the Boeotian people. When it won, he went up to the charioteer and tied the victor's ribbon on him to make clear that the chariot was his, and for this he was publicly flogged. The Elean records gave the victory to the Thebans (Miller, 2004, pp. 186-187)."
   },
   "refs": [
    "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3.ª ed.). University of California Press."
@@ -674,18 +670,18 @@
   "img": {
    "src": "img/curio/017.jpg",
    "pie": {
-    "es": "Túnel de entrada al estadio de Olimpia",
-    "en": "Entrance tunnel to the stadium at Olympia"
+    "es": "Cuadriga en un ánfora ática de figuras negras, hacia 510 a. C.; el auriga espera la salida. Museo Arqueológico Nacional de Atenas",
+    "en": "Four-horse chariot on an Attic black-figure amphora, c. 510 BC; the charioteer awaits the start. National Archaeological Museum, Athens"
    },
    "autor": {
-    "es": "Asier Barre",
-    "en": "Asier Barre"
+    "es": "George E. Koronaios",
+    "en": "George E. Koronaios"
    },
    "licencia": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Picture_that_I_took_in_Olimpia_(entance_to_stadium).jpg",
-   "tipo": "lugar"
+   "url": "https://commons.wikimedia.org/wiki/File:Attic_amphora_with_a_quadriga_(6th_cent._B.C.)_at_the_National_Archaeological_Museum_of_Athens_on_1_June_2018.jpg",
+   "tipo": "genérica"
   },
-  "nota": "Fuente primaria: Pausanias 5.6.7-8 (algunos la llaman Ferenice). Pausanias dice que las doncellas sí podían ver los Juegos (6.20.9), de ahí «casadas». No hay fecha exacta de la victoria de Pisírodo; Diágoras ganó en 464 a. C."
+  "nota": "Fuentes en Miller: Tucídides 5.49-50 (habla del pueblo de Beocia y de los portadores de vara) y Pausanias 6.2.2 (habla de los tebanos y de que lo azotaron los helanódicas; añade que el episodio llevó a la invasión espartana de Élide). El PPT del tema 3 recoge la exclusión de Esparta en 420 a. C. por la multa de Lepreo, pero no a Licas; la curiosidad la complementa."
  },
  {
   "n": 18,
@@ -694,40 +690,40 @@
    "en": "Classical Greece"
   },
   "fecha": {
-   "es": "396 a. C.",
-   "en": "396 BC"
+   "es": "400 a. C.",
+   "en": "400 BC"
   },
   "titulo": {
-   "es": "Cinisca, la primera campeona olímpica",
-   "en": "Kyniska, the first female Olympic champion"
+   "es": "Una bailarina con escudo en Cotiora",
+   "en": "A dancing girl with a shield at Cotyora"
   },
   "texto": {
-   "es": "La espartana Cinisca, hija y hermana de reyes, ganó la carrera de cuadrigas de Olimpia en 396 y 392 a. C. como propietaria de los caballos, y dejó en su estatua que era la única mujer de Grecia con esa corona. Según Plutarco, su hermano Agesilao la animó a competir para demostrar que esas victorias se compraban con riqueza (Crowther, 2007, p. 148; Miller, 2004, p. 106).",
-   "en": "The Spartan Kyniska, daughter and sister of kings, won the four-horse chariot race at Olympia in 396 and 392 BC as owner of the horses, and her statue proclaimed her the only woman in Greece to win that crown. According to Plutarch, her brother Agesilaus urged her to compete to prove that such victories were bought with wealth (Crowther, 2007, p. 148; Miller, 2004, p. 106)."
+   "es": "En 400 a. C., durante la retirada de los mercenarios griegos que contó Jenofonte, sus jefes agasajaron en Cotiora a unos embajadores paflagonios con danzas armadas. La última la bailó una muchacha con un escudo ligero, que ejecutó la pírrica con gracia. Los invitados preguntaron si también las mujeres combatían con ellos, y los griegos respondieron que ellas habían puesto en fuga al rey de su campamento (Jenofonte, 1922, 6.1.11-13; Golden, 2004, p. 142).",
+   "en": "In 400 BC, during the retreat of the Greek mercenaries described by Xenophon, their generals entertained some Paphlagonian envoys at Cotyora with armed dances. The last was performed by a girl with a light shield, who danced the pyrrhic with grace. The guests asked whether women also fought alongside them, and the Greeks replied that these were the ones who had put the king to flight from his camp (Xenophon, 1922, 6.1.11-13; Golden, 2004, p. 142)."
   },
   "refs": [
-   "Crowther, N. B. (2007). Sport in ancient times. Praeger.",
-   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3.ª ed.). University of California Press."
+   "Jenofonte. (1922). Xenophon: Vol. 3. Anabasis, Books I-VII (C. L. Brownson, Trad.). Harvard University Press; William Heinemann. (Obra original publicada ca. 370 a. C.)",
+   "Golden, M. (2004). Sport in the ancient world from A to Z. Routledge."
   ],
   "refs_en": [
-   "Crowther, N. B. (2007). Sport in ancient times. Praeger.",
-   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3rd ed.). University of California Press."
+   "Xenophon. (1922). Xenophon: Vol. 3. Anabasis, Books I-VII (C. L. Brownson, Trans.). Harvard University Press; William Heinemann. (Original work published ca. 370 B.C.E.)",
+   "Golden, M. (2004). Sport in the ancient world from A to Z. Routledge."
   ],
   "img": {
    "src": "img/curio/018.jpg",
    "pie": {
-    "es": "Base de la estatua de Cinisca con su inscripción, Museo de los Juegos Olímpicos de la Antigüedad (Olimpia)",
-    "en": "Statue base of Kyniska with its inscription, Museum of the Olympic Games in Antiquity (Olympia)"
+    "es": "Base de mármol de una estatua votiva con danzantes de pírrica, 329-323 a. C. Museo de la Acrópolis, Atenas",
+    "en": "Marble base of a votive statue with pyrrhic dancers, 329-323 BC. Acropolis Museum, Athens"
    },
    "autor": {
-    "es": "Peter J. Miller",
-    "en": "Peter J. Miller"
+    "es": "Gary Todd",
+    "en": "Gary Todd"
    },
-   "licencia": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Statue_base_of_Kyniska_(side-view),_Museum_of_the_Olympic_Games_in_Antiquity,_Ancient_Olympia.jpg",
-   "tipo": "hecho"
+   "licencia": "CC0",
+   "url": "https://commons.wikimedia.org/wiki/File:Athens_Acropolis_Museum_Marble_Base_of_Dedication_Statue_with_Depiction_of_Pyrrhic_Dance,_329-323_BC_(28159283790).jpg",
+   "tipo": "genérica"
   },
-  "nota": "Miller fecha la primera victoria en 396 a. C. con interrogante; Crowther da 396 y 392 a. C. Fuentes primarias: Pausanias 3.8.1, IvO 160 y Plutarco, Agesilao 20.1."
+  "nota": "Pasaje (Anábasis 6.1.1-13) verificado en la traducción de Brownson en Perseids. La respuesta de los griegos es una broma. Golden (2004, p. 142) describe la pírrica y recuerda que algunos vasos muestran a mujeres bailándola. Datos editoriales del volumen Loeb de Brownson tomados de la ficha de Perseus; conviene cotejarlos si se cita en otro sitio."
  },
  {
   "n": 19,
@@ -736,38 +732,40 @@
    "en": "Classical Greece"
   },
   "fecha": {
-   "es": "388 a. C.",
-   "en": "388 BC"
+   "es": "384-380 a. C.",
+   "en": "384-380 BC"
   },
   "titulo": {
-   "es": "Las estatuas pagadas por los tramposos",
-   "en": "Statues paid for by cheats"
+   "es": "El cretense que corrió para Éfeso",
+   "en": "The Cretan who ran for Ephesus"
   },
   "texto": {
-   "es": "En 388 a. C. el púgil Eupolo de Tesalia sobornó a tres rivales en Olimpia, y los jueces multaron a los cuatro. Con ese dinero se alzaron seis estatuas de bronce de Zeus, los Zanes, a la entrada del estadio, y sus inscripciones recordaban a los atletas que la victoria se ganaba con los pies o con la fuerza y no con dinero (Miller, 2004, p. 74).",
-   "en": "In 388 BC the boxer Eupolus of Thessaly bribed three rivals at Olympia, and the judges fined all four. The money paid for six bronze statues of Zeus, the Zanes, at the entrance to the stadium, and their inscriptions reminded athletes that victory was won with speed of foot or strength of body and not with money (Miller, 2004, p. 74)."
+   "es": "Sotades ganó el dólico, la carrera larga, en Olimpia en 384 a. C. y fue proclamado cretense, como era. En los Juegos siguientes volvió a ganar, pero aceptó dinero de Éfeso para anunciarse como efesio, y los cretenses lo castigaron con el destierro. Poco después un cómico ateniense lo nombraba como ejemplo de quien corre mucho (Miller, 2004, p. 182; Golden, 2004, p. 155).",
+   "en": "Sotades won the dolichos, the long race, at Olympia in 384 BC and was proclaimed a Cretan, as he was. At the next Games he won again but took money from Ephesus to be announced as an Ephesian, and the Cretans punished him with exile. Shortly afterwards an Athenian comic poet named him as the model of someone who runs a lot (Miller, 2004, p. 182; Golden, 2004, p. 155)."
   },
   "refs": [
-   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3.ª ed.). University of California Press."
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3.ª ed.). University of California Press.",
+   "Golden, M. (2004). Sport in the ancient world from A to Z. Routledge."
   ],
   "refs_en": [
-   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3rd ed.). University of California Press."
+   "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3rd ed.). University of California Press.",
+   "Golden, M. (2004). Sport in the ancient world from A to Z. Routledge."
   ],
   "img": {
    "src": "img/curio/019.jpg",
    "pie": {
-    "es": "Bases de los Zanes junto al túnel de entrada al estadio de Olimpia",
-    "en": "Bases of the Zanes beside the entrance tunnel to the stadium at Olympia"
+    "es": "Corredores de larga distancia en un ánfora panatenaica, dibujo publicado por E. N. Gardiner en 1910",
+    "en": "Long-distance runners on a Panathenaic amphora, drawing published by E. N. Gardiner in 1910"
    },
    "autor": {
-    "es": "Mark Landon",
-    "en": "Mark Landon"
+    "es": "RickyBennison (a partir de Gardiner, 1910)",
+    "en": "RickyBennison (after Gardiner, 1910)"
    },
-   "licencia": "CC BY 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Olympia_Bases_of_the_Zanes_from_SW_(1993).jpg",
-   "tipo": "lugar"
+   "licencia": "CC0",
+   "url": "https://commons.wikimedia.org/wiki/File:Long_Distance_Runners,_Ancient_Greece,_Amphora.png",
+   "tipo": "genérica"
   },
-  "nota": "Fuente primaria: Pausanias 5.21.2-4, en la traducción de Miller."
+  "nota": "Fuente antigua, Pausanias 6.18.6; el cómico es Filetero, fr. 3 Kassel-Austin (según Golden). El PPT cita el caso de Ástilo (Crotona y Siracusa), parecido pero distinto. La imagen es un ánfora panatenaica; si se quiere evitar cualquier eco con el antiguo nivel 20, puede cambiarse."
  },
  {
   "n": 20,
@@ -776,16 +774,16 @@
    "en": "Classical Greece"
   },
   "fecha": {
-   "es": "Siglo IV a. C.",
-   "en": "4th century BC"
+   "es": "c. 358 a. C.",
+   "en": "c. 358 BC"
   },
   "titulo": {
-   "es": "Cincuenta ánforas de aceite por una carrera",
-   "en": "Fifty jars of oil for one race"
+   "es": "Diógenes contra las fatigas",
+   "en": "Diogenes against hardship"
   },
   "texto": {
-   "es": "Una inscripción ateniense de la primera mitad del siglo IV a. C. conserva la lista de premios de las Panateneas. El niño que ganaba la carrera del estadio recibía 50 ánforas de aceite de oliva de los olivos sagrados, y el segundo, 10. Miller calcula que el premio del vencedor equivalía a unos 19 800 dólares de 2004 (Miller, 2004, pp. 81-82).",
-   "en": "An Athenian inscription from the first half of the 4th century BC preserves the prize list of the Panathenaic Games. The boy who won the stadion race received 50 amphoras of olive oil from the sacred olive trees, and the runner-up 10. Miller estimates the winner's prize at about 19,800 dollars of 2004 (Miller, 2004, pp. 81-82)."
+   "es": "Hacia el 358 a. C. el filósofo cínico Diógenes acudió a los Juegos Ístmicos y, cuando le preguntaron si iba a ver las pruebas, contestó que iba a competir. Su rival eran las fatigas, imbatibles para los glotones y vencibles para los hombres flacos, con cintura de avispa. Lo contó Dion de Prusa cuatro siglos después, de modo que el retrato puede reflejar una época u otra (Miller, 2004, pp. 99-101).",
+   "en": "Around 358 BC the Cynic philosopher Diogenes went to the Isthmian Games and, when asked whether he had come to watch, replied that he had come to compete. His opponent was hardship, unbeatable for gluttons and beatable by lean men with waists like wasps. Dio of Prusa told the story four centuries later, so the portrait may reflect either age (Miller, 2004, pp. 99-101)."
   },
   "refs": [
    "Miller, S. G. (2004). Arete: Greek sports from ancient sources (3.ª ed.). University of California Press."
@@ -796,17 +794,17 @@
   "img": {
    "src": "img/curio/020.jpg",
    "pie": {
-    "es": "Ánfora panatenaica de premio atribuida al Pintor de Cleofrades, c. 525-500 a. C., Museo Metropolitano de Arte (Nueva York)",
-    "en": "Panathenaic prize amphora attributed to the Kleophrades Painter, c. 525-500 BC, Metropolitan Museum of Art (New York)"
+    "es": "Jean-Léon Gérôme, «Diógenes» (1860). Walters Art Museum, Baltimore",
+    "en": "Jean-Léon Gérôme, «Diogenes» (1860). Walters Art Museum, Baltimore"
    },
    "autor": {
-    "es": "Pintor de Cleofrades",
-    "en": "Kleophrades Painter"
+    "es": "Jean-Léon Gérôme",
+    "en": "Jean-Léon Gérôme"
    },
-   "licencia": "CC0",
-   "url": "https://commons.wikimedia.org/wiki/File:Terracotta_Panathenaic_prize_amphora_MET_DT5494.jpg",
-   "tipo": "genérica"
+   "licencia": "Dominio público",
+   "url": "https://commons.wikimedia.org/wiki/File:Jean-L%C3%A9on_G%C3%A9r%C3%B4me_-_Diogenes_-_Walters_37131.jpg",
+   "tipo": "protagonista"
   },
-  "nota": "Fuente primaria: IG II² 2311 (400-350 a. C.). El origen del aceite en los olivos sagrados procede de Aristóteles, Constitución de los atenienses 60, recogido por Miller en la misma página. La equivalencia en dólares es una estimación de Miller (2004). El ánfora de la foto es anterior a la inscripción."
+  "nota": "Fuente antigua, Dion Crisóstomo 8.4-12 (recogido por Miller, n.º 145). Miller advierte de que no se sabe si el cuadro de la fiesta es de época de Diógenes o de la de Dion."
  }
 ]

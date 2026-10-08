@@ -128,38 +128,38 @@
    "en": "Rome"
   },
   "fecha": {
-   "es": "Siglos I-II d. C.",
-   "en": "1st-2nd century AD"
+   "es": "Siglo I d. C.",
+   "en": "1st century AD"
   },
   "titulo": {
-   "es": "Amazona y Aquilia, gladiadoras sin casco",
-   "en": "Amazon and Achillia, gladiators without helmets"
+   "es": "El púgil que ganaba sin dar golpes",
+   "en": "The boxer who won without throwing punches"
   },
   "texto": {
-   "es": "Un relieve de los siglos I-II d. C. hallado en Halicarnaso muestra a dos gladiadoras, Amazona y Aquilia, con espada, escudo y el equipo de los hombres, pero sin casco, sobre una tarima bajo la que asoman las cabezas de dos espectadores. Sus nombres evocaban el duelo mítico entre Aquiles y la reina amazona Pentesilea, y la inscripción recuerda que ambas fueron licenciadas del combate (British Museum, s. f.).",
-   "en": "A relief of the 1st-2nd century AD found at Halicarnassus shows two female gladiators, Amazon and Achillia, with sword, shield and the same kit as men, but no helmets, on a platform with the heads of two spectators below. Their names recalled the mythical duel between Achilles and the Amazon queen Penthesilea, and the inscription records that both were released from the fight (British Museum, n.d.)."
+   "es": "En el siglo I d. C. el orador Dion de Prusa elogió al púgil Melancomas, invicto, según él, desde que empezó a competir en los Juegos Píticos. Aguantaba dos días seguidos con la guardia alta y obligaba a sus rivales a rendirse antes de recibir un golpe y antes de darlo, porque no veía valentía en herir ni en ser herido (Dion Crisóstomo, 1939, pp. 365-367).",
+   "en": "In the 1st century AD the orator Dio of Prusa praised the boxer Melancomas, undefeated, he said, from the moment he began competing at the Pythian Games. He could keep his guard up for two days in a row and made rivals give up before he took a blow or landed one, since he saw no courage in wounding or being wounded (Dio Chrysostom, 1939, pp. 365-367)."
   },
   "refs": [
-   "British Museum. (s. f.). Relieve [Número de museo 1847,0424.19]. https://www.britishmuseum.org/collection/object/G_1847-0424-19"
+   "Dion Crisóstomo. (1939). Discursos XII-XXX (J. W. Cohoon, Trad.; Vol. 2, Loeb Classical Library 339). Harvard University Press. https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Dio_Chrysostom/Discourses/28*.html"
   ],
   "refs_en": [
-   "British Museum. (n.d.). Relief [Museum number 1847,0424.19]. https://www.britishmuseum.org/collection/object/G_1847-0424-19"
+   "Dio Chrysostom. (1939). Discourses XII-XXX (J. W. Cohoon, Trans.; Vol. 2, Loeb Classical Library 339). Harvard University Press. https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Dio_Chrysostom/Discourses/28*.html"
   ],
   "img": {
    "src": "img/curio/024.jpg",
    "pie": {
-    "es": "Relieve de Halicarnaso con las gladiadoras Amazona y Aquilia, British Museum",
-    "en": "Relief from Halicarnassus with the female gladiators Amazon and Achillia, British Museum"
+    "es": "El llamado Púgil de las Termas, bronce griego helenístico (siglos III-II a. C.) de un boxeador que descansa tras el combate. Museo Nazionale Romano, Palazzo Massimo.",
+    "en": "The so-called Terme Boxer, a Hellenistic Greek bronze (3rd-2nd centuries BC) of a boxer resting after a bout. Museo Nazionale Romano, Palazzo Massimo."
    },
    "autor": {
-    "es": "TimeTravelRome",
-    "en": "TimeTravelRome"
+    "es": "Marie-Lan Nguyen (fotografía)",
+    "en": "Marie-Lan Nguyen (photograph)"
    },
-   "licencia": "CC BY 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Relief_depicting_a_battle_scene_between_Amazon_and_Achillia_(51233583658).jpg",
-   "tipo": "hecho"
+   "licencia": "Dominio público",
+   "url": "https://commons.wikimedia.org/wiki/File:Thermae_boxer_Massimo_Inv1055.jpg",
+   "tipo": "genérica"
   },
-  "nota": "La ficha del museo añade que el licenciamiento (missio) pudo deberse a un empate (lectura de K. Coleman)."
+  "nota": "Discurso 28 (pp. 365-367: invicto desde los Píticos, dos días con los brazos en alto, ni golpear ni ser golpeado) y 29 (p. 385). Dion lo pronuncia en Nápoles poco después de la muerte del púgil; la fecha hacia el 74 d. C. es conjetura de Von Arnim recogida en la introducción Loeb, por eso la fecha queda en «siglo I». El traductor (Cohoon) y el número Loeb 339 no figuran en la página digital; los doy por conocidos, conviene comprobarlos. La estatua es anterior a Melancomas."
  },
  {
   "n": 25,
@@ -168,40 +168,38 @@
    "en": "Rome"
   },
   "fecha": {
-   "es": "146 d. C.",
-   "en": "AD 146"
+   "es": "Siglo II d. C.",
+   "en": "2nd century AD"
   },
   "titulo": {
-   "es": "El auriga lusitano que se hizo millonario",
-   "en": "The Lusitanian charioteer who made a fortune"
+   "es": "Una tumba para el caballo del emperador",
+   "en": "A tomb for the emperor's horse"
   },
   "texto": {
-   "es": "Cayo Apuleyo Diocles, auriga nacido en Lusitania, empezó a correr en Roma con dieciocho años y se retiró en el 146 d. C. con 1.462 victorias. Una inscripción en su honor suma sus premios en 35.863.120 sestercios, cantidad que, según un cálculo moderno, habría alimentado durante un año a toda la población de Roma (d'Encarnação, 2006; History News Network, 2010).",
-   "en": "Gaius Appuleius Diocles, a charioteer born in Lusitania, began racing in Rome at eighteen and retired in AD 146 with 1,462 victories. An inscription in his honour totals his prize money at 35,863,120 sesterces, a sum that, by one modern estimate, could have fed the entire population of Rome for a year (d'Encarnação, 2006; History News Network, 2010)."
+   "es": "Adriano, emperador entre el 117 y el 138 d. C., fue un cazador apasionado. Según Dion Casio, se rompió la clavícula cazando, estuvo a punto de quedar lisiado de una pierna y dio a una ciudad que fundó en Misia el nombre de Hadrianoterae, «cacerías de Adriano». Cuando murió Borístenes, su caballo de caza favorito, le hizo una tumba con lápida e inscripción (Dion Casio, 1925, p. 443).",
+   "en": "Hadrian, emperor from AD 117 to 138, was a passionate hunter. According to Cassius Dio, he broke his collarbone hunting, nearly maimed a leg and gave a city he founded in Mysia the name Hadrianotherae, 'Hadrian's hunts'. When Borysthenes, his favourite hunting horse, died, he gave it a tomb with a slab and an inscription (Cassius Dio, 1925, p. 443)."
   },
   "refs": [
-   "d'Encarnação, J. (2006). Lusitani nell'Italia romana. En A. Sartori y A. Valvo (Eds.), Hiberia-Italia, Italia-Hiberia (pp. 47-52). Cisalpino-Istituto Editoriale Universitario. https://hdl.handle.net/10316/31550",
-   "History News Network. (2010, 1 de septiembre). Highest paid athlete hailed from ancient Rome [Sobre la estimación de P. Struck en Lapham's Quarterly]. https://www.historynewsnetwork.org/article/130904"
+   "Dion Casio. (1925). Historia romana (E. Cary, Trad.; Vol. 8, Loeb Classical Library 176). Harvard University Press. https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/69*.html"
   ],
   "refs_en": [
-   "d'Encarnação, J. (2006). Lusitani nell'Italia romana. In A. Sartori & A. Valvo (Eds.), Hiberia-Italia, Italia-Hiberia (pp. 47-52). Cisalpino-Istituto Editoriale Universitario. https://hdl.handle.net/10316/31550",
-   "History News Network. (2010, September 1). Highest paid athlete hailed from ancient Rome [On P. Struck's estimate in Lapham's Quarterly]. https://www.historynewsnetwork.org/article/130904"
+   "Cassius Dio. (1925). Roman history (E. Cary, Trans.; Vol. 8, Loeb Classical Library 176). Harvard University Press. https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/69*.html"
   ],
   "img": {
    "src": "img/curio/025.jpg",
    "pie": {
-    "es": "Mosaico del auriga Marciano con su cuadriga, siglo IV d. C., Museo Nacional de Arte Romano de Mérida",
-    "en": "Mosaic of the charioteer Marcianus with his quadriga, 4th century AD, National Museum of Roman Art, Mérida"
+    "es": "Tondo de época de Adriano con una cacería de jabalí, reutilizado en el Arco de Constantino (Roma).",
+    "en": "Hadrianic roundel showing a boar hunt, reused on the Arch of Constantine (Rome)."
    },
    "autor": {
-    "es": "Carole Raddato",
-    "en": "Carole Raddato"
+    "es": "S. I. Sosnovski",
+    "en": "S. I. Sosnovsky"
    },
-   "licencia": "CC BY-SA 2.5",
-   "url": "https://commons.wikimedia.org/wiki/File:Roman_mosaic_of_a_victorious_charioteer_called_Marcianus_depicted_commanding_a_quadriga_(a_four-horse_chariot),_4th_century_AD,_National_Museum_of_Roman_Art,_M%C3%A9rida.jpg",
-   "tipo": "genérica"
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Arch_of_Constantine._Wild_boar_hunting.jpg",
+   "tipo": "hecho"
   },
-  "nota": "Inscripción CIL VI 10048. No he podido abrir el artículo original de Struck (2010) en Lapham's Quarterly; la cifra y la comparación proceden de la noticia de HNN que lo resume. El número de carreras varía según la lectura (4.251 o 4.257), por eso no se da. Fecha de retiro calculada así: empezó en 122 con 18 años y se retiró con 42. La foto muestra otro auriga hispano, del siglo IV."
+  "nota": "Dion Casio 69.10.2. Escribe en el siglo III y este libro se conserva por el resumen bizantino de Xifilino. La traducción «cacerías de Adriano» es la etimología del nombre (theraí, cacerías), no está en Dion. La ficha de Commons identifica a los jinetes del tondo con Adriano y Antínoo; el pie no lo afirma. T4 cita a Adriano solo por los baños, el gremio de atletas y los gladiadores."
  },
  {
   "n": 26,
@@ -210,38 +208,40 @@
    "en": "Rome"
   },
   "fecha": {
-   "es": "Siglos II-III d. C.",
-   "en": "2nd-3rd century AD"
+   "es": "267 d. C.",
+   "en": "AD 267"
   },
   "titulo": {
-   "es": "Los gladiadores comían cebada y bebían ceniza",
-   "en": "Gladiators ate barley and drank ash"
+   "es": "Tres caídas pactadas por 3.800 dracmas",
+   "en": "Three agreed falls for 3,800 drachmas"
   },
   "texto": {
-   "es": "A los gladiadores los llamaban con desprecio hordearii, «comedores de cebada». Los huesos de 22 de ellos, enterrados en Éfeso en los siglos II y III d. C., confirman una dieta casi vegetal y mucho más estroncio que el de sus vecinos, quizá por una bebida de ceniza vegetal que, según Plinio el Viejo, tomaban tras el combate para aliviar el dolor (Lösch et al., 2014).",
-   "en": "Gladiators were scornfully called hordearii, «barley eaters». The bones of 22 of them, buried at Ephesus in the 2nd and 3rd centuries AD, confirm an almost plant-based diet and far more strontium than their neighbours, perhaps from a plant ash drink which, according to Pliny the Elder, they took after fighting to ease their pain (Lösch et al., 2014)."
+   "es": "En el 267 d. C., antes de la final de lucha juvenil de los Grandes Antinoeia, en Egipto, el padre de Nicantinoo se comprometió por contrato a pagar 3.800 dracmas al rival, Demetrio, a cambio de que «cayera tres veces y cediera». Si Demetrio se echaba atrás y ganaba, pagaría tres talentos. Es el contrato de amaño entre atletas más antiguo que se conoce (Jarus, 2014).",
+   "en": "In AD 267, before the boys' wrestling final at the Great Antinoeia in Egypt, the father of Nicantinous agreed by contract to pay 3,800 silver drachmas to the opponent, Demetrius, if he would 'fall three times and yield'. If Demetrius backed out and won, he would owe three talents. It is the earliest known written match-fixing contract between ancient athletes (Jarus, 2014)."
   },
   "refs": [
-   "Lösch, S., Moghaddam, N., Grossschmidt, K., Risser, D. U. y Kanz, F. (2014). Stable isotope and trace element studies on gladiators and contemporary Romans from Ephesus (Turkey, 2nd and 3rd ct. AD): Implications for differences in diet. PLOS ONE, 9(10), e110489. https://doi.org/10.1371/journal.pone.0110489"
+   "Jarus, O. (2014, 16 de abril). Body slam this! Ancient wrestling match was fixed. Live Science. https://www.livescience.com/44867-ancient-wrestling-match-was-fixed.html",
+   "Urbanus, J. (2014). Taking a dive. Archaeology, julio-agosto de 2014. https://archaeology.org/issues/july-august-2014/digs-discoveries/oxyrhynchus-papyrus-wrestling-contract/"
   ],
   "refs_en": [
-   "Lösch, S., Moghaddam, N., Grossschmidt, K., Risser, D. U., & Kanz, F. (2014). Stable isotope and trace element studies on gladiators and contemporary Romans from Ephesus (Turkey, 2nd and 3rd ct. AD): Implications for differences in diet. PLOS ONE, 9(10), e110489. https://doi.org/10.1371/journal.pone.0110489"
+   "Jarus, O. (2014, April 16). Body slam this! Ancient wrestling match was fixed. Live Science. https://www.livescience.com/44867-ancient-wrestling-match-was-fixed.html",
+   "Urbanus, J. (2014). Taking a dive. Archaeology, July-August 2014. https://archaeology.org/issues/july-august-2014/digs-discoveries/oxyrhynchus-papyrus-wrestling-contract/"
   ],
   "img": {
    "src": "img/curio/026.jpg",
    "pie": {
-    "es": "Relieve con dos gladiadores y un árbitro, hallado en el cementerio de gladiadores de Éfeso",
-    "en": "Relief of two gladiators and a referee, found in the gladiator graveyard at Ephesus"
+    "es": "Arco de triunfo de Antinoópolis (Egipto), la ciudad de los juegos Antinoeia, en un grabado de la Description de l'Égypte (1809).",
+    "en": "Triumphal arch of Antinoopolis (Egypt), the city of the Antinoeia games, in an engraving from the Description de l'Égypte (1809)."
    },
    "autor": {
-    "es": "Carole Raddato",
-    "en": "Carole Raddato"
+    "es": "Imprimerie impériale (Description de l'Égypte)",
+    "en": "Imprimerie impériale (Description de l'Égypte)"
    },
-   "licencia": "CC BY-SA 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Relief_depicting_two_gladiators_fighting_while_a_referee_looks_on,_found_in_the_gladiator_graveyard_at_Ephesus,_Ephesus_Museum,_Turkey_(17277590191).jpg",
+   "licencia": "Dominio público",
+   "url": "https://commons.wikimedia.org/wiki/File:Antinoë_(Antinoöpolis)._Vue_de_l'arc_de_triomphe_(NYPL_b14212718-1268152).jpg",
    "tipo": "lugar"
   },
-  "nota": "El artículo advierte que no puede descartarse del todo una alteración química de los huesos tras el enterramiento; por eso «quizá»."
+  "nota": "Papiro de Oxirrinco publicado en 2014 en The Oxyrhynchus Papyri (transcripción de J. Rea, traducción de D. Rathbone, King's College London). No he podido verificar el número de volumen y papiro (sería P.Oxy. LXXIX 5209), por eso cito la prensa científica. Live Science da el nombre «138.º Gran Antinoeia» y la sede en Antinoópolis; Archaeology equipara los tres talentos a 18.000 dracmas. Sin rastro en T3 ni T4."
  },
  {
   "n": 27,
@@ -372,38 +372,40 @@
    "en": "Ancient China"
   },
   "fecha": {
-   "es": "Siglo II a. C.",
-   "en": "2nd century BC"
+   "es": "108 a. C.",
+   "en": "108 BC"
   },
   "titulo": {
-   "es": "Fútbol para endurecer a los soldados",
-   "en": "Football to toughen soldiers"
+   "es": "Lucha para asombrar a los extranjeros",
+   "en": "Wrestling to dazzle foreigners"
   },
   "texto": {
-   "es": "En la China de los Han el cuju, un juego de patear una pelota, servía para preparar la guerra. El general Huo Qubing (siglo II a. C.) dejó que sus tropas construyeran un campo mientras vigilaban la frontera norte, y el erudito Liu Xin lo incluyó entre las enseñanzas que reforzaban la capacidad de combate de los soldados (FIFA Museum, s. f.).",
-   "en": "In Han China cuju, a game of kicking a ball, was a way of preparing for war. General Huo Qubing (2nd century BC) let his troops build a pitch while they guarded the northern frontier, and the scholar Liu Xin listed it among the teachings that strengthened the fighting power of soldiers (FIFA Museum, n.d.)."
+   "es": "En la primavera del 108 a. C. el emperador Wu de Han ofreció juegos de jiaodi, una lucha de fuerza acompañada de otros espectáculos, y acudió a verlos la gente de trescientos li a la redonda. Según la Historia de Han, también los organizaba para los visitantes extranjeros, a quienes enseñaba además sus graneros y tesoros para asombrarlos (Ban Gu, s. f., caps. 6 y 61).",
+   "en": "In the spring of 108 BC Emperor Wu of Han staged jiaodi games, a trial of strength accompanied by other shows, and people came from three hundred li around to watch. According to the History of Han, he also held them for foreign visitors, to whom he also showed his granaries and treasuries to overwhelm them (Ban Gu, n.d., chs. 6 & 61)."
   },
   "refs": [
-   "FIFA Museum. (s. f.). Origins: Cuju in China. https://fifamuseum.com/explore/fifamuseumplus/blog/origins-cuju-in-china"
+   "Ban Gu. (s. f.). Han shu [Historia de Han], cap. 6, Anales del emperador Wu. Wikisource. https://zh.wikisource.org/wiki/%E6%BC%A2%E6%9B%B8/%E5%8D%B7006 (Obra original del siglo I d. C.)",
+   "Ban Gu. (s. f.). Han shu [Historia de Han], cap. 61. Wikisource. https://zh.wikisource.org/wiki/%E6%BC%A2%E6%9B%B8/%E5%8D%B7061 (Obra original del siglo I d. C.)"
   ],
   "refs_en": [
-   "FIFA Museum. (n.d.). Origins: Cuju in China. https://fifamuseum.com/explore/fifamuseumplus/blog/origins-cuju-in-china"
+   "Ban Gu. (n.d.). Han shu [History of Han], ch. 6, Annals of Emperor Wu. Wikisource. https://zh.wikisource.org/wiki/%E6%BC%A2%E6%9B%B8/%E5%8D%B7006 (Original work 1st century AD)",
+   "Ban Gu. (n.d.). Han shu [History of Han], ch. 61. Wikisource. https://zh.wikisource.org/wiki/%E6%BC%A2%E6%9B%B8/%E5%8D%B7061 (Original work 1st century AD)"
   ],
   "img": {
    "src": "img/curio/030.jpg",
    "pie": {
-    "es": "El emperador Taizu de la dinastía Song jugando al cuju con sus ministros, pintura de Qian Xuan, c. 1300",
-    "en": "Emperor Taizu of the Song dynasty playing cuju with his ministers, painting by Qian Xuan, c. 1300"
+    "es": "Figuras de cerámica de acróbatas de época Han. Museo Provincial de Henan (Zhengzhou).",
+    "en": "Han-period ceramic figures of acrobats. Henan Provincial Museum (Zhengzhou)."
    },
    "autor": {
-    "es": "Qian Xuan",
-    "en": "Qian Xuan"
+    "es": "Gary Todd",
+    "en": "Gary Todd"
    },
-   "licencia": "Dominio público",
-   "url": "https://commons.wikimedia.org/wiki/File:Emperor_Taizu_play_Cuju_2.JPG",
+   "licencia": "CC0",
+   "url": "https://commons.wikimedia.org/wiki/File:Han_Pottery_Acrobats_(10340369004).jpg",
    "tipo": "genérica"
   },
-  "nota": "La imagen es muy posterior (copia Yuan de una escena Song); el pie lo dice. Huo Qubing vivió c. 140-117 a. C."
+  "nota": "Fuente primaria leída en chino en Wikisource. Cap. 6, año 3 de Yuanfeng (108 a. C.): «作角抵戲，三百里內皆觀»; en el 105 a. C. el pueblo de la capital vio jiaodi en el palacio de Pingle. Cap. 61: «大角氐，出奇戲諸怪物… 令外國客徧觀名倉庫府臧之積，欲以見漢廣大，傾駭之». No he consultado la traducción inglesa de Dubs, por eso no hay página. T5 trata la lucha china (Kich-Li) en general, sin este episodio ni el emperador Wu. Imagen genérica: acróbatas Han, no la lucha."
  },
  {
   "n": 31,
@@ -450,42 +452,44 @@
  {
   "n": 32,
   "era": {
-   "es": "Japón medieval",
-   "en": "Medieval Japan"
+   "es": "Corea medieval",
+   "en": "Medieval Korea"
   },
   "fecha": {
-   "es": "Siglos IX-XII",
-   "en": "9th-12th century"
+   "es": "1170",
+   "en": "1170"
   },
   "titulo": {
-   "es": "Luchar para adivinar la cosecha",
-   "en": "Wrestling to foretell the harvest"
+   "es": "La bofetada que dio el poder al ejército",
+   "en": "The slap that handed power to the army"
   },
   "texto": {
-   "es": "En la corte japonesa de la época Heian se celebraba cada año el sumai no sechie, un banquete con combates de sumo. Mensajeros de la guardia imperial recorrían las provincias para reclutar luchadores, y los combates servían para adivinar y pedir buenas cosechas. La ceremonia, ligada al rito sintoísta, dejó de celebrarse en 1174 (Takayama, s. f.).",
-   "en": "At the Japanese court of the Heian period the sumai no sechie, a banquet with sumo bouts, was held every year. Messengers of the imperial guard toured the provinces to recruit wrestlers, and the bouts served to foretell and pray for good harvests. The ceremony, bound to Shinto ritual, was last held in 1174 (Takayama, n.d.)."
+   "es": "En agosto de 1170 el rey Uijong de Goryeo, en Corea, hizo que sus oficiales militares disputaran combates de subak, un arte de lucha, durante una salida al recinto de Bohyeon-won. Ese día el joven funcionario civil Han Roe abofeteó al general Yi So-eung. La afrenta desató una revuelta que mató a muchos funcionarios civiles, desterró al rey y abrió cien años de gobierno militar (Yun, 2021).",
+   "en": "In August 1170 King Uijong of Goryeo, in Korea, had his military officers fight subak bouts, a combat art, during an outing to Bohyeon-won. That day the young civil official Han Roe slapped General Yi So-eung. The insult sparked a revolt that killed many civil officials, sent the king into exile and opened a hundred years of military rule (Yun, 2021)."
   },
   "refs": [
-   "Takayama, S. (s. f.). Sumō. En Encyclopedia of Shinto. Kokugakuin University. https://d-museum.kokugakuin.ac.jp/eos/detail/?id=8936"
+   "Yun, Y. (2021). 무신란 [Rebelión de los oficiales militares]. En Enciclopedia de la Cultura Coreana. Academy of Korean Studies. https://encykorea.aks.ac.kr/Article/E0019113",
+   "Lee, I. (1995). 이소응 [Yi So-eung]. En Enciclopedia de la Cultura Coreana. Academy of Korean Studies. https://encykorea.aks.ac.kr/Article/E0044796"
   ],
   "refs_en": [
-   "Takayama, S. (n.d.). Sumō. In Encyclopedia of Shinto. Kokugakuin University. https://d-museum.kokugakuin.ac.jp/eos/detail/?id=8936"
+   "Yun, Y. (2021). 무신란 [Military officials' revolt]. In Encyclopedia of Korean Culture. Academy of Korean Studies. https://encykorea.aks.ac.kr/Article/E0019113",
+   "Lee, I. (1995). 이소응 [Yi So-eung]. In Encyclopedia of Korean Culture. Academy of Korean Studies. https://encykorea.aks.ac.kr/Article/E0044796"
   ],
   "img": {
    "src": "img/curio/032.jpg",
    "pie": {
-    "es": "Combate legendario de Nomi no Sukune y Taima no Kehaya, origen mítico del sumo, grabado de Tsukioka Yoshitoshi, 1885",
-    "en": "The legendary bout between Nomi no Sukune and Taima no Kehaya, the mythical origin of sumo, woodblock print by Tsukioka Yoshitoshi, 1885"
+    "es": "Daekwaedo, pintura de Yu Suk (1846) con combates de ssireum y taekkyeon ante el público, muy posterior a 1170.",
+    "en": "Daekwaedo, a painting by Yu Suk (1846) showing ssireum and taekkyeon bouts before a crowd, long after 1170."
    },
    "autor": {
-    "es": "Tsukioka Yoshitoshi",
-    "en": "Tsukioka Yoshitoshi"
+    "es": "Yu Suk",
+    "en": "Yu Suk"
    },
    "licencia": "Dominio público",
-   "url": "https://commons.wikimedia.org/wiki/File:Nomi_no_Sukune_Wrestling_with_Taima_no_Kehaya_LACMA_M.84.31.87.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Yu_Suk,_Daekwaedo.jpg",
    "tipo": "genérica"
   },
-  "nota": "La enciclopedia no da año de inicio del banquete; lo sitúa como costumbre desde comienzos de Heian (794). El grabado es del siglo XIX y representa la leyenda del Nihon shoki, no el banquete."
+  "nota": "Encykorea, entradas «무신란» (Yun Yong-hyeok, 2021, rev. 2022) e «이소응» (Lee Ik-ju, 1995, rev. 2023), que remiten al Goryeosa. Las entradas no dicen que Yi So-eung perdiera un combate antes de la bofetada (lo cuentan obras divulgativas); no lo afirmo. El rey fue desterrado a Geoje y le sucedió su hermano Myeongjong; el régimen militar duró hasta 1270. Época nueva «Corea medieval», porque el hueco admitía Corea."
  },
  {
   "n": 33,
@@ -530,42 +534,42 @@
  {
   "n": 34,
   "era": {
-   "es": "Japón medieval",
-   "en": "Medieval Japan"
+   "es": "Imperio mongol",
+   "en": "Mongol Empire"
   },
   "fecha": {
-   "es": "1187",
-   "en": "1187"
+   "es": "c. 1225",
+   "en": "c. 1225"
   },
   "titulo": {
-   "es": "Tiro con arco a caballo para un dios guerrero",
-   "en": "Mounted archery for a warrior god"
+   "es": "Una flecha a más de quinientos metros",
+   "en": "An arrow beyond five hundred metres"
   },
   "texto": {
-   "es": "Desde 1187 el santuario Tsurugaoka Hachimangu, en Kamakura, acoge el yabusame, en el que arqueros a caballo y con traje ceremonial tratan de acertar a tres blancos colocados a lo largo de una pista. Lo que había sido una destreza muy valorada en el campo de batalla se convirtió en ofrenda a Hachiman, dios protector de la clase guerrera (Agencia de Turismo de Japón, s. f.).",
-   "en": "Since 1187 the Tsurugaoka Hachimangu shrine in Kamakura has hosted yabusame, in which mounted archers in ceremonial dress try to hit three targets set along a track. What had been a highly valued skill on the battlefield became an offering to Hachiman, the guardian deity of the warrior class (Japan Tourism Agency, n.d.)."
+   "es": "Hacia 1224-1225, después de que Gengis Kan sometiera a los pueblos musulmanes de Asia central, los nobles de toda la nación mongola se reunieron en Buqa Sochiqai y celebraron un tiro de larga distancia. Yisüngge lanzó una flecha a 335 aldas, unos 536 metros, y la hazaña quedó grabada en una estela, probablemente el texto más antiguo conservado en escritura mongola (de Rachewiltz, 2018, pp. 47-49).",
+   "en": "Around 1224-1225, after Genghis Khan had subdued the Muslim peoples of Central Asia, the nobles of the whole Mongol nation gathered at Buqa Sochiqai and held a long-distance shooting contest. Yisüngge shot an arrow 335 aldas, about 536 metres, and the feat was carved on a stele, probably the oldest surviving text in Mongolian script (de Rachewiltz, 2018, pp. 47-49)."
   },
   "refs": [
-   "Agencia de Turismo de Japón. (s. f.). Yabusame archery track [Texto explicativo multilingüe]. Ministerio de Territorio, Infraestructuras, Transporte y Turismo de Japón. https://www.mlit.go.jp/tagengo-db/common/001564754.pdf"
+   "de Rachewiltz, I. (2018). Sino-Mongolica remota. East Asian History, 42, 47-56. https://eah.anu.edu.au/42/rachewiltz-sino-mongolica-remota/index.html"
   ],
   "refs_en": [
-   "Japan Tourism Agency. (n.d.). Yabusame archery track [Multilingual explanatory text]. Ministry of Land, Infrastructure, Transport and Tourism of Japan. https://www.mlit.go.jp/tagengo-db/common/001564754.pdf"
+   "de Rachewiltz, I. (2018). Sino-Mongolica remota. East Asian History, 42, 47-56. https://eah.anu.edu.au/42/rachewiltz-sino-mongolica-remota/index.html"
   ],
   "img": {
    "src": "img/curio/034.jpg",
    "pie": {
-    "es": "Yabusame en el castillo de Chiyoda, grabado de Toyohara Chikanobu, 1897, Metropolitan Museum of Art",
-    "en": "Yabusame at Chiyoda Castle, woodblock print by Toyohara Chikanobu, 1897, Metropolitan Museum of Art"
+    "es": "Copia de la estela de Yisüngge en el Museo de Mongolia Interior (Hohhot); el original se guarda en el Museo del Hermitage.",
+    "en": "Copy of the Yisüngge stele in the Inner Mongolia Museum (Hohhot); the original is in the Hermitage Museum."
    },
    "autor": {
-    "es": "Toyohara Chikanobu",
-    "en": "Toyohara Chikanobu"
+    "es": "BabelStone",
+    "en": "BabelStone"
    },
-   "licencia": "CC0",
-   "url": "https://commons.wikimedia.org/wiki/File:Yabusame_Archery_at_Chiyoda_Castle_by_Yoshu_Chikanobu_1897_MET_DP149434.jpg",
-   "tipo": "genérica"
+   "licencia": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Inner_Mongolia_Museum_stele_of_Yisungge.jpg",
+   "tipo": "hecho"
   },
-  "nota": "El PDF pertenece a la base de textos multilingües del Gobierno japonés (dominio mlit.go.jp, Agencia de Turismo); la página no nombra autor ni editor, así que la autoría institucional es deducción mía. El grabado es del siglo XIX y recrea una escena en Edo, no en Kamakura."
+  "nota": "Sustituí la primera idea (la luchadora Khutulun) porque ya la usa reemplazos_C (nivel 45). De Rachewiltz (p. 50) prefiere fechar la estela en 1224 o 1225, aunque discute también una datación hacia 1270; lo de «el texto más antiguo» lo presenta como conclusión probable (p. 49). Época nueva «Imperio mongol»."
  },
  {
   "n": 35,
@@ -656,38 +660,40 @@
    "en": "Pre-Columbian Mesoamerica"
   },
   "fecha": {
-   "es": "600-900 d. C.",
-   "en": "AD 600-900"
+   "es": "c. 200-550 d. C.",
+   "en": "c. AD 200-550"
   },
   "titulo": {
-   "es": "El cinturón de piedra que nadie se ponía",
-   "en": "The stone belt nobody wore"
+   "es": "Una ciudad con veintisiete campos de pelota",
+   "en": "A city with twenty-seven ballcourts"
   },
   "texto": {
-   "es": "Los jugadores de pelota se protegían el torso del golpe de la pesada pelota de caucho con cinturones acolchados. En el Veracruz clásico (600-900 d. C.) se tallaban copias en piedra, los llamados yugos, demasiado pesados y sin agujeros para sujetarlos. Servían para ceremonias, como trofeos u ofrendas funerarias, y algunos muestran rostros de jugadores con los ojos cerrados, quizá sacrificados tras el partido (Metropolitan Museum of Art, s. f.).",
-   "en": "Ballplayers protected their torsos from the blow of the heavy rubber ball with padded belts. In Classic Veracruz (AD 600-900) stone copies were carved, the so-called yokes, too heavy and with no holes to fasten them. They served for ceremonies, as trophies or grave offerings, and some show the faces of players with closed eyes, perhaps sacrificed after the game (Metropolitan Museum of Art, n.d.)."
+   "es": "Cantona, en el actual estado mexicano de Puebla, llegó a tener 27 campos de pelota o más, un número que le daba una importancia inusual. Hacia el 450-550 d. C. funcionaban a la vez unos veinte, repartidos por los barrios como parte de sus centros ceremoniales y administrativos, junto a pirámides y plazas desde las que el público seguía el juego (INAH, s. f.; Zamora Rivera, 2004, pp. 62, 74).",
+   "en": "Cantona, in today's Mexican state of Puebla, came to have 27 or more ballcourts, a number that gave it unusual importance. Around AD 450-550 some twenty were in use at once, spread across the neighbourhoods as part of their ceremonial and administrative centres, next to pyramids and plazas from which the public watched the game (INAH, n.d.; Zamora Rivera, 2004, pp. 62, 74)."
   },
   "refs": [
-   "Metropolitan Museum of Art. (s. f.). Yoke [Número de inventario 1979.206.423]. https://www.metmuseum.org/art/collection/search/312643"
+   "Instituto Nacional de Antropología e Historia. (s. f.). Zona arqueológica Cantona. https://lugares.inah.gob.mx/en/mundial/6497",
+   "Zamora Rivera, M. (2004). Ubicación, descripción y análisis de los juegos de pelota en Cantona, Puebla. Arqueología, 34, 62-74. https://revistas.inah.gob.mx/index.php/arqueologia/article/download/6119/6963/11981"
   ],
   "refs_en": [
-   "Metropolitan Museum of Art. (n.d.). Yoke [Accession number 1979.206.423]. https://www.metmuseum.org/art/collection/search/312643"
+   "Instituto Nacional de Antropología e Historia. (n.d.). Zona arqueológica Cantona. https://lugares.inah.gob.mx/en/mundial/6497",
+   "Zamora Rivera, M. (2004). Ubicación, descripción y análisis de los juegos de pelota en Cantona, Puebla. Arqueología, 34, 62-74. https://revistas.inah.gob.mx/index.php/arqueologia/article/download/6119/6963/11981"
   ],
   "img": {
    "src": "img/curio/037.jpg",
    "pie": {
-    "es": "Yugo de piedra del Veracruz clásico, siglos VII-IX, Metropolitan Museum of Art",
-    "en": "Stone yoke from Classic Veracruz, 7th-9th century, Metropolitan Museum of Art"
+    "es": "Campos de pelota de la zona arqueológica de Cantona (Puebla, México).",
+    "en": "Ballcourts at the archaeological site of Cantona (Puebla, Mexico)."
    },
    "autor": {
-    "es": "Autor anónimo (Metropolitan Museum of Art)",
-    "en": "Anonymous (Metropolitan Museum of Art)"
+    "es": "Diego Delso",
+    "en": "Diego Delso"
    },
-   "licencia": "CC0",
-   "url": "https://commons.wikimedia.org/wiki/File:Yoke_MET_vs1979_206_423.jpg",
-   "tipo": "hecho"
+   "licencia": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Zona_arqueológica_de_Cantona,_Puebla,_México,_2013-10-11,_DD_27.JPG",
+   "tipo": "lugar"
   },
-  "nota": "El museo presenta como «posibles» los usos y la decapitación ritual; el texto mantiene la cautela con «quizá»."
+  "nota": "El INAH da «27 o más»; Zamora Rivera contaba 25 en 2004. Las cifras por fase (14 hacia 200-250, 20 hacia 450-550, 9 hacia 650-700, 5 hacia 900-1000) son tentativas, basadas en cerámica (p. 74). La afirmación de que es el mayor número de Mesoamérica circula en prensa pero no la he visto en fuente académica, por eso no la uso."
  },
  {
   "n": 38,
@@ -696,78 +702,78 @@
    "en": "Pre-Columbian Andes"
   },
   "fecha": {
-   "es": "Siglos XV-XVI",
-   "en": "15th-16th century"
+   "es": "Siglo XV",
+   "en": "15th century"
   },
   "titulo": {
-   "es": "La carrera que hacía adultos a los incas",
-   "en": "The race that made Inca youths adults"
+   "es": "La gran cacería del Inca",
+   "en": "The Inca's great hunt"
   },
   "texto": {
-   "es": "En el Capac Raymi, la fiesta en que los jóvenes nobles de Cusco eran iniciados en la edad adulta, había una prueba de velocidad y resistencia en el cerro de Anahuarque en la que corrían tanto varones como doncellas. Al final les aguardaban jóvenes con chicha, que gritaban «¡Venid presto, valientes mancebos, que aquí estamos esperando!» (Martínez Sagredo, 2025, p. 8).",
-   "en": "During Capac Raymi, the festival in which the young nobles of Cusco were initiated into adulthood, there was a test of speed and endurance at the hill of Anahuarque in which both young men and maidens ran. At the end young women waited with chicha, calling out «Come quickly, brave youths, for we are waiting here!» (Martínez Sagredo, 2025, p. 8)."
+   "es": "Según el Inca Garcilaso, en el Imperio inca solo se podían cazar algunas aves y con permiso. En el chacu, la cacería real, hasta treinta mil hombres cercaban hasta treinta leguas de tierra. Esquilaban vicuñas y guanacos y los soltaban, mataban a los depredadores y anotaban las cabezas en los quipus. Cada distrito se cazaba una vez cada cuatro años (Garcilaso de la Vega, 1609/s. f., lib. VI, cap. 6).",
+   "en": "According to the Inca Garcilaso, only some birds could be hunted in the Inca Empire, with permission. In the chacu, the royal hunt, up to thirty thousand men encircled up to thirty leagues of land. They sheared vicuñas and guanacos and set them free, killed predators and recorded the heads on the quipus. Each district was hunted once every four years (Garcilaso de la Vega, 1609/n.d., bk. VI, ch. 6)."
   },
   "refs": [
-   "Martínez Sagredo, P. (2025). Dimensiones y roles femeninos del Capac Raymi. Chungara. Revista de Antropología Chilena, 57, e03325. https://doi.org/10.4067/s0717-7356202500010412"
+   "Garcilaso de la Vega, I. (s. f.). Comentarios reales de los Incas. Edición digital. (Obra original publicada en 1609)"
   ],
   "refs_en": [
-   "Martínez Sagredo, P. (2025). Dimensiones y roles femeninos del Capac Raymi. Chungara. Revista de Antropología Chilena, 57, e03325. https://doi.org/10.4067/s0717-7356202500010412"
+   "Garcilaso de la Vega, I. (n.d.). Comentarios reales de los Incas. Digital edition. (Original work published 1609)"
   ],
   "img": {
    "src": "img/curio/038.jpg",
    "pie": {
-    "es": "El mes del Capac Raymi en la crónica de Felipe Guamán Poma de Ayala, c. 1613",
-    "en": "The month of Capac Raymi in Felipe Guaman Poma de Ayala's chronicle, c. 1613"
+    "es": "Chaku de vicuñas en 2015, con el cerco de cuerdas que guía a los animales.",
+    "en": "A vicuña chaku in 2015, with the rope fence that guides the animals."
    },
    "autor": {
-    "es": "Felipe Guamán Poma de Ayala",
-    "en": "Felipe Guaman Poma de Ayala"
+    "es": "Sorrrowolf",
+    "en": "Sorrrowolf"
    },
-   "licencia": "Dominio público",
-   "url": "https://commons.wikimedia.org/wiki/File:Capac_Raymi.jpg",
-   "tipo": "hecho"
+   "licencia": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Chaku_vicu.jpg",
+   "tipo": "genérica"
   },
-  "nota": "La cita es de Cristóbal de Molina (1575), recogida por Martínez Sagredo, con la grafía modernizada (original «Uenid presto valientes manceuos»). El artículo añade que algunos jóvenes murieron o se hirieron en la prueba; lo he dejado fuera por tono. Conviene comprobar en el PDF si la prueba se corría hacia Raurahua, donde esperaban las ñustas."
+  "nota": "Leído en el corpus de Alex («_cronicas/txt/Garcilaso, Comentarios reales de los Incas.txt», libro VI, cap. 6). Las marcas [20]-[21] del texto parecen paginación de la edición de base, que no he identificado; por eso cito libro y capítulo. Garcilaso añade que la lana de vicuña era para el Inca y que el descanso de cuatro años dejaba crecer la lana y multiplicar el ganado. Ninguna mención en T6. La foto lleva fecha impresa en una esquina."
  },
  {
   "n": 39,
   "era": {
-   "es": "Andes precolombinos",
-   "en": "Pre-Columbian Andes"
+   "es": "Mesoamérica precolombina",
+   "en": "Pre-Columbian Mesoamerica"
   },
   "fecha": {
-   "es": "Siglos XV-XVI",
-   "en": "15th-16th century"
+   "es": "Principios del siglo XVI",
+   "en": "Early 16th century"
   },
   "titulo": {
-   "es": "Pescado del mar a Cusco en dos días",
-   "en": "Fish from the sea to Cusco in two days"
+   "es": "Dieciséis mil pelotas de caucho al año",
+   "en": "Sixteen thousand rubber balls a year"
   },
   "texto": {
-   "es": "Los chasquis, mensajeros oficiales del Imperio inca, corrían en relevos por el Qhapaq Ñan, la mayor red de caminos de la América antigua, llevando mensajes y paquetes pequeños. Según el Smithsonian, el pescado de Mollendo, en la costa, podía llegar a Cusco, a unos 565 kilómetros, en dos días. La carrera a pie sostenía así el gobierno de un imperio sin caballos ni ruedas (Smithsonian Institution, 2015, pp. 4, 13).",
-   "en": "The chaskis, official messengers of the Inka Empire, ran in relays along the Qhapaq Ñan, the largest road system in ancient America, carrying messages and small packages. According to the Smithsonian, fish from Mollendo, on the coast, could reach Cusco, some 565 kilometres away, in two days. Running on foot thus held together the government of an empire without horses or wheeled transport (Smithsonian Institution, 2015, pp. 4, 13)."
+   "es": "El Códice Mendoza, manuscrito del siglo XVI, recoge los tributos que los pueblos sometidos pagaban a los mexicas. La provincia de Tochtepec, en las tierras bajas del Golfo, entregaba cada año 16.000 pelotas de caucho, además de mantas, plumas y cacao. Las pelotas del juego llegaban así a la capital como tributo de los pueblos conquistados (Pool y Kidder, 2013).",
+   "en": "The Codex Mendoza, a 16th-century manuscript, records the tribute that subject peoples paid to the Mexica. The province of Tochtepec, in the Gulf lowlands, delivered 16,000 rubber balls every year, together with cloaks, feathers and cacao. The balls for the game thus reached the capital as tribute from conquered peoples (Pool & Kidder, 2013)."
   },
   "refs": [
-   "Smithsonian Institution. (2015). The Great Inka Road: Activity guide. National Museum of the American Indian. https://americanindian.si.edu/caminoinka/pdf/Inka-ActivityGuide-Web.pdf"
+   "Pool, C. y Kidder, B. (2013). Codex Mendoza, folio 46 recto (p. 99) [Ficha de colección]. UKnowledge, University of Kentucky. https://uknowledge.uky.edu/world_mexico_codices/11"
   ],
   "refs_en": [
-   "Smithsonian Institution. (2015). The Great Inka Road: Activity guide. National Museum of the American Indian. https://americanindian.si.edu/caminoinka/pdf/Inka-ActivityGuide-Web.pdf"
+   "Pool, C., & Kidder, B. (2013). Codex Mendoza, folio 46 recto (p. 99) [Collection record]. UKnowledge, University of Kentucky. https://uknowledge.uky.edu/world_mexico_codices/11"
   ],
   "img": {
    "src": "img/curio/039.jpg",
    "pie": {
-    "es": "Un chasqui, mensajero del Imperio inca, dibujo de Felipe Guamán Poma de Ayala, c. 1615",
-    "en": "A chaski, messenger of the Inka Empire, drawing by Felipe Guaman Poma de Ayala, c. 1615"
+    "es": "Folio 46r del Códice Mendoza con el tributo de la provincia de Tochtepec. Biblioteca Bodleiana, Oxford.",
+    "en": "Folio 46r of the Codex Mendoza, with the tribute of the province of Tochtepec. Bodleian Library, Oxford."
    },
    "autor": {
-    "es": "Felipe Guamán Poma de Ayala",
-    "en": "Felipe Guaman Poma de Ayala"
+    "es": "Autor anónimo",
+    "en": "Anonymous"
    },
    "licencia": "Dominio público",
-   "url": "https://commons.wikimedia.org/wiki/File:A_chaski,_1615.jpg",
-   "tipo": "protagonista"
+   "url": "https://commons.wikimedia.org/wiki/File:Codex_Mendoza_folio_46r.jpg",
+   "tipo": "hecho"
   },
-  "nota": "La guía no dice expresamente que el pescado lo llevaran chasquis, aunque su actividad de la p. 13 propone «ayudar al chasqui a llevar pescado». «Sin caballos ni ruedas» es conocimiento general, no de la guía. Es una guía didáctica del museo; si se prefiere fuente académica, buscar otra."
+  "nota": "El códice es posterior a la conquista y describe el tributo del imperio mexica anterior a 1521, por eso la fecha es aproximada. La ficha de Kentucky da también 1.600 y 800 mantas cada seis meses, 8.000 manojos de plumas de cada color al año y 200 cargas de cacao. T6 cita el Códice Mendoza solo por el calmécac. La última frase es inferencia mía a partir del dato."
  },
  {
   "n": 40,
@@ -776,37 +782,37 @@
    "en": "Pre-Columbian Mesoamerica"
   },
   "fecha": {
-   "es": "c. 1500",
-   "en": "c. 1500"
+   "es": "1519-1520",
+   "en": "1519-1520"
   },
   "titulo": {
-   "es": "El tanto que vaciaba los bolsillos del público",
-   "en": "The goal that emptied the crowd's pockets"
+   "es": "Moctezuma, Cortés y un marcador tramposo",
+   "en": "Moctezuma, Cortés and a cheating scorekeeper"
   },
   "texto": {
-   "es": "Entre los mexicas, quien metía la pelota de caucho por el aro de piedra del campo ganaba al instante todos los bienes valiosos de los espectadores. Era tan raro que el autor del tanto despertaba sospechas, como si viviera en secreto en adulterio. Los señores apostaban oro, esclavos, campos y casas, y la gente común sus viejas mantas (López Austin, 1967, pp. 62-63).",
-   "en": "Among the Mexica, whoever put the rubber ball through the stone ring of the court instantly won all the valuables of the spectators. It was so rare that the scorer was viewed with suspicion, as if he were secretly living in adultery. Lords wagered gold, slaves, fields and houses, and commoners their old cloaks (López Austin, 1967, pp. 62-63)."
+   "es": "Preso de los españoles en 1519-1520, Moctezuma jugaba con Cortés al totoloque, tirando bolitas de oro a unos tejuelos también de oro. Pedro de Alvarado llevaba los tantos de Cortés y apuntaba siempre una raya de más, y Moctezuma dijo riendo que hacía mucho ixoxol, que mentía. Cortés regalaba lo ganado a los parientes de Moctezuma, y este a sus guardianes (Díaz del Castillo, 1862, pp. 470-471).",
+   "en": "While held prisoner by the Spaniards in 1519-1520, Moctezuma played totoloque with Cortés, tossing small gold pellets at gold targets. Pedro de Alvarado kept Cortés's score and always marked one point too many, and Moctezuma laughingly said he did a lot of ixoxol, that he lied. Cortés gave his winnings to Moctezuma's relatives, and Moctezuma gave his to his guards (Díaz del Castillo, 1862, pp. 470-471)."
   },
   "refs": [
-   "López Austin, A. (Ed. y Trad.). (1967). Juegos rituales aztecas (Cuadernos, Serie Documental 5). Universidad Nacional Autónoma de México, Instituto de Investigaciones Históricas. https://historicas.unam.mx/publicaciones/publicadigital/libros/110/110_04_18_JuegoPelota.pdf"
+   "Díaz del Castillo, B. (1862). Historia verdadera de la conquista de la Nueva España (t. 1). Imprenta de Tejado. (Obra original publicada en 1632)"
   ],
   "refs_en": [
-   "López Austin, A. (Ed. & Trans.). (1967). Juegos rituales aztecas (Cuadernos, Serie Documental 5). Universidad Nacional Autónoma de México, Instituto de Investigaciones Históricas. https://historicas.unam.mx/publicaciones/publicadigital/libros/110/110_04_18_JuegoPelota.pdf"
+   "Díaz del Castillo, B. (1862). Historia verdadera de la conquista de la Nueva España (Vol. 1). Imprenta de Tejado. (Original work published 1632)"
   ],
   "img": {
    "src": "img/curio/040.jpg",
    "pie": {
-    "es": "Aro de piedra del Gran Juego de Pelota de Chichén Itzá, fotografía de la Carnegie Institution publicada en 1925",
-    "en": "Stone ring of the Great Ballcourt at Chichen Itza, Carnegie Institution photograph published in 1925"
+    "es": "Lienzo de Tlaxcala (original hacia 1550, facsímil de hacia 1890) con el encuentro de Cortés, Malinche y Moctezuma en 1519.",
+    "en": "Lienzo de Tlaxcala (original c. 1550, facsimile c. 1890) showing the meeting of Cortés, Malinche and Moctezuma in 1519."
    },
    "autor": {
-    "es": "Carnegie Institution",
-    "en": "Carnegie Institution"
+    "es": "Artistas tlaxcaltecas anónimos",
+    "en": "Anonymous Tlaxcalan artists"
    },
    "licencia": "Dominio público",
-   "url": "https://commons.wikimedia.org/wiki/File:Chichen_Itza_Stone_Ring_Nat_Geo_1925_caption_cropped.jpg",
-   "tipo": "lugar"
+   "url": "https://commons.wikimedia.org/wiki/File:Cortez_&_La_Malinche.jpg",
+   "tipo": "hecho"
   },
-  "nota": "Texto de los informantes nahuas de Sahagún en versión de López Austin (cap. «Juego de pelota de hule», pp. 61-64). Sustituye a la curiosidad de los jugadores mexicas ante Carlos V, que ya figura en lote_3 (nivel 51). El aro de la foto es maya (Chichén Itzá), no mexica."
+  "nota": "Bernal Díaz, cap. XCVII, ed. Madrid 1862, t. 1, pp. 470-471 impresas (págs. 474-475 del PDF del corpus «(1568) Bernal Diaz - Verdadera historia de la conquista, t1 (ed. 1862)»). El título exacto de la portada sale mal en el OCR; conviene comprobarlo. Hay apuestas de joyas, aunque el hecho es distinto de las apuestas del tlachtli y del patolli que ya no valían. T6 nombra a Moctezuma solo con Tlahuicole. La época «precolombina» es forzada para 1519-1520; la mantengo por coherencia con el lote."
  }
 ]

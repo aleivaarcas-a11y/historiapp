@@ -420,6 +420,14 @@ details.slide li{font-size:13.5px;line-height:1.5;margin-bottom:6px}
 .lg-c.done{background:var(--tp);border-color:var(--tp);color:var(--paper)}
 .lg-c.now{border:2px solid var(--accent);background:var(--warm);color:var(--ink)}
 .lg-c.next{opacity:.55}
+.cur-sub{font-size:14px;color:var(--muted);margin:0 0 10px}
+.cur-pg{margin-bottom:12px}.cur-pg .bar{height:8px;background:var(--soft);border-radius:6px;overflow:hidden}.cur-pg .bar i{display:block;height:100%;background:var(--accent);border-radius:6px}.cur-pg b{display:block;margin-bottom:6px;color:var(--tp2)}
+.cur-list{display:flex;flex-direction:column;gap:8px}
+.cur-i{display:flex;align-items:center;gap:12px;text-align:left;width:100%;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:8px;font:inherit;color:var(--ink);cursor:pointer}
+.cur-i img,.cur-ph{flex:none;width:64px;height:64px;border-radius:10px;object-fit:cover;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:24px}
+.cur-i small{display:block;font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.cur-i b{display:block;font-size:15px;line-height:1.25;color:var(--tp2);margin-top:2px}
+.cur-i.off{opacity:.55;cursor:default}.cur-i.off b{color:var(--muted);font-weight:600}
 .lg-hint{font-size:13px;color:var(--muted);margin:0 0 8px}
 .lvm{position:fixed;inset:0;z-index:210;background:rgba(0,20,50,.6);display:flex;align-items:center;justify-content:center;padding:16px;animation:achIn .25s ease}
 .lvm.out{opacity:0;transition:opacity .25s}
@@ -785,7 +793,7 @@ const I18N = {
     settings:"Ajustes", language:"Idioma", reset:"Cerrar sesión y empezar de nuevo", resetConfirm:"Se borrarán el idioma, la XP, los niveles y el progreso de todos los temas en este móvil, y la app volverá a la pantalla de inicio. ¿Seguro?", resetDone:"Sesión cerrada",
     badges:"Insignias", badgeName:{fichas:"Lector",mapa:"Cartógrafo",cards:"Ojo de arqueólogo",glossary:"Escriba",timeline:"Cronista",sources:"Lector de fuentes",match:"Atacabos",myths:"Cazamitos",quiz:"Relámpago"},
     badgeHow:"Completa cada sección de un tema para ganar su insignia.",
-    levelUp:"¡Nivel {n}!", lvOf:"Nivel {n} de {t}", lvUpT:"¡Nivel {n}!", lvCur:"Curiosidad desbloqueada", lvSrc:"Fuentes e imagen", lvImg:"Imagen", lvLocked:"Se desbloquea en el nivel {n} ({x} XP)", lvHint:"Cada nivel desbloquea una curiosidad de la historia del deporte. Toca un nivel conseguido para releerla.", lvPrev:"‹ Anterior", lvNext:"Siguiente ›", complete:"Completado",
+    levelUp:"¡Nivel {n}!", lvOf:"Nivel {n} de {t}", tabCur:"¿Sabías?", curT:"Curiosidades", curN:"{a} de {b} desbloqueadas", curSub:"Cada nivel que subes desbloquea una curiosidad de la historia del deporte, en orden cronológico.", curLock:"Nivel {n} · {x} XP", lvUpT:"¡Nivel {n}!", lvCur:"Curiosidad desbloqueada", lvSrc:"Fuentes e imagen", lvImg:"Imagen", lvLocked:"Se desbloquea en el nivel {n} ({x} XP)", lvHint:"Cada nivel desbloquea una curiosidad de la historia del deporte. Toca un nivel conseguido para releerla.", lvPrev:"‹ Anterior", lvNext:"Siguiente ›", complete:"Completado",
     levels:["Aprendiz","Paleolítico","Neolítico","Escriba","Pahlavan","Hoplita","Gladiador","Caballero","Gentleman","Catedrático"],
     noVideos:"Todavía no hay vídeos para este tema.", vFeed:"Modo scroll", vFeedSub:"Desliza hacia arriba y los vídeos pasan uno tras otro, como en TikTok o Reels", vTap:"Toca para activar el sonido", vNext:"Siguiente vídeo ›", vEnd:"Has llegado al último vídeo del tema", vClose:"Volver", vTestB:"Test", vMoreB:"Saber más", pListen:"▶ Escuchar", pResume:"▶ Continuar", pPause:"❚❚ Pausa", pDone:"✓ Escuchado", pLeft:"quedan {m} min", pMin:"{m} min", pBg:"Sigue sonando si apagas la pantalla o si pasas a otras secciones de la app. En iPhone, instala la app para que funcione mejor.", pEsOnly:"", noPod:"Todavía no hay pódcast para este tema.", pSpeed:"Velocidad", vMore:"Saber más", vTest:"Pon a prueba lo que has visto", vSeen:"✓ Visto", vNew:"Sin ver", vAll:"Todos los vídeos", vOk:"Correcto. +{n} XP", vKo:"La respuesta correcta está marcada", install:"Añade Historiapp a tu pantalla de inicio: en Safari, botón Compartir y «Añadir a pantalla de inicio»; en Chrome, menú y «Instalar aplicación».",
     privacy:"Tu progreso (XP, rachas, insignias) se guarda solo en este móvil y nadie más lo ve. Para no perderlo, instala la app y úsala siempre desde el icono. La app cuenta de forma anónima qué pantallas se visitan, sin cookies ni datos personales, para mejorar la asignatura.", version:"Contenido actualizado", offline:"Sin conexión: se muestran los datos guardados", loadError:"No se ha podido cargar el contenido. Comprueba la conexión.",
@@ -814,7 +822,7 @@ const I18N = {
     settings:"Settings", language:"Language", reset:"Log out and start again", resetConfirm:"Your language, XP, levels and progress for all units will be erased on this phone, and the app will go back to the start screen. Are you sure?", resetDone:"Logged out",
     badges:"Badges", badgeName:{fichas:"Reader",mapa:"Cartographer",cards:"Archaeologist's eye",glossary:"Scribe",timeline:"Chronicler",sources:"Source reader",match:"Dot-connector",myths:"Myth hunter",quiz:"Lightning"},
     badgeHow:"Complete each section of a unit to earn its badge.",
-    levelUp:"Level {n}!", lvOf:"Level {n} of {t}", lvUpT:"Level {n}!", lvCur:"Fact unlocked", lvSrc:"Sources and image", lvImg:"Image", lvLocked:"Unlocks at level {n} ({x} XP)", lvHint:"Each level unlocks a fact from the history of sport. Tap a level you have reached to read it again.", lvPrev:"‹ Previous", lvNext:"Next ›", complete:"Completed",
+    levelUp:"Level {n}!", lvOf:"Level {n} of {t}", tabCur:"Did you know?", curT:"Facts", curN:"{a} of {b} unlocked", curSub:"Every level you reach unlocks a fact from the history of sport, in chronological order.", curLock:"Level {n} · {x} XP", lvUpT:"Level {n}!", lvCur:"Fact unlocked", lvSrc:"Sources and image", lvImg:"Image", lvLocked:"Unlocks at level {n} ({x} XP)", lvHint:"Each level unlocks a fact from the history of sport. Tap a level you have reached to read it again.", lvPrev:"‹ Previous", lvNext:"Next ›", complete:"Completed",
     levels:["Apprentice","Palaeolithic","Neolithic","Scribe","Pahlavan","Hoplite","Gladiator","Knight","Gentleman","Professor"],
     noVideos:"No videos for this unit yet.", vFeed:"Scroll mode", vFeedSub:"Swipe up and the videos play one after another, like TikTok or Reels", vTap:"Tap to turn the sound on", vNext:"Next video ›", vEnd:"That was the last video of this unit", vClose:"Back", vTestB:"Test", vMoreB:"Learn more", pListen:"▶ Listen", pResume:"▶ Resume", pPause:"❚❚ Pause", pDone:"✓ Listened", pLeft:"{m} min left", pMin:"{m} min", pBg:"It keeps playing if you switch the screen off or move to other sections of the app. On iPhone, install the app for best results.", pEsOnly:"This episode is in Spanish.", noPod:"No podcast for this unit yet.", pSpeed:"Speed", vMore:"Learn more", vTest:"Test what you have seen", vSeen:"✓ Watched", vNew:"Not watched", vAll:"All videos", vOk:"Correct. +{n} XP", vKo:"The right answer is marked", install:"Add Historiapp to your home screen: in Safari, tap Share and 'Add to Home Screen'; in Chrome, open the menu and 'Install app'.",
     privacy:"Your progress (XP, streaks, badges) is stored only on this phone and nobody else sees it. To keep it, install the app and always open it from its icon. The app counts anonymously which screens are visited, with no cookies or personal data, to improve the course.", version:"Content updated", offline:"Offline: showing saved data", loadError:"Could not load the content. Check your connection.",
@@ -901,9 +909,9 @@ async function getTema(num){
 
 /* ============ rendering ============ */
 const app=document.getElementById("app");
-function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="linea") return "linea"; if(v.name==="pods") return "podcast"; if(v.name==="guia") return "guia"; if(v.name==="palabra") return "palabra"; if(v.name==="logros") return "logros"; if(v.name==="daily") return "reto"; if(v.name==="exam") return "examen"; if(v.name==="search") return "buscar"; if(v.name==="temas") return "temas"; if(v.name==="efe") return v.d?"hoy/"+v.d:"hoy"; if(v.name==="enc") return v.id?"enciclopedia/"+encodeURIComponent(v.id):"enciclopedia"; if(v.name==="tema") return "t"+v.num;
+function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="linea") return "linea"; if(v.name==="pods") return "podcast"; if(v.name==="guia") return "guia"; if(v.name==="palabra") return "palabra"; if(v.name==="logros") return "logros"; if(v.name==="cur") return "curiosidades"; if(v.name==="daily") return "reto"; if(v.name==="exam") return "examen"; if(v.name==="search") return "buscar"; if(v.name==="temas") return "temas"; if(v.name==="efe") return v.d?"hoy/"+v.d:"hoy"; if(v.name==="enc") return v.id?"enciclopedia/"+encodeURIComponent(v.id):"enciclopedia"; if(v.name==="tema") return "t"+v.num;
   if(v.name==="mode"){ if(v.mode==="fichas") return v.f?`t${v.num}/f/${v.f}`:`t${v.num}/fichas`; return `t${v.num}/${v.mode}`+(v.sec?"/"+v.sec:""); } return ""; }
-function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="linea") return {name:"linea"}; if(h==="podcast") return {name:"pods"}; if(h==="guia") return {name:"guia"}; if(h==="palabra") return {name:"palabra"}; if(h==="logros") return {name:"logros"}; if(h==="reto") return {name:"daily"}; if(h==="examen") return {name:"exam"}; if(h==="buscar") return {name:"search"}; if(h==="temas") return {name:"temas"}; if(h==="hoy") return {name:"efe"}; if(h.startsWith("hoy/")) return {name:"efe",d:h.slice(4)}; if(h==="enciclopedia") return {name:"enc"}; if(h.startsWith("enciclopedia/")) return {name:"enc",id:decodeURIComponent(h.slice(13))};
+function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="linea") return {name:"linea"}; if(h==="podcast") return {name:"pods"}; if(h==="guia") return {name:"guia"}; if(h==="palabra") return {name:"palabra"}; if(h==="logros") return {name:"logros"}; if(h==="curiosidades") return {name:"cur"}; if(h==="reto") return {name:"daily"}; if(h==="examen") return {name:"exam"}; if(h==="buscar") return {name:"search"}; if(h==="temas") return {name:"temas"}; if(h==="hoy") return {name:"efe"}; if(h.startsWith("hoy/")) return {name:"efe",d:h.slice(4)}; if(h==="enciclopedia") return {name:"enc"}; if(h.startsWith("enciclopedia/")) return {name:"enc",id:decodeURIComponent(h.slice(13))};
   const p=h.split("/"); const mt=/^t(\d+)$/.exec(p[0]); if(!mt) return {name:"home"}; const num=+mt[1];
   if(p.length===1) return {name:"tema",num}; if(p[1]==="f"&&p[2]) return {name:"mode",num,mode:"fichas",f:decodeURIComponent(p[2])};
   if(MODES.includes(p[1])) return {name:"mode",num,mode:p[1],sec:p[2]||undefined}; return {name:"tema",num}; }
@@ -927,6 +935,7 @@ function render(){
   if(v.name==="guia") return renderGuia();
   if(v.name==="palabra") return renderPalabra();
   if(v.name==="logros") return renderLogros();
+  if(v.name==="cur") return renderCur();
   if(v.name==="search") return renderSearch();
   if(v.name==="enc") return v.id?renderEncFicha(v.id):renderEnc();
   if(v.name==="mode") return renderMode(v.num,v.mode);
@@ -963,8 +972,8 @@ function setLang(l){ S.lang=l; try{localStorage.setItem("historiapp.lang",l)}cat
 
 function scrollTop0(){ const m=document.querySelector("#app main"); if(m) m.scrollTo(0,0); }
 function celebrate(){ try{ if(matchMedia("(prefers-reduced-motion: reduce)").matches) return; const c=document.createElement("div"); c.className="confetti"; const col=["#004379","#EDAB00","#FBAE40","#002060","#7fb2e5"]; for(let i=0;i<26;i++){ const e=document.createElement("i"); e.style.left=(Math.random()*100)+"%"; e.style.background=col[i%col.length]; e.style.animationDelay=(Math.random()*.35)+"s"; e.style.transform="rotate("+(Math.random()*180)+"deg)"; c.appendChild(e); } document.body.appendChild(c); setTimeout(()=>c.remove(),2100); }catch(e){} }
-const TABS=[["home","🏠","tabHome"],["temas","📚","tabTemas"],["videos","▶️","tabVid"],["linea","🕰️","tabLine"],["pods","🎧","tabPod"],["search","🔎","tabSearch"],["enc","📖","tabEncS"],["exam","🎓","tabExam"]];
-function tabOf(v){ const n=(v||{}).name; if(n==="linea") return "linea"; if(n==="pods") return "pods"; if(n==="tema"||n==="mode"||n==="temas") return "temas"; if(n==="enc") return "enc"; if(n==="exam") return "exam"; if(n==="search") return "search"; if(n==="settings"||n==="guia") return "settings"; return "home"; }
+const TABS=[["home","🏠","tabHome"],["temas","📚","tabTemas"],["videos","▶️","tabVid"],["linea","🕰️","tabLine"],["pods","🎧","tabPod"],["search","🔎","tabSearch"],["enc","📖","tabEncS"],["cur","✨","tabCur"],["exam","🎓","tabExam"]];
+function tabOf(v){ const n=(v||{}).name; if(n==="linea") return "linea"; if(n==="pods") return "pods"; if(n==="tema"||n==="mode"||n==="temas") return "temas"; if(n==="enc") return "enc"; if(n==="cur") return "cur"; if(n==="exam") return "exam"; if(n==="search") return "search"; if(n==="settings"||n==="guia") return "settings"; return "home"; }
 function updateTabbar(){ let tb=document.getElementById("tabbar"); if(!tb){ tb=document.createElement("nav"); tb.id="tabbar"; document.body.appendChild(tb); }
   const cur=tabOf(S.view); tb.innerHTML=TABS.map(([k,i,l])=>`<button data-k="${k}" class="${k===cur?"on":""}" aria-current="${k===cur?"page":"false"}"><span class="i">${i}</span>${esc(t(l))}</button>`).join("");
   tb.querySelectorAll("button").forEach(b=>b.onclick=()=>{ const k=b.dataset.k; if(k==="videos"){ openMixFeed(); return; } nav(k==="settings"?{name:"settings",from:{name:"home"}}:{name:k}); }); }
@@ -1321,6 +1330,18 @@ async function showLevel(n,isUp){
   const P=d.querySelector("#lvP"), N=d.querySelector("#lvN");
   if(P) P.onclick=()=>showLevel(n-1,false); if(N) N.onclick=()=>showLevel(n+1,false);
   if(isUp){ const nx=all[n]; if(nx&&nx.img){ const i=new Image(); i.src=nx.img.src; } }
+}
+async function renderCur(){
+  app.innerHTML=header(t("curT"),false)+`<main><div class="empty">${t("loading")}</div></main>`;
+  const all=await getCur(); if(S.view.name!=="cur") return;
+  const lv=levelOf(S.prog.xp)+1, tot=(all||[]).length, got=Math.min(lv,tot);
+  const m=app.querySelector("main");
+  if(!all){ m.innerHTML=`<div class="empty">${t("loadError")}</div>`; return; }
+  m.innerHTML=`<p class="cur-sub">${esc(t("curSub"))}</p>
+    <div class="card cur-pg"><b>${esc(t("curN",{a:got,b:tot}))}</b><div class="bar"><i style="width:${Math.round(got/tot*100)}%"></i></div></div>
+    <div class="cur-list">${all.map((c,i)=>i<lv?`<button class="cur-i" data-n="${i+1}">${c.img?`<img src="${esc(c.img.src)}" alt="" loading="lazy">`:`<span class="cur-ph">✨</span>`}<div><small>${i+1} · ${esc(L(c.era))} · ${esc(L(c.fecha))}</small><b>${esc(L(c.titulo))}</b></div></button>`
+      :`<div class="cur-i off"><span class="cur-ph">🔒</span><div><small>${esc(t("curLock",{n:i+1,x:LEVEL_XP[i]}))}</small><b>${esc(L(c.era))}</b></div></div>`).join("")}</div>`;
+  m.querySelectorAll("button.cur-i").forEach(b=>b.onclick=()=>showLevel(+b.dataset.n,false));
 }
 function showAch(list){ if(document.querySelector(".lvm")){ ACHQ=(ACHQ||[]).concat(list); return; } document.querySelectorAll(".achm").forEach(x=>x.remove());
   const d=document.createElement("div"); d.className="achm"; d.setAttribute("role","dialog"); d.setAttribute("aria-modal","true");

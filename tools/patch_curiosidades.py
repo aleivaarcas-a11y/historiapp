@@ -5,7 +5,7 @@ root=pathlib.Path(__file__).resolve().parent.parent
 allc=[]
 for i in range(1,6): allc+=json.load(open(root/f"tools/curio/lote_{i}.json",encoding="utf-8"))
 allc.sort(key=lambda x:x["n"]); assert [c["n"] for c in allc]==list(range(1,101))
-for c in allc: c.pop("nota",None)
+for c in allc: c.pop("nota",None)  # los lote_N.json ya incluyen los reemplazos de reemplazos_A-D.json
 json.dump(allc,open(root/"data/curiosidades.json","w",encoding="utf-8"),ensure_ascii=False,separators=(",",":"))
 # 2) index.html
 p=root/"index.html"; s=p.read_text(encoding="utf-8")
