@@ -173,7 +173,7 @@
   if (document.body) build(); else document.addEventListener('DOMContentLoaded', build);
 })();
 </script>
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <title>Senet</title>
 <style>
 /* Cámara funeraria a la luz de las antorchas: tablero de ébano y marfil en 3D, interfaz de pan de oro y lapislázuli */
@@ -194,6 +194,8 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; overflow: hidden; background: var(--noche); color: var(--marfil); font: 600 18px/1.4 var(--font-text); -webkit-tap-highlight-color: transparent; }
 button { font: inherit; color: inherit; cursor: pointer; }
+#bCam { position: fixed; right: 12px; top: 50%; transform: translateY(-50%); z-index: 6; min-height: 44px; padding: 0 14px; }
+#bCam[hidden] { display: none; }
 #gl { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; outline: none; }
 #ui { position: fixed; inset: 0; pointer-events: none; padding: max(10px, env(safe-area-inset-top, 0px)) 16px max(12px, env(safe-area-inset-bottom, 0px)); display: grid; grid-template-rows: auto 1fr auto; }
 #ui > * { pointer-events: none; }
@@ -932,7 +934,7 @@ const matRing = new T.Mesh(new T.RingGeometry(1.62, 1.7, 64), M.gold); matRing.r
 mat.userData = { stick: true };
 
 // --- Disposición y cámara ---
-let camBase = new T.Vector3(), camTarget = new T.Vector3(), shake = 0, hudCache = null;
+let camOff = 0, camBase = new T.Vector3(), camTarget = new T.Vector3(), shake = 0, hudCache = null;
 function layout() {
   const w = innerWidth, h = innerHeight;
   renderer.setSize(w, h, false);
@@ -976,7 +978,7 @@ function layout() {
     camera.position.copy(center).addScaledVector(dir, d); camera.lookAt(center); camera.updateMatrixWorld(); camera.updateProjectionMatrix();
     let mnx = 9, mxx = -9, mny = 9, mxy = -9;
     pts3.forEach(v => { const q = v.clone().project(camera); mnx = Math.min(mnx, q.x); mxx = Math.max(mxx, q.x); mny = Math.min(mny, q.y); mxy = Math.max(mxy, q.y); });
-    if (mxx - mnx < 1.9 && mxy - mny < (top - bot) * .98) { const off = ((top + bot) / 2 - (mxy + mny) / 2) * h / 2; camera.setViewOffset(w, h, 0, off, w, h); break; }
+    if (mxx - mnx < 1.9 && mxy - mny < (top - bot) * .98) { const off = ((top + bot) / 2 - (mxy + mny) / 2) * h / 2; camOff = off; camera.setViewOffset(w, h, 0, off, w, h); break; }
   }
   camBase.copy(camera.position); camTarget.copy(center);
   scene.fog.near = d * .9; scene.fog.far = d * 2.3;
@@ -1050,6 +1052,39 @@ function pick(ev) {
   const hit = ray.intersectObjects(objs, false)[0];
   return hit ? hit.object.userData : null;
 }
+// --- Zoom con los dedos y paseo cenital por el tablero ---
+const camZ = { z: 1, zt: 1, pan: new T.Vector3(), panT: new T.Vector3(), moved: false };
+const ZMAX = 3.2, camPts = new Map(); let pinch0 = null, drag0 = null;
+function camDist() { return camBase.distanceTo(camTarget) / camZ.z; }
+function wpp() { return 2 * camDist() * Math.tan(T.MathUtils.degToRad(camera.fov / 2)) / innerHeight; }
+function clampPan(v) { const ex = PORTRAIT ? [3.2, 6.5] : [6.8, 3.6]; const k = Math.min(1, (camZ.zt - 1) / .6); v.x = Math.max(-ex[0] * k, Math.min(ex[0] * k, v.x)); v.z = Math.max(-ex[1] * k, Math.min(ex[1] * k, v.z)); return v; }
+function setZoom(z) { camZ.zt = Math.max(1, Math.min(ZMAX, z)); clampPan(camZ.panT); camBtn.hidden = camZ.zt < 1.04; }
+function panBy(dx, dy) { const k = wpp(); camZ.panT.x -= dx * k; camZ.panT.z -= dy * k; clampPan(camZ.panT); }
+function camReset() { camZ.zt = 1; camZ.panT.set(0, 0, 0); camBtn.hidden = true; }
+const camBtn = document.createElement('button'); camBtn.id = 'bCam'; camBtn.className = 'btn'; camBtn.hidden = true; camBtn.textContent = 'Ver todo'; camBtn.setAttribute('aria-label', 'Volver a ver el tablero entero');
+camBtn.addEventListener('click', camReset); document.body.appendChild(camBtn);
+canvas.addEventListener('pointerdown', ev => {
+  camPts.set(ev.pointerId, { x: ev.clientX, y: ev.clientY });
+  if (camPts.size === 2) { const [a, b] = [...camPts.values()]; pinch0 = { d: Math.hypot(a.x - b.x, a.y - b.y), z: camZ.zt, mx: (a.x + b.x) / 2, my: (a.y + b.y) / 2 }; drag0 = null; camZ.moved = true; }
+  else if (camPts.size === 1) drag0 = { x: ev.clientX, y: ev.clientY, lx: ev.clientX, ly: ev.clientY };
+});
+canvas.addEventListener('pointermove', ev => {
+  if (!camPts.has(ev.pointerId)) return;
+  camPts.set(ev.pointerId, { x: ev.clientX, y: ev.clientY });
+  if (camPts.size >= 2 && pinch0) {
+    const [a, b] = [...camPts.values()]; const d = Math.hypot(a.x - b.x, a.y - b.y), mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
+    setZoom(pinch0.z * d / Math.max(20, pinch0.d)); panBy(mx - pinch0.mx, my - pinch0.my); pinch0.mx = mx; pinch0.my = my;
+  } else if (drag0) {
+    if (!camZ.moved && Math.hypot(ev.clientX - drag0.x, ev.clientY - drag0.y) > 10 && camZ.zt > 1.04) camZ.moved = true;
+    if (camZ.moved) panBy(ev.clientX - drag0.lx, ev.clientY - drag0.ly);
+    drag0.lx = ev.clientX; drag0.ly = ev.clientY;
+  }
+});
+function ptrUp(ev) { camPts.delete(ev.pointerId); if (camPts.size < 2) pinch0 = null; if (camPts.size === 0) { drag0 = null; setTimeout(() => { camZ.moved = false; }, 60); } }
+canvas.addEventListener('pointerup', ptrUp); canvas.addEventListener('pointercancel', ptrUp);
+canvas.addEventListener('wheel', ev => { ev.preventDefault(); setZoom(camZ.zt * Math.exp(-ev.deltaY * .0015)); }, { passive: false });
+document.addEventListener('gesturestart', e => e.preventDefault());
+canvas.addEventListener('dblclick', () => { if (camZ.zt > 1.04) camReset(); else setZoom(2); });
 canvas.addEventListener('pointermove', ev => {
   if (ev.pointerType !== 'mouse') return;
   const u = pick(ev);
@@ -1063,6 +1098,7 @@ canvas.addEventListener('pointermove', ev => {
 });
 let selI = null;
 canvas.addEventListener('click', ev => {
+  if (camZ.moved) return;
   audio();
   const u = pick(ev);
   if (!u || !G) return;
@@ -1173,8 +1209,13 @@ function frame() {
   // cámara
   sway.lerp(swayT, .04);
   shake *= .88;
-  camera.position.copy(camBase).add(new T.Vector3(sway.x * .12 + (Math.random() - .5) * shake, (Math.random() - .5) * shake, sway.y * .06));
-  camera.lookAt(camTarget);
+  camZ.z += (camZ.zt - camZ.z) * .22; camZ.pan.lerp(camZ.panT, .25);
+  { const base = camBase.clone().sub(camTarget), dist = base.length() / camZ.z; base.normalize();
+    const k = Math.min(1, Math.max(0, (camZ.z - 1) / .7)), up = new T.Vector3(0, 1, PORTRAIT ? .02 : .02).normalize();
+    const dir = base.lerp(up, k * k * (3 - 2 * k)).normalize(), tgt = camTarget.clone().add(camZ.pan), sw = 1 / camZ.z;
+    if (camOff) { const o = camOff * (1 - k); if (Math.abs(o - (camera.view ? camera.view.offsetY : 0)) > .5) camera.setViewOffset(innerWidth, innerHeight, 0, o, innerWidth, innerHeight); }
+    camera.position.copy(tgt).addScaledVector(dir, dist).add(new T.Vector3((sway.x * .12 + (Math.random() - .5) * shake) * sw, (Math.random() - .5) * shake * sw, sway.y * .06 * sw));
+    camera.lookAt(tgt); }
   updateTags();
   renderer.render(scene, camera);
   requestAnimationFrame(frame);

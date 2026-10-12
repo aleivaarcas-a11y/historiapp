@@ -1842,7 +1842,9 @@ function gEmblem(kind,s){ ctx.save(); ctx.scale(s,s); ctx.strokeStyle=GC.ink; ct
   const css=document.createElement('style'); css.textContent=`
 #mintro{display:none} .howtab{display:none}
 .why{text-align:left;margin:.4em auto .6em;max-width:38em;font-size:.95em;line-height:1.35}.why ul{margin:.25em 0 0;padding:0;list-style:none}.why li{margin:.15em 0}.why li b{display:inline-block;width:1.3em;text-align:center;color:var(--accent)}
+.cdesc{display:none}
 @media (pointer:coarse) and (max-height:500px){
+ .hubst{font-size:12px!important;line-height:1.22!important} .hubst *{line-height:1.22!important} .cdesc{display:-webkit-box!important;text-align:left;font-size:12.5px;line-height:1.3;margin:.3em 0;color:var(--ink);-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden} .card:has(.cdesc) .pick p{display:none!important} .card:has(.cdesc) .pick h3{margin:0;font-size:15px} .card:has(.cdesc) .pick .grp{font-size:10.5px} .card:has(.cdesc) .pick{padding:6px 9px!important} .card:has(.cdesc) .grid{gap:6px!important} .card:has(.cdesc) h2{margin:0;font-size:17px;line-height:1.1} .card:has(.cdesc) .sub{font-size:11.5px;margin:0} .card:has(.cdesc) input{padding:.1em .4em!important} .card:has(.cdesc) .btns{margin-top:4px} .card:has(.cdesc) .btns button{padding-top:6px;padding-bottom:6px}
  #ov{position:fixed;inset:0;z-index:20;padding:max(6px,env(safe-area-inset-top)) max(8px,env(safe-area-inset-right)) max(6px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));background:rgba(10,7,4,.8)}
  .card{position:relative;width:min(100%,700px);max-height:100%;padding:10px 16px;font-size:14px;line-height:1.35;border-radius:12px}
  .card.wide{width:100%}
@@ -2275,6 +2277,7 @@ const Career=(function(){
       <div style="text-align:left;margin:.3em 0"><b>Nombre de arena</b> <input id="cN" value="${esc(name)}" maxlength="16" style="font:inherit;padding:.2em .4em;border-radius:6px;border:2px solid var(--edge);background:#1c140b;color:var(--ink)"> <button id="cR" style="font-size:.8em">otro</button></div>
       <div style="text-align:left;color:var(--accent);margin:.6em 0 .2em"><b>Cómo llegas al ludus</b></div>
       <div class="grid" style="grid-template-columns:repeat(3,1fr)">${Object.entries(ORIGINS).map(([k,o])=>`<div class="pick${k===origin?' sel':''}" data-o="${k}" tabindex="0"><h3>${o.t}</h3><div class="grp">${o.s}</div><p style="font-size:.85em;margin:.3em 0">${esc(cd(o.d))}</p><p style="font-size:.85em;margin:.2em 0;color:var(--accent)">${o.j}</p></div>`).join('')}</div>
+      <div class="cdesc">${esc(cd(ORIGINS[origin].d))}</div>
       ${opt.aula?`<div class="sub" style="font-size:.8em;text-align:left;margin:.3em 0">${esc(SHARE_NOTE)}</div>`:''}
       <div class="crow"><div><div style="text-align:left;color:var(--accent);margin:.6em 0 .2em"><b>Gladiador o gladiatrix</b></div>
       <div class="grid" style="grid-template-columns:repeat(2,1fr)"><div class="pick${!fem?' sel':''}" data-s="m" tabindex="0"><h3>Gladiador</h3><p style="font-size:.85em;margin:.2em 0">La gran mayoría de los que bajaban a la arena.</p></div>

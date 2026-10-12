@@ -19,3 +19,11 @@ Además de lo anterior, `atlas_build.py` enlaza cada lugar con el tema. Saca los
 ## Mapa base
 
 `mapa_base.json`: costas, lagos y ríos de Natural Earth y fronteras del Ancient World Mapping Center (AWMC, licencia ODbL, a partir del Barrington Atlas): provincias romanas hacia el 200 d. C., Imperio persa, Imperio de Alejandro y Roma hacia el 60 a. C. Las fuentes con que se reconstruyeron las provincias están en «Juegos web/Codigo/atlas/».
+
+## Mapa político por épocas (12-10-2026)
+
+- `tools/atlas/eras_build.py` (necesita shapely y pyproj) lee los GeoJSON de historical-basemaps (A. Ourednik, GPL-3.0; https://github.com/aourednik/historical-basemaps), recorta y proyecta cada época al mapa del Atlas, agrupa las entidades por civilización con su nombre en castellano e inglés y escribe `tools/atlas/atlas_eras.json`. `atlas_build.py` lo copia dentro de `data/atlas_mapa.json`.
+- Épocas: 3000, 2000, 1000, 700, 500, 400, 323, 300, 200 y 100 a. C.; cambio de era (Augusto a 99 d. C.); 200 d. C. (de 100 a 299, con las provincias romanas del AWMC); 300, 400 y 500 d. C. Antes del 3000 a. C. no se dibujan fronteras. «Todas las épocas» enseña el mapa hacia el 200 d. C.
+- Colores por civilización, iguales a los de los lugares del temario donde existen (Egipto oro, Persia azul, Fenicia y Cartago morado, Etruria verde, Roma rojo, Grecia terracota, Macedonia y los reinos helenísticos malva, seléucidas verde azulado). Los pueblos sin Estado van con sombreado tenue y borde discontinuo. Cada territorio se puede pulsar y muestra los lugares del temario que caen dentro.
+- Correcciones a la fuente: el Imperio parto de la capa del 300 d. C. se rotula como sasánida; los hititas del 1000 y el 700 a. C., como reinos neohititas; las «ciudades griegas» de esas dos capas, como pueblos griegos; se retira el resto del Imperio de Occidente de la capa del 500 d. C.
+- Límites conocidos de la fuente: es un mapa mundial de trabajo y su autor pide contrastarlo; no trae Micenas ni las colonias fenicias, y la capa del 1500 a. C. repite la del 1000, por eso no se usa.

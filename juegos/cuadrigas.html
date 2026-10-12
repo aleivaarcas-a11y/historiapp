@@ -242,6 +242,25 @@ h1 .ansata{font-size:1.05em;letter-spacing:.2em}
   .logo.ansata{font-size:26px;letter-spacing:.16em;padding:0 10px 0 16px}
   .lang{position:static;justify-content:flex-end}
 }
+/* 12-10-2026 · menús en una sola pantalla en el móvil: nueva carrera y contrarreloj */
+@media (max-height:540px),(max-width:540px){
+  .box:has(#f_V)>p:not(.act),.box:has(.gopt)>p:not(.act){display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px;line-height:1.3}
+  .box:has(#f_V) p.note,.box:has(.gopt) p.note{display:none}
+  .box:has(#f_V) .row:has(.fac){display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+  .box:has(#f_V) .card.fac{padding:6px 4px;text-align:center;min-width:0}
+  .box:has(#f_V) .card.fac p{display:none}
+  .box:has(#f_V) .card.fac h2{font-size:14px;margin:2px 0 0}
+  .box:has(#f_V) .card.fac canvas.sw{width:26px;height:26px}
+  .box:has(#f_V) .row:has(#stu){display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .box:has(#f_V) .row:has(#stu) label{font-size:12px}
+  .box:has(#f_V) .row:has(#stu) input{width:100%;box-sizing:border-box}
+  .box:has(#f_V) h3,.box:has(.gopt) h3{margin:8px 0 4px}
+  .box:has(.gopt) .row button{min-height:40px;padding:4px 10px}
+}
+@media (max-width:540px) and (orientation:portrait){
+  .box:has(#f_V) .row:has(.fac){grid-template-columns:repeat(2,minmax(0,1fr))}
+  .box:has(#f_V) .row:has(#stu){grid-template-columns:1fr}
+}
 
 
 #rot{display:none;position:fixed;inset:0;background:#1d150d;color:#f3ead6;place-items:center;text-align:center;font:600 20px/1.4 "Cinzel",Georgia,serif;padding:24px;z-index:50}

@@ -30,6 +30,7 @@ button,a.btn{font:inherit;color:inherit;cursor:pointer}
 #zoom{position:fixed;left:max(10px,env(safe-area-inset-left));bottom:calc(var(--chron) + 24px);display:flex;flex-direction:column;gap:8px;z-index:4}
 #zoom .tb{font-size:20px;padding:0;width:44px}
 #layer{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--chron) + 24px);padding:8px 16px;font-size:14px;font-weight:700;color:var(--tp2);z-index:4;max-width:min(560px,70vw);text-align:center;pointer-events:none;border-radius:14px}
+@media (max-width:820px){#layer .cr{display:none}#layer{padding:5px 12px;font-size:12.5px}}
 #layer small{display:block;font-size:11.5px;font-weight:400;color:var(--muted);margin-top:2px}
 #chron{position:fixed;left:max(10px,env(safe-area-inset-left));right:max(10px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));height:var(--chron);padding:10px 14px 6px;z-index:4;display:flex;flex-direction:column}
 #chron .row{display:flex;align-items:center;gap:6px;min-height:32px}
@@ -199,7 +200,7 @@ body.emb #top{justify-content:flex-end}
   const ids=new Set(S.map(s=>s.id));
   const EV=A.acontecimientos.filter(a=>avail.has(a.tema)).map(a=>({y:a.year,date:a.date,t:a.title,d:a.text,tema:a.tema,lugar:ids.has(a.lugar)?a.lugar:null}));
   document.getElementById('loading').remove();
-  start({MAP:{W:M.W,H:M.H,land:M.land,lakes:M.lakes,rivers:M.rivers,grat:M.grat,seas:M.seas},EX:{mounts:M.mounts,desert:M.desert,fert:M.fert,rlabels:M.rlabels,rose:M.rose},GEO:{prov:M.prov,layers:M.layers},S,EV,CIVS:A.civs,CREDITS:M.credits});
+  start({MAP:{W:M.W,H:M.H,land:M.land,lakes:M.lakes,rivers:M.rivers,grat:M.grat,seas:M.seas},EX:{mounts:M.mounts,desert:M.desert,fert:M.fert,rlabels:M.rlabels,rose:M.rose},GEO:{prov:M.prov,layers:M.layers,eras:M.eras||[],ecol:M.ecol||{}},S,EV,CIVS:A.civs,CREDITS:M.credits});
 })();
 function start(DATA){'use strict';
 const {MAP,EX,GEO,S,EV,CIVS}=DATA;
@@ -211,20 +212,20 @@ const I18N={
   i1:'Toca un lugar para ver qué cuenta de él el temario, con sus fichas, el apartado y el mapa del tema, la línea del tiempo, los conceptos, las preguntas y los vídeos.',i2:'Toca una provincia para ver qué lugares del temario quedan dentro.',i3:'Arrastra la línea del tiempo de abajo y el mapa político cambia de época.',i4:'Los botones de tema, en la crónica, muestran u ocultan los lugares de cada tema.',
   explore:'Explorar el mapa',close:'Cerrar',src:'Fuente',refs:'Referencias',qs:'Comprueba lo que sabes',next:'Siguiente pregunta',qOf:'Pregunta {a} de {b}',ok:'¡Correcto! +5 XP. ',okNo:'¡Correcto! ',ko:'No es esa. La correcta está marcada en azul. ',
   vids:'Vídeos',fichas:'Fichas',inTema:'En el temario',practice:'Practicar el apartado',conceptMap:'Mapa del tema',tline:'En la línea del tiempo',openLine:'Abrir la línea del tiempo',gloss:'Conceptos clave',vfQ:'Verdadero o falso',true:'Verdadero',false:'Falso',tema:'Tema {n}',notYet:'El Tema {n} todavía no está en Historiapp; sus fichas llegarán con él.',
-  prov:'Provincia romana',provNote:'Límites hacia el 200 d. C. según el Ancient World Mapping Center (AWMC), a partir del Barrington Atlas. Las islas del Egeo, salvo Creta, figuran en Asia. Los límites entre Britannia Superior e Inferior y entre Galatia y Cappadocia son aproximados, porque no se conocen con precisión o faltan en los datos.',provSites:'Lugares del temario en esta provincia',provNone:'Ningún lugar del temario cae dentro de esta provincia.',outside:'Fuera del Imperio romano',
+  prov:'Provincia romana',provNote:'Límites hacia el 200 d. C. según el Ancient World Mapping Center (AWMC), a partir del Barrington Atlas. Las islas del Egeo, salvo Creta, figuran en Asia. Los límites entre Britannia Superior e Inferior y entre Galatia y Cappadocia son aproximados, porque no se conocen con precisión o faltan en los datos.',provSites:'Lugares del temario en esta provincia',L_era:'Mapa político hacia el {y}',L_eraS:'Fronteras aproximadas',polSites:'Lugares del temario en este territorio',polNone:'Ningún lugar del temario cae dentro de este territorio.',polNote:'Fronteras aproximadas de historical-basemaps (A. Ourednik), un mapa mundial de trabajo que conviene contrastar con un atlas histórico. Los pueblos sin Estado llevan un sombreado tenue.',polChip:'Hacia el {y}',provNone:'Ningún lugar del temario cae dentro de esta provincia.',outside:'Fuera del Imperio romano',
   ev:'Acontecimiento',goSite:'Ir al lugar',allEp:'Todas las épocas',allS:'Todas',year:'{y}',
   L_persia:'Imperio persa aqueménida',L_persiaS:'Extensión máxima, hacia 500 a. C.',L_alejandro:'Imperio de Alejandro',L_alejandroS:'Hacia 323 a. C.',L_roma60:'Roma hacia el 60 a. C.',L_roma60S:'Territorio bajo control romano',L_prov:'Provincias romanas',L_provS:'Hacia el 200 d. C.',L_none:'Sin fronteras dibujadas',L_noneS:'No hay un mapa político fiable para esta fecha',
-  credit:'Fronteras: AWMC, ODbL · Costas y ríos: Natural Earth',
+  credit:'Fronteras: historical-basemaps (Ourednik, GPL-3.0) y AWMC (ODbL) · Costas y ríos: Natural Earth',
   tshort:'T{n}',bc:'a. C.',ad:'d. C.',xp:'+5 XP en Historiapp',soon:'Agón llega pronto a Historiapp'},
  en:{back:'Historiapp',tag:'Ancient sport on the map',play:'Play Agón',chron:'Chronicle',all:'All periods',
   introKick:'Historiapp · History of Sport',introP:'The places of the syllabus on the real map, with the borders of each period. The Atlas grows with every unit opened in the app and shares its map with the game Agón.',
   i1:'Tap a place to see what the syllabus says about it, with its study sheets, the section and the unit map, the timeline, key concepts, questions and videos.',i2:'Tap a province to see which places of the syllabus lie inside it.',i3:'Drag the timeline at the bottom and the political map changes period.',i4:'The unit buttons, in the chronicle, show or hide the places of each unit.',
   explore:'Explore the map',close:'Close',src:'Source',refs:'References',qs:'Test what you know',next:'Next question',qOf:'Question {a} of {b}',ok:'Correct! +5 XP. ',okNo:'Correct! ',ko:'Not that one. The right answer is marked in blue. ',
   vids:'Videos',fichas:'Study sheets',inTema:'In the syllabus',practice:'Practise this section',conceptMap:'Unit map',tline:'On the timeline',openLine:'Open the timeline',gloss:'Key concepts',vfQ:'True or false',true:'True',false:'False',tema:'Unit {n}',notYet:'Unit {n} is not in Historiapp yet; its study sheets will come with it.',
-  prov:'Roman province',provNote:'Borders around AD 200 from the Ancient World Mapping Center (AWMC), based on the Barrington Atlas. The Aegean islands, except Crete, appear in Asia. The borders between Britannia Superior and Inferior and between Galatia and Cappadocia are approximate, because they are not precisely known or are missing from the data.',provSites:'Places of the syllabus in this province',provNone:'No place of the syllabus lies in this province.',outside:'Outside the Roman Empire',
+  prov:'Roman province',provNote:'Borders around AD 200 from the Ancient World Mapping Center (AWMC), based on the Barrington Atlas. The Aegean islands, except Crete, appear in Asia. The borders between Britannia Superior and Inferior and between Galatia and Cappadocia are approximate, because they are not precisely known or are missing from the data.',provSites:'Places of the syllabus in this province',L_era:'Political map around {y}',L_eraS:'Approximate borders',polSites:'Places of the syllabus in this territory',polNone:'No place of the syllabus lies in this territory.',polNote:'Approximate borders from historical-basemaps (A. Ourednik), a working world map that should be checked against a historical atlas. Peoples without a state have a faint shading.',polChip:'Around {y}',provNone:'No place of the syllabus lies in this province.',outside:'Outside the Roman Empire',
   ev:'Event',goSite:'Go to the place',allEp:'All periods',allS:'All',year:'{y}',
   L_persia:'Achaemenid Persian Empire',L_persiaS:'Greatest extent, c. 500 BC',L_alejandro:'Empire of Alexander',L_alejandroS:'c. 323 BC',L_roma60:'Rome around 60 BC',L_roma60S:'Territory under Roman control',L_prov:'Roman provinces',L_provS:'Around AD 200',L_none:'No borders drawn',L_noneS:'There is no reliable political map for this date',
-  credit:'Borders: AWMC, ODbL · Coasts and rivers: Natural Earth',
+  credit:'Borders: historical-basemaps (Ourednik, GPL-3.0) and AWMC (ODbL) · Coasts and rivers: Natural Earth',
   tshort:'U{n}',bc:'BC',ad:'AD',xp:'+5 XP in Historiapp',soon:'Agón is coming to Historiapp soon'}};
 const ls={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 let lang=(()=>{try{const a=JSON.parse(localStorage.getItem('atlas.lang'));if(a)return a}catch(e){}try{const h=localStorage.getItem('historiapp.lang');if(h)return JSON.parse(h)||h}catch(e){try{const h=localStorage.getItem('historiapp.lang');if(h)return h}catch(_){}}return (navigator.language||'es').startsWith('es')?'es':'en'})();
@@ -259,6 +260,9 @@ const landPath=P2(MAP.land),lakePath=P2(MAP.lakes),gratPath=P2(MAP.grat.join('')
 const PROV=GEO.prov.map((p,i)=>({id:p.id,path:P2(p.d),lab:p.lab,area:p.area,i}));
 const PBY={};PROV.forEach(p=>PBY[p.id]=p);
 const LAY={};for(const k in GEO.layers)LAY[k]={path:P2(GEO.layers[k].d),lab:GEO.layers[k].lab};
+const ECOL=GEO.ecol;const ERAS=GEO.eras.map(e=>({id:e.id,from:e.from,to:e.to,pols:e.pols.map((p,i)=>({f:p.f,n:p.n,lab:p.lab,a:p.a,i,path:P2(p.d)}))}));const ERBY={};ERAS.forEach(e=>ERBY[e.id]=e);
+const eraY=id=>id.startsWith('bc')?-(+id.slice(2)):+id;const ROMT=['#B6402C','#C9583C','#A23527','#D06A48','#B44A36'];let selPol=null;
+const eraOf=l=>l&&l.startsWith('e:')?ERBY[l.slice(2)]:null;
 const PROVCOL=['#c98b3b','#8f9b4a','#b8644a','#6f8f86','#a77a3c','#9a6a8a','#7d8f52','#c2a050','#8a6f4f','#5f8a9a'];
 /* ---------- tiempo ---------- */
 const SEG=[[-200000,-30000,0,.07],[-30000,-3500,.07,.17],[-3500,700,.17,.9],[700,1700,.9,1]];
@@ -266,9 +270,9 @@ const tpos=y=>{for(const s of SEG){if(y<=s[1])return s[2]+(y-s[0])/(s[1]-s[0])*(
 const tinv=p=>{for(const s of SEG){if(p<=s[3])return s[0]+(p-s[2])/(s[3]-s[2])*(s[1]-s[0])}return 1700};
 let Y=null;  // null = todas las épocas
 const fmtY=y=>{y=Math.round(y);if(Math.abs(y)>=10000)y=Math.round(y/1000)*1000;const n=Math.abs(y).toLocaleString(lang==='es'?'es-ES':'en-GB');return y<0?(lang==='es'?`${n} a. C.`:`${n} BC`):(lang==='es'?`${n} d. C.`:`AD ${n}`)};
-function layerAt(y){if(y==null)return null;if(y>=-550&&y<-334)return'persia';if(y>=-334&&y<-300)return'alejandro';if(y>=-146&&y<-27)return'roma60';if(y>=-27&&y<=476)return'prov';return'none'}
-function renderLayer(){const l=layerAt(Y),e=$('layer');if(!l){e.hidden=true;return}e.hidden=false;
-  e.innerHTML=`${t('L_'+l)}<small>${t('L_'+l+'S')}${l!=='none'?' · '+t('credit'):''}</small>`}
+function layerAt(y){if(y==null)return ERBY['200']?'e:200':null;if(y<-3000)return'none';const e=ERAS.find(e=>y>=e.from&&y<=e.to);return e?'e:'+e.id:'none'}
+function renderLayer(){const l=Y==null?null:layerAt(Y),e=$('layer');if(!l){e.hidden=true;return}e.hidden=false;const E=eraOf(l);
+  e.innerHTML=E?`${t('L_era',{y:fmtY(eraY(E.id))})}<small>${t('L_eraS')}<span class="cr"> · ${t('credit')}</span></small>`:`${t('L_'+l)}<small>${t('L_'+l+'S')}</small>`;if(openState&&openState.t==='q'&&openState.era!==(E&&E.id))closePanel()}
 function buildChron(){const tr=$('track');tr.querySelectorAll('.tick,.brk,.mk,.ev').forEach(n=>n.remove());
   const ticks=[[-200000,'200.000'],[-40000,'40.000'],[-10000,'10.000'],[-3000,'3000'],[-2000,'2000'],[-1000,'1000'],[0,'0'],[500,'500'],[1000,'1000'],[1600,'1600']];
   ticks.forEach(([y,l],i)=>{const d=document.createElement('div');d.className='tick'+([1,2,4,5,7,8].includes(i)?' minor':'');d.style.left=(tpos(y)*100)+'%';d.textContent=l+(i===0||i===3?(lang==='es'?' a. C.':' BC'):i===7?(lang==='es'?' d. C.':' AD'):'');tr.appendChild(d)});
@@ -286,7 +290,7 @@ function renderChron(){buildChron();const c=$('cursor');
   let ev=null,ei=-1;EV.forEach((v,i)=>{if(VIS.has(v.tema)&&v.y<=Y&&Y-v.y<=40){ev=v;ei=i}});
   document.querySelectorAll('#track .ev').forEach(b=>b.classList.toggle('on',+b.dataset.i===ei));
   $('now').textContent=fmtY(Y)+(ev?' · '+L(ev.t):'')}
-function setY(y){Y=y==null?null:Math.max(-200000,Math.min(1700,y));renderChron();renderLayer();dirty=true}
+window.atlasSetY=y=>setY(y);function setY(y){Y=y==null?null:Math.max(-200000,Math.min(1700,y));renderChron();renderLayer();dirty=true}
 $('tall').onclick=()=>{stopPlay();setY(null)};
 (()=>{const tr=$('track');let drag=false;const at=e=>{const r=tr.getBoundingClientRect();return tinv(Math.max(0,Math.min(1,(e.clientX-r.left)/r.width)))};
   tr.addEventListener('pointerdown',e=>{if(e.target.closest('.mk,.ev'))return;drag=true;stopPlay();tr.setPointerCapture(e.pointerId);setY(at(e))});
@@ -331,8 +335,9 @@ let hov=null;function hover(e){const h=pickTarget(e.clientX,e.clientY);const id=
 function siteR(){return Math.max(7,Math.min(13,5+2.2*cam.k))}
 function pickTarget(sx,sy){let best=null,bd=1e9;for(const s of S){if(!vis(s))continue;const x=(s.xy[0]-cam.x)*cam.k,y=(s.xy[1]-cam.y)*cam.k;const d=Math.hypot(x-sx,y-sy);if(d<Math.max(22,siteR()+10)&&d<bd){bd=d;best=s}}
   if(best)return{t:'s',id:best.id};const[mx,my]=toMap(sx,sy);if(!hit.isPointInPath(landPath,mx,my,'evenodd'))return null;
-  for(const p of PROV)if(hit.isPointInPath(p.path,mx,my,'evenodd'))return{t:'p',id:p.id};return null}
-function pick(sx,sy){const h=pickTarget(sx,sy);if(!h){closePanel();return}if(h.t==='s')openSite(h.id,false);else openProv(h.id)}
+  const E=eraOf(layerAt(Y));if(E&&E.id==='200'||!E){for(const p of PROV)if(hit.isPointInPath(p.path,mx,my,'evenodd'))return{t:'p',id:p.id}}
+  if(E){let b=null;for(const p of E.pols){if(E.id==='200'&&p.f==='rom')continue;if(hit.isPointInPath(p.path,mx,my,'evenodd')&&(!b||(b.f==='pue'&&p.f!=='pue')||(b.f==='pue')===(p.f==='pue')&&p.a<b.a))b=p}if(b)return{t:'q',id:b.i}}return null}
+function pick(sx,sy){const h=pickTarget(sx,sy);if(!h){closePanel();return}if(h.t==='s')openSite(h.id,false);else if(h.t==='q')openPol(h.id);else openProv(h.id)}
 /* ---------- texturas (como Agón) ---------- */
 const paperPat=(()=>{const c=document.createElement('canvas');c.width=c.height=256;const x=c.getContext('2d');const im=x.createImageData(256,256);for(let i=0;i<im.data.length;i+=4){const v=Math.random();const dk=v<.5;im.data[i]=im.data[i+1]=im.data[i+2]=dk?60:255;im.data[i+3]=Math.abs(v-.5)*34}x.putImageData(im,0,0);return ctx.createPattern(c,'repeat')})();
 const sandPat=(()=>{const c=document.createElement('canvas');c.width=c.height=64;const x=c.getContext('2d');x.fillStyle='rgba(150,112,58,.5)';for(let n=0;n<26;n++){x.beginPath();x.arc(Math.random()*64,Math.random()*64,.7+Math.random()*.6,0,7);x.fill()}return ctx.createPattern(c,'repeat')})();
@@ -350,14 +355,19 @@ function paintMap(g,k,x0,y0,w,h,lay){
   paperPat.setTransform(new DOMMatrix().scale(1.5/k));g.fillStyle=paperPat;g.fillRect(x0,y0,w,h);
   sandPat.setTransform(new DOMMatrix().scale(1/k));g.fillStyle=sandPat;g.fill(desPath,'evenodd');
   g.fillStyle='rgba(122,150,72,.30)';g.fill(fertPath,'evenodd');
-  if(lay==='prov'||lay==null){for(const p of PROV){g.fillStyle=hexA(PROVCOL[(p.i*7)%PROVCOL.length],lay==='prov'?.40:.32);g.fill(p.path,'evenodd')}}
-  else if(lay&&lay!=='none'){const col={persia:'#2E62AE',alejandro:'#7A4FA0',roma60:'#B6402C'}[lay];const P=LAY[lay].path;g.fillStyle=hexA(col,.26);g.fill(P,'evenodd');
+  const E=eraOf(lay),wp=E&&E.id==='200';
+  if(E){for(const pass of[0,1])for(const p of E.pols){if((p.f==='pue')!==(pass===0))continue;if(wp&&p.f==='rom')continue;const c=ECOL[p.f]||'#777777';
+      if(p.f==='pue'){g.fillStyle=hexA(c,.13);g.fill(p.path,'evenodd');g.setLineDash([4/k,4/k]);g.strokeStyle=hexA(c,.5);g.lineWidth=1/k;g.stroke(p.path);g.setLineDash([]);continue}
+      g.fillStyle=hexA(c,.46);g.fill(p.path,'evenodd');g.save();g.clip(p.path,'evenodd');g.strokeStyle=hexA(c,.6);g.lineWidth=9/k;g.stroke(p.path);g.restore();g.strokeStyle=hexA(c,1);g.lineWidth=1.5/k;g.stroke(p.path)}
+    if(wp)for(const p of PROV){g.fillStyle=hexA(ROMT[(p.i*3)%ROMT.length],.5);g.fill(p.path,'evenodd')}}
+  else if(lay==='prov'||lay==null){for(const p of PROV){g.fillStyle=hexA(PROVCOL[(p.i*7)%PROVCOL.length],lay==='prov'?.40:.32);g.fill(p.path,'evenodd')}}
+  else if(lay&&lay!=='none'&&LAY[lay]){const col={persia:'#2E62AE',alejandro:'#7A4FA0',roma60:'#B6402C'}[lay];const P=LAY[lay].path;g.fillStyle=hexA(col,.26);g.fill(P,'evenodd');
     g.save();g.clip(P,'evenodd');g.strokeStyle=hexA(col,.6);g.lineWidth=10/k;g.stroke(P);g.restore();g.strokeStyle=hexA(col,.95);g.lineWidth=1.6/k;g.stroke(P)}
   const ms=Math.max(3.2,Math.min(7,3.4*Math.pow(k,.45)))/k;
   for(const m of EX.mounts){const x=m[0],y=m[1],mw=ms*m[2]*1.25,mh=mw;g.beginPath();g.moveTo(x-mw,y);g.lineTo(x-mw*.1,y-mh);g.lineTo(x+mw,y);g.closePath();g.fillStyle='rgba(228,212,168,.9)';g.fill();
     g.beginPath();g.moveTo(x-mw*.1,y-mh);g.lineTo(x+mw,y);g.lineTo(x+mw*.15,y);g.closePath();g.fillStyle='rgba(120,95,60,.45)';g.fill();
     g.beginPath();g.moveTo(x-mw,y);g.lineTo(x-mw*.1,y-mh);g.lineTo(x+mw,y);g.strokeStyle='rgba(80,60,35,.75)';g.lineWidth=.9/k;g.stroke()}
-  if(lay==='prov'||lay==null){g.strokeStyle='rgba(60,36,18,.7)';g.lineWidth=1.1/k;for(const p of PROV)g.stroke(p.path)}
+  if(wp||lay==='prov'||lay==null){g.strokeStyle=wp?'rgba(90,20,12,.75)':'rgba(60,36,18,.7)';g.lineWidth=1.1/k;for(const p of PROV)g.stroke(p.path)}
   g.restore();
   g.strokeStyle='rgba(48,104,128,.85)';g.lineCap='round';for(const r of rivers){g.lineWidth=(r.w===2?1.7:1)*Math.min(1.9,.7+.25*k)/k;g.stroke(r.p)}
   g.fillStyle='#164150';g.fill(lakePath,'evenodd');
@@ -377,6 +387,8 @@ function draw(now){
   if(hi&&!interacting){paintMap(ctx,k,cam.x,cam.y,VW/k,VH/k,lay);hiPending=false}
   else{ctx.imageSmoothingEnabled=true;ctx.drawImage(getBase(lay),0,0,MAP.W,MAP.H);hiPending=hi}
   if(selProv&&PBY[selProv]){ctx.fillStyle='rgba(242,213,140,.30)';ctx.fill(PBY[selProv].path,'evenodd');ctx.strokeStyle='#f6d27a';ctx.lineWidth=3/k;ctx.stroke(PBY[selProv].path)}
+  {const E=eraOf(lay);if(E&&selPol!=null&&E.pols[selPol]){ctx.fillStyle='rgba(242,213,140,.30)';ctx.fill(E.pols[selPol].path,'evenodd');ctx.strokeStyle='#f6d27a';ctx.lineWidth=3/k;ctx.stroke(E.pols[selPol].path)}
+   if(E&&hov&&hov.startsWith('q:')){const p=E.pols[+hov.slice(2)];if(p){ctx.fillStyle='rgba(255,245,210,.16)';ctx.fill(p.path,'evenodd')}}}
   if(hov&&hov.startsWith('p:')){const p=PBY[hov.slice(2)];if(p){ctx.fillStyle='rgba(255,245,210,.16)';ctx.fill(p.path,'evenodd')}}
   ctx.fillStyle='rgba(8,18,22,.55)';ctx.beginPath();ctx.rect(cam.x-10,cam.y-10,VW/k+20,VH/k+20);ctx.rect(MAP.W,0,-MAP.W,MAP.H);ctx.fill('evenodd');
   ctx.strokeStyle='rgba(220,170,69,.75)';ctx.lineWidth=2/k;ctx.strokeRect(0,0,MAP.W,MAP.H);
@@ -385,9 +397,14 @@ function draw(now){
   for(const[nm,p,rot,sz]of MAP.seas){const[x,y]=sc(p);if(x<-250||x>VW+250||y<-60||y>VH+60)continue;const fs=Math.max(10,Math.min(sz*k*1.1,sz*1.7));ctx.save();ctx.translate(x,y);ctx.rotate(rot*Math.PI/180);ctx.font=`italic ${fs}px "Palatino Linotype",Palatino,Georgia,serif`;ctx.fillStyle='rgba(205,228,232,.42)';spaced(seaName(nm),0,0,fs*.18);ctx.restore()}
   // nombres de provincia o de la capa
   const serif='"Palatino Linotype",Palatino,Georgia,serif';
-  if(lay==='prov'||(lay==null&&k>1.6)){for(const p of PROV){if(p.area*k*k<6000&&!(selProv===p.id))continue;const[x,y]=sc(p.lab);if(x<-80||x>VW+80||y<-30||y>VH+30)continue;
+  const LE=eraOf(lay),LWP=LE&&LE.id==='200';
+  if(LE){ctx.textBaseline='middle';for(const p of LE.pols){if(LWP&&p.f==='rom')continue;const pa=p.a*67.5*k*k,pue=p.f==='pue';if(pa<(pue?16000:1400)&&selPol!==p.i)continue;const[x,y]=sc(p.lab);if(x<-120||x>VW+120||y<-40||y>VH+40)continue;
+      const fs=Math.max(pue?9:10,Math.min(pue?14:21,Math.sqrt(pa)/(pue?13:8)));ctx.font=`${pue?'italic ':'600 '}${fs}px ${serif}`;const nm=L(p.n).toUpperCase();ctx.lineWidth=3;ctx.lineJoin='round';ctx.strokeStyle='rgba(246,236,210,.75)';
+      const w=[...nm].reduce((a,ch)=>a+ctx.measureText(ch).width+fs*.14,-fs*.14);ctx.strokeText(nm,x,y);ctx.fillStyle=pue?'rgba(80,70,55,.7)':'rgba(38,24,12,.9)';ctx.fillText(nm,x,y)}}
+  if(LWP&&k>1.3||lay==='prov'||(lay==null&&k>1.6)){for(const p of PROV){if(p.area*k*k<6000&&!(selProv===p.id))continue;const[x,y]=sc(p.lab);if(x<-80||x>VW+80||y<-30||y>VH+30)continue;
       const fs=Math.max(10,Math.min(15,7+2*k));ctx.font=`italic ${fs}px ${serif}`;ctx.fillStyle='rgba(70,40,18,.8)';spaced(p.id.toUpperCase(),x,y,fs*.12)}}
-  else if(lay&&lay!=='none'){const[x,y]=sc(LAY[lay].lab);const fs=Math.max(12,Math.min(22,10+3*k));ctx.font=`italic ${fs}px ${serif}`;ctx.fillStyle='rgba(40,25,60,.7)';spaced(t('L_'+lay).toUpperCase(),x,y,fs*.22)}
+  else if(LE){}
+  else if(lay&&lay!=='none'&&LAY[lay]){const[x,y]=sc(LAY[lay].lab);const fs=Math.max(12,Math.min(22,10+3*k));ctx.font=`italic ${fs}px ${serif}`;ctx.fillStyle='rgba(40,25,60,.7)';spaced(t('L_'+lay).toUpperCase(),x,y,fs*.22)}
   else{for(const[nm,x0,y0,rot]of EX.rlabels){const[x,y]=sc([x0,y0]);if(x<-200||x>VW+200||y<-40||y>VH+40)continue;const fs=Math.max(9,Math.min(13*Math.pow(k,.5),18));ctx.save();ctx.translate(x,y);ctx.rotate(rot*Math.PI/180);ctx.font=`italic ${fs}px ${serif}`;ctx.fillStyle='rgba(95,70,40,.5)';spaced(nm.toUpperCase(),0,0,fs*.3);ctx.restore()}}
   // lugares
   const r=siteR();const showNames=k>1.5;const rects=[];
@@ -407,10 +424,10 @@ function loop(now){draw(now);requestAnimationFrame(loop)}
 let openState=null;const pc=$('pc');
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function showPanel(){const was=$('panel').hidden;$('panel').hidden=false;pc.scrollTop=0;if(was)setTimeout(()=>dirty=true,0)}
-function closePanel(){$('panel').hidden=true;selSite=null;selProv=null;openState=null;pc.querySelectorAll('video').forEach(v=>v.pause());dirty=true}
+function closePanel(){$('panel').hidden=true;selSite=null;selProv=null;selPol=null;openState=null;pc.querySelectorAll('video').forEach(v=>v.pause());dirty=true}
 $('pclose').onclick=closePanel;
 addEventListener('keydown',e=>{if(e.key==='Escape'){if(!$('lb').hidden)$('lb').hidden=true;else closePanel()}});
-function reopen(){const o=openState;if(!o)return;if(o.t==='s')openSite(o.id,false,true);else if(o.t==='p')openProv(o.id,true);else if(o.t==='e')openEvent(o.i,true)}
+function reopen(){const o=openState;if(!o)return;if(o.t==='s')openSite(o.id,false,true);else if(o.t==='p')openProv(o.id,true);else if(o.t==='e')openEvent(o.i,true);else if(o.t==='q')openPol(o.id,true)}
 const ANS=ls.get('atlas.ans',{});
 function srcType(ft){return lang==='en'?({Material:'Material source',Iconografía:'Iconographic source',Texto:'Written source'}[ft]||ft):({Material:'Fuente material',Iconografía:'Fuente iconográfica',Texto:'Fuente escrita'}[ft]||ft)}
 function shuffle(n,seed){const a=[...Array(n).keys()];let x=seed>>>0;for(let i=n-1;i>0;i--){x=(x*9301+49297)%233280;const j=Math.floor(x/233280*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
@@ -463,6 +480,14 @@ function openProv(id,keep){const p=PBY[id];if(!p)return;openState={t:'p',id};sel
   h+=`<div class="note">${esc(t('provNote'))}</div>`;pc.innerHTML=h;showPanel();
   pc.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>openSite(b.dataset.s,true));
   if(!keep)flyTo(p.lab[0],p.lab[1],Math.max(cam.k,Math.min(5,1.4+60/Math.sqrt(p.area+1))));dirty=true}
+function openPol(i,keep){const E=eraOf(layerAt(Y));if(!E||!E.pols[i])return;const p=E.pols[i];openState={t:'q',id:i,era:E.id};selPol=i;selProv=null;selSite=null;
+  const inside=S.filter(s=>vis(s)&&hit.isPointInPath(p.path,s.xy[0],s.xy[1],'evenodd')).sort((a,b)=>a.year-b.year);
+  let h=`<div class="hero"><div class="chips"><span class="chip">${esc(t('polChip',{y:fmtY(eraY(E.id))}))}</span></div><h2>${esc(L(p.n))}</h2></div>`;
+  h+=`<div class="st">${esc(t('polSites'))}</div>`;
+  h+=inside.length?`<div class="pl">${inside.map(s=>`<button data-s="${s.id}">${shapeSVG(s.g,20)}<span><b>${esc(L(s.name))}</b><br><small class="note">${esc(t('tema',{n:s.tema}))}</small></span><span class="dd">${esc(L(s.date))}</span></button>`).join('')}</div>`:`<div class="c note">${esc(t('polNone'))}</div>`;
+  h+=`<div class="note">${esc(t('polNote'))}</div>`;pc.innerHTML=h;showPanel();
+  pc.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>openSite(b.dataset.s,true));
+  if(!keep)flyTo(p.lab[0],p.lab[1],Math.max(cam.k,Math.min(4,1.2+40/Math.sqrt(p.a*67.5+1))));dirty=true}
 function openEvent(i,keep){const v=EV[i];openState={t:'e',i};selProv=null;const sid=v.lugar;selSite=sid||null;
   let h=`<div class="hero"><div class="chips"><span class="chip">${esc(t('ev'))}</span><span class="chip">${esc(t('tema',{n:v.tema}))}</span></div><h2>${esc(L(v.t))}</h2><div class="date">${esc(L(v.date))}</div></div><div class="c"><p class="txt">${esc(L(v.d))}</p></div>`;
   if(sid)h+=`<div class="pl"><button id="evgo">${shapeSVG(SITE[sid].g,20)}<span><b>${esc(L(SITE[sid].name))}</b><br><small class="note">${esc(t('goSite'))}</small></span></button></div>`;

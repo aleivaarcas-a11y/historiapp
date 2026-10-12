@@ -159,6 +159,8 @@ for A in acont:
 out = {'v': datetime.date.today().isoformat(), 'civs': CIVS, 'lugares': sorted(lugares, key=lambda l: l['year']), 'acontecimientos': sorted(acont, key=lambda a: a['year'])}
 json.dump(out, open(os.path.join(APP, 'data', 'atlas.json'), 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))
 mp = {k: v for k, v in mapa.items() if k != 'proj'}
+_er = os.path.join(BASE, 'atlas_eras.json')
+if os.path.exists(_er): mp.update(json.load(open(_er, encoding='utf8')))  # mapa político por épocas (eras_build.py)
 json.dump(mp, open(os.path.join(APP, 'data', 'atlas_mapa.json'), 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))
 por = {}
 for l in lugares: por[l['tema']] = por.get(l['tema'], 0)+1
