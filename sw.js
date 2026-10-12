@@ -1,5 +1,5 @@
 /* Historiapp service worker (12-10-2026): instalación ligera y respuestas que no se quedan esperando a la red. */
-const VERSION = "historiapp-v100";
+const VERSION = "historiapp-v101";
 // solo lo imprescindible para abrir la app; juegos, atlas, temas e imágenes se guardan la primera vez que se usan
 const SHELL = ["./", "./index.html", "./manifest.json", "./data/temas.json", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png", "./fonts/Carlito-Regular.woff2", "./fonts/Carlito-Bold.woff2", "./fonts/Carlito-Italic.woff2", "./fonts/Carlito-BoldItalic.woff2", "./icons/logo_oro.png", "./icons/emblema_blanco.png", "./icons/emblema_oro.png"];
 self.addEventListener("install", e => {
