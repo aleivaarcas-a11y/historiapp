@@ -1,0 +1,865 @@
+{
+ "tema": 4,
+ "lugares": [
+  {
+   "id": "urso",
+   "civ": "his",
+   "lat": 37.24,
+   "lon": -5.1,
+   "name": {
+    "es": "Urso",
+    "en": "Urso"
+   },
+   "place": {
+    "es": "Osuna (Sevilla)",
+    "en": "Osuna (Seville)"
+   },
+   "date": {
+    "es": "44 a. C.",
+    "en": "44 BC"
+   },
+   "year": -44,
+   "text": {
+    "es": "La ley de la colonia de Urso obligaba a sus duunviros a dar cada año cuatro días de espectáculos, con 2.000 sestercios públicos, a los que el magistrado solía añadir dinero propio.",
+    "en": "The law of the colony of Urso required its duoviri to give four days of shows every year, with 2,000 sesterces of public money, to which the magistrate usually added his own."
+   },
+   "src": {
+    "type": "Texto",
+    "cap": {
+     "es": "Tabla de bronce de la ley de Urso, copia de época flavia (Museo Arqueológico Nacional)",
+     "en": "Bronze tablet of the law of Urso, Flavian copy (National Archaeological Museum)"
+    }
+   },
+   "ref": "",
+   "qs": [
+    {
+     "q": {
+      "es": "¿Qué obligaba la ley de la colonia de Urso a sus duunviros?",
+      "en": "What did the law of the colony of Urso require of its duoviri?"
+     },
+     "o": {
+      "es": [
+       "A dar cada año cuatro días de espectáculos",
+       "A construir un estadio de tipo griego",
+       "A prohibir los combates de gladiadores"
+      ],
+      "en": [
+       "To give four days of shows every year",
+       "To build a Greek-style stadium",
+       "To ban gladiatorial combats"
+      ]
+     }
+    },
+    {
+     "q": {
+      "es": "¿Quién pagaba unos juegos romanos?",
+      "en": "Who paid for Roman games?"
+     },
+     "o": {
+      "es": [
+       "El editor, con dinero público al que solía añadir el suyo",
+       "Solo el emperador, siempre",
+       "Los propios gladiadores"
+      ],
+      "en": [
+       "The editor, with public money to which he usually added his own",
+       "Only the emperor, always",
+       "The gladiators themselves"
+      ]
+     }
+    }
+   ],
+   "fichas": [],
+   "imgs": [],
+   "vids": []
+  },
+  {
+   "id": "emerita",
+   "civ": "his",
+   "lat": 38.92,
+   "lon": -6.34,
+   "name": {
+    "es": "Augusta Emerita",
+    "en": "Augusta Emerita"
+   },
+   "place": {
+    "es": "Mérida, capital de Lusitania",
+    "en": "Mérida, capital of Lusitania"
+   },
+   "date": {
+    "es": "s. I-II d. C.",
+    "en": "1st-2nd c. AD"
+   },
+   "year": 60,
+   "text": {
+    "es": "En el podio del anfiteatro de Mérida se conserva la pintura de un venator frente a una leona. De Lusitania procedía Diocles, el auriga liberto que corrió de 122 a 146 d. C. y sumó 35.863.120 sestercios en premios.",
+    "en": "The podium of the amphitheatre of Mérida preserves the painting of a venator facing a lioness. Diocles, the freedman charioteer who raced from AD 122 to 146 and won 35,863,120 sesterces in prizes, came from Lusitania."
+   },
+   "src": {
+    "type": "Iconografía",
+    "cap": {
+     "es": "Venator frente a una leona, anfiteatro de Mérida, s. I d. C.",
+     "en": "Venator facing a lioness, amphitheatre of Mérida, 1st c. AD"
+    }
+   },
+   "ref": "Álvarez Martínez y Nogales Basarrate (2005)",
+   "qs": [
+    {
+     "q": {
+      "es": "¿Qué muestra la pintura hallada en 1979 en el podio del anfiteatro de Mérida?",
+      "en": "What does the painting found in 1979 on the podium of the Mérida amphitheatre show?"
+     },
+     "o": {
+      "es": [
+       "Un venator frente a una leona",
+       "Una naumaquia",
+       "Una carrera de cuadrigas"
+      ],
+      "en": [
+       "A venator facing a lioness",
+       "A naumachia",
+       "A four-horse chariot race"
+      ]
+     }
+    },
+    {
+     "q": {
+      "es": "Diocles, auriga liberto de Lusitania, ¿cuántas carreras ganó?",
+      "en": "How many races did Diocles, the freedman charioteer from Lusitania, win?"
+     },
+     "o": {
+      "es": [
+       "1.462 de 4.257",
+       "12 de 20",
+       "Todas las que corrió"
+      ],
+      "en": [
+       "1,462 out of 4,257",
+       "12 out of 20",
+       "Every race he ran"
+      ]
+     }
+    }
+   ],
+   "fichas": [],
+   "imgs": [],
+   "vids": []
+  },
+  {
+   "id": "tarquinia",
+   "civ": "etr",
+   "lat": 42.25,
+   "lon": 11.76,
+   "name": {
+    "es": "Tarquinia",
+    "en": "Tarquinia"
+   },
+   "place": {
+    "es": "Necrópolis etrusca",
+    "en": "Etruscan necropolis"
+   },
+   "date": {
+    "es": "h. 550-400 a. C.",
+    "en": "c. 550-400 BC"
+   },
+   "year": -530,
+   "text": {
+    "es": "De unas seis mil tumbas solo unas doscientas están pintadas, en torno al 2 %. En la Tumba de los Augures aparece el juego del phersu, y en la de las Bigas, hombres y mujeres mezclados en gradas con toldos.",
+    "en": "Of some six thousand tombs only about two hundred are painted, around 2%. The Tomb of the Augurs shows the phersu game, and the Tomb of the Bigae men and women mixed on stands with awnings."
+   },
+   "src": {
+    "type": "Iconografía",
+    "cap": {
+     "es": "Juego del phersu, Tumba de los Augures, h. 530 a. C.",
+     "en": "The phersu game, Tomb of the Augurs, c. 530 BC"
+    }
+   },
+   "ref": "Thuillier (2013); Bevagna (2014)",
+   "qs": [
+    {
+     "q": {
+      "es": "¿Qué proporción de las tumbas de Tarquinia está pintada?",
+      "en": "What share of the tombs of Tarquinia is painted?"
+     },
+     "o": {
+      "es": [
+       "En torno al 2 %",
+       "La mitad",
+       "Todas"
+      ],
+      "en": [
+       "Around 2%",
+       "Half",
+       "All of them"
+      ]
+     }
+    },
+    {
+     "q": {
+      "es": "¿Qué muestra la Tumba de las Bigas?",
+      "en": "What does the Tomb of the Bigae show?"
+     },
+     "o": {
+      "es": [
+       "Espectadores nobles, hombres y mujeres, en gradas de madera con toldos",
+       "Un combate de gladiadores",
+       "Una naumaquia"
+      ],
+      "en": [
+       "Noble spectators, men and women, on wooden stands with awnings",
+       "A gladiatorial combat",
+       "A naumachia"
+      ]
+     }
+    },
+    {
+     "q": {
+      "es": "¿Dónde sitúa hoy la mayoría de autores el origen de los gladiadores?",
+      "en": "Where do most authors today place the origin of gladiators?"
+     },
+     "o": {
+      "es": [
+       "En el sur de Italia",
+       "En Etruria",
+       "En Egipto"
+      ],
+      "en": [
+       "In southern Italy",
+       "In Etruria",
+       "In Egypt"
+      ]
+     }
+    }
+   ],
+   "fichas": [],
+   "imgs": [],
+   "vids": []
+  },
+  {
+   "id": "chiusi",
+   "civ": "etr",
+   "lat": 43.02,
+   "lon": 11.95,
+   "name": {
+    "es": "Chiusi",
+    "en": "Chiusi"
+   },
+   "place": {
+    "es": "Tumba del Colle Casuccini",
+    "en": "Tomb of Colle Casuccini"
+   },
+   "date": {
+    "es": "h. 460-450 a. C. (cronología discutida)",
+    "en": "c. 460-450 BC (disputed chronology)"
+   },
+   "year": -455,
+   "text": {
+    "es": "Las carreras de carros fueron una de las actividades predilectas de los etruscos. El auriga romano conducía con las riendas atadas a la cintura, como los etruscos.",
+    "en": "Chariot races were one of the Etruscans' favourite activities. The Roman charioteer drove with the reins tied round his waist, like the Etruscans."
+   },
+   "src": {
+    "type": "Iconografía",
+    "cap": {
+     "es": "Carrera de carros, Tumba del Colle Casuccini, Chiusi",
+     "en": "Chariot race, Tomb of Colle Casuccini, Chiusi"
+    }
+   },
+   "ref": "",
+   "qs": [
+    {
+     "q": {
+      "es": "¿Cómo llevaban las riendas los aurigas etruscos, y después los romanos?",
+      "en": "How did Etruscan, and later Roman, charioteers hold the reins?"
+     },
+     "o": {
+      "es": [
+       "Atadas a la cintura",
+       "Sujetas con los dientes",
+       "Sin riendas, a la voz"
+      ],
+      "en": [
+       "Tied round the waist",
+       "Held in the teeth",
+       "Without reins, by voice"
+      ]
+     }
+    }
+   ],
+   "fichas": [],
+   "imgs": [],
+   "vids": []
+  },
+  {
+   "id": "murlo",
+   "civ": "etr",
+   "lat": 43.17,
+   "lon": 11.39,
+   "name": {
+    "es": "Murlo",
+    "en": "Murlo"
+   },
+   "place": {
+    "es": "Toscana",
+    "en": "Tuscany"
+   },
+   "date": {
+    "es": "h. 600 a. C.",
+    "en": "c. 600 BC"
+   },
+   "year": -600,
+   "text": {
+    "es": "Las placas de Murlo documentan carreras de caballos con jinete, que después apenas vuelven a representarse en Etruria.",
+    "en": "The Murlo plaques record horse races with riders, which are hardly ever shown again in Etruria."
+   },
+   "src": {
+    "type": "Iconografía",
+    "cap": {
+     "es": "Placas de Murlo",
+     "en": "Murlo plaques"
+    }
+   },
+   "ref": "",
+   "qs": [
+    {
+     "q": {
+      "es": "¿Qué documentan sobre todo las placas de Murlo?",
+      "en": "What do the Murlo plaques mainly record?"
+     },
+     "o": {
+      "es": [
+       "Carreras de caballos con jinete",
+       "Combates de lucha",
+       "Saltos al agua"
+      ],
+      "en": [
+       "Horse races with riders",
+       "Wrestling bouts",
+       "Dives into water"
+      ]
+     }
+    }
+   ],
+   "fichas": [],
+   "imgs": [],
+   "vids": []
+  },
+  {
+   "id": "roma",
+   "civ": "rom",
+   "lat": 41.89,
+   "lon": 12.49,
+   "name": {
+    "es": "Roma",
+    "en": "Rome"
+   },
+   "place": {
+    "es": "Anfiteatro Flavio y Circo Máximo",
+    "en": "Flavian Amphitheatre and Circus Maximus"
+   },
+   "date": {
+    "es": "264 a. C. - 216 d. C.",
+    "en": "264 BC - AD 216"
+   },
+   "year": 80,
+   "text": {
+    "es": "Los combates de gladiadores empezaron en 264 a. C. con tres parejas de esclavos en unas honras fúnebres. El Anfiteatro Flavio se inauguró en 80 d. C. con cien días de juegos, y en el Circo Máximo cada carrera daba siete vueltas.",
+    "en": "Gladiatorial combats began in 264 BC with three pairs of slaves at a funeral. The Flavian Amphitheatre opened in AD 80 with a hundred days of games, and in the Circus Maximus each race ran seven laps."
+   },
+   "src": {
+    "type": "Material",
+    "cap": {
+     "es": "Anfiteatro Flavio, 72-80 d. C.",
+     "en": "Flavian Amphitheatre, AD 72-80"
+    }
+   },
+   "ref": "",
+   "qs": [
+    {
+     "q": {
+      "es": "¿Cómo empezaron los combates de gladiadores en Roma?",
+      "en": "How did gladiatorial combats begin in Rome?"
+     },
+     "o": {
+      "es": [
+       "En 264 a. C., con tres parejas de esclavos en unas honras fúnebres",
+       "En 776 a. C., en el Circo",
+       "En 80 d. C., al inaugurarse el Coliseo"
+      ],
+      "en": [
+       "In 264 BC, with three pairs of slaves at a funeral",
+       "In 776 BC, in the Circus",
+       "In AD 80, when the Colosseum opened"
+      ]
+     }
+    },
+    {
+     "q": {
+      "es": "¿Cuántos días de juegos inauguraron el Anfiteatro Flavio?",
+      "en": "How many days of games opened the Flavian Amphitheatre?"
+     },
+     "o": {
+      "es": [
+       "Cien",
+       "Siete",
+       "Uno"
+      ],
+      "en": [
+       "A hundred",
+       "Seven",
+       "One"
+      ]
+     }
+    },
+    {
+     "q": {
+      "es": "¿Cuántas vueltas daba cada carrera del Circo Máximo?",
+      "en": "How many laps did each race in the Circus Maximus run?"
+     },
+     "o": {
+      "es": [
+       "Siete",
+       "Doce",
+       "Dos"
+      ],
+      "en": [
+       "Seven",
+       "Twelve",
+       "Two"
+      ]
+     }
+    },
+    {
+     "q": {
+      "es": "¿Qué instituyó Domiciano en 86 d. C.?",
+      "en": "What did Domitian establish in AD 86?"
+     },
+     "o": {
+      "es": [
+       "Los Juegos Capitolinos, con el primer estadio permanente de Roma",
+       "Las Termas de Caracalla",
+       "Los combates de gladiadores"
+      ],
+      "en": [
+       "The Capitoline Games, with Rome's first permanent stadium",
+       "The Baths of Caracalla",
+       "Gladiatorial combats"
+      ]
+     }
+    }
+   ],
+   "fichas": [],
+   "imgs": [],
+   "vids": [],
+   "prov": "Latium et Campania"
+  },
+  {
+   "id": "campania",
+   "civ": "rom",
+   "lat": 40.95,
+   "lon": 14.25,
+   "name": {
+    "es": "Capua y Pompeya",
+    "en": "Capua and Pompeii"
+   },
+   "place": {
+    "es": "Campania",
+    "en": "Campania"
+   },
+   "date": {
+    "es": "ss. I a. C. - I d. C.",
+    "en": "1st c. BC - 1st c. AD"
+   },
+   "year": -73,
+   "text": {
+    "es": "La escuela de gladiadores de Capua funcionaba ya en 105 a. C., y de ella se fugó Espartaco en 73 a. C. En el cuartel de gladiadores de Pompeya se hallaron quince cascos.",
+    "en": "The gladiator school of Capua was already working in 105 BC, and Spartacus escaped from it in 73 BC. Fifteen helmets were found in the gladiators' barracks at Pompeii."
+   },
+   "src": {
+    "type": "Texto",
+    "cap": {
+     "es": "Programa de un munus pintado en una pared de Pompeya (edictum muneris)",
+     "en": "Programme of a munus painted on a wall at Pompeii (edictum muneris)"
+    }
+   },
+   "ref": "",
+   "qs": [
+    {
+     "q": {
+      "es": "¿Quién se fugó de la escuela de gladiadores de Capua en 73 a. C.?",
+      "en": "Who escaped from the gladiator school of Capua in 73 BC?"
+     },
+     "o": {
+      "es": [
+       "Espartaco",
+       "Diocles",
+       "Nerón"
+      ],
+      "en": [
+       "Spartacus",
+       "Diocles",
+       "Nero"
+      ]
+     }
+    },
+    {
+     "q": {
+      "es": "¿Cuántos cascos se hallaron en el cuartel de gladiadores de Pompeya?",
+      "en": "How many helmets were found in the gladiators' barracks at Pompeii?"
+     },
+     "o": {
+      "es": [
+       "Quince",
+       "Mil",
+       "Ninguno"
+      ],
+      "en": [
+       "Fifteen",
+       "A thousand",
+       "None"
+      ]
+     }
+    }
+   ],
+   "fichas": [],
+   "imgs": [],
+   "vids": []
+  },
+  {
+   "id": "sicilia",
+   "civ": "rom",
+   "lat": 37.37,
+   "lon": 14.33,
+   "name": {
+    "es": "Villa del Casale",
+    "en": "Villa del Casale"
+   },
+   "place": {
+    "es": "Piazza Armerina (Sicilia)",
+    "en": "Piazza Armerina (Sicily)"
+   },
+   "date": {
+    "es": "s. IV d. C.",
+    "en": "4th c. AD"
+   },
+   "year": 350,
+   "text": {
+    "es": "En el mosaico de la Villa del Casale las muchachas corren, saltan con pesas y juegan a la pelota, y alguna lleva una palma. Queda abierta la pregunta de si es deporte femenino o espectáculo.",
+    "en": "In the mosaic of the Villa del Casale the girls run, jump with weights and play ball, and one holds a palm. Whether this is women's sport or spectacle remains an open question."
+   },
+   "src": {
+    "type": "Iconografía",
+    "cap": {
+     "es": "Mosaico de las muchachas, Villa del Casale",
+     "en": "Mosaic of the girls, Villa del Casale"
+    }
+   },
+   "ref": "Kyle (2014)",
+   "qs": [
+    {
+     "q": {
+      "es": "¿Qué hacen las muchachas del mosaico de la Villa del Casale?",
+      "en": "What do the girls in the Villa del Casale mosaic do?"
+     },
+     "o": {
+      "es": [
+       "Corren, saltan con pesas y juegan a la pelota",
+       "Luchan como gladiadoras",
+       "Conducen cuadrigas"
+      ],
+      "en": [
+       "They run, jump with weights and play ball",
+       "They fight as gladiators",
+       "They drive four-horse chariots"
+      ]
+     }
+    }
+   ],
+   "fichas": [],
+   "imgs": [],
+   "vids": []
+  },
+  {
+   "id": "zliten",
+   "civ": "rom",
+   "lat": 32.47,
+   "lon": 14.57,
+   "name": {
+    "es": "Zliten",
+    "en": "Zliten"
+   },
+   "place": {
+    "es": "Libia",
+    "en": "Libya"
+   },
+   "date": {
+    "es": "h. 200 d. C.",
+    "en": "c. AD 200"
+   },
+   "year": 200,
+   "text": {
+    "es": "El mosaico de Zliten muestra combates de gladiadores. El reciario, armado con red, tridente y daga, combatía sin escudo y a cara descubierta, con un equipo de 7-8 kg.",
+    "en": "The Zliten mosaic shows gladiatorial combats. The retiarius, armed with net, trident and dagger, fought without shield and bare-faced, with equipment of 7-8 kg."
+   },
+   "src": {
+    "type": "Iconografía",
+    "cap": {
+     "es": "Gladiadores en el mosaico de Zliten (Museo Arqueológico de Trípoli)",
+     "en": "Gladiators in the Zliten mosaic (Archaeological Museum of Tripoli)"
+    }
+   },
+   "ref": "",
+   "qs": [
+    {
+     "q": {
+      "es": "¿Con qué combatía el reciario?",
+      "en": "What did the retiarius fight with?"
+     },
+     "o": {
+      "es": [
+       "Con red, tridente y daga, sin escudo",
+       "Con dos machetes",
+       "Desde un carro ligero"
+      ],
+      "en": [
+       "Net, trident and dagger, without a shield",
+       "Two machetes",
+       "From a light chariot"
+      ]
+     }
+    },
+    {
+     "q": {
+      "es": "¿Qué fijó un senadoconsulto de Marco Aurelio en 177 d. C.?",
+      "en": "What did a decree of the senate under Marcus Aurelius fix in AD 177?"
+     },
+     "o": {
+      "es": [
+       "Precios máximos para los gladiadores",
+       "La prohibición de los juegos",
+       "El número de vueltas del circo"
+      ],
+      "en": [
+       "Maximum prices for gladiators",
+       "A ban on the games",
+       "The number of laps in the circus"
+      ]
+     }
+    }
+   ],
+   "fichas": [],
+   "imgs": [],
+   "vids": []
+  },
+  {
+   "id": "efeso",
+   "civ": "rom",
+   "lat": 37.94,
+   "lon": 27.34,
+   "name": {
+    "es": "Éfeso",
+    "en": "Ephesus"
+   },
+   "place": {
+    "es": "Asia Menor (Turquía)",
+    "en": "Asia Minor (Turkey)"
+   },
+   "date": {
+    "es": "ss. II-III d. C.",
+    "en": "2nd-3rd c. AD"
+   },
+   "year": 200,
+   "text": {
+    "es": "El cementerio de gladiadores de Éfeso reúne al menos 68 individuos, casi todos varones de 20 a 30 años. Comían cereal, muchas legumbres y poca carne, quizá con un suplemento de calcio, y un 16 % tiene heridas craneales curadas.",
+    "en": "The gladiators' cemetery at Ephesus holds at least 68 individuals, almost all men aged 20 to 30. They ate cereals, many pulses and little meat, perhaps with a calcium supplement, and 16% have healed skull injuries."
+   },
+   "src": {
+    "type": "Material",
+    "cap": {
+     "es": "Cementerio de gladiadores de Éfeso",
+     "en": "Gladiators' cemetery at Ephesus"
+    }
+   },
+   "ref": "Lösch et al. (2014); Kanz y Grossschmidt (2006)",
+   "qs": [
+    {
+     "q": {
+      "es": "¿Qué revelan los huesos de los gladiadores de Éfeso sobre su dieta?",
+      "en": "What do the bones of the Ephesus gladiators reveal about their diet?"
+     },
+     "o": {
+      "es": [
+       "Cereal, muchas legumbres y poca carne, quizá con un suplemento de calcio",
+       "Mucha carne roja",
+       "Solo pescado"
+      ],
+      "en": [
+       "Cereals, many pulses and little meat, perhaps with a calcium supplement",
+       "A lot of red meat",
+       "Only fish"
+      ]
+     }
+    },
+    {
+     "q": {
+      "es": "¿Qué porcentaje de los gladiadores de Éfeso tiene heridas craneales curadas?",
+      "en": "What share of the Ephesus gladiators have healed skull injuries?"
+     },
+     "o": {
+      "es": [
+       "Un 16 %",
+       "Un 90 %",
+       "Ninguno"
+      ],
+      "en": [
+       "16%",
+       "90%",
+       "None"
+      ]
+     }
+    }
+   ],
+   "fichas": [],
+   "imgs": [],
+   "vids": []
+  },
+  {
+   "id": "constantinopla",
+   "civ": "rom",
+   "lat": 41.01,
+   "lon": 28.98,
+   "name": {
+    "es": "Constantinopla",
+    "en": "Constantinople"
+   },
+   "place": {
+    "es": "Hipódromo",
+    "en": "Hippodrome"
+   },
+   "date": {
+    "es": "ss. IV-VI d. C.",
+    "en": "4th-6th c. AD"
+   },
+   "year": 532,
+   "text": {
+    "es": "Mientras Occidente perdía sus juegos, el hipódromo de Constantinopla siguió con Azules y Verdes. En la revuelta Nika de 532 ambos se unieron, y la represión dejó unos treinta mil muertos en el propio hipódromo.",
+    "en": "While the West was losing its games, the hippodrome of Constantinople carried on with Blues and Greens. In the Nika riot of 532 both joined forces, and the repression left some thirty thousand dead in the hippodrome itself."
+   },
+   "src": {
+    "type": "Iconografía",
+    "cap": {
+     "es": "Teodosio y su corte en el palco del hipódromo, h. 390 d. C.",
+     "en": "Theodosius and his court in the hippodrome box, c. AD 390"
+    }
+   },
+   "ref": "Parnell (2014)",
+   "qs": [
+    {
+     "q": {
+      "es": "¿Qué ocurrió en la revuelta Nika de 532?",
+      "en": "What happened in the Nika riot of 532?"
+     },
+     "o": {
+      "es": [
+       "Azules y Verdes se unieron contra el emperador y la represión dejó unos treinta mil muertos",
+       "Se prohibieron las carreras",
+       "Se trasladaron los Juegos de Olimpia"
+      ],
+      "en": [
+       "Blues and Greens joined against the emperor and the repression left some thirty thousand dead",
+       "Races were banned",
+       "The Olympic Games were moved"
+      ]
+     }
+    },
+    {
+     "q": {
+      "es": "¿Adónde se llevó la estatua de Zeus de Olimpia hacia 420-440 d. C.?",
+      "en": "Where was the statue of Zeus from Olympia taken around AD 420-440?"
+     },
+     "o": {
+      "es": [
+       "A Constantinopla",
+       "A Roma",
+       "A Alejandría"
+      ],
+      "en": [
+       "To Constantinople",
+       "To Rome",
+       "To Alexandria"
+      ]
+     }
+    }
+   ],
+   "fichas": [],
+   "imgs": [],
+   "vids": [],
+   "prov": "Thracia"
+  }
+ ],
+ "acontecimientos": [
+  {
+   "year": -264,
+   "date": {
+    "es": "264 a. C.",
+    "en": "264 BC"
+   },
+   "title": {
+    "es": "El primer munus de Roma",
+    "en": "Rome's first munus"
+   },
+   "text": {
+    "es": "Tres parejas de esclavos combaten en el Foro Boario en las honras fúnebres de un noble.",
+    "en": "Three pairs of slaves fight in the Forum Boarium at a nobleman's funeral."
+   },
+   "lugar": "roma"
+  },
+  {
+   "year": -73,
+   "date": {
+    "es": "73 a. C.",
+    "en": "73 BC"
+   },
+   "title": {
+    "es": "La fuga de Espartaco",
+    "en": "The escape of Spartacus"
+   },
+   "text": {
+    "es": "Espartaco escapa de la escuela de gladiadores de Capua, que funcionaba ya en 105 a. C.",
+    "en": "Spartacus escapes from the gladiator school of Capua, already working in 105 BC."
+   },
+   "lugar": "campania"
+  },
+  {
+   "year": 80,
+   "date": {
+    "es": "80 d. C.",
+    "en": "AD 80"
+   },
+   "title": {
+    "es": "Se inaugura el Anfiteatro Flavio",
+    "en": "The Flavian Amphitheatre opens"
+   },
+   "text": {
+    "es": "Tito abre el anfiteatro con cien días de juegos.",
+    "en": "Titus opens the amphitheatre with a hundred days of games."
+   },
+   "lugar": "roma"
+  },
+  {
+   "year": 532,
+   "date": {
+    "es": "532 d. C.",
+    "en": "AD 532"
+   },
+   "title": {
+    "es": "La revuelta Nika",
+    "en": "The Nika riot"
+   },
+   "text": {
+    "es": "Azules y Verdes se unen contra el emperador en el hipódromo de Constantinopla, y la represión deja unos treinta mil muertos.",
+    "en": "Blues and Greens join against the emperor in the hippodrome of Constantinople, and the repression leaves some thirty thousand dead."
+   },
+   "lugar": "constantinopla"
+  }
+ ]
+}
