@@ -894,6 +894,7 @@ const S = {
   prog: load("historiapp.progress", {xp:0, streak:0, lastDay:null, seen:{}, badges:{}, gl:{}, daily:{}})
 };
 function load(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
+(function(){ try{ for(let i=localStorage.length-1;i>=0;i--){ const k=localStorage.key(i); if(k&&/^historiapp\.tema\.\d+$/.test(k)) localStorage.removeItem(k); } }catch(_){} })();
 function save(){try{localStorage.setItem("historiapp.progress",JSON.stringify(S.prog));}catch(e){}}
 function t(key,vars){ let s=key.split(".").reduce((o,k)=>o&&o[k],I18N[S.lang||"es"]); if(s==null) s=key; if(vars) for(const k in vars) s=s.replace("{"+k+"}",vars[k]); return s; }
 function L(obj){ return obj ? (obj[S.lang] || obj.es || "") : ""; }
@@ -951,7 +952,7 @@ async function getIndex(){
 async function getTema(num){
   if(S.temaCache[num]) return S.temaCache[num];
   const idx=await getIndex(); const meta=idx.temas.find(x=>x.num===num);
-  let d; try{ d=await fetchJSON(meta.file); localStorage.setItem("historiapp.tema."+num,JSON.stringify(d)); }
+  let d; try{ d=await fetchJSON(meta.file); try{ localStorage.removeItem("historiapp.tema."+num); }catch(_){} }
   catch(e){ d=load("historiapp.tema."+num,null); if(!d) throw e; }
   S.temaCache[num]=d; return d;
 }
@@ -1043,11 +1044,12 @@ async function fillTemaGrid(box,short){
       if(m.available){ b.className="tcard"; if(TEMA_IMG[m.num]) b.style.backgroundImage=`url('${TEMA_IMG[m.num]}')`;
         b.innerHTML=`<div class="ring">${ringSVG(temaPct(m.num))}</div><div class="tx"><small>${t("tema")} ${m.num}</small><b>${ttl}</b></div>`;
         b.onclick=()=>nav({name:"tema",num:m.num});
-        if(!S.temaCache[m.num]) getTema(m.num).then(()=>{ const r=b.querySelector(".ring"); if(r) r.innerHTML=ringSVG(temaPct(m.num)); }).catch(()=>{});
+        if(!S.temaCache[m.num]) setTimeout(()=>{ if(!b.isConnected) return; getTema(m.num).then(()=>{ const r=b.querySelector(".ring"); if(r) r.innerHTML=ringSVG(temaPct(m.num)); }).catch(()=>{}); },1500+m.num*700);
       } else { b.className="tcard locked"; b.innerHTML=`<div class="big">${m.num}</div><div class="lk" aria-label="${esc(t("soon"))}">🔒</div><div class="tx"><small>${t("tema")} ${m.num} · ${t("soon")}</small><b>${ttl}</b></div>`; b.onclick=()=>toast(t("locked"),2200); }
       box.appendChild(b); }
   }catch(e){ box.innerHTML=`<div class="empty">${t("loadError")}</div>`; }
 }
+const homeWait=ms=>new Promise(r=>setTimeout(r,ms));
 async function renderHome(){
   const lvl=levelOf(S.prog.xp), nextXP=LEVEL_XP[lvl+1]||LEVEL_XP[lvl], prevXP=LEVEL_XP[lvl];
   const pct=LEVEL_XP[lvl+1]?Math.round((S.prog.xp-prevXP)/(nextXP-prevXP)*100):100;
@@ -1083,14 +1085,16 @@ async function renderHome(){
     if(!document.getElementById("contBox")) return;
     box.innerHTML=`<button class="cont" id="contBtn"><div class="pl">▶</div><div><small>${t("contTitle")} · ${esc(sub)}</small><b>${esc(label)}</b></div></button>`;
     document.getElementById("contBtn").onclick=()=>{ const v={name:l.name,num:l.num,mode:l.mode,f:l.f,id:l.id,sec:l.sec}; Object.keys(v).forEach(k=>v[k]===undefined&&delete v[k]); nav(v); }; })();
-  // deporte del día
-  try{ const D=await getEnc(); const E=D.entries; if(E.length&&document.getElementById("hoy")===hoy){ const e=encDaily(E); const c=sDep; c.setAttribute("role","button");
+  // deporte del día (se guarda el de hoy para no leer la enciclopedia entera en cada arranque)
+  try{ let e=null; const ch=load("historiapp.encHoy",null); if(ch&&ch.d===todayKey()) e=ch.e; else { await homeWait(900); const D=await getEnc(); const E=D.entries; if(E.length){ const x=encDaily(E); e={id:x.id,name:x.name,cuando:x.cuando,img:x.img&&x.img.src?{src:x.img.src}:null}; try{ localStorage.setItem("historiapp.encHoy",JSON.stringify({d:todayKey(),e})); }catch(_){} } }
+    if(e&&document.getElementById("hoy")===hoy){ const c=sDep; c.setAttribute("role","button");
     if(e.img&&e.img.src) c.style.backgroundImage=`url('${e.img.src}')`;
     c.innerHTML=`<div class="ov"></div><small>🏅 ${t("encCard")}</small><b>${esc(L(e.name))}</b><span class="w">${esc(String(L(e.cuando)).replace(/\*+/g,""))}</span>`; c.style.display="";
     c.onclick=()=>nav({name:"enc",id:e.id,back:{name:"home"}});
     } }catch(e){}
   // tal día como hoy
-  try{ const F=await getEfe(); const k=mmdd(new Date()); if(F&&F[k]&&document.getElementById("hoy")===hoy){ const f=F[k]; const c=sEfe; c.setAttribute("role","button");
+  try{ const k=mmdd(new Date()); let f=null; const ch=load("historiapp.efeHoy",null); if(ch&&ch.d===k) f=ch.f; else { await homeWait(300); const F=await getEfe(); f=F&&F[k]||null; if(f) try{ localStorage.setItem("historiapp.efeHoy",JSON.stringify({d:k,f})); }catch(_){} }
+    if(f&&document.getElementById("hoy")===hoy){ const c=sEfe; c.setAttribute("role","button");
     c.innerHTML=`<small>📅 ${t("efeCard")}</small><div class="yr">${esc(String(f.year||""))}</div><div class="dd">${esc(fmtDay(k))}</div><div class="tx">${md(L(f))}</div>`;
     c.onclick=()=>nav({name:"efe"}); c.style.display=""; } }catch(e){}
 

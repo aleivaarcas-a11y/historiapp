@@ -1,23 +1,49 @@
-/* Historiapp service worker: app shell cached on install; data and images cached as they are used. */
-const VERSION = "historiapp-v88";
-const SHELL = ["./", "./index.html", "./atlas/index.html", "./juegos/pentatlon.html", "./juegos/halterios.html", "./juegos/senet.html", "./juegos/agon.html", "./juegos/cuadrigas.html", "./juegos/gladiatura.html", "./img/juegos/pentatlon.jpg", "./img/juegos/halterios.jpg", "./img/juegos/senet.jpg", "./img/juegos/agon.jpg", "./img/juegos/cuadrigas.jpg", "./img/juegos/gladiatura.jpg", "./manifest.json", "./data/temas.json", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png", "./fonts/Carlito-Regular.woff2", "./fonts/Carlito-Bold.woff2", "./fonts/Carlito-Italic.woff2", "./fonts/Carlito-BoldItalic.woff2", "./icons/logo_oro.png", "./icons/emblema_blanco.png", "./icons/emblema_oro.png"];
+/* Historiapp service worker (12-10-2026): instalación ligera y respuestas que no se quedan esperando a la red. */
+const VERSION = "historiapp-v89";
+// solo lo imprescindible para abrir la app; juegos, atlas, temas e imágenes se guardan la primera vez que se usan
+const SHELL = ["./", "./index.html", "./manifest.json", "./data/temas.json", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png", "./fonts/Carlito-Regular.woff2", "./fonts/Carlito-Bold.woff2", "./fonts/Carlito-Italic.woff2", "./fonts/Carlito-BoldItalic.woff2", "./icons/logo_oro.png", "./icons/emblema_blanco.png", "./icons/emblema_oro.png"];
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
 });
 self.addEventListener("activate", e => {
-  e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k !== VERSION).map(k => caches.delete(k)))).then(() => self.clients.claim()));
+  // se conservan los archivos ya guardados de la versión anterior (juegos, temas) para no volver a descargarlos
+  e.waitUntil(caches.keys().then(async keys => {
+    const cur = await caches.open(VERSION);
+    for (const k of keys) {
+      if (k === VERSION) continue;
+      if (k.startsWith("historiapp-")) {
+        const old = await caches.open(k);
+        for (const req of await old.keys()) { if (!(await cur.match(req))) { const r = await old.match(req); if (r) await cur.put(req, r); } }
+      }
+      await caches.delete(k);
+    }
+  }).then(() => self.clients.claim()));
 });
+const put = (req, res) => { if (res && res.ok && res.status === 200) { const copy = res.clone(); caches.open(VERSION).then(c => c.put(req, copy)); } return res; };
+const fromNet = req => fetch(new Request(req.url, { cache: "no-cache", credentials: "same-origin" })).then(r => put(req, r));
 self.addEventListener("fetch", e => {
-  const url = new URL(e.request.url);
-  if (e.request.method !== "GET" || url.origin !== location.origin) return;
-  // videos stream straight from the network (range requests), never cached on the phone
-  if (/\.(mp4|m4a|mp3)$/.test(url.pathname)) return;
-  const isData = url.pathname.endsWith(".json") || url.pathname.endsWith(".html") || url.pathname.endsWith("/");
-  if (isData) {
-    // network first, fall back to cache (so new content arrives as soon as it is published)
-    e.respondWith(fetch(new Request(e.request.url, { cache: "no-cache", credentials: "same-origin" })).then(r => { const copy = r.clone(); caches.open(VERSION).then(c => c.put(e.request, copy)); return r; }).catch(() => caches.match(e.request, { ignoreSearch: true })));
+  const req = e.request, url = new URL(req.url);
+  if (req.method !== "GET" || url.origin !== location.origin) return;
+  if (/\.(mp4|m4a|mp3)$/.test(url.pathname)) return;   // vídeo y audio, siempre de la red
+  const p = url.pathname;
+  const heavy = /\/juegos\/|\/atlas\/|enciclopedia\.json$|efemerides\.json$|curiosidades\.json$|atlas(_mapa)?\.json$/.test(p);
+  const isData = p.endsWith(".json") || p.endsWith(".html") || p.endsWith("/");
+  if (heavy) {
+    // archivos grandes: se abre al momento la copia guardada y se actualiza por detrás
+    e.respondWith(caches.match(req, { ignoreSearch: true }).then(hit => {
+      const net = fromNet(req).catch(() => hit);
+      if (hit) { e.waitUntil(net.catch(() => {})); return hit; }
+      return net;
+    }));
+  } else if (isData) {
+    // la red primero, pero si tarda más de 3,5 s se usa la copia guardada
+    e.respondWith(caches.match(req, { ignoreSearch: true }).then(hit => {
+      const net = fromNet(req);
+      if (!hit) return net;
+      const late = new Promise(res => setTimeout(() => res(hit), 3500));
+      return Promise.race([net.catch(() => hit), late]);
+    }));
   } else {
-    // cache first for images and static files
-    e.respondWith(caches.match(e.request).then(hit => hit || fetch(e.request).then(r => { const copy = r.clone(); caches.open(VERSION).then(c => c.put(e.request, copy)); return r; })));
+    e.respondWith(caches.match(req).then(hit => hit || fetch(req).then(r => put(req, r))));
   }
 });
