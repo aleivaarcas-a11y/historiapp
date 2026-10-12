@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
+<meta name="author" content="Alejandro Leiva Arcas">
+<meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#2a1d14">
+<title>Taurocatapsia</title>
+<style>
+:root{--cal:#f3e8cf;--ocre:#b4472b;--ocreD:#86301b;--azul:#2c6a96;--azulD:#1d3c58;--amar:#dca23a;--negro:#231a14;--serif:"Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;background:#2a1d14;overflow:hidden;font-family:var(--serif);color:var(--negro);-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;touch-action:manipulation}
+#cv{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none}
+#st{position:fixed;pointer-events:none}
+#st > *{pointer-events:auto}
+button{font-family:var(--serif);cursor:pointer;-webkit-appearance:none;appearance:none}
+.btn{min-height:44px;padding:8px 18px;border-radius:8px;border:2px solid var(--negro);background:var(--cal);color:var(--negro);font-size:16px;font-weight:600;box-shadow:0 3px 0 var(--negro);letter-spacing:.02em}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--negro)}
+.btn.pri{background:var(--ocre);color:#fff8ea}
+.btn.az{background:var(--azul);color:#fff8ea}
+.btn[disabled]{opacity:.45;pointer-events:none}
+.top{position:absolute;left:1.4%;right:1.4%;top:5.2%;display:flex;gap:8px;align-items:center;pointer-events:none}
+.top > *{pointer-events:auto}
+.top .sp{flex:1}
+.chip{min-height:44px;min-width:44px;padding:0 12px;border-radius:22px;border:2px solid var(--negro);background:rgba(243,232,207,.92);font-size:15px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.chip.on{background:var(--negro);color:var(--cal)}
+/* marcas de las estancias */
+.spot{position:absolute;width:40px;height:40px;margin:-20px 0 0 -20px;opacity:.92;border-radius:50%;border:2.5px solid var(--negro);background:radial-gradient(circle,#fff8ea 0 28%,var(--ocre) 29% 52%,#fff8ea 53% 60%,var(--azul) 61%);box-shadow:0 0 0 0 rgba(220,162,58,.8);animation:pulse 1.8s infinite;font-size:0}
+.spot b{position:absolute;right:-10px;top:-10px;min-width:22px;height:22px;border-radius:11px;background:var(--negro);color:var(--cal);font:700 13px/22px var(--serif);text-align:center;padding:0 4px}
+.spot.seen{animation:none;background:radial-gradient(circle,#fff8ea 0 30%,#8a7a5c 31% 58%,#fff8ea 59%)}
+.spot.seen b{background:var(--azul)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(220,162,58,.85)}70%{box-shadow:0 0 0 16px rgba(220,162,58,0)}100%{box-shadow:0 0 0 0 rgba(220,162,58,0)}}
+/* barra inferior de la estancia */
+.bar{position:absolute;left:0;right:0;bottom:6.4%;display:flex;align-items:center;gap:12px;padding:0 1.6%;pointer-events:none}
+.bar > *{pointer-events:auto}
+.bar .tt{background:rgba(243,232,207,.95);border:2px solid var(--negro);border-radius:10px;padding:6px 14px;min-width:0;flex:1;box-shadow:0 3px 0 var(--negro)}
+.bar .tt b{display:block;font-size:19px;color:var(--ocreD);font-variant:small-caps;letter-spacing:.04em;line-height:1.1}
+.bar .tt small{display:block;font-size:13px;opacity:.85}
+.dots{display:flex;gap:5px;margin-top:3px}.dots i{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--negro);background:transparent}.dots i.ok{background:var(--negro)}.dots i.now{background:var(--amar)}
+.rinfo{min-width:0;flex:0 1 auto;max-width:46%;background:rgba(243,232,207,.95);border:2px solid var(--negro);border-radius:10px;padding:5px 12px;box-shadow:0 3px 0 var(--negro);display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;overflow:hidden}
+.rinfo b{font-size:18px;color:var(--ocreD);font-variant:small-caps;letter-spacing:.04em;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.rinfo small{flex-basis:100%;font-size:12.5px;opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rinfo .dots{margin:0}
+.top .nx{flex:0 0 auto}
+/* tarjetas */
+.veil{position:absolute;inset:0;background:rgba(35,26,20,.35);display:flex;align-items:center;justify-content:center;padding:6.5% 3% 8%}
+.card{position:relative;background:#f6ecd6;border:3px solid var(--negro);border-radius:12px;box-shadow:0 6px 0 var(--negro),0 18px 40px rgba(0,0,0,.35);width:min(620px,100%);max-height:100%;display:flex;flex-direction:column;overflow:hidden}
+.card::before{content:"";display:block;height:14px;flex:0 0 14px;background:repeating-linear-gradient(90deg,var(--amar) 0 18px,var(--negro) 18px 20px,var(--amar) 20px 26px,var(--ocre) 26px 34px);border-bottom:2px solid var(--negro)}
+.card .in{padding:12px 20px 4px;overflow:auto;-webkit-overflow-scrolling:touch}
+.card h2{margin:0 0 2px;font-size:22px;color:var(--ocreD);font-variant:small-caps;letter-spacing:.03em;line-height:1.15}
+.card .sub{font-size:13px;opacity:.8;margin-bottom:6px}
+.card p{margin:6px 0;font-size:16px;line-height:1.42}
+.card .act{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;padding:8px 20px 14px}
+.card.side{width:min(560px,58%)}
+.card.wide{width:min(980px,100%)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card p.sm{font-size:14px;line-height:1.35;margin:2px 0 6px}
+.opt small{font-size:12.5px;opacity:.85}
+.card p.cr{font-size:14px;line-height:1.4}
+.opts{display:flex;flex-direction:column;gap:8px;margin:8px 0}
+.opt{min-height:46px;text-align:left;padding:8px 14px;border-radius:8px;border:2px solid var(--negro);background:#fffaf0;font-size:16px;line-height:1.25;display:flex;gap:10px;align-items:center}
+.opt i{font-style:normal;font-weight:700;width:24px;height:24px;flex:0 0 24px;border-radius:50%;border:2px solid var(--negro);display:flex;align-items:center;justify-content:center;font-size:14px}
+.opt.ok{background:#d9e8f3;border-color:var(--azulD)}.opt.ok i{background:var(--azul);color:#fff;border-color:var(--azulD)}
+.opt.no{background:#f8dcc6;border-color:var(--ocreD)}.opt.no i{background:var(--ocre);color:#fff}
+.opt.chk.on{background:#efe0b8}
+.fb{font-size:15px;line-height:1.4;padding:8px 12px;border-radius:8px;border:2px dashed var(--negro);margin:6px 0}
+.ficha{display:inline-flex;align-items:center;gap:6px;min-height:42px;padding:0 14px;border-radius:21px;border:2px solid var(--azulD);background:var(--azul);color:#fff;font:600 14px var(--serif);margin:6px 0 2px}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--azulD);margin-bottom:2px}
+/* portada */
+.title{position:absolute;left:0;right:0;top:13%;text-align:center;pointer-events:none}
+.title h1{margin:0;font-size:calc(var(--s,1)*70px);letter-spacing:.14em;color:#fff3d6;text-shadow:0 3px 0 var(--negro),0 0 18px rgba(0,0,0,.35);font-weight:700}
+.title p{margin:4px 0 0;font-size:calc(var(--s,1)*22px);color:#fff3d6;text-shadow:0 2px 0 var(--negro);font-style:italic}
+.menu{position:absolute;left:50%;bottom:9%;transform:translateX(-50%);display:flex;gap:12px;flex-wrap:wrap;justify-content:center;width:92%}
+.menu .btn{font-size:18px;padding:10px 22px}
+/* arena */
+.hud{position:absolute;left:1.6%;right:1.6%;top:5.4%;display:flex;gap:8px;align-items:flex-start;pointer-events:none}
+.hud > *{pointer-events:auto}
+.pane{background:rgba(243,232,207,.94);border:2px solid var(--negro);border-radius:10px;padding:5px 12px;font-size:15px;line-height:1.2;box-shadow:0 3px 0 var(--negro)}
+.pane b{color:var(--ocreD)}
+.hint{position:absolute;left:50%;top:22%;transform:translateX(-50%);background:var(--negro);color:var(--cal);padding:8px 16px;border-radius:22px;font-size:17px;pointer-events:none;white-space:nowrap;opacity:0;transition:opacity .3s}
+.hint.on{opacity:1}
+.big{position:absolute;left:50%;top:30%;transform:translate(-50%,-50%) scale(.6);font-size:calc(var(--s,1)*58px);font-weight:700;letter-spacing:.06em;color:#fff3d6;text-shadow:0 3px 0 var(--negro),0 0 14px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:transform .25s cubic-bezier(.3,1.6,.5,1),opacity .2s;white-space:nowrap}
+.big.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.grades{display:flex;gap:10px;margin:6px 0}
+.grades span{flex:1;border:2px solid var(--negro);border-radius:8px;padding:6px;text-align:center;font-size:14px;background:#fffaf0}
+.grades span b{display:block;font-size:22px;line-height:1}
+.ros{font-size:30px;letter-spacing:6px}
+.rot{position:fixed;inset:0;z-index:50;display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:#2a1d14;color:#f3e8cf;font-size:20px;text-align:center;padding:24px}
+.rot b{font-size:56px;display:block;animation:rr 2.2s ease-in-out infinite}
+@keyframes rr{0%,30%{transform:rotate(0)}60%,100%{transform:rotate(-90deg)}}
+@media (orientation:portrait) and (max-width:900px){.rot{display:flex}}
+.toast{position:absolute;left:50%;top:15%;transform:translate(-50%,-12px);opacity:0;background:var(--amar);color:var(--negro);border:2px solid var(--negro);padding:6px 16px;border-radius:20px;font-weight:700;transition:all .25s;pointer-events:none;z-index:9}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.copy{position:fixed;right:max(8px,env(safe-area-inset-right));bottom:max(4px,env(safe-area-inset-bottom));font:11px system-ui,sans-serif;color:rgba(243,232,207,.75);pointer-events:none;z-index:60}
+@media (max-height:430px){
+  .card p{font-size:14.5px;line-height:1.36;margin:4px 0}.card h2{font-size:19px}.card .in{padding:8px 16px 2px}.card .act{padding:6px 16px 10px}
+  .opt{min-height:40px;font-size:14.5px;padding:6px 10px}.opts{gap:6px}
+  .bar .tt b{font-size:16px}.bar .tt small{font-size:12px}.btn{font-size:15px;padding:6px 14px}
+  .spot{width:38px;height:38px;margin:-19px 0 0 -19px}
+  .rinfo small{display:none}.rinfo{padding:4px 10px}.rinfo b{font-size:15px}
+  .veil{padding:5.6% 2% 6.5%}
+  .card.wide .sm,.card .nota{display:none}.card.wide .opts{margin:4px 0;gap:5px}.card.wide h2{margin-bottom:4px}.card.wide .opt{min-height:44px}
+}
+@media (prefers-reduced-motion:reduce){.spot{animation:none}.big{transition:none}}
+</style>
+</head>
+<body>
+<canvas id="cv" aria-label="Taurocatapsia"></canvas>
+<div id="st"></div>
+<div class="rot" id="rot"><b>📱</b><span id="rotT">Gira el dispositivo para jugar</span></div>
+<script>
+/* Taurocatapsia · contenido. Todo procede del texto de pantalla de las fichas H3·01 a H3·17 del Tema 3 (Historiapp, tema03.json).
+   En las preguntas, la primera opción es la correcta; el juego las baraja. */
+const ROOMS = [
+ { id:'entrada', scene:'entrada',
+   t:{es:'La llegada a Cnoso',en:'Arriving at Knossos'},
+   sub:{es:'Creta, hacia 1950-1375 a. C.',en:'Crete, c. 1950–1375 BC'},
+   spots:[
+    {x:300,y:250,ficha:['introduccion-historica','H3·03'],
+     t:{es:'Un nombre puesto por un arqueólogo',en:'A name given by an archaeologist'},
+     p:{es:['La cultura minoica debe su nombre a Arthur Evans, el arqueólogo británico que excavó el palacio de Cnoso desde 1900 y la bautizó a partir del mito griego del rey Minos.','Su civilización floreció en la Edad del Bronce, hacia 1950-1450 a. C.'],
+        en:['Minoan culture owes its name to Arthur Evans, the British archaeologist who excavated the palace of Knossos from 1900 and named it after the Greek myth of King Minos.','The civilisation flourished in the Bronze Age, c. 1950–1450 BC.']}},
+    {x:760,y:300,ficha:['introduccion-historica','H3·03'],
+     t:{es:'Palacios sin murallas',en:'Palaces without walls'},
+     p:{es:['Creta es una isla montañosa entre Grecia, Egipto y Asia Menor. Su relieve fragmentado la protegía y permitió que convivieran varios palacios, como Cnoso, Festo o Malia.','Los palacios se organizan en torno a un gran patio central y carecen de murallas. Evans imaginó una «Pax Minoica», hipótesis que hoy debe matizarse: las primeras armas del Egeo son cretenses y había preparación para la guerra.'],
+        en:['Crete is a mountainous island between Greece, Egypt and Asia Minor. Its broken relief protected it and allowed several palaces to coexist, such as Knossos, Phaistos or Malia.','The palaces are arranged around a great central court and have no walls. Evans imagined a «Pax Minoica», a view that must now be qualified: the earliest weapons of the Aegean are Cretan and there was preparation for war.']}},
+    {x:1040,y:470,ficha:['introduccion-historica','H3·03'],
+     t:{es:'Tres escrituras y un silencio deportivo',en:'Three scripts and a sporting silence'},
+     p:{es:['En Creta se usaron el jeroglífico cretense y el lineal A, que siguen sin descifrar, y el lineal B, que es griego micénico y se empleó sobre todo para la contabilidad del palacio.','Ninguna de las tres ha dejado un solo texto sobre deporte.'],
+        en:['Crete used Cretan hieroglyphic and Linear A, both still undeciphered, and Linear B, which is Mycenaean Greek and served mainly for palace accounting.','None of the three has left a single text about sport.']}}
+   ],
+   qs:[
+    {q:{es:'¿De dónde viene el nombre de «cultura minoica»?',en:'Where does the name «Minoan culture» come from?'},
+     o:{es:['De Arthur Evans, que la bautizó por el mito del rey Minos','Del nombre que los cretenses daban a su isla','De una inscripción en lineal B'],
+        en:['From Arthur Evans, who named it after the myth of King Minos','From the name the Cretans gave their island','From an inscription in Linear B']}},
+    {q:{es:'¿Por qué hay que matizar la «Pax Minoica» de Evans?',en:'Why must Evans\'s «Pax Minoica» be qualified?'},
+     o:{es:['Las primeras armas del Egeo son cretenses y había preparación para la guerra','Los palacios tenían grandes murallas','Creta vivía en guerra permanente con Egipto'],
+        en:['The earliest Aegean weapons are Cretan and there was preparation for war','The palaces had great walls','Crete was permanently at war with Egypt']}}
+   ]},
+ { id:'almacenes', scene:'procesion',
+   t:{es:'El corredor de la Procesión',en:'The Corridor of the Procession'},
+   sub:{es:'Sociedad, poder y economía',en:'Society, power and economy'},
+   spots:[
+    {x:330,y:400,ficha:['sociedad-poder-y-economia','H3·04'],
+     t:{es:'Lo que administraba el palacio',en:'What the palace managed'},
+     p:{es:['El palacio almacenaba y administraba parte de los excedentes agrícolas, con los que sostenía a quienes dependían de él.','Hoy se descarta que repartiera toda la producción de la isla o controlara todo su comercio.'],
+        en:['The palace stored and managed part of the agricultural surplus, with which it supported those who depended on it.','It is now ruled out that it redistributed all the island\'s produce or controlled all its trade.']}},
+    {x:690,y:200,ficha:['sociedad-poder-y-economia','H3·04'],
+     t:{es:'Palacio y templo a la vez',en:'Palace and temple at once'},
+     p:{es:['Creta no levantó templos monumentales, de ahí que el palacio fuera también el centro religioso de la comunidad, además de residencia y almacén.','Hacia 1950 a. C. surgió una nueva clase dirigente, que se reconoce en el paso de los enterramientos colectivos a los individuales.'],
+        en:['Crete raised no monumental temples, so the palace was also the religious centre of the community, as well as a residence and a store.','Around 1950 BC a new ruling class emerged, recognisable in the shift from collective to individual burials.']}},
+    {x:1010,y:330,ficha:['sociedad-poder-y-economia','H3·04'],
+     t:{es:'¿Hubo reyes?',en:'Were there kings?'},
+     p:{es:['Se discute si en Creta existieron reyes absolutos como los de Egipto o Mesopotamia: apenas se conservan representaciones regias.','El arte recoge, en cambio, escenas de una élite refinada. El deporte pudo ser una forma más de exhibir su prestigio, siempre unido al rito.'],
+        en:['It is debated whether Crete had absolute kings like those of Egypt or Mesopotamia: hardly any royal images survive.','Art shows instead the scenes of a refined elite. Sport may have been one more way of displaying its prestige, always bound to ritual.']}}
+   ],
+   qs:[
+    {q:{es:'¿Qué era el palacio minoico, además de residencia?',en:'Besides a residence, what was the Minoan palace?'},
+     o:{es:['Almacén y centro religioso de la comunidad','Una fortaleza militar amurallada','Un mercado sin funciones religiosas'],
+        en:['A store and the religious centre of the community','A walled military fortress','A market with no religious role']}},
+    {q:{es:'¿Qué cambio delata, hacia 1950 a. C., una nueva clase dirigente?',en:'What change reveals a new ruling class around 1950 BC?'},
+     o:{es:['El paso de los enterramientos colectivos a los individuales','La construcción de murallas en los palacios','La aparición de la moneda'],
+        en:['The shift from collective to individual burials','The building of walls around the palaces','The appearance of coinage']}}
+   ]},
+ { id:'damas', scene:'damas',
+   t:{es:'El corredor de las damas',en:'The corridor of the ladies'},
+   sub:{es:'La mujer minoica, hacia 1750-1450 a. C.',en:'Minoan women, c. 1750–1450 BC'},
+   spots:[
+    {x:340,y:300,ficha:['la-mujer-minoica','H3·05'],
+     t:{es:'Leer los colores de la pintura',en:'Reading the colours of the painting'},
+     p:{es:['Para reconocer a las mujeres hay que leer los códigos de esta pintura. El más evidente es el color de la piel, una convención heredada de Egipto que pinta en blanco a la mujer y en rojo al varón.'],
+        en:['To recognise women we must read the codes of this painting. The most obvious is skin colour, a convention inherited from Egypt that paints women white and men red.']}},
+    {x:700,y:250,ficha:['la-mujer-minoica','H3·05'],
+     t:{es:'Mujeres a la vista de todos',en:'Women in public view'},
+     p:{es:['En la pintura minoica las mujeres aparecen con una visibilidad y participación públicas notables, algo que no sucedió en las ciudades griegas posteriores (con excepción, quizá, de Esparta).','Como espectadoras, disfrutan de actividades públicas junto a los varones e incluso ocupan lugares de honor. Las principales divinidades minoicas eran femeninas.'],
+        en:['In Minoan painting women appear with a remarkable public visibility and participation, something that did not happen in the later Greek cities (except, perhaps, Sparta).','As spectators they enjoy public events alongside men and even occupy places of honour. The main Minoan deities were female.']}},
+    {x:1020,y:420,ficha:['la-mujer-minoica','H3·05'],
+     t:{es:'La danza de la arboleda sagrada',en:'The dance in the sacred grove'},
+     p:{es:['Hacia 1600 a. C. las mujeres bailan ante una multitud en la danza de la arboleda sagrada, un acto que los estudios vinculan al culto a la naturaleza, concebida como divinidad femenina, y a los ritos de iniciación.'],
+        en:['Around 1600 BC women dance before a crowd in the dance in the sacred grove, an act that scholars link to the cult of nature, conceived as a female deity, and to initiation rites.']}}
+   ],
+   qs:[
+    {q:{es:'En la pintura minoica, ¿qué distingue a la mujer del varón?',en:'In Minoan painting, what distinguishes women from men?'},
+     o:{es:['La piel blanca, una convención heredada de Egipto','El pelo corto','Que siempre aparece sentada'],
+        en:['White skin, a convention inherited from Egypt','Short hair','That she always appears seated']}},
+    {q:{es:'¿Dónde se concentra el protagonismo femenino en el arte minoico?',en:'Where is female prominence concentrated in Minoan art?'},
+     o:{es:['En el espectáculo y en el culto','En la guerra y la caza','En el comercio marítimo'],
+        en:['In spectacle and cult','In war and hunting','In maritime trade']}}
+   ]},
+ { id:'frescos', scene:'frescos',
+   t:{es:'La sala de las imágenes',en:'The hall of images'},
+   sub:{es:'Actividades físico-deportivas de los cretenses',en:'Physical and sporting activities of the Cretans'},
+   spots:[
+    {x:250,y:270,ficha:['actividades-fisico-deportivas-de-los-cre','H3·06'],
+     t:{es:'Lo que dicen las imágenes',en:'What the images tell'},
+     p:{es:['Todo lo que sabemos del deporte minoico procede de imágenes. Se conocen unos cien objetos con escenas deportivas (frescos, vasos de piedra y sellos) de hacia 1750-1450 a. C.','Casi todos representan el salto del toro; entre un 10 y un 20 % muestran combates sin armas.'],
+        en:['All we know of Minoan sport comes from images. Some hundred objects with sporting scenes are known (frescoes, stone vessels and seals) from c. 1750–1450 BC.','Almost all show bull-leaping; between 10 and 20 % show unarmed combat.']}},
+    {x:640,y:300,ficha:['pugilato','H3·08'],
+     t:{es:'Los niños púgiles de Akrotiri',en:'The boxing boys of Akrotiri'},
+     p:{es:['En Akrotiri (Tera), sepultada por el volcán a finales del siglo XVII a. C., dos niños de entre seis y diez años boxean con un solo guante en la mano derecha.','El vencedor lleva collar, pulseras y pendientes, y su rival viste con sencillez: el juego marcaba ya la jerarquía entre los hijos de la élite.'],
+        en:['At Akrotiri (Thera), buried by the volcano at the end of the 17th century BC, two boys aged six to ten box with a single glove on the right hand.','The winner wears a necklace, bracelets and earrings, while his rival is plainly dressed: the game already marked rank among the children of the elite.']}},
+    {x:1030,y:300,ficha:['el-riton-de-los-boxeadores','H3·09'],
+     t:{es:'El ritón de los boxeadores',en:'The Boxer Rhyton'},
+     p:{es:['En Hagia Triada, hacia 1550-1500 a. C., un vaso de piedra de unos 46 cm para las libaciones muestra en cuatro bandas púgiles adultos y el salto del toro.','Sus cascos, guantes y vendajes cambian de una banda a otra, señal de un entrenamiento sistemático con reglas. Los estudios lo leen como imagen de los ritos de iniciación de los jóvenes de la élite.'],
+        en:['At Hagia Triada, c. 1550–1500 BC, a stone vessel some 46 cm tall used for libations shows adult boxers and bull-leaping in four bands.','Their helmets, gloves and bindings change from band to band, a sign of systematic training with rules. Scholars read it as an image of the initiation rites of young elite men.']}},
+    {x:640,y:478,ficha:['actividades-fisico-deportivas-de-los-cre','H3·06'],
+     t:{es:'Sin premios',en:'No prizes'},
+     p:{es:['Ningún objeto representa un premio ni una lista de vencedores. El deporte servía para la iniciación de los jóvenes de la élite, expresaba la creencia religiosa y exhibía el prestigio de las grandes casas que se disputaban el palacio.','El deporte minoico fue, a la postre, un deporte del poder palacial.'],
+        en:['No object shows a prize or a list of winners. Sport served the initiation of young elite men, expressed religious belief and displayed the prestige of the great houses competing for the palace.','Minoan sport was, in the end, a sport of palatial power.']}}
+   ],
+   qs:[
+    {q:{es:'¿Por qué conocemos el deporte minoico solo por imágenes?',en:'Why do we know Minoan sport only from images?'},
+     o:{es:['Ninguna de sus tres escrituras registró un evento deportivo','Los papiros se quemaron en los palacios','Estaba prohibido escribir sobre deporte'],
+        en:['None of its three scripts recorded a sporting event','The papyri burned in the palaces','Writing about sport was forbidden']}},
+    {q:{es:'¿Qué indica que en Creta no se competía por recompensas materiales?',en:'What suggests that Cretans did not compete for material rewards?'},
+     o:{es:['Ningún objeto representa un premio ni una lista de vencedores','Los vencedores eran siempre esclavos','Las tablillas en lineal B lo prohíben'],
+        en:['No object shows a prize or a list of winners','The winners were always slaves','The Linear B tablets forbid it']}},
+    {q:{es:'¿Qué distingue al vencedor de los niños púgiles de Akrotiri?',en:'What marks the winner among the boxing boys of Akrotiri?'},
+     o:{es:['Lleva collar, pulseras y pendientes','Lleva dos guantes','Es mayor que su rival'],
+        en:['He wears a necklace, bracelets and earrings','He wears two gloves','He is older than his rival']}}
+   ]},
+ { id:'toro', scene:'tazas',
+   t:{es:'El toro',en:'The bull'},
+   sub:{es:'De la captura al salto',en:'From capture to leap'},
+   spots:[
+    {x:330,y:330,ficha:['el-toro-de-la-captura-al-salto','H3·14'],
+     t:{es:'Las tazas de oro de Vafio',en:'The gold cups of Vapheio'},
+     p:{es:['El salto era solo la parte más vistosa de un ciclo que empezaba con la captura del toro, una empresa colectiva y peligrosa.','En las tazas de oro de Vafio unos jóvenes atrapan a un toro con una red y atraen a otro con una vaca como señuelo.'],
+        en:['The leap was only the most spectacular part of a cycle that began with the capture of the bull, a dangerous collective enterprise.','On the gold cups from Vapheio young men trap one bull in a net and lure another with a cow as a decoy.']}},
+    {x:830,y:420,ficha:['el-toro-de-la-captura-al-salto','H3·14'],
+     t:{es:'Toros moteados',en:'Spotted bulls'},
+     p:{es:['Durante décadas se pensó que eran uros, el toro salvaje europeo. El pelaje moteado de los toros de Cnoso, sin embargo, solo se da en animales domésticos: no eran tan fieros como se ha propuesto.','Se especula que el salto terminara en sacrificio y banquete, si bien las imágenes minoicas no unen el salto con la muerte del toro.'],
+        en:['For decades they were thought to be aurochs, the wild European bull. The spotted coat of the Knossos bulls, however, occurs only in domestic animals: they were not as fierce as has been claimed.','It is speculated that the leap ended in sacrifice and a feast, although Minoan images do not link the leap with the death of the bull.']}},
+    {x:1060,y:220,ficha:['salto-del-toro','H3·11'],
+     t:{es:'De juego de aldea a emblema del palacio',en:'From village game to palace emblem'},
+     p:{es:['Las imágenes más antiguas, muy anteriores a los palacios, muestran a varios hombres agarrados a un toro, como un juego colectivo de aldea.','Con los palacios el salto adquiere grandeza escénica y ritual. Casi todas sus imágenes proceden de Cnoso, de su fresco y de sus sellos oficiales: fue emblema del poder de este palacio.'],
+        en:['The oldest images, long before the palaces, show several men clinging to a bull, like a collective village game.','With the palaces the leap gained scenic and ritual grandeur. Almost all its images come from Knossos, from its fresco and its official seals: it was an emblem of this palace\'s power.']}}
+   ],
+   qs:[
+    {q:{es:'¿Cómo se captura al toro en las tazas de Vafio?',en:'How is the bull captured on the Vapheio cups?'},
+     o:{es:['Con una red y con una vaca como señuelo','Con lazos desde carros','Encerrándolo en el patio del palacio'],
+        en:['With a net and with a cow as a decoy','With lassos thrown from chariots','By shutting it in the palace court']}},
+    {q:{es:'¿Por qué los toros de Cnoso no serían uros salvajes?',en:'Why were the Knossos bulls probably not wild aurochs?'},
+     o:{es:['Su pelaje moteado solo se da en animales domésticos','Porque eran mucho más pequeños que un caballo','Porque no tenían cuernos'],
+        en:['Their spotted coat occurs only in domestic animals','Because they were much smaller than a horse','Because they had no horns']}}
+   ]},
+ { id:'patio', scene:'patio',
+   t:{es:'El patio central',en:'The central court'},
+   sub:{es:'Espacios y protagonistas del salto',en:'The spaces and the leapers'},
+   spots:[
+    {x:640,y:470,ficha:['espacios-ludico-deportivos','H3·16'],
+     t:{es:'Un patio para la comunidad',en:'A court for the community'},
+     p:{es:['El patio central medía entre un cuarto y un tercio de estadio, la medida griega de unos 180-190 metros. En Malia o en Cnoso se conservan encajes para barreras de madera entre las columnas, y los balcones harían de palcos.','Dónde se saltaba sigue en discusión. Evans lo situó en el patio, pero el enlosado era peligroso: muchos estudios prefieren hoy un espacio de tierra junto al palacio.'],
+        en:['The central court measured between a quarter and a third of a stadion, the Greek measure of some 180–190 metres. At Malia and Knossos sockets for wooden barriers survive between the columns, and the balconies would serve as boxes.','Where the leap took place is still debated. Evans placed it in the court, but the paving was dangerous: many scholars now prefer an earthen space beside the palace.']}},
+    {x:250,y:280,ficha:['quienes-saltaban-y-como','H3·12'],
+     t:{es:'¿Quién salta?',en:'Who leaps?'},
+     p:{es:['Los saltadores de Cnoso son jóvenes de la élite, a juzgar por sus vestimentas, sus joyas y su melena larga. Nueve de los dieciséis conservados tienen la piel blanca que el arte egeo destinaba a las mujeres.','Hoy se discute: otras hipótesis ven en el color claro una marca de edad o de función social entre varones. No puede afirmarse ni descartarse la presencia de mujeres.'],
+        en:['The Knossos leapers are young members of the elite, judging by their dress, jewellery and long hair. Nine of the sixteen preserved have the white skin that Aegean art reserved for women.','This is debated: other views see the pale colour as a mark of age or social role among men. The presence of women can be neither affirmed nor ruled out.']}},
+    {x:1040,y:280,ficha:['el-salto-en-picado','H3·13'],
+     t:{es:'¿Cómo se saltaba?',en:'How did they leap?'},
+     p:{es:['Según Evans (1930), el saltador sujetaba los cuernos y aprovechaba la embestida para tomar impulso. Younger (1995) reúne una treintena de ejemplos del salto en picado, el esquema más frecuente, frente a las pocas imágenes, más antiguas, que encajan con Evans.','En picado: entrada de cabeza sobre el cuello, apoyo de las manos en los hombros del toro con las piernas arriba y salida con voltereta hasta caer de pie, donde una figura con los brazos extendidos parece recibir al saltador.'],
+        en:['According to Evans (1930), the leaper grasped the horns and used the bull\'s charge for momentum. Younger (1995) gathers some thirty examples of the diving leap, the most frequent scheme, against the few, older images that fit Evans.','The diving leap: a head-first entry over the neck, hands on the bull\'s shoulders with legs raised, and an exit with a somersault to land standing, where a figure with outstretched arms seems to receive the leaper.']}}
+   ],
+   qs:[
+    {q:{es:'¿Qué propuso Younger (1995) sobre el salto del toro?',en:'What did Younger (1995) propose about bull-leaping?'},
+     o:{es:['Que el esquema más frecuente fue el salto en picado','Que nunca se saltó sobre toros vivos','Que solo saltaban mujeres'],
+        en:['That the most frequent scheme was the diving leap','That no one ever leapt over live bulls','That only women leapt']}},
+    {q:{es:'¿Por qué muchos estudios sitúan hoy el salto fuera del patio central?',en:'Why do many scholars now place the leap outside the central court?'},
+     o:{es:['El enlosado era peligroso y conducir al toro por los pasillos, difícil','El patio era demasiado pequeño para el público','Estaba reservado al rey'],
+        en:['The paving was dangerous and leading the bull through the corridors was hard','The court was too small for the audience','It was reserved for the king']}}
+   ]}
+];
+
+const EPILOGO = {
+  t:{es:'La sala del trono',en:'The throne room'},
+  sub:{es:'El fin de la Creta de los palacios',en:'The end of palatial Crete'},
+  ficha:['el-fin-de-la-creta-minoica','H3·17'],
+  p:{es:['Durante décadas se atribuyó el fin de la Creta minoica a la erupción de Tera, pero se produjo hacia 1628 a. C., unos ciento cincuenta años antes del final de los palacios, y Creta se rehízo.','Hacia 1450 a. C. ardieron casi todos los palacios salvo el de Cnoso, que pasó a manos de los micénicos. Durante unos setenta y cinco años fue el único palacio de Creta y la taurocatapsia siguió bajo dominio micénico.','Hacia 1375 a. C. ardió también Cnoso. El salto del toro continuó en la Grecia continental hasta la caída de los palacios micénicos.'],
+     en:['For decades the end of Minoan Crete was blamed on the eruption of Thera, but it happened c. 1628 BC, some hundred and fifty years before the end of the palaces, and Crete recovered.','Around 1450 BC almost all the palaces burned except Knossos, which passed to the Mycenaeans. For some seventy-five years it was the only palace in Crete, and bull-leaping went on under Mycenaean rule.','Around 1375 BC Knossos burned too. Bull-leaping continued in mainland Greece until the fall of the Mycenaean palaces.']},
+  q:{es:'Ningún texto dice qué significaba el salto del toro. ¿Cuáles de estas lecturas proponen los estudios?',en:'No text tells us what bull-leaping meant. Which of these readings do scholars propose?'},
+  lec:{es:['Ofrenda a los dioses','Paso a la edad adulta','Emblema del palacio','Exhibición de destreza ante la comunidad'],en:['An offering to the gods','A passage to adulthood','An emblem of the palace','A display of skill before the community']},
+  fin:{es:'Las cuatro, y no se excluyen: el salto pudo ser todo a la vez y en el mismo acto. Como hoy, un mismo acto deportivo puede tener varias capas de significado.',en:'All four, and they are not exclusive: the leap could be all of them at once, in the same act. As today, a single sporting act can carry several layers of meaning.'},
+  fichaQ:['que-significaba-el-salto-del-toro','H3·15']
+};
+
+const ARENA = {
+  intro:{es:'El fresco del salto del toro de Cnoso cobra vida. Sus tres figuras pueden leerse como fases de un mismo salto o como un salto en picado con ayudantes: elige la lectura.',en:'The bull-leaping fresco of Knossos comes to life. Its three figures can be read as phases of a single leap or as a diving leap with helpers: choose the reading.'},
+  tec:{es:'Elige la lectura del fresco',en:'Choose the reading of the fresco'},
+  picado:{es:'En picado, con ayudantes',en:'Diving leap, with helpers'},
+  picadoS:{es:'Tú eres la figura central; a la derecha te recibe otra. El esquema más frecuente (Younger, 1995).',en:'You are the central figure; another receives you on the right. The most frequent scheme (Younger, 1995).'},
+  evans:{es:'Por los cuernos, fases de un mismo salto',en:'By the horns, phases of one leap'},
+  evansS:{es:'Las tres figuras son tres momentos del mismo saltador, como reconstruyó Evans (1930).',en:'The three figures are three moments of the same leaper, as Evans reconstructed it (1930).'},
+  evansNota:{es:'Evans (1930) reconstruyó el salto con el agarre de los cuernos. Solo unas pocas imágenes, más antiguas, encajan con él, y el salto en picado es el esquema más frecuente (Younger, 1995). Por eso aquí es más exigente.',en:'Evans (1930) reconstructed the leap with a grip on the horns. Only a few, older images fit it, and the diving leap is the most frequent scheme (Younger, 1995). That is why it is harder here.'},
+  creditos:{es:['El toro y las tres figuras están recortados de una fotografía del fresco del salto del toro de Cnoso, hacia 1450-1375 a. C. (Museo Arqueológico de Heraclión), en dominio público (Wikimedia Commons, «Knossos bull leaping fresco.jpg»). El fondo de la fiesta es el mismo fresco con las figuras retiradas.','Damas de azul: dominio público (Wikimedia Commons, «Knossos women fresco.jpg»). Sala del trono: CC0 (Wikimedia Commons, «Throne of Minos at Knossos Palace.jpg»). Las demás imágenes son las de las fichas del Tema 3.'],
+     en:['The bull and the three figures are cut out from a photograph of the bull-leaping fresco of Knossos, c. 1450–1375 BC (Heraklion Archaeological Museum), in the public domain (Wikimedia Commons, «Knossos bull leaping fresco.jpg»). The festival background is the same fresco with the figures removed.','Ladies in Blue: public domain (Wikimedia Commons, «Knossos women fresco.jpg»). Throne room: CC0 (Wikimedia Commons, «Throne of Minos at Knossos Palace.jpg»). The other images are those of the Unit 3 study sheets.']}
+};
+/* láminas de cada estancia: caja [x, y, ancho, alto] en la escena de 1280 × 720 y pie de foto; las marcas se sitúan en [lámina, x relativa, y relativa] */
+const LAYOUT = {
+  entrada:{panels:[
+    {img:'r_cnoso', box:[60,104,660,500], cap:{es:'Reconstrucción del palacio de Cnoso, hacia 1750-1450 a. C.',en:'Reconstruction of the palace of Knossos, c. 1750–1450 BC'}},
+    {img:'r_delfines', box:[760,104,470,300], cap:{es:'Fresco de los delfines, palacio de Cnoso',en:'Dolphin fresco, palace of Knossos'}},
+    {img:'r_disco', box:[880,418,230,190], cap:{es:'Disco de Festo, Museo de Heraclión',en:'Phaistos Disc, Heraklion Museum'}}],
+   spots:[[0,.3,.45],[0,.7,.55],[2,.5,.5]]},
+  procesion:{panels:[
+    {img:'r_procesion', box:[90,104,400,510], cap:{es:'Fresco de la Procesión, Cnoso, hacia 1450-1350 a. C.',en:'Procession Fresco, Knossos, c. 1450–1350 BC'}},
+    {img:'r_plano', box:[560,104,640,510], cap:{es:'Plano de la planta del palacio, con el patio central',en:'Ground plan of the palace, with the central court'}}],
+   spots:[[1,.32,.62],[1,.62,.38],[0,.5,.45]]},
+  damas:{panels:[
+    {img:'r_damas', box:[50,110,720,480], cap:{es:'Damas de azul · Palacio de Cnoso · Hacia 1600-1450 a. C.',en:'Ladies in Blue · Palace of Knossos · c. 1600–1450 BC'}},
+    {img:'r_danza', box:[800,150,430,390], cap:{es:'Danza en la arboleda sagrada · Cnoso · Hacia 1600 a. C.',en:'Dance in the sacred grove · Knossos · c. 1600 BC'}}],
+   spots:[[0,.25,.45],[0,.72,.4],[1,.5,.5]]},
+  frescos:{panels:[
+    {img:'r_pescador', box:[60,104,330,510], cap:{es:'Pescador de Akrotiri (Tera)',en:'Fisherman of Akrotiri (Thera)'}},
+    {img:'r_pugiles', box:[440,104,340,510], cap:{es:'Niños púgiles · Akrotiri · Siglo XVII a. C.',en:'Boxing boys · Akrotiri · 17th c. BC'}},
+    {img:'r_riton', box:[830,104,380,510], cap:{es:'Ritón de los boxeadores · Hagia Triada',en:'Boxer Rhyton · Hagia Triada'}}],
+   spots:[[0,.5,.3],[1,.5,.42],[2,.5,.4],[0,.5,.78]]},
+  tazas:{panels:[
+    {img:'r_tazas', box:[50,110,660,470], cap:{es:'Tazas de oro de Vafio, hacia 1750-1450 a. C.',en:'Gold cups from Vapheio, c. 1750–1450 BC'}},
+    {img:'r_tazasdib', box:[750,104,470,300], cap:{es:'Frisos de las tazas de Vafio (dibujo)',en:'Friezes of the Vapheio cups (drawing)'}},
+    {img:'r_cabeza', box:[900,420,170,200], cap:{es:'Ritón con cabeza de toro, Cnoso',en:'Bull\'s head rhyton, Knossos'}}],
+   spots:[[0,.45,.45],[2,.5,.45],[1,.5,.5]]},
+  patio:{panels:[
+    {img:'r_patio', box:[50,110,640,480], cap:{es:'Patio y graderío del palacio de Festo, Creta',en:'Court and stands of the palace of Phaistos, Crete'}},
+    {img:'r_secuencia', box:[720,104,510,270], cap:{es:'Las figuras del fresco de Cnoso, leídas como fases de un salto',en:'The figures of the Knossos fresco, read as phases of a leap'}},
+    {img:'r_grada', box:[800,404,350,210], cap:{es:'Área teatral del palacio de Festo',en:'Theatral area of the palace of Phaistos'}}],
+   spots:[[0,.5,.6],[1,.2,.45],[1,.72,.45]]},
+  trono:{panels:[
+    {img:'r_trono', box:[110,104,400,510], cap:{es:'Sala del trono del palacio de Cnoso, estado actual',en:'Throne room of the palace of Knossos, today'}},
+    {img:'r_tera', box:[560,150,640,420], cap:{es:'Caldera de Santorini, la antigua Tera, desde el aire',en:'The caldera of Santorini, ancient Thera, from the air'}}],
+   spots:[]}
+};
+
+/* Taurocatapsia · arte. Las imágenes son las piezas reales: el fresco del salto del toro de Cnoso (dominio público,
+   Wikimedia Commons) recortado en toro y figuras, y las fotografías de las fichas del Tema 3. Aquí solo se compone. */
+const PAL = { cal:'#efe2c4', ocre:'#b4472b', ocreD:'#86301b', azul:'#2c6a96', azulD:'#1d3c58', amar:'#dca23a', negro:'#231a14', blanco:'#f8f1df' };
+function rng(seed){ let s = seed >>> 0 || 1; return () => { s ^= s << 13; s ^= s >>> 17; s ^= s << 5; return ((s >>> 0) % 100000) / 100000; }; }
+
+/* ---------- carga de imágenes bajo demanda ---------- */
+const IMGDIR = 'toro/';
+const IMG = {};
+function img(name){
+  if (!IMG[name]){ const i = new Image(); i.decoding = 'async'; i.onload = () => { i.ok = true; }; i.src = IMGDIR + name + '.webp'; IMG[name] = i; }
+  return IMG[name];
+}
+const ready = (...n) => n.every(k => img(k).ok);
+
+/* ---------- enlucido ---------- */
+let PLASTER = null;
+function plaster(){
+  if (PLASTER) return PLASTER;
+  const w = 640, h = 360, c = document.createElement('canvas'); c.width = w; c.height = h; const g = c.getContext('2d');
+  g.fillStyle = '#ece0c6'; g.fillRect(0, 0, w, h);
+  const im = g.getImageData(0, 0, w, h), d = im.data, R = rng(7);
+  for (let i = 0; i < d.length; i += 4){ const n = (R() - .5)*16; d[i] += n; d[i+1] += n; d[i+2] += n*.8; }
+  g.putImageData(im, 0, 0);
+  for (let k = 0; k < 30; k++){ const x = R()*w, y = R()*h, r = 20 + R()*90, gr = g.createRadialGradient(x, y, 0, x, y, r);
+    gr.addColorStop(0, `rgba(${R() < .5 ? '120,95,60' : '255,250,238'},${.05 + R()*.05})`); gr.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = gr; g.fillRect(x - r, y - r, 2*r, 2*r); }
+  g.strokeStyle = 'rgba(80,55,30,.18)'; g.lineWidth = .8;
+  for (let k = 0; k < 14; k++){ let x = R()*w, y = R()*h, a = R()*6.28; g.beginPath(); g.moveTo(x, y); for (let i = 0; i < 8; i++){ a += (R() - .5)*1.1; x += Math.cos(a)*10; y += Math.sin(a)*10; g.lineTo(x, y); } g.stroke(); }
+  return (PLASTER = c);
+}
+/* banda del propio fresco de Cnoso (piedras pintadas entre filetes), repetida a lo ancho */
+function band(g, y, h, flip){
+  const b = img('banda'); if (!b.ok){ g.fillStyle = '#8a6a48'; g.fillRect(0, y, 1280, h); return; }
+  const w = b.naturalWidth*h/b.naturalHeight; g.save(); if (flip){ g.translate(0, 2*y + h); g.scale(1, -1); }
+  for (let x = 0; x < 1280; x += w - 1) g.drawImage(b, x, y, w, h); g.restore();
+}
+/* lámina enmarcada: la imagen ajustada dentro de la caja, con paspartú y sombra */
+function panel(g, name, box, cap){
+  const i = img(name); let [x, y, w, h] = box;
+  const capH = cap ? 24 : 0; h -= capH;
+  let iw = w, ih = h;
+  if (i.ok){ const r = i.naturalWidth/i.naturalHeight; if (w/h > r){ iw = h*r; } else { ih = w/r; } }
+  const ix = x + (w - iw)/2, iy = y + (h - ih)/2;
+  g.save(); g.shadowColor = 'rgba(30,18,8,.45)'; g.shadowBlur = 18; g.shadowOffsetY = 6;
+  g.fillStyle = '#f7efdc'; g.fillRect(ix - 9, iy - 9, iw + 18, ih + 18); g.restore();
+  g.strokeStyle = PAL.negro; g.lineWidth = 2; g.strokeRect(ix - 9, iy - 9, iw + 18, ih + 18);
+  g.strokeStyle = PAL.ocre; g.lineWidth = 1.5; g.strokeRect(ix - 4, iy - 4, iw + 8, ih + 8);
+  if (i.ok) g.drawImage(i, ix, iy, iw, ih); else { g.fillStyle = '#d9cbb0'; g.fillRect(ix, iy, iw, ih); }
+  if (cap){ g.fillStyle = 'rgba(35,26,20,.9)'; g.font = 'italic 14px "Palatino Linotype",Palatino,Georgia,serif'; g.textAlign = 'center'; g.textBaseline = 'top';
+    let t = cap; const mw = Math.max(w, iw + 40); while (g.measureText(t).width > mw && t.length > 10) t = t.slice(0, -2); if (t !== cap) t += '…'; g.fillText(t, ix + iw/2, iy + ih + 13); }
+  return [ix, iy, iw, ih];
+}
+function wall(g){ const p = plaster(); g.drawImage(p, 0, 0, 1280, 720); band(g, 26, 58); band(g, 650, 50, true);
+  g.fillStyle = PAL.negro; g.fillRect(0, 84, 1280, 2); g.fillRect(0, 648, 1280, 2); }
+function rosette(g, x, y, r, petal, core){
+  g.save(); g.translate(x, y);
+  for (let i = 0; i < 8; i++){ g.rotate(Math.PI/4); g.beginPath(); g.ellipse(0, -r*.55, r*.22, r*.5, 0, 0, 6.283); g.fillStyle = petal || PAL.ocre; g.fill(); g.strokeStyle = PAL.negro; g.lineWidth = 1.2; g.stroke(); }
+  g.beginPath(); g.arc(0, 0, r*.28, 0, 6.283); g.fillStyle = core || PAL.amar; g.fill(); g.stroke(); g.restore();
+}
+const ease = t => t < .5 ? 2*t*t : 1 - Math.pow(-2*t + 2, 2)/2;
+
+/* ---------- el fresco de Cnoso: posición de cada pieza en la escena (unidades de la escena 1280 × 720) ---------- */
+const FR = { bull:[277.4, 202.6, 693.6, 292.0], mid:[610.4, 171.6, 200.5, 248.8], left:[198.7, 205.1, 91.2, 212.6], right:[886.0, 206.5, 166.0, 338.6] };
+function sprite(g, name, x, y, w, h, rot, px, py, alpha){
+  const i = img('sp_' + name); if (!i.ok) return;
+  g.save(); if (alpha != null) g.globalAlpha = alpha; g.translate(x + (px ?? w/2), y + (py ?? h/2)); if (rot) g.rotate(rot);
+  g.drawImage(i, -(px ?? w/2), -(py ?? h/2), w, h); g.restore();
+}
+
+/* Taurocatapsia · motor del juego */
+(() => {
+'use strict';
+const W = 1280, H = 720, GY = 545;
+const cv = document.getElementById('cv'), ctx = cv.getContext('2d'), st = document.getElementById('st');
+const $ = (h) => { const d = document.createElement('div'); d.innerHTML = h.trim(); return d.firstElementChild; };
+
+/* ---------- Historiapp ---------- */
+const HIST = {
+  inside: (() => { try { if (!/\/juegos\//.test(location.pathname)) return false; for (let i = 0; i < localStorage.length; i++) if (localStorage.key(i).startsWith('historiapp.')) return true; } catch (e) {} return false; })(),
+  xp(n){ if (!this.inside || !(n > 0)) return; try { const k = 'historiapp.progress'; const p = JSON.parse(localStorage.getItem(k)) || {xp:0, streak:0, lastDay:null, seen:{}, badges:{}, gl:{}, daily:{}}; p.xp = (p.xp || 0) + Math.round(n); localStorage.setItem(k, JSON.stringify(p)); } catch (e) { return; } toast('+' + Math.round(n) + ' XP'); },
+  back(){ location.href = '../#t3'; },
+  ficha(id){ save(); location.href = '../#t3/f/' + encodeURIComponent(id); }
+};
+
+/* ---------- estado guardado ---------- */
+const KEY = 'toro.v1';
+const DEF = {lang:null, room:0, seen:{}, qok:{}, arena:false, fiestas:[0, 0, 0], best:0, done:false, skin:'R', tec:'picado', sound:true, shake:true, xpQ:{}, xpF:{}, epi:false};
+let S = (() => { try { return Object.assign({}, DEF, JSON.parse(localStorage.getItem(KEY)) || {}); } catch (e) { return Object.assign({}, DEF); } })();
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+if (!S.lang){ let l = null; try { l = localStorage.getItem('historiapp.lang'); } catch (e) {} S.lang = l === 'en' || l === 'es' ? l : ((navigator.language || 'es').startsWith('es') ? 'es' : 'en'); }
+if (HIST.inside){ try { const l = localStorage.getItem('historiapp.lang'); if (l === 'en' || l === 'es') S.lang = l; } catch (e) {} }
+const L = o => o ? (o[S.lang] ?? o.es) : '';
+const UI = {
+ es:{sub:'El salto del toro en el palacio de Cnoso', entrar:'Entrar en Cnoso', seguir:'Seguir el recorrido', fiestas:'Fiestas del toro', nuevo:'Empezar de nuevo', hist:'‹ Historiapp', menu:'Menú',
+   room:'Estancia {a} de {b}', explora:'Toca las marcas para conocer la estancia', pasar:'Pasar', cerrar:'Seguir explorando', ficha:'Ficha', preg:'Para pasar', comprobar:'Comprobar', siguiente:'Siguiente',
+   bien:'Correcto.', mal:'No es así. Vuelve a intentarlo.', alArena:'Ir a la fiesta', piel:'¿Quién salta?', tec:'Técnica', empezar:'Empezar la fiesta',
+   fiesta:['Primera fiesta','Segunda fiesta','Gran fiesta del palacio'], toro:'Toro {a} de 3', aclam:'Aclamación', tap:'Toca cuando el anillo se cierre', tapK:'Toca (o pulsa espacio) cuando el anillo se cierre',
+   f1:'Entrada', f2:'Apoyo', f3:'Salida', f1e:'Agarre', f2e:'Volteo', perf:'¡Perfecto!', good:'¡Bien!', fail:'Fallo',
+   early1:'Demasiado pronto: te lanzaste antes de que llegara el toro.', late1:'Demasiado tarde: el toro llegó antes que tu salto y te apartaste a tiempo.',
+   early2:'Empujaste antes de tiempo y resbalaste por el costado del toro.', late2:'Empujaste tarde: el toro te sacudió y caíste al polvo.',
+   land0:'Caíste de rodillas: quien recibe te sujetó, pero el público lo notó.', clean:'Salto completo y limpio.', otro:'Siguiente toro', finF:'Fin de la fiesta', repetir:'Repetir la fiesta', next:'Siguiente fiesta',
+   alTrono:'Ir a la sala del trono', palacio:'Volver al palacio', saltos:'Saltos completos', perfs:'Fases perfectas', cron:'Crónica', nota:'Ningún objeto minoico representa un premio: lo que cuenta es la aclamación de la comunidad.',
+   epiQ:'Elige todas las que creas correctas', fin:'Has recorrido Cnoso', fin2:'Del palacio al patio y a la fiesta del toro.', libre:'Fiestas del toro', volver:'Volver a Historiapp',
+   rot:'Gira el dispositivo para jugar', snd:'Sonido', tmb:'Temblor', reset:'¿Seguro? Se borrará tu recorrido en este juego.', si:'Sí, empezar', no:'Cancelar', ayuda:'Ayuda', ayudaT:'Toca la pantalla, o pulsa espacio, cuando el anillo que se cierra coincida con el círculo fijo. En cada salto hay tres momentos.'},
+ en:{sub:'Bull-leaping at the palace of Knossos', entrar:'Enter Knossos', seguir:'Continue the tour', fiestas:'Bull festivals', nuevo:'Start again', hist:'‹ Historiapp', menu:'Menu',
+   room:'Room {a} of {b}', explora:'Tap the marks to explore the room', pasar:'Go on', cerrar:'Keep exploring', ficha:'Study sheet', preg:'To go on', comprobar:'Check', siguiente:'Next',
+   bien:'Correct.', mal:'Not quite. Try again.', alArena:'Go to the festival', piel:'Who leaps?', tec:'Technique', empezar:'Start the festival',
+   fiesta:['First festival','Second festival','Great palace festival'], toro:'Bull {a} of 3', aclam:'Acclaim', tap:'Tap when the ring closes', tapK:'Tap (or press space) when the ring closes',
+   f1:'Entry', f2:'Support', f3:'Exit', f1e:'Grip', f2e:'Vault', perf:'Perfect!', good:'Good!', fail:'Miss',
+   early1:'Too early: you dived before the bull arrived.', late1:'Too late: the bull arrived before your leap and you stepped aside in time.',
+   early2:'You pushed too soon and slid off the bull\'s flank.', late2:'You pushed too late: the bull shook you off into the dust.',
+   land0:'You landed on your knees: the catcher held you, but the crowd noticed.', clean:'A complete, clean leap.', otro:'Next bull', finF:'End of the festival', repetir:'Repeat the festival', next:'Next festival',
+   alTrono:'Go to the throne room', palacio:'Back to the palace', saltos:'Complete leaps', perfs:'Perfect phases', cron:'Chronicle', nota:'No Minoan object shows a prize: what counts is the acclaim of the community.',
+   epiQ:'Choose all you think are correct', fin:'You have explored Knossos', fin2:'From the palace to the court and the bull festival.', libre:'Bull festivals', volver:'Back to Historiapp',
+   rot:'Turn your device to play', snd:'Sound', tmb:'Shake', reset:'Are you sure? Your tour in this game will be erased.', si:'Yes, start', no:'Cancel', ayuda:'Help', ayudaT:'Tap the screen, or press space, when the closing ring meets the fixed circle. Each leap has three moments.'}
+};
+const t = (k, v) => { let s = UI[S.lang][k] ?? UI.es[k] ?? k; if (v) for (const x in v) s = s.replace('{' + x + '}', v[x]); return s; };
+document.getElementById('rotT').textContent = t('rot');
+document.documentElement.lang = S.lang;
+
+/* ---------- sonido sintetizado (nada suena hasta el primer toque) ---------- */
+let AC = null;
+function au(){ if (!S.sound) return null; try { if (!AC) AC = new (window.AudioContext || window.webkitAudioContext)(); if (AC.state === 'suspended') AC.resume(); } catch (e) { return null; } return AC; }
+function tone(f, d, type, vol, slide, when){ const a = au(); if (!a) return; const o = a.createOscillator(), g = a.createGain(), t0 = a.currentTime + (when || 0);
+  o.type = type || 'triangle'; o.frequency.setValueAtTime(f, t0); if (slide) o.frequency.exponentialRampToValueAtTime(slide, t0 + d);
+  g.gain.setValueAtTime(0.0001, t0); g.gain.exponentialRampToValueAtTime(vol || .2, t0 + .01); g.gain.exponentialRampToValueAtTime(0.0001, t0 + d); o.connect(g); g.connect(a.destination); o.start(t0); o.stop(t0 + d + .05); }
+function noise(d, f, vol, when, q){ const a = au(); if (!a) return; const n = a.createBufferSource(), b = a.createBuffer(1, Math.max(1, a.sampleRate*d|0), a.sampleRate), ch = b.getChannelData(0);
+  for (let i = 0; i < ch.length; i++) ch[i] = (Math.random()*2 - 1)*(1 - i/ch.length); n.buffer = b; const fl = a.createBiquadFilter(); fl.type = 'bandpass'; fl.frequency.value = f; fl.Q.value = q || 1;
+  const g = a.createGain(), t0 = a.currentTime + (when || 0); g.gain.setValueAtTime(vol || .2, t0); g.gain.exponentialRampToValueAtTime(0.0001, t0 + d); n.connect(fl); fl.connect(g); g.connect(a.destination); n.start(t0); }
+const LYRE = [293.7, 329.6, 392, 440, 523.3, 587.3, 659.3];
+const SFX = {
+  tap(){ tone(660, .07, 'triangle', .12); },
+  open(){ tone(392, .18, 'triangle', .1); tone(587, .25, 'triangle', .08, null, .06); },
+  ok(){ [0, 2, 4].forEach((k, i) => tone(LYRE[k]*1, .5, 'triangle', .13, null, i*.07)); },
+  no(){ tone(196, .25, 'sawtooth', .07, 150); },
+  hoof(){ noise(.07, 180, .16, 0, 2); },
+  whoosh(){ noise(.35, 900, .1, 0, .7); },
+  perfect(){ [0, 2, 4, 6].forEach((k, i) => tone(LYRE[k], .55, 'triangle', .14, null, i*.06)); },
+  good(){ [0, 3].forEach((k, i) => tone(LYRE[k], .4, 'triangle', .12, null, i*.07)); },
+  thud(){ noise(.25, 140, .3, 0, 1.2); tone(90, .2, 'sine', .2, 60); },
+  crowd(v){ noise(1.2 + v, 700, .05 + .12*v, 0, .5); noise(.9 + v, 1300, .03 + .07*v, .08, .6); },
+  land(){ noise(.12, 260, .2, 0, 1.5); }
+};
+
+/* ---------- lienzo y escalado ---------- */
+let DPR = 1, VW = 0, VH = 0, sc = 1, ox = 0, oy = 0, K = 1;
+function resize(){
+  DPR = Math.min(2, window.devicePixelRatio || 1); VW = innerWidth; VH = innerHeight;
+  cv.width = Math.round(VW*DPR); cv.height = Math.round(VH*DPR);
+  sc = Math.min(VW/W, VH/H); ox = (VW - W*sc)/2; oy = (VH - H*sc)/2;
+  Object.assign(st.style, {left:ox + 'px', top:oy + 'px', width:W*sc + 'px', height:H*sc + 'px'});
+  st.style.setProperty('--s', sc.toFixed(3));
+  K = Math.min(2, Math.max(.6, sc*DPR));
+  layoutSpots();
+}
+addEventListener('resize', resize);
+
+/* ---------- interfaz ---------- */
+let toastT = 0, toastEl = null;
+function toast(m){ if (!toastEl){ toastEl = $('<div class="toast"></div>'); st.appendChild(toastEl); } toastEl.textContent = m; st.appendChild(toastEl); const el = toastEl; el.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove('on'), 1600); }
+function clearUI(){ st.innerHTML = ''; toastEl = null; spotsEls = []; }
+function topBar(extra){
+  const b = $('<div class="top"></div>');
+  if (HIST.inside){ const h = $(`<button class="chip">${t('hist')}</button>`); h.onclick = () => { SFX.tap(); HIST.back(); }; b.appendChild(h); }
+  if (extra) extra.forEach(e => b.appendChild(e));
+  b.appendChild($('<span class="sp"></span>'));
+  for (const l of ['es', 'en']){ const c = $(`<button class="chip${S.lang === l ? ' on' : ''}" aria-pressed="${S.lang === l}">${l.toUpperCase()}</button>`); c.onclick = () => { if (S.lang === l) return; S.lang = l; save(); document.documentElement.lang = l; document.getElementById('rotT').textContent = t('rot'); rerender(); }; b.appendChild(c); }
+  const s = $(`<button class="chip" aria-label="${t('snd')}">${S.sound ? '♪' : '♪̸'}</button>`); s.onclick = () => { S.sound = !S.sound; save(); s.textContent = S.sound ? '♪' : '♪̸'; if (S.sound) SFX.tap(); }; b.appendChild(s);
+  st.appendChild(b); return b;
+}
+let rerender = () => {};
+function card(html, side, cls){ const v = $(`<div class="veil"><div class="card${side ? ' side' : ''}${cls ? ' ' + cls : ''}" role="dialog">${html}</div></div>`); st.appendChild(v); return v; }
+function fichaBtn(f){ return HIST.inside && f ? `<button class="ficha" data-f="${f[0]}">📖 ${t('ficha')} ${f[1]}</button>` : ''; }
+function bindFicha(el){ el.querySelectorAll('[data-f]').forEach(b => b.onclick = e => { e.stopPropagation(); HIST.ficha(b.dataset.f); }); }
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--){ const j = Math.random()*(i + 1)|0; [a[i], a[j]] = [a[j], a[i]]; } return a; };
+
+/* ---------- escena actual y bucle ---------- */
+let MODE = 'title', SCN = 'titulo', last = performance.now(), T = 0;
+const dyn = { dust:[], sparks:[] };
+const RECTS = {};
+function drawScene(){
+  const g = ctx;
+  if (SCN === 'titulo'){ const i = img('titulo'); if (i.ok) g.drawImage(i, 0, 0, W, H); else { g.fillStyle = '#5d7d96'; g.fillRect(0, 0, W, H); }
+    const gr = g.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, 'rgba(20,12,6,.55)'); gr.addColorStop(.35, 'rgba(20,12,6,.05)'); gr.addColorStop(.75, 'rgba(20,12,6,.05)'); gr.addColorStop(1, 'rgba(20,12,6,.6)'); g.fillStyle = gr; g.fillRect(0, 0, W, H); return; }
+  if (SCN === 'arena'){ const i = img('arena'); if (i.ok) g.drawImage(i, 0, 0, W, H); else { g.fillStyle = '#6f8ea6'; g.fillRect(0, 0, W, H); } return; }
+  const LY = LAYOUT[SCN]; if (!LY) return;
+  wall(g); RECTS[SCN] = LY.panels.map(p => panel(g, p.img, p.box, L(p.cap)));
+}
+function frame(now){
+  const dt = Math.min(.05, (now - last)/1000); last = now; T += dt;
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  ctx.fillStyle = '#2a1d14'; ctx.fillRect(0, 0, VW, VH);
+  if (MODE === 'arena') arenaStep(dt);
+  ctx.setTransform(DPR*sc, 0, 0, DPR*sc, DPR*(ox + shakeX), DPR*(oy + shakeY));
+  ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
+  drawScene();
+  if (MODE === 'arena') arenaDraw();
+  drawParticles(dt);
+  if (MODE === 'room') placeSpots();
+  requestAnimationFrame(frame);
+}
+let shakeX = 0, shakeY = 0, shakeA = 0;
+function shake(a){ if (!S.shake || matchMedia('(prefers-reduced-motion: reduce)').matches) return; shakeA = Math.max(shakeA, a); }
+function drawParticles(dt){
+  for (const p of dyn.dust){ p.t += dt; p.x += p.vx*dt; p.y += p.vy*dt; p.vy += 380*dt; p.rot += p.vr*dt; const a = Math.max(0, 1 - p.t/p.life);
+    ctx.save(); ctx.globalAlpha = a; ctx.translate(p.x, p.y); ctx.rotate(p.rot); ctx.fillStyle = p.c; ctx.fillRect(-p.r/2, -p.r/2, p.r, p.r*.7); ctx.restore(); }
+  dyn.dust = dyn.dust.filter(p => p.t < p.life);
+  for (const p of dyn.sparks){ p.t += dt; p.x += p.vx*dt; p.y += p.vy*dt; p.vy += 260*dt; const a = Math.max(0, 1 - p.t/p.life); ctx.globalAlpha = a; rosette(ctx, p.x, p.y, p.r, p.c, PAL.amar); ctx.globalAlpha = 1; }
+  dyn.sparks = dyn.sparks.filter(p => p.t < p.life);
+  shakeA *= .86; shakeX = (Math.random() - .5)*shakeA; shakeY = (Math.random() - .5)*shakeA;
+}
+// esquirlas de enlucido en los contactos
+function dust(x, y, n, s){ for (let i = 0; i < n; i++) dyn.dust.push({x:x + (Math.random() - .5)*30, y:y - Math.random()*8, vx:(Math.random() - .5)*220*(s || 1), vy:-120 - Math.random()*160, r:3 + Math.random()*5, rot:Math.random()*6, vr:(Math.random() - .5)*12, t:0, life:.7 + Math.random()*.5, c:['#e9dcc1', '#c7a37a', '#9fb3c4'][i % 3]}); }
+function sparks(x, y, n){ for (let i = 0; i < n; i++){ const a = Math.random()*6.283, v = 160 + Math.random()*220; dyn.sparks.push({x, y, vx:Math.cos(a)*v, vy:Math.sin(a)*v - 160, r:6 + Math.random()*6, t:0, life:.9 + Math.random()*.4, c:[PAL.ocre, PAL.azul, PAL.blanco][i % 3]}); } }
+
+/* ---------- portada ---------- */
+function showTitle(){
+  MODE = 'title'; SCN = 'titulo'; clearUI(); rerender = showTitle; img('titulo'); img('banda');
+  topBar();
+  st.appendChild($(`<div class="title"><h1>TAUROCATAPSIA</h1><p>${t('sub')}</p></div>`));
+  const m = $('<div class="menu"></div>');
+  const started = S.room > 0 || Object.keys(S.seen).length;
+  const go = $(`<button class="btn pri">${started && !S.done ? t('seguir') : t('entrar')}</button>`);
+  go.onclick = () => { au(); SFX.open(); if (S.done) S.room = 0; enterRoom(Math.min(S.room, ROOMS.length - 1)); };
+  m.appendChild(go);
+  if (S.arena){ const f = $(`<button class="btn az">${t('fiestas')}</button>`); f.onclick = () => { au(); SFX.open(); arenaSetup(); }; m.appendChild(f); }
+  if (started){ const r = $(`<button class="btn">${t('nuevo')}</button>`); r.onclick = () => { const v = card(`<div class="in"><p>${t('reset')}</p></div><div class="act"><button class="btn" data-n>${t('no')}</button><button class="btn pri" data-y>${t('si')}</button></div>`);
+      v.querySelector('[data-n]').onclick = () => v.remove(); v.querySelector('[data-y]').onclick = () => { const keep = {lang:S.lang, sound:S.sound, shake:S.shake, xpQ:S.xpQ, xpF:S.xpF}; S = Object.assign({}, DEF, keep); save(); showTitle(); }; }; m.appendChild(r); }
+  const cr = $(`<button class="btn">${L({es:'Imágenes', en:'Images'})}</button>`); cr.onclick = () => credits(); m.appendChild(cr);
+  st.appendChild(m);
+}
+
+/* ---------- estancias ---------- */
+let spotsEls = [], CUR = 0;
+function layoutSpots(){}
+function placeSpots(){ const R = ROOMS[CUR], LY = LAYOUT[R.scene], rc = RECTS[R.scene]; if (!LY || !rc) return;
+  for (const b of spotsEls){ const s = LY.spots[+b.dataset.k]; if (!s) continue; const r = rc[s[0]]; const x = (r[0] + r[2]*s[1])/W*100, y = (r[1] + r[3]*s[2])/H*100;
+    const l = x.toFixed(2) + '%', t2 = y.toFixed(2) + '%'; if (b.style.left !== l) b.style.left = l; if (b.style.top !== t2) b.style.top = t2; } }
+function enterRoom(i){
+  MODE = 'room'; CUR = i; S.room = i; save(); const R = ROOMS[i]; SCN = R.scene; clearUI(); rerender = () => enterRoom(i);
+  LAYOUT[R.scene].panels.forEach(p => img(p.img)); if (ROOMS[i + 1]) LAYOUT[ROOMS[i + 1].scene].panels.forEach(p => img(p.img)); else ['arena', 'sp_bull', 'sp_mid', 'sp_left', 'sp_right'].forEach(img);
+  const all = R.spots.every((_, k) => S.seen[R.id + k]);
+  const info = $(`<div class="rinfo"><b>${L(R.t)}</b><span class="dots">${ROOMS.map((_, k) => `<i class="${k < i ? 'ok' : k === i ? 'now' : ''}"></i>`).join('')}</span><small>${L(R.sub)} · ${t('room', {a:i + 1, b:ROOMS.length})}${all ? '' : ' · ' + t('explora')}</small></div>`);
+  const nx = $(`<button class="btn pri nx"${all ? '' : ' disabled'}>${t('pasar')} ›</button>`); nx.onclick = () => { au(); SFX.open(); askQuestions(i); };
+  topBar([info, nx]);
+  R.spots.forEach((sp, k) => { const seen = S.seen[R.id + k];
+    const b = $(`<button class="spot${seen ? ' seen' : ''}" aria-label="${L(sp.t)}" style="left:-100px;top:-100px"><b>${seen ? '✓' : k + 1}</b></button>`); b.dataset.k = k;
+    b.onclick = () => { au(); SFX.open(); openSpot(i, k); }; st.appendChild(b); spotsEls.push(b); });
+}
+function openSpot(i, k){
+  const R = ROOMS[i], sp = R.spots[k];
+  const v = card(`<div class="in"><span class="tag">${L(R.t)}</span><h2>${L(sp.t)}</h2>${L(sp.p).map(p => `<p>${p}</p>`).join('')}${fichaBtn(sp.ficha)}</div><div class="act"><button class="btn pri" data-c>${t('cerrar')}</button></div>`);
+  bindFicha(v); const close = () => { v.remove(); S.seen[R.id + k] = 1; save(); enterRoom(i); };
+  v.querySelector('[data-c]').onclick = () => { SFX.tap(); close(); }; v.onclick = e => { if (e.target === v) close(); };
+}
+function askQuestions(i){
+  const R = ROOMS[i]; let n = 0;
+  const show = () => {
+    const Q = R.qs[n], opts = shuffle(L(Q.o).map((o, j) => ({o, ok:j === 0})));
+    st.querySelectorAll('.veil').forEach(e => e.remove());
+    const v = card(`<div class="in"><span class="tag">${t('preg')} · ${n + 1}/${R.qs.length}</span><h2>${L(Q.q)}</h2><div class="opts">${opts.map((o, j) => `<button class="opt" data-j="${j}"><i>${'ABC'[j]}</i><span>${o.o}</span></button>`).join('')}</div><div class="fb" hidden></div></div><div class="act"><button class="btn pri" data-n hidden>${t('siguiente')} ›</button></div>`);
+    let tries = 0; const fb = v.querySelector('.fb'), nb = v.querySelector('[data-n]');
+    v.querySelectorAll('.opt').forEach(b => b.onclick = () => {
+      if (b.classList.contains('no') || !nb.hidden) return; const o = opts[+b.dataset.j]; tries++;
+      if (o.ok){ b.classList.add('ok'); b.querySelector('i').textContent = '✓'; SFX.ok(); fb.hidden = false; fb.textContent = t('bien'); nb.hidden = false;
+        const key = R.id + n; if (tries === 1 && !S.xpQ[key]){ S.xpQ[key] = 1; save(); HIST.xp(10); } }
+      else { b.classList.add('no'); b.querySelector('i').textContent = '✗'; SFX.no(); fb.hidden = false; fb.textContent = t('mal'); }
+    });
+    nb.onclick = () => { SFX.tap(); n++; if (n < R.qs.length) show(); else finishRoom(i); };
+  };
+  show();
+}
+function finishRoom(i){
+  if (!S.xpF['room' + i]){ S.xpF['room' + i] = 1; HIST.xp(20); }
+  if (i + 1 < ROOMS.length){ S.room = i + 1; save(); enterRoom(i + 1); }
+  else { S.arena = true; S.room = ROOMS.length - 1; save(); arenaSetup(); }
+}
+
+/* ---------- la fiesta del toro: el fresco de Cnoso cobra vida ---------- */
+const FIESTA = [
+  {v:330, good:.21, perf:.085, vary:0},
+  {v:400, good:.17, perf:.07, vary:.14},
+  {v:470, good:.14, perf:.058, vary:.22}
+];
+let A = null;
+const OFF = { mid:[FR.mid[0] - FR.bull[0], FR.mid[1] - FR.bull[1]], left:[FR.left[0] - FR.bull[0], FR.left[1] - FR.bull[1]] };
+const HAND = { mid:[22, 244], left:[82, 30] };       // manos de cada figura dentro de su recorte
+const LAND = { picado:[FR.right[0] - 150, GY], evans:[FR.right[0], GY] };
+function arenaSetup(){
+  MODE = 'setup'; SCN = 'arena'; clearUI(); rerender = arenaSetup; A = null;
+  ['arena', 'sp_bull', 'sp_mid', 'sp_left', 'sp_right'].forEach(img);
+  topBar();
+  const v = card(`<div class="in"><h2>${L({es:'La fiesta del toro', en:'The bull festival'})}</h2><p class="sm">${L(ARENA.intro)}</p>
+    <span class="tag">${L(ARENA.tec)}</span>
+    <div class="opts" data-g="tec"><button class="opt chk" data-v="picado"><i>↘</i><span><b>${L(ARENA.picado)}</b><br><small>${L(ARENA.picadoS)}</small></span></button><button class="opt chk" data-v="evans"><i>⌒</i><span><b>${L(ARENA.evans)}</b><br><small>${L(ARENA.evansS)}</small></span></button></div>
+    <p class="sm" data-ev hidden>${L(ARENA.evansNota)}</p></div>
+    <div class="act"><button class="btn" data-cr>${L({es:'Imágenes', en:'Images'})}</button>${S.done || S.epi ? `<button class="btn" data-b>${t('palacio')}</button>` : ''}<button class="btn pri" data-go>${t('empezar')} ›</button></div>`, false, 'wide');
+  const sync = () => { v.querySelectorAll('[data-g]').forEach(gr => gr.querySelectorAll('.opt').forEach(b => { const on = S[gr.dataset.g] === b.dataset.v; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); b.style.borderWidth = on ? '3px' : '2px'; b.style.background = on ? '#efe0b8' : ''; })); v.querySelector('[data-ev]').hidden = S.tec !== 'evans'; };
+  v.querySelectorAll('[data-g] .opt').forEach(b => b.onclick = () => { SFX.tap(); S[b.parentElement.dataset.g] = b.dataset.v; save(); sync(); });
+  sync();
+  const bb = v.querySelector('[data-b]'); if (bb) bb.onclick = () => showTitle();
+  v.querySelector('[data-cr]').onclick = () => credits();
+  v.querySelector('[data-go]').onclick = () => { au(); SFX.open(); const f = S.fiestas.findIndex(x => !x); startFiesta(f < 0 ? 0 : f); };
+}
+function credits(){
+  const v = card(`<div class="in"><h2>${L({es:'Imágenes', en:'Images'})}</h2>${L(ARENA.creditos).map(p => `<p class="cr">${p}</p>`).join('')}</div><div class="act"><button class="btn pri" data-c>${L({es:'Cerrar', en:'Close'})}</button></div>`);
+  v.querySelector('[data-c]').onclick = () => v.remove();
+}
+function startFiesta(f){
+  MODE = 'arena'; SCN = 'arena'; clearUI(); rerender = () => {};
+  A = {f, cfg:FIESTA[f], n:0, res:[], acl:0, firstEver:!S.fiestas.some(x => x)};
+  A.hud = $(`<div class="hud"><div class="pane" data-h></div><span style="flex:1"></span><div class="pane" data-a></div></div>`); st.appendChild(A.hud);
+  if (HIST.inside){ const h = $(`<button class="chip" style="margin-right:6px">${t('hist')}</button>`); h.onclick = () => HIST.back(); A.hud.insertBefore(h, A.hud.firstChild); }
+  const mb = $(`<button class="chip" style="margin-left:6px">${t('menu')}</button>`); mb.onclick = e => { e.stopPropagation(); A = null; showTitle(); }; A.hud.appendChild(mb);
+  A.hint = $('<div class="hint"></div>'); st.appendChild(A.hint);
+  A.big = $('<div class="big"></div>'); st.appendChild(A.big);
+  newBull();
+}
+function hud(){ if (!A) return; A.hud.querySelector('[data-h]').innerHTML = `<b>${t('fiesta')[A.f]}</b> · ${t('toro', {a:A.n + 1})}`; A.hud.querySelector('[data-a]').innerHTML = `${t('aclam')} <b>${Math.round(A.acl)}</b>`; }
+function newBull(){
+  const c = A.cfg, ev = S.tec === 'evans';
+  A.ph = 'approach'; A.t = 0; A.g = [null, null, null]; A.msg = ''; A.flash = 0; A.hitstop = 0; A.cheer = 0; A.knees = false; A.dusted = 0;
+  A.bull = {x:1500, v:c.v*(1 + (Math.random() - .5)*c.vary), rate:11 + c.v/70, gone:false};
+  // el saltador: en picado es la figura central, que espera arriba a la izquierda; por los cuernos empieza como la figura de la izquierda
+  A.lp = ev ? {spr:'left', x:FR.left[0], y:FR.left[1], rot:0, a:1} : {spr:'mid', x:180, y:150, rot:-.55, a:1};
+  A.ring = null; A.tmul = ev ? .66 : 1; A.firstHint = A.firstEver && A.n === 0;
+  A.good = c.good*A.tmul*(A.firstHint ? 1.3 : 1); A.perf = c.perf*A.tmul*(A.firstHint ? 1.3 : 1);
+  A.ts = 1; A.hintShown = 0; A.fl = null;
+  hud(); SFX.crowd(.2);
+}
+const bullBob = () => Math.sin(T*A.bull.rate)*4;
+function tapArena(){
+  if (!A || MODE !== 'arena') return;
+  if (A.ph === 'result'){ if (A.t > .5) nextAfterResult(); return; }
+  const r = A.ring; if (!r || r.done) return;
+  const e = r.due - A.t; SFX.tap();
+  if (Math.abs(e) <= A.good) judge(r.k, Math.abs(e) <= A.perf ? 2 : 1);
+  else if (e > A.good) fail(r.k, 'early');
+}
+function judge(k, q){
+  A.g[k] = q; A.ring.done = true; A.hitstop = .035; A.flash = 1;
+  bigText(q === 2 ? t('perf') : t('good')); (q === 2 ? SFX.perfect : SFX.good)(); shake(q === 2 ? 7 : 4);
+  if (q === 2) sparks(A.ring.x, A.ring.y, 10);
+  dust(A.ring.x, A.ring.y, 6, .8);
+  A.cheer = Math.min(1, A.cheer + .35*q);
+  if (k === 0){ A.ph = 'entry'; A.t0 = A.t; SFX.whoosh(); A.e0 = {x:A.lp.x, y:A.lp.y, rot:A.lp.rot}; }
+  else if (k === 1){ A.ph = S.tec === 'evans' ? 'swap' : 'flight'; A.t0 = A.t; SFX.whoosh(); A.fl = {x0:A.lp.x, y0:A.lp.y}; }
+  else if (k === 2){ A.ph = 'landed'; A.t0 = A.t; SFX.land(); dust(A.ring.x, GY, 10); }
+}
+function fail(k, why){
+  A.g[k] = 0; if (A.ring) A.ring.done = true; SFX.no(); bigText(t('fail'));
+  A.fall = {x:A.lp.x, y:A.lp.y, rot:A.lp.rot, vx:why === 'early' ? 60 : -40, vr:why === 'early' ? 2.2 : -2};
+  if (k === 0){ A.msg = why === 'early' ? t('early1') : t('late1'); A.ph = 'fall'; A.t0 = A.t; }
+  else if (k === 1){ A.msg = why === 'early' ? t('early2') : t('late2'); A.ph = 'fall'; A.t0 = A.t; A.fall.vx = -90; }
+  else { A.msg = t('land0'); A.ph = 'landed'; A.t0 = A.t; A.knees = true; SFX.thud(); dust(A.lp.x + 90, GY, 12); }
+}
+function bigText(s){ if (!A) return; A.big.textContent = s; A.big.classList.add('on'); clearTimeout(A.bigT); A.bigT = setTimeout(() => A && A.big.classList.remove('on'), 650); }
+function hint(on){ if (!A) return; A.hint.textContent = matchMedia('(hover: hover)').matches ? t('tapK') : t('tap'); A.hint.classList.toggle('on', !!on); }
+function sz(n){ const f = FR[n]; return [f[2], f[3]]; }
+
+function arenaStep(dt){
+  if (!A) return;
+  if (A.hitstop > 0){ A.hitstop -= dt; return; }
+  const r = A.ring, near = r && !r.done ? Math.max(0, r.due - A.t) : 9;
+  const want = near < .75 ? .45 : 1; A.ts += (want - A.ts)*Math.min(1, dt*8);
+  const d = dt*A.ts; A.t += d; const B = A.bull, ev = S.tec === 'evans', lp = A.lp;
+  if (!B.gone){ B.x -= B.v*d; if (Math.random() < d*3) SFX.hoof(); }
+  if (B.x < -900) B.gone = true;
+  const att = (spr) => { const o = OFF[spr]; return [B.x + o[0], FR.bull[1] + o[1] + bullBob()]; };
+  switch (A.ph){
+    case 'approach': {
+      // el momento justo es aquel en que la escena coincide con el fresco
+      const lead = ev ? 0 : .32, due = A.t + (B.x - FR.bull[0])/B.v - lead;
+      const hp = ev ? [FR.left[0] + HAND.left[0], FR.left[1] + HAND.left[1]] : [FR.mid[0] + HAND.mid[0], FR.mid[1] + HAND.mid[1]];
+      if (!A.ring) A.ring = {k:0, due, x:hp[0], y:hp[1], done:false}; else A.ring.due = due;
+      if (!ev){ lp.y = 150 + Math.sin(A.t*2.4)*5; lp.rot = -.55 + Math.sin(A.t*2.4)*.03; }
+      if (A.firstHint && A.ring.due - A.t < 1.2) hint(true);
+      if (A.t - A.ring.due > A.good){ hint(false); fail(0, 'late'); }
+      break; }
+    case 'entry': {
+      hint(false);
+      if (!ev){ const k = Math.min(1, (A.t - A.t0)/.32), e = ease(k), p = att('mid');
+        lp.x = A.e0.x + (p[0] - A.e0.x)*e; lp.y = A.e0.y + (p[1] - A.e0.y)*e - Math.sin(k*Math.PI)*30; lp.rot = A.e0.rot*(1 - e);
+        if (k >= 1){ A.ph = 'support'; A.t0 = A.t; A.ring = {k:1, due:A.t + .62 + Math.random()*.25, done:false}; } }
+      else { const p = att('left'); lp.x = p[0]; lp.y = p[1]; A.ph = 'support'; A.t0 = A.t; A.ring = {k:1, due:A.t + .55 + Math.random()*.2, done:false}; }
+      break; }
+    case 'support': {
+      if (!ev){ const p = att('mid'); lp.x = p[0]; lp.y = p[1]; lp.rot = Math.sin((A.t - A.t0)*7)*.035; A.ring.x = lp.x + HAND.mid[0]; A.ring.y = lp.y + HAND.mid[1]; }
+      else { const p = att('left'), u = Math.min(1, (A.t - A.t0)/Math.max(.1, A.ring.due - A.t0)); lp.x = p[0]; lp.y = p[1] - u*46; lp.rot = -u*.22; A.ring.x = lp.x + HAND.left[0]; A.ring.y = lp.y + HAND.left[1]; }
+      if (A.firstHint && !A.hintShown){ hint(true); A.hintShown = 1; }
+      if (A.t - A.ring.due > A.good){ hint(false); fail(1, 'late'); }
+      break; }
+    case 'swap': {   // por los cuernos: la figura de la izquierda da paso a la central, sobre el lomo
+      const k = Math.min(1, (A.t - A.t0)/.22), p = att('mid');
+      if (lp.spr !== 'mid'){ A.ghost = {spr:'left', x:lp.x, y:lp.y, rot:lp.rot, a:1}; lp.spr = 'mid'; lp.a = 0; }
+      lp.x = p[0]; lp.y = p[1] - 20*(1 - k); lp.rot = 0; lp.a = k; if (A.ghost) A.ghost.a = 1 - k;
+      if (k >= 1){ A.ghost = null; A.ph = 'flight'; A.t0 = A.t; A.fl = {x0:lp.x, y0:lp.y}; }
+      break; }
+    case 'flight': {
+      hint(false);
+      const dur = ev ? .9 : .82, k = Math.min(1, (A.t - A.t0)/dur), [w, h] = sz('mid'), L0 = LAND[ev ? 'evans' : 'picado'];
+      // de la posición sobre el lomo a caer de pie: la figura gira media vuelta, con las piernas hacia abajo
+      const xe = L0[0] + (ev ? (FR.right[2] - w)/2 : 0), ye = ev ? GY - h : FR.right[1] - 20;
+      const top = Math.min(A.fl.y0, ye) - (ev ? 120 : 80);
+      lp.x = A.fl.x0 + (xe - A.fl.x0)*ease(k); lp.y = (1 - k)*(1 - k)*A.fl.y0 + 2*(1 - k)*k*top + k*k*ye; lp.rot = Math.PI*ease(k);
+      if (A.ring.k !== 2){ A.ring = {k:2, due:A.t0 + dur, x:ev ? xe + w/2 : FR.right[0] + 6, y:ev ? GY - 18 : FR.right[1] + 40, done:false}; if (A.firstHint) hint(true); }
+      if (k >= 1 && !A.ring.done && A.t - A.ring.due > A.good) fail(2, 'late');
+      break; }
+    case 'landed': {
+      hint(false); const k = Math.min(1, (A.t - A.t0)/.55);
+      if (ev && !A.knees && lp.spr !== 'right'){ A.ghost = {spr:lp.spr, x:lp.x, y:lp.y, rot:lp.rot, a:1}; lp.spr = 'right'; lp.x = FR.right[0]; lp.y = FR.right[1]; lp.rot = 0; lp.a = 0; }
+      if (A.ghost){ A.ghost.a = Math.max(0, 1 - k*2.2); lp.a = Math.min(1, k*2.2); }
+      if (A.knees) lp.rot = Math.PI + .35*ease(k);
+      else if (!ev){ lp.y = FR.right[1] - 20 + 30*ease(k); lp.rot = Math.PI - .12*ease(k); }
+      if (k >= 1){ A.ghost = null; toResult(); }
+      break; }
+    case 'fall': {
+      const f = A.fall, k = (A.t - A.t0);
+      f.x += f.vx*d; f.y += (60 + 900*k)*d; f.rot += f.vr*d; lp.x = f.x; lp.y = Math.min(f.y, GY - 40); lp.rot = f.rot; lp.a = Math.max(0, 1 - Math.max(0, k - .7)*2);
+      if (f.y > GY - 60 && !A.dusted){ A.dusted = 1; dust(lp.x + 80, GY, 14); SFX.thud(); shake(5); }
+      if (k > 1.5) toResult();
+      break; }
+    case 'result': break;
+  }
+  A.cheer *= Math.pow(.6, d);
+}
+function toResult(){
+  if (A.ph === 'result') return;
+  A.ph = 'result'; A.t0 = A.t; A.t = 0; A.ring = null; hint(false);
+  const q = A.g.map(x => x || 0), sum = q.reduce((a, b) => a + b, 0), ev = S.tec === 'evans';
+  const gain = sum*10*[1, 1.5, 2][A.f]*(ev ? 1.4 : 1); A.acl += gain; A.res.push({q, ok:A.g[2] != null && A.g[2] > 0, perf:q.filter(x => x === 2).length});
+  if (sum >= 5) SFX.crowd(1); else if (sum >= 3) SFX.crowd(.5);
+  hud();
+  const names = ev ? [t('f1e'), t('f2e'), t('f3')] : [t('f1'), t('f2'), t('f3')];
+  const sym = g => g === 2 ? '★' : g === 1 ? '✓' : g === 0 ? '✗' : '–';
+  const msg = A.msg || t('clean');
+  const head = A.g[2] > 0 ? L({es:'Salto completo', en:'Complete leap'}) : A.g[2] === 0 ? L({es:'Salto completo, caída de rodillas', en:'Complete leap, landing on the knees'}) : L({es:'Salto fallido', en:'Failed leap'});
+  const v = card(`<div class="in"><span class="tag">${t('fiesta')[A.f]} · ${t('toro', {a:A.n + 1})}</span><h2>${head}</h2>
+    <div class="grades">${names.map((n, i) => `<span><b>${sym(A.g[i])}</b>${n}</span>`).join('')}</div><p>${msg}</p>${ev ? `<p style="font-size:13px;opacity:.85">${L(ARENA.evansNota)}</p>` : ''}<p><b>${t('aclam')}: +${Math.round(gain)}</b></p></div>
+    <div class="act"><button class="btn pri" data-n>${A.n < 2 ? t('otro') : t('finF')} ›</button></div>`);
+  v.style.background = 'rgba(35,26,20,.15)';
+  v.querySelector('[data-n]').onclick = e => { e.stopPropagation(); nextAfterResult(); };
+  A.card = v;
+}
+function nextAfterResult(){
+  if (!A || A.ph !== 'result') return; if (A.card) A.card.remove(); SFX.tap();
+  if (A.n < 2){ A.n++; newBull(); return; }
+  endFiesta();
+}
+function endFiesta(){
+  const f = A.f, maxA = 3*6*10*[1, 1.5, 2][f]*(S.tec === 'evans' ? 1.4 : 1), ratio = A.acl/maxA;
+  const ros = ratio > .8 ? 3 : ratio > .5 ? 2 : 1;
+  S.fiestas[f] = Math.max(S.fiestas[f] || 0, ros); S.best = Math.max(S.best || 0, Math.round(A.acl)); save();
+  const comp = A.res.filter(r => r.ok).length, perf = A.res.reduce((a, r) => a + r.perf, 0);
+  if (!S.xpF['f' + f]){ S.xpF['f' + f] = 1; HIST.xp(30 + perf*5); }
+  const crono = S.lang === 'es'
+    ? `En la ${t('fiesta')[f].toLowerCase()}, saltaste ${comp} de 3 toros${S.tec === 'evans' ? ' por los cuernos, a la manera de Evans' : ' en picado'}, con ${perf} ${perf === 1 ? 'fase perfecta' : 'fases perfectas'}. ${comp === 3 ? 'La comunidad te aclamó desde las barreras.' : comp ? 'El público reconoció tu valor.' : 'Habrá otra fiesta.'}`
+    : `At the ${t('fiesta')[f].toLowerCase()}, you leapt ${comp} of 3 bulls${S.tec === 'evans' ? ' by the horns, in Evans\'s manner' : ' with the diving leap'}, with ${perf} perfect ${perf === 1 ? 'phase' : 'phases'}. ${comp === 3 ? 'The community acclaimed you from the barriers.' : comp ? 'The crowd recognised your courage.' : 'There will be another festival.'}`;
+  const last = f === 2, needEpi = last && !S.epi;
+  const v = card(`<div class="in"><span class="tag">${t('finF')}</span><h2>${t('fiesta')[f]}</h2><div class="ros" aria-label="${ros}/3">${'✿'.repeat(ros)}<span style="opacity:.25">${'✿'.repeat(3 - ros)}</span></div>
+    <div class="grades"><span><b>${comp}/3</b>${t('saltos')}</span><span><b>${perf}</b>${t('perfs')}</span><span><b>${Math.round(A.acl)}</b>${t('aclam')}</span></div>
+    <p><i>${t('cron')}.</i> ${crono}</p><p class="nota" style="font-size:13px;opacity:.85">${t('nota')}</p></div>
+    <div class="act"><button class="btn" data-r>${t('repetir')}</button>${needEpi ? `<button class="btn pri" data-e>${t('alTrono')} ›</button>` : last ? `<button class="btn pri" data-m>${t('palacio')}</button>` : `<button class="btn pri" data-x>${t('next')} ›</button>`}</div>`);
+  A.ph = 'end';
+  v.querySelector('[data-r]').onclick = () => startFiesta(f);
+  const x = v.querySelector('[data-x]'); if (x) x.onclick = () => startFiesta(f + 1);
+  const e = v.querySelector('[data-e]'); if (e) e.onclick = () => showEpilogue();
+  const m = v.querySelector('[data-m]'); if (m) m.onclick = () => showTitle();
+}
+// dibujo de la arena: fondo del fresco, figura que recibe, toro y saltador recortados del original
+function arenaDraw(){
+  if (!A) return; const c = ctx, ev = S.tec === 'evans', B = A.bull;
+  // todo ocurre dentro del campo azul del fresco, entre sus cenefas
+  c.save(); c.beginPath(); c.rect(150, 138, 965, 418); c.clip();
+  // velo azul que calma las grietas del fondo para que las figuras se lean
+  c.fillStyle = 'rgba(112,150,180,.42)'; c.fillRect(150, 138, 965, 418);
+  c.shadowColor = 'rgba(25,14,6,.6)'; c.shadowBlur = 7; c.shadowOffsetX = 2; c.shadowOffsetY = 3;
+  if (!ev) sprite(c, 'right', ...FR.right);
+  const drawLp = () => { if (A.ghost) sprite(c, A.ghost.spr, A.ghost.x, A.ghost.y, ...sz(A.ghost.spr), A.ghost.rot, null, null, A.ghost.a); const lp = A.lp; sprite(c, lp.spr, lp.x, lp.y, ...sz(lp.spr), lp.rot, null, null, lp.a); };
+  const front = ['entry', 'support', 'swap', 'flight', 'landed', 'fall'].includes(A.ph);
+  if (!front) drawLp();
+  if (!B.gone) sprite(c, 'bull', B.x, FR.bull[1] + bullBob(), FR.bull[2], FR.bull[3], Math.sin(T*B.rate)*.012);
+  if (front) drawLp();
+  c.restore();
+  const r = A.ring;
+  if (r && !r.done && A.ph !== 'result'){ const dtt = r.due - A.t, R0 = 24, rr = R0 + Math.min(120, Math.max(0, dtt)*150);
+    c.lineWidth = 4; c.strokeStyle = PAL.negro; c.beginPath(); c.arc(r.x, r.y, R0, 0, 6.283); c.stroke();
+    c.strokeStyle = '#fff8ea'; c.lineWidth = 2; c.beginPath(); c.arc(r.x, r.y, R0 - 3, 0, 6.283); c.stroke();
+    if (dtt > -A.good){ const inw = Math.abs(dtt) <= A.good; c.lineWidth = 5; c.strokeStyle = inw ? PAL.amar : '#fff8ea'; c.setLineDash(inw ? [] : [10, 6]); c.beginPath(); c.arc(r.x, r.y, rr, 0, 6.283); c.stroke(); c.setLineDash([]); }
+    rosette(c, r.x, r.y, 9, PAL.ocre, PAL.amar); }
+  if (A.flash > 0){ c.fillStyle = `rgba(255,248,230,${A.flash*.3})`; c.fillRect(0, 0, W, H); A.flash = Math.max(0, A.flash - .08); }
+}
+
+/* ---------- epílogo ---------- */
+function showEpilogue(){
+  MODE = 'epi'; SCN = 'trono'; clearUI(); rerender = showEpilogue; topBar();
+  const v = card(`<div class="in"><span class="tag">${L(EPILOGO.sub)}</span><h2>${L(EPILOGO.t)}</h2>${L(EPILOGO.p).map(p => `<p>${p}</p>`).join('')}${fichaBtn(EPILOGO.ficha)}</div><div class="act"><button class="btn pri" data-n>${t('siguiente')} ›</button></div>`);
+  bindFicha(v);
+  v.querySelector('[data-n]').onclick = () => { SFX.tap(); v.remove(); meaning(); };
+}
+function meaning(){
+  const sel = new Set();
+  const v = card(`<div class="in"><span class="tag">${t('epiQ')}</span><h2 style="font-size:19px">${L(EPILOGO.q)}</h2><div class="opts">${L(EPILOGO.lec).map((o, j) => `<button class="opt chk" data-j="${j}"><i></i><span>${o}</span></button>`).join('')}</div><div class="fb" hidden></div>${fichaBtn(EPILOGO.fichaQ)}</div><div class="act"><button class="btn pri" data-c>${t('comprobar')}</button></div>`);
+  bindFicha(v); const fb = v.querySelector('.fb'), cb = v.querySelector('[data-c]'); let done = false;
+  v.querySelectorAll('.opt').forEach(b => b.onclick = () => { if (done) return; SFX.tap(); const j = +b.dataset.j; sel.has(j) ? sel.delete(j) : sel.add(j); b.classList.toggle('on', sel.has(j)); b.querySelector('i').textContent = sel.has(j) ? '✓' : ''; b.style.background = sel.has(j) ? '#efe0b8' : ''; });
+  cb.onclick = () => {
+    if (done){ finale(); return; }
+    done = true; const all = sel.size === 4; v.querySelectorAll('.opt').forEach(b => { b.classList.add('ok'); b.querySelector('i').textContent = '✓'; });
+    fb.hidden = false; fb.textContent = L(EPILOGO.fin); (all ? SFX.ok : SFX.good)();
+    if (all && !S.xpF.epiQ){ S.xpF.epiQ = 1; HIST.xp(20); }
+    cb.textContent = t('siguiente') + ' ›';
+  };
+}
+function finale(){
+  if (!S.done){ S.done = true; S.epi = true; save(); if (!S.xpF.fin){ S.xpF.fin = 1; HIST.xp(100); } }
+  clearUI(); SCN = 'titulo'; MODE = 'title'; topBar();
+  const tot = S.fiestas.reduce((a, b) => a + b, 0);
+  const v = card(`<div class="in"><h2>${t('fin')}</h2><p>${t('fin2')}</p><div class="ros">${'✿'.repeat(tot)}<span style="opacity:.25">${'✿'.repeat(9 - tot)}</span></div><p>${t('aclam')}: <b>${S.best}</b></p></div>
+    <div class="act">${HIST.inside ? `<button class="btn" data-h>${t('volver')}</button>` : ''}<button class="btn az" data-f>${t('libre')}</button><button class="btn pri" data-t>${t('menu')}</button></div>`);
+  const h = v.querySelector('[data-h]'); if (h) h.onclick = () => HIST.back();
+  v.querySelector('[data-f]').onclick = () => arenaSetup(); v.querySelector('[data-t]').onclick = () => showTitle();
+}
+
+/* ---------- entrada ---------- */
+cv.addEventListener('pointerdown', e => { if (MODE === 'arena'){ e.preventDefault(); au(); tapArena(); } });
+st.addEventListener('pointerdown', e => { if (MODE === 'arena' && (e.target === st || e.target.classList.contains('hud'))){ au(); tapArena(); } });
+addEventListener('keydown', e => { if (MODE === 'arena' && (e.code === 'Space' || e.code === 'Enter')){ e.preventDefault(); au(); tapArena(); } });
+document.addEventListener('gesturestart', e => e.preventDefault());
+
+resize(); showTitle(); requestAnimationFrame(t0 => { last = t0; requestAnimationFrame(frame); });
+window.TORO = { get A(){ return A; }, S:() => S, enterRoom, arenaSetup, startFiesta, showEpilogue, tapArena };
+})();
+
+</script>
+<div id="alacopy" role="contentinfo" style="position:fixed;right:max(8px,env(safe-area-inset-right));bottom:max(6px,env(safe-area-inset-bottom));z-index:2147482000;pointer-events:none;user-select:none;-webkit-user-select:none;font:500 11px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif;color:#fff;opacity:.6;text-shadow:0 1px 2px #000,0 0 4px #000;white-space:nowrap">© Diseñado y Creado por Alejandro Leiva Arcas</div>
+</body>
+</html>

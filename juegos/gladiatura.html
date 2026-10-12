@@ -1691,21 +1691,29 @@ if(HIST.inside()){ try{ fetch('../data/temas.json').then(r=>r.json()).then(d=>{ 
 if(HIST.lang) document.documentElement.lang=HIST.lang;
 
 // ---------- táctil ----------
-window.TOUCHON=false;
+window.TOUCHON=false; var Touch_jRelease=()=>{};
 const Touch=(function(){
   const st=document.getElementById('stage');
   const css=document.createElement('style'); css.textContent=`
 #touch{position:fixed;inset:0;height:auto;display:none;pointer-events:none;z-index:5;--s:1.25;--L:max(10px,env(safe-area-inset-left));--R:max(10px,env(safe-area-inset-right));--B:max(8px,env(safe-area-inset-bottom))}
 @media (max-height:500px){ #touch{--s:1} }
 #touch.on{display:block}
+.tb-left,.tb-right,.tb-up,.tb-guard{display:none!important}
+#tjz{position:absolute;left:0;top:28%;width:44%;bottom:0;pointer-events:auto;touch-action:none}
+#tjoy{position:absolute;width:calc(124px*var(--s));height:calc(124px*var(--s));margin:calc(-62px*var(--s)) 0 0 calc(-62px*var(--s));border-radius:50%;border:2.5px solid rgba(243,231,207,.75);background:radial-gradient(circle,rgba(20,14,8,.25),rgba(20,14,8,.5));pointer-events:none;opacity:.55;transition:opacity .15s}
+#tjoy.on{opacity:.95}
+#tjoy .kn{position:absolute;left:50%;top:50%;width:calc(54px*var(--s));height:calc(54px*var(--s));margin:calc(-27px*var(--s)) 0 0 calc(-27px*var(--s));border-radius:50%;background:radial-gradient(circle at 35% 35%,#fbf3df,#c9a76a);border:2px solid #7a5a2e;box-shadow:0 3px 8px rgba(0,0,0,.4)}
+#tjoy i{position:absolute;font-style:normal;color:#f3e7cf;font-size:calc(15px*var(--s));text-shadow:0 1px 2px #000;opacity:.8}
+#tjoy i.qneed{color:#f3d68c;opacity:1;font-size:calc(22px*var(--s));text-shadow:0 0 6px #000,0 0 10px rgba(243,214,140,.9)}
+#tjoy i.on{opacity:1;color:#f3d68c}
 .tb-left{left:var(--L);bottom:calc(var(--B) + 50px*var(--s));width:calc(58px*var(--s));height:calc(58px*var(--s))}
 .tb-right{left:calc(var(--L) + 120px*var(--s));bottom:calc(var(--B) + 50px*var(--s));width:calc(58px*var(--s));height:calc(58px*var(--s))}
 .tb-up{left:calc(var(--L) + 61px*var(--s));bottom:calc(var(--B) + 106px*var(--s));width:calc(56px*var(--s));height:calc(56px*var(--s))}
 .tb-guard{left:calc(var(--L) + 61px*var(--s));bottom:var(--B);width:calc(56px*var(--s));height:calc(56px*var(--s))}
-.tb-atk{right:calc(var(--R) + 62px*var(--s));bottom:calc(var(--B) + 8px*var(--s));width:calc(82px*var(--s));height:calc(82px*var(--s))}
-.tb-dodge{right:calc(var(--R) + 154px*var(--s));bottom:var(--B);width:calc(58px*var(--s));height:calc(58px*var(--s))}
-.tb-push{right:var(--R);bottom:calc(var(--B) + 96px*var(--s));width:calc(62px*var(--s));height:calc(62px*var(--s))}
-.tb-spec{right:calc(var(--R) + 74px*var(--s));bottom:calc(var(--B) + 104px*var(--s));width:calc(56px*var(--s));height:calc(56px*var(--s))}
+.tb-atk{right:calc(var(--R) + 16px*var(--s));bottom:calc(var(--B) + 14px*var(--s));width:calc(86px*var(--s));height:calc(86px*var(--s))}
+.tb-dodge{right:calc(var(--R) + 110px*var(--s));bottom:calc(var(--B) + 6px*var(--s));width:calc(62px*var(--s));height:calc(62px*var(--s))}
+.tb-push{right:calc(var(--R) + 96px*var(--s));bottom:calc(var(--B) + 76px*var(--s));width:calc(62px*var(--s));height:calc(62px*var(--s))}
+.tb-spec{right:calc(var(--R) + 26px*var(--s));bottom:calc(var(--B) + 108px*var(--s));width:calc(62px*var(--s));height:calc(62px*var(--s))}
 #tyield{position:absolute;left:56.5%;top:7.8%;transform:translate(-50%,-50%);width:48px;height:48px;min-height:48px;padding:0;border:none;background:none;display:none;z-index:6;align-items:center;justify-content:center;flex-direction:column;-webkit-tap-highlight-color:transparent;touch-action:none}
 #tyield.on{display:flex}
 #tyield b{position:relative;width:32px;height:32px;border-radius:50%;background:rgba(20,14,8,.8);border:2px dashed rgba(243,231,207,.6);color:#f3e7cf;font-size:17px;line-height:28px;opacity:.6}
@@ -1761,6 +1769,20 @@ const Touch=(function(){
   const B=(k,big,small,cls)=>{ const b=document.createElement('div'); b.className='tb tb-'+k+(cls?' '+cls:''); b.dataset.k=k; b.innerHTML=`<b>${big}</b>${small?`<small>${small}</small>`:''}`; pad.appendChild(b); return b; };
   // cruceta a la izquierda
   B('left','←'); B('right','→'); B('up','↑'); B('guard','↓','cubrir');
+  // joystick analógico flotante: aparece donde se apoya el pulgar izquierdo (izquierda/derecha andar, arriba saltar, abajo cubrir)
+  const jz=document.createElement('div'); jz.id='tjz'; pad.appendChild(jz);
+  const jy=document.createElement('div'); jy.id='tjoy'; jy.innerHTML='<i data-k="up" style="left:50%;top:4%;transform:translateX(-50%)">▲</i><i data-k="guard" style="left:50%;bottom:4%;transform:translateX(-50%)">▼</i><i data-k="left" style="left:6%;top:50%;transform:translateY(-50%)">◀</i><i data-k="right" style="right:6%;top:50%;transform:translateY(-50%)">▶</i><span class="kn"></span>'; pad.appendChild(jy);
+  const jk=jy.querySelector('.kn'); let jId=null, jx=0, jyy=0; const jOn={left:false,right:false,up:false,guard:false};
+  const jRest=()=>{ const r=pad.getBoundingClientRect(), sc=parseFloat(getComputedStyle(pad).getPropertyValue('--s'))||1; jy.style.left=(Math.max(12,parseFloat(getComputedStyle(pad).getPropertyValue('--L'))||12)+76*sc)+'px'; jy.style.top=(r.height-(parseFloat(getComputedStyle(pad).getPropertyValue('--B'))||8)-78*sc)+'px'; jk.style.transform=''; jy.classList.remove('on'); };
+  const jSet=(k,v)=>{ if(jOn[k]===v) return; jOn[k]=v; jy.querySelector('i[data-k="'+k+'"]').classList.toggle('on',v); v?vPress(k):vRelease(k); };
+  const jUpd=(cx,cy)=>{ const R=parseFloat(getComputedStyle(jy).width)/2||62; let dx=cx-jx, dy=cy-jyy; const d=Math.hypot(dx,dy); if(d>R){ dx*=R/d; dy*=R/d; } jk.style.transform=`translate(${dx}px,${dy}px)`;
+    const nx=dx/R, ny=dy/R; jSet('left',nx<-(jOn.left?.25:.38)); jSet('right',nx>(jOn.right?.25:.38)); jSet('up',ny<-(jOn.up?.45:.6)); jSet('guard',ny>(jOn.guard?.45:.6)); };
+  jz.addEventListener('pointerdown',e=>{ if(jId!==null) return; e.preventDefault(); try{ jz.setPointerCapture(e.pointerId); }catch(_){} if(!started) begin(); jId=e.pointerId; const r=pad.getBoundingClientRect(); jx=e.clientX-r.left; jyy=e.clientY-r.top; jy.style.left=jx+'px'; jy.style.top=jyy+'px'; jy.classList.add('on'); jUpd(jx,jyy); });
+  jz.addEventListener('pointermove',e=>{ if(e.pointerId!==jId) return; const r=pad.getBoundingClientRect(); jUpd(e.clientX-r.left,e.clientY-r.top); });
+  const jEnd=e=>{ if(e.pointerId!==jId) return; jId=null; for(const k in jOn) jSet(k,false); jRest(); };
+  for(const ev of ['pointerup','pointercancel','lostpointercapture']) jz.addEventListener(ev,jEnd);
+  addEventListener('resize',()=>{ if(jId===null) jRest(); }); setTimeout(jRest,50);
+  Touch_jRelease=()=>{ jId=null; for(const k in jOn) jSet(k,false); jRest(); };
   // acciones a la derecha (las letras coinciden con el teclado y con los textos del juego)
   B('atk','A','golpe'); B('push','S','presa'); B('dodge','D','esquiva'); const bW=B('spec','W','furor');
   // rendirse (ad digitum): botón pequeño junto al reloj, lejos de los de acción; hay que mantenerlo medio segundo
@@ -1801,6 +1823,8 @@ const Touch=(function(){
     // contraataque en tiempo bala: se marcan con contorno discontinuo y un número los botones del paso que toca
     { const qn=play&&typeof QT!=='undefined'&&QT&&QT.state==='input'?QTOK[QT.seq[QT.i]]:null, fk=typeof P!=='undefined'&&P&&P.dir>0?'right':'left';
       for(const b of pad.children){ const k=b.dataset.k, on=!!qn&&(k===qn.k||(qn.d==='up'&&k==='up')||(qn.d==='down'&&k==='guard')||(qn.d==='fwd'&&k===fk)); b.classList.toggle('qneed',on); } }
+    for(const i of jy.querySelectorAll('i')){ const k=i.dataset.k, on=!!(play&&typeof QT!=='undefined'&&QT&&QT.state==='input'&&(()=>{ const qn=QTOK[QT.seq[QT.i]]; const fk=typeof P!=='undefined'&&P&&P.dir>0?'right':'left'; return qn&&((qn.d==='up'&&k==='up')||(qn.d==='down'&&k==='guard')||(qn.d==='fwd'&&k===fk)||qn.k===k); })()); i.classList.toggle('qneed',on); }
+    if(!play&&jId!==null) Touch_jRelease();
     if(!play&&held.size){ for(const b of held.values()){ b.classList.remove('down'); vRelease(b.dataset.k); } held.clear(); }
     requestAnimationFrame(tick); }
   requestAnimationFrame(tick);
@@ -1965,6 +1989,26 @@ function tutDone(){ try{ return +(localStorage.getItem(TUT_KEY)||0); }catch(e){ 
 function portraitCanvas(type,fem,w,h,look){ const c=document.createElement('canvas'); c.width=w*2; c.height=h*2; c.style.width=w+'px'; c.style.height=h+'px'; const g=c.getContext('2d'); const sv=ctx; ctx=g;
   try{ const f=Fighter(type,0,1,true,''); f.fem=!!fem; if(look){ f.emblem=look.emblem||null; f.oro=!!look.oro; } const sc=(h*2)/(f.mount?400:305); g.translate(w*(f.mount?1.1:1.02),h*2-10); g.scale(sc,sc); if(f.mount) gHorse(0,false); bodyLocal(f,skeleton(f)); }catch(e){}
   ctx=sv; return c; }
+
+/* la lección va en una franja abajo, entre el joystick y los botones, para no tapar a los luchadores */
+(function(){ const st=document.createElement('style'); st.textContent=`
+#stage #tut{top:auto;bottom:max(1.6%,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:min(50%,620px);padding:.3em .8em .35em;pointer-events:none;background:rgba(18,12,7,.88)}
+#stage #tut button{pointer-events:auto}
+#stage #tut .tutT{display:inline-block;font-size:1.3em;margin:0 .4em 0 0}
+#stage #tut .tutK{display:inline-block;margin:0}
+#stage #tut .tutF{margin-top:.2em}
+#stage #tut.mini{padding:.15em .6em;width:auto;max-width:min(50%,620px);white-space:nowrap;display:flex;align-items:center;gap:.6em}
+#stage #tut.mini .tutH,#stage #tut.mini .tutD{display:none}
+#stage #tut.mini .tutF{margin:0;gap:.5em}
+#stage #tut.mini .tutF button{min-height:36px}
+#stage #tut .tQ{display:none}
+#stage #tut.mini #tS,#stage #tut.mini #tX{font-size:0;min-width:40px;padding:0 .5em}
+#stage #tut.mini #tS::after{content:'⏭';font-size:16px}
+#stage #tut.mini #tX::after{content:'✕';font-size:16px}
+#stage #tut.mini .tutT{font-size:1.1em}
+#stage #tut.mini .tQ{display:inline-block}
+@media (pointer:coarse){ #stage #tut{left:47%;width:min(46%,560px);font-size:12.5px} #stage #tut .tutT{font-size:16px} #stage #tut.mini{max-width:46%} }
+`; document.head.appendChild(st); })();
 const Tutor=(function(){
   const LESSONS=[
     {t:'Acércate',k:['→'],d:'Camina hacia Calvio con las flechas ← →.',mode:'idle',ev:'near'},
@@ -1977,22 +2021,22 @@ const Tutor=(function(){
     {t:'Presa',k:['S'],d:'Calvio se tapa. Pulsa S pegado a él para agarrarlo: la presa atraviesa la guardia.',mode:'guard',ev:'grab'},
     {t:'Gana espacio',k:['←','+','S','·','D'],d:'Empuja y retrocede con ← y S, o esquiva hacia atrás con D (o doble toque de ←). Doble toque de → te lanza hacia delante.',mode:'idle',ev:'space'},
     {t:'Furor del público',k:['W'],d:'Tu furor está lleno: la grada lo pide. Pulsa W cerca de Calvio para el golpe especial.',mode:'idle',ev:'special',setup:()=>{ P.furor=100; }}];
-  let on=false,i=0,cnt=0,seen={},okT=0,box=null,orig={},atkT=0;
+  let on=false,i=0,cnt=0,seen={},okT=0,box=null,orig={},atkT=0,shT=0;
   function ev(kind,f){ if(!on||okT>0) return; const L=LESSONS[i]; if(L.ev!==kind) return;
     if(kind==='hit'){ if(L.test&&!L.test(f)) return; if(L.multi){ const h=f.move&&f.move.hgt; if(L.multi.includes(h)) seen[h]=true; cnt=L.multi.filter(x=>seen[x]).length; if(cnt<L.multi.length){ draw(); return; } } }
     cnt++; if(cnt>=(L.need||1)||L.multi) pass(); else draw(); }
   function pass(){ okT=1.1; if(i+1>tutDone()) HIST.xp(10,'lección '+(i+1)); try{ localStorage.setItem(TUT_KEY,Math.max(tutDone(),i+1)); }catch(e){} sfx('parry'); sfx('ooh',.6); draw(); }
-  function next(){ i++; cnt=0; seen={}; atkT=1.2; if(i>=LESSONS.length){ finish(); return; } P.x=820; E.x=1180; P.state='idle'; E.state='idle'; P.move=E.move=null; if(LESSONS[i].setup) LESSONS[i].setup(); draw(); }
+  function next(){ i++; cnt=0; seen={}; atkT=1.2; shT=0; if(i>=LESSONS.length){ finish(); return; } P.x=820; E.x=1180; P.state='idle'; E.state='idle'; P.move=E.move=null; if(LESSONS[i].setup) LESSONS[i].setup(); draw(); }
   function kbd(k){ return k.map(x=>/^[A-ZZ←→↑↓]$|^¡YA!$/.test(x)?`<kbd>${x}</kbd>`:`<span>${x}</span>`).join(' '); }
   function draw(){ if(!box) return; const L=LESSONS[i]; if(!L) return; const prog=L.multi?`${cnt} de ${L.multi.length}`:L.need?`${Math.min(cnt,L.need)} de ${L.need}`:'';
     box.innerHTML=`<div class="tutH"><span>Lección ${i+1} de ${LESSONS.length}</span><span class="dots">${LESSONS.map((_,j)=>`<i class="${j<i?'ok':j===i?'cur':''}">${j<i?'✓':j+1}</i>`).join('')}</span></div>
       <div class="tutT">${okT>0?'✓ ¡Bien hecho!':L.t}</div><div class="tutK">${kbd(L.k)}</div><div class="tutD">${L.d}</div>
-      <div class="tutF"><span>${prog}</span><span><button id="tS">Saltar lección</button><button id="tX">Salir (Esc)</button></span></div>`;
+      <div class="tutF"><span>${prog}</span><span><button id="tQ" class="tQ" aria-label="Ver la instrucción">?</button><button id="tS">Saltar lección</button><button id="tX">Salir (Esc)</button></span></div>`;
     box.classList.toggle('ok',okT>0);
-    q('tS').onclick=e=>{ e.target.blur(); okT=0; next(); }; q('tX').onclick=e=>{ e.target.blur(); exit(); }; }
+    q('tQ').onclick=e=>{ e.target.blur(); shT=0; box.classList.remove('mini'); }; q('tS').onclick=e=>{ e.target.blur(); okT=0; next(); }; q('tX').onclick=e=>{ e.target.blur(); exit(); }; }
   const q=id=>document.getElementById(id);
   function wrap(name,fn){ orig[name]=window[name]; window[name]=function(...a){ try{ fn(...a); }catch(e){} return orig[name].apply(this,a); }; }
-  function start(from){ if(!started) begin(); i=Math.max(0,Math.min(LESSONS.length-1,from||0)); cnt=0; seen={}; okT=0; atkT=1.5; on=true; window.TUTON=true;
+  function start(from){ if(!started) begin(); i=Math.max(0,Math.min(LESSONS.length-1,from||0)); shT=0; cnt=0; seen={}; okT=0; atkT=1.5; on=true; window.TUTON=true;
     window.CM={ptype:'murmillo',rtype:'thraex',pname:'Tú',rname:'Calvio',style:'prudente',ai:.3,venue:venueByName('Carthago Nova'),php:100,pbio:{status:'novato del ludus',pugnae:0,vict:0},rbio:{status:'doctor del ludus (personaje inventado)'},onEnd:()=>{}};
     newDuel(); startFight(); hintT=0;
     wrap('onHit',(f,o)=>{ if(f===P) ev('hit',f); }); wrap('onBlock',(f,o)=>{ if(o===P) ev('block'); }); wrap('onParry',(f,o)=>{ if(o===P) ev('parry'); });
@@ -2004,6 +2048,7 @@ const Tutor=(function(){
   function finish(){ stop(); Career.tutEnd(); }
   function tick(){ if(!on) return; P.hp=P.hpShow=100; E.hp=E.hpShow=100; timeLeft=99; for(const c of INC) c.cd=99; if(P.st<30) P.st=30;
     if(pressed.yield){ pressed.yield=false; exit(); return; }
+    shT+=DT; if(box) box.classList.toggle('mini',shT>5&&okT<=0);
     const L=LESSONS[i]; if(okT>0){ okT-=DT; if(okT<=0){ okT=0; next(); } return; }
     if(L.ev==='near'&&Math.abs(P.x-E.x)<240) pass();
     if(L.ev==='space'&&P.state==='dodge'&&!P.dashF) pass();
