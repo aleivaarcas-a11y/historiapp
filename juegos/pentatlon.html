@@ -1224,7 +1224,7 @@ function previewArc(x, y, vx, vy, wind, k, frac) {
 // valoración inmediata de cada pulsación, en castellano o inglés y en griego
 let fbs = [];
 const FB = { perfect: ['PERFECTO', 'PERFECT', 'ΑΡΙΣΤΑ'], good: ['BIEN', 'GOOD', 'ΕΥ'], early: ['PRONTO', 'EARLY', 'ΠΡΩΙ'], late: ['TARDE', 'LATE', 'ΟΨΕ'] };
-function feedback(kind, x, y) { fbs = []; fbs.push({ kind, x: clamp(x, 120, W - 120), y: clamp(y, 150, 470), t: 0 }); }
+function feedback(kind, x, y) { fbs = []; let yy = clamp(y, 150, 470); if (Math.abs(yy - 300) < 56) yy = 244; /* lejos de la instrucción, que va en y = 300 */ fbs.push({ kind, x: clamp(x, 120, W - 120), y: yy, t: 0 }); }
 const fbKind = (q, early, perfectQ = .85, goodQ = .4) => q >= perfectQ ? 'perfect' : q >= goodQ ? 'good' : early ? 'early' : 'late';
 function drawFeedback() {
   fbs.forEach(f => f.t += 1 / 60); fbs = fbs.filter(f => f.t < 1.15);

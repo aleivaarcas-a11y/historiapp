@@ -105,6 +105,10 @@ button{font-family:var(--serif);cursor:pointer;-webkit-appearance:none;appearanc
   .card.wide .sm,.card .nota{display:none}.card.wide .opts{margin:4px 0;gap:5px}.card.wide h2{margin-bottom:4px}.card.wide .opt{min-height:44px}
 }
 @media (prefers-reduced-motion:reduce){.spot{animation:none}.big{transition:none}}
+
+.chip{white-space:nowrap}
+.opts.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (max-height:430px){.card.epi p{font-size:13.6px;line-height:1.32;margin:3px 0}.opts.g2 .opt{min-height:42px;font-size:14px}.card h2[style]{font-size:16px!important}}
 </style>
 </head>
 <body>
@@ -371,7 +375,7 @@ function band(g, y, h, flip){
 /* lámina enmarcada: la imagen ajustada dentro de la caja, con paspartú y sombra */
 function panel(g, name, box, cap){
   const i = img(name); let [x, y, w, h] = box;
-  const capH = cap ? 24 : 0; h -= capH;
+  const capH = cap ? 30 : 0; h -= capH;
   let iw = w, ih = h;
   if (i.ok){ const r = i.naturalWidth/i.naturalHeight; if (w/h > r){ iw = h*r; } else { ih = w/r; } }
   const ix = x + (w - iw)/2, iy = y + (h - ih)/2;
@@ -380,7 +384,7 @@ function panel(g, name, box, cap){
   g.strokeStyle = PAL.negro; g.lineWidth = 2; g.strokeRect(ix - 9, iy - 9, iw + 18, ih + 18);
   g.strokeStyle = PAL.ocre; g.lineWidth = 1.5; g.strokeRect(ix - 4, iy - 4, iw + 8, ih + 8);
   if (i.ok) g.drawImage(i, ix, iy, iw, ih); else { g.fillStyle = '#d9cbb0'; g.fillRect(ix, iy, iw, ih); }
-  if (cap){ g.fillStyle = 'rgba(35,26,20,.9)'; g.font = 'italic 14px "Palatino Linotype",Palatino,Georgia,serif'; g.textAlign = 'center'; g.textBaseline = 'top';
+  if (cap){ g.fillStyle = 'rgba(35,26,20,.9)'; g.font = 'italic 18px "Palatino Linotype",Palatino,Georgia,serif'; g.textAlign = 'center'; g.textBaseline = 'top';
     let t = cap; const mw = Math.max(w, iw + 40); while (g.measureText(t).width > mw && t.length > 10) t = t.slice(0, -2); if (t !== cap) t += '…'; g.fillText(t, ix + iw/2, iy + ih + 13); }
   return [ix, iy, iw, ih];
 }
@@ -828,13 +832,13 @@ function arenaDraw(){
 /* ---------- epílogo ---------- */
 function showEpilogue(){
   MODE = 'epi'; SCN = 'trono'; clearUI(); rerender = showEpilogue; topBar();
-  const v = card(`<div class="in"><span class="tag">${L(EPILOGO.sub)}</span><h2>${L(EPILOGO.t)}</h2>${L(EPILOGO.p).map(p => `<p>${p}</p>`).join('')}${fichaBtn(EPILOGO.ficha)}</div><div class="act"><button class="btn pri" data-n>${t('siguiente')} ›</button></div>`);
+  const v = card(`<div class="in"><span class="tag">${L(EPILOGO.sub)}</span><h2>${L(EPILOGO.t)}</h2>${L(EPILOGO.p).map(p => `<p>${p}</p>`).join('')}${fichaBtn(EPILOGO.ficha)}</div><div class="act"><button class="btn pri" data-n>${t('siguiente')} ›</button></div>`, false, 'wide epi');
   bindFicha(v);
   v.querySelector('[data-n]').onclick = () => { SFX.tap(); v.remove(); meaning(); };
 }
 function meaning(){
   const sel = new Set();
-  const v = card(`<div class="in"><span class="tag">${t('epiQ')}</span><h2 style="font-size:19px">${L(EPILOGO.q)}</h2><div class="opts">${L(EPILOGO.lec).map((o, j) => `<button class="opt chk" data-j="${j}"><i></i><span>${o}</span></button>`).join('')}</div><div class="fb" hidden></div>${fichaBtn(EPILOGO.fichaQ)}</div><div class="act"><button class="btn pri" data-c>${t('comprobar')}</button></div>`);
+  const v = card(`<div class="in"><span class="tag">${t('epiQ')}</span><h2 style="font-size:19px">${L(EPILOGO.q)}</h2><div class="opts g2">${L(EPILOGO.lec).map((o, j) => `<button class="opt chk" data-j="${j}"><i></i><span>${o}</span></button>`).join('')}</div><div class="fb" hidden></div>${fichaBtn(EPILOGO.fichaQ)}</div><div class="act"><button class="btn pri" data-c>${t('comprobar')}</button></div>`, false, 'wide epi');
   bindFicha(v); const fb = v.querySelector('.fb'), cb = v.querySelector('[data-c]'); let done = false;
   v.querySelectorAll('.opt').forEach(b => b.onclick = () => { if (done) return; SFX.tap(); const j = +b.dataset.j; sel.has(j) ? sel.delete(j) : sel.add(j); b.classList.toggle('on', sel.has(j)); b.querySelector('i').textContent = sel.has(j) ? '✓' : ''; b.style.background = sel.has(j) ? '#efe0b8' : ''; });
   cb.onclick = () => {

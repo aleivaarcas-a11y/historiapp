@@ -151,7 +151,19 @@ button{font-family:var(--serif);cursor:pointer;-webkit-appearance:none;appearanc
 .tb-w{right:calc(max(10px,env(safe-area-inset-right)) + 24px*var(--s));bottom:calc(max(8px,env(safe-area-inset-bottom)) + 112px*var(--s));width:calc(60px*var(--s));height:calc(60px*var(--s));opacity:.45}
 .tb-w.ready{opacity:1;background:var(--ink);color:var(--paper);animation:wp 1s infinite}
 @keyframes wp{50%{transform:scale(1.08)}}
-@media (max-height:430px){.veil{padding-top:calc(5.2% + 52px)}.card.side{width:min(520px,60%)}.card p{font-size:14px}.title h1{font-size:calc(var(--s,1)*78px)}.hintb{max-width:50%}}
+@media (max-height:430px){.veil{padding:2.4% 2% 2.4%}.card.side{width:min(520px,60%)}.card p{font-size:14px}.title h1{font-size:calc(var(--s,1)*78px)}.hintb{max-width:50%}}
+
+.hwc p.hw{font-size:15px;line-height:1.38;margin:4px 0}
+.card.pz2{width:min(560px,100%)}
+.card p.lg{margin:0;opacity:.75}
+.opts.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.act.col.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (max-height:430px){
+ .card.how .hwc{columns:2;column-gap:20px}.card.how .hwc p.hw{font-size:12.4px;line-height:1.28;margin:0 0 5px;break-inside:avoid}.card.how h2{margin-bottom:2px}
+ .card.side{width:min(620px,70%)}.card.side p{font-size:13.4px;line-height:1.3;margin:3px 0}.card .sub{font-size:12px;margin-bottom:2px}
+ .opts.g2 .opt{min-height:52px;padding:4px 10px}.opts.g2 .opt small{font-size:11.5px}.opt .stars{font-size:14px;letter-spacing:1px}
+ .card .grades{margin:4px 0}.grades span{padding:3px}.grades span b{font-size:18px}.stars.big2{font-size:24px}
+}
 </style>
 </head>
 <body>
@@ -994,8 +1006,8 @@ function fightUI(){
 }
 function pause(){
   if (paused || !A || A.over) return; paused = true; touchUI(false); Object.keys(KEYS).forEach(k => KEYS[k] = false);
-  const v = card(`<div class="in"><h2>${t('pausa')}</h2><p class="sm">${L(B.t)} · ${L(B.lugar)}</p></div><div class="act col">
-    <button class="btn pri" data-c>${t('reanudar')}</button><button class="btn" data-h>${t('como')}</button><button class="btn" data-m>${t('salir')}</button>${HIST.inside ? `<button class="btn" data-b>${t('volver')}</button>` : ''}</div>`, 'narrow');
+  const v = card(`<div class="in"><h2>${t('pausa')}</h2><p class="lg">${L(B.t)}</p></div><div class="act col g2">
+    <button class="btn pri" data-c>${t('reanudar')}</button><button class="btn" data-h>${t('como')}</button><button class="btn" data-m>${t('salir')}</button>${HIST.inside ? `<button class="btn" data-b>${t('volver')}</button>` : ''}</div>`, 'pz2');
   v.querySelector('[data-c]').onclick = () => { v.remove(); paused = false; last = performance.now(); touchUI(true); };
   v.querySelector('[data-h]').onclick = () => { howTo(() => {}); };
   v.querySelector('[data-m]').onclick = () => { v.remove(); paused = false; showTitle(); };
@@ -1014,11 +1026,11 @@ function showTitle(){
   m.append(b1, b2, b3); st.appendChild(m);
 }
 function howTo(done){
-  const v = card(`<div class="in"><h2>${t('howT')}</h2>${UI[S.lang].how.map(p => `<p class="sm">${p}</p>`).join('')}</div><div class="act"><button class="btn pri" data-x>OK</button></div>`, 'wide');
+  const v = card(`<div class="in"><h2>${t('howT')}</h2><div class="hwc">${UI[S.lang].how.map(p => `<p class="hw">${p}</p>`).join('')}</div></div><div class="act"><button class="btn pri" data-x>OK</button></div>`, 'wide how');
   v.querySelector('[data-x]').onclick = () => { SFX.tap(); v.remove(); done(); };
 }
 function pickBout(){
-  const v = card(`<div class="in"><h2>${t('libre')}</h2><div class="opts">${BOUTS.map((b, i) => `<button class="opt"${i >= S.open ? ' disabled' : ''} data-i="${i}"><i>${i + 1}</i><span><b>${L(b.t)}</b><br><small>${i >= S.open ? t('bloq') : L(b.lugar)}</small></span><em class="stars">${'✦'.repeat(S.stars[i])}${'✧'.repeat(3 - S.stars[i])}</em></button>`).join('')}</div></div>
+  const v = card(`<div class="in"><h2>${t('libre')}</h2><div class="opts g2">${BOUTS.map((b, i) => `<button class="opt"${i >= S.open ? ' disabled' : ''} data-i="${i}"><i>${i + 1}</i><span><b>${L(b.t)}</b><br><small>${i >= S.open ? t('bloq') : L(b.lugar)}</small></span><em class="stars">${'✦'.repeat(S.stars[i])}${'✧'.repeat(3 - S.stars[i])}</em></button>`).join('')}</div></div>
     <div class="act"><button class="btn" data-x>${t('menu')}</button></div>`, 'wide');
   v.querySelectorAll('[data-i]').forEach(b => b.onclick = () => { if (+b.dataset.i >= S.open) return; SFX.tap(); v.remove(); A_free = true; intro(+b.dataset.i); });
   v.querySelector('[data-x]').onclick = () => { SFX.tap(); v.remove(); };

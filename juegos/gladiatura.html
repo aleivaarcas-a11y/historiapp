@@ -1946,6 +1946,18 @@ function gEmblem(kind,s){ ctx.save(); ctx.scale(s,s); ctx.strokeStyle=GC.ink; ct
  .miA{margin:2px 0}.miP i{font-style:italic}
  .miVs{align-self:center;font-weight:bold;color:var(--accent);font-size:15px;letter-spacing:.08em}
  .miF{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+@media (max-height:500px){ /* cartel del combate en una sola pantalla del móvil apaisado */
+ #mintro .miH small{display:none}
+ #mintro .miF small{display:none}
+ #mintro .miC{margin:3px 0;gap:6px}
+ #mintro .miP{font-size:11.6px;line-height:1.2;padding:5px 8px}
+ #mintro .miT canvas{height:44px!important;width:auto!important}
+ #mintro .miN{font-size:16px}#mintro .miE{font-size:11px}
+ #mintro .miTip{margin:3px 0;padding:3px 6px}
+ #mintro .miS{margin-top:3px;font-size:10.5px}
+ #mintro .miA{display:inline-block;width:50%;vertical-align:top;margin:1px 0;padding-right:4px;box-sizing:border-box}
+ #mintro .miF .main{min-height:40px;padding:4px 18px}
+}
  .miF small{color:var(--muted);font-style:italic;font-size:12px;max-width:24em;line-height:1.25}
 }
 @media (pointer:coarse) and (max-height:500px) and (max-width:700px){

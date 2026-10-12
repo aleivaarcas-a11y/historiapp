@@ -262,6 +262,16 @@ h1 .ansata{font-size:1.05em;letter-spacing:.2em}
   .box:has(#f_V) .row:has(#stu){grid-template-columns:1fr}
 }
 
+/* jornada compacta en el móvil apaisado: las ofertas y sus botones se ven sin desplazarse (12-10-2026) */
+@media (max-height:540px) and (orientation:landscape){
+  .obj{padding:3px 10px;margin:2px 0 4px}.obj span{font-size:10.5px}.obj b{font-size:14px}
+  .edictum{padding:5px 10px 8px;margin:3px 0 6px}.ed-h{font-size:15px;letter-spacing:.08em}.ed-s{font-size:10.5px;margin-bottom:4px}
+  .offer{padding:5px 9px;flex:1 1 170px}.offer h2{font-size:14.5px;margin:0 0 2px;line-height:1.15}.offer p{margin:1px 0;font-size:12.5px;line-height:1.25}
+  .offer p.muted{font-size:11px;line-height:1.2}
+  .offer button{min-height:40px;padding:3px 10px;font-size:14px}
+  .edictum>p.muted{font-size:11px;line-height:1.25;margin:4px 0 0}
+}
+
 
 #rot{display:none;position:fixed;inset:0;background:#1d150d;color:#f3ead6;place-items:center;text-align:center;font:600 20px/1.4 "Cinzel",Georgia,serif;padding:24px;z-index:50}
 #rot small{font-family:"Alegreya",Georgia,serif}
@@ -2400,7 +2410,7 @@ function drawHUD(ctx){
   drawMini(ctx,u);
   if(r.leadFac&&r.type!=='crono'){const F=FAC[r.leadFac];const bx=VW/2-70*u,by=96*u;hudPanel(ctx,bx,by,140*u,40*u,u);patFill(ctx,r.leadFac,bx+8*u,by+8*u,24*u,24*u);ctx.fillStyle='#f6efdf';ctx.textAlign='left';ctx.font=HF(11*u);ctx.fillText(L('En cabeza','Leading'),bx+40*u,by+17*u);ctx.font=HF(14*u,true);ctx.fillText(`${fName(r.leadFac)} (${F.letter})`,bx+40*u,by+33*u)}
   // un momento de la pista cada vez, bajo los caballos
-  if(r.toasts.length){const t=r.toasts[0];t.t+=1/60;const T=r.toasts.length>2?3.5:5.5;if(t.t>T)r.toasts.shift();else{const G2=glossText(t.id);if(G2){const a=clamp(Math.min(t.t*3,T-t.t),0,1);ctx.globalAlpha=a;
+  if(r.toasts.length&&!p.cutOpen){const t=r.toasts[0];t.t+=1/60;const T=r.toasts.length>2?3.5:5.5;if(t.t>T)r.toasts.shift();else{const G2=glossText(t.id);if(G2){const a=clamp(Math.min(t.t*3,T-t.t),0,1);ctx.globalAlpha=a;
     const w=400*u,x=VW-w-14*u,ty=104*u;ctx.font=HF(12.5*u);const lines=wrapText(ctx,G2[1],w-28*u,3);const hh=(34+lines.length*16)*u;
     ctx.fillStyle='rgba(246,239,223,.96)';rrect(ctx,x,ty,w,hh,6*u);ctx.fill();ctx.fillStyle='#c99a3b';ctx.fillRect(x,ty,5*u,hh);
     ctx.fillStyle='#2a1d12';ctx.textAlign='left';ctx.font=HF(15*u,true);ctx.fillText(G2[0],x+14*u,ty+21*u);ctx.font=HF(12.5*u);lines.forEach((ln,i)=>ctx.fillText(ln,x+14*u,ty+39*u+i*16*u));ctx.globalAlpha=1}}}
@@ -2499,8 +2509,8 @@ function drawHUDPhone(ctx){
   if(!r.started){hudPanel(ctx,fx-cW/2,fy-30,cW,74,1);ctx.fillStyle='#f6efdf';ctx.textAlign='center';ctx.font=HF(17);ctx.fillText(fitText(ctx,L('El editor sostiene la mappa…','The editor holds up the mappa…'),cW-20),fx,fy-6);ctx.font=HF(13);
     wrapText(ctx,TOUCH?L('No toques el látigo hasta que suene el tubicen','Do not touch the whip until the tubicen sounds'):L('No uses el látigo hasta que suene el tubicen','Do not use the whip until the tubicen sounds'),cW-24,2).forEach((ln,i)=>ctx.fillText(ln,fx,fy+14+i*16))}
   // un momento de la pista cada vez, a la izquierda, bajo la pausa y encima de las riendas
-  if(r.toasts.length){const t=r.toasts[0];t.t+=1/60;const T=r.toasts.length>2?3.5:5.5;if(t.t>T)r.toasts.shift();else{const G2=glossText(t.id);if(G2){const a=clamp(Math.min(t.t*3,T-t.t),0,1);ctx.globalAlpha=a;
-    const w=Math.min(280,W*0.34),x=SL,ty=Math.max(y0+h0+66,fy+38);ctx.font=HF(13);const lines=wrapText(ctx,G2[1],w-24,4);const hh=30+lines.length*17;
+  if(r.toasts.length&&!p.cutOpen){const t=r.toasts[0];t.t+=1/60;const T=r.toasts.length>2?3.5:5.5;if(t.t>T)r.toasts.shift();else{const G2=glossText(t.id);if(G2){const a=clamp(Math.min(t.t*3,T-t.t),0,1);ctx.globalAlpha=a;
+    const w=Math.min(250,W*0.3),x=W-SR-96-w,ty=ST+82; /* a la derecha, bajo las riendas y lejos del joystick */ctx.font=HF(13);const lines=wrapText(ctx,G2[1],w-24,4);const hh=30+lines.length*17;
     ctx.fillStyle='rgba(246,239,223,.96)';rrect(ctx,x,ty,w,hh,6);ctx.fill();ctx.fillStyle='#c99a3b';ctx.fillRect(x,ty,5,hh);
     ctx.fillStyle='#2a1d12';ctx.textAlign='left';ctx.font=HF(15,true);ctx.fillText(fitText(ctx,G2[0],w-24),x+13,ty+19);ctx.font=HF(13);lines.forEach((ln,i)=>ctx.fillText(ln,x+13,ty+37+i*17));ctx.globalAlpha=1}}}
   if(XPT){XPT.t+=1/60;if(XPT.t>2.5)XPT=null;else{ctx.globalAlpha=clamp(2.5-XPT.t,0,1);const xx=W-SR-184,xy=ST+ph+10;hudPanel(ctx,xx,xy,184,34,1);ctx.fillStyle='#f6e3b0';ctx.font=HF(15,true);ctx.textAlign='center';ctx.fillText(`+${XPT.n} XP · Historiapp`,xx+92,xy+22);ctx.globalAlpha=1}}
