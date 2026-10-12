@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#2a1d14">
-<title>Taurocatapsia</title>
+<title>CNOSO</title>
 <style>
 :root{--cal:#f3e8cf;--ocre:#b4472b;--ocreD:#86301b;--azul:#2c6a96;--azulD:#1d3c58;--amar:#dca23a;--negro:#231a14;--serif:"Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -109,10 +109,20 @@ button{font-family:var(--serif);cursor:pointer;-webkit-appearance:none;appearanc
 .chip{white-space:nowrap}
 .opts.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 @media (max-height:430px){.card.epi p{font-size:13.6px;line-height:1.32;margin:3px 0}.opts.g2 .opt{min-height:42px;font-size:14px}.card h2[style]{font-size:16px!important}}
+
+/* CNOSO */
+.gn{font-size:14.5px;margin:6px 0}.act .spc{flex:1}.act .ficha{margin:0}
+.title p{display:inline-block;background:rgba(35,26,20,.62);padding:3px 14px;border-radius:14px}
+.pugframe{position:fixed;inset:0;width:100%;height:100%;border:0;z-index:40;background:#2a1d14}
+.pjrow{display:flex;gap:16px;align-items:flex-start}.pjrow>span{flex:0 0 auto}.pjrow>div{flex:1;min-width:0}
+.pjc{display:block;border-radius:4px;box-shadow:0 2px 0 rgba(26,20,15,.5)}
+.tlist{display:flex;flex-wrap:wrap;gap:3px 12px;margin:6px 0;font-size:13.5px}.tlist span{opacity:.55}.tlist span.ok{opacity:1;font-weight:700}
+.pjchip{padding:0 12px 0 4px;gap:5px}.pjchip canvas{display:block;box-shadow:none}
+@media (max-height:430px){.gn{font-size:13px;margin:4px 0}.pjrow{gap:10px}.tlist{font-size:12px;margin:3px 0;gap:2px 10px}.pjchip span{display:none}.pjchip{padding:0 6px}}
 </style>
 </head>
 <body>
-<canvas id="cv" aria-label="Taurocatapsia"></canvas>
+<canvas id="cv" aria-label="CNOSO"></canvas>
 <div id="st"></div>
 <div class="rot" id="rot"><b>📱</b><span id="rotT">Gira el dispositivo para jugar</span></div>
 <script>
@@ -337,13 +347,56 @@ const LAYOUT = {
    spots:[]}
 };
 
+/* ---------- CNOSO: el ciclo de pruebas ----------
+   El recorrido sigue una de las lecturas del ritón de Hagia Triada, la de Koehl (1986), sin darla por cierta.
+   Todos los textos salen de las fichas H3·07, H3·08, H3·09 y H3·12 de Historiapp. */
+const CICLO = {
+  steps:[{k:'pro'}, {k:'bout', i:0}, {k:'room', i:0}, {k:'room', i:1}, {k:'stage', s:1}, {k:'room', i:2}, {k:'room', i:3}, {k:'stage', s:2},
+         {k:'bout', i:1}, {k:'room', i:4}, {k:'bout', i:2}, {k:'room', i:5}, {k:'bout', i:3}, {k:'fiesta'}, {k:'epi'}],
+  pro:{t:{es:'El ciclo de las pruebas', en:'The cycle of trials'},
+    p:{es:['Eres un muchacho de la élite cretense. Recorrerás el palacio de Cnoso, conocerás su cultura y superarás, de menor a mayor dureza, las pruebas que muestran el fresco de Akrotiri y el ritón de Hagia Triada: el pugilato y, al final, el salto del toro.',
+           'Koehl (1986, pp. 108-109) lee el ritón como la ilustración de las pruebas de un ciclo de iniciación de los varones aristocráticos, en el que el pugilato y el salto del toro demostraban el valor exigido al elegido. Es una de las lecturas posibles, y el juego la sigue para ordenar el recorrido. Si también saltaban mujeres es hoy una cuestión abierta (Younger, 2021, p. 58; Newman, 2017, pp. 229-232).'],
+       en:['You are a boy of the Cretan elite. You will walk through the palace of Knossos, learn about its culture and pass, from least to greatest severity, the trials shown by the Akrotiri fresco and the Hagia Triada rhyton: boxing and, at the end, bull-leaping.',
+           'Koehl (1986, pp. 108-109) reads the rhyton as the illustration of the trials of an initiation cycle for aristocratic males, in which boxing and bull-leaping demonstrated the courage required of the chosen youth. It is one possible reading, and the game follows it to order the journey. Whether women also leapt is an open question today (Younger, 2021, p. 58; Newman, 2017, pp. 229-232).']},
+    ficha:['el-riton-de-los-boxeadores', 'H3·09']},
+  stages:[
+    {t:{es:'Niño', en:'Boy'}, d:{es:'Cabeza rapada con mechones sueltos, como los niños púgiles de Akrotiri.', en:'Shaved head with loose locks, like the boy boxers of Akrotiri.'}},
+    {t:{es:'Muchacho', en:'Youth'}, d:{es:'Sin los mechones de la infancia, como los muchachos del fresco del pescador.', en:'Without the locks of childhood, like the youths of the Fisherman fresco.'}},
+    {t:{es:'Joven', en:'Young man'}, d:{es:'Con la melena hasta la cintura del varón aristocrático adulto.', en:'With the waist-length hair of the adult aristocratic male.'}}],
+  cambio:[null,
+    {t:{es:'El corte de los mechones', en:'Cutting the locks'},
+     p:{es:['Koehl (1986, p. 101) se fija en el peinado. Los niños púgiles llevan la cabeza rapada alrededor de mechones sueltos, y los muchachos del fresco del pescador, algo mayores, ya se han cortado esos mechones.', 'Koehl propone que el corte formara parte de la preparación para la etapa siguiente de un rito de paso. Ahora eres un muchacho.'],
+        en:['Koehl (1986, p. 101) attends to the hairstyle. The boy boxers have the head shaved around loose locks, and the youths of the Fisherman fresco, somewhat older, have already cut off those locks.', 'Koehl proposes that the cutting formed part of the preparation for the next stage of a rite of passage. You are now a youth.']},
+     ficha:['pugilato', 'H3·08']},
+    {t:{es:'La melena del adulto', en:'The hair of the adult'},
+     p:{es:['Los púgiles del ritón son adultos, esbeltos pero musculados, con la melena hasta la cintura del aristócrata minoico.', 'Koehl (1986, pp. 102-103) observa que es la misma melena de los saltadores del fresco de Cnoso y la identifica como el peinado del varón aristocrático en la plenitud de su vida adulta, dedicado al atletismo y a las fiestas del palacio. Te esperan las bandas del ritón.'],
+        en:['The boxers on the rhyton are adults, slender but muscular, with the waist-length hair of the Minoan aristocrat.', 'Koehl (1986, pp. 102-103) observes that it is the same hair as that of the leapers in the Knossos fresco and identifies it as the hairstyle of the aristocratic male in the fullness of adult life, devoted to athletics and the festivals of the palace. The bands of the rhyton await you.']},
+     ficha:['quienes-saltaban-y-como', 'H3·12']}],
+  pruebas:[
+    {t:{es:'Prueba I · Como los niños de Akrotiri', en:'Trial I · Like the boys of Akrotiri'},
+     p:{es:'Antes de entrar en el palacio, un combate de aprendizaje con un solo guante, sin intención de herir. Gana quien toque primero cinco veces.', en:'Before entering the palace, a practice bout with a single glove, without intent to injure. The first to land five touches wins.'},
+     gana:{es:'El collar, las pulseras y los pendientes del niño vencedor', en:'The necklace, bracelets and earrings of the victorious boy'}},
+    {t:{es:'Prueba II · La cuarta banda del ritón', en:'Trial II · The fourth band of the rhyton'},
+     p:{es:'Tu primer combate de adulto: sin casco y con las muñecas vendadas. Termina cuando uno de los dos queda en el suelo.', en:'Your first adult bout: no helmet and bandaged wrists. It ends when one of the two is left on the ground.'},
+     gana:{es:'Las vendas de las muñecas', en:'The wrist bandages'}},
+    {t:{es:'Prueba III · La tercera banda del ritón', en:'Trial III · The third band of the rhyton'},
+     p:{es:'Casco, protecciones en el antebrazo y manos acolchadas. Tu rival cubre mejor su guardia.', en:'Helmet, forearm protections and padded hands. Your rival keeps a sturdier guard.'},
+     gana:{es:'El casco, las protecciones del antebrazo y las manos acolchadas', en:'The helmet, the forearm protections and the padded hands'}},
+    {t:{es:'Prueba IV · La banda superior, junto a la columna', en:'Trial IV · The upper band, by the column'},
+     p:{es:'El combate más duro, junto a una columna de capitel cuadrado, ante el campeón que espera tus errores.', en:'The hardest bout, beside a column with a square capital, against the champion who waits for your mistakes.'},
+     gana:{es:'Las botas de los púgiles del ritón', en:'The boots of the rhyton boxers'}},
+    {t:{es:'Prueba V · La fiesta del toro', en:'Trial V · The bull festival'},
+     p:{es:'La última prueba del ciclo, en el patio central: tres toros. La comunidad mide tu valor con su aclamación.', en:'The last trial of the cycle, in the central court: three bulls. The community measures your courage with its acclaim.'},
+     gana:{es:'La aclamación del palacio', en:'The acclaim of the palace'}}]
+};
+
 /* Taurocatapsia · arte. Las imágenes son las piezas reales: el fresco del salto del toro de Cnoso (dominio público,
    Wikimedia Commons) recortado en toro y figuras, y las fotografías de las fichas del Tema 3. Aquí solo se compone. */
 const PAL = { cal:'#efe2c4', ocre:'#b4472b', ocreD:'#86301b', azul:'#2c6a96', azulD:'#1d3c58', amar:'#dca23a', negro:'#231a14', blanco:'#f8f1df' };
 function rng(seed){ let s = seed >>> 0 || 1; return () => { s ^= s << 13; s ^= s >>> 17; s ^= s << 5; return ((s >>> 0) % 100000) / 100000; }; }
 
 /* ---------- carga de imágenes bajo demanda ---------- */
-const IMGDIR = 'toro/';
+const IMGDIR = 'cnoso/';
 const IMG = {};
 function img(name){
   if (!IMG[name]){ const i = new Image(); i.decoding = 'async'; i.onload = () => { i.ok = true; }; i.src = IMGDIR + name + '.webp'; IMG[name] = i; }
@@ -405,7 +458,303 @@ function sprite(g, name, x, y, w, h, rot, px, py, alpha){
   g.drawImage(i, -(px ?? w/2), -(py ?? h/2), w, h); g.restore();
 }
 
-/* Taurocatapsia · motor del juego */
+/* el personaje, dibujado a tinta con el arte del calco del ritón (mismo código que el pugilato) */
+const CAL = (() => {
+/* Púgiles de Hagia Triada · arte. Todo se dibuja a tinta sobre papel, a la manera del calco arqueológico
+   del ritón de los boxeadores: contorno negro, líneas interiores finas y ninguna mancha de color. */
+const INK = '#1a140f', PAPER = '#f4ecda', PAPER_D = '#e9dec6', INK_F = 'rgba(26,20,15,.55)', INK_L = 'rgba(26,20,15,.22)';
+function rng(seed){ let s = seed >>> 0 || 1; return () => { s ^= s << 13; s ^= s >>> 17; s ^= s << 5; return ((s >>> 0) % 100000) / 100000; }; }
+const lerp = (a, b, t) => a + (b - a)*t, clamp = (v, a, b) => v < a ? a : v > b ? b : v;
+const ease = t => t < .5 ? 2*t*t : 1 - Math.pow(-2*t + 2, 2)/2, easeOut = t => 1 - Math.pow(1 - t, 3), easeIn = t => t*t*t;
+
+/* ---------- medidas del cuerpo (unidades del escenario, adulto) ---------- */
+const BODY = { thigh:92, shin:86, foot:30, pelvis:24, torso:78, neck:11, ua:54, fa:50 };
+
+/* cinemática inversa de dos huesos: devuelve la articulación intermedia */
+function ik(rx, ry, tx, ty, a, b, s){
+  let dx = tx - rx, dy = ty - ry, d = Math.hypot(dx, dy) || .001; const dm = Math.min(d, a + b - .01);
+  const base = Math.atan2(dy, dx), off = Math.acos(clamp((a*a + dm*dm - b*b)/(2*a*dm), -1, 1));
+  return [rx + a*Math.cos(base + s*off), ry + a*Math.sin(base + s*off), rx + dx*dm/d, ry + dy*dm/d];
+}
+
+/* segmento de miembro: dos curvas con su abultamiento y los extremos redondeados */
+function seg(g, ax, ay, bx, by, wa, wb, b1, b2, bt){
+  const L = Math.hypot(bx - ax, by - ay) || .001, ux = (bx - ax)/L, uy = (by - ay)/L, nx = -uy, ny = ux;
+  const mx = ax + ux*L*(bt ?? .45), my = ay + uy*L*(bt ?? .45), wm = lerp(wa, wb, bt ?? .45);
+  const aN = Math.atan2(ny, nx);
+  g.beginPath(); g.moveTo(ax + nx*wa, ay + ny*wa);
+  g.quadraticCurveTo(mx + nx*(wm + b1)*1.5 - nx*wm*.5, my + ny*(wm + b1)*1.5 - ny*wm*.5, bx + nx*wb, by + ny*wb);
+  g.arc(bx, by, wb, aN, aN - Math.PI, true);
+  g.quadraticCurveTo(mx - nx*(wm + b2)*1.5 + nx*wm*.5, my - ny*(wm + b2)*1.5 + ny*wm*.5, ax - nx*wa, ay - ny*wa);
+  g.arc(ax, ay, wa, aN - Math.PI, aN - 2*Math.PI, true);
+  g.closePath(); g.fill(); g.stroke();
+  return {ux, uy, nx, ny, L};
+}
+/* línea interior paralela a un segmento (estrías de los músculos, vendas) */
+function along(g, ax, ay, bx, by, off, t0, t1, bow){
+  const L = Math.hypot(bx - ax, by - ay) || .001, ux = (bx - ax)/L, uy = (by - ay)/L, nx = -uy, ny = ux;
+  const p = t => [ax + ux*L*t + nx*off, ay + uy*L*t + ny*off], a = p(t0), b = p(t1), m = p((t0 + t1)/2);
+  g.beginPath(); g.moveTo(a[0], a[1]); g.quadraticCurveTo(m[0] + nx*(bow || 0), m[1] + ny*(bow || 0), b[0], b[1]); g.stroke();
+}
+function across(g, ax, ay, bx, by, t, w, tilt){
+  const L = Math.hypot(bx - ax, by - ay) || .001, ux = (bx - ax)/L, uy = (by - ay)/L, nx = -uy, ny = ux;
+  const cx = ax + ux*L*t, cy = ay + uy*L*t, k = tilt || 0;
+  g.beginPath(); g.moveTo(cx + nx*w + ux*k, cy + ny*w + uy*k); g.quadraticCurveTo(cx + ux*(k*.2 + 2), cy + uy*(k*.2 + 2), cx - nx*w - ux*k, cy - ny*w - uy*k); g.stroke();
+}
+function poly(g, pts, close, fill){ g.beginPath(); g.moveTo(pts[0][0], pts[0][1]);
+  for (let i = 1; i < pts.length - 1; i++){ const mx = (pts[i][0] + pts[i + 1][0])/2, my = (pts[i][1] + pts[i + 1][1])/2; g.quadraticCurveTo(pts[i][0], pts[i][1], mx, my); }
+  const l = pts[pts.length - 1]; if (close){ g.quadraticCurveTo(l[0], l[1], (l[0] + pts[0][0])/2, (l[1] + pts[0][1])/2); g.closePath(); } else g.lineTo(l[0], l[1]);
+  if (fill) g.fill(); g.stroke(); }
+const rot = (x, y, a) => [x*Math.cos(a) - y*Math.sin(a), x*Math.sin(a) + y*Math.cos(a)];
+
+/* ---------- postura ----------
+   Coordenadas locales mirando a la derecha, con el origen en la cadera; y crece hacia abajo.
+   fl/fr: pies (adelantado y retrasado) respecto a la cadera. hl/hr: puños respecto al hombro.
+   lean: inclinación del tronco; head: inclinación de la cabeza; roll: giro de todo el cuerpo (caídas); gy: altura de la cadera sobre el suelo. */
+const POSE_KEYS = ['lean', 'head', 'roll', 'gy', 'flx', 'fly', 'frx', 'fry', 'la', 'lf', 'ra', 'rf', 'fla', 'fra', 'tw'];
+function P(o){ const p = {lean:.1, head:0, roll:0, gy:172, flx:34, frx:-40, la:55, lf:95, ra:25, rf:135, fla:0, fra:0, tw:0}; Object.assign(p, o); if (o.fly == null) p.fly = p.gy - 1; if (o.fry == null) p.fry = p.gy - 1; return p; }
+function mix(a, b, t){ const o = {}; for (const k of POSE_KEYS) o[k] = lerp(a[k], b[k], t); return o; }
+
+/* ---------- mechones con inercia ---------- */
+function makeLocks(n, len, segs){ const L = []; for (let i = 0; i < n; i++){ const p = []; for (let j = 0; j <= segs; j++) p.push({x:0, y:0, px:0, py:0}); L.push({p, len:len*(.82 + .18*((i*37)%7)/6), w:4.4 - i*.25, ph:i*1.7, init:false}); } return L; }
+function stepLocks(F, dt){
+  if (!F.nape) return; const rx = F.nape[0], ry = F.nape[1], dirx = F.dir;
+  // raíces en la nuca, en coordenadas del escenario; el pelo cae y se queda atrás cuando el cuerpo avanza
+  const G = 900, damp = .9;
+  F.locks.forEach((lk, i) => {
+    const seglen = lk.len/(lk.p.length - 1), r = lk.p[0];
+    const ox = (-i*1.4)*dirx*F.s, oy = (i*2.6 - 4)*F.s;
+    if (!lk.init){ lk.p.forEach((q, j) => { q.x = q.px = rx + ox - dirx*j*seglen*.7; q.y = q.py = ry + oy + j*seglen*.7; }); lk.init = true; }
+    r.x = rx + ox; r.y = ry + oy; r.px = r.x; r.py = r.y;
+    for (let j = 1; j < lk.p.length; j++){ const q = lk.p[j], vx = (q.x - q.px)*damp, vy = (q.y - q.py)*damp; q.px = q.x; q.py = q.y;
+      const wv = Math.sin(performance.now()/476 + lk.ph + j*.7)*14; q.x += vx - dirx*(6 + wv*.4)*dt*dt*60; q.y += vy + G*dt*dt; }
+    for (let it = 0; it < 3; it++) for (let j = 1; j < lk.p.length; j++){ const a = lk.p[j - 1], b = lk.p[j], dx = b.x - a.x, dy = b.y - a.y, d = Math.hypot(dx, dy) || .001, k = (d - seglen*F.s)/d;
+      if (j === 1){ b.x -= dx*k; b.y -= dy*k; } else { a.x += dx*k*.5; a.y += dy*k*.5; b.x -= dx*k*.5; b.y -= dy*k*.5; } }
+  });
+}
+function drawLocks(g, F){
+  g.lineJoin = 'round'; g.lineCap = 'round';
+  F.locks.forEach((lk, i) => {
+    const p = lk.p, n = p.length, L = [], R = [];
+    for (let j = 0; j < n; j++){ const a = p[Math.max(0, j - 1)], b = p[Math.min(n - 1, j + 1)]; let dx = b.x - a.x, dy = b.y - a.y; const d = Math.hypot(dx, dy) || 1; dx /= d; dy /= d;
+      const w = lk.w*F.s*(1 - j/(n - 1))*.5 + .4, wav = Math.sin(j*1.3 + lk.ph)*1.6*F.s; L.push([p[j].x - dy*(w + wav*.3) , p[j].y + dx*(w + wav*.3)]); R.push([p[j].x + dy*w, p[j].y - dx*w]); }
+    g.fillStyle = PAPER; g.strokeStyle = INK; g.lineWidth = 1.25*F.lw;
+    poly(g, L.concat(R.reverse()), true, true);
+    g.lineWidth = .8*F.lw; g.strokeStyle = INK_F; poly(g, p.map(q => [q.x, q.y]).slice(0, n - 1), false, false);
+  });
+}
+
+/* ---------- figura ----------
+   F: {x, y (punto del suelo), rot (pendiente), dir (1 derecha, -1 izquierda), s (escala), pose, kit, locks, lw}
+   kit: {helmet, gloves: 0 ninguno, 1 solo derecho, 2 ambos; wrist, guard (antebrazo), boots, boy, jewel} */
+function drawFigure(g, F){
+  const p = F.pose, k = F.kit, s = F.s, B = BODY, lw = F.lw;
+  const base = g.getTransform().inverse();
+  g.save(); g.translate(F.x, F.y); g.rotate(F.rot); g.scale(F.dir*s, s);
+  g.translate(0, -p.gy); if (p.roll) g.rotate(p.roll);
+  g.lineJoin = 'round'; g.lineCap = 'round'; g.fillStyle = PAPER; g.strokeStyle = INK; const LW = 2.5*lw/s, lw2 = 1.15*lw/s; g.lineWidth = LW;
+  const thin = () => { g.lineWidth = lw2; g.strokeStyle = INK_F; }, bold = () => { g.lineWidth = LW; g.strokeStyle = INK; };
+  const th = k.boy ? .8 : 1, tw = 1 + (p.tw || 0)*.1;
+  // cintura y puntos del tronco (el tronco se ve de frente, a la manera egea; caderas y piernas de perfil)
+  const pt = p.lean*.35, wx = Math.sin(pt)*B.pelvis, wy = -Math.cos(pt)*B.pelvis;
+  const TP = (x, y) => { const r = rot(x, y, p.lean); return [wx + r[0], wy + r[1]]; };
+  const shF = TP(22*th*tw, -67), shB = TP(-20*th*tw, -67), nk = TP(0, -80);
+  // pierna: primero la pierna y el pie, luego el muslo encima, para que la rodilla quede redonda
+  const leg = (fx, fy, fa, far) => {
+    const hx = far ? 4 : -3, hy = 0;
+    const [kx, ky, ax, ay] = ik(hx, hy, fx, fy - 6, B.thigh, B.shin, -1);
+    g.fillStyle = far ? PAPER_D : PAPER;
+    const fd = rot(B.foot, 0, fa), toeX = ax + fd[0], toeY = ay + 5 + fd[1];
+    g.beginPath(); g.moveTo(ax - 6, ay - 5); g.quadraticCurveTo(ax - 10, ay + 6, ax - 4, ay + 7); g.lineTo(toeX, toeY + 1); g.quadraticCurveTo(toeX + 3, toeY - 3, toeX - 5, toeY - 5);
+    g.quadraticCurveTo(ax + 10, ay - 2, ax + 6, ay - 8); g.closePath(); g.fill(); g.stroke();
+    seg(g, kx, ky, ax, ay, 8*th, 4.6*th, -.5, 6.5*th, .3);
+    thin(); along(g, kx, ky, ax, ay, -3*th, .14, .55, -1.5);
+    if (k.boots){ for (let i = 0; i < 5; i++) across(g, kx, ky, ax, ay, .6 + i*.08, 6.6 - i*.25, i % 2 ? 2.5 : -2.5); }
+    else if (!k.boy){ across(g, kx, ky, ax, ay, .88, 5.6, 0); across(g, kx, ky, ax, ay, .94, 5.2, 0); }
+    bold(); g.fillStyle = far ? PAPER_D : PAPER;
+    seg(g, hx, hy, kx, ky, 17*th, 9*th, 5.5*th, 3*th, .38);
+    thin(); along(g, hx, hy, kx, ky, 6*th, .2, .88, 1.5); along(g, hx, hy, kx, ky, -5*th, .3, .82, -1); along(g, hx, hy, kx, ky, 1*th, .5, .9, .5);
+    bold(); g.fillStyle = PAPER;
+  };
+  // brazo: antebrazo y guante, luego el brazo encima (codo redondo)
+  // brazo: el ángulo del hombro se mide desde la vertical hacia delante y gira con el tronco; el codo solo se flexiona
+  // hacia delante, entre casi recto (5°) y 150°, como un brazo humano
+  const D2R = Math.PI/180;
+  const arm = (sh, a, f, far, gloved) => {
+    const [ox, oy] = sh, A1 = clamp(a, -80, 215)*D2R + p.lean, A2 = A1 + clamp(f, 5, 150)*D2R;
+    const ua = B.ua*th + 2, fa = B.fa*th + 2;
+    const ex = ox + Math.sin(A1)*ua, ey = oy + Math.cos(A1)*ua, hx = ex + Math.sin(A2)*fa, hy = ey + Math.cos(A2)*fa;
+    g.fillStyle = far ? PAPER_D : PAPER;
+    seg(g, ex, ey, hx, hy, 7*th, 4.6*th, 3*th, 1, .3);
+    thin(); if (k.guard){ for (let i = 0; i < 5; i++) across(g, ex, ey, hx, hy, .28 + i*.12, 6.6*th, 0); }
+    if (k.wrist){ for (let i = 0; i < 3; i++) across(g, ex, ey, hx, hy, .72 + i*.09, 5.4*th, 1.5); }
+    bold(); g.fillStyle = far ? PAPER_D : PAPER;
+    const L = Math.hypot(hx - ex, hy - ey) || 1, ux = (hx - ex)/L, uy = (hy - ey)/L;
+    { const m = base.multiply(g.getTransform()), q = m.transformPoint(new DOMPoint(hx + ux*8, hy + uy*8)); (F.hands || (F.hands = {}))[far ? 'l' : 'r'] = [q.x, q.y]; }
+    if (gloved){
+      // mano acolchada como en el calco: poco mayor que el puño, alargada en el sentido del antebrazo y atada en la muñeca
+      const r = k.boy ? 9.6 : 9.2, cx = hx + ux*r*.85, cy = hy + uy*r*.85, an = Math.atan2(uy, ux);
+      g.beginPath(); g.ellipse(cx, cy, r*1.15, r*.95, an, 0, 6.283); g.fill(); g.stroke();
+      thin(); g.beginPath(); g.ellipse(cx + ux*r*.25, cy + uy*r*.25, r*.62, r*.6, an, -1.3, 1.3); g.stroke();
+      g.beginPath(); g.moveTo(cx - ux*r*.15 - uy*r*.85, cy - uy*r*.15 + ux*r*.85); g.lineTo(cx - ux*r*.15 + uy*r*.85, cy - uy*r*.15 - ux*r*.85); g.stroke();
+      bold(); g.lineWidth = lw2*1.4; across(g, ex, ey, hx, hy, .9, 5.2*th, 0); across(g, ex, ey, hx, hy, .97, 5*th, 0); bold(); }
+    else { const r = 7, cx = hx + ux*r*.6, cy = hy + uy*r*.6; g.beginPath(); g.ellipse(cx, cy, r*1.15, r, Math.atan2(uy, ux), 0, 6.283); g.fill(); g.stroke();
+      thin(); g.beginPath(); g.moveTo(cx + uy*r*.5, cy - ux*r*.5); g.lineTo(cx + ux*r*.9 + uy*r*.2, cy + uy*r*.9 - ux*r*.2); g.stroke(); bold(); }
+    if (k.jewel){ g.lineWidth = lw2; g.strokeStyle = INK; for (let i = 0; i < 2; i++) across(g, ex, ey, hx, hy, .84 + i*.07, 5.2*th, 0); bold(); }
+    g.fillStyle = far ? PAPER_D : PAPER;
+    seg(g, ox, oy, ex, ey, 11*th, 7.2*th, 4*th, 3*th, .4);
+    thin(); along(g, ox, oy, ex, ey, 4*th, .25, .8, 1); bold(); g.fillStyle = PAPER;
+  };
+  const gL = k.gloves === 2, gR = k.gloves >= 1;
+  // brazo adelantado detrás del tronco; piernas
+  arm(shB, p.la, p.lf, true, gL);
+  leg(p.flx, p.fly, p.fla, true);
+  leg(p.frx, p.fry, p.fra, false);
+  // taparrabos trasero y nalga
+  g.beginPath(); g.moveTo(wx - 8, wy + 4); g.quadraticCurveTo(-21, 8, -24, 24); g.quadraticCurveTo(-15, 21, -6, 12); g.closePath(); g.fill(); g.stroke();
+  g.beginPath(); g.moveTo(wx - 8, wy + 2); g.quadraticCurveTo(-25, 4, -19, 20); g.quadraticCurveTo(-8, 29, 6, 18); g.quadraticCurveTo(13, 8, wx + 8, wy + 2); g.closePath(); g.fill(); g.stroke();
+  // tronco de frente: hombros anchos y cintura de avispa
+  g.save(); g.translate(wx, wy); g.rotate(p.lean);
+  const X = v => v*th*tw;
+  const torso = [[X(7), 1], [X(9.5), -14], [X(19), -40], [X(26), -57], [X(29), -70], [X(13), -79], [6, -80], [-6, -80], [X(-12), -79], [X(-27), -70], [X(-24), -57], [X(-18), -40], [X(-9.5), -14], [X(-7), 1]];
+  g.beginPath(); g.moveTo(torso[0][0], torso[0][1]); for (let i = 1; i < torso.length; i++){ const a = torso[i], b = torso[(i + 1) % torso.length]; g.quadraticCurveTo(a[0], a[1], (a[0] + b[0])/2, (a[1] + b[1])/2); } g.closePath(); g.fill(); g.stroke();
+  thin();
+  g.beginPath(); g.moveTo(X(1.5), -51); g.quadraticCurveTo(X(12), -44, X(22), -53); g.stroke();
+  g.beginPath(); g.moveTo(X(-1.5), -51); g.quadraticCurveTo(X(-11), -44, X(-20), -53); g.stroke();
+  g.beginPath(); g.moveTo(0, -70); g.lineTo(0, -52); g.stroke();
+  g.beginPath(); g.moveTo(0, -42); g.quadraticCurveTo(1, -26, 0, -9); g.stroke();
+  for (const y of [-34, -24]){ g.beginPath(); g.moveTo(X(-5), y); g.quadraticCurveTo(0, y + 2, X(5), y); g.stroke(); }
+  g.beginPath(); g.moveTo(X(-10), -78); g.quadraticCurveTo(X(-3), -73, 0, -74); g.quadraticCurveTo(X(3), -73, X(10), -78); g.stroke();
+  g.fillStyle = INK_F; for (const x of [X(12), X(-10)]){ g.beginPath(); g.arc(x, -49, 1.2, 0, 6.283); g.fill(); } g.fillStyle = PAPER;
+  bold();
+  // cinturón enrollado
+  g.beginPath(); g.moveTo(X(-10.5), -3); g.quadraticCurveTo(0, -7, X(10.5), -4); g.lineTo(X(11.5), 5); g.quadraticCurveTo(0, 8, X(-11.5), 5); g.closePath(); g.fill(); g.stroke();
+  thin(); for (let i = -9; i <= 9; i += 3.6){ g.beginPath(); g.moveTo(i*th, -4.5); g.lineTo(i*th + 2.4, 5.5); g.stroke(); } bold();
+  if (k.jewel){ g.lineWidth = lw2*1.2; g.strokeStyle = INK; g.beginPath(); g.moveTo(-9, -77); g.quadraticCurveTo(0, -64, 9, -77); g.stroke(); g.fillStyle = INK; for (let i = 0; i < 7; i++){ const a = i/6, x = lerp(-8, 8, a), y = -76 + Math.sin(a*Math.PI)*10; g.beginPath(); g.arc(x, y, 1.5, 0, 6.283); g.fill(); } g.fillStyle = PAPER; bold(); }
+  g.restore();
+  // estuche del taparrabos, hacia delante
+  g.beginPath(); g.moveTo(wx + 8, wy + 4); g.quadraticCurveTo(22, 6, 27, -2); g.quadraticCurveTo(23, 12, 9, 17); g.closePath(); g.fill(); g.stroke();
+  // cuello y cabeza de perfil
+  const hd = p.lean + p.head;
+  g.save(); g.translate(nk[0], nk[1]); g.rotate(hd*.55);
+  seg(g, 0, 3, 2, -B.neck, 7*th, 6.2*th, .5, .5, .5);
+  g.translate(2, -B.neck); g.rotate(hd*.35 - p.lean*.2);
+  { const m = base.multiply(g.getTransform()), q = m.transformPoint(new DOMPoint(-11, -14)); F.nape = [q.x, q.y]; const q2 = m.transformPoint(new DOMPoint(4, -16)); F.headW = [q2.x, q2.y]; }
+  drawHead(g, k, lw2, LW, F);
+  g.restore();
+  // brazo retrasado por delante del pecho
+  arm(shF, p.ra, p.rf, false, gR);
+  g.restore();
+}
+function drawHead(g, k, lw2, LW, F){
+  const thin = () => { g.lineWidth = lw2; g.strokeStyle = INK_F; }, bold = () => { g.lineWidth = LW; g.strokeStyle = INK; };
+  g.fillStyle = PAPER;
+  // cráneo y rostro de perfil, con la nariz recta y el mentón marcado
+  g.beginPath(); g.moveTo(-13, -4); g.quadraticCurveTo(-17, -20, -8, -29); g.quadraticCurveTo(2, -35, 11, -27); g.quadraticCurveTo(14, -23, 14.5, -19);
+  g.lineTo(20, -12.5); g.quadraticCurveTo(19.5, -10.5, 15, -10.5); g.quadraticCurveTo(16.5, -8.5, 15, -7); g.quadraticCurveTo(16, -5, 14, -3.5);
+  g.quadraticCurveTo(14, 1, 8, 1.5); g.quadraticCurveTo(-4, 3, -13, -4); g.closePath(); g.fill(); g.stroke();
+  // ojo almendrado de frente, a la manera egea
+  g.lineWidth = lw2*1.15; g.strokeStyle = INK; g.beginPath(); g.moveTo(5, -18); g.quadraticCurveTo(9, -21.5, 12.5, -18.2); g.quadraticCurveTo(9, -16, 5, -18); g.stroke();
+  g.beginPath(); g.arc(9.6, -18.6, 1.5, 0, 6.283); g.fillStyle = INK; g.fill(); g.fillStyle = PAPER;
+  thin(); g.beginPath(); g.moveTo(4.5, -21.5); g.quadraticCurveTo(9, -24.5, 13.5, -21.8); g.stroke();                       // ceja
+  g.beginPath(); g.moveTo(15.5, -8.6); g.lineTo(12.5, -8.6); g.stroke();                                                   // labios
+  if (k.helmet){
+    bold(); g.fillStyle = PAPER;
+    // casco de cúpula con carrillera y remate
+    g.beginPath(); g.moveTo(-15, -12); g.quadraticCurveTo(-18, -30, -4, -35); g.quadraticCurveTo(10, -38, 15, -24); g.lineTo(13, -21); g.quadraticCurveTo(0, -26, -9, -19); g.lineTo(-9, -6); g.quadraticCurveTo(-13, -5, -15, -12); g.closePath(); g.fill(); g.stroke();
+    g.beginPath(); g.moveTo(-1, -23); g.quadraticCurveTo(4, -21, 5, -12); g.quadraticCurveTo(3, -6, -2, -5); g.quadraticCurveTo(-4, -13, -1, -23); g.closePath(); g.fill(); g.stroke(); // carrillera
+    thin(); g.beginPath(); g.moveTo(-14, -18); g.quadraticCurveTo(0, -31, 14, -23.5); g.stroke(); g.beginPath(); g.moveTo(-12, -27); g.quadraticCurveTo(0, -36, 9, -31); g.stroke();
+    for (let i = 0; i < 4; i++){ g.beginPath(); g.arc(-10 + i*6, -28 - Math.sin(i*.9)*3.5, .9, 0, 6.283); g.fillStyle = INK_F; g.fill(); } g.fillStyle = PAPER;
+    bold(); g.beginPath(); g.ellipse(-3, -36, 3.2, 2.4, -.3, 0, 6.283); g.fill(); g.stroke();
+  } else if (k.boy || k.shaved){
+    // cabeza rapada, salvo los mechones (Koehl): punteado del rapado y un mechón sobre la frente
+    g.fillStyle = INK_F; const R = rng(5); for (let i = 0; i < 26; i++){ const a = -2.9 + R()*2.6, r = 12 + R()*5; g.fillRect(Math.cos(a)*r - 1, -14 + Math.sin(a)*r*1.05, 1.1, 1.1); }
+    bold(); g.fillStyle = PAPER; g.lineWidth = lw2*1.4;
+    if (k.boy){ g.beginPath(); g.moveTo(4, -30); g.quadraticCurveTo(14, -36, 17, -28); g.quadraticCurveTo(13, -30, 10, -28); g.stroke(); }
+    g.lineWidth = LW;
+  } else {
+    // melena sin casco (cuarta banda): casquete de pelo y cinta
+    bold(); g.beginPath(); g.moveTo(-14, -8); g.quadraticCurveTo(-18, -28, -4, -33); g.quadraticCurveTo(9, -36, 13, -25); g.quadraticCurveTo(2, -27, -6, -21); g.quadraticCurveTo(-9, -12, -14, -8); g.closePath(); g.fill(); g.stroke();
+    thin(); for (let i = 0; i < 4; i++){ g.beginPath(); g.moveTo(-12 + i*2, -11 - i*4); g.quadraticCurveTo(-4 + i*3, -28 + i, 10 - i*2, -27 - i); g.stroke(); }
+  }
+  if (k.jewel){ g.fillStyle = INK; g.beginPath(); g.arc(-2, -3, 1.7, 0, 6.283); g.fill(); g.fillStyle = PAPER; }
+  bold();
+}
+
+/* ---------- escenario: una banda del ritón desplegada ----------
+   El ritón es un cono, y su desarrollo dibuja bandas en arco. El suelo de la banda es un arco de radio ARC. */
+const ARC = 2300, BAND = 404;
+function arcPt(cam, x, h){ const th = (x - cam.x)/ARC, R = ARC + (h || 0); return [cam.cx + R*Math.sin(th), cam.cy + ARC - R*Math.cos(th), th]; }
+let PAPERC = null;
+function paper(){
+  if (PAPERC) return PAPERC; const w = 512, h = 288, c = document.createElement('canvas'); c.width = w; c.height = h; const g = c.getContext('2d');
+  g.fillStyle = PAPER; g.fillRect(0, 0, w, h); const im = g.getImageData(0, 0, w, h), d = im.data, R = rng(11);
+  for (let i = 0; i < d.length; i += 4){ const n = (R() - .5)*10; d[i] += n; d[i + 1] += n; d[i + 2] += n*.9; } g.putImageData(im, 0, 0);
+  for (let k = 0; k < 18; k++){ const x = R()*w, y = R()*h, r = 30 + R()*90, gr = g.createRadialGradient(x, y, 0, x, y, r); gr.addColorStop(0, `rgba(150,120,80,${.03 + R()*.04})`); gr.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = gr; g.fillRect(x - r, y - r, 2*r, 2*r); }
+  return (PAPERC = c);
+}
+/* líneas de fractura del vaso, como en el calco (fijas a la banda) */
+const CRACKS = (() => { const R = rng(23), out = []; for (let i = 0; i < 9; i++){ let x = -900 + i*220 + R()*80, h = R()*BAND; const pts = [[x, h]]; let a = R()*6.28; for (let j = 0; j < 7; j++){ a += (R() - .5)*1.6; x += Math.cos(a)*34; h += Math.sin(a)*34; pts.push([x, clamp(h, -30, BAND + 40)]); } out.push(pts); } return out; })();
+function arcLine(g, cam, h, x0, x1){ g.beginPath(); for (let x = x0; x <= x1; x += 40){ const [px, py] = arcPt(cam, x, h); x === x0 ? g.moveTo(px, py) : g.lineTo(px, py); } const e = arcPt(cam, x1, h); g.lineTo(e[0], e[1]); g.stroke(); }
+function column(g, cam, x, flip){
+  const [px, py, th] = arcPt(cam, x, 0); g.save(); g.translate(px, py); g.rotate(th); if (flip) g.scale(-1, 1);
+  g.lineJoin = 'round'; g.fillStyle = PAPER; g.strokeStyle = INK; g.lineWidth = 2.4;
+  const Hc = BAND - 64;
+  // fuste minoico, más ancho arriba que abajo
+  g.beginPath(); g.moveTo(-15, 0); g.lineTo(-21, -Hc); g.lineTo(21, -Hc); g.lineTo(15, 0); g.closePath(); g.fill(); g.stroke();
+  g.lineWidth = 1.1; g.strokeStyle = INK_F; g.beginPath(); g.moveTo(-6, -4); g.lineTo(-9, -Hc + 4); g.stroke();
+  // basa, equino y ábaco cuadrado con la fila de óvalos del calco
+  g.lineWidth = 2.4; g.strokeStyle = INK; g.fillStyle = PAPER;
+  g.beginPath(); g.rect(-20, -6, 40, 8); g.fill(); g.stroke();
+  g.beginPath(); g.ellipse(0, -Hc - 7, 30, 9, 0, 0, 6.283); g.fill(); g.stroke();
+  g.beginPath(); g.rect(-40, -Hc - 50, 80, 36); g.fill(); g.stroke();
+  g.beginPath(); g.rect(-44, -Hc - 60, 88, 10); g.fill(); g.stroke();
+  g.lineWidth = 1.3; for (let r = 0; r < 2; r++) for (let i = 0; i < 5; i++){ g.beginPath(); g.ellipse(-28 + i*14, -Hc - 40 + r*15, 4.6, 3.6, 0, 0, 6.283); g.stroke(); }
+  g.restore();
+}
+function drawStage(g, cam){
+  const pc = paper(); g.drawImage(pc, 0, 0, 1280, 720);
+  g.save(); g.lineCap = 'round';
+  // grietas y fragmentos del vaso
+  g.strokeStyle = INK_L; g.lineWidth = 1.2;
+  CRACKS.forEach(c => { g.beginPath(); c.forEach(([x, h], i) => { const [px, py] = arcPt(cam, x, h); i ? g.lineTo(px, py) : g.moveTo(px, py); }); g.stroke(); });
+  // marcos de la banda: filetes dobles arriba y abajo, y el arranque de las bandas vecinas
+  g.strokeStyle = INK; g.lineWidth = 2.4; arcLine(g, cam, -2, -1500, 1500); arcLine(g, cam, -12, -1500, 1500);
+  g.lineWidth = 1.4; arcLine(g, cam, -20, -1500, 1500);
+  g.lineWidth = 2.4; arcLine(g, cam, BAND, -1500, 1500); arcLine(g, cam, BAND + 10, -1500, 1500);
+  g.lineWidth = 1.2; g.strokeStyle = INK_F; arcLine(g, cam, BAND + 18, -1500, 1500);
+  // suelo: línea de tierra con algunos guijarros a pluma
+  const R = rng(3); g.strokeStyle = INK_F; g.lineWidth = 1;
+  for (let i = 0; i < 70; i++){ const x = -1400 + i*40 + R()*30, [px, py, th] = arcPt(cam, x, 4 + R()*6); g.save(); g.translate(px, py); g.rotate(th); g.beginPath(); g.ellipse(0, 0, 2 + R()*3, 1 + R()*1.4, 0, 0, 6.283); g.stroke(); g.restore(); }
+  g.restore();
+}
+/* bandas vecinas apenas sugeridas, para que se lea el vaso entero */
+function drawNeighbors(g, cam){ return;
+  g.save(); g.strokeStyle = INK_L; g.lineWidth = 1.3;
+  for (let i = 0; i < 26; i++){ const x = -1300 + i*104; const [a, b] = arcPt(cam, x, BAND + 22), [c, d] = arcPt(cam, x + 30, BAND + 90); g.beginPath(); g.moveTo(a, b); g.quadraticCurveTo((a + c)/2 + 12, (b + d)/2, c, d); g.stroke(); }
+  for (let i = 0; i < 26; i++){ const x = -1250 + i*104; const [a, b] = arcPt(cam, x, -24), [c, d] = arcPt(cam, x + 40, -80); g.beginPath(); g.moveTo(a, b); g.quadraticCurveTo((a + c)/2 - 10, (b + d)/2, c, d); g.stroke(); }
+  g.restore();
+}
+
+/* ---------- efectos a tinta ---------- */
+function inkBurst(g, x, y, r, a, seed){
+  const R = rng(seed || 9); g.save(); g.translate(x, y); g.strokeStyle = INK; g.lineCap = 'round';
+  for (let i = 0; i < 9; i++){ const an = (a ?? 0) + (i - 4)*.33 + (R() - .5)*.2, r0 = r*(.35 + R()*.15), r1 = r*(.8 + R()*.5); g.lineWidth = 2.6 - i%3*.6;
+    g.beginPath(); g.moveTo(Math.cos(an)*r0, Math.sin(an)*r0); g.lineTo(Math.cos(an)*r1, Math.sin(an)*r1); g.stroke(); }
+  g.fillStyle = INK; for (let i = 0; i < 6; i++){ const an = (a ?? 0) + (R() - .5)*2.4, rr = r*(.9 + R()*.6); g.beginPath(); g.arc(Math.cos(an)*rr, Math.sin(an)*rr, 1 + R()*2.4, 0, 6.283); g.fill(); }
+  g.restore();
+}
+function speedLines(g, x0, y0, x1, y1, n, w){
+  const L = Math.hypot(x1 - x0, y1 - y0) || 1, nx = -(y1 - y0)/L, ny = (x1 - x0)/L; g.save(); g.strokeStyle = INK_F; g.lineCap = 'round';
+  for (let i = 0; i < n; i++){ const o = (i - (n - 1)/2)*w; g.lineWidth = 1.4; g.beginPath(); g.moveTo(x0 + nx*o, y0 + ny*o); g.lineTo(lerp(x0, x1, .8) + nx*o, lerp(y0, y1, .8) + ny*o); g.stroke(); }
+  g.restore();
+}
+function drop(g, x, y, s, a){ g.save(); g.translate(x, y); g.rotate(a); g.scale(s, s); g.fillStyle = PAPER; g.strokeStyle = INK; g.lineWidth = 1.4/s;
+  g.beginPath(); g.moveTo(0, -6); g.quadraticCurveTo(4, 0, 0, 3.5); g.quadraticCurveTo(-4, 0, 0, -6); g.fill(); g.stroke(); g.restore(); }
+
+return {drawFigure, P, makeLocks, stepLocks, drawLocks};
+})();
+/* CNOSO · motor del juego: recorrido del palacio, ciclo de pruebas, personaje y fiesta del toro */
 (() => {
 'use strict';
 const W = 1280, H = 720, GY = 545;
@@ -421,15 +770,15 @@ const HIST = {
 };
 
 /* ---------- estado guardado ---------- */
-const KEY = 'toro.v1';
-const DEF = {lang:null, room:0, seen:{}, qok:{}, arena:false, fiestas:[0, 0, 0], best:0, done:false, skin:'R', tec:'picado', sound:true, shake:true, xpQ:{}, xpF:{}, epi:false};
+const KEY = 'cnoso.v1';
+const DEF = {lang:null, step:0, stage:0, gear:{}, bouts:[0, 0, 0, 0], bOpen:1, room:0, seen:{}, qok:{}, arena:false, fiestas:[0, 0, 0], best:0, done:false, skin:'R', tec:'picado', sound:true, shake:true, xpQ:{}, xpF:{}, epi:false};
 let S = (() => { try { return Object.assign({}, DEF, JSON.parse(localStorage.getItem(KEY)) || {}); } catch (e) { return Object.assign({}, DEF); } })();
 function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
 if (!S.lang){ let l = null; try { l = localStorage.getItem('historiapp.lang'); } catch (e) {} S.lang = l === 'en' || l === 'es' ? l : ((navigator.language || 'es').startsWith('es') ? 'es' : 'en'); }
 if (HIST.inside){ try { const l = localStorage.getItem('historiapp.lang'); if (l === 'en' || l === 'es') S.lang = l; } catch (e) {} }
 const L = o => o ? (o[S.lang] ?? o.es) : '';
 const UI = {
- es:{sub:'El salto del toro en el palacio de Cnoso', entrar:'Entrar en Cnoso', seguir:'Seguir el recorrido', fiestas:'Fiestas del toro', nuevo:'Empezar de nuevo', hist:'‹ Historiapp', menu:'Menú',
+ es:{pj:'Personaje', etapa:'Etapa', pruebasT:'Pruebas del ciclo', llevas:'Lo que has ganado', nada:'Todavía nada', combatir:'Combatir', combates:'Combates', alFiesta:'Ir a la fiesta', ganas:'Ganarás', superada:'Prueba superada', obtienes:'Consigues', continuar:'Continuar', empezarC:'Empezar el ciclo', pruebaN:'Prueba {a} de {b}', nuevaEtapa:'Nueva etapa', sub:'Un ciclo de pruebas en el palacio minoico', entrar:'Empezar el ciclo', seguir:'Seguir el ciclo', fiestas:'Fiestas del toro', nuevo:'Empezar de nuevo', hist:'‹ Historiapp', menu:'Menú',
    room:'Estancia {a} de {b}', explora:'Toca las marcas para conocer la estancia', pasar:'Pasar', cerrar:'Seguir explorando', ficha:'Ficha', preg:'Para pasar', comprobar:'Comprobar', siguiente:'Siguiente',
    bien:'Correcto.', mal:'No es así. Vuelve a intentarlo.', alArena:'Ir a la fiesta', piel:'¿Quién salta?', tec:'Técnica', empezar:'Empezar la fiesta',
    fiesta:['Primera fiesta','Segunda fiesta','Gran fiesta del palacio'], toro:'Toro {a} de 3', aclam:'Aclamación', tap:'Toca cuando el anillo se cierre', tapK:'Toca (o pulsa espacio) cuando el anillo se cierre',
@@ -438,9 +787,9 @@ const UI = {
    early2:'Empujaste antes de tiempo y resbalaste por el costado del toro.', late2:'Empujaste tarde: el toro te sacudió y caíste al polvo.',
    land0:'Caíste de rodillas: quien recibe te sujetó, pero el público lo notó.', clean:'Salto completo y limpio.', otro:'Siguiente toro', finF:'Fin de la fiesta', repetir:'Repetir la fiesta', next:'Siguiente fiesta',
    alTrono:'Ir a la sala del trono', palacio:'Volver al palacio', saltos:'Saltos completos', perfs:'Fases perfectas', cron:'Crónica', nota:'Ningún objeto minoico representa un premio: lo que cuenta es la aclamación de la comunidad.',
-   epiQ:'Elige todas las que creas correctas', fin:'Has recorrido Cnoso', fin2:'Del palacio al patio y a la fiesta del toro.', libre:'Fiestas del toro', volver:'Volver a Historiapp',
+   epiQ:'Elige todas las que creas correctas', fin:'Has completado el ciclo', fin2:'Del pugilato de los niños a la fiesta del toro, sala a sala del palacio de Cnoso.', libre:'Fiestas del toro', volver:'Volver a Historiapp',
    rot:'Gira el dispositivo para jugar', snd:'Sonido', tmb:'Temblor', reset:'¿Seguro? Se borrará tu recorrido en este juego.', si:'Sí, empezar', no:'Cancelar', ayuda:'Ayuda', ayudaT:'Toca la pantalla, o pulsa espacio, cuando el anillo que se cierra coincida con el círculo fijo. En cada salto hay tres momentos.'},
- en:{sub:'Bull-leaping at the palace of Knossos', entrar:'Enter Knossos', seguir:'Continue the tour', fiestas:'Bull festivals', nuevo:'Start again', hist:'‹ Historiapp', menu:'Menu',
+ en:{pj:'Character', etapa:'Stage', pruebasT:'Trials of the cycle', llevas:'What you have won', nada:'Nothing yet', combatir:'Fight', combates:'Bouts', alFiesta:'Go to the festival', ganas:'You will win', superada:'Trial passed', obtienes:'You obtain', continuar:'Continue', empezarC:'Start the cycle', pruebaN:'Trial {a} of {b}', nuevaEtapa:'New stage', sub:'A cycle of trials in the Minoan palace', entrar:'Start the cycle', seguir:'Continue the cycle', fiestas:'Bull festivals', nuevo:'Start again', hist:'‹ Historiapp', menu:'Menu',
    room:'Room {a} of {b}', explora:'Tap the marks to explore the room', pasar:'Go on', cerrar:'Keep exploring', ficha:'Study sheet', preg:'To go on', comprobar:'Check', siguiente:'Next',
    bien:'Correct.', mal:'Not quite. Try again.', alArena:'Go to the festival', piel:'Who leaps?', tec:'Technique', empezar:'Start the festival',
    fiesta:['First festival','Second festival','Great palace festival'], toro:'Bull {a} of 3', aclam:'Acclaim', tap:'Tap when the ring closes', tapK:'Tap (or press space) when the ring closes',
@@ -449,7 +798,7 @@ const UI = {
    early2:'You pushed too soon and slid off the bull\'s flank.', late2:'You pushed too late: the bull shook you off into the dust.',
    land0:'You landed on your knees: the catcher held you, but the crowd noticed.', clean:'A complete, clean leap.', otro:'Next bull', finF:'End of the festival', repetir:'Repeat the festival', next:'Next festival',
    alTrono:'Go to the throne room', palacio:'Back to the palace', saltos:'Complete leaps', perfs:'Perfect phases', cron:'Chronicle', nota:'No Minoan object shows a prize: what counts is the acclaim of the community.',
-   epiQ:'Choose all you think are correct', fin:'You have explored Knossos', fin2:'From the palace to the court and the bull festival.', libre:'Bull festivals', volver:'Back to Historiapp',
+   epiQ:'Choose all you think are correct', fin:'You have completed the cycle', fin2:'From the boys\' boxing to the bull festival, room by room through the palace of Knossos.', libre:'Bull festivals', volver:'Back to Historiapp',
    rot:'Turn your device to play', snd:'Sound', tmb:'Shake', reset:'Are you sure? Your tour in this game will be erased.', si:'Yes, start', no:'Cancel', ayuda:'Help', ayudaT:'Tap the screen, or press space, when the closing ring meets the fixed circle. Each leap has three moments.'}
 };
 const t = (k, v) => { let s = UI[S.lang][k] ?? UI.es[k] ?? k; if (v) for (const x in v) s = s.replace('{' + x + '}', v[x]); return s; };
@@ -497,9 +846,10 @@ addEventListener('resize', resize);
 let toastT = 0, toastEl = null;
 function toast(m){ if (!toastEl){ toastEl = $('<div class="toast"></div>'); st.appendChild(toastEl); } toastEl.textContent = m; st.appendChild(toastEl); const el = toastEl; el.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove('on'), 1600); }
 function clearUI(){ st.innerHTML = ''; toastEl = null; spotsEls = []; }
-function topBar(extra){
+function topBar(extra, noPj){
   const b = $('<div class="top"></div>');
   if (HIST.inside){ const h = $(`<button class="chip">${t('hist')}</button>`); h.onclick = () => { SFX.tap(); HIST.back(); }; b.appendChild(h); }
+  if (!noPj) b.appendChild(pjChip());
   if (extra) extra.forEach(e => b.appendChild(e));
   b.appendChild($('<span class="sp"></span>'));
   for (const l of ['es', 'en']){ const c = $(`<button class="chip${S.lang === l ? ' on' : ''}" aria-pressed="${S.lang === l}">${l.toUpperCase()}</button>`); c.onclick = () => { if (S.lang === l) return; S.lang = l; save(); document.documentElement.lang = l; document.getElementById('rotT').textContent = t('rot'); rerender(); }; b.appendChild(c); }
@@ -555,15 +905,16 @@ function sparks(x, y, n){ for (let i = 0; i < n; i++){ const a = Math.random()*6
 function showTitle(){
   MODE = 'title'; SCN = 'titulo'; clearUI(); rerender = showTitle; img('titulo'); img('banda');
   topBar();
-  st.appendChild($(`<div class="title"><h1>TAUROCATAPSIA</h1><p>${t('sub')}</p></div>`));
+  st.appendChild($(`<div class="title"><h1>CNOSO</h1><p>${t('sub')}</p></div>`));
   const m = $('<div class="menu"></div>');
-  const started = S.room > 0 || Object.keys(S.seen).length;
+  const started = S.step > 0;
   const go = $(`<button class="btn pri">${started && !S.done ? t('seguir') : t('entrar')}</button>`);
-  go.onclick = () => { au(); SFX.open(); if (S.done) S.room = 0; enterRoom(Math.min(S.room, ROOMS.length - 1)); };
+  go.onclick = () => { au(); SFX.open(); if (S.done && S.step >= CICLO.steps.length) S.step = 0; runStep(); };
   m.appendChild(go);
+  if (S.bOpen > 1 || S.bouts.some(x => x)){ const c = $(`<button class="btn az">${t('combates')}</button>`); c.onclick = () => { au(); SFX.open(); openBout(null); }; m.appendChild(c); }
   if (S.arena){ const f = $(`<button class="btn az">${t('fiestas')}</button>`); f.onclick = () => { au(); SFX.open(); arenaSetup(); }; m.appendChild(f); }
   if (started){ const r = $(`<button class="btn">${t('nuevo')}</button>`); r.onclick = () => { const v = card(`<div class="in"><p>${t('reset')}</p></div><div class="act"><button class="btn" data-n>${t('no')}</button><button class="btn pri" data-y>${t('si')}</button></div>`);
-      v.querySelector('[data-n]').onclick = () => v.remove(); v.querySelector('[data-y]').onclick = () => { const keep = {lang:S.lang, sound:S.sound, shake:S.shake, xpQ:S.xpQ, xpF:S.xpF}; S = Object.assign({}, DEF, keep); save(); showTitle(); }; }; m.appendChild(r); }
+      v.querySelector('[data-n]').onclick = () => v.remove(); v.querySelector('[data-y]').onclick = () => { const keep = {lang:S.lang, sound:S.sound, shake:S.shake, xpQ:S.xpQ, xpF:S.xpF}; S = Object.assign({}, DEF, keep, {gear:{}, bouts:[0, 0, 0, 0], seen:{}, qok:{}, fiestas:[0, 0, 0]}); save(); showTitle(); }; }; m.appendChild(r); }
   const cr = $(`<button class="btn">${L({es:'Imágenes', en:'Images'})}</button>`); cr.onclick = () => credits(); m.appendChild(cr);
   st.appendChild(m);
 }
@@ -610,8 +961,7 @@ function askQuestions(i){
 }
 function finishRoom(i){
   if (!S.xpF['room' + i]){ S.xpF['room' + i] = 1; HIST.xp(20); }
-  if (i + 1 < ROOMS.length){ S.room = i + 1; save(); enterRoom(i + 1); }
-  else { S.arena = true; S.room = ROOMS.length - 1; save(); arenaSetup(); }
+  nextStep();
 }
 
 /* ---------- la fiesta del toro: el fresco de Cnoso cobra vida ---------- */
@@ -794,15 +1144,15 @@ function endFiesta(){
   const crono = S.lang === 'es'
     ? `En la ${t('fiesta')[f].toLowerCase()}, saltaste ${comp} de 3 toros${S.tec === 'evans' ? ' por los cuernos, a la manera de Evans' : ' en picado'}, con ${perf} ${perf === 1 ? 'fase perfecta' : 'fases perfectas'}. ${comp === 3 ? 'La comunidad te aclamó desde las barreras.' : comp ? 'El público reconoció tu valor.' : 'Habrá otra fiesta.'}`
     : `At the ${t('fiesta')[f].toLowerCase()}, you leapt ${comp} of 3 bulls${S.tec === 'evans' ? ' by the horns, in Evans\'s manner' : ' with the diving leap'}, with ${perf} perfect ${perf === 1 ? 'phase' : 'phases'}. ${comp === 3 ? 'The community acclaimed you from the barriers.' : comp ? 'The crowd recognised your courage.' : 'There will be another festival.'}`;
-  const last = f === 2, needEpi = last && !S.epi;
+  const last = f === 2, cyc = (CICLO.steps[S.step] || {}).k === 'fiesta', needEpi = cyc;
   const v = card(`<div class="in"><span class="tag">${t('finF')}</span><h2>${t('fiesta')[f]}</h2><div class="ros" aria-label="${ros}/3">${'✿'.repeat(ros)}<span style="opacity:.25">${'✿'.repeat(3 - ros)}</span></div>
     <div class="grades"><span><b>${comp}/3</b>${t('saltos')}</span><span><b>${perf}</b>${t('perfs')}</span><span><b>${Math.round(A.acl)}</b>${t('aclam')}</span></div>
     <p><i>${t('cron')}.</i> ${crono}</p><p class="nota" style="font-size:13px;opacity:.85">${t('nota')}</p></div>
-    <div class="act"><button class="btn" data-r>${t('repetir')}</button>${needEpi ? `<button class="btn pri" data-e>${t('alTrono')} ›</button>` : last ? `<button class="btn pri" data-m>${t('palacio')}</button>` : `<button class="btn pri" data-x>${t('next')} ›</button>`}</div>`);
+    <div class="act"><button class="btn" data-r>${t('repetir')}</button>${needEpi ? `<button class="btn pri" data-e>${t('alTrono')} ›</button>` : last ? `<button class="btn pri" data-m>${t('palacio')}</button>` : `<button class="btn" data-m>${t('palacio')}</button><button class="btn pri" data-x>${t('next')} ›</button>`}</div>`);
   A.ph = 'end';
   v.querySelector('[data-r]').onclick = () => startFiesta(f);
   const x = v.querySelector('[data-x]'); if (x) x.onclick = () => startFiesta(f + 1);
-  const e = v.querySelector('[data-e]'); if (e) e.onclick = () => showEpilogue();
+  const e = v.querySelector('[data-e]'); if (e) e.onclick = () => { SFX.tap(); nextStep(); };
   const m = v.querySelector('[data-m]'); if (m) m.onclick = () => showTitle();
 }
 // dibujo de la arena: fondo del fresco, figura que recibe, toro y saltador recortados del original
@@ -850,13 +1200,111 @@ function meaning(){
   };
 }
 function finale(){
-  if (!S.done){ S.done = true; S.epi = true; save(); if (!S.xpF.fin){ S.xpF.fin = 1; HIST.xp(100); } }
+  S.step = CICLO.steps.length; if (!S.done){ S.done = true; S.epi = true; if (!S.xpF.fin){ S.xpF.fin = 1; HIST.xp(100); } } save();
   clearUI(); SCN = 'titulo'; MODE = 'title'; topBar();
   const tot = S.fiestas.reduce((a, b) => a + b, 0);
-  const v = card(`<div class="in"><h2>${t('fin')}</h2><p>${t('fin2')}</p><div class="ros">${'✿'.repeat(tot)}<span style="opacity:.25">${'✿'.repeat(9 - tot)}</span></div><p>${t('aclam')}: <b>${S.best}</b></p></div>
+  const v = card(`<div class="in"><div class="pjrow"><span data-pj></span><div><h2>${t('fin')}</h2><p>${t('fin2')}</p>${trialList()}</div></div><div class="ros">${'✿'.repeat(tot)}<span style="opacity:.25">${'✿'.repeat(9 - tot)}</span></div><p>${t('aclam')}: <b>${S.best}</b></p></div>
     <div class="act">${HIST.inside ? `<button class="btn" data-h>${t('volver')}</button>` : ''}<button class="btn az" data-f>${t('libre')}</button><button class="btn pri" data-t>${t('menu')}</button></div>`);
+  v.querySelector('[data-pj]').appendChild(portrait(96, 128));
   const h = v.querySelector('[data-h]'); if (h) h.onclick = () => HIST.back();
   v.querySelector('[data-f]').onclick = () => arenaSetup(); v.querySelector('[data-t]').onclick = () => showTitle();
+}
+
+/* ---------- el ciclo de pruebas ---------- */
+const NPRU = CICLO.pruebas.length;
+const trialNo = st => st.k === 'fiesta' ? 4 : st.i;
+function nextStep(){ S.step++; save(); runStep(); }
+function runStep(){
+  const st = CICLO.steps[S.step]; A = null;
+  if (!st){ finale(); return; }
+  if (st.k === 'pro') proCard();
+  else if (st.k === 'room') enterRoom(st.i);
+  else if (st.k === 'bout' || st.k === 'fiesta') trialCard(trialNo(st));
+  else if (st.k === 'stage') stageCard(st.s);
+  else if (st.k === 'epi') showEpilogue();
+}
+function proCard(){
+  MODE = 'card'; SCN = 'titulo'; clearUI(); rerender = proCard; topBar();
+  const v = card(`<div class="in"><div class="pjrow"><span data-pj></span><div><span class="tag">${t('etapa')} · ${L(CICLO.stages[0].t)}</span><h2>${L(CICLO.pro.t)}</h2>${L(CICLO.pro.p).map(p => `<p>${p}</p>`).join('')}</div></div></div>
+    <div class="act">${fichaBtn(CICLO.pro.ficha)}<span class="spc"></span><button class="btn" data-m>${t('menu')}</button><button class="btn pri" data-g>${t('empezarC')} ›</button></div>`, false, 'wide epi');
+  v.querySelector('[data-pj]').appendChild(portrait(108, 144)); bindFicha(v);
+  v.querySelector('[data-m]').onclick = () => { SFX.tap(); showTitle(); };
+  v.querySelector('[data-g]').onclick = () => { au(); SFX.open(); nextStep(); };
+}
+function stageCard(s){
+  MODE = 'card'; SCN = s === 1 ? 'procesion' : 'frescos'; clearUI(); rerender = () => stageCard(s);
+  S.stage = s; save(); topBar();
+  const C = CICLO.cambio[s];
+  const v = card(`<div class="in"><div class="pjrow"><span data-pj></span><div><span class="tag">${t('nuevaEtapa')} · ${L(CICLO.stages[s].t)}</span><h2>${L(C.t)}</h2>${L(C.p).map(p => `<p>${p}</p>`).join('')}</div></div></div>
+    <div class="act">${fichaBtn(C.ficha)}<span class="spc"></span><button class="btn pri" data-g>${t('continuar')} ›</button></div>`, false, 'wide epi');
+  v.querySelector('[data-pj]').appendChild(portrait(108, 144)); bindFicha(v); SFX.ok();
+  v.querySelector('[data-g]').onclick = () => { SFX.tap(); nextStep(); };
+}
+function trialCard(i){
+  MODE = 'card'; SCN = i >= 3 ? 'patio' : i === 0 ? 'entrada' : 'frescos'; clearUI(); rerender = () => trialCard(i); topBar();
+  const P = CICLO.pruebas[i], done = i < 4 ? S.bouts[i] > 0 : S.fiestas.some(x => x);
+  const v = card(`<div class="in"><div class="pjrow"><span data-pj></span><div><span class="tag">${t('pruebaN', {a:i + 1, b:NPRU})}</span><h2>${L(P.t)}</h2><p>${L(P.p)}</p><p class="gn"><b>${t('ganas')}:</b> ${L(P.gana)}${done ? ' ✓' : ''}</p></div></div></div>
+    <div class="act"><button class="btn" data-m>${t('menu')}</button><button class="btn pri" data-g>${i < 4 ? t('combatir') : t('alFiesta')} ›</button></div>`, false, 'wide epi');
+  v.querySelector('[data-pj]').appendChild(portrait(108, 144));
+  v.querySelector('[data-m]').onclick = () => { SFX.tap(); showTitle(); };
+  v.querySelector('[data-g]').onclick = () => { au(); SFX.open(); if (i < 4) openBout(i); else { S.arena = true; save(); arenaSetup(); } };
+}
+const GEAR = [['jewel'], ['wrist'], ['helmet'], ['boots']];
+function gainCard(i){
+  MODE = 'card'; clearUI(); rerender = () => gainCard(i); topBar();
+  const P = CICLO.pruebas[i];
+  const v = card(`<div class="in"><div class="pjrow"><span data-pj></span><div><span class="tag">${t('superada')}</span><h2>${L(P.t)}</h2><p><b>${t('obtienes')}:</b> ${L(P.gana)}.</p>${trialList()}</div></div></div>
+    <div class="act"><button class="btn pri" data-g>${t('continuar')} ›</button></div>`, false, 'wide epi');
+  v.querySelector('[data-pj]').appendChild(portrait(108, 144)); SFX.ok();
+  v.querySelector('[data-g]').onclick = () => { SFX.tap(); nextStep(); };
+}
+function trialList(){
+  return `<div class="tlist">${CICLO.pruebas.map((P, i) => { const ok = i < 4 ? S.bouts[i] > 0 : S.fiestas.some(x => x); return `<span class="${ok ? 'ok' : ''}">${ok ? '✓' : '·'} ${L(P.t).split(' · ')[1] || L(P.t)}</span>`; }).join('')}</div>`;
+}
+/* combates: se abren en un marco con el juego de pugilato y devuelven el resultado */
+let FRAME = null, FRAME_I = null;
+function openBout(i){
+  MODE = 'bout'; clearUI(); FRAME_I = i;
+  const q = i == null ? `free=1&open=${S.bOpen}` : `b=${i}`;
+  FRAME = document.createElement('iframe'); FRAME.className = 'pugframe'; FRAME.title = t('combates');
+  FRAME.src = `cnoso/pugilato.html?${q}&lang=${S.lang}`; document.body.appendChild(FRAME);
+  try { FRAME.focus(); } catch (e) {}
+}
+function closeBout(){ if (FRAME){ FRAME.remove(); FRAME = null; } }
+addEventListener('message', e => {
+  if (e.origin !== location.origin || !e.data || !e.data.cnoso) return; const d = e.data;
+  if (d.type === 'ficha'){ HIST.ficha(d.id); return; }
+  if (d.type === 'result'){ if (d.won){ S.bouts[d.i] = Math.max(S.bouts[d.i] || 0, d.stars || 1); S.bOpen = Math.max(S.bOpen, Math.min(4, d.i + 2)); GEAR[d.i].forEach(g => S.gear[g] = 1); save(); } return; }
+  if (d.type === 'bout'){ closeBout(); const st = CICLO.steps[S.step]; if (FRAME_I != null && st && st.k === 'bout' && st.i === d.i) gainCard(d.i); else runStep(); return; }
+  if (d.type === 'quit'){ closeBout(); if (FRAME_I == null) showTitle(); else runStep(); }
+});
+/* el personaje dibujado a tinta, como en el calco del ritón */
+function pjKit(){ const g = S.gear, k = {};
+  if (S.stage === 0){ k.boy = true; if (g.jewel) k.jewel = true; } else if (S.stage === 1) k.shaved = true;
+  if (g.wrist) k.wrist = true; if (g.helmet){ k.helmet = true; k.guard = true; k.gloves = 2; } if (g.boots) k.boots = true; return k; }
+function portrait(w, h, bare){
+  const c = document.createElement('canvas'), d = Math.min(2, devicePixelRatio || 1); c.width = w*d; c.height = h*d; c.style.width = w + 'px'; c.style.height = h + 'px'; c.className = 'pjc';
+  const g = c.getContext('2d'); g.scale(d, d);
+  if (!bare){ g.fillStyle = '#f4ecda'; g.fillRect(0, 0, w, h); g.strokeStyle = '#1a140f'; g.lineWidth = 1.5; g.strokeRect(.75, .75, w - 1.5, h - 1.5); }
+  const st = S.stage, kit = pjKit(), s = h/(st === 0 ? 430 : 375);
+  const F = {x:w/2 + 4, y:h - 7, rot:0, dir:1, s, kit, lw:.75, pose:CAL.P({lean:.12, gy:166, flx:28, frx:-38, la:72, lf:40, ra:20, rf:140, head:-.05}),
+    locks:st === 1 ? [] : st === 0 ? CAL.makeLocks(2, 64, 7) : CAL.makeLocks(5, 96, 7)};
+  CAL.drawFigure(document.createElement('canvas').getContext('2d'), F);
+  for (let n = 0; n < 160; n++) CAL.stepLocks(F, 1/60);
+  CAL.drawLocks(g, F); CAL.drawFigure(g, F);
+  return c;
+}
+function pjChip(){
+  const b = $(`<button class="chip pjchip" aria-label="${t('pj')}"></button>`); b.appendChild(portrait(26, 36, true));
+  b.appendChild($(`<span>${L(CICLO.stages[S.stage].t)}</span>`)); b.onclick = e => { e.stopPropagation(); SFX.tap(); pjCard(); }; return b;
+}
+function pjCard(){
+  const kit = pjKit(), gear = [S.gear.jewel && CICLO.pruebas[0].gana, S.gear.wrist && CICLO.pruebas[1].gana, S.gear.helmet && CICLO.pruebas[2].gana, S.gear.boots && CICLO.pruebas[3].gana].filter(Boolean);
+  const v = card(`<div class="in"><div class="pjrow"><span data-pj></span><div><span class="tag">${t('pj')} · ${t('etapa')} ${S.stage + 1} de 3</span><h2>${L(CICLO.stages[S.stage].t)}</h2><p>${L(CICLO.stages[S.stage].d)}</p>
+    <span class="tag">${t('pruebasT')}</span>${trialList()}<span class="tag">${t('llevas')}</span><p class="gn">${gear.length ? gear.map(L).join(' · ') : t('nada')}</p></div></div></div>
+    <div class="act"><button class="btn pri" data-c>${L({es:'Cerrar', en:'Close'})}</button></div>`, false, 'wide epi');
+  v.querySelector('[data-pj]').appendChild(portrait(120, 160));
+  v.querySelector('[data-c]').onclick = () => { SFX.tap(); v.remove(); };
 }
 
 /* ---------- entrada ---------- */
@@ -866,7 +1314,7 @@ addEventListener('keydown', e => { if (MODE === 'arena' && (e.code === 'Space' |
 document.addEventListener('gesturestart', e => e.preventDefault());
 
 resize(); showTitle(); requestAnimationFrame(t0 => { last = t0; requestAnimationFrame(frame); });
-window.TORO = { get A(){ return A; }, S:() => S, enterRoom, arenaSetup, startFiesta, showEpilogue, tapArena };
+window.CNOSO = { get A(){ return A; }, S:() => S, enterRoom, arenaSetup, startFiesta, showEpilogue, tapArena, runStep, nextStep, openBout, pjCard };
 })();
 
 </script>

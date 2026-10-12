@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#2a1d14">
-<title>Púgiles</title>
+<title>CNOSO · Pugilato</title>
 <style>
 :root{--cal:#f3e8cf;--ocre:#b4472b;--ocreD:#86301b;--azul:#2c6a96;--azulD:#1d3c58;--amar:#dca23a;--negro:#231a14;--serif:"Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -235,7 +235,7 @@ const FINAL = {
   ficha:['un-deporte-dos-combates-dos-edades-mismo', 'H3·07']
 };
 const UI = {
- es:{sub:'El pugilato minoico, de Akrotiri al ritón de Hagia Triada', jugar:'Combatir', seguir:'Seguir', libre:'Combate libre', como:'Cómo se juega', hist:'‹ Historiapp', menu:'Menú', volver:'Volver a Historiapp',
+ es:{palacio:'Volver al palacio', continuar:'Continuar', otro:'Otro combate', sub:'El pugilato minoico, de Akrotiri al ritón de Hagia Triada', jugar:'Combatir', seguir:'Seguir', libre:'Combate libre', como:'Cómo se juega', hist:'‹ Historiapp', menu:'Menú', volver:'Volver a Historiapp',
    combate:'Combate {a} de {b}', aCombatir:'¡A combatir!', ficha:'Ficha', tu:'Tú', vigor:'vigor', aliento:'aliento', toques:'toques',
    gana:'¡Victoria!', pierde:'Derrotado', siguiente:'Siguiente combate', repetir:'Repetir', fin:'Ver el final', pausa:'Pausa', reanudar:'Seguir combatiendo', salir:'Salir al menú',
    derribo:'¡Derribado!', derribos:'derribos', esquivas:'Esquivas', contra:'¡Contra!', esquiva:'¡Esquiva!', rotura:'¡Guardia rota!', toque:'Toque', ko:'¡Al suelo!', cansado:'Sin aliento',
@@ -250,7 +250,7 @@ const UI = {
         '<b>Contra.</b> El golpe que lanzas justo después de esquivar hace más daño.',
         '<b>Derribos.</b> Cuando el vigor se acaba, el púgil cae. Al primer derribo se levanta; al segundo se queda en el suelo y el combate termina.',
         '<b>Aliento.</b> Cada golpe cuesta aliento. Sin aliento golpeas más despacio y con menos fuerza.']},
- en:{sub:'Minoan boxing, from Akrotiri to the Hagia Triada rhyton', jugar:'Fight', seguir:'Continue', libre:'Free bout', como:'How to play', hist:'‹ Historiapp', menu:'Menu', volver:'Back to Historiapp',
+ en:{palacio:'Back to the palace', continuar:'Continue', otro:'Another bout', sub:'Minoan boxing, from Akrotiri to the Hagia Triada rhyton', jugar:'Fight', seguir:'Continue', libre:'Free bout', como:'How to play', hist:'‹ Historiapp', menu:'Menu', volver:'Back to Historiapp',
    combate:'Bout {a} of {b}', aCombatir:'Fight!', ficha:'Study sheet', tu:'You', vigor:'vigour', aliento:'breath', toques:'touches',
    gana:'Victory!', pierde:'Defeated', siguiente:'Next bout', repetir:'Repeat', fin:'See the ending', pausa:'Pause', reanudar:'Keep fighting', salir:'Exit to menu',
    derribo:'Knocked down!', derribos:'knockdowns', esquivas:'Dodges', contra:'Counter!', esquiva:'Dodge!', rotura:'Guard broken!', toque:'Touch', ko:'Down!', cansado:'Out of breath',
@@ -473,11 +473,11 @@ function drawHead(g, k, lw2, LW, F){
     thin(); g.beginPath(); g.moveTo(-14, -18); g.quadraticCurveTo(0, -31, 14, -23.5); g.stroke(); g.beginPath(); g.moveTo(-12, -27); g.quadraticCurveTo(0, -36, 9, -31); g.stroke();
     for (let i = 0; i < 4; i++){ g.beginPath(); g.arc(-10 + i*6, -28 - Math.sin(i*.9)*3.5, .9, 0, 6.283); g.fillStyle = INK_F; g.fill(); } g.fillStyle = PAPER;
     bold(); g.beginPath(); g.ellipse(-3, -36, 3.2, 2.4, -.3, 0, 6.283); g.fill(); g.stroke();
-  } else if (k.boy){
+  } else if (k.boy || k.shaved){
     // cabeza rapada, salvo los mechones (Koehl): punteado del rapado y un mechón sobre la frente
     g.fillStyle = INK_F; const R = rng(5); for (let i = 0; i < 26; i++){ const a = -2.9 + R()*2.6, r = 12 + R()*5; g.fillRect(Math.cos(a)*r - 1, -14 + Math.sin(a)*r*1.05, 1.1, 1.1); }
     bold(); g.fillStyle = PAPER; g.lineWidth = lw2*1.4;
-    g.beginPath(); g.moveTo(4, -30); g.quadraticCurveTo(14, -36, 17, -28); g.quadraticCurveTo(13, -30, 10, -28); g.stroke();
+    if (k.boy){ g.beginPath(); g.moveTo(4, -30); g.quadraticCurveTo(14, -36, 17, -28); g.quadraticCurveTo(13, -30, 10, -28); g.stroke(); }
     g.lineWidth = LW;
   } else {
     // melena sin casco (cuarta banda): casquete de pelo y cinta
@@ -574,13 +574,19 @@ const HIST = {
   ficha(id){ save(); location.href = '../#t3/f/' + encodeURIComponent(id); }
 };
 
+/* ---------- dentro de CNOSO: el combate se abre en un marco y devuelve el resultado al palacio ---------- */
+const QP = new URLSearchParams(location.search), EMB = QP.has('b') || QP.has('free'), FREE = QP.has('free');
+const post = m => { try { parent.postMessage(Object.assign({cnoso:true}, m), location.origin); } catch (e) {} };
+if (EMB){ HIST.back = () => post({type:'quit'}); HIST.ficha = id => post({type:'ficha', id}); }
+
 /* ---------- estado guardado ---------- */
-const KEY = 'pugiles.v1';
+const KEY = EMB ? 'cnoso.pugilato' : 'pugiles.v1';
 const DEF = {lang:null, open:1, stars:[0, 0, 0, 0], sound:true, shake:true, xpF:{}, done:false, hints:false};
 let S = (() => { try { return Object.assign({}, DEF, JSON.parse(localStorage.getItem(KEY)) || {}); } catch (e) { return Object.assign({}, DEF); } })();
 function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
 if (!S.lang){ let l = null; try { l = localStorage.getItem('historiapp.lang'); } catch (e) {} S.lang = l === 'en' || l === 'es' ? l : ((navigator.language || 'es').startsWith('es') ? 'es' : 'en'); }
 if (HIST.inside){ try { const l = localStorage.getItem('historiapp.lang'); if (l === 'en' || l === 'es') S.lang = l; } catch (e) {} }
+if (EMB){ const l = QP.get('lang'); if (l === 'en' || l === 'es') S.lang = l; const o = +QP.get('open'); if (o > S.open) S.open = Math.min(BOUTS.length, o); }
 const L = o => o ? (o[S.lang] ?? o.es) : '';
 const t = (k, v) => { let s = UI[S.lang][k] ?? UI.es[k] ?? k; if (v) for (const x in v) s = s.replace('{' + x + '}', v[x]); return s; };
 document.getElementById('rotT').textContent = t('rot');
@@ -630,9 +636,9 @@ function clearUI(){ st.innerHTML = ''; toastEl = null; bigEl = null; hintEl = nu
 let rerender = () => {};
 function topBar(){
   const b = $('<div class="top"></div>');
-  if (HIST.inside){ const h = $(`<button class="chip">${t('hist')}</button>`); h.onclick = () => { SFX.tap(); HIST.back(); }; b.appendChild(h); }
+  if (HIST.inside && !EMB){ const h = $(`<button class="chip">${t('hist')}</button>`); h.onclick = () => { SFX.tap(); HIST.back(); }; b.appendChild(h); }
   b.appendChild($('<span class="sp"></span>'));
-  for (const l of ['es', 'en']){ const c = $(`<button class="chip${S.lang === l ? ' on' : ''}" aria-pressed="${S.lang === l}">${l.toUpperCase()}</button>`); c.onclick = () => { if (S.lang === l) return; S.lang = l; save(); document.documentElement.lang = l; document.getElementById('rotT').textContent = t('rot'); rerender(); }; b.appendChild(c); }
+  if (!EMB) for (const l of ['es', 'en']){ const c = $(`<button class="chip${S.lang === l ? ' on' : ''}" aria-pressed="${S.lang === l}">${l.toUpperCase()}</button>`); c.onclick = () => { if (S.lang === l) return; S.lang = l; save(); document.documentElement.lang = l; document.getElementById('rotT').textContent = t('rot'); rerender(); }; b.appendChild(c); }
   const s = $(`<button class="chip" aria-label="${t('snd')}">${S.sound ? '♪' : '♪̸'}</button>`); s.onclick = () => { S.sound = !S.sound; save(); s.textContent = S.sound ? '♪' : '♪̸'; if (S.sound) SFX.tap(); }; b.appendChild(s);
   st.appendChild(b); return b;
 }
@@ -1007,10 +1013,10 @@ function fightUI(){
 function pause(){
   if (paused || !A || A.over) return; paused = true; touchUI(false); Object.keys(KEYS).forEach(k => KEYS[k] = false);
   const v = card(`<div class="in"><h2>${t('pausa')}</h2><p class="lg">${L(B.t)}</p></div><div class="act col g2">
-    <button class="btn pri" data-c>${t('reanudar')}</button><button class="btn" data-h>${t('como')}</button><button class="btn" data-m>${t('salir')}</button>${HIST.inside ? `<button class="btn" data-b>${t('volver')}</button>` : ''}</div>`, 'pz2');
+    <button class="btn pri" data-c>${t('reanudar')}</button><button class="btn" data-h>${t('como')}</button><button class="btn" data-m>${EMB ? t('palacio') : t('salir')}</button>${HIST.inside && !EMB ? `<button class="btn" data-b>${t('volver')}</button>` : ''}</div>`, 'pz2');
   v.querySelector('[data-c]').onclick = () => { v.remove(); paused = false; last = performance.now(); touchUI(true); };
   v.querySelector('[data-h]').onclick = () => { howTo(() => {}); };
-  v.querySelector('[data-m]').onclick = () => { v.remove(); paused = false; showTitle(); };
+  v.querySelector('[data-m]').onclick = () => { v.remove(); paused = false; if (EMB) post({type:'quit'}); else showTitle(); };
   const hb = v.querySelector('[data-b]'); if (hb) hb.onclick = () => HIST.back();
 }
 addEventListener('blur', () => { if (MODE === 'fight' && A && !A.over && A.ready <= 0 && TOUCH) pause(); });
@@ -1031,18 +1037,19 @@ function howTo(done){
 }
 function pickBout(){
   const v = card(`<div class="in"><h2>${t('libre')}</h2><div class="opts g2">${BOUTS.map((b, i) => `<button class="opt"${i >= S.open ? ' disabled' : ''} data-i="${i}"><i>${i + 1}</i><span><b>${L(b.t)}</b><br><small>${i >= S.open ? t('bloq') : L(b.lugar)}</small></span><em class="stars">${'✦'.repeat(S.stars[i])}${'✧'.repeat(3 - S.stars[i])}</em></button>`).join('')}</div></div>
-    <div class="act"><button class="btn" data-x>${t('menu')}</button></div>`, 'wide');
+    <div class="act"><button class="btn" data-x>${EMB ? t('palacio') : t('menu')}</button></div>`, 'wide');
   v.querySelectorAll('[data-i]').forEach(b => b.onclick = () => { if (+b.dataset.i >= S.open) return; SFX.tap(); v.remove(); A_free = true; intro(+b.dataset.i); });
-  v.querySelector('[data-x]').onclick = () => { SFX.tap(); v.remove(); };
+  v.querySelector('[data-x]').onclick = () => { SFX.tap(); if (EMB) post({type:'quit'}); else v.remove(); };
 }
+function freeHome(){ MODE = 'title'; A = null; fx.length = 0; clearUI(); touchUI(false); rerender = freeHome; makeDemo(3); topBar(); pickBout(); }
 let A_free = false;
 function intro(i){
   MODE = 'intro'; A = null; fx.length = 0; clearUI(); touchUI(false); rerender = () => intro(i); makeDemo(i); topBar();
   const b = BOUTS[i];
   const v = card(`<div class="in"><span class="tag">${t('combate', {a:i + 1, b:BOUTS.length})}</span><h2>${L(b.t)}</h2><p class="sub">${L(b.lugar)}</p>${L(b.intro).map(p => `<p>${p}</p>`).join('')}${fichaBtn(b.ficha)}</div>
-    <div class="act"><button class="btn" data-m>${t('menu')}</button><button class="btn pri" data-g>${t('aCombatir')}</button></div>`, 'side');
+    <div class="act"><button class="btn" data-m>${EMB ? (FREE ? t('libre') : t('palacio')) : t('menu')}</button><button class="btn pri" data-g>${t('aCombatir')}</button></div>`, 'side');
   bindFicha(v);
-  v.querySelector('[data-m]').onclick = () => { SFX.tap(); A_free = false; showTitle(); };
+  v.querySelector('[data-m]').onclick = () => { SFX.tap(); A_free = false; if (EMB){ if (FREE) freeHome(); else post({type:'quit'}); } else showTitle(); };
   v.querySelector('[data-g]').onclick = () => { au(); SFX.tap(); startBout(i); };
 }
 function result(){
@@ -1059,10 +1066,13 @@ function result(){
     ${won ? `<p class="stars big2">${'✦'.repeat(stars)}${'✧'.repeat(3 - stars)}</p>` : ''}
     <div class="grades"><span><b>${P0.stats.hits}</b>${t('golpes')}</span><span><b>${P0.stats.dodges}</b>${t('esquivas')}</span><span><b>${P0.stats.counters}</b>${t('contras')}</span><span><b>${m}:${String(s).padStart(2, '0')}</b>${t('tiempo')}</span></div>
     <p>${won ? L(b.win) : (b.mode === 'toques' ? t('perdidoT') : t('perdido'))}</p>${won ? fichaBtn(b.ficha) : ''}</div>
-    <div class="act"><button class="btn" data-m>${t('menu')}</button><button class="btn" data-r>${t('repetir')}</button>${won && !A_free ? `<button class="btn pri" data-n>${isLast ? t('fin') : t('siguiente')}</button>` : ''}</div>`, mid > 0 ? 'side left' : 'side'); v.classList.add('lite');
+    <div class="act">${EMB ? (FREE ? `<button class="btn" data-m>${t('palacio')}</button><button class="btn" data-o>${t('otro')}</button><button class="btn pri" data-r>${t('repetir')}</button>` : won ? `<button class="btn" data-r>${t('repetir')}</button><button class="btn pri" data-k>${t('continuar')} ›</button>` : `<button class="btn" data-m>${t('palacio')}</button><button class="btn pri" data-r>${t('repetir')}</button>`) : `<button class="btn" data-m>${t('menu')}</button><button class="btn" data-r>${t('repetir')}</button>${won && !A_free ? `<button class="btn pri" data-n>${isLast ? t('fin') : t('siguiente')}</button>` : ''}`}</div>`, mid > 0 ? 'side left' : 'side'); v.classList.add('lite');
   bindFicha(v);
-  v.querySelector('[data-m]').onclick = () => { SFX.tap(); A_free = false; showTitle(); };
+  const mb = v.querySelector('[data-m]'); if (mb) mb.onclick = () => { SFX.tap(); A_free = false; if (EMB) post({type:'quit', i, won}); else showTitle(); };
   v.querySelector('[data-r]').onclick = () => { SFX.tap(); startBout(i); };
+  const ob = v.querySelector('[data-o]'); if (ob) ob.onclick = () => { SFX.tap(); freeHome(); };
+  const kb = v.querySelector('[data-k]'); if (kb) kb.onclick = () => { SFX.tap(); post({type:'bout', i, won:true, stars}); };
+  if (EMB) post({type:'result', i, won, stars});
   const n = v.querySelector('[data-n]'); if (n) n.onclick = () => { SFX.tap(); if (isLast) finale(); else intro(i + 1); };
 }
 function finale(){
@@ -1075,7 +1085,7 @@ function finale(){
 }
 
 /* ---------- arranque ---------- */
-resize(); showTitle(); requestAnimationFrame(frame);
+resize(); if (EMB){ if (FREE) freeHome(); else intro(Math.max(0, Math.min(BOUTS.length - 1, +QP.get('b') || 0))); } else showTitle(); requestAnimationFrame(frame);
 window.__pug = {set slow(v){ slow = v; }, get A(){ return A; }, startBout, KEYS, PRESS, get MODE(){ return MODE; }};
 })();
 
