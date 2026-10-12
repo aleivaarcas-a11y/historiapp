@@ -102,6 +102,11 @@
    "vids": [
     "t3_01",
     "t3_02"
+   ],
+   "kw": [
+    "cnoso",
+    "salto del toro",
+    "taurocatapsia"
    ]
   },
   {
@@ -183,7 +188,12 @@
    "vids": [
     "t3_03"
    ],
-   "prov": "Asia"
+   "prov": "Asia",
+   "kw": [
+    "akrotiri",
+    "tera",
+    "pugiles"
+   ]
   },
   {
    "id": "micenas",
@@ -263,7 +273,12 @@
     "img/t3/caldera_santorini.jpg",
     "img/t3/sala_trono_cnoso.jpg"
    ],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "micenas",
+    "micenic",
+    "wanax"
+   ]
   },
   {
    "id": "troya",
@@ -339,7 +354,12 @@
    "imgs": [
     "img/t3/fresco_guerreros_carro.jpg"
    ],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "patroclo",
+    "iliada",
+    "aquiles"
+   ]
   },
   {
    "id": "olimpia",
@@ -461,6 +481,11 @@
    "vids": [
     "t3_08",
     "t3_12"
+   ],
+   "kw": [
+    "olimpia",
+    "olimpic",
+    "corebo"
    ]
   },
   {
@@ -561,6 +586,12 @@
    ],
    "vids": [
     "t3_08"
+   ],
+   "kw": [
+    "atenas",
+    "atenien",
+    "panateneas",
+    "dipilon"
    ]
   },
   {
@@ -662,6 +693,11 @@
    "vids": [
     "t3_10",
     "t3_04"
+   ],
+   "kw": [
+    "esparta",
+    "espartan",
+    "vafio"
    ]
   },
   {
@@ -738,7 +774,12 @@
    "imgs": [
     "img/t3/circuito_panhelenico.jpg"
    ],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "delfos",
+    "panhelenic",
+    "periodonikes"
+   ]
   },
   {
    "id": "siracusa",
@@ -820,7 +861,12 @@
     "img/t3/cuadrigas_museo_britanico.jpg",
     "img/t3/hipodromo_situacion.jpg"
    ],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "siracusa",
+    "hieron",
+    "astilo"
+   ]
   },
   {
    "id": "paestum",
@@ -892,7 +938,11 @@
    ],
    "fichas": [],
    "imgs": [],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "paestum",
+    "nadador"
+   ]
   }
  ],
  "acontecimientos": [

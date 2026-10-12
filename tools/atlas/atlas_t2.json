@@ -94,7 +94,12 @@
     "img/t2/mazarron_pecio_fondo.jpg",
     "img/t2/mazarron_pecio_extraido.jpg"
    ],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "mazarron",
+    "cartagena",
+    "carthago nova"
+   ]
   },
   {
    "id": "biblos",
@@ -173,6 +178,11 @@
    ],
    "vids": [
     "t2_08"
+   ],
+   "kw": [
+    "biblos",
+    "sidon",
+    "alfabeto"
    ]
   },
   {
@@ -252,6 +262,11 @@
    ],
    "vids": [
     "t2_08"
+   ],
+   "kw": [
+    "kharayeb",
+    "sidon y tiro",
+    "biblos, sidon y tiro"
    ]
   },
   {
@@ -310,7 +325,10 @@
    "imgs": [
     "img/t2/patera_idalion.jpg"
    ],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "idalion"
+   ]
   },
   {
    "id": "cartago",
@@ -387,7 +405,12 @@
    "imgs": [
     "img/t2/cartago_aerea.jpg"
    ],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "cartago",
+    "osa menor",
+    "qart"
+   ]
   },
   {
    "id": "menfis",
@@ -491,6 +514,13 @@
    "vids": [
     "t2_05",
     "t2_02"
+   ],
+   "kw": [
+    "sahure",
+    "saqqara",
+    "menfis",
+    "dyeser",
+    "abusir"
    ]
   },
   {
@@ -569,6 +599,10 @@
    ],
    "vids": [
     "t2_04"
+   ],
+   "kw": [
+    "taharqa",
+    "fayum"
    ]
   },
   {
@@ -669,7 +703,13 @@
     "img/t2/boxeo_kheruef.jpg",
     "img/t2/beni_hasan_lucha.jpg"
    ],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "beni hasan",
+    "baqet",
+    "siut",
+    "khety"
+   ]
   },
   {
    "id": "abidos",
@@ -748,6 +788,11 @@
    ],
    "vids": [
     "t2_02"
+   ],
+   "kw": [
+    "abidos",
+    "seti",
+    "djed"
    ]
   },
   {
@@ -851,6 +896,14 @@
    "vids": [
     "t2_01",
     "t2_02"
+   ],
+   "kw": [
+    "tebas",
+    "hatshepsut",
+    "karnak",
+    "amenofis",
+    "medinet habu",
+    "kheruef"
    ]
   },
   {
@@ -926,7 +979,14 @@
     "remar"
    ],
    "imgs": [],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "asurbanipal",
+    "ninive",
+    "asiri",
+    "khorsabad",
+    "sargon"
+   ]
   },
   {
    "id": "taqebostan",
@@ -1003,7 +1063,13 @@
    "imgs": [
     "img/t2/artajerjes_tumba.jpg"
    ],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "taq-e bostan",
+    "cosroes",
+    "sasanida",
+    "frahangestan"
+   ]
   },
   {
    "id": "susa",
@@ -1083,6 +1149,10 @@
    ],
    "vids": [
     "t2_03"
+   ],
+   "kw": [
+    "susa",
+    "arqueros"
    ]
   },
   {
@@ -1158,7 +1228,13 @@
     "chovgan"
    ],
    "imgs": [],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "isfahan",
+    "chatir",
+    "naqsh-e jahan",
+    "abbas"
+   ]
   },
   {
    "id": "persepolis",
@@ -1253,6 +1329,12 @@
    "imgs": [],
    "vids": [
     "t2_07"
+   ],
+   "kw": [
+    "persepolis",
+    "dario",
+    "naqsh-e rostam",
+    "paradeisos"
    ]
   },
   {
@@ -1335,6 +1417,11 @@
    ],
    "vids": [
     "t2_06"
+   ],
+   "kw": [
+    "zurkhaneh",
+    "casa de fuerza",
+    "pahlavan"
    ]
   }
  ],

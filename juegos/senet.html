@@ -314,6 +314,70 @@ body.big .card p, body.big .ans { font-size: 23px; } body.big .card h2 { font-si
   #toast { font-size: 38px; }
 }
 
+/* Ventanas: el contenido se desplaza y los botones quedan siempre a la vista */
+#modal { padding: max(12px, env(safe-area-inset-top, 0px)) max(12px, env(safe-area-inset-right, 0px)) max(12px, env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px)); }
+.card { display: flex; flex-direction: column; overflow: hidden; }
+@supports (height: 100dvh) { .card { max-height: calc(100dvh - 24px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)); } }
+#mBody { flex: 1 1 auto; min-height: 0; overflow: auto; overscroll-behavior: contain; margin: 0 -8px; padding: 0 8px; }
+.card > .mBtns, .card > .fb { flex: none; }
+.seg button { min-width: 56px; }
+.opt.in { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.opt.in .lab { margin: 0; }
+.mas { margin: 12px 0 0; border-top: 1px solid rgba(217,178,76,.3); }
+.mas summary { list-style: none; display: flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; font: 700 17px var(--font-display); letter-spacing: .06em; color: var(--oro2); }
+.mas summary::-webkit-details-marker { display: none; }
+.mas summary::before { content: "▸"; display: inline-block; transition: transform .2s; }
+.mas[open] summary::before { transform: rotate(90deg); }
+.mas summary span { font: italic 600 15px var(--font-text); letter-spacing: 0; color: var(--tenue); }
+#rot { display: none; }
+
+/* Móvil en vertical: tablero lo mayor posible, controles abajo, al alcance del pulgar */
+@media (max-width: 600px) and (orientation: portrait) {
+  #ui { padding: max(8px, env(safe-area-inset-top, 0px)) 8px calc(max(6px, env(safe-area-inset-bottom, 0px)) + 16px); }
+  .mas summary span { display: none; }
+  .top { gap: 6px; align-items: stretch; }
+  .plaques { justify-self: stretch; min-width: 0; }
+  .pl { flex: 1 1 0; min-width: 0; padding: 5px 8px; }
+  .pl .who { font-size: 15px; letter-spacing: 0; }
+  .pl .ico { width: 20px; height: 26px; }
+  .pl .ankhs svg { width: 11px; height: 15px; }
+  .tools { justify-content: space-between; }
+  .btn { font-size: 14px; padding: 4px 10px; }
+  .action { grid-template-columns: auto minmax(0, 1fr) auto; padding: 8px 10px; }
+  .roll { min-width: 44px; }
+  #status { font-size: 16px; line-height: 1.25; }
+  #hint { font-size: 14px; }
+  #bThrow { min-height: 56px; padding: 12px 16px; font-size: 19px; }
+  .info { max-height: 52vh; padding: 8px 12px; }
+  .info:not(.open) { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 10px; align-items: center; min-height: 64px; }
+  .info:not(.open) > * { grid-column: 1; }
+  .info:not(.open) .k { grid-row: 1; }
+  .info:not(.open) h2 { grid-row: 2; font-size: 18px; }
+  #info:not(.open) .happ-ficha { grid-column: 2; grid-row: 1 / span 2; margin: 0; padding: 0 12px; font-size: 14px; }
+  .info.open { display: flex; flex-direction: column; }
+  .info.open > * { order: 2; }
+  .info.open .k, .info.open h2 { order: 0; }
+  #info.open .happ-ficha { order: 1; align-self: flex-start; margin: 4px 0 8px; }
+  .info.open h2 { margin-bottom: 4px; }
+  .card { padding: 16px 16px 14px; }
+  .card h2 { font-size: 26px; }
+  .card p, .card li { font-size: 17px; }
+  .lead { font-size: 16px; line-height: 1.35; }
+  .opt { margin: 8px 0; }
+  .seg button { font-size: 16px; padding: 6px 10px; }
+  .ans { font-size: 18px; padding: 11px 14px; }
+  .mBtns { margin-top: 12px; }
+  .mBtns:not(.col) > * { flex: 1 1 auto; }
+}
+/* Móvil en horizontal: el juego pide girar el teléfono */
+@media (orientation: landscape) and (max-height: 500px) and (pointer: coarse) {
+  #rot { position: fixed; inset: 0; z-index: 50; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 24px; text-align: center; background: var(--noche); color: var(--marfil); }
+  #rot b { font: 700 30px var(--font-display); color: var(--oro2); letter-spacing: .06em; }
+  #rot p { margin: 0; font-size: 19px; max-width: 30em; }
+  #rot svg { width: 64px; height: 64px; animation: rotgira 2.2s ease-in-out infinite; }
+  @keyframes rotgira { 0%, 20% { transform: rotate(90deg); } 60%, 100% { transform: rotate(0deg); } }
+}
+
 @media (min-width: 1025px) {
   .info:not(.open) p:not(.role) { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
   .info:not(.open) .more { display: inline; font: 600 14px var(--font-text); color: var(--oro2); }
@@ -349,6 +413,7 @@ body.big .card p, body.big .ans { font-size: 23px; } body.big .card h2 { font-si
   </footer>
 </div>
 <div id="modal" hidden><div class="card" role="dialog" aria-modal="true" aria-labelledby="mTitle"><div id="mBody"></div><div class="mBtns" id="mBtns"></div></div></div>
+<div id="rot" role="alert"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="20" y="6" width="24" height="52" rx="5" fill="none" stroke="#f3d77e" stroke-width="3"/><circle cx="32" cy="51" r="2.5" fill="#f3d77e"/></svg><b>Gira el móvil</b><p>El senet se juega con el móvil en vertical: así el tablero se ve grande y los botones quedan al alcance del pulgar.</p></div>
 <div id="nogl" hidden><div>Este juego necesita un navegador con WebGL y conexión a internet para cargar el motor 3D.<br>Prueba a abrirlo en Chrome, Safari o Firefox actualizados.</div></div>
 <script>
 /**
@@ -867,7 +932,7 @@ const matRing = new T.Mesh(new T.RingGeometry(1.62, 1.7, 64), M.gold); matRing.r
 mat.userData = { stick: true };
 
 // --- Disposición y cámara ---
-let camBase = new T.Vector3(), camTarget = new T.Vector3(), shake = 0;
+let camBase = new T.Vector3(), camTarget = new T.Vector3(), shake = 0, hudCache = null;
 function layout() {
   const w = innerWidth, h = innerHeight;
   renderer.setSize(w, h, false);
@@ -893,7 +958,17 @@ function layout() {
   const sr = PORTRAIT ? .5 : 1.7;
   for (const sx of [-1, 1]) for (const sz of [-1, 1]) pts3.push(new T.Vector3(sticks.position.x + sx * sr, 0, sticks.position.z + sz * sr));
   const center = new T.Vector3(); pts3.forEach(v => center.add(v)); center.divideScalar(pts3.length); center.y = 0;
-  const hud = w < 1025 ? [104, 196] : [96, 150];
+  let hud = [96, 150];
+  if (w < 1025) {
+    // con el panel de la casilla abierto se conserva el encuadre anterior
+    if (!infoEl.classList.contains('open') || !hudCache || hudCache.w !== w || hudCache.h !== h) {
+      const tb = document.querySelector('#ui .top').getBoundingClientRect().bottom;
+      const ab = document.querySelector('#ui .action').getBoundingClientRect().top;
+      hudCache = { w, h, v: [Math.max(tb + 6, 60), Math.max(h - ab + 6, 90)] };
+    }
+    hud = hudCache.v.slice();
+    if (h - hud[0] - hud[1] < 160) hud = [Math.min(hud[0], h * .2), Math.min(hud[1], h * .3)];
+  }
   const top = 1 - 2 * hud[0] / h, bot = -1 + 2 * hud[1] / h;
   camera.clearViewOffset();
   let d = 6;
@@ -1258,6 +1333,7 @@ function setRoll(r, n) {
   $('rollTxt').textContent = r == null ? ' ' : (n === 0 ? 'ninguna clara: 5' : `${n} ${n === 1 ? 'cara clara' : 'caras claras'}`);
 }
 const infoEl = $('info');
+const TOUCH = matchMedia('(pointer: coarse)').matches;
 function showSquare(n, flash) {
   const d = SQ[n];
   const done = G && G.right && cfg.quiz ? ['L', 'D'].filter(p => G.right.has(p + n) && !isAI(p)) : [];
@@ -1327,7 +1403,7 @@ function startTurn() {
   $('bThrow').disabled = ai;
   if (ai) { setStatus('Turno del adversario.'); const tk = G.token; setTimeout(() => { if (G.token === tk) doThrow(); }, 700 * SP()); }
   else setStatus(cfg.rival > 0 ? 'Tu turno. Lanza los palillos.' : `Turno de las ${NAME(G.turn).toLowerCase()}. Lanza los palillos.`);
-  setHint(ai ? '' : 'Pulsa Lanzar, la barra espaciadora o los propios palillos.');
+  setHint(ai ? '' : (TOUCH ? 'Toca Lanzar o los palillos.' : 'Pulsa Lanzar, la barra espaciadora o los propios palillos.'));
 }
 async function doThrow() {
   if (!G || G.over || G.phase !== 'throw' || G.busy) return;
@@ -1446,22 +1522,25 @@ function modal(html, btns, opts = {}) {
   const f = bb.querySelector('.primary') || bb.querySelector('button'); if (f) f.focus();
 }
 function closeModal() { document.querySelectorAll('.card > .fb, .card > .mBtns.extra').forEach(e => e.remove()); $('modal').hidden = true; modalOpts = {}; canvas.focus({ preventScroll: true }); }
-function seg(label, key, opts) {
-  return `<div class="opt"><div class="lab">${label}</div><div class="seg" data-key="${key}">${opts.map(([v, t]) => `<button data-v='${JSON.stringify(v)}' aria-pressed="${cfg[key] === v}">${t}</button>`).join('')}</div></div>`;
+let masOpen = false;
+function seg(label, key, opts, inl) {
+  return `<div class="opt${inl ? ' in' : ''}"><div class="lab">${label}</div><div class="seg" data-key="${key}">${opts.map(([v, t]) => `<button data-v='${JSON.stringify(v)}' aria-pressed="${cfg[key] === v}">${t}</button>`).join('')}</div></div>`;
 }
 function menu() {
   modal(`<h2 id="mTitle">Senet</h2>
     <p class="lead">En el Imperio Nuevo el senet se convirtió en el viaje del difunto por el inframundo, y ganar la partida a un adversario invisible le garantizaba el renacimiento (Decker, 1992). Cada una de las treinta casillas recoge un contenido del deporte en el Antiguo Egipto.</p>
     ${seg('Rival', 'rival', [[1, 'Adversario fácil'], [2, 'Adversario normal'], [3, 'Adversario difícil'], [0, 'Dos jugadores o equipos']])}
+    ${seg('Duración', 'pieces', [[3, 'Corta, 3 fichas'], [5, 'Completa, 5 fichas']])}
+    ${seg('Preguntas del tema', 'quiz', [[true, 'Sí'], [false, 'No']], true)}
+    <details class="mas"${masOpen ? ' open' : ''}><summary>Más opciones <span>fichas, tablero, ayudas, sonido, letra</span></summary>
     ${seg('Tus fichas (contra el adversario)', 'color', [['L', 'Carretes de marfil'], ['D', 'Conos de ébano']])}
     ${seg('Tablero', 'orient', [['v', 'Vertical'], ['h', 'Horizontal'], ['auto', 'Según la pantalla']])}
-    ${seg('Duración', 'pieces', [[3, 'Corta, 3 fichas'], [5, 'Completa, 5 fichas']])}
-    ${seg('Preguntas del tema', 'quiz', [[true, 'Sí'], [false, 'No']])}
-    ${seg('Ayudas de estrategia', 'help', [[true, 'Sí'], [false, 'No']])}
-    ${seg('Velocidad', 'fast', [[false, 'Normal'], [true, 'Rápida']])}
-    ${seg('Sonido', 'sound', [[true, 'Sí'], [false, 'No']])}
-    ${seg('Letra', 'big', [[false, 'Normal'], [true, 'Grande, para proyector']])}`,
+    ${seg('Ayudas de estrategia', 'help', [[true, 'Sí'], [false, 'No']], true)}
+    ${seg('Velocidad', 'fast', [[false, 'Normal'], [true, 'Rápida']], true)}
+    ${seg('Sonido', 'sound', [[true, 'Sí'], [false, 'No']], true)}
+    ${seg('Letra', 'big', [[false, 'Normal'], [true, 'Grande, para proyector']])}</details>`,
     [['Reglas', () => rules(true)], ['Jugar', () => { let seen = false; try { seen = localStorage.getItem('senet.intro') === '1'; } catch (e) {} if (seen) { closeModal(); newGame(); } else intro(true); }, 'primary']]);
+  const mas = document.querySelector('#mBody .mas'); if (mas) mas.addEventListener('toggle', () => { masOpen = mas.open; });
   document.querySelectorAll('#mBody .seg').forEach(s => s.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
     cfg[s.dataset.key] = JSON.parse(b.dataset.v); saveCfg(); applyCfg();
     s.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));

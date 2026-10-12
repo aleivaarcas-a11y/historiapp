@@ -414,16 +414,36 @@ const SDK = {
 const cv = document.getElementById('game');
 const ctx = cv.getContext('2d');
 let scale = 1, dpr = 1;
+// En pantallas pequeñas (móvil en horizontal) la escena 16:9 queda a media escala: MOB activa
+// la maqueta de móvil (textos con tamaño mínimo real, botones mayores, tarjetas ampliadas) y
+// uiK es cuánto se pueden ampliar las tarjetas para verse casi a tamaño real.
+let MOB = false, uiK = 1;
+const COARSE = matchMedia('(pointer: coarse)').matches;
+// OX: unidades lógicas que la escena se extiende a cada lado del 16:9 cuando la pantalla es más
+// apaisada (iPhone en horizontal). La interfaz sigue dentro del 16:9 central, que se encaja en el
+// área segura (sin la muesca); el fondo ocupa también los lados, así no quedan bandas negras.
+let OX = 0;
+const safeProbe = document.createElement('div');
+safeProbe.style.cssText = 'position:fixed;left:0;top:0;visibility:hidden;pointer-events:none;padding:0 env(safe-area-inset-right) 0 env(safe-area-inset-left)';
+document.body.appendChild(safeProbe);
+function safeSide() {
+  if (window.__safeTest) return window.__safeTest;
+  const s = getComputedStyle(safeProbe);
+  return Math.max(parseFloat(s.paddingLeft) || 0, parseFloat(s.paddingRight) || 0);
+}
 function resize() {
-  const vw = innerWidth, vh = innerHeight;
-  scale = Math.min(vw / W, vh / H);
+  const vw = innerWidth, vh = innerHeight, side = safeSide();
+  scale = Math.min((vw - 2 * side) / W, vh / H);
+  OX = Math.max(0, Math.min(W * .3, (vw / scale - W) / 2));
+  MOB = scale < .75; uiK = MOB ? Math.min(2, .95 / scale) : 1;
   dpr = Math.min(devicePixelRatio || 1, 2);
-  cv.style.width = Math.round(W * scale) + 'px';
+  cv.style.width = Math.round((W + 2 * OX) * scale) + 'px';
   cv.style.height = Math.round(H * scale) + 'px';
-  cv.width = Math.round(W * scale * dpr);
+  cv.width = Math.round((W + 2 * OX) * scale * dpr);
   cv.height = Math.round(H * scale * dpr);
 }
 addEventListener('resize', resize); resize();
+addEventListener('orientationchange', () => setTimeout(resize, 300));
 const grain = document.createElement('canvas'); grain.width = grain.height = 256;
 { const g = grain.getContext('2d'); for (let i = 0; i < 2600; i++) { g.fillStyle = Math.random() < .5 ? 'rgba(60,20,5,.07)' : 'rgba(255,220,180,.05)'; g.fillRect(Math.random() * 256, Math.random() * 256, 1 + Math.random() * 2, 1 + Math.random() * 2); } }
 const grainPat = ctx.createPattern(grain, 'repeat');
@@ -699,9 +719,20 @@ function press() {
 
 // Botones dibujados en el lienzo
 let uiButtons = [], menuFocus = 0;
-function toLogical(e) { const r = cv.getBoundingClientRect(); return { x: (e.clientX - r.left) / r.width * W, y: (e.clientY - r.top) / r.height * H }; }
+function toLogical(e) { const r = cv.getBoundingClientRect(); return { x: (e.clientX - r.left) / r.width * (W + 2 * OX) - OX, y: (e.clientY - r.top) / r.height * H }; }
 // los botones pequeños tienen un área de toque mayor que su dibujo (mínimo 44 de alto)
-function hitButton(p) { return uiButtons.find(b => { const py = Math.max(0, (52 - b.h) / 2), px = b.w < 52 ? (52 - b.w) / 2 : 0; return p.x >= b.x - px && p.x <= b.x + b.w + px && p.y >= b.y - py && p.y <= b.y + b.h + py; }); }
+// en el móvil el área de toque mide al menos 46 px reales; si se solapan, gana el botón más cercano (y, a igualdad, el primero)
+function hitButton(p) {
+  const m = Math.max(52, MOB ? 46 / scale : 0);
+  let best = null, bd = Infinity;
+  for (const b of uiButtons) {
+    const py = Math.max(0, (m - b.h) / 2), px = Math.max(0, (m - b.w) / 2);
+    if (p.x < b.x - px || p.x > b.x + b.w + px || p.y < b.y - py || p.y > b.y + b.h + py) continue;
+    const dx = Math.max(b.x - p.x, 0, p.x - b.x - b.w), dy = Math.max(b.y - p.y, 0, p.y - b.y - b.h), d = dx * dx + dy * dy;
+    if (d < bd) { bd = d; best = b; }
+  }
+  return best;
+}
 const MENU_STATES = ['menu', 'records'];
 cv.addEventListener('pointerdown', e => {
   e.preventDefault(); cv.focus(); audioInit();
@@ -748,7 +779,15 @@ const ease = t => t < 0 ? 0 : t > 1 ? 1 : t * t * (3 - 2 * t);
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const FONT = 'Palatino Linotype, Palatino, "Book Antiqua", Georgia, serif';
 
+// tamaño mínimo real en el móvil: px CSS que debe medir al menos un texto con la transformación actual
+function fpx(size, min = 12) {
+  if (!MOB) return size;
+  const t = ctx.getTransform(), ef = Math.hypot(t.a, t.b) / dpr;
+  return Math.max(size, min / ef);
+}
+let uiExt = 0;   // borde inferior de lo dibujado en la tarjeta o panel actual (para medirlo en el móvil)
 function text(txt, x, y, size, align = 'center', color = C.negro, weight = 700) {
+  size = fpx(size);
   ctx.font = `${weight} ${size}px ${FONT}`;
   ctx.textAlign = align; ctx.fillStyle = color;
   if ('letterSpacing' in ctx) ctx.letterSpacing = Math.round(size * .12) + 'px';
@@ -763,27 +802,27 @@ function hatch(x, y, w, h, step = 7) {
 
 // Fondo: pórtico lejano, talud con público y suelo
 function drawBackground() {
-  ctx.fillStyle = C.barro; ctx.fillRect(0, 0, W, H);
-  ctx.fillStyle = grainPat; ctx.fillRect(0, 0, W, H);
-  if (typeof career !== 'undefined' && career && career.scene && CAMP_STATES.includes(state)) { ctx.fillStyle = 'rgba(90,35,12,.16)'; ctx.fillRect(0, 470, W, 115); return; }
+  ctx.fillStyle = C.barro; ctx.fillRect(-OX, 0, W + 2 * OX, H);
+  ctx.fillStyle = grainPat; ctx.fillRect(-OX, 0, W + 2 * OX, H);
+  if (typeof career !== 'undefined' && career && career.scene && CAMP_STATES.includes(state)) { ctx.fillStyle = 'rgba(90,35,12,.16)'; ctx.fillRect(-OX, 470, W + 2 * OX, 115); return; }
   if (typeof camp !== 'undefined' && camp && camp.mode === 'road' && CAMP_STATES.includes(state)) {
     // campo abierto: colinas lejanas que se desplazan despacio
     ctx.fillStyle = 'rgba(80,30,10,.16)';
-    ctx.beginPath(); ctx.moveTo(0, 470);
-    for (let x = 0; x <= W; x += 20) ctx.lineTo(x, 400 - 60 * Math.sin((x + camX * 16) / 210) - 30 * Math.sin((x + camX * 16) / 77));
-    ctx.lineTo(W, 470); ctx.fill();
-    ctx.fillStyle = 'rgba(80,30,10,.22)'; ctx.fillRect(0, 470, W, 120);
+    ctx.beginPath(); ctx.moveTo(-OX, 470);
+    for (let x = -OX; x <= W + OX + 20; x += 20) ctx.lineTo(x, 400 - 60 * Math.sin((x + camX * 16) / 210) - 30 * Math.sin((x + camX * 16) / 77));
+    ctx.lineTo(W + OX + 20, 470); ctx.fill();
+    ctx.fillStyle = 'rgba(80,30,10,.22)'; ctx.fillRect(-OX, 470, W + 2 * OX, 120);
     return;
   }
   ctx.fillStyle = 'rgba(80,30,10,.13)';
-  const sp = 2.6, off = camX * .2, first = Math.floor(off / sp) - 1;
-  for (let i = first; i < first + 24; i++) { const x = (i * sp - off) * 80 * .8; ctx.fillRect(x - 14, 230, 28, 190); ctx.fillRect(x - 22, 222, 44, 10); }
-  ctx.fillRect(0, 186, W, 40);
+  const sp = 2.6, off = camX * .2, first = Math.floor(off / sp) - 1 - Math.ceil(OX / (sp * 64));
+  for (let i = first; i < first + 24 + 2 * Math.ceil(OX / (sp * 64)); i++) { const x = (i * sp - off) * 80 * .8; ctx.fillRect(x - 14, 230, 28, 190); ctx.fillRect(x - 22, 222, 44, 10); }
+  ctx.fillRect(-OX, 186, W + 2 * OX, 40);
   // talud de tierra con espectadores
   ctx.fillStyle = 'rgba(90,35,12,.22)';
-  ctx.fillRect(0, 470, W, 75);
+  ctx.fillRect(-OX, 470, W + 2 * OX, 75);
   const pxs = S * .55, spacing = .55, off2 = camX * pxs;
-  const i0 = Math.floor(off2 / (spacing * pxs)) - 1, n = Math.ceil(W / (spacing * pxs)) + 3;
+  const i0 = Math.floor((off2 - OX) / (spacing * pxs)) - 1, n = Math.ceil((W + 2 * OX) / (spacing * pxs)) + 3;
   ctx.fillStyle = 'rgba(23,17,13,.5)';
   for (let k = i0; k < i0 + n; k++) {
     const h = Math.sin(k * 12.9898) * 43758.5453, r = h - Math.floor(h);
@@ -796,11 +835,11 @@ function drawBackground() {
   }
 }
 function meander(y, h) {
-  ctx.fillStyle = C.negro; ctx.fillRect(0, y, W, h);
+  ctx.fillStyle = C.negro; ctx.fillRect(-OX, y, W + 2 * OX, h);
   ctx.strokeStyle = C.barro; ctx.lineWidth = 3; ctx.lineCap = 'square';
   const u = (h - 10) / 5, top = y + 5;
-  ctx.beginPath(); ctx.moveTo(0, top + 5 * u); ctx.lineTo(W, top + 5 * u); ctx.stroke();
-  for (let x = 4; x < W; x += 6 * u) {
+  ctx.beginPath(); ctx.moveTo(-OX, top + 5 * u); ctx.lineTo(W + OX, top + 5 * u); ctx.stroke();
+  for (let x = 4 - Math.ceil(OX / (6 * u)) * 6 * u; x < W + OX; x += 6 * u) {
     ctx.beginPath();
     ctx.moveTo(x + u, top + 5 * u); ctx.lineTo(x + u, top); ctx.lineTo(x + 5 * u, top); ctx.lineTo(x + 5 * u, top + 3.6 * u);
     ctx.lineTo(x + 2.6 * u, top + 3.6 * u); ctx.lineTo(x + 2.6 * u, top + 1.6 * u); ctx.lineTo(x + 3.6 * u, top + 1.6 * u);
@@ -808,18 +847,18 @@ function meander(y, h) {
   }
 }
 function rays(y, h) {
-  ctx.fillStyle = C.negro; ctx.fillRect(0, y, W, 6);
+  ctx.fillStyle = C.negro; ctx.fillRect(-OX, y, W + 2 * OX, 6);
   const w = 26;
-  for (let x = 0; x < W + w; x += w) { ctx.beginPath(); ctx.moveTo(x, y + h); ctx.lineTo(x + w / 2, y + 10); ctx.lineTo(x + w, y + h); ctx.fill(); }
-  ctx.fillRect(0, y + h, W, H - y - h);
+  for (let x = -Math.ceil(OX / w) * w; x < W + OX + w; x += w) { ctx.beginPath(); ctx.moveTo(x, y + h); ctx.lineTo(x + w / 2, y + 10); ctx.lineTo(x + w, y + h); ctx.fill(); }
+  ctx.fillRect(-OX, y + h, W + 2 * OX, H - y - h);
 }
 function ground(from = -1e4, to = 1e4) {
-  const gy = TUNING.groundY, a = Math.max(0, wx(from)), b = Math.min(W, wx(to));
+  const gy = TUNING.groundY, a = Math.max(-OX, wx(from)), b = Math.min(W + OX, wx(to));
   ctx.fillStyle = C.negro; if (b > a) ctx.fillRect(a, gy, b - a, 5);
 }
 function ticks(step, labelEvery, max) {
   const gy = TUNING.groundY;
-  const a = Math.max(step, Math.floor(camX / step) * step), b = Math.min(max || 1e9, camX + W / S + step);
+  const a = Math.max(step, Math.floor((camX - OX / S) / step) * step), b = Math.min(max || 1e9, camX + (W + OX) / S + step);
   for (let m = a; m <= b; m += step) {
     const x = wx(m);
     ctx.fillStyle = C.negro;
@@ -838,7 +877,7 @@ function sand(x0, x1) {
 }
 function stake(x, label, filled, row) {
   const sx = wx(x), gy = TUNING.groundY;
-  if (sx < -80 || sx > W + 80) return;
+  if (sx < -OX - 80 || sx > W + OX + 80) return;
   const top = gy - 70 - row * 26;
   ctx.strokeStyle = C.negro; ctx.lineWidth = 3;
   ctx.beginPath(); ctx.moveTo(sx, gy + 4); ctx.lineTo(sx, top); ctx.stroke();
@@ -1004,7 +1043,7 @@ function robe(f, X, hipY, P, beard, bare) {
   head(f.hd.x, f.hd.y, P.lean * .7, beard);
 }
 function drawAulete(X) {
-  const hx = wx(X); if (hx < -100 || hx > W + 100) return;
+  const hx = wx(X); if (hx < -OX - 100 || hx > W + OX + 100) return;
   const bob = Math.sin(timeT * 5) * .01, P = { lean: -.05, th: [0, 0], kn: [0, 0], sh: [1.1, 1.0], el: [.9, 1.0] };
   const f = figure(X, .95 + bob, P, { beard: true });
   robe(f, X, .95 + bob, P, true);
@@ -1013,7 +1052,7 @@ function drawAulete(X) {
   ctx.beginPath(); ctx.moveTo(f.hd.x + 12 * Z, f.hd.y + 5 * Z); ctx.lineTo(f.hd.x + 54 * Z, f.hd.y + 22 * Z); ctx.stroke();
 }
 function drawJudge(X) {
-  const hx = wx(X); if (hx < -100 || hx > W + 100) return;
+  const hx = wx(X); if (hx < -OX - 100 || hx > W + OX + 100) return;
   const P = { lean: -.1, th: [0, 0], kn: [0, 0], sh: [-.3, .8], el: [.2, 1.3] };
   ctx.strokeStyle = C.negro; ctx.lineWidth = 3; ctx.lineCap = 'round';
   ctx.beginPath(); ctx.moveTo(hx - 34 * Z, wy(1.95)); ctx.lineTo(hx - 22 * Z, wy(0)); ctx.stroke();
@@ -1174,7 +1213,7 @@ function previewArc(x, y, vx, vy, wind, k, frac) {
   ctx.fillStyle = C.negro;
   let t = 0, X = x, Y = y, VX = vx, VY = vy, n = 0;
   const T = 2 * Math.max(.4, VY) / 9.81 * frac;
-  ctx.save(); ctx.beginPath(); ctx.rect(0, 250, W, TUNING.groundY - 250); ctx.clip();
+  ctx.save(); ctx.beginPath(); ctx.rect(-OX, 250, W + 2 * OX, TUNING.groundY - 250); ctx.clip();
   while (t < T && n < 60) {
     const a = airAccel(VX, VY, wind, k);
     VX += a.ax * .03; VY += (a.ay - 9.81) * .03; X += VX * .03; Y += VY * .03; t += .03; n++;
@@ -1362,7 +1401,7 @@ E.disc = {
     if (D.disc) discFlat(wx(D.disc.x), wy(D.disc.y), D.disc.landed ? 0 : Math.atan2(D.disc.vy, D.disc.vx) * .4, D.spin, D.disc.landed ? .22 : .3);
   },
   hud() {
-    text(windText(D.wind), W - 24, 140, 15, 'right', C.negro, 700);
+    text(windText(D.wind), W - 24, MOB ? 154 : 140, 15, 'right', C.negro, 700);
     if (state === 'idle') return hint(TX.start.disc);
     if (state !== 'play') return;
     const P = TUNING.disc, h = helpCount.disc < P.help;
@@ -1371,8 +1410,8 @@ E.disc = {
     if (!['coil', 'angle', 'power'].includes(D.mode)) return;
     const box = (i, lbl, active, done) => {
       const x = W / 2 - 300 + i * 220, y = 190;
-      text(`${i + 1}. ${lbl}`, x, y, 14, 'left', active ? C.negro : 'rgba(23,17,13,.45)', 800);
-      if (done) text('✓', x + 150, y, 16, 'left', C.negro, 800);
+      text(`${i + 1}. ${lbl}${MOB && done ? ' ✓' : ''}`, x, y, 14, 'left', active || (MOB && done) ? C.negro : 'rgba(23,17,13,.45)', 800);
+      if (done && !MOB) text('✓', x + 150, y, 16, 'left', C.negro, 800);
       if (active) { ctx.fillStyle = C.negro; ctx.fillRect(x, y + 8, 140, 3); }
     };
     box(0, TX.dTorsion, D.mode === 'coil', D.mode !== 'coil');
@@ -1610,7 +1649,7 @@ E.jump = {
     ctx.fillStyle = C.blanco; ctx.fillRect(wx(-.2), gy - 3, .2 * S, 9);
     ctx.strokeStyle = C.negro; ctx.lineWidth = 2; ctx.strokeRect(wx(-.2), gy - 3, .2 * S, 9);
     for (let m = 1; m <= P.pitTo; m++) {
-      const x = wx(m); if (x < -40 || x > W + 40) continue;
+      const x = wx(m); if (x < -OX - 40 || x > W + OX + 40) continue;
       ctx.fillStyle = C.negro;
       if (m >= P.pitFrom) { ctx.fillRect(x - 1.5, gy + 26, 3, 12); text(gnum(m), x, gy + 62, 20); }
       else ctx.fillRect(x - 1, gy + 5, 2, 8);
@@ -1845,7 +1884,7 @@ E.jav = {
     }
   },
   hud() {
-    text(windText(V.wind), W - 24, 140, 15, 'right', C.negro, 700);
+    text(windText(V.wind), W - 24, MOB ? 154 : 140, 15, 'right', C.negro, 700);
     if (state === 'idle') return hint(TX.start.jav);
     if (state !== 'play') return;
     if (A.mode === 'run') {
@@ -1989,7 +2028,7 @@ E.run = {
       drawJudge(-3);
     } else {
       const fx = wx(RD());
-      if (fx > -40 && fx < W + 40) { ctx.fillStyle = C.negro; ctx.fillRect(fx - 4, wy(2.2), 8, 2.2 * S); ctx.fillStyle = C.blanco; ctx.fillRect(fx - 2, gy - 2, 4, 8); }
+      if (fx > -OX - 40 && fx < W + OX + 40) { ctx.fillStyle = C.negro; ctx.fillRect(fx - 4, wy(2.2), 8, 2.2 * S); ctx.fillStyle = C.blanco; ctx.fillRect(fx - 2, gy - 2, 4, 8); }
       drawJudge(RD() + 3);
     }
     R.rivals.slice().reverse().forEach((r, k) => {
@@ -2188,7 +2227,8 @@ function gauge(x, y, w, title, zoneA, zoneB, markV, markLbl, sub, lblSize = 16) 
   text(markLbl, x, y - 14, lblSize, 'left', C.blanco, 600);
   ctx.strokeStyle = C.barro; ctx.lineWidth = 2; ctx.strokeRect(x, y, w, 18);
   hatch(x + zoneA * w, y, (zoneB - zoneA) * w, 18);
-  text(sub, x + w / 2, y + 38, 12, 'center', C.barro, 600);
+  if (MOB) para(sub, x + w / 2, y + 38, w + 14, 12, 15, C.barro, 'center');
+  else text(sub, x + w / 2, y + 38, 12, 'center', C.barro, 600);
   if (markV != null) {
     const mx = x + clamp(markV, 0, 1) * w;
     ctx.fillStyle = C.blanco;
@@ -2198,19 +2238,34 @@ function gauge(x, y, w, title, zoneA, zoneB, markV, markLbl, sub, lblSize = 16) 
 }
 // aviso para seguir, sobre una placa para que no lo tape ni el fondo ni los atletas
 function nextHint(s, y) {
-  ctx.font = `700 22px ${FONT}`; const w = ctx.measureText(s).width + 22 * s.length * .12 + 48;
-  ctx.globalAlpha = .9; ctx.fillStyle = C.negro; ctx.fillRect(W / 2 - w / 2, y - 26, w, 38); ctx.globalAlpha = 1;
-  text(s, W / 2, y, 22, 'center', C.blanco);
+  if (MOB) y = Math.max(y, cardBot + 46, uiExt + 44);
+  const fs = fpx(22, 14);
+  ctx.font = `700 ${fs}px ${FONT}`; const w = ctx.measureText(s).width + fs * s.length * .12 + 48;
+  ctx.globalAlpha = .9; ctx.fillStyle = C.negro; ctx.fillRect(W / 2 - w / 2, y - fs - 4, w, fs * 1.7); ctx.globalAlpha = 1;
+  text(s, W / 2, y, fs, 'center', C.blanco);
+  uiExt = Math.max(uiExt, y + fs * .7 + 2);
 }
+// en el móvil la tarjeta crece si los textos (con su tamaño mínimo) no caben: se mide en el fotograma anterior
+let cardBot = 0, lastCard = null;
+const cardGrow = {};
+// alarga la última tarjeta dibujada hasta y (lo que se dibuja fuera de ella, debajo, en el móvil)
+function growLastCard(y) { if (!lastCard) return; const L = lastCard, need = y + 20 - L.cy - L.ch0; if (need > (cardGrow[L.key] || 0) + 1) cardGrow[L.key] = need; cardBot = Math.max(cardBot, y + 20); }
 function card(cw, ch, fn) {
+  const key = `${state}|${cw}|${ch}|${talk ? talk.i : ''}|${ev}`;
+  const ch0 = ch; if (MOB) ch += cardGrow[key] || 0;
   const cx = (W - cw) / 2, cy = 120;
   const pop = reduced ? 1 : ease(stateT / .18);
   ctx.save(); ctx.translate(W / 2, cy + ch / 2); ctx.scale(.9 + .1 * pop, .9 + .1 * pop); ctx.translate(-W / 2, -(cy + ch / 2));
   ctx.globalAlpha = pop;
   ctx.fillStyle = C.negro; ctx.fillRect(cx, cy, cw, ch);
   ctx.strokeStyle = C.barro; ctx.lineWidth = 2; ctx.strokeRect(cx + 6, cy + 6, cw - 12, ch - 12);
+  const e0 = uiExt; uiExt = 0;
   fn(cx, cy);
+  if (MOB && uiExt + 20 > cy + ch + 1) cardGrow[key] = uiExt + 20 - cy - ch0;
+  uiExt = Math.max(e0, uiExt, cy + ch);
   ctx.restore();
+  cardBot = Math.max(cardBot, cy + ch);
+  lastCard = { key, cy, ch0 };
 }
 function resultCard() {
   const isW = ev === 'wrestle', ch = isW ? 170 : 250;
@@ -2279,6 +2334,7 @@ function wreath(x, y, r) {
   ctx.restore();
 }
 function para(str, x, y, maxW, size, lineH, color = C.blanco, align = 'left') {
+  const s0 = size; size = fpx(size, size >= 15 ? 14 : 12); lineH *= size / s0;
   ctx.font = `400 ${size}px ${FONT}`; ctx.fillStyle = color; ctx.textAlign = align;
   if ('letterSpacing' in ctx) ctx.letterSpacing = '0px';
   const words = str.split(' '); let line = '', yy = y;
@@ -2287,6 +2343,7 @@ function para(str, x, y, maxW, size, lineH, color = C.blanco, align = 'left') {
     if (ctx.measureText(t).width > maxW && line) { ctx.fillText(line, x, yy); line = w; yy += lineH; } else line = t;
   }
   if (line) ctx.fillText(line, x, yy);
+  uiExt = Math.max(uiExt, yy + size * .35);
   return yy + lineH;
 }
 function button(b, focused) {
@@ -2294,9 +2351,56 @@ function button(b, focused) {
   ctx.strokeStyle = focused ? C.blanco : C.barro; ctx.lineWidth = focused ? 3 : 2;
   ctx.strokeRect(b.x + 4, b.y + 4, b.w - 8, b.h - 8);
   const col = b.fill === C.blanco ? C.negro : C.blanco;
+  uiExt = Math.max(uiExt, b.y + b.h);
+  if (MOB) {
+    // en el móvil los textos crecen: se centran según su tamaño real
+    const ls = fpx(b.big || 20), cy = b.y + b.h / 2;
+    if (b.sub) { const ss = fpx(13), g = ls * .72 + 6 + ss * .72; text(b.label, b.x + b.w / 2, cy - g / 2 + ls * .72, ls, 'center', col); text(b.sub, b.x + b.w / 2, cy + g / 2, ss, 'center', b.fill === C.blanco ? C.negro : C.barro, 600); }
+    else if (b.para) { const ps = fpx(18, 14), lh = ps * 1.2; ctx.font = `400 ${ps}px ${FONT}`; const n = lineCount(b.label, b.w - 48); para(b.label, b.x + 24, cy + ps * .35 - (n - 1) * lh / 2, b.w - 48, ps, lh, col, 'left'); }
+    else text(b.label, b.x + b.w / 2, cy + ls * .36, ls, 'center', col);
+    return;
+  }
   if (b.sub) { text(b.label, b.x + b.w / 2, b.y + b.h / 2 - 2, 20, 'center', col); text(b.sub, b.x + b.w / 2, b.y + b.h / 2 + 18, 13, 'center', C.barro, 600); }
   else if (b.para) { ctx.font = `400 18px ${FONT}`; const n = Math.ceil(ctx.measureText(b.label).width / (b.w - 60)); para(b.label, b.x + 24, b.y + b.h / 2 + 6 - (n - 1) * 11, b.w - 48, 18, 22, col, 'left'); }
   else text(b.label, b.x + b.w / 2, b.y + b.h / 2 + 7, 20, 'center', col);
+}
+// como para(), pero devuelve el borde inferior real del texto dibujado
+function paraBot(...a) { const e0 = uiExt; uiExt = -Infinity; para(...a); const b = uiExt; uiExt = Math.max(e0, b); return b; }
+// líneas que ocupará un párrafo con la fuente ya puesta en ctx
+function lineCount(str, maxW) {
+  let n = 1, line = '';
+  for (const w of str.split(' ')) { const t = line ? line + ' ' + w : w; if (ctx.measureText(t).width > maxW && line) { n++; line = w; } else line = t; }
+  return n;
+}
+// dibuja fn ampliada k veces, llevando el punto (ax, ay) a (bx, by); los botones creados dentro se transforman también
+function zoomed(k, ax, ay, bx, by, fn) {
+  const before = uiButtons, n0 = before.length;
+  ctx.save(); ctx.translate(bx, by); ctx.scale(k, k); ctx.translate(-ax, -ay);
+  fn();
+  ctx.restore();
+  const tr = b => ({ ...b, x: bx + (b.x - ax) * k, y: by + (b.y - ay) * k, w: b.w * k, h: b.h * k });
+  if (uiButtons !== before) uiButtons = uiButtons.map(tr);
+  else for (let i = n0; i < uiButtons.length; i++) uiButtons[i] = tr(uiButtons[i]);
+}
+// en el móvil, amplía una tarjeta (con sus botones y el aviso de seguir) para que llene la pantalla;
+// la altura se mide en el fotograma anterior porque los textos crecen con el tamaño mínimo
+const panelH = {};
+function fitPanel(key, x, y, w, h, fn, reserve = true) {
+  if (!MOB) { fn(); return; }
+  const hh = Math.max(h, panelH[key] || 0);
+  // con el botón Menú en la esquina, la tarjeta va debajo de él o a su izquierda, lo que la deje mayor
+  let k = Math.min(uiK, (W - 16) / w, (H - 12) / hh), bx = W / 2, by = H / 2;
+  // 'top': sin botón Menú, pero por debajo de la greca de arriba
+  if (reserve === 'top') { k = Math.min(uiK, (W - 16) / w, (H - 52) / hh); by = (46 + H - 6) / 2; }
+  else if (reserve) {
+    const top = 46 + 80 + 6, right = W - 24 - 150 - 12;
+    const kA = Math.min(uiK, (W - 16) / w, (H - 6 - top) / hh), kB = Math.min(uiK, (right - 8) / w, (H - 12) / hh);
+    if (kA >= kB) { k = kA; by = (top + H - 6) / 2; } else { k = kB; bx = (8 + right) / 2; }
+  }
+  k = clamp(k, 1, 3);
+  uiExt = y;
+  zoomed(k, x + w / 2, y + hh / 2, bx, by, fn);
+  if (uiExt - y + 10 > hh + 1) panelH[key] = uiExt - y + 10;
 }
 function drawMenuScene() {
   camX = -8; Z = 1; S = TUNING.S;
@@ -2306,8 +2410,8 @@ function drawMenuScene() {
   drawAulete(6.2);
 }
 function menuScreen() {
-  text('ΠΕΝΤΑΘΛΟΝ', W / 2, 140, 64, 'center', C.negro, 700);
-  text(TX.title, W / 2, 176, 18, 'center', C.negro, 600);
+  text('ΠΕΝΤΑΘΛΟΝ', W / 2, MOB ? 112 : 140, 64, 'center', C.negro, 700);
+  text(TX.title, W / 2, MOB ? 150 : 176, 18, 'center', C.negro, 600);
   const bw = 440, bh = 44, x = W / 2 - bw / 2, yes = v => v ? TX.on : TX.off;
   const items = [
     { label: CU().campTitle, sub: CU().campSub, action: startCampaign, h: 66 },
@@ -2320,6 +2424,18 @@ function menuScreen() {
     { label: TX.mRecords, action: () => { state = 'records'; menuFocus = 0; } },
   ];
   if (inHistoriapp()) items.push({ label: CU().backApp, action: () => { location.href = '../#t3'; } });
+  if (MOB) {
+    const sub2 = [TX.levels[difficulty], TX.langName, yes(soundOn), `${Math.round(SPEEDS[speedIdx] * 100)} %`];
+    [TX.sLevel, TX.sLang, TX.sSound, TX.sSpeed].forEach((l, i) => { items[3 + i].label = l; items[3 + i].sub = sub2[i]; });
+    const top = 170, lw = 520, rw = (W - 40 - lw - 24 - 14) / 2, x0 = 20, bh = 140, g = 14;
+    uiButtons = items.map((b, i) => {
+      if (i < 3) return { ...b, x: x0, y: top + i * (bh + g), w: lw, h: bh, big: 24, nav: true };
+      const j = i - 3, col = j % 2, row = Math.floor(j / 2), rows = Math.ceil((items.length - 3) / 2), rh = (3 * bh + 2 * g - (rows - 1) * g) / rows;
+      return { ...b, x: x0 + lw + 24 + col * (rw + 14), y: top + row * (rh + g), w: rw, h: rh, nav: true };
+    });
+    uiButtons.forEach((b, i) => button(b, i === menuFocus));
+    return;
+  }
   let y = 190;
   uiButtons = items.map(b => { const o = { ...b, x, y, w: bw, h: b.h || bh, nav: true }; y += o.h + 8; return o; });
   uiButtons.forEach((b, i) => button(b, i === menuFocus));
@@ -2337,7 +2453,7 @@ function recordsScreen() {
   });
   wreath(cx + 60, 396, 16);
   text(`${TX.rWins}  ${olympiaWins}`, cx + 92, 402, 18, 'left', C.blanco);
-  const b = { label: TX.back, action: goMenu, x: W / 2 - 150, y: 470, w: 300, h: 50, nav: true };
+  const b = { label: TX.back, action: goMenu, x: W / 2 - 150, y: 470, w: 300, h: MOB ? 72 : 50, nav: true };
   uiButtons = [b]; button(b, true);
 }
 function introCard() {
@@ -2349,6 +2465,19 @@ function introCard() {
     if (!fl) text(TX.olympia.sub, W / 2, cy + 166, 16, 'center', C.barro, 600);
     para(agon.camp ? LX(CAMP.outro.rule[0][1]) : TX.olympia.note, W / 2, cy + 200, 660, 16, 22, C.blanco, 'center');
     // los tres rivales de esta partida, con su victoria documentada
+    if (MOB) {
+      // en el móvil los textos son mayores: cada rival en dos líneas, debajo de la nota
+      let y = Math.max(cy + 280, uiExt + 30);
+      text(TX.rivalsTitle, W / 2, y, 13, 'center', C.barro); y += 34;
+      agon.rivals.forEach(r => {
+        const inf = r.info;
+        text(r.name, cx + 60, y, 18, 'left', C.blanco, 700);
+        text(`${inf[lang] || inf.es} · ${inf.d[lang] || inf.d.es}`, cx + 60, y + 24, 14, 'left', C.barro, 600);
+        y += 58;
+      });
+      para(TX.rivalsSrc, W / 2, y + 4, 680, 12, 16, C.barro, 'center');
+      return;
+    }
     text(TX.rivalsTitle, W / 2, cy + 280, 13, 'center', C.barro);
     agon.rivals.forEach((r, i) => {
       const y = cy + 312 + i * 30, inf = r.info;
@@ -2398,67 +2527,74 @@ function finalCard() {
   if (stateT > .5) nextHint(TX.toMenu, 120 + 380 + 40);
 }
 
+// botón pequeño de la esquina (Menú, Cómo se juega); en el móvil, más grande para el dedo
+function smallBtn(label, right, action) {
+  const w = MOB ? Math.max(150, label.length * 19 + 40) : label.length > 6 ? 190 : 110, h = MOB ? 80 : 34, y = MOB ? 46 : 52;
+  const b = { x: right - w, y, w, h, action };
+  uiButtons.push(b);
+  ctx.fillStyle = C.negro; ctx.fillRect(b.x, b.y, b.w, b.h);
+  ctx.strokeStyle = C.barro; ctx.lineWidth = 1.5; ctx.strokeRect(b.x + 3, b.y + 3, b.w - 6, b.h - 6);
+  text(label, b.x + b.w / 2, b.y + (MOB ? h / 2 + 8 : 23), 13, 'center', C.barro);
+  return b;
+}
+const menuBtn = () => smallBtn(TX.menu, W - 24, goMenu);
+// tarjetas que en el móvil se amplían hasta llenar la pantalla: [estado, x, y, ancho, alto incluido el aviso de seguir]
+function cardPanel(key, cw, h, fn, reserve = true) { fitPanel(key, (W - cw) / 2, 112, cw, h, fn, reserve); }
 function hud() {
   meander(0, 40);
+  cardBot = 0; uiExt = 0;
   if (MENU_STATES.includes(state)) {
     if (state === 'menu') menuScreen();
-    if (state === 'records') recordsScreen();
+    if (state === 'records') { uiButtons = []; fitPanel('records', W / 2 - 300, 76, 600, 456, recordsScreen, 'top'); }
     return;
   }
   if (CAMP_STATES.includes(state)) {
     uiButtons = []; campHud();
-    const mb0 = { x: W - 24 - 110, y: 52, w: 110, h: 34, action: goMenu };
-    if (state !== 'cTalk' || (curItem() && curItem().t === 'line')) { uiButtons.push(mb0); ctx.fillStyle = C.negro; ctx.fillRect(mb0.x, mb0.y, mb0.w, mb0.h); ctx.strokeStyle = C.barro; ctx.lineWidth = 1.5; ctx.strokeRect(mb0.x + 3, mb0.y + 3, mb0.w - 6, mb0.h - 6); text(TX.menu, mb0.x + mb0.w / 2, mb0.y + 23, 13, 'center', C.barro); }
+    if (state !== 'cTalk' || (curItem() && curItem().t === 'line')) menuBtn();
     return;
   }
   if (!agon) return;
   uiButtons = [];
+  const lh = MOB ? 1.35 : 1;   // en el móvil los textos de la esquina crecen: más interlineado
   if (agon.solo) {
     text(KU()[agon.solo.label], 24, 76, 20, 'left');
-    if (agon.solo.shield) text(KU().shield, 24, 100, 14, 'left', C.negro, 600);
+    if (agon.solo.shield) text(KU().shield, 24, 76 + 24 * lh, 14, 'left', C.negro, 600);
     if (state === 'idle' || state === 'play') E[ev].hud();
-    if (state === 'result') resultCard();
-    const mb1 = { x: W - 24 - 110, y: 52, w: 110, h: 34, action: goMenu }; uiButtons.push(mb1);
-    ctx.fillStyle = C.negro; ctx.fillRect(mb1.x, mb1.y, mb1.w, mb1.h); text(TX.menu, mb1.x + mb1.w / 2, mb1.y + 23, 13, 'center', C.barro);
+    if (state === 'result') cardPanel('result' + ev, 560, 330, resultCard);
+    menuBtn();
     if (state === 'play' || state === 'idle') { drawHerald(); drawFeedback(); } else { herald = null; fbs = []; }
     return;
   }
   text(`${agon.trial ? CU().elis : (festLabel() || TX.olympia.short)} · ${TX.ev[ev]}`, 24, 76, 20, 'left');
   EVS.forEach((e, i) => {
-    const x = 30 + i * 22, y = 100, idx = EVS.indexOf(ev), cur = i === idx && state !== 'intro', done = i < idx || state === 'final';
-    ctx.beginPath(); ctx.arc(x, y, 7, 0, Math.PI * 2); ctx.lineWidth = 2.5; ctx.strokeStyle = C.negro; ctx.stroke();
+    const x = 30 + i * 22 * lh, y = 76 + 24 * lh, idx = EVS.indexOf(ev), cur = i === idx && state !== 'intro', done = i < idx || state === 'final';
+    ctx.beginPath(); ctx.arc(x, y, 7 * lh, 0, Math.PI * 2); ctx.lineWidth = 2.5; ctx.strokeStyle = C.negro; ctx.stroke();
     if (cur || done) { ctx.fillStyle = C.negro; ctx.fill(); }
-    if (cur && !done) { ctx.beginPath(); ctx.arc(x, y, 11, 0, Math.PI * 2); ctx.lineWidth = 1.5; ctx.stroke(); }
+    if (cur && !done) { ctx.beginPath(); ctx.arc(x, y, 11 * lh, 0, Math.PI * 2); ctx.lineWidth = 1.5; ctx.stroke(); }
   });
   if (['idle', 'play', 'result'].includes(state) && ev !== 'wrestle') {
-    if (agon.trial) text(CU().trialName.toUpperCase(), 24, 134, 16, 'left', C.negro, 600);
-    else if (T().attempts > 1) text(`${TX.attempt} ${Math.min(attempt + 1, 3)}/3`, 24, 134, 16, 'left', C.negro, 600);
-    const rows = agon.rivals.map(r => [r.name, rivalShown(r, ev)]).sort((a, b) => a[1] == null ? 1 : b[1] == null ? -1 : better(ev)(a[1], b[1]) ? -1 : 1);
-    rows.forEach((r, i) => text(`${r[0]}  ${fmtEv(ev, r[1])}`, 24, 162 + i * 22, 15, 'left', C.negro, 600));
-    text(`${TX.you}  ${fmtEv(ev, evBest(ev))}`, 24, 162 + 3 * 22 + 4, 16, 'left', C.negro, 800);
+    const y0 = 76 + 58 * lh, rh = 22 * lh;
+    if (agon.trial) text(CU().trialName.toUpperCase(), 24, y0, 16, 'left', C.negro, 600);
+    else if (T().attempts > 1) text(`${TX.attempt} ${Math.min(attempt + 1, 3)}/3`, 24, y0, 16, 'left', C.negro, 600);
+    // en el móvil, durante el intento, las marcas se ocultan para no tapar las indicaciones del centro
+    if (!(MOB && state === 'play')) {
+      const rows = agon.rivals.map(r => [MOB ? r.short || r.name : r.name, rivalShown(r, ev)]).sort((a, b) => a[1] == null ? 1 : b[1] == null ? -1 : better(ev)(a[1], b[1]) ? -1 : 1);
+      rows.forEach((r, i) => text(`${r[0]}  ${fmtEv(ev, r[1])}`, 24, y0 + 28 * lh + i * rh, 15, 'left', C.negro, 600));
+      text(`${TX.you}  ${fmtEv(ev, evBest(ev))}`, 24, y0 + 28 * lh + 3 * rh + 4, 16, 'left', C.negro, 800);
+    }
   }
-  if (state === 'intro') introCard();
-  if (state === 'tutorial') tutorialCard();
+  if (state === 'intro') cardPanel('intro', 760, 560, introCard);
+  if (state === 'tutorial') cardPanel('tutorial', 900, 480, tutorialCard);
   if (state === 'idle' || state === 'play') E[ev].hud();
-  if (state === 'result') resultCard();
-  if (state === 'standings') standingsCard();
-  if (state === 'lesson') lessonCard();
-  if (state === 'quiz') quizCard();
-  if (state === 'final') { if (agon.wins) campFinalCard(); else finalCard(); }
-  if (state === 'crown') crownHud();
+  if (state === 'result') cardPanel('result' + ev, 560, 330, resultCard);
+  if (state === 'standings') cardPanel('standings', 540, 350, standingsCard);
+  if (state === 'lesson') cardPanel('lesson' + ev, 780, 460, lessonCard);
+  if (state === 'quiz') cardPanel('quiz' + ev, 780, 470, quizCard);
+  if (state === 'final') { if (agon.wins) cardPanel('cfinal', 640, 520, campFinalCard); else cardPanel('final', 560, 460, finalCard); }
+  if (state === 'crown') cardPanel('crown', 940, 330, crownHud);
   // botón para volver al menú (después de los demás, para que no lo tape nada)
-  const mb = { x: W - 24 - 110, y: 52, w: 110, h: 34, action: goMenu };
-  uiButtons.push(mb);
-  if (state === 'idle') {
-    const hb = { x: mb.x - 200, y: 52, w: 190, h: 34, action: openTutorial };
-    uiButtons.push(hb);
-    ctx.fillStyle = C.negro; ctx.fillRect(hb.x, hb.y, hb.w, hb.h);
-    ctx.strokeStyle = C.barro; ctx.lineWidth = 1.5; ctx.strokeRect(hb.x + 3, hb.y + 3, hb.w - 6, hb.h - 6);
-    text(TX.howToBtn, hb.x + hb.w / 2, hb.y + 23, 13, 'center', C.barro);
-  }
-  ctx.fillStyle = C.negro; ctx.fillRect(mb.x, mb.y, mb.w, mb.h);
-  ctx.strokeStyle = C.barro; ctx.lineWidth = 1.5; ctx.strokeRect(mb.x + 3, mb.y + 3, mb.w - 6, mb.h - 6);
-  text(TX.menu, mb.x + mb.w / 2, mb.y + 23, 13, 'center', C.barro);
+  const mb = menuBtn();
+  if (state === 'idle') smallBtn(TX.howToBtn, mb.x - 10, openTutorial);
   if (state === 'play' || state === 'idle') { drawHerald(); drawFeedback(); } else { herald = null; fbs = []; }
 }
 
@@ -2567,7 +2703,7 @@ function tutorialCard() {
       ctx.restore();
       para(s, colX + 4, cy + 250, 252, 15, 20, C.blanco, 'left');
     });
-    para(tut.keys, W / 2, cy + 374, 820, 13, 18, C.barro, 'center');
+    if (!COARSE) para(tut.keys, W / 2, cy + 374, 820, 13, 18, C.barro, 'center');
   });
   if (stateT > .5) nextHint(TX.tryIt, 120 + 400 + 40);
 }
@@ -2721,7 +2857,7 @@ function roadKm() {
   return { k: Math.round(k), d: k > 30 ? 2 : 1, place: r.i < CAMP.road.length && state !== 'cRoad' ? LX(st.place) : '' };
 }
 function olive(X) {
-  const x = wx(X), gy = TUNING.groundY; if (x < -80 || x > W + 80) return;
+  const x = wx(X), gy = TUNING.groundY; if (x < -OX - 80 || x > W + OX + 80) return;
   ctx.fillStyle = 'rgba(23,17,13,.55)';
   ctx.fillRect(x - 4, gy - 70, 8, 70);
   for (const [dx, dy, r] of [[-18, -82, 20], [8, -96, 22], [24, -78, 17], [-2, -70, 15]]) { ctx.beginPath(); ctx.arc(x + dx, gy + dy, r, 0, Math.PI * 2); ctx.fill(); }
@@ -2906,9 +3042,10 @@ function calendarBar() {
     ctx.strokeStyle = C.negro; ctx.lineWidth = 1.5; ctx.strokeRect(cx + 1, y, cw - 2, 22);
     if (i < camp.day) { ctx.fillStyle = C.negro; ctx.fillRect(cx + 1, y, cw - 2, 22); }
   }
-  text(`${U.days} ${Math.min(camp.day, MONTH)} ${U.of} ${MONTH} · ${daysLeft()} ${U.daysLeft}`, W / 2, y + 44, 15, 'center', C.negro, 700);
+  text(`${U.days} ${Math.min(camp.day, MONTH)} ${U.of} ${MONTH} · ${daysLeft()} ${U.daysLeft}`, W / 2, y + (MOB ? 74 : 44), 15, 'center', C.negro, 700);
 }
 function plate(X, y, label, sub, action, enabled = true) {
+  if (MOB) { const xs = [HUB.coach, HUB.judge, ...HUB.r, HUB.gate, HUB.road].sort((a, b) => a - b); return plateM(X, xs.indexOf(X) % 2 ? 248 : 150, label, sub, action, enabled); }
   const w = 170, h = 54, x = clamp(wx(X) - w / 2, 8, W - w - 8);
   const b = { x, y, w, h, label, sub, action: enabled ? action : () => sfx.foul(), nav: true };
   uiButtons.push(b);
@@ -2920,6 +3057,19 @@ function plate(X, y, label, sub, action, enabled = true) {
   ctx.fillStyle = C.negro; ctx.beginPath(); ctx.moveTo(wx(X) - 7, y + h); ctx.lineTo(wx(X) + 7, y + h); ctx.lineTo(wx(X), y + h + 9); ctx.fill();
   // la figura también se puede tocar
   uiButtons.push({ x: wx(X) - 55, y: y + h, w: 110, h: TUNING.groundY - y - h, action: b.action });
+}
+function plateM(X, y, label, sub, action, enabled) {
+  const w = 246, h = 86, fx = wx(X), x = clamp(fx - w / 2, 8, W - w - 8);
+  const b = { x, y, w, h, label, sub, action: enabled ? action : () => sfx.foul(), nav: true };
+  uiButtons.push(b);
+  const focused = uiButtons.filter(o => o.nav).length - 1 === menuFocus;
+  // la línea hasta la cabeza de la figura va por detrás
+  ctx.strokeStyle = C.negro; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(fx, y + h); ctx.lineTo(fx, TUNING.groundY - 190); ctx.stroke();
+  ctx.globalAlpha = enabled ? 1 : .55;
+  ctx.fillStyle = C.negro; ctx.fillRect(x, y, w, h); ctx.strokeStyle = focused ? C.blanco : C.barro; ctx.lineWidth = focused ? 3 : 2; ctx.strokeRect(x + 3, y + 3, w - 6, h - 6);
+  text(label, x + w / 2, y + 36, 17, 'center', C.blanco, 700); text(sub, x + w / 2, y + 66, 12, 'center', C.barro, 700);
+  ctx.globalAlpha = 1;
+  uiButtons.push({ x: fx - 55, y: TUNING.groundY - 190, w: 110, h: 190, action: b.action });
 }
 function nodeStatus(ids) {
   const done = ids.filter(id => camp.done[id]).length;
@@ -2951,17 +3101,22 @@ function choiceUI() {
     const sub = camp.done[id] ? `${U.done} · ${U.retry} ${N.days} ${U.cost}` : `${N.days} ${N.days === 1 ? U.cost1 : U.cost}`;
     return { x, y: 196 + i * 78, w: 600, h: 66, label: LX(N.title), sub, nav: true, action: ok ? () => doNode(id) : () => sfx.foul(), dim: !ok };
   });
-  uiButtons.push({ x: W / 2 - 110, y: 196 + ids.length * 78 + 4, w: 220, h: 44, label: U.back, nav: true, action: () => { state = 'cHub'; choice = null; menuFocus = -1; } });
+  uiButtons.push({ x: W / 2 - 110, y: 196 + ids.length * 78 + 4, w: 220, h: MOB ? 60 : 44, label: U.back, nav: true, action: () => { state = 'cHub'; choice = null; menuFocus = -1; } });
   uiButtons.forEach((b, i) => { ctx.globalAlpha = b.dim ? .5 : 1; button(b, i === menuFocus); ctx.globalAlpha = 1; });
 }
 function regionUI() {
   const U = CU();
   text(U.chooseRegion, W / 2, 110, 30, 'center', C.negro, 700);
   text(U.regionHint, W / 2, 140, 16, 'center', C.negro, 600);
-  const bw = 400, x = W / 2 - bw / 2;
-  uiButtons = CAMP.regions.map((R, i) => ({ x, y: 170 + i * 74, w: bw, h: 64, label: LX(R.name), sub: LX(R.area), nav: true, action: () => chooseRegion(R) }));
+  uiButtons = regionButtons(170, chooseRegion);
   uiButtons.forEach((b, i) => button(b, i === menuFocus));
   text(U.fictional, W / 2, 642, 13, 'center', C.negro, 600);
+}
+// botones de las ciudades; en el móvil, en dos columnas y más altos
+function regionButtons(y0, act) {
+  if (!MOB) { const bw = 400, x = W / 2 - bw / 2; return CAMP.regions.map((R, i) => ({ x, y: y0 + i * 74, w: bw, h: 64, label: LX(R.name), sub: LX(R.area), nav: true, action: () => act(R) })); }
+  const bw = 440, g = 24, bh = 104, n = CAMP.regions.length;
+  return CAMP.regions.map((R, i) => ({ x: i === n - 1 && n % 2 ? W / 2 - bw / 2 : W / 2 - bw - g / 2 + (i % 2) * (bw + g), y: y0 - 10 + Math.floor(i / 2) * (bh + 14), w: bw, h: bh, label: LX(R.name), sub: LX(R.area), nav: true, action: () => act(R) }));
 }
 function who2name(who) {
   const U = CU();
@@ -2973,7 +3128,9 @@ function talkUI() {
   const it = curItem(); if (!it) return;
   const U = CU();
   if (it.t === 'line') {
-    const x = 70, y = 142, w = W - 140, h = 200;
+    const x = 70, y = 142, w = W - 140;
+    let h = 200;
+    if (MOB) { const ps = fpx(it.who === 'note' ? 21 : 23, 14); ctx.font = `400 ${ps}px ${FONT}`; h = Math.max(h, 84 + (lineCount(LX(it.s), w - 80) - 1) * ps * 1.35 + 56); }
     ctx.fillStyle = C.negro; ctx.fillRect(x, y, w, h);
     ctx.strokeStyle = C.barro; ctx.lineWidth = 2; ctx.strokeRect(x + 6, y + 6, w - 12, h - 12);
     text(who2name(it.who).toUpperCase(), x + 34, y + 44, 15, 'left', C.barro, 700);
@@ -2989,7 +3146,7 @@ function talkUI() {
       if (it.stat) para(it.stat, W / 2, y + 6, 600, 16, 22, C.barro, 'center');
     });
     if (it.fic && inHistoriapp()) {
-      const b = { x: W / 2 - 130, y: 360, w: 260, h: 44, label: `${U.readFicha} ${it.fic}`, action: () => openFicha(it.fic) };
+      const fw = MOB ? 360 : 260, b = { x: W / 2 - fw / 2, y: MOB ? 356 : 360, w: fw, h: MOB ? 54 : 44, label: `${U.readFicha} ${it.fic}`, action: () => openFicha(it.fic) };
       uiButtons.push(b); button(b, false);
     }
     if (stateT > .4) nextHint(U.continue, 120 + 300 + 44);
@@ -3001,19 +3158,22 @@ function talkUI() {
     text(`${U.examTag} · ${it.fic}`, W / 2, cy + 34, 13, 'center', C.barro);
     para(LX(q.q), W / 2, cy + 74, 720, 22, 28, C.blanco, 'center');
   });
-  const bx = W / 2 - 360, bw = 720, bh = 62;
+  const bx = W / 2 - 360, bw = 720, bh = MOB ? 84 : 62, bg = MOB ? 4 : 6;
   uiButtons = talk.order.map((oi, k) => {
-    const b = { label: `${k + 1}.  ${LX(q.o[oi])}`, para: true, x: bx, y: 228 + k * (bh + 6), w: bw, h: bh, nav: true, action: () => pickAnswer(k) };
+    const b = { label: `${k + 1}.  ${LX(q.o[oi])}`, para: true, x: bx, y: 228 + k * (bh + bg), w: bw, h: bh, nav: true, action: () => pickAnswer(k) };
     if (talk.picked >= 0) { b.fill = oi === 0 ? C.blanco : C.negro; b.label = (oi === 0 ? '✓  ' : k === talk.picked ? '✗  ' : '') + b.label; }
     return b;
   });
   uiButtons.forEach((b, k) => button(b, talk.picked < 0 && k === menuFocus));
   if (talk.picked >= 0) {
     const ok = talk.order[talk.picked] === 0;
-    text(ok ? U.right : U.wrong, W / 2, 516, 19, 'center', ok ? C.blanco : C.barro, 800);
-    para(LX(q.x), W / 2, 542, 740, 15, 20, C.blanco, 'center');
+    const ry = MOB ? 228 + 4 * (bh + bg) + 18 : 516;
+    text(ok ? U.right : U.wrong, W / 2, ry, 19, 'center', ok ? C.blanco : C.barro, 800);
+    const eb = paraBot(LX(q.x), W / 2, ry + (MOB ? 34 : 26), 740, 15, 20, C.blanco, 'center');
     uiButtons = [];
-    if (inHistoriapp()) { const b = { x: W - 300, y: 128, w: 230, h: 40, label: `${U.readFicha} ${it.fic}`, action: () => openFicha(it.fic) }; uiButtons.push(b); button(b, false); }
+    // en el móvil, «Leer la ficha» va debajo de la explicación, dentro de la tarjeta
+    if (inHistoriapp()) { const b = MOB ? { x: W / 2 - 240, y: eb + 12, w: 480, h: 70, label: `${U.readFicha} ${it.fic}`, action: () => openFicha(it.fic) } : { x: W - 300, y: 128, w: 230, h: 40, label: `${U.readFicha} ${it.fic}`, action: () => openFicha(it.fic) }; uiButtons.push(b); button(b, false); }
+    if (MOB) growLastCard(inHistoriapp() ? eb + 82 : eb);
     if (stateT > .4) nextHint(U.continue, 120 + 520 + 40);
   }
 }
@@ -3031,9 +3191,9 @@ function campHud() {
   if (camp && camp.mode === 'road' && (state === 'cRoad' || (state === 'cTalk' && curItem() && curItem().t === 'line'))) roadBar();
   else if (state !== 'cRegion' && camp && camp.day > 0 && (state === 'cHub' || state === 'cChoice' || (state === 'cTalk' && curItem() && curItem().t === 'line'))) calendarBar();
   if (state === 'cHub') return hubUI();
-  if (state === 'cChoice') return choiceUI();
-  if (state === 'cTalk') return talkUI();
-  if (state === 'cEnd') return endUI();
+  if (state === 'cChoice') return cardPanel('choice' + choice.ids.length, 700, 200 + choice.ids.length * 78, choiceUI);
+  if (state === 'cTalk') { const it = curItem(); if (it && it.t === 'card') return cardPanel('tcard', 700, 400, talkUI, false); if (it && it.t === 'q') return cardPanel('tq', 820, 600, talkUI, false); return talkUI(); }
+  if (state === 'cEnd') return cardPanel('end', 640, 320, endUI);
 }
 
 // ---------- coronación ----------
@@ -3059,7 +3219,7 @@ function crownHud() {
     if (camp && camp.region === 'atenas') ls.push(LX(CAMP.outro.solon));
     ls.forEach(l => { y = para(l, W / 2, y, 860, 15, 19, C.blanco, 'center') + 3; });
   });
-  if (stateT > 2.6) nextHint(TX.next, 664);
+  if (stateT > 2.6) nextHint(TX.next, MOB ? 0 : 664);
 }
 
 const CAR = {"chapters": [{"id": "pre", "date": {"es": "h. 1450-700 a. C.", "en": "c. 1450-700 BC"}, "title": {"es": "Antes de Olimpia", "en": "Before Olympia"}, "place": {"es": "Micenas y Homero", "en": "Mycenae and Homer"}, "fic": "H3·19"}, {"id": "polis", "date": {"es": "384 a. C.", "en": "384 BC"}, "title": {"es": "Tu polis", "en": "Your polis"}, "place": {"es": "El gimnasio de tu ciudad", "en": "Your city's gymnasium"}, "fic": "H3·24"}, {"id": "ol1", "date": {"es": "380 a. C.", "en": "380 BC"}, "title": {"es": "Tus primeros Juegos", "en": "Your first Games"}, "place": {"es": "100.ª Olimpiada", "en": "100th Olympiad"}, "fic": "H3·47"}, {"id": "heraia", "date": {"es": "380 a. C.", "en": "380 BC"}, "title": {"es": "Los Juegos Hereos", "en": "The Heraia"}, "place": {"es": "La carrera de tu hermana", "en": "Your sister's race"}, "fic": "H3·76"}, {"id": "circuit", "date": {"es": "379-377 a. C.", "en": "379-377 BC"}, "title": {"es": "El circuito", "en": "The circuit"}, "place": {"es": "Istmo, Nemea y Delfos", "en": "Isthmus, Nemea and Delphi"}, "fic": "H3·43"}, {"id": "ol2", "date": {"es": "376 a. C.", "en": "376 BC"}, "title": {"es": "Defender la corona", "en": "Defending the crown"}, "place": {"es": "101.ª Olimpiada", "en": "101st Olympiad"}, "fic": "H3·78"}, {"id": "ol3", "date": {"es": "364 a. C.", "en": "364 BC"}, "title": {"es": "La anolimpiada", "en": "The anolympiad"}, "place": {"es": "104.ª Olimpiada", "en": "104th Olympiad"}, "fic": "H3·33"}, {"id": "coach", "date": {"es": "Mediados del s. IV a. C.", "en": "Mid-4th c. BC"}, "title": {"es": "Paidotriba", "en": "Trainer"}, "place": {"es": "Tu alumno y la tregua", "en": "Your pupil and the truce"}, "fic": "H3·39"}, {"id": "epi", "date": {"es": "s. IV a. C. - 1896", "en": "4th c. BC - 1896"}, "title": {"es": "Tu estatua", "en": "Your statue"}, "place": {"es": "Del rito al espectáculo", "en": "From rite to spectacle"}, "fic": "H3·79"}], "myths": [{"c": {"es": "Los palacios cretenses no tenían murallas porque Creta fue una isla sin guerras.", "en": "The Cretan palaces had no walls because Crete was an island without wars."}, "a": false, "x": {"es": "Las primeras armas del Egeo son cretenses, había preparación para la guerra y algunos centros tuvieron fortificaciones. La «Pax Minoica» de Evans debe matizarse.", "en": "The first weapons of the Aegean are Cretan, there was preparation for war and some centres had fortifications. Evans's 'Pax Minoica' must be qualified."}}, {"c": {"es": "Los minoicos competían por premios, como muestran sus imágenes.", "en": "The Minoans competed for prizes, as their images show."}, "a": false, "x": {"es": "Ningún objeto representa un premio ni una lista de vencedores. El deporte servía para la iniciación, el culto y el prestigio de las grandes casas.", "en": "No object shows a prize or a list of victors. Sport served initiation, worship and the prestige of the great houses."}}, {"c": {"es": "Los toros del salto eran uros salvajes.", "en": "The bulls in the leap were wild aurochs."}, "a": false, "x": {"es": "El pelaje moteado de los toros de Cnoso solo se da en animales domésticos, de modo que no eran tan fieros como se ha propuesto.", "en": "The spotted coat of the Knossos bulls occurs only in domestic animals, so they were not as fierce as has been suggested."}}, {"c": {"es": "La erupción de Tera puso fin a la Creta de los palacios.", "en": "The eruption of Thera ended palatial Crete."}, "a": false, "x": {"es": "Fue hacia 1628 a. C., unos ciento cincuenta años antes del final. Hoy la tesis más aceptada atribuye la destrucción de hacia 1450 a. C. a las invasiones micénicas.", "en": "It happened c. 1628 BC, some 150 years before the end. Today the most accepted thesis attributes the destruction of c. 1450 BC to the Mycenaean invasions."}}, {"c": {"es": "La tregua sagrada detenía todas las guerras de Grecia durante los Juegos.", "en": "The sacred truce stopped all wars in Greece during the Games."}, "a": false, "x": {"es": "Protegía el territorio de Élide y a los peregrinos. La Olimpiada de 480 a. C. se celebró mientras Leónidas resistía en las Termópilas.", "en": "It protected the territory of Elis and the pilgrims. The Olympiad of 480 BC was held while Leonidas held out at Thermopylae."}}, {"c": {"es": "Los Juegos de Olimpia continúan los juegos de la época micénica.", "en": "The Olympic Games continue the games of the Mycenaean period."}, "a": false, "x": {"es": "Más de mil años de vacío separan el túmulo prehistórico del santuario de Zeus, nacido a finales del siglo XI a. C. No hubo continuidad.", "en": "More than a thousand years separate the prehistoric tumulus from the sanctuary of Zeus, founded at the end of the 11th century BC. There was no continuity."}}, {"c": {"es": "Está probado que los Juegos empezaron en 776 a. C.", "en": "It is proven that the Games began in 776 BC."}, "a": false, "x": {"es": "Es la fecha de una lista de vencedores compilada hacia 400 a. C. y poco fiable en sus primeros siglos. Se han propuesto también 884 (leyenda) y 704 a. C. (arqueología).", "en": "It is the date of a list of victors compiled c. 400 BC and unreliable for its first centuries. Dates of 884 (legend) and 704 BC (archaeology) have also been proposed."}}, {"c": {"es": "Las ciudades griegas seleccionaban y pagaban a sus atletas.", "en": "Greek cities selected and paid their athletes."}, "a": false, "x": {"es": "Cada atleta acudía por iniciativa propia y costeaba entrenador, dieta, viaje y el mes en Élide. Ástilo llegó a cambiar de patria deportiva.", "en": "Each athlete went on his own initiative and paid for coach, diet, travel and the month at Elis. Astylos even changed his sporting homeland."}}, {"c": {"es": "Como Olimpia solo daba una corona de olivo, el atleta no ganaba dinero.", "en": "Since Olympia gave only an olive wreath, the athlete earned no money."}, "a": false, "x": {"es": "Su ciudad lo recibía con estatuas, manutención y premios: Solón daba 500 dracmas al ateniense vencedor en Olimpia.", "en": "His city welcomed him with statues, maintenance and rewards: Solon gave 500 drachmas to any Athenian who won at Olympia."}}, {"c": {"es": "Está demostrado que la carrera de hoplitas preparaba para la guerra.", "en": "It is proven that the hoplite race was preparation for war."}, "a": false, "x": {"es": "Su utilidad militar se discute: Mann (2021) no halla fuentes en ese sentido antes del siglo IV a. C. y Spivey (2021) cree que premiaba al corredor aislado y no la cohesión de la falange.", "en": "Its military usefulness is debated: Mann (2021) finds no sources to that effect before the fourth century BC and Spivey (2021) thinks it rewarded the lone runner, not the cohesion of the phalanx."}}, {"c": {"es": "Los griegos medían y registraban las marcas del salto, la jabalina y el disco.", "en": "The Greeks measured and recorded the marks in the jump, javelin and discus."}, "a": false, "x": {"es": "Solo se marcaba con una estaca el mejor intento, que se movía si otro lo superaba. No sabemos si sus marcas eran comparables a las actuales.", "en": "Only the best attempt was marked with a stake, moved if someone bettered it. We do not know whether their marks were comparable to today's."}}, {"c": {"es": "Los combates griegos tenían categorías de peso, como el boxeo actual.", "en": "Greek combat sports had weight classes, like modern boxing."}, "a": false, "x": {"es": "Solo había categorías de edad, sin asaltos ni descansos, de ahí que llevaran ventaja el más resistente y el más pesado.", "en": "There were only age categories, with no rounds or breaks, which is why the most enduring and heaviest had the advantage."}}, {"c": {"es": "Hubo campeonas olímpicas aunque las mujeres casadas no podían entrar en Olimpia.", "en": "There were female Olympic champions although married women could not enter Olympia."}, "a": true, "x": {"es": "En la hípica la corona era para el dueño de las monturas, y Cinisca de Esparta ganó la cuadriga en 396 a. C.", "en": "In the equestrian events the wreath went to the owner, and Kyniska of Sparta won the four-horse chariot race in 396 BC."}}, {"c": {"es": "Ninguna mujer corrió nunca en el estadio de Olimpia.", "en": "No woman ever ran in the stadium of Olympia."}, "a": false, "x": {"es": "En los Juegos Hereos, desde hacia 580 a. C., muchachas solteras corrían unos 160 m en el estadio en honor de Hera.", "en": "In the Heraia, from c. 580 BC, unmarried girls ran about 160 m in the stadium in honour of Hera."}}, {"c": {"es": "Teodosio I prohibió los Juegos Olímpicos en 393 d. C.", "en": "Theodosius I banned the Olympic Games in AD 393."}, "a": false, "x": {"es": "Remijsen (2015) comprobó que esa ley no menciona los Juegos; el vínculo lo estableció un cronista del siglo XI. Los Juegos se apagaron porque las élites dejaron de costearlos.", "en": "Remijsen (2015) showed that this law does not mention the Games; the link was made by an 11th-century chronicler. The Games faded because the elites stopped paying for them."}}], "ui": {"es": {"careerTitle": "VIDA DE UN ATLETA", "careerSub": "Modo carrera · todo el Tema 3", "mapTitle": "VIDA DE UN ATLETA", "mapHint": "Elige capítulo. Los capítulos se desbloquean en orden y se guardan al terminarlos.", "play": "JUGAR", "replay": "REPETIR", "locked": "Bloqueado", "done": "Completado", "honors": "PALMARÉS", "noHonors": "Todavía nada", "kleos": "Kléos", "reset": "BORRAR LA CARRERA", "who": {"father": "Tu padre", "mother": "Tu madre", "sister": "Tu hermana", "aedo": "Un aedo", "pupil": "Tu alumno", "you": "Tú", "phrynon": "Frinón de Atenas", "note": "TEMA 3"}, "myth": "¿MITO O REALIDAD?", "mythT": "REALIDAD", "mythF": "MITO", "isTrue": "Es realidad", "isFalse": "Es un mito", "visit": "ELIGE ADÓNDE IR", "visited": "visto", "goOn": "CONTINUAR", "needMore": "Visita al menos {n}", "raceBoys": "ESTADIO DE MUCHACHOS", "raceHeraia": "JUEGOS HEREOS", "raceDiaulos": "DÍAULOS", "raceHoplite": "CARRERA DE HOPLITAS", "turn": "GIRA EN EL POSTE", "shield": "Escudo de unos 8 kg", "raceWon": "¡GANAS LA CARRERA!", "racePlace": "Llegas en el puesto {n}", "prizeCup": "Premio: una copa de plata", "prizeOlive": "Premio: una corona de olivo", "fest": {"olympia": "OLIMPIA", "isthmia": "ISTMO", "nemea": "NEMEA", "pythia": "DELFOS"}, "crownOf": {"olympia": "Corona olímpica", "isthmia": "Corona ístmica", "nemea": "Corona nemea", "pythia": "Corona pítica"}, "hBoys": "Estadio de muchachos en tu polis", "hHeraia": "Juegos Hereos: tu hermana vence", "hDiaulos": "Díaulos en Olimpia", "hHoplite": "Carrera de hoplitas", "hPeriod": "PERIODONIKES", "hZan": "Un zan con tu nombre", "periodonikes": "¡PERIODONIKES! Has vencido en los cuatro grandes Juegos.", "chapterDone": "CAPÍTULO COMPLETADO", "nextChapter": "PULSA PARA VOLVER AL MAPA", "battle": "¡BATALLA EN EL ALTIS!", "anolymp": "ANOLIMPIADA", "zanTitle": "UN ZAN CON TU NOMBRE", "statueYou": "Tu estatua", "statueZan": "Tu zan", "notWon": "Sin corona esta vez", "careerEnd": "FIN DE LA CARRERA", "endScore": "Respuestas acertadas: {n} de {t}", "region": "¿DE QUÉ CIUDAD ERES?", "rank": "CLASIFICACIÓN", "rankTitle": "CLASIFICACIÓN DE CLASE · VIDA DE UN ATLETA", "rankGroup": "Mi grupo", "rankAll": "Toda la clase", "rankLoading": "Cargando…", "rankOffline": "No se ha podido cargar la clasificación. Revisa la conexión.", "rankEmpty": "Todavía no hay nadie en esta clasificación.", "rankJoin": "Para aparecer, apúntate al ranking de Historiapp con tu alias. La puntuación se envía al terminar cada capítulo.", "rankJoinBtn": "APUNTARME EN HISTORIAPP", "rankOutside": "La clasificación de clase funciona dentro de Historiapp.", "rankPts": "pts", "rankRule": "Puntos: kléos × 10 + respuestas acertadas. Cuenta tu mejor carrera.", "rankYou": "Tú", "back": "VOLVER", "statueWon": "Lo que queda de ti es una estatua en el santuario, como las de los antiguos vencedores. Ella verá pasar los siglos.", "statueNot": "No venciste en Olimpia, así que no tendrás estatua allí. Las de los vencedores que viste verán pasar los siglos.", "statueZanL": "De ti queda en Olimpia un zan, una estatua de Zeus pagada con tu multa y con tu nombre en el pedestal. Él verá pasar los siglos.", "summary": "Tu carrera", "bribeLose": "Te dejas caer en la lucha, como prometiste."}, "en": {"careerTitle": "AN ATHLETE'S LIFE", "careerSub": "Career mode · all of Topic 3", "mapTitle": "AN ATHLETE'S LIFE", "mapHint": "Choose a chapter. Chapters unlock in order and are saved when you finish them.", "play": "PLAY", "replay": "REPLAY", "locked": "Locked", "done": "Completed", "honors": "HONOURS", "noHonors": "Nothing yet", "kleos": "Kleos", "reset": "DELETE CAREER", "who": {"father": "Your father", "mother": "Your mother", "sister": "Your sister", "aedo": "A bard", "pupil": "Your pupil", "you": "You", "phrynon": "Phrynon of Athens", "note": "TOPIC 3"}, "myth": "MYTH OR FACT?", "mythT": "FACT", "mythF": "MYTH", "isTrue": "It is a fact", "isFalse": "It is a myth", "visit": "CHOOSE WHERE TO GO", "visited": "seen", "goOn": "CONTINUE", "needMore": "Visit at least {n}", "raceBoys": "BOYS' STADION", "raceHeraia": "HERAIA", "raceDiaulos": "DIAULOS", "raceHoplite": "HOPLITE RACE", "turn": "ROUND THE POST", "shield": "Shield of about 8 kg", "raceWon": "YOU WIN THE RACE!", "racePlace": "You finish in place {n}", "prizeCup": "Prize: a silver cup", "prizeOlive": "Prize: an olive crown", "fest": {"olympia": "OLYMPIA", "isthmia": "ISTHMUS", "nemea": "NEMEA", "pythia": "DELPHI"}, "crownOf": {"olympia": "Olympic crown", "isthmia": "Isthmian crown", "nemea": "Nemean crown", "pythia": "Pythian crown"}, "hBoys": "Boys' stadion in your polis", "hHeraia": "Heraia: your sister wins", "hDiaulos": "Diaulos at Olympia", "hHoplite": "Hoplite race", "hPeriod": "PERIODONIKES", "hZan": "A Zan with your name", "periodonikes": "PERIODONIKES! You have won all four great Games.", "chapterDone": "CHAPTER COMPLETED", "nextChapter": "TAP TO RETURN TO THE MAP", "battle": "BATTLE IN THE ALTIS!", "anolymp": "ANOLYMPIAD", "zanTitle": "A ZAN WITH YOUR NAME", "statueYou": "Your statue", "statueZan": "Your Zan", "notWon": "No crown this time", "careerEnd": "END OF CAREER", "endScore": "Correct answers: {n} of {t}", "region": "WHERE ARE YOU FROM?", "rank": "LEADERBOARD", "rankTitle": "CLASS LEADERBOARD · AN ATHLETE'S LIFE", "rankGroup": "My group", "rankAll": "Whole class", "rankLoading": "Loading…", "rankOffline": "The leaderboard could not be loaded. Check your connection.", "rankEmpty": "Nobody is on this leaderboard yet.", "rankJoin": "To appear here, join the Historiapp leaderboard with your nickname. Your score is sent when you finish each chapter.", "rankJoinBtn": "JOIN IN HISTORIAPP", "rankOutside": "The class leaderboard works inside Historiapp.", "rankPts": "pts", "rankRule": "Points: kleos × 10 + correct answers. Your best career counts.", "rankYou": "You", "back": "BACK", "statueWon": "What remains of you is a statue in the sanctuary, like those of the old victors. It will watch the centuries go by.", "statueNot": "You did not win at Olympia, so you will have no statue there. Those of the victors you saw will watch the centuries go by.", "statueZanL": "What remains of you at Olympia is a Zan, a statue of Zeus paid for with your fine and bearing your name on its base. It will watch the centuries go by.", "summary": "Your career", "bribeLose": "You take a fall in the wrestling, as promised."}}, "myc": [["note", {"es": "Los micénicos fueron los griegos de la Edad del Bronce y escribían en lineal B una forma temprana de griego, de modo que fueron los antecesores de los griegos clásicos. Sus reinos se gobernaban desde palacios fortificados como Micenas o Tirinto bajo un rey, el wanax.", "en": "The Mycenaeans were the Greeks of the Bronze Age and wrote an early form of Greek in Linear B, so they were the forerunners of the classical Greeks. Their kingdoms were ruled from fortified palaces such as Mycenae or Tiryns under a king, the wanax."}], ["note", {"es": "Su deporte consistía sobre todo en el carro y la caza del jabalí, reservados al señor, y en el pugilato, a cargo de púgiles pagados que animaban sus banquetes y sus funerales.", "en": "Their sport consisted mainly of the chariot and the boar hunt, reserved for the lord, and of boxing, performed by paid boxers who entertained at his banquets and funerals."}], {"q": {"q": {"es": "¿Quién gobernaba los reinos micénicos?", "en": "Who ruled the Mycenaean kingdoms?"}, "o": [{"es": "El wanax", "en": "The wanax"}, {"es": "Los basileis", "en": "The basileis"}, {"es": "Los helanódicas", "en": "The Hellanodikai"}, {"es": "El arconte", "en": "The archon"}], "x": {"es": "El wanax gobernaba desde palacios fortificados como Micenas o Tirinto.", "en": "The wanax ruled from fortified palaces such as Mycenae or Tiryns."}}, "fic": "H3·19"}, {"q": {"q": {"es": "¿Quién practicaba el pugilato en el mundo micénico?", "en": "Who practised boxing in the Mycenaean world?"}, "o": [{"es": "Púgiles pagados que animaban los banquetes y funerales del señor", "en": "Paid boxers who entertained at the lord's banquets and funerals"}, {"es": "Los hijos del wanax en las fiestas de palacio", "en": "The wanax's sons at palace festivals"}, {"es": "Los ciudadanos libres en Olimpia", "en": "Free citizens at Olympia"}, {"es": "El propio wanax ante su pueblo", "en": "The wanax himself before his people"}], "x": {"es": "El deporte micénico que nos ha llegado era el del señor: el carro, la caza del jabalí y los púgiles a sueldo.", "en": "The Mycenaean sport that has come down to us was the lord's: the chariot, the boar hunt and paid boxers."}}, "fic": "H3·19"}, ["note", {"es": "Entre 1200 y 1150 a. C. ardieron los palacios. Cline (2015) habla de una «tormenta perfecta» de terremotos, sequía, gentes desplazadas, revueltas y ataques de los «pueblos del mar». Grecia se quedó cuatro siglos sin escribir.", "en": "Between 1200 and 1150 BC the palaces burned. Cline (2015) speaks of a 'perfect storm' of earthquakes, drought, displaced peoples, revolts and attacks by the 'Sea Peoples'. Greece went four centuries without writing."}], ["note", {"es": "El poder local quedó en manos de los basileis, los hombres influyentes de cada aldea, y el deporte, sin palacio ni calendario fijo, pasó a girar en torno a estos jefes y a sus funerales.", "en": "Local power passed to the basileis, the influential men of each village, and sport, with no palace and no fixed calendar, came to revolve around these chiefs and their funerals."}], ["note", {"es": "En el siglo VIII a. C. regresa la escritura, con el alfabeto fenicio. La enócoe del Dipilón lleva grabada una de las inscripciones griegas más antiguas, que la declara premio del mejor bailarín de un concurso.", "en": "In the 8th century BC writing returns, with the Phoenician alphabet. The Dipylon oinochoe bears one of the oldest Greek inscriptions, which declares it the prize for the best dancer in a contest."}], {"q": {"q": {"es": "¿Qué era la enócoe del Dipilón?", "en": "What was the Dipylon oinochoe?"}, "o": [{"es": "Una jarra que su inscripción declara premio del mejor bailarín", "en": "A jug whose inscription declares it the prize for the best dancer"}, {"es": "La primera lista de vencedores de Olimpia", "en": "The first list of Olympic victors"}, {"es": "Una tablilla en lineal B con un reglamento", "en": "A Linear B tablet with a set of rules"}, {"es": "El trofeo de la carrera de carros de Patroclo", "en": "The trophy of Patroclus's chariot race"}], "x": {"es": "Lleva una de las inscripciones griegas más antiguas, de hacia 740-725 a. C.", "en": "It bears one of the oldest Greek inscriptions, c. 740-725 BC."}}, "fic": "H3·19"}], "homer": [["aedo", {"es": "Escucha el canto 23 de la Ilíada. Aquiles organiza juegos en el funeral de su compañero Patroclo, ocho pruebas en las que compiten casi solo príncipes.", "en": "Listen to Book 23 of the Iliad. Achilles holds games at the funeral of his companion Patroclus, eight contests in which almost only princes compete."}], ["aedo", {"es": "Los premios son calderos, trípodes, caballos, bueyes y mujeres, y la carrera de carros ocupa el lugar preferente. Cuando dos competidores discuten el resultado, Aquiles interviene como juez.", "en": "The prizes are cauldrons, tripods, horses, oxen and women, and the chariot race holds pride of place. When two competitors dispute the result, Achilles steps in as judge."}], ["note", {"es": "Repartir premios exigía ya reglas y un árbitro. La trama se sitúa en el mundo micénico del siglo XIII a. C., pero los poemas se fijaron entre 725 y 675 a. C. y retratan la sociedad de los basileis de los siglos IX y VIII a. C.", "en": "Awarding prizes already required rules and a referee. The plot is set in the Mycenaean world of the 13th century BC, but the poems were fixed between 725 and 675 BC and portray the society of the basileis of the 9th and 8th centuries BC."}], ["note", {"es": "En Lefkandi, en Eubea, hacia 950 a. C., un gran señor fue incinerado y enterrado bajo un túmulo con sus armas y sus caballos sacrificados, como Patroclo. El poema y la tumba retratan a una misma élite.", "en": "At Lefkandi, in Euboea, c. 950 BC, a great lord was cremated and buried under a mound with his weapons and his sacrificed horses, like Patroclus. The poem and the tomb portray the same elite."}], {"q": {"q": {"es": "¿Qué texto narra los juegos fúnebres de Patroclo?", "en": "Which text narrates the funeral games of Patroclus?"}, "o": [{"es": "El canto 23 de la Ilíada", "en": "Book 23 of the Iliad"}, {"es": "La Odisea", "en": "The Odyssey"}, {"es": "Las Historias de Heródoto", "en": "Herodotus's Histories"}, {"es": "Una oda de Píndaro", "en": "An ode by Pindar"}], "x": {"es": "Aquiles organiza ocho pruebas premiadas con calderos, trípodes, caballos, bueyes y mujeres, y actúa como juez.", "en": "Achilles holds eight contests rewarded with cauldrons, tripods, horses, oxen and women, and acts as judge."}}, "fic": "H3·20"}, {"q": {"q": {"es": "¿Qué sociedad retratan los poemas homéricos?", "en": "What society do the Homeric poems portray?"}, "o": [{"es": "La de los basileis de los siglos IX y VIII a. C.", "en": "That of the basileis of the 9th and 8th centuries BC"}, {"es": "La micénica del siglo XIII a. C., tal como fue", "en": "The Mycenaean one of the 13th century BC, as it was"}, {"es": "La Atenas democrática", "en": "Democratic Athens"}, {"es": "La Esparta de los homoioi", "en": "The Sparta of the homoioi"}], "x": {"es": "Los poemas se fijaron entre 725 y 675 a. C.; por eso la Edad Oscura se llama también época homérica.", "en": "The poems were fixed between 725 and 675 BC; that is why the Dark Age is also called the Homeric period."}}, "fic": "H3·20"}, {"q": {"q": {"es": "¿Qué paralelo arqueológico tiene el funeral de Patroclo?", "en": "What archaeological parallel does Patroclus's funeral have?"}, "o": [{"es": "La tumba del gran señor de Lefkandi, hacia 950 a. C.", "en": "The tomb of the great lord of Lefkandi, c. 950 BC"}, {"es": "La enócoe del Dipilón", "en": "The Dipylon oinochoe"}, {"es": "El túmulo de Pélope en Olimpia", "en": "The mound of Pelops at Olympia"}, {"es": "El palacio de Cnoso", "en": "The palace of Knossos"}], "x": {"es": "Fue incinerado con sus armas y sus caballos sacrificados, como Patroclo.", "en": "He was cremated with his weapons and his sacrificed horses, like Patroclus."}}, "fic": "H3·20"}, {"card": {"title": {"es": "El relevo del deporte", "en": "The relay of sport"}, "s": {"es": "Antes de Olimpia el deporte pasa por Micenas y por los juegos de Homero. Al caer los palacios desaparece el pugilato a sueldo, y el deporte cambia de dueño.", "en": "Before Olympia sport passes through Mycenae and the games of Homer. When the palaces fall, paid boxing disappears, and sport changes hands."}, "fic": "H3·21"}}], "polis_a": [["father", {"es": "Ya tienes catorce años. Desde el siglo VIII a. C. las aldeas de los basileis dieron paso a la polis, la ciudad-estado con sus tierras y sus magistraturas. Grecia son cientos de poleis que comparten lengua, dioses y santuarios, y que habitualmente guerrean entre sí.", "en": "You are fourteen now. Since the 8th century BC the villages of the basileis gave way to the polis, the city-state with its lands and its magistracies. Greece is hundreds of poleis that share language, gods and sanctuaries, and that usually make war on each other."}], ["father", {"es": "Grecia nunca fue un Estado unificado. Solo nos unimos en ligas contra un invasor, como la que venció a los persas en Platea, en 479 a. C., y en los santuarios comunes, como Olimpia.", "en": "Greece was never a unified state. We only unite in leagues against an invader, like the one that beat the Persians at Plataea in 479 BC, and in the common sanctuaries, such as Olympia."}], ["father", {"es": "El deporte construye tres identidades a la vez, la del atleta, la de su ciudad y la de todos los griegos frente a los bárbaros. Cuando un atleta vence, vence también su polis.", "en": "Sport builds three identities at once, that of the athlete, that of his city and that of all Greeks against the barbarians. When an athlete wins, his polis wins too."}], ["note", {"es": "Vives en la época clásica, que arranca en 480 a. C. con la derrota de los persas de Jerjes en Salamina y llega hasta 323 a. C. Antes vinieron la Edad Oscura, hacia 1100-700 a. C., y la época arcaica, hacia 700-480 a. C., en la que se configuró casi todo el deporte griego.", "en": "You live in the Classical period, which begins in 480 BC with the defeat of Xerxes's Persians at Salamis and lasts until 323 BC. Before it came the Dark Age, c. 1100-700 BC, and the Archaic period, c. 700-480 BC, when almost all of Greek sport took shape."}], {"q": {"q": {"es": "¿Qué unía a las poleis griegas?", "en": "What united the Greek poleis?"}, "o": [{"es": "La lengua, los dioses y los santuarios comunes", "en": "Language, gods and common sanctuaries"}, {"es": "Un rey común con capital en Olimpia", "en": "A common king with his capital at Olympia"}, {"es": "Un ejército permanente pagado por todas", "en": "A standing army paid for by all"}, {"es": "Una sola ley escrita por Solón", "en": "A single law written by Solon"}], "x": {"es": "Grecia nunca fue un Estado unificado; solo se unía en ligas contra un invasor y en los santuarios comunes.", "en": "Greece was never a unified state; it only united in leagues against an invader and in the common sanctuaries."}}, "fic": "H3·22"}, {"q": {"q": {"es": "¿En qué periodo se configura casi todo el deporte griego?", "en": "In which period did almost all of Greek sport take shape?"}, "o": [{"es": "En la época arcaica, hacia 700-480 a. C.", "en": "In the Archaic period, c. 700-480 BC"}, {"es": "En la Edad Oscura, hacia 1100-700 a. C.", "en": "In the Dark Age, c. 1100-700 BC"}, {"es": "En la época helenística, 323-31 a. C.", "en": "In the Hellenistic period, 323-31 BC"}, {"es": "Bajo Roma, desde 146 a. C.", "en": "Under Rome, from 146 BC"}], "x": {"es": "Entonces se fijan el programa de Olimpia y el circuito de grandes juegos panhelénicos.", "en": "That is when the Olympic programme and the circuit of great Panhellenic games were fixed."}}, "fic": "H3·23"}], "polis_region": {"atenas": [["father", {"es": "Hacia 500 a. C., de unos 175.000 habitantes de Atenas, solo unos 25.000 eran ciudadanos varones adultos. La ley distingue entre ciudadanos, metecos, que son extranjeros residentes, y esclavos, y a estos últimos les veda el deporte.", "en": "Around 500 BC, of some 175,000 inhabitants of Athens, only about 25,000 were adult male citizens. The law distinguishes citizens, metics, who are resident foreigners, and slaves, and it bars the last from sport."}], ["father", {"es": "Entre los ciudadanos, los plousioi no trabajan y son el 4 o 5 % de los hogares. Los penêtes trabajan su tierra parte del año y suman del 30 al 50 %. Los ptôchoi trabajan a diario. Nosotros podemos pagarte el paidotriba.", "en": "Among the citizens, the plousioi do not work and are 4 or 5% of households. The penêtes work their land part of the year and make up 30 to 50%. The ptôchoi work every day. We can pay for your trainer."}], ["father", {"es": "En 508 a. C. llegó la democracia, pero el deporte siguió exigiendo tiempo libre y el pago de un paidotriba. Ni la democracia abrió la palestra a quien trabaja a diario.", "en": "In 508 BC democracy came, but sport still required free time and paying a trainer. Not even democracy opened the palaestra to those who work every day."}], {"q": {"q": {"es": "¿Por qué apenas hacían deporte los ptôchoi atenienses?", "en": "Why did the Athenian ptôchoi hardly do sport?"}, "o": [{"es": "Porque trabajaban a diario y no podían pagar al paidotriba ni perder horas de trabajo", "en": "Because they worked every day and could not pay a trainer or lose working hours"}, {"es": "Porque la ley les prohibía entrar en el gimnasio", "en": "Because the law forbade them to enter the gymnasium"}, {"es": "Porque el gimnasio cobraba entrada", "en": "Because the gymnasium charged admission"}, {"es": "Porque no eran ciudadanos", "en": "Because they were not citizens"}], "x": {"es": "El gimnasio era público y no cobraba entrada, pero el paidotriba cobraba de 10 a 15 dracmas al año cuando una familia de cuatro vivía con media dracma diaria.", "en": "The gymnasium was public and free, but the trainer charged 10 to 15 drachmas a year when a family of four lived on half a drachma a day."}}, "fic": "H3·24"}], "esparta": [["father", {"es": "Somos unos 8.000 ciudadanos, los homoioi o «iguales», y vivimos del trabajo de nuestros esclavos, los hilotas. La ciudad nos educa desde los 7 años y la ley nos obliga a ejercitarnos sin descanso.", "en": "We are some 8,000 citizens, the homoioi or 'equals', and we live from the labour of our slaves, the helots. The city educates us from the age of 7 and the law obliges us to train without rest."}], ["father", {"es": "También tus hermanas entrenan. Aquí el deporte es un instrumento de control, y hasta mediados del siglo VI a. C. nos llevamos buena parte de las victorias de Olimpia.", "en": "Your sisters train too. Here sport is an instrument of control, and until the mid-6th century BC we took a good share of the victories at Olympia."}], {"q": {"q": {"es": "¿Qué daba a los homoioi espartanos tiempo libre para el deporte?", "en": "What gave the Spartan homoioi free time for sport?"}, "o": [{"es": "El trabajo de sus esclavos, los hilotas", "en": "The labour of their slaves, the helots"}, {"es": "Un salario de la ciudad", "en": "A salary from the city"}, {"es": "Los premios de Olimpia", "en": "The prizes of Olympia"}, {"es": "El comercio con las colonias", "en": "Trade with the colonies"}], "x": {"es": "Esparta cerró la ciudadanía a unos pocos y a todos ellos les impuso el deporte.", "en": "Sparta closed citizenship to a few and imposed sport on all of them."}}, "fic": "H3·26"}], "corinto": [["father", {"es": "Aristóteles cuenta que las oligarquías, los gobiernos de unos pocos ricos, multaban al rico que no hacía gimnasia y no al pobre. Así la ley apartaba al pobre sin necesidad de prohibírselo.", "en": "Aristotle tells that oligarchies, governments of a few rich men, fined the rich man who did not exercise and not the poor one. So the law kept the poor out without needing to forbid it."}], ["father", {"es": "En Egina, isla vecina de Atenas, las familias ricas costean el entrenamiento de sus hijos, y muchos han vencido en los juegos. Y muy cerca de aquí, en el istmo de Corinto, se celebran unos de los grandes Juegos de Grecia.", "en": "On Aegina, an island near Athens, rich families pay for their sons' training, and many have won at the games. And very near here, at the Isthmus of Corinth, one of the great Games of Greece is held."}], {"q": {"q": {"es": "¿Cómo apartaban las oligarquías al pobre del deporte, según Aristóteles?", "en": "How did oligarchies keep the poor out of sport, according to Aristotle?"}, "o": [{"es": "Multaban al rico que no hacía gimnasia y no al pobre", "en": "They fined the rich man who did not exercise and not the poor one"}, {"es": "Prohibían por ley la entrada de los pobres", "en": "They banned the poor by law"}, {"es": "Cobraban una entrada en el gimnasio", "en": "They charged admission to the gymnasium"}, {"es": "Enviaban a los pobres a la flota", "en": "They sent the poor to the fleet"}], "x": {"es": "La ley apartaba al pobre sin necesidad de prohibírselo.", "en": "The law kept the poor out without needing to forbid it."}}, "fic": "H3·26"}], "crotona": [["father", {"es": "Crotona, nuestra colonia del sur de Italia, encadenó victorias olímpicas en los siglos VI y V a. C. Hoy los historiadores no saben quién accedía aquí al deporte.", "en": "Croton, our colony in southern Italy, strung together Olympic victories in the 6th and 5th centuries BC. Historians today do not know who had access to sport here."}], ["father", {"es": "En Siracusa, la colonia de Sicilia, fundada en 734 a. C., los propios tiranos compiten y vencen para exhibir su poder.", "en": "In Syracuse, the colony in Sicily founded in 734 BC, the tyrants themselves compete and win to display their power."}], {"q": {"q": {"es": "¿Para qué competían los tiranos de Siracusa?", "en": "Why did the tyrants of Syracuse compete?"}, "o": [{"es": "Para exhibir su poder", "en": "To display their power"}, {"es": "Para pagar sus deudas con los premios", "en": "To pay their debts with the prizes"}, {"es": "Porque la ley de Élide los obligaba", "en": "Because the law of Elis obliged them"}, {"es": "Para entrenar a su ejército", "en": "To train their army"}], "x": {"es": "En oligarquías y tiranías el deporte quedaba en manos de quienes gobernaban.", "en": "In oligarchies and tyrannies sport stayed in the hands of those who governed."}}, "fic": "H3·26"}], "elide": [["father", {"es": "Élide administra el santuario de Olimpia, abierto según Heródoto a «cualquier griego que quisiera acceder». Controlamos la admisión, fijamos el reglamento y nombramos al personal entre nuestros ciudadanos.", "en": "Elis runs the sanctuary of Olympia, open according to Herodotus to 'any Greek who wished to come'. We control admission, set the rules and appoint the staff from our citizens."}], ["father", {"es": "Tú tendrás una ventaja. La estancia del mes en Élide corre a cuenta del atleta, un gasto considerable que solo se ahorran los competidores locales.", "en": "You will have an advantage. The month's stay at Elis is at the athlete's expense, a considerable cost that only local competitors are spared."}], {"q": {"q": {"es": "¿Qué competidores se ahorraban el gasto del mes en Élide?", "en": "Which competitors were spared the cost of the month at Elis?"}, "o": [{"es": "Los competidores locales", "en": "Local competitors"}, {"es": "Los vencedores anteriores", "en": "Previous victors"}, {"es": "Los muchachos", "en": "The boys"}, {"es": "Los que llegaban por mar", "en": "Those who came by sea"}], "x": {"es": "La estancia corría a cuenta del atleta.", "en": "The stay was at the athlete's expense."}}, "fic": "H3·47"}]}, "polis_b": [["coach", {"es": "Soy tu paidotriba. Los gimnasios son instituciones públicas, construidas y mantenidas con fondos públicos y donaciones privadas, y las palestras pueden ser también negocios privados.", "en": "I am your paidotribes. Gymnasia are public institutions, built and kept up with public funds and private donations, and palaestrae can also be private businesses."}], ["coach", {"es": "El gimnasio solo abre de día y tiene turnos por edad, para niños, jóvenes y adultos. Aquí trabajan también músicos, poetas, masajistas y demostradores de técnica, y antes de las sesiones más físicas calentaremos.", "en": "The gymnasium only opens by day and has turns by age, for children, youths and adults. Musicians, poets, masseurs and technique demonstrators work here too, and before the hardest sessions we will warm up."}], ["coach", {"es": "Entrenarás desnudo y cubierto de aceite. Gymnasion significa literalmente «lugar de la desnudez».", "en": "You will train naked and covered in oil. Gymnasion literally means 'place of nakedness'."}], {"q": {"q": {"es": "¿Qué significa literalmente gymnasion?", "en": "What does gymnasion literally mean?"}, "o": [{"es": "Lugar de la desnudez", "en": "Place of nakedness"}, {"es": "Lugar del esfuerzo", "en": "Place of effort"}, {"es": "Casa de los jóvenes", "en": "House of the young"}, {"es": "Campo de Zeus", "en": "Field of Zeus"}], "x": {"es": "Los atletas entrenaban desnudos y cubiertos de aceite.", "en": "Athletes trained naked and covered in oil."}}, "fic": "H3·40"}, {"q": {"q": {"es": "¿Por qué el gimnasio solo abría de día?", "en": "Why did the gymnasium only open by day?"}, "o": [{"es": "Para evitar cualquier conducta impropia", "en": "To prevent any improper conduct"}, {"es": "Porque de noche se celebraban sacrificios", "en": "Because sacrifices were held at night"}, {"es": "Porque el aceite se congelaba", "en": "Because the oil froze"}, {"es": "Porque el gimnasiarca dormía allí", "en": "Because the gymnasiarch slept there"}], "x": {"es": "Las instalaciones tenían además turnos por grupos de edad.", "en": "The facilities also had turns by age group."}}, "fic": "H3·41"}, ["note", {"es": "El paidotriba corriente cobraba de 10 a 15 dracmas por alumno y año, cuando una familia de cuatro vivía con media dracma diaria. A ello se sumaban el aceite para untarse y, sobre todo, las horas sin trabajar.", "en": "An ordinary paidotribes charged 10 to 15 drachmas per pupil a year, when a family of four lived on half a drachma a day. On top of that came the oil and, above all, the hours not worked."}], {"choice": {"title": {"es": "¿Qué paidotriba contrata tu familia?", "en": "Which trainer does your family hire?"}, "opts": [{"label": {"es": "Un paidotriba corriente", "en": "An ordinary trainer"}, "sub": {"es": "De 10 a 15 dracmas al año", "en": "10 to 15 drachmas a year"}, "flag": "coachPlain", "items": [["coach", {"es": "Trabajaremos fuerza, resistencia y técnica con halteras, trepa por cuerda, sacos de arena y carreras por la arena.", "en": "We will work on strength, endurance and technique with halteres, rope climbing, sandbags and runs on sand."}]]}, {"label": {"es": "Un paidotriba de renombre", "en": "A renowned trainer"}, "sub": {"es": "Honorarios elevados", "en": "High fees"}, "flag": "coachRich", "items": [["note", {"es": "Los paidotribas de renombre tenían honorarios elevados. En Atenas la ley solo dejaba fuera del gimnasio a los esclavos, pero la barrera real era económica.", "en": "Renowned trainers charged high fees. In Athens the law only kept slaves out of the gymnasium, but the real barrier was economic."}]]}]}}, ["coach", {"es": "Dentro de un mes se celebran los juegos de la ciudad. Correrás el estadio de los muchachos.", "en": "In a month the city's games are held. You will run the boys' stadion."}]], "polis_c": [["note", {"es": "Los juegos locales, a diferencia de Olimpia, solían entregar premios materiales, como escudos de bronce, copas de plata o mantos de lana, y en ocasiones daban segundos premios para fomentar la participación.", "en": "Local games, unlike Olympia, usually gave material prizes, such as bronze shields, silver cups or woollen cloaks, and sometimes second prizes to encourage participation."}], {"q": {"q": {"es": "¿Qué premios solían dar los juegos locales?", "en": "What prizes did local games usually give?"}, "o": [{"es": "Escudos de bronce, copas de plata o mantos de lana", "en": "Bronze shields, silver cups or woollen cloaks"}, {"es": "Solo una corona de olivo", "en": "Only an olive crown"}, {"es": "Tierras y esclavos", "en": "Land and slaves"}, {"es": "Nada, solo el honor", "en": "Nothing, only honour"}], "x": {"es": "Uno de los premios más cuantiosos era el de las Panateneas de Atenas: probablemente 80 ánforas de aceite para el vencedor del estadio.", "en": "One of the richest was at the Athenian Panathenaia: probably 80 amphorae of oil for the stadion winner."}}, "fic": "H3·52"}], "ol1_intro": [{"card": {"title": {"es": "Cuatro años después", "en": "Four years later"}, "s": {"es": "Tienes dieciocho años y ya compites en la categoría de hombres. Se acerca la 100.ª Olimpiada, en 380 a. C., y decides presentarte por tu cuenta, como hacía cada atleta.", "en": "You are eighteen and now compete among the men. The 100th Olympiad, in 380 BC, is approaching, and you decide to enter on your own account, as every athlete did."}, "fic": "H3·38"}}], "fest_intro": [["coach", {"es": "Tu prueba ha terminado, pero el festival dura cinco días. Desde mediados del siglo V a. C. se consolidó esa duración, y además de las pruebas hay rituales, concursos de heraldos y trompeteros, banquetes y reuniones entre ciudades.", "en": "Your event is over, but the festival lasts five days. That length became fixed in the mid-5th century BC, and besides the events there are rituals, contests of heralds and trumpeters, banquets and meetings between cities."}], ["coach", {"es": "Vamos a verlo todo. Elige adónde ir.", "en": "Let's see it all. Choose where to go."}]], "fest": [{"id": "stadium", "label": {"es": "El estadio", "en": "The stadium"}, "sub": {"es": "Público y carrera del estadio", "en": "Crowd and stadion race"}, "fic": "H3·55", "items": [["coach", {"es": "La palabra stádion designa a la vez una medida de 600 pies, la carrera de esa longitud y el recinto donde se corre. Como el pie varía de una ciudad a otra, la pista de Olimpia mide 192,27 metros.", "en": "The word stadion means at once a measure of 600 feet, the race of that length and the place where it is run. Because the foot varies from city to city, the Olympia track measures 192.27 metres."}], ["coach", {"es": "No hay gradas de piedra. Los taludes de tierra acogen a unos 40.000 espectadores según el cálculo habitual, aunque Scanlon (2002) lo rebaja a unos 28.500. El asiento fijo es para los jueces, en el lado sur, y enfrente para la sacerdotisa de Deméter Cámine.", "en": "There are no stone seats. The earth banks hold some 40,000 spectators by the usual estimate, though Scanlon (2002) lowers it to about 28,500. Fixed seats are for the judges, on the south side, and opposite for the priestess of Demeter Chamyne."}], ["coach", {"es": "El estadio fue la única prueba durante las trece primeras ediciones. Cada Olimpiada se recuerda por el nombre del vencedor del estadio, y los historiadores fechan los acontecimientos por esos nombres.", "en": "The stadion was the only event for the first thirteen editions. Each Olympiad is remembered by the name of the stadion winner, and historians date events by those names."}], {"q": {"q": {"es": "¿Cómo recordaban los griegos cada Olimpiada?", "en": "How did the Greeks remember each Olympiad?"}, "o": [{"es": "Por el nombre del vencedor del estadio", "en": "By the name of the stadion winner"}, {"es": "Por el nombre del helanódica", "en": "By the name of the Hellanodikes"}, {"es": "Por el número de espectadores", "en": "By the number of spectators"}, {"es": "Por el vencedor del pentatlón", "en": "By the pentathlon winner"}], "x": {"es": "Era la prueba por excelencia del programa olímpico.", "en": "It was the event par excellence of the Olympic programme."}}, "fic": "H3·57"}, {"q": {"q": {"es": "¿Quién tenía asiento fijo en el estadio de Olimpia?", "en": "Who had a fixed seat in the stadium at Olympia?"}, "o": [{"es": "Los jueces y, enfrente, la sacerdotisa de Deméter Cámine", "en": "The judges and, opposite, the priestess of Demeter Chamyne"}, {"es": "Los vencedores de ediciones anteriores", "en": "Victors of earlier editions"}, {"es": "Los embajadores de cada polis", "en": "The ambassadors of each polis"}, {"es": "Nadie, todos estaban de pie", "en": "Nobody, everyone stood"}], "x": {"es": "Era un espacio de espectáculo sin arquitectura de espectáculo.", "en": "It was a space for spectacle without the architecture of spectacle."}}, "fic": "H3·55"}]}, {"id": "races", "label": {"es": "Las carreras", "en": "The races"}, "sub": {"es": "Díaulos y dólico", "en": "Diaulos and dolichos"}, "fic": "H3·58", "race": "diaulos", "items": [["coach", {"es": "El díaulos fue la primera prueba añadida, en 724 a. C. Cubre dos longitudes del estadio, 384,56 m, y su nombre, «doble flauta», evoca las dos cañas del instrumento, como la ida y la vuelta.", "en": "The diaulos was the first event added, in 724 BC. It covers two lengths of the stadium, 384.56 m, and its name, 'double pipe', recalls the two reeds of the instrument, like going and returning."}], ["coach", {"es": "La mayoría de los estudios supone que cada corredor rodea su propio poste, el kamptér, en sentido antihorario, y vuelve por la calle contigua.", "en": "Most studies assume that each runner rounds his own post, the kampter, anticlockwise, and comes back along the next lane."}], ["coach", {"es": "El dólico, la carrera de fondo, entró en 720 a. C. y mide entre 20 y 24 estadios, de 3,8 a 4,6 km. Todos giran en torno a un único poste. Está prohibido agarrarse a él, pero se permite levantar una nube de polvo para frenar al rival.", "en": "The dolichos, the long race, came in in 720 BC and measures 20 to 24 stades, 3.8 to 4.6 km. Everyone turns round a single post. Grabbing it is forbidden, but raising a cloud of dust to slow a rival is allowed."}], ["coach", {"es": "Te he inscrito en el díaulos. Corre hasta tu poste, gíralo y vuelve.", "en": "I have entered you in the diaulos. Run to your post, round it and come back."}], {"q": {"q": {"es": "¿Qué estaba permitido en el dólico?", "en": "What was allowed in the dolichos?"}, "o": [{"es": "Levantar una nube de polvo para frenar al rival", "en": "Raising a cloud of dust to slow a rival"}, {"es": "Agarrarse al poste para girar", "en": "Grabbing the post to turn"}, {"es": "Cortar por el centro del estadio", "en": "Cutting across the middle of the stadium"}, {"es": "Correr con calzado", "en": "Running with shoes"}], "x": {"es": "Todos los corredores giraban en torno a un único poste, en sentido antihorario.", "en": "All the runners turned round a single post, anticlockwise."}}, "fic": "H3·59"}, {"q": {"q": {"es": "¿Con qué relacionaba Filóstrato el dólico?", "en": "What did Philostratus link the dolichos to?"}, "o": [{"es": "Con los hemeródromos, mensajeros arcadios de larga distancia", "en": "With the hemerodromoi, Arcadian long-distance messengers"}, {"es": "Con la caza del jabalí", "en": "With the boar hunt"}, {"es": "Con la carga de la falange", "en": "With the charge of the phalanx"}, {"es": "Con el salto del toro", "en": "With bull-leaping"}], "x": {"es": "Otra hipótesis apunta a los bematistas, contadores de pasos profesionales.", "en": "Another hypothesis points to the bematists, professional pace-counters."}}, "fic": "H3·59"}]}, {"id": "combat", "label": {"es": "Los combates", "en": "Combat"}, "sub": {"es": "Pugilato y pancracio", "en": "Boxing and pankration"}, "fic": "H3·67", "items": [["r1", {"es": "Mira el círculo de arena. No hay asaltos ni descansos, ni categorías de peso. En el pugilato y el pancracio se sigue hasta que uno queda incapacitado o levanta el índice en señal de abandono, y el único límite es la caída de la noche.", "en": "Look at the sand circle. There are no rounds, no breaks and no weight classes. In boxing and pankration they go on until one is incapacitated or raises his index finger to give up, and the only time limit is nightfall."}], ["r1", {"es": "Los púgiles se enrollan las manos con himantes, tiras de cuero que protegen la mano del que golpea. Si rehúyen el combate, los jueces reducen el espacio con una barrera, el klímax.", "en": "Boxers wrap their hands in himantes, leather strips that protect the hitter's hand. If they avoid fighting, the judges shrink the space with a barrier, the klimax."}], ["r1", {"es": "El pancracio mezcla golpes, patadas y agarres, y es el más violento. Aquí solo se prohíbe morder y meter los dedos en los ojos. Arriquión murió asfixiado en la final de 564 a. C. mientras dislocaba el pie de su rival, que se rindió, y los jueces coronaron su cadáver.", "en": "Pankration mixes punches, kicks and holds, and is the most violent. Here only biting and gouging the eyes are forbidden. Arrhichion died choking in the final of 564 BC while dislocating his rival's foot; the rival gave up, and the judges crowned his corpse."}], {"myth": 11, "fic": "H3·67"}, {"q": {"q": {"es": "¿Qué era el klímax en el pugilato?", "en": "What was the klimax in boxing?"}, "o": [{"es": "Una barrera con la que los jueces reducían el espacio si los púgiles rehuían el combate", "en": "A barrier the judges used to shrink the space if boxers avoided fighting"}, {"es": "El guante de época romana", "en": "The Roman-era glove"}, {"es": "El golpe final", "en": "The final blow"}, {"es": "La señal de rendición", "en": "The sign of surrender"}], "x": {"es": "Al no haber asaltos, el combate solo acababa con la incapacidad o el abandono de uno de los dos.", "en": "Since there were no rounds, the bout only ended with one man's incapacity or surrender."}}, "fic": "H3·69"}, {"q": {"q": {"es": "¿Qué estaba prohibido en el pancracio de Olimpia?", "en": "What was forbidden in pankration at Olympia?"}, "o": [{"es": "Morder y meter los dedos en los ojos", "en": "Biting and gouging the eyes"}, {"es": "Las patadas", "en": "Kicks"}, {"es": "Los estrangulamientos", "en": "Chokes"}, {"es": "Las luxaciones", "en": "Dislocations"}], "x": {"es": "Filóstrato añade que los espartanos lo permitían en su tierra.", "en": "Philostratus adds that the Spartans allowed it in their own land."}}, "fic": "H3·70"}]}, {"id": "hippo", "label": {"es": "El hipódromo", "en": "The hippodrome"}, "sub": {"es": "Carros y caballos", "en": "Chariots and horses"}, "fic": "H3·72", "items": [["r2", {"es": "El hipódromo está a las afueras del recinto sagrado, y se le calculan unos 600 metros de largo por 200 de ancho. Un viajero del siglo II d. C. contará que la salida era lanzada, en «punta de flecha», con las posiciones sorteadas de antemano.", "en": "The hippodrome lies outside the sacred precinct and is estimated at some 600 metres long by 200 wide. A traveller of the 2nd century AD will tell that the start was a flying one, in an 'arrowhead', with the positions drawn by lot beforehand."}], ["r2", {"es": "La cuadriga entró en 680 a. C. y da 12 vueltas. La carrera de caballos, el kéles, entró en 648 a. C. y da 6 vueltas, montando a pelo, sin estribos, pero con riendas. Las imágenes muestran jinetes muy jóvenes, probablemente niños esclavos.", "en": "The four-horse chariot came in in 680 BC and runs 12 laps. The horse race, the keles, came in in 648 BC and runs 6 laps, ridden bareback, without stirrups but with reins. Images show very young riders, probably slave boys."}], ["r2", {"es": "Un caballo de élite puede costar 1.200 dracmas, y un carro de varios caballos supera los 5.000. En 416 a. C. Alcibíades inscribió siete carros y logró el primer, el segundo y el cuarto puesto.", "en": "An elite horse can cost 1,200 drachmas, and a chariot with several horses over 5,000. In 416 BC Alcibiades entered seven chariots and took first, second and fourth place."}], ["r2", {"es": "En 512 a. C. una yegua llamada Aura derribó a su jinete en la salida y llegó primera. Los jueces dieron la victoria a su dueño.", "en": "In 512 BC a mare called Aura threw her rider at the start and came in first. The judges gave the victory to her owner."}], {"q": {"q": {"es": "¿Cuántas vueltas daba la cuadriga en Olimpia?", "en": "How many laps did the four-horse chariot run at Olympia?"}, "o": [{"es": "12", "en": "12"}, {"es": "8", "en": "8"}, {"es": "6", "en": "6"}, {"es": "24", "en": "24"}], "x": {"es": "La biga, desde 408 a. C., daba 8 vueltas, y el kéles 6.", "en": "The two-horse chariot, from 408 BC, ran 8, and the keles 6."}}, "fic": "H3·74"}, {"q": {"q": {"es": "¿Por qué los aurigas no recibían la corona?", "en": "Why did charioteers not receive the crown?"}, "o": [{"es": "Eran esclavos o profesionales a sueldo de baja condición, y la corona era para el dueño", "en": "They were slaves or hired professionals of low status, and the crown went to the owner"}, {"es": "Porque competían vestidos", "en": "Because they competed clothed"}, {"es": "Porque no eran griegos", "en": "Because they were not Greek"}, {"es": "Porque la cuadriga no era una prueba sagrada", "en": "Because the chariot race was not a sacred event"}], "x": {"es": "El reconocimiento recaía sobre el noble que asumía todos los gastos.", "en": "Recognition went to the noble who bore all the costs."}}, "fic": "H3·73"}]}, {"id": "altis", "label": {"es": "El Altis", "en": "The Altis"}, "sub": {"es": "De dónde salieron los Juegos", "en": "Where the Games came from"}, "fic": "H3·34", "items": [["judge", {"es": "Aquí nació todo. El culto a Zeus empieza a finales del siglo XI a. C., junto a ese túmulo que hoy veneramos como tumba de Pélope. Entre los siglos X y VIII a. C. los fieles ofrecían miles de figurillas de animales y trípodes de bronce.", "en": "This is where it all began. The cult of Zeus starts at the end of the 11th century BC, next to that mound we now honour as the tomb of Pelops. Between the 10th and 8th centuries BC the faithful offered thousands of animal figurines and bronze tripods."}], ["note", {"es": "El túmulo era en realidad prehistórico, de mediados del III milenio a. C., y más de mil años de vacío lo separan del santuario. El primer estadio se levantó hacia 700 a. C., y Homero no menciona Olimpia.", "en": "The mound was in fact prehistoric, from the mid-3rd millennium BC, and more than a thousand years of emptiness separate it from the sanctuary. The first stadium was built c. 700 BC, and Homer does not mention Olympia."}], ["note", {"es": "Sobre el origen de los Juegos hay tres hipótesis sin consenso: la funeraria, como los juegos de Patroclo; la iniciática, que se apoya en los Juegos Hereos; y la de la caza, de Patay-Horváth (2020). Los estudios coinciden en que los primeros Juegos fueron sencillas carreras a pie dentro de una fiesta de Zeus.", "en": "There are three hypotheses on the origin of the Games, with no consensus: the funerary one, like the games of Patroclus; the initiatory one, based on the Heraia; and the hunting one, by Patay-Horváth (2020). Scholars agree that the first Games were simple foot races within a festival of Zeus."}], {"myth": 5, "fic": "H3·34"}, {"q": {"q": {"es": "¿Qué obstáculo tiene la hipótesis funeraria del origen de los Juegos?", "en": "What obstacle does the funerary hypothesis of the Games' origin face?"}, "o": [{"es": "Los cultos funerarios a Pélope son de hacia 600 a. C., posteriores al inicio de las pruebas", "en": "The funerary cults of Pelops date from c. 600 BC, after the events began"}, {"es": "Homero no conocía los funerales", "en": "Homer did not know about funerals"}, {"es": "En Olimpia no había tumbas", "en": "There were no tombs at Olympia"}, {"es": "Los Hereos son más antiguos", "en": "The Heraia are older"}], "x": {"es": "Ninguna de las tres hipótesis se ha impuesto del todo.", "en": "None of the three hypotheses has fully prevailed."}}, "fic": "H3·36"}, {"q": {"q": {"es": "¿En qué orden aparecen las cosas en Olimpia según la arqueología?", "en": "In what order do things appear at Olympia according to archaeology?"}, "o": [{"es": "Primero el rito, después la distinción de las élites y al final el certamen atlético", "en": "First the rite, then elite distinction and finally the athletic contest"}, {"es": "Primero los Juegos y después el santuario", "en": "First the Games and then the sanctuary"}, {"es": "Primero la carrera de carros y después el estadio", "en": "First the chariot race and then the stadion"}, {"es": "Primero el pentatlón y después la lucha", "en": "First the pentathlon and then wrestling"}], "x": {"es": "La arqueología invierte el orden de los relatos de fundación.", "en": "Archaeology reverses the order of the foundation stories."}}, "fic": "H3·34"}]}], "ol1_home": [["note", {"es": "La victoria olímpica convertía al vencedor en un héroe para el resto de la sociedad. Con el tiempo, los gobernantes empezaron además a recompensar económicamente a sus vencedores.", "en": "An Olympic victory turned the victor into a hero for the rest of society. In time, rulers also began to reward their victors with money."}], {"myth": 8, "fic": "H3·52"}], "heraia": [["mother", {"es": "En la polis la mujer libre carece de derechos políticos y depende de los varones. La maternidad y la casa, el oikos, delimitan casi por completo nuestro papel. Jenofonte llega a escribir que las tareas domésticas bastan como ejercicio para la esposa.", "en": "In the polis a free woman has no political rights and depends on the men. Motherhood and the household, the oikos, mark out almost all our role. Xenophon even writes that housework is exercise enough for a wife."}], ["sister", {"es": "Yo puedo correr porque aún no me he casado. Para las chicas el paso a la edad adulta llega entre los 12 y los 14 años, cuando nos consideran listas para casarnos. Una vez casadas, apenas volvemos a competir.", "en": "I can run because I am not married yet. For girls the passage to adulthood comes between 12 and 14, when we are considered ready to marry. Once married, we hardly ever compete again."}], ["mother", {"es": "Las casadas tenemos vetado el festival de Olimpia. La ley de Élide castiga con la muerte a la mujer casada sorprendida en él. Las jóvenes solteras sí pueden asistir.", "en": "We married women are barred from the festival of Olympia. The law of Elis punishes with death any married woman caught there. Unmarried girls may attend."}], ["mother", {"es": "Calipátira de Rodas, hija de un púgil famoso, entró disfrazada de entrenador para ver competir a su hijo. La descubrieron al saltar la valla para celebrar su victoria, y los jueces la perdonaron por ser hija, hermana y madre de vencedores.", "en": "Kallipateira of Rhodes, daughter of a famous boxer, got in disguised as a trainer to watch her son compete. She was found out when she jumped the fence to celebrate his win, and the judges forgave her for being the daughter, sister and mother of victors."}], ["sister", {"es": "Los Juegos Hereos se instituyeron hacia 580 a. C. en honor de Hera, la esposa de Zeus. Corremos 5/6 del estadio, unos 160 m, en tres categorías de edad, con el pelo suelto y una túnica por encima de las rodillas atada a un hombro.", "en": "The Heraia were founded c. 580 BC in honour of Hera, Zeus's wife. We run 5/6 of the stadium, about 160 m, in three age groups, with our hair loose and a tunic above the knee tied at one shoulder."}], ["note", {"es": "En este capítulo corres tú la carrera de tu hermana. Hipótesis como la de Serwint (1993) ven en los Hereos un rito prenupcial, y a la ganadora se le daba una corona de olivo, igual que a los varones.", "en": "In this chapter you run your sister's race. Hypotheses such as Serwint's (1993) see the Heraia as a prenuptial rite, and the winner received an olive crown, just like the men."}]], "heraia_b": [{"myth": 13, "fic": "H3·76"}, {"myth": 12, "fic": "H3·72"}, {"q": {"q": {"es": "¿Qué frontera decidía el lugar de la mujer en el deporte griego?", "en": "What boundary decided a woman's place in Greek sport?"}, "o": [{"es": "El matrimonio", "en": "Marriage"}, {"es": "La riqueza de su familia", "en": "Her family's wealth"}, {"es": "La ciudad de origen", "en": "Her city of origin"}, {"es": "La religión", "en": "Religion"}], "x": {"es": "Dependía de su edad y de su estado civil; casi todo lo que sabemos procede de autores varones.", "en": "It depended on her age and marital status; almost all we know comes from male authors."}}, "fic": "H3·75"}, {"q": {"q": {"es": "¿En qué se diferenciaba Esparta respecto a las muchachas?", "en": "How was Sparta different regarding girls?"}, "o": [{"es": "En época clásica participaban en carreras y pruebas para dar a la ciudad hijos robustos", "en": "In the Classical period they took part in races and contests to give the city strong children"}, {"es": "Competían en Olimpia junto a los hombres", "en": "They competed at Olympia alongside the men"}, {"es": "Tenían derechos políticos", "en": "They had political rights"}, {"es": "Podían entrar casadas en el festival", "en": "They could enter the festival when married"}], "x": {"es": "Practicaban además una modalidad de lucha y una danza de saltos.", "en": "They also practised a form of wrestling and a jumping dance."}}, "fic": "H3·75"}], "circuit_intro": [{"card": {"title": {"es": "El circuito panhelénico", "en": "The Panhellenic circuit"}, "s": {"es": "Además de los Juegos Olímpicos, los más importantes, hubo otros tres Juegos deportivos, en Delfos, en el istmo de Corinto y en Nemea. Vencer en los cuatro otorgaba el título de periodonikes, «vencedor del circuito». El Tema 3 solo estudia Olimpia, así que el juego aplica en los tres las reglas de Olimpia.", "en": "Besides the Olympic Games, the most important, there were three other athletic Games, at Delphi, at the Isthmus of Corinth and at Nemea. Winning all four gave the title of periodonikes, 'circuit victor'. Topic 3 only studies Olympia, so the game applies Olympia's rules at all three."}, "fic": "H3·43"}}], "circuit": [{"id": "isthmia", "label": {"es": "Juegos Ístmicos", "en": "Isthmian Games"}, "sub": {"es": "Istmo de Corinto", "en": "Isthmus of Corinth"}, "fic": "H3·43", "items": [["r2", {"es": "Aquí se recuerda a un pancratista apodado «Dedos», que vencía doblando los dedos del rival. Sumó tres coronas en Olimpia, dos en Delfos y doce en el Istmo y en Nemea.", "en": "Here they remember a pankratiast nicknamed 'Fingers', who won by bending his rival's fingers. He took three crowns at Olympia, two at Delphi and twelve at the Isthmus and Nemea."}], ["r2", {"es": "Y Píndaro, el poeta que componía odas para los vencedores, celebró a un tebano que venció aquí conduciendo su propio carro. Muy pocos propietarios lo hacían.", "en": "And Pindar, the poet who composed odes for victors, celebrated a Theban who won here driving his own chariot. Very few owners did."}], {"q": {"q": {"es": "¿Qué título recibía quien vencía en Olimpia, Delfos, el Istmo y Nemea?", "en": "What title did someone who won at Olympia, Delphi, the Isthmus and Nemea receive?"}, "o": [{"es": "Periodonikes", "en": "Periodonikes"}, {"es": "Áristos", "en": "Aristos"}, {"es": "Helanódica", "en": "Hellanodikes"}, {"es": "Espondóforo", "en": "Spondophoros"}], "x": {"es": "«Vencedor del circuito» panhelénico.", "en": "'Victor of the circuit', the Panhellenic one."}}, "fic": "H3·43"}]}, {"id": "nemea", "label": {"es": "Juegos Nemeos", "en": "Nemean Games"}, "sub": {"es": "Nemea", "en": "Nemea"}, "fic": "H3·78", "items": [["coach", {"es": "Mira lo que he encontrado junto a la pista: una tablilla de plomo enrollada y perforada. Los atletas graban maldiciones contra sus rivales para hechizarlos antes de la prueba.", "en": "Look what I found by the track: a lead tablet, rolled up and pierced. Athletes engrave curses against their rivals to bewitch them before the event."}], ["note", {"es": "En Nemea se han hallado tablillas así. Una reza: «Ato y encadeno los tendones, las partes del cuerpo, la mente y la inteligencia de los corredores para que no tengan fuerza, pasen la noche en vela, vomiten toda la comida para su propio perjuicio, no puedan correr y queden en último lugar».", "en": "Tablets like this have been found at Nemea. One reads: 'I bind and chain the tendons, the body parts, the mind and the intelligence of the runners so that they have no strength, lie awake at night, vomit all their food to their own harm, cannot run and come last.'"}], {"q": {"q": {"es": "¿Para qué grababan los atletas tablillas de plomo?", "en": "Why did athletes engrave lead tablets?"}, "o": [{"es": "Para maldecir a sus rivales antes de la prueba", "en": "To curse their rivals before the event"}, {"es": "Para inscribirse ante los jueces", "en": "To register with the judges"}, {"es": "Para registrar sus marcas", "en": "To record their marks"}, {"es": "Para dar gracias a Zeus", "en": "To thank Zeus"}], "x": {"es": "Aparecieron enrolladas y perforadas.", "en": "They were found rolled up and pierced."}}, "fic": "H3·78"}]}, {"id": "pythia", "label": {"es": "Juegos Píticos", "en": "Pythian Games"}, "sub": {"es": "Delfos", "en": "Delphi"}, "fic": "H3·22", "items": [["r0", {"es": "Aquí, como en Olimpia, se reúnen griegos de cientos de poleis que comparten lengua, dioses y santuarios, aunque habitualmente guerreen entre sí. Olimpia es de todos los griegos aunque la gobierne Élide.", "en": "Here, as at Olympia, Greeks from hundreds of poleis meet, sharing language, gods and sanctuaries even though they usually fight each other. Olympia belongs to all Greeks even though Elis governs it."}], ["r0", {"es": "Y los mejores atletas, además de la gloria, pueden lucrarse y vivir holgadamente gracias a su talento.", "en": "And the best athletes, besides glory, can make money and live comfortably thanks to their talent."}], {"q": {"q": {"es": "¿Qué tres identidades construía a la vez el deporte griego?", "en": "Which three identities did Greek sport build at once?"}, "o": [{"es": "La del atleta, la de su ciudad y la de todos los griegos frente a los bárbaros", "en": "The athlete's, his city's and that of all Greeks against the barbarians"}, {"es": "La del rey, la del sacerdote y la del soldado", "en": "The king's, the priest's and the soldier's"}, {"es": "La del ciudadano, la del meteco y la del esclavo", "en": "The citizen's, the metic's and the slave's"}, {"es": "La de Esparta, la de Atenas y la de Élide", "en": "Sparta's, Athens's and Elis's"}], "x": {"es": "La victoria del atleta era también la victoria de su polis.", "en": "The athlete's victory was also his polis's."}}, "fic": "H3·22"}]}], "ol2_a": [{"card": {"title": {"es": "101.ª Olimpiada", "en": "101st Olympiad"}, "s": {"es": "Has cumplido de nuevo los 30 días en Élide bajo la vigilancia de los helanódicas y has recorrido la Vía Sagrada. Tienes veintidós años.", "en": "You have again done the 30 days at Elis under the eye of the Hellanodikai and walked the Sacred Way. You are twenty-two."}, "fic": "H3·47"}}, ["judge", {"es": "Romper la tregua es un delito político y religioso de primer orden, porque ofende al propio Zeus. En 420 a. C. impusimos a Esparta una multa de 200.000 dracmas, 200 por cada soldado, por enviar tropas al fuerte de Lepreo durante la tregua. No pagó y quedó excluida.", "en": "Breaking the truce is a political and religious crime of the first order, because it offends Zeus himself. In 420 BC we fined Sparta 200,000 drachmas, 200 per soldier, for sending troops to the fort of Lepreon during the truce. It did not pay and was excluded."}], {"q": {"q": {"es": "¿Por qué quedó excluida Esparta de los Juegos de 420 a. C.?", "en": "Why was Sparta excluded from the Games of 420 BC?"}, "o": [{"es": "Por enviar tropas a Lepreo durante la tregua y negarse a pagar la multa", "en": "For sending troops to Lepreon during the truce and refusing to pay the fine"}, {"es": "Porque un espartano sobornó a los jueces", "en": "Because a Spartan bribed the judges"}, {"es": "Porque sus atletas llegaron tarde a Élide", "en": "Because its athletes reached Elis late"}, {"es": "Porque una espartana entró en el estadio", "en": "Because a Spartan woman entered the stadium"}], "x": {"es": "Élide le impuso 200.000 dracmas, 200 por cada soldado.", "en": "Elis fined it 200,000 drachmas, 200 per soldier."}}, "fic": "H3·33"}, ["r1", {"es": "Escúchame bien. Si mañana llegamos a la lucha con dos victorias cada uno, déjate caer. Te pagaré bien. Nadie lo sabrá.", "en": "Listen carefully. If tomorrow we reach the wrestling with two wins each, let yourself fall. I will pay you well. No one will know."}], {"choice": {"title": {"es": "Un rival te ofrece dinero", "en": "A rival offers you money"}, "opts": [{"label": {"es": "Aceptar el dinero", "en": "Take the money"}, "sub": {"es": "Y dejarte caer si llega el caso", "en": "And take a fall if it comes to it"}, "flag": "bribe", "items": [["r1", {"es": "Trato hecho. Ni una palabra.", "en": "Deal. Not a word."}]]}, {"label": {"es": "Rechazarlo", "en": "Refuse"}, "sub": {"es": "Competir limpio", "en": "Compete clean"}, "flag": "clean", "items": [["r1", {"es": "Allá tú. Nos veremos en la arena.", "en": "Suit yourself. See you in the sand."}]]}, {"label": {"es": "Denunciarlo a los helanódicas", "en": "Report him to the Hellanodikai"}, "sub": {"es": "Romper el silencio", "en": "Break the silence"}, "flag": "report", "items": [["judge", {"es": "Lo multaremos. Las sanciones económicas son las más deshonrosas y se imponen sobre todo por intentos de soborno. Nuestras decisiones pueden recurrirse ante el Consejo Olímpico, que ha llegado a multar a jueces parciales.", "en": "We will fine him. Fines are the most shameful penalty and are imposed above all for attempted bribery. Our decisions can be appealed to the Olympic Council, which has even fined biased judges."}]]}]}}], "ol2_bribe": [["judge", {"es": "Lo sabemos todo. Has roto el juramento que prestaste ante Zeus. Pagarás una multa, y con ella se levantará un zan, una estatua de Zeus en bronce junto a la entrada del estadio, con tu nombre grabado en el pedestal.", "en": "We know everything. You have broken the oath you swore before Zeus. You will pay a fine, and with it a Zan will be raised, a bronze statue of Zeus by the stadium entrance, with your name engraved on the base."}], ["note", {"es": "Los seis primeros zanes se pagaron en 388 a. C. con las multas al púgil que compró a sus rivales y a los tres que aceptaron su dinero. Se levantaron al menos dieciséis, y Kyle (2015) y Buraselis (2017) ven en ellos una advertencia pública y duradera.", "en": "The first six Zanes were paid for in 388 BC with the fines on the boxer who bought his rivals and the three who took his money. At least sixteen were raised, and Kyle (2015) and Buraselis (2017) see them as a public and lasting warning."}], {"q": {"q": {"es": "¿Qué se grababa en el pedestal de un zan?", "en": "What was engraved on the base of a Zan?"}, "o": [{"es": "El nombre del infractor", "en": "The offender's name"}, {"es": "El nombre del vencedor", "en": "The victor's name"}, {"es": "Una oración a Hera", "en": "A prayer to Hera"}, {"es": "Las reglas del pentatlón", "en": "The rules of the pentathlon"}], "x": {"es": "Se levantaban junto a la entrada del estadio.", "en": "They stood by the stadium entrance."}}, "fic": "H3·78"}], "ol2_hoplite": [["coach", {"es": "Queda la última prueba del programa, la carrera de hoplitas. Según Filóstrato, simboliza el fin de la tregua. Cubre 2 estadios, 384,56 m, y entró en la 65.ª Olimpiada, en 520 a. C.", "en": "The last event of the programme remains, the hoplite race. According to Philostratus, it symbolises the end of the truce. It covers 2 stades, 384.56 m, and came in at the 65th Olympiad, in 520 BC."}], ["coach", {"es": "Al principio se corría con casco, grebas y escudo; luego se quitaron las grebas y después el casco. El templo de Zeus guarda 25 escudos iguales para que todos carguen el mismo peso. Si se parece al de guerra, de unos 8 kg, llevarás en un brazo más del 10 % de tu peso.", "en": "At first it was run with helmet, greaves and shield; then the greaves were dropped and later the helmet. The temple of Zeus keeps 25 identical shields so that everyone carries the same weight. If it is like a war shield, about 8 kg, you will carry more than 10% of your weight on one arm."}], {"myth": 9, "fic": "H3·60"}], "ol2_end": [{"q": {"q": {"es": "¿Qué homenajeaba la carrera de hoplitas?", "en": "What did the hoplite race pay homage to?"}, "o": [{"es": "La carga de los últimos cincuenta metros antes del choque de las falanges", "en": "The charge of the last fifty metres before the phalanxes clashed"}, {"es": "La huida de los persas en Maratón", "en": "The Persian flight at Marathon"}, {"es": "El correo de los hemeródromos", "en": "The hemerodromoi's messages"}, {"es": "La caza del jabalí", "en": "The boar hunt"}], "x": {"es": "El hoplita era el ciudadano capaz de pagarse la panoplia, de 75 a 100 dracmas.", "en": "The hoplite was the citizen able to pay for his panoply, 75 to 100 drachmas."}}, "fic": "H3·60"}], "ol3_a": [{"card": {"title": {"es": "104.ª Olimpiada", "en": "104th Olympiad"}, "s": {"es": "Tienes treinta y cuatro años. Los arcadios tomaron Olimpia hace un año y presiden ahora los Juegos, mientras Élide trata de recuperar su control.", "en": "You are thirty-four. The Arcadians took Olympia a year ago and now preside over the Games, while Elis tries to regain control."}, "fic": "H3·33"}}, ["r0", {"es": "Los arcadios mandan en el santuario. Dicen que los eleos vendrán armados a recuperarlo.", "en": "The Arcadians are in charge of the sanctuary. They say the Eleans will come armed to take it back."}], ["coach", {"es": "Concéntrate en lo tuyo. Todas las pruebas del pentatlón se hacen el segundo día por la tarde, con tres jueces. Se desconoce el orden exacto, pero la lucha cierra siempre.", "en": "Focus on your own business. All the pentathlon events take place on the second day in the afternoon, with three judges. The exact order is unknown, but wrestling always comes last."}], {"q": {"q": {"es": "¿Qué propuso Gillet en 1971 sobre el pentatlón?", "en": "What did Gillet propose in 1971 about the pentathlon?"}, "o": [{"es": "Un sistema por eliminación, difícil de verificar y que choca con la regla de las tres victorias", "en": "An elimination system, hard to verify and at odds with the three-win rule"}, {"es": "Que se sumaban las marcas de las cinco pruebas", "en": "That the marks of the five events were added up"}, {"es": "Que la lucha abría la competición", "en": "That wrestling opened the contest"}, {"es": "Que el pentatlón duraba tres días", "en": "That the pentathlon lasted three days"}], "x": {"es": "Según Gillet, todos saltaban, los cinco primeros lanzaban la jabalina, cuatro corrían, tres lanzaban el disco y el ganador de la lucha vencía.", "en": "According to Gillet, all jumped, the top five threw the javelin, four ran, three threw the discus and the wrestling winner won."}}, "fic": "H3·63"}], "ol3_battle": [["note", {"es": "En plena prueba del pentatlón estalla una batalla en el recinto sagrado entre los arcadios y Élide, que trata de recuperar su legítimo control.", "en": "In the middle of the pentathlon a battle breaks out in the sacred precinct between the Arcadians and Elis, which is trying to regain its rightful control."}], ["note", {"es": "La pugna se extiende toda la noche. Élide se retira para que puedan concluir los eventos deportivos, con la promesa de la retirada arcadia.", "en": "The fight lasts all night. Elis withdraws so that the sporting events can be completed, on the promise of an Arcadian withdrawal."}], {"myth": 4, "fic": "H3·32"}], "ol3_end": [{"card": {"title": {"es": "La anolimpiada", "en": "The anolympiad"}, "s": {"es": "Tras recuperar la administración, Élide registró esta edición como la anolimpiada, la «no-olimpiada», aunque respetó los triunfos individuales.", "en": "After regaining control, Elis recorded this edition as the anolympiad, the 'non-Olympiad', although it respected the individual victories."}, "fic": "H3·33"}}, {"q": {"q": {"es": "¿Qué fue la anolimpiada?", "en": "What was the anolympiad?"}, "o": [{"es": "La edición de 364 a. C., que Élide no reconoció tras la batalla con los arcadios, aunque respetó los triunfos individuales", "en": "The edition of 364 BC, which Elis did not recognise after the battle with the Arcadians, though it respected individual victories"}, {"es": "La Olimpiada de Nerón", "en": "Nero's Olympiad"}, {"es": "Una edición suspendida por la invasión persa", "en": "An edition suspended by the Persian invasion"}, {"es": "Los Juegos de las muchachas", "en": "The girls' Games"}], "x": {"es": "La 104.ª Olimpiada se celebró en 364 a. C.", "en": "The 104th Olympiad was held in 364 BC."}}, "fic": "H3·33"}], "coach_a": [{"card": {"title": {"es": "Ahora enseñas tú", "en": "Now you teach"}, "s": {"es": "Te has retirado y eres paidotriba. Acompañas siempre a tu alumno, porque su éxito depende en buena parte de ti, y llevas la vara para corregir sus ejercicios.", "en": "You have retired and become a trainer. You always go with your pupil, because his success depends largely on you, and you carry the rod to correct his exercises."}, "fic": "H3·39"}}, ["pupil", {"es": "Maestro, ¿por qué hemos dejado de comer solo carne?", "en": "Master, why have we stopped eating only meat?"}], ["you", {"es": "Hacia 500 a. C. se impuso una dieta abundante en carne, porque más proteína y un entrenamiento vigoroso dan volumen, una ventaja en los combates. Pero a finales del siglo V a. C. los médicos censuraron comer casi solo carne, porque daba diarrea a algunos atletas, y prohibieron el agua fría.", "en": "Around 500 BC a meat-rich diet took over, because more protein and hard training add bulk, an advantage in combat. But at the end of the 5th century BC doctors condemned eating almost only meat, because it gave some athletes diarrhoea, and they banned cold water."}], ["pupil", {"es": "¿Y es verdad que Milón de Crotona comía veinte libras de carne al día?", "en": "And is it true that Milo of Croton ate twenty pounds of meat a day?"}], ["you", {"es": "Es un mito, el del atleta glotón, que se convirtió en un tópico común en Grecia.", "en": "It is a myth, that of the glutton athlete, which became a common cliché in Greece."}], {"choice": {"title": {"es": "¿Cómo vas a entrenarlo?", "en": "How will you train him?"}, "opts": [{"label": {"es": "Con los tetras, sin romper el ciclo", "en": "With the tetrads, never breaking the cycle"}, "sub": {"es": "Cuatro días fijos", "en": "Four fixed days"}, "flag": "tetras", "items": [["note", {"es": "Siglos después, hacia 230 d. C., Filóstrato condenará los tetras por excesivos, con el ejemplo de un luchador egipcio que celebró dos días su victoria olímpica, llegó al tercero con el estómago revuelto y murió por el ejercicio que le impuso un entrenador empeñado en no romper el ciclo.", "en": "Centuries later, around AD 230, Philostratus will condemn the tetrads as excessive, citing an Egyptian wrestler who celebrated his Olympic win for two days, arrived on the third with an upset stomach and died from the exercise imposed by a trainer determined not to break the cycle."}]]}, {"label": {"es": "Adaptado a él", "en": "Adapted to him"}, "sub": {"es": "Atento al sueño y al ánimo", "en": "Mindful of sleep and spirits"}, "flag": "adapt", "items": [["note", {"es": "Es lo que defenderá Filóstrato hacia 230 d. C.: un entrenamiento pensado para cada atleta, atento a la higiene, a la psicología y al sueño, que anime con la palabra en los momentos de flaqueza y se adapte a cada deporte, con sacos ligeros para los púgiles y pesados para los pancratistas.", "en": "It is what Philostratus will argue around AD 230: training designed for each athlete, mindful of hygiene, psychology and sleep, encouraging with words in moments of weakness and adapted to each sport, with light bags for boxers and heavy ones for pankratiasts."}]]}]}}, {"q": {"q": {"es": "¿Qué recomendaba Filóstrato a púgiles y pancratistas?", "en": "What did Philostratus recommend to boxers and pankratiasts?"}, "o": [{"es": "Sacos ligeros a los púgiles para ganar velocidad y pesados a los pancratistas para fortalecer puños y dedos", "en": "Light bags for boxers to gain speed and heavy ones for pankratiasts to strengthen fists and fingers"}, {"es": "Lo mismo a todos: los tetras", "en": "The same for everyone: the tetrads"}, {"es": "Comer solo carne", "en": "Eating only meat"}, {"es": "Entrenar de noche", "en": "Training at night"}], "x": {"es": "Defendía además una vida disciplinada, sin dulces, alcohol ni actividad sexual, para no malgastar energía.", "en": "He also argued for a disciplined life, without sweets, alcohol or sex, so as not to waste energy."}}, "fic": "H3·39"}, ["you", {"es": "En la lucha solo se permiten las llaves reglamentarias. Una ley sagrada de Olimpia parece castigar con azotes al que rompe los dedos del rival. La lucha es una escuela de disciplina y de control de los impulsos.", "en": "In wrestling only regulation holds are allowed. A sacred law of Olympia seems to punish with flogging anyone who breaks a rival's fingers. Wrestling is a school of discipline and self-control."}]], "coach_b": [{"card": {"title": {"es": "Camino de Olimpia", "en": "On the way to Olympia"}, "s": {"es": "Viajas con tu alumno durante el mes sagrado. En el camino coincidís con un ateniense que se llama Frinón.", "en": "You travel with your pupil during the sacred month. On the way you fall in with an Athenian named Phrynon."}, "fic": "H3·33"}}, ["phrynon", {"es": "Unos soldados macedonios me asaltaron en plena tregua, en tiempos del rey Filipo II. El propio rey se disculpó alegando que sus hombres ignoraban la tregua.", "en": "Some Macedonian soldiers attacked me in the middle of the truce, in the time of King Philip II. The king himself apologised, saying his men did not know about the truce."}], {"q": {"q": {"es": "¿Qué protegía la ekecheiría, la tregua sagrada?", "en": "What did the ekecheiria, the sacred truce, protect?"}, "o": [{"es": "El territorio de Élide, el paso de los peregrinos que iban o volvían del festival y el santuario sin armas", "en": "The territory of Elis, the passage of pilgrims to and from the festival and a weapon-free sanctuary"}, {"es": "La paz en toda Grecia durante un año", "en": "Peace throughout Greece for a year"}, {"es": "Solo a los atletas vencedores", "en": "Only the winning athletes"}, {"es": "Las fronteras de cada polis", "en": "The borders of each polis"}], "x": {"es": "Duraba al principio un mes y después tres, para que pudieran llegar los griegos de ultramar.", "en": "At first it lasted a month and later three, so that Greeks from overseas could arrive."}}, "fic": "H3·32"}], "epi": [{"year": {"es": "Siglos IV-III a. C.", "en": "4th-3rd centuries BC"}, "era": "hell", "fic": "H3·79", "items": [["note", {"es": "Desde finales del siglo V a. C. aparece el atleta profesional, entrenado para encadenar victorias y vivir de sus premios, y con él llegan los fraudes.", "en": "From the end of the 5th century BC the professional athlete appears, trained to string victories together and live off his prizes, and with him come frauds."}], ["note", {"es": "El público se inclina por las pruebas más violentas. En 200 a. C. se abre el pancracio de muchachos, y el pentatleta, el atleta completo, pierde el favor de las gradas. Un comediógrafo ateniense describe Olimpia como «verbena, mercado, acróbatas, diversión, ladrones».", "en": "The crowd leans towards the most violent events. In 200 BC boys' pankration opens, and the pentathlete, the complete athlete, loses favour with the crowd. An Athenian comic poet describes Olympia as 'fair, market, acrobats, fun, thieves'."}], {"q": {"q": {"es": "¿Qué prueba fue la última en entrar en el programa olímpico?", "en": "Which event was the last to join the Olympic programme?"}, "o": [{"es": "El pancracio de muchachos, en 200 a. C.", "en": "Boys' pankration, in 200 BC"}, {"es": "La carrera de hoplitas, en 520 a. C.", "en": "The hoplite race, in 520 BC"}, {"es": "El pentatlón, en 708 a. C.", "en": "The pentathlon, in 708 BC"}, {"es": "La biga, en 408 a. C.", "en": "The two-horse chariot, in 408 BC"}], "x": {"es": "El público prefería ya las pruebas más violentas.", "en": "The crowd now preferred the most violent events."}}, "fic": "H3·54"}]}, {"year": {"es": "146 a. C. - siglo I d. C.", "en": "146 BC - 1st century AD"}, "era": "rome", "fic": "H3·80", "items": [["note", {"es": "Desde 146 a. C., con Grecia bajo el dominio de Roma, Olimpia depende de sus generales y después de sus emperadores. Los romanos entienden mal la desnudez y el sentido religioso del agón.", "en": "From 146 BC, with Greece under Roman rule, Olympia depends on Rome's generals and later its emperors. The Romans understand nakedness and the religious meaning of the agon poorly."}], ["note", {"es": "Los romanos acuden a competir sobre todo en la carrera de carros. Tiberio, futuro emperador, la gana en el año 4 d. C., y Germánico en el 17. Un vencedor olímpico puede cobrar hasta 30.000 dracmas por acudir como invitado a un certamen.", "en": "Romans come to compete above all in the chariot race. Tiberius, the future emperor, wins it in AD 4, and Germanicus in 17. An Olympic victor can be paid up to 30,000 drachmas to attend a contest as a guest."}], {"q": {"q": {"es": "¿En qué prueba competían sobre todo los romanos en Olimpia?", "en": "In which event did Romans mainly compete at Olympia?"}, "o": [{"es": "En la carrera de carros", "en": "The chariot race"}, {"es": "En el pentatlón", "en": "The pentathlon"}, {"es": "En la lucha", "en": "Wrestling"}, {"es": "En el dólico", "en": "The dolichos"}], "x": {"es": "Era la prueba más prestigiosa por su asociación con la élite pudiente.", "en": "It was the most prestigious event because of its link with the wealthy elite."}}, "fic": "H3·80"}]}, {"year": {"es": "67 d. C.", "en": "AD 67"}, "era": "nero", "fic": "H3·81", "items": [["note", {"es": "Nerón hace aplazar dos años la Olimpiada para competir y añade pruebas que nunca se habían disputado allí, como el carro de diez caballos y concursos de tragedia y música.", "en": "Nero has the Olympiad postponed by two years so he can compete, and adds events never held there, such as the ten-horse chariot and contests in tragedy and music."}], ["note", {"es": "Se cae del carro de diez caballos y no termina la carrera, y aun así lo proclaman vencedor tras pagar con generosidad a los jueces. Según la tradición, vuelve a Roma con 1.808 coronas.", "en": "He falls from the ten-horse chariot and does not finish, and yet he is proclaimed victor after paying the judges generously. According to tradition, he returns to Rome with 1,808 crowns."}], ["note", {"es": "Para que ningún campeón le haga sombra, manda derribar las estatuas de los antiguos vencedores y arrojarlas a las letrinas, según Suetonio. Tras su muerte, Élide borra aquella Olimpiada de sus registros.", "en": "So that no champion overshadows him, he has the statues of the old victors torn down and thrown into the latrines, according to Suetonius. After his death, Elis erases that Olympiad from its records."}], {"q": {"q": {"es": "Según la tradición, ¿cuántas coronas trajo Nerón de Grecia?", "en": "According to tradition, how many crowns did Nero bring back from Greece?"}, "o": [{"es": "1.808", "en": "1,808"}, {"es": "12", "en": "12"}, {"es": "3", "en": "3"}, {"es": "300", "en": "300"}], "x": {"es": "Ganó todas las pruebas en las que se inscribió. El agón se había convertido en una exhibición del poder del emperador.", "en": "He won every event he entered. The agon had become a display of the emperor's power."}}, "fic": "H3·81"}]}, {"year": {"es": "Hacia 150-170 d. C.", "en": "c. AD 150-170"}, "era": "herodes", "fic": "H3·80", "items": [["note", {"es": "Roma alarga también la vida del santuario. Se levanta un edificio con piscina para los atletas, comenzado bajo Nerón, y hacia 150 Herodes Ático, un rico benefactor griego, costea un acueducto con su fuente monumental, el ninfeo.", "en": "Rome also lengthens the life of the sanctuary. A building with a pool for athletes is raised, begun under Nero, and around 150 Herodes Atticus, a rich Greek benefactor, pays for an aqueduct with its monumental fountain, the nymphaeum."}], ["note", {"es": "Hacia 170, mientras se produce el declive deportivo, Olimpia vive paradójicamente su máximo apogeo arquitectónico.", "en": "Around 170, while sport declines, Olympia paradoxically reaches its architectural peak."}]]}, {"year": {"es": "Siglos IV-VI d. C.", "en": "4th-6th centuries AD"}, "era": "end", "fic": "H3·82", "items": [["note", {"es": "Durante más de un siglo los manuales fecharon el final de los Juegos en 393 d. C., con una ley de Teodosio I contra los cultos paganos. Remijsen (2015) comprobó que esa ley no menciona los Juegos, y en 399 un poeta de la corte aún esperaba ver en Roma a los vencedores de Olimpia.", "en": "For more than a century textbooks dated the end of the Games to AD 393, with a law of Theodosius I against pagan cults. Remijsen (2015) showed that the law does not mention the Games, and in 399 a court poet still hoped to see Olympic victors in Rome."}], {"myth": 14, "fic": "H3·82"}, ["note", {"es": "Hacia 420-440 la estatua de Zeus de oro y marfil se lleva a Constantinopla. En 435 Teodosio II firma una constitución contra los templos paganos que pudo desencadenar el incendio del templo de Zeus. Después, los Juegos no vuelven a celebrarse.", "en": "Around 420-440 the gold and ivory statue of Zeus is taken to Constantinople. In 435 Theodosius II signs a constitution against pagan temples that may have triggered the fire in the temple of Zeus. After that, the Games are never held again."}], ["note", {"es": "El santuario pasa a ser una aldea cristiana, y el taller de Fidias se convierte en iglesia. En el siglo VI terremotos e inundaciones lo cubren de sedimentos durante casi 1.300 años.", "en": "The sanctuary becomes a Christian village, and the workshop of Phidias becomes a church. In the 6th century earthquakes and floods cover it with sediment for almost 1,300 years."}], {"q": {"q": {"es": "¿Por qué terminaron los Juegos de Olimpia, según Remijsen (2015)?", "en": "Why did the Olympic Games end, according to Remijsen (2015)?"}, "o": [{"es": "Porque las élites dejaron de costearlos y prefirieron las carreras de carros del circo", "en": "Because the elites stopped paying for them and preferred the chariot races of the circus"}, {"es": "Por una ley de Teodosio I en 393", "en": "Because of a law of Theodosius I in 393"}, {"es": "Por la invasión persa", "en": "Because of the Persian invasion"}, {"es": "Porque Nerón los prohibió", "en": "Because Nero banned them"}], "x": {"es": "Los certámenes griegos vivían del dinero de las élites de cada ciudad, que los costeaban y competían en ellos.", "en": "Greek contests lived on the money of each city's elites, who paid for them and competed in them."}}, "fic": "H3·82"}]}, {"year": {"es": "1896", "en": "1896"}, "era": "modern", "fic": "H3·82", "items": [["note", {"es": "Olimpia se apagó, pero su nombre y su legado sobrevivieron, desde los juegos «olímpicos» de Dafne, cerca de Antioquía, hasta los que Pierre de Coubertin restauró en 1896.", "en": "Olympia faded, but its name and legacy survived, from the 'Olympic' games of Daphne, near Antioch, to those Pierre de Coubertin restored in 1896."}]]}]};
@@ -3309,10 +3469,11 @@ function visitNode(N) {
 function kHubUI() {
   const U = KU(), H = career.hub, n = Object.keys(H.seen).length;
   text(U.visit, W / 2, 96, 26, 'center', C.negro, 700);
-  const bw = 560, x = W / 2 - bw / 2;
-  uiButtons = H.nodes.map((N, i) => ({ x, y: 120 + i * 74, w: bw, h: 64, label: (H.seen[N.id] ? '✓ ' : '') + LX(N.label), sub: LX(N.sub) + (H.seen[N.id] ? ` · ${U.visited}` : ''), nav: true, action: () => visitNode(N) }));
-  const ok = n >= H.need;
-  uiButtons.push({ x: W / 2 - 160, y: 124 + H.nodes.length * 74, w: 320, h: 50, label: ok ? U.goOn : fmt(U.needMore, { n: H.need }), nav: true, dim: !ok, action: ok ? () => { const nx = H.next; career.hub = null; nx(); } : () => sfx.foul() });
+  const bw = MOB ? 590 : 560, x = W / 2 - bw / 2, bh = MOB ? 100 : 64;
+  const pos = i => MOB ? { x: W / 2 - bw - 10 + (i % 2) * (bw + 20), y: 124 + Math.floor(i / 2) * (bh + 12) } : { x, y: 120 + i * 74 };
+  uiButtons = H.nodes.map((N, i) => ({ ...pos(i), w: bw, h: bh, label: (H.seen[N.id] ? '✓ ' : '') + LX(N.label), sub: LX(N.sub) + (H.seen[N.id] ? ` · ${U.visited}` : ''), nav: true, action: () => visitNode(N) }));
+  const ok = n >= H.need, gy = MOB ? 124 + Math.ceil(H.nodes.length / 2) * (bh + 12) + 6 : 124 + H.nodes.length * 74;
+  uiButtons.push({ x: W / 2 - (MOB ? 220 : 160), y: gy, w: MOB ? 440 : 320, h: MOB ? 84 : 50, label: ok ? U.goOn : fmt(U.needMore, { n: H.need }), nav: true, dim: !ok, action: ok ? () => { const nx = H.next; career.hub = null; nx(); } : () => sfx.foul() });
   uiButtons.forEach((b, i) => { ctx.globalAlpha = b.dim ? .5 : 1; button(b, i === menuFocus); ctx.globalAlpha = 1; });
 }
 
@@ -3462,7 +3623,7 @@ function drawCareerScene() {
     if (sc === 'zan') drawStatue(-6, 'zan'); else mirrored(1.6, () => figure(1.6, .95, RPOSE[0], { perizoma: true }));
     drawJudge(3.8);
   } else if (sc === 'sanct') {
-    ctx.fillStyle = 'rgba(80,30,10,.18)'; ctx.beginPath(); ctx.moveTo(0, 420); for (let x = 0; x <= W; x += 40) ctx.lineTo(x, 300 - 80 * Math.sin(x / 260) - 40 * Math.sin(x / 90)); ctx.lineTo(W, 420); ctx.fill();
+    ctx.fillStyle = 'rgba(80,30,10,.18)'; ctx.beginPath(); ctx.moveTo(-OX, 420); for (let x = -OX - 40; x <= W + OX + 40; x += 40) ctx.lineTo(x, 300 - 80 * Math.sin(x / 260) - 40 * Math.sin(x / 90)); ctx.lineTo(W + OX + 40, 420); ctx.fill();
     temple(W / 2 + 120, 420, 240, .2);
     figure(0, .95, STAND(lift), { perizoma: true });
     mirrored(-3.4, () => drawCoach(-3.4));
@@ -3501,12 +3662,48 @@ function drawStatueScene() {
   else drawStatue(0, mine, fallen && (mine === 'you'));
   if (fallen) { ctx.fillStyle = C.negro; ctx.fillRect(wx(0) + 70, gy - 22, 150, 22); }
   // sedimentos que lo cubren durante casi 1.300 años
-  if (era === 'end') { const h = clamp((eT - 2) / 6, 0, 1) * 230; ctx.fillStyle = 'rgba(90,35,12,.85)'; ctx.fillRect(0, gy - h, W, h); }
-  if (era === 'modern') { ctx.fillStyle = 'rgba(90,35,12,.35)'; ctx.fillRect(0, gy - 30, W, 30); }
+  if (era === 'end') { const h = clamp((eT - 2) / 6, 0, 1) * 230; ctx.fillStyle = 'rgba(90,35,12,.85)'; ctx.fillRect(-OX, gy - h, W + 2 * OX, h); }
+  if (era === 'modern') { ctx.fillStyle = 'rgba(90,35,12,.35)'; ctx.fillRect(-OX, gy - 30, W + 2 * OX, 30); }
 }
 
 // ---------- mapa de capítulos ----------
+// mapa en el móvil: rejilla a todo lo ancho, letra mayor y botones de 80 de alto
+function mapUIM() {
+  const U = KU(), up = unlockedUpTo(), right = W - 24 - 150 - 20;
+  text(U.mapTitle, 24, 82, 30, 'left', C.negro, 700);
+  para(U.mapHint, 24, 112, right - 24, 13, 16, C.negro, 'left');
+  const g = 12, cw = (W - 40 - 2 * g) / 3, chh = 112, x0 = 20, y0 = 140;
+  uiButtons = CAR.chapters.map((c, i) => {
+    const x = x0 + (i % 3) * (cw + g), y = y0 + Math.floor(i / 3) * (chh + 8), open = i <= up, done = !!career.save.done[c.id];
+    return { x, y, w: cw, h: chh, nav: true, c, i, open, done, action: open ? () => playChapter(c.id) : () => sfx.foul() };
+  });
+  uiButtons.forEach((b, k) => {
+    const f = k === menuFocus;
+    ctx.fillStyle = C.negro; ctx.fillRect(b.x, b.y, b.w, b.h);
+    ctx.globalAlpha = b.open ? 1 : .45;
+    ctx.strokeStyle = f ? C.blanco : C.barro; ctx.lineWidth = f ? 3 : 2; ctx.strokeRect(b.x + 4, b.y + 4, b.w - 8, b.h - 8);
+    // estado con un signo: ✓ hecho, ▸ se puede jugar; los bloqueados se ven apagados
+    text(`${b.i} · ${LX(b.c.date)}`, b.x + 16, b.y + 32, 13, 'left', C.barro, 700);
+    if (b.done || b.open) text(b.done ? '✓' : '▸', b.x + b.w - 16, b.y + 34, 24, 'right', C.blanco, 700);
+    text(LX(b.c.title), b.x + 16, b.y + 66, 22, 'left', C.blanco, 700);
+    text(LX(b.c.place), b.x + 16, b.y + 96, 14, 'left', C.blanco, 600);
+    ctx.globalAlpha = 1;
+  });
+  const hs = career.save.honors.map(honorName).filter(Boolean), py = y0 + 3 * (chh + 8);
+  const bw = 350, bx = W - 20 - bw, pw = bx - 12 - x0;
+  ctx.fillStyle = C.negro; ctx.fillRect(x0, py, pw, 168); ctx.strokeStyle = C.barro; ctx.lineWidth = 2; ctx.strokeRect(x0 + 4, py + 4, pw - 8, 160);
+  text(`${U.honors} · ${U.kleos} ${kleos()}`, x0 + 16, py + 30, 13, 'left', C.barro, 700);
+  if (career.save.region) { const R = regionObj(); if (R) text(`${CU().yourPolis}: ${LX(R.name)}`, x0 + pw - 16, py + 30, 13, 'right', C.barro, 700); }
+  para(hs.length ? hs.join(' · ') : U.noHonors, x0 + 16, py + 62, pw - 32, 14, 18, C.blanco, 'left');
+  const kb = { x: bx, y: py, w: bw, h: 80, label: U.rank, nav: true, action: openRank };
+  uiButtons.push(kb); button(kb, uiButtons.indexOf(kb) === menuFocus);
+  const armed = career.armReset && timeT - career.armReset < 3;
+  const rb = { x: bx, y: py + 88, w: bw, h: 80, label: armed ? '¿?' : U.reset, action: () => { if (career.armReset && timeT - career.armReset < 3) { store.set(CSAVE, null); startCareer(); } else { career.armReset = timeT; sfx.foul(); } } };
+  uiButtons.push(rb);
+  ctx.fillStyle = C.negro; ctx.fillRect(rb.x, rb.y, rb.w, rb.h); text(rb.label, rb.x + rb.w / 2, rb.y + 48, 13, 'center', C.barro, 700);
+}
 function mapUI() {
+  if (MOB) return mapUIM();
   const U = KU(), up = unlockedUpTo();
   text(U.mapTitle, W / 2, 92, 34, 'center', C.negro, 700);
   text(U.mapHint, W / 2, 118, 15, 'center', C.negro, 600);
@@ -3539,9 +3736,9 @@ function mapUI() {
   if (career.save.region) { const R = regionObj(); if (R) text(`${CU().yourPolis}: ${LX(R.name)}`, x0 + cw * 3 + gx * 2 - 320, 628, 14, 'right', C.negro, 700); }
 }
 function careerRegionUI() {
-  const U = KU(), bw = 400, x = W / 2 - bw / 2;
+  const U = KU();
   text(U.region, W / 2, 110, 30, 'center', C.negro, 700);
-  uiButtons = CAMP.regions.map((R, i) => ({ x, y: 150 + i * 74, w: bw, h: 64, label: LX(R.name), sub: LX(R.area), nav: true, action: () => regionPicked(R) }));
+  uiButtons = regionButtons(MOB ? 170 : 150, regionPicked);
   uiButtons.forEach((b, i) => button(b, i === menuFocus));
 }
 
@@ -3571,9 +3768,9 @@ function careerHud() {
   if (state === 'kRank') { rankUI(); return true; }
   if (state === 'cTalk') {
     const it = curItem(); if (!it) return true;
-    if (it.t === 'myth') { mythUI(it); return true; }
-    if (it.t === 'choice') { choiceItemUI(it); return true; }
-    if (it.t === 'card' && it.era) { card(700, 160, (cx, cy) => { text(LX(it.title), W / 2, cy + 92, 40, 'center', C.blanco); }); if (stateT > .4) nextHint(CU().continue, 120 + 160 + 44); return true; }
+    if (it.t === 'myth') { cardPanel('myth', 820, 590, () => mythUI(it), false); return true; }
+    if (it.t === 'choice') { cardPanel('kchoice' + it.c.opts.length, 760, 150 + it.c.opts.length * 80, () => choiceItemUI(it), false); return true; }
+    if (it.t === 'card' && it.era) { cardPanel('era', 700, 260, () => { card(700, 160, (cx, cy) => { text(LX(it.title), W / 2, cy + 92, 40, 'center', C.blanco); }); if (stateT > .4) nextHint(CU().continue, 120 + 160 + 44); }, false); return true; }
     if (career.scene && career.scene !== 'map' && it.t === 'line') { talkUI(); return true; }
   }
   return false;
@@ -3585,7 +3782,7 @@ function mythUI(it) {
     para(LX(it.m.c), W / 2, cy + 90, 720, 24, 31, C.blanco, 'center');
   });
   const bw = 300, y = 380;
-  uiButtons = [U.mythT, U.mythF].map((s, k) => ({ x: W / 2 - bw - 10 + k * (bw + 20), y, w: bw, h: 60, label: `${k + 1}.  ${s}`, nav: true, action: () => pickMyth(k) }));
+  uiButtons = [U.mythT, U.mythF].map((s, k) => ({ x: W / 2 - bw - 10 + k * (bw + 20), y, w: bw, h: MOB ? 84 : 60, label: `${k + 1}.  ${s}`, nav: true, action: () => pickMyth(k) }));
   if (talk.picked >= 0) {
     const okIdx = it.m.a ? 0 : 1;
     uiButtons.forEach((b, k) => { b.fill = k === okIdx ? C.blanco : C.negro; b.label = (k === okIdx ? '✓  ' : k === talk.picked ? '✗  ' : '') + b.label; });
@@ -3593,10 +3790,13 @@ function mythUI(it) {
   uiButtons.forEach((b, k) => button(b, talk.picked < 0 && k === menuFocus));
   if (talk.picked >= 0) {
     uiButtons = [];
-    text(`${talk.lastOk ? CU().right : CU().wrong}. ${it.m.a ? U.isTrue : U.isFalse}.`, W / 2, 536, 19, 'center', C.negro, 800);
-    para(LX(it.m.x), W / 2, 562, 900, 15, 20, C.negro, 'center');
-    if (inHistoriapp()) { const b = { x: W - 300, y: 128, w: 230, h: 40, label: `${CU().readFicha} ${it.fic}`, action: () => openFicha(it.fic) }; uiButtons.push(b); button(b, false); }
-    if (stateT > .4) nextHint(CU().continue, 664);
+    // en el móvil, la explicación va sobre una placa oscura para que no la tapen las figuras
+    const ty = MOB ? 506 : 536, col = MOB ? C.blanco : C.negro;
+    if (MOB) { const ps = fpx(15, 14); ctx.font = `400 ${ps}px ${FONT}`; const hh = 40 + lineCount(LX(it.m.x), 900) * ps * 1.33 + 16; ctx.globalAlpha = .92; ctx.fillStyle = C.negro; ctx.fillRect(W / 2 - 480, ty - 36, 960, hh); ctx.globalAlpha = 1; }
+    text(`${talk.lastOk ? CU().right : CU().wrong}. ${it.m.a ? U.isTrue : U.isFalse}.`, W / 2, ty, 19, 'center', col, 800);
+    const eb = paraBot(LX(it.m.x), W / 2, ty + 26 * (MOB ? 1.35 : 1), 900, 15, 20, col, 'center');
+    if (inHistoriapp()) { const b = MOB ? { x: W / 2 - 240, y: eb + 14, w: 480, h: 76, label: `${CU().readFicha} ${it.fic}`, action: () => openFicha(it.fic) } : { x: W - 300, y: 128, w: 230, h: 40, label: `${CU().readFicha} ${it.fic}`, action: () => openFicha(it.fic) }; uiButtons.push(b); button(b, false); }
+    if (stateT > .4) nextHint(CU().continue, MOB ? 0 : 664);
   }
 }
 function choiceItemUI(it) {
@@ -3630,40 +3830,42 @@ function openRank() {
   }, 1500);
 }
 function rankUI() {
-  const U = KU(), R = career.rank, me = rkMe(), x0 = W / 2 - 400;
+  const U = KU(), R = career.rank, me = rkMe(), bw0 = MOB ? 1000 : 800, x0 = W / 2 - bw0 / 2;
+  // en el móvil: caja más ancha y alta, pestañas y Volver de 80 de alto (Volver arriba a la izquierda)
+  const by0 = MOB ? 140 : 160, tabH = MOB ? 80 : 48, row0 = MOB ? 268 : 254, rowH = MOB ? 30 : 28, sc = bw0 / 800;
   text(U.rankTitle, W / 2, 92, 24, 'center', C.negro, 700);
-  ctx.fillStyle = C.negro; ctx.fillRect(x0, 160, 800, 420);
+  ctx.fillStyle = C.negro; ctx.fillRect(x0, by0, bw0, MOB ? 510 : 420);
   uiButtons = [];
   const msg = s => para(s, W / 2, 300, 680, 20, 28, C.blanco, 'center');
   if (!inHistoriapp()) msg(U.rankOutside);
   else if (!me) {
     msg(U.rankJoin);
-    const jb = { x: W / 2 - 200, y: 440, w: 400, h: 54, label: U.rankJoinBtn, nav: true, action: () => { location.href = '../#ranking'; } };
+    const jb = { x: W / 2 - (MOB ? 270 : 200), y: MOB ? 420 : 440, w: MOB ? 540 : 400, h: MOB ? 84 : 54, label: U.rankJoinBtn, nav: true, action: () => { location.href = '../#ranking'; } };
     uiButtons.push(jb); button(jb, menuFocus === 0);
   } else if (R.err) msg(U.rankOffline);
   else if (!R.data) msg(U.rankLoading);
   else {
     const d = R.data, T = R.tab === 'grp' ? (d.grupos || {})[d.grupo || me.grupo] : d.total;
     [['grp', U.rankGroup + (me.grupo ? ' · ' + me.grupo : '')], ['all', U.rankAll]].forEach(([k, l], i) => {
-      const b = { x: x0 + 20 + i * 390, y: 172, w: 370, h: 48, label: l, nav: true, fill: R.tab === k ? C.blanco : C.negro, action: () => { R.tab = k; } };
+      const b = { x: x0 + 20 * sc + i * 390 * sc, y: by0 + 12, w: 370 * sc, h: tabH, label: l, nav: true, fill: R.tab === k ? C.blanco : C.negro, action: () => { R.tab = k; } };
       uiButtons.push(b); button(b, uiButtons.length - 1 === menuFocus);
     });
     const rows = T && T.top ? T.top.slice() : [];
     if (T && T.yo && T.yo.p > 10) rows.push({ p: T.yo.p, alias: me.alias, grupo: me.grupo, pts: T.yo.pts, yo: true });
     if (!rows.length) msg(U.rankEmpty);
     rows.forEach((r, i) => {
-      const y = 254 + i * 28;
-      if (r.yo) { ctx.fillStyle = C.blanco; ctx.fillRect(x0 + 14, y - 20, 772, 27); }
+      const y = row0 + i * rowH;
+      if (r.yo) { ctx.fillStyle = C.blanco; ctx.fillRect(x0 + 14, y - 20 - (rowH - 28), bw0 - 28, rowH - 1); }
       const col = r.yo ? C.negro : C.blanco;
       text(`${r.p}`, x0 + 46, y, 17, 'right', col, 700);
       text(String(r.alias || ''), x0 + 66, y, 17, 'left', col, 700);
-      text(String(r.grupo || ''), x0 + 300, y, 13, 'left', r.yo ? C.negro : C.barro, 600);
-      text(String(r.det || ''), x0 + 390, y, 13, 'left', r.yo ? C.negro : C.barro, 600);
-      text(`${r.pts} ${U.rankPts}`, x0 + 770, y, 17, 'right', col, 700);
+      text(String(r.grupo || ''), x0 + 300 * sc, y, 13, 'left', r.yo ? C.negro : C.barro, 600);
+      text(String(r.det || ''), x0 + 390 * sc, y, 13, 'left', r.yo ? C.negro : C.barro, 600);
+      text(`${r.pts} ${U.rankPts}`, x0 + bw0 - 30, y, 17, 'right', col, 700);
     });
   }
-  text(U.rankRule, W / 2, 604, 14, 'center', C.negro, 700);
-  const bb = { x: W / 2 - 120, y: 618, w: 240, h: 44, label: U.back, nav: true, action: () => { state = 'kMap'; menuFocus = -1; } };
+  if (MOB) para(U.rankRule, W / 2, by0 + 486, bw0 - 60, 13, 16, C.barro, 'center'); else text(U.rankRule, W / 2, 604, 14, 'center', C.negro, 700);
+  const bb = MOB ? { x: 24, y: 46, w: 200, h: 80, label: U.back, nav: true, action: () => { state = 'kMap'; menuFocus = -1; } } : { x: W / 2 - 120, y: 618, w: 240, h: 44, label: U.back, nav: true, action: () => { state = 'kMap'; menuFocus = -1; } };
   uiButtons.push(bb); button(bb, uiButtons.length - 1 === menuFocus);
 }
 
@@ -3690,7 +3892,7 @@ function update(dt) {
   }
 }
 function draw() {
-  ctx.setTransform(scale * dpr, 0, 0, scale * dpr, 0, 0);
+  ctx.setTransform(scale * dpr, 0, 0, scale * dpr, OX * scale * dpr, 0);
   ctx.save();
   if (!reduced) ctx.translate(0, camShake.x * .02);
   drawBackground();
@@ -3699,7 +3901,7 @@ function draw() {
   rays(TUNING.groundY + 80, 40);
   ctx.restore();
   hud();
-  if (flash > 0 && !reduced) { ctx.fillStyle = `rgba(239,227,200,${flash * .25})`; ctx.fillRect(0, 0, W, H); }
+  if (flash > 0 && !reduced) { ctx.fillStyle = `rgba(239,227,200,${flash * .25})`; ctx.fillRect(-OX, 0, W + 2 * OX, H); }
 }
 let last = performance.now();
 function frame(now) {

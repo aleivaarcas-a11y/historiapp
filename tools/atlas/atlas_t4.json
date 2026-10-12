@@ -71,7 +71,11 @@
    ],
    "fichas": [],
    "imgs": [],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "urso",
+    "osuna"
+   ]
   },
   {
    "id": "emerita",
@@ -143,7 +147,12 @@
    ],
    "fichas": [],
    "imgs": [],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "emerita",
+    "merida",
+    "diocles"
+   ]
   },
   {
    "id": "tarquinia",
@@ -233,7 +242,12 @@
    ],
    "fichas": [],
    "imgs": [],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "tarquinia",
+    "phersu",
+    "augures"
+   ]
   },
   {
    "id": "chiusi",
@@ -287,7 +301,11 @@
    ],
    "fichas": [],
    "imgs": [],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "chiusi",
+    "casuccini"
+   ]
   },
   {
    "id": "murlo",
@@ -341,7 +359,10 @@
    ],
    "fichas": [],
    "imgs": [],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "murlo"
+   ]
   },
   {
    "id": "roma",
@@ -450,7 +471,13 @@
    "fichas": [],
    "imgs": [],
    "vids": [],
-   "prov": "Latium et Campania"
+   "prov": "Latium et Campania",
+   "kw": [
+    "coliseo",
+    "anfiteatro flavio",
+    "circo maximo",
+    "munus"
+   ]
   },
   {
    "id": "campania",
@@ -522,7 +549,12 @@
    ],
    "fichas": [],
    "imgs": [],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "capua",
+    "pompeya",
+    "espartaco"
+   ]
   },
   {
    "id": "sicilia",
@@ -576,7 +608,11 @@
    ],
    "fichas": [],
    "imgs": [],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "casale",
+    "piazza armerina"
+   ]
   },
   {
    "id": "zliten",
@@ -648,7 +684,11 @@
    ],
    "fichas": [],
    "imgs": [],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "zliten",
+    "reciario"
+   ]
   },
   {
    "id": "efeso",
@@ -720,7 +760,10 @@
    ],
    "fichas": [],
    "imgs": [],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "efeso"
+   ]
   },
   {
    "id": "constantinopla",
@@ -793,7 +836,12 @@
    "fichas": [],
    "imgs": [],
    "vids": [],
-   "prov": "Thracia"
+   "prov": "Thracia",
+   "kw": [
+    "constantinopla",
+    "nika",
+    "hipodromo"
+   ]
   }
  ],
  "acontecimientos": [

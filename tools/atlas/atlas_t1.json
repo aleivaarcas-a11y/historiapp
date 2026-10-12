@@ -73,7 +73,10 @@
     "las-armas-de-caza-mas-antiguas-conservad"
    ],
    "imgs": [],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "schoningen"
+   ]
   },
   {
    "id": "oblazowa",
@@ -150,7 +153,11 @@
     "img/t1/bumeran_oblazowa.jpg",
     "img/t1/valltorta_caza.jpg"
    ],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "oblazowa",
+    "bumeran"
+   ]
   },
   {
    "id": "cometas",
@@ -229,6 +236,11 @@
    ],
    "vids": [
     "t1_08"
+   ],
+   "kw": [
+    "cometas",
+    "jordania",
+    "trampa"
    ]
   },
   {
@@ -309,7 +321,12 @@
     "img/t1/cueva_arana_miel.jpg",
     "img/t1/barranco_gomez_miel.jpg"
    ],
-   "vids": []
+   "vids": [],
+   "kw": [
+    "levantin",
+    "valltorta",
+    "castellote"
+   ]
   }
  ],
  "acontecimientos": []

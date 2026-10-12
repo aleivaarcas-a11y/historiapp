@@ -10,7 +10,11 @@ Pestaña «Atlas» de la app (`#atlas`), que abre `atlas/index.html` dentro de l
 
 ## Formato de un lugar
 
-`id`, `civ` (pre, his, fen, egi, per, ege, gre, etr, rom o una nueva definida en `civs`), `lat`, `lon`, `name`, `place`, `date` (textos `{es, en}`), `year` (número, negativo antes de Cristo), `text`, `src` (`type`: Material, Iconografía o Texto; `cap`), `ref`, `qs` (la primera opción es la correcta), `fichas` (ids de `data/temaNN.json`), `imgs` (rutas de imágenes de esas fichas), `vids` (ids de vídeo) y, si hace falta forzarla, `prov`.
+`id`, `civ` (pre, his, fen, egi, per, ege, gre, etr, rom o una nueva definida en `civs`), `lat`, `lon`, `name`, `place`, `date` (textos `{es, en}`), `year` (número, negativo antes de Cristo), `text`, `src` (`type`: Material, Iconografía o Texto; `cap`), `ref`, `qs` (la primera opción es la correcta), `fichas` (ids de `data/temaNN.json`), `imgs` (rutas de imágenes de esas fichas), `vids` (ids de vídeo), `kw` (palabras clave opcionales) y, si hace falta forzarla, `prov`.
+
+## Qué monta el script en la cartela
+
+Además de lo anterior, `atlas_build.py` enlaza cada lugar con el tema. Saca los apartados y los nodos del mapa conceptual donde están sus fichas, un extracto de cada ficha, los hitos de `data/linea.json`, los términos del glosario que aparecen en sus textos y, junto a las preguntas propias, las del cuestionario, los mitos y las tarjetas del tema que contienen alguna palabra clave. Las palabras clave son el nombre del lugar y las de `kw`; casan al principio de palabra, de modo que «tiro» no se confunde con «tiro con arco» si se precisa en `kw`. Límites por lugar: tres nodos, cinco hitos, seis términos y diez preguntas.
 
 ## Mapa base
 

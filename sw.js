@@ -1,6 +1,6 @@
 /* Historiapp service worker: app shell cached on install; data and images cached as they are used. */
-const VERSION = "historiapp-v84";
-const SHELL = ["./", "./index.html", "./atlas/index.html", "./juegos/pentatlon.html", "./juegos/halterios.html", "./juegos/senet.html", "./juegos/agon.html", "./juegos/cuadrigas.html", "./juegos/gladiatura.html", "./manifest.json", "./data/temas.json", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png", "./fonts/Carlito-Regular.woff2", "./fonts/Carlito-Bold.woff2", "./fonts/Carlito-Italic.woff2", "./fonts/Carlito-BoldItalic.woff2", "./icons/logo_oro.png", "./icons/emblema_blanco.png", "./icons/emblema_oro.png"];
+const VERSION = "historiapp-v87";
+const SHELL = ["./", "./index.html", "./atlas/index.html", "./juegos/pentatlon.html", "./juegos/halterios.html", "./juegos/senet.html", "./juegos/agon.html", "./juegos/cuadrigas.html", "./juegos/gladiatura.html", "./img/juegos/pentatlon.jpg", "./img/juegos/halterios.jpg", "./img/juegos/senet.jpg", "./img/juegos/agon.jpg", "./img/juegos/cuadrigas.jpg", "./img/juegos/gladiatura.jpg", "./manifest.json", "./data/temas.json", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png", "./fonts/Carlito-Regular.woff2", "./fonts/Carlito-Bold.woff2", "./fonts/Carlito-Italic.woff2", "./fonts/Carlito-BoldItalic.woff2", "./icons/logo_oro.png", "./icons/emblema_blanco.png", "./icons/emblema_oro.png"];
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
 });

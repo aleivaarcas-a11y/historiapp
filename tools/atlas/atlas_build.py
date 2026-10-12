@@ -58,6 +58,18 @@ CIVS = {
  'rom': {'es':'Roma','en':'Rome','c':'#B6402C','s':'sq'},
 }
 
+import unicodedata
+def norm(x): return ''.join(c for c in unicodedata.normalize('NFD',(x or '').lower()) if unicodedata.category(c)!='Mn')
+def LX(o,l='es'): return o.get(l) or o.get('es') or '' if isinstance(o,dict) else (o or '')
+def excerpt(paras, n=280):
+    t=' '.join(paras or []).strip()
+    if not t: return ''
+    out=''
+    for sent in re.split(r'(?<=[.!?])\s+', t):
+        if len(out)+len(sent)>n and out: break
+        out=(out+' '+sent).strip()
+    return out
+LINEA=json.load(open(os.path.join(APP,'data','linea.json'),encoding='utf8')) if os.path.exists(os.path.join(APP,'data','linea.json')) else {'hitos':[]}
 def load_tema(num):
     p = os.path.join(APP, 'data', f'tema{num:02d}.json')
     return json.load(open(p, encoding='utf8')) if os.path.exists(p) else None
@@ -89,8 +101,51 @@ for fn in sorted(glob.glob(os.path.join(BASE, 'atlas_t*.json')), key=lambda s: i
             v = VI.get(vid)
             if v: vids.append({'id': vid, 't': v['title'], 'src': v['src'], 'poster': v['poster']})
             elif td: avisos.append(f"t{num} {L['id']}: no existe el vídeo {vid}")
-        o = {k: L[k] for k in ('id','civ','name','place','date','year','text','src','ref','qs')}
-        o.update({'tema': num, 'xy': xy, 'prov': L.get('prov') or prov_of(xy), 'fichas': fichas, 'imgs': imgs, 'vids': vids})
+        o = {k: L[k] for k in ('id','civ','name','place','date','year','text','src','ref')}
+        kw=[norm(k) for k in L.get('kw',[])]
+        kre=[re.compile(r'(?<![a-z0-9])'+re.escape(k)) for k in kw]
+        hit=lambda txt: any(r.search(norm(txt)) for r in kre)
+        fobjs=[FI[f['id']] for f in fichas]
+        secs=[]
+        for fo in fobjs:
+            if fo['sec'] not in secs: secs.append(fo['sec'])
+        SEC={x['code']:x['title'] for x in (td or {}).get('sections',[])}
+        o['secs']=[{'code':c,'t':SEC.get(c,{'es':c,'en':c})} for c in secs]
+        # fichas con extracto e imagen
+        for f,fo in zip(fichas,fobjs):
+            f['sec']=fo['sec']; f['ex']={'es':excerpt(fo['body'].get('es')),'en':excerpt(fo['body'].get('en'))}
+            f['img']=(fo.get('images') or [{}])[0].get('src')
+        # nodos del mapa conceptual del tema
+        nodos=[]
+        for r in (td or {}).get('mapa',{}).get('ramas',[]):
+            for nd in r.get('nodos',[]):
+                fs=set(nd.get('fs') or [])|({nd['f']} if nd.get('f') else set())
+                if fs & {f['id'] for f in fichas}: nodos.append({'t':nd['t'],'d':nd['d'],'sec':nd.get('sec',r['code'])})
+        # hitos de la línea del tiempo (por diapositiva de las fichas o por palabra clave)
+        sl=set(); [sl.update(fo.get('slides') or []) for fo in fobjs]
+        hitos=[]
+        for h in LINEA['hitos']:
+            if h['tema']!=num: continue
+            if hit(h['es']['t']+' '+h['es']['x']):
+                hitos.append({'y':h['y'],'d':{'es':h['es']['d'],'en':h['en']['d']},'t':{'es':h['es']['t'],'en':h['en']['t']},'x':{'es':h['es']['x'],'en':h['en']['x']},'s':h.get('s','')})
+        hitos.sort(key=lambda h:h['y'])
+        # glosario: términos que aparecen en las fichas del lugar
+        ftext=norm(LX(L['text'])+' '+' '.join(LX(f['t'])+' '+f['ex']['es'] for f in fichas))
+        glos=[]
+        for g in (td or {}).get('glossary',[]):
+            term=norm(re.split(r'[(,]',g['term']['es'])[0]).strip()
+            if term and (re.search(r'(?<![a-z0-9])'+re.escape(term)+r'(?![a-z0-9])',ftext) or hit(LX(g['term'])+' '+g['def']['es'])): glos.append({'term':g['term'],'def':g['def'],'sec':g.get('sec','')})
+        # preguntas: las del lugar y las de los modos de estudio del tema que hablan de él
+        preg=[{'k':'mc','q':q['q'],'o':q['o'],'a':0} for q in L['qs']]
+        for q in (td or {}).get('quiz',[]):
+            if hit(LX(q['q'])+' '+LX(q.get('explain',{}))+' '+' '.join(LX(o) for o in q['options'])):
+                preg.append({'k':'mc','q':q['q'],'o':{'es':[LX(o) for o in q['options']],'en':[LX(o,'en') for o in q['options']]},'a':q['answer'],'ex':q.get('explain'),'sec':q.get('sec')})
+        for m in (td or {}).get('myths',[]):
+            if hit(LX(m['claim'])+' '+LX(m['explain'])): preg.append({'k':'vf','q':m['claim'],'a':bool(m['answer']),'ex':m['explain'],'sec':m.get('sec')})
+        for c in (td or {}).get('cards',[]):
+            if hit(LX(c['claim'])+' '+LX(c.get('caption',{}))+' '+LX(c.get('explain',{}))): preg.append({'k':'vf','q':c['claim'],'a':bool(c['answer']),'ex':c.get('explain'),'img':c.get('img'),'cap':c.get('caption'),'sec':c.get('sec')})
+        o.update({'tema': num, 'xy': xy, 'prov': L.get('prov') or prov_of(xy), 'fichas': fichas, 'vids': vids,
+                  'nodos': nodos[:3], 'hitos': hitos[:5], 'glos': glos[:6], 'preg': preg[:10]})
         lugares.append(o)
     for A in T.get('acontecimientos', []):
         acont.append({**A, 'tema': num})
@@ -107,6 +162,8 @@ mp = {k: v for k, v in mapa.items() if k != 'proj'}
 json.dump(mp, open(os.path.join(APP, 'data', 'atlas_mapa.json'), 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))
 por = {}
 for l in lugares: por[l['tema']] = por.get(l['tema'], 0)+1
+tot=lambda k: sum(len(l[k]) for l in lugares)
+print(f"Enlaces: {tot('fichas')} fichas, {tot('nodos')} ideas del mapa, {tot('hitos')} hitos de la línea, {tot('glos')} términos, {tot('preg')} preguntas, {tot('vids')} vídeos.")
 print('Atlas: ' + ', '.join(f'Tema {k}: {v} lugares' for k, v in sorted(por.items())) + f'; {len(acont)} acontecimientos.')
 print('Avisos:' if avisos else 'Sin avisos.')
 for a_ in avisos: print('  -', a_)

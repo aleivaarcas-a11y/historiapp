@@ -2,13 +2,10 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
-<meta name="author" content="Alejandro Leiva Arcas">
-<meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
 <script>window.HAPP_CFG={tema:3, volver:'../#t3', orient:'h', barra:{left:'max(10px, env(safe-area-inset-left))', bottom:'max(10px, env(safe-area-inset-bottom))'}, enlaces:[{tema:3, id:'el-salto', es:'Ficha H3·64', en:'Sheet H3·64'}]};</script>
 <script>
 /* Puente con Historiapp. Lo inserta hacer_historiapp.py en la versión <juego>-historiapp.html.
-   Configuración en window.HAPP_CFG = { tema, volver, orient, fichas, enlaces, barra, css }.
+   Configuración en window.HAPP_CFG = { tema, volver, orient, fichas, enlaces, barra, barraEn, barraClase, css }.
    1. Idioma: toma historiapp.lang si existe y lo presenta al juego como navigator.language.
    2. Sonido: ningún AudioContext ni <audio> suena hasta el primer toque (iOS lo bloquea).
    3. Dentro de la app (carpeta juegos/ y alguna clave historiapp.* en el mismo origen):
@@ -125,7 +122,14 @@
   function build() {
     var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
     toastEl = document.createElement('div'); toastEl.className = 'happ-toast'; toastEl.setAttribute('role', 'status'); document.body.appendChild(toastEl);
-    if (inApp) {
+    // C.barraEn: selector de una barra del propio juego donde colocar el botón de volver (con la clase C.barraClase)
+    var dentro = inApp && C.barraEn ? document.querySelector(C.barraEn) : null;
+    if (dentro) {
+      var av = document.createElement('a'); av.href = C.volver || '../'; av.className = 'happ-volver ' + (C.barraClase || '');
+      av.textContent = '‹ ' + T.back; av.setAttribute('aria-label', EN ? 'Back to Historiapp' : 'Volver a Historiapp');
+      dentro.insertBefore(av, dentro.firstChild);
+    }
+    if (inApp && !dentro) {
       var bar = document.createElement('div'); bar.className = 'happ-bar';
       var pos = C.barra || { top: 'max(10px, env(safe-area-inset-top))', left: 'max(10px, env(safe-area-inset-left))' };
       for (var k in pos) bar.style[k] = pos[k];
@@ -166,6 +170,9 @@
   if (document.body) build(); else document.addEventListener('DOMContentLoaded', build);
 })();
 </script>
+<!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
+<meta name="author" content="Alejandro Leiva Arcas">
+<meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 </head>
 <body style="margin:0">
@@ -188,6 +195,8 @@ body { background: var(--negro); color: var(--blanco); overflow: hidden; touch-a
 #ctrl { position: absolute; display: flex; gap: 8px; }
 #ctrl button { min-height: 44px; min-width: 44px; font: 600 13px/1 var(--font-display); letter-spacing: .12em; text-transform: uppercase; color: var(--barro); background: var(--negro); border: 1.5px solid var(--barro); padding: 7px 10px; cursor: pointer; }
 #ctrl button:focus-visible { outline: 2px solid var(--blanco); outline-offset: 2px; }
+/* móvil en horizontal: botones de 44 px como mínimo y letra legible */
+@media (max-height: 540px), (max-width: 700px) { #ctrl { gap: 10px; } #ctrl button { min-height: 44px; min-width: 64px; font-size: 14px; padding: 8px 12px; } }
 </style>
 
 <div id="wrap">
@@ -258,19 +267,35 @@ const cv = document.getElementById('game');
 const ctx = cv.getContext('2d');
 const ctrl = document.getElementById('ctrl');
 let scale = 1, dpr = 1;
+// MOB: pantalla pequeña (móvil en horizontal); uiK: cuánto se amplía la tarjeta de resultado
+let MOB = false, uiK = 1;
+// OX: lo que la escena se extiende a cada lado del 16:9 en pantallas más apaisadas (iPhone en
+// horizontal); el 16:9 central, con la interfaz, se encaja en el área segura (sin la muesca)
+let OX = 0;
+const safeProbe = document.createElement('div');
+safeProbe.style.cssText = 'position:fixed;left:0;top:0;visibility:hidden;pointer-events:none;padding:0 env(safe-area-inset-right) 0 env(safe-area-inset-left)';
+document.body.appendChild(safeProbe);
+function safeSide() {
+  if (window.__safeTest) return window.__safeTest;
+  const s = getComputedStyle(safeProbe);
+  return Math.max(parseFloat(s.paddingLeft) || 0, parseFloat(s.paddingRight) || 0);
+}
 function resize() {
-  const vw = innerWidth, vh = innerHeight;
-  scale = Math.min(vw / W, vh / H);
+  const vw = innerWidth, vh = innerHeight, side = safeSide();
+  scale = Math.min((vw - 2 * side) / W, vh / H);
+  OX = Math.max(0, Math.min(W * .3, (vw / scale - W) / 2));
   dpr = Math.min(devicePixelRatio || 1, 2);
-  cv.style.width = Math.round(W * scale) + 'px';
+  MOB = scale < .75; uiK = MOB ? Math.min(2, .95 / scale) : 1;
+  cv.style.width = Math.round((W + 2 * OX) * scale) + 'px';
   cv.style.height = Math.round(H * scale) + 'px';
-  cv.width = Math.round(W * scale * dpr);
+  cv.width = Math.round((W + 2 * OX) * scale * dpr);
   cv.height = Math.round(H * scale * dpr);
   const left = (vw - W * scale) / 2, top = (vh - H * scale) / 2;
   ctrl.style.right = (left + 12 * scale + 4) + 'px';
   ctrl.style.top = (top + 48 * scale) + 'px';
 }
 addEventListener('resize', resize); resize();
+addEventListener('orientationchange', () => setTimeout(resize, 300));
 
 // Textura de barro cocido
 const grain = document.createElement('canvas'); grain.width = grain.height = 256;
@@ -480,28 +505,28 @@ const wx = x => (x - camX) * S + camShake.x * .02;
 const wy = y => TUNING.groundY - y * S;
 
 function drawBackground() {
-  ctx.fillStyle = C.barro; ctx.fillRect(0, 0, W, H);
-  ctx.fillStyle = grainPat; ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = C.barro; ctx.fillRect(-OX, 0, W + 2 * OX, H);
+  ctx.fillStyle = grainPat; ctx.fillRect(-OX, 0, W + 2 * OX, H);
   // Pórtico lejano con parallax
   ctx.fillStyle = 'rgba(80,30,10,.16)';
   const par = .35, sp = 2.6;
   const off = camX * par;
-  const first = Math.floor(off / sp) - 1;
-  for (let i = first; i < first + 22; i++) {
+  const more = Math.ceil(OX / (sp * S * .8)), first = Math.floor(off / sp) - 1 - more;
+  for (let i = first; i < first + 22 + 2 * more; i++) {
     const x = (i * sp - off) * S * .8;
     ctx.fillRect(x - 14, 300, 28, 210);
     ctx.fillRect(x - 22, 292, 44, 10);
   }
-  ctx.fillRect(0, 262, W, 30);
-  ctx.beginPath(); ctx.moveTo(0, 262); ctx.lineTo(W, 262); ctx.lineTo(W, 250); ctx.lineTo(0, 250); ctx.fill();
+  ctx.fillRect(-OX, 262, W + 2 * OX, 30);
+  ctx.beginPath(); ctx.moveTo(-OX, 262); ctx.lineTo(W + OX, 262); ctx.lineTo(W + OX, 250); ctx.lineTo(-OX, 250); ctx.fill();
 }
 
 function meander(y, h) {
-  ctx.fillStyle = C.negro; ctx.fillRect(0, y, W, h);
+  ctx.fillStyle = C.negro; ctx.fillRect(-OX, y, W + 2 * OX, h);
   ctx.strokeStyle = C.barro; ctx.lineWidth = 3; ctx.lineCap = 'square';
   const u = (h - 10) / 5, x0 = 4, top = y + 5;
-  ctx.beginPath(); ctx.moveTo(0, top + 5 * u); ctx.lineTo(W, top + 5 * u); ctx.stroke();
-  for (let x = x0; x < W; x += 6 * u) {
+  ctx.beginPath(); ctx.moveTo(-OX, top + 5 * u); ctx.lineTo(W + OX, top + 5 * u); ctx.stroke();
+  for (let x = x0 - Math.ceil(OX / (6 * u)) * 6 * u; x < W + OX; x += 6 * u) {
     ctx.beginPath();
     ctx.moveTo(x + u, top + 5 * u); ctx.lineTo(x + u, top); ctx.lineTo(x + 5 * u, top); ctx.lineTo(x + 5 * u, top + 3.6 * u);
     ctx.lineTo(x + 2.6 * u, top + 3.6 * u); ctx.lineTo(x + 2.6 * u, top + 1.6 * u); ctx.lineTo(x + 3.6 * u, top + 1.6 * u);
@@ -511,12 +536,12 @@ function meander(y, h) {
 
 function rays(y, h) {
   ctx.fillStyle = C.negro;
-  ctx.fillRect(0, y, W, 6);
+  ctx.fillRect(-OX, y, W + 2 * OX, 6);
   const w = 26;
-  for (let x = 0; x < W + w; x += w) {
+  for (let x = -Math.ceil(OX / w) * w; x < W + OX + w; x += w) {
     ctx.beginPath(); ctx.moveTo(x, y + h); ctx.lineTo(x + w / 2, y + 10); ctx.lineTo(x + w, y + h); ctx.fill();
   }
-  ctx.fillRect(0, y + h, W, H - y - h);
+  ctx.fillRect(-OX, y + h, W + 2 * OX, H - y - h);
 }
 
 function drawTrack() {
@@ -534,16 +559,16 @@ function drawTrack() {
   ctx.restore();
   // Suelo
   ctx.fillStyle = C.negro;
-  ctx.fillRect(0, gy, x1 > 0 ? x1 : 0, 5);
-  if (x2 < W) ctx.fillRect(x2, gy, W - x2, 5);
-  ctx.fillRect(Math.max(0, x1), gy + 22, Math.min(W, x2) - Math.max(0, x1), 4);
+  if (x1 > -OX) ctx.fillRect(-OX, gy, x1 + OX, 5);
+  if (x2 < W + OX) ctx.fillRect(x2, gy, W + OX - x2, 5);
+  ctx.fillRect(Math.max(-OX, x1), gy + 22, Math.min(W + OX, x2) - Math.max(-OX, x1), 4);
   // Tabla de batida
   ctx.fillStyle = C.blanco; ctx.fillRect(wx(-.2), gy - 3, .2 * S, 9);
   ctx.strokeStyle = C.negro; ctx.lineWidth = 2; ctx.strokeRect(wx(-.2), gy - 3, .2 * S, 9);
   // Marcas de metros con numerales griegos
   ctx.fillStyle = C.negro; ctx.font = `700 22px ${'Palatino Linotype, Palatino, Georgia, serif'}`; ctx.textAlign = 'center';
   for (let m = 1; m <= 10; m++) {
-    const x = wx(m); if (x < -40 || x > W + 40) continue;
+    const x = wx(m); if (x < -OX - 40 || x > W + OX + 40) continue;
     ctx.fillRect(x - 1.5, gy + 26, 3, 12);
     ctx.fillText(GREEK[m] + 'ʹ', x, gy + 62);
   }
@@ -551,13 +576,13 @@ function drawTrack() {
 
 function stake(x, label, filled) {
   const sx = wx(x), gy = TUNING.groundY;
-  if (sx < -50 || sx > W + 50) return;
+  if (sx < -OX - 50 || sx > W + OX + 50) return;
   ctx.strokeStyle = C.negro; ctx.lineWidth = 3;
   ctx.beginPath(); ctx.moveTo(sx, gy + 4); ctx.lineTo(sx, gy - 70); ctx.stroke();
   // banderín: lleno para el récord, hueco para el último salto
   ctx.beginPath(); ctx.moveTo(sx, gy - 70); ctx.lineTo(sx + 26, gy - 62); ctx.lineTo(sx, gy - 54); ctx.closePath();
   if (filled) { ctx.fillStyle = C.negro; ctx.fill(); } else { ctx.fillStyle = C.blanco; ctx.fill(); ctx.stroke(); }
-  ctx.fillStyle = C.negro; ctx.font = '700 15px Palatino Linotype, Palatino, Georgia, serif'; ctx.textAlign = 'left';
+  ctx.fillStyle = C.negro; ctx.font = `700 ${MOB ? 24 : 15}px Palatino Linotype, Palatino, Georgia, serif`; ctx.textAlign = 'left';
   ctx.fillText(label, sx + 6, gy - 78);
 }
 
@@ -642,7 +667,7 @@ function landPose() {
 }
 
 function drawAulete() {
-  const X = -1.6, hx = wx(X); if (hx < -100 || hx > W + 100) return;
+  const X = -1.6, hx = wx(X); if (hx < -OX - 100 || hx > W + OX + 100) return;
   const bob = Math.sin(timeT * 5) * .01;
   const hy = wy(.95 + bob);
   // túnica larga
@@ -658,7 +683,7 @@ function drawAulete() {
   ctx.beginPath(); ctx.moveTo(head.x + 8, head.y + 6); ctx.lineTo(head.x + 50, head.y + 22); ctx.stroke();
 }
 function drawJudge() {
-  const X = 11.6, hx = wx(X); if (hx < -100 || hx > W + 100) return;
+  const X = 11.6, hx = wx(X); if (hx < -OX - 100 || hx > W + OX + 100) return;
   ctx.fillStyle = C.negro;
   const hy = wy(.95);
   ctx.beginPath(); ctx.moveTo(hx - 16, hy - 40); ctx.lineTo(hx + 12, hy - 40); ctx.lineTo(hx + 20, wy(0)); ctx.lineTo(hx - 26, wy(0)); ctx.fill();
@@ -703,6 +728,7 @@ function landMark() {
 
 // Texto con tipografía de inscripción
 function label(txt, x, y, size, align = 'center', color = C.negro, weight = 700) {
+  if (MOB) { const t = ctx.getTransform(); size = Math.max(size, 12.5 * dpr / Math.hypot(t.a, t.b)); }
   ctx.font = `${weight} ${size}px Palatino Linotype, Palatino, "Book Antiqua", Georgia, serif`;
   ctx.textAlign = align; ctx.fillStyle = color;
   if ('letterSpacing' in ctx) ctx.letterSpacing = Math.round(size * .12) + 'px';
@@ -723,18 +749,23 @@ function hand(x, y) {
 
 function hud() {
   meander(0, 40);
-  label(`${TX.jump} ${jumps + (state === 'result' ? 0 : 1)}`, 24, 76, 20, 'left');
-  label(`${TX.best} ${best > 0 ? fmt(best) : '—'}`, 24, 104, 20, 'left');
+  // marcador: en el móvil, mayor (unos 16 px reales)
+  label(`${TX.jump} ${jumps + (state === 'result' ? 0 : 1)}`, 24, MOB ? 82 : 76, MOB ? 30 : 20, 'left');
+  label(`${TX.best} ${best > 0 ? fmt(best) : '—'}`, 24, MOB ? 122 : 104, MOB ? 30 : 20, 'left');
 
   const helpOn_ = helpOn();
   if (state === 'idle') { label(TX.tapRun, W / 2, 200, 34); hand(W / 2, 250); }
   if (state === 'run' && helpOn_ && A.x > -2.6) { label(TX.tapJump, W / 2, 200, 34); hand(W / 2, 250); }
   if (state === 'air' && helpOn_ && A.holding) { const p = A.tAir / A.Tpred; if (p > .5 && p < .86) { label(TX.tapRel, W / 2, 200, 34); hand(W / 2, 250); } }
-  if (state === 'result') resultCard();
+  if (state === 'result') {
+    // debajo de los botones de arriba (unos 130 de alto en el móvil)
+    if (MOB) { const top = 132, hh = 255 + 64, k = Math.min(uiK, (W - 16) / 560, (H - 100 - top) / hh); ctx.save(); ctx.translate(W / 2, top + hh * k / 2); ctx.scale(k, k); ctx.translate(-W / 2, -(120 + hh / 2)); resultCard(); ctx.restore(); }
+    else resultCard();
+  }
 }
 
 function gauge(x, y, w, title, zoneA, zoneB, markV, markLbl, ideal) {
-  label(title, x, y - 12, 15, 'left', C.barro);
+  label(title, x, y - 36, 15, 'left', C.barro);
   ctx.strokeStyle = C.barro; ctx.lineWidth = 2;
   ctx.strokeRect(x, y, w, 18);
   // zona ideal rayada
@@ -748,11 +779,11 @@ function gauge(x, y, w, title, zoneA, zoneB, markV, markLbl, ideal) {
     ctx.beginPath(); ctx.moveTo(mx, y + 2); ctx.lineTo(mx - 9, y - 12); ctx.lineTo(mx + 9, y - 12); ctx.fill();
     ctx.fillRect(mx - 1.5, y, 3, 18);
   }
-  label(markLbl, x + w, y - 12, 15, 'right', C.blanco, 600);
+  label(markLbl, x, y - 12, 15, 'left', C.blanco, 600);
 }
 
 function resultCard() {
-  const cw = 560, ch = 215, cx = (W - cw) / 2, cy = 120;
+  const cw = 560, ch = 255, cx = (W - cw) / 2, cy = 120, gy = 40;
   const pop = reduced ? 1 : ease(stateT / .18);
   ctx.save(); ctx.translate(W / 2, cy + ch / 2); ctx.scale(.9 + .1 * pop, .9 + .1 * pop); ctx.translate(-W / 2, -(cy + ch / 2));
   ctx.globalAlpha = pop;
@@ -766,17 +797,19 @@ function resultCard() {
     label(fmt(J.dist), W / 2, cy + 98, 60, 'center', C.blanco);
     // batida: últimos 50 cm antes de la tabla
     const bLbl = J.assisted ? TX.bHelp : J.gap < .05 ? TX.bPerfect : J.gap < .15 ? TX.bGood : J.gap < .35 ? TX.bEarly : TX.bVery;
-    gauge(cx + 30, cy + 150, 230, TX.board, .9, 1, 1 - Math.min(J.gap, .5) / .5, bLbl, TX.cm(Math.round(J.gap * 100)));
+    gauge(cx + 30, cy + 150 + gy, 230, TX.board, .9, 1, 1 - Math.min(J.gap, .5) / .5, bLbl, TX.cm(Math.round(J.gap * 100)));
     let rLbl = TX.rNone;
     if (J.p != null) rLbl = J.q > .8 ? TX.rPerfect : J.q > .45 ? TX.rGood : J.p < TUNING.relOpt ? TX.rEarly : TX.rLate;
-    gauge(cx + 300, cy + 150, 230, TX.rel, TUNING.relOpt - .08, TUNING.relOpt + .08, J.p, rLbl, TX.ideal);
+    gauge(cx + 300, cy + 150 + gy, 230, TX.rel, TUNING.relOpt - .08, TUNING.relOpt + .08, J.p, rLbl, TX.ideal);
   }
   ctx.restore();
-  if (stateT > .5) label(TX.again, W / 2, cy + ch + 44, 22, 'center', C.negro);
+  // en el móvil, el aviso va sobre una placa oscura para que no lo tapen las figuras
+  if (stateT > .5 && MOB) { ctx.font = `700 22px Palatino Linotype, Palatino, Georgia, serif`; const tw = ctx.measureText(TX.again).width + TX.again.length * 2.6 + 44; ctx.globalAlpha = .9; ctx.fillStyle = C.negro; ctx.fillRect(W / 2 - tw / 2, cy + ch + 20, tw, 36); ctx.globalAlpha = 1; label(TX.again, W / 2, cy + ch + 44, 22, 'center', C.blanco); }
+  else if (stateT > .5) label(TX.again, W / 2, cy + ch + 44, 22, 'center', C.negro);
 }
 
 function draw() {
-  ctx.setTransform(scale * dpr, 0, 0, scale * dpr, 0, 0);
+  ctx.setTransform(scale * dpr, 0, 0, scale * dpr, OX * scale * dpr, 0);
   ctx.save();
   if (!reduced) ctx.translate(0, camShake.x * .02);
   drawBackground();
@@ -792,7 +825,7 @@ function draw() {
   rays(TUNING.groundY + 80, 40);
   ctx.restore();
   hud();
-  if (flash > 0 && !reduced) { ctx.fillStyle = `rgba(239,227,200,${flash * .25})`; ctx.fillRect(0, 0, W, H); }
+  if (flash > 0 && !reduced) { ctx.fillStyle = `rgba(239,227,200,${flash * .25})`; ctx.fillRect(-OX, 0, W + 2 * OX, H); }
 }
 
 // ---------- Bucle ----------
