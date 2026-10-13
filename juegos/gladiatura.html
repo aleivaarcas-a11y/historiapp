@@ -1699,21 +1699,24 @@ const Touch=(function(){
 @media (max-height:500px){ #touch{--s:1} }
 #touch.on{display:block}
 .tb-left,.tb-right,.tb-up,.tb-guard{display:none!important}
-#tjz{position:absolute;left:0;top:28%;width:44%;bottom:0;pointer-events:auto;touch-action:none}
-#tjoy{position:absolute;width:calc(124px*var(--s));height:calc(124px*var(--s));margin:calc(-62px*var(--s)) 0 0 calc(-62px*var(--s));border-radius:50%;border:2.5px solid rgba(243,231,207,.75);background:radial-gradient(circle,rgba(20,14,8,.25),rgba(20,14,8,.5));pointer-events:none;opacity:.55;transition:opacity .15s}
-#tjoy.on{opacity:.95}
-#tjoy .kn{position:absolute;left:50%;top:50%;width:calc(54px*var(--s));height:calc(54px*var(--s));margin:calc(-27px*var(--s)) 0 0 calc(-27px*var(--s));border-radius:50%;background:radial-gradient(circle at 35% 35%,#fbf3df,#c9a76a);border:2px solid #7a5a2e;box-shadow:0 3px 8px rgba(0,0,0,.4)}
-#tjoy i{position:absolute;font-style:normal;color:#f3e7cf;font-size:calc(15px*var(--s));text-shadow:0 1px 2px #000;opacity:.8}
-#tjoy i.qneed{color:#f3d68c;opacity:1;font-size:calc(22px*var(--s));text-shadow:0 0 6px #000,0 0 10px rgba(243,214,140,.9)}
-#tjoy i.on{opacity:1;color:#f3d68c}
+#tjz{position:absolute;left:0;top:34%;width:40%;bottom:0;pointer-events:auto;touch-action:none}
+#tdp{position:absolute;left:calc(var(--L) + 6px*var(--s));bottom:calc(var(--B) + 6px*var(--s));width:calc(138px*var(--s));height:calc(138px*var(--s));pointer-events:none}
+#tdp b{position:absolute;left:33.3%;top:33.3%;width:33.4%;height:33.4%;background:rgba(20,14,8,.55)}
+#tdp i{position:absolute;box-sizing:border-box;width:33.4%;height:33.4%;display:flex;align-items:center;justify-content:center;font-style:normal;background:rgba(20,14,8,.55);border:2.5px solid rgba(243,231,207,.75);color:#f3e7cf;font-size:calc(17px*var(--s));text-shadow:0 1px 2px #000}
+#tdp i[data-k=up]{left:33.3%;top:0;border-bottom:none;border-radius:10px 10px 0 0}
+#tdp i[data-k=guard]{left:33.3%;bottom:0;border-top:none;border-radius:0 0 10px 10px}
+#tdp i[data-k=left]{left:0;top:33.3%;border-right:none;border-radius:10px 0 0 10px}
+#tdp i[data-k=right]{right:0;top:33.3%;border-left:none;border-radius:0 10px 10px 0}
+#tdp i.qneed{outline:3px dashed #f3d68c;outline-offset:2px;color:#f3d68c;background:rgba(243,214,140,.3);z-index:1}
+#tdp i.on{background:rgba(224,164,86,.7);color:#1d1408;text-shadow:none}
 .tb-left{left:var(--L);bottom:calc(var(--B) + 50px*var(--s));width:calc(58px*var(--s));height:calc(58px*var(--s))}
 .tb-right{left:calc(var(--L) + 120px*var(--s));bottom:calc(var(--B) + 50px*var(--s));width:calc(58px*var(--s));height:calc(58px*var(--s))}
 .tb-up{left:calc(var(--L) + 61px*var(--s));bottom:calc(var(--B) + 106px*var(--s));width:calc(56px*var(--s));height:calc(56px*var(--s))}
 .tb-guard{left:calc(var(--L) + 61px*var(--s));bottom:var(--B);width:calc(56px*var(--s));height:calc(56px*var(--s))}
 .tb-atk{right:calc(var(--R) + 16px*var(--s));bottom:calc(var(--B) + 14px*var(--s));width:calc(86px*var(--s));height:calc(86px*var(--s))}
-.tb-dodge{right:calc(var(--R) + 110px*var(--s));bottom:calc(var(--B) + 6px*var(--s));width:calc(62px*var(--s));height:calc(62px*var(--s))}
-.tb-push{right:calc(var(--R) + 96px*var(--s));bottom:calc(var(--B) + 76px*var(--s));width:calc(62px*var(--s));height:calc(62px*var(--s))}
-.tb-spec{right:calc(var(--R) + 26px*var(--s));bottom:calc(var(--B) + 108px*var(--s));width:calc(62px*var(--s));height:calc(62px*var(--s))}
+.tb-dodge{right:calc(var(--R) + 104px*var(--s));bottom:calc(var(--B) + 7px*var(--s));width:calc(62px*var(--s));height:calc(62px*var(--s))}
+.tb-push{right:calc(var(--R) + 91px*var(--s));bottom:calc(var(--B) + 72px*var(--s));width:calc(62px*var(--s));height:calc(62px*var(--s))}
+.tb-spec{right:calc(var(--R) + 29px*var(--s));bottom:calc(var(--B) + 104px*var(--s));width:calc(62px*var(--s));height:calc(62px*var(--s))}
 #tyield{position:absolute;left:56.5%;top:7.8%;transform:translate(-50%,-50%);width:48px;height:48px;min-height:48px;padding:0;border:none;background:none;display:none;z-index:6;align-items:center;justify-content:center;flex-direction:column;-webkit-tap-highlight-color:transparent;touch-action:none}
 #tyield.on{display:flex}
 #tyield b{position:relative;width:32px;height:32px;border-radius:50%;background:rgba(20,14,8,.8);border:2px dashed rgba(243,231,207,.6);color:#f3e7cf;font-size:17px;line-height:28px;opacity:.6}
@@ -1769,20 +1772,20 @@ const Touch=(function(){
   const B=(k,big,small,cls)=>{ const b=document.createElement('div'); b.className='tb tb-'+k+(cls?' '+cls:''); b.dataset.k=k; b.innerHTML=`<b>${big}</b>${small?`<small>${small}</small>`:''}`; pad.appendChild(b); return b; };
   // cruceta a la izquierda
   B('left','←'); B('right','→'); B('up','↑'); B('guard','↓','cubrir');
-  // joystick analógico flotante: aparece donde se apoya el pulgar izquierdo (izquierda/derecha andar, arriba saltar, abajo cubrir)
+  // cruceta fija (sustituye al joystick porque con él no entraban bien los combos): el pulgar se desliza de una flecha a otra
+  // sin levantarse, y en diagonal cuenta como dos flechas (abajo y adelante, por ejemplo)
   const jz=document.createElement('div'); jz.id='tjz'; pad.appendChild(jz);
-  const jy=document.createElement('div'); jy.id='tjoy'; jy.innerHTML='<i data-k="up" style="left:50%;top:4%;transform:translateX(-50%)">▲</i><i data-k="guard" style="left:50%;bottom:4%;transform:translateX(-50%)">▼</i><i data-k="left" style="left:6%;top:50%;transform:translateY(-50%)">◀</i><i data-k="right" style="right:6%;top:50%;transform:translateY(-50%)">▶</i><span class="kn"></span>'; pad.appendChild(jy);
-  const jk=jy.querySelector('.kn'); let jId=null, jx=0, jyy=0; const jOn={left:false,right:false,up:false,guard:false};
-  const jRest=()=>{ const r=pad.getBoundingClientRect(), sc=parseFloat(getComputedStyle(pad).getPropertyValue('--s'))||1; jy.style.left=(Math.max(12,parseFloat(getComputedStyle(pad).getPropertyValue('--L'))||12)+76*sc)+'px'; jy.style.top=(r.height-(parseFloat(getComputedStyle(pad).getPropertyValue('--B'))||8)-78*sc)+'px'; jk.style.transform=''; jy.classList.remove('on'); };
+  const jy=document.createElement('div'); jy.id='tdp'; jy.innerHTML='<b></b><i data-k="up">▲</i><i data-k="guard">▼</i><i data-k="left">◀</i><i data-k="right">▶</i>'; pad.appendChild(jy);
+  let jId=null; const jOn={left:false,right:false,up:false,guard:false};
   const jSet=(k,v)=>{ if(jOn[k]===v) return; jOn[k]=v; jy.querySelector('i[data-k="'+k+'"]').classList.toggle('on',v); v?vPress(k):vRelease(k); };
-  const jUpd=(cx,cy)=>{ const R=parseFloat(getComputedStyle(jy).width)/2||62; let dx=cx-jx, dy=cy-jyy; const d=Math.hypot(dx,dy); if(d>R){ dx*=R/d; dy*=R/d; } jk.style.transform=`translate(${dx}px,${dy}px)`;
-    const nx=dx/R, ny=dy/R; jSet('left',nx<-(jOn.left?.25:.38)); jSet('right',nx>(jOn.right?.25:.38)); jSet('up',ny<-(jOn.up?.45:.6)); jSet('guard',ny>(jOn.guard?.45:.6)); };
-  jz.addEventListener('pointerdown',e=>{ if(jId!==null) return; e.preventDefault(); try{ jz.setPointerCapture(e.pointerId); }catch(_){} if(!started) begin(); jId=e.pointerId; const r=pad.getBoundingClientRect(); jx=e.clientX-r.left; jyy=e.clientY-r.top; jy.style.left=jx+'px'; jy.style.top=jyy+'px'; jy.classList.add('on'); jUpd(jx,jyy); });
-  jz.addEventListener('pointermove',e=>{ if(e.pointerId!==jId) return; const r=pad.getBoundingClientRect(); jUpd(e.clientX-r.left,e.clientY-r.top); });
-  const jEnd=e=>{ if(e.pointerId!==jId) return; jId=null; for(const k in jOn) jSet(k,false); jRest(); };
+  const jUpd=(cx,cy)=>{ const r=jy.getBoundingClientRect(), R=r.width/2||69, dx=cx-(r.left+R), dy=cy-(r.top+R), d=Math.hypot(dx,dy);
+    if(d<R*.2){ for(const k in jOn) jSet(k,false); return; }
+    const ux=dx/d, uy=dy/d; jSet('left',ux<-(jOn.left?.3:.38)); jSet('right',ux>(jOn.right?.3:.38)); jSet('up',uy<-(jOn.up?.45:.55)); jSet('guard',uy>(jOn.guard?.45:.55)); };
+  jz.addEventListener('pointerdown',e=>{ if(jId!==null) return; e.preventDefault(); try{ jz.setPointerCapture(e.pointerId); }catch(_){} if(!started) begin(); jId=e.pointerId; jUpd(e.clientX,e.clientY); if(navigator.vibrate) try{ navigator.vibrate(4); }catch(_){} });
+  jz.addEventListener('pointermove',e=>{ if(e.pointerId===jId) jUpd(e.clientX,e.clientY); });
+  const jEnd=e=>{ if(e.pointerId!==jId) return; jId=null; for(const k in jOn) jSet(k,false); };
   for(const ev of ['pointerup','pointercancel','lostpointercapture']) jz.addEventListener(ev,jEnd);
-  addEventListener('resize',()=>{ if(jId===null) jRest(); }); setTimeout(jRest,50);
-  Touch_jRelease=()=>{ jId=null; for(const k in jOn) jSet(k,false); jRest(); };
+  Touch_jRelease=()=>{ jId=null; for(const k in jOn) jSet(k,false); };
   // acciones a la derecha (las letras coinciden con el teclado y con los textos del juego)
   B('atk','A','golpe'); B('push','S','presa'); B('dodge','D','esquiva'); const bW=B('spec','W','furor');
   // rendirse (ad digitum): botón pequeño junto al reloj, lejos de los de acción; hay que mantenerlo medio segundo
@@ -2002,7 +2005,7 @@ function portraitCanvas(type,fem,w,h,look){ const c=document.createElement('canv
   try{ const f=Fighter(type,0,1,true,''); f.fem=!!fem; if(look){ f.emblem=look.emblem||null; f.oro=!!look.oro; } const sc=(h*2)/(f.mount?400:305); g.translate(w*(f.mount?1.1:1.02),h*2-10); g.scale(sc,sc); if(f.mount) gHorse(0,false); bodyLocal(f,skeleton(f)); }catch(e){}
   ctx=sv; return c; }
 
-/* la lección va en una franja abajo, entre el joystick y los botones, para no tapar a los luchadores */
+/* la lección va en una franja abajo, entre la cruceta y los botones, para no tapar a los luchadores */
 (function(){ const st=document.createElement('style'); st.textContent=`
 #stage #tut{top:auto;bottom:max(1.6%,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:min(50%,620px);padding:.3em .8em .35em;pointer-events:none;background:rgba(18,12,7,.88)}
 #stage #tut button{pointer-events:auto}

@@ -119,6 +119,44 @@ button{font-family:var(--serif);cursor:pointer;-webkit-appearance:none;appearanc
 .tlist{display:flex;flex-wrap:wrap;gap:3px 12px;margin:6px 0;font-size:13.5px}.tlist span{opacity:.55}.tlist span.ok{opacity:1;font-weight:700}
 .pjchip{padding:0 12px 0 4px;gap:5px}.pjchip canvas{display:block;box-shadow:none}
 @media (max-height:430px){.gn{font-size:13px;margin:4px 0}.pjrow{gap:10px}.tlist{font-size:12px;margin:3px 0;gap:2px 10px}.pjchip span{display:none}.pjchip{padding:0 6px}}
+
+/* drama */
+.dlg{position:absolute;left:3%;right:3%;bottom:4%;min-height:24%;background:linear-gradient(180deg,rgba(32,22,14,.9),rgba(22,15,9,.94));border:2px solid #c99a52;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.5),inset 0 0 0 4px rgba(201,154,82,.18);color:#f3e6c8;padding:14px 22px 16px;cursor:pointer}
+.dlg.wp{left:27%}
+.dlg .nm{position:absolute;left:14px;top:-18px;background:var(--ocre);color:#fff3d6;border:2px solid #c99a52;border-radius:6px;padding:3px 12px;font-weight:700;font-variant:small-caps;letter-spacing:.06em;font-size:17px}
+.dlg .nm:empty{display:none}
+.dlg .tx{font-size:20px;line-height:1.45;min-height:2.9em}
+.dlg.narr .tx{font-style:italic;color:#e9d8b4}
+.dlg .nx{position:absolute;right:16px;bottom:8px;font-style:normal;color:#e3a04a;animation:bob 1s ease-in-out infinite;transition:opacity .2s}
+@keyframes bob{50%{transform:translateY(4px)}}
+.dlg.opts{cursor:default}.dlg.opts .tx{display:none}
+.dlg .ops{display:flex;flex-direction:column;gap:8px}
+.dlg .ops .opt{background:rgba(246,236,214,.95);color:var(--negro)}
+.dlg .ops .opt:hover{background:#efe0b8}
+.pane.scn{font-size:14px;padding:4px 10px;opacity:.95;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:40%}
+.card.diario{width:min(760px,100%);background:#f8f1e1}
+.card.diario::before{background:repeating-linear-gradient(90deg,var(--azul) 0 18px,var(--negro) 18px 20px,#f8f1e1 20px 26px)}
+.card .dtx{font-size:16.5px;line-height:1.5}
+.card h3{margin:12px 0 2px;font-size:16px;color:var(--azulD);font-variant:small-caps;letter-spacing:.04em}
+.card .code{display:inline-block;font:700 11.5px system-ui,sans-serif;background:var(--azul);color:#fff;border-radius:9px;padding:1px 7px;margin-right:4px;vertical-align:1px}
+.ficha.sm{min-height:30px;padding:0 9px;margin:0 0 0 4px;font-size:13px}
+.card.diarioL .dtx{font-size:15px;margin:5px 0}
+.card .lec{font-size:15px;line-height:1.42;margin:7px 0;padding:6px 10px;border-left:4px solid #c9b48a}
+.card .lec.mine{border-color:var(--ocre);background:#f3e2c6}
+.qte{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;cursor:pointer}
+.qte .qh{background:var(--negro);color:var(--cal);padding:8px 18px;border-radius:22px;font-size:19px;font-weight:700}
+.qte .qr{position:relative;width:120px;height:120px}
+.qte .qr b{position:absolute;inset:0;border-radius:50%}
+.qte .fix{border:6px solid #fff3d6;box-shadow:0 0 0 3px var(--negro),inset 0 0 0 3px var(--negro);background:rgba(180,71,43,.25)}
+.qte .mov{border:5px dashed var(--amar);opacity:0}
+.qte .qr span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff3d6;font-weight:700;text-shadow:0 2px 0 var(--negro)}
+.qte .qs{display:flex;gap:10px}.qte .qs i{width:18px;height:18px;border-radius:50%;border:2px solid #fff3d6;background:rgba(0,0,0,.3)}.qte .qs i.ok{background:var(--amar)}.qte .qs i.no{background:var(--ocre)}
+@media (max-height:430px){
+ .dlg{padding:10px 16px 10px;min-height:28%}.dlg .tx{font-size:15.5px;line-height:1.38}.dlg .nm{font-size:14px;top:-15px;padding:2px 9px}
+ .dlg .ops{gap:5px}.dlg .ops .opt{min-height:40px;font-size:14.5px;padding:5px 10px}
+ .card .dtx{font-size:14px;line-height:1.38}.card .lec{font-size:13px;margin:4px 0;padding:4px 8px}.card h3{font-size:14px;margin:8px 0 2px}
+ .pane.scn{display:none}.qte .qh{font-size:15px}
+}
 </style>
 </head>
 <body>
@@ -388,6 +426,305 @@ const CICLO = {
     {t:{es:'Prueba V · La fiesta del toro', en:'Trial V · The bull festival'},
      p:{es:'La última prueba del ciclo, en el patio central: tres toros. La comunidad mide tu valor con su aclamación.', en:'The last trial of the cycle, in the central court: three bulls. The community measures your courage with its acclaim.'},
      gana:{es:'La aclamación del palacio', en:'The acclaim of the palace'}}]
+};
+
+/* CNOSO · guion del drama interactivo.
+   Los personajes y el hilo son inventados. Todo dato sobre Creta procede del texto de las fichas H3·03 a H3·17 del Tema 3
+   (Historiapp, tema03.json), que reproduce las diapositivas y las notas del orador. Los personajes solo dicen lo que podrían
+   saber desde dentro; lo que sabemos hoy, con sus autores, lo dice el diario (líneas {d}).
+   Formato de una línea:
+     ['quien', 'es', 'en']                     diálogo (quien: tu, mae, sac, esc, riv, dam) o narración (nar)
+     {d:['es','en'], f:['id-ficha','H3·xx']}   voz del diario, con su ficha
+     {q:[{es, en, p:'rit|ini|pod|atl', a:'mae|sac|esc|riv', r:[líneas]}]}   decisión
+     {act:'bout', i} {act:'stage', s} {act:'fig', f} {act:'qte'} {act:'lugar'} {act:'tec'} {act:'fiesta'} {act:'final'}
+     {if:'cond', then:[...], else:[...]}       variante según lo ocurrido */
+const PERS = {
+  tu:{es:'Tú', en:'You'}, mae:{es:'El Maestro', en:'The Master'}, sac:{es:'La Sacerdotisa', en:'The Priestess'},
+  esc:{es:'El Escriba', en:'The Scribe'}, riv:{es:'El Rival', en:'The Rival'}, dam:{es:'La Mujer de la tribuna', en:'The Woman in the stand'}
+};
+const F = {
+  intro:['introduccion-historica', 'H3·03'], soc:['sociedad-poder-y-economia', 'H3·04'], mujer:['la-mujer-minoica', 'H3·05'],
+  act:['actividades-fisico-deportivas-de-los-cre', 'H3·06'], pug:['pugilato', 'H3·08'], riton:['el-riton-de-los-boxeadores', 'H3·09'],
+  salto:['salto-del-toro', 'H3·11'], quien:['quienes-saltaban-y-como', 'H3·12'], picado:['el-salto-en-picado', 'H3·13'],
+  toro:['el-toro-de-la-captura-al-salto', 'H3·14'], sig:['que-significaba-el-salto-del-toro', 'H3·15'], esp:['espacios-ludico-deportivos', 'H3·16'],
+  fin:['el-fin-de-la-creta-minoica', 'H3·17']
+};
+const GUION = [
+/* ---------------- Capítulo 1 ---------------- */
+{cap:1, t:{es:'Llegada a Cnoso', en:'Arrival at Knossos'}, sub:{es:'La infancia', en:'Childhood'}, scenes:[
+ {id:'1.1', bg:['r_cnoso'], amb:'viento', t:{es:'La isla', en:'The island'}, lines:[
+  ['nar', 'Creta. Desde lo alto de una colina, un anciano y un niño miran hacia el valle.', 'Crete. From the top of a hill, an old man and a boy look down into the valley.'],
+  ['mae', 'Mira allí abajo. Aquel es el palacio de Cnoso, y a partir de hoy vivirás en él.', 'Look down there. That is the palace of Knossos, and from today you will live in it.'],
+  ['tu', '¿Es el único palacio de la isla?', 'Is it the only palace on the island?'],
+  ['mae', 'Hay otros, como Festo o Malia. Nuestras montañas separan unas tierras de otras, y cada una tiene su palacio.', 'There are others, such as Phaistos or Malia. Our mountains divide one land from another, and each has its palace.'],
+  {d:['La cultura minoica debe su nombre a Arthur Evans, el arqueólogo británico que excavó el palacio de Cnoso desde 1900 y la bautizó a partir del mito griego del rey Minos. Floreció en la Edad del Bronce, hacia 1950-1450 a. C. Creta es una isla montañosa, y su relieve fragmentado permitió que convivieran varios palacios, como Cnoso, Festo o Malia.',
+      'Minoan culture owes its name to Arthur Evans, the British archaeologist who excavated the palace of Knossos from 1900 and named it after the Greek myth of King Minos. It flourished in the Bronze Age, c. 1950–1450 BC. Crete is a mountainous island, and its broken relief allowed several palaces to coexist, such as Knossos, Phaistos or Malia.'], f:F.intro}
+ ]},
+ {id:'1.2', bg:['r_plano'], amb:'viento', t:{es:'Sin murallas', en:'No walls'}, lines:[
+  ['nar', 'Al acercarse, el niño busca una muralla y no la encuentra.', 'As they draw near, the boy looks for a wall and finds none.'],
+  ['tu', 'Maestro, ¿dónde están los muros? Todo se abre alrededor de un gran patio.', 'Master, where are the walls? Everything opens around a great court.'],
+  ['mae', 'Así se levantan nuestros palacios, en torno a su patio. Pregunta lo que quieras saber.', 'That is how our palaces are built, around their court. Ask what you want to know.'],
+  {q:[
+   {es:'¿Y si nos atacan?', en:'And if we are attacked?', p:'pod', r:[
+    ['mae', 'Las montañas nos guardan. Y no te equivoques, en esta isla también se forjan armas.', 'The mountains guard us. And make no mistake, weapons are forged on this island too.']]},
+   {es:'¿Quién vive dentro?', en:'Who lives inside?', p:'rit', r:[
+    ['mae', 'Viven las grandes casas, trabajan quienes dependen del palacio y se honra a la diosa. Ya lo verás.', 'The great houses live there, those who depend on the palace work there and the goddess is honoured there. You will see.']]}
+  ]},
+  {d:['Los palacios se organizan en torno a un gran patio central y carecen de murallas. Evans imaginó una «Pax Minoica», hipótesis que hoy debe matizarse, puesto que las primeras armas del Egeo son cretenses y había preparación para la guerra.',
+      'The palaces are arranged around a great central court and have no walls. Evans imagined a «Pax Minoica», a view that must now be qualified, since the earliest weapons of the Aegean are Cretan and there was preparation for war.'], f:F.intro}
+ ]},
+ {id:'1.3', bg:['r_disco'], amb:'interior', t:{es:'Las señales', en:'The signs'}, lines:[
+  ['nar', 'En una sala en penumbra, el niño encuentra un disco de barro con signos estampados en espiral.', 'In a dim room, the boy finds a clay disc with signs stamped in a spiral.'],
+  ['tu', '¿Qué dicen estas señales?', 'What do these signs say?'],
+  ['mae', 'No sé leerlas. Eso es cosa de escribas.', 'I cannot read them. That is a matter for scribes.'],
+  {d:['En Creta se usaron el jeroglífico cretense y el lineal A, que siguen sin descifrar, y el lineal B, que es griego micénico y se empleó sobre todo para la contabilidad del palacio. Ninguna de las tres ha dejado un solo texto sobre deporte, de ahí que todo lo que sabemos del deporte minoico proceda de imágenes. Tampoco conocemos ningún nombre minoico, y por eso los personajes de este juego llevan el nombre de su oficio. En la imagen, el disco de Festo (Museo de Heraclión).',
+      'Crete used Cretan hieroglyphic and Linear A, both still undeciphered, and Linear B, which is Mycenaean Greek and served mainly for palace accounting. None of the three has left a single text about sport, so all we know of Minoan sport comes from images. Nor do we know any Minoan name, which is why the characters of this game are named after their trade. In the image, the Phaistos Disc (Heraklion Museum).'], f:F.intro}
+ ]},
+ {id:'1.4', bg:['r_pugiles'], amb:'patio', fig:'ninos2', t:{es:'Prueba I', en:'Trial I'}, lines:[
+  ['nar', 'En el patio te espera otro niño de una gran casa, con un guante en la mano derecha.', 'In the court another boy of a great house is waiting for you, with a glove on his right hand.'],
+  ['riv', 'Dicen que el hijo de tu casa es rápido. Veamos si tocas antes que yo.', 'They say the son of your house is quick. Let us see if you touch before I do.'],
+  ['mae', 'Es un juego para aprender. Nadie quiere herir a nadie, y gana quien toque primero cinco veces.', 'It is a game for learning. Nobody wants to hurt anybody, and the first to land five touches wins.'],
+  {d:['En Akrotiri (Tera), sepultada por el volcán a finales del siglo XVII a. C., un fresco muestra a dos niños de entre seis y diez años que boxean con un solo guante en la mano derecha. Desconocemos las reglas, aunque los estudios coinciden en ver un ejercicio de aprendizaje sin intención de herir. El fresco es de Akrotiri, y el juego lo traslada a Cnoso como recurso narrativo.',
+      'At Akrotiri (Thera), buried by the volcano at the end of the 17th century BC, a fresco shows two boys aged six to ten boxing with a single glove on the right hand. We do not know the rules, although scholars agree in seeing a learning exercise without intent to injure. The fresco is from Akrotiri, and the game moves it to Knossos as a narrative device.'], f:F.pug},
+  {act:'bout', i:0},
+  {if:'b0', then:[
+    ['mae', 'Llevarás el collar, las pulseras y los pendientes del vencedor. Entre los hijos de las grandes casas, el juego ya dice quién es quién.', 'You will wear the necklace, bracelets and earrings of the victor. Among the sons of the great houses, the game already tells who is who.']],
+   else:[
+    ['mae', 'Hoy las joyas son para él. Habrá otros días, y él lo recordará tanto como tú.', 'Today the jewels are his. There will be other days, and he will remember it as much as you.']]},
+  {d:['El niño de la izquierda del fresco, con collar, pulseras y pendientes, es el vencedor, y su rival viste con sencillez. ¿Qué nos dice esa diferencia? Que el juego marcaba ya la jerarquía entre los hijos de la élite (Rutter, 2014, p. 41).',
+      'The boy on the left of the fresco, with necklace, bracelets and earrings, is the victor, and his rival is plainly dressed. What does that difference tell us? That the game already marked rank among the children of the elite (Rutter, 2014, p. 41).'], f:F.pug}
+ ]}
+]},
+/* ---------------- Capítulo 2 ---------------- */
+{cap:2, t:{es:'El corredor de la Procesión', en:'The Corridor of the Procession'}, sub:{es:'Los almacenes y las damas', en:'The stores and the ladies'}, scenes:[
+ {id:'2.1', bg:['r_procesion'], amb:'interior', t:{es:'La Procesión', en:'The Procession'}, lines:[
+  ['nar', 'El Maestro te deja a la entrada de un largo corredor, pintado con figuras que avanzan en fila. Allí te espera la Sacerdotisa.', 'The Master leaves you at the entrance of a long corridor, painted with figures walking in line. The Priestess is waiting for you there.'],
+  ['sac', 'Bienvenido, niño. Esta casa es la tuya, y es también la casa de la diosa.', 'Welcome, child. This house is yours, and it is also the house of the goddess.'],
+  ['tu', '¿No tiene la diosa un templo propio?', 'Does the goddess have no temple of her own?'],
+  ['sac', 'Su casa es esta. Aquí vivimos, aquí se guarda lo que da la tierra y aquí se la honra.', 'This is her house. Here we live, here what the earth gives is stored, and here she is honoured.'],
+  {d:['Creta no levantó templos monumentales, de ahí que el palacio fuera también el centro religioso de la comunidad, además de residencia y almacén. Hacia 1950 a. C. surgió una nueva clase dirigente, que se reconoce en el paso de los enterramientos colectivos a los individuales, y con ella un grupo estable de sacerdotes. En la imagen, el fresco de la Procesión de Cnoso, hacia 1450-1350 a. C.',
+      'Crete raised no monumental temples, so the palace was also the religious centre of the community, as well as a residence and a store. Around 1950 BC a new ruling class emerged, recognisable in the shift from collective to individual burials, and with it a stable group of priests. In the image, the Procession Fresco of Knossos, c. 1450–1350 BC.'], f:F.soc}
+ ]},
+ {id:'2.2', bg:['r_plano'], amb:'interior', t:{es:'Los almacenes', en:'The stores'}, lines:[
+  ['esc', '¿Tú eres el niño nuevo? Ven, te enseño lo que guardamos. Parte de lo que dan los campos llega aquí, se cuenta y sostiene a quienes dependen del palacio.', 'Are you the new boy? Come, I will show you what we keep. Part of what the fields give comes here, is counted and feeds those who depend on the palace.'],
+  {q:[
+   {es:'¿Quién manda aquí?', en:'Who rules here?', p:'pod', a:'esc', r:[
+    ['esc', 'Las grandes casas se disputan el palacio, y la tuya es una de ellas. Quien lo controla controla lo que aquí se guarda.', 'The great houses compete for the palace, and yours is one of them. Whoever controls it controls what is kept here.']]},
+   {es:'¿Qué apuntas en esas tablillas?', en:'What do you write on those tablets?', r:[
+    ['esc', 'Eso es cosa de escribas. Tú mira y aprende.', 'That is a matter for scribes. You look and learn.']]}
+  ]},
+  {d:['El palacio almacenaba y administraba parte de los excedentes agrícolas, con los que sostenía a quienes dependían de él. Hoy se descarta que repartiera toda la producción de la isla o controlara todo su comercio.',
+      'The palace stored and managed part of the agricultural surplus, with which it supported those who depended on it. It is now ruled out that it redistributed all the island\'s produce or controlled all its trade.'], f:F.soc}
+ ]},
+ {id:'2.3', bg:['r_procesion'], amb:'interior', t:{es:'¿Hay un rey?', en:'Is there a king?'}, lines:[
+  ['tu', '¿Y quién es el señor de todo esto? ¿Hay un rey?', 'And who is the lord of all this? Is there a king?'],
+  ['esc', 'Haces muchas preguntas para tu edad. Hay quien manda y hay quien cuenta. Yo cuento.', 'You ask a lot of questions for your age. Some rule and some count. I count.'],
+  {d:['Se discute si en Creta existieron reyes absolutos como los de Egipto o Mesopotamia, puesto que apenas se conservan representaciones regias que permitan afirmarlo. El arte minoico recoge, en cambio, escenas de un refinamiento notable, propias de una élite con medios para encargarlas y costearlas.',
+      'It is debated whether Crete had absolute kings like those of Egypt or Mesopotamia, since hardly any royal images survive to support it. Minoan art shows instead scenes of remarkable refinement, typical of an elite with the means to commission and pay for them.'], f:F.soc}
+ ]},
+ {id:'2.4', bg:['r_damas'], amb:'interior', t:{es:'Las damas', en:'The ladies'}, lines:[
+  ['nar', 'En una sala de paredes azules, una dama contempla las pinturas.', 'In a room with blue walls, a lady is looking at the paintings.'],
+  ['dam', '¿Sabes leer los colores? Fíjate en la piel. A nosotras nos pintan blancas, y a vosotros, rojos.', 'Can you read the colours? Look at the skin. They paint us white, and you red.'],
+  ['tu', '¿Y por qué salís vosotras en las paredes?', 'And why are you on the walls?'],
+  ['dam', 'Porque vamos a las fiestas, y a veces ocupamos los mejores sitios. Y porque la diosa es mujer.', 'Because we go to the festivals, and sometimes we have the best seats. And because the goddess is a woman.'],
+  {d:['Para reconocer a las mujeres hay que leer los códigos de esta pintura. El más evidente es el color de la piel, una convención heredada de Egipto que pinta en blanco a la mujer y en rojo al varón. Las mujeres aparecen con una visibilidad y una participación públicas notables. Como espectadoras, disfrutan de actividades públicas junto a los varones e incluso ocupan lugares de honor, y las principales divinidades minoicas eran femeninas.',
+      'To recognise women we must read the codes of this painting. The most obvious is skin colour, a convention inherited from Egypt that paints women white and men red. Women appear with a remarkable public visibility and participation. As spectators they enjoy public events alongside men and even occupy places of honour, and the main Minoan deities were female.'], f:F.mujer}
+ ]},
+ {id:'2.5', bg:['r_danza'], amb:'campo', t:{es:'La arboleda sagrada', en:'The sacred grove'}, lines:[
+  ['nar', 'En la arboleda sagrada, unas mujeres bailan ante la multitud.', 'In the sacred grove, women dance before the crowd.'],
+  ['sac', 'Bailan para la diosa, para la tierra y para todo lo que crece en ella.', 'They dance for the goddess, for the earth and for all that grows in it.'],
+  ['mae', 'Bailan también para dejar atrás una edad y entrar en otra. Cada danza es un paso.', 'They also dance to leave one age behind and enter another. Each dance is a step.'],
+  {q:[
+   {es:'Hacer caso a la Sacerdotisa', en:'Listen to the Priestess', p:'rit', a:'sac', r:[
+    ['sac', 'Escucha a la diosa y entenderás las fiestas del palacio.', 'Listen to the goddess and you will understand the festivals of the palace.']]},
+   {es:'Hacer caso al Maestro', en:'Listen to the Master', p:'ini', a:'mae', r:[
+    ['mae', 'En este palacio todo te va a pedir que crezcas. Recuérdalo.', 'In this palace everything will ask you to grow. Remember it.']]}
+  ]},
+  {d:['Hacia 1600 a. C. las mujeres bailan ante una multitud en la danza de la arboleda sagrada, un acto que los estudios vinculan al culto a la naturaleza, concebida como divinidad femenina, y a los ritos de iniciación.',
+      'Around 1600 BC women dance before a crowd in the dance in the sacred grove, an act that scholars link to the cult of nature, conceived as a female deity, and to initiation rites.'], f:F.mujer}
+ ]},
+ {id:'2.6', bg:['r_pescador'], amb:'mar', t:{es:'Los mechones', en:'The locks'}, lines:[
+  ['nar', 'Pasan las estaciones. Una mañana, junto al mar, el Maestro te corta los mechones de la infancia.', 'The seasons pass. One morning, by the sea, the Master cuts off your childhood locks.'],
+  {act:'stage', s:1},
+  {act:'fig', f:'pescador'},
+  ['mae', 'Ya no eres un niño. Desde hoy te verán como a un muchacho.', 'You are no longer a child. From today they will see you as a youth.'],
+  {d:['Koehl (1986, p. 101) se fija en el peinado. Los niños púgiles llevan la cabeza rapada alrededor de mechones sueltos, y los muchachos del fresco del pescador, algo mayores, ya se han cortado esos mechones. Koehl propone que el corte formara parte de la preparación para la etapa siguiente de un rito de paso. Es una propuesta suya, sin prueba directa en las fuentes.',
+      'Koehl (1986, p. 101) attends to the hairstyle. The boy boxers have the head shaved around loose locks, and the youths of the Fisherman fresco, somewhat older, have already cut off those locks. Koehl proposes that the cutting formed part of the preparation for the next stage of a rite of passage. It is his proposal, without direct proof in the sources.'], f:F.pug},
+  {act:'fig', f:null}
+ ]}
+]},
+/* ---------------- Capítulo 3 ---------------- */
+{cap:3, t:{es:'La sala de las imágenes', en:'The hall of images'}, sub:{es:'El pugilato', en:'Boxing'}, scenes:[
+ {id:'3.1', bg:['r_pugiles', 'r_riton', 'r_secuencia', 'r_tazas'], amb:'interior', t:{es:'Las imágenes', en:'The images'}, lines:[
+  ['mae', 'Mira estas imágenes. En el palacio, las hazañas se pintan en las paredes, se tallan en los vasos de piedra y se graban en los sellos.', 'Look at these images. In the palace, feats are painted on the walls, carved on stone vessels and engraved on seals.'],
+  ['tu', 'Casi todas muestran al toro.', 'Almost all of them show the bull.'],
+  ['mae', 'El toro, sí. Y algunas, hombres que luchan sin armas.', 'The bull, yes. And some, men fighting without weapons.'],
+  {d:['Todo lo que sabemos del deporte minoico procede de imágenes. Se conocen unos cien objetos con escenas deportivas (frescos, vasos de piedra y sellos) de hacia 1750-1450 a. C. Casi todos representan el salto del toro, y entre un 10 y un 20 % muestran combates sin armas.',
+      'All we know of Minoan sport comes from images. Some hundred objects with sporting scenes are known (frescoes, stone vessels and seals) from c. 1750–1450 BC. Almost all show bull-leaping, and between 10 and 20 % show unarmed combat.'], f:F.act}
+ ]},
+ {id:'3.2', bg:['r_riton'], amb:'interior', t:{es:'El ritón', en:'The rhyton'}, lines:[
+  ['nar', 'Junto a un vaso de piedra tallado en bandas te espera un muchacho al que ya conoces.', 'Beside a stone vessel carved in bands, a youth you already know is waiting for you.'],
+  {if:'b0', then:[['riv', '¿Te acuerdas de mí? Aquel día te llevaste las joyas. Mira este vaso: yo ya he luchado como los de la banda de arriba.', 'Do you remember me? That day you took the jewels. Look at this vessel: I have already fought like the men in the top band.']],
+   else:[['riv', '¿Te acuerdas de mí? Aquel día las joyas fueron para mí. Mira este vaso: yo ya he luchado como los de la banda de arriba.', 'Do you remember me? That day the jewels were mine. Look at this vessel: I have already fought like the men in the top band.']]},
+  ['tu', 'En cada banda llevan cosas distintas.', 'In each band they wear different things.'],
+  ['riv', 'Unos van con las muñecas vendadas y otros con casco. Se aprende banda a banda. ¿Te atreves?', 'Some have bandaged wrists and others helmets. You learn band by band. Do you dare?'],
+  {q:[
+   {es:'Aceptar el desafío enseguida', en:'Accept the challenge at once', a:'riv', r:[
+    ['riv', 'Así me gusta. Te espero junto a la columna.', 'That is what I like. I will wait for you by the column.']]},
+   {es:'Pedir al Maestro que te prepare', en:'Ask the Master to train you', a:'mae', r:[
+    ['mae', 'Bien pensado. Antes de pelear, aprende.', 'Well thought. Before you fight, learn.']]}
+  ]},
+  {d:['En Hagia Triada, hacia 1550-1500 a. C., un vaso de piedra de unos 46 cm para las libaciones, esto es, las ofrendas líquidas a los dioses, muestra en cuatro bandas púgiles adultos y el salto del toro. Sus cascos, guantes, botas y vendajes cambian de una banda a otra, señal de un entrenamiento sistemático con reglas. El vaso es de Hagia Triada, y el juego lo sitúa en Cnoso.',
+      'At Hagia Triada, c. 1550–1500 BC, a stone vessel some 46 cm tall used for libations, that is, liquid offerings to the gods, shows adult boxers and bull-leaping in four bands. Their helmets, gloves, boots and bindings change from band to band, a sign of systematic training with rules. The vessel is from Hagia Triada, and the game places it in Knossos.'], f:F.riton}
+ ]},
+ {id:'3.3', bg:['r_riton'], amb:'interior', t:{es:'La melena', en:'The long hair'}, lines:[
+  ['nar', 'Han pasado los años. El pelo te cae ya hasta la cintura.', 'Years have passed. Your hair now falls to your waist.'],
+  {act:'stage', s:2},
+  {act:'fig', f:'lirios'},
+  ['mae', 'Llevas la melena de los hombres de las grandes casas. Te esperan las bandas del vaso.', 'You wear the long hair of the men of the great houses. The bands of the vessel await you.'],
+  {d:['Los púgiles del ritón son adultos, esbeltos pero musculados, con la melena hasta la cintura del aristócrata minoico. Koehl (1986, pp. 102-103) observa que es la misma melena de los saltadores del fresco de Cnoso y la identifica como el peinado del varón aristocrático en la plenitud de su vida adulta.',
+      'The boxers on the rhyton are adults, slender but muscular, with the waist-length hair of the Minoan aristocrat. Koehl (1986, pp. 102-103) observes that it is the same hair as that of the leapers in the Knossos fresco and identifies it as the hairstyle of the aristocratic male in the fullness of adult life.'], f:F.quien},
+  {act:'fig', f:null}
+ ]},
+ {id:'3.4', bg:['r_riton'], amb:'patio', t:{es:'Pruebas II y III', en:'Trials II and III'}, lines:[
+  ['mae', 'Empezarás por la cuarta banda, sin casco y con las muñecas vendadas. El combate termina cuando uno de los dos queda en el suelo.', 'You will begin with the fourth band, without a helmet and with bandaged wrists. The bout ends when one of you is left on the ground.'],
+  {act:'bout', i:1},
+  ['mae', 'Ahora la tercera banda: casco, protecciones en el antebrazo y manos acolchadas.', 'Now the third band: helmet, forearm guards and padded hands.'],
+  {act:'bout', i:2},
+  {d:['Kyle (2015, pp. 38-39) describe las cuatro bandas del ritón. En la tercera hay cuatro hombres con casco, protecciones en el antebrazo y manos acolchadas, dos en pie y dos en el suelo; en la cuarta, figuras sin casco y con las muñecas vendadas, dos en guardia y dos derribadas.',
+      'Kyle (2015, pp. 38-39) describes the four bands of the rhyton. In the third are four men with helmets, forearm guards and padded hands, two standing and two on the ground; in the fourth, figures without helmets and with bandaged wrists, two on guard and two knocked down.'], f:F.riton}
+ ]},
+ {id:'3.5', bg:['r_riton'], amb:'patio', t:{es:'Prueba IV', en:'Trial IV'}, lines:[
+  ['riv', 'Junto a la columna, como en lo más alto del vaso. Esta vez no es un juego de niños.', 'By the column, as at the top of the vessel. This time it is no children\'s game.'],
+  {act:'bout', i:3},
+  {if:'win', then:[['riv', 'Me has dejado en el suelo. No lo olvidaré.', 'You have left me on the ground. I will not forget it.']],
+   else:[['riv', 'Levántate. El vaso también deja a los vencidos en el suelo.', 'Get up. The vessel also leaves the defeated on the ground.']]},
+  {d:['Las columnas de capitel cuadrado de la banda superior indican un contexto palacial, y Soar (2014, pp. 231-232) observa que en otras piezas los boxeadores aparecen junto a columnas, altares y árboles, lo que sugiere un marco oficial y quizá ceremonial. El vencedor se distingue siempre que la pieza lo permite, y los vencidos yacen en el suelo.',
+      'The square-capital columns of the top band indicate a palatial setting, and Soar (2014, pp. 231-232) notes that on other pieces boxers appear beside columns, altars and trees, which suggests an official and perhaps ceremonial setting. The victor stands out wherever the piece allows, and the defeated lie on the ground.'], f:F.riton}
+ ]},
+ {id:'3.6', bg:['r_riton'], amb:'interior', t:{es:'Sin premio', en:'No prize'}, lines:[
+  ['nar', 'Nadie se acerca con un regalo y nadie graba tu nombre.', 'No one comes with a gift and no one carves your name.'],
+  ['tu', '¿Y qué he ganado?', 'And what have I won?'],
+  ['mae', 'Que te hayan visto. ¿A quién ofreces lo que has hecho?', 'That you have been seen. To whom do you offer what you have done?'],
+  {q:[
+   {es:'A la diosa', en:'To the goddess', p:'rit', a:'sac', r:[['sac', 'Ella lo ha visto. Es suficiente.', 'She has seen it. That is enough.']]},
+   {es:'A mi casa', en:'To my house', p:'pod', a:'esc', r:[['esc', 'Tu casa lo anotará en la memoria del palacio.', 'Your house will set it down in the memory of the palace.']]},
+   {es:'Al Maestro', en:'To the Master', p:'ini', a:'mae', r:[['mae', 'No es mío. Es tuyo, y es el paso que te tocaba dar.', 'It is not mine. It is yours, and it is the step you had to take.']]},
+   {es:'A quienes miraban', en:'To those who watched', p:'atl', a:'riv', r:[['riv', 'Te han visto todos. Eso es lo que cuenta.', 'Everyone saw you. That is what counts.']]}
+  ]},
+  {d:['Ningún objeto representa un premio ni una lista de vencedores. El deporte servía para la iniciación de los jóvenes de la élite, expresaba la creencia religiosa y exhibía el prestigio de las grandes casas que se disputaban el palacio.',
+      'No object shows a prize or a list of winners. Sport served the initiation of young elite men, expressed religious belief and displayed the prestige of the great houses competing for the palace.'], f:F.act}
+ ]}
+]},
+/* ---------------- Capítulo 4 ---------------- */
+{cap:4, t:{es:'El santuario y el toro', en:'The shrine and the bull'}, sub:{es:'De la captura al salto', en:'From capture to leap'}, scenes:[
+ {id:'4.1', bg:['r_cabeza'], amb:'interior', t:{es:'El santuario', en:'The shrine'}, lines:[
+  ['sac', 'Mira este vaso con forma de cabeza de toro. Pronto saltarás sobre uno vivo.', 'Look at this vessel shaped like a bull\'s head. Soon you will leap over a living one.'],
+  ['tu', '¿Por qué el toro?', 'Why the bull?'],
+  ['sac', 'Porque es el más fuerte de los animales de esta tierra, y lo que se hace con él se hace ante la diosa.', 'Because it is the strongest of the animals of this land, and what is done with it is done before the goddess.'],
+  {d:['Ritón de esteatita en forma de cabeza de toro, del Pequeño Palacio de Cnoso, hacia 1550-1500 a. C. Evans vio en el salto una ofrenda a una diosa minoica, y McInerney (2011, pp. 6-8) reúne el contexto religioso del toro (cuernos de consagración, ritones, sacrificio). Shapland (2013, pp. 196-199) sostiene, en cambio, que esa lectura responde más a los presupuestos del siglo XIX que a las pruebas.',
+      'Steatite rhyton in the shape of a bull\'s head, from the Little Palace of Knossos, c. 1550–1500 BC. Evans saw the leap as an offering to a Minoan goddess, and McInerney (2011, pp. 6-8) assembles the religious context of the bull (horns of consecration, rhyta, sacrifice). Shapland (2013, pp. 196-199) maintains, however, that this reading owes more to nineteenth-century assumptions than to the evidence.'], f:F.sig}
+ ]},
+ {id:'4.2', bg:['r_tazasdib', 'r_tazas'], amb:'campo', t:{es:'La captura', en:'The capture'}, lines:[
+  ['nar', 'Al amanecer sales al campo con jóvenes de otras casas. Llevan una red y una vaca.', 'At dawn you go out into the countryside with young men of other houses. They carry a net and lead a cow.'],
+  ['riv', 'La vaca lo atraerá. Cuando entre en la red, tirad todos a la vez.', 'The cow will draw it in. When it enters the net, all pull at once.'],
+  {act:'qte'},
+  {if:'vafio', then:[['nar', 'La red se cierra y el toro queda preso entre las cuerdas.', 'The net closes and the bull is caught in the ropes.']],
+   else:[['nar', 'El toro rompe por un lado y escapa. Al atardecer, otro grupo vuelve con él atado.', 'The bull breaks through one side and escapes. At dusk, another group returns with it tied.']]},
+  {d:['El salto era solo la parte más vistosa de un ciclo que empezaba con la captura del toro, una empresa colectiva y peligrosa. En las tazas de oro de Vafio se ve a unos jóvenes que atrapan a un toro con una red y a otro al que atraen con una vaca como señuelo.',
+      'The leap was only the most spectacular part of a cycle that began with the capture of the bull, a dangerous collective enterprise. On the gold cups from Vapheio young men trap one bull in a net and lure another with a cow as a decoy.'], f:F.toro}
+ ]},
+ {id:'4.3', bg:['titulo'], amb:'interior', t:{es:'Los toros moteados', en:'The spotted bulls'}, lines:[
+  ['tu', '¿Morirá el toro después de la fiesta?', 'Will the bull die after the festival?'],
+  ['sac', 'Yo creo que la diosa lo recibirá. Pero eso no lo decido yo.', 'I believe the goddess will receive it. But that is not for me to decide.'],
+  {q:[
+   {es:'Creer a la Sacerdotisa', en:'Believe the Priestess', p:'rit', a:'sac', r:[['sac', 'Entonces mirarás la fiesta con otros ojos.', 'Then you will watch the festival with other eyes.']]},
+   {es:'Dudar', en:'Doubt', p:'atl', r:[['tu', 'Yo solo sé que mañana saltaré sobre él.', 'All I know is that tomorrow I will leap over it.']]}
+  ]},
+  {d:['Durante décadas se pensó que eran uros, el toro salvaje europeo. El pelaje moteado de los toros de Cnoso, sin embargo, solo se da en animales domésticos, de modo que no eran tan fieros como se ha propuesto. Se especula que el salto terminara en sacrificio y banquete, si bien las imágenes minoicas no unen el salto con la muerte del toro.',
+      'For decades they were thought to be aurochs, the wild European bull. The spotted coat of the Knossos bulls, however, occurs only in domestic animals, so they were not as fierce as has been claimed. It is speculated that the leap ended in sacrifice and a feast, although Minoan images do not link the leap with the death of the bull.'], f:F.toro}
+ ]},
+ {id:'4.4', bg:['r_tazasdib', 'r_secuencia', 'titulo'], amb:'interior', t:{es:'De la aldea al palacio', en:'From village to palace'}, lines:[
+  ['esc', 'En las aldeas, los hombres se agarran al toro entre muchos. Aquí el salto es otra cosa, porque pertenece al palacio.', 'In the villages, many men cling to the bull together. Here the leap is something else, because it belongs to the palace.'],
+  ['esc', 'Si quieres, tu casa puede contar conmigo para la fiesta.', 'If you wish, your house can count on me for the festival.'],
+  {q:[
+   {es:'Aceptar su apoyo', en:'Accept his support', p:'pod', a:'esc', r:[['esc', 'Bien. Quien salta en Cnoso salta para Cnoso.', 'Good. Whoever leaps in Knossos leaps for Knossos.']]},
+   {es:'Rechazarlo', en:'Refuse it', r:[['esc', 'Como quieras. Te estaré mirando.', 'As you wish. I will be watching you.']]}
+  ]},
+  {d:['Las imágenes más antiguas, muy anteriores a los palacios, muestran a varios hombres agarrados a un toro, como un juego colectivo de aldea. Con los palacios, el salto adquiere grandeza escénica y ritual. Casi todas sus imágenes proceden de Cnoso, de su fresco y de sus sellos oficiales, de modo que se convirtió en emblema del poder de este palacio.',
+      'The oldest images, long before the palaces, show several men clinging to a bull, like a collective village game. With the palaces the leap gained scenic and ritual grandeur. Almost all its images come from Knossos, from its fresco and its official seals, so it became an emblem of this palace\'s power.'], f:F.salto}
+ ]}
+]},
+/* ---------------- Capítulo 5 ---------------- */
+{cap:5, t:{es:'La fiesta del toro', en:'The bull festival'}, sub:{es:'El salto', en:'The leap'}, scenes:[
+ {id:'5.1', bg:['r_patio'], amb:'viento', t:{es:'¿Dónde?', en:'Where?'}, lines:[
+  ['mae', 'La fiesta debe hacerse en el gran patio, delante de todos.', 'The festival must be held in the great court, before everyone.'],
+  ['esc', '¿Sobre las losas? Ahí resbala el toro, y el saltador también. Mejor la tierra, junto al palacio.', 'On the paving? The bull slips there, and so does the leaper. Better the earth, beside the palace.'],
+  {act:'lugar'},
+  {d:['El patio central medía entre un cuarto y un tercio de estadio, la medida griega de unos 180-190 metros. En Malia o en Cnoso se conservan encajes para barreras de madera entre las columnas, y los balcones harían de palcos. Dónde se saltaba sigue en discusión. Evans lo situó en el patio, pero el enlosado era peligroso para el toro y para el saltador, y muchos estudios prefieren hoy un espacio de tierra junto al palacio (Kyle, 2015, pp. 41 y 43).',
+      'The central court measured between a quarter and a third of a stadion, the Greek measure of some 180–190 metres. At Malia and Knossos sockets for wooden barriers survive between the columns, and the balconies would serve as boxes. Where the leap took place is still debated. Evans placed it in the court, but the paving was dangerous for bull and leaper, and many scholars now prefer an earthen space beside the palace (Kyle, 2015, pp. 41 and 43).'], f:F.esp}
+ ]},
+ {id:'5.2', bg:['r_grada'], amb:'gentio', t:{es:'La tribuna', en:'The stand'}, lines:[
+  ['dam', 'Desde aquí se ve todo. Dime, ¿has visto saltar a alguna muchacha?', 'From here one sees everything. Tell me, have you seen any girl leap?'],
+  ['tu', 'En las paredes hay saltadores de piel blanca.', 'On the walls there are leapers with white skin.'],
+  ['dam', 'Y blancas nos pintan a nosotras. Piénsalo.', 'And it is us they paint white. Think about it.'],
+  {d:['Los saltadores de Cnoso son jóvenes de la élite, a juzgar por sus vestimentas, sus joyas y su melena larga. Nueve de los dieciséis conservados tienen la piel blanca que el arte egeo destinaba a las mujeres. Otras hipótesis ven en el color claro una marca de edad o de función social entre varones, de modo que hoy no puede afirmarse ni descartarse la presencia de mujeres.',
+      'The Knossos leapers are young members of the elite, judging by their dress, jewellery and long hair. Nine of the sixteen preserved have the white skin that Aegean art reserved for women. Other views see the pale colour as a mark of age or social role among men, so the presence of women can today be neither affirmed nor ruled out.'], f:F.quien}
+ ]},
+ {id:'5.3', bg:['r_secuencia'], amb:'gentio', t:{es:'Cómo saltar', en:'How to leap'}, lines:[
+  ['riv', 'Entra de cabeza sobre el cuello, apoya las manos en sus hombros y sal con una voltereta.', 'Go in head first over the neck, put your hands on its shoulders and come out with a somersault.'],
+  {if:'afRiv', then:[['riv', 'Yo estaré al otro lado para recibirte.', 'I will be on the other side to catch you.']]},
+  ['mae', 'Hay quien lo agarra por los cuernos y aprovecha su embestida. Es más difícil.', 'Some grasp it by the horns and use its charge. It is harder.'],
+  {if:'afMae', then:[['mae', 'Mírame antes de cada toro. Yo te daré la señal.', 'Look at me before each bull. I will give you the signal.']]},
+  {d:['Según Evans (1930), el saltador sujetaba los cuernos y aprovechaba la embestida para tomar impulso. Younger (1995) reúne una treintena de ejemplos del salto en picado, el esquema más frecuente, frente a las pocas imágenes, más antiguas, que encajan con Evans. En picado, el saltador entra de cabeza sobre el cuello, apoya las manos en los hombros del toro con las piernas arriba y sale con una voltereta hasta caer de pie, donde una figura con los brazos extendidos parece recibirle.',
+      'According to Evans (1930), the leaper grasped the horns and used the charge for momentum. Younger (1995) gathers some thirty examples of the diving leap, the most frequent scheme, against the few, older images that fit Evans. In the diving leap, the leaper goes in head first over the neck, puts the hands on the bull\'s shoulders with legs raised and comes out with a somersault to land standing, where a figure with outstretched arms seems to receive the leaper.'], f:F.picado},
+  {act:'tec'}
+ ]},
+ {id:'5.4', bg:['titulo'], amb:'gentio', t:{es:'La fiesta', en:'The festival'}, lines:[
+  {if:'patio', then:[['nar', 'La comunidad llena el patio central y se apiña tras las barreras de madera.', 'The community fills the central court and crowds behind the wooden barriers.']],
+   else:[['nar', 'La comunidad se reúne en la explanada de tierra, junto al palacio.', 'The community gathers on the earthen ground beside the palace.']]},
+  ['nar', 'Tres toros. Toda la comunidad te mira.', 'Three bulls. The whole community is watching you.'],
+  {act:'fiesta'}
+ ]},
+ {id:'5.5', bg:['titulo'], amb:'gentio', t:{es:'La aclamación', en:'The acclaim'}, lines:[
+  {if:'f3', then:[['nar', 'Has saltado los tres toros. El clamor llega hasta los balcones del palacio.', 'You have leapt all three bulls. The roar reaches the balconies of the palace.']],
+   else:[{if:'f1', then:[['nar', 'No todos tus saltos han salido limpios, pero la comunidad reconoce tu valor.', 'Not all your leaps were clean, but the community recognises your courage.']],
+          else:[['nar', 'Hoy los toros han podido más. La comunidad guarda silencio, y habrá otras fiestas.', 'Today the bulls were stronger. The community falls silent, and there will be other festivals.']]}]},
+  {d:['Ningún objeto minoico representa un premio. Lo que cuenta es la aclamación de la comunidad.', 'No Minoan object shows a prize. What counts is the acclaim of the community.'], f:F.act}
+ ]}
+]},
+/* ---------------- Capítulo 6 ---------------- */
+{cap:6, t:{es:'La sala del trono', en:'The throne room'}, sub:{es:'Los finales', en:'The endings'}, scenes:[
+ {id:'6.1', bg:['r_trono'], amb:'interior', t:{es:'La sala del trono', en:'The throne room'}, lines:[
+  ['nar', 'Tras la fiesta te llaman a la sala del trono. Una voz conocida te espera dentro.', 'After the festival you are called to the throne room. A familiar voice awaits you inside.'],
+  {act:'final'}
+ ]},
+ {id:'6.3', bg:['r_tera', 'r_trono'], amb:'mar', t:{es:'Lo que vino después', en:'What came after'}, lines:[
+  {d:['Durante décadas se atribuyó el fin de la Creta minoica a la erupción de Tera, pero se produjo hacia 1628 a. C., unos ciento cincuenta años antes del final de los palacios, y Creta se rehízo.', 'For decades the end of Minoan Crete was blamed on the eruption of Thera, but it happened c. 1628 BC, some hundred and fifty years before the end of the palaces, and Crete recovered.'], f:F.fin},
+  {d:['Hacia 1450 a. C. ardieron casi todos los palacios salvo el de Cnoso, que pasó a manos de los micénicos. Hacia 1375 a. C. ardió también Cnoso, y el salto del toro continuó en la Grecia continental hasta la caída de los palacios micénicos.', 'Around 1450 BC almost all the palaces burned except Knossos, which passed to the Mycenaeans. Around 1375 BC Knossos burned too, and bull-leaping continued in mainland Greece until the fall of the Mycenaean palaces.'], f:F.fin},
+  {act:'meaning'}
+ ]}
+]}
+];
+/* finales (6.2): quién lo cuenta, qué dice y qué añade el diario (H3·15) */
+const FINALES = {
+  rit:{who:'sac', t:{es:'Has saltado para la diosa. Ella ha visto tu valor, y también lo ha visto la comunidad que la honra.', en:'You have leapt for the goddess. She has seen your courage, and so has the community that honours her.'},
+    d:{es:'Lectura ritual. Evans vio en el salto una ofrenda a una diosa minoica, y McInerney (2011, pp. 6-8) reúne el contexto religioso del toro. Su punto débil es que Younger (1995, p. 518) admite que no hay pruebas de que el sacrificio siguiera al salto (citado en Shapland, 2013, p. 197).', en:'Ritual reading. Evans saw in the leap an offering to a Minoan goddess, and McInerney (2011, pp. 6-8) assembles the religious context of the bull. Its weak point is that Younger (1995, p. 518) admits there is no evidence that sacrifice followed the leap (cited in Shapland, 2013, p. 197).'}},
+  ini:{who:'mae', t:{es:'Has dejado de ser un muchacho. Las pruebas que empezaron con un guante de niño terminan hoy, delante de todos.', en:'You are no longer a youth. The trials that began with a child\'s glove end today, before everyone.'},
+    d:{es:'Lectura iniciática. Koehl (1986, p. 100) relaciona los peinados con grupos de edad y sugiere que las pruebas del ritón de los boxeadores, salto del toro incluido, formaban parte de un ciclo de iniciación aristocrático. Scanlon (2014, pp. 28-59) vincula los juegos del toro con cultos e iniciación.', en:'Initiatory reading. Koehl (1986, p. 100) relates the hairstyles to age groups and suggests that the trials on the Boxer Rhyton, bull-leaping included, formed part of an aristocratic initiation cycle. Scanlon (2014, pp. 28-59) links the bull games with cults and initiation.'}},
+  pod:{who:'esc', t:{es:'Tu casa y el palacio han mostrado su fuerza. Hoy todos saben de quién eres y a quién sirves.', en:'Your house and the palace have shown their strength. Today everyone knows whose you are and whom you serve.'},
+    d:{es:'Lectura de poder. Shapland (2022, p. 24) interpreta el salto y la caza de ganado como indicadores de la expansión del dominio de Cnoso, y Soar (2014) observa que las representaciones solo aparecen en Cnoso o en objetos de sus talleres y propone que fuera una actuación reservada a la facción dominante.', en:'Reading as power. Shapland (2022, p. 24) interprets leaping and cattle hunting as indicators of the expansion of Knossos\'s dominion, and Soar (2014) observes that the representations appear only at Knossos or on objects from its workshops and proposes that it was a performance reserved for the dominant faction.'}},
+  atl:{who:'riv', t:{es:'Has demostrado tu destreza ante todos. Eso no te lo quita nadie.', en:'You have shown your skill before everyone. No one can take that from you.'},
+    d:{es:'Lectura atlética. Younger (1995, p. 508) ordena las imágenes en un ciclo de actividades con toros, de la captura al salto, y McInerney (2011, p. 10) sostiene que la variedad de escenas solo se explica si representan actuaciones reales.', en:'Athletic reading. Younger (1995, p. 508) arranges the images in a cycle of activities with bulls, from capture to leap, and McInerney (2011, p. 10) maintains that the variety of scenes can be explained only if they represent real performances.'}}
+};
+const LECT = {rit:{es:'Ritual', en:'Ritual'}, ini:{es:'Iniciática', en:'Initiatory'}, pod:{es:'De poder', en:'Power'}, atl:{es:'Atlética', en:'Athletic'}};
+/* retratos: fragmentos recortados de frescos reales; Tú y el Rival cambian con la etapa */
+const RETR = {tu:['p_tu0', 'p_tu1', 'p_tu2'], riv:['p_riv0', 'p_riv1', 'p_riv2'], mae:'p_mae', sac:'p_sac', esc:'p_esc', dam:'p_dama'};
+const CRED_DRAMA = {
+  es:['Retratos y figuras recortados de fotografías de Wikimedia Commons: niños púgiles de Akrotiri (dominio público); pescador de Akrotiri (dominio público); Príncipe de los Lirios, Cnoso (CC0, Gsimonov); muchacho con cuenco, Akrotiri (CC BY-SA 4.0, Zde); Copero de la Procesión, Cnoso (CC BY-SA 4.0, ArchaiOptix); «La Parisina», Cnoso (CC BY-SA 4.0, Zde); Damas de azul, reproducción de Gilliéron (CC0, Metropolitan Museum); oferentes del sarcófago de Hagia Triada, hacia 1370-1320 a. C., posterior a los frescos de Cnoso (CC0, Jebulon).',
+      'Música y sonido ambiente generados en el navegador, sin grabaciones de terceros. Se inspiran en la lira y la flauta doble que tocan los músicos del sarcófago de Hagia Triada y no reconstruyen la música minoica, que desconocemos.'],
+  en:['Portraits and figures cut out from photographs on Wikimedia Commons: boxing boys of Akrotiri (public domain); fisherman of Akrotiri (public domain); Prince of the Lilies, Knossos (CC0, Gsimonov); boy with a bowl, Akrotiri (CC BY-SA 4.0, Zde); Cup-bearer of the Procession, Knossos (CC BY-SA 4.0, ArchaiOptix); «La Parisienne», Knossos (CC BY-SA 4.0, Zde); Ladies in Blue, reproduction by Gilliéron (CC0, Metropolitan Museum); offering bearers of the Hagia Triada sarcophagus, c. 1370–1320 BC, later than the Knossos frescoes (CC0, Jebulon).',
+      'Music and ambient sound generated in the browser, with no third-party recordings. They are inspired by the lyre and double pipe played by the musicians of the Hagia Triada sarcophagus and do not reconstruct Minoan music, which is unknown to us.']
 };
 
 /* Taurocatapsia · arte. Las imágenes son las piezas reales: el fresco del salto del toro de Cnoso (dominio público,
@@ -778,7 +1115,7 @@ if (!S.lang){ let l = null; try { l = localStorage.getItem('historiapp.lang'); }
 if (HIST.inside){ try { const l = localStorage.getItem('historiapp.lang'); if (l === 'en' || l === 'es') S.lang = l; } catch (e) {} }
 const L = o => o ? (o[S.lang] ?? o.es) : '';
 const UI = {
- es:{pj:'Personaje', etapa:'Etapa', pruebasT:'Pruebas del ciclo', llevas:'Lo que has ganado', nada:'Todavía nada', combatir:'Combatir', combates:'Combates', alFiesta:'Ir a la fiesta', ganas:'Ganarás', superada:'Prueba superada', obtienes:'Consigues', continuar:'Continuar', empezarC:'Empezar el ciclo', pruebaN:'Prueba {a} de {b}', nuevaEtapa:'Nueva etapa', sub:'Un ciclo de pruebas en el palacio minoico', entrar:'Empezar el ciclo', seguir:'Seguir el ciclo', fiestas:'Fiestas del toro', nuevo:'Empezar de nuevo', hist:'‹ Historiapp', menu:'Menú',
+ es:{pj:'Personaje', etapa:'Etapa', pruebasT:'Pruebas del ciclo', llevas:'Lo que has ganado', nada:'Todavía nada', combatir:'Combatir', combates:'Combates', alFiesta:'Ir a la fiesta', ganas:'Ganarás', superada:'Prueba superada', obtienes:'Consigues', continuar:'Continuar', empezarC:'Empezar el ciclo', pruebaN:'Prueba {a} de {b}', nuevaEtapa:'Nueva etapa', sub:'Una historia en el palacio minoico', entrar:'Empezar el ciclo', seguir:'Seguir el ciclo', fiestas:'Fiestas del toro', nuevo:'Empezar de nuevo', hist:'‹ Historiapp', menu:'Menú',
    room:'Estancia {a} de {b}', explora:'Toca las marcas para conocer la estancia', pasar:'Pasar', cerrar:'Seguir explorando', ficha:'Ficha', preg:'Para pasar', comprobar:'Comprobar', siguiente:'Siguiente',
    bien:'Correcto.', mal:'No es así. Vuelve a intentarlo.', alArena:'Ir a la fiesta', piel:'¿Quién salta?', tec:'Técnica', empezar:'Empezar la fiesta',
    fiesta:['Primera fiesta','Segunda fiesta','Gran fiesta del palacio'], toro:'Toro {a} de 3', aclam:'Aclamación', tap:'Toca cuando el anillo se cierre', tapK:'Toca (o pulsa espacio) cuando el anillo se cierre',
@@ -787,9 +1124,9 @@ const UI = {
    early2:'Empujaste antes de tiempo y resbalaste por el costado del toro.', late2:'Empujaste tarde: el toro te sacudió y caíste al polvo.',
    land0:'Caíste de rodillas: quien recibe te sujetó, pero el público lo notó.', clean:'Salto completo y limpio.', otro:'Siguiente toro', finF:'Fin de la fiesta', repetir:'Repetir la fiesta', next:'Siguiente fiesta',
    alTrono:'Ir a la sala del trono', palacio:'Volver al palacio', saltos:'Saltos completos', perfs:'Fases perfectas', cron:'Crónica', nota:'Ningún objeto minoico representa un premio: lo que cuenta es la aclamación de la comunidad.',
-   epiQ:'Elige todas las que creas correctas', fin:'Has completado el ciclo', fin2:'Del pugilato de los niños a la fiesta del toro, sala a sala del palacio de Cnoso.', libre:'Fiestas del toro', volver:'Volver a Historiapp',
+   epiQ:'Elige todas las que creas correctas', fin:'Has completado la historia', fin2:'Del pugilato de los niños a la fiesta del toro, por las salas del palacio de Cnoso.', libre:'Fiestas del toro', volver:'Volver a Historiapp',
    rot:'Gira el dispositivo para jugar', snd:'Sonido', tmb:'Temblor', reset:'¿Seguro? Se borrará tu recorrido en este juego.', si:'Sí, empezar', no:'Cancelar', ayuda:'Ayuda', ayudaT:'Toca la pantalla, o pulsa espacio, cuando el anillo que se cierra coincida con el círculo fijo. En cada salto hay tres momentos.'},
- en:{pj:'Character', etapa:'Stage', pruebasT:'Trials of the cycle', llevas:'What you have won', nada:'Nothing yet', combatir:'Fight', combates:'Bouts', alFiesta:'Go to the festival', ganas:'You will win', superada:'Trial passed', obtienes:'You obtain', continuar:'Continue', empezarC:'Start the cycle', pruebaN:'Trial {a} of {b}', nuevaEtapa:'New stage', sub:'A cycle of trials in the Minoan palace', entrar:'Start the cycle', seguir:'Continue the cycle', fiestas:'Bull festivals', nuevo:'Start again', hist:'‹ Historiapp', menu:'Menu',
+ en:{pj:'Character', etapa:'Stage', pruebasT:'Trials of the cycle', llevas:'What you have won', nada:'Nothing yet', combatir:'Fight', combates:'Bouts', alFiesta:'Go to the festival', ganas:'You will win', superada:'Trial passed', obtienes:'You obtain', continuar:'Continue', empezarC:'Start the cycle', pruebaN:'Trial {a} of {b}', nuevaEtapa:'New stage', sub:'A story in the Minoan palace', entrar:'Start the cycle', seguir:'Continue the cycle', fiestas:'Bull festivals', nuevo:'Start again', hist:'‹ Historiapp', menu:'Menu',
    room:'Room {a} of {b}', explora:'Tap the marks to explore the room', pasar:'Go on', cerrar:'Keep exploring', ficha:'Study sheet', preg:'To go on', comprobar:'Check', siguiente:'Next',
    bien:'Correct.', mal:'Not quite. Try again.', alArena:'Go to the festival', piel:'Who leaps?', tec:'Technique', empezar:'Start the festival',
    fiesta:['First festival','Second festival','Great palace festival'], toro:'Bull {a} of 3', aclam:'Acclaim', tap:'Tap when the ring closes', tapK:'Tap (or press space) when the ring closes',
@@ -798,7 +1135,7 @@ const UI = {
    early2:'You pushed too soon and slid off the bull\'s flank.', late2:'You pushed too late: the bull shook you off into the dust.',
    land0:'You landed on your knees: the catcher held you, but the crowd noticed.', clean:'A complete, clean leap.', otro:'Next bull', finF:'End of the festival', repetir:'Repeat the festival', next:'Next festival',
    alTrono:'Go to the throne room', palacio:'Back to the palace', saltos:'Complete leaps', perfs:'Perfect phases', cron:'Chronicle', nota:'No Minoan object shows a prize: what counts is the acclaim of the community.',
-   epiQ:'Choose all you think are correct', fin:'You have completed the cycle', fin2:'From the boys\' boxing to the bull festival, room by room through the palace of Knossos.', libre:'Bull festivals', volver:'Back to Historiapp',
+   epiQ:'Choose all you think are correct', fin:'You have completed the story', fin2:'From the boys\' boxing to the bull festival, through the halls of the palace of Knossos.', libre:'Bull festivals', volver:'Back to Historiapp',
    rot:'Turn your device to play', snd:'Sound', tmb:'Shake', reset:'Are you sure? Your tour in this game will be erased.', si:'Yes, start', no:'Cancel', ayuda:'Help', ayudaT:'Tap the screen, or press space, when the closing ring meets the fixed circle. Each leap has three moments.'}
 };
 const t = (k, v) => { let s = UI[S.lang][k] ?? UI.es[k] ?? k; if (v) for (const x in v) s = s.replace('{' + x + '}', v[x]); return s; };
@@ -853,7 +1190,7 @@ function topBar(extra, noPj){
   if (extra) extra.forEach(e => b.appendChild(e));
   b.appendChild($('<span class="sp"></span>'));
   for (const l of ['es', 'en']){ const c = $(`<button class="chip${S.lang === l ? ' on' : ''}" aria-pressed="${S.lang === l}">${l.toUpperCase()}</button>`); c.onclick = () => { if (S.lang === l) return; S.lang = l; save(); document.documentElement.lang = l; document.getElementById('rotT').textContent = t('rot'); rerender(); }; b.appendChild(c); }
-  const s = $(`<button class="chip" aria-label="${t('snd')}">${S.sound ? '♪' : '♪̸'}</button>`); s.onclick = () => { S.sound = !S.sound; save(); s.textContent = S.sound ? '♪' : '♪̸'; if (S.sound) SFX.tap(); }; b.appendChild(s);
+  const s = $(`<button class="chip" aria-label="${t('snd')}">${S.sound ? '♪' : '♪̸'}</button>`); s.onclick = () => { S.sound = !S.sound; save(); s.textContent = S.sound ? '♪' : '♪̸'; if (S.sound){ SFX.tap(); if (DR.on) SND.start(DR.scene && DR.scene.amb); } else SND.stop(); }; b.appendChild(s);
   st.appendChild(b); return b;
 }
 let rerender = () => {};
@@ -870,6 +1207,7 @@ function drawScene(){
   const g = ctx;
   if (SCN === 'titulo'){ const i = img('titulo'); if (i.ok) g.drawImage(i, 0, 0, W, H); else { g.fillStyle = '#5d7d96'; g.fillRect(0, 0, W, H); }
     const gr = g.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, 'rgba(20,12,6,.55)'); gr.addColorStop(.35, 'rgba(20,12,6,.05)'); gr.addColorStop(.75, 'rgba(20,12,6,.05)'); gr.addColorStop(1, 'rgba(20,12,6,.6)'); g.fillStyle = gr; g.fillRect(0, 0, W, H); return; }
+  if (SCN === 'drama'){ drawDrama(g); return; }
   if (SCN === 'arena'){ const i = img('arena'); if (i.ok) g.drawImage(i, 0, 0, W, H); else { g.fillStyle = '#6f8ea6'; g.fillRect(0, 0, W, H); } return; }
   const LY = LAYOUT[SCN]; if (!LY) return;
   wall(g); RECTS[SCN] = LY.panels.map(p => panel(g, p.img, p.box, L(p.cap)));
@@ -879,6 +1217,7 @@ function frame(now){
   ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
   ctx.fillStyle = '#2a1d14'; ctx.fillRect(0, 0, VW, VH);
   if (MODE === 'arena') arenaStep(dt);
+  if (MODE === 'drama') typeStep(dt);
   ctx.setTransform(DPR*sc, 0, 0, DPR*sc, DPR*(ox + shakeX), DPR*(oy + shakeY));
   ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
   drawScene();
@@ -904,17 +1243,20 @@ function sparks(x, y, n){ for (let i = 0; i < n; i++){ const a = Math.random()*6
 /* ---------- portada ---------- */
 function showTitle(){
   MODE = 'title'; SCN = 'titulo'; clearUI(); rerender = showTitle; img('titulo'); img('banda');
-  topBar();
+  topBar(null, true);
   st.appendChild($(`<div class="title"><h1>CNOSO</h1><p>${t('sub')}</p></div>`));
   const m = $('<div class="menu"></div>');
-  const started = S.step > 0;
-  const go = $(`<button class="btn pri">${started && !S.done ? t('seguir') : t('entrar')}</button>`);
-  go.onclick = () => { au(); SFX.open(); if (S.done && S.step >= CICLO.steps.length) S.step = 0; runStep(); };
+  const started = S.step > 0 || (S.dr && (S.dr.c > 0 || S.dr.s > 0));
+  DR.on = false; DR.wait = null; SND.stop();
+  const dS = drS(), dStarted = (dS.c > 0 || dS.s > 0) && !dS.fin;
+  const go = $(`<button class="btn pri">${dStarted ? dt_('seguirH') : dt_('empezarH')}</button>`);
+  go.onclick = () => { au(); SFX.open(); startDrama(); };
   m.appendChild(go);
+  if (dS.dia.length){ const db = $(`<button class="btn">📜 ${dt_('diario')}</button>`); db.onclick = () => { SFX.tap(); diarioCard(); }; m.appendChild(db); }
   if (S.bOpen > 1 || S.bouts.some(x => x)){ const c = $(`<button class="btn az">${t('combates')}</button>`); c.onclick = () => { au(); SFX.open(); openBout(null); }; m.appendChild(c); }
   if (S.arena){ const f = $(`<button class="btn az">${t('fiestas')}</button>`); f.onclick = () => { au(); SFX.open(); arenaSetup(); }; m.appendChild(f); }
   if (started){ const r = $(`<button class="btn">${t('nuevo')}</button>`); r.onclick = () => { const v = card(`<div class="in"><p>${t('reset')}</p></div><div class="act"><button class="btn" data-n>${t('no')}</button><button class="btn pri" data-y>${t('si')}</button></div>`);
-      v.querySelector('[data-n]').onclick = () => v.remove(); v.querySelector('[data-y]').onclick = () => { const keep = {lang:S.lang, sound:S.sound, shake:S.shake, xpQ:S.xpQ, xpF:S.xpF}; S = Object.assign({}, DEF, keep, {gear:{}, bouts:[0, 0, 0, 0], seen:{}, qok:{}, fiestas:[0, 0, 0]}); save(); showTitle(); }; }; m.appendChild(r); }
+      v.querySelector('[data-n]').onclick = () => v.remove(); v.querySelector('[data-y]').onclick = () => { const keep = {lang:S.lang, sound:S.sound, shake:S.shake, xpQ:S.xpQ, xpF:S.xpF}; S = Object.assign({}, DEF, keep, {gear:{}, bouts:[0, 0, 0, 0], seen:{}, qok:{}, fiestas:[0, 0, 0], dr:null}); save(); showTitle(); }; }; m.appendChild(r); }
   const cr = $(`<button class="btn">${L({es:'Imágenes', en:'Images'})}</button>`); cr.onclick = () => credits(); m.appendChild(cr);
   st.appendChild(m);
 }
@@ -991,7 +1333,7 @@ function arenaSetup(){
   v.querySelector('[data-go]').onclick = () => { au(); SFX.open(); const f = S.fiestas.findIndex(x => !x); startFiesta(f < 0 ? 0 : f); };
 }
 function credits(){
-  const v = card(`<div class="in"><h2>${L({es:'Imágenes', en:'Images'})}</h2>${L(ARENA.creditos).map(p => `<p class="cr">${p}</p>`).join('')}</div><div class="act"><button class="btn pri" data-c>${L({es:'Cerrar', en:'Close'})}</button></div>`);
+  const v = card(`<div class="in"><h2>${L({es:'Imágenes', en:'Images'})}</h2>${L(ARENA.creditos).map(p => `<p class="cr">${p}</p>`).join('')}${L(CRED_DRAMA).map(p => `<p class="cr">${p}</p>`).join('')}</div><div class="act"><button class="btn pri" data-c>${L({es:'Cerrar', en:'Close'})}</button></div>`);
   v.querySelector('[data-c]').onclick = () => v.remove();
 }
 function startFiesta(f){
@@ -1004,7 +1346,8 @@ function startFiesta(f){
   A.big = $('<div class="big"></div>'); st.appendChild(A.big);
   newBull();
 }
-function hud(){ if (!A) return; A.hud.querySelector('[data-h]').innerHTML = `<b>${t('fiesta')[A.f]}</b> · ${t('toro', {a:A.n + 1})}`; A.hud.querySelector('[data-a]').innerHTML = `${t('aclam')} <b>${Math.round(A.acl)}</b>`; }
+const fName = f => (DR.on && DR.wait === 'fiesta') ? L({es:'La fiesta del toro', en:'The bull festival'}) : t('fiesta')[f];
+function hud(){ if (!A) return; A.hud.querySelector('[data-h]').innerHTML = `<b>${fName(A.f)}</b> · ${t('toro', {a:A.n + 1})}`; A.hud.querySelector('[data-a]').innerHTML = `${t('aclam')} <b>${Math.round(A.acl)}</b>`; }
 function newBull(){
   const c = A.cfg, ev = S.tec === 'evans';
   A.ph = 'approach'; A.t = 0; A.g = [null, null, null]; A.msg = ''; A.flash = 0; A.hitstop = 0; A.cheer = 0; A.knees = false; A.dusted = 0;
@@ -1013,6 +1356,7 @@ function newBull(){
   A.lp = ev ? {spr:'left', x:FR.left[0], y:FR.left[1], rot:0, a:1} : {spr:'mid', x:180, y:150, rot:-.55, a:1};
   A.ring = null; A.tmul = ev ? .66 : 1; A.firstHint = A.firstEver && A.n === 0;
   A.good = c.good*A.tmul*(A.firstHint ? 1.3 : 1); A.perf = c.perf*A.tmul*(A.firstHint ? 1.3 : 1);
+  if (DR.on && DR.wait === 'fiesta'){ A.good *= DR.help; A.perf *= DR.help; }
   A.ts = 1; A.hintShown = 0; A.fl = null;
   hud(); SFX.crowd(.2);
 }
@@ -1123,7 +1467,7 @@ function toResult(){
   const sym = g => g === 2 ? '★' : g === 1 ? '✓' : g === 0 ? '✗' : '–';
   const msg = A.msg || t('clean');
   const head = A.g[2] > 0 ? L({es:'Salto completo', en:'Complete leap'}) : A.g[2] === 0 ? L({es:'Salto completo, caída de rodillas', en:'Complete leap, landing on the knees'}) : L({es:'Salto fallido', en:'Failed leap'});
-  const v = card(`<div class="in"><span class="tag">${t('fiesta')[A.f]} · ${t('toro', {a:A.n + 1})}</span><h2>${head}</h2>
+  const v = card(`<div class="in"><span class="tag">${fName(A.f)} · ${t('toro', {a:A.n + 1})}</span><h2>${head}</h2>
     <div class="grades">${names.map((n, i) => `<span><b>${sym(A.g[i])}</b>${n}</span>`).join('')}</div><p>${msg}</p>${ev ? `<p style="font-size:13px;opacity:.85">${L(ARENA.evansNota)}</p>` : ''}<p><b>${t('aclam')}: +${Math.round(gain)}</b></p></div>
     <div class="act"><button class="btn pri" data-n>${A.n < 2 ? t('otro') : t('finF')} ›</button></div>`);
   v.style.background = 'rgba(35,26,20,.15)';
@@ -1142,14 +1486,15 @@ function endFiesta(){
   const comp = A.res.filter(r => r.ok).length, perf = A.res.reduce((a, r) => a + r.perf, 0);
   if (!S.xpF['f' + f]){ S.xpF['f' + f] = 1; HIST.xp(30 + perf*5); }
   const crono = S.lang === 'es'
-    ? `En la ${t('fiesta')[f].toLowerCase()}, saltaste ${comp} de 3 toros${S.tec === 'evans' ? ' por los cuernos, a la manera de Evans' : ' en picado'}, con ${perf} ${perf === 1 ? 'fase perfecta' : 'fases perfectas'}. ${comp === 3 ? 'La comunidad te aclamó desde las barreras.' : comp ? 'El público reconoció tu valor.' : 'Habrá otra fiesta.'}`
-    : `At the ${t('fiesta')[f].toLowerCase()}, you leapt ${comp} of 3 bulls${S.tec === 'evans' ? ' by the horns, in Evans\'s manner' : ' with the diving leap'}, with ${perf} perfect ${perf === 1 ? 'phase' : 'phases'}. ${comp === 3 ? 'The community acclaimed you from the barriers.' : comp ? 'The crowd recognised your courage.' : 'There will be another festival.'}`;
+    ? `En la ${fName(f).toLowerCase()}, saltaste ${comp} de 3 toros${S.tec === 'evans' ? ' por los cuernos, a la manera de Evans' : ' en picado'}, con ${perf} ${perf === 1 ? 'fase perfecta' : 'fases perfectas'}. ${comp === 3 ? 'La comunidad te aclamó desde las barreras.' : comp ? 'El público reconoció tu valor.' : 'Habrá otra fiesta.'}`
+    : `At the ${fName(f).toLowerCase()}, you leapt ${comp} of 3 bulls${S.tec === 'evans' ? ' by the horns, in Evans\'s manner' : ' with the diving leap'}, with ${perf} perfect ${perf === 1 ? 'phase' : 'phases'}. ${comp === 3 ? 'The community acclaimed you from the barriers.' : comp ? 'The crowd recognised your courage.' : 'There will be another festival.'}`;
   const last = f === 2, cyc = (CICLO.steps[S.step] || {}).k === 'fiesta', needEpi = cyc;
-  const v = card(`<div class="in"><span class="tag">${t('finF')}</span><h2>${t('fiesta')[f]}</h2><div class="ros" aria-label="${ros}/3">${'✿'.repeat(ros)}<span style="opacity:.25">${'✿'.repeat(3 - ros)}</span></div>
+  const v = card(`<div class="in"><span class="tag">${t('finF')}</span><h2>${fName(f)}</h2><div class="ros" aria-label="${ros}/3">${'✿'.repeat(ros)}<span style="opacity:.25">${'✿'.repeat(3 - ros)}</span></div>
     <div class="grades"><span><b>${comp}/3</b>${t('saltos')}</span><span><b>${perf}</b>${t('perfs')}</span><span><b>${Math.round(A.acl)}</b>${t('aclam')}</span></div>
     <p><i>${t('cron')}.</i> ${crono}</p><p class="nota" style="font-size:13px;opacity:.85">${t('nota')}</p></div>
     <div class="act"><button class="btn" data-r>${t('repetir')}</button>${needEpi ? `<button class="btn pri" data-e>${t('alTrono')} ›</button>` : last ? `<button class="btn pri" data-m>${t('palacio')}</button>` : `<button class="btn" data-m>${t('palacio')}</button><button class="btn pri" data-x>${t('next')} ›</button>`}</div>`);
   A.ph = 'end';
+  if (dramaFiestaEnd(v, comp)) return;
   v.querySelector('[data-r]').onclick = () => startFiesta(f);
   const x = v.querySelector('[data-x]'); if (x) x.onclick = () => startFiesta(f + 1);
   const e = v.querySelector('[data-e]'); if (e) e.onclick = () => { SFX.tap(); nextStep(); };
@@ -1201,11 +1546,11 @@ function meaning(){
 }
 function finale(){
   S.step = CICLO.steps.length; if (!S.done){ S.done = true; S.epi = true; if (!S.xpF.fin){ S.xpF.fin = 1; HIST.xp(100); } } save();
-  clearUI(); SCN = 'titulo'; MODE = 'title'; topBar();
+  clearUI(); SCN = 'titulo'; MODE = 'title'; topBar(null, true);
   const tot = S.fiestas.reduce((a, b) => a + b, 0);
   const v = card(`<div class="in"><div class="pjrow"><span data-pj></span><div><h2>${t('fin')}</h2><p>${t('fin2')}</p>${trialList()}</div></div><div class="ros">${'✿'.repeat(tot)}<span style="opacity:.25">${'✿'.repeat(9 - tot)}</span></div><p>${t('aclam')}: <b>${S.best}</b></p></div>
     <div class="act">${HIST.inside ? `<button class="btn" data-h>${t('volver')}</button>` : ''}<button class="btn az" data-f>${t('libre')}</button><button class="btn pri" data-t>${t('menu')}</button></div>`);
-  v.querySelector('[data-pj]').appendChild(portrait(96, 128));
+  { const im = document.createElement('img'); im.src = IMGDIR + 'p_tu2.webp'; im.style.cssText = 'width:110px;display:block;filter:drop-shadow(4px 6px 6px rgba(0,0,0,.4))'; v.querySelector('[data-pj]').appendChild(im); }
   const h = v.querySelector('[data-h]'); if (h) h.onclick = () => HIST.back();
   v.querySelector('[data-f]').onclick = () => arenaSetup(); v.querySelector('[data-t]').onclick = () => showTitle();
 }
@@ -1274,6 +1619,7 @@ function closeBout(){ if (FRAME){ FRAME.remove(); FRAME = null; } }
 addEventListener('message', e => {
   if (e.origin !== location.origin || !e.data || !e.data.cnoso) return; const d = e.data;
   if (d.type === 'ficha'){ HIST.ficha(d.id); return; }
+  if (d.type === 'result') dramaBoutMsg(d); else if (dramaBoutMsg(d)) return;
   if (d.type === 'result'){ if (d.won){ S.bouts[d.i] = Math.max(S.bouts[d.i] || 0, d.stars || 1); S.bOpen = Math.max(S.bOpen, Math.min(4, d.i + 2)); GEAR[d.i].forEach(g => S.gear[g] = 1); save(); } return; }
   if (d.type === 'bout'){ closeBout(); const st = CICLO.steps[S.step]; if (FRAME_I != null && st && st.k === 'bout' && st.i === d.i) gainCard(d.i); else runStep(); return; }
   if (d.type === 'quit'){ closeBout(); if (FRAME_I == null) showTitle(); else runStep(); }
@@ -1305,6 +1651,316 @@ function pjCard(){
     <div class="act"><button class="btn pri" data-c>${L({es:'Cerrar', en:'Close'})}</button></div>`, false, 'wide epi');
   v.querySelector('[data-pj]').appendChild(portrait(120, 160));
   v.querySelector('[data-c]').onclick = () => { SFX.tap(); v.remove(); };
+}
+
+/* ---------- CNOSO · drama interactivo: escenas, diálogos, decisiones, diario, sonido ---------- */
+const DR = {on:false, Q:[], line:null, typing:false, shown:0, full:'', fig:null, figT:0, por:null, porT:0, porPrev:null, bgT:0, scene:null, wait:null, help:1, capT:0, flakes:[]};
+const DEFD = {c:0, s:0, pi:{rit:0, ini:0, pod:0, atl:0}, af:{mae:0, sac:0, esc:0, riv:0}, dia:[], dw:{}, vafio:false, lugar:'patio', lastF:0, fin:false};
+function drS(){ if (!S.dr) S.dr = JSON.parse(JSON.stringify(DEFD)); return S.dr; }
+const DTX = {
+ es:{empezarH:'Empezar la historia', seguirH:'Seguir la historia', diario:'Diario', diarioV:'El diario está vacío. Se irá llenando con lo que aprendas.', cap:'Capítulo', pista:'Lectura', afin:'Afinidad', toca:'Toca para seguir', tira:'¡Tira de la red!', tiraH:'Toca cuando el anillo se cierre sobre la red', red:'Red', patio:'En el patio central, como Evans', patioS:'Delante de todos, sobre el enlosado.', expl:'En la explanada de tierra, junto al palacio', explS:'Como prefieren hoy muchos estudios (Kyle, 2015).', tecQ:'¿Cómo saltarás?', lect4:'Las cuatro lecturas', lect4P:'Ningún texto dice qué significaba el salto del toro. Has llegado a uno de los finales; estas son las cuatro lecturas que proponen los estudios, y ninguna es la versión oficial del juego.', otro:'Vuelve a jugar para escuchar los otros finales.', tuFinal:'Tu final', creditos:'Créditos', fin2:'Del pugilato de los niños a la fiesta del toro, por las salas del palacio de Cnoso.', reinicio:'Empezar la historia de nuevo', inventado:'Los personajes y su historia son inventados. Todo lo que el juego afirma sobre Creta procede de las fichas del Tema 3, y el diario lo cita.'},
+ en:{empezarH:'Start the story', seguirH:'Continue the story', diario:'Journal', diarioV:'The journal is empty. It will fill with what you learn.', cap:'Chapter', pista:'Reading', afin:'Affinity', toca:'Tap to continue', tira:'Pull the net!', tiraH:'Tap when the ring closes on the net', red:'Net', patio:'In the central court, like Evans', patioS:'Before everyone, on the paving.', expl:'On the earthen ground beside the palace', explS:'As many scholars prefer today (Kyle, 2015).', tecQ:'How will you leap?', lect4:'The four readings', lect4P:'No text tells us what bull-leaping meant. You have reached one of the endings; these are the four readings scholars propose, and none is the game\'s official version.', otro:'Play again to hear the other endings.', tuFinal:'Your ending', creditos:'Credits', fin2:'From the boys\' boxing to the bull festival, through the halls of the palace of Knossos.', reinicio:'Start the story again', inventado:'The characters and their story are invented. Everything the game states about Crete comes from the Unit 3 study sheets, and the journal cites them.'}
+};
+const dt_ = k => (DTX[S.lang] || DTX.es)[k];
+const tx = l => S.lang === 'en' ? l[2] : l[1];
+/* índice de las voces del diario: clave escena#n */
+const DIAIDX = {};
+GUION.forEach(C => C.scenes.forEach(sc => { let n = 0; const walk = arr => arr.forEach(l => { if (!l || Array.isArray(l)) return; if (l.d){ DIAIDX[sc.id + '#' + n] = {c:C.cap, d:l.d, f:l.f}; l._k = sc.id + '#' + (n++); } if (l.q) l.q.forEach(o => o.r && walk(o.r)); if (l.if){ walk(l.then || []); walk(l.else || []); } }); walk(sc.lines); }));
+
+Object.keys(FINALES).forEach(k => { DIAIDX['fin-' + k] = {c:6, d:[FINALES[k].d.es, FINALES[k].d.en], f:F.sig}; });
+/* ---------- sonido: música y ambiente generados ---------- */
+const SND = (() => {
+  let a = null, master = null, mus = null, amb = null, rev = null, on = false, cur = '', timers = [];
+  const D = 146.83, ESC = [1, 9/8, 6/5, 4/3, 3/2, 8/5, 16/9, 2];
+  function init(){ a = au(); if (!a || master) return !!a;
+    master = a.createGain(); master.gain.value = 0; master.connect(a.destination);
+    const n = a.sampleRate*4, b = a.createBuffer(2, n, a.sampleRate); for (let c = 0; c < 2; c++){ const d = b.getChannelData(c); for (let i = 0; i < n; i++) d[i] = (Math.random()*2 - 1)*Math.pow(1 - i/n, 2.6); }
+    rev = a.createConvolver(); rev.buffer = b; const rg = a.createGain(); rg.gain.value = .5; rev.connect(rg); rg.connect(master);
+    mus = a.createGain(); mus.gain.value = .55; mus.connect(master); mus.connect(rev);
+    amb = a.createGain(); amb.gain.value = .9; amb.connect(master);
+    const lp = a.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 380; lp.Q.value = 3; const dg = a.createGain(); dg.gain.value = .05; lp.connect(dg); dg.connect(mus);
+    [[D/2, 0], [D/2, 5], [D*3/4, -4]].forEach(([f, dt]) => { const o = a.createOscillator(); o.type = 'sawtooth'; o.frequency.value = f; o.detune.value = dt; o.connect(lp); o.start(); });
+    const lfo = a.createOscillator(), lg = a.createGain(); lfo.frequency.value = .05; lg.gain.value = 150; lfo.connect(lg); lg.connect(lp.frequency); lfo.start();
+    return true; }
+  const noiseBuf = () => { const n = a.sampleRate*3, b = a.createBuffer(1, n, a.sampleRate), d = b.getChannelData(0); let last = 0; for (let i = 0; i < n; i++){ const w = Math.random()*2 - 1; last = (last + .02*w)/1.02; d[i] = w*.6 + last*3; } return b; };
+  function lira(f, t, v){ const o = a.createOscillator(), o2 = a.createOscillator(), g = a.createGain(), fl = a.createBiquadFilter();
+    o.type = 'triangle'; o2.type = 'sine'; o.frequency.value = f; o2.frequency.value = f*2.003; fl.type = 'lowpass'; fl.frequency.setValueAtTime(f*8, t); fl.frequency.exponentialRampToValueAtTime(f*1.5, t + 1.2);
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(v || .14, t + .005); g.gain.exponentialRampToValueAtTime(.0005, t + 2.6);
+    o.connect(fl); o2.connect(fl); fl.connect(g); g.connect(mus); o.start(t); o2.start(t); o.stop(t + 2.8); o2.stop(t + 2.8); }
+  function aulos(f, t, d){ const g = a.createGain(), bp = a.createBiquadFilter(); bp.type = 'bandpass'; bp.frequency.value = f*3; bp.Q.value = 1.2;
+    const vib = a.createOscillator(), vg = a.createGain(); vib.frequency.value = 5; vg.gain.value = f*.006; vib.connect(vg);
+    [0, 7].forEach(dt => { const o = a.createOscillator(); o.type = 'sawtooth'; o.frequency.value = f; o.detune.value = dt; vg.connect(o.frequency); o.connect(bp); o.start(t); o.stop(t + d + .6); });
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.035, t + .35); g.gain.setValueAtTime(.035, t + d - .2); g.gain.linearRampToValueAtTime(0, t + d + .5);
+    bp.connect(g); g.connect(mus); vib.start(t); vib.stop(t + d + .6); }
+  const nota = i => D*ESC[((i % 8) + 8) % 8]*Math.pow(2, Math.floor(i/8));
+  let pos = 4;
+  function frase(){ if (!on || !a) return; const t = a.currentTime + .05, n = 3 + (Math.random()*4|0); let dt = 0;
+    for (let i = 0; i < n; i++){ pos = Math.max(0, Math.min(11, pos + [-2, -1, -1, 1, 1, 2, 0][Math.random()*7|0])); lira(nota(pos), t + dt); if (Math.random() < .3) lira(nota(pos - 4)/2, t + dt, .08); dt += [.35, .5, .7, 1][Math.random()*4|0]; }
+    if (Math.random() < .3) aulos(nota(2 + (Math.random()*5|0)), t + dt*.5, 2.5 + Math.random()*2);
+    timers.push(setTimeout(frase, (dt + 3 + Math.random()*4)*1000)); }
+  /* ambientes: mar (olas), viento, campo (viento suave y pájaros), interior (sala), patio y gentío (murmullo) */
+  let ambNodes = [];
+  function stopAmb(){ const t = a.currentTime; ambNodes.forEach(n => { try { n.g.gain.cancelScheduledValues(t); n.g.gain.setValueAtTime(n.g.gain.value, t); n.g.gain.linearRampToValueAtTime(0, t + 1.5); n.src.forEach(s => s.stop(t + 1.6)); } catch (e) {} }); ambNodes = []; }
+  function bed(type, freq, q, vol, lfoF, lfoD){ const s = a.createBufferSource(); s.buffer = noiseBuf(); s.loop = true; const f = a.createBiquadFilter(); f.type = type; f.frequency.value = freq; f.Q.value = q;
+    const g = a.createGain(); g.gain.value = 0; s.connect(f); f.connect(g); g.connect(amb); s.start(); const src = [s];
+    const t = a.currentTime; g.gain.linearRampToValueAtTime(vol, t + 2);
+    if (lfoF){ const l = a.createOscillator(), lg = a.createGain(); l.frequency.value = lfoF; lg.gain.value = lfoD; l.connect(lg); lg.connect(g.gain); l.start(); src.push(l);
+      const l2 = a.createOscillator(), lg2 = a.createGain(); l2.frequency.value = lfoF*1.7; lg2.gain.value = freq*.35; l2.connect(lg2); lg2.connect(f.frequency); l2.start(); src.push(l2); }
+    ambNodes.push({g, src}); }
+  let birdT = null;
+  function pajaro(){ if (cur !== 'campo' || !a) return; const t = a.currentTime, n = 2 + (Math.random()*4|0), f0 = 2600 + Math.random()*1500;
+    for (let i = 0; i < n; i++){ const o = a.createOscillator(), g = a.createGain(), tt = t + i*.12; o.type = 'sine'; o.frequency.setValueAtTime(f0, tt); o.frequency.exponentialRampToValueAtTime(f0*1.35, tt + .06);
+      g.gain.setValueAtTime(0, tt); g.gain.linearRampToValueAtTime(.018, tt + .01); g.gain.exponentialRampToValueAtTime(.0004, tt + .09); o.connect(g); g.connect(amb); o.start(tt); o.stop(tt + .1); }
+    birdT = setTimeout(pajaro, 2500 + Math.random()*5000); }
+  function setAmb(k){ if (!a || k === cur) return; stopAmb(); cur = k; clearTimeout(birdT);
+    if (k === 'mar'){ bed('lowpass', 520, .7, .16, .09, .12); bed('bandpass', 1800, .5, .025, .13, .02); }
+    else if (k === 'viento'){ bed('bandpass', 420, 1.4, .09, .07, .06); bed('bandpass', 900, 3, .02, .11, .015); }
+    else if (k === 'campo'){ bed('bandpass', 380, 1.1, .05, .06, .035); birdT = setTimeout(pajaro, 1500); }
+    else if (k === 'interior'){ bed('lowpass', 160, .7, .05, .03, .015); }
+    else if (k === 'patio'){ bed('bandpass', 350, 1, .04, .05, .02); bed('bandpass', 700, 2.5, .018, .2, .012); }
+    else if (k === 'gentio'){ bed('bandpass', 520, 1.6, .08, .23, .05); bed('bandpass', 1100, 2.2, .03, .31, .02); }
+  }
+  return {
+    start(k){ if (!S.sound) return; if (!init()) return; if (!on){ on = true; const t = a.currentTime; master.gain.cancelScheduledValues(t); master.gain.setValueAtTime(master.gain.value, t); master.gain.linearRampToValueAtTime(.9, t + 3); frase(); } if (k) setAmb(k); },
+    amb(k){ if (on) setAmb(k); else this.start(k); },
+    stop(){ if (!a || !on) return; on = false; timers.forEach(clearTimeout); timers = []; const t = a.currentTime; master.gain.cancelScheduledValues(t); master.gain.setValueAtTime(master.gain.value, t); master.gain.linearRampToValueAtTime(0, t + 1.2); setTimeout(() => { if (!on && a){ stopAmb(); cur = ''; } }, 1300); },
+    duck(v){ if (!a || !master) return; const t = a.currentTime; master.gain.cancelScheduledValues(t); master.gain.setValueAtTime(master.gain.value, t); master.gain.linearRampToValueAtTime(v, t + .6); }
+  };
+})();
+
+/* ---------- dibujo de la escena ---------- */
+const BLUR = {};
+function blurOf(name, im){ if (BLUR[name]) return BLUR[name]; const c = document.createElement('canvas'); c.width = 64; c.height = 36; const g = c.getContext('2d');
+  const s = Math.max(64/im.naturalWidth, 36/im.naturalHeight); g.drawImage(im, (64 - im.naturalWidth*s)/2, (36 - im.naturalHeight*s)/2, im.naturalWidth*s, im.naturalHeight*s); return (BLUR[name] = c); }
+/* la lámina entera, encajada, sobre un fondo desenfocado de sí misma, con un movimiento lento de cámara */
+function coverDraw(g, name, k, z, alpha){ const im = img(name); if (!im || !im.ok) return; g.globalAlpha = alpha;
+  g.save(); g.filter = 'brightness(.5) saturate(.8)'; g.drawImage(blurOf(name, im), -40, -40, W + 80, H + 80); g.restore();
+  const iw = im.naturalWidth, ih = im.naturalHeight, s = Math.min(W*.96/iw, H*.94/ih)*z, w = iw*s, h = ih*s;
+  const x = (W - w)/2 + Math.sin(k*.9)*14, y = Math.max(8, (H - h)/2 - 14) + Math.cos(k*.7)*8;
+  g.save(); g.shadowColor = 'rgba(0,0,0,.55)'; g.shadowBlur = 30; g.shadowOffsetY = 10; g.drawImage(im, x, y, w, h); g.restore(); g.globalAlpha = 1; }
+const FOFF = document.createElement('canvas'); FOFF.width = W; FOFF.height = H; const fog = FOFF.getContext('2d');
+function liveFigure(g, im, cx, by, hgt, t, ph, sway, br){
+  if (!im || !im.ok) return; const s = hgt/im.naturalHeight, w = im.naturalWidth*s, N = 80, sh = im.naturalHeight/N;
+  fog.clearRect(0, 0, W, H);
+  for (let i = 0; i < N; i++){ const v = i/N, up = 1 - v; const dx = Math.sin(t*.9 + ph)*sway*Math.pow(up, 1.6) + Math.sin(t*2.1 + v*5)*.5*up;
+    let sx = 1; if (v > .15 && v < .45) sx = 1 + br*Math.sin(t*1.25 + ph)*Math.sin(Math.PI*(v - .15)/.3);
+    fog.drawImage(im, 0, i*sh, im.naturalWidth, sh + 1, cx - w*sx/2 + dx, by - hgt + i*sh*s, w*sx, sh*s + 1); }
+  g.drawImage(FOFF, 0, 0); }
+function drawDrama(g){
+  const sc = DR.scene; if (!sc){ g.fillStyle = '#1b130d'; g.fillRect(0, 0, W, H); return; }
+  const bgs = sc.bg, per = 9, n = bgs.length, tt = (T - DR.bgT);
+  const i0 = n > 1 ? Math.floor(tt/per) % n : 0, fr = n > 1 ? (tt % per)/per : 0;
+  g.fillStyle = '#1b130d'; g.fillRect(0, 0, W, H);
+  coverDraw(g, bgs[i0], tt*.12 + i0, 1 + .035*Math.sin(tt*.06), 1);
+  if (n > 1 && fr > .82){ const j = (i0 + 1) % n; coverDraw(g, bgs[j], tt*.12 + j, 1, (fr - .82)/.18); }
+  // velo y luz de lámpara
+  const fl = .92 + .05*Math.sin(T*7) + .03*Math.sin(T*13.3);
+  let gr = g.createRadialGradient(W*.5, H*.38, 80, W*.5, H*.5, 820); gr.addColorStop(0, `rgba(255,190,110,${.06*fl})`); gr.addColorStop(.55, 'rgba(0,0,0,.05)'); gr.addColorStop(1, 'rgba(12,6,2,.7)');
+  g.fillStyle = gr; g.fillRect(0, 0, W, H);
+  gr = g.createLinearGradient(0, H*.45, 0, H); gr.addColorStop(0, 'rgba(15,9,5,0)'); gr.addColorStop(1, 'rgba(15,9,5,.62)'); g.fillStyle = gr; g.fillRect(0, H*.45, W, H*.55);
+  // figura que cobra vida
+  if (DR.fig){ const im = img(DR.fig), k = Math.min(1, (T - DR.figT)/1.6), e = k*k*(3 - 2*k), hgt = 560;
+    g.save(); g.globalAlpha = e*.5; g.filter = 'blur(16px) brightness(0)'; g.translate(22*e, 12*e); liveFigure(g, im, W*.62, H - 30, hgt, T, 1, 4*e, .012*e); g.restore();
+    g.save(); g.globalAlpha = e; if (e < 1) g.filter = `blur(${(1 - e)*6}px)`; g.translate(0, -8*e); liveFigure(g, im, W*.62, H - 30, hgt, T, 1, 4*e, .012*e); g.restore(); }
+  // retrato del que habla
+  if (DR.porPrev && T - DR.porT < .35){ drawPortrait(g, DR.porPrev, 1 - (T - DR.porT)/.35, -1); }
+  if (DR.por){ drawPortrait(g, DR.por, Math.min(1, (T - DR.porT)/.45), 1); }
+  // polvo en la luz
+  g.save(); g.globalCompositeOperation = 'screen';
+  for (const m of MOTES){ m.y -= m.v; m.x += Math.sin(T + m.a*9)*.25; if (m.y < 0){ m.y = H; m.x = Math.random()*W; }
+    g.fillStyle = `rgba(255,220,160,${.18 + .2*Math.sin(T*2 + m.a*6)})`; g.beginPath(); g.arc(m.x, m.y, 1 + m.a*1.6, 0, 7); g.fill(); }
+  g.restore();
+  for (const f of DR.flakes){ f.vy += .07; f.x += f.vx; f.y += f.vy; f.life -= .01; g.globalAlpha = Math.max(0, f.life); g.fillStyle = f.c; g.fillRect(f.x, f.y, f.z, f.z); }
+  g.globalAlpha = 1; DR.flakes = DR.flakes.filter(f => f.life > 0);
+  // cartela de capítulo
+  if (DR.capT && T - DR.capT < 3.2){ const k = T - DR.capT, a = k < .6 ? k/.6 : k > 2.6 ? (3.2 - k)/.6 : 1;
+    g.fillStyle = `rgba(15,9,5,${.55*a})`; g.fillRect(0, H*.36, W, H*.26);
+    g.globalAlpha = a; g.textAlign = 'center'; g.fillStyle = '#e9c98a'; g.font = '600 22px Palatino, Georgia, serif'; g.fillText(DR.capTxt[0], W/2, H*.44);
+    g.fillStyle = '#fff3d6'; g.font = '700 54px Palatino, Georgia, serif'; g.fillText(DR.capTxt[1], W/2, H*.53); g.font = 'italic 22px Palatino, Georgia, serif'; g.fillStyle = '#efe0c0'; g.fillText(DR.capTxt[2], W/2, H*.585); g.textAlign = 'left'; g.globalAlpha = 1; }
+}
+const MOTES = [...Array(60)].map(() => ({x:Math.random()*W, y:Math.random()*H, v:.15 + Math.random()*.4, a:Math.random()}));
+function drawPortrait(g, name, k, dir){
+  const im = img(name); if (!im.ok) return; const e = k*k*(3 - 2*k), hh = 470, ww = im.naturalWidth*hh/im.naturalHeight;
+  const x = 40 + ww/2 - (1 - e)*60*dir, y = H - 30 - hh/2 + Math.sin(T*.8)*4 - (dir > 0 ? (1 - e)*10 : 0);
+  g.save(); g.globalAlpha = dir > 0 ? e : k; g.translate(x, y); g.rotate(Math.sin(T*.5)*.006 - .015);
+  const br = 1 + .006*Math.sin(T*1.2); g.scale(br, br);
+  g.shadowColor = 'rgba(0,0,0,.6)'; g.shadowBlur = 22; g.shadowOffsetX = 12; g.shadowOffsetY = 16;
+  g.drawImage(im, -ww/2, -hh/2, ww, hh); g.restore(); }
+function flakesAt(x0, x1, y0, y1, n){ for (let i = 0; i < n; i++) DR.flakes.push({x:x0 + Math.random()*(x1 - x0), y:y0 + Math.random()*(y1 - y0), vx:(Math.random() - .5)*1.4, vy:-Math.random()*1.2, life:1, c:Math.random() < .5 ? '#e9dcc0' : '#b8432a', z:1 + Math.random()*3}); }
+
+/* ---------- motor ---------- */
+const sceneAt = () => { const d = drS(), C = GUION[d.c]; return C && C.scenes[d.s]; };
+function retrato(who){ const r = RETR[who]; if (!r) return null; return Array.isArray(r) ? r[Math.min(2, S.stage)] : r; }
+function startDrama(){
+  const d = drS(); if (d.fin){ S.dr = JSON.parse(JSON.stringify(DEFD)); S.stage = 0; save(); }
+  au(); DR.on = true; SND.start(); if (drS().c === 0 && drS().s === 0) S.stage = 0;
+  enterScene(true);
+}
+function enterScene(fresh){
+  const d = drS(), C = GUION[d.c], sc = C && C.scenes[d.s];
+  if (!sc){ DR.on = false; SND.stop(); finale(); return; }
+  MODE = 'drama'; SCN = 'drama'; clearUI(); rerender = () => { if (!DR.wait) renderLine(true); }; A = null;
+  DR.scene = sc; DR.bgT = T; DR.fig = sc.fig || null; DR.figT = T; DR.por = null; DR.porPrev = null; DR.Q = sc.lines.slice(); DR.line = null; DR.wait = null;
+  sc.bg.forEach(img); if (sc.fig) img(sc.fig);
+  ['mae', 'sac', 'esc', 'dam'].forEach(k => img(RETR[k])); img(retrato('tu')); img(retrato('riv'));
+  if (d.s === 0){ DR.capT = T; DR.capTxt = [`${dt_('cap')} ${C.cap}`, L(C.t), L(C.sub)]; } else DR.capT = 0;
+  SND.amb(sc.amb);
+  if (sc.fig) setTimeout(() => flakesAt(W*.5, W*.75, 150, H - 60, 70), 300);
+  dramaChrome();
+  setTimeout(next, d.s === 0 ? 1500 : 250);
+}
+function dramaChrome(){
+  const sc = DR.scene;
+  const dia = $(`<button class="chip">📜 ${dt_('diario')}</button>`); dia.onclick = e => { e.stopPropagation(); SFX.tap(); diarioCard(); };
+  const menu = $(`<button class="chip">${t('menu')}</button>`); menu.onclick = e => { e.stopPropagation(); SFX.tap(); DR.on = false; SND.stop(); showTitle(); };
+  const tb = topBar([dia], true); tb.appendChild(menu);
+  tb.insertBefore($(`<span class="pane scn"><b>${sc.id}</b> · ${L(sc.t)}</span>`), tb.querySelector('.sp'));
+  DR.box = $(`<div class="dlg"><div class="nm"></div><div class="tx"></div><div class="ops"></div><i class="nx">▾</i></div>`); st.appendChild(DR.box);
+  DR.box.addEventListener('pointerdown', e => { if (e.target.closest('button')) return; e.stopPropagation(); tapDrama(); });
+  DR.box.hidden = true;
+}
+function next(){
+  if (!DR.on || DR.wait) return;
+  const l = DR.Q.shift();
+  if (l === undefined){ endScene(); return; }
+  DR.line = l;
+  if (Array.isArray(l)) return say(l);
+  if (l.d) return diaryLine(l);
+  if (l.q) return choice(l);
+  if (l.if){ const ok = cond(l.if); DR.Q.unshift(...((ok ? l.then : l.else) || [])); return next(); }
+  if (l.act) return act(l);
+  next();
+}
+function cond(k){ const d = drS();
+  return k === 'b0' ? !!d.dw[0] : k === 'win' ? !!d.dw[3] : k === 'vafio' ? d.vafio : k === 'afRiv' ? d.af.riv >= 2 : k === 'afMae' ? d.af.mae >= 2
+    : k === 'patio' ? d.lugar === 'patio' : k === 'f3' ? d.lastF >= 3 : k === 'f1' ? d.lastF >= 1 : false; }
+function say(l){
+  const who = l[0], box = DR.box; box.hidden = false; box.classList.toggle('narr', who === 'nar'); box.classList.remove('opts');
+  const por = who === 'nar' ? null : retrato(who);
+  if (por !== DR.por){ DR.porPrev = DR.por; DR.por = por; DR.porT = T; if (por) flakesAt(40, 300, 260, H - 40, 18); }
+  box.classList.toggle('wp', !!por);
+  box.querySelector('.nm').textContent = who === 'nar' ? '' : L(PERS[who]);
+  box.querySelector('.ops').innerHTML = '';
+  DR.full = tx(l); DR.shown = 0; DR.typing = true; box.querySelector('.tx').textContent = ''; box.querySelector('.nx').style.opacity = 0;
+  if (who !== 'nar') SFX.tap();
+}
+function renderLine(re){ if (re){ clearUI(); dramaChrome(); const l = DR.line; if (l){ if (Array.isArray(l)) say(l); else if (l.q) choice(l); else if (l.d) diaryLine(l); else if (l.act === 'lugar' || l.act === 'tec' || l.act === 'meaning') act(l); } } }
+function typeStep(dt){ if (!DR.typing || !DR.box) return; DR.shown = Math.min(DR.full.length, DR.shown + dt*48); DR.box.querySelector('.tx').textContent = DR.full.slice(0, DR.shown|0);
+  if (DR.shown >= DR.full.length){ DR.typing = false; DR.box.querySelector('.nx').style.opacity = 1; } }
+function tapDrama(){
+  if (!DR.on || DR.wait) return; const l = DR.line;
+  if (DR.capT && T - DR.capT < 2.6){ DR.capT = T - 2.6; return; }
+  if (!Array.isArray(l)) return;
+  if (DR.typing){ DR.shown = DR.full.length; return; }
+  next();
+}
+function diaryLine(l){
+  const d = drS(); if (l._k && !d.dia.includes(l._k)){ d.dia.push(l._k); save(); toast('📜 ' + dt_('diario') + ' · ' + l.f[1]); }
+  DR.box.hidden = true; DR.por = null; DR.porT = T;
+  const v = card(`<div class="in"><span class="tag">📜 ${dt_('diario')} · ${l.f[1]}</span><p class="dtx">${L({es:l.d[0], en:l.d[1]})}</p></div><div class="act">${fichaBtn(l.f)}<span class="spc"></span><button class="btn pri" data-n>${t('continuar')} ›</button></div>`, false, 'diario');
+  bindFicha(v); v.style.background = 'rgba(20,12,6,.25)';
+  v.querySelector('[data-n]').onclick = e => { e.stopPropagation(); SFX.tap(); v.remove(); next(); };
+}
+function choice(l){
+  const box = DR.box; box.hidden = false; box.classList.add('opts'); box.classList.remove('narr');
+  box.querySelector('.nm').textContent = ''; box.querySelector('.tx').textContent = ''; box.querySelector('.nx').style.opacity = 0;
+  const ops = box.querySelector('.ops'); ops.innerHTML = '';
+  l.q.forEach(o => { const b = $(`<button class="opt"><i>›</i><span>${L(o)}</span></button>`); b.onclick = e => { e.stopPropagation(); pick(o); }; ops.appendChild(b); });
+}
+function pick(o){
+  const d = drS(); SFX.ok();
+  const m = [];
+  if (o.p){ d.pi[o.p]++; m.push(`✦ ${dt_('pista')} ${L(LECT[o.p]).toLowerCase()}`); }
+  if (o.a){ d.af[o.a]++; m.push(`${L(PERS[o.a])} ↑`); }
+  save(); if (m.length) toast(m.join(' · '));
+  DR.box.querySelector('.ops').innerHTML = ''; DR.box.classList.remove('opts');
+  DR.Q.unshift(...(o.r || [])); next();
+}
+function act(l){
+  const d = drS();
+  switch (l.act){
+    case 'bout': DR.wait = 'bout'; DR.boutI = l.i; SND.duck(0); openBout(l.i); return;
+    case 'stage': S.stage = l.s; save(); SFX.ok(); toast(`${t('nuevaEtapa')} · ${L(CICLO.stages[l.s].t)}`); return next();
+    case 'fig': DR.fig = l.f; DR.figT = T; if (l.f){ img(l.f); flakesAt(W*.5, W*.75, 150, H - 60, 80); SFX.whoosh(); } return next();
+    case 'qte': return qte();
+    case 'lugar': return lugar();
+    case 'tec': return tecnica();
+    case 'fiesta': DR.wait = 'fiesta'; DR.help = d.af.mae >= 2 || d.af.riv >= 2 ? 1.18 : 1; S.arena = true; save(); SND.duck(.25); startFiesta(1); return;
+    case 'final': return finales();
+    case 'meaning': return lecturas();
+  }
+  next();
+}
+function endScene(){
+  const d = drS(), C = GUION[d.c];
+  if (d.s + 1 < C.scenes.length) d.s++; else { d.c++; d.s = 0; }
+  save(); SFX.open();
+  enterScene();
+}
+/* combates: el marco del pugilato avisa al terminar */
+function dramaBoutMsg(dd){
+  if (!DR.on || DR.wait !== 'bout') return false;
+  if (dd.type === 'result'){ drS().dw[dd.i] = !!dd.won; save(); return true; }
+  if (dd.type === 'bout' || dd.type === 'quit'){ closeBout(); DR.wait = null; MODE = 'drama'; SCN = 'drama'; clearUI(); dramaChrome(); SND.duck(.9); setTimeout(next, 300); return true; }
+  return false;
+}
+/* fiesta: al terminar, vuelve a la historia */
+function dramaFiestaEnd(v, comp){
+  if (!DR.on || DR.wait !== 'fiesta') return false;
+  drS().lastF = comp; save();
+  const act = v.querySelector('.act'); act.innerHTML = `<button class="btn" data-r>${t('repetir')}</button><button class="btn pri" data-g>${t('continuar')} ›</button>`;
+  act.querySelector('[data-r]').onclick = () => startFiesta(1);
+  act.querySelector('[data-g]').onclick = () => { SFX.tap(); DR.wait = null; SND.duck(.9); endScene(); };
+  return true;
+}
+/* reacción: tensar la red a tiempo */
+function qte(){
+  DR.box.hidden = true; DR.wait = 'qte'; DR.por = null; let hits = 0, k = 0;
+  const ov = $(`<div class="qte"><div class="qh">${dt_('tiraH')}</div><div class="qr"><b class="fix"></b><b class="mov"></b><span>${dt_('red')}</span></div><div class="qs"><i></i><i></i><i></i></div></div>`); st.appendChild(ov);
+  const mov = ov.querySelector('.mov'), dots = ov.querySelectorAll('.qs i');
+  let t0 = 0, dur = 1.5, raf = 0, done = false;
+  const start = () => { t0 = performance.now(); mov.style.transition = 'none'; mov.style.transform = 'scale(3.2)'; mov.style.opacity = 1; SFX.hoof(); loop(); };
+  const loop = () => { const e = (performance.now() - t0)/1000/dur; mov.style.transform = `scale(${Math.max(.6, 3.2 - 2.2*e)})`; if (e > 1.25){ judge(false); return; } raf = requestAnimationFrame(loop); };
+  const judge = ok => { if (done) return; cancelAnimationFrame(raf); dots[k].className = ok ? 'ok' : 'no'; if (ok){ hits++; SFX.good(); shake(6); flakesAt(500, 780, 300, 420, 25); } else SFX.no(); k++;
+    mov.style.opacity = 0; if (k < 3) setTimeout(start, 700); else { done = true; setTimeout(end, 700); } };
+  const tap = e => { e.preventDefault(); e.stopPropagation(); if (done) return; const el = (performance.now() - t0)/1000/dur; judge(Math.abs(el - 1) < .16); };
+  ov.addEventListener('pointerdown', tap);
+  const key = e => { if (e.code === 'Space' || e.code === 'Enter') tap(e); }; addEventListener('keydown', key);
+  const end = () => { removeEventListener('keydown', key); ov.remove(); drS().vafio = hits >= 2; save(); if (hits >= 2) SFX.ok(); DR.wait = null; DR.box.hidden = false; next(); };
+  ov.querySelector('.qh').textContent = dt_('tira'); setTimeout(() => { ov.querySelector('.qh').textContent = dt_('tiraH'); start(); }, 900);
+}
+function lugar(){
+  const v = card(`<div class="in"><div class="opts"><button class="opt" data-v="patio"><i>›</i><span><b>${dt_('patio')}</b><br><small>${dt_('patioS')}</small></span></button><button class="opt" data-v="expl"><i>›</i><span><b>${dt_('expl')}</b><br><small>${dt_('explS')}</small></span></button></div></div>`, false, 'wide');
+  DR.box.hidden = true;
+  v.querySelectorAll('[data-v]').forEach(b => b.onclick = () => { drS().lugar = b.dataset.v; save(); SFX.ok(); v.remove();
+    DR.Q.unshift(b.dataset.v === 'patio' ? ['mae', 'Delante de todos, como debe ser.', 'Before everyone, as it should be.'] : ['esc', 'Sobre tierra firme. Bien pensado.', 'On firm earth. Well thought.']); next(); });
+}
+function tecnica(){
+  DR.box.hidden = true;
+  const v = card(`<div class="in"><h2>${dt_('tecQ')}</h2><div class="opts"><button class="opt" data-v="picado"><i>↘</i><span><b>${L(ARENA.picado)}</b><br><small>${L(ARENA.picadoS)}</small></span></button><button class="opt" data-v="evans"><i>⌒</i><span><b>${L(ARENA.evans)}</b><br><small>${L(ARENA.evansS)}</small></span></button></div><p class="sm">${L(ARENA.evansNota)}</p></div>`, false, 'wide');
+  v.querySelectorAll('[data-v]').forEach(b => b.onclick = () => { S.tec = b.dataset.v; save(); SFX.ok(); v.remove(); next(); });
+}
+/* finales según la lectura con más pistas; si empatan, hablan los dos */
+function finales(){
+  const d = drS(), mx = Math.max(...Object.values(d.pi)), win = Object.keys(d.pi).filter(k => d.pi[k] === mx).slice(0, 2);
+  d.finales = win; save();
+  const ls = [];
+  win.forEach(k => { const F_ = FINALES[k]; ls.push([F_.who, F_.t.es, F_.t.en]); });
+  win.forEach(k => { const F_ = FINALES[k]; ls.push({d:[F_.d.es, F_.d.en], f:F.sig, _k:'fin-' + k}); });
+  DR.Q.unshift(...ls); next();
+}
+function lecturas(){
+  const d = drS(); DR.box.hidden = true; DR.por = null;
+  const v = card(`<div class="in"><span class="tag">${dt_('lect4')}</span><p class="sm">${dt_('lect4P')}</p>${['rit', 'ini', 'pod', 'atl'].map(k => `<p class="lec${(d.finales || []).includes(k) ? ' mine' : ''}"><b>${(d.finales || []).includes(k) ? '★ ' : ''}${L(FINALES[k].d).split('. ')[0]}.</b> ${L(FINALES[k].d).split('. ').slice(1).join('. ')}</p>`).join('')}<p class="sm"><i>${dt_('otro')}</i></p></div><div class="act">${fichaBtn(F.sig)}<span class="spc"></span><button class="btn pri" data-n>${t('siguiente')} ›</button></div>`, false, 'wide epi');
+  bindFicha(v);
+  v.querySelector('[data-n]').onclick = () => { SFX.tap(); v.remove(); d.fin = true; save(); DR.on = false; meaning(); };
+}
+function diarioCard(){
+  const d = drS(); const by = {};
+  d.dia.forEach(k => { const e = DIAIDX[k]; if (e) (by[e.c] = by[e.c] || []).push(e); });
+  const html = Object.keys(by).length ? Object.keys(by).map(c => `<h3>${dt_('cap')} ${c} · ${L(GUION[c - 1].t)}</h3>${by[c].map(e => `<p class="dtx"><span class="code">${e.f[1]}</span> ${L({es:e.d[0], en:e.d[1]})} ${HIST.inside ? `<button class="ficha sm" data-f="${e.f[0]}">📖</button>` : ''}</p>`).join('')}`).join('') : `<p>${dt_('diarioV')}</p>`;
+  const v = card(`<div class="in"><h2>📜 ${dt_('diario')}</h2><p class="sm"><i>${dt_('inventado')}</i></p>${html}</div><div class="act"><button class="btn pri" data-c>${L({es:'Cerrar', en:'Close'})}</button></div>`, false, 'wide diarioL');
+  bindFicha(v); v.querySelector('[data-c]').onclick = () => { SFX.tap(); v.remove(); };
 }
 
 /* ---------- entrada ---------- */

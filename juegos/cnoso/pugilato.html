@@ -131,24 +131,27 @@ button{font-family:var(--serif);cursor:pointer;-webkit-appearance:none;appearanc
 .opt .stars{margin-left:auto;font-style:normal;letter-spacing:2px;font-size:18px}
 .stars.big2{font-size:34px;letter-spacing:8px;margin:0}
 .opt b{font-size:16px}
-/* mandos táctiles: joystick a la izquierda y botones en arco a la derecha */
+/* mandos táctiles: cruceta fija a la izquierda y botones juntos en arco a la derecha */
 #pad{position:fixed;inset:0;display:none;pointer-events:none;z-index:5;--s:1.15}
 @media (max-height:500px){#pad{--s:1}}
 #pad.on{display:block}
-#tjz{position:absolute;left:0;top:30%;width:44%;bottom:0;pointer-events:auto;touch-action:none}
-#tjoy{position:absolute;width:calc(124px*var(--s));height:calc(124px*var(--s));margin:calc(-62px*var(--s)) 0 0 calc(-62px*var(--s));border-radius:50%;border:2.5px solid rgba(26,20,15,.55);background:radial-gradient(circle,rgba(244,236,218,.25),rgba(26,20,15,.18));pointer-events:none;opacity:.6;transition:opacity .15s}
-#tjoy.on{opacity:.95}
-#tjoy .kn{position:absolute;left:50%;top:50%;width:calc(54px*var(--s));height:calc(54px*var(--s));margin:calc(-27px*var(--s)) 0 0 calc(-27px*var(--s));border-radius:50%;background:radial-gradient(circle at 35% 35%,#fffaf0,#d9ccae);border:2.5px solid var(--ink);box-shadow:0 3px 6px rgba(0,0,0,.3)}
-#tjoy i{position:absolute;font-style:normal;color:var(--ink);font-size:calc(14px*var(--s));opacity:.6}
-#tjoy .u{left:50%;top:3%;transform:translateX(-50%)}#tjoy .d{left:50%;bottom:3%;transform:translateX(-50%);opacity:.9}#tjoy .l{left:5%;top:50%;transform:translateY(-50%)}#tjoy .r{right:5%;top:50%;transform:translateY(-50%)}
+#tjz{position:absolute;left:0;top:34%;width:40%;bottom:0;pointer-events:auto;touch-action:none}
+#tdp{position:absolute;left:calc(max(10px,env(safe-area-inset-left)) + 6px*var(--s));bottom:calc(max(8px,env(safe-area-inset-bottom)) + 6px*var(--s));width:calc(138px*var(--s));height:calc(138px*var(--s));pointer-events:none}
+#tdp b{position:absolute;left:33.3%;top:33.3%;width:33.4%;height:33.4%;background:rgba(244,236,218,.78)}
+#tdp i{position:absolute;box-sizing:border-box;width:33.4%;height:33.4%;display:flex;align-items:center;justify-content:center;font-style:normal;background:rgba(244,236,218,.78);border:2.5px solid var(--ink);color:var(--ink);font-size:calc(17px*var(--s))}
+#tdp i[data-k=up]{left:33.3%;top:0;border-bottom:none;border-radius:10px 10px 0 0;color:rgba(26,20,15,.3)}
+#tdp i[data-k=down]{left:33.3%;bottom:0;border-top:none;border-radius:0 0 10px 10px}
+#tdp i[data-k=left]{left:0;top:33.3%;border-right:none;border-radius:10px 0 0 10px}
+#tdp i[data-k=right]{right:0;top:33.3%;border-left:none;border-radius:0 10px 10px 0}
+#tdp i.on{background:var(--ink);color:var(--paper)}
 .tb{position:absolute;pointer-events:auto;border-radius:50%;border:2.5px solid var(--ink);background:rgba(244,236,218,.78);color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;font-family:var(--serif);font-weight:700;touch-action:none;user-select:none;-webkit-user-select:none;padding:0;min-height:0;box-shadow:0 3px 0 rgba(26,20,15,.6)}
 .tb b{font-size:calc(22px*var(--s))}.tb small{font-size:11px;font-weight:600;margin-top:2px}
 .tb.down{background:var(--ink);color:var(--paper);transform:translateY(2px);box-shadow:none}
 .tb-a{right:calc(max(10px,env(safe-area-inset-right)) + 14px*var(--s));bottom:calc(max(8px,env(safe-area-inset-bottom)) + 14px*var(--s));width:calc(88px*var(--s));height:calc(88px*var(--s))}
 .tb-a b{font-size:calc(30px*var(--s))}
-.tb-s{right:calc(max(10px,env(safe-area-inset-right)) + 110px*var(--s));bottom:calc(max(8px,env(safe-area-inset-bottom)) + 6px*var(--s));width:calc(64px*var(--s));height:calc(64px*var(--s))}
-.tb-d{right:calc(max(10px,env(safe-area-inset-right)) + 96px*var(--s));bottom:calc(max(8px,env(safe-area-inset-bottom)) + 80px*var(--s));width:calc(64px*var(--s));height:calc(64px*var(--s))}
-.tb-w{right:calc(max(10px,env(safe-area-inset-right)) + 24px*var(--s));bottom:calc(max(8px,env(safe-area-inset-bottom)) + 112px*var(--s));width:calc(60px*var(--s));height:calc(60px*var(--s));opacity:.45}
+.tb-s{right:calc(max(10px,env(safe-area-inset-right)) + 104px*var(--s));bottom:calc(max(8px,env(safe-area-inset-bottom)) + 8px*var(--s));width:calc(64px*var(--s));height:calc(64px*var(--s))}
+.tb-d{right:calc(max(10px,env(safe-area-inset-right)) + 89px*var(--s));bottom:calc(max(8px,env(safe-area-inset-bottom)) + 75px*var(--s));width:calc(64px*var(--s));height:calc(64px*var(--s))}
+.tb-w{right:calc(max(10px,env(safe-area-inset-right)) + 24px*var(--s));bottom:calc(max(8px,env(safe-area-inset-bottom)) + 106px*var(--s));width:calc(60px*var(--s));height:calc(60px*var(--s));opacity:.45}
 .tb-w.ready{opacity:1;background:var(--ink);color:var(--paper);animation:wp 1s infinite}
 @keyframes wp{50%{transform:scale(1.08)}}
 @media (max-height:430px){.veil{padding:2.4% 2% 2.4%}.card.side{width:min(520px,60%)}.card p{font-size:14px}.title h1{font-size:calc(var(--s,1)*78px)}.hintb{max-width:50%}}
@@ -241,9 +244,9 @@ const UI = {
    derribo:'¡Derribado!', derribos:'derribos', esquivas:'Esquivas', contra:'¡Contra!', esquiva:'¡Esquiva!', rotura:'¡Guardia rota!', toque:'Toque', ko:'¡Al suelo!', cansado:'Sin aliento',
    golpes:'Golpes', contras:'Contras', tiempo:'Tiempo', perdido:'Has caído dos veces. El rival se queda en pie y tú en el suelo, como los vencidos del vaso.', perdidoT:'Has perdido el ejercicio. Vuelve a intentarlo.',
    bA:'directo', bS:'golpe alto', bD:'guardia', rot:'Gira el dispositivo para jugar', snd:'Sonido', tmb:'Temblor', bloq:'Gana el combate anterior para abrirlo',
-   h1:'Acércate al rival con el joystick (o ← →)', h2:'Pulsa A para el directo, con el brazo extendido, como en el ritón', h3:'Cuando ataque, mantén D para cubrirte con los antebrazos', h4:'Pulsa S para el golpe alto, con el brazo por encima de la cabeza', h5:'Joystick abajo (o ↓) para agacharte y esquivar', h6:'Golpea justo después de esquivar: es una contra',
+   h1:'Acércate al rival con la cruceta (o ← →)', h2:'Pulsa A para el directo, con el brazo extendido, como en el ritón', h3:'Cuando ataque, mantén D para cubrirte con los antebrazos', h4:'Pulsa S para el golpe alto, con el brazo por encima de la cabeza', h5:'Cruceta abajo (o ↓) para agacharte y esquivar', h6:'Golpea justo después de esquivar: es una contra',
    howT:'Cómo se juega',
-   how:['<b>Moverse.</b> Joystick a la izquierda de la pantalla, o las flechas ← →. Abajo (o ↓) te agachas y el golpe pasa por encima, porque los golpes van a la cabeza.',
+   how:['<b>Moverse.</b> Cruceta a la izquierda de la pantalla, o las flechas ← →. Abajo (o ↓) te agachas y el golpe pasa por encima, porque los golpes van a la cabeza.',
         '<b>Directo (A).</b> El brazo adelantado se extiende hacia la cara del rival, como en las figuras del ritón. Es rápido, alcanza lejos y hace poco daño.',
         '<b>Golpe alto (S).</b> El brazo retrasado sube por encima de la cabeza y cae sobre el rival. Tarda y se ve venir, pero hace mucho daño y, aunque se cubra, algo le llega.',
         '<b>Guardia (D).</b> Mantenla para cubrirte con los antebrazos. Frena los golpes, pero te empuja hacia atrás y gasta aliento; si se agota, la guardia se rompe.',
@@ -256,9 +259,9 @@ const UI = {
    derribo:'Knocked down!', derribos:'knockdowns', esquivas:'Dodges', contra:'Counter!', esquiva:'Dodge!', rotura:'Guard broken!', toque:'Touch', ko:'Down!', cansado:'Out of breath',
    golpes:'Blows', contras:'Counters', tiempo:'Time', perdido:'You went down twice. Your rival stays on his feet and you on the ground, like the defeated on the vessel.', perdidoT:'You lost the exercise. Try again.',
    bA:'straight', bS:'overhand', bD:'guard', rot:'Turn your device to play', snd:'Sound', tmb:'Shake', bloq:'Win the previous bout to open it',
-   h1:'Close in on your rival with the joystick (or ← →)', h2:'Press A for the straight blow, arm extended, as on the rhyton', h3:'When he attacks, hold D to cover up with your forearms', h4:'Press S for the overhand blow, arm above the head', h5:'Joystick down (or ↓) to duck and dodge', h6:'Strike right after a dodge: that is a counter',
+   h1:'Close in on your rival with the D-pad (or ← →)', h2:'Press A for the straight blow, arm extended, as on the rhyton', h3:'When he attacks, hold D to cover up with your forearms', h4:'Press S for the overhand blow, arm above the head', h5:'D-pad down (or ↓) to duck and dodge', h6:'Strike right after a dodge: that is a counter',
    howT:'How to play',
-   how:['<b>Moving.</b> Joystick on the left of the screen, or the arrows ← →. Down (or ↓) makes you duck and the blow passes overhead, since blows go to the head.',
+   how:['<b>Moving.</b> D-pad on the left of the screen, or the arrows ← →. Down (or ↓) makes you duck and the blow passes overhead, since blows go to the head.',
         '<b>Straight (A).</b> The lead arm extends towards the rival\'s face, as in the figures on the rhyton. It is fast, reaches far and does little damage.',
         '<b>Overhand (S).</b> The rear arm rises above the head and comes down on the rival. It is slow and easy to see coming, but it hits hard and, even against a guard, some of it gets through.',
         '<b>Guard (D).</b> Hold it to cover up with your forearms. It stops blows, but pushes you back and uses breath; if your breath runs out, the guard breaks.',
@@ -979,18 +982,21 @@ function demo(dt){ if (!DEMO.length) makeDemo(); stepFx(dt); for (const F of DEM
 let pad = null;
 function touchUI(on){
   if (!pad){
-    pad = $(`<div id="pad"><div id="tjz"></div><div id="tjoy"><i class="u">▲</i><i class="d">▼</i><i class="l">◀</i><i class="r">▶</i><span class="kn"></span></div>
+    pad = $(`<div id="pad"><div id="tjz"></div><div id="tdp"><b></b><i data-k="up">▲</i><i data-k="down">▼</i><i data-k="left">◀</i><i data-k="right">▶</i></div>
       <button class="tb tb-a" data-k="jab"><b>A</b><small></small></button><button class="tb tb-s" data-k="over"><b>S</b><small></small></button>
       <button class="tb tb-d" data-k="guard"><b>D</b><small></small></button></div>`);
     document.body.appendChild(pad);
-    const jz = pad.querySelector('#tjz'), jy = pad.querySelector('#tjoy'), kn = jy.querySelector('.kn'); let jId = null, jx = 0, jyy = 0;
-    const rest = () => { const r = pad.getBoundingClientRect(); jy.style.left = (Math.max(14, VW*.02) + 76) + 'px'; jy.style.top = (r.height - 88) + 'px'; kn.style.transform = ''; jy.classList.remove('on'); JOY.on = false; JOY.nx = JOY.ny = 0; };
-    const upd = (cx, cy) => { const R = jy.offsetWidth/2 || 62; let dx = cx - jx, dy = cy - jyy; const d = Math.hypot(dx, dy); if (d > R){ dx *= R/d; dy *= R/d; } kn.style.transform = `translate(${dx}px,${dy}px)`; JOY.on = true; JOY.nx = dx/R; JOY.ny = dy/R; };
-    jz.addEventListener('pointerdown', e => { if (jId !== null) return; e.preventDefault(); au(); try { jz.setPointerCapture(e.pointerId); } catch (_) {} jId = e.pointerId; jx = e.clientX; jyy = e.clientY; jy.style.left = jx + 'px'; jy.style.top = jyy + 'px'; jy.classList.add('on'); upd(jx, jyy); });
+    // cruceta fija (sustituye al joystick porque con él no entraban bien los combos): el pulgar se desliza de una flecha a otra sin levantarse
+    const jz = pad.querySelector('#tjz'), dp = pad.querySelector('#tdp'), on4 = {left:false, right:false, up:false, down:false}; let jId = null;
+    const show = () => { for (const k in on4) dp.querySelector(`i[data-k="${k}"]`).classList.toggle('on', on4[k] && k !== 'up'); JOY.nx = (on4.right ? 1 : 0) - (on4.left ? 1 : 0); JOY.ny = (on4.down ? 1 : 0) - (on4.up ? 1 : 0); };
+    const rest = () => { jId = null; for (const k in on4) on4[k] = false; JOY.on = false; show(); };
+    const upd = (cx, cy) => { const r = dp.getBoundingClientRect(), R = r.width/2 || 69, dx = cx - (r.left + R), dy = cy - (r.top + R), d = Math.hypot(dx, dy); JOY.on = true;
+      if (d < R*.2){ for (const k in on4) on4[k] = false; return show(); }
+      const ux = dx/d, uy = dy/d; on4.left = ux < -(on4.left ? .3 : .38); on4.right = ux > (on4.right ? .3 : .38); on4.up = uy < -(on4.up ? .45 : .55); on4.down = uy > (on4.down ? .45 : .55); show(); };
+    jz.addEventListener('pointerdown', e => { if (jId !== null) return; e.preventDefault(); au(); try { jz.setPointerCapture(e.pointerId); } catch (_) {} jId = e.pointerId; upd(e.clientX, e.clientY); });
     jz.addEventListener('pointermove', e => { if (e.pointerId === jId) upd(e.clientX, e.clientY); });
-    const end = e => { if (e.pointerId !== jId) return; jId = null; rest(); };
+    const end = e => { if (e.pointerId !== jId) return; rest(); };
     for (const ev of ['pointerup', 'pointercancel', 'lostpointercapture']) jz.addEventListener(ev, end);
-    addEventListener('resize', () => { if (jId === null) rest(); }); setTimeout(rest, 30);
     pad.querySelectorAll('.tb').forEach(b => {
       b.addEventListener('pointerdown', e => { e.preventDefault(); au(); try { b.setPointerCapture(e.pointerId); } catch (_) {} const k = b.dataset.k; b.classList.add('down'); if (k === 'guard') KEYS.guard = true; else PRESS[k] = true; if (navigator.vibrate && k === 'jab') try { navigator.vibrate(6); } catch (_) {} });
       const up = () => { b.classList.remove('down'); if (b.dataset.k === 'guard') KEYS.guard = false; };
