@@ -93,6 +93,33 @@
   addEventListener('resize', function () { if (!avisando) giro(); });
   try { if (screen.orientation && screen.orientation.addEventListener) screen.orientation.addEventListener('change', giro); } catch (e) {}
   addEventListener('pageshow', function (e) { if (e.persisted) giro(); });
+
+  /* ---------- Orientación bloqueada y zoom (13-10-2026) ----------
+     4. Historiapp instalada en Android hereda la orientación vertical de la app: aunque el alumno gire el móvil,
+        la pantalla no gira y el aviso de girar no se va. Dentro de la app instalada, el juego pide su orientación
+        con screen.orientation.lock (Android lo permite en apps instaladas; iPhone no lo necesita).
+     5. iPhone agranda la letra al poner el móvil en horizontal y amplía la pantalla al tocar un campo de texto
+        con letra de menos de 16 px; como los juegos no dejan pellizcar, la pantalla se quedaba grande.
+        Se fija el tamaño de letra, los campos pasan a 16 px y el zoom vuelve a 1 al salir del campo o al girar. */
+  function bloquear() {
+    if (!C.orient) return;
+    try { if (screen.orientation && screen.orientation.lock) screen.orientation.lock(C.orient === 'h' ? 'landscape' : 'portrait').catch(function () {}); } catch (e) {}
+  }
+  bloquear();
+  addEventListener('pointerdown', bloquear, { capture: true, passive: true, once: true });
+  addEventListener('pageshow', bloquear);
+  addEventListener('pagehide', function () { try { screen.orientation.unlock(); } catch (e) {} });
+  var vm = document.querySelector('meta[name="viewport"]'), vmBase = vm ? vm.getAttribute('content') : '';
+  function sinZoom() {
+    if (!vm || (window.visualViewport && Math.abs(window.visualViewport.scale - 1) < 0.01)) return;
+    vm.setAttribute('content', vmBase.replace(/,?\s*maximum-scale=[^,]*/g, '') + ',maximum-scale=1');
+    setTimeout(function () { vm.setAttribute('content', vmBase); }, 400);
+  }
+  document.addEventListener('focusout', function (e) { var t = e.target && e.target.tagName; if (t === 'INPUT' || t === 'SELECT' || t === 'TEXTAREA') setTimeout(sinZoom, 60); }, true);
+  addEventListener('orientationchange', function () { setTimeout(sinZoom, 400); });
+  var st2 = document.createElement('style');
+  st2.textContent = 'html{-webkit-text-size-adjust:100%!important;text-size-adjust:100%!important}@media (pointer:coarse){input,select,textarea{font-size:16px!important}}';
+  (document.head || document.documentElement).appendChild(st2);
 })();
 </script>
 <!--/HAPP-GUARDAR-->
