@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es"><head><meta charset="utf-8">
 <!--HAPP-GUARDAR-->
-<script>window.HAPP_GS={volver:function(){return (window.HIST&&HIST.t4)?'../#t4':'../'}, orient:'h', pos:{left:'50%', transform:'translateX(-50%)', bottom:'max(6px, env(safe-area-inset-bottom))'}, visible:function(){try{return (phase==='fight'||phase==='break')&&!window.TUTON&&!window.PAUSED}catch(e){return false}}};</script>
+<script>window.HAPP_GS={volver:function(){return (window.HIST&&HIST.t4)?'../#t4':'../'}, pos:{left:'50%', transform:'translateX(-50%)', bottom:'max(6px, env(safe-area-inset-bottom))'}, visible:function(){try{return (phase==='fight'||phase==='break')&&!window.TUTON&&!window.PAUSED}catch(e){return false}}};</script>
 <script>
 /* Guardar y salir a Historiapp. Común a todos los juegos de la app; lo inserta guardar_salir.py.
    Configuración en window.HAPP_GS = { volver, pos, fijo, visible }.
@@ -12,41 +12,6 @@
 (function () {
   'use strict';
   var C = window.HAPP_GS || {};
-
-  /* ---------- Sonido y pausa (revisión del 13-10-2026) ----------
-     - Se anotan todos los AudioContext que crea el juego para poder despertarlos y dormirlos.
-     - En iPhone el sonido solo arranca dentro de un toque «completo» (touchend o click), y tras salir de la app
-       el contexto queda «interrumpido» y el juego ya no suena: se reanuda en cualquier toque posterior.
-     - Con audioSession 'playback' (iPhone con iOS 16.4 o posterior) el juego suena aunque el móvil esté en silencio.
-     - Al ocultar la app (bloquear el móvil, cambiar de app) se pausa el juego (HAPP_PAUSA o el evento blur que ya
-       escuchan los juegos), se duerme el sonido y se paran las músicas; al volver, se reanudan. */
-  var ctxs = [], oculto = false, dormidos = [], parados = [];
-  try {
-    var AC0 = window.AudioContext || window.webkitAudioContext;
-    if (AC0 && !AC0.__happ) {
-      var ACW = function (o) { var c = o === undefined ? new AC0() : new AC0(o); ctxs.push(c); return c; };
-      ACW.prototype = AC0.prototype; ACW.__happ = true;
-      window.AudioContext = ACW; if (window.webkitAudioContext) window.webkitAudioContext = ACW;
-    }
-  } catch (e) {}
-  try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) {}
-  function despertar() {
-    if (oculto) return;
-    ctxs.forEach(function (c) { try { if (c.state === 'suspended' || c.state === 'interrupted') c.resume(); } catch (e) {} });
-  }
-  ['touchend', 'click', 'pointerup', 'keydown'].forEach(function (ev) { addEventListener(ev, despertar, { capture: true, passive: true }); });
-  document.addEventListener('visibilitychange', function () {
-    if (document.visibilityState === 'hidden') {
-      if (oculto) return; oculto = true;
-      try { if (typeof window.HAPP_PAUSA === 'function') window.HAPP_PAUSA(); else window.dispatchEvent(new Event('blur')); } catch (e) {}
-      ctxs.forEach(function (c) { try { if (c.state === 'running') { c.suspend(); dormidos.push(c); } } catch (e) {} });
-      try { document.querySelectorAll('audio,video').forEach(function (m) { if (!m.paused) { try { m.pause(); parados.push(m); } catch (e) {} } }); } catch (e) {}
-    } else {
-      oculto = false;
-      dormidos.splice(0).forEach(function (c) { try { c.resume(); } catch (e) {} });
-      parados.splice(0).forEach(function (m) { try { var r = m.play(); if (r && r.catch) r.catch(function () {}); } catch (e) {} });
-    }
-  });
   var lang = null;
   try { lang = localStorage.getItem('historiapp.lang'); } catch (e) {}
   if (lang !== 'es' && lang !== 'en') lang = String(document.documentElement.lang || navigator.language || 'es').slice(0, 2) === 'en' ? 'en' : 'es';
@@ -88,77 +53,8 @@
     ver(); setInterval(ver, 300);
   }
   if (document.body) build(); else document.addEventListener('DOMContentLoaded', build);
-
-  /* ---------- Giro de pantalla (13-10-2026) ----------
-     En algunos Android e iPhone el aviso de girar desaparece pero el juego queda mal dibujado o en blanco:
-     el navegador lanza el evento resize antes de dar las medidas definitivas y el juego se dibuja con las viejas.
-     1. Se limita la densidad de píxeles a 2 (en pantallas de 3 los lienzos ocupan más del doble de memoria
-        y algunos móviles recargan o cuelgan la página al girar).
-     2. Tras cada giro se vuelve a avisar al juego del cambio de tamaño cuando las medidas ya son las buenas.
-     3. Si el juego se abrió en la orientación equivocada (C.orient 'h' o 'v'), al ponerlo en la buena se recarga
-        una vez, con la partida guardada antes, para que arranque con las medidas correctas. */
-  try { if ((window.devicePixelRatio || 1) > 2) Object.defineProperty(window, 'devicePixelRatio', { get: function () { return 2; }, configurable: true }); } catch (e) {}
-  var portrait = function () { return window.innerHeight > window.innerWidth; };
-  var buena = function () { return !C.orient || (C.orient === 'h' ? !portrait() : portrait()); };
-  var malAlCargar = !!C.orient && !buena();
-  var avisando = false, giroT = [], ultimo = '';
-  function avisar() {
-    var m = window.innerWidth + 'x' + window.innerHeight;
-    avisando = true;
-    try { window.dispatchEvent(new Event('resize')); } catch (e) {}
-    try { if (window.visualViewport) window.visualViewport.dispatchEvent(new Event('resize')); } catch (e) {}
-    avisando = false;
-    ultimo = m;
-  }
-  function recargarSiHaceFalta() {
-    if (!malAlCargar || !buena()) return;
-    var k = 'happ.giro.' + location.pathname, ahora = Date.now(), antes = 0;
-    try { antes = +sessionStorage.getItem(k) || 0; } catch (e) {}
-    if (ahora - antes < 20000) return;
-    try { sessionStorage.setItem(k, String(ahora)); } catch (e) {}
-    malAlCargar = false; guardar(); location.reload();
-  }
-  function giro() {
-    if (avisando) return;
-    giroT.forEach(clearTimeout);
-    giroT = [120, 350, 700, 1200].map(function (t, i, a) {
-      return setTimeout(function () { avisar(); if (i === a.length - 1) recargarSiHaceFalta(); }, t);
-    });
-  }
-  addEventListener('orientationchange', giro);
-  addEventListener('resize', function () { if (!avisando) giro(); });
-  try { if (screen.orientation && screen.orientation.addEventListener) screen.orientation.addEventListener('change', giro); } catch (e) {}
-  addEventListener('pageshow', function (e) { if (e.persisted) giro(); });
-
-  /* ---------- Orientación bloqueada y zoom (13-10-2026) ----------
-     4. Historiapp instalada en Android hereda la orientación vertical de la app: aunque el alumno gire el móvil,
-        la pantalla no gira y el aviso de girar no se va. Dentro de la app instalada, el juego pide su orientación
-        con screen.orientation.lock (Android lo permite en apps instaladas; iPhone no lo necesita).
-     5. iPhone agranda la letra al poner el móvil en horizontal y amplía la pantalla al tocar un campo de texto
-        con letra de menos de 16 px; como los juegos no dejan pellizcar, la pantalla se quedaba grande.
-        Se fija el tamaño de letra, los campos pasan a 16 px y el zoom vuelve a 1 al salir del campo o al girar. */
-  function bloquear() {
-    if (!C.orient) return;
-    try { if (screen.orientation && screen.orientation.lock) screen.orientation.lock(C.orient === 'h' ? 'landscape' : 'portrait').catch(function () {}); } catch (e) {}
-  }
-  bloquear();
-  addEventListener('pointerdown', bloquear, { capture: true, passive: true, once: true });
-  addEventListener('pageshow', bloquear);
-  addEventListener('pagehide', function () { try { screen.orientation.unlock(); } catch (e) {} });
-  var vm = document.querySelector('meta[name="viewport"]'), vmBase = vm ? vm.getAttribute('content') : '';
-  function sinZoom() {
-    if (!vm || (window.visualViewport && Math.abs(window.visualViewport.scale - 1) < 0.01)) return;
-    vm.setAttribute('content', vmBase.replace(/,?\s*maximum-scale=[^,]*/g, '') + ',maximum-scale=1');
-    setTimeout(function () { vm.setAttribute('content', vmBase); }, 400);
-  }
-  document.addEventListener('focusout', function (e) { var t = e.target && e.target.tagName; if (t === 'INPUT' || t === 'SELECT' || t === 'TEXTAREA') setTimeout(sinZoom, 60); }, true);
-  addEventListener('orientationchange', function () { setTimeout(sinZoom, 400); });
-  var st2 = document.createElement('style');
-  st2.textContent = 'html{-webkit-text-size-adjust:100%!important;text-size-adjust:100%!important}@media (pointer:coarse){input,select,textarea{font-size:16px!important}}';
-  (document.head || document.documentElement).appendChild(st2);
 })();
 </script>
-<!--/HAPP-GUARDAR-->
 <!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
 <meta name="author" content="Alejandro Leiva Arcas">
 <meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
@@ -834,12 +730,12 @@ function stepF(f,o,I){
   const busy=f.state==='atk'||f.state==='dodge'; f.stRest=Math.max(0,(f.stRest||0)-DT);
   if(!busy&&f.stRest<=0) f.st=Math.min(100,f.st+(f.guard?9:f.s.regen)*(f.regenMul||1)*DT);
   // memoria de pulsación
-  const pa=f.state==='atk'&&f.move?f.f-(f.move.s+f.move.a):-99; if(I.atk) f.buf={k:'atk',t:12,dir:I.adir||'neutral',after:pa}; else if(I.push) f.buf={k:'push',t:12,dir:I.adir||'neutral',after:pa}; else if(I.spec) f.buf={k:'spec',t:12}; else if(I.dodge) f.buf={k:'dodge',t:10}; else if(I.dashF) f.buf={k:'dashF',t:10};
+  const pa=f.state==='atk'&&f.move?f.f-(f.move.s+f.move.a):-99; if(I.atk) f.buf={k:'atk',t:12,dir:I.adir||'neutral',after:pa}; else if(I.push) f.buf={k:'push',t:12,dir:I.adir||'neutral',after:pa}; else if(I.spec) f.buf={k:'spec',t:26}; else if(I.dodge) f.buf={k:'dodge',t:10}; else if(I.dashF) f.buf={k:'dashF',t:10};
   if(f.buf&&--f.buf.t<=0) f.buf=null;
   if(I.yield&&f.alive&&phase==='fight'&&f.state!=='down'&&f.state!=='yield'){ f.state='yield'; f.f=0; f.move=null; f.auto=null; f.yieldHp=f.hp; refSay('SISTE!','¡alto!',1.4); startDecision(f,o,true); }
   // guardia y parada
   const backG=f.isPlayer&&(I.move||0)===-f.dir&&Math.abs(o.x-f.x)<520;
-  f.guard=free(f)&&(!!I.guard||backG)&&f.st>3&&!(f.buf&&(f.buf.k==='atk'||f.buf.k==='push'));
+  f.guard=free(f)&&(!!I.guard||backG)&&f.st>3&&!(f.buf&&(f.buf.k==='atk'||f.buf.k==='push'||(f.buf.k==='spec'&&f.furor>=100)));
   f.backGuard=f.guard&&backG&&!I.guard;
   if(I.guardPress&&f.parryCD<=0&&(free(f)||f.guard)){ f.parry=.2; f.parryCD=.35; }
   // estados
@@ -866,6 +762,7 @@ function stepF(f,o,I){
     // encadenar el combo durante la recuperación
     const after=f.f-(m.s+m.a);
     if(f.auto&&f.auto.length&&after>=1){ startMove(f,f.auto.shift(),true); }
+    else if(after>=1&&f.buf&&f.buf.k==='spec'&&!f.auto){ f.buf=null; if(f.furor>=100) startSpecial(f); else if(f.isPlayer) floatText(f.x,-260,'el público aún no lo pide'); }
     else if(after>=1&&f.buf&&(f.buf.k==='atk'||f.buf.k==='push')&&!f.auto&&f.st>=8&&f.chainN<5+(f.s.chain||0)&&(f.connected||(f.buf.k==='atk'&&f.buf.dir==='neutral'&&(m.id==='L1'||m.id==='L2')))){
       const b=f.buf; f.buf=null; let id=b.k==='atk'?zMove(f,b.dir):xMove(f,b.dir);
       if(id==='L1'&&(m.id==='L1'||m.id==='L2')) id=m.id==='L1'?'L2':'L3';
@@ -1029,7 +926,7 @@ function onBlock(f,o,at,weak){
    Se abre con una parada perfecta del jugador, al romper la guardia del rival o con una ventaja clara.
    El tiempo casi se detiene, la cámara se acerca y el juego pide una secuencia corta propia de la armatura.
    Como mucho dos por combate y con 20 s entre una y otra. Solo para el jugador: la IA no lo usa. */
-const QTE_MAX=2, QTE_GAP=20, QSLOW=.1;
+const QTE_MAX=3, QTE_GAP=8, QSLOW=.1;
 const QTOK={'A':{k:'atk',d:'neutral',mv:'L1',ic:'A',tx:'tajo'},'↑A':{k:'atk',d:'up',mv:'HIGH',ic:'↑ + A',tx:'golpe alto'},'↓A':{k:'atk',d:'down',mv:'LOW',ic:'↓ + A',tx:'golpe bajo'},'→A':{k:'atk',d:'fwd',mv:'FWD',ic:'→ + A',tx:'estocada'},'↑S':{k:'push',d:'up',mv:'XUP',ic:'↑ + S',tx:'escudo al yelmo'}};
 const QSEQ={murmillo:['↑S','↓A','→A'],secutor:['↑S','↓A','→A'],provocator:['↑S','↑A','→A'],scissor:['↓A','↑A','→A'],thraex:['↓A','↑A','A'],hoplomachus:['↓A','→A','↑A'],retiarius:['→A','↓A','A'],dimachaerus:['↑A','↓A','↑A'],eques:['→A','↑A','A'],essedarius:['→A','↓A','A'],sagittarius:['↓A','↑A','A'],iaculator:['↓A','↑A','A']};
 let QT=null, qteN=0, qteLast=0;
@@ -1106,7 +1003,7 @@ function separate(){ const min=92, d=E.x-P.x, back=f=>f.state==='dodge'&&!f.dash
 /* ---------- Incitatores: látigo (lorum) y hierro al rojo en los bordes ----------
    Mañas Bastidas (2011, pp. 182-184): auxiliares con fusta o hierro al rojo que azuzaban a quien no combatía. */
 const INC=[{side:-1,tool:'lorum',x:ARENA.l+20,state:'idle',t:0,cd:4,walk:0},{side:1,tool:'ferrum',x:ARENA.r-20,state:'idle',t:0,cd:4,walk:0}];
-let incWarned=false; const PASS_WARN=3, PASS_HIT=4.6; // segundos sin atacar: aviso y castigo
+let incWarned=false; const PASS_WARN=2.2, PASS_HIT=3.4; // segundos sin atacar: aviso y castigo
 function incHome(c){ const lo=Math.min(P.x,E.x), hi=Math.max(P.x,E.x); return clamp(c.side<0?lo-260:hi+260,ARENA.l+20,ARENA.r-20); }
 function updateInc(dt){
   // pasividad: tiempo sin atacar mientras nadie te está atacando (cubrirse ante un golpe no cuenta como rehuir la lucha)
@@ -1134,7 +1031,7 @@ function updateInc(dt){
           sfx('ooh',.55); floatText(f.x,-292,'silbidos en la grada'); crowdJump=Math.max(crowdJump,.5);
           if(f.isPlayer&&!incWarned){ incWarned=true; banner(cite(c.why==='muro'?'Los incitatores castigan a quien huye al muro (Mañas Bastidas, 2011)':'Los incitatores castigan a quien rehúye la lucha (Mañas Bastidas, 2011)'),2.4); } } }
       if(c.t>.5){ c.state='back'; c.hit=false; c.warned=false; c.cd=rnd(2.5,3.5); } }
-    else if(c.state==='back'){ const h=incHome(c), dx=h-c.x; c.x+=Math.sign(dx)*Math.min(Math.abs(dx),220*dt); c.walk+=dt*10; if(Math.abs(dx)<3) c.state='idle'; } } }
+    else if(c.state==='back'){ const h=incHome(c), dx=h-c.x; c.x+=Math.sign(dx)*Math.min(Math.abs(dx),220*dt); c.walk+=dt*10; if(Math.abs(dx)<3){ c.state='idle'; c.warned=false; c.hit=false; } } } }
 function drawInc(){
   for(const c of INC){ const s=w2s(c.x,0), dir=c.state==='back'?c.side:-c.side, walking=c.state==='go'||c.state==='back';
     ctx.save(); ctx.translate(s.x,s.y); ctx.scale(dir*.58*cam.z,.58*cam.z); const w=walking?Math.sin(c.walk)*16:0;
