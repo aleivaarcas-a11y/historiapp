@@ -1,5 +1,61 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
+<html lang="es"><head><meta charset="utf-8">
+<!--HAPP-GUARDAR-->
+<script>window.HAPP_GS={volver:function(){return (window.HIST&&HIST.t4)?'../#t4':'../'}, pos:{left:'50%', transform:'translateX(-50%)', bottom:'max(6px, env(safe-area-inset-bottom))'}, visible:function(){try{return (phase==='fight'||phase==='break')&&!window.TUTON&&!window.PAUSED}catch(e){return false}}};</script>
+<script>
+/* Guardar y salir a Historiapp. Común a todos los juegos de la app; lo inserta guardar_salir.py.
+   Configuración en window.HAPP_GS = { volver, pos, fijo, visible }.
+   - El juego define window.HAPP_GUARDAR() con lo que haya que guardar de la partida en curso.
+   - Se guarda al pulsar el botón y también al salir de la página por cualquier otra vía (pagehide y
+     visibilitychange), de modo que el progreso no se pierde aunque se cierre la app.
+   - window.HAPP_SALIR(href) guarda, avisa y vuelve a Historiapp; los botones propios del juego lo usan. */
+(function () {
+  'use strict';
+  var C = window.HAPP_GS || {};
+  var lang = null;
+  try { lang = localStorage.getItem('historiapp.lang'); } catch (e) {}
+  if (lang !== 'es' && lang !== 'en') lang = String(document.documentElement.lang || navigator.language || 'es').slice(0, 2) === 'en' ? 'en' : 'es';
+  var TX = lang === 'en'
+    ? { b: 'Save & exit', a: 'Save the game and go back to Historiapp', ok: 'Game saved' }
+    : { b: 'Guardar y salir', a: 'Guardar la partida y volver a Historiapp', ok: 'Partida guardada' };
+  window.HAPP_GS_TX = TX;
+  function guardar() { try { if (typeof window.HAPP_GUARDAR === 'function') window.HAPP_GUARDAR(); } catch (e) {} }
+  var yendo = false, aviso = null;
+  function salir(href) {
+    if (yendo) return; yendo = true;
+    guardar();
+    if (aviso) aviso.classList.add('on');
+    var v = href || (typeof C.volver === 'function' ? C.volver() : C.volver) || '../';
+    setTimeout(function () { location.href = v; }, 500);
+  }
+  window.HAPP_SALIR = salir;
+  addEventListener('pagehide', guardar);
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') guardar(); });
+  var css = '.hgs{position:fixed;z-index:2147482999;display:none;align-items:center;gap:6px;min-height:40px;margin:0;padding:0 13px;border-radius:20px;' +
+    'background:rgba(12,10,8,.76);color:#fff;border:1px solid rgba(255,255,255,.5);font:600 13px/1 system-ui,-apple-system,"Segoe UI",sans-serif;' +
+    'box-shadow:0 3px 10px rgba(0,0,0,.35);cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;white-space:nowrap}' +
+    '.hgs.on{display:inline-flex}.hgs:active{transform:translateY(1px)}' +
+    '.hgs-ok{position:fixed;left:50%;top:42%;transform:translate(-50%,-50%) scale(.9);opacity:0;z-index:2147483003;pointer-events:none;padding:12px 22px;border-radius:24px;' +
+    'background:#EDAB00;color:#1b1406;font:700 17px/1 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 6px 18px rgba(0,0,0,.45);transition:opacity .2s,transform .2s}' +
+    '.hgs-ok.on{opacity:1;transform:translate(-50%,-50%) scale(1)}';
+  function build() {
+    var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
+    aviso = document.createElement('div'); aviso.className = 'hgs-ok'; aviso.setAttribute('role', 'status'); aviso.textContent = '✓ ' + TX.ok; document.body.appendChild(aviso);
+    if (C.fijo === false) return;
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'hgs';
+    b.innerHTML = '<span aria-hidden="true">💾</span><span>' + TX.b + '</span>'; b.setAttribute('aria-label', TX.a); b.title = TX.a;
+    var pos = C.pos || { top: 'max(8px, env(safe-area-inset-top))', right: 'max(10px, env(safe-area-inset-right))' };
+    for (var k in pos) b.style[k] = pos[k];
+    ['pointerdown', 'touchstart', 'mousedown'].forEach(function (ev) { b.addEventListener(ev, function (e) { e.stopPropagation(); }, { passive: true }); });
+    b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); salir(); });
+    document.body.appendChild(b);
+    var ver = function () { var on = true; try { on = !C.visible || !!C.visible(); } catch (e) {} b.classList.toggle('on', on); };
+    ver(); setInterval(ver, 300);
+  }
+  if (document.body) build(); else document.addEventListener('DOMContentLoaded', build);
+})();
+</script>
+<!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
 <meta name="author" content="Alejandro Leiva Arcas">
 <meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -1683,7 +1739,7 @@ var HIST={
   t4:false, // el Tema 4 aún no está publicado en la app; se comprueba en temas.json
   FICHAS:{}, // código de ficha (H4·xx) → id de tema04.json, cuando exista
   xp(n,why){ if(!this.inside()) return; try{ const k='historiapp.progress'; const p=JSON.parse(localStorage.getItem(k))||{xp:0,streak:0,lastDay:null,seen:{},badges:{},gl:{},daily:{}}; p.xp=(p.xp||0)+n; localStorage.setItem(k,JSON.stringify(p)); HIST.toast('+'+n+' XP en Historiapp'+(why?' · '+why:'')); }catch(e){} },
-  back(){ location.href=this.t4?'../#t4':'../'; },
+  back(){ const u=this.t4?'../#t4':'../'; if(window.HAPP_SALIR) HAPP_SALIR(u); else location.href=u; },
   ficha(code){ const id=this.FICHAS[code]; try{ window.open(id?'../#t4/f/'+id:'../#t4','_blank'); }catch(e){} },
   toast(t){ const d=document.createElement('div'); d.className='htoast'; d.textContent=t; document.getElementById('stage').appendChild(d); setTimeout(()=>d.classList.add('out'),2200); setTimeout(()=>d.remove(),2800); }
 };
@@ -1806,7 +1862,7 @@ const Touch=(function(){
   pb.onclick=()=>pause();
   function pause(){ if(window.PAUSED||ovOpen()) return; window.PAUSED=true; for(const k in keys) keys[k]=false;
     const c=document.getElementById('card'); c.className='card'; c.innerHTML=`<h2>Pausa</h2><div class="btns" style="flex-direction:column;align-items:stretch;max-width:340px;margin:0 auto">
-      <button class="main" id="pC">Seguir luchando</button><button id="pH">Lista de golpes</button>${window.TUTON?'':'<button id="pY">Rendirse y pedir la missio</button>'}<button id="pM">Salir al menú</button>${HIST.inside()?'<button id="pB">Volver a Historiapp</button>':''}</div>`;
+      <button class="main" id="pC">Seguir luchando</button><button id="pH">Lista de golpes</button>${window.TUTON?'':'<button id="pY">Rendirse y pedir la missio</button>'}<button id="pM">Salir al menú</button>${HIST.inside()?'<button id="pB">💾 Guardar y salir a Historiapp</button>':''}</div>`;
     ovEl.classList.add('show');
     const res=()=>{ closeOv(); window.PAUSED=false; };
     document.getElementById('pC').onclick=res;
@@ -2214,7 +2270,7 @@ const Career=(function(){
     { const n=hofList().length; if(n) items.push(['fama','Salón de la fama',n+(n>1?' carreras terminadas':' carrera terminada')]); }
     const band=rewardBand(); { const L=HIST.level(), nu=UNLOCKS.filter(u=>L&&L.lv>=u.lv).length; if(!band&&(L||HIST.inside())) items.push(['recomp','Recompensas',L?`nivel ${L.lv} en Historiapp · ${nu} de ${UNLOCKS.length} desbloqueadas`:'se desbloquean subiendo de nivel en Historiapp']); }
     items.push(['opc','Opciones','sonido, temblor, modo aula']);
-    if(HIST.inside()) items.push(['hist','Volver a Historiapp','tu progreso y tus fichas']);
+    if(HIST.inside()) items.push(['hist','Guardar y salir a Historiapp','tu progreso queda guardado']);
     const rec=s&&s.alive?'cont':td<3&&!w?'tut':'nueva';
     const hello=fresh?'¿Primera vez en la arena? Empieza por las lecciones: en unos minutos sabrás atacar, cubrirte y parar.':s&&s.alive?`Te esperan en ${esc(SEDES[s.sede].name)}, ${esc(s.name)}.`:td>=3?'Ya sabes defenderte. Es hora de entrar en el ludus.':'Bienvenido de nuevo al ludus.';
     show(`<div class="tt"><div class="ttL">

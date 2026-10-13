@@ -2,6 +2,62 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<!--HAPP-GUARDAR-->
+<script>window.HAPP_GS={volver:'../#t3', pos:{top:'max(8px, env(safe-area-inset-top))', left:'calc(50% + 36px)'}, visible:function(){return !!document.querySelector('iframe.pugframe')}};</script>
+<script>
+/* Guardar y salir a Historiapp. Común a todos los juegos de la app; lo inserta guardar_salir.py.
+   Configuración en window.HAPP_GS = { volver, pos, fijo, visible }.
+   - El juego define window.HAPP_GUARDAR() con lo que haya que guardar de la partida en curso.
+   - Se guarda al pulsar el botón y también al salir de la página por cualquier otra vía (pagehide y
+     visibilitychange), de modo que el progreso no se pierde aunque se cierre la app.
+   - window.HAPP_SALIR(href) guarda, avisa y vuelve a Historiapp; los botones propios del juego lo usan. */
+(function () {
+  'use strict';
+  var C = window.HAPP_GS || {};
+  var lang = null;
+  try { lang = localStorage.getItem('historiapp.lang'); } catch (e) {}
+  if (lang !== 'es' && lang !== 'en') lang = String(document.documentElement.lang || navigator.language || 'es').slice(0, 2) === 'en' ? 'en' : 'es';
+  var TX = lang === 'en'
+    ? { b: 'Save & exit', a: 'Save the game and go back to Historiapp', ok: 'Game saved' }
+    : { b: 'Guardar y salir', a: 'Guardar la partida y volver a Historiapp', ok: 'Partida guardada' };
+  window.HAPP_GS_TX = TX;
+  function guardar() { try { if (typeof window.HAPP_GUARDAR === 'function') window.HAPP_GUARDAR(); } catch (e) {} }
+  var yendo = false, aviso = null;
+  function salir(href) {
+    if (yendo) return; yendo = true;
+    guardar();
+    if (aviso) aviso.classList.add('on');
+    var v = href || (typeof C.volver === 'function' ? C.volver() : C.volver) || '../';
+    setTimeout(function () { location.href = v; }, 500);
+  }
+  window.HAPP_SALIR = salir;
+  addEventListener('pagehide', guardar);
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') guardar(); });
+  var css = '.hgs{position:fixed;z-index:2147482999;display:none;align-items:center;gap:6px;min-height:40px;margin:0;padding:0 13px;border-radius:20px;' +
+    'background:rgba(12,10,8,.76);color:#fff;border:1px solid rgba(255,255,255,.5);font:600 13px/1 system-ui,-apple-system,"Segoe UI",sans-serif;' +
+    'box-shadow:0 3px 10px rgba(0,0,0,.35);cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;white-space:nowrap}' +
+    '.hgs.on{display:inline-flex}.hgs:active{transform:translateY(1px)}' +
+    '.hgs-ok{position:fixed;left:50%;top:42%;transform:translate(-50%,-50%) scale(.9);opacity:0;z-index:2147483003;pointer-events:none;padding:12px 22px;border-radius:24px;' +
+    'background:#EDAB00;color:#1b1406;font:700 17px/1 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 6px 18px rgba(0,0,0,.45);transition:opacity .2s,transform .2s}' +
+    '.hgs-ok.on{opacity:1;transform:translate(-50%,-50%) scale(1)}';
+  function build() {
+    var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
+    aviso = document.createElement('div'); aviso.className = 'hgs-ok'; aviso.setAttribute('role', 'status'); aviso.textContent = '✓ ' + TX.ok; document.body.appendChild(aviso);
+    if (C.fijo === false) return;
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'hgs';
+    b.innerHTML = '<span aria-hidden="true">💾</span><span>' + TX.b + '</span>'; b.setAttribute('aria-label', TX.a); b.title = TX.a;
+    var pos = C.pos || { top: 'max(8px, env(safe-area-inset-top))', right: 'max(10px, env(safe-area-inset-right))' };
+    for (var k in pos) b.style[k] = pos[k];
+    ['pointerdown', 'touchstart', 'mousedown'].forEach(function (ev) { b.addEventListener(ev, function (e) { e.stopPropagation(); }, { passive: true }); });
+    b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); salir(); });
+    document.body.appendChild(b);
+    var ver = function () { var on = true; try { on = !C.visible || !!C.visible(); } catch (e) {} b.classList.toggle('on', on); };
+    ver(); setInterval(ver, 300);
+  }
+  if (document.body) build(); else document.addEventListener('DOMContentLoaded', build);
+})();
+</script>
+
 <!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
 <meta name="author" content="Alejandro Leiva Arcas">
 <meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
@@ -1102,7 +1158,7 @@ const $ = (h) => { const d = document.createElement('div'); d.innerHTML = h.trim
 const HIST = {
   inside: (() => { try { if (!/\/juegos\//.test(location.pathname)) return false; for (let i = 0; i < localStorage.length; i++) if (localStorage.key(i).startsWith('historiapp.')) return true; } catch (e) {} return false; })(),
   xp(n){ if (!this.inside || !(n > 0)) return; try { const k = 'historiapp.progress'; const p = JSON.parse(localStorage.getItem(k)) || {xp:0, streak:0, lastDay:null, seen:{}, badges:{}, gl:{}, daily:{}}; p.xp = (p.xp || 0) + Math.round(n); localStorage.setItem(k, JSON.stringify(p)); } catch (e) { return; } toast('+' + Math.round(n) + ' XP'); },
-  back(){ location.href = '../#t3'; },
+  back(){ try { save(); } catch (e) {} if (window.HAPP_SALIR) HAPP_SALIR('../#t3'); else location.href = '../#t3'; },
   ficha(id){ save(); location.href = '../#t3/f/' + encodeURIComponent(id); }
 };
 
@@ -1115,7 +1171,7 @@ if (!S.lang){ let l = null; try { l = localStorage.getItem('historiapp.lang'); }
 if (HIST.inside){ try { const l = localStorage.getItem('historiapp.lang'); if (l === 'en' || l === 'es') S.lang = l; } catch (e) {} }
 const L = o => o ? (o[S.lang] ?? o.es) : '';
 const UI = {
- es:{pj:'Personaje', etapa:'Etapa', pruebasT:'Pruebas del ciclo', llevas:'Lo que has ganado', nada:'Todavía nada', combatir:'Combatir', combates:'Combates', alFiesta:'Ir a la fiesta', ganas:'Ganarás', superada:'Prueba superada', obtienes:'Consigues', continuar:'Continuar', empezarC:'Empezar el ciclo', pruebaN:'Prueba {a} de {b}', nuevaEtapa:'Nueva etapa', sub:'Una historia en el palacio minoico', entrar:'Empezar el ciclo', seguir:'Seguir el ciclo', fiestas:'Fiestas del toro', nuevo:'Empezar de nuevo', hist:'‹ Historiapp', menu:'Menú',
+ es:{pj:'Personaje', etapa:'Etapa', pruebasT:'Pruebas del ciclo', llevas:'Lo que has ganado', nada:'Todavía nada', combatir:'Combatir', combates:'Combates', alFiesta:'Ir a la fiesta', ganas:'Ganarás', superada:'Prueba superada', obtienes:'Consigues', continuar:'Continuar', empezarC:'Empezar el ciclo', pruebaN:'Prueba {a} de {b}', nuevaEtapa:'Nueva etapa', sub:'Una historia en el palacio minoico', entrar:'Empezar el ciclo', seguir:'Seguir el ciclo', fiestas:'Fiestas del toro', nuevo:'Empezar de nuevo', hist:'💾 Guardar y salir', menu:'Menú',
    room:'Estancia {a} de {b}', explora:'Toca las marcas para conocer la estancia', pasar:'Pasar', cerrar:'Seguir explorando', ficha:'Ficha', preg:'Para pasar', comprobar:'Comprobar', siguiente:'Siguiente',
    bien:'Correcto.', mal:'No es así. Vuelve a intentarlo.', alArena:'Ir a la fiesta', piel:'¿Quién salta?', tec:'Técnica', empezar:'Empezar la fiesta',
    fiesta:['Primera fiesta','Segunda fiesta','Gran fiesta del palacio'], toro:'Toro {a} de 3', aclam:'Aclamación', tap:'Toca cuando el anillo se cierre', tapK:'Toca (o pulsa espacio) cuando el anillo se cierre',
@@ -1124,9 +1180,9 @@ const UI = {
    early2:'Empujaste antes de tiempo y resbalaste por el costado del toro.', late2:'Empujaste tarde: el toro te sacudió y caíste al polvo.',
    land0:'Caíste de rodillas: quien recibe te sujetó, pero el público lo notó.', clean:'Salto completo y limpio.', otro:'Siguiente toro', finF:'Fin de la fiesta', repetir:'Repetir la fiesta', next:'Siguiente fiesta',
    alTrono:'Ir a la sala del trono', palacio:'Volver al palacio', saltos:'Saltos completos', perfs:'Fases perfectas', cron:'Crónica', nota:'Ningún objeto minoico representa un premio: lo que cuenta es la aclamación de la comunidad.',
-   epiQ:'Elige todas las que creas correctas', fin:'Has completado la historia', fin2:'Del pugilato de los niños a la fiesta del toro, por las salas del palacio de Cnoso.', libre:'Fiestas del toro', volver:'Volver a Historiapp',
+   epiQ:'Elige todas las que creas correctas', fin:'Has completado la historia', fin2:'Del pugilato de los niños a la fiesta del toro, por las salas del palacio de Cnoso.', libre:'Fiestas del toro', volver:'Guardar y salir a Historiapp',
    rot:'Gira el dispositivo para jugar', snd:'Sonido', tmb:'Temblor', reset:'¿Seguro? Se borrará tu recorrido en este juego.', si:'Sí, empezar', no:'Cancelar', ayuda:'Ayuda', ayudaT:'Toca la pantalla, o pulsa espacio, cuando el anillo que se cierra coincida con el círculo fijo. En cada salto hay tres momentos.'},
- en:{pj:'Character', etapa:'Stage', pruebasT:'Trials of the cycle', llevas:'What you have won', nada:'Nothing yet', combatir:'Fight', combates:'Bouts', alFiesta:'Go to the festival', ganas:'You will win', superada:'Trial passed', obtienes:'You obtain', continuar:'Continue', empezarC:'Start the cycle', pruebaN:'Trial {a} of {b}', nuevaEtapa:'New stage', sub:'A story in the Minoan palace', entrar:'Start the cycle', seguir:'Continue the cycle', fiestas:'Bull festivals', nuevo:'Start again', hist:'‹ Historiapp', menu:'Menu',
+ en:{pj:'Character', etapa:'Stage', pruebasT:'Trials of the cycle', llevas:'What you have won', nada:'Nothing yet', combatir:'Fight', combates:'Bouts', alFiesta:'Go to the festival', ganas:'You will win', superada:'Trial passed', obtienes:'You obtain', continuar:'Continue', empezarC:'Start the cycle', pruebaN:'Trial {a} of {b}', nuevaEtapa:'New stage', sub:'A story in the Minoan palace', entrar:'Start the cycle', seguir:'Continue the cycle', fiestas:'Bull festivals', nuevo:'Start again', hist:'💾 Save & exit', menu:'Menu',
    room:'Room {a} of {b}', explora:'Tap the marks to explore the room', pasar:'Go on', cerrar:'Keep exploring', ficha:'Study sheet', preg:'To go on', comprobar:'Check', siguiente:'Next',
    bien:'Correct.', mal:'Not quite. Try again.', alArena:'Go to the festival', piel:'Who leaps?', tec:'Technique', empezar:'Start the festival',
    fiesta:['First festival','Second festival','Great palace festival'], toro:'Bull {a} of 3', aclam:'Acclaim', tap:'Tap when the ring closes', tapK:'Tap (or press space) when the ring closes',
@@ -1135,7 +1191,7 @@ const UI = {
    early2:'You pushed too soon and slid off the bull\'s flank.', late2:'You pushed too late: the bull shook you off into the dust.',
    land0:'You landed on your knees: the catcher held you, but the crowd noticed.', clean:'A complete, clean leap.', otro:'Next bull', finF:'End of the festival', repetir:'Repeat the festival', next:'Next festival',
    alTrono:'Go to the throne room', palacio:'Back to the palace', saltos:'Complete leaps', perfs:'Perfect phases', cron:'Chronicle', nota:'No Minoan object shows a prize: what counts is the acclaim of the community.',
-   epiQ:'Choose all you think are correct', fin:'You have completed the story', fin2:'From the boys\' boxing to the bull festival, through the halls of the palace of Knossos.', libre:'Bull festivals', volver:'Back to Historiapp',
+   epiQ:'Choose all you think are correct', fin:'You have completed the story', fin2:'From the boys\' boxing to the bull festival, through the halls of the palace of Knossos.', libre:'Bull festivals', volver:'Save and exit to Historiapp',
    rot:'Turn your device to play', snd:'Sound', tmb:'Shake', reset:'Are you sure? Your tour in this game will be erased.', si:'Yes, start', no:'Cancel', ayuda:'Help', ayudaT:'Tap the screen, or press space, when the closing ring meets the fixed circle. Each leap has three moments.'}
 };
 const t = (k, v) => { let s = UI[S.lang][k] ?? UI.es[k] ?? k; if (v) for (const x in v) s = s.replace('{' + x + '}', v[x]); return s; };
@@ -1975,5 +2031,6 @@ window.CNOSO = { get A(){ return A; }, S:() => S, enterRoom, arenaSetup, startFi
 
 </script>
 <div id="alacopy" role="contentinfo" style="position:fixed;right:max(8px,env(safe-area-inset-right));bottom:max(6px,env(safe-area-inset-bottom));z-index:2147482000;pointer-events:none;user-select:none;-webkit-user-select:none;font:500 11px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif;color:#fff;opacity:.6;text-shadow:0 1px 2px #000,0 0 4px #000;white-space:nowrap">© Diseñado y Creado por Alejandro Leiva Arcas</div>
+<script>window.HAPP_GUARDAR=function(){try{save()}catch(e){}};</script>
 </body>
 </html>

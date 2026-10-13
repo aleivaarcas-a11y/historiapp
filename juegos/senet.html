@@ -2,6 +2,62 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<!--HAPP-GUARDAR-->
+<script>window.HAPP_GS={volver:'../#t2', fijo:false};</script>
+<script>
+/* Guardar y salir a Historiapp. Común a todos los juegos de la app; lo inserta guardar_salir.py.
+   Configuración en window.HAPP_GS = { volver, pos, fijo, visible }.
+   - El juego define window.HAPP_GUARDAR() con lo que haya que guardar de la partida en curso.
+   - Se guarda al pulsar el botón y también al salir de la página por cualquier otra vía (pagehide y
+     visibilitychange), de modo que el progreso no se pierde aunque se cierre la app.
+   - window.HAPP_SALIR(href) guarda, avisa y vuelve a Historiapp; los botones propios del juego lo usan. */
+(function () {
+  'use strict';
+  var C = window.HAPP_GS || {};
+  var lang = null;
+  try { lang = localStorage.getItem('historiapp.lang'); } catch (e) {}
+  if (lang !== 'es' && lang !== 'en') lang = String(document.documentElement.lang || navigator.language || 'es').slice(0, 2) === 'en' ? 'en' : 'es';
+  var TX = lang === 'en'
+    ? { b: 'Save & exit', a: 'Save the game and go back to Historiapp', ok: 'Game saved' }
+    : { b: 'Guardar y salir', a: 'Guardar la partida y volver a Historiapp', ok: 'Partida guardada' };
+  window.HAPP_GS_TX = TX;
+  function guardar() { try { if (typeof window.HAPP_GUARDAR === 'function') window.HAPP_GUARDAR(); } catch (e) {} }
+  var yendo = false, aviso = null;
+  function salir(href) {
+    if (yendo) return; yendo = true;
+    guardar();
+    if (aviso) aviso.classList.add('on');
+    var v = href || (typeof C.volver === 'function' ? C.volver() : C.volver) || '../';
+    setTimeout(function () { location.href = v; }, 500);
+  }
+  window.HAPP_SALIR = salir;
+  addEventListener('pagehide', guardar);
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') guardar(); });
+  var css = '.hgs{position:fixed;z-index:2147482999;display:none;align-items:center;gap:6px;min-height:40px;margin:0;padding:0 13px;border-radius:20px;' +
+    'background:rgba(12,10,8,.76);color:#fff;border:1px solid rgba(255,255,255,.5);font:600 13px/1 system-ui,-apple-system,"Segoe UI",sans-serif;' +
+    'box-shadow:0 3px 10px rgba(0,0,0,.35);cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;white-space:nowrap}' +
+    '.hgs.on{display:inline-flex}.hgs:active{transform:translateY(1px)}' +
+    '.hgs-ok{position:fixed;left:50%;top:42%;transform:translate(-50%,-50%) scale(.9);opacity:0;z-index:2147483003;pointer-events:none;padding:12px 22px;border-radius:24px;' +
+    'background:#EDAB00;color:#1b1406;font:700 17px/1 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 6px 18px rgba(0,0,0,.45);transition:opacity .2s,transform .2s}' +
+    '.hgs-ok.on{opacity:1;transform:translate(-50%,-50%) scale(1)}';
+  function build() {
+    var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
+    aviso = document.createElement('div'); aviso.className = 'hgs-ok'; aviso.setAttribute('role', 'status'); aviso.textContent = '✓ ' + TX.ok; document.body.appendChild(aviso);
+    if (C.fijo === false) return;
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'hgs';
+    b.innerHTML = '<span aria-hidden="true">💾</span><span>' + TX.b + '</span>'; b.setAttribute('aria-label', TX.a); b.title = TX.a;
+    var pos = C.pos || { top: 'max(8px, env(safe-area-inset-top))', right: 'max(10px, env(safe-area-inset-right))' };
+    for (var k in pos) b.style[k] = pos[k];
+    ['pointerdown', 'touchstart', 'mousedown'].forEach(function (ev) { b.addEventListener(ev, function (e) { e.stopPropagation(); }, { passive: true }); });
+    b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); salir(); });
+    document.body.appendChild(b);
+    var ver = function () { var on = true; try { on = !C.visible || !!C.visible(); } catch (e) {} b.classList.toggle('on', on); };
+    ver(); setInterval(ver, 300);
+  }
+  if (document.body) build(); else document.addEventListener('DOMContentLoaded', build);
+})();
+</script>
+
 <!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
 <meta name="author" content="Alejandro Leiva Arcas">
 <meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
@@ -129,7 +185,7 @@
     var dentro = inApp && C.barraEn ? document.querySelector(C.barraEn) : null;
     if (dentro) {
       var av = document.createElement('a'); av.href = C.volver || '../'; av.className = 'happ-volver ' + (C.barraClase || '');
-      av.textContent = '‹ ' + T.back; av.setAttribute('aria-label', EN ? 'Back to Historiapp' : 'Volver a Historiapp');
+      av.textContent = '💾 ' + (window.HAPP_GS_TX ? HAPP_GS_TX.b : T.back); av.addEventListener('click', function (e) { if (window.HAPP_SALIR) { e.preventDefault(); HAPP_SALIR(av.href); } }); av.setAttribute('aria-label', EN ? 'Back to Historiapp' : 'Volver a Historiapp');
       dentro.insertBefore(av, dentro.firstChild);
     }
     if (inApp && !dentro) {
@@ -1535,7 +1591,7 @@ async function doMove(m) {
   G.turn = opp(me); startTurn();
 }
 function gameOver(w) {
-  G.over = true; G.phase = 'over'; renderPlayers(); $('bThrow').disabled = true; setHint('');
+  G.over = true; G.phase = 'over'; try { localStorage.removeItem('senet.partida'); } catch (e) {} renderPlayers(); $('bThrow').disabled = true; setHint('');
   const youWin = cfg.rival === 0 || w === 'L'; if (window.HAPP) HAPP.xp(cfg.rival > 0 ? (w === 'L' ? 100 : 0) : 30);
   youWin ? sfx.win() : sfx.lose();
   if (youWin) for (let k = 0; k < 6; k++) setTimeout(() => burst(table.localToWorld(new T.Vector3(rnd(-5, 5), 3, rnd(-1.5, 1.5))), 60, [0xffe08a, 0x6fe6c8, 0xff9a6a][k % 3], 3, 2, 2, -2), k * 260);
@@ -1648,7 +1704,27 @@ G.over = true;
 layout();
 requestAnimationFrame(frame);
 window.__senet = { legalMoves, applyMove, aiPick, exposure, QZ, SQ, get G() { return G; }, routes: () => routes.length };
-menu();
+
+// ---- Guardar y salir (Historiapp): partida exacta ----
+const HKEY = 'senet.partida';
+window.HAPP_GUARDAR = () => { try {
+  if (G && !G.over && G.pos && G.phase !== 'idle') localStorage.setItem(HKEY, JSON.stringify({ v: 1, cfg, pos: G.pos, turn: G.turn,
+    roll: (G.phase === 'move' && !G.busy && !isAI(G.turn)) ? G.roll : null, right: [...(G.right || [])], score: G.score, asked: G.asked }));
+  else if (G && G.phase === 'over') localStorage.removeItem(HKEY);
+} catch (e) {} };
+function resumeGame(s) {
+  Object.assign(cfg, s.cfg || {}); applyCfg();
+  G = { pos: s.pos, turn: s.turn, phase: 'throw', roll: null, moves: [], busy: false, over: false, right: new Set(s.right || []),
+        score: s.score || { L: 0, D: 0 }, asked: s.asked || { L: 0, D: 0 }, token: (G ? G.token + 1 : 1) };
+  clearRoutes(); buildPieces(); renderPlayers(); setRoll(null); setHint(''); showSquare(26, false);
+  startTurn();
+  if (s.roll && !isAI(G.turn)) { const r = s.roll; const mv = legalMoves(G.pos, G.turn, r);
+    if (mv.length) { G.roll = r; setRoll(r, r === 5 ? 0 : r); G.moves = mv; G.phase = 'move'; $('bThrow').disabled = true; setHint('');
+      setStatus((youP(G.turn) ? `Sacas ${r}` : `Las ${NAME(G.turn).toLowerCase()} sacan ${r}`) + '. Elige qué ficha mueves.'); showRoutes(); } }
+}
+{ let s = null; try { s = JSON.parse(localStorage.getItem(HKEY)); } catch (e) {}
+  if (s && s.pos && s.turn) { try { resumeGame(s); } catch (e) { console.warn(e); menu(); } } else menu(); }
+
 })();
 </script>
 <div id="alacopy" role="contentinfo" style="position:fixed;right:max(8px,env(safe-area-inset-right));bottom:max(6px,env(safe-area-inset-bottom));z-index:2147482000;pointer-events:none;user-select:none;-webkit-user-select:none;font:500 11px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif;color:#fff;opacity:.6;text-shadow:0 1px 2px #000,0 0 4px #000;white-space:nowrap">© Diseñado y Creado por Alejandro Leiva Arcas</div>

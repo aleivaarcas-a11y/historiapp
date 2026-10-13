@@ -2,6 +2,62 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<!--HAPP-GUARDAR-->
+<script>window.HAPP_GS={volver:function(){try{return appTema4()?'../#t4':'../'}catch(e){return '../'}}, pos:{right:'max(10px, env(safe-area-inset-right))', top:'20%'}};</script>
+<script>
+/* Guardar y salir a Historiapp. Común a todos los juegos de la app; lo inserta guardar_salir.py.
+   Configuración en window.HAPP_GS = { volver, pos, fijo, visible }.
+   - El juego define window.HAPP_GUARDAR() con lo que haya que guardar de la partida en curso.
+   - Se guarda al pulsar el botón y también al salir de la página por cualquier otra vía (pagehide y
+     visibilitychange), de modo que el progreso no se pierde aunque se cierre la app.
+   - window.HAPP_SALIR(href) guarda, avisa y vuelve a Historiapp; los botones propios del juego lo usan. */
+(function () {
+  'use strict';
+  var C = window.HAPP_GS || {};
+  var lang = null;
+  try { lang = localStorage.getItem('historiapp.lang'); } catch (e) {}
+  if (lang !== 'es' && lang !== 'en') lang = String(document.documentElement.lang || navigator.language || 'es').slice(0, 2) === 'en' ? 'en' : 'es';
+  var TX = lang === 'en'
+    ? { b: 'Save & exit', a: 'Save the game and go back to Historiapp', ok: 'Game saved' }
+    : { b: 'Guardar y salir', a: 'Guardar la partida y volver a Historiapp', ok: 'Partida guardada' };
+  window.HAPP_GS_TX = TX;
+  function guardar() { try { if (typeof window.HAPP_GUARDAR === 'function') window.HAPP_GUARDAR(); } catch (e) {} }
+  var yendo = false, aviso = null;
+  function salir(href) {
+    if (yendo) return; yendo = true;
+    guardar();
+    if (aviso) aviso.classList.add('on');
+    var v = href || (typeof C.volver === 'function' ? C.volver() : C.volver) || '../';
+    setTimeout(function () { location.href = v; }, 500);
+  }
+  window.HAPP_SALIR = salir;
+  addEventListener('pagehide', guardar);
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') guardar(); });
+  var css = '.hgs{position:fixed;z-index:2147482999;display:none;align-items:center;gap:6px;min-height:40px;margin:0;padding:0 13px;border-radius:20px;' +
+    'background:rgba(12,10,8,.76);color:#fff;border:1px solid rgba(255,255,255,.5);font:600 13px/1 system-ui,-apple-system,"Segoe UI",sans-serif;' +
+    'box-shadow:0 3px 10px rgba(0,0,0,.35);cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;white-space:nowrap}' +
+    '.hgs.on{display:inline-flex}.hgs:active{transform:translateY(1px)}' +
+    '.hgs-ok{position:fixed;left:50%;top:42%;transform:translate(-50%,-50%) scale(.9);opacity:0;z-index:2147483003;pointer-events:none;padding:12px 22px;border-radius:24px;' +
+    'background:#EDAB00;color:#1b1406;font:700 17px/1 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 6px 18px rgba(0,0,0,.45);transition:opacity .2s,transform .2s}' +
+    '.hgs-ok.on{opacity:1;transform:translate(-50%,-50%) scale(1)}';
+  function build() {
+    var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
+    aviso = document.createElement('div'); aviso.className = 'hgs-ok'; aviso.setAttribute('role', 'status'); aviso.textContent = '✓ ' + TX.ok; document.body.appendChild(aviso);
+    if (C.fijo === false) return;
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'hgs';
+    b.innerHTML = '<span aria-hidden="true">💾</span><span>' + TX.b + '</span>'; b.setAttribute('aria-label', TX.a); b.title = TX.a;
+    var pos = C.pos || { top: 'max(8px, env(safe-area-inset-top))', right: 'max(10px, env(safe-area-inset-right))' };
+    for (var k in pos) b.style[k] = pos[k];
+    ['pointerdown', 'touchstart', 'mousedown'].forEach(function (ev) { b.addEventListener(ev, function (e) { e.stopPropagation(); }, { passive: true }); });
+    b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); salir(); });
+    document.body.appendChild(b);
+    var ver = function () { var on = true; try { on = !C.visible || !!C.visible(); } catch (e) {} b.classList.toggle('on', on); };
+    ver(); setInterval(ver, 300);
+  }
+  if (document.body) build(); else document.addEventListener('DOMContentLoaded', build);
+})();
+</script>
+
 <!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
 <meta name="author" content="Alejandro Leiva Arcas">
 <meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
@@ -260,16 +316,6 @@ h1 .ansata{font-size:1.05em;letter-spacing:.2em}
 @media (max-width:540px) and (orientation:portrait){
   .box:has(#f_V) .row:has(.fac){grid-template-columns:repeat(2,minmax(0,1fr))}
   .box:has(#f_V) .row:has(#stu){grid-template-columns:1fr}
-}
-
-/* jornada compacta en el móvil apaisado: las ofertas y sus botones se ven sin desplazarse (12-10-2026) */
-@media (max-height:540px) and (orientation:landscape){
-  .obj{padding:3px 10px;margin:2px 0 4px}.obj span{font-size:10.5px}.obj b{font-size:14px}
-  .edictum{padding:5px 10px 8px;margin:3px 0 6px}.ed-h{font-size:15px;letter-spacing:.08em}.ed-s{font-size:10.5px;margin-bottom:4px}
-  .offer{padding:5px 9px;flex:1 1 170px}.offer h2{font-size:14.5px;margin:0 0 2px;line-height:1.15}.offer p{margin:1px 0;font-size:12.5px;line-height:1.25}
-  .offer p.muted{font-size:11px;line-height:1.2}
-  .offer button{min-height:40px;padding:3px 10px;font-size:14px}
-  .edictum>p.muted{font-size:11px;line-height:1.25;margin:4px 0 0}
 }
 
 
@@ -845,7 +891,7 @@ function hxp(n,why){
 const FICHAS_T4={};
 function appTema4(){try{const ix=JSON.parse(localStorage.getItem('historiapp.index')||'null');const list=ix&&(ix.temas||ix);return Array.isArray(list)&&list.some(t=>String(t.id||t.n||t.tema||'').replace(/\D/g,'')==='4')}catch(e){return false}}
 function fichaURL(codexId){const id=FICHAS_T4[codexId];return IN_APP&&id?'../#t4/f/'+id:null}
-function backToApp(){location.href=appTema4()?'../#t4':'../'}
+function backToApp(){if(window.HAPP_SALIR&&!window.__hgsGo){window.__hgsGo=1;return HAPP_SALIR(appTema4()?'../#t4':'../')}location.href=appTema4()?'../#t4':'../'}
 const TUNING={
   dt:1/120,
   tiros:{
@@ -2410,7 +2456,7 @@ function drawHUD(ctx){
   drawMini(ctx,u);
   if(r.leadFac&&r.type!=='crono'){const F=FAC[r.leadFac];const bx=VW/2-70*u,by=96*u;hudPanel(ctx,bx,by,140*u,40*u,u);patFill(ctx,r.leadFac,bx+8*u,by+8*u,24*u,24*u);ctx.fillStyle='#f6efdf';ctx.textAlign='left';ctx.font=HF(11*u);ctx.fillText(L('En cabeza','Leading'),bx+40*u,by+17*u);ctx.font=HF(14*u,true);ctx.fillText(`${fName(r.leadFac)} (${F.letter})`,bx+40*u,by+33*u)}
   // un momento de la pista cada vez, bajo los caballos
-  if(r.toasts.length&&!p.cutOpen){const t=r.toasts[0];t.t+=1/60;const T=r.toasts.length>2?3.5:5.5;if(t.t>T)r.toasts.shift();else{const G2=glossText(t.id);if(G2){const a=clamp(Math.min(t.t*3,T-t.t),0,1);ctx.globalAlpha=a;
+  if(r.toasts.length){const t=r.toasts[0];t.t+=1/60;const T=r.toasts.length>2?3.5:5.5;if(t.t>T)r.toasts.shift();else{const G2=glossText(t.id);if(G2){const a=clamp(Math.min(t.t*3,T-t.t),0,1);ctx.globalAlpha=a;
     const w=400*u,x=VW-w-14*u,ty=104*u;ctx.font=HF(12.5*u);const lines=wrapText(ctx,G2[1],w-28*u,3);const hh=(34+lines.length*16)*u;
     ctx.fillStyle='rgba(246,239,223,.96)';rrect(ctx,x,ty,w,hh,6*u);ctx.fill();ctx.fillStyle='#c99a3b';ctx.fillRect(x,ty,5*u,hh);
     ctx.fillStyle='#2a1d12';ctx.textAlign='left';ctx.font=HF(15*u,true);ctx.fillText(G2[0],x+14*u,ty+21*u);ctx.font=HF(12.5*u);lines.forEach((ln,i)=>ctx.fillText(ln,x+14*u,ty+39*u+i*16*u));ctx.globalAlpha=1}}}
@@ -2509,8 +2555,8 @@ function drawHUDPhone(ctx){
   if(!r.started){hudPanel(ctx,fx-cW/2,fy-30,cW,74,1);ctx.fillStyle='#f6efdf';ctx.textAlign='center';ctx.font=HF(17);ctx.fillText(fitText(ctx,L('El editor sostiene la mappa…','The editor holds up the mappa…'),cW-20),fx,fy-6);ctx.font=HF(13);
     wrapText(ctx,TOUCH?L('No toques el látigo hasta que suene el tubicen','Do not touch the whip until the tubicen sounds'):L('No uses el látigo hasta que suene el tubicen','Do not use the whip until the tubicen sounds'),cW-24,2).forEach((ln,i)=>ctx.fillText(ln,fx,fy+14+i*16))}
   // un momento de la pista cada vez, a la izquierda, bajo la pausa y encima de las riendas
-  if(r.toasts.length&&!p.cutOpen){const t=r.toasts[0];t.t+=1/60;const T=r.toasts.length>2?3.5:5.5;if(t.t>T)r.toasts.shift();else{const G2=glossText(t.id);if(G2){const a=clamp(Math.min(t.t*3,T-t.t),0,1);ctx.globalAlpha=a;
-    const w=Math.min(250,W*0.3),x=W-SR-96-w,ty=ST+82; /* a la derecha, bajo las riendas y lejos del joystick */ctx.font=HF(13);const lines=wrapText(ctx,G2[1],w-24,4);const hh=30+lines.length*17;
+  if(r.toasts.length){const t=r.toasts[0];t.t+=1/60;const T=r.toasts.length>2?3.5:5.5;if(t.t>T)r.toasts.shift();else{const G2=glossText(t.id);if(G2){const a=clamp(Math.min(t.t*3,T-t.t),0,1);ctx.globalAlpha=a;
+    const w=Math.min(280,W*0.34),x=SL,ty=Math.max(y0+h0+66,fy+38);ctx.font=HF(13);const lines=wrapText(ctx,G2[1],w-24,4);const hh=30+lines.length*17;
     ctx.fillStyle='rgba(246,239,223,.96)';rrect(ctx,x,ty,w,hh,6);ctx.fill();ctx.fillStyle='#c99a3b';ctx.fillRect(x,ty,5,hh);
     ctx.fillStyle='#2a1d12';ctx.textAlign='left';ctx.font=HF(15,true);ctx.fillText(fitText(ctx,G2[0],w-24),x+13,ty+19);ctx.font=HF(13);lines.forEach((ln,i)=>ctx.fillText(ln,x+13,ty+37+i*17));ctx.globalAlpha=1}}}
   if(XPT){XPT.t+=1/60;if(XPT.t>2.5)XPT=null;else{ctx.globalAlpha=clamp(2.5-XPT.t,0,1);const xx=W-SR-184,xy=ST+ph+10;hudPanel(ctx,xx,xy,184,34,1);ctx.fillStyle='#f6e3b0';ctx.font=HF(15,true);ctx.textAlign='center';ctx.fillText(`+${XPT.n} XP · Historiapp`,xx+92,xy+22);ctx.globalAlpha=1}}
@@ -2998,7 +3044,7 @@ function titleScreen(){
    <button onclick="cronoScreen()">${L('Contrarreloj y fantasmas','Time trial and ghosts')}</button>
    <button onclick="codexScreen('title')">${L('Códice','Codex')}</button>
    ${IN_APP?'':`<button onclick="teacherScreen()">${L('Guía del profesor','Teacher’s guide')}</button>`}
-   ${IN_APP?`<button onclick="backToApp()">${L('Volver a Historiapp','Back to Historiapp')}</button>`:''}
+   ${IN_APP?`<button onclick="backToApp()">${L('💾 Guardar y salir a Historiapp','💾 Save and exit to Historiapp')}</button>`:''}
   </div>
   <p class="muted">${L('La clase de veinte minutos recorre en cinco carreras lo esencial del circo romano. La carrera profesional es para jugar en casa.','The twenty-minute lesson covers the essentials of the Roman circus in five races. The career is for playing at home.')}${TOUCH?'':L(' Tecla M: sonido.',' M key: sound.')}</p>${XP_SESSION?`<p class="sent">${L(`Has ganado ${XP_SESSION} XP para Historiapp en esta sesión.`,`You have earned ${XP_SESSION} XP for Historiapp this session.`)}</p>`:''}</div>`,'narrow');
 }
