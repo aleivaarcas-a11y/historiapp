@@ -1,5 +1,7 @@
 <!doctype html>
 <html lang="es"><head><meta charset="utf-8">
+<script>/* idioma (13-10-2026): con Historiapp en inglés se abre la versión inglesa, y al revés */(function(){try{var l=localStorage.getItem("historiapp.lang"),p=location.pathname,en=/-en\.html$/.test(p);if(l==="en"&&!en)location.replace(p.replace(/[^/]*$/,"gladiatura-en.html")+location.search+location.hash);else if(l==="es"&&en)location.replace(p.replace(/[^/]*$/,"gladiatura.html")+location.search+location.hash);}catch(e){}})();</script>
+
 <!--HAPP-GUARDAR-->
 <script>window.HAPP_GS={volver:function(){return (window.HIST&&HIST.t4)?'../#t4':'../'}, orient:'h', pos:{left:'50%', transform:'translateX(-50%)', bottom:'max(6px, env(safe-area-inset-bottom))'}, visible:function(){try{return (phase==='fight'||phase==='break')&&!window.TUTON&&!window.PAUSED}catch(e){return false}}};</script>
 <script>

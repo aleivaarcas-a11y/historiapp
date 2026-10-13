@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<script>/* idioma (13-10-2026): con Historiapp en inglés se abre la versión inglesa, y al revés */(function(){try{var l=localStorage.getItem("historiapp.lang"),p=location.pathname,en=/-en\.html$/.test(p);if(l==="en"&&!en)location.replace(p.replace(/[^/]*$/,"senet-en.html")+location.search+location.hash);else if(l==="es"&&en)location.replace(p.replace(/[^/]*$/,"senet.html")+location.search+location.hash);}catch(e){}})();</script>
+
 <!--HAPP-GUARDAR-->
 <script>window.HAPP_GS={volver:'../#t2', orient:'v', pos:{top:'max(8px, env(safe-area-inset-top))', right:'max(8px, env(safe-area-inset-right))'}, visible:function(){var m=document.getElementById('modal');return !!(m&&!m.hidden)}};</script>
 <script>
