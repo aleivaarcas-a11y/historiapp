@@ -1,6 +1,6 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8">
 <!--HAPP-GUARDAR-->
-<script>window.HAPP_GS={volver:'../', fijo:false};</script>
+<script>window.HAPP_GS={volver:'../', fijo:false, orient:'h'};</script>
 <script>
 /* Guardar y salir a Historiapp. Común a todos los juegos de la app; lo inserta guardar_salir.py.
    Configuración en window.HAPP_GS = { volver, pos, fijo, visible }.
@@ -52,8 +52,50 @@
     ver(); setInterval(ver, 300);
   }
   if (document.body) build(); else document.addEventListener('DOMContentLoaded', build);
+
+  /* ---------- Giro de pantalla (13-10-2026) ----------
+     En algunos Android e iPhone el aviso de girar desaparece pero el juego queda mal dibujado o en blanco:
+     el navegador lanza el evento resize antes de dar las medidas definitivas y el juego se dibuja con las viejas.
+     1. Se limita la densidad de píxeles a 2 (en pantallas de 3 los lienzos ocupan más del doble de memoria
+        y algunos móviles recargan o cuelgan la página al girar).
+     2. Tras cada giro se vuelve a avisar al juego del cambio de tamaño cuando las medidas ya son las buenas.
+     3. Si el juego se abrió en la orientación equivocada (C.orient 'h' o 'v'), al ponerlo en la buena se recarga
+        una vez, con la partida guardada antes, para que arranque con las medidas correctas. */
+  try { if ((window.devicePixelRatio || 1) > 2) Object.defineProperty(window, 'devicePixelRatio', { get: function () { return 2; }, configurable: true }); } catch (e) {}
+  var portrait = function () { return window.innerHeight > window.innerWidth; };
+  var buena = function () { return !C.orient || (C.orient === 'h' ? !portrait() : portrait()); };
+  var malAlCargar = !!C.orient && !buena();
+  var avisando = false, giroT = [], ultimo = '';
+  function avisar() {
+    var m = window.innerWidth + 'x' + window.innerHeight;
+    avisando = true;
+    try { window.dispatchEvent(new Event('resize')); } catch (e) {}
+    try { if (window.visualViewport) window.visualViewport.dispatchEvent(new Event('resize')); } catch (e) {}
+    avisando = false;
+    ultimo = m;
+  }
+  function recargarSiHaceFalta() {
+    if (!malAlCargar || !buena()) return;
+    var k = 'happ.giro.' + location.pathname, ahora = Date.now(), antes = 0;
+    try { antes = +sessionStorage.getItem(k) || 0; } catch (e) {}
+    if (ahora - antes < 20000) return;
+    try { sessionStorage.setItem(k, String(ahora)); } catch (e) {}
+    malAlCargar = false; guardar(); location.reload();
+  }
+  function giro() {
+    if (avisando) return;
+    giroT.forEach(clearTimeout);
+    giroT = [120, 350, 700, 1200].map(function (t, i, a) {
+      return setTimeout(function () { avisar(); if (i === a.length - 1) recargarSiHaceFalta(); }, t);
+    });
+  }
+  addEventListener('orientationchange', giro);
+  addEventListener('resize', function () { if (!avisando) giro(); });
+  try { if (screen.orientation && screen.orientation.addEventListener) screen.orientation.addEventListener('change', giro); } catch (e) {}
+  addEventListener('pageshow', function (e) { if (e.persisted) giro(); });
 })();
 </script>
+<!--/HAPP-GUARDAR-->
 <script>
 /* Guardar y salir (Historiapp): partida de Agón */
 var AGON_K = 'agon.partida', __agonLast = null;
