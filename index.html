@@ -795,6 +795,17 @@ body.podon .deck{height:calc(100dvh - 406px - var(--safe-top) - var(--safe-botto
 main.atmain{padding:0;overflow:hidden;gap:0}
 #atFr{position:fixed;left:0;right:0;width:100%;height:auto;border:0;background:#0e2a35;z-index:5}
 </style>
+<style>/* 13-10-2026: tamaño de letra fijo al girar (iPhone) y campos de 16 px para que no amplíe la pantalla */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}@media (pointer:coarse){input,select,textarea{font-size:16px!important}}</style>
+<script>/* 13-10-2026: el manifest pasa a orientation "any" para que los juegos puedan girar en la app instalada;
+   la portada se mantiene en vertical pidiéndolo aquí (Android, app instalada), y el zoom vuelve a 1 al salir de un campo */
+(function(){
+  function vertical(){ try{ var st=(window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone; if(st&&screen.orientation&&screen.orientation.lock) screen.orientation.lock('portrait').catch(function(){}); }catch(e){} }
+  vertical(); addEventListener('pageshow',vertical); addEventListener('pointerdown',vertical,{capture:true,passive:true,once:true});
+  document.addEventListener('focusout',function(e){ var t=e.target&&e.target.tagName; if(!/INPUT|SELECT|TEXTAREA/.test(t||'')) return;
+    setTimeout(function(){ var vm=document.querySelector('meta[name="viewport"]'); if(!vm||(window.visualViewport&&Math.abs(visualViewport.scale-1)<.01)) return;
+      var b=vm.getAttribute('content'); vm.setAttribute('content',b.replace(/,?\s*maximum-scale=[^,]*/g,'')+',maximum-scale=1'); setTimeout(function(){vm.setAttribute('content',b)},400); },60); },true);
+})();</script>
 </head>
 <body>
 <div id="splash"><img src="icons/logo_oro.png" alt="Historiapp"><small>Historia del Deporte · UCAM</small><div class="sp-bar"><i id="spBar"></i></div><div class="sp-msg" id="spMsg"></div></div>
