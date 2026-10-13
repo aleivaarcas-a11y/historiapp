@@ -795,17 +795,6 @@ body.podon .deck{height:calc(100dvh - 406px - var(--safe-top) - var(--safe-botto
 main.atmain{padding:0;overflow:hidden;gap:0}
 #atFr{position:fixed;left:0;right:0;width:100%;height:auto;border:0;background:#0e2a35;z-index:5}
 </style>
-<style>/* 13-10-2026: tamaño de letra fijo al girar (iPhone) y campos de 16 px para que no amplíe la pantalla */
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%}@media (pointer:coarse){input,select,textarea{font-size:16px!important}}</style>
-<script>/* 13-10-2026: el manifest pasa a orientation "any" para que los juegos puedan girar en la app instalada;
-   la portada se mantiene en vertical pidiéndolo aquí (Android, app instalada), y el zoom vuelve a 1 al salir de un campo */
-(function(){
-  function vertical(){ try{ var st=(window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone; if(st&&screen.orientation&&screen.orientation.lock) screen.orientation.lock('portrait').catch(function(){}); }catch(e){} }
-  vertical(); addEventListener('pageshow',vertical); addEventListener('pointerdown',vertical,{capture:true,passive:true,once:true});
-  document.addEventListener('focusout',function(e){ var t=e.target&&e.target.tagName; if(!/INPUT|SELECT|TEXTAREA/.test(t||'')) return;
-    setTimeout(function(){ var vm=document.querySelector('meta[name="viewport"]'); if(!vm||(window.visualViewport&&Math.abs(visualViewport.scale-1)<.01)) return;
-      var b=vm.getAttribute('content'); vm.setAttribute('content',b.replace(/,?\s*maximum-scale=[^,]*/g,'')+',maximum-scale=1'); setTimeout(function(){vm.setAttribute('content',b)},400); },60); },true);
-})();</script>
 </head>
 <body>
 <div id="splash"><img src="icons/logo_oro.png" alt="Historiapp"><small>Historia del Deporte · UCAM</small><div class="sp-bar"><i id="spBar"></i></div><div class="sp-msg" id="spMsg"></div></div>
@@ -1482,7 +1471,7 @@ function renderSettings(){
 
 /* ============ ranking ============ */
 const RK_URL="https://script.google.com/macros/s/AKfycbzjxo9QvXjWabkFGm3MtbgTJWV1OMT372TAD7n-iTSoSR7av2KMpYBb3LhRfXvWt36GeA/exec";
-const RK_GRUPOS=["1ºA","1ºB","1ºTAMA","1ºEnglish"];
+const RK_GRUPOS=["1ºA","1ºB","1ºTAMA","1ºEnglish","Recuperación"];
 Object.assign(I18N.es,{rkJustLook:"Solo quiero verlo, sin apuntarme",rkLooking:"Estás viendo el ranking sin apuntarte.",rkJoinNow:"Apuntarme",rkRulesT:"Normas del ranking",rkRules:"Los alias no pueden contener palabras malsonantes, insultos ni expresiones racistas, sexistas u homófobas, y tampoco el nombre de otra persona, sea un compañero, un profesor o un personaje conocido. El alias que incumpla estas normas se retirará, y su autor podrá ser sancionado según los artículos 10 a 12 de las Normas de Convivencia Universitaria y Reglamento de Régimen Interno de la UCAM, que tipifican como falta las palabras impropias y las ofensas a otros miembros de la comunidad universitaria.",rkAccept:"He leído y acepto las normas del ranking.",rkMustAccept:"Para entrar tienes que aceptar las normas del ranking.",rkT:"Ranking",rkCard:"Ranking semanal",rkJoinSub:"Apúntate con un alias y compite con tu clase",rkPos:"Vas {p}.º de {n} esta semana",rkNoPts:"Aún no tienes puntos esta semana",
  rkWeek:"Esta semana",rkGroup:"Mi grupo",rkTotal:"Total",rkReset:"El ranking semanal se reinicia cada lunes. Cuentan los puntos ganados desde que te apuntas, con un máximo de 1.500 al día.",
  rkEmpty:"Todavía no hay nadie con puntos en esta clasificación.",rkLoading:"Cargando…",rkOffline:"No se ha podido cargar el ranking. Revisa la conexión.",

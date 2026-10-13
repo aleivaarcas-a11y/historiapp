@@ -14,6 +14,41 @@
 (function () {
   'use strict';
   var C = window.HAPP_GS || {};
+
+  /* ---------- Sonido y pausa (revisión del 13-10-2026) ----------
+     - Se anotan todos los AudioContext que crea el juego para poder despertarlos y dormirlos.
+     - En iPhone el sonido solo arranca dentro de un toque «completo» (touchend o click), y tras salir de la app
+       el contexto queda «interrumpido» y el juego ya no suena: se reanuda en cualquier toque posterior.
+     - Con audioSession 'playback' (iPhone con iOS 16.4 o posterior) el juego suena aunque el móvil esté en silencio.
+     - Al ocultar la app (bloquear el móvil, cambiar de app) se pausa el juego (HAPP_PAUSA o el evento blur que ya
+       escuchan los juegos), se duerme el sonido y se paran las músicas; al volver, se reanudan. */
+  var ctxs = [], oculto = false, dormidos = [], parados = [];
+  try {
+    var AC0 = window.AudioContext || window.webkitAudioContext;
+    if (AC0 && !AC0.__happ) {
+      var ACW = function (o) { var c = o === undefined ? new AC0() : new AC0(o); ctxs.push(c); return c; };
+      ACW.prototype = AC0.prototype; ACW.__happ = true;
+      window.AudioContext = ACW; if (window.webkitAudioContext) window.webkitAudioContext = ACW;
+    }
+  } catch (e) {}
+  try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) {}
+  function despertar() {
+    if (oculto) return;
+    ctxs.forEach(function (c) { try { if (c.state === 'suspended' || c.state === 'interrupted') c.resume(); } catch (e) {} });
+  }
+  ['touchend', 'click', 'pointerup', 'keydown'].forEach(function (ev) { addEventListener(ev, despertar, { capture: true, passive: true }); });
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'hidden') {
+      if (oculto) return; oculto = true;
+      try { if (typeof window.HAPP_PAUSA === 'function') window.HAPP_PAUSA(); else window.dispatchEvent(new Event('blur')); } catch (e) {}
+      ctxs.forEach(function (c) { try { if (c.state === 'running') { c.suspend(); dormidos.push(c); } } catch (e) {} });
+      try { document.querySelectorAll('audio,video').forEach(function (m) { if (!m.paused) { try { m.pause(); parados.push(m); } catch (e) {} } }); } catch (e) {}
+    } else {
+      oculto = false;
+      dormidos.splice(0).forEach(function (c) { try { c.resume(); } catch (e) {} });
+      parados.splice(0).forEach(function (m) { try { var r = m.play(); if (r && r.catch) r.catch(function () {}); } catch (e) {} });
+    }
+  });
   var lang = null;
   try { lang = localStorage.getItem('historiapp.lang'); } catch (e) {}
   if (lang !== 'es' && lang !== 'en') lang = String(document.documentElement.lang || navigator.language || 'es').slice(0, 2) === 'en' ? 'en' : 'es';
@@ -3706,5 +3741,6 @@ window.__cq={TUNING,CODEX,QUIZ,get race(){return race},get G(){return G},set G(v
 
 </script>
 <div id="alacopy" role="contentinfo" style="position:fixed;right:max(8px,env(safe-area-inset-right));bottom:max(6px,env(safe-area-inset-bottom));z-index:2147482000;pointer-events:none;user-select:none;-webkit-user-select:none;font:500 11px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif;color:#fff;opacity:.6;text-shadow:0 1px 2px #000,0 0 4px #000;white-space:nowrap">© Diseñado y Creado por Alejandro Leiva Arcas</div>
+<script>/* sonido desde la salida de la carrera, aunque aún no se haya tocado la pista */setInterval(function(){try{if(MODE==='race'&&!AC&&(!navigator.userActivation||navigator.userActivation.hasBeenActive))audioInit()}catch(e){}},400);</script>
 </body>
 </html>
