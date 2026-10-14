@@ -2,6 +2,9 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
+<meta name="author" content="Alejandro Leiva Arcas">
+<meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
 <!--HAPP-GUARDAR-->
 <script>window.HAPP_GS={volver:function(){try{return appTema4()?'../#t4':'../'}catch(e){return '../'}}, pos:{right:'max(10px, env(safe-area-inset-right))', top:'20%'}};</script>
 <script>
@@ -162,9 +165,6 @@
 </script>
 <!--/HAPP-GUARDAR-->
 
-<!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
-<meta name="author" content="Alejandro Leiva Arcas">
-<meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Cuadrigas</title>
@@ -422,6 +422,30 @@ h1 .ansata{font-size:1.05em;letter-spacing:.2em}
   .box:has(#f_V) .row:has(#stu){grid-template-columns:1fr}
 }
 
+/* jornada compacta en el móvil apaisado: las ofertas y sus botones se ven sin desplazarse (12-10-2026) */
+@media (max-height:540px) and (orientation:landscape){
+  .obj{padding:3px 10px;margin:2px 0 4px}.obj span{font-size:10.5px}.obj b{font-size:14px}
+  .edictum{padding:5px 10px 8px;margin:3px 0 6px}.ed-h{font-size:15px;letter-spacing:.08em}.ed-s{font-size:10.5px;margin-bottom:4px}
+  .offer{padding:5px 9px;flex:1 1 170px}.offer h2{font-size:14.5px;margin:0 0 2px;line-height:1.15}.offer p{margin:1px 0;font-size:12.5px;line-height:1.25}
+  .offer p.muted{font-size:11px;line-height:1.2}
+  .offer button{min-height:40px;padding:3px 10px;font-size:14px}
+  .edictum>p.muted{font-size:11px;line-height:1.25;margin:4px 0 0}
+}
+
+/* recompensas de Historiapp (14-10-2026) */
+#rwmodal{position:fixed;inset:0;background:rgba(20,14,8,.7);display:flex;align-items:center;justify-content:center;z-index:60;padding:12px}
+.rwbox{background:var(--panel);border:3px solid var(--line);outline:8px solid #3b2a1a;padding:18px 22px;max-width:420px;width:100%}
+.rwbox input{width:100%;font-size:18px;margin:6px 0 10px}
+.rwbox h2{margin-top:0}
+tr.rwlock td{color:var(--muted);opacity:.75}
+.rwch{gap:8px;margin:6px 0}
+.rwch button{text-align:center;padding:6px 8px;font-size:13px;line-height:1.2}
+.rwch canvas{display:inline-block;background:#e4d6b4}
+.monu{display:flex;gap:16px;align-items:center;flex-wrap:wrap;border:2px solid #c7ad83;background:var(--paper);padding:10px 14px;margin:0 0 10px}
+.monu canvas{width:120px;height:156px;flex:0 0 auto;image-rendering:auto}
+.monu-t{flex:1 1 220px;min-width:0}
+.monu-t .ansata{font-size:15px;margin:6px 28px 6px 28px}
+
 
 #rot{display:none;position:fixed;inset:0;background:#1d150d;color:#f3ead6;place-items:center;text-align:center;font:600 20px/1.4 "Cinzel",Georgia,serif;padding:24px;z-index:50}
 #rot small{font-family:"Alegreya",Georgia,serif}
@@ -440,6 +464,1413 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
 <div id="rot"><div><b>⟳</b>Gira el móvil para correr<small>La carrera está en pausa · Rotate your phone to race</small></div></div>
 <script>
 'use strict';
+/* Recompensas por nivel de Historiapp (14-10-2026). Fuente única: recompensas.json
+   (tabla de RECOMPENSAS-POR-NIVEL.md). Cada juego la incrusta con su build:
+   el marcador [
+ {
+  "lv": 2,
+  "game": "cuadrigas",
+  "k": "poner_nombre_a_los_caballos",
+  "es": "Poner nombre a los caballos",
+  "en": "Name your horses"
+ },
+ {
+  "lv": 3,
+  "game": "kleos",
+  "k": "calipatira",
+  "es": "Calipátira",
+  "en": "Kallipateira"
+ },
+ {
+  "lv": 4,
+  "game": "gladiatura",
+  "k": "apodo_de_arena",
+  "es": "Apodo de arena",
+  "en": "Arena nickname"
+ },
+ {
+  "lv": 5,
+  "game": "kleos",
+  "k": "ramses_ii",
+  "es": "Ramsés II",
+  "en": "Ramesses II"
+ },
+ {
+  "lv": 6,
+  "game": "monopoleis",
+  "k": "casco_espartano",
+  "es": "Casco espartano",
+  "en": "Spartan helmet"
+ },
+ {
+  "lv": 7,
+  "game": "senet",
+  "k": "fichas_de_lapislazuli",
+  "es": "Fichas de lapislázuli",
+  "en": "Lapis lazuli pieces"
+ },
+ {
+  "lv": 8,
+  "game": "kleos",
+  "k": "pilar_djed",
+  "es": "Pilar Djed",
+  "en": "Djed pillar"
+ },
+ {
+  "lv": 9,
+  "game": "agon",
+  "k": "estandarte_con_emblema_propio",
+  "es": "Estandarte con emblema propio",
+  "en": "Standard with your own emblem"
+ },
+ {
+  "lv": 10,
+  "game": "kleos",
+  "k": "tutmosis_iii",
+  "es": "Tutmosis III",
+  "en": "Thutmose III"
+ },
+ {
+  "lv": 11,
+  "game": "pentatlon",
+  "k": "pruebas_sueltas_sin_pasar_por_la",
+  "es": "Pruebas sueltas sin pasar por la carrera",
+  "en": "Pentathlon: single events without the career"
+ },
+ {
+  "lv": 12,
+  "game": "kleos",
+  "k": "aquiles",
+  "es": "Aquiles",
+  "en": "Achilles"
+ },
+ {
+  "lv": 13,
+  "game": "cnoso",
+  "k": "repetir_cualquier_sala_del_palac",
+  "es": "Repetir cualquier sala del palacio",
+  "en": "Replay any room of the palace"
+ },
+ {
+  "lv": 14,
+  "game": "cuadrigas",
+  "k": "librea_del_auriga_con_bordado_de",
+  "es": "Librea del auriga con bordado de oro",
+  "en": "Charioteer's livery with gold embroidery"
+ },
+ {
+  "lv": 15,
+  "game": "kleos",
+  "k": "dedos",
+  "es": "«Dedos»",
+  "en": "\"Fingers\""
+ },
+ {
+  "lv": 16,
+  "game": "gladiatura",
+  "k": "emblema_de_laurel",
+  "es": "Emblema de laurel",
+  "en": "Laurel emblem"
+ },
+ {
+  "lv": 17,
+  "game": "monopoleis",
+  "k": "escudo_de_hoplita",
+  "es": "Escudo de hoplita",
+  "en": "Hoplite shield"
+ },
+ {
+  "lv": 18,
+  "game": "kleos",
+  "k": "abbas_i",
+  "es": "Abbás I",
+  "en": "Abbas I"
+ },
+ {
+  "lv": 19,
+  "game": "agon",
+  "k": "dados_de_hueso",
+  "es": "Dados de hueso",
+  "en": "Bone dice"
+ },
+ {
+  "lv": 20,
+  "game": "cuadrigas",
+  "k": "elegir_circuito_en_la_carrera_su",
+  "es": "Elegir circuito en la carrera suelta",
+  "en": "Choose the circuit in a single race"
+ },
+ {
+  "lv": 21,
+  "game": "kleos",
+  "k": "heracles_y_pelope",
+  "es": "Heracles y Pélope",
+  "en": "Heracles and Pelops"
+ },
+ {
+  "lv": 22,
+  "game": "gladiatura",
+  "k": "elegir_anfiteatro",
+  "es": "Elegir anfiteatro",
+  "en": "Choose the amphitheatre"
+ },
+ {
+  "lv": 23,
+  "game": "agon",
+  "k": "mapa_de_pergamino",
+  "es": "Mapa de pergamino",
+  "en": "Parchment map"
+ },
+ {
+  "lv": 24,
+  "game": "monopoleis",
+  "k": "riton_de_los_boxeadores",
+  "es": "Ritón de los boxeadores",
+  "en": "Boxer Rhyton"
+ },
+ {
+  "lv": 25,
+  "game": "kleos",
+  "k": "anolimpiada",
+  "es": "Anolimpiada",
+  "en": "Anolympiad"
+ },
+ {
+  "lv": 26,
+  "game": "cuadrigas",
+  "k": "latigo_con_mango_de_marfil",
+  "es": "Látigo con mango de marfil",
+  "en": "Whip with an ivory handle"
+ },
+ {
+  "lv": 27,
+  "game": "gladiatura",
+  "k": "emblema_del_rayo",
+  "es": "Emblema del rayo",
+  "en": "Thunderbolt emblem"
+ },
+ {
+  "lv": 28,
+  "game": "agon",
+  "k": "repetir_una_tirada_por_partida",
+  "es": "Repetir una tirada por partida",
+  "en": "Reroll one roll per game"
+ },
+ {
+  "lv": 29,
+  "game": "cuadrigas",
+  "k": "ruedas_doradas",
+  "es": "Ruedas doradas",
+  "en": "Golden wheels"
+ },
+ {
+  "lv": 30,
+  "game": "gladiatura",
+  "k": "elegir_rival",
+  "es": "Elegir rival",
+  "en": "Choose your opponent"
+ },
+ {
+  "lv": 31,
+  "game": "monopoleis",
+  "k": "color_topacio",
+  "es": "Color topacio",
+  "en": "Topaz colour"
+ },
+ {
+  "lv": 32,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_sicili",
+  "es": "Caballos de la yeguada de Sicilia",
+  "en": "Horses from the Sicilian stud"
+ },
+ {
+  "lv": 33,
+  "game": "agon",
+  "k": "dados_de_marfil",
+  "es": "Dados de marfil",
+  "en": "Ivory dice"
+ },
+ {
+  "lv": 34,
+  "game": "senet",
+  "k": "bastones_de_oro",
+  "es": "Bastones de oro",
+  "en": "Golden sticks"
+ },
+ {
+  "lv": 35,
+  "game": "gladiatura",
+  "k": "emblema_de_creciente_y_estrellas",
+  "es": "Emblema de creciente y estrellas",
+  "en": "Crescent and stars emblem"
+ },
+ {
+  "lv": 36,
+  "game": "monopoleis",
+  "k": "leon_del_coliseo",
+  "es": "León del Coliseo",
+  "en": "Lion of the Colosseum"
+ },
+ {
+  "lv": 37,
+  "game": "cuadrigas",
+  "k": "casco_de_cuero_repujado_del_auri",
+  "es": "Casco de cuero repujado del auriga",
+  "en": "Charioteer's embossed leather helmet"
+ },
+ {
+  "lv": 38,
+  "game": "agon",
+  "k": "tropas_con_armadura_dorada",
+  "es": "Tropas con armadura dorada",
+  "en": "Troops in golden armour"
+ },
+ {
+  "lv": 39,
+  "game": "gladiatura",
+  "k": "escudo_pintado",
+  "es": "Escudo pintado",
+  "en": "Painted shield"
+ },
+ {
+  "lv": 40,
+  "game": "pentatlon",
+  "k": "retrato_del_atleta_con_corona_de",
+  "es": "Retrato del atleta con corona de olivo",
+  "en": "Portrait of the athlete with an olive crown"
+ },
+ {
+  "lv": 41,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_tesali",
+  "es": "Caballos de la yeguada de Tesalia",
+  "en": "Horses from the Thessalian stud"
+ },
+ {
+  "lv": 42,
+  "game": "monopoleis",
+  "k": "tridente_del_reciario",
+  "es": "Tridente del reciario",
+  "en": "Retiarius trident"
+ },
+ {
+  "lv": 43,
+  "game": "agon",
+  "k": "una_tropa_de_mas_al_empezar",
+  "es": "Una tropa de más al empezar",
+  "en": "One extra troop at the start"
+ },
+ {
+  "lv": 44,
+  "game": "gladiatura",
+  "k": "yelmo_de_gala_dorado",
+  "es": "Yelmo de gala dorado",
+  "en": "Golden parade helmet"
+ },
+ {
+  "lv": 45,
+  "game": "cnoso",
+  "k": "fiesta_del_toro_al_atardecer",
+  "es": "Fiesta del toro al atardecer",
+  "en": "Bull festival at sunset"
+ },
+ {
+  "lv": 46,
+  "game": "cuadrigas",
+  "k": "carro_de_bronce_repujado",
+  "es": "Carro de bronce repujado",
+  "en": "Embossed bronze chariot"
+ },
+ {
+  "lv": 47,
+  "game": "agon",
+  "k": "dados_de_cristal_de_roca",
+  "es": "Dados de cristal de roca",
+  "en": "Rock crystal dice"
+ },
+ {
+  "lv": 48,
+  "game": "gladiatura",
+  "k": "grebas_decoradas",
+  "es": "Grebas decoradas",
+  "en": "Decorated greaves"
+ },
+ {
+  "lv": 49,
+  "game": "monopoleis",
+  "k": "casco_de_secutor",
+  "es": "Casco de secutor",
+  "en": "Secutor helmet"
+ },
+ {
+  "lv": 50,
+  "game": "cuadrigas",
+  "k": "caballo_legendario_hirpino",
+  "es": "Caballo legendario Hirpino",
+  "en": "Legendary horse Hirpinus"
+ },
+ {
+  "lv": 51,
+  "game": "gladiatura",
+  "k": "munus_de_exhibicion_tres_combate",
+  "es": "Munus de exhibición, tres combates seguidos",
+  "en": "Exhibition munus, three fights in a row"
+ },
+ {
+  "lv": 52,
+  "game": "agon",
+  "k": "ver_la_siguiente_carta_de_mision",
+  "es": "Ver la siguiente carta de misión",
+  "en": "See the next mission card"
+ },
+ {
+  "lv": 53,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_hispan",
+  "es": "Caballos de la yeguada de Hispania",
+  "en": "Horses from the Hispanic stud"
+ },
+ {
+  "lv": 54,
+  "game": "monopoleis",
+  "k": "dados_de_oro",
+  "es": "Dados de oro",
+  "en": "Golden dice"
+ },
+ {
+  "lv": 55,
+  "game": "senet",
+  "k": "fichas_holograficas",
+  "es": "Fichas holográficas",
+  "en": "Holographic pieces"
+ },
+ {
+  "lv": 56,
+  "game": "gladiatura",
+  "k": "emblema_de_la_palma",
+  "es": "Emblema de la palma",
+  "en": "Palm emblem"
+ },
+ {
+  "lv": 57,
+  "game": "agon",
+  "k": "cartas_con_marco_dorado",
+  "es": "Cartas con marco dorado",
+  "en": "Gold-framed cards"
+ },
+ {
+  "lv": 58,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_pom",
+  "es": "Correr contra el fantasma de Pompeyo Musclosus",
+  "en": "Race against the ghost of Pompeius Musclosus"
+ },
+ {
+  "lv": 59,
+  "game": "monopoleis",
+  "k": "mesa_de_marmol_veteado",
+  "es": "Mesa de mármol veteado",
+  "en": "Veined marble table"
+ },
+ {
+  "lv": 60,
+  "game": "gladiatura",
+  "k": "cartel_del_munus_con_tu_nombre",
+  "es": "Cartel del munus con tu nombre",
+  "en": "Munus poster with your name"
+ },
+ {
+  "lv": 61,
+  "game": "agon",
+  "k": "fortificar_un_yacimiento_durante",
+  "es": "Fortificar un yacimiento durante un turno",
+  "en": "Fortify a site for one turn"
+ },
+ {
+  "lv": 62,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_capado",
+  "es": "Caballos de la yeguada de Capadocia",
+  "en": "Horses from the Cappadocian stud"
+ },
+ {
+  "lv": 63,
+  "game": "gladiatura",
+  "k": "manica_dorada",
+  "es": "Manica dorada",
+  "en": "Golden manica"
+ },
+ {
+  "lv": 64,
+  "game": "monopoleis",
+  "k": "cambiar_una_pregunta_por_partida",
+  "es": "Cambiar una pregunta por partida",
+  "en": "Swap one question per game"
+ },
+ {
+  "lv": 65,
+  "game": "cuadrigas",
+  "k": "carro_de_plata",
+  "es": "Carro de plata",
+  "en": "Silver chariot"
+ },
+ {
+  "lv": 66,
+  "game": "agon",
+  "k": "dados_de_bronce",
+  "es": "Dados de bronce",
+  "en": "Bronze dice"
+ },
+ {
+  "lv": 67,
+  "game": "gladiatura",
+  "k": "combate_de_noche_con_antorchas",
+  "es": "Combate de noche con antorchas",
+  "en": "Night fight by torchlight"
+ },
+ {
+  "lv": 68,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_del_norte",
+  "es": "Caballos de la yeguada del norte de África",
+  "en": "Horses from the North African stud"
+ },
+ {
+  "lv": 69,
+  "game": "agon",
+  "k": "segunda_repeticion_de_tirada_por",
+  "es": "Segunda repetición de tirada por partida",
+  "en": "Second reroll per game"
+ },
+ {
+  "lv": 70,
+  "game": "monopoleis",
+  "k": "villas_de_marmol",
+  "es": "Villas de mármol",
+  "en": "Marble villas"
+ },
+ {
+  "lv": 71,
+  "game": "cuadrigas",
+  "k": "monumento_del_auriga_en_la_cuadr",
+  "es": "Monumento del auriga en la cuadra",
+  "en": "Charioteer's monument in the stable"
+ },
+ {
+  "lv": 72,
+  "game": "gladiatura",
+  "k": "armadura_de_gala_completa",
+  "es": "Armadura de gala completa",
+  "en": "Full parade armour"
+ },
+ {
+  "lv": 73,
+  "game": "agon",
+  "k": "dados_de_plata",
+  "es": "Dados de plata",
+  "en": "Silver dice"
+ },
+ {
+  "lv": 74,
+  "game": "monopoleis",
+  "k": "partida_de_noche_con_lucernas",
+  "es": "Partida de noche con lucernas",
+  "en": "Night game by oil lamps"
+ },
+ {
+  "lv": 75,
+  "game": "cuadrigas",
+  "k": "caballo_legendario_aquilon",
+  "es": "Caballo legendario Aquilón",
+  "en": "Legendary horse Aquilo"
+ },
+ {
+  "lv": 76,
+  "game": "senet",
+  "k": "tablero_holografico",
+  "es": "Tablero holográfico",
+  "en": "Holographic board"
+ },
+ {
+  "lv": 77,
+  "game": "gladiatura",
+  "k": "corona_de_la_victoria_en_el_retr",
+  "es": "Corona de la victoria en el retrato",
+  "en": "Victory crown on the portrait"
+ },
+ {
+  "lv": 78,
+  "game": "agon",
+  "k": "carta_de_mision_adicional",
+  "es": "Carta de misión adicional",
+  "en": "Extra mission card"
+ },
+ {
+  "lv": 79,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_pompeyo_musc",
+  "es": "Carro legendario de Pompeyo Musclosus",
+  "en": "Legendary chariot of Pompeius Musclosus"
+ },
+ {
+  "lv": 80,
+  "game": "gladiatura",
+  "k": "emblema_de_flamma",
+  "es": "Emblema de Flamma",
+  "en": "Flamma emblem"
+ },
+ {
+  "lv": 81,
+  "game": "monopoleis",
+  "k": "palacios_dorados",
+  "es": "Palacios dorados",
+  "en": "Golden palaces"
+ },
+ {
+  "lv": 82,
+  "game": "agon",
+  "k": "dados_de_oro",
+  "es": "Dados de oro",
+  "en": "Golden dice"
+ },
+ {
+  "lv": 83,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_guta_calpurn",
+  "es": "Carro legendario de Guta Calpurniano",
+  "en": "Legendary chariot of Gutta Calpurnianus"
+ },
+ {
+  "lv": 84,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_bronce",
+  "es": "Gladiador legendario de bronce",
+  "en": "Legendary bronze gladiator"
+ },
+ {
+  "lv": 85,
+  "game": "monopoleis",
+  "k": "empezar_con_una_carta_de_curacio",
+  "es": "Empezar con una carta de curación",
+  "en": "Start with a healing card"
+ },
+ {
+  "lv": 86,
+  "game": "agon",
+  "k": "refuerzo_doble_en_el_primer_turn",
+  "es": "Refuerzo doble en el primer turno",
+  "en": "Double reinforcements on the first turn"
+ },
+ {
+  "lv": 87,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_esc",
+  "es": "Correr contra el fantasma de Escorpo",
+  "en": "Race against the ghost of Scorpus"
+ },
+ {
+  "lv": 88,
+  "game": "gladiatura",
+  "k": "yelmo_legendario_de_flamma",
+  "es": "Yelmo legendario de Flamma",
+  "en": "Legendary helmet of Flamma"
+ },
+ {
+  "lv": 89,
+  "game": "agon",
+  "k": "dados_legendarios_de_lapislazuli",
+  "es": "Dados legendarios de lapislázuli",
+  "en": "Legendary lapis lazuli dice"
+ },
+ {
+  "lv": 90,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_crescens",
+  "es": "Carro legendario de Crescens",
+  "en": "Legendary chariot of Crescens"
+ },
+ {
+  "lv": 91,
+  "game": "monopoleis",
+  "k": "tablero_de_oro_y_lapislazuli",
+  "es": "Tablero de oro y lapislázuli",
+  "en": "Gold and lapis lazuli board"
+ },
+ {
+  "lv": 92,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_plata",
+  "es": "Gladiador legendario de plata",
+  "en": "Legendary silver gladiator"
+ },
+ {
+  "lv": 93,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_escorpo",
+  "es": "Carro legendario de Escorpo",
+  "en": "Legendary chariot of Scorpus"
+ },
+ {
+  "lv": 94,
+  "game": "agon",
+  "k": "estandarte_legendario",
+  "es": "Estandarte legendario",
+  "en": "Legendary standard"
+ },
+ {
+  "lv": 95,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_oro",
+  "es": "Gladiador legendario de oro",
+  "en": "Legendary golden gladiator"
+ },
+ {
+  "lv": 96,
+  "game": "monopoleis",
+  "k": "ficha_legendaria_holografica",
+  "es": "Ficha legendaria holográfica",
+  "en": "Legendary holographic piece"
+ },
+ {
+  "lv": 97,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_dio",
+  "es": "Correr contra el fantasma de Diocles",
+  "en": "Race against the ghost of Diocles"
+ },
+ {
+  "lv": 98,
+  "game": "agon",
+  "k": "dados_legendarios_holograficos",
+  "es": "Dados legendarios holográficos",
+  "en": "Legendary holographic dice"
+ },
+ {
+  "lv": 99,
+  "game": "gladiatura",
+  "k": "rudis_de_la_libertad",
+  "es": "Rudis de la libertad",
+  "en": "Rudis of freedom"
+ },
+ {
+  "lv": 100,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_diocles",
+  "es": "Carro legendario de Diocles",
+  "en": "Legendary chariot of Diocles"
+ }
+] se sustituye por el contenido de recompensas.json.
+   Uso: HAPP_RW.level() -> {lv,xp,next} o null fuera de la app;
+        HAPP_RW.list('cuadrigas') -> recompensas del juego;  HAPP_RW.has('cuadrigas','ruedas_doradas')
+        HAPP_RW.nuevas('cuadrigas') -> recompensas ganadas desde la última vez (y las marca vistas). */
+var HAPP_RW=(function(){
+  var ALL=[
+ {
+  "lv": 2,
+  "game": "cuadrigas",
+  "k": "poner_nombre_a_los_caballos",
+  "es": "Poner nombre a los caballos",
+  "en": "Name your horses"
+ },
+ {
+  "lv": 3,
+  "game": "kleos",
+  "k": "calipatira",
+  "es": "Calipátira",
+  "en": "Kallipateira"
+ },
+ {
+  "lv": 4,
+  "game": "gladiatura",
+  "k": "apodo_de_arena",
+  "es": "Apodo de arena",
+  "en": "Arena nickname"
+ },
+ {
+  "lv": 5,
+  "game": "kleos",
+  "k": "ramses_ii",
+  "es": "Ramsés II",
+  "en": "Ramesses II"
+ },
+ {
+  "lv": 6,
+  "game": "monopoleis",
+  "k": "casco_espartano",
+  "es": "Casco espartano",
+  "en": "Spartan helmet"
+ },
+ {
+  "lv": 7,
+  "game": "senet",
+  "k": "fichas_de_lapislazuli",
+  "es": "Fichas de lapislázuli",
+  "en": "Lapis lazuli pieces"
+ },
+ {
+  "lv": 8,
+  "game": "kleos",
+  "k": "pilar_djed",
+  "es": "Pilar Djed",
+  "en": "Djed pillar"
+ },
+ {
+  "lv": 9,
+  "game": "agon",
+  "k": "estandarte_con_emblema_propio",
+  "es": "Estandarte con emblema propio",
+  "en": "Standard with your own emblem"
+ },
+ {
+  "lv": 10,
+  "game": "kleos",
+  "k": "tutmosis_iii",
+  "es": "Tutmosis III",
+  "en": "Thutmose III"
+ },
+ {
+  "lv": 11,
+  "game": "pentatlon",
+  "k": "pruebas_sueltas_sin_pasar_por_la",
+  "es": "Pruebas sueltas sin pasar por la carrera",
+  "en": "Pentathlon: single events without the career"
+ },
+ {
+  "lv": 12,
+  "game": "kleos",
+  "k": "aquiles",
+  "es": "Aquiles",
+  "en": "Achilles"
+ },
+ {
+  "lv": 13,
+  "game": "cnoso",
+  "k": "repetir_cualquier_sala_del_palac",
+  "es": "Repetir cualquier sala del palacio",
+  "en": "Replay any room of the palace"
+ },
+ {
+  "lv": 14,
+  "game": "cuadrigas",
+  "k": "librea_del_auriga_con_bordado_de",
+  "es": "Librea del auriga con bordado de oro",
+  "en": "Charioteer's livery with gold embroidery"
+ },
+ {
+  "lv": 15,
+  "game": "kleos",
+  "k": "dedos",
+  "es": "«Dedos»",
+  "en": "\"Fingers\""
+ },
+ {
+  "lv": 16,
+  "game": "gladiatura",
+  "k": "emblema_de_laurel",
+  "es": "Emblema de laurel",
+  "en": "Laurel emblem"
+ },
+ {
+  "lv": 17,
+  "game": "monopoleis",
+  "k": "escudo_de_hoplita",
+  "es": "Escudo de hoplita",
+  "en": "Hoplite shield"
+ },
+ {
+  "lv": 18,
+  "game": "kleos",
+  "k": "abbas_i",
+  "es": "Abbás I",
+  "en": "Abbas I"
+ },
+ {
+  "lv": 19,
+  "game": "agon",
+  "k": "dados_de_hueso",
+  "es": "Dados de hueso",
+  "en": "Bone dice"
+ },
+ {
+  "lv": 20,
+  "game": "cuadrigas",
+  "k": "elegir_circuito_en_la_carrera_su",
+  "es": "Elegir circuito en la carrera suelta",
+  "en": "Choose the circuit in a single race"
+ },
+ {
+  "lv": 21,
+  "game": "kleos",
+  "k": "heracles_y_pelope",
+  "es": "Heracles y Pélope",
+  "en": "Heracles and Pelops"
+ },
+ {
+  "lv": 22,
+  "game": "gladiatura",
+  "k": "elegir_anfiteatro",
+  "es": "Elegir anfiteatro",
+  "en": "Choose the amphitheatre"
+ },
+ {
+  "lv": 23,
+  "game": "agon",
+  "k": "mapa_de_pergamino",
+  "es": "Mapa de pergamino",
+  "en": "Parchment map"
+ },
+ {
+  "lv": 24,
+  "game": "monopoleis",
+  "k": "riton_de_los_boxeadores",
+  "es": "Ritón de los boxeadores",
+  "en": "Boxer Rhyton"
+ },
+ {
+  "lv": 25,
+  "game": "kleos",
+  "k": "anolimpiada",
+  "es": "Anolimpiada",
+  "en": "Anolympiad"
+ },
+ {
+  "lv": 26,
+  "game": "cuadrigas",
+  "k": "latigo_con_mango_de_marfil",
+  "es": "Látigo con mango de marfil",
+  "en": "Whip with an ivory handle"
+ },
+ {
+  "lv": 27,
+  "game": "gladiatura",
+  "k": "emblema_del_rayo",
+  "es": "Emblema del rayo",
+  "en": "Thunderbolt emblem"
+ },
+ {
+  "lv": 28,
+  "game": "agon",
+  "k": "repetir_una_tirada_por_partida",
+  "es": "Repetir una tirada por partida",
+  "en": "Reroll one roll per game"
+ },
+ {
+  "lv": 29,
+  "game": "cuadrigas",
+  "k": "ruedas_doradas",
+  "es": "Ruedas doradas",
+  "en": "Golden wheels"
+ },
+ {
+  "lv": 30,
+  "game": "gladiatura",
+  "k": "elegir_rival",
+  "es": "Elegir rival",
+  "en": "Choose your opponent"
+ },
+ {
+  "lv": 31,
+  "game": "monopoleis",
+  "k": "color_topacio",
+  "es": "Color topacio",
+  "en": "Topaz colour"
+ },
+ {
+  "lv": 32,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_sicili",
+  "es": "Caballos de la yeguada de Sicilia",
+  "en": "Horses from the Sicilian stud"
+ },
+ {
+  "lv": 33,
+  "game": "agon",
+  "k": "dados_de_marfil",
+  "es": "Dados de marfil",
+  "en": "Ivory dice"
+ },
+ {
+  "lv": 34,
+  "game": "senet",
+  "k": "bastones_de_oro",
+  "es": "Bastones de oro",
+  "en": "Golden sticks"
+ },
+ {
+  "lv": 35,
+  "game": "gladiatura",
+  "k": "emblema_de_creciente_y_estrellas",
+  "es": "Emblema de creciente y estrellas",
+  "en": "Crescent and stars emblem"
+ },
+ {
+  "lv": 36,
+  "game": "monopoleis",
+  "k": "leon_del_coliseo",
+  "es": "León del Coliseo",
+  "en": "Lion of the Colosseum"
+ },
+ {
+  "lv": 37,
+  "game": "cuadrigas",
+  "k": "casco_de_cuero_repujado_del_auri",
+  "es": "Casco de cuero repujado del auriga",
+  "en": "Charioteer's embossed leather helmet"
+ },
+ {
+  "lv": 38,
+  "game": "agon",
+  "k": "tropas_con_armadura_dorada",
+  "es": "Tropas con armadura dorada",
+  "en": "Troops in golden armour"
+ },
+ {
+  "lv": 39,
+  "game": "gladiatura",
+  "k": "escudo_pintado",
+  "es": "Escudo pintado",
+  "en": "Painted shield"
+ },
+ {
+  "lv": 40,
+  "game": "pentatlon",
+  "k": "retrato_del_atleta_con_corona_de",
+  "es": "Retrato del atleta con corona de olivo",
+  "en": "Portrait of the athlete with an olive crown"
+ },
+ {
+  "lv": 41,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_tesali",
+  "es": "Caballos de la yeguada de Tesalia",
+  "en": "Horses from the Thessalian stud"
+ },
+ {
+  "lv": 42,
+  "game": "monopoleis",
+  "k": "tridente_del_reciario",
+  "es": "Tridente del reciario",
+  "en": "Retiarius trident"
+ },
+ {
+  "lv": 43,
+  "game": "agon",
+  "k": "una_tropa_de_mas_al_empezar",
+  "es": "Una tropa de más al empezar",
+  "en": "One extra troop at the start"
+ },
+ {
+  "lv": 44,
+  "game": "gladiatura",
+  "k": "yelmo_de_gala_dorado",
+  "es": "Yelmo de gala dorado",
+  "en": "Golden parade helmet"
+ },
+ {
+  "lv": 45,
+  "game": "cnoso",
+  "k": "fiesta_del_toro_al_atardecer",
+  "es": "Fiesta del toro al atardecer",
+  "en": "Bull festival at sunset"
+ },
+ {
+  "lv": 46,
+  "game": "cuadrigas",
+  "k": "carro_de_bronce_repujado",
+  "es": "Carro de bronce repujado",
+  "en": "Embossed bronze chariot"
+ },
+ {
+  "lv": 47,
+  "game": "agon",
+  "k": "dados_de_cristal_de_roca",
+  "es": "Dados de cristal de roca",
+  "en": "Rock crystal dice"
+ },
+ {
+  "lv": 48,
+  "game": "gladiatura",
+  "k": "grebas_decoradas",
+  "es": "Grebas decoradas",
+  "en": "Decorated greaves"
+ },
+ {
+  "lv": 49,
+  "game": "monopoleis",
+  "k": "casco_de_secutor",
+  "es": "Casco de secutor",
+  "en": "Secutor helmet"
+ },
+ {
+  "lv": 50,
+  "game": "cuadrigas",
+  "k": "caballo_legendario_hirpino",
+  "es": "Caballo legendario Hirpino",
+  "en": "Legendary horse Hirpinus"
+ },
+ {
+  "lv": 51,
+  "game": "gladiatura",
+  "k": "munus_de_exhibicion_tres_combate",
+  "es": "Munus de exhibición, tres combates seguidos",
+  "en": "Exhibition munus, three fights in a row"
+ },
+ {
+  "lv": 52,
+  "game": "agon",
+  "k": "ver_la_siguiente_carta_de_mision",
+  "es": "Ver la siguiente carta de misión",
+  "en": "See the next mission card"
+ },
+ {
+  "lv": 53,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_hispan",
+  "es": "Caballos de la yeguada de Hispania",
+  "en": "Horses from the Hispanic stud"
+ },
+ {
+  "lv": 54,
+  "game": "monopoleis",
+  "k": "dados_de_oro",
+  "es": "Dados de oro",
+  "en": "Golden dice"
+ },
+ {
+  "lv": 55,
+  "game": "senet",
+  "k": "fichas_holograficas",
+  "es": "Fichas holográficas",
+  "en": "Holographic pieces"
+ },
+ {
+  "lv": 56,
+  "game": "gladiatura",
+  "k": "emblema_de_la_palma",
+  "es": "Emblema de la palma",
+  "en": "Palm emblem"
+ },
+ {
+  "lv": 57,
+  "game": "agon",
+  "k": "cartas_con_marco_dorado",
+  "es": "Cartas con marco dorado",
+  "en": "Gold-framed cards"
+ },
+ {
+  "lv": 58,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_pom",
+  "es": "Correr contra el fantasma de Pompeyo Musclosus",
+  "en": "Race against the ghost of Pompeius Musclosus"
+ },
+ {
+  "lv": 59,
+  "game": "monopoleis",
+  "k": "mesa_de_marmol_veteado",
+  "es": "Mesa de mármol veteado",
+  "en": "Veined marble table"
+ },
+ {
+  "lv": 60,
+  "game": "gladiatura",
+  "k": "cartel_del_munus_con_tu_nombre",
+  "es": "Cartel del munus con tu nombre",
+  "en": "Munus poster with your name"
+ },
+ {
+  "lv": 61,
+  "game": "agon",
+  "k": "fortificar_un_yacimiento_durante",
+  "es": "Fortificar un yacimiento durante un turno",
+  "en": "Fortify a site for one turn"
+ },
+ {
+  "lv": 62,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_capado",
+  "es": "Caballos de la yeguada de Capadocia",
+  "en": "Horses from the Cappadocian stud"
+ },
+ {
+  "lv": 63,
+  "game": "gladiatura",
+  "k": "manica_dorada",
+  "es": "Manica dorada",
+  "en": "Golden manica"
+ },
+ {
+  "lv": 64,
+  "game": "monopoleis",
+  "k": "cambiar_una_pregunta_por_partida",
+  "es": "Cambiar una pregunta por partida",
+  "en": "Swap one question per game"
+ },
+ {
+  "lv": 65,
+  "game": "cuadrigas",
+  "k": "carro_de_plata",
+  "es": "Carro de plata",
+  "en": "Silver chariot"
+ },
+ {
+  "lv": 66,
+  "game": "agon",
+  "k": "dados_de_bronce",
+  "es": "Dados de bronce",
+  "en": "Bronze dice"
+ },
+ {
+  "lv": 67,
+  "game": "gladiatura",
+  "k": "combate_de_noche_con_antorchas",
+  "es": "Combate de noche con antorchas",
+  "en": "Night fight by torchlight"
+ },
+ {
+  "lv": 68,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_del_norte",
+  "es": "Caballos de la yeguada del norte de África",
+  "en": "Horses from the North African stud"
+ },
+ {
+  "lv": 69,
+  "game": "agon",
+  "k": "segunda_repeticion_de_tirada_por",
+  "es": "Segunda repetición de tirada por partida",
+  "en": "Second reroll per game"
+ },
+ {
+  "lv": 70,
+  "game": "monopoleis",
+  "k": "villas_de_marmol",
+  "es": "Villas de mármol",
+  "en": "Marble villas"
+ },
+ {
+  "lv": 71,
+  "game": "cuadrigas",
+  "k": "monumento_del_auriga_en_la_cuadr",
+  "es": "Monumento del auriga en la cuadra",
+  "en": "Charioteer's monument in the stable"
+ },
+ {
+  "lv": 72,
+  "game": "gladiatura",
+  "k": "armadura_de_gala_completa",
+  "es": "Armadura de gala completa",
+  "en": "Full parade armour"
+ },
+ {
+  "lv": 73,
+  "game": "agon",
+  "k": "dados_de_plata",
+  "es": "Dados de plata",
+  "en": "Silver dice"
+ },
+ {
+  "lv": 74,
+  "game": "monopoleis",
+  "k": "partida_de_noche_con_lucernas",
+  "es": "Partida de noche con lucernas",
+  "en": "Night game by oil lamps"
+ },
+ {
+  "lv": 75,
+  "game": "cuadrigas",
+  "k": "caballo_legendario_aquilon",
+  "es": "Caballo legendario Aquilón",
+  "en": "Legendary horse Aquilo"
+ },
+ {
+  "lv": 76,
+  "game": "senet",
+  "k": "tablero_holografico",
+  "es": "Tablero holográfico",
+  "en": "Holographic board"
+ },
+ {
+  "lv": 77,
+  "game": "gladiatura",
+  "k": "corona_de_la_victoria_en_el_retr",
+  "es": "Corona de la victoria en el retrato",
+  "en": "Victory crown on the portrait"
+ },
+ {
+  "lv": 78,
+  "game": "agon",
+  "k": "carta_de_mision_adicional",
+  "es": "Carta de misión adicional",
+  "en": "Extra mission card"
+ },
+ {
+  "lv": 79,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_pompeyo_musc",
+  "es": "Carro legendario de Pompeyo Musclosus",
+  "en": "Legendary chariot of Pompeius Musclosus"
+ },
+ {
+  "lv": 80,
+  "game": "gladiatura",
+  "k": "emblema_de_flamma",
+  "es": "Emblema de Flamma",
+  "en": "Flamma emblem"
+ },
+ {
+  "lv": 81,
+  "game": "monopoleis",
+  "k": "palacios_dorados",
+  "es": "Palacios dorados",
+  "en": "Golden palaces"
+ },
+ {
+  "lv": 82,
+  "game": "agon",
+  "k": "dados_de_oro",
+  "es": "Dados de oro",
+  "en": "Golden dice"
+ },
+ {
+  "lv": 83,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_guta_calpurn",
+  "es": "Carro legendario de Guta Calpurniano",
+  "en": "Legendary chariot of Gutta Calpurnianus"
+ },
+ {
+  "lv": 84,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_bronce",
+  "es": "Gladiador legendario de bronce",
+  "en": "Legendary bronze gladiator"
+ },
+ {
+  "lv": 85,
+  "game": "monopoleis",
+  "k": "empezar_con_una_carta_de_curacio",
+  "es": "Empezar con una carta de curación",
+  "en": "Start with a healing card"
+ },
+ {
+  "lv": 86,
+  "game": "agon",
+  "k": "refuerzo_doble_en_el_primer_turn",
+  "es": "Refuerzo doble en el primer turno",
+  "en": "Double reinforcements on the first turn"
+ },
+ {
+  "lv": 87,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_esc",
+  "es": "Correr contra el fantasma de Escorpo",
+  "en": "Race against the ghost of Scorpus"
+ },
+ {
+  "lv": 88,
+  "game": "gladiatura",
+  "k": "yelmo_legendario_de_flamma",
+  "es": "Yelmo legendario de Flamma",
+  "en": "Legendary helmet of Flamma"
+ },
+ {
+  "lv": 89,
+  "game": "agon",
+  "k": "dados_legendarios_de_lapislazuli",
+  "es": "Dados legendarios de lapislázuli",
+  "en": "Legendary lapis lazuli dice"
+ },
+ {
+  "lv": 90,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_crescens",
+  "es": "Carro legendario de Crescens",
+  "en": "Legendary chariot of Crescens"
+ },
+ {
+  "lv": 91,
+  "game": "monopoleis",
+  "k": "tablero_de_oro_y_lapislazuli",
+  "es": "Tablero de oro y lapislázuli",
+  "en": "Gold and lapis lazuli board"
+ },
+ {
+  "lv": 92,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_plata",
+  "es": "Gladiador legendario de plata",
+  "en": "Legendary silver gladiator"
+ },
+ {
+  "lv": 93,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_escorpo",
+  "es": "Carro legendario de Escorpo",
+  "en": "Legendary chariot of Scorpus"
+ },
+ {
+  "lv": 94,
+  "game": "agon",
+  "k": "estandarte_legendario",
+  "es": "Estandarte legendario",
+  "en": "Legendary standard"
+ },
+ {
+  "lv": 95,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_oro",
+  "es": "Gladiador legendario de oro",
+  "en": "Legendary golden gladiator"
+ },
+ {
+  "lv": 96,
+  "game": "monopoleis",
+  "k": "ficha_legendaria_holografica",
+  "es": "Ficha legendaria holográfica",
+  "en": "Legendary holographic piece"
+ },
+ {
+  "lv": 97,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_dio",
+  "es": "Correr contra el fantasma de Diocles",
+  "en": "Race against the ghost of Diocles"
+ },
+ {
+  "lv": 98,
+  "game": "agon",
+  "k": "dados_legendarios_holograficos",
+  "es": "Dados legendarios holográficos",
+  "en": "Legendary holographic dice"
+ },
+ {
+  "lv": 99,
+  "game": "gladiatura",
+  "k": "rudis_de_la_libertad",
+  "es": "Rudis de la libertad",
+  "en": "Rudis of freedom"
+ },
+ {
+  "lv": 100,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_diocles",
+  "es": "Carro legendario de Diocles",
+  "en": "Legendary chariot of Diocles"
+ }
+];
+  var LEVEL_XP=(function(){var a=[0,100,250,450,700,1000,1400,1900,2500,3300];for(var i=1;i<=90;i++)a.push(a[a.length-1]+Math.round((400+(i-1)*240/89)/10)*10);return a})(); // misma tabla que index.html
+  function inApp(){ try{ return /\/juegos\//.test(location.pathname) && !!localStorage.getItem('historiapp.progress'); }catch(e){ return false; } }
+  function level(){ try{ if(!inApp()) return null; var p=JSON.parse(localStorage.getItem('historiapp.progress')); var xp=(p&&p.xp)||0, l=0; for(var i=0;i<LEVEL_XP.length;i++) if(xp>=LEVEL_XP[i]) l=i; return {lv:l+1,xp:xp,next:LEVEL_XP[l+1]||null,nextLv:l+2}; }catch(e){ return null; } }
+  function list(g){ return ALL.filter(function(r){return r.game===g;}); }
+  function has(g,k){ var L=level(); var r=ALL.find(function(x){return x.game===g&&x.k===k;}); return !!(L&&r&&L.lv>=r.lv); }
+  function nuevas(g){ var L=level(); if(!L) return []; var key=g+'.rw_vistas', seen=[]; try{ seen=JSON.parse(localStorage.getItem(key))||[]; }catch(e){}
+    var n=list(g).filter(function(r){ return L.lv>=r.lv && seen.indexOf(r.k)<0; }); try{ localStorage.setItem(key,JSON.stringify(seen.concat(n.map(function(r){return r.k;})))); }catch(e){} return n; }
+  function proxima(g){ var L=level(); if(!L) return null; return list(g).find(function(r){return r.lv>L.lv;})||null; }
+  return {ALL:ALL,LEVEL_XP:LEVEL_XP,level:level,list:list,has:has,nuevas:nuevas,proxima:proxima,xpFor:function(lv){return LEVEL_XP[lv-1];}};
+})();
+
 /* =====================================================================
    CUADRIGAS · contenido histórico
    Cada entrada del códice lleva su fuente en APA 7 dentro del texto y una
@@ -492,7 +1923,7 @@ const CODEX={
  diocles:{t:'Diocles',k:'H',g:'Los aurigas',x:'Diocles, un liberto de Lusitania, corrió veinticuatro años, de 122 a 146 d. C., participó en 4.257 carreras, quedó segundo en 2.900 y ganó 1.462, y se retiró a los cuarenta y dos años (Bell, 2020, pp. 18-19). Su inscripción suma 35.863.120 sestercios en premios, casi treinta y seis veces el censo de un senador (Tema 4). Bell (2020, p. 19) lo compara con Tiger Woods y lo tiene quizá por el deportista mejor pagado de la historia, aunque la fortuna de Séneca se calcula en 300 millones (Nelis-Clément, 2002, p. 275).'},
  miliarios:{t:'Los miliarios',k:'H',g:'Los aurigas',x:'Los miliarios, los aurigas que pasaron de mil victorias, formaban un grupo cerrado con Diocles, Guta Calpurniano, Escorpo y Pompeyo Muscloso (Bell, 2020, p. 19). Escorpo murió a los veintisiete años tras más de dos mil victorias (Tema 4), y Marcial se quejaba de que ganara quince bolsas de oro en una hora (Nelis-Clément, 2002, p. 277).'},
  premios:{t:'Premios',k:'H',g:'El dinero',x:'Para las cuadrigas, el primer premio normal (pura) parece haber sido de 20.000 sestercios, y los de seis o siete caballos valían de 30.000 a 50.000 (Bell, 2020, p. 19). Thuillier (1989, p. 48) da grandes premios de 30.000 a 60.000 sestercios a partir de la inscripción de Diocles, y en los juegos seculares de Severo el tercer puesto de cuadrigas cobraba 4.000. En provincias bastaba mucho menos, y en Auzia 135 denarios alcanzaron para seis carreras (Nelis-Clément, 2002, p. 294).'},
- sestercio:{t:'El sestercio',k:'H',g:'El dinero',x:'Los romanos llevaban sus cuentas en sestercios (HS), y cuatro sestercios hacían un denario de plata. La mejor vara de medir es la paga de un legionario, unos 1.400 sestercios al año en el siglo I d. C., mientras que para ser senador hacía falta un patrimonio de un millón (Tema 4). En el juego, cada cifra lleva al lado su equivalencia en años de paga de un legionario.'},
+ sestercio:{t:'El sestercio',k:'H',g:'El dinero',x:'Los romanos llevaban sus cuentas en sestercios (los abreviaban HS; en el juego, sest.), y cuatro sestercios hacían un denario de plata. La mejor vara de medir es la paga de un legionario, unos 1.400 sestercios al año en el siglo I d. C., mientras que para ser senador hacía falta un patrimonio de un millón (Tema 4). En el juego, cada cifra lleva al lado su equivalencia en años de paga de un legionario.'},
  editor:{t:'El editor',k:'H',g:'El dinero',x:'El magistrado que organizaba unos juegos, el editor, recibía dinero público y solía añadir el suyo. La ley de la colonia de Urso, del 44 a. C., obligaba a sus duunviros a dar cuatro días de espectáculos con 2.000 sestercios públicos y otros 2.000 de su bolsillo (Tema 4). A cambio recibía reconocimiento, el intercambio que Paul Veyne llamó evergetismo. El editor pagaba a las facciones, que actuaban como contratistas (Bell, 2020, pp. 9-10).'},
  calendario:{t:'Los ludi circenses',k:'H',g:'Roma',x:'Siete fiestas del calendario religioso del Estado incluían juegos circenses anuales, los Megalenses, los Cereales, los Florales, los Apolinares, los Romanos, los de la Victoria y los Plebeyos (Bell, 2020, p. 5). En el apogeo del Imperio había 175 días de ludi, de los que 64 eran de carreras (Crowther, 1996, p. 445). Un registro de mediados del siglo IV da unas 24 carreras por jornada y unos 66 días de juegos al año, aunque es un dato tardío que no vale para todas las épocas (Bell, 2020, p. 9).'},
  pompa:{t:'Pompa y pulvinar',k:'H',g:'Roma',x:'La procesión circense, la pompa circensis, llevaba las imágenes doradas de los dioses hasta el pulvinar, donde presidían los juegos junto al emperador, de modo que los dioses eran imaginados como espectadores (Bell, 2020, p. 7). Durante el Imperio el pulvinar pasó a ser la tribuna del emperador (Ruiz de Arbulo y Gris, 2021, p. 197).'},
@@ -629,7 +2060,7 @@ const CODEX_EN={
  diocles:{t:'Diocles',x:'Diocles, a freedman from Lusitania, raced for twenty-four years, from AD 122 to 146, took part in 4,257 races, came second in 2,900 and won 1,462, and retired at the age of forty-two (Bell, 2020, pp. 18-19). His inscription adds up to 35,863,120 sesterces in prize money, almost thirty-six times the census qualification of a senator (Tema 4). Bell (2020, p. 19) compares him with Tiger Woods and regards him as perhaps the best-paid athlete in history, although Seneca’s fortune is estimated at 300 million (Nelis-Clément, 2002, p. 275).'},
  miliarios:{t:'The miliarii',x:'The miliarii, the charioteers who passed a thousand victories, formed a closed group with Diocles, Gutta Calpurnianus, Scorpus and Pompeius Musclosus (Bell, 2020, p. 19). Scorpus died at the age of twenty-seven after more than two thousand victories (Tema 4), and Martial complained that he won fifteen bags of gold in one hour (Nelis-Clément, 2002, p. 277).'},
  premios:{t:'Prizes',x:'For quadrigae, the normal first prize (pura) seems to have been 20,000 sesterces, and races for six or seven horses were worth 30,000 to 50,000 (Bell, 2020, p. 19). Thuillier (1989, p. 48) gives major prizes of 30,000 to 60,000 sesterces on the basis of the inscription of Diocles, and at the Secular Games of Severus third place in the quadriga races earned 4,000. In the provinces much less was enough, and at Auzia 135 denarii were sufficient for six races (Nelis-Clément, 2002, p. 294).'},
- sestercio:{t:'The sestertius',x:'The Romans kept their accounts in sesterces (HS), and four sesterces made one silver denarius. The best yardstick is a legionary’s pay, about 1,400 sesterces a year in the 1st century AD, whereas becoming a senator required property worth one million (Tema 4). In the game, each figure is shown next to its equivalent in years of a legionary’s pay.'},
+ sestercio:{t:'The sestertius',x:'The Romans kept their accounts in sesterces (they abbreviated them HS; in the game, sest.), and four sesterces made one silver denarius. The best yardstick is a legionary’s pay, about 1,400 sesterces a year in the 1st century AD, whereas becoming a senator required property worth one million (Tema 4). In the game, each figure is shown next to its equivalent in years of a legionary’s pay.'},
  editor:{t:'The editor',x:'The magistrate who organised a set of games, the editor, received public money and usually added his own. The law of the colony of Urso, of 44 BC, obliged its duumvirs to give four days of shows with 2,000 sesterces of public money and another 2,000 from their own pocket (Tema 4). In return he received recognition, the exchange that Paul Veyne called euergetism. The editor paid the factions, which acted as contractors (Bell, 2020, pp. 9-10).'},
  calendario:{t:'The ludi circenses',x:'Seven festivals of the state religious calendar included annual circus games: the Megalenses, the Cereales, the Florales, the Apollinares, the Romani, the Victoriae and the Plebeii (Bell, 2020, p. 5). At the height of the Empire there were 175 days of ludi, of which 64 were for races (Crowther, 1996, p. 445). A record from the mid-4th century gives about 24 races per day and about 66 days of games a year, although it is a late figure that does not hold for every period (Bell, 2020, p. 9).'},
  pompa:{t:'Pompa and pulvinar',x:'The circus procession, the pompa circensis, carried the gilded images of the gods to the pulvinar, where they presided over the games beside the emperor, so that the gods were imagined as spectators (Bell, 2020, p. 7). Under the Empire the pulvinar became the emperor’s tribune (Ruiz de Arbulo & Gris, 2021, p. 197).'},
@@ -1065,8 +2496,8 @@ function load(k){try{const v=localStorage.getItem(k);return v?JSON.parse(v):null
 const fmt=n=>Math.round(n).toLocaleString(LANG==='en'?'en-GB':'es-ES');
 function hs(n){const y=n/TUNING.legionario;const a=Math.abs(y);
   const ys=a<0.1?L('menos de un mes de paga de legionario','less than a month of a legionary’s pay'):a<1?L(`${Math.round(a*12)} meses de paga de legionario`,`${Math.round(a*12)} months of a legionary’s pay`):L(`${y.toLocaleString('es-ES',{maximumFractionDigits:1})} años de paga de legionario`,`${y.toLocaleString('en-GB',{maximumFractionDigits:1})} years of a legionary’s pay`);
-  return `<span class="hs" title="${ys}">${fmt(n)} HS</span>`}
-const hsTxt=n=>`${fmt(n)} HS`;
+  return `<span class="hs" title="${ys}">${fmt(n)} sest.</span>`}
+const hsTxt=n=>`${fmt(n)} sest.`;
 const timeStr=t=>{t=Math.max(0,t);const m=Math.floor(t/60),s=t-m*60;return `${m}:${s.toFixed(1).padStart(4,'0')}`};
 function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function hashStr(s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return (h>>>0)}
@@ -1631,8 +3062,40 @@ function facPattern(c,F,x0,y0,x1,y1,u,dir){
   else if(F.pat==='puntos'){let row=0;for(let y=y0+u;y<y1+u;y+=u*1.9,row++)for(let x=x0+u*(row%2?1.95:1);x<x1+u;x+=u*1.9){c.beginPath();c.arc(x,y,u*0.55,0,7);c.fill()}}
   else if(F.pat==='rombos'){let row=0;for(let y=y0;y<y1+u*2;y+=u*1.5,row++)for(let x=x0+(row%2?u*1.2:0);x<x1+u*2;x+=u*2.4){c.beginPath();c.moveTo(x,y-u*0.75);c.lineTo(x+u*0.7,y);c.lineTo(x,y+u*0.75);c.lineTo(x-u*0.7,y);c.closePath();c.fill()}}
 }
+
+/* ---------- recompensas de Historiapp: aspecto del carro, la librea y el látigo del jugador (solo cosmético) ---------- */
+let COSM_CUR={sig:''};
+const BODY={
+  bronce:{rim:'#9a6a2e',hi:'#e0b070',stud:'#f0cf8a',n:9,em:null},
+  plata:{rim:'#9aa3ad',hi:'#f2f5f8',stud:'#ffffff',n:9,em:null},
+  pompeyo:{rim:'#7a1f2b',hi:'#e0b070',stud:'#f0cf8a',n:7,em:'palma'},
+  guta:{rim:'#2f5a4a',hi:'#cfe0a8',stud:'#eadfa6',n:8,em:'laurel'},
+  crescens:{rim:'#3b3f7a',hi:'#c9ceF2',stud:'#f3e8b4',n:9,em:'estrella'},
+  escorpo:{rim:'#5a2a6a',hi:'#e4bff2',stud:'#f3dc98',n:10,em:'rayo'},
+  diocles:{rim:'#b8892a',hi:'#fff2b8',stud:'#fffadf',n:12,em:'corona'}
+};
+function bodyDeco(c,k,sty,D){
+  const B=BODY[sty];if(!B)return;
+  c.save();c.lineJoin='round';c.lineCap='round';
+  D(1);c.strokeStyle=B.rim;c.lineWidth=0.16*k;c.stroke();
+  D(0.94);c.strokeStyle=B.hi;c.lineWidth=0.035*k;c.stroke();
+  // remaches: tres por cada lado recto y el resto sobre el frente curvo
+  const pts=[];for(const sy of [-1,1])for(const x of [-0.38,-0.14,0.1])pts.push([x*k,sy*0.84*k]);
+  const arc=Math.max(3,B.n-3);for(let i=0;i<arc;i++){const th=-Math.PI/2+Math.PI*(i+0.5)/arc;pts.push([(0.12+0.86*Math.cos(th))*k,0.84*Math.sin(th)*k])}
+  c.fillStyle=B.stud;for(const p of pts){c.beginPath();c.arc(p[0],p[1],0.05*k,0,7);c.fill()}
+  if(B.em){
+    c.translate(0.86*k,0);const r=0.11*k;c.fillStyle=B.stud;c.strokeStyle=B.stud;c.lineWidth=0.03*k;
+    if(B.em==='palma'){c.beginPath();c.moveTo(-r,0);c.lineTo(r,0);c.stroke();for(const a of [-0.9,-0.45,0.45,0.9]){c.beginPath();c.moveTo(r*0.2,0);c.lineTo(r*0.2+Math.cos(a)*r*0.9,Math.sin(a)*r*1.2);c.stroke()}}
+    else if(B.em==='laurel'){for(const s of [-1,1])for(let i=0;i<4;i++){const a=-1.2+i*0.55;c.beginPath();c.arc(Math.cos(a)*r*0.9,s*Math.sin(Math.abs(a)+0.2)*r*0.9+0,0.028*k,0,7);c.fill()}}
+    else if(B.em==='estrella'){c.beginPath();for(let i=0;i<10;i++){const a=-Math.PI/2+i*Math.PI/5,rr=i%2?r*0.45:r;c.lineTo(Math.cos(a)*rr,Math.sin(a)*rr)}c.closePath();c.fill()}
+    else if(B.em==='rayo'){c.beginPath();c.moveTo(r*0.4,-r);c.lineTo(-r*0.35,0.05*k);c.lineTo(r*0.05,0.05*k);c.lineTo(-r*0.4,r);c.lineTo(r*0.35,-0.05*k);c.lineTo(-r*0.05,-0.05*k);c.closePath();c.fill()}
+    else if(B.em==='corona'){c.beginPath();c.moveTo(-r,r*0.7);c.lineTo(-r,-r*0.3);c.lineTo(-r*0.5,r*0.1);c.lineTo(0,-r*0.8);c.lineTo(r*0.5,r*0.1);c.lineTo(r,-r*0.3);c.lineTo(r,r*0.7);c.closePath();c.fill()}
+  }
+  c.restore();
+}
 /* carro y auriga vistos desde arriba; origen en el eje */
-function drawChariotTop(c,k,fac,whip,helm){
+function drawChariotTop(c,k,fac,whip,helm,o){
+  o=o||{};
   const F=FAC[fac],ink='#1d120a',wood='#7a5530',woodD='#3b2817';
   const isA=fac==='A',edge=isA?F.dark:ink;
   c.lineCap='round';c.lineJoin='round';
@@ -1641,9 +3104,9 @@ function drawChariotTop(c,k,fac,whip,helm){
   // ruedas de radios, algo abatidas para que se lean
   for(const wy of [-1,1]){c.save();c.translate(0,wy*1.13*k);
     c.fillStyle=ink;c.beginPath();c.ellipse(0,0,0.56*k,0.17*k,0,0,7);c.fill();
-    c.fillStyle='#5a3a1e';c.beginPath();c.ellipse(0,0,0.5*k,0.13*k,0,0,7);c.fill();
-    c.fillStyle='#d8c39a';c.beginPath();c.ellipse(0,0,0.42*k,0.085*k,0,0,7);c.fill();
-    c.strokeStyle=woodD;c.lineWidth=0.05*k;for(let i=0;i<8;i++){const a=i/8*Math.PI*2;c.beginPath();c.moveTo(0,0);c.lineTo(Math.cos(a)*0.44*k,Math.sin(a)*0.09*k);c.stroke()}
+    c.fillStyle=o.wheel?'#c9a24a':'#5a3a1e';c.beginPath();c.ellipse(0,0,0.5*k,0.13*k,0,0,7);c.fill();
+    c.fillStyle=o.wheel?'#f0d98a':'#d8c39a';c.beginPath();c.ellipse(0,0,0.42*k,0.085*k,0,0,7);c.fill();
+    c.strokeStyle=o.wheel?'#8a6a22':woodD;c.lineWidth=0.05*k;for(let i=0;i<8;i++){const a=i/8*Math.PI*2;c.beginPath();c.moveTo(0,0);c.lineTo(Math.cos(a)*0.44*k,Math.sin(a)*0.09*k);c.stroke()}
     c.fillStyle=ink;c.beginPath();c.ellipse(0,0,0.1*k,0.06*k,0,0,7);c.fill();c.fillStyle='#c9a24a';c.beginPath();c.ellipse(0,0,0.055*k,0.035*k,0,0,7);c.fill();
     c.restore()}
   // caja en D: suelo de correas trenzadas y baranda con el color y el motivo de la facción
@@ -1651,6 +3114,7 @@ function drawChariotTop(c,k,fac,whip,helm){
   c.fillStyle=edge;c.save();c.translate(0,0);c.beginPath();c.moveTo(-0.56*k,-0.88*k);c.lineTo(0.12*k,-0.88*k);c.bezierCurveTo(0.76*k,-0.88*k,1.05*k,-0.38*k,1.05*k,0);c.bezierCurveTo(1.05*k,0.38*k,0.76*k,0.88*k,0.12*k,0.88*k);c.lineTo(-0.56*k,0.88*k);c.closePath();c.fill();c.restore();
   // baranda patronada
   c.save();D(1);c.clip();facPattern(c,F,-0.6*k,-0.9*k,1.1*k,0.9*k,0.15*k,true);c.restore();
+  if(o.body)bodyDeco(c,k,o.body,D);
   // interior (suelo)
   c.save();c.beginPath();c.moveTo(-0.5*k,-0.6*k);c.lineTo(0.1*k,-0.6*k);c.bezierCurveTo(0.52*k,-0.6*k,0.74*k,-0.26*k,0.74*k,0);c.bezierCurveTo(0.74*k,0.26*k,0.52*k,0.6*k,0.1*k,0.6*k);c.lineTo(-0.5*k,0.6*k);c.closePath();
   c.fillStyle=edge;c.lineWidth=0.06*k;c.strokeStyle=edge;c.stroke();c.fillStyle='#6a4524';c.fill();c.clip();
@@ -1661,12 +3125,12 @@ function drawChariotTop(c,k,fac,whip,helm){
   c.save();c.translate(-0.02*k,0);c.scale(1.14,1.14);
   const skin='#e0ac80',skinD='#a0683e',lea='#5b3518';
   const arm=(pts)=>{c.fillStyle=ink;limbPath(c,pts.map(p=>[p[0]*k,p[1]*k,(p[2]+0.06)*k]));c.fill();c.fillStyle=skin;limbPath(c,pts.map(p=>[p[0]*k,p[1]*k,p[2]*k]));c.fill()};
-  const sleeve=(x,y)=>{c.fillStyle=edge;c.beginPath();c.arc(x*k,y*k,0.12*k,0,7);c.fill();c.fillStyle=F.col;c.beginPath();c.arc(x*k,y*k,0.085*k,0,7);c.fill()};
+  const sleeve=(x,y)=>{c.fillStyle=o.liv?'#e0bb55':edge;c.beginPath();c.arc(x*k,y*k,0.12*k,0,7);c.fill();c.fillStyle=F.col;c.beginPath();c.arc(x*k,y*k,0.085*k,0,7);c.fill()};
   arm([[0.04,-0.34,0.13],[0.3,-0.32,0.11],[0.5,-0.14,0.1]]);
   if(whip){arm([[0.0,0.34,0.13],[-0.2,0.52,0.11],[-0.36,0.6,0.1]]);
-    c.strokeStyle=woodD;c.lineWidth=0.07*k;c.beginPath();c.moveTo(-0.36*k,0.6*k);c.lineTo(-0.6*k,0.74*k);c.stroke();
+    c.strokeStyle=o.ivory?'#f1e7cc':woodD;c.lineWidth=0.07*k;c.beginPath();c.moveTo(-0.36*k,0.6*k);c.lineTo(-0.6*k,0.74*k);c.stroke();
     c.strokeStyle=ink;c.lineWidth=0.04*k;c.beginPath();c.moveTo(-0.6*k,0.74*k);c.quadraticCurveTo(-0.72*k,0.98*k,-0.3*k,1.08*k);c.stroke()}
-  else{arm([[0.04,0.34,0.13],[0.3,0.32,0.11],[0.5,0.14,0.1]]);c.strokeStyle=woodD;c.lineWidth=0.06*k;c.beginPath();c.moveTo(0.48*k,0.18*k);c.lineTo(-0.25*k,0.66*k);c.stroke()}
+  else{arm([[0.04,0.34,0.13],[0.3,0.32,0.11],[0.5,0.14,0.1]]);c.strokeStyle=o.ivory?'#f1e7cc':woodD;c.lineWidth=0.06*k;c.beginPath();c.moveTo(0.48*k,0.18*k);c.lineTo(-0.25*k,0.66*k);c.stroke()}
   c.fillStyle=skinD;for(const s of [-1,1]){c.beginPath();c.arc(0.5*k,s*0.14*k,0.065*k,0,7);c.fill()}
   // torso: túnica con motivo sobre los hombros y corsé de correas en la cintura
   const torso=()=>{c.beginPath();c.ellipse(0,0,0.28*k,0.44*k,0,0,7)};
@@ -1676,19 +3140,22 @@ function drawChariotTop(c,k,fac,whip,helm){
   c.fillStyle='#c9a24a';for(const y of [-0.22,0,0.22]){c.beginPath();c.arc(-0.27*k,y*k,0.035*k,0,7);c.fill()}
   c.restore();
   if(isA){c.strokeStyle=F.dark;c.lineWidth=0.045*k;torso();c.stroke()}
+  if(o.liv){c.strokeStyle='#e0bb55';c.lineWidth=0.05*k;torso();c.stroke();c.beginPath();c.moveTo(0.08*k,-0.4*k);c.lineTo(0.08*k,0.4*k);c.stroke();c.fillStyle='#fff0b0';for(const y of [-0.3,-0.1,0.1,0.3]){c.beginPath();c.arc(0.08*k,y*k,0.025*k,0,7);c.fill()}}
   for(const s of [-1,1])sleeve(0.04,s*0.36);
   // casco acolchado
   const hx=0.12*k;c.fillStyle=edge;c.beginPath();c.arc(hx,0,0.215*k,0,7);c.fill();
+  if(o.helm)helm='#9c6a36';
   c.fillStyle=helm;c.beginPath();c.arc(hx,0,0.165*k,0,7);c.fill();
+  if(o.helm){c.strokeStyle='#e0b878';c.lineWidth=0.022*k;c.beginPath();c.arc(hx,0,0.13*k,0,7);c.stroke();c.fillStyle='#e0b878';for(let i=0;i<8;i++){const a=i*Math.PI/4+0.4;c.beginPath();c.arc(hx+Math.cos(a)*0.145*k,Math.sin(a)*0.145*k,0.014*k,0,7);c.fill()}}
   c.strokeStyle=shade(helm,-0.45);c.lineWidth=0.04*k;c.beginPath();c.moveTo(hx-0.15*k,0);c.lineTo(hx+0.15*k,0);c.stroke();
   c.beginPath();c.arc(hx,0,0.08*k,0,7);c.stroke();
   c.fillStyle=shade(helm,0.5);c.beginPath();c.arc(hx-0.04*k,-0.06*k,0.035*k,0,7);c.fill();
   c.restore();
 }
-function chariotSprite(fac,whip){
-  const key='c'+fac+(whip?1:0);if(SPR.cache[key])return SPR.cache[key];
+function chariotSprite(fac,whip,o){
+  const key='c'+fac+(whip?1:0)+(o?o.sig:'');if(SPR.cache[key])return SPR.cache[key];
   const k=SPR.PPM,cv=newCv(2.2*k,2.8*k),c=cv.getContext('2d',{willReadFrequently:true});c.translate(0.9*k,1.4*k);
-  drawChariotTop(c,k,fac,whip,fac==='A'?'#b9a27a':FAC[fac].light);
+  drawChariotTop(c,k,fac,whip,fac==='A'?'#b9a27a':FAC[fac].light,o);
   return SPR.cache[key]=mosaicize(cv,2,0,0.1,hashStr(key)%999,{edge:fac==='A'?'#3a3226':'#1d120a',edgeK:0.5});
 }
 /* fondo de mosaico para los retratos: campo claro con orla */
@@ -1699,7 +3166,7 @@ function portraitField(c,w,hh,seed){
 function portraitFrame(c,w,hh,col){const b=Math.max(4,Math.round(w/30/4)*4);c.strokeStyle=col||'#6b2a1e';c.lineWidth=b;c.strokeRect(b/2,b/2,w-b,hh-b);c.strokeStyle='#2a1d12';c.lineWidth=b*0.5;c.strokeRect(b*1.25,b*1.25,w-b*2.5,hh-b*2.5)}
 /* retratos para las fichas (de perfil) */
 function horsePortrait(h,w=180,hh=120){
-  const coat=h.coat?h.coat[1]:'#7a4a26',mark=horseMark(h);const key='p'+h.id+coat+w+'x'+hh;
+  const coat=h.coat?h.coat[1]:'#7a4a26',mark=horseMark(h);const key='p'+h.id+coat+w+'x'+hh+(h.legend?'L':'');
   if(SPR.cache[key])return SPR.cache[key];
   const P=coatPal(coat),cv=newCv(w,hh),c=cv.getContext('2d',{willReadFrequently:true});
   portraitField(c,w,hh,(h.id||5)%997+1);
@@ -1752,6 +3219,7 @@ function horsePortrait(h,w=180,hh=120){
   c.beginPath();c.moveTo(148,13);c.lineTo(156,38);c.stroke();c.beginPath();c.moveTo(159,24);c.lineTo(168,30);c.moveTo(152,38);c.lineTo(166,35);c.stroke();
   c.lineWidth=3.6;c.beginPath();c.moveTo(112,40);c.quadraticCurveTo(128,58,136,66);c.stroke();
   c.fillStyle=bro;for(const [x,y] of [[156,31],[124,54],[132,62],[118,46]]){c.beginPath();c.arc(x,y,2.2,0,7);c.fill()}
+  if(h.legend){c.fillStyle='#f3d98a';c.strokeStyle='#8a6a22';c.lineWidth=0.8;for(const [x,y] of [[150,26],[158,34],[127,57],[120,49],[135,64],[113,43]]){c.beginPath();c.arc(x,y,3.1,0,7);c.fill();c.stroke()}c.beginPath();c.moveTo(150,3);c.lineTo(152,8);c.lineTo(157,8);c.lineTo(153,11);c.lineTo(155,16);c.lineTo(150,13);c.lineTo(145,16);c.lineTo(147,11);c.lineTo(143,8);c.lineTo(148,8);c.closePath();c.fill();c.stroke()}
   c.restore();
   portraitFrame(c,w,hh,'#7a5530');
   const tile=Math.max(3,Math.round(w/45));
@@ -1759,12 +3227,12 @@ function horsePortrait(h,w=180,hh=120){
   return SPR.cache[key]=out;
 }
 function aurigaPortrait(a,fac,w=120,hh=120){
-  const key='a'+a.id+fac+w+'x'+hh;if(SPR.cache[key])return SPR.cache[key];
+  const S=COSM_CUR;const key='a'+a.id+fac+w+'x'+hh+S.sig;if(SPR.cache[key])return SPR.cache[key];
   const F=FAC[fac],r=rng((a.id||7)%9973+1),skin=['#c99a74','#b07d57','#8d5e3c','#d8b08a'][Math.floor(r()*4)];
   const isA=fac==='A',ink='#1d120a',edge=isA?F.dark:ink;
   const cv=newCv(w,hh),c=cv.getContext('2d',{willReadFrequently:true});portraitField(c,w,hh,(a.id||3)%997+11);
   c.save();const s=Math.min(w/120,hh/120);c.translate((w-120*s)/2,(hh-120*s)/2);c.scale(s,s);c.lineJoin='round';c.lineCap='round';
-  const skinD=shade(skin,-0.3),skinL=shade(skin,0.18),helm=isA?'#9a8058':F.light,helmD=shade(helm,-0.32);
+  const skinD=shade(skin,-0.3),skinL=shade(skin,0.18),helm=S.helm?'#9c6a36':(isA?'#9a8058':F.light),helmD=shade(helm,-0.32);
   // hombros y torso
   const torso=()=>{c.beginPath();c.moveTo(4,124);c.bezierCurveTo(6,98,14,88,32,84);c.bezierCurveTo(42,82,48,80,60,80);c.bezierCurveTo(72,80,78,82,88,84);c.bezierCurveTo(106,88,114,98,116,124);c.closePath()};
   c.strokeStyle=edge;c.lineWidth=5;torso();c.stroke();
@@ -1773,6 +3241,7 @@ function aurigaPortrait(a,fac,w=120,hh=120){
   c.fillStyle='#5b3518';const cor=()=>{c.beginPath();c.moveTo(34,124);c.lineTo(37,102);c.quadraticCurveTo(60,97,83,102);c.lineTo(86,124);c.closePath()};cor();c.fill();
   c.save();cor();c.clip();for(let y=102;y<124;y+=6){c.fillStyle='#8a5a30';c.fillRect(20,y,80,3.6);c.fillStyle='#3a2010';c.fillRect(20,y+3.6,80,1.4)}
   c.fillStyle='#2a1d12';c.fillRect(58,99,4,26);c.restore();
+  if(S.liv){c.strokeStyle='#e0bb55';c.lineWidth=2.6;c.beginPath();c.moveTo(8,110);c.quadraticCurveTo(24,92,44,88);c.moveTo(112,110);c.quadraticCurveTo(96,92,76,88);c.stroke();c.fillStyle='#fff0b0';for(const [x,y] of [[16,100],[104,100],[30,91],[90,91]]){c.beginPath();c.arc(x,y,1.8,0,7);c.fill()}}
   c.restore();
   if(isA){c.strokeStyle=F.dark;c.lineWidth=2;torso();c.stroke()}
   // cuello
@@ -1784,7 +3253,7 @@ function aurigaPortrait(a,fac,w=120,hh=120){
   const cap=()=>{c.beginPath();c.moveTo(38,48);c.bezierCurveTo(36,26,48,18,60,18);c.bezierCurveTo(72,18,84,26,82,48);c.lineTo(76,46);c.bezierCurveTo(72,40,48,40,44,46);c.closePath()};
   c.strokeStyle=edge;c.lineWidth=4;cap();c.stroke();c.fillStyle=helm;cap();c.fill();
   c.save();cap();c.clip();c.strokeStyle=helmD;c.lineWidth=2.4;for(const y of [26,33,40]){c.beginPath();c.moveTo(30,y+6);c.quadraticCurveTo(60,y-6,90,y+6);c.stroke()}
-  c.beginPath();c.moveTo(60,16);c.lineTo(60,42);c.stroke();c.fillStyle=shade(helm,0.4);c.beginPath();c.ellipse(52,25,6,3,-0.3,0,7);c.fill();c.restore();
+  c.beginPath();c.moveTo(60,16);c.lineTo(60,42);c.stroke();c.fillStyle=shade(helm,0.4);c.beginPath();c.ellipse(52,25,6,3,-0.3,0,7);c.fill();if(S.helm){c.fillStyle='#e0b878';for(let i=0;i<7;i++){c.beginPath();c.arc(44+i*5.3,30-Math.sin(i/6*Math.PI)*8,1.5,0,7);c.fill()}}c.restore();
   for(const sd of [-1,1]){const x=60+sd*18;c.fillStyle=edge;c.beginPath();c.moveTo(x-6,44);c.lineTo(x+6,44);c.lineTo(x+5*sd*0+4,68);c.lineTo(x-4,68);c.closePath();c.fill();
     c.fillStyle=helm;c.beginPath();c.moveTo(x-4,46);c.lineTo(x+4,46);c.lineTo(x+2.5,66);c.lineTo(x-2.5,66);c.closePath();c.fill();c.fillStyle=helmD;c.fillRect(x-3,53,6,1.8);c.fillRect(x-3,60,6,1.8)}
   c.strokeStyle='#3a2414';c.lineWidth=2;c.beginPath();c.moveTo(43,66);c.quadraticCurveTo(60,78,77,66);c.stroke();
@@ -1799,6 +3268,7 @@ function aurigaPortrait(a,fac,w=120,hh=120){
   const out=mosaicize(cv,tile,1,0.12,(a.id||3)%997,{thr:1});return SPR.cache[key]=out;
 }
 function paintPortraits(root){
+  if(typeof paintMon==='function')paintMon(root);
   (root||document).querySelectorAll('canvas[data-hp]').forEach(cv=>{const h=findHorseAny(+cv.dataset.hp);if(!h)return;const p=horsePortrait(h);cv.getContext('2d').drawImage(p,0,0,cv.width,cv.height)});
   (root||document).querySelectorAll('canvas[data-ap]').forEach(cv=>{const a=G&&G.aurigas.find(x=>x.id===+cv.dataset.ap);if(!a)return;const p=aurigaPortrait(a,G.fac);cv.getContext('2d').drawImage(p,0,0,cv.width,cv.height)});
 }
@@ -2043,6 +3513,7 @@ function makeHorse(level=0,opt={}){
     traits,fat:0,inj:0,wins:0,races:0,seconds:0,crashes:0,hist:[]};
 }
 function setupRace(o){
+  refreshCosm();
   const g=trackGeom(CIRCUITS[o.circuit||'tarraco']);
   const lay=buildLayer(g);g.ppm=lay.g.ppm;clearMarks(lay);
   debris.length=0;dust.length=0;splash.length=0;
@@ -2259,6 +3730,7 @@ function cronoScreen(){
   <h3>${L('Tiro','Team')}</h3><div class="row">${['biga','triga','cuadriga'].map(k=>`<button class="${C.tiro===k?'on':''}" onclick="CRONO.tiro='${k}';CRONO.list=null;CRONO.sel={};cronoScreen()">${tiroName(k)}</button>`).join(' ')}</div>
   <h3>${L('Fantasmas en la pista','Ghosts on the track')}</h3>`;
   h+=`<label class="gopt"><input type="checkbox" ${C.sel.mine!==false&&mine?'checked':''} ${mine?'':'disabled'} onchange="CRONO.sel.mine=this.checked"> ${L('Tu mejor carrera','Your best run')}: ${mine?timeStr(mine.t):L('todavía ninguna','none yet')}</label>`;
+  h+=refGhostsHTML();
   if(netReady()){
     if(!C.list&&!C.loading){C.loading=true;C.err=null;netGhostList(C.circ,C.tiro).then(l=>{C.list=l||[];C.loading=false;if(rerender===cronoScreen)cronoScreen()}).catch(()=>{C.loading=false;C.err=1;C.list=[];if(rerender===cronoScreen)cronoScreen()})}
     if(C.loading)h+=`<p class="muted">${L('Cargando los fantasmas de tu clase…','Loading your class’s ghosts…')}</p>`;
@@ -2288,6 +3760,8 @@ async function cronoStart(){
   const C=CRONO;const horses=cronoHorses(C.tiro);const T=TUNING.tiros[C.tiro];
   const datas=[];const mine=bestLocal(C.circ,C.tiro);
   if(mine&&C.sel.mine!==false)datas.push(Object.assign({},mine,{alias:L('Tú','You'),mine:true,fac:'A'}));
+  if(C.refs&&REFG.some(g=>C.refs[g.k]&&rwOn(g.k))){show(`<h1>${L('Preparando la pista…','Preparing the track…')}</h1>`,'narrow');await new Promise(r=>setTimeout(r,30));
+    REFG.forEach((g,i)=>{if(C.refs[g.k]&&rwOn(g.k)){const d=refGhostData(g,C.circ,C.tiro,i+1);if(d)datas.push(d)}})}
   const picks=Object.keys(C.sel).filter(k=>k!=='mine'&&C.sel[k]&&typeof C.sel[k]==='object').map(k=>C.sel[k]);
   if(picks.length){show(`<h1>${L('Preparando la pista…','Preparing the track…')}</h1>`,'narrow');
     const got=await Promise.all(picks.map(x=>netGhostGet(x.id).catch(()=>null)));
@@ -2463,7 +3937,7 @@ function drawCar(ctx,c,r){
     const hx=cxw+ca*0.3,hy=cyw+sa*0.3;c.horses.forEach((h,i)=>{const o=cfg.offs[i];const tx=c.x+ch*3.3-sh*o,ty=c.y+sh*3.3+ch*o;ctx.beginPath();ctx.moveTo(hx,hy);ctx.quadraticCurveTo((hx+tx)/2-sh*o*0.3,(hy+ty)/2+ch*o*0.3,tx,ty);ctx.stroke()})}
   // carro
   ctx.save();ctx.translate(cxw,cyw);ctx.rotate(c.h+c.sw+(c.crashed?0.9*Math.sign(c.sw||1):0));
-  const cs=chariotSprite(c.fac,c.whipT>0.25);
+  const cs=chariotSprite(c.fac,c.whipT>0.25,c.isPlayer?COSM_CUR:null);
   if(c.crashed){ctx.globalAlpha=c.cleared?0:1;ctx.drawImage(cs,-0.9,-1.4,cs.width/k,cs.height/k);ctx.fillStyle='#3b2817';ctx.save();ctx.translate(1.4,1.6);ctx.rotate(1.2);ctx.fillRect(-0.5,-0.08,1,0.16);ctx.restore();ctx.globalAlpha=1}
   else ctx.drawImage(cs,-0.9,-1.4,cs.width/k,cs.height/k);
   // indicador de vuelco dibujado sobre el carro (solo jugadores)
@@ -2493,7 +3967,7 @@ function drawLash(ctx,c){
   ctx.save();ctx.lineCap='round';ctx.lineJoin='round';ctx.globalAlpha=fade;
   const curve=()=>{ctx.beginPath();ctx.moveTo(E[0],E[1]);ctx.quadraticCurveTo(bul[0],bul[1],tip[0],tip[1])};
   ctx.strokeStyle='rgba(255,248,228,.9)';ctx.lineWidth=0.42;ctx.beginPath();ctx.moveTo(H[0],H[1]);ctx.lineTo(E[0],E[1]);ctx.stroke();curve();ctx.lineWidth=0.36;ctx.stroke();
-  ctx.strokeStyle='#3b230e';ctx.lineWidth=0.24;ctx.beginPath();ctx.moveTo(H[0],H[1]);ctx.lineTo(E[0],E[1]);ctx.stroke();
+  ctx.strokeStyle=(c.isPlayer&&COSM_CUR.ivory)?'#efe3c4':'#3b230e';ctx.lineWidth=0.24;ctx.beginPath();ctx.moveTo(H[0],H[1]);ctx.lineTo(E[0],E[1]);ctx.stroke();if(c.isPlayer&&COSM_CUR.ivory){ctx.strokeStyle='#8a7a58';ctx.lineWidth=0.05;ctx.beginPath();ctx.moveTo(H[0],H[1]);ctx.lineTo(E[0],E[1]);ctx.stroke()}
   ctx.strokeStyle='#1e1208';ctx.lineWidth=0.17;curve();ctx.stroke();
   // restallido sobre la grupa
   if(t>0.45){const k=(t-0.45)/0.55;ctx.globalAlpha=1-k;ctx.strokeStyle='#fffaf0';ctx.lineWidth=0.18;
@@ -2560,7 +4034,7 @@ function drawHUD(ctx){
   drawMini(ctx,u);
   if(r.leadFac&&r.type!=='crono'){const F=FAC[r.leadFac];const bx=VW/2-70*u,by=96*u;hudPanel(ctx,bx,by,140*u,40*u,u);patFill(ctx,r.leadFac,bx+8*u,by+8*u,24*u,24*u);ctx.fillStyle='#f6efdf';ctx.textAlign='left';ctx.font=HF(11*u);ctx.fillText(L('En cabeza','Leading'),bx+40*u,by+17*u);ctx.font=HF(14*u,true);ctx.fillText(`${fName(r.leadFac)} (${F.letter})`,bx+40*u,by+33*u)}
   // un momento de la pista cada vez, bajo los caballos
-  if(r.toasts.length){const t=r.toasts[0];t.t+=1/60;const T=r.toasts.length>2?3.5:5.5;if(t.t>T)r.toasts.shift();else{const G2=glossText(t.id);if(G2){const a=clamp(Math.min(t.t*3,T-t.t),0,1);ctx.globalAlpha=a;
+  if(r.toasts.length&&!p.cutOpen){const t=r.toasts[0];t.t+=1/60;const T=r.toasts.length>2?3.5:5.5;if(t.t>T)r.toasts.shift();else{const G2=glossText(t.id);if(G2){const a=clamp(Math.min(t.t*3,T-t.t),0,1);ctx.globalAlpha=a;
     const w=400*u,x=VW-w-14*u,ty=104*u;ctx.font=HF(12.5*u);const lines=wrapText(ctx,G2[1],w-28*u,3);const hh=(34+lines.length*16)*u;
     ctx.fillStyle='rgba(246,239,223,.96)';rrect(ctx,x,ty,w,hh,6*u);ctx.fill();ctx.fillStyle='#c99a3b';ctx.fillRect(x,ty,5*u,hh);
     ctx.fillStyle='#2a1d12';ctx.textAlign='left';ctx.font=HF(15*u,true);ctx.fillText(G2[0],x+14*u,ty+21*u);ctx.font=HF(12.5*u);lines.forEach((ln,i)=>ctx.fillText(ln,x+14*u,ty+39*u+i*16*u));ctx.globalAlpha=1}}}
@@ -2659,8 +4133,8 @@ function drawHUDPhone(ctx){
   if(!r.started){hudPanel(ctx,fx-cW/2,fy-30,cW,74,1);ctx.fillStyle='#f6efdf';ctx.textAlign='center';ctx.font=HF(17);ctx.fillText(fitText(ctx,L('El editor sostiene la mappa…','The editor holds up the mappa…'),cW-20),fx,fy-6);ctx.font=HF(13);
     wrapText(ctx,TOUCH?L('No toques el látigo hasta que suene el tubicen','Do not touch the whip until the tubicen sounds'):L('No uses el látigo hasta que suene el tubicen','Do not use the whip until the tubicen sounds'),cW-24,2).forEach((ln,i)=>ctx.fillText(ln,fx,fy+14+i*16))}
   // un momento de la pista cada vez, a la izquierda, bajo la pausa y encima de las riendas
-  if(r.toasts.length){const t=r.toasts[0];t.t+=1/60;const T=r.toasts.length>2?3.5:5.5;if(t.t>T)r.toasts.shift();else{const G2=glossText(t.id);if(G2){const a=clamp(Math.min(t.t*3,T-t.t),0,1);ctx.globalAlpha=a;
-    const w=Math.min(280,W*0.34),x=SL,ty=Math.max(y0+h0+66,fy+38);ctx.font=HF(13);const lines=wrapText(ctx,G2[1],w-24,4);const hh=30+lines.length*17;
+  if(r.toasts.length&&!p.cutOpen){const t=r.toasts[0];t.t+=1/60;const T=r.toasts.length>2?3.5:5.5;if(t.t>T)r.toasts.shift();else{const G2=glossText(t.id);if(G2){const a=clamp(Math.min(t.t*3,T-t.t),0,1);ctx.globalAlpha=a;
+    const w=Math.min(250,W*0.3),x=W-SR-96-w,ty=ST+82; /* a la derecha, bajo las riendas y lejos del joystick */ctx.font=HF(13);const lines=wrapText(ctx,G2[1],w-24,4);const hh=30+lines.length*17;
     ctx.fillStyle='rgba(246,239,223,.96)';rrect(ctx,x,ty,w,hh,6);ctx.fill();ctx.fillStyle='#c99a3b';ctx.fillRect(x,ty,5,hh);
     ctx.fillStyle='#2a1d12';ctx.textAlign='left';ctx.font=HF(15,true);ctx.fillText(fitText(ctx,G2[0],w-24),x+13,ty+19);ctx.font=HF(13);lines.forEach((ln,i)=>ctx.fillText(ln,x+13,ty+37+i*17));ctx.globalAlpha=1}}}
   if(XPT){XPT.t+=1/60;if(XPT.t>2.5)XPT=null;else{ctx.globalAlpha=clamp(2.5-XPT.t,0,1);const xx=W-SR-184,xy=ST+ph+10;hudPanel(ctx,xx,xy,184,34,1);ctx.fillStyle='#f6e3b0';ctx.font=HF(15,true);ctx.textAlign='center';ctx.fillText(`+${XPT.n} XP · Historiapp`,xx+92,xy+22);ctx.globalAlpha=1}}
@@ -3081,7 +4555,7 @@ const OBJ={
   cuadriga:{n:()=>1,es:()=>'Ganar una carrera con cuadriga',en:()=>'Win a race with a quadriga'},
   triga:{n:()=>1,es:()=>'Ganar una carrera con triga',en:()=>'Win a race with a triga'},
   rival:{n:()=>2,es:n=>`Quedar ${n} veces por delante de tu rival`,en:n=>`Finish ahead of your rival ${n} times`},
-  caja:{n:()=>G.stage==='roma'?20000:1500,es:n=>`Ganar al menos ${fmt(n)} HS de caja en la temporada`,en:n=>`Grow the funds by at least ${fmt(n)} HS this season`}
+  caja:{n:()=>G.stage==='roma'?20000:1500,es:n=>`Ganar al menos ${fmt(n)} sest. de caja en la temporada`,en:n=>`Grow the funds by at least ${fmt(n)} sest. this season`}
 };
 function objText(o){if(!o)return '';const D=OBJ[o.k];return L(D.es(o.n),D.en(o.n))}
 function ensureObjective(){
@@ -3118,6 +4592,226 @@ function objProgressHTML(){
   return `<div class="obj"><span>${L('Objetivo del dominus factionis','Goal from the dominus factionis')}</span><b>${esc(objText(o))}</b><span>${prog}${done&&o.k!=='limpio'?' · '+L('conseguido','achieved'):''} · ${L('premio','reward')} ${hs(o.reward)}</span></div>`;
 }
 
+/* ---------- recompensas por nivel de Historiapp (14-10-2026) ----------
+   Fuente única: Codigo/historiapp/recompensas.json, que build.py incrusta junto con recompensas.js (HAPP_RW).
+   Solo están activas dentro de Historiapp (HAPP_RW.level() devuelve null fuera). Todo lo que toca a las carreras
+   de la clase, la contrarreloj y el ranking es cosmético; lo que da una opción de juego (caballos de yeguada,
+   caballos legendarios) vive en la carrera profesional, que no cuenta para el ranking. */
+const RWK={nombres:'poner_nombre_a_los_caballos',librea:'librea_del_auriga_con_bordado_de',circuito:'elegir_circuito_en_la_carrera_su',
+  latigo:'latigo_con_mango_de_marfil',ruedas:'ruedas_doradas',sicilia:'caballos_de_la_yeguada_de_sicili',casco:'casco_de_cuero_repujado_del_auri',
+  tesalia:'caballos_de_la_yeguada_de_tesali',bronce:'carro_de_bronce_repujado',hirpino:'caballo_legendario_hirpino',hispania:'caballos_de_la_yeguada_de_hispan',
+  f_pompeyo:'correr_contra_el_fantasma_de_pom',capadocia:'caballos_de_la_yeguada_de_capado',plata:'carro_de_plata',africa:'caballos_de_la_yeguada_del_norte',
+  monumento:'monumento_del_auriga_en_la_cuadr',aquilon:'caballo_legendario_aquilon',pompeyo:'carro_legendario_de_pompeyo_musc',guta:'carro_legendario_de_guta_calpurn',
+  f_escorpo:'correr_contra_el_fantasma_de_esc',crescens:'carro_legendario_de_crescens',escorpo:'carro_legendario_de_escorpo',f_diocles:'correr_contra_el_fantasma_de_dio',diocles:'carro_legendario_de_diocles'};
+const RWD={
+  nombres:['En el Establo de la carrera profesional puedes poner nombre a tus caballos, con un máximo de dieciocho letras.','In the Stable of the career you can give your horses a name of up to eighteen letters.'],
+  librea:['Tu auriga viste una túnica con bordados de oro, en la pista y en su retrato. Solo cambia el aspecto.','Your charioteer wears a tunic with gold embroidery, on the track and in his portrait. It only changes the look.'],
+  circuito:['En la Carrera suelta puedes elegir entre el circo de Tarraco y el Circo Máximo.','In the Single race you can choose between the circus of Tarraco and the Circus Maximus.'],
+  latigo:['El látigo de tu auriga tiene el mango de marfil. Solo cambia el aspecto.','Your charioteer’s whip has an ivory handle. It only changes the look.'],
+  ruedas:['Las ruedas de tu carro son doradas. Solo cambia el aspecto.','Your chariot has golden wheels. It only changes the look.'],
+  casco:['El casco de tu auriga es de cuero repujado, en la pista y en su retrato. Solo cambia el aspecto.','Your charioteer’s helmet is made of embossed leather, on the track and in his portrait. It only changes the look.'],
+  bronce:['Tu carro estrena una caja de bronce repujado con remaches. Tu facción se sigue distinguiendo por su color y su motivo.','Your chariot gets an embossed bronze body with rivets. Your faction can still be told apart by its colour and pattern.'],
+  plata:['Tu carro estrena una caja de plata con remaches. Tu facción se sigue distinguiendo por su color y su motivo.','Your chariot gets a silver body with rivets. Your faction can still be told apart by its colour and pattern.'],
+  monumento:['En el Establo de la carrera profesional se levanta un monumento con el busto, el nombre y las victorias de tu auriga.','In the Stable of the career a monument stands with your charioteer’s bust, name and wins.'],
+  hirpino:['Hirpino, nombre de un caballo que recuerdan las fuentes (Bell, 2020, p. 24), se ofrece en el Mercado de la carrera profesional. Sus cifras son las de un caballo corriente del mercado.','Hirpinus, the name of a horse remembered in the sources (Bell, 2020, p. 24), is offered in the Market of the career. His figures are those of an ordinary market horse.'],
+  aquilon:['Aquilón, nombre de un caballo que recuerdan las fuentes (Bell, 2020, p. 24), se ofrece en el Mercado de la carrera profesional. Sus cifras son las de un caballo corriente del mercado.','Aquilo, the name of a horse remembered in the sources (Bell, 2020, p. 24), is offered in the Market of the career. His figures are those of an ordinary market horse.']
+};
+const STUD_RW={Sicilia:'sicilia',Tesalia:'tesalia',Hispania:'hispania','África':'africa',Capadocia:'capadocia'};
+const STUD_ES={Sicilia:'Sicilia',Tesalia:'Tesalia',Hispania:'Hispania','África':'el norte de África',Capadocia:'Capadocia'};
+const STUD_EN={Sicilia:'Sicilian',Tesalia:'Thessalian',Hispania:'Hispanic','África':'North African',Capadocia:'Cappadocian'};
+const REFG=[{k:'f_pompeyo',es:'Pompeyo Musclosus',en:'Pompeius Musclosus',mul:1.06},{k:'f_escorpo',es:'Escorpo',en:'Scorpus',mul:1.02},{k:'f_diocles',es:'Diocles',en:'Diocles',mul:1.0}];
+const LEGEND_CH={pompeyo:['Pompeyo Musclosus','Pompeius Musclosus'],guta:['Guta Calpurniano','Gutta Calpurnianus'],crescens:['Crescens','Crescens'],escorpo:['Escorpo','Scorpus'],diocles:['Diocles','Diocles']};
+const CHARIOTS=['base','bronce','plata','pompeyo','guta','crescens','escorpo','diocles'];
+function rwOn(k){try{return !!HAPP_RW.has('cuadrigas',RWK[k])}catch(e){return false}}
+function rwLevel(){try{return HAPP_RW.level()}catch(e){return null}}
+function rwDesc(k){
+  if(RWD[k])return L(RWD[k][0],RWD[k][1]);
+  const s=STUDS.find(x=>STUD_RW[x]===k);
+  if(s)return L(`Cada jornada, el Mercado de la carrera profesional ofrece además un caballo de la yeguada de ${STUD_ES[s]}, al precio de siempre. El perfil de cada yeguada es una convención del juego.`,`Each day, the Market of the career also offers a horse from the ${STUD_EN[s]} stud farm, at the usual price. Each stud farm’s profile is a game convention.`);
+  const g=REFG.find(x=>x.k===k);
+  if(g)return L(`En la Contrarreloj puedes correr contra el fantasma de ${g.es}, un carro transparente que repite una carrera con un tiempo de referencia del juego. Ese tiempo sale del auriga automático de Cuadrigas y carece de base histórica.`,`In the Time trial you can race against the ghost of ${g.en}, a transparent chariot that replays a run with a reference time set by the game. That time comes from Cuadrigas’ automatic charioteer and has no historical basis.`);
+  if(LEGEND_CH[k])return L(`Un adorno de convención del juego con el nombre de ${LEGEND_CH[k][0]} para tu carro, sin base histórica. Solo cambia el aspecto.`,`A game-convention decoration named after ${LEGEND_CH[k][1]} for your chariot, with no historical basis. It only changes the look.`);
+  return '';
+}
+function chariotName(k){
+  if(k==='base')return L('Carro de la facción','Faction chariot');
+  if(k==='bronce')return L('Bronce repujado','Embossed bronze');
+  if(k==='plata')return L('Plata','Silver');
+  return L('Carro de '+LEGEND_CH[k][0],'Chariot of '+LEGEND_CH[k][1]);
+}
+/* ---- aspecto del jugador (cosmético) ---- */
+let COSM_S=load('cuadrigas.cosm')||{};
+function chariotsOwned(){return CHARIOTS.filter(k=>k==='base'||rwOn(k))}
+function cosmSig(o){return (o.wheel?'w':'')+(o.liv?'l':'')+(o.helm?'h':'')+(o.ivory?'i':'')+(o.body?'-'+o.body:'')}
+function refreshCosm(){
+  const o={wheel:rwOn('ruedas')&&COSM_S.ruedas!==false,liv:rwOn('librea')&&COSM_S.librea!==false,helm:rwOn('casco')&&COSM_S.casco!==false,ivory:rwOn('latigo')&&COSM_S.latigo!==false};
+  const own=chariotsOwned();const b=COSM_S.chariot&&own.includes(COSM_S.chariot)?COSM_S.chariot:own[own.length-1];
+  o.body=b==='base'?null:b;o.sig=cosmSig(o);COSM_CUR=o;
+}
+function setCosm(k,v){COSM_S[k]=v;store('cuadrigas.cosm',COSM_S);refreshCosm();rewardsScreen()}
+refreshCosm();
+/* ---- pantalla de recompensas ---- */
+let RW_NEW=null;
+function rwNewList(){
+  if(RW_NEW===null){try{RW_NEW=rwLevel()?HAPP_RW.nuevas('cuadrigas'):[]}catch(e){RW_NEW=[]}}
+  return RW_NEW;
+}
+function rwNewHTML(){
+  const n=rwNewList();if(!n.length)return '';
+  return `<p class="sent">${L('Recompensas nuevas','New rewards')}: ${n.map(r=>esc(L(r.es,r.en))).join(', ')}. <button onclick="rewardsScreen()">${L('Ver','View')}</button></p>`;
+}
+function rwKeyOf(r){return Object.keys(RWK).find(k=>RWK[k]===r.k)}
+function rewardsScreen(){
+  rerender=rewardsScreen;MODE='menu';if(!race||!race.attract)startAttract();refreshCosm();RW_NEW=[];
+  const Lv=rwLevel();
+  if(!Lv)return show(`${langBtn()}<h1>${L('Recompensas','Rewards')}</h1><p>${L('Las recompensas se activan dentro de Historiapp, según tu nivel.','Rewards are unlocked inside Historiapp, according to your level.')}</p><p class="act"><button onclick="titleScreen()">${L('Volver','Back')}</button></p>`,'narrow');
+  const list=HAPP_RW.list('cuadrigas'),nx=HAPP_RW.proxima('cuadrigas'),won=list.filter(r=>Lv.lv>=r.lv);
+  let h=`${langBtn()}<h1>${L('Recompensas de Cuadrigas','Cuadrigas rewards')}</h1>
+  <p>${L(`Tu nivel en Historiapp es el ${Lv.lv}, con ${fmt(Lv.xp)} XP. Has ganado ${won.length} de ${list.length} recompensas.`,`Your Historiapp level is ${Lv.lv}, with ${fmt(Lv.xp)} XP. You have earned ${won.length} of ${list.length} rewards.`)}
+  ${nx?L(` La próxima, «${esc(nx.es)}», llega en el nivel ${nx.lv}: te faltan ${fmt(Math.max(0,HAPP_RW.xpFor(nx.lv)-Lv.xp))} XP.`,` The next one, “${esc(nx.en)}”, arrives at level ${nx.lv}: you need ${fmt(Math.max(0,HAPP_RW.xpFor(nx.lv)-Lv.xp))} more XP.`):L(' Ya las tienes todas.',' You have them all.')}</p>`;
+  // aspecto
+  const own=chariotsOwned(),opts=[['ruedas',L('Ruedas doradas','Golden wheels')],['librea',L('Librea con bordado de oro','Gold-embroidered livery')],['latigo',L('Látigo con mango de marfil','Ivory-handled whip')],['casco',L('Casco de cuero repujado','Embossed leather helmet')],['monumento',L('Monumento en el Establo','Monument in the Stable')]].filter(o=>rwOn(o[0]));
+  if(own.length>1||opts.length){
+    h+=`<h3>${L('Tu aspecto en la pista','Your look on the track')}</h3>`;
+    if(own.length>1)h+=`<div class="row rwch">${own.map(k=>`<button class="${(COSM_CUR.body||'base')===k?'on':''}" onclick="setCosm('chariot','${k}')"><canvas data-cp="${k}" width="63" height="80"></canvas><br>${esc(chariotName(k))}</button>`).join('')}</div>`;
+    if(opts.length)h+=`<div class="row">${opts.map(o=>`<label class="gopt"><input type="checkbox" ${COSM_S[o[0]]!==false?'checked':''} onchange="setCosm('${o[0]}',this.checked)"> ${esc(o[1])}</label>`).join('')}</div>`;
+  }
+  h+=`<h3>${L('Todas las recompensas','All rewards')}</h3><table><tr><th>${L('Nivel','Level')}</th><th>${L('Recompensa','Reward')}</th><th></th></tr>`+list.map(r=>{
+    const ok=Lv.lv>=r.lv,k=rwKeyOf(r);
+    return `<tr class="${ok?'':'rwlock'}"><td>${r.lv}</td><td><b>${esc(L(r.es,r.en))}</b>${ok&&k?`<br><span class="muted">${esc(rwDesc(k))}</span>`:''}</td><td>${ok?L('Ganada','Earned'):L('Con candado','Locked')}</td></tr>`}).join('')+`</table>
+  <p class="note">${L('Todo lo que cambia la pista (carros, ruedas, látigo, librea, casco) es cosmético, y por eso las carreras de la clase y el ranking siguen igual para todos. Los caballos de yeguada y los legendarios se compran con sestercios en la carrera profesional, que no cuenta para el ranking.','Everything that changes the track (chariots, wheels, whip, livery, helmet) is cosmetic, so the class races and the leaderboard stay the same for everybody. Stud-farm and legendary horses are bought with sesterces in the career, which does not count for the leaderboard.')}</p>
+  <p class="act"><button class="big" onclick="titleScreen()">${L('Volver','Back')}</button></p>`;
+  show(h,'narrow');
+  box.querySelectorAll('canvas[data-cp]').forEach(cv=>{const b=cv.dataset.cp,o=Object.assign({},COSM_CUR,{body:b==='base'?null:b});o.sig=cosmSig(o);
+    const sp=chariotSprite(G?G.fac:'V',false,o),x=cv.getContext('2d'),sc=Math.min(cv.width/sp.width,cv.height/sp.height);x.drawImage(sp,(cv.width-sp.width*sc)/2,(cv.height-sp.height*sc)/2,sp.width*sc,sp.height*sc)});
+}
+/* ---- nombrar a los caballos ---- */
+function closeAsk(){const d=document.getElementById('rwmodal');if(d)d.remove()}
+function askText(title,val,max,ok){
+  closeAsk();const d=document.createElement('div');d.id='rwmodal';
+  d.innerHTML=`<div class="rwbox"><h2>${esc(title)}</h2><input id="rwin" maxlength="${max}" value="${esc(val)}" autocomplete="off"><p><button onclick="closeAsk()">${L('Cancelar','Cancel')}</button> <button class="big" id="rwok">${L('Guardar','Save')}</button></p></div>`;
+  document.body.appendChild(d);const inp=d.querySelector('#rwin');
+  d.querySelector('#rwok').onclick=()=>{const v=inp.value.trim();closeAsk();if(v)ok(v)};
+  inp.addEventListener('keydown',e=>{e.stopPropagation();if(e.key==='Enter')d.querySelector('#rwok').click();if(e.key==='Escape')closeAsk()});
+  setTimeout(()=>{inp.focus();inp.select()},30);
+}
+function renameHorse(id){
+  const H=G&&G.horses.find(x=>x.id===id);if(!H||!rwOn('nombres'))return;
+  askText(L('Poner nombre al caballo','Name the horse'),H.name,18,v=>{const old=H.name;H.name=v.slice(0,18);horseHist(H,L(`Pasa a llamarse ${H.name}`,`Is renamed ${H.name}`));logG(L(`${old} pasa a llamarse ${H.name}`,`${old} is renamed ${H.name}`));saveG();hub('establo')});
+}
+/* ---- mercado: yeguadas y caballos legendarios ---- */
+function rwMarketOk(h){
+  if(!h.rw)return true;
+  if(h.rw.indexOf('stud:')===0)return rwOn(STUD_RW[h.rw.slice(5)]);
+  return rwOn(h.rw.slice(4));
+}
+function ensureRwMarket(){
+  if(!G||!G.market)return;
+  const lv=econ().level+Math.min(6,G.stageSeason||1);
+  const want=[];
+  STUDS.forEach(s=>{if(rwOn(STUD_RW[s]))want.push({key:'stud:'+s,stud:s})});
+  [['hirpino','Hirpinus'],['aquilon','Aquilo']].forEach(([k,n])=>{if(rwOn(k)&&!G.horses.some(h=>h.legendKey===k))want.push({key:'leg:'+k,name:n,leg:k})});
+  want.forEach(w=>{
+    if(G.market.some(h=>h.rw===w.key))return;
+    const h=makeHorse(lv,{age:6+Math.floor(R()*4),stud:w.stud,name:w.name});
+    h.rw=w.key;if(w.leg){h.legend=true;h.legendKey=w.leg}
+    G.market.push(h);
+  });
+}
+/* ---- monumento del auriga ---- */
+function monumentHTML(){
+  if(!G||!rwOn('monumento')||COSM_S.monumento===false)return '';
+  const A=curAur();
+  return `<div class="monu"><canvas data-mon="${A.id}" width="160" height="208"></canvas><div class="monu-t"><h3>${L('Monumento del auriga','Charioteer’s monument')}</h3><div class="ansata">${esc(A.name.toUpperCase())}</div>
+  <p>${A.wins} ${L('victorias','wins')} · ${A.races} ${L('carreras','races')}</p><p class="muted">${L('Un adorno de convención del juego: gana una estrella por cada cinco victorias.','A game-convention ornament: it gains one star for every five wins.')}</p></div></div>`;
+}
+function monumentArt(a){
+  const stars=Math.min(8,Math.floor(a.wins/5)),key='mon'+a.id+G.fac+stars+COSM_CUR.sig;if(SPR.cache[key])return SPR.cache[key];
+  const W=160,Hh=208,cv=newCv(W,Hh),c=cv.getContext('2d',{willReadFrequently:true});
+  portraitField(c,W,Hh,(a.id||3)%997+21);
+  c.lineJoin='round';
+  // escalones y pedestal
+  const st=['#b9ad92','#c9bea4','#d8cdb4'];
+  for(let i=0;i<3;i++){c.fillStyle=st[i];c.strokeStyle='#6f6247';c.lineWidth=2;const x=8+i*12,y=190-i*12;c.fillRect(x,y,W-2*x,12);c.strokeRect(x,y,W-2*x,12)}
+  c.fillStyle='#e2d8c0';c.strokeStyle='#6f6247';c.fillRect(34,98,92,76);c.strokeRect(34,98,92,76);
+  c.fillStyle='#cfc4aa';c.fillRect(28,90,104,10);c.strokeRect(28,90,104,10);c.fillRect(28,172,104,10);c.strokeRect(28,172,104,10);
+  // placa y estrellas
+  c.fillStyle='#8a6a22';c.fillRect(44,108,72,26);c.fillStyle='#d9b44a';c.fillRect(47,111,66,20);
+  for(let i=0;i<8;i++){const x=48+i*9.2;c.beginPath();c.arc(x,152,i<stars?3.4:1.5,0,7);c.fillStyle=i<stars?'#d9b44a':'#b9ad92';c.fill();if(i<stars){c.strokeStyle='#8a6a22';c.lineWidth=1;c.stroke()}}
+  // busto en el nicho
+  c.fillStyle='#8c7f62';c.fillRect(46,8,68,82);c.fillStyle='#403524';c.fillRect(49,11,62,76);
+  const pt=aurigaPortrait(a,G.fac);c.drawImage(pt,50,14,60,60);
+  c.fillStyle='#d8cdb4';c.fillRect(56,76,48,10);
+  return SPR.cache[key]=mosaicize(cv,4,1,0.1,(a.id||1)%997,{thr:1});
+}
+function paintMon(root){
+  (root||document).querySelectorAll('canvas[data-mon]').forEach(cv=>{const a=G&&G.aurigas.find(x=>x.id===+cv.dataset.mon);if(!a)return;cv.getContext('2d').drawImage(monumentArt(a),0,0,cv.width,cv.height)});
+}
+/* ---- carrera suelta ---- */
+let FREE={circ:'tarraco',tiro:'biga',laps:2};
+function freeScreen(){
+  rerender=freeScreen;MODE='menu';if(!race||!race.attract)startAttract();refreshCosm();
+  const pickC=rwOn('circuito');if(!pickC)FREE.circ='tarraco';
+  show(`${langBtn()}<h1>${L('Carrera suelta','Single race')}</h1>
+  <p>${L('Una carrera para practicar, con caballos y rivales de nivel medio, sin código, sin clase y sin resultados para tu profesor. Sirve para probar un tiro o un circo con calma.','A race for practice, with average horses and rivals, with no code, no lesson and no results sent to your lecturer. It lets you try a team or a circus at your own pace.')}</p>
+  <h3>${L('Circo','Circus')}</h3>${pickC?`<div class="row">${['tarraco','maximo'].map(k=>`<button class="${FREE.circ===k?'on':''}" onclick="FREE.circ='${k}';freeScreen()">${circName(k)}</button>`).join(' ')}</div>`:`<p>${circName('tarraco')}${IN_APP?` <span class="muted">${L('(en el nivel 20 de Historiapp podrás elegir el circo)','(at Historiapp level 20 you will be able to choose the circus)')}</span>`:''}</p>`}
+  <div class="row"><div class="col"><h3>${L('Tiro','Team')}</h3><div class="row">${['biga','triga','cuadriga'].map(k=>`<button class="${FREE.tiro===k?'on':''}" onclick="FREE.tiro='${k}';freeScreen()">${tiroName(k)}</button>`).join(' ')}</div></div>
+  <div class="col"><h3>${L('Vueltas','Laps')}</h3><div class="row">${[1,2,3].map(k=>`<button class="${FREE.laps===k?'on':''}" onclick="FREE.laps=${k};freeScreen()">${k}</button>`).join(' ')}</div></div></div>
+  <p class="act"><button onclick="titleScreen()">${L('Volver','Back')}</button> <button class="big" onclick="freeStart()">${L('A los carceres','To the starting gates')}</button></p>`,'narrow');
+}
+function freeStart(){
+  setSeed((Date.now()%999983)+11);
+  const T=TUNING.tiros[FREE.tiro];const horses=[];for(let i=0;i<T.n;i++)horses.push(makeHorse(3,{rival:true}));
+  setupRace({circuit:FREE.circ,tiro:FREE.tiro,laps:FREE.laps,nPerFac:FREE.circ==='maximo'?2:1,level:3,skill:0.68,label:L('Carrera suelta','Single race'),type:'suelta',
+    humans:[{pl:1,fac:'V',name:L('Tú','You'),tiro:FREE.tiro,horses,guide:FREE.tiro==='cuadriga'?1:0,pericia:50}],onEnd:freeEnd});
+  SHOW_HELP=true;hide();MODE='race';paused=false;
+}
+function freeEnd(r){
+  MODE='result';rerender=()=>{};const p=r.players[0];const pos=p.finished?r.order.indexOf(p)+1:0;
+  const rows=[...r.cars].sort((a,b)=>placeOf(r,a)-placeOf(r,b)).map(c=>`<tr class="${c.isPlayer?'me':''}"><td>${c.crashed?'—':ord(placeOf(r,c))}</td><td>${facSwatch(c.fac,16)} ${fName(c.fac)} (${FAC[c.fac].letter})</td><td>${esc(c.name)}</td><td>${c.finished?timeStr(c.finishT-r.goT):c.crashed?'naufragium':L('sin terminar','not finished')}</td></tr>`).join('');
+  show(`<h1>${pos===1?'<span class="ansata">NICA</span>':pos?L(`Has entrado ${ord(pos)}`,`You finished ${ord(pos)}`):'Naufragium'}</h1>
+  <p>${circName(FREE.circ)} · ${tiroName(FREE.tiro)} · ${FREE.laps} ${FREE.laps===1?L('vuelta','lap'):L('vueltas','laps')}</p>
+  <table><tr><th>${L('Puesto','Pos.')}</th><th>${L('Facción','Faction')}</th><th>${L('Auriga','Charioteer')}</th><th>${L('Tiempo','Time')}</th></tr>${rows}</table>
+  <p class="act"><button onclick="race=null;startAttract();titleScreen()">${L('Portada','Title')}</button> <button onclick="race=null;startAttract();freeScreen()">${L('Cambiar la carrera','Change the race')}</button> <button class="big" onclick="race=null;freeStart()">${L('Otra vez','Again')}</button></p>`,'narrow');
+}
+/* ---- fantasmas de referencia (Pompeyo Musclosus, Escorpo, Diocles) ----
+   El «tiempo de referencia» es del juego: el mejor de tres carreras del auriga automático (ritmos 0,7, 0,9 y 1,0) con los
+   caballos de la contrarreloj, multiplicado por un factor propio de cada fantasma. No procede de ninguna marca histórica. */
+const REFC={};
+function botRun(circ,tiro,sk){
+  const horses=cronoHorses(tiro);setSeed(hashStr('refg-'+circ+tiro)%99991+5);
+  let ended=null;
+  setupRace({circuit:circ,tiro,laps:CRONO_LAPS[circ],nPerFac:0,level:3,type:'crono',humans:[{pl:1,fac:'V',name:'ref',tiro,horses,guide:tiro==='cuadriga'?1:0,pericia:55}],onEnd:r=>{ended=r}});
+  const r=race,p=r.players[0];r.glossary=()=>{};ghostRecStart(r);p.ai=makeAI(sk,{startR:10,R:12});
+  let t=0;while(!ended&&t<600){updateRace(TUNING.dt);t+=TUNING.dt}
+  return {fin:!!p.finished&&!p.crashed,t:p.finished?+(p.finishT-r.goT).toFixed(2):null,pts:r.rec.pts};
+}
+function refBase(circ,tiro){
+  const key=circ+'|'+tiro;if(REFC[key]!==undefined)return REFC[key];
+  const keep=race,wasMuted=muted;muted=true;let best=null;
+  try{for(const sk of [0.7,0.9,1.0]){const run=botRun(circ,tiro,sk);if(run.fin&&(!best||run.t<best.t))best=run}}catch(e){best=null}
+  finally{muted=wasMuted;race=keep}
+  return REFC[key]=best||false;
+}
+function ghostScale(pts,mul){
+  // mul > 1: el fantasma tarda más (se remuestrea a 10 Hz sobre un tiempo más largo)
+  const n=Math.max(2,Math.round((pts.length-1)*mul)+1),out=[];
+  for(let i=0;i<n;i++){const s=Math.min(pts.length-1,i/mul),a=Math.floor(s),b=Math.min(pts.length-1,a+1),u=s-a,P=pts[a],Q=pts[b];
+    out.push([Math.round(lerp(P[0],Q[0],u)),Math.round(lerp(P[1],Q[1],u)),Math.round(P[2]+normA((Q[2]-P[2])/100)*100*u),Math.round(lerp(P[3],Q[3],u))])}
+  return out;
+}
+function refGhostData(g,circ,tiro,i){
+  const b=refBase(circ,tiro);if(!b)return null;
+  return {d:ghostEncode(ghostScale(b.pts,g.mul)),t:+(b.t*g.mul).toFixed(1),alias:L(g.es,g.en),grupo:'',tiro,fac:FACS[(i+1)%4],ref:true};
+}
+function refGhostsHTML(){
+  if(!rwLevel())return '';const own=REFG.filter(g=>rwOn(g.k));if(!own.length)return '';
+  const C=CRONO;C.refs=C.refs||{};const b=REFC[C.circ+'|'+C.tiro];
+  if(b===undefined)setTimeout(()=>{refBase(C.circ,C.tiro);if(rerender===cronoScreen)cronoScreen()},60);
+  return `<h3>${L('Fantasmas de referencia','Reference ghosts')}</h3>`+own.map(g=>`<label class="gopt"><input type="checkbox" ${C.refs[g.k]?'checked':''} ${b?'':'disabled'} onchange="CRONO.refs['${g.k}']=this.checked"> ${esc(L(g.es,g.en))} · ${b?timeStr(b.t*g.mul):b===false?L('sin tiempo de referencia en este circo y tiro','no reference time for this circus and team'):L('calculando el tiempo de referencia…','working out the reference time…')}</label>`).join('')+
+    `<p class="muted">${L('El tiempo de referencia es del juego, calculado con el auriga automático de Cuadrigas. No es una marca histórica de estos aurigas.','The reference time is the game’s own, worked out with Cuadrigas’ automatic charioteer. It is not a historical record of these charioteers.')}</p>`;
+}
+
 /* ---------- pantallas ---------- */
 let MODE='title';
 const panel=document.getElementById('panel'),box=document.getElementById('box');
@@ -3138,19 +4832,21 @@ function startAttract(){
 }
 function titleScreen(){
   MODE='title';paused=false;rerender=titleScreen;if(!race||!race.attract)startAttract();
-  const saved=loadG();
+  const saved=loadG();refreshCosm();
   show(`${langBtn()}<div class="title"><div class="logo ansata">CVADRIGAE</div><div class="sub">${L('Carreras en el circo romano · Historia del Deporte · Tema 4','Chariot racing in the Roman circus · History of Sport · Unit 4')}</div>
   <div class="menu">
    <button class="big" onclick="campaignStart()">${L('Clase de veinte minutos','Twenty-minute lesson')}</button>
    ${saved?`<button onclick="continueCareer()">${L('Continuar la carrera profesional','Continue the career')}</button>`:''}
    <button onclick="newCareerScreen()">${L('Nueva carrera profesional','New career')}</button>
    <button onclick="classScreen()">${L('Carrera de la clase (código)','Class race (code)')}</button>
+   <button onclick="freeScreen()">${L('Carrera suelta','Single race')}</button>
    <button onclick="cronoScreen()">${L('Contrarreloj y fantasmas','Time trial and ghosts')}</button>
    <button onclick="codexScreen('title')">${L('Códice','Codex')}</button>
+   ${rwLevel()?`<button onclick="rewardsScreen()">${L('Recompensas','Rewards')}</button>`:''}
    ${IN_APP?'':`<button onclick="teacherScreen()">${L('Guía del profesor','Teacher’s guide')}</button>`}
    ${IN_APP?`<button onclick="backToApp()">${L('💾 Guardar y salir a Historiapp','💾 Save and exit to Historiapp')}</button>`:''}
   </div>
-  <p class="muted">${L('La clase de veinte minutos recorre en cinco carreras lo esencial del circo romano. La carrera profesional es para jugar en casa.','The twenty-minute lesson covers the essentials of the Roman circus in five races. The career is for playing at home.')}${TOUCH?'':L(' Tecla M: sonido.',' M key: sound.')}</p>${XP_SESSION?`<p class="sent">${L(`Has ganado ${XP_SESSION} XP para Historiapp en esta sesión.`,`You have earned ${XP_SESSION} XP for Historiapp this session.`)}</p>`:''}</div>`,'narrow');
+  <p class="muted">${L('La clase de veinte minutos recorre en cinco carreras lo esencial del circo romano. La carrera profesional es para jugar en casa.','The twenty-minute lesson covers the essentials of the Roman circus in five races. The career is for playing at home.')}${TOUCH?'':L(' Tecla M: sonido.',' M key: sound.')}</p>${rwNewHTML()}${XP_SESSION?`<p class="sent">${L(`Has ganado ${XP_SESSION} XP para Historiapp en esta sesión.`,`You have earned ${XP_SESSION} XP for Historiapp this session.`)}</p>`:''}</div>`,'narrow');
 }
 function newCareerScreen(){
   rerender=newCareerScreen;
@@ -3171,7 +4867,7 @@ function beginCareer(){
   show(`<h1>${L('La cuadra de los ','The stable of the ')}${fName(G.fac)}</h1>
   <p>${L('En Roma, las facciones eran empresas que alquilaban caballos, aurigas y material a quien pagaba los juegos (Nelis-Clément, 2002, p. 266). Tu cuadra cobra una tarifa del editor por cada carrera y, si gana, el premio, del que la facción se queda una parte y el auriga otra para su peculio.','In Rome the factions were businesses that hired out horses, charioteers and equipment to whoever paid for the games (Nelis-Clément, 2002, p. 266). Your stable earns a fee from the editor for each race and, if it wins, the prize, of which the faction keeps a share and the charioteer another for his peculium.')}</p>
   <p>${L(`${esc(A.name)} tiene quince años y es esclavo, como casi todos los aurigas: de unos 230 conocidos solo uno había nacido libre (Nelis-Clément, 2002, p. 274). Empieza con bigas, porque la cuadriga era el tiro de los cocheros de rango (Bell, 2020, p. 16).`,`${esc(A.name)} is fifteen and a slave, like almost all charioteers: of some 230 known, only one was freeborn (Nelis-Clément, 2002, p. 274). He starts with bigae, because the quadriga was the team of senior drivers (Bell, 2020, p. 16).`)}</p>
-  <p>${L('Las cuentas van en sestercios, que los romanos abreviaban HS: cuatro sestercios hacían un denario de plata, y la paga de un legionario rondaba los 1.400 HS al año en el siglo I d. C. (Tema 4). Junto a cada cifra puedes ver su equivalencia en años de paga de un legionario.','Accounts are kept in sesterces, which Romans abbreviated HS: four sesterces made a silver denarius, and a legionary’s pay was about 1,400 HS a year in the 1st century AD (Tema 4). Next to each figure you can see what it equals in years of a legionary’s pay.')}</p>
+  <p>${L('Las cuentas van en sestercios (sest.), que los romanos abreviaban HS: cuatro sestercios hacían un denario de plata, y la paga de un legionario rondaba los 1.400 sest. al año en el siglo I d. C. (Tema 4). Junto a cada cifra puedes ver su equivalencia en años de paga de un legionario.','Accounts are kept in sesterces (sest.), which Romans abbreviated HS: four sesterces made a silver denarius, and a legionary’s pay was about 1,400 sest. a year in the 1st century AD (Tema 4). Next to each figure you can see what it equals in years of a legionary’s pay.')}</p>
   <p>${L('Cuida el dinero. El mantenimiento de caballos, aurigas y personal se paga cada jornada, y una cuadra en números rojos tiene que vender caballos al final de la temporada.','Watch the money. Upkeep for horses, charioteers and staff is paid every day, and a stable in the red has to sell horses at the end of the season.')}</p>
   <p class="act"><button class="big" onclick="hub('jornada')">${L('A la cuadra','To the stable')}</button></p>`);
 }
@@ -3195,7 +4891,7 @@ function hub(tab){
   <div class="kpis"><div><span>${L('Caja (sestercios)','Funds (sesterces)')}</span><b class="${G.money<0?'neg':''}">${hs(G.money)}</b></div><div><span>${L('Prestigio','Prestige')}</span><b>${Math.round(G.prestige)}</b></div><div><span>${L('Favor del editor','Editor’s favour')}</span><b>${Math.round(G.favor)}</b></div><div><span>${L('Gasto por jornada','Cost per day')}</span><b>${hs(upkeepCost())}</b></div></div></div>
   <div class="hubexit"><button onclick="titleScreen()">${L('Portada','Title')}</button>${IN_APP?`<button onclick="backToApp()">Historiapp</button>`:''}<span class="lgs"><button class="${LANG==='es'?'on':''}" onclick="setLang('es');hub()">ES</button><button class="${LANG==='en'?'on':''}" onclick="setLang('en');hub()">EN</button></span></div></div>
   <div class="hubmain"><div class="tabs">${tabs.map(([k,l])=>`<button class="${TAB===k?'on':''}" onclick="hub('${k}')">${l}</button>`).join('')}</div><div class="hubbody" id="hubbody">`;
-  const hsl=`<p class="hsleg">${L('<b>HS</b> son sestercios, la moneda en que los romanos llevaban sus cuentas: cuatro sestercios hacían un denario de plata y un legionario cobraba unos 1.400 HS al año (Tema 4). Toca cualquier cifra para ver cuántos años de paga de legionario supone.','<b>HS</b> means sesterces, the coin Romans kept their accounts in: four sesterces made a silver denarius and a legionary earned about 1,400 HS a year (Tema 4). Tap any figure to see how many years of a legionary’s pay it represents.')}</p>`;
+  const hsl=`<p class="hsleg">${L('<b>sest.</b> son sestercios, la moneda en que los romanos llevaban sus cuentas: cuatro sestercios hacían un denario de plata y un legionario cobraba unos 1.400 sest. al año (Tema 4). Toca cualquier cifra para ver cuántos años de paga de legionario supone.','<b>sest.</b> means sesterces, the coin Romans kept their accounts in: four sesterces made a silver denarius and a legionary earned about 1,400 sest. a year (Tema 4). Tap any figure to see how many years of a legionary’s pay it represents.')}</p>`;
   if(!phoneUI())h+=hsl;
   if(TAB==='jornada')h+=tabJornada();
   if(TAB==='establo')h+=tabEstablo();
@@ -3253,11 +4949,11 @@ function engancheHTML(){
 function horseCard(H,pickable){
   const state=H.age<5?L('potro','foal'):H.inj?L('lesionado','injured'):'';
   const risk=injRisk(H);
-  return `<div class="hcard ${H.inj||H.age<5?'off':''}"><canvas data-hp="${H.id}" width="150" height="100"></canvas><div class="hc-b"><h3>${esc(H.name)} ${state?`<span class="tag">${state}</span>`:''}</h3>
+  return `<div class="hcard ${H.inj||H.age<5?'off':''}"><canvas data-hp="${H.id}" width="150" height="100"></canvas><div class="hc-b"><h3>${esc(H.name)} ${state?`<span class="tag">${state}</span>`:''}${H.legend?`<span class="tag tc">${L('Legendario','Legendary')}</span>`:''}</h3>
   <div class="muted">${H.age} ${L('años','yrs')} · ${studName(H.stud)} · ${coatName(H.coat)}</div><div class="chips">${(H.traits||[]).map(chip).join('')}</div>
   <div class="stats"><span>${L('Velocidad','Speed')}</span>${bar(H.vel)}<span>${L('Aguante','Stamina')}</span>${bar(H.agu)}<span>${L('Guía','Lead')}</span>${bar(H.gui)}<span>${L('Cansancio','Fatigue')}</span>${bar(H.fat,true)}</div>
   <div class="muted">${H.wins||0} ${L('victorias','wins')} · ${H.races||0} ${L('carreras','races')}${risk?` · <b>${L('riesgo','risk')} ${Math.round(risk*100)} %</b>`:''}</div>
-  ${pickable&&!H.inj&&H.age>=5?`<button onclick="placeH(${H.id})">${L('Enganchar','Harness')}</button>`:''}</div></div>`;
+  ${pickable&&!H.inj&&H.age>=5?`<button onclick="placeH(${H.id})">${L('Enganchar','Harness')}</button>`:''}${!pickable&&G&&G.horses.includes(H)&&rwOn('nombres')?` <button onclick="renameHorse(${H.id})">${L('Poner nombre','Name it')}</button>`:''}</div></div>`;
 }
 function chooseOffer(i){offerSel=i;slots=[];autoFill()}
 function placeH(id){const i=slots.indexOf(null);if(i>=0)slots[i]=id;hub()}
@@ -3320,7 +5016,7 @@ function careerRaceEnd(r){
   let h=`<h1>${pos===1?L(`<span class="ansata">NICA</span> Vencen los ${fName(G.fac)}`,`<span class="ansata">NICA</span> The ${fName(G.fac)} win`):pos?L(`${esc(A.name)} entra ${ord(pos)}`,`${esc(A.name)} finishes ${ord(pos)}`):'Naufragium'}</h1>`;
   if(pos===1)h+=`<div class="cer"><b>${L('Vuelta de honor.','Lap of honour.')}</b> ${L(`${esc(A.name)} sube a la tribuna de los jueces y recoge la palma, la corona y la bolsa mientras suena la trompeta (Bell, 2020, p. 12). En Roma el vencedor era el auriga, no el dueño de los caballos (Nelis-Clément, 2002, p. 265).`,`${esc(A.name)} climbs to the judges’ stand and receives the palm, the wreath and the purse as the trumpet sounds (Bell, 2020, p. 12). In Rome the winner was the charioteer, not the owner of the horses (Nelis-Clément, 2002, p. 265).`)}</div>`;
   h+=`<div class="row"><div class="col"><table><tr><th>${L('Puesto','Pos.')}</th><th>${L('Facción','Faction')}</th><th>${L('Auriga','Charioteer')}</th><th>${L('Tiempo','Time')}</th></tr>${rows}</table></div>
-  <div class="col"><div class="card"><h3>${L('Cuentas de la jornada, en sestercios (HS)','Accounts for the day, in sesterces (HS)')}</h3><table>
+  <div class="col"><div class="card"><h3>${L('Cuentas de la jornada, en sestercios (sest.)','Accounts for the day, in sesterces (sest.)')}</h3><table>
   <tr><td>${L('Tarifa del editor','Editor’s fee')}</td><td>${hs(res.fee)}</td></tr><tr><td>${L('Premio','Prize')}</td><td>${hs(res.gross)}</td></tr>
   ${res.teamBonus?`<tr><td>${L('Reparto de la facción','Faction share-out')}</td><td>${hs(res.teamBonus)}</td></tr>`:''}
   <tr><td>${L('Parte de la facción (20 %)','Faction’s share (20%)')}</td><td>−${hs(res.facCut)}</td></tr><tr><td>${L('Peculio del auriga','Charioteer’s peculium')} (${Math.round(A.cut*100)} %)</td><td>−${hs(res.pec)}</td></tr>
@@ -3434,8 +5130,9 @@ function retireScreen(){
 }
 /* pestañas */
 function tabEstablo(){
+  refreshCosm();
   const planRow=h=>h.age<4?'':`<div class="plan"><span>${L('Entre jornadas','Between race days')}</span>${Object.keys(PLANES).map(k=>`<button class="${(h.plan||'descanso')===k?'on':''}" title="${esc(L(PLANES[k].des,PLANES[k].den))}" onclick="setPlan(${h.id},'${k}')">${planName(k)}</button>`).join('')}</div>`;
-  return `<p class="note">${L('Elige qué hace cada caballo entre una jornada y la siguiente. Entrenar puede mejorarlo, sobre todo si es joven, aunque cansa; descansar recupera más. Las fuentes no describen el entrenamiento de los caballos del circo: es una convención del juego.','Choose what each horse does between one race day and the next. Training may improve it, especially when young, but tires it; resting recovers more. The sources do not describe how circus horses were trained: it is a game convention.')}</p>
+  return monumentHTML()+`<p class="note">${L('Elige qué hace cada caballo entre una jornada y la siguiente. Entrenar puede mejorarlo, sobre todo si es joven, aunque cansa; descansar recupera más. Las fuentes no describen el entrenamiento de los caballos del circo: es una convención del juego.','Choose what each horse does between one race day and the next. Training may improve it, especially when young, but tires it; resting recovers more. The sources do not describe how circus horses were trained: it is a game convention.')}</p>
   <div class="hgrid">`+G.horses.map(h=>horseCard(h,false).replace(/<\/div><\/div>$/,planRow(h)+'</div></div>')).join('')+`</div>
   <h3>${L('Vender','Sell')}</h3><div class="row">${G.horses.map(h=>`<button ${G.horses.length<=2?'disabled':''} onclick="sellH(${h.id})">${esc(h.name)} · ${hsTxt(Math.round(horsePrice(h)*0.6))}</button>`).join(' ')}</div>
   <p class="note">${L('Los caballos empezaban a correr a los cinco años y podían competir hasta los veinte (Bell, 2020, pp. 21-22). Envejecen un año por temporada. Las yeguadas son las de las fuentes; su perfil y los rasgos de cada caballo son convenciones del juego. Aquilón e Hirpino son nombres documentados (Bell, 2020, p. 24).','Horses started racing at five and could compete until twenty (Bell, 2020, pp. 21-22). They age one year per season. The stud farms are those in the sources; their profiles and each horse’s traits are game conventions. Aquilo and Hirpinus are documented names (Bell, 2020, p. 24).')}</p>
@@ -3443,12 +5140,15 @@ function tabEstablo(){
 }
 function sellH(id){const h=G.horses.find(x=>x.id===id);G.money+=Math.round(horsePrice(h)*0.6);G.horses=G.horses.filter(x=>x.id!==id);logG(L(`Vende a ${h.name}`,`Sells ${h.name}`));saveG();hub('establo')}
 function tabMercado(){
-  const debt=G.money<0;
-  return `<h3>${L('Caballos en venta esta jornada','Horses for sale today')}</h3><div class="hgrid">`+G.market.map((h,i)=>horseCard(h,false).replace('</div></div>',`<button ${!debt&&G.money>=horsePrice(h)?'':'disabled'} onclick="buyH(${i})">${L('Comprar por','Buy for')} ${hsTxt(horsePrice(h))}</button></div></div>`)).join('')+`</div>
+  const debt=G.money<0;ensureRwMarket();
+  const card=(h,i)=>horseCard(h,false).replace('</div></div>',`<button ${!debt&&G.money>=horsePrice(h)?'':'disabled'} onclick="buyH(${i})">${L('Comprar por','Buy for')} ${hsTxt(horsePrice(h))}</button></div></div>`);
+  const rwH=G.market.map((h,i)=>({h,i})).filter(x=>x.h.rw&&rwMarketOk(x.h));
+  return `<h3>${L('Caballos en venta esta jornada','Horses for sale today')}</h3><div class="hgrid">`+G.market.map((h,i)=>h.rw?'':card(h,i)).join('')+`</div>
+  ${rwH.length?`<h3>${L('Yeguadas y caballos legendarios (recompensas de Historiapp)','Stud farms and legendary horses (Historiapp rewards)')}</h3><div class="hgrid">${rwH.map(x=>card(x.h,x.i)).join('')}</div>`:''}
   ${debt?`<p class="warn">${L('Con la caja en números rojos no puedes comprar.','You cannot buy while in the red.')}</p>`:''}
   <p class="note">${L('Un día de juegos en Roma exigía de 700 a 800 caballos, traídos de yeguadas de Hispania, Sicilia, Tesalia, el norte de África y Capadocia (Bell, 2020, p. 21). Los precios son una convención del juego; la reventa paga el 60 %.','A day of games in Rome required 700 to 800 horses, brought from stud farms in Hispania, Sicily, Thessaly, North Africa and Cappadocia (Bell, 2020, p. 21). Prices are a game convention; resale pays 60%.')}</p>`;
 }
-function buyH(i){const h=G.market[i],p=horsePrice(h);if(G.money<p)return;G.money-=p;G.horses.push(h);G.market.splice(i,1);logG(L(`Compra a ${h.name} por ${hsTxt(p)}`,`Buys ${h.name} for ${hsTxt(p)}`));unlock('caballos');unlock('cYeguadas');unlock('cRasgos');saveG();hub('mercado')}
+function buyH(i){const h=G.market[i],p=horsePrice(h);if(G.money<p)return;G.money-=p;G.horses.push(h);G.market.splice(i,1);logG(L(`Compra a ${h.name} por ${hsTxt(p)}`,`Buys ${h.name} for ${hsTxt(p)}`));unlock('caballos');unlock('cYeguadas');unlock('cRasgos');if(h.legend)horseHist(h,L('Entra en la cuadra como caballo legendario','Joins the stable as a legendary horse'));saveG();hub('mercado')}
 function tabPersonal(){
   const m=econ().staffMul,debt=G.money<0;
   return `<p>${L('La familia quadrigaria de Capitón nombra doce oficios, entre ellos el sparsor, el medicus y el conditor (Bell, 2020, p. 10; Nelis-Clément, 2002, p. 267). Cada facción tenía cientos de entrenadores, mozos, médicos y ayudantes (Bell, 2014, p. 495).','The familia quadrigaria of Capito lists twelve trades, including the sparsor, the medicus and the conditor (Bell, 2020, p. 10; Nelis-Clément, 2002, p. 267). Each faction employed hundreds of trainers, grooms, doctors and assistants (Bell, 2014, p. 495).')}</p><div class="row">`+
@@ -3585,7 +5285,7 @@ function checkVer(){
 }
 function abortRace(){
   if(!race||race.attract)return;const t=race.type;race=null;
-  if(t==='clase')return classScreen();if(t==='crono')return cronoScreen();if(t==='campana')return campaignAbort();
+  if(t==='suelta')return freeScreen();if(t==='clase')return classScreen();if(t==='crono')return cronoScreen();if(t==='campana')return campaignAbort();
   if(G)return hub('jornada');titleScreen();
 }
 
@@ -3740,7 +5440,9 @@ window.__cq={TUNING,CODEX,QUIZ,get race(){return race},get G(){return G},set G(v
   }};
 
 </script>
-<div id="alacopy" role="contentinfo" style="position:fixed;right:max(8px,env(safe-area-inset-right));bottom:max(6px,env(safe-area-inset-bottom));z-index:2147482000;pointer-events:none;user-select:none;-webkit-user-select:none;font:500 11px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif;color:#fff;opacity:.6;text-shadow:0 1px 2px #000,0 0 4px #000;white-space:nowrap">© Diseñado y Creado por Alejandro Leiva Arcas</div>
 <script>/* sonido desde la salida de la carrera, aunque aún no se haya tocado la pista */setInterval(function(){try{if(MODE==='race'&&!AC&&(!navigator.userActivation||navigator.userActivation.hasBeenActive))audioInit()}catch(e){}},400);</script>
+<div id="alacopy" role="contentinfo" style="position:fixed;right:max(8px,env(safe-area-inset-right));bottom:max(6px,env(safe-area-inset-bottom));z-index:2147482000;pointer-events:none;user-select:none;-webkit-user-select:none;font:500 11px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif;color:#fff;opacity:.6;text-shadow:0 1px 2px #000,0 0 4px #000;white-space:nowrap">© Diseñado y Creado por Alejandro Leiva Arcas</div>
+<script id="alacopy-en">(function(){try{var l=null;try{l=localStorage.getItem("historiapp.lang")}catch(e){}var en=l?l==="en":/^en/i.test(document.documentElement.lang||"");if(!en&&/-en\.html$/.test(location.pathname))en=true;var d=document.getElementById("alacopy");if(en&&d)d.textContent="© Designed and created by Alejandro Leiva Arcas"}catch(e){}})();</script>
+
 </body>
 </html>

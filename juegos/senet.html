@@ -167,7 +167,7 @@
 <!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
 <meta name="author" content="Alejandro Leiva Arcas">
 <meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
-<script>window.HAPP_CFG={tema:2, volver:'../#t2', barraEn:'#ui .tools', barraClase:'btn', css:'.happ-volver{display:inline-flex;align-items:center;justify-content:center;min-width:44px;text-decoration:none}', fichas:{"1": [2, "el-don-del-nilo-geografia-y-ciclo-agrico", "H2·03"], "2": [2, "las-fuentes", "H2·07"], "3": [2, "principios-del-deporte-y-de-la-educacion", "H2·08"], "4": [2, "la-piramide-social", "H2·05"], "5": [2, "la-mujer-egipcia", "H2·06"], "6": [2, "principios-del-deporte-y-de-la-educacion-2", "H2·09"], "7": [2, "el-dogma-real", "H2·11"], "8": [2, "el-dogma-real", "H2·11"], "9": [2, "el-tiro-con-arco-sobre-dianas-de-cobre", "H2·14"], "10": [2, "las-marcas-imposibles", "H2·15"], "11": [2, "el-tiro-con-arco-sobre-dianas-de-cobre", "H2·14"], "12": [2, "el-carro-y-los-caballos", "H2·16"], "13": [2, "el-carro-y-los-caballos", "H2·16"], "14": [2, "la-fiesta-del-heb-sed", "H2·12"], "15": [2, "la-fiesta-del-heb-sed", "H2·12"], "16": [2, "complejo-funerario-de-dyeser-saqqara", "H2·13"], "17": [2, "la-caza-en-las-marismas", "H2·17"], "18": [2, "la-educacion-cortesana-y-la-natacion", "H2·18"], "19": [2, "la-educacion-cortesana-y-la-natacion", "H2·18"], "20": [2, "el-ejercito-egipcio", "H2·19"], "21": [2, "beni-hasan-registros-de-lucha", "H2·22"], "22": [2, "los-deportes-de-combate", "H2·21"], "23": [2, "los-deportes-de-combate", "H2·21"], "24": [2, "la-carrera-de-fondo", "H2·24"], "25": [2, "las-competiciones-de-obreros", "H2·28"], "26": [2, "los-juegos-el-senet", "H2·31"], "27": [2, "las-justas-de-pescadores", "H2·26"], "28": [2, "el-cuerpo-como-oficio-danzas", "H2·29"], "29": [2, "el-cuerpo-como-oficio-acrobacias-y-malab", "H2·30"], "30": [2, "por-que-se-apaga-el-deporte-faraonico", "H2·33"]}};</script>
+<script>window.HAPP_CFG={tema:2, volver:'../#t2', barraEn:'#ui .tools', barraClase:'btn', css:'.happ-volver{display:inline-flex;align-items:center;justify-content:center;min-width:44px;text-decoration:none;pointer-events:auto}', fichas:{"1": [2, "el-don-del-nilo-geografia-y-ciclo-agrico", "H2·03"], "2": [2, "las-fuentes", "H2·07"], "3": [2, "principios-del-deporte-y-de-la-educacion", "H2·08"], "4": [2, "la-piramide-social", "H2·05"], "5": [2, "la-mujer-egipcia", "H2·06"], "6": [2, "principios-del-deporte-y-de-la-educacion-2", "H2·09"], "7": [2, "el-dogma-real", "H2·11"], "8": [2, "el-dogma-real", "H2·11"], "9": [2, "el-tiro-con-arco-sobre-dianas-de-cobre", "H2·14"], "10": [2, "las-marcas-imposibles", "H2·15"], "11": [2, "el-tiro-con-arco-sobre-dianas-de-cobre", "H2·14"], "12": [2, "el-carro-y-los-caballos", "H2·16"], "13": [2, "el-carro-y-los-caballos", "H2·16"], "14": [2, "la-fiesta-del-heb-sed", "H2·12"], "15": [2, "la-fiesta-del-heb-sed", "H2·12"], "16": [2, "complejo-funerario-de-dyeser-saqqara", "H2·13"], "17": [2, "la-caza-en-las-marismas", "H2·17"], "18": [2, "la-educacion-cortesana-y-la-natacion", "H2·18"], "19": [2, "la-educacion-cortesana-y-la-natacion", "H2·18"], "20": [2, "el-ejercito-egipcio", "H2·19"], "21": [2, "beni-hasan-registros-de-lucha", "H2·22"], "22": [2, "los-deportes-de-combate", "H2·21"], "23": [2, "los-deportes-de-combate", "H2·21"], "24": [2, "la-carrera-de-fondo", "H2·24"], "25": [2, "las-competiciones-de-obreros", "H2·28"], "26": [2, "los-juegos-el-senet", "H2·31"], "27": [2, "las-justas-de-pescadores", "H2·26"], "28": [2, "el-cuerpo-como-oficio-danzas", "H2·29"], "29": [2, "el-cuerpo-como-oficio-acrobacias-y-malab", "H2·30"], "30": [2, "por-que-se-apaga-el-deporte-faraonico", "H2·33"]}};</script>
 <script>
 /* Puente con Historiapp. Lo inserta hacer_historiapp.py en la versión <juego>-historiapp.html.
    Configuración en window.HAPP_CFG = { tema, volver, orient, fichas, enlaces, barra, barraEn, barraClase, css }.
@@ -547,6 +547,17 @@ body.big .card p, body.big .ans { font-size: 23px; } body.big .card h2 { font-si
   .info:not(.open) .more { display: inline; font: 600 14px var(--font-text); color: var(--oro2); }
 }
 @media (prefers-reduced-motion: reduce) { #toast.show { animation-duration: .01s; } }
+
+.rwnew { border: 1px solid var(--oro); border-radius: 10px; padding: 8px 12px; background: rgba(243,215,126,.12); margin: 0 0 10px; }
+.card .rwl { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 10px; }
+.card .rwl li { border: 1px solid rgba(217,178,76,.6); border-radius: 10px; padding: 9px 12px; background: rgba(217,178,76,.09); }
+.card .rwl li.off { border-color: rgba(196,178,140,.28); background: rgba(255,255,255,.03); opacity: .78; }
+.card .rwl .rwh { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+.card .rwl .rwh b { color: var(--oro2); font-size: 1.08em; }
+.card .rwl .rwh span { color: var(--tenue); font-size: .85em; white-space: nowrap; }
+.card .rwl p { margin: 4px 0 4px; }
+.card .rwl em { font-style: normal; font-size: .78em; letter-spacing: .08em; text-transform: uppercase; color: var(--fayenza); }
+.card .rwl li.off em { color: var(--tenue); }
 </style>
 <style>/* Fuentes incrustadas (SIL Open Font License) */
 @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(data:font/woff2;base64,d09GMgABAAAAAFsQABAAAAABLUAAAFqsAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGoNeG7tkHJNMBmA/U1RBVEQAhTARCAqD0miC7xkLhWwAATYCJAOLVAQgBYVWB5NBDAcbbvcl4m2Xi9vBmKP+381ZwY69hNtBVJMC340MBBsHUPDYq87+/3tyMoYwF8P0avUGKVSVxXb1m3sfdKMsiARhwmTbbBJ60Cv+XW7xVse83sGAoISptEfho9AWympaTtnBm/599Srw52JZUUEQL65Af1X2wI5OtW7sQzNjhGdg28if5OQdnp9b78eCbcCimx5r2Ea1gESLSghGJFadePapZ2Vf6WnfnddKUez37/fsuUFwKpqFY5avYqNQAyoyLp6Vig9/oCd/4d7s3pE0gCO+TqEcwRgD/YNz1mZ39kEYEvKVIlB2Z1sbGEHaFHEAmDZHbvpUHq1OA7GpY9xmRF8PyMXmrZkBGOiHTt9Fvz3pDhEjMDlK+xjb4FJ/rcOSMq2ZUgD/LTAAQBD+bfdlNykomXTJlwFPXN5872bN3HlSTiM1A19xz2SAaQmyXfbcy2/5jSCtA4WlhYrqW7b9v6FrgtsDFb1G10Zni07d5i2j618oWqejhEy3rjQTQv1gBBIEYPwZgWBrLW+foYASfSs7HvDu8h1EITGxid1HaCvMg6tED0ldfT3/Oq3a/604keNk15q5RU4WsGgcb3bgiFuCopG/ZEuWrNiWg86gPRRP5jbxsOfAsq3/Y0jiOFkCDizNHCFVu1wdAHbA3T2lW6ByymLvqquAu+aKcsstymvK6xj6n1ser4ybxWawlbX3wRiEBUFrMW7RZsum4N9PVeoXeaPq1LUyNjIqjWEvsGOjEJJ7kSP//PyM7fzs5bhrSHKGrE44ASlLWanjLnWsCVDRmIQVoMI/tMxZZl760D51z4EMUSdsWJpxGHlJ3/3UHdocpTaHQ8gIjXCopsCiFMJFyMAYHNCAIZy9yjDooCswt3qxCjRaeo3/touhkrQTxRpESsN/5kzfL3BFc2K5hg3w6zBly5jb3nrf6B49Nu+WNIQggwx2EJEwHaxdQpD0+mqtxC22RQPBLBW7tikUeTG58PM/+7X+o9FmXnfpc5atKVFQUFHA7RyEtLrvfRJA4JgBEANA7zNiBMBfPnjpgUuO2GWT5eaaoNsADSoVyRIU5AKDlSgFwA6nwCAoqAOjmW9OMC82LzALPctO2Qiw9DQ0ZVvAn2CHDaujKTEGn8N2mQyyLwhzyiTwpa8LYHGZDr5WupMqhrFkeeVgNnQH40UUg0pbGFZmO6hA22lnAy4HBnKNgdzdIeSBhyAvGMhPDOR1G+SdDyPz2Wfb3/5ZKwBhUAjD4CAcQ4AIjJaOMTIxbj4mLMxkyFCzGDGP3g+DqtEcAgIDgA8AEhhcjcYAdE1zWBCopiAAELi1Qfd/r05EeWFoI4nySkcmCPdmNWqihALf/4W5DvmREHPjp9FE/e00jfBv9UOE0IHVlnBEFIxAYfz3TAgA+B2TPoWPUbt5sGCCOlRYZBACCLQpLxdoEwGQYOkpiXHRxYBMn+VBvu8vkJOjDTJkHgapcaE1Y+PmSxPYAFhz66aPTfTWlbxoEZH/LZm8ZSB40MYX8x9o49JIyJULiyeEgl9ds8dyU3Srk8fNSApet0cbO1xlXDASrOd23BNkhWedWvtLVF+7i9a22s22ThO8HEXW84vJS13AUN6lSnS4UtdulH7cj2qpNNU+5mZpx9hD17cy1QfmN3P7PO6yhXfQOln6g9mrpbvisRg9qqqS+Fj9ZQsBGrZl85evWUZoUSLI/jAhtcjXM0ACAgYQMICAAQQMIJCBdZPxseoBgCFAIAAECASAAIEAECAQAAIEAkCAgAEEDCBgAQKNdJGb1r8ddtltj332O+iQw4446pjjTokSSKIDCozt6yJix6+5PVtm3PiR7wvZd3zz131V+tLP/9LwWZ/ycR/hZcje/ba3vA4qk0ue94zswbufePuA8epLpyIg/JkV8+QTUBT50l996k0jm4Gfe9aDVAm71ZXOdaJD7WE/0P59bWtTa3IK8nlsK1vc3Es4uRlNagzQxRvWoAbUVE3lcNVAUXJO4fxWruKzpk+ZOG70ZvcYBI/A8H8+e9lUwh+81a9+9MQ9N1xyxrFKhtwH7LLVhvDVFVlejbH/TE0V+addaI5pJhhliA6tlmtQpUyBLOm8JetkTh+YackJsZlPWFGRYCxMOID+9HvvvOzpu/FpX3jkjmsuOOWIfXbYbN1+Wa4E+dot52j1THv7dM4pve3rZm+vpslXCYeXhD3Ebld6kout57JwGQuNXy1YXRDnvamOT83thbA+zEL/YvyHYRVn+cenQL3T1s5MkCO0Eeb6vvPhRh5ePoSKGwgt08s5A7ozWt/IzptJ3EUZMckt/+y4yrP4aKpI8sCfmfy70aLWstlHDJ/5k6+83/F7f83H5WTJfMH4E3dLC5zPW0B4aArGuLg9VeIxVmNmtepmfbsTknGenhdTNW1KNXo2sMQvA/FlDkB72+vVvQIz1tVznMpXqpuzTk1L87xw+w1kp2d8Xk11kiHAbTJ2dC95wTgVQBlDLBQuMVUT5hePi/OcxB4HHuZ5RMBTMIZ5vWFXXJutAqfPC9CzfgYPNyxkNw+5UQDUKiGlxB0FeXyzSwOhdD7ucVswzvbNYOPm4i0b37ODnexiN3vZx34OcJgjHOM4JznF6XD2oafz+cBFLnGZK76+bWq8fUgOzmAO2iD/nRAkuxlBpsjuLQPHSWNa6P3idu9UotBmfnOZm5E+nzTjSPyYL/vIERD0aPjL8X/55M30nz3zwK3RK+PnZj/RHML699hmkzVWWmwuTJ9hkjGGvTzIM1+8sTVzaRDXnIhpJw0oTWrqZo35YbkiOTQYvy/MzyWeFdBLSTx6aJx7cNf66WJgPAyjgf7rcx8eZv7qR0/ce/HG6Cc8Vs4+JFiLhy6ZPWcm/JJjDti1brYarm6w2vx9uYXmuOeJaSbMSqOUOhHo+QMwY9b6SspsJKgqMJzaVzcp1etIkdDNWJjyeCp1cs8XPJx+NJMXHyR/c4TvWcpn/oxfU2iclPzFOCYzg/9Ywqv4UwpwIxalNrISPTYCXCWDSvyQGEMsFC4xkel0swxVLJuyOlnjDZYRQEidBgjYd6KG+l5jg8W0iFD5cpXtyj0I2uqdvvdB2/zj7ZXPjtd35eZtd4Wzj/0c0GHQfixICEzeiXEYvjYfFnYPCkBf6SMgAAAAsEacUZz40Z/nEAnNV42t30wB0NMC9WA+OMbIo3mb1/ThaUE7FRv5Y9UNNsj9/7CzLrjsrvshEBEiQdEQHQMbj4CQiISMgoqahpmFlY2dg1OceAkSJfELSBdSHowLBoOcdRbW+SCcC8K7KJzLwvnt1aiIUDRAUv0gNCZWmNjoQpOeDfaNqCAJyaqMq9DkVZgUXXA2Z4P9UBOaU19oVo6QYULwpQuBLuQ6I6Ry5bCN5GNsJsbcVQrG/bAdH5IBLqtReDGfVR7logwQ8Cg8b4Bmh4CBgIGBA7TRePC2OxHAG2+FAqT1UT8nJRE0yRLo21vB/2VFt+QK8a2DmigELZutAttnO8K86cXnLB8cdczyjXezu3WPiOF5cXLH8bNQEbKu/JRSofzlWMUFwKad/h6SeEgXfNMps0BwPgcAmiJl2gXLUZ5Uv62k4q4uPfesAsi+fEC7EC6Ygmj1urWGVPSu/TKyrtavkPdCCAqQu2mVQrtyn1NA9JU2+fH3JghLOQb8q6EI8DxzBWW56Q3Z1DT4lBydTINelZ29DCcS8o1AxYtp0fAmuM4CF4uGwAW1uAnH9ooZbV57tboIgIG6zhYzR4pGMqwBNpUDpwd42YnkgggRQKtajmY747SK/R6NnAopgcNQNujGxQuoO5SiRlN7+XSQuaxH0fc8fryBq2bIgWDQgW+v42Q29QVRUj9ja3AplJe8+SkfNZo6qAXKCXeKk+eGFnZ6++YRbXuyjhwOcgi09x2lAB0laZG0JETcun19m5+276snfdZ100fXlJsx8ra7Lz/zFkcxqEWnoNezKoAAI+EitFCbRnsTRYNBhw7/+hkLBy8WCxsHF4+CkoqahpaOnoGRiYWVjYNTnHgJEiVJlsIllVtAULqQsIgMmbJky1GgUJESpfooV6FKjWYDdeg0SJduwww3wSSTTTHVNDPMNc8CCy2yVK8NNtrkO5ttsdX3dthlj/0OOuyoY045uzmmK+s8mgqQGOCHOAhMmK5gBrMJZheV4/VYTkmQwksMF8wuv0TzQHwBwYJChAaxPywHRq78phDCKDK8KiVWGYTVR0TlwqsQpHLA6quqqYGIasVVJ1SjuJol1PonkYHaEXXohhpe9eONMB5kgvAmCjJJqMkimiK8qUJN62eabgbULKMSFJL5EGqBxXIUmsUQaqkgy8S1XJCV4vpGIquE19tPsdp6WBtEsbEfb5MtIFtF9r3wtgvrlMjOiuO8eC5I4KJ4Lpu3/Ydg+s4EFnSiIECHDosooqBDh0AUBAgQLkXVSQuKcEQbcAL6EAXDkoRiLaqdwsCBCRVUiCwQn8MUtQARC88xCimQdDIDCqwAJkOBlUAUpcLoI0S5aCqEVyW8GmE0S2Cgo8QvGMMgjOFGwEiFGREcMSxxzTgZLfW8yJBMl3dRQEfXoGmigYdaaHYEIXYJsUcY+xXloBCHhXFUUY61iLwJ1UwZwZktoNl7OSRgwYGDDRYsbNjgwIIDB85YeMoBIXX3NlErkOY7kc+/x7sHFB5xCEZnKA925zX2o4oQ5SkLiME/Pk/BqBe+vOpCemFWtSPiKauWZmX4q3E5GZGupSA8cE1edOIRMFHLB7zfigGxgIzVia5DqkOsQ6gTVQdfBwd2+Xj7azw+f9lISm116yBwqba2fxs4UTdgYH9w6N9K/Cewp7W5sRpsax3Q1R9sah1Y2wrWOFaymLnMYBJjGNYMOjbsAAM+nwAHkKZZYsGDgwgBLFFgIIFChQslkG2aIUMlDvh2TGy8DR1vwvvOfe7e9fJZuu+CO/H6a3Xv2ndNuur292XXltlhsTY15JjF6yT7uARxABPT8lPg+vkalptvhglGGKRVnXJFcoT5ucSz0lM6CdbmBFit42DTHQOb7CjYQEfAWh0Gq7ETrNoOsD4OQVSb7uAoTXZAarNfGmif1GqvVGuPVGO3VG0X63MkSku5oYQ4QJBxtNpWUGGj7P//CbsgBIA8EgJL902xzZBGajMAHC8vTeFZQQ1hiDQUGjgALD4Ro4BCTqZQOJ1UZBW3mRL9cjFNMUCBRGJY8MYNB6w2QQsvKa/LC4xIjKlmmNUG5ZC/dG+s4cbotXpDUpS+dApl9eKxgbOpqL9w4KLtf7hr4CBurPMyUvO1h2mNsbYHheG2HKJNNo4oG62JiNWWRViv2Yk3y7j0cacZBRlt4n1oJ7af/OwXL73yq9feeOuhRx574qlnnnvhBz96l4y8U5cQ6qwHALQXfTPAmTEav5HJ+v6kYlxzw0233HbHXffcd70cufLkB0OcdRXoVs8cVYbsCHVLyuP9ByUyioFgI8OHAiRJ58KM0oVwJVfEPTGCcUTtCIuBDUvMg7+g8y667EGu95OM4L2PPvnN7/7w2Z+/SqYKAvde/vav//zvi68BKAgG/9w0RajzZ9RhXxQPnCBIkKghV7tZWz07lBJXGwMkXJwKQLQvcM1iqlMK1XGytlb0wBioNOlWtonzULDUCkbyEfn4dxifq9Ayy62w3dKagxAR0WjFi2g0xiyrbaoukkK7GyzFWOvTIEZBk2IEhUY6wej0V4YcNchoOV+7RuQXqDgEztGBvl8obbGJMfvPC8fssdlqi41SxyuekRwEVQWufnKVCTMTofiYyAhGLcnoUWxohFjbyPK6X3ChQ1FhsP8QoUvoFAYhd3l9kvKGyYWaxSUW1IJGUPqrBJkg8ZcKIkHgErqoDsL9xIpCwSem4BRWq27LOvNwM/TaqMp+OQxuEMgYXz6Ak7GnF8NgSdeqv2+gvfI7DAA/nJIAiFzOhU5n1fFcNAZohJYkPP4vbPdNjhH/d5e/ngfQI3hPAD0NAHAkvxIAMSSgRw4A3dnk+9z+LdEgAvA3wisNEjgdSkqGiwaAQW9dAFoH9VwABoTSKTiK6Cz/kr3cMGAWCUbZ5WsW+XNozsyDebQQgiJRiOwJix/id/GXmCsWiqVipdgmThT7xUYplfSU8yrql+cEgJhVolX2ZJE3B+MzAbIgHPGpNDFbzF+TVZxQutB6v3qcL+u/zP8y70vtl5r4fwSeRz+Peo5/TgcAgGf/Pfv0nPrs67Pps95n4qdXn1556oNjJQ0gXgDU+DVqAHptDZwIvYKzemQxdEI7ce7e95qhrxRJtHRECjAo0ElaP+4CP4IyJUrxJBeGlQsnSqx8ZBQsHFyljbewKWDvYii9i+t5MpIyqaTRr95OBa+0cYNDa+q7eaA2bbJJXQo2/Urm+/e7OL0gg3IUXGFZIrKlSdXC3emcKih5tPHp8xBq5aLrtyOCM8XBQCiEhfhldU7EHJn3j5EnBhFJNCYaOgY8OUNHJmjynopYUh/mYd2stllrtW+tt8Y6G1TY0jd51/00atKsr2HGG2OsicZV3AQ9ZpltjoUmW8Ts+wbpbG3t7Bw1Xkosel/0/2JFAK3dEMDfAsi+QO5xAvp+8Ow1ayZAdsf4wuArAkNnDoEBByPkMcTYUQWUSNkodBOIRbGIuBCAZMPQNyNEdCEaHgYvo1wDVN3sJpJnLMyj4NqbkqlC1YFYdNmMgkaKfQEMx8EMIgopTsvwbGaQjYWtcp0waChTQ9auRGDQPAeE064QhXJX8QggyhAgqkcjdJU1ZoTeRBjWDLWxkD5kWjmGOWrBWixvhUu7Ct6cKpwapfTIjdQi+Jn9IPKh3Nx6jQfxrxyJAsCAAhqfOXM3U7N6UJnxjGYGM54U6Bi5xcK427vM5yCcVfgNolkCyzJbIDK+AJL0WbrAXwWycf7zrPgR2MePqyu54iu60rjiRTaErXNhGHEcbwteOZ59FfHqCQoZGbMMKKgx+VlzrAxD/ewNCzEsi974ovyvZzuWLGrbOi96VErWVBetblsJndBSa8DLQ6azDJULq8oURX2vwzlU1uWZN83is8gAIBQASXqSgF+KNGmdZjJqbnNKcxaFAQAFNPhZ6XtpQ3d3hzuNIUOluLWLnGRffp0Fm1z+FKGAghqTn7V2lF75caXYaW2jSmmwf2nPtPlUqD/5JTZk08Guqecsq82W1hruSUoPvasx3ZqdOB4zkEgJWa2ImsBZ4OoowOkQmX20LZeW/O4VRjmGJcv7q3I6re97a+vlbojyob7rZ9ZeOhKiL9vMmrJfT10+mewnYhpK9ExP1+wI9uI+4YF49tmQic2QFRjA2Z6MRRUYiG0HwXyeZTFFAMv59n7N5/33aO3zU3C7FGDp1RzLuAtxadEVzs9dGKlHRBEwY4DQpV3UkGxxQyRnZ0Ta0/CCRzdRQaJ5LtLIxuXXiOO/Z3T6T+duABy5LaBqaM6vApaijVMIqstWjMeMYw2ngYwrXhJ6EAbbU3rxImWK5Q4Q8ZW3+hUBJ77SZBHLQBZhYIF7gSTTxNHf47R3Lm5YDoLPUj/oPGTvmdMBV8fD+WNEw6yjdz5KXvJLjfj00qpJ7UGZEYZcuDUtVyivQaYroTgaopgwvlnTx8uhcBAmi/JrV2k5RSgshT0wPeKtUXuqhoCpxulhr/NlAQh+BiiFqE8WR6Fz5plxC3v9+cdpI3ChAiooU0gioAFoAgT/cDB7A2A5inOKV1TGVqoNKXHNfk7n4awkFjZdi/FwGYXkrdVM2QPn9uuq2gioDnpS8/rZho2I7tz1UXkHzJgw0uiwQJnKpOyrCxEFd0ktfdsfUQOvinJ+Kzt5Bnm6Wo487/mdGvHj/Jxh3QZy2P1dAJrIIgVwoiCjaA5rkHSaqQJe3lgxANc5P7mYo+2py45mZxRAc5OUSF7UeKRLio9TjWvmb2aFksmBDPLgu8YAj3KqdEaoh9m3Se02ufD33DAjLqo0tQoTg8zVcHBl0egHrn2CCXRRYlzV1ba09NUPgDQHdvMOmKrhcO9T504JsysKI8ttnJYRvz7HrEr1MTXoMvYzNJtNpuJHgQDAyZFfzXmvplt/Dpadd0uaPNBSqIoYKbs6arQd7+ntreNIadR3+Y3QI+ilzmsvZYH7cu+jHI6K81dLHJclDU+RVCwmq5UqXB3klfll4xmLs7YVjUXQaGQK7gpOveNaslrUg4D7curABMZPYq4j71iWFweeU2/O0maK6iPJKNNbX0SJIZSTnzisIRTBtjZIHE37fFx2toUBNnSfz5QUqJs601VP+vkTLIPPVZcGFC3D1YPrT5xyDMdc01dRpJHK/6ZJzMt0hFUsRC4ocLCw5G2B4zKtX+aDGDPdEqd7XpkV556udMBSUwW7qipzKmYVSb6KzBUrXrayBMelyCqETjjSTqNwb/B4X9vYDkrSXO3rzXjpytOx4DDne1dT6no8zjfPjEL7QTdDBhVBO4fZsJsK03LM0sWcHcvnIHGYudYr0LGg57aaky7pvoygBZhvd3SoKCLF6d9SdIx5TQRfpw0DBJhXMvSUwWpqb36ixe/QDFgW1GDpTMGogF6BWdIF4kTYZV7aHBkOGjsks09pm0QYJQHV0m8nlj3ZamSBc2Um9AEprvxQvbhxwHGZtFg9uOrP0EyNaIm4JDYpXf187Jr5yFSxy056Dlkk5YOnI6fDgs4uZhS+yFwSue1nV1JQ173HaKa8Rfk1YIWJ7pFFiH8Iz/dKTNGjY5evcP/+SXY7NuGkODfhrWyR4jGakYABViWdPsngHb51p6GBpmWkqzi1ANYgE5JCGhHmpQxfPyoe58s0ERQC6i9voBihXEO4nrxnAw5icx60WbBMbQI1GSsjIquuetU/Rn2U0zKPA3Q4zpAineEBwkydBAjjzqrpj3DvU/ZEmFlkuvog7CKAi98eV3COGiNcsGgykQLN1MEQIbjQV5JNjiaWa2suRtomYnNVUBowK1zagS9hbG2hktLHx4K757c2GFaWKNLkrIr4aJtZpHeKmeleIoutx7nHfkgtjWVnnls/S7ySVkBVAaZ4ZsHHnO+JsOOc2OCXorsIZnQLdI05HJG3puEEKNsD465RbVec6+tlt36FkL4jGb4r79b/xV+STv6ylXHlKrJdjrv8BV5qz3HobZhVsrW4XoDUezWxJCajNpq8kqAlJYymU40PYDKM68FTbjqFALE8PY2Ky8blAeveBLVaCKHmKMnr/fhnoNg4zcbNr3u+A2Xze7RXLVgBlmKUxvyQQnXXqdPt9UQdP2uQcTdMNrY6vAesEFNUyr93I8Dec8/i+vmqTxhJMdvEpa8+W8nb8pJdSVbkDxPcibwIBBmAPbweBQgyuTCiNTNbS9t4dxhhFL6T1uNwxXw3kUn73ixkHunB5kXwQ2zylpNc9VVsLQt1JLlFbSRM7PMZoBvcR/ce5jBrwrz5JXZMSXR75vk0qDA5cq1wMgBUoL6Q+lSdYM4hDJxghW5OZIDcm1wkPF8LFJfEZ3XRpJ9TSvipIARUMvrcSudQhWBKMMqXNhftOa0i9gLoGFVhQKYA/Yn1U6Stb6MhtUyOHh60M8jQusZRiZ9SMSTP7fSVGlHlMa6cGI+D0d5DkghI+W5DHU2WxPCtjkR6WGjrTquHeWhRpFB8hJA9f2S2OITHvaxUPHmVMzGqxRG10XW2K6lzXb1md/IspEaeuTrTPG109j6pXY2ek8//2+jER8JjdWHSSwtOmuyE1Ux8mzDAaMnoV1SeX/WfronN93qS72MJQjU9pxL6IT2JEhSjh/SOJKbPWV+GkEM7CuihS33RFI/ipBtIw+Tvhj05oa3XoSOUs4zRLpcuSnhz9ljqDP/2dLJxuSi51Fm8257p+0Sx27+agcWauE7bPCubPG1wlt2uxF4M4AF+2tD0dVxcqNHp9g2ZsJu7VpDB0BzVx9NugLMBNbL4TAGFmuaj41PHgDVmSAwyNb1cByEXIgkIcIslv4L2+jJYTR1cwzbNZmyRhjXbd2SHzVibJ5eMljpahXM4GplBHFGZMQkVsWzpgk1yLAXLIMdB02nIHVLaFDFm0ovuZmK5wCYzstnHOjOaLwwhSQUh0tJJceo760jx0ZxqIXr029wwPqVeKHpl3SeDoAAraXrzxa+HMCuEGsN3iOAh76o2r/qTTf5gsf3CBaobPjh78NN9PCEBIF1tYd9eo9kSDIQYh5zehm3+QrRHcbbhR/XbZZnJ17NFu3IWcKBWLPM35ODW8Wu/cCB3gR4qukYILXNyXUKbJ14nA4/TQKTHFkIUkheVMvT6vqN5i71+CpNlEorBoz0yGaRNGN+JMtH0YiQPqeEBSX4J8IFoKdPyvZLkqWexVxSvcsaLZZUrlL1kiVINF9RnvZt109Zqm1MFO2u9prZkL7BcHxd8XKZHSW3drm03xECh6UH002qMBcchpVZgSOdztr3qaEi6CE7Hki7gwxMnGt/PxyAtz7HJ2hEXtXW9OonEgBPMKcsrQkOznGGh6Cl4YxSPAO4onk4faWgT5NQWS6dX46M+ux45WTH/a1uOLdddVn2JKe1kFzY/LK8OxPrz/ZB6U4l9nq0I/tE6O1xWT6PxCroBxsREFyC7kJr3Ck3UIlMO91o/XfBQ1hsYupy5jHJ5h8J0XkeANHz0pkc9wOpphVP7782i1MWgXUgvZOiS/PX4DdeMJxMCpUQ8NUyLDtjDieTzJa+enU3pem1098Ms9PVcXoUclLJ5KpiB5O3R54o2Vu0KT+k/ucZiF0ntH865iA0nLYr52kHuVHdvMkcUaaeHTA1qMbxgjphSh4i0siColOGSeBS2b8664GqeeY2eA3teb6PsvNg9eDPN0WwtJbVmL5YwxqgathWPL4IX+1gbh+N00eG6RA8du2hDbYzawchbSS0342pjfKMyvmYYv58mPzBk/IBry9zacB55MHicsTePwOTE4zxvD2VyzJwQwp9sa00hsuLoAGTTx4fnjoFQcvE52C8Z4akIBMATx/w99naMpJ/El758LedesEEtwawhm0TnQkTdVLZI+7nXv+7vuHWHgyoAyke03ubs5M7Ls2l8OV1U874VFCGY5tlvw5C8rZJwHzkGjm5cYZOO84v5Bo0NnuwRQHhzWy46lydjtq16KlgNUf1cwfLJAjfeBpw/HjypH9Yu3bMaNfmN4K8kf1keRagwdsKVxt1xgokJvItod4C5/5G+8hwdZCEWyn/kH2P8aR/So5G0q2l5ha15ih1h7tU3ngXBC3xyGhK8DfUuKFYQG8WohuFsOi2xFbl2WsHtAeJifs0ITHOi8x6XwkKuJhZZ3s3Z85iVl8suBbNeMgXBNlhOQ1IRrwYuSGXXLHtQ3tufEdpM/d7ZBipZ9vj+MZhi7UtoYcrNJN2KwIdCtWL44PfkJovEpoF2kz2F2WNWjFzntTxcdXp0B1Xsl1UVfizn6hcoQBj65KD16COWqLyySaSGXGtOrfAs0V6wUUSUvSRaYrdcwrhZdc7f1xSmvjJJfzObtp7aXfPnJiF1o2PIvN7gzY24WxtsNme6gG3TuXDD4Iny0r4iFCpviB3HJ7KGOdfvDsaoP53NiqiJlJRVjU5H4GnMdiZm7EfcHpOLelWuGWd8Hxo8X82pTgpvt5ie0jK88agmW0t2lGgKRninOxVEKVTDxTOwbEzR/RyJEyuBjYtAecVovCYy5UPphoUyFQnYkmUwnoakHJsYtxouWqhiLIbtak9wi6G6t8ZuNz1PIkdcINDiaWFe0/v3cb7Eq5jM1PelAPJRK07XM0QVgDl6iZQercQ9INnTRjYGmpyAEO1kG6SwxTWrccOCA/68DjL051PpsWBT6rBIcwa6I41jT3b29Lgiu/B3zdE4IfbHuIDjgIwDMs7JOCAxFCIV3q020NcUPkeynqppFFwse6S2OfA2NG7+uGTucUfbEJCfUFHYdZjkAYdu92JNAboaqceCPqRH/w/xGeg2bvQQYOdzI2T7kGrcqbBCbTQJuu1MbI/tUT70e1jK0c6l9kGYVpYTEKjwr+1ae27FjiyJUSyrfAffx4QVcGcO9yNf1AISVxi58sEFnD5hxoRpxAFUWQVwkRySnU5nIS1qOEalzmv1LdfTqYe5VgpZx/1yoJqLyQBGMtlmskSbolps5JoRjAfT7h45ouWhhG5IyInpgJRKMil+WmotUS+CNdctm9VUGM9KgA53MoIsIJQT8IikOFP7ofiY5w21KB3GSb5TErC0xXKfvwyeP1Xayf6hkJhS02selJk+yzcxmA/3aor6rO/KHrLiInQJTtxrFYLOuMgrri5HhioNvjTw7B1QYrnr0DNxenTce0Rp3nGhZvYQUQuR1z966M2fWdp4ymVa5hVv6p08MzLqyQmN2U7dZtm07yNvANsSD5RKw0FQZ0FGb4g6EIYpWBl4R4nzwxqY3tFaURJZWFP5pUu8Ukdvmo5HzDSdoz0s8cfLJoJt9dWcDiogBXwQSa+WmdZxJvpg4SHNJF6id6pdZuN6Tfge9oGxBxC3TspafGlz0wKLpoPxglDTIa9jzqnnXDJz414DF6AezBJkON9fFLWqYyWx+JyE9655gzy6dUZ8cK0/ocwx4qOti1P53sFIjwEPtsUZhBzQlO+USYgGwwjkN6a5HBXPrRW2aji8oL0PlSbUXTto5wbecSOwI/MNpTF949aWc6WG7K3FCwmcak2NzQfYNnYW0JgQ+Lbk7XNiQGQVc3LUN021WHv6HJt06DJntxBqnQnEvT5V4OmkVL4kWuUh8bzrf7L7mKg5scemMexa+38KpLTAGTfV4nHE2xMQjhJZEethMOfiUm82qVfsKCqxUlx/V4/YIhDz7Lh7TNCdlU6VhdFhMgACGPbRySGEQC+0/vurIronSahQtK5B27MYkbfzYAEy4f/ZgqIiWYXCkCDL+uX2vDF8U/SOFdmq0gqq6/Z0kf2YVZ/43Y+82FEcdEgCOaHL3k2gpkiSbK0ed8AlPQ5AlSS7G44a4OJrhzctz8Sn1ifoiekpfmZ+LPgu4Wx5ztLgTflNfYj/fE4cr+rj5xEj973ugaZMYFxlsmVIXKbMS8i6TbE/3JTkEktFXRDIVIiRhl4br7VvweO6d7BlsVfLMX/uX3CVdJ6YHx62wFqvudkwJX1RIYGLCK0mjWVHY51aLQZnkfcqouFwMJVS9XxwCLK9a/bQrcZ2mdLh3CBytvszGOiuf81cXRW8ioVdJDa+1FI8GgvbuSrstljRSvrWRumF55lTl+/0VYSHPKyfyV+jMZbWvdBNfe1CyIUH9Lv+lCMbOxMmp44KpXjNjW7Jvl+U+J4nUlHCWB01kSSgdid+bwUto8S5CuNVMcgolDnqNIBAru+YosNZtsy45ccc3ge8OZrLYvWVhwrT3NCTvRTlTtFrhWm9RV8R5R/FlB6slSsmOA2lqz6KVhU8TtPHKK4k4uze7IdOBv0IbeU6q0JHC869MXQk9zXlvIvHXdUn3CIsOQqQ3XKgtYVBxGEuEZsk53cpZ3LuXZHk+792NmF9XRp3FpjSCcsW0h6WlNogX9FOezv7ZPZI1y4Alvl7LQ6e/LVr9NJbx6ZfyG5a9/Am3BqeHvCIkfKQSRogxVzt3ATWcvus5GQF9WXKy1jbRI/SK14n9o7/4mct+GWd1BuoE/tlEpmn0iv3SuuCXsm6iSMmSdfVin3bpWypuT5H0r6uvc4jWNe+TpxtrjdPLAkGjJJ1knq/USxdBwI79ug2qaQIAYkik2PcUQgBkR4jIW2UzccQOQEmwHgGBstAMIylc76BRx839aokMAGOEpOjc/AwAZaBO+6frzSgdgwJIzgpEP8gQEmopbLizpGvi+XyB6kYEkZIUypOilESyhuUln/rV3gb8v5dm5Ke6nk4tNBaQl26M0G25jUv70ZQU8n+DCccMCcCGqa/UeFe0rKWURooGwh0xoxlHIZoE7mOOvx7LJXc7yIAKAmVhpKma/drMlwICZlPiIJGIqtg3m+pYhv/r/OsC+wDF3ge8diNg5BeRIuJiGNje2ESLNUcFvx7NPl+6fQUDAkjztdKxmMTfr7f8Chfh3csZC2231DAJFgE0VgCLkwEhvzNrnKdNWJ1OAsqzUnCXIxUep2DkBBJwmXBVcEhrRQmwZwTUp4Hw03OEJep4vPz+//P3LBZdAr3cQ4STMlOlE8SEvJC3rA/nFuZbbZ8++B/1qVW4ECExRiF9DkHJsGyhMN8GISE/CBSmoXyW5ZnF08titiHVBQMNWRSIh0ez5jy4pRpA/Iyk1X6E+ouYNchXC7CRAgEhG7aBG5vMhZINZmUxYp8Nhv+stuEfx9gn2VvesDzJoS8j5HtSGI0cvAnHd7Zw5pv+6SAiaoChusIiUtUS6Zmfdfw2+DS6TO+Y8NvwHBjFHAHyN0TlkTx+jSrU3r3P16VN7ZRwfcOkJc3Ghr9Mfb6RnERuZ+t1QYaNh0v/8CczGRM6mY0MIzj31YSvd7I+0uYdkLZpPDEtun+Oyt1plnXm7VABZNgheYy26X0d6UXhF901vy1k2RAZunHnPu6+ITRrHFxNHlHWooELALBlojyYGf2C5XUDbM/8bLwIcFVweGQ7IeN3ZBU9XwwZWiLYOFL1gHWk5eZ8kOJMZwbUvULjgAgwnr1cGkXjXKvq6UfjwwjDx0GV3MEWzSyrnjg43LZdUuQE7cb35DJb7ABDw/dsdRtEcjuGCG24opOmWJm2DLWL1lsSKs0SLCRS23byFjEZCxkMBsYzMYRzMFR7tYWXHVQPHGKPrzZ+W0ICRE8XCGw1vcdWi5bwiQr6XTfgx9ihKKM0lLBo2FqmAQLvbBcUgNueT3kcrn766cyTO6rGFX5l+CSln813g2xtIYZYxiumz3ZrBxgMd2B5MLOnJ6sUX6iKtJlkdGRpu3yPm85/5cvOrFz3rENSWmTnh2nZlasd8YQr+GiOSOX4HYBuPC2LXGbVaeFmXjxVDXKTeB/cFx4gbvppajQkxu5gqxC9JhcWWzsDWZ8B+Lka2S/yHd35h6mftF/1bM2MRkbmeypDOY00N0e9cvYqJ+QaiNCQpjXBbyPDBfWjj1kqe226zJJD2vzH2Mt+7W0O41wCRJNQ5nSYCpMgqnVMbTn+JhPH15cyv6girwh4Dwx/Fw6TILNR/D0i/zDHL4jYpcqmxTe2Cref2etLX+dTSxooYtLzInivVpAtRmVPEsvT6CpLvRfrNGEBUPbX/b8bM/V5KKMXh6XYpTD6dv/DsNjyHcMar2ePQe0XDK7nRC9p3XibdxC4qw3di9lZAeX80mc3u9gUHThIFsjz7JoWad9kSfX9IOXY1JdmH8xRhOG10C3nBhuf3DUn5g+yJpXqh/kzXUNbcwZrkoJD7Lnlmrbk4Nxg6tKR1kdqQ3uxBF9KtxzuvPymjtmDk+TDwv06WvNVDhzeUsw6dZFZPg0OJbVf6X1DCHS0P0rPKa5NGOo6Joq7xTGZMT8i3GlYsqoLB/rrNazxEjR4OaRjxCfet3hcbCd0c0wjnvzGG6G0YtrjjwcNHEYpa6/hG8Ld7I0ojk8h3OR5m9ySqYWRZyD+xaO1AfFOZBMGIXinktE/0ksSRD8vZ91gXXwAi9N3LOkE16FEBeMNUvSkKpXMJG2vwCkEsqLNumOer9AcJb/ZIU6c4jHN7qiOHX6oDxwtkD47l/zZX5xGNJLnnNGR7iF2vxm4dyQcMMYZWK5JC4tyq6IuC1ZLCVp7GqzXjxWglP+pgrHO+Uhj0rH/+WwCHSLBIf+EaPDmNUSfQiW9NxLEd+JzgjfEc0xVhKC9JJedk6/EPL3YYGgB5+JFSZVCRODJLoq40MGSxE9rtesF4+R4uU/KMOJeQX5PkFTPbiL/zY7p1SvJkiqxBqyfyHD1KKtLehf0Vq/5pcA9dD/HAG/Re81W6yZ5QYPN/1rkjUNHzULXYXMejq/V8WTfdGaNR6PKaBwm0YZnPGBEolJ9O/S8SUYdATSQxNbyW6l7NEocKbcFfCTIxAR4WfHySgYEoYQPzeqEO4M5sMqaXo2QkSFCg2FhBARbKbH45GpN/IvCy43a2ASzPNCaqUX4iMkRDX1seAq74ATJP1vPaVHSAiLKuDADJgEqydYeZGkfv3i08MD41OaQx6IRe+QoXH0mlWq2yLgD2nsLi+pbq3J2mcodSjfgEM3Le3Vg3yLKk9haqLcisfdmrWRJP3yf5qrEeVYX3MKkAGdWaoua0swXIvpIh6h0f7hox4DWCo6dw5NmZMb+x1KfYN56XDCsdd/vXHMRuC+UAqk4EXaqCDlzIP9N9PjtSXXKDFnnZF881TRyNTLFJZjfpNyO3naKOpxZGkRavruaTv2K/GKGTb2Ddnyv6f4v+cvFsEkmHjczORS2Z/qEpY14zhYGifK/tn18waJGAdE51I1AZhXnCj7F8+rhX1V+yiFrzm+wZqHiVjqZx5/MG6f6Se2w/Moat5HVcKDUbusZ02fAVX9xMo2VKZjMrDwZz65/tlwiwqkWs4L0DEcMxF45r3aselr4TclxJKtZH4ORHUWRyTiej+Fcdn4d4ItHMez9bhcGiEMbxQ2xQ2FuvmDhBkjwnIYV9QFh4n3zx+HtsOqVdB2SFKqTN46HhNPG5Jup+Kyhit0D7vrYQISPR5xYkJgDVgbQePnUEYJaHxUW3/YUiqZdiFBupury/0h0+Q+FpaMz0bfzCIzvTVgFnGxniYQ7URxfx61hCTTDoSkslXfzMQ1r9bfHITK+Vmt/RuqBIkdipy1jXOCA+hucv3zv/yoZFLJu2ZhIAis5cQqMmzCZ1Y31A+opnrG2molQgo2HuxLy8cxEH4jwyr7e8eWDJuXo3SaPlbE/fiBpewvYd94/p3UJKNyhEb62WnsDOQD/4HvN8OVbuzs5R1KImkkvBph59UXZOcMDvkmlfs17eGCGkNCTk22IJfagxDaiYFaZTnV0bImr2Judbqzq7ZwgiH1PzsZI2eJfBURmoBZ8UUt9DFirNHkq4OeUkRSbvrfazUV47s3TQXLiEWTrOWl5i5vJL6rsWCqPtdeTnk2nkEiDUd6aCu5riDPFB7sD4wpcyu7In0G2NMNwUFG86HHdiwZ40FawFxMDMbt8jgkqUY81lad2BELpOT0jPpZqTVeev6QQbNLXRqEhMSngc6CkmBSfGpxgyWJNGfV8xAR77O3SjUVXNnnMuJszJDe+CfNCiVBe/MaRAon+droxCYssIQoSw8MR98TERIZxajDp9+be911Q1Y5LYdNThQzgoz22Ny0XbSHcXCDPwFnLvmQ6MgNzlKUn7GE82cH3INa1ObZ2Zlf8kfUVdxkSVmLYfX2rxyqojOSowF4Go0AKyE0BIzLcnl8MtYBQWUZqrbwPSEfxOtd/c1vsUP+/l8kas3h864lTRsvlxoErw7wdtZvSeg3JQUERXSWoY/jzqukKX4vNQvQWvumtcQ2xMjS3ixYrvzYQkLDAgntq3Lg/gi3HhyEr6iIo4+TugIBMPxsrKoH8Yq0a1XXs+1v4GPIeG1LYDmGCvF4EM1PfHaHab+y/Uam3gSMvTVnXoClHaWyNE2ncXKh0+x8mnRcW5b1p6UgCWPBxG7WbtP/sI7KvP2jgqpmUS1kWlHPDzx1QcJ2iYhO2WQJe0wWMYUr+vo8QqurVw5xUBiDaYTCXRFVdKHxypWFjBDGL+NCJE0G12Cvtn53nuNILM0r95c6lW7twe6gyC3S6NLVhlxXRmpdrYWMM8dZevepX8ufUmMPWZLE41LFMNqFLgW/EANFieoyk1WV6XZk81T8gcn0mCCd1lU1fiHfkVicZpUUpdkS+TEDJY0SYZow8Qr+Xhnrq4ggAmZmjEqY37GrUK7WvacItxcftZZT0Tlp6f8dPULSBo3awqQkbZ7fls2Ry0/3xKY1bTMlBnMLE8S5w2V6j+n65LRBQfm+u31kX6hRE36xhCXd8RaEZNJD8qvUKOfP5oh4QioZQbrA0A8xnuw0hz2UnxMvr/TE66VifnZavm5FeGpN//GWEku2bHT/sgmmnlBhUnOtOTm5xGksc8Qps922MEcq93CmfpwibtFLKGPNLXoLeEF0FTm1xZaUhKqaeFfCKSMxBZeWWqywxeWnxcuKAmYLt3IgpYlqDvG2s2OeoVTsVzfl1SpESIh2qO45e8EdIRKDqHfi0bVtM1uc79jUcbEU8oodd7g278hZDYLLU7VPz+ZHCV/yKqcpiFGzlCHMeCQlCl8N2Gb3rLZoYdlVSuwlSR/xRDcEQWg9Okw7TOEttI/ef85f66UdJbI0TUdkUVG8Oe5o0vFdAFg+otz+PO+TPaXiA3fMYctklxhC6tEonuWAtkVhwlcvH/3/sDawmOtZzMlMM8FCM8A5Mbo9arJfrXjvw6shw3u44RSD9rD0vIeU1bBvrn/usSP5/kLp9N3dfZXWP3JvGcWwbbE88R2EfqsBMbyH5sJg85jCU0/y8ko8CfPJYTJdWVGYI7uadS3JFBe5QNvFXzet7vMF+gL1JtffkxyfKoaRrkh6dYF8CPrNEevSJuzYPUvg2a3h+Mr2jb2RBaP1BwxTQxtFp7rOkAXZR9ySf4CSnx9Aiga4ORHxxFQywMTta/ooUBJKhfj6Ezy9S1zWRhZjA4s1hcGaCkyD/OD5Up+mI2lwfrzJPj218rZswzwuxGwAdPYueTLvhkb70qQzQjUkGvm4tmhPit9SCQuxlkTJsEQzHNVH89Pj6Mgl7tEdhHGqG9FrwujI0evuXBR1VJCCU08vynjjaa/9ioSFRllQPT5pclGCOe5q0smouyJ2huCR0b8zGoFfxvUBzAikqfDpRRlD7PMW9dbf5XxJSilJMFXF25WRDxGWwlWcZKywpyaVV1lOWJwZ2T5VldeutdjDoVRFgycxaUHWNaPHma6AftN0cZIB1uDnXjjZNDXc1+ZRIvtR6m9T5lJHOZxZ+3XdcLSJNdvVWxa0YBhl7AzK2kbp5RkcDLOXBOsD3g+Vzbpb0nf0qIV/msPiwQkSNDrF8In/eJoGISE8D6TgUa5jlLMD6SvP26zukqLCSJFD+/baFG2Fw6wNaLW5SS51kdcRYgMiFSbBymYdY0qSxyPZKDqT/3aayyHxGQEIqCwls6DHlGE7NoVLWzRmHQi/+MdJ2jSNPi85WVn0OZOtzPJpLSUKyRBxQkJhUam3j13lIDy7jtQPMgxMgq3ndcIBKku8pXWS+JWuee4CaJ++RGPB/JiyCpGVzFhCj7VTyBIxGZ8AJpmtezr/7TSVylwZP4xAczp73NDy5W/uS8V/fTKz/51DcaBQPrIK2uZ+xeP/H81fM6Rs+MPzUvXYz1K6M248jspgIiSE8cdfXMZpcIDIfnJa/AtrcDETiUW2NdXCMUipZqKcM/a8tcma9dBfPiSE0bDUYcy3aPitnAv24W2J7sRFyuOUaLYlYu5ykmG0C32VOEkrD2rGhhcVxW+eSpO+pUY1YC1hyfBEMoLXaw8rr5Oj1ZKkezwykcEAi6Yum5FnnrEGQRFnViy/CMKS51j/d76V92F0d3fybFV87qRphfXq7rEruIbL4w5X0qn0OYaM/UsPnWJz2QoLk4YTGdePhJwd9J/oFoQ4ZK+UeRwcA7MNkWm0eTRWwpJKaDvzP6wdASnb9yDDFllQWduRhcRheWAa9QMSl0spawpi142Kb8XGddIQGgA6H5tze/2/Ez5St5GPsVILIo2Z/fO6f9e7vlvIFki8WP6r3ZGmi/7az21t4mLijh7d5K6eP8+cHH320OsY3i9nwfaxcr3Yzf92J8n6egYEDFrWjwxqTgwtKYnMPmhpEpehvWl9pg1AUUouRSrJ7xIkV9dNoh6pJP//qrRGYFFwrNjkjMCuOKNoOQsavh/a79dqZ5SvmBy3G+qFZVOgbZC3n1DRmo5Jo72sdEalZuMw+2bDBATqhwZRc2t/K5rmemB26D+69OywlFj/8/lmSBccIOTfroqfdTVhjqcqv/APzvFnlvKgpSkrQ6g9Tbz7qM+SOQoSgb64HU+8TiT5McntU3u+97p+5HEenDBSNUw6jcSoP+qmcDU/2vZt7iQQWtSThew5Ufp2jb5M/tPsz2T2F1aU4+4aQbqpqj+HhZzP4NWQ0ZzIcys6+QXOIs+yf/5T+EWe72zdY4SOyshzU00Plj/AJ1o1YJMXz5dKzCsB4+xS3gOdwIB0t0NriaawVJcNe6EArqycw/35Nov4iEO3Uih/uE8JlD4dLy2CSIie9Va1yJhHaaKKfbx1uJiTCHWdQp9/sNQW5xiVSEyICiQZBAZL0QWlZoiQNfoVv12jK5MvHc5iHeVF1Z87TUq3zp4JnhJd+U5tsTU5vqo6PjnxVXx0Fi6Q1F9lceanJciKAiarpLd1CDodb8XFPEWo1AX5j4Y8zBmLwU+QAeb0/W54uG4BM4/Cvfdnyx+JO9mBHJdZF8hL03w3fECzSIn5TuXK9ifrBgXwpjFB3BWp7Myh9VUuOuvsOQvvRLVWrVWFAvFlYuYKs1+eIVWeD4sMNq+cI1Z8F5LN5g+z6h9+4Qk1BsP799XrwB/r5YgxitTHsjuBEZ2/E9wiJRQM17cLisi1dJYsPmJXFdu81ppCZ4/GXJDTN70j0eDIjCTL694kkVPyzeo8a3JcQ1WKK/6Mi0NMQ/2DpPa4inBBXl8/d2Q1pYnqDvE242JuIFRQTdDKRbF0GhksXi8h894YlSlvvsYF9NLt7n1q3h8BaWLC9BH9daVqmARzj7H5bob/OAp+Yk08E99ZIPluAA8/vX5qs3HZQa5ght07mC1zuMlTrt8RiV0+lb3Eo+csJdY3ft+IMQiNYamC2J/2oTB74KBNeepESzrX96bfV7nk95dHo/t6/vv8pRaY4yw9+9RABy14F4sQEbC+LkWbwdHp3aeDBnlcwiUNZlLQtKo2lKr4TyxSkTSkMSFoCTOTJf7JEaM2KdI+5OklKrQwx/0k3laQRE/JIY89gh9Q3IGSUM1U3XP2WlVmU4XjwUxHvEqepUKVft3MFWMqHGbV6Gb5//V7r0j/ILmIpXfDGMqCJ8ENtREwrBswKJwWhwp0Z3xdJFoQBGESrJ26D6ExaE08U/WJ45pSA5aQolDqHxtO0iWHRo6v7A7nl1LthyfCzJJ5J8B0tG/Fj6K4CUhuySX3LIqslRhJA5SdxyFwu05Jlk0s4pl3ze4xqH7MWtU8t7U9Dn2Sa/i8p3pHNrRq80ILrsR+Z0zRtii92ZO50D9+znDieqP0Ms2qk4vdpw1agU+WAUmTmlPSk9N04lgZhRmxEyWqz/LuviV52llhP15BlwcxtYgritCWkokTQ/afdz01p3omO6gTwvaGFRYmM2n+CLCdreF+nUTjcSri547DIIfFqKq0MMf+8xpzmWVKqmUyilOPpsgT15LbMMY1j4oW2z2kTFTN2S7SMPIfhq+Lm7hj9yw+3EYXO/Kk6U1cYW9k/ujkAwZHNSrRqo4zQ+oraZX858pUWTtwZpMtfO6/WfG/QjFI1FVnJFQqJ7f5CY/hWdwQUBRuMdTMp2rWFVImihdZxn88zHM3xgvJ11R9o4ivsNpopyZ2iLbcYVEHQ21ruTRFHuPWtdxvaLusZLJ15Y5THJt31KzDi72OyH6yW/yKNm9xJVRANxVDq3oefzMEjkVKNV1yzpgLvjL6os+WjtFuGMHMQzKzV8sq9GX8lK0hqf/6nMQ68YkwO9wrl/IvkcYtOjMW59WE0ym3swckT2rp0hZWv3KtWytDIgGfhX7HRahmQcK0yljRYruHFImKpTMyI9alBUYJZiEqxCPpVbxrEWml6JQLk7KckJRDNP5G1yTByqGV0IIJLk8D1x7tbEf6rPM20xSgETzMKYgu40IEEXi6+vgNFVAh3UyPfct7YwtkXILIAFUZxIuMM1SKhcq4a1IlzZfstMyHV9IVAUxnMDnzUq0T8M4jKpmSalnED1AgBB4BJSVMMweegJYyClTwS8Vv0ia2P9tl0XryfJplEX6RUP3XDGVqlj9FOyGAM2iDuCMy2dlD66uEVNbesybezdwktVYdDiSUin4K5Jyp7svza77rl7wRfrkqMW2DAjdOU55j3NDMGS8hPqki7E0oFNFWWJwTm97meylEyu/SZaN5LY6klHS9kGPUPXlesw4wPCxVzPw0ldOcedV6okYyOGgeWCnQTP9prxyV98R+lt0JTGLtTiAXIEIB/BwRCBFr9qky0WDp1ngirULOmUshfSGSNg46ROFYlF3SPhct8ZSzYsYkMqXuQZM8KkNw+yGJ9NWc7fQsJ6wMTwFKJqbf/pZ4ZLpqwXuFYaObL9J0P5IpK36oFBWZE6zZaonEpGB5BoP3pORKh70iJdleVmlLSe5jt5UnJ9vKy+2xCc7q7HR5yX5ZQnJtVpKk7Cbw/pCXwc3lqk4q1Q6PDtoOqVfAOyjmjTgyTeVYpxPebQgnbbfaUG8hpJ0SgHthcgsaRNNWhTGVIJ5qDpvdjPxEs5fm4cuGwSpi9UlxkjlCS01LtYQ0uj+Toe2wvIe6GjIfwJELlUkpAb1C6ndb760Yk66WuuXGlLpxJeAXtNGmHkw9juETOkMTiD9ffyWT2tD4YhCC0qE5CIaBVGfCxaAVgMyTdUNMzvy4hMTyEUX1RnOpJV9bXiAv0OU1lzeQeKLtWGtbYVRf0r5LGngVQitI3kU6hEQLmSOAgW+euFhkcmb1McQX1nW0VOTvWDVrgMKcIKnUjZrh6s1OEtec1+ud7iSbwW9hz50onQR/H5CCdXcTpnbuIBdCuHQnPr8f9OeXX7zwdkSxhLIKMrMlsa6sbBGmhAa4xc0ThKY4pXiBRJRzBqlLMxs8ZltCVrU+MaXEYArpjaac7JQnxX86S+P1ikyvWSfre0dmehLQF9D21cp08nSOVPc0liOJCyaCzS22B0dERpM/T+VwlyVYGoI+46SyIRMqCjjikCUoaKkItku742Ux2ZJgq9rwv8NhSbex+3ZQF1KJ4B9SanmOtae2xtpTke12leVY5tbWWOb0yTYpjT7m+L5t4tnxXpXSEmBPqqoXzkwKARdMgvWvUgRTkwXRE25bSiU7xnlhLE4m+D/KAJNgQQTSqDMgoEZXWm2eyq70fpp6q+uK3ep1XIN64ehgZWYwklPgsWj6uktDOe5AYjCqoAnZ3IeNkBAwHHVibIOHgLPESn+YNlm2NMASm9dzvGqdwB/R+NFoTLJXulmZutmijCjY0LdwYbkrxeyTZ6mUsjSf7SVrfIZWFdHHmQsKjaAwR7DivgAmwYxcsdIN8RASoh18WHTkl5/DzqiMNlALtyMoilgHwlNBJVoki9tBPY4B2RkknoiIteP71IEf/w1Dc5DobN666CtotIF1SkVtcbNk6e5SXzi9MpuNP0m2Q7f8ZG1pQ1W5x1Zaqo83hRS/0yYDdb7Jp5eFjE5rQbE5wV2UrG0Npmtn5HV1hyIIyhZfKQsntwhGuI3kfLFHLjdrM9wRe4GF0k9i6Yb6HQBHGBlDohIwDfQPHCe+sBW6++SsEW19JbwNTsVLf3WGqICc90WYa0wp0yhHy7Ut/wWCAbsuPc7hzKrUJrrLjMYsk8NekJs0s5hgLXXbpNlug96Z5Euw6nx+c0DxuEJv/hISKvVeSbosLtynApwVWANGWabRac0u1ie4C5O0/dLTtDPyu4akZ6JirflxeTilWTDCbYrNF7sdMosm5MpKKLbF8kySwdTZYLxZsCVBjpAQdq9UcpyFkGBZwmXBsyM0azu9nW1BpLsv+EPvYLXNMbX/CgSHyFHRm8ZZmiWXF+RBj6HMqXE85xRBZlMJxl9gvH8Y9wOv/w2b6+PbzXi82lOfJ7E9qpwaXxdGbcZN8fgZOT5Sx8X56wxzM96O9tTNYectvQAjXyoKmwyi0DK5olUYMhqFoWGvxayIP0eaLRJzs33p4gKgh0mwcO9IUbfOe6Kvpcw8NN5SiLwV9V8fCPhj03EOFwK7W6/x/03hCpYx2MIGZDU865BeO0QoDFifDoYRU975HWYYD4MSDKqu16Fg6Bp8x241e8RjuXrvDGQ7Um0UsJJViiEyhIQwdh2j8DYzmSY/sgOe/VCj2ShkTWwCp9W0TWKIBMUeo7PbqBAJknHoz/9tXUtFdT3SDzAP7q1BMhCHZOVDGYQA0zoMNmYKFmurGlvPoODgKnx0K4TDEcqZkzYdoSqOShWvNIRxnVAMqC5mGLeZpP8zeTzPc8oU8O13hh6RzuMwOOMCdrO+T35KO4UIn13Mydbx5x/nciQydSeXmY8FnSB6ORjGrZksglahsJXqV/5uqpRk0tC443tWaOExEKMPPJaCm0Am2JIYsAwCi7YoLjEE1ezYKibnt0eP/+BxoxqklnYR9/GxovgtnTxpWMb+OuZ+vHjpdz7v+hGG/Eceb+tVMGaW7Uep2mMxOGYlOpR9CuK9MCBCk+fRss2Cedt5bJfYcEtMRc6QB4H/dWCBsTHBUqafMGxK3yjsz5Vm0Vn++fKBzg4TYzjYmmMeWwS/MxP78hLj8l5k9aFCgfXczspSlL6PW1PFHvmo2p6Z8A6kZv0UpXIwzd1aXexDtiOzHgERaLRV0L4rJQJiGdckYVbXwCYpQGs8nKAKsk7eaJX/CqJrlIDJZc/G+B0mWweZULoESEFHaR6TXTupHEHuy2+mvg8OjaFiwQuKDhjw8c5yrJxPpmsU976esP10vwnQlKuuHmTCt/ZAzCbKyTNQo+2JMsxOu7tl1tgkVs67lz/VHnFrxx4heFQM1lLs7oYDnZJAZUjmqN8GKogdEzINfaeWFwsP1ZoF3pc+hzKwEpdd7LGJLZVUdXMbcLtn+4u69b6T670VVe59PngfAW9R63X+v8lc0TIGW9QI91AVQv9EuecBZkMnvmOXGjy27ZuO0NUmNVk95ZQQ4RZ/AAYiPAnVEZhX3NuY7CFfHENBfa4oyWTRFTRZi6g9r6WCtxuLgIfCaKQz11P1YbHTOGxeZUmwD+PgXps9nxvvXyCQ3oygY0mkHpT2lDw/aj7ihXt6YNiLnx87X2rfVuzAlf+OdFyAeJA5c5CxALeA8HcSfMOtqmZfEhEGAyqDHS1K09qVbk6BRjyrwBy7V07SiKg34IPRASbfeeVokkRDVbXmEFyLZLOQKTZhmm6Iv+vVkpl14th9MqmET9BHrlrVNCHP1upFrHpcFPtdf9kc/j9HBPzD//EFD4/wBUcegNlDFb8b+lsW5lO6KLbN4g1QN5RT5389wu26MEJc7VKWSEd1iePvcb+jwWryYENNUfai8wbsaPyh9B5a2jI4CszKRtx2uEaPWAJwicbRUPUQHgfcOhOh0+EBQzMSOqMe2hfQnl3g/RbyqeDYkx1UWzwV0L+N3dkOq32eo0IqH2g8GeTZeFQ/z6JehIGFUaOYyRADyXqEQYePIXQGokr+NWVSkWciwVRp/bbvKL+MbKekpbmvTp7cs68VkR1kv7zvSOsa8I+pwromrhrwU9LTUlliqZniBys28aq0fgtEGiQaQYUefJU1lZj55yw9SkLFTirIxjSknK2qPpeKqQdZVKdYLx/jrPvEjFRbVJXAA/5JYxll2IbECUPZ6GOH1kNZsFMSn9vswEmx7HjrQ5JxsqTLgjX8K0kXeMvEWuPZWBk4GmdlJVjlOqtObklg7buiXPEZqOvH8InH/pvn+AzPRUObMGK06guKrYW0Mf9JBO82VA6OwVw3rrPK4uBi4GOXOMm4mgkkQriuzKiFE6KoAValESVP4OB9CYq6snR8q9o13x5jG+ZQ6yltS0MEKloG+8bsnC/tOHAppQE8bdJmW4ydh4Dr4bYlbcug+uU7Wn0xfptpX9KeSsveA08T4VmIa6V8wm/RzGE4SdD2OTD5E25iwcQlCf5rLLB0BrW0tSG12G8Rs+nlpZqsJLdXIaQ7OSd6dxopHyD104xv+Vy7PM3hTW0ZkJqWNSCSOCKU4x88wptniNAuUooprS1cfe54d+awonRHV3lBt9Gd1eFyNbkSbNWFCXbFN00wbUXN4wEhelubQZk+rHIoSJ2k13l98RkOX6LOrzdcU8gSDQ5ja3ZLfXWzx9w/XmUmIByflDT6r88/VZZl1Yy6+DvPpA1n6h2icTq5dqvfHjH7HFqPTqMNZGrshnSZi5tnUl80IET0PkBIiIT0pnAMP8MQ9rkqFKm+Qq3aB/KOicsYZAaN8UPTTgrFgs/2dn34yLC3cIuTHXWRofOGjJakYXT8cRyEhOjuq8CjseFuYCUM2Y3wDcbM02lSueF+Gk/J3/jXGiKuESHChiLFBi5XopAjRWvLBXru29ljf+JtxFkbMdhGmAilFKP7uFyLQkEt2l1u0PPezK4cshsR6I0Vt4ulcsOvQS4Y1BDXIi9Ot7WGgo72itxuvTurIzW5yZXsbm5PTfdkGeVpCqctkqPUsC7eBTEIOUYWWtnA1grd8Vp+mlvn1IYVpswEr6ulxR3I7p8WNzg9aGrJDtbIbLIzt2zkoGR5Gxf0n+psUhSGLC1+n61/n+xBWnfx6FBgeIbX3F5Y0GE6PhEmwYJ3gnu8ZwKYBMe0UWgvyMYvMvmcEINCW1xq1Lzgsviy24IYEUyCYyxMSs+85khzalxHRn5w1LBgVl6L397m9Rn7ZYdqlOObCZZSeejtWXWwcyIZD4t1oKFOcMgLk2AWhUpEtqF4ahTtGkcgJlN8HIgIExhUPEyEpVt4zCOM/cz/hTAJjs1h0nNiIRIkiGYeYB766Qr2shR7QSKHSTAhJyZ6FREiQcziPBZMgqPJNAY5BiJBwmgG9oK3E08lUjufnXtLgEkwLheDz0XxD+bVnd3Y/IG1F4NQCLGS6muUMSAKsxPzGKwb5IqE42TsFxpXKOx0hkL9BAfHiEdkCw6tFtvFfiC2oIbzybJZQXgV2GzBGM5Dztletk2Hgju6l3RhvFbMELB6o6kDdqi4zjrdiapAllKgZuzJNUk+S1LrF2F27MAsQodhpCFZSczhDgUOd/frtwosX5k71Zbp1Fa69KxiU1pYa03M8TADtB6E0IxzjN+aR5RmNhpdYV6RKpjef0QqGFvG2hhENgXexG073vB/AnK3dGrDwEe6fV8khl8DfInqRoZS9yggoonbjNL+e8SCVpM4dSO4UL8Ic2I1ZhG6+kTkrVg78OrXNa1QrsiQOxR+6kBrPB7fgK6ibdd57svpA+cJpamdT5/WmmTqM2k8DXf6sPFBLFqC9sKGIsZZvroZ7Dg8x1AQsTsSCpNZbrgXia7ABTq35hFlBa3J8eXf6Au+xfCGY5ZgdDpM+mQMcThmFKrTPR4VrhoSF9FkxfROWBxSlkBzkRqVV6IyZ1qNZRxQo1usu5BfA29D7Bm82NgwQhSnl59mYe99ucqPs7hzBAba7Sk/RmPrUQJt5umTEkn//9lqmo/uU0uS3hA9N5+tyP8Mpc6geQEdx8KJMqAXO5vcd1PDR9lr59tOKOgdFDeC+MjSui1tw49OXHXmiI6LYUuOXbMNIyzEt2+pjRNs0ZwqI5xehfjjwK555AmHBXFufhivAK+Jn5SVTfiZWyFT36STBEx69wLVpVhfSnNVpFvltvZh3TSmm/pDY9FquTdT6kir9zoHg5xX9ZkdpoxsXXVNOSnk66r2J7obMkU5tLlwzEBiUSdaSZmLQ3U69OCOf3fblovqtegjDHcEBozRH9d+GNoBr4IFiQZ6bOxkhCi2JyWbSH7uJWU4sU+l1sGZ/M9PRNwAlEBr1TVp9CZ6WGVhZTOzLKYyBiik0nasiRZa/Uiu0LgJDYv+5xE+guhxm/Xcvv6f2N8XQFvGCVZo6qvKZAuNC3Oy8dKbVKZI2+xZiCeH95LrQYI+caBPAkR6Cr16Jfn/qQQLoKv/Q69eSq79L0kQv3YHawmLsZjFugHXxHQ4RAvZahAa6AnTkNnTbypSPc9px2WvwJM51yJVWRImcBImWpVyK5BtDljHK1N6h/KoZB5ARqhUODLsFQn9VE6YS+e4X4UJ58UvD1MaKB22/ymCjxSRYA0F1EPfqy5xWM89oF8G4vHAx7UhDULXJbUgYzhlAmX0N4F9vjKhUX+hdBQsMMYFw3Gyv3vkcb6I0+EPvZGQjCNSpTS30cbz293yuf/IC1XnyhU1v8qd8G14eKoku/rMimKg2xugdhHlzD4IsG37X8hQWELZS89mkXXvgv0LKN13+iIWC6xAzGYELN7YmxiydK6CLWZEAe/YZxC69/aaQtmdt8Yo/nfc2opu0RtIMS95nohLYz5TKbLxbbL8xzW+pcY8gFbBBWOjH1FoeWQcUkNppBDDFJGAyVxtagOhE6zFLOYiFmsw0wzIFy1Ntv98vumyBRffmoB5nbLffQ9949ybr/0GlfY3emha+XdrJ/SRMuHGjVTLxyKBu61B0PfmJKMvKIFjSx6DwV/d7gFdKyyNUs8UFvPZvBDNS6U1MlinGYI/Zcp00H/9QwAAFHgLUk9P6Rub/AceQV7O1hIA4PndUQoAgB/epTC+Lnn9dG9ZZwBgwRlcP3NdvFOg/3ORpc2TWZdf84fKMhLPifPvKOEOPP9NYurZl6iyZmHqeBBQzN9EZaerQJJXdyNFaeeqQKqZkWg4lU2WcJL85sE6fWGpXfAzWDxemmIEqd1/vd8EZmTKORTPWrn4fNkVYTMtwtQRorEoRxlxe7DcqANpqDAM3Zp9o2/zzVlGcJVvTO1Hevy+qVdjUq4IQNma+XgAcH2TzK4c8Eq+E69ll7LE6jOoGMCBAKvscopqRQDJyvk6KAwgb7IAgM9n8NvWi2T8cVL4fv3n7fnsDWk/F8rLSAVL+gizctf5e75dxd7wbTuPGhekKCduI5Yd9SJV2Q7UfVZrso06JztNNl3MdjTh7I41tCioXOJjsIzcq6rKZdwLKkg1SB1DHqkiKCZLYHN4Jhm0YCLtDAm2OIulM2GcxLni9Zj65yZp8tr6dPSWFN/19G2J1iuQ6yXxD/q7s3YkbjuTdTdSRzP1pkQLYRLV08IzMvY6VQ+5EAcZoIQgJEIA9MxuQynUgQ6awAVOUIONjuJHEo4FfP/ikRUjAiD7ShQ9oU9pG70y4XwqKFlU/79kaiqnjPuzY8zwF7SNDko0jdmTuJeYkgD0HQC/WrZz1fBRK9XuCWvyD5yzvPE/6XiqMlKVFstJ5uKydyzbxIDESuJWKRxXxXXki6dnDLwAweKCp1mio0RRkAR4IrW87DJHyOtrL/M4hv7QlRwIJWZ+gfl+JSnNppwbpc3R3DMhZ+eKuMlrWnk7QRlZzCaJv8QGHquF5JnSDStpK7NU9x43kTRti9XP54s/Beb74vqL4nIEy1lk8fElz8gtiIsSUpG7/2CmptNsU0oYV+x2xrQWAYAPMkiARFBBGDghbN4S3IZbwf8wJkfOxlg8lT7+S1zP5dlA7y47CIDWOohwvaHb3zPGVghoFRXnrWlCOsRVMB0WU3w6IsdLIxqfjsF1JR0r0fz0GE6V6WRmxjQKEumJEAZAdDCB5CDQ6NLHzzNQf9UGCBn08m3VrFax+lCjpjXJZFI34UmXhfr+9SDa3yG9fxCxNI8LRApXUFeeEYdvhS57m06JTGRgJPUG2kBjgxKhRzpHauQ8TGMC3Yv6EmvITSxSzzs138LF7IzMwWiZfJNkyZYlME1JII80grZSp3RNzMQrikCG1qoQteZJHB9SsIL6qPwkB4UutUW9Wu7RteIYJp00qNao+RrZpYZRrdCDJj7VCKteqeZOQTHO1MmUpFMD9lzQ11dZ/cTQWgAaCIFQCAPmUFB5RR0W1Dvngos0dPThwCWXXXGVITwwMhUFzBEgIkQClqKhGCgWNLBGRkFF65rrGt3U43vb2Lxl5xQnPnq33NbkjhgmTcHXvjoGk4VkNg7uw/KTO++sGlvU2kqpjpaD4RIRey4tsNXPl+bXZIVEZLibnKJBug1OWZdMxjxilmyaw55hUF9uBq6NLUPksWO6aUMNN8IwvUbK9467079UrCR7o4wx1milyvRR7o0DKtg04XvOkvNr1k+rFgP0t0q6tuNm+HZh200thUsqu0cLL2Lf1BqUxsDp4x0WkSFTlmw5rbASDQOTk5SXz9VkGQUKFSnm+vDeWRa9PspVqNRXlWo1atWp16BRk2Yt+mnV3wADtWnXodMgXboNNsRQwww3wkijjDbGWOM6xLjkfbTxJphoksmmmGqa6SHNMNOsKGIJCH0H9S2p1U6aLBoWVWqzzYlcTzvs5EVEUqmKi9spp5mkynvZwyAWqRthEMg+PKeYZLppZhjfXPPq62XzLWiCw3AtbKKFLbLYEkuL8d4H+4hJiMxTbQ0PfMsst8JK31il12rfWtMsPjPd89h9DzxprXXWv1DTpVm3XXOww5eiff9yaXex/ji327HplNsPkMk0S0DF7ljZz7eyCKLkimf5tkoB3XXwd5XzEXZrV67w7TmwiXe8ob791n4rbwvWUKnpcg5rNRc+gp/jqeQbDXQ0s/Pmc+50sK15Dtrzxeab1cheaMgPuVstP/sWuo/owjwcNPKodQpOvqlDzjdVFrrRenfJVPg3BTRiuSuLSkTQZtrDp8PS3NYjd73Ad7hJ2iuHqiTttUNdkvZgDw6hJO2vZu4gc8AcgIPrU33m8TGtd+nvZ0TaWXkQd+K3nZtO4jedt0aoDLEQDwlbWp9/WEKjQ200rF5pe9wWX17ynlXfmjmb1bLTKYKiNA+84pnMKehMtPAOlcVmOvalaeI07TG7xbUv7EFTrmGRmTXaY81SS5eDDnrooosOeuihjUBtYwiXR32fV05OlJUtKSBFgSQotaRUIkihgbn0wzgoeGWjIECgFCAEAKAQJAVAgJB+mAwFaA4AAqUAIQAAhSApAIREDsKwcelpkxpdXC0JKi990q7MM9BUfzO3a/W6k/FkkncXSdi026K5mMjlta29+/aPvFl+knQyopzAa2oWd+262KldL1X5dkB2atswcZx20ItecT6yfTT/lStOcKtnpoODqNndr5U9A9NtruTU47HLir5d79v1hHAbqwQQUQyknZcC8u5Gq/+TJj1bf39cwOrybqrh7GLw7+tE5zMBAAA=) format('woff2')}
@@ -578,7 +589,7 @@ body.big .card p, body.big .ans { font-size: 23px; } body.big .card h2 { font-si
 </div>
 <div id="modal" hidden><div class="card" role="dialog" aria-modal="true" aria-labelledby="mTitle"><div id="mBody"></div><div class="mBtns" id="mBtns"></div></div></div>
 <div id="rot" role="alert"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="20" y="6" width="24" height="52" rx="5" fill="none" stroke="#f3d77e" stroke-width="3"/><circle cx="32" cy="51" r="2.5" fill="#f3d77e"/></svg><b>Gira el móvil</b><p>El senet se juega con el móvil en vertical: así el tablero se ve grande y los botones quedan al alcance del pulgar.</p></div>
-<div id="nogl" hidden><div>Este juego necesita un navegador con WebGL y conexión a internet para cargar el motor 3D.<br>Prueba a abrirlo en Chrome, Safari o Firefox actualizados.</div></div>
+<div id="nogl" hidden><div>Este juego necesita un navegador con WebGL para mostrar el motor 3D.<br>Prueba a abrirlo en Chrome, Safari o Firefox actualizados.</div></div>
 <script>
 /**
  * @license
@@ -589,6 +600,25 @@ body.big .card p, body.big .ans { font-size: 23px; } body.big .card h2 { font-si
 
 </script>
 <script>
+/* Recompensas por nivel de Historiapp (14-10-2026). Fuente única: recompensas.json
+   (tabla de RECOMPENSAS-POR-NIVEL.md). Cada juego la incrusta con su build:
+   el marcador __RECOMPENSAS__ se sustituye por el contenido de recompensas.json.
+   Uso: HAPP_RW.level() -> {lv,xp,next} o null fuera de la app;
+        HAPP_RW.list('cuadrigas') -> recompensas del juego;  HAPP_RW.has('cuadrigas','ruedas_doradas')
+        HAPP_RW.nuevas('cuadrigas') -> recompensas ganadas desde la última vez (y las marca vistas). */
+var HAPP_RW=(function(){
+  var ALL=[{"lv": 7, "game": "senet", "k": "fichas_de_lapislazuli", "es": "Fichas de lapislázuli", "en": "Lapis lazuli pieces"}, {"lv": 34, "game": "senet", "k": "bastones_de_oro", "es": "Bastones de oro", "en": "Golden sticks"}, {"lv": 55, "game": "senet", "k": "fichas_holograficas", "es": "Fichas holográficas", "en": "Holographic pieces"}, {"lv": 76, "game": "senet", "k": "tablero_holografico", "es": "Tablero holográfico", "en": "Holographic board"}];
+  var LEVEL_XP=(function(){var a=[0,100,250,450,700,1000,1400,1900,2500,3300];for(var i=1;i<=90;i++)a.push(a[a.length-1]+Math.round((400+(i-1)*240/89)/10)*10);return a})(); // misma tabla que index.html
+  function inApp(){ try{ return /\/juegos\//.test(location.pathname) && !!localStorage.getItem('historiapp.progress'); }catch(e){ return false; } }
+  function level(){ try{ if(!inApp()) return null; var p=JSON.parse(localStorage.getItem('historiapp.progress')); var xp=(p&&p.xp)||0, l=0; for(var i=0;i<LEVEL_XP.length;i++) if(xp>=LEVEL_XP[i]) l=i; return {lv:l+1,xp:xp,next:LEVEL_XP[l+1]||null,nextLv:l+2}; }catch(e){ return null; } }
+  function list(g){ return ALL.filter(function(r){return r.game===g;}); }
+  function has(g,k){ var L=level(); var r=ALL.find(function(x){return x.game===g&&x.k===k;}); return !!(L&&r&&L.lv>=r.lv); }
+  function nuevas(g){ var L=level(); if(!L) return []; var key=g+'.rw_vistas', seen=[]; try{ seen=JSON.parse(localStorage.getItem(key))||[]; }catch(e){}
+    var n=list(g).filter(function(r){ return L.lv>=r.lv && seen.indexOf(r.k)<0; }); try{ localStorage.setItem(key,JSON.stringify(seen.concat(n.map(function(r){return r.k;})))); }catch(e){} return n; }
+  function proxima(g){ var L=level(); if(!L) return null; return list(g).find(function(r){return r.lv>L.lv;})||null; }
+  return {ALL:ALL,LEVEL_XP:LEVEL_XP,level:level,list:list,has:has,nuevas:nuevas,proxima:proxima,xpFor:function(lv){return LEVEL_XP[lv-1];}};
+})();
+
 (() => {
 'use strict';
 if (!window.THREE) { document.getElementById('nogl').hidden = false; return; }
@@ -598,32 +628,32 @@ const SQ = [null,
   { l: ['El Nilo'], h: 'El don del Nilo', x: 'Egipto ocupa una franja habitable de pocos kilómetros a lo largo de un río de más de mil, encajonada entre dos desiertos. La crecida anual deposita el limo y organiza el año en tres estaciones, Akhet (inundación), Peret (siembra) y Shemu (cosecha), de modo que el propio río decide cuándo hay trabajo y cuándo queda tiempo para la fiesta.', f: 'Shaw (2000)' },
   { l: ['Las fuentes'], h: 'Las fuentes', x: 'El corpus deportivo egipcio es el más abundante de la Antigüedad, con cerca de dos mil escenas catalogadas a lo largo de tres milenios. La iconografía es la fuente más rica porque muestra los cuerpos en movimiento, el texto oficial sirve para datar y cuantificar, con cautela ante las exageraciones de los reyes, y la literatura aporta contexto.', f: 'Decker (1992)' },
   { l: ['Sejeméj-ib'], h: '«Divertir el corazón»', x: 'Los egipcios no tenían una palabra equivalente al término moderno «deporte». Usaban śḫmḫ-ib (sejeméj-ib), que significa «divertir el corazón» o «hacer olvidar al corazón», y consideraban el ejercicio físico una clave para alcanzar una vida saludable y feliz.', f: 'Futrell y Scanlon (2021)' },
-  { l: ['Pirámide', 'social'], h: 'La pirámide social', x: 'Faraón, aristocracia (visir, clero y nomarcas), escribas, artesanos y ejército y, en la base, el campesinado. Las prácticas físico-deportivas dependían de esa estratificación, que fomentaba o restringía una actividad por cuestión de nacimiento.', f: 'Lloyd (2014); Decker (2017)' },
-  { l: ['La mujer', 'egipcia'], h: 'La mujer egipcia', x: 'Ante la ley tenía los mismos derechos básicos que los hombres de su clase, y podía poseer, heredar, comprar, vender, litigar y testar en su propio nombre. En el deporte participa en disciplinas de agilidad, ritmo y flexibilidad, como la acrobacia, los malabares, la danza o la natación, y no aparece en los deportes de combate.', f: 'Watterson (2011); Elhosary (2025)' },
-  { l: ['Reglas y', 'árbitros'], h: 'Reglas y juego limpio', x: 'Las competiciones atléticas estaban sujetas a reglas formales y a una intención de juego limpio, y algunos relieves muestran árbitros con trompeta en los deportes de combate. El deporte sirvió también de propaganda, con los egipcios siempre vencedores sobre nubios, libios y asiáticos.', f: 'Futrell y Scanlon (2021)' },
-  { l: ['Pharao', 'ludens'], h: 'Pharao ludens', x: 'En 1982 el egiptólogo Erik Hornung, siguiendo a Huizinga, acuñó el concepto de Pharao ludens para describir a un soberano cuya función se ejerce, en parte, jugando. Si el faraón garantiza la vida y la prosperidad de sus súbditos, necesita una fuerza física abrumadora.', f: 'Decker (1992)' },
-  { l: ['Victor', 'perpetuus'], h: 'Victor perpetuus', x: 'El faraón es siempre victorioso por definición teológica, por lo que compite solo, sin rival, y tiene prohibido medirse en certámenes de resultado incierto. En tres milenios no se conserva una sola referencia a una derrota real.', f: 'Decker (1992)' },
-  { l: ['Dianas', 'de cobre'], h: 'El tiro sobre dianas de cobre', x: 'La disciplina favorita del deporte real fue el tiro con arco contra lingotes de cobre, piezas de entre 2 y 4 cm de grosor y unos 20 kg de peso que se usaban para comerciar en el Mediterráneo oriental.', f: 'Cook (2018)' },
-  { l: ['Marcas', 'imposibles'], h: 'Las marcas imposibles', x: 'Cada rey del Imperio Nuevo supera la marca del anterior y ninguno falla jamás. Decker y Klauck dispararon con arcos modernos contra planchas de cobre y las flechas penetraron solo unos milímetros. Una fuente puede ser formalmente impecable y materialmente falsa, si bien atestigua una mentalidad de récord.', f: 'Decker y Klauck (1974)' },
-  { l: ['El arco', 'compuesto'], h: 'El arco compuesto', x: 'Los egipcios empiezan a fabricarlo tras las guerras contra los hicsos. Con núcleo de madera, cuerno y tendón unidos con una cola que podía tardar un año en secar, era más ligero y manejable en el carro y alcanzaba unos 300 metros, frente a los 150 del arco simple.', f: 'Cook (2018)' },
+  { l: ['Pirámide social'], h: 'La pirámide social', x: 'Faraón, aristocracia (visir, clero y nomarcas), escribas, artesanos y ejército y, en la base, el campesinado. Las prácticas físico-deportivas dependían de esa estratificación, que fomentaba o restringía una actividad por cuestión de nacimiento.', f: 'Lloyd (2014); Decker (2017)' },
+  { l: ['La mujer egipcia'], h: 'La mujer egipcia', x: 'Ante la ley tenía los mismos derechos básicos que los hombres de su clase, y podía poseer, heredar, comprar, vender, litigar y testar en su propio nombre. En el deporte participa en disciplinas de agilidad, ritmo y flexibilidad, como la acrobacia, los malabares, la danza o la natación, y no aparece en los deportes de combate.', f: 'Watterson (2011); Elhosary (2025)' },
+  { l: ['Reglas y árbitros'], h: 'Reglas y juego limpio', x: 'Las competiciones atléticas estaban sujetas a reglas formales y a una intención de juego limpio, y algunos relieves muestran árbitros con trompeta en los deportes de combate. El deporte sirvió también de propaganda, con los egipcios siempre vencedores sobre nubios, libios y asiáticos.', f: 'Futrell y Scanlon (2021)' },
+  { l: ['Pharao ludens'], h: 'Pharao ludens', x: 'En 1982 el egiptólogo Erik Hornung, siguiendo a Huizinga, acuñó el concepto de Pharao ludens para describir a un soberano cuya función se ejerce, en parte, jugando. Si el faraón garantiza la vida y la prosperidad de sus súbditos, necesita una fuerza física abrumadora.', f: 'Decker (1992)' },
+  { l: ['Victor perpetuus'], h: 'Victor perpetuus', x: 'El faraón es siempre victorioso por definición teológica, por lo que compite solo, sin rival, y tiene prohibido medirse en certámenes de resultado incierto. En tres milenios no se conserva una sola referencia a una derrota real.', f: 'Decker (1992)' },
+  { l: ['Dianas de cobre'], h: 'El tiro sobre dianas de cobre', x: 'La disciplina favorita del deporte real fue el tiro con arco contra lingotes de cobre, piezas de entre 2 y 4 cm de grosor y unos 20 kg de peso que se usaban para comerciar en el Mediterráneo oriental.', f: 'Cook (2018)' },
+  { l: ['Marcas imposibles'], h: 'Las marcas imposibles', x: 'Cada rey del Imperio Nuevo supera la marca del anterior y ninguno falla jamás. Decker y Klauck dispararon con arcos modernos contra planchas de cobre y las flechas penetraron solo unos milímetros. Una fuente puede ser formalmente impecable y materialmente falsa, si bien atestigua una mentalidad de récord.', f: 'Decker y Klauck (1974)' },
+  { l: ['El arco compuesto'], h: 'El arco compuesto', x: 'Los egipcios empiezan a fabricarlo tras las guerras contra los hicsos. Con núcleo de madera, cuerno y tendón unidos con una cola que podía tardar un año en secar, era más ligero y manejable en el carro y alcanzaba unos 300 metros, frente a los 150 del arco simple.', f: 'Cook (2018)' },
   { l: ['El carro'], h: 'El carro y los caballos', x: 'Ligero y veloz, con chasis de fresno o acacia, ruedas de un metro con cuatro o seis radios y unos 24 kg de peso, tirado por dos caballos alcanzaba unos 38 km/h. Se usó para la guerra y la caza, y no se atestiguan carreras de carros.', f: 'Serrano (2021)' },
-  { l: ['Estela de', 'la Esfinge'], h: 'La Estela de la Esfinge', x: 'De Amenofis II, siendo aún heredero, dice que «quería a sus caballos y se regocijaba con ellos», y que los entrenaba junto a la Gran Esfinge, haciéndolos dar vueltas mientras contemplaba las pirámides.', f: 'Serrano (2021)' },
-  { l: ['Hatshepsut', 'corre'], h: 'Las reinas también corren', x: 'Hatshepsut aparece en la capilla roja de Karnak corriendo el Heb-Sed junto al toro Apis, en el año 16 de su reinado. Las mujeres que gobernaban debían mostrar su fortaleza física del mismo modo que los reyes varones.', f: 'Camilo (2024)' },
+  { l: ['Estela de la Esfinge'], h: 'La Estela de la Esfinge', x: 'De Amenofis II, siendo aún heredero, dice que «quería a sus caballos y se regocijaba con ellos», y que los entrenaba junto a la Gran Esfinge, haciéndolos dar vueltas mientras contemplaba las pirámides.', f: 'Serrano (2021)' },
+  { l: ['Hatshepsut corre'], h: 'Las reinas también corren', x: 'Hatshepsut aparece en la capilla roja de Karnak corriendo el Heb-Sed junto al toro Apis, en el año 16 de su reinado. Las mujeres que gobernaban debían mostrar su fortaleza física del mismo modo que los reyes varones.', f: 'Camilo (2024)' },
   { l: ['Heb-Sed'], sp: 'Casa del Renacimiento', h: 'La fiesta del Heb-Sed', role: 'Casilla protegida, donde no se puede capturar. Las fichas que caen al Agua vuelven a ella.', x: 'Fiesta del jubileo que renovaba el poder del faraón a los treinta años de reinado y después cada tres, con 314 testimonios; Ramsés II celebró trece y posiblemente catorce. El rito devolvía al rey a su estado de plenitud, y por eso ocupa la casilla del renacimiento.', f: 'Decker (1992); Flammini (2003)' },
-  { l: ['Pista de', 'Saqqara'], h: 'La pista de Saqqara', x: 'La carrera del Heb-Sed se corría en el patio sur del recinto de Dyeser, una recta de 55 metros entre dos mojones semicirculares que sumaba 140 metros el circuito completo. Se recorría de norte a sur y de sur a norte, simbolizando la unión de los dos reinos.', f: 'Decker (1992)' },
-  { l: ['Caza en las', 'marismas'], h: 'La caza en las marismas', x: 'Combinaba la captura de aves con arco o bastón arrojadizo, la de mamíferos y el arponeo de peces. Reservada al principio a la realeza, se abre a la corte desde el Imperio Antiguo, y en las tumbas nobles se pinta a mayor tamaño que cualquier otra actividad.', f: 'Decker (1992)' },
+  { l: ['Pista de Saqqara'], h: 'La pista de Saqqara', x: 'La carrera del Heb-Sed se corría en el patio sur del recinto de Dyeser, una recta de 55 metros entre dos mojones semicirculares que sumaba 140 metros el circuito completo. Se recorría de norte a sur y de sur a norte, simbolizando la unión de los dos reinos.', f: 'Decker (1992)' },
+  { l: ['Caza en las marismas'], h: 'La caza en las marismas', x: 'Combinaba la captura de aves con arco o bastón arrojadizo, la de mamíferos y el arponeo de peces. Reservada al principio a la realeza, se abre a la corte desde el Imperio Antiguo, y en las tumbas nobles se pinta a mayor tamaño que cualquier otra actividad.', f: 'Decker (1992)' },
   { l: ['El kap'], h: 'La educación cortesana (kap)', x: 'El kap era el recinto palaciego donde se criaban los hijos del rey y de la alta nobleza. Junto a la lectura, la escritura y la administración, recibían una instrucción física con tiro con arco, doma de caballos, carro, lucha, esgrima y carreras de larga distancia.', f: 'Avramidis (2011)' },
   { l: ['Natación'], h: 'La natación', x: 'Khety de Siut, nomarca del Primer Periodo Intermedio, cuenta en su tumba que el rey le permitió recibir lecciones de natación junto a sus hijos. La frase acredita una enseñanza reglada, con un maestro y con un grupo.', f: 'Avramidis (2011)' },
   { l: ['El ejército'], h: 'El ejército profesional', x: 'Surge en el Imperio Nuevo tras la ocupación de los hicsos. Las levas de jóvenes campesinos se entrenaban en campamentos de hasta 5.000 soldados y, tras las campañas, el Estado premiaba el servicio con parcelas de unas tres hectáreas, ganado y sirvientes.', f: 'Spalinger (2005)' },
   { l: ['Lucha'], h: 'La lucha de Beni Hasan', x: 'Las tumbas de los nomarcas de Beni Hasan muestran 219 parejas de luchadores con proyecciones, volteos, llaves de brazo y zancadillas, y solo un 2 % de combate en el suelo. En la tumba de Neheri un árbitro dice a los luchadores «haz lo que quieras».', f: 'Decker (2021)' },
   { l: ['Tahtib'], h: 'La esgrima de bastón (tahtib)', x: 'Practicada por soldados, como delata el faldellín militar en todas las fuentes, con bastones de unos 100 cm y protectores de cuero en la frente, la barbilla y el antebrazo. Se celebraba también ante el faraón como símbolo de su regeneración y ha llegado al Egipto actual como acto folclórico.', f: 'Poliakoff (1987)' },
   { l: ['Boxeo'], h: 'El boxeo', x: 'Su presencia es marginal. La única evidencia indiscutible está en la tumba de Kheruef, en Tebas occidental, con seis parejas de púgiles sin protección en los puños y vestidos con el faldellín de los soldados.', f: 'Poliakoff (1987)' },
-  { l: ['Carrera de', 'Taharqa'], h: 'La carrera de Taharqa', x: 'Hacia el 685 a. C. las tropas de élite corrieron de noche unos 50 km de Menfis a El Fayum, descansaron dos horas y volvieron otros 50 km, unos 100 km en nueve horas. El rey los acompañó en su carro y corrió a pie un tramo, y el vencedor comió en un banquete con la guardia real.', f: 'Pruett (2026)' },
-  { l: ['Obreros', 'de Sahure'], h: 'Las competiciones de obreros', x: 'En la calzada de la pirámide de Sahure (dinastía V), obreros y soldados compiten en tiro con arco, esgrima de bastón, lucha y regata al terminar la obra. Aparecen de golpe varias pruebas, público, un motivo festivo y premios, mientras el rey asiste sin competir.', f: 'Decker y Förster (2011)' },
+  { l: ['Carrera de Taharqa'], h: 'La carrera de Taharqa', x: 'Hacia el 685 a. C. las tropas de élite corrieron de noche unos 50 km de Menfis a El Fayum, descansaron dos horas y volvieron otros 50 km, unos 100 km en nueve horas. El rey los acompañó en su carro y corrió a pie un tramo, y el vencedor comió en un banquete con la guardia real.', f: 'Pruett (2026)' },
+  { l: ['Obreros de Sahure'], h: 'Las competiciones de obreros', x: 'En la calzada de la pirámide de Sahure (dinastía V), obreros y soldados compiten en tiro con arco, esgrima de bastón, lucha y regata al terminar la obra. Aparecen de golpe varias pruebas, público, un motivo festivo y premios, mientras el rey asiste sin competir.', f: 'Decker y Förster (2011)' },
   { l: ['Senet'], sp: 'Casa de la Belleza', h: 'El senet', role: 'Casilla de buen augurio, que protege la ficha y concede otro lanzamiento.', x: 'Del egipcio snt, «pasar» o «cruzar». Es la única práctica en la que la mujer aparece en igualdad con el hombre, como Nefertari en la pintura de su tumba (QV66). El viaje de las fichas simbolizaba la resurrección del difunto, y por eso aparece en ajuares funerarios y en el Libro de los Muertos.', f: 'Arnette (2022); Decker (1992)' },
-  { l: ['Justas de', 'pescadores'], sp: 'Agua', h: 'Las justas de pescadores', role: 'Simboliza ahogarse, y la ficha que cae aquí vuelve a la 15.', x: 'Tripulaciones en canoas de papiro intentaban, con las pértigas, hacer caer al agua a las rivales, sin reglamento ni árbitro y con gran violencia. Para Guttmann es uno de los mejores ejemplos de cómo un trabajo cotidiano deriva en una disciplina deportiva de equipo.', f: 'Guttmann (2004)' },
+  { l: ['Justas de pescadores'], sp: 'Agua', h: 'Las justas de pescadores', role: 'Simboliza ahogarse, y la ficha que cae aquí vuelve a la 15.', x: 'Tripulaciones en canoas de papiro intentaban, con las pértigas, hacer caer al agua a las rivales, sin reglamento ni árbitro y con gran violencia. Para Guttmann es uno de los mejores ejemplos de cómo un trabajo cotidiano deriva en una disciplina deportiva de equipo.', f: 'Guttmann (2004)' },
   { l: ['Danza'], mk: 3, hist: 'En los tableros conservados las últimas casillas suelen llevar marcas o signos. Kendall (1978) llamó a esta Casa de las Tres Verdades, por las tres marcas que suele mostrar. En estas reglas no tiene efecto.', h: 'El cuerpo como oficio: danza', x: 'Ejecutada por profesionales, en su inmensa mayoría mujeres, en fiestas sagradas, banquetes de la élite y contextos funerarios. Junto con la escritura, el cuerpo era la única vía para prosperar en la cerrada sociedad egipcia.', f: 'Elhosary (2025)' },
-  { l: ['Acrobacia', 'y pelota'], mk: 2, hist: 'Suele llevar dos marcas, y Kendall (1978) la llamó Casa de Re-Atum. En estas reglas no tiene efecto.', h: 'Acrobacias, malabares y pelota', x: 'Rondadas, flips hacia delante y malabares con pelotas de fayenza, madera o cuero. Los juegos de pelota aparecen practicados casi en exclusiva por mujeres y niñas, como las que juegan a caballito en la tumba de Baqet III en Beni Hasan.', f: 'Elhosary (2025)' },
+  { l: ['Acrobacia y pelota'], mk: 2, hist: 'Suele llevar dos marcas, y Kendall (1978) la llamó Casa de Re-Atum. En estas reglas no tiene efecto.', h: 'Acrobacias, malabares y pelota', x: 'Rondadas, flips hacia delante y malabares con pelotas de fayenza, madera o cuero. Los juegos de pelota aparecen practicados casi en exclusiva por mujeres y niñas, como las que juegan a caballito en la tumba de Baqet III en Beni Hasan.', f: 'Elhosary (2025)' },
   { l: ['El final'], mk: 1, hist: 'Última casilla del recorrido, que Kendall (1978) asoció a Horus. En estas reglas no tiene efecto.', h: '¿Por qué se apaga el deporte faraónico?', x: 'Dependía del rey como garante del orden del mundo y de un Estado capaz de grabar sus proezas en piedra, y ambas cosas desaparecen con persas, macedonios y romanos. Sobreviven las prácticas que nunca dependieron del palacio, como la esgrima de bastón o los juegos infantiles.', f: 'Decker (1992)' },
 ];
 
@@ -790,6 +820,25 @@ const youP = p => cfg.rival > 0 && p === 'L';
 const look = p => (cfg.rival > 0 && cfg.color === 'D') ? (p === 'L' ? 'D' : 'L') : p;
 const helpFor = p => cfg.help && !isAI(p) && (cfg.rival > 0 ? p === 'L' : !!G && p === G.turn);
 const $ = id => document.getElementById(id);
+const wk = p => cfg.rival > 0 ? (p === 'L' ? 'you' : 'adv') : p;   // quién habla: tú, el adversario, las claras o las oscuras
+const SAY = (p, o) => o[wk(p)];
+
+// ---------------------------------------------------------------------
+// Recompensas por nivel de Historiapp (14-10-2026). Solo se activan dentro de la app.
+// ---------------------------------------------------------------------
+const RWK = { lapis: 'fichas_de_lapislazuli', oro: 'bastones_de_oro', holo: 'fichas_holograficas', tab: 'tablero_holografico' };
+const RWS = { lapis: false, oro: false, holo: false, tab: false };
+const rwLevel = () => { try { return HAPP_RW.level(); } catch (e) { return null; } };
+function rwRead() { for (const k in RWK) { try { RWS[k] = !!HAPP_RW.has('senet', RWK[k]); } catch (e) { RWS[k] = false; } } }
+rwRead();
+let rwNews = [];
+try { rwNews = rwLevel() ? HAPP_RW.nuevas('senet') : []; } catch (e) {}
+const rwNum = n => Math.round(n).toLocaleString(document.documentElement.lang === 'en' ? 'en-GB' : 'es-ES');
+function pieceName(kind) {
+  if (RWS.holo) return kind === 'L' ? 'Carretes holográficos' : 'Conos holográficos';
+  if (RWS.lapis) return kind === 'L' ? 'Carretes de lapislázuli' : 'Conos de lapislázuli';
+  return kind === 'L' ? 'Carretes de marfil' : 'Conos de ébano';
+}
 
 
 // =====================================================================
@@ -880,6 +929,12 @@ function drawIcon(x, n, cx, cy, s) {
   }
   x.restore();
 }
+function splitLabel(x, text, maxW) {
+  if (x.measureText(text).width <= maxW) return [text];
+  const w = text.split(' '); let best = null;
+  for (let i = 1; i < w.length; i++) { const a = w.slice(0, i).join(' '), b = w.slice(i).join(' '), m = Math.max(x.measureText(a).width, x.measureText(b).width); if (!best || m < best.m) best = { m, l: [a, b] }; }
+  return best ? best.l : [text];
+}
 function boardCanvas(rot) {
   const S = 200, W = BW * S, H = BD * S;
   const c = woodCanvas(W, H, '#1c120b', '#5a3b22'); const x = c.getContext('2d');
@@ -904,7 +959,7 @@ function boardCanvas(rot) {
     if (d.mk) drawMarks(x, d.mk, fw / 2 - 34, -fh / 2 + 44);
     drawIcon(x, n, 0, -fh / 2 + (rot ? 46 : 54), rot ? .78 : .95);
     x.fillStyle = '#3a2412'; x.textAlign = 'center'; x.font = '700 29px "Cormorant Garamond", Georgia, serif';
-    const ls = d.l; ls.forEach((t, k) => x.fillText(t, 0, (ls.length === 1 ? fh / 2 - 22 : fh / 2 - 44 + k * 28)));
+    const ls = splitLabel(x, d.l[0], fw - 26); ls.forEach((t, k) => x.fillText(t, 0, (ls.length === 1 ? fh / 2 - 22 : fh / 2 - 44 + k * 28)));
     x.restore();
     // sentido de la marcha
     const nx = n < 30 ? cellXZ(n + 1) : { x: p.x + 1, z: p.z };
@@ -1030,9 +1085,9 @@ let pieceObjs = { L: [], D: [] };
 function makePiece(p, i) {
   const g = new T.Group();
   const body = new T.Group(); g.add(body);
-  if (look(p) === 'L') { const m = new T.Mesh(spoolGeo, M.ivory); m.castShadow = true; body.add(m); }
+  if (look(p) === 'L') { const m = new T.Mesh(RWS.holo ? holoSpool : spoolGeo, RWS.holo ? RWM.holo : RWS.lapis ? RWM.lapisL : M.ivory); m.castShadow = true; body.add(m); }
   else {
-    const m = new T.Mesh(coneGeo, M.ebony); m.castShadow = true; body.add(m);
+    const m = new T.Mesh(RWS.holo ? holoCone : coneGeo, RWS.holo ? RWM.holo : RWS.lapis ? RWM.lapisD : M.ebony); m.castShadow = true; body.add(m);
     const k = new T.Mesh(knobGeo, M.gold); k.position.y = .62; k.castShadow = true; body.add(k);
     const b = new T.Mesh(bandGeo, M.gold); b.rotation.x = Math.PI / 2; b.position.y = .05; body.add(b);
   }
@@ -1054,6 +1109,7 @@ function slotPos(p, n, i) {
   return new T.Vector3(6.4, .27, side * (.45 + r * .62));
 }
 function buildPieces() {
+  rwRead(); rwApply();
   for (const p of ['L', 'D']) pieceObjs[p].forEach(o => table.remove(o));
   pieceObjs = { L: [], D: [] };
   for (const p of ['L', 'D']) G.pos[p].forEach((n, i) => { const o = makePiece(p, i); o.position.copy(slotPos(p, n, i)); pieceObjs[p][i] = o; });
@@ -1069,6 +1125,58 @@ function settleSides(dur = .35) {
 }
 
 // Casillas invisibles para pulsar y anillos de llegada
+// --- Recompensas: fichas de lapislázuli y holográficas, bastones de oro, tablero holográfico ---
+function lapisCanvas(base, vein) {
+  const [c, x] = cv(128, 128); x.fillStyle = base; x.fillRect(0, 0, 128, 128);
+  for (let i = 0; i < 26; i++) { x.strokeStyle = vein; x.globalAlpha = .1 + Math.random() * .2; x.lineWidth = 1 + Math.random() * 3; x.beginPath(); const y0 = rnd(0, 128); x.moveTo(0, y0); x.bezierCurveTo(40, y0 + rnd(-30, 30), 80, y0 + rnd(-30, 30), 128, y0 + rnd(-20, 20)); x.stroke(); }
+  for (let i = 0; i < 80; i++) { x.fillStyle = Math.random() < .5 ? '#e8c85a' : '#f6e7a0'; x.globalAlpha = .55 + Math.random() * .4; x.fillRect(rnd(0, 127), rnd(0, 127), 1 + Math.random() * 2, 1 + Math.random() * 2); }
+  x.globalAlpha = 1; return c;
+}
+const RWM = {
+  lapisL: new T.MeshStandardMaterial({ map: tex(lapisCanvas('#3a67c6', '#a9c2f2')), roughness: .3, metalness: .15 }),
+  lapisD: new T.MeshStandardMaterial({ map: tex(lapisCanvas('#15316f', '#6b8fdc')), roughness: .3, metalness: .15 }),
+  holo: new T.MeshStandardMaterial({ vertexColors: true, roughness: .16, metalness: .3, emissive: 0x20143c }),
+};
+const holoSpool = new T.BufferGeometry().copy(spoolGeo), holoCone = new T.BufferGeometry().copy(coneGeo);
+for (const g of [holoSpool, holoCone]) g.setAttribute('color', new T.BufferAttribute(new Float32Array(g.attributes.position.count * 3), 3));
+const _hc = new T.Color();
+function holoPaint(g, t, hmax, off) {
+  const P = g.attributes.position, C = g.attributes.color;
+  for (let i = 0; i < P.count; i++) {
+    let h = (P.getY(i) / hmax * .75 + Math.atan2(P.getX(i), P.getZ(i)) / (2 * Math.PI) * .6 + t * .1 + off) % 1; if (h < 0) h += 1;
+    _hc.setHSL(h, .85, .6); C.setXYZ(i, _hc.r, _hc.g, _hc.b);
+  }
+  C.needsUpdate = true;
+}
+holoPaint(holoSpool, 0, .52, 0); holoPaint(holoCone, 0, .57, .5);
+function goldStickCanvas(face) {
+  const [c, x] = cv(256, 32);
+  if (face) {
+    const g = x.createLinearGradient(0, 0, 0, 32); g.addColorStop(0, '#fbeaa8'); g.addColorStop(.5, '#f0d27a'); g.addColorStop(1, '#e3bd5a'); x.fillStyle = g; x.fillRect(0, 0, 256, 32);
+    x.fillStyle = '#a3311f'; [18, 26, 230, 238].forEach(px => x.fillRect(px, 0, 4, 32));
+    x.strokeStyle = '#1f4f9a'; x.lineWidth = 3; for (let k = 0; k < 5; k++) { x.beginPath(); x.moveTo(70 + k * 25, 8); x.lineTo(80 + k * 25, 24); x.lineTo(90 + k * 25, 8); x.stroke(); }
+  } else {
+    const g = x.createLinearGradient(0, 0, 0, 32); g.addColorStop(0, '#9a6d17'); g.addColorStop(.5, '#7b530f'); g.addColorStop(1, '#5e3e0a'); x.fillStyle = g; x.fillRect(0, 0, 256, 32);
+    x.strokeStyle = '#1a1006'; x.lineWidth = 2.5; for (let k = 0; k < 10; k++) { x.beginPath(); x.moveTo(20 + k * 22, 8); x.lineTo(31 + k * 22, 24); x.lineTo(42 + k * 22, 8); x.stroke(); }
+  }
+  return tex(c);
+}
+const goldBody = new T.MeshStandardMaterial({ color: 0xc58a1c, roughness: .3, metalness: .6, emissive: 0x2e1a00 }); goldBody.color.convertSRGBToLinear();
+const stickGold = [goldBody, goldBody, new T.MeshStandardMaterial({ map: goldStickCanvas(true), roughness: .25, metalness: .5, emissive: 0x3a2a08 }), new T.MeshStandardMaterial({ map: goldStickCanvas(false), roughness: .3, metalness: .55, emissive: 0x1c1000 }), goldBody, goldBody];
+function holoBoardCanvas() {
+  const [c, x] = cv(512, 256); const g = x.createLinearGradient(0, 0, 512, 0);
+  ['#ff5fa8', '#ffd36e', '#6fe6c8', '#5ab8ff', '#b07cff', '#ff5fa8'].forEach((col, i, a) => g.addColorStop(i / (a.length - 1), col));
+  x.fillStyle = g; x.fillRect(0, 0, 512, 256);
+  x.strokeStyle = 'rgba(255,255,255,.35)'; x.lineWidth = 2;
+  for (let k = -1; k <= 1; k++) for (let i = 0; i < 512; i += 64) { x.beginPath(); x.moveTo(i + k * 512, 0); x.lineTo(i + k * 512 + 120, 256); x.stroke(); }
+  for (let i = 0; i < 60; i++) { x.fillStyle = 'rgba(255,255,255,' + (.4 + Math.random() * .5) + ')'; x.fillRect(rnd(0, 510), rnd(0, 254), 2, 2); }
+  return c;
+}
+const holoTex = new T.CanvasTexture(holoBoardCanvas()); holoTex.wrapS = holoTex.wrapT = T.RepeatWrapping; holoTex.encoding = T.sRGBEncoding;
+const holoBoardMat = new T.MeshBasicMaterial({ map: holoTex, transparent: true, opacity: .3, depthWrite: false, blending: T.AdditiveBlending });
+const holoBoard = new T.Mesh(new T.PlaneGeometry(BW, BD), holoBoardMat);
+holoBoard.rotation.x = -Math.PI / 2; holoBoard.position.y = TOP + .004; holoBoard.visible = false; holoBoard.renderOrder = 2; table.add(holoBoard);
+const stickOrig = [];
 const cellHits = [];
 for (let n = 1; n <= 30; n++) {
   const c = cellXZ(n);
@@ -1086,11 +1194,12 @@ const darkMat = new T.MeshStandardMaterial({ color: 0x3a2312, roughness: .5 }); 
 const stickGeo = new T.BoxGeometry(1.5, .09, .2);
 const stickList = [];
 for (let k = 0; k < 4; k++) {
-  const m = new T.Mesh(stickGeo, [darkMat, darkMat, faceMat, stickMats[3], darkMat, darkMat]);
+  const m = new T.Mesh(stickGeo, stickOrig.length ? stickOrig : (stickOrig.push(darkMat, darkMat, faceMat, stickMats[3], darkMat, darkMat), stickOrig));
   m.castShadow = true; m.userData = { stick: true };
   m.position.set(-.9 + k * .6, .045, 0); m.rotation.set(k % 2 ? Math.PI : 0, Math.PI / 2, 0);
   sticks.add(m); stickList.push(m);
 }
+function rwApply() { stickList.forEach(m => { m.material = RWS.oro ? stickGold : stickOrig; }); holoBoard.visible = RWS.tab; }
 const mat = new T.Mesh(new T.CircleGeometry(1.7, 48), new T.MeshStandardMaterial({ color: 0x5a1f14, roughness: .9 })); mat.rotation.x = -Math.PI / 2; mat.position.y = .005; mat.receiveShadow = true; sticks.add(mat);
 const matRing = new T.Mesh(new T.RingGeometry(1.62, 1.7, 64), M.gold); matRing.rotation.x = -Math.PI / 2; matRing.position.y = .008; sticks.add(matRing);
 mat.userData = { stick: true };
@@ -1296,9 +1405,9 @@ function describe(m, p) {
   if (m.to === OFF) return 'Sale del tablero y llega al estrado.';
   const { pos, ev } = applyMove(G.pos, m, p);
   const parts = [];
-  if (ev.some(e => e.t === 'capture')) parts.push(`Captura la ficha rival de la ${m.to} y la devuelve al inicio`);
+  if (ev.some(e => e.t === 'capture')) parts.push(`Captura la ficha rival de la casilla ${m.to} y la devuelve al inicio`);
   const w = ev.find(e => e.t === 'water'); const s = pos[p][m.i];
-  if (w) parts.push(s ? `Cae al Agua y renace en la ${s}` : 'Cae al Agua y vuelve al inicio');
+  if (w) parts.push(s ? `Cae al Agua y renace en la casilla ${s}` : 'Cae al Agua y vuelve al inicio');
   if (m.to === BEAUTY) parts.push('Casa de la Belleza, protegida y con otro lanzamiento');
   else if (s === REBIRTH && !w) parts.push('Casa del Renacimiento, protegida');
   const o = occ(pos);
@@ -1306,11 +1415,11 @@ function describe(m, p) {
     const rl = runLen(o, s, p);
     if (rl >= 3) parts.push('Forma un bloqueo que el rival no puede saltar');
     else if (rl === 2) parts.push('Queda protegida junto a otra ficha');
-    else { const r = exposure(pos, p, s); parts.push(r > 0 ? `Queda expuesta, con un ${Math.round(r * 100)} % de probabilidad de captura` : 'Queda fuera del alcance del rival'); }
+    else { const r = exposure(pos, p, s); parts.push(r > 0 ? `Queda expuesta a la captura, con un ${Math.round(r * 100)}${document.documentElement.lang === 'en' ? '%' : ' %'} de probabilidad` : 'Queda fuera del alcance del rival'); }
   }
   if (m.from >= 1) {
     const o0 = occ(G.pos);
-    for (const q of [m.from - 1, m.from + 1]) { const c = o0[q]; if (c && c.p === p && q !== s && !SAFE.has(q) && runLen(o0, q, p) >= 2 && runLen(o, q, p) < 2 && exposure(pos, p, q) > 0) { parts.push(`Deja sola a la ficha de la ${q}`); break; } }
+    for (const q of [m.from - 1, m.from + 1]) { const c = o0[q]; if (c && c.p === p && q !== s && !SAFE.has(q) && runLen(o0, q, p) >= 2 && runLen(o, q, p) < 2 && exposure(pos, p, q) > 0) { parts.push(`La ficha de la casilla ${q} queda sola`); break; } }
   }
   return parts.join('. ') + '.';
 }
@@ -1360,6 +1469,9 @@ function frame() {
     const lift = on ? (hov ? .22 : .06 + .04 * Math.sin(t * 3 + u.bob)) : 0;
     u.body.position.y += (lift - u.body.position.y) * .2;
   });
+  // recompensas holográficas
+  if (RWS.holo) { holoPaint(holoSpool, t, .52, 0); holoPaint(holoCone, t, .57, .5); }
+  if (RWS.tab) { holoTex.offset.x = (t * .03) % 1; holoBoardMat.opacity = .26 + .08 * Math.sin(t * 1.6); }
   // caminos
   if (routesDirty && G && G.phase === 'move') { routesDirty = false; showRoutes(); }
   routes.forEach(r => {
@@ -1438,7 +1550,7 @@ async function animateMove(me, mv, ev) {
       v.rotation.z = 0;
     }
     if (e.t === 'water') {
-      sfx.water(); toast('Al Agua', 'La ficha se ahoga y renace en la 15');
+      sfx.water(); toast('Al Agua', 'La ficha se ahoga y renace en la casilla 15');
       burst(wpos(), 70, 0x5ab8ff, 2.4, 3.4, 1.2, -7);
       const a = o.position.clone();
       await tw(.55, t => { o.position.y = a.y - t * .7; o.userData.body.scale.setScalar(1 - t * .5); });
@@ -1450,7 +1562,7 @@ async function animateMove(me, mv, ev) {
       o.userData.body.scale.setScalar(1);
     }
     if (e.t === 'off') {
-      sfx.off(); toast('Ha cruzado', 'Una ficha sale del tablero');
+      sfx.off(); toast('Ha cruzado el tablero', 'Una ficha sale del tablero');
       const a = o.position.clone(), b = slotPos(me, OFF, mv.i);
       burst(table.localToWorld(a.clone().setY(1)), 50, 0xffe08a, 1, 4, 1.4, -1);
       await tw(.8, t => { o.position.lerpVectors(a, b, ease(t)); o.position.y += Math.sin(Math.PI * t) * 1.6; o.rotation.y = t * Math.PI * 2; });
@@ -1523,26 +1635,27 @@ function renderPlayers() {
   for (const p of ['L', 'D']) {
     const box = $(p === 'L' ? 'plL' : 'plD');
     const total = G.pos[p].length, off = G.pos[p].filter(x => x === OFF).length;
-    const lvl = ['', 'fácil', 'normal', 'difícil'][cfg.rival];
-    const sub = isAI(p) ? `IA ${lvl}` : (cfg.quiz && G.score ? `Aciertos: ${G.score[p]}` : (look(p) === 'L' ? 'Carretes de marfil' : 'Conos de ébano'));
+    const lvl = ['', 'IA fácil', 'IA normal', 'IA difícil'][cfg.rival];
+    const ar = `${off} de ${total} fichas fuera del tablero`;
+    const sub = isAI(p) ? lvl : (cfg.quiz && G.score ? `Aciertos: ${G.score[p]}` : pieceName(look(p)));
     box.classList.toggle('turn', G.turn === p && !G.over);
-    box.innerHTML = `${iconSVG(p)}<div><div class="who">${NAME(p)}</div><div class="sub">${sub}</div><div class="ankhs" aria-label="${off} de ${total} fichas fuera">${Array.from({ length: total }, (_, k) => ankh(k < off)).join('')}</div></div>`;
+    box.innerHTML = `${iconSVG(p)}<div><div class="who">${NAME(p)}</div><div class="sub">${sub}</div><div class="ankhs" aria-label="${ar}">${Array.from({ length: total }, (_, k) => ankh(k < off)).join('')}</div></div>`;
   }
 }
 function setStatus(t) { $('status').textContent = t; }
 function setHint(t) { $('hint').textContent = t; }
 function setRoll(r, n) {
   $('rollNum').textContent = r == null ? '·' : r;
-  $('rollTxt').textContent = r == null ? ' ' : (n === 0 ? 'ninguna clara: 5' : `${n} ${n === 1 ? 'cara clara' : 'caras claras'}`);
+  $('rollTxt').textContent = r == null ? ' ' : (n === 0 ? 'ninguna cara clara: 5' : ['1 cara clara', '2 caras claras', '3 caras claras', '4 caras claras'][n - 1]);
 }
 const infoEl = $('info');
 const TOUCH = matchMedia('(pointer: coarse)').matches;
 function showSquare(n, flash) {
   const d = SQ[n];
   const done = G && G.right && cfg.quiz ? ['L', 'D'].filter(p => G.right.has(p + n) && !isAI(p)) : [];
-  infoEl.innerHTML = `<div class="k">Casilla ${n}${d.sp ? ` · <span class="sp">${d.sp}</span>` : ''}</div><h2>${d.h} <span class="more">· leer</span></h2>
+  infoEl.innerHTML = `<div class="k">Casilla ${n}${d.sp ? ` · <span class="sp">${d.sp}</span>` : ''}</div><h2>${d.h} <span class="more">· leer más</span></h2>
     ${d.role ? `<p class="role">${d.role}</p>` : ''}<p>${d.x}</p><div class="src">${d.f}</div>${window.HAPP ? HAPP.fichaHTML(n) : ''}${d.hist ? `<p class="hist">${d.hist}</p>` : ''}
-    ${done.length ? `<div class="ok">Pregunta acertada por ${done.map(p => cfg.rival > 0 ? (p === 'L' ? 'ti' : 'el adversario') : 'las ' + NAME(p).toLowerCase()).join(' y ')}</div>` : ''}`;
+    ${done.length ? `<div class="ok">${cfg.rival > 0 ? 'Pregunta acertada por ti' : (done.length === 2 ? 'Pregunta acertada por las claras y las oscuras' : (done[0] === 'L' ? 'Pregunta acertada por las claras' : 'Pregunta acertada por las oscuras'))}</div>` : ''}`;
   if (flash) infoEl.animate([{ boxShadow: '0 0 0 3px rgba(243,215,126,.9)' }, { boxShadow: '0 0 0 0 rgba(243,215,126,0)' }], { duration: 800 });
 }
 function openInfo(v) { infoEl.classList.toggle('open', v); }
@@ -1560,7 +1673,7 @@ function quiz(me, sq) {
   const q = QZ[sq], order = shuffle([0, 1, 2]);
   G.asked[me]++;
   const ai = isAI(me);
-  const who = ai ? ' · Responde el adversario' : (cfg.rival > 0 ? '' : ` · Responden las ${NAME(me).toLowerCase()}`);
+  const who = ai ? ' · Responde el adversario' : (cfg.rival > 0 ? '' : (me === 'L' ? ' · Responden las claras' : ' · Responden las oscuras'));
   return new Promise(res => {
     let done = false;
     const answer = k => {
@@ -1572,9 +1685,9 @@ function quiz(me, sq) {
       else ai ? sfx.right() : sfx.wrong();
       const fb = document.createElement('p'); fb.className = 'fb';
       fb.innerHTML = ai
-        ? (ok ? 'El adversario acierta y entra en la casilla.' : `El adversario falla. Su ficha se queda donde estaba y pierde el movimiento.`)
+        ? (ok ? 'El adversario acierta y entra en la casilla.' : 'El adversario falla. Su ficha se queda donde estaba y pierde el movimiento.')
         : (ok ? (youP(me) ? 'Correcto. Entras en la casilla.' : 'Correcto. La ficha entra en la casilla.')
-              : `Respuesta incorrecta. La correcta es ${/^«/.test(q.o[0]) ? q.o[0] : '«' + q.o[0] + '»'}. La ficha se queda donde estaba y ${youP(me) ? 'pierdes' : 'se pierde'} el movimiento.`);
+              : (youP(me) ? `Respuesta incorrecta. La correcta es <b>${q.o[0]}</b>. La ficha se queda donde estaba y pierdes el movimiento.` : `Respuesta incorrecta. La correcta es <b>${q.o[0]}</b>. La ficha se queda donde estaba y se pierde el movimiento.`));
       const card = $('mBtns').parentNode; card.appendChild(fb);
       const go = () => { closeModal(); res(ok); };
       if (ai) setTimeout(go, 1900 * SP());
@@ -1605,7 +1718,7 @@ function startTurn() {
   const ai = isAI(G.turn);
   $('bThrow').disabled = ai;
   if (ai) { setStatus('Turno del adversario.'); const tk = G.token; setTimeout(() => { if (G.token === tk) doThrow(); }, 700 * SP()); }
-  else setStatus(cfg.rival > 0 ? 'Tu turno. Lanza los palillos.' : `Turno de las ${NAME(G.turn).toLowerCase()}. Lanza los palillos.`);
+  else setStatus(SAY(G.turn, { you: 'Tu turno. Lanza los palillos.', L: 'Turno de las claras. Lanza los palillos.', D: 'Turno de las oscuras. Lanza los palillos.' }));
   setHint(ai ? '' : (TOUCH ? 'Toca Lanzar o los palillos.' : 'Pulsa Lanzar, la barra espaciadora o los propios palillos.'));
 }
 async function doThrow() {
@@ -1622,24 +1735,24 @@ async function doThrow() {
   G.moves = legalMoves(G.pos, G.turn, r);
   const me = G.turn;
   if (!G.moves.length) {
-    setStatus(youP(me) ? `Sacas ${r} y ninguna ficha puede moverse. Pasa el turno.` : `${NAME(me)}: ${r}, sin movimiento posible. Pasa el turno.`);
+    setStatus(SAY(me, { you: `Obtienes ${r} y ninguna ficha puede moverse. Pasa el turno.`, adv: `El adversario obtiene ${r} y ninguna ficha puede moverse. Pasa el turno.`, L: `Las claras obtienen ${r} y ninguna ficha puede moverse. Pasa el turno.`, D: `Las oscuras obtienen ${r} y ninguna ficha puede moverse. Pasa el turno.` }));
     await wait(1.4); if (G.token !== tk) return;
     G.busy = false; G.turn = opp(me); startTurn(); return;
   }
   G.phase = 'move'; G.busy = false;
   if (isAI(me)) {
-    setStatus(`El adversario saca ${r}.`);
+    setStatus(`El adversario obtiene ${r}.`);
     const m = aiPick(G.pos, me, r, cfg.rival);
     pieceObjs[me][m.i].userData.can = true; hoverI = m.i;
     await wait(.7); if (G.token !== tk) return;
     pieceObjs[me][m.i].userData.can = false; hoverI = null;
     await doMove(m);
   } else {
-    setStatus(youP(me) ? `Sacas ${r}. Elige qué ficha mueves.` : `Las ${NAME(me).toLowerCase()} sacan ${r}. Elige qué ficha mueves.`);
+    setStatus(SAY(me, { you: `Obtienes ${r}. Elige qué ficha mueves.`, L: `Las claras obtienen ${r}. Elige qué ficha mueves.`, D: `Las oscuras obtienen ${r}. Elige qué ficha mueves.` }));
     showRoutes(); setHover(null);
     if (G.moves.length === 1) {
       const only = G.moves[0];
-      setStatus(`${youP(me) ? `Sacas ${r}` : `Las ${NAME(me).toLowerCase()} sacan ${r}`}. Solo hay un movimiento posible.`);
+      setStatus(SAY(me, { you: `Obtienes ${r}. Solo hay un movimiento posible.`, L: `Las claras obtienen ${r}. Solo hay un movimiento posible.`, D: `Las oscuras obtienen ${r}. Solo hay un movimiento posible.` }));
       setHover(only.i);
       await wait(1.3);
       if (G.token === tk && G.phase === 'move' && !G.busy) await doMove(only);
@@ -1657,8 +1770,8 @@ async function doMove(m) {
     if (G.token !== tk) return;
     renderPlayers();
     if (!ok) {
-      toast('Falla', 'La ficha no entra en la casilla');
-      setStatus(youP(me) ? `Fallas la pregunta de la casilla ${m.to} y pierdes el movimiento.` : `${NAME(me)} ${cfg.rival > 0 ? 'falla' : 'fallan'} la pregunta de la casilla ${m.to} y pierde${cfg.rival > 0 ? '' : 'n'} el movimiento.`);
+      toast('Respuesta fallida', 'La ficha no puede entrar en la casilla');
+      setStatus(SAY(me, { you: `Respuesta fallida en la casilla ${m.to}. Pierdes el movimiento.`, adv: `El adversario falla en la casilla ${m.to}. Se pierde el movimiento.`, L: `Las claras fallan en la casilla ${m.to}. Se pierde el movimiento.`, D: `Las oscuras fallan en la casilla ${m.to}. Se pierde el movimiento.` }));
       G.busy = false;
       await wait(1.1); if (G.token !== tk) return;
       G.turn = opp(me); startTurn(); return;
@@ -1669,12 +1782,14 @@ async function doMove(m) {
   if (G.token !== tk) return;
   G.pos = pos;
   await settleSides();
-  const fromTxt = m.from === 0 ? 'desde el inicio' : `de la ${m.from}`;
-  const toTxt = m.to === OFF ? 'fuera del tablero' : `a la ${m.to}`;
-  let msg = youP(me) ? `Mueves ${fromTxt} ${toTxt}` : `${NAME(me)} ${cfg.rival > 0 ? 'mueve' : 'mueven'} ${fromTxt} ${toTxt}`;
+  const fromTxt = m.from === 0 ? 'desde el inicio' : `de la casilla ${m.from}`;
+  const toTxt = m.to === OFF ? 'fuera del tablero' : `a la casilla ${m.to}`;
+  let msg = `${SAY(me, { you: 'Mueves', adv: 'El adversario mueve', L: 'Las claras mueven', D: 'Las oscuras mueven' })} ${fromTxt} ${toTxt}`;
   for (const e of ev) {
-    if (e.t === 'capture') msg += `, captura la ficha de la ${e.at} y la devuelve al inicio`;
-    if (e.t === 'water') msg += e.to ? `, cae al Agua y renace en la ${e.to}` : ', cae al Agua y vuelve al inicio';
+    if (e.t === 'capture') msg += SAY(me, { you: `, capturas la ficha de la casilla ${e.at} y la devuelves al inicio`, adv: `, captura la ficha de la casilla ${e.at} y la devuelve al inicio`, L: `, capturan la ficha de la casilla ${e.at} y la devuelven al inicio`, D: `, capturan la ficha de la casilla ${e.at} y la devuelven al inicio` });
+    if (e.t === 'water') msg += e.to
+      ? SAY(me, { you: `, caes al Agua y renaces en la casilla ${e.to}`, adv: `, cae al Agua y renace en la casilla ${e.to}`, L: `, caen al Agua y renacen en la casilla ${e.to}`, D: `, caen al Agua y renacen en la casilla ${e.to}` })
+      : SAY(me, { you: ', caes al Agua y vuelves al inicio', adv: ', cae al Agua y vuelve al inicio', L: ', caen al Agua y vuelven al inicio', D: ', caen al Agua y vuelven al inicio' });
   }
   msg += '.'; setStatus(msg);
   const landed = m.to === OFF ? null : (ev.find(e => e.t === 'water') ? WATER : m.to);
@@ -1689,7 +1804,7 @@ async function doMove(m) {
     await wait(isAI(me) ? .9 : .3); if (G.token !== tk) return;
     G.phase = 'throw'; G.roll = null; G.moves = [];
     renderPlayers(); $('bThrow').disabled = isAI(me);
-    setStatus(youP(me) ? 'Vuelves a lanzar.' : (cfg.rival > 0 ? 'El adversario vuelve a lanzar.' : `Las ${NAME(me).toLowerCase()} vuelven a lanzar.`));
+    setStatus(SAY(me, { you: 'Vuelves a lanzar.', adv: 'El adversario vuelve a lanzar.', L: 'Las claras vuelven a lanzar.', D: 'Las oscuras vuelven a lanzar.' }));
     if (isAI(me)) setTimeout(() => { if (G.token === tk) doThrow(); }, 500 * SP());
     return;
   }
@@ -1702,11 +1817,11 @@ function gameOver(w) {
   youWin ? sfx.win() : sfx.lose();
   if (youWin) for (let k = 0; k < 6; k++) setTimeout(() => burst(table.localToWorld(new T.Vector3(rnd(-5, 5), 3, rnd(-1.5, 1.5))), 60, [0xffe08a, 0x6fe6c8, 0xff9a6a][k % 3], 3, 2, 2, -2), k * 260);
   const n = G.pos[w].length;
-  const title = cfg.rival > 0 ? (w === 'L' ? 'Has renacido' : 'El adversario cruza antes') : `Ganan las ${NAME(w).toLowerCase()}`;
+  const title = cfg.rival > 0 ? (w === 'L' ? 'Has renacido' : 'El adversario cruza antes') : (w === 'L' ? 'Ganan las claras' : 'Ganan las oscuras');
   const body = cfg.rival > 0 && w === 'L'
     ? `Tus ${n} fichas han salido del tablero. En el Imperio Nuevo, ganar la partida contra un adversario invisible garantizaba al difunto el renacimiento y, con él, la vida eterna (Decker, 1992).`
     : 'Todas las fichas han salido del tablero. En el Imperio Nuevo, el recorrido de las fichas simbolizaba el viaje del difunto por el inframundo hasta su renacimiento (Decker, 1992).';
-  const sc = cfg.quiz ? ['L', 'D'].filter(p => !isAI(p)).map(p => `<li>${cfg.rival > 0 ? 'Tus aciertos' : 'Aciertos de las ' + NAME(p).toLowerCase()}: ${G.score[p]} de ${G.asked[p]} preguntas</li>`).join('') : '';
+  const sc = cfg.quiz ? ['L', 'D'].filter(p => !isAI(p)).map(p => `<li>${cfg.rival > 0 ? `Has acertado ${G.score[p]} de ${G.asked[p]} preguntas.` : (p === 'L' ? `Las claras han acertado ${G.score[p]} de ${G.asked[p]} preguntas.` : `Las oscuras han acertado ${G.score[p]} de ${G.asked[p]} preguntas.`)}</li>`).join('') : '';
   setStatus(title + '.');
   setTimeout(() => modal(`<h2 id="mTitle">${title}</h2><p>${body}</p>${sc ? `<ul>${sc}</ul>` : ''}`, [['Opciones', () => menu()], ['Otra partida', () => { closeModal(); newGame(); }, 'primary']]), 900);
 }
@@ -1730,24 +1845,44 @@ function seg(label, key, opts, inl) {
   return `<div class="opt${inl ? ' in' : ''}"><div class="lab">${label}</div><div class="seg" data-key="${key}">${opts.map(([v, t]) => `<button data-v='${JSON.stringify(v)}' aria-pressed="${cfg[key] === v}">${t}</button>`).join('')}</div></div>`;
 }
 function menu() {
-  modal(`<h2 id="mTitle">Senet</h2>
+  const nw = rwNews.length ? `<p class="rwnew">${rwNews.length === 1 ? 'Has ganado una recompensa nueva, ' : 'Has ganado recompensas nuevas, '}${rwNews.map(r => `<b>${r.es}</b>`).join(', ')}, con tu nivel de Historiapp.</p>` : '';
+  modal(`<h2 id="mTitle">Senet</h2>${nw}
     <p class="lead">En el Imperio Nuevo el senet se convirtió en el viaje del difunto por el inframundo, y ganar la partida a un adversario invisible le garantizaba el renacimiento (Decker, 1992). Cada una de las treinta casillas recoge un contenido del deporte en el Antiguo Egipto.</p>
     ${seg('Rival', 'rival', [[1, 'Adversario fácil'], [2, 'Adversario normal'], [3, 'Adversario difícil'], [0, 'Dos jugadores o equipos']])}
     ${seg('Duración', 'pieces', [[3, 'Corta, 3 fichas'], [5, 'Completa, 5 fichas']])}
     ${seg('Preguntas del tema', 'quiz', [[true, 'Sí'], [false, 'No']], true)}
-    <details class="mas"${masOpen ? ' open' : ''}><summary>Más opciones <span>fichas, tablero, ayudas, sonido, letra</span></summary>
-    ${seg('Tus fichas (contra el adversario)', 'color', [['L', 'Carretes de marfil'], ['D', 'Conos de ébano']])}
-    ${seg('Tablero', 'orient', [['v', 'Vertical'], ['h', 'Horizontal'], ['auto', 'Según la pantalla']])}
+    <details class="mas"${masOpen ? ' open' : ''}><summary>Más opciones <span>fichas, tablero, ayudas, sonido, tamaño de letra</span></summary>
+    ${seg('Tus fichas (contra el adversario)', 'color', [['L', pieceName('L')], ['D', pieceName('D')]])}
+    ${seg('Tablero', 'orient', [['v', 'Vertical'], ['h', 'Horizontal'], ['auto', 'Automático, según la pantalla']])}
     ${seg('Ayudas de estrategia', 'help', [[true, 'Sí'], [false, 'No']], true)}
     ${seg('Velocidad', 'fast', [[false, 'Normal'], [true, 'Rápida']], true)}
     ${seg('Sonido', 'sound', [[true, 'Sí'], [false, 'No']], true)}
-    ${seg('Letra', 'big', [[false, 'Normal'], [true, 'Grande, para proyector']])}</details>`,
-    [['Reglas', () => rules(true)], ['Jugar', () => { let seen = false; try { seen = localStorage.getItem('senet.intro') === '1'; } catch (e) {} if (seen) { closeModal(); newGame(); } else intro(true); }, 'primary']]);
+    ${seg('Tamaño de letra', 'big', [[false, 'Normal'], [true, 'Grande, para proyector']])}</details>`,
+    [['Reglas', () => rules(true)], ['Recompensas', () => rewards()], ['Jugar', () => { rwNews = []; let seen = false; try { seen = localStorage.getItem('senet.intro') === '1'; } catch (e) {} if (seen) { closeModal(); newGame(); } else intro(true); }, 'primary']]);
   const mas = document.querySelector('#mBody .mas'); if (mas) mas.addEventListener('toggle', () => { masOpen = mas.open; });
   document.querySelectorAll('#mBody .seg').forEach(s => s.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
     cfg[s.dataset.key] = JSON.parse(b.dataset.v); saveCfg(); applyCfg();
     s.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
   })));
+}
+const RWD = {
+  fichas_de_lapislazuli: 'Tus fichas pasan a ser de lapislázuli, la piedra azul que los egipcios apreciaban en joyas y amuletos.',
+  bastones_de_oro: 'Los cuatro palillos se recubren de oro, con la cara clara bruñida y la oscura en oro viejo.',
+  fichas_holograficas: 'Las fichas cambian de color con un brillo holográfico. Es un adorno del juego, sin base histórica.',
+  tablero_holografico: 'Un velo holográfico recorre el tablero. Es un adorno del juego, sin base histórica.',
+};
+function rewards() {
+  const L = rwLevel(); rwNews = [];
+  let h = '<h2 id="mTitle">Recompensas de Senet</h2>';
+  let list = [], nx = null;
+  try { list = HAPP_RW.list('senet'); nx = HAPP_RW.proxima('senet'); } catch (e) {}
+  if (!L) h += '<p class="lead">Las recompensas se activan dentro de Historiapp, según tu nivel.</p>';
+  else {
+    h += `<p class="lead">Tu nivel en Historiapp es el ${L.lv}, con ${rwNum(L.xp)} XP.</p>`;
+    h += nx ? `<p>La próxima, <b>${nx.es}</b>, llega en el nivel ${nx.lv}. Para conseguirla te faltan ${rwNum(Math.max(0, HAPP_RW.xpFor(nx.lv) - L.xp))} XP.</p>` : '<p>Ya las tienes todas.</p>';
+  }
+  h += '<ul class="rwl">' + list.map(r => { const ok = !!(L && L.lv >= r.lv); return `<li class="${ok ? 'on' : 'off'}"><div class="rwh"><b>${r.es}</b><span>Nivel ${r.lv}</span></div><p>${RWD[r.k] || ''}</p><em>${ok ? 'Conseguida' : 'Bloqueada'}</em></li>`; }).join('') + '</ul>';
+  modal(h, [['Volver', () => menu(), 'primary']]);
 }
 function intro(thenPlay) {
   try { localStorage.setItem('senet.intro', '1'); } catch (e) {}
@@ -1834,6 +1969,8 @@ function resumeGame(s) {
 })();
 </script>
 <div id="alacopy" role="contentinfo" style="position:fixed;right:max(8px,env(safe-area-inset-right));bottom:max(6px,env(safe-area-inset-bottom));z-index:2147482000;pointer-events:none;user-select:none;-webkit-user-select:none;font:500 11px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif;color:#fff;opacity:.6;text-shadow:0 1px 2px #000,0 0 4px #000;white-space:nowrap">© Diseñado y Creado por Alejandro Leiva Arcas</div>
+<script id="alacopy-en">(function(){try{var l=null;try{l=localStorage.getItem("historiapp.lang")}catch(e){}var en=l?l==="en":/^en/i.test(document.documentElement.lang||"");if(!en&&/-en\.html$/.test(location.pathname))en=true;var d=document.getElementById("alacopy");if(en&&d)d.textContent="© Designed and created by Alejandro Leiva Arcas"}catch(e){}})();</script>
+
 <style>.happ-volver{pointer-events:auto!important}</style>
 </body>
 </html>

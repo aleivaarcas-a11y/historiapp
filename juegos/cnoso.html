@@ -2,6 +2,9 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
+<meta name="author" content="Alejandro Leiva Arcas">
+<meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
 <!--HAPP-GUARDAR-->
 <script>window.HAPP_GS={volver:'../#t3', orient:'h', pos:{top:'max(8px, env(safe-area-inset-top))', left:'calc(50% + 36px)'}, visible:function(){return !!document.querySelector('iframe.pugframe')}};</script>
 <script>
@@ -162,9 +165,6 @@
 </script>
 <!--/HAPP-GUARDAR-->
 
-<!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
-<meta name="author" content="Alejandro Leiva Arcas">
-<meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#2a1d14">
@@ -324,6 +324,1413 @@ button{font-family:var(--serif);cursor:pointer;-webkit-appearance:none;appearanc
 <div id="st"></div>
 <div class="rot" id="rot"><b>📱</b><span id="rotT">Gira el dispositivo para jugar</span></div>
 <script>
+/* Recompensas por nivel de Historiapp (14-10-2026). Fuente única: recompensas.json
+   (tabla de RECOMPENSAS-POR-NIVEL.md). Cada juego la incrusta con su build:
+   el marcador [
+ {
+  "lv": 2,
+  "game": "cuadrigas",
+  "k": "poner_nombre_a_los_caballos",
+  "es": "Poner nombre a los caballos",
+  "en": "Name your horses"
+ },
+ {
+  "lv": 3,
+  "game": "kleos",
+  "k": "calipatira",
+  "es": "Calipátira",
+  "en": "Kallipateira"
+ },
+ {
+  "lv": 4,
+  "game": "gladiatura",
+  "k": "apodo_de_arena",
+  "es": "Apodo de arena",
+  "en": "Arena nickname"
+ },
+ {
+  "lv": 5,
+  "game": "kleos",
+  "k": "ramses_ii",
+  "es": "Ramsés II",
+  "en": "Ramesses II"
+ },
+ {
+  "lv": 6,
+  "game": "monopoleis",
+  "k": "casco_espartano",
+  "es": "Casco espartano",
+  "en": "Spartan helmet"
+ },
+ {
+  "lv": 7,
+  "game": "senet",
+  "k": "fichas_de_lapislazuli",
+  "es": "Fichas de lapislázuli",
+  "en": "Lapis lazuli pieces"
+ },
+ {
+  "lv": 8,
+  "game": "kleos",
+  "k": "pilar_djed",
+  "es": "Pilar Djed",
+  "en": "Djed pillar"
+ },
+ {
+  "lv": 9,
+  "game": "agon",
+  "k": "estandarte_con_emblema_propio",
+  "es": "Estandarte con emblema propio",
+  "en": "Standard with your own emblem"
+ },
+ {
+  "lv": 10,
+  "game": "kleos",
+  "k": "tutmosis_iii",
+  "es": "Tutmosis III",
+  "en": "Thutmose III"
+ },
+ {
+  "lv": 11,
+  "game": "pentatlon",
+  "k": "pruebas_sueltas_sin_pasar_por_la",
+  "es": "Pruebas sueltas sin pasar por la carrera",
+  "en": "Pentathlon: single events without the career"
+ },
+ {
+  "lv": 12,
+  "game": "kleos",
+  "k": "aquiles",
+  "es": "Aquiles",
+  "en": "Achilles"
+ },
+ {
+  "lv": 13,
+  "game": "cnoso",
+  "k": "repetir_cualquier_sala_del_palac",
+  "es": "Repetir cualquier sala del palacio",
+  "en": "Replay any room of the palace"
+ },
+ {
+  "lv": 14,
+  "game": "cuadrigas",
+  "k": "librea_del_auriga_con_bordado_de",
+  "es": "Librea del auriga con bordado de oro",
+  "en": "Charioteer's livery with gold embroidery"
+ },
+ {
+  "lv": 15,
+  "game": "kleos",
+  "k": "dedos",
+  "es": "«Dedos»",
+  "en": "\"Fingers\""
+ },
+ {
+  "lv": 16,
+  "game": "gladiatura",
+  "k": "emblema_de_laurel",
+  "es": "Emblema de laurel",
+  "en": "Laurel emblem"
+ },
+ {
+  "lv": 17,
+  "game": "monopoleis",
+  "k": "escudo_de_hoplita",
+  "es": "Escudo de hoplita",
+  "en": "Hoplite shield"
+ },
+ {
+  "lv": 18,
+  "game": "kleos",
+  "k": "abbas_i",
+  "es": "Abbás I",
+  "en": "Abbas I"
+ },
+ {
+  "lv": 19,
+  "game": "agon",
+  "k": "dados_de_hueso",
+  "es": "Dados de hueso",
+  "en": "Bone dice"
+ },
+ {
+  "lv": 20,
+  "game": "cuadrigas",
+  "k": "elegir_circuito_en_la_carrera_su",
+  "es": "Elegir circuito en la carrera suelta",
+  "en": "Choose the circuit in a single race"
+ },
+ {
+  "lv": 21,
+  "game": "kleos",
+  "k": "heracles_y_pelope",
+  "es": "Heracles y Pélope",
+  "en": "Heracles and Pelops"
+ },
+ {
+  "lv": 22,
+  "game": "gladiatura",
+  "k": "elegir_anfiteatro",
+  "es": "Elegir anfiteatro",
+  "en": "Choose the amphitheatre"
+ },
+ {
+  "lv": 23,
+  "game": "agon",
+  "k": "mapa_de_pergamino",
+  "es": "Mapa de pergamino",
+  "en": "Parchment map"
+ },
+ {
+  "lv": 24,
+  "game": "monopoleis",
+  "k": "riton_de_los_boxeadores",
+  "es": "Ritón de los boxeadores",
+  "en": "Boxer Rhyton"
+ },
+ {
+  "lv": 25,
+  "game": "kleos",
+  "k": "anolimpiada",
+  "es": "Anolimpiada",
+  "en": "Anolympiad"
+ },
+ {
+  "lv": 26,
+  "game": "cuadrigas",
+  "k": "latigo_con_mango_de_marfil",
+  "es": "Látigo con mango de marfil",
+  "en": "Whip with an ivory handle"
+ },
+ {
+  "lv": 27,
+  "game": "gladiatura",
+  "k": "emblema_del_rayo",
+  "es": "Emblema del rayo",
+  "en": "Thunderbolt emblem"
+ },
+ {
+  "lv": 28,
+  "game": "agon",
+  "k": "repetir_una_tirada_por_partida",
+  "es": "Repetir una tirada por partida",
+  "en": "Reroll one roll per game"
+ },
+ {
+  "lv": 29,
+  "game": "cuadrigas",
+  "k": "ruedas_doradas",
+  "es": "Ruedas doradas",
+  "en": "Golden wheels"
+ },
+ {
+  "lv": 30,
+  "game": "gladiatura",
+  "k": "elegir_rival",
+  "es": "Elegir rival",
+  "en": "Choose your opponent"
+ },
+ {
+  "lv": 31,
+  "game": "monopoleis",
+  "k": "color_topacio",
+  "es": "Color topacio",
+  "en": "Topaz colour"
+ },
+ {
+  "lv": 32,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_sicili",
+  "es": "Caballos de la yeguada de Sicilia",
+  "en": "Horses from the Sicilian stud"
+ },
+ {
+  "lv": 33,
+  "game": "agon",
+  "k": "dados_de_marfil",
+  "es": "Dados de marfil",
+  "en": "Ivory dice"
+ },
+ {
+  "lv": 34,
+  "game": "senet",
+  "k": "bastones_de_oro",
+  "es": "Bastones de oro",
+  "en": "Golden sticks"
+ },
+ {
+  "lv": 35,
+  "game": "gladiatura",
+  "k": "emblema_de_creciente_y_estrellas",
+  "es": "Emblema de creciente y estrellas",
+  "en": "Crescent and stars emblem"
+ },
+ {
+  "lv": 36,
+  "game": "monopoleis",
+  "k": "leon_del_coliseo",
+  "es": "León del Coliseo",
+  "en": "Lion of the Colosseum"
+ },
+ {
+  "lv": 37,
+  "game": "cuadrigas",
+  "k": "casco_de_cuero_repujado_del_auri",
+  "es": "Casco de cuero repujado del auriga",
+  "en": "Charioteer's embossed leather helmet"
+ },
+ {
+  "lv": 38,
+  "game": "agon",
+  "k": "tropas_con_armadura_dorada",
+  "es": "Tropas con armadura dorada",
+  "en": "Troops in golden armour"
+ },
+ {
+  "lv": 39,
+  "game": "gladiatura",
+  "k": "escudo_pintado",
+  "es": "Escudo pintado",
+  "en": "Painted shield"
+ },
+ {
+  "lv": 40,
+  "game": "pentatlon",
+  "k": "retrato_del_atleta_con_corona_de",
+  "es": "Retrato del atleta con corona de olivo",
+  "en": "Portrait of the athlete with an olive crown"
+ },
+ {
+  "lv": 41,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_tesali",
+  "es": "Caballos de la yeguada de Tesalia",
+  "en": "Horses from the Thessalian stud"
+ },
+ {
+  "lv": 42,
+  "game": "monopoleis",
+  "k": "tridente_del_reciario",
+  "es": "Tridente del reciario",
+  "en": "Retiarius trident"
+ },
+ {
+  "lv": 43,
+  "game": "agon",
+  "k": "una_tropa_de_mas_al_empezar",
+  "es": "Una tropa de más al empezar",
+  "en": "One extra troop at the start"
+ },
+ {
+  "lv": 44,
+  "game": "gladiatura",
+  "k": "yelmo_de_gala_dorado",
+  "es": "Yelmo de gala dorado",
+  "en": "Golden parade helmet"
+ },
+ {
+  "lv": 45,
+  "game": "cnoso",
+  "k": "fiesta_del_toro_al_atardecer",
+  "es": "Fiesta del toro al atardecer",
+  "en": "Bull festival at sunset"
+ },
+ {
+  "lv": 46,
+  "game": "cuadrigas",
+  "k": "carro_de_bronce_repujado",
+  "es": "Carro de bronce repujado",
+  "en": "Embossed bronze chariot"
+ },
+ {
+  "lv": 47,
+  "game": "agon",
+  "k": "dados_de_cristal_de_roca",
+  "es": "Dados de cristal de roca",
+  "en": "Rock crystal dice"
+ },
+ {
+  "lv": 48,
+  "game": "gladiatura",
+  "k": "grebas_decoradas",
+  "es": "Grebas decoradas",
+  "en": "Decorated greaves"
+ },
+ {
+  "lv": 49,
+  "game": "monopoleis",
+  "k": "casco_de_secutor",
+  "es": "Casco de secutor",
+  "en": "Secutor helmet"
+ },
+ {
+  "lv": 50,
+  "game": "cuadrigas",
+  "k": "caballo_legendario_hirpino",
+  "es": "Caballo legendario Hirpino",
+  "en": "Legendary horse Hirpinus"
+ },
+ {
+  "lv": 51,
+  "game": "gladiatura",
+  "k": "munus_de_exhibicion_tres_combate",
+  "es": "Munus de exhibición, tres combates seguidos",
+  "en": "Exhibition munus, three fights in a row"
+ },
+ {
+  "lv": 52,
+  "game": "agon",
+  "k": "ver_la_siguiente_carta_de_mision",
+  "es": "Ver la siguiente carta de misión",
+  "en": "See the next mission card"
+ },
+ {
+  "lv": 53,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_hispan",
+  "es": "Caballos de la yeguada de Hispania",
+  "en": "Horses from the Hispanic stud"
+ },
+ {
+  "lv": 54,
+  "game": "monopoleis",
+  "k": "dados_de_oro",
+  "es": "Dados de oro",
+  "en": "Golden dice"
+ },
+ {
+  "lv": 55,
+  "game": "senet",
+  "k": "fichas_holograficas",
+  "es": "Fichas holográficas",
+  "en": "Holographic pieces"
+ },
+ {
+  "lv": 56,
+  "game": "gladiatura",
+  "k": "emblema_de_la_palma",
+  "es": "Emblema de la palma",
+  "en": "Palm emblem"
+ },
+ {
+  "lv": 57,
+  "game": "agon",
+  "k": "cartas_con_marco_dorado",
+  "es": "Cartas con marco dorado",
+  "en": "Gold-framed cards"
+ },
+ {
+  "lv": 58,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_pom",
+  "es": "Correr contra el fantasma de Pompeyo Musclosus",
+  "en": "Race against the ghost of Pompeius Musclosus"
+ },
+ {
+  "lv": 59,
+  "game": "monopoleis",
+  "k": "mesa_de_marmol_veteado",
+  "es": "Mesa de mármol veteado",
+  "en": "Veined marble table"
+ },
+ {
+  "lv": 60,
+  "game": "gladiatura",
+  "k": "cartel_del_munus_con_tu_nombre",
+  "es": "Cartel del munus con tu nombre",
+  "en": "Munus poster with your name"
+ },
+ {
+  "lv": 61,
+  "game": "agon",
+  "k": "fortificar_un_yacimiento_durante",
+  "es": "Fortificar un yacimiento durante un turno",
+  "en": "Fortify a site for one turn"
+ },
+ {
+  "lv": 62,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_capado",
+  "es": "Caballos de la yeguada de Capadocia",
+  "en": "Horses from the Cappadocian stud"
+ },
+ {
+  "lv": 63,
+  "game": "gladiatura",
+  "k": "manica_dorada",
+  "es": "Manica dorada",
+  "en": "Golden manica"
+ },
+ {
+  "lv": 64,
+  "game": "monopoleis",
+  "k": "cambiar_una_pregunta_por_partida",
+  "es": "Cambiar una pregunta por partida",
+  "en": "Swap one question per game"
+ },
+ {
+  "lv": 65,
+  "game": "cuadrigas",
+  "k": "carro_de_plata",
+  "es": "Carro de plata",
+  "en": "Silver chariot"
+ },
+ {
+  "lv": 66,
+  "game": "agon",
+  "k": "dados_de_bronce",
+  "es": "Dados de bronce",
+  "en": "Bronze dice"
+ },
+ {
+  "lv": 67,
+  "game": "gladiatura",
+  "k": "combate_de_noche_con_antorchas",
+  "es": "Combate de noche con antorchas",
+  "en": "Night fight by torchlight"
+ },
+ {
+  "lv": 68,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_del_norte",
+  "es": "Caballos de la yeguada del norte de África",
+  "en": "Horses from the North African stud"
+ },
+ {
+  "lv": 69,
+  "game": "agon",
+  "k": "segunda_repeticion_de_tirada_por",
+  "es": "Segunda repetición de tirada por partida",
+  "en": "Second reroll per game"
+ },
+ {
+  "lv": 70,
+  "game": "monopoleis",
+  "k": "villas_de_marmol",
+  "es": "Villas de mármol",
+  "en": "Marble villas"
+ },
+ {
+  "lv": 71,
+  "game": "cuadrigas",
+  "k": "monumento_del_auriga_en_la_cuadr",
+  "es": "Monumento del auriga en la cuadra",
+  "en": "Charioteer's monument in the stable"
+ },
+ {
+  "lv": 72,
+  "game": "gladiatura",
+  "k": "armadura_de_gala_completa",
+  "es": "Armadura de gala completa",
+  "en": "Full parade armour"
+ },
+ {
+  "lv": 73,
+  "game": "agon",
+  "k": "dados_de_plata",
+  "es": "Dados de plata",
+  "en": "Silver dice"
+ },
+ {
+  "lv": 74,
+  "game": "monopoleis",
+  "k": "partida_de_noche_con_lucernas",
+  "es": "Partida de noche con lucernas",
+  "en": "Night game by oil lamps"
+ },
+ {
+  "lv": 75,
+  "game": "cuadrigas",
+  "k": "caballo_legendario_aquilon",
+  "es": "Caballo legendario Aquilón",
+  "en": "Legendary horse Aquilo"
+ },
+ {
+  "lv": 76,
+  "game": "senet",
+  "k": "tablero_holografico",
+  "es": "Tablero holográfico",
+  "en": "Holographic board"
+ },
+ {
+  "lv": 77,
+  "game": "gladiatura",
+  "k": "corona_de_la_victoria_en_el_retr",
+  "es": "Corona de la victoria en el retrato",
+  "en": "Victory crown on the portrait"
+ },
+ {
+  "lv": 78,
+  "game": "agon",
+  "k": "carta_de_mision_adicional",
+  "es": "Carta de misión adicional",
+  "en": "Extra mission card"
+ },
+ {
+  "lv": 79,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_pompeyo_musc",
+  "es": "Carro legendario de Pompeyo Musclosus",
+  "en": "Legendary chariot of Pompeius Musclosus"
+ },
+ {
+  "lv": 80,
+  "game": "gladiatura",
+  "k": "emblema_de_flamma",
+  "es": "Emblema de Flamma",
+  "en": "Flamma emblem"
+ },
+ {
+  "lv": 81,
+  "game": "monopoleis",
+  "k": "palacios_dorados",
+  "es": "Palacios dorados",
+  "en": "Golden palaces"
+ },
+ {
+  "lv": 82,
+  "game": "agon",
+  "k": "dados_de_oro",
+  "es": "Dados de oro",
+  "en": "Golden dice"
+ },
+ {
+  "lv": 83,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_guta_calpurn",
+  "es": "Carro legendario de Guta Calpurniano",
+  "en": "Legendary chariot of Gutta Calpurnianus"
+ },
+ {
+  "lv": 84,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_bronce",
+  "es": "Gladiador legendario de bronce",
+  "en": "Legendary bronze gladiator"
+ },
+ {
+  "lv": 85,
+  "game": "monopoleis",
+  "k": "empezar_con_una_carta_de_curacio",
+  "es": "Empezar con una carta de curación",
+  "en": "Start with a healing card"
+ },
+ {
+  "lv": 86,
+  "game": "agon",
+  "k": "refuerzo_doble_en_el_primer_turn",
+  "es": "Refuerzo doble en el primer turno",
+  "en": "Double reinforcements on the first turn"
+ },
+ {
+  "lv": 87,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_esc",
+  "es": "Correr contra el fantasma de Escorpo",
+  "en": "Race against the ghost of Scorpus"
+ },
+ {
+  "lv": 88,
+  "game": "gladiatura",
+  "k": "yelmo_legendario_de_flamma",
+  "es": "Yelmo legendario de Flamma",
+  "en": "Legendary helmet of Flamma"
+ },
+ {
+  "lv": 89,
+  "game": "agon",
+  "k": "dados_legendarios_de_lapislazuli",
+  "es": "Dados legendarios de lapislázuli",
+  "en": "Legendary lapis lazuli dice"
+ },
+ {
+  "lv": 90,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_crescens",
+  "es": "Carro legendario de Crescens",
+  "en": "Legendary chariot of Crescens"
+ },
+ {
+  "lv": 91,
+  "game": "monopoleis",
+  "k": "tablero_de_oro_y_lapislazuli",
+  "es": "Tablero de oro y lapislázuli",
+  "en": "Gold and lapis lazuli board"
+ },
+ {
+  "lv": 92,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_plata",
+  "es": "Gladiador legendario de plata",
+  "en": "Legendary silver gladiator"
+ },
+ {
+  "lv": 93,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_escorpo",
+  "es": "Carro legendario de Escorpo",
+  "en": "Legendary chariot of Scorpus"
+ },
+ {
+  "lv": 94,
+  "game": "agon",
+  "k": "estandarte_legendario",
+  "es": "Estandarte legendario",
+  "en": "Legendary standard"
+ },
+ {
+  "lv": 95,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_oro",
+  "es": "Gladiador legendario de oro",
+  "en": "Legendary golden gladiator"
+ },
+ {
+  "lv": 96,
+  "game": "monopoleis",
+  "k": "ficha_legendaria_holografica",
+  "es": "Ficha legendaria holográfica",
+  "en": "Legendary holographic piece"
+ },
+ {
+  "lv": 97,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_dio",
+  "es": "Correr contra el fantasma de Diocles",
+  "en": "Race against the ghost of Diocles"
+ },
+ {
+  "lv": 98,
+  "game": "agon",
+  "k": "dados_legendarios_holograficos",
+  "es": "Dados legendarios holográficos",
+  "en": "Legendary holographic dice"
+ },
+ {
+  "lv": 99,
+  "game": "gladiatura",
+  "k": "rudis_de_la_libertad",
+  "es": "Rudis de la libertad",
+  "en": "Rudis of freedom"
+ },
+ {
+  "lv": 100,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_diocles",
+  "es": "Carro legendario de Diocles",
+  "en": "Legendary chariot of Diocles"
+ }
+] se sustituye por el contenido de recompensas.json.
+   Uso: HAPP_RW.level() -> {lv,xp,next} o null fuera de la app;
+        HAPP_RW.list('cuadrigas') -> recompensas del juego;  HAPP_RW.has('cuadrigas','ruedas_doradas')
+        HAPP_RW.nuevas('cuadrigas') -> recompensas ganadas desde la última vez (y las marca vistas). */
+var HAPP_RW=(function(){
+  var ALL=[
+ {
+  "lv": 2,
+  "game": "cuadrigas",
+  "k": "poner_nombre_a_los_caballos",
+  "es": "Poner nombre a los caballos",
+  "en": "Name your horses"
+ },
+ {
+  "lv": 3,
+  "game": "kleos",
+  "k": "calipatira",
+  "es": "Calipátira",
+  "en": "Kallipateira"
+ },
+ {
+  "lv": 4,
+  "game": "gladiatura",
+  "k": "apodo_de_arena",
+  "es": "Apodo de arena",
+  "en": "Arena nickname"
+ },
+ {
+  "lv": 5,
+  "game": "kleos",
+  "k": "ramses_ii",
+  "es": "Ramsés II",
+  "en": "Ramesses II"
+ },
+ {
+  "lv": 6,
+  "game": "monopoleis",
+  "k": "casco_espartano",
+  "es": "Casco espartano",
+  "en": "Spartan helmet"
+ },
+ {
+  "lv": 7,
+  "game": "senet",
+  "k": "fichas_de_lapislazuli",
+  "es": "Fichas de lapislázuli",
+  "en": "Lapis lazuli pieces"
+ },
+ {
+  "lv": 8,
+  "game": "kleos",
+  "k": "pilar_djed",
+  "es": "Pilar Djed",
+  "en": "Djed pillar"
+ },
+ {
+  "lv": 9,
+  "game": "agon",
+  "k": "estandarte_con_emblema_propio",
+  "es": "Estandarte con emblema propio",
+  "en": "Standard with your own emblem"
+ },
+ {
+  "lv": 10,
+  "game": "kleos",
+  "k": "tutmosis_iii",
+  "es": "Tutmosis III",
+  "en": "Thutmose III"
+ },
+ {
+  "lv": 11,
+  "game": "pentatlon",
+  "k": "pruebas_sueltas_sin_pasar_por_la",
+  "es": "Pruebas sueltas sin pasar por la carrera",
+  "en": "Pentathlon: single events without the career"
+ },
+ {
+  "lv": 12,
+  "game": "kleos",
+  "k": "aquiles",
+  "es": "Aquiles",
+  "en": "Achilles"
+ },
+ {
+  "lv": 13,
+  "game": "cnoso",
+  "k": "repetir_cualquier_sala_del_palac",
+  "es": "Repetir cualquier sala del palacio",
+  "en": "Replay any room of the palace"
+ },
+ {
+  "lv": 14,
+  "game": "cuadrigas",
+  "k": "librea_del_auriga_con_bordado_de",
+  "es": "Librea del auriga con bordado de oro",
+  "en": "Charioteer's livery with gold embroidery"
+ },
+ {
+  "lv": 15,
+  "game": "kleos",
+  "k": "dedos",
+  "es": "«Dedos»",
+  "en": "\"Fingers\""
+ },
+ {
+  "lv": 16,
+  "game": "gladiatura",
+  "k": "emblema_de_laurel",
+  "es": "Emblema de laurel",
+  "en": "Laurel emblem"
+ },
+ {
+  "lv": 17,
+  "game": "monopoleis",
+  "k": "escudo_de_hoplita",
+  "es": "Escudo de hoplita",
+  "en": "Hoplite shield"
+ },
+ {
+  "lv": 18,
+  "game": "kleos",
+  "k": "abbas_i",
+  "es": "Abbás I",
+  "en": "Abbas I"
+ },
+ {
+  "lv": 19,
+  "game": "agon",
+  "k": "dados_de_hueso",
+  "es": "Dados de hueso",
+  "en": "Bone dice"
+ },
+ {
+  "lv": 20,
+  "game": "cuadrigas",
+  "k": "elegir_circuito_en_la_carrera_su",
+  "es": "Elegir circuito en la carrera suelta",
+  "en": "Choose the circuit in a single race"
+ },
+ {
+  "lv": 21,
+  "game": "kleos",
+  "k": "heracles_y_pelope",
+  "es": "Heracles y Pélope",
+  "en": "Heracles and Pelops"
+ },
+ {
+  "lv": 22,
+  "game": "gladiatura",
+  "k": "elegir_anfiteatro",
+  "es": "Elegir anfiteatro",
+  "en": "Choose the amphitheatre"
+ },
+ {
+  "lv": 23,
+  "game": "agon",
+  "k": "mapa_de_pergamino",
+  "es": "Mapa de pergamino",
+  "en": "Parchment map"
+ },
+ {
+  "lv": 24,
+  "game": "monopoleis",
+  "k": "riton_de_los_boxeadores",
+  "es": "Ritón de los boxeadores",
+  "en": "Boxer Rhyton"
+ },
+ {
+  "lv": 25,
+  "game": "kleos",
+  "k": "anolimpiada",
+  "es": "Anolimpiada",
+  "en": "Anolympiad"
+ },
+ {
+  "lv": 26,
+  "game": "cuadrigas",
+  "k": "latigo_con_mango_de_marfil",
+  "es": "Látigo con mango de marfil",
+  "en": "Whip with an ivory handle"
+ },
+ {
+  "lv": 27,
+  "game": "gladiatura",
+  "k": "emblema_del_rayo",
+  "es": "Emblema del rayo",
+  "en": "Thunderbolt emblem"
+ },
+ {
+  "lv": 28,
+  "game": "agon",
+  "k": "repetir_una_tirada_por_partida",
+  "es": "Repetir una tirada por partida",
+  "en": "Reroll one roll per game"
+ },
+ {
+  "lv": 29,
+  "game": "cuadrigas",
+  "k": "ruedas_doradas",
+  "es": "Ruedas doradas",
+  "en": "Golden wheels"
+ },
+ {
+  "lv": 30,
+  "game": "gladiatura",
+  "k": "elegir_rival",
+  "es": "Elegir rival",
+  "en": "Choose your opponent"
+ },
+ {
+  "lv": 31,
+  "game": "monopoleis",
+  "k": "color_topacio",
+  "es": "Color topacio",
+  "en": "Topaz colour"
+ },
+ {
+  "lv": 32,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_sicili",
+  "es": "Caballos de la yeguada de Sicilia",
+  "en": "Horses from the Sicilian stud"
+ },
+ {
+  "lv": 33,
+  "game": "agon",
+  "k": "dados_de_marfil",
+  "es": "Dados de marfil",
+  "en": "Ivory dice"
+ },
+ {
+  "lv": 34,
+  "game": "senet",
+  "k": "bastones_de_oro",
+  "es": "Bastones de oro",
+  "en": "Golden sticks"
+ },
+ {
+  "lv": 35,
+  "game": "gladiatura",
+  "k": "emblema_de_creciente_y_estrellas",
+  "es": "Emblema de creciente y estrellas",
+  "en": "Crescent and stars emblem"
+ },
+ {
+  "lv": 36,
+  "game": "monopoleis",
+  "k": "leon_del_coliseo",
+  "es": "León del Coliseo",
+  "en": "Lion of the Colosseum"
+ },
+ {
+  "lv": 37,
+  "game": "cuadrigas",
+  "k": "casco_de_cuero_repujado_del_auri",
+  "es": "Casco de cuero repujado del auriga",
+  "en": "Charioteer's embossed leather helmet"
+ },
+ {
+  "lv": 38,
+  "game": "agon",
+  "k": "tropas_con_armadura_dorada",
+  "es": "Tropas con armadura dorada",
+  "en": "Troops in golden armour"
+ },
+ {
+  "lv": 39,
+  "game": "gladiatura",
+  "k": "escudo_pintado",
+  "es": "Escudo pintado",
+  "en": "Painted shield"
+ },
+ {
+  "lv": 40,
+  "game": "pentatlon",
+  "k": "retrato_del_atleta_con_corona_de",
+  "es": "Retrato del atleta con corona de olivo",
+  "en": "Portrait of the athlete with an olive crown"
+ },
+ {
+  "lv": 41,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_tesali",
+  "es": "Caballos de la yeguada de Tesalia",
+  "en": "Horses from the Thessalian stud"
+ },
+ {
+  "lv": 42,
+  "game": "monopoleis",
+  "k": "tridente_del_reciario",
+  "es": "Tridente del reciario",
+  "en": "Retiarius trident"
+ },
+ {
+  "lv": 43,
+  "game": "agon",
+  "k": "una_tropa_de_mas_al_empezar",
+  "es": "Una tropa de más al empezar",
+  "en": "One extra troop at the start"
+ },
+ {
+  "lv": 44,
+  "game": "gladiatura",
+  "k": "yelmo_de_gala_dorado",
+  "es": "Yelmo de gala dorado",
+  "en": "Golden parade helmet"
+ },
+ {
+  "lv": 45,
+  "game": "cnoso",
+  "k": "fiesta_del_toro_al_atardecer",
+  "es": "Fiesta del toro al atardecer",
+  "en": "Bull festival at sunset"
+ },
+ {
+  "lv": 46,
+  "game": "cuadrigas",
+  "k": "carro_de_bronce_repujado",
+  "es": "Carro de bronce repujado",
+  "en": "Embossed bronze chariot"
+ },
+ {
+  "lv": 47,
+  "game": "agon",
+  "k": "dados_de_cristal_de_roca",
+  "es": "Dados de cristal de roca",
+  "en": "Rock crystal dice"
+ },
+ {
+  "lv": 48,
+  "game": "gladiatura",
+  "k": "grebas_decoradas",
+  "es": "Grebas decoradas",
+  "en": "Decorated greaves"
+ },
+ {
+  "lv": 49,
+  "game": "monopoleis",
+  "k": "casco_de_secutor",
+  "es": "Casco de secutor",
+  "en": "Secutor helmet"
+ },
+ {
+  "lv": 50,
+  "game": "cuadrigas",
+  "k": "caballo_legendario_hirpino",
+  "es": "Caballo legendario Hirpino",
+  "en": "Legendary horse Hirpinus"
+ },
+ {
+  "lv": 51,
+  "game": "gladiatura",
+  "k": "munus_de_exhibicion_tres_combate",
+  "es": "Munus de exhibición, tres combates seguidos",
+  "en": "Exhibition munus, three fights in a row"
+ },
+ {
+  "lv": 52,
+  "game": "agon",
+  "k": "ver_la_siguiente_carta_de_mision",
+  "es": "Ver la siguiente carta de misión",
+  "en": "See the next mission card"
+ },
+ {
+  "lv": 53,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_hispan",
+  "es": "Caballos de la yeguada de Hispania",
+  "en": "Horses from the Hispanic stud"
+ },
+ {
+  "lv": 54,
+  "game": "monopoleis",
+  "k": "dados_de_oro",
+  "es": "Dados de oro",
+  "en": "Golden dice"
+ },
+ {
+  "lv": 55,
+  "game": "senet",
+  "k": "fichas_holograficas",
+  "es": "Fichas holográficas",
+  "en": "Holographic pieces"
+ },
+ {
+  "lv": 56,
+  "game": "gladiatura",
+  "k": "emblema_de_la_palma",
+  "es": "Emblema de la palma",
+  "en": "Palm emblem"
+ },
+ {
+  "lv": 57,
+  "game": "agon",
+  "k": "cartas_con_marco_dorado",
+  "es": "Cartas con marco dorado",
+  "en": "Gold-framed cards"
+ },
+ {
+  "lv": 58,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_pom",
+  "es": "Correr contra el fantasma de Pompeyo Musclosus",
+  "en": "Race against the ghost of Pompeius Musclosus"
+ },
+ {
+  "lv": 59,
+  "game": "monopoleis",
+  "k": "mesa_de_marmol_veteado",
+  "es": "Mesa de mármol veteado",
+  "en": "Veined marble table"
+ },
+ {
+  "lv": 60,
+  "game": "gladiatura",
+  "k": "cartel_del_munus_con_tu_nombre",
+  "es": "Cartel del munus con tu nombre",
+  "en": "Munus poster with your name"
+ },
+ {
+  "lv": 61,
+  "game": "agon",
+  "k": "fortificar_un_yacimiento_durante",
+  "es": "Fortificar un yacimiento durante un turno",
+  "en": "Fortify a site for one turn"
+ },
+ {
+  "lv": 62,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_capado",
+  "es": "Caballos de la yeguada de Capadocia",
+  "en": "Horses from the Cappadocian stud"
+ },
+ {
+  "lv": 63,
+  "game": "gladiatura",
+  "k": "manica_dorada",
+  "es": "Manica dorada",
+  "en": "Golden manica"
+ },
+ {
+  "lv": 64,
+  "game": "monopoleis",
+  "k": "cambiar_una_pregunta_por_partida",
+  "es": "Cambiar una pregunta por partida",
+  "en": "Swap one question per game"
+ },
+ {
+  "lv": 65,
+  "game": "cuadrigas",
+  "k": "carro_de_plata",
+  "es": "Carro de plata",
+  "en": "Silver chariot"
+ },
+ {
+  "lv": 66,
+  "game": "agon",
+  "k": "dados_de_bronce",
+  "es": "Dados de bronce",
+  "en": "Bronze dice"
+ },
+ {
+  "lv": 67,
+  "game": "gladiatura",
+  "k": "combate_de_noche_con_antorchas",
+  "es": "Combate de noche con antorchas",
+  "en": "Night fight by torchlight"
+ },
+ {
+  "lv": 68,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_del_norte",
+  "es": "Caballos de la yeguada del norte de África",
+  "en": "Horses from the North African stud"
+ },
+ {
+  "lv": 69,
+  "game": "agon",
+  "k": "segunda_repeticion_de_tirada_por",
+  "es": "Segunda repetición de tirada por partida",
+  "en": "Second reroll per game"
+ },
+ {
+  "lv": 70,
+  "game": "monopoleis",
+  "k": "villas_de_marmol",
+  "es": "Villas de mármol",
+  "en": "Marble villas"
+ },
+ {
+  "lv": 71,
+  "game": "cuadrigas",
+  "k": "monumento_del_auriga_en_la_cuadr",
+  "es": "Monumento del auriga en la cuadra",
+  "en": "Charioteer's monument in the stable"
+ },
+ {
+  "lv": 72,
+  "game": "gladiatura",
+  "k": "armadura_de_gala_completa",
+  "es": "Armadura de gala completa",
+  "en": "Full parade armour"
+ },
+ {
+  "lv": 73,
+  "game": "agon",
+  "k": "dados_de_plata",
+  "es": "Dados de plata",
+  "en": "Silver dice"
+ },
+ {
+  "lv": 74,
+  "game": "monopoleis",
+  "k": "partida_de_noche_con_lucernas",
+  "es": "Partida de noche con lucernas",
+  "en": "Night game by oil lamps"
+ },
+ {
+  "lv": 75,
+  "game": "cuadrigas",
+  "k": "caballo_legendario_aquilon",
+  "es": "Caballo legendario Aquilón",
+  "en": "Legendary horse Aquilo"
+ },
+ {
+  "lv": 76,
+  "game": "senet",
+  "k": "tablero_holografico",
+  "es": "Tablero holográfico",
+  "en": "Holographic board"
+ },
+ {
+  "lv": 77,
+  "game": "gladiatura",
+  "k": "corona_de_la_victoria_en_el_retr",
+  "es": "Corona de la victoria en el retrato",
+  "en": "Victory crown on the portrait"
+ },
+ {
+  "lv": 78,
+  "game": "agon",
+  "k": "carta_de_mision_adicional",
+  "es": "Carta de misión adicional",
+  "en": "Extra mission card"
+ },
+ {
+  "lv": 79,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_pompeyo_musc",
+  "es": "Carro legendario de Pompeyo Musclosus",
+  "en": "Legendary chariot of Pompeius Musclosus"
+ },
+ {
+  "lv": 80,
+  "game": "gladiatura",
+  "k": "emblema_de_flamma",
+  "es": "Emblema de Flamma",
+  "en": "Flamma emblem"
+ },
+ {
+  "lv": 81,
+  "game": "monopoleis",
+  "k": "palacios_dorados",
+  "es": "Palacios dorados",
+  "en": "Golden palaces"
+ },
+ {
+  "lv": 82,
+  "game": "agon",
+  "k": "dados_de_oro",
+  "es": "Dados de oro",
+  "en": "Golden dice"
+ },
+ {
+  "lv": 83,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_guta_calpurn",
+  "es": "Carro legendario de Guta Calpurniano",
+  "en": "Legendary chariot of Gutta Calpurnianus"
+ },
+ {
+  "lv": 84,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_bronce",
+  "es": "Gladiador legendario de bronce",
+  "en": "Legendary bronze gladiator"
+ },
+ {
+  "lv": 85,
+  "game": "monopoleis",
+  "k": "empezar_con_una_carta_de_curacio",
+  "es": "Empezar con una carta de curación",
+  "en": "Start with a healing card"
+ },
+ {
+  "lv": 86,
+  "game": "agon",
+  "k": "refuerzo_doble_en_el_primer_turn",
+  "es": "Refuerzo doble en el primer turno",
+  "en": "Double reinforcements on the first turn"
+ },
+ {
+  "lv": 87,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_esc",
+  "es": "Correr contra el fantasma de Escorpo",
+  "en": "Race against the ghost of Scorpus"
+ },
+ {
+  "lv": 88,
+  "game": "gladiatura",
+  "k": "yelmo_legendario_de_flamma",
+  "es": "Yelmo legendario de Flamma",
+  "en": "Legendary helmet of Flamma"
+ },
+ {
+  "lv": 89,
+  "game": "agon",
+  "k": "dados_legendarios_de_lapislazuli",
+  "es": "Dados legendarios de lapislázuli",
+  "en": "Legendary lapis lazuli dice"
+ },
+ {
+  "lv": 90,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_crescens",
+  "es": "Carro legendario de Crescens",
+  "en": "Legendary chariot of Crescens"
+ },
+ {
+  "lv": 91,
+  "game": "monopoleis",
+  "k": "tablero_de_oro_y_lapislazuli",
+  "es": "Tablero de oro y lapislázuli",
+  "en": "Gold and lapis lazuli board"
+ },
+ {
+  "lv": 92,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_plata",
+  "es": "Gladiador legendario de plata",
+  "en": "Legendary silver gladiator"
+ },
+ {
+  "lv": 93,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_escorpo",
+  "es": "Carro legendario de Escorpo",
+  "en": "Legendary chariot of Scorpus"
+ },
+ {
+  "lv": 94,
+  "game": "agon",
+  "k": "estandarte_legendario",
+  "es": "Estandarte legendario",
+  "en": "Legendary standard"
+ },
+ {
+  "lv": 95,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_oro",
+  "es": "Gladiador legendario de oro",
+  "en": "Legendary golden gladiator"
+ },
+ {
+  "lv": 96,
+  "game": "monopoleis",
+  "k": "ficha_legendaria_holografica",
+  "es": "Ficha legendaria holográfica",
+  "en": "Legendary holographic piece"
+ },
+ {
+  "lv": 97,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_dio",
+  "es": "Correr contra el fantasma de Diocles",
+  "en": "Race against the ghost of Diocles"
+ },
+ {
+  "lv": 98,
+  "game": "agon",
+  "k": "dados_legendarios_holograficos",
+  "es": "Dados legendarios holográficos",
+  "en": "Legendary holographic dice"
+ },
+ {
+  "lv": 99,
+  "game": "gladiatura",
+  "k": "rudis_de_la_libertad",
+  "es": "Rudis de la libertad",
+  "en": "Rudis of freedom"
+ },
+ {
+  "lv": 100,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_diocles",
+  "es": "Carro legendario de Diocles",
+  "en": "Legendary chariot of Diocles"
+ }
+];
+  var LEVEL_XP=(function(){var a=[0,100,250,450,700,1000,1400,1900,2500,3300];for(var i=1;i<=90;i++)a.push(a[a.length-1]+Math.round((400+(i-1)*240/89)/10)*10);return a})(); // misma tabla que index.html
+  function inApp(){ try{ return /\/juegos\//.test(location.pathname) && !!localStorage.getItem('historiapp.progress'); }catch(e){ return false; } }
+  function level(){ try{ if(!inApp()) return null; var p=JSON.parse(localStorage.getItem('historiapp.progress')); var xp=(p&&p.xp)||0, l=0; for(var i=0;i<LEVEL_XP.length;i++) if(xp>=LEVEL_XP[i]) l=i; return {lv:l+1,xp:xp,next:LEVEL_XP[l+1]||null,nextLv:l+2}; }catch(e){ return null; } }
+  function list(g){ return ALL.filter(function(r){return r.game===g;}); }
+  function has(g,k){ var L=level(); var r=ALL.find(function(x){return x.game===g&&x.k===k;}); return !!(L&&r&&L.lv>=r.lv); }
+  function nuevas(g){ var L=level(); if(!L) return []; var key=g+'.rw_vistas', seen=[]; try{ seen=JSON.parse(localStorage.getItem(key))||[]; }catch(e){}
+    var n=list(g).filter(function(r){ return L.lv>=r.lv && seen.indexOf(r.k)<0; }); try{ localStorage.setItem(key,JSON.stringify(seen.concat(n.map(function(r){return r.k;})))); }catch(e){} return n; }
+  function proxima(g){ var L=level(); if(!L) return null; return list(g).find(function(r){return r.lv>L.lv;})||null; }
+  return {ALL:ALL,LEVEL_XP:LEVEL_XP,level:level,list:list,has:has,nuevas:nuevas,proxima:proxima,xpFor:function(lv){return LEVEL_XP[lv-1];}};
+})();
+
 /* Taurocatapsia · contenido. Todo procede del texto de pantalla de las fichas H3·01 a H3·17 del Tema 3 (Historiapp, tema03.json).
    En las preguntas, la primera opción es la correcta; el juego las baraja. */
 const ROOMS = [
@@ -1268,7 +2675,7 @@ const HIST = {
 
 /* ---------- estado guardado ---------- */
 const KEY = 'cnoso.v1';
-const DEF = {lang:null, step:0, stage:0, gear:{}, bouts:[0, 0, 0, 0], bOpen:1, room:0, seen:{}, qok:{}, arena:false, fiestas:[0, 0, 0], best:0, done:false, skin:'R', tec:'picado', sound:true, shake:true, xpQ:{}, xpF:{}, epi:false};
+const DEF = {lang:null, step:0, stage:0, gear:{}, bouts:[0, 0, 0, 0], bOpen:1, room:0, seen:{}, qok:{}, arena:false, fiestas:[0, 0, 0], best:0, done:false, skin:'R', tec:'picado', sound:true, shake:true, sunset:false, xpQ:{}, xpF:{}, epi:false};
 let S = (() => { try { return Object.assign({}, DEF, JSON.parse(localStorage.getItem(KEY)) || {}); } catch (e) { return Object.assign({}, DEF); } })();
 function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
 if (!S.lang){ let l = null; try { l = localStorage.getItem('historiapp.lang'); } catch (e) {} S.lang = l === 'en' || l === 'es' ? l : ((navigator.language || 'es').startsWith('es') ? 'es' : 'en'); }
@@ -1298,6 +2705,13 @@ const UI = {
    epiQ:'Choose all you think are correct', fin:'You have completed the story', fin2:'From the boys\' boxing to the bull festival, through the halls of the palace of Knossos.', libre:'Bull festivals', volver:'Save and exit to Historiapp',
    rot:'Turn your device to play', snd:'Sound', tmb:'Shake', reset:'Are you sure? Your tour in this game will be erased.', si:'Yes, start', no:'Cancel', ayuda:'Help', ayudaT:'Tap the screen, or press space, when the closing ring meets the fixed circle. Each leap has three moments.'}
 };
+Object.assign(UI.es, {salas:'Salas del palacio', salasT:'Elige una sala para volver a recorrerla', salasN:'Recorres la sala de nuevo: tu avance en la historia no cambia.', recomp:'Recompensas', nivel:'Nivel', tuNivel:'Tienes el nivel {a} en Historiapp ({b} XP).', proxima:'La próxima recompensa llega en el nivel {a}: {b}. Te faltan {c} XP.', todas:'Lo tienes todo desbloqueado.', fueraApp:'Abre Cnoso desde Historiapp para desbloquear recompensas al subir de nivel en la app.', nuevas:'Nuevo en Cnoso por tu nivel de Historiapp:', atard:'Al atardecer', atardS:'La fiesta del toro, con el sol bajo sobre la arena.', salaSi:'Volver a las salas', n_rec:'recompensas', etapaN:'{a} de 3'});
+Object.assign(UI.en, {salas:'Rooms of the palace', salasT:'Choose a room to walk through it again', salasN:'You walk through the room again: your progress in the story does not change.', recomp:'Rewards', nivel:'Level', tuNivel:'You are level {a} in Historiapp ({b} XP).', proxima:'The next reward comes at level {a}: {b}. You need {c} more XP.', todas:'You have unlocked everything.', fueraApp:'Open Cnoso from Historiapp to unlock rewards as you level up in the app.', nuevas:'New in Cnoso for your Historiapp level:', atard:'At sunset', atardS:'The bull festival, with the low sun over the arena.', salaSi:'Back to the rooms', n_rec:'rewards', etapaN:'{a} of 3'});
+const RWK = {salas:'repetir_cualquier_sala_del_palac', sol:'fiesta_del_toro_al_atardecer'};
+const RWD = {
+  [RWK.salas]:{es:'Vuelve a recorrer cualquier sala del palacio, con sus marcas y sus preguntas, sin cambiar tu avance en la historia.', en:'Walk through any room of the palace again, with its marks and its questions, without changing your progress in the story.'},
+  [RWK.sol]:{es:'La fiesta del toro se celebra al atardecer, con el cielo y la arena teñidos de ocre y rosa. Se activa en la pantalla de la fiesta.', en:'The bull festival takes place at sunset, with the sky and the arena tinted in ochre and pink. You switch it on from the festival screen.'}};
+const rwHas = k => !!HAPP_RW.has('cnoso', k);
 const t = (k, v) => { let s = UI[S.lang][k] ?? UI.es[k] ?? k; if (v) for (const x in v) s = s.replace('{' + x + '}', v[x]); return s; };
 document.getElementById('rotT').textContent = t('rot');
 document.documentElement.lang = S.lang;
@@ -1402,7 +2816,7 @@ function sparks(x, y, n){ for (let i = 0; i < n; i++){ const a = Math.random()*6
 
 /* ---------- portada ---------- */
 function showTitle(){
-  MODE = 'title'; SCN = 'titulo'; clearUI(); rerender = showTitle; img('titulo'); img('banda');
+  MODE = 'title'; SCN = 'titulo'; REPLAY = false; clearUI(); rerender = showTitle; img('titulo'); img('banda');
   topBar(null, true);
   st.appendChild($(`<div class="title"><h1>CNOSO</h1><p>${t('sub')}</p></div>`));
   const m = $('<div class="menu"></div>');
@@ -1417,31 +2831,36 @@ function showTitle(){
   if (S.arena){ const f = $(`<button class="btn az">${t('fiestas')}</button>`); f.onclick = () => { au(); SFX.open(); arenaSetup(); }; m.appendChild(f); }
   if (started){ const r = $(`<button class="btn">${t('nuevo')}</button>`); r.onclick = () => { const v = card(`<div class="in"><p>${t('reset')}</p></div><div class="act"><button class="btn" data-n>${t('no')}</button><button class="btn pri" data-y>${t('si')}</button></div>`);
       v.querySelector('[data-n]').onclick = () => v.remove(); v.querySelector('[data-y]').onclick = () => { const keep = {lang:S.lang, sound:S.sound, shake:S.shake, xpQ:S.xpQ, xpF:S.xpF}; S = Object.assign({}, DEF, keep, {gear:{}, bouts:[0, 0, 0, 0], seen:{}, qok:{}, fiestas:[0, 0, 0], dr:null}); save(); showTitle(); }; }; m.appendChild(r); }
+  if (rwHas(RWK.salas)){ const sb = $(`<button class="btn az">🏛 ${t('salas')}</button>`); sb.onclick = () => { au(); SFX.open(); roomsCard(); }; m.appendChild(sb); }
+  if (HAPP_RW.level()){ const rb = $(`<button class="btn">🎖 ${t('recomp')}</button>`); rb.onclick = () => { SFX.tap(); rewardsCard(); }; m.appendChild(rb); }
   const cr = $(`<button class="btn">${L({es:'Imágenes', en:'Images'})}</button>`); cr.onclick = () => credits(); m.appendChild(cr);
   st.appendChild(m);
+  { const nv = HAPP_RW.nuevas('cnoso'); if (nv.length) setTimeout(() => { if (MODE === 'title') toast(t('nuevas') + ' ' + nv.map(r => L(r)).join(', ')); }, 700); }
 }
 
 /* ---------- estancias ---------- */
-let spotsEls = [], CUR = 0;
+let spotsEls = [], CUR = 0, REPLAY = false, RSEEN = {};
+const seenK = k => REPLAY ? RSEEN[k] : S.seen[k];
 function layoutSpots(){}
 function placeSpots(){ const R = ROOMS[CUR], LY = LAYOUT[R.scene], rc = RECTS[R.scene]; if (!LY || !rc) return;
   for (const b of spotsEls){ const s = LY.spots[+b.dataset.k]; if (!s) continue; const r = rc[s[0]]; const x = (r[0] + r[2]*s[1])/W*100, y = (r[1] + r[3]*s[2])/H*100;
     const l = x.toFixed(2) + '%', t2 = y.toFixed(2) + '%'; if (b.style.left !== l) b.style.left = l; if (b.style.top !== t2) b.style.top = t2; } }
 function enterRoom(i){
-  MODE = 'room'; CUR = i; S.room = i; save(); const R = ROOMS[i]; SCN = R.scene; clearUI(); rerender = () => enterRoom(i);
+  MODE = 'room'; CUR = i; if (!REPLAY){ S.room = i; save(); } const R = ROOMS[i]; SCN = R.scene; clearUI(); rerender = () => enterRoom(i);
   LAYOUT[R.scene].panels.forEach(p => img(p.img)); if (ROOMS[i + 1]) LAYOUT[ROOMS[i + 1].scene].panels.forEach(p => img(p.img)); else ['arena', 'sp_bull', 'sp_mid', 'sp_left', 'sp_right'].forEach(img);
-  const all = R.spots.every((_, k) => S.seen[R.id + k]);
+  const all = R.spots.every((_, k) => seenK(R.id + k));
   const info = $(`<div class="rinfo"><b>${L(R.t)}</b><span class="dots">${ROOMS.map((_, k) => `<i class="${k < i ? 'ok' : k === i ? 'now' : ''}"></i>`).join('')}</span><small>${L(R.sub)} · ${t('room', {a:i + 1, b:ROOMS.length})}${all ? '' : ' · ' + t('explora')}</small></div>`);
   const nx = $(`<button class="btn pri nx"${all ? '' : ' disabled'}>${t('pasar')} ›</button>`); nx.onclick = () => { au(); SFX.open(); askQuestions(i); };
-  topBar([info, nx]);
-  R.spots.forEach((sp, k) => { const seen = S.seen[R.id + k];
+  const xr = [info, nx]; if (REPLAY){ const rb = $(`<button class="chip">${t('salaSi')}</button>`); rb.onclick = () => { SFX.tap(); roomsCard(); }; xr.unshift(rb); }
+  topBar(xr);
+  R.spots.forEach((sp, k) => { const seen = seenK(R.id + k);
     const b = $(`<button class="spot${seen ? ' seen' : ''}" aria-label="${L(sp.t)}" style="left:-100px;top:-100px"><b>${seen ? '✓' : k + 1}</b></button>`); b.dataset.k = k;
     b.onclick = () => { au(); SFX.open(); openSpot(i, k); }; st.appendChild(b); spotsEls.push(b); });
 }
 function openSpot(i, k){
   const R = ROOMS[i], sp = R.spots[k];
   const v = card(`<div class="in"><span class="tag">${L(R.t)}</span><h2>${L(sp.t)}</h2>${L(sp.p).map(p => `<p>${p}</p>`).join('')}${fichaBtn(sp.ficha)}</div><div class="act"><button class="btn pri" data-c>${t('cerrar')}</button></div>`);
-  bindFicha(v); const close = () => { v.remove(); S.seen[R.id + k] = 1; save(); enterRoom(i); };
+  bindFicha(v); const close = () => { v.remove(); if (REPLAY) RSEEN[R.id + k] = 1; else { S.seen[R.id + k] = 1; save(); } enterRoom(i); };
   v.querySelector('[data-c]').onclick = () => { SFX.tap(); close(); }; v.onclick = e => { if (e.target === v) close(); };
 }
 function askQuestions(i){
@@ -1463,7 +2882,24 @@ function askQuestions(i){
 }
 function finishRoom(i){
   if (!S.xpF['room' + i]){ S.xpF['room' + i] = 1; HIST.xp(20); }
+  if (REPLAY){ roomsCard(); return; }
   nextStep();
+}
+/* recompensa del nivel 13: repetir cualquier sala del palacio */
+function roomsCard(){
+  MODE = 'card'; SCN = 'titulo'; clearUI(); rerender = roomsCard; REPLAY = false; topBar(null, true);
+  const v = card(`<div class="in"><h2>${t('salas')}</h2><p class="sm">${t('salasT')}</p><div class="opts">${ROOMS.map((R, i) => `<button class="opt" data-i="${i}"><i>${i + 1}</i><span><b>${L(R.t)}</b><br><small>${L(R.sub)}</small></span></button>`).join('')}</div><p class="sm">${t('salasN')}</p></div><div class="act"><button class="btn pri" data-c>${t('menu')}</button></div>`, false, 'wide');
+  v.querySelectorAll('[data-i]').forEach(b => b.onclick = () => { au(); SFX.open(); REPLAY = true; RSEEN = {}; enterRoom(+b.dataset.i); });
+  v.querySelector('[data-c]').onclick = () => { SFX.tap(); showTitle(); };
+}
+/* pantalla de recompensas por nivel de Historiapp */
+function rewardsCard(){
+  MODE = 'card'; SCN = 'titulo'; clearUI(); rerender = rewardsCard; topBar(null, true);
+  const Lv = HAPP_RW.level(), list = HAPP_RW.list('cnoso').slice().sort((a, b) => a.lv - b.lv), nx = HAPP_RW.proxima('cnoso');
+  const rows = list.map(r => { const ok = !!(Lv && Lv.lv >= r.lv); return `<p class="gn"><b>${ok ? '✓' : '🔒'} ${t('nivel')} ${r.lv}</b> · ${L(r)}<br><small>${L(RWD[r.k])}</small></p>`; }).join('');
+  const msg = !Lv ? t('fueraApp') : `${t('tuNivel', {a:Lv.lv, b:Lv.xp})} ${nx ? t('proxima', {a:nx.lv, b:L(nx).toLowerCase(), c:Math.max(0, HAPP_RW.xpFor(nx.lv) - Lv.xp)}) : t('todas')}`;
+  const v = card(`<div class="in"><h2>${t('recomp')}</h2><p class="sm">${msg}</p>${rows}</div><div class="act"><button class="btn pri" data-c>${t('menu')}</button></div>`, false, 'wide');
+  v.querySelector('[data-c]').onclick = () => { SFX.tap(); showTitle(); };
 }
 
 /* ---------- la fiesta del toro: el fresco de Cnoso cobra vida ---------- */
@@ -1483,11 +2919,13 @@ function arenaSetup(){
   const v = card(`<div class="in"><h2>${L({es:'La fiesta del toro', en:'The bull festival'})}</h2><p class="sm">${L(ARENA.intro)}</p>
     <span class="tag">${L(ARENA.tec)}</span>
     <div class="opts" data-g="tec"><button class="opt chk" data-v="picado"><i>↘</i><span><b>${L(ARENA.picado)}</b><br><small>${L(ARENA.picadoS)}</small></span></button><button class="opt chk" data-v="evans"><i>⌒</i><span><b>${L(ARENA.evans)}</b><br><small>${L(ARENA.evansS)}</small></span></button></div>
-    <p class="sm" data-ev hidden>${L(ARENA.evansNota)}</p></div>
+    <p class="sm" data-ev hidden>${L(ARENA.evansNota)}</p>
+    ${rwHas(RWK.sol) ? `<div class="opts"><button class="opt chk" data-sun><i>☀</i><span><b>${t('atard')}</b><br><small>${t('atardS')}</small></span></button></div>` : ''}</div>
     <div class="act"><button class="btn" data-cr>${L({es:'Imágenes', en:'Images'})}</button>${S.done || S.epi ? `<button class="btn" data-b>${t('palacio')}</button>` : ''}<button class="btn pri" data-go>${t('empezar')} ›</button></div>`, false, 'wide');
   const sync = () => { v.querySelectorAll('[data-g]').forEach(gr => gr.querySelectorAll('.opt').forEach(b => { const on = S[gr.dataset.g] === b.dataset.v; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); b.style.borderWidth = on ? '3px' : '2px'; b.style.background = on ? '#efe0b8' : ''; })); v.querySelector('[data-ev]').hidden = S.tec !== 'evans'; };
   v.querySelectorAll('[data-g] .opt').forEach(b => b.onclick = () => { SFX.tap(); S[b.parentElement.dataset.g] = b.dataset.v; save(); sync(); });
   sync();
+  const sun = v.querySelector('[data-sun]'); if (sun){ const sy = () => { sun.classList.toggle('on', !!S.sunset); sun.setAttribute('aria-pressed', !!S.sunset); sun.style.borderWidth = S.sunset ? '3px' : '2px'; sun.style.background = S.sunset ? '#efe0b8' : ''; }; sy(); sun.onclick = () => { SFX.tap(); S.sunset = !S.sunset; save(); sy(); }; }
   const bb = v.querySelector('[data-b]'); if (bb) bb.onclick = () => showTitle();
   v.querySelector('[data-cr]').onclick = () => credits();
   v.querySelector('[data-go]').onclick = () => { au(); SFX.open(); const f = S.fiestas.findIndex(x => !x); startFiesta(f < 0 ? 0 : f); };
@@ -1666,7 +3104,11 @@ function arenaDraw(){
   // todo ocurre dentro del campo azul del fresco, entre sus cenefas
   c.save(); c.beginPath(); c.rect(150, 138, 965, 418); c.clip();
   // velo azul que calma las grietas del fondo para que las figuras se lean
-  c.fillStyle = 'rgba(112,150,180,.42)'; c.fillRect(150, 138, 965, 418);
+  const sunset = !!(S.sunset && rwHas(RWK.sol));
+  if (sunset){ const gs = c.createLinearGradient(0, 138, 0, 556); gs.addColorStop(0, 'rgba(120,76,128,.52)'); gs.addColorStop(.55, 'rgba(226,120,78,.48)'); gs.addColorStop(1, 'rgba(246,176,96,.42)'); c.fillStyle = gs; c.fillRect(150, 138, 965, 418);
+    const rg = c.createRadialGradient(930, 300, 8, 930, 300, 190); rg.addColorStop(0, 'rgba(255,236,170,.95)'); rg.addColorStop(.25, 'rgba(255,200,110,.55)'); rg.addColorStop(1, 'rgba(255,160,80,0)'); c.fillStyle = rg; c.fillRect(150, 138, 965, 418);
+    c.fillStyle = 'rgba(255,240,190,.95)'; c.beginPath(); c.arc(930, 300, 34, 0, 6.283); c.fill(); }
+  else { c.fillStyle = 'rgba(112,150,180,.42)'; c.fillRect(150, 138, 965, 418); }
   c.shadowColor = 'rgba(25,14,6,.6)'; c.shadowBlur = 7; c.shadowOffsetX = 2; c.shadowOffsetY = 3;
   if (!ev) sprite(c, 'right', ...FR.right);
   const drawLp = () => { if (A.ghost) sprite(c, A.ghost.spr, A.ghost.x, A.ghost.y, ...sz(A.ghost.spr), A.ghost.rot, null, null, A.ghost.a); const lp = A.lp; sprite(c, lp.spr, lp.x, lp.y, ...sz(lp.spr), lp.rot, null, null, lp.a); };
@@ -1675,6 +3117,7 @@ function arenaDraw(){
   if (!B.gone) sprite(c, 'bull', B.x, FR.bull[1] + bullBob(), FR.bull[2], FR.bull[3], Math.sin(T*B.rate)*.012);
   if (front) drawLp();
   c.restore();
+  if (S.sunset && rwHas(RWK.sol)){ c.save(); c.globalCompositeOperation = 'multiply'; c.globalAlpha = .38; c.fillStyle = 'rgb(255,190,140)'; c.fillRect(0, 0, W, H); c.restore(); }
   const r = A.ring;
   if (r && !r.done && A.ph !== 'result'){ const dtt = r.due - A.t, R0 = 24, rr = R0 + Math.min(120, Math.max(0, dtt)*150);
     c.lineWidth = 4; c.strokeStyle = PAL.negro; c.beginPath(); c.arc(r.x, r.y, R0, 0, 6.283); c.stroke();
@@ -1806,7 +3249,7 @@ function pjChip(){
 }
 function pjCard(){
   const kit = pjKit(), gear = [S.gear.jewel && CICLO.pruebas[0].gana, S.gear.wrist && CICLO.pruebas[1].gana, S.gear.helmet && CICLO.pruebas[2].gana, S.gear.boots && CICLO.pruebas[3].gana].filter(Boolean);
-  const v = card(`<div class="in"><div class="pjrow"><span data-pj></span><div><span class="tag">${t('pj')} · ${t('etapa')} ${S.stage + 1} de 3</span><h2>${L(CICLO.stages[S.stage].t)}</h2><p>${L(CICLO.stages[S.stage].d)}</p>
+  const v = card(`<div class="in"><div class="pjrow"><span data-pj></span><div><span class="tag">${t('pj')} · ${t('etapa')} ${t('etapaN', {a:S.stage + 1})}</span><h2>${L(CICLO.stages[S.stage].t)}</h2><p>${L(CICLO.stages[S.stage].d)}</p>
     <span class="tag">${t('pruebasT')}</span>${trialList()}<span class="tag">${t('llevas')}</span><p class="gn">${gear.length ? gear.map(L).join(' · ') : t('nada')}</p></div></div></div>
     <div class="act"><button class="btn pri" data-c>${L({es:'Cerrar', en:'Close'})}</button></div>`, false, 'wide epi');
   v.querySelector('[data-pj]').appendChild(portrait(120, 160));
@@ -2134,7 +3577,9 @@ window.CNOSO = { get A(){ return A; }, S:() => S, enterRoom, arenaSetup, startFi
 })();
 
 </script>
-<div id="alacopy" role="contentinfo" style="position:fixed;right:max(8px,env(safe-area-inset-right));bottom:max(6px,env(safe-area-inset-bottom));z-index:2147482000;pointer-events:none;user-select:none;-webkit-user-select:none;font:500 11px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif;color:#fff;opacity:.6;text-shadow:0 1px 2px #000,0 0 4px #000;white-space:nowrap">© Diseñado y Creado por Alejandro Leiva Arcas</div>
 <style>.top{z-index:6}</style><script>window.HAPP_GUARDAR=function(){try{save()}catch(e){}};</script>
+<div id="alacopy" role="contentinfo" style="position:fixed;right:max(8px,env(safe-area-inset-right));bottom:max(6px,env(safe-area-inset-bottom));z-index:2147482000;pointer-events:none;user-select:none;-webkit-user-select:none;font:500 11px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif;color:#fff;opacity:.6;text-shadow:0 1px 2px #000,0 0 4px #000;white-space:nowrap">© Diseñado y Creado por Alejandro Leiva Arcas</div>
+<script id="alacopy-en">(function(){try{var l=null;try{l=localStorage.getItem("historiapp.lang")}catch(e){}var en=l?l==="en":/^en/i.test(document.documentElement.lang||"");if(!en&&/-en\.html$/.test(location.pathname))en=true;var d=document.getElementById("alacopy");if(en&&d)d.textContent="© Designed and created by Alejandro Leiva Arcas"}catch(e){}})();</script>
+
 </body>
 </html>

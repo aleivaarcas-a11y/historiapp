@@ -2,6 +2,9 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
+<meta name="author" content="Alejandro Leiva Arcas">
+<meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
 <!--HAPP-GUARDAR-->
 <script>window.HAPP_GS={fijo:false};</script>
 <script>
@@ -162,9 +165,6 @@
 </script>
 <!--/HAPP-GUARDAR-->
 
-<!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
-<meta name="author" content="Alejandro Leiva Arcas">
-<meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#2a1d14">
@@ -754,6 +754,7 @@ const L = o => o ? (o[S.lang] ?? o.es) : '';
 const t = (k, v) => { let s = UI[S.lang][k] ?? UI.es[k] ?? k; if (v) for (const x in v) s = s.replace('{' + x + '}', v[x]); return s; };
 document.getElementById('rotT').textContent = t('rot');
 document.documentElement.lang = S.lang;
+{ const cvA = document.getElementById('cv'); if (cvA) cvA.setAttribute('aria-label', S.lang === 'es' ? 'Púgiles' : 'Boxers'); }
 
 /* ---------- sonido sintetizado (nada suena hasta el primer toque) ---------- */
 let AC = null;
@@ -1257,5 +1258,7 @@ window.__pug = {set slow(v){ slow = v; }, get A(){ return A; }, startBout, KEYS,
 
 </script>
 <div id="alacopy" role="contentinfo" style="position:fixed;right:max(8px,env(safe-area-inset-right));bottom:max(6px,env(safe-area-inset-bottom));z-index:2147482000;pointer-events:none;user-select:none;-webkit-user-select:none;font:500 11px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif;color:#fff;opacity:.6;text-shadow:0 1px 2px #000,0 0 4px #000;white-space:nowrap">© Diseñado y Creado por Alejandro Leiva Arcas</div>
+<script id="alacopy-en">(function(){try{var l=null;try{l=localStorage.getItem("historiapp.lang")}catch(e){}var en=l?l==="en":/^en/i.test(document.documentElement.lang||"");if(!en&&/-en\.html$/.test(location.pathname))en=true;var d=document.getElementById("alacopy");if(en&&d)d.textContent="© Designed and created by Alejandro Leiva Arcas"}catch(e){}})();</script>
+
 </body>
 </html>
