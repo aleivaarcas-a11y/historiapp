@@ -1,8 +1,7 @@
 #!/bin/bash
 # Historiapp: sube (o actualiza) la app en GitHub Pages con un solo comando.
 # Uso, desde la Terminal del Mac:
-#   bash "/Users/leiva/Mi unidad /UCAM/ASIGNATURAS/Claude outputs/Historiapp/subir.sh"   (MacBook Air)
-#   bash ~/Library/CloudStorage/GoogleDrive-*/"Mi unidad"/UCAM/ASIGNATURAS/"Claude outputs"/Historiapp/subir.sh   (Mac mini)
+#   bash ~/"Mi unidad /UCAM/ASIGNATURAS/Claude outputs/Historiapp/subir.sh"   (igual en el Air y en el Mac mini)
 # La primera vez crea el repositorio y activa la página; las siguientes solo suben los cambios.
 
 set -e
