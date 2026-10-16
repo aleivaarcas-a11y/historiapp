@@ -1,7 +1,8 @@
 #!/bin/bash
 # Historiapp: sube (o actualiza) la app en GitHub Pages con un solo comando.
 # Uso, desde la Terminal del Mac:
-#   bash "/Users/leiva/Mi unidad /UCAM/ASIGNATURAS/Claude outputs/Historiapp/subir.sh"
+#   bash "/Users/leiva/Mi unidad /UCAM/ASIGNATURAS/Claude outputs/Historiapp/subir.sh"   (MacBook Air)
+#   bash ~/Library/CloudStorage/GoogleDrive-*/"Mi unidad"/UCAM/ASIGNATURAS/"Claude outputs"/Historiapp/subir.sh   (Mac mini)
 # La primera vez crea el repositorio y activa la página; las siguientes solo suben los cambios.
 
 set -e
@@ -39,6 +40,13 @@ if [ ! -d .git ]; then
   git init -b main >/dev/null
   git config user.name >/dev/null 2>&1 || git config user.name "$USUARIO"
   git config user.email >/dev/null 2>&1 || git config user.email "$USUARIO@users.noreply.github.com"
+fi
+# 16-10-2026: se puede subir desde el Air o desde el Mac mini. Antes de subir, la copia local se pone al día con
+# GitHub (sin tocar los archivos, que son los de Drive), así la subida nunca choca con la que hizo el otro ordenador.
+if git remote get-url origin >/dev/null 2>&1 || gh repo view "$USUARIO/$REPO" >/dev/null 2>&1; then
+  git remote get-url origin >/dev/null 2>&1 || git remote add origin "https://github.com/$USUARIO/$REPO.git"
+  echo "==> Poniendo al día la copia local con GitHub…"
+  git fetch -q origin main && git update-ref HEAD FETCH_HEAD && git read-tree HEAD
 fi
 git add -A
 if git diff --cached --quiet; then

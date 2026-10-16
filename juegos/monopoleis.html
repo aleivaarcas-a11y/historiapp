@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <!--HAPP-GUARDAR-->
-<script>window.HAPP_GS={volver:'../', pos:{left:'max(10px, env(safe-area-inset-left))', bottom:'max(8px, env(safe-area-inset-bottom))'}};</script>
+<script>window.HAPP_GS={volver:'../', fijo:false};</script>
 <script>
 /* Guardar y salir a Historiapp. Común a todos los juegos de la app; lo inserta guardar_salir.py.
    Configuración en window.HAPP_GS = { volver, pos, fijo, visible }.
@@ -404,7 +404,16 @@ html, body { font: 500 17px/1.4 var(--font-text); }
   .mini img, .mini .h { display: none; }
   #hand { justify-content: flex-start; }
 }
-@media (max-width: 760px) and (orientation: portrait) { body.inapp .bottom { padding-bottom: 44px; } }
+/* 15-10-2026: la línea de copyright (abajo a la derecha) ya no pisa botones; --cpy es su altura, medida en juego.js */
+#ui { padding-bottom: calc(max(10px, env(safe-area-inset-bottom, 0px)) + var(--cpy, 0px)); }
+#intro, #modal { padding: max(12px, env(safe-area-inset-top, 0px)) 12px calc(max(12px, env(safe-area-inset-bottom, 0px)) + var(--cpy, 0px)); }
+#intro > .sheet { max-height: 100%; }
+.slot { grid-template-columns: 64px minmax(0, 1fr) auto; }
+.slot input { min-width: 0; }
+@media (max-width: 560px) { .slot { grid-template-columns: 64px minmax(0, 1fr); } .slot > .seg { grid-column: 2; } }
+#bSave .sh { display: none; }
+@media (max-width: 1100px) { #bSave .lbl { display: none; } #bSave .sh { display: inline; } }
+@media (max-width: 420px) { #bSave .sh { display: none; } }
 @media (prefers-reduced-motion: reduce) { #toast, .sheet { transition: none; animation: none; } }
 </style>
 <style>/* Fuentes incrustadas (SIL Open Font License) */
@@ -424,6 +433,7 @@ html, body { font: 500 17px/1.4 var(--font-text); }
       <button class="btn" id="bProps" data-t="props">Propiedades</button>
       <button class="btn" id="bCam" data-t="cam">Cámara</button>
       <button class="btn" id="bLang">EN</button>
+      <button class="btn" id="bSave" hidden>💾 <span class="lbl"></span><span class="sh"></span></button>
       <button class="btn" id="bMenu" data-t="menu">Menú</button>
     </div>
   </div>
@@ -1458,7 +1468,16 @@ function frame(now) {
 // Dentro de Historiapp (carpeta juegos/ y alguna clave historiapp.* en el mismo origen) el juego toma el idioma de la app,
 // suma XP a historiapp.progress y abre las recompensas por nivel. Fuera de la app no hace nada de eso.
 const IN_APP = (() => { try { if (!/\/juegos\//.test(location.pathname)) return false; for (let i = 0; i < localStorage.length; i++) if (String(localStorage.key(i)).indexOf('historiapp.') === 0) return true; } catch (e) { } return false; })();
-if (IN_APP) document.body.classList.add('inapp');   // deja sitio abajo al botón «Guardar y salir» en pantallas estrechas
+if (IN_APP) document.body.classList.add('inapp');
+// 15-10-2026: «Guardar y salir» va dentro del juego (barra de arriba y menú inicial) en lugar de flotar sobre los botones
+const CAN_EXIT = typeof window.HAPP_SALIR === 'function';
+const exitTxt = () => LANG === 'en' ? 'Save & exit' : 'Guardar y salir';
+const doExit = () => { try { window.HAPP_SALIR('../'); } catch (e) { location.href = '../'; } };
+function fitCopy() {                                   // reserva abajo la altura de la línea de copyright
+  const c = document.getElementById('alacopy'); const h = c && getComputedStyle(c).display !== 'none' ? c.getBoundingClientRect().height + 6 : 0;
+  document.documentElement.style.setProperty('--cpy', Math.ceil(h) + 'px');
+}
+addEventListener('resize', () => setTimeout(fitCopy, 60)); addEventListener('load', fitCopy); setTimeout(fitCopy, 300);
 let LANG = (() => { try { const ha = localStorage.getItem('historiapp.lang'); if (IN_APP && (ha === 'es' || ha === 'en')) return ha; return localStorage.getItem('monopoleis.lang') || ha || ((navigator.language || 'es').startsWith('es') ? 'es' : 'en'); } catch (e) { return 'es'; } })();
 if (LANG !== 'en') LANG = 'es';
 const REAL_NAMES = { es: ['Corebo de Élide', 'Milón de Crotona', 'Cinisca de Esparta', 'Arriquión', 'Alcibíades', 'Calipátira de Rodas', 'Publio Asclepíades', 'Diocles', 'Escorpo', 'Crescens', 'Montanus', 'Augusto', 'Nerón', 'Tito', 'Trajano', 'Marco Aurelio', 'Solón', 'Filipo II', 'Herodes Ático', 'Sócrates', 'Platón', 'Aristóteles', 'Jenofonte', 'Heródoto', 'Píndaro', 'Galeno'], en: ['Koroibos of Elis', 'Milo of Croton', 'Kyniska of Sparta', 'Arrhichion', 'Alcibiades', 'Kallipateira of Rhodes', 'Publius Asclepiades', 'Diocles', 'Scorpus', 'Crescens', 'Montanus', 'Augustus', 'Nero', 'Titus', 'Trajan', 'Marcus Aurelius', 'Solon', 'Philip II', 'Herodes Atticus', 'Socrates', 'Plato', 'Aristotle', 'Xenophon', 'Herodotus', 'Pindar', 'Galen'] };
@@ -2326,7 +2345,7 @@ function showIntro() {
     <h3>${t('look')}</h3><div class="seg lookseg">${ASPECTOS.map(([k, r]) => { const rr = rwOf(r), ok = rw(r), on = ok && setup.look[k], inf = RW_INFO[r]; return `<button data-look="${k}" class="${on ? 'on' : ''}${ok ? '' : ' lk'}" ${ok ? '' : 'disabled'}>${inf.ic} ${esc(rr[LANG])}${ok ? '' : `<small>${IN_APP ? t('lookLocked')(rr.lv) : t('lookApp')}</small>`}</button>`; }).join('')}</div>
     <h3>${t('lang')}</h3>${seg('lang', [['es', 'Español'], ['en', 'English']], L)}
     <p class="src">${IN_APP ? t('lvlHint')(appLevel()) : t('lvlHintOut')}</p>
-    <div class="row"><button class="primary" id="iPlay">${t('play')}</button><button class="btn" id="iRules">${t('rules')}</button><button class="btn" id="iRw">🏆 ${t('rewards')}</button></div></div>`;
+    <div class="row"><button class="primary" id="iPlay">${t('play')}</button><button class="btn" id="iRules">${t('rules')}</button><button class="btn" id="iRw">🏆 ${t('rewards')}</button>${CAN_EXIT ? `<button class="btn" id="iExit">💾 ${esc(exitTxt())}</button>` : ''}</div></div>`;
   el.querySelectorAll('[data-seg]').forEach(sg => sg.querySelectorAll('button').forEach(b => b.onclick = () => {
     const name = sg.dataset.seg, v = b.dataset.sv; sfx.step();
     if (name === 'n') setup.n = +v; else if (name === 'quiz') setup.quiz = +v; else if (name === 'limit') setup.limit = +v;
@@ -2343,6 +2362,8 @@ function showIntro() {
   if ($('iCont')) $('iCont').onclick = () => startGame(saved);
   $('iRules').onclick = rulesModal;
   $('iRw').onclick = rewardsModal;
+  if ($('iExit')) $('iExit').onclick = doExit;
+  fitCopy();
   el.querySelectorAll('[data-look]').forEach(b => b.onclick = () => {
     const k = b.dataset.look; setup.look[k] = !setup.look[k]; sfx.step();
     try { localStorage.setItem('monopoleis.aspecto', JSON.stringify(setup.look)); } catch (e) { }
@@ -2372,6 +2393,8 @@ function setLang(l) {
   if (setup && old !== l) setup.players.forEach((p, k) => { if (p.name === DEF_NAMES[old][k]) p.name = DEF_NAMES[l][k]; });
   document.querySelectorAll('[data-t]').forEach(e => e.textContent = e.dataset.t === 'subtitle' ? editionName() : t(e.dataset.t));
   $('bLang').textContent = l === 'es' ? 'EN' : 'ES';
+  if (CAN_EXIT) { const b = $('bSave'); b.querySelector('.lbl').textContent = b.title = b.ariaLabel = exitTxt(); b.querySelector('.sh').textContent = l === 'en' ? 'Exit' : 'Salir'; }
+  setTimeout(fitCopy, 60);
   drawBoard(); buildDecks(); if (G) { renderPlayers(); renderLog(); }
 }
 function resetBoardObjects() {
@@ -2397,6 +2420,7 @@ function startGame(saved) {
 
 // ---------- botones de la barra ----------
 $('bLang').onclick = () => setLang(LANG === 'es' ? 'en' : 'es');
+if (CAN_EXIT) { const b = $('bSave'); b.hidden = false; b.querySelector('.lbl').textContent = exitTxt(); b.title = b.ariaLabel = exitTxt(); b.querySelector('.sh').textContent = LANG === 'en' ? 'Exit' : 'Salir'; b.onclick = doExit; }
 $('bCam').onclick = () => { if (cam.mode === 'board' || cam.mode === 'free' && false) { camAuto = true; if (G) camFollow(tokenObjs[G.turn]); toast(t('cam'), LANG === 'en' ? 'Follow' : 'Seguir', 800); } else { camAuto = false; camBoard(); toast(t('cam'), LANG === 'en' ? 'Board' : 'Tablero', 800); } };
 $('bProps').onclick = () => { if (G && !G.over) openManage(P().bot ? G.players.find(p => !p.bot)?.id ?? G.turn : G.turn, P().bot); };
 $('bMenu').onclick = async () => {
@@ -2409,8 +2433,9 @@ $('bMenu').onclick = async () => {
     <button class="btn" data-v="rewards">🏆 ${t('rewards')}</button>
     <button class="btn" data-v="credits">${LANG === 'en' ? 'Image credits' : 'Créditos de las imágenes'}</button>
     <button class="btn" data-v="finish">${t('endGame')}</button>
-    <button class="primary" data-v="new">${t('newGame')}</button></div>`, { close: true });
-  if (r === 'rules') rulesModal();
+    <button class="primary" data-v="new">${t('newGame')}</button>${CAN_EXIT ? `<button class="btn" data-v="exit">💾 ${esc(exitTxt())}</button>` : ''}</div>`, { close: true });
+  if (r === 'exit') doExit();
+  else if (r === 'rules') rulesModal();
   else if (r === 'fast') { FAST = FAST > 1 ? 1 : 2.2; }
   else if (r === 'log') $('log').classList.toggle('hide');
   else if (r === 'save') { save(); toast(t('saved'), '', 1000); }
