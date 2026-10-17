@@ -2001,6 +2001,9 @@ function safeSide() {
   return Math.max(parseFloat(s.paddingLeft) || 0, parseFloat(s.paddingRight) || 0);
 }
 function resize() {
+  // 17-10-2026: se encoge el lienzo antes de medir; si no, al pasar de horizontal a vertical el lienzo de 844 px
+  // ensancha la página, innerWidth sigue dando 844 y el móvil se queda alejado (aviso de girar diminuto)
+  cv.style.width = '0px'; cv.style.height = '0px';
   const vw = innerWidth, vh = innerHeight, side = safeSide();
   scale = Math.min((vw - 2 * side) / W, vh / H);
   OX = Math.max(0, Math.min(W * .3, (vw / scale - W) / 2));
