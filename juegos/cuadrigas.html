@@ -5393,8 +5393,10 @@ function campaignSummary(){
 /* ---------- bucle principal ---------- */
 let last=performance.now(),acc=0,hoofT=0;
 /* la carrera pide el teléfono en horizontal; los menús se leen en cualquier orientación */
+/* 17-10-2026: en la app instalada (Android) la carrera pide el horizontal al sistema y lo suelta al salir; sin esto, si la app conserva el manifest vertical antiguo, el móvil no gira y el aviso no se va. En el navegador y en iPhone no hace nada */
+function giroCarrera(on){try{const so=screen.orientation;if(!so)return;if(on){if(so.lock)so.lock('landscape').catch(function(){})}else if(so.unlock)so.unlock()}catch(e){}}
 let racingCls=null;const rotEl=document.getElementById('rot');
-function racingState(){const rc=!!(MODE==='race'&&race&&!race.attract);if(rc!==racingCls){racingCls=rc;document.body.classList.toggle('racing',rc)}
+function racingState(){const rc=!!(MODE==='race'&&race&&!race.attract);if(rc!==racingCls){racingCls=rc;document.body.classList.toggle('racing',rc);giroCarrera(rc)}
   if(rc&&!paused&&rotEl&&innerHeight>innerWidth&&innerWidth<=900)paused=true}
 function frame(now){
   const d=Math.min(0.05,(now-last)/1000);last=now;racingState();
