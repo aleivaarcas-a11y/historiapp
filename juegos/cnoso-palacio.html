@@ -1,0 +1,1099 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
+<meta name="author" content="Alejandro Leiva Arcas">
+<meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#2a1d14">
+<meta name="author" content="Alejandro Leiva Arcas">
+<meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
+<title>CNOSO · El palacio</title>
+<style>
+
+:root{--cal:#f3e8cf;--ocre:#b4472b;--ocreD:#86301b;--azul:#2c6a96;--azulD:#1d3c58;--amar:#dca23a;--negro:#231a14;--serif:"Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;background:#2a1d14;overflow:hidden;font-family:var(--serif);color:var(--negro);-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;touch-action:manipulation}
+#cv{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none}
+#st{position:fixed;pointer-events:none}
+#st > *{pointer-events:auto}
+button{font-family:var(--serif);cursor:pointer;-webkit-appearance:none;appearance:none}
+.btn{min-height:44px;padding:8px 18px;border-radius:8px;border:2px solid var(--negro);background:var(--cal);color:var(--negro);font-size:16px;font-weight:600;box-shadow:0 3px 0 var(--negro);letter-spacing:.02em}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--negro)}
+.btn.pri{background:var(--ocre);color:#fff8ea}
+.btn.az{background:var(--azul);color:#fff8ea}
+.btn[disabled]{opacity:.45;pointer-events:none}
+.top{position:absolute;left:1.4%;right:1.4%;top:5.2%;display:flex;gap:8px;align-items:center;pointer-events:none}
+.top > *{pointer-events:auto}
+.top .sp{flex:1}
+.chip{min-height:44px;min-width:44px;padding:0 12px;border-radius:22px;border:2px solid var(--negro);background:rgba(243,232,207,.92);font-size:15px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.chip.on{background:var(--negro);color:var(--cal)}
+/* marcas de las estancias */
+.spot{position:absolute;width:40px;height:40px;margin:-20px 0 0 -20px;opacity:.92;border-radius:50%;border:2.5px solid var(--negro);background:radial-gradient(circle,#fff8ea 0 28%,var(--ocre) 29% 52%,#fff8ea 53% 60%,var(--azul) 61%);box-shadow:0 0 0 0 rgba(220,162,58,.8);animation:pulse 1.8s infinite;font-size:0}
+.spot b{position:absolute;right:-10px;top:-10px;min-width:22px;height:22px;border-radius:11px;background:var(--negro);color:var(--cal);font:700 13px/22px var(--serif);text-align:center;padding:0 4px}
+.spot.seen{animation:none;background:radial-gradient(circle,#fff8ea 0 30%,#8a7a5c 31% 58%,#fff8ea 59%)}
+.spot.seen b{background:var(--azul)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(220,162,58,.85)}70%{box-shadow:0 0 0 16px rgba(220,162,58,0)}100%{box-shadow:0 0 0 0 rgba(220,162,58,0)}}
+/* barra inferior de la estancia */
+.bar{position:absolute;left:0;right:0;bottom:6.4%;display:flex;align-items:center;gap:12px;padding:0 1.6%;pointer-events:none}
+.bar > *{pointer-events:auto}
+.bar .tt{background:rgba(243,232,207,.95);border:2px solid var(--negro);border-radius:10px;padding:6px 14px;min-width:0;flex:1;box-shadow:0 3px 0 var(--negro)}
+.bar .tt b{display:block;font-size:19px;color:var(--ocreD);font-variant:small-caps;letter-spacing:.04em;line-height:1.1}
+.bar .tt small{display:block;font-size:13px;opacity:.85}
+.dots{display:flex;gap:5px;margin-top:3px}.dots i{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--negro);background:transparent}.dots i.ok{background:var(--negro)}.dots i.now{background:var(--amar)}
+.rinfo{min-width:0;flex:0 1 auto;max-width:46%;background:rgba(243,232,207,.95);border:2px solid var(--negro);border-radius:10px;padding:5px 12px;box-shadow:0 3px 0 var(--negro);display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;overflow:hidden}
+.rinfo b{font-size:18px;color:var(--ocreD);font-variant:small-caps;letter-spacing:.04em;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.rinfo small{flex-basis:100%;font-size:12.5px;opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rinfo .dots{margin:0}
+.top .nx{flex:0 0 auto}
+/* tarjetas */
+.veil{position:absolute;inset:0;background:rgba(35,26,20,.35);display:flex;align-items:center;justify-content:center;padding:6.5% 3% 8%}
+.card{position:relative;background:#f6ecd6;border:3px solid var(--negro);border-radius:12px;box-shadow:0 6px 0 var(--negro),0 18px 40px rgba(0,0,0,.35);width:min(620px,100%);max-height:100%;display:flex;flex-direction:column;overflow:hidden}
+.card::before{content:"";display:block;height:14px;flex:0 0 14px;background:repeating-linear-gradient(90deg,var(--amar) 0 18px,var(--negro) 18px 20px,var(--amar) 20px 26px,var(--ocre) 26px 34px);border-bottom:2px solid var(--negro)}
+.card .in{padding:12px 20px 4px;overflow:auto;-webkit-overflow-scrolling:touch}
+.card h2{margin:0 0 2px;font-size:22px;color:var(--ocreD);font-variant:small-caps;letter-spacing:.03em;line-height:1.15}
+.card .sub{font-size:13px;opacity:.8;margin-bottom:6px}
+.card p{margin:6px 0;font-size:16px;line-height:1.42}
+.card .act{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;padding:8px 20px 14px}
+.card.side{width:min(560px,58%)}
+.card.wide{width:min(980px,100%)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card p.sm{font-size:14px;line-height:1.35;margin:2px 0 6px}
+.opt small{font-size:12.5px;opacity:.85}
+.card p.cr{font-size:14px;line-height:1.4}
+.opts{display:flex;flex-direction:column;gap:8px;margin:8px 0}
+.opt{min-height:46px;text-align:left;padding:8px 14px;border-radius:8px;border:2px solid var(--negro);background:#fffaf0;font-size:16px;line-height:1.25;display:flex;gap:10px;align-items:center}
+.opt i{font-style:normal;font-weight:700;width:24px;height:24px;flex:0 0 24px;border-radius:50%;border:2px solid var(--negro);display:flex;align-items:center;justify-content:center;font-size:14px}
+.opt.ok{background:#d9e8f3;border-color:var(--azulD)}.opt.ok i{background:var(--azul);color:#fff;border-color:var(--azulD)}
+.opt.no{background:#f8dcc6;border-color:var(--ocreD)}.opt.no i{background:var(--ocre);color:#fff}
+.opt.chk.on{background:#efe0b8}
+.fb{font-size:15px;line-height:1.4;padding:8px 12px;border-radius:8px;border:2px dashed var(--negro);margin:6px 0}
+.ficha{display:inline-flex;align-items:center;gap:6px;min-height:42px;padding:0 14px;border-radius:21px;border:2px solid var(--azulD);background:var(--azul);color:#fff;font:600 14px var(--serif);margin:6px 0 2px}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--azulD);margin-bottom:2px}
+/* portada */
+.title{position:absolute;left:0;right:0;top:13%;text-align:center;pointer-events:none}
+.title h1{margin:0;font-size:calc(var(--s,1)*70px);letter-spacing:.14em;color:#fff3d6;text-shadow:0 3px 0 var(--negro),0 0 18px rgba(0,0,0,.35);font-weight:700}
+.title p{margin:4px 0 0;font-size:calc(var(--s,1)*22px);color:#fff3d6;text-shadow:0 2px 0 var(--negro);font-style:italic}
+.menu{position:absolute;left:50%;bottom:9%;transform:translateX(-50%);display:flex;gap:12px;flex-wrap:wrap;justify-content:center;width:92%}
+.menu .btn{font-size:18px;padding:10px 22px}
+/* arena */
+.hud{position:absolute;left:1.6%;right:1.6%;top:5.4%;display:flex;gap:8px;align-items:flex-start;pointer-events:none}
+.hud > *{pointer-events:auto}
+.pane{background:rgba(243,232,207,.94);border:2px solid var(--negro);border-radius:10px;padding:5px 12px;font-size:15px;line-height:1.2;box-shadow:0 3px 0 var(--negro)}
+.pane b{color:var(--ocreD)}
+.hint{position:absolute;left:50%;top:22%;transform:translateX(-50%);background:var(--negro);color:var(--cal);padding:8px 16px;border-radius:22px;font-size:17px;pointer-events:none;white-space:nowrap;opacity:0;transition:opacity .3s}
+.hint.on{opacity:1}
+.big{position:absolute;left:50%;top:30%;transform:translate(-50%,-50%) scale(.6);font-size:calc(var(--s,1)*58px);font-weight:700;letter-spacing:.06em;color:#fff3d6;text-shadow:0 3px 0 var(--negro),0 0 14px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:transform .25s cubic-bezier(.3,1.6,.5,1),opacity .2s;white-space:nowrap}
+.big.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.grades{display:flex;gap:10px;margin:6px 0}
+.grades span{flex:1;border:2px solid var(--negro);border-radius:8px;padding:6px;text-align:center;font-size:14px;background:#fffaf0}
+.grades span b{display:block;font-size:22px;line-height:1}
+.ros{font-size:30px;letter-spacing:6px}
+.rot{position:fixed;inset:0;z-index:50;display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:#2a1d14;color:#f3e8cf;font-size:20px;text-align:center;padding:24px}
+.rot b{font-size:56px;display:block;animation:rr 2.2s ease-in-out infinite}
+@keyframes rr{0%,30%{transform:rotate(0)}60%,100%{transform:rotate(-90deg)}}
+@media (orientation:portrait) and (max-width:900px){.rot{display:flex}}
+.toast{position:absolute;left:50%;top:15%;transform:translate(-50%,-12px);opacity:0;background:var(--amar);color:var(--negro);border:2px solid var(--negro);padding:6px 16px;border-radius:20px;font-weight:700;transition:all .25s;pointer-events:none;z-index:9}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.copy{position:fixed;right:max(8px,env(safe-area-inset-right));bottom:max(4px,env(safe-area-inset-bottom));font:11px system-ui,sans-serif;color:rgba(243,232,207,.75);pointer-events:none;z-index:60}
+@media (max-height:430px){
+  .card p{font-size:14.5px;line-height:1.36;margin:4px 0}.card h2{font-size:19px}.card .in{padding:8px 16px 2px}.card .act{padding:6px 16px 10px}
+  .opt{min-height:40px;font-size:14.5px;padding:6px 10px}.opts{gap:6px}
+  .bar .tt b{font-size:16px}.bar .tt small{font-size:12px}.btn{font-size:15px;padding:6px 14px}
+  .spot{width:38px;height:38px;margin:-19px 0 0 -19px}
+  .rinfo small{display:none}.rinfo{padding:4px 10px}.rinfo b{font-size:15px}
+  .veil{padding:5.6% 2% 6.5%}
+  .card.wide .sm,.card .nota{display:none}.card.wide .opts{margin:4px 0;gap:5px}.card.wide h2{margin-bottom:4px}.card.wide .opt{min-height:44px}
+}
+@media (prefers-reduced-motion:reduce){.spot{animation:none}.big{transition:none}}
+
+.chip{white-space:nowrap}
+.opts.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (max-height:430px){.card.epi p{font-size:13.6px;line-height:1.32;margin:3px 0}.opts.g2 .opt{min-height:42px;font-size:14px}.card h2[style]{font-size:16px!important}}
+
+/* CNOSO */
+.gn{font-size:14.5px;margin:6px 0}.act .spc{flex:1}.act .ficha{margin:0}
+.title p{display:inline-block;background:rgba(35,26,20,.62);padding:3px 14px;border-radius:14px}
+.pugframe{position:fixed;inset:0;width:100%;height:100%;border:0;z-index:40;background:#2a1d14}
+.pjrow{display:flex;gap:16px;align-items:flex-start}.pjrow>span{flex:0 0 auto}.pjrow>div{flex:1;min-width:0}
+.pjc{display:block;border-radius:4px;box-shadow:0 2px 0 rgba(26,20,15,.5)}
+.tlist{display:flex;flex-wrap:wrap;gap:3px 12px;margin:6px 0;font-size:13.5px}.tlist span{opacity:.55}.tlist span.ok{opacity:1;font-weight:700}
+.pjchip{padding:0 12px 0 4px;gap:5px}.pjchip canvas{display:block;box-shadow:none}
+@media (max-height:430px){.gn{font-size:13px;margin:4px 0}.pjrow{gap:10px}.tlist{font-size:12px;margin:3px 0;gap:2px 10px}.pjchip span{display:none}.pjchip{padding:0 6px}}
+
+/* drama */
+.dlg{position:absolute;left:3%;right:3%;bottom:4%;min-height:24%;background:linear-gradient(180deg,rgba(32,22,14,.9),rgba(22,15,9,.94));border:2px solid #c99a52;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.5),inset 0 0 0 4px rgba(201,154,82,.18);color:#f3e6c8;padding:14px 22px 16px;cursor:pointer}
+.dlg.wp{left:27%}
+.dlg .nm{position:absolute;left:14px;top:-18px;background:var(--ocre);color:#fff3d6;border:2px solid #c99a52;border-radius:6px;padding:3px 12px;font-weight:700;font-variant:small-caps;letter-spacing:.06em;font-size:17px}
+.dlg .nm:empty{display:none}
+.dlg .tx{font-size:20px;line-height:1.45;min-height:2.9em}
+.dlg.narr .tx{font-style:italic;color:#e9d8b4}
+.dlg .nx{position:absolute;right:16px;bottom:8px;font-style:normal;color:#e3a04a;animation:bob 1s ease-in-out infinite;transition:opacity .2s}
+@keyframes bob{50%{transform:translateY(4px)}}
+.dlg.opts{cursor:default}.dlg.opts .tx{display:none}
+.dlg .ops{display:flex;flex-direction:column;gap:8px}
+.dlg .ops .opt{background:rgba(246,236,214,.95);color:var(--negro)}
+.dlg .ops .opt:hover{background:#efe0b8}
+.pane.scn{font-size:14px;padding:4px 10px;opacity:.95;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:40%}
+.card.diario{width:min(760px,100%);background:#f8f1e1}
+.card.diario::before{background:repeating-linear-gradient(90deg,var(--azul) 0 18px,var(--negro) 18px 20px,#f8f1e1 20px 26px)}
+.card .dtx{font-size:16.5px;line-height:1.5}
+.card h3{margin:12px 0 2px;font-size:16px;color:var(--azulD);font-variant:small-caps;letter-spacing:.04em}
+.card .code{display:inline-block;font:700 11.5px system-ui,sans-serif;background:var(--azul);color:#fff;border-radius:9px;padding:1px 7px;margin-right:4px;vertical-align:1px}
+.ficha.sm{min-height:30px;padding:0 9px;margin:0 0 0 4px;font-size:13px}
+.card.diarioL .dtx{font-size:15px;margin:5px 0}
+.card .lec{font-size:15px;line-height:1.42;margin:7px 0;padding:6px 10px;border-left:4px solid #c9b48a}
+.card .lec.mine{border-color:var(--ocre);background:#f3e2c6}
+.qte{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;cursor:pointer}
+.qte .qh{background:var(--negro);color:var(--cal);padding:8px 18px;border-radius:22px;font-size:19px;font-weight:700}
+.qte .qr{position:relative;width:120px;height:120px}
+.qte .qr b{position:absolute;inset:0;border-radius:50%}
+.qte .fix{border:6px solid #fff3d6;box-shadow:0 0 0 3px var(--negro),inset 0 0 0 3px var(--negro);background:rgba(180,71,43,.25)}
+.qte .mov{border:5px dashed var(--amar);opacity:0}
+.qte .qr span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff3d6;font-weight:700;text-shadow:0 2px 0 var(--negro)}
+.qte .qs{display:flex;gap:10px}.qte .qs i{width:18px;height:18px;border-radius:50%;border:2px solid #fff3d6;background:rgba(0,0,0,.3)}.qte .qs i.ok{background:var(--amar)}.qte .qs i.no{background:var(--ocre)}
+@media (max-height:430px){
+ .dlg{padding:10px 16px 10px;min-height:28%}.dlg .tx{font-size:15.5px;line-height:1.38}.dlg .nm{font-size:14px;top:-15px;padding:2px 9px}
+ .dlg .ops{gap:5px}.dlg .ops .opt{min-height:40px;font-size:14.5px;padding:5px 10px}
+ .card .dtx{font-size:14px;line-height:1.38}.card .lec{font-size:13px;margin:4px 0;padding:4px 8px}.card h3{font-size:14px;margin:8px 0 2px}
+ .pane.scn{display:none}.qte .qh{font-size:15px}
+}
+
+#game{position:fixed;inset:0}
+#st{position:fixed;inset:0;pointer-events:none;z-index:5}
+.title-ui{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;color:#f6ecd6;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.title-ui h1{font-size:clamp(48px,9vw,96px);letter-spacing:.18em;margin:0;font-variant:small-caps}
+.title-ui .ts{font-size:clamp(15px,2.2vw,20px);margin:4px 0 18px}
+.tbtns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+.lookbtn{position:absolute;right:3%;bottom:7%;font-size:18px;min-height:56px;opacity:0;transform:scale(.8);transition:all .2s;pointer-events:none!important}
+.lookbtn.on{opacity:1;transform:scale(1);pointer-events:auto!important}
+.lect{border:2px solid var(--negro);border-radius:10px;padding:6px 12px;margin:8px 0;background:#efe2c4;opacity:.8}
+.lect.open{background:#fff8ea;opacity:1;border-color:var(--ocreD)}
+.lect h3{margin:2px 0;font-size:18px;color:var(--ocreD);font-variant:small-caps}
+.lect h3 small{font-size:13px;color:var(--negro);opacity:.7;margin-left:6px}
+.opt{text-align:left;width:100%}
+.fb p{margin:8px 0 0}
+</style>
+</head>
+<body>
+<div id="game"></div>
+<div id="st"></div>
+<div class="rot" id="rot"><b>📱</b><span id="rotT">Gira el dispositivo para jugar</span></div>
+<script src="lib/phaser.min.js"></script>
+<script>
+
+/* Taurocatapsia · contenido. Todo procede del texto de pantalla de las fichas H3·01 a H3·17 del Tema 3 (Historiapp, tema03.json).
+   En las preguntas, la primera opción es la correcta; el juego las baraja. */
+const ROOMS = [
+ { id:'entrada', scene:'entrada',
+   t:{es:'La llegada a Cnoso',en:'Arriving at Knossos'},
+   sub:{es:'Creta, hacia 1950-1375 a. C.',en:'Crete, c. 1950–1375 BC'},
+   spots:[
+    {x:300,y:250,ficha:['introduccion-historica','H3·03'],
+     t:{es:'Un nombre puesto por un arqueólogo',en:'A name given by an archaeologist'},
+     p:{es:['La cultura minoica debe su nombre a Arthur Evans, el arqueólogo británico que excavó el palacio de Cnoso desde 1900 y la bautizó a partir del mito griego del rey Minos.','Su civilización floreció en la Edad del Bronce, hacia 1950-1450 a. C.'],
+        en:['Minoan culture owes its name to Arthur Evans, the British archaeologist who excavated the palace of Knossos from 1900 and named it after the Greek myth of King Minos.','The civilisation flourished in the Bronze Age, c. 1950–1450 BC.']}},
+    {x:760,y:300,ficha:['introduccion-historica','H3·03'],
+     t:{es:'Palacios sin murallas',en:'Palaces without walls'},
+     p:{es:['Creta es una isla montañosa entre Grecia, Egipto y Asia Menor. Su relieve fragmentado la protegía y permitió que convivieran varios palacios, como Cnoso, Festo o Malia.','Los palacios se organizan en torno a un gran patio central y carecen de murallas. Evans imaginó una «Pax Minoica», hipótesis que hoy debe matizarse: las primeras armas del Egeo son cretenses y había preparación para la guerra.'],
+        en:['Crete is a mountainous island between Greece, Egypt and Asia Minor. Its broken relief protected it and allowed several palaces to coexist, such as Knossos, Phaistos or Malia.','The palaces are arranged around a great central court and have no walls. Evans imagined a «Pax Minoica», a view that must now be qualified: the earliest weapons of the Aegean are Cretan and there was preparation for war.']}},
+    {x:1040,y:470,ficha:['introduccion-historica','H3·03'],
+     t:{es:'Tres escrituras y un silencio deportivo',en:'Three scripts and a sporting silence'},
+     p:{es:['En Creta se usaron el jeroglífico cretense y el lineal A, que siguen sin descifrar, y el lineal B, que es griego micénico y se empleó sobre todo para la contabilidad del palacio.','Ninguna de las tres ha dejado un solo texto sobre deporte.'],
+        en:['Crete used Cretan hieroglyphic and Linear A, both still undeciphered, and Linear B, which is Mycenaean Greek and served mainly for palace accounting.','None of the three has left a single text about sport.']}}
+   ],
+   qs:[
+    {q:{es:'¿De dónde viene el nombre de «cultura minoica»?',en:'Where does the name «Minoan culture» come from?'},
+     o:{es:['De Arthur Evans, que la bautizó por el mito del rey Minos','Del nombre que los cretenses daban a su isla en lineal A','De una inscripción en lineal B'],
+        en:['From Arthur Evans, who named it after the myth of King Minos','From the name the Cretans gave their island in Linear A','From an inscription in Linear B']}},
+    {q:{es:'¿Por qué hay que matizar la «Pax Minoica» de Evans?',en:'Why must Evans\'s «Pax Minoica» be qualified?'},
+     o:{es:['Las primeras armas del Egeo son cretenses y había preparación para la guerra','Los palacios tenían grandes murallas','Creta vivía en guerra permanente con Egipto y con las ciudades de Anatolia'],
+        en:['The earliest Aegean weapons are Cretan and there was preparation for war','The palaces had great walls','Crete lived in permanent war with Egypt and the cities of Anatolia']}}
+   ]},
+ { id:'almacenes', scene:'procesion',
+   t:{es:'El corredor de la Procesión',en:'The Corridor of the Procession'},
+   sub:{es:'Sociedad, poder y economía',en:'Society, power and economy'},
+   spots:[
+    {x:330,y:400,ficha:['sociedad-poder-y-economia','H3·04'],
+     t:{es:'Lo que administraba el palacio',en:'What the palace managed'},
+     p:{es:['El palacio almacenaba y administraba parte de los excedentes agrícolas, con los que sostenía a quienes dependían de él.','Hoy se descarta que repartiera toda la producción de la isla o controlara todo su comercio.'],
+        en:['The palace stored and managed part of the agricultural surplus, with which it supported those who depended on it.','It is now ruled out that it redistributed all the island\'s produce or controlled all its trade.']}},
+    {x:690,y:200,ficha:['sociedad-poder-y-economia','H3·04'],
+     t:{es:'Palacio y templo a la vez',en:'Palace and temple at once'},
+     p:{es:['Creta no levantó templos monumentales, de ahí que el palacio fuera también el centro religioso de la comunidad, además de residencia y almacén.','Hacia 1950 a. C. surgió una nueva clase dirigente, que se reconoce en el paso de los enterramientos colectivos a los individuales.'],
+        en:['Crete raised no monumental temples, so the palace was also the religious centre of the community, as well as a residence and a store.','Around 1950 BC a new ruling class emerged, recognisable in the shift from collective to individual burials.']}},
+    {x:1010,y:330,ficha:['sociedad-poder-y-economia','H3·04'],
+     t:{es:'¿Hubo reyes?',en:'Were there kings?'},
+     p:{es:['Se discute si en Creta existieron reyes absolutos como los de Egipto o Mesopotamia: apenas se conservan representaciones regias.','El arte recoge, en cambio, escenas de una élite refinada. El deporte pudo ser una forma más de exhibir su prestigio, siempre unido al rito.'],
+        en:['It is debated whether Crete had absolute kings like those of Egypt or Mesopotamia: hardly any royal images survive.','Art shows instead the scenes of a refined elite. Sport may have been one more way of displaying its prestige, always bound to ritual.']}}
+   ],
+   qs:[
+    {q:{es:'¿Qué era el palacio minoico, además de residencia?',en:'Besides a residence, what was the Minoan palace?'},
+     o:{es:['Almacén y centro religioso de la comunidad','Una fortaleza militar amurallada sobre la colina','Un mercado sin funciones religiosas'],
+        en:['A store and the religious centre of the community','A walled military fortress on the hill','A market with no religious role']}},
+    {q:{es:'¿Qué cambio delata, hacia 1950 a. C., una nueva clase dirigente?',en:'What change reveals a new ruling class around 1950 BC?'},
+     o:{es:['El paso de los enterramientos colectivos a los individuales','La construcción de murallas en todos los palacios de la isla','La aparición de la moneda'],
+        en:['The shift from collective to individual burials','The building of walls round every palace on the island','The appearance of coinage']}}
+   ]},
+ { id:'damas', scene:'damas',
+   t:{es:'El corredor de las damas',en:'The corridor of the ladies'},
+   sub:{es:'La mujer minoica, hacia 1750-1450 a. C.',en:'Minoan women, c. 1750–1450 BC'},
+   spots:[
+    {x:340,y:300,ficha:['la-mujer-minoica','H3·05'],
+     t:{es:'Leer los colores de la pintura',en:'Reading the colours of the painting'},
+     p:{es:['Para reconocer a las mujeres hay que leer los códigos de esta pintura. El más evidente es el color de la piel, una convención heredada de Egipto que pinta en blanco a la mujer y en rojo al varón.'],
+        en:['To recognise women we must read the codes of this painting. The most obvious is skin colour, a convention inherited from Egypt that paints women white and men red.']}},
+    {x:700,y:250,ficha:['la-mujer-minoica','H3·05'],
+     t:{es:'Mujeres a la vista de todos',en:'Women in public view'},
+     p:{es:['En la pintura minoica las mujeres aparecen con una visibilidad y participación públicas notables, algo que no sucedió en las ciudades griegas posteriores (con excepción, quizá, de Esparta).','Como espectadoras, disfrutan de actividades públicas junto a los varones e incluso ocupan lugares de honor. Las principales divinidades minoicas eran femeninas.'],
+        en:['In Minoan painting women appear with a remarkable public visibility and participation, something that did not happen in the later Greek cities (except, perhaps, Sparta).','As spectators they enjoy public events alongside men and even occupy places of honour. The main Minoan deities were female.']}},
+    {x:1020,y:420,ficha:['la-mujer-minoica','H3·05'],
+     t:{es:'La danza de la arboleda sagrada',en:'The dance in the sacred grove'},
+     p:{es:['Hacia 1600 a. C. las mujeres bailan ante una multitud en la danza de la arboleda sagrada, un acto que los estudios vinculan al culto a la naturaleza, concebida como divinidad femenina, y a los ritos de iniciación.'],
+        en:['Around 1600 BC women dance before a crowd in the dance in the sacred grove, an act that scholars link to the cult of nature, conceived as a female deity, and to initiation rites.']}}
+   ],
+   qs:[
+    {q:{es:'En la pintura minoica, ¿qué distingue a la mujer del varón?',en:'In Minoan painting, what distinguishes women from men?'},
+     o:{es:['La piel blanca, una convención heredada de Egipto','El pelo corto','Que siempre aparece sentada'],
+        en:['White skin, a convention inherited from Egypt','Short hair','That she always appears seated']}},
+    {q:{es:'¿Dónde se concentra el protagonismo femenino en el arte minoico?',en:'Where is female prominence concentrated in Minoan art?'},
+     o:{es:['En el espectáculo y en el culto','En la guerra y en la caza del jabalí','En el comercio marítimo'],
+        en:['In spectacle and cult','In war and in boar hunting','In maritime trade']}}
+   ]},
+ { id:'frescos', scene:'frescos',
+   t:{es:'La sala de las imágenes',en:'The hall of images'},
+   sub:{es:'Actividades físico-deportivas de los cretenses',en:'Physical and sporting activities of the Cretans'},
+   spots:[
+    {x:250,y:270,ficha:['actividades-fisico-deportivas-de-los-cre','H3·06'],
+     t:{es:'Lo que dicen las imágenes',en:'What the images tell'},
+     p:{es:['Todo lo que sabemos del deporte minoico procede de imágenes. Se conocen unos cien objetos con escenas deportivas (frescos, vasos de piedra y sellos) de hacia 1750-1450 a. C.','Casi todos representan el salto del toro; entre un 10 y un 20 % muestran combates sin armas.'],
+        en:['All we know of Minoan sport comes from images. Some hundred objects with sporting scenes are known (frescoes, stone vessels and seals) from c. 1750–1450 BC.','Almost all show bull-leaping; between 10 and 20 % show unarmed combat.']}},
+    {x:640,y:300,ficha:['pugilato','H3·08'],
+     t:{es:'Los niños púgiles de Akrotiri',en:'The boxing boys of Akrotiri'},
+     p:{es:['En Akrotiri (Tera), sepultada por el volcán a finales del siglo XVII a. C., dos niños de entre seis y diez años boxean con un solo guante en la mano derecha.','El vencedor lleva collar, pulseras y pendientes, y su rival viste con sencillez: el juego marcaba ya la jerarquía entre los hijos de la élite.'],
+        en:['At Akrotiri (Thera), buried by the volcano at the end of the 17th century BC, two boys aged six to ten box with a single glove on the right hand.','The winner wears a necklace, bracelets and earrings, while his rival is plainly dressed: the game already marked rank among the children of the elite.']}},
+    {x:1030,y:300,ficha:['el-riton-de-los-boxeadores','H3·09'],
+     t:{es:'El ritón de los boxeadores',en:'The Boxer Rhyton'},
+     p:{es:['En Hagia Triada, hacia 1550-1500 a. C., un vaso de piedra de unos 46 cm para las libaciones muestra en cuatro bandas púgiles adultos y el salto del toro.','Sus cascos, guantes y vendajes cambian de una banda a otra, señal de un entrenamiento sistemático con reglas. Los estudios lo leen como imagen de los ritos de iniciación de los jóvenes de la élite.'],
+        en:['At Hagia Triada, c. 1550–1500 BC, a stone vessel some 46 cm tall used for libations shows adult boxers and bull-leaping in four bands.','Their helmets, gloves and bindings change from band to band, a sign of systematic training with rules. Scholars read it as an image of the initiation rites of young elite men.']}},
+    {x:640,y:478,ficha:['actividades-fisico-deportivas-de-los-cre','H3·06'],
+     t:{es:'Sin premios',en:'No prizes'},
+     p:{es:['Ningún objeto representa un premio ni una lista de vencedores. El deporte servía para la iniciación de los jóvenes de la élite, expresaba la creencia religiosa y exhibía el prestigio de las grandes casas que se disputaban el palacio.','El deporte minoico fue, a la postre, un deporte del poder palacial.'],
+        en:['No object shows a prize or a list of winners. Sport served the initiation of young elite men, expressed religious belief and displayed the prestige of the great houses competing for the palace.','Minoan sport was, in the end, a sport of palatial power.']}}
+   ],
+   qs:[
+    {q:{es:'¿Por qué conocemos el deporte minoico solo por imágenes?',en:'Why do we know Minoan sport only from images?'},
+     o:{es:['Ninguna de sus tres escrituras registró un evento deportivo','Los papiros donde se registraban se quemaron en los palacios','Estaba prohibido escribir sobre deporte'],
+        en:['None of its three scripts recorded a sporting event','The papyri that recorded it burned in the palaces','Writing about sport was forbidden']}},
+    {q:{es:'¿Qué indica que en Creta no se competía por recompensas materiales?',en:'What suggests that Cretans did not compete for material rewards?'},
+     o:{es:['Ningún objeto representa un premio ni una lista de vencedores','Los vencedores eran siempre esclavos y no podían recibir nada','Las tablillas en lineal B lo prohíben'],
+        en:['No object shows a prize or a list of winners','The winners were always slaves and could receive nothing','The Linear B tablets forbid it']}},
+    {q:{es:'¿Qué distingue al vencedor de los niños púgiles de Akrotiri?',en:'What marks the winner among the boxing boys of Akrotiri?'},
+     o:{es:['Lleva collar, pulseras y pendientes','Lleva dos guantes','Es bastante mayor que su rival y más alto'],
+        en:['He wears a necklace, bracelets and earrings','He wears two gloves','He is clearly older and taller than his rival']}}
+   ]},
+ { id:'toro', scene:'tazas',
+   t:{es:'El toro',en:'The bull'},
+   sub:{es:'De la captura al salto',en:'From capture to leap'},
+   spots:[
+    {x:330,y:330,ficha:['el-toro-de-la-captura-al-salto','H3·14'],
+     t:{es:'Las tazas de oro de Vafio',en:'The gold cups of Vapheio'},
+     p:{es:['El salto era solo la parte más vistosa de un ciclo que empezaba con la captura del toro, una empresa colectiva y peligrosa.','En las tazas de oro de Vafio unos jóvenes atrapan a un toro con una red y atraen a otro con una vaca como señuelo.'],
+        en:['The leap was only the most spectacular part of a cycle that began with the capture of the bull, a dangerous collective enterprise.','On the gold cups from Vapheio young men trap one bull in a net and lure another with a cow as a decoy.']}},
+    {x:830,y:420,ficha:['el-toro-de-la-captura-al-salto','H3·14'],
+     t:{es:'Toros moteados',en:'Spotted bulls'},
+     p:{es:['Durante décadas se pensó que eran uros, el toro salvaje europeo. El pelaje moteado de los toros de Cnoso, sin embargo, solo se da en animales domésticos: no eran tan fieros como se ha propuesto.','Se especula que el salto terminara en sacrificio y banquete, si bien las imágenes minoicas no unen el salto con la muerte del toro.'],
+        en:['For decades they were thought to be aurochs, the wild European bull. The spotted coat of the Knossos bulls, however, occurs only in domestic animals: they were not as fierce as has been claimed.','It is speculated that the leap ended in sacrifice and a feast, although Minoan images do not link the leap with the death of the bull.']}},
+    {x:1060,y:220,ficha:['salto-del-toro','H3·11'],
+     t:{es:'De juego de aldea a emblema del palacio',en:'From village game to palace emblem'},
+     p:{es:['Las imágenes más antiguas, muy anteriores a los palacios, muestran a varios hombres agarrados a un toro, como un juego colectivo de aldea.','Con los palacios el salto adquiere grandeza escénica y ritual. Casi todas sus imágenes proceden de Cnoso, de su fresco y de sus sellos oficiales: fue emblema del poder de este palacio.'],
+        en:['The oldest images, long before the palaces, show several men clinging to a bull, like a collective village game.','With the palaces the leap gained scenic and ritual grandeur. Almost all its images come from Knossos, from its fresco and its official seals: it was an emblem of this palace\'s power.']}}
+   ],
+   qs:[
+    {q:{es:'¿Cómo se captura al toro en las tazas de Vafio?',en:'How is the bull captured on the Vapheio cups?'},
+     o:{es:['Con una red y con una vaca como señuelo','Con lazos desde carros','Encerrándolo de noche en el patio del palacio'],
+        en:['With a net and with a cow as a decoy','With lassos thrown from chariots','Shutting it in the palace courtyard at night']}},
+    {q:{es:'¿Por qué los toros de Cnoso no serían uros salvajes?',en:'Why were the Knossos bulls probably not wild aurochs?'},
+     o:{es:['Su pelaje moteado solo se da en animales domésticos','Porque eran mucho más pequeños que un caballo de tiro','Porque no tenían cuernos'],
+        en:['Their spotted coat occurs only in domestic animals','Because they were much smaller than a draught horse','Because they had no horns']}}
+   ]},
+ { id:'patio', scene:'patio',
+   t:{es:'El patio central',en:'The central court'},
+   sub:{es:'Espacios y protagonistas del salto',en:'The spaces and the leapers'},
+   spots:[
+    {x:640,y:470,ficha:['espacios-ludico-deportivos','H3·16'],
+     t:{es:'Un patio para la comunidad',en:'A court for the community'},
+     p:{es:['El patio central medía entre un cuarto y un tercio de estadio, la medida griega de unos 180-190 metros. En Malia o en Cnoso se conservan encajes para barreras de madera entre las columnas, y los balcones harían de palcos.','Dónde se saltaba sigue en discusión. Evans lo situó en el patio, pero el enlosado era peligroso: muchos estudios prefieren hoy un espacio de tierra junto al palacio.'],
+        en:['The central court measured between a quarter and a third of a stadion, the Greek measure of some 180–190 metres. At Malia and Knossos sockets for wooden barriers survive between the columns, and the balconies would serve as boxes.','Where the leap took place is still debated. Evans placed it in the court, but the paving was dangerous: many scholars now prefer an earthen space beside the palace.']}},
+    {x:250,y:280,ficha:['quienes-saltaban-y-como','H3·12'],
+     t:{es:'¿Quién salta?',en:'Who leaps?'},
+     p:{es:['Los saltadores de Cnoso son jóvenes de la élite, a juzgar por sus vestimentas, sus joyas y su melena larga. Nueve de los dieciséis conservados tienen la piel blanca que el arte egeo destinaba a las mujeres.','Hoy se discute: otras hipótesis ven en el color claro una marca de edad o de función social entre varones. No puede afirmarse ni descartarse la presencia de mujeres.'],
+        en:['The Knossos leapers are young members of the elite, judging by their dress, jewellery and long hair. Nine of the sixteen preserved have the white skin that Aegean art reserved for women.','This is debated: other views see the pale colour as a mark of age or social role among men. The presence of women can be neither affirmed nor ruled out.']}},
+    {x:1040,y:280,ficha:['el-salto-en-picado','H3·13'],
+     t:{es:'¿Cómo se saltaba?',en:'How did they leap?'},
+     p:{es:['Según Evans (1930), el saltador sujetaba los cuernos y aprovechaba la embestida para tomar impulso. Younger (1995) reúne una treintena de ejemplos del salto en picado, el esquema más frecuente, frente a las pocas imágenes, más antiguas, que encajan con Evans.','En picado: entrada de cabeza sobre el cuello, apoyo de las manos en los hombros del toro con las piernas arriba y salida con voltereta hasta caer de pie, donde una figura con los brazos extendidos parece recibir al saltador.'],
+        en:['According to Evans (1930), the leaper grasped the horns and used the bull\'s charge for momentum. Younger (1995) gathers some thirty examples of the diving leap, the most frequent scheme, against the few, older images that fit Evans.','The diving leap: a head-first entry over the neck, hands on the bull\'s shoulders with legs raised, and an exit with a somersault to land standing, where a figure with outstretched arms seems to receive the leaper.']}}
+   ],
+   qs:[
+    {q:{es:'¿Qué propuso Younger (1995) sobre el salto del toro?',en:'What did Younger (1995) propose about bull-leaping?'},
+     o:{es:['Que el esquema más frecuente fue el salto en picado','Que nunca se saltó sobre toros vivos, solo sobre figuras','Que solo saltaban mujeres'],
+        en:['That the most frequent scheme was the diving leap','That no one ever leapt over live bulls, only over models','That only women leapt']}},
+    {q:{es:'¿Por qué muchos estudios sitúan hoy el salto fuera del patio central?',en:'Why do many scholars now place the leap outside the central court?'},
+     o:{es:['El enlosado era peligroso y conducir al toro por los pasillos, difícil','El patio era demasiado pequeño para el público','El patio central estaba reservado al rey y a los sacerdotes del palacio'],
+        en:['The paving was dangerous and leading the bull through the corridors was hard','The court was too small for the audience','The central court was reserved for the king and the palace priests']}}
+   ]}
+];
+
+const EPILOGO = {
+  t:{es:'La sala del trono',en:'The throne room'},
+  sub:{es:'El fin de la Creta de los palacios',en:'The end of palatial Crete'},
+  ficha:['el-fin-de-la-creta-minoica','H3·17'],
+  p:{es:['Durante décadas se atribuyó el fin de la Creta minoica a la erupción de Tera, pero se produjo hacia 1628 a. C., unos ciento cincuenta años antes del final de los palacios, y Creta se rehízo.','Hacia 1450 a. C. ardieron casi todos los palacios salvo el de Cnoso, que pasó a manos de los micénicos. Durante unos setenta y cinco años fue el único palacio de Creta y la taurocatapsia siguió bajo dominio micénico.','Hacia 1375 a. C. ardió también Cnoso. El salto del toro continuó en la Grecia continental hasta la caída de los palacios micénicos.'],
+     en:['For decades the end of Minoan Crete was blamed on the eruption of Thera, but it happened c. 1628 BC, some hundred and fifty years before the end of the palaces, and Crete recovered.','Around 1450 BC almost all the palaces burned except Knossos, which passed to the Mycenaeans. For some seventy-five years it was the only palace in Crete, and bull-leaping went on under Mycenaean rule.','Around 1375 BC Knossos burned too. Bull-leaping continued in mainland Greece until the fall of the Mycenaean palaces.']},
+  q:{es:'Ningún texto dice qué significaba el salto del toro. ¿Cuáles de estas lecturas proponen los estudios?',en:'No text tells us what bull-leaping meant. Which of these readings do scholars propose?'},
+  lec:{es:['Ofrenda a los dioses','Paso a la edad adulta','Emblema del palacio','Exhibición de destreza ante la comunidad'],en:['An offering to the gods','A passage to adulthood','An emblem of the palace','A display of skill before the community']},
+  fin:{es:'Las cuatro, y no se excluyen: el salto pudo ser todo a la vez y en el mismo acto. Como hoy, un mismo acto deportivo puede tener varias capas de significado.',en:'All four, and they are not exclusive: the leap could be all of them at once, in the same act. As today, a single sporting act can carry several layers of meaning.'},
+  fichaQ:['que-significaba-el-salto-del-toro','H3·15']
+};
+
+const ARENA = {
+  intro:{es:'El fresco del salto del toro de Cnoso cobra vida. Sus tres figuras pueden leerse como fases de un mismo salto o como un salto en picado con ayudantes: elige la lectura.',en:'The bull-leaping fresco of Knossos comes to life. Its three figures can be read as phases of a single leap or as a diving leap with helpers: choose the reading.'},
+  tec:{es:'Elige la lectura del fresco',en:'Choose the reading of the fresco'},
+  picado:{es:'En picado, con ayudantes',en:'Diving leap, with helpers'},
+  picadoS:{es:'Tú eres la figura central; a la derecha te recibe otra. El esquema más frecuente (Younger, 1995).',en:'You are the central figure; another receives you on the right. The most frequent scheme (Younger, 1995).'},
+  evans:{es:'Por los cuernos, fases de un mismo salto',en:'By the horns, phases of one leap'},
+  evansS:{es:'Las tres figuras son tres momentos del mismo saltador, como reconstruyó Evans (1930).',en:'The three figures are three moments of the same leaper, as Evans reconstructed it (1930).'},
+  evansNota:{es:'Evans (1930) reconstruyó el salto con el agarre de los cuernos. Solo unas pocas imágenes, más antiguas, encajan con él, y el salto en picado es el esquema más frecuente (Younger, 1995). Por eso aquí es más exigente.',en:'Evans (1930) reconstructed the leap with a grip on the horns. Only a few, older images fit it, and the diving leap is the most frequent scheme (Younger, 1995). That is why it is harder here.'},
+  creditos:{es:['El toro y las tres figuras están recortados de una fotografía del fresco del salto del toro de Cnoso, hacia 1450-1375 a. C. (Museo Arqueológico de Heraclión), en dominio público (Wikimedia Commons, «Knossos bull leaping fresco.jpg»). El fondo de la fiesta es el mismo fresco con las figuras retiradas.','Damas de azul: dominio público (Wikimedia Commons, «Knossos women fresco.jpg»). Sala del trono: CC0 (Wikimedia Commons, «Throne of Minos at Knossos Palace.jpg»). Las demás imágenes son las de las fichas del Tema 3.'],
+     en:['The bull and the three figures are cut out from a photograph of the bull-leaping fresco of Knossos, c. 1450–1375 BC (Heraklion Archaeological Museum), in the public domain (Wikimedia Commons, «Knossos bull leaping fresco.jpg»). The festival background is the same fresco with the figures removed.','Ladies in Blue: public domain (Wikimedia Commons, «Knossos women fresco.jpg»). Throne room: CC0 (Wikimedia Commons, «Throne of Minos at Knossos Palace.jpg»). The other images are those of the Unit 3 study sheets.']}
+};
+/* láminas de cada estancia: caja [x, y, ancho, alto] en la escena de 1280 × 720 y pie de foto; las marcas se sitúan en [lámina, x relativa, y relativa] */
+const LAYOUT = {
+  entrada:{panels:[
+    {img:'r_cnoso', box:[60,104,660,500], cap:{es:'Reconstrucción del palacio de Cnoso, hacia 1750-1450 a. C.',en:'Reconstruction of the palace of Knossos, c. 1750–1450 BC'}},
+    {img:'r_delfines', box:[760,104,470,300], cap:{es:'Fresco de los delfines, palacio de Cnoso',en:'Dolphin fresco, palace of Knossos'}},
+    {img:'r_disco', box:[880,418,230,190], cap:{es:'Disco de Festo, Museo de Heraclión',en:'Phaistos Disc, Heraklion Museum'}}],
+   spots:[[0,.3,.45],[0,.7,.55],[2,.5,.5]]},
+  procesion:{panels:[
+    {img:'r_procesion', box:[90,104,400,510], cap:{es:'Fresco de la Procesión, Cnoso, hacia 1450-1350 a. C.',en:'Procession Fresco, Knossos, c. 1450–1350 BC'}},
+    {img:'r_plano', box:[560,104,640,510], cap:{es:'Plano de la planta del palacio, con el patio central',en:'Ground plan of the palace, with the central court'}}],
+   spots:[[1,.32,.62],[1,.62,.38],[0,.5,.45]]},
+  damas:{panels:[
+    {img:'r_damas', box:[50,110,720,480], cap:{es:'Damas de azul · Palacio de Cnoso · Hacia 1600-1450 a. C.',en:'Ladies in Blue · Palace of Knossos · c. 1600–1450 BC'}},
+    {img:'r_danza', box:[800,150,430,390], cap:{es:'Danza en la arboleda sagrada · Cnoso · Hacia 1600 a. C.',en:'Dance in the sacred grove · Knossos · c. 1600 BC'}}],
+   spots:[[0,.25,.45],[0,.72,.4],[1,.5,.5]]},
+  frescos:{panels:[
+    {img:'r_pescador', box:[60,104,330,510], cap:{es:'Pescador de Akrotiri (Tera)',en:'Fisherman of Akrotiri (Thera)'}},
+    {img:'r_pugiles', box:[440,104,340,510], cap:{es:'Niños púgiles · Akrotiri · Siglo XVII a. C.',en:'Boxing boys · Akrotiri · 17th c. BC'}},
+    {img:'r_riton', box:[830,104,380,510], cap:{es:'Ritón de los boxeadores · Hagia Triada',en:'Boxer Rhyton · Hagia Triada'}}],
+   spots:[[0,.5,.3],[1,.5,.42],[2,.5,.4],[0,.5,.78]]},
+  tazas:{panels:[
+    {img:'r_tazas', box:[50,110,660,470], cap:{es:'Tazas de oro de Vafio, hacia 1750-1450 a. C.',en:'Gold cups from Vapheio, c. 1750–1450 BC'}},
+    {img:'r_tazasdib', box:[750,104,470,300], cap:{es:'Frisos de las tazas de Vafio (dibujo)',en:'Friezes of the Vapheio cups (drawing)'}},
+    {img:'r_cabeza', box:[900,420,170,200], cap:{es:'Ritón con cabeza de toro, Cnoso',en:'Bull\'s head rhyton, Knossos'}}],
+   spots:[[0,.45,.45],[2,.5,.45],[1,.5,.5]]},
+  patio:{panels:[
+    {img:'r_patio', box:[50,110,640,480], cap:{es:'Patio y graderío del palacio de Festo, Creta',en:'Court and stands of the palace of Phaistos, Crete'}},
+    {img:'r_secuencia', box:[720,104,510,270], cap:{es:'Las figuras del fresco de Cnoso, leídas como fases de un salto',en:'The figures of the Knossos fresco, read as phases of a leap'}},
+    {img:'r_grada', box:[800,404,350,210], cap:{es:'Área teatral del palacio de Festo',en:'Theatral area of the palace of Phaistos'}}],
+   spots:[[0,.5,.6],[1,.2,.45],[1,.72,.45]]},
+  trono:{panels:[
+    {img:'r_trono', box:[110,104,400,510], cap:{es:'Sala del trono del palacio de Cnoso, estado actual',en:'Throne room of the palace of Knossos, today'}},
+    {img:'r_tera', box:[560,150,640,420], cap:{es:'Caldera de Santorini, la antigua Tera, desde el aire',en:'The caldera of Santorini, ancient Thera, from the air'}}],
+   spots:[]}
+};
+
+/* ---------- CNOSO: el ciclo de pruebas ----------
+   El recorrido sigue una de las lecturas del ritón de Hagia Triada, la de Koehl (1986), sin darla por cierta.
+   Todos los textos salen de las fichas H3·07, H3·08, H3·09 y H3·12 de Historiapp. */
+const CICLO = {
+  steps:[{k:'pro'}, {k:'bout', i:0}, {k:'room', i:0}, {k:'room', i:1}, {k:'stage', s:1}, {k:'room', i:2}, {k:'room', i:3}, {k:'stage', s:2},
+         {k:'bout', i:1}, {k:'room', i:4}, {k:'bout', i:2}, {k:'room', i:5}, {k:'bout', i:3}, {k:'fiesta'}, {k:'epi'}],
+  pro:{t:{es:'El ciclo de las pruebas', en:'The cycle of trials'},
+    p:{es:['Eres un muchacho de la élite cretense. Recorrerás el palacio de Cnoso, conocerás su cultura y superarás, de menor a mayor dureza, las pruebas que muestran el fresco de Akrotiri y el ritón de Hagia Triada: el pugilato y, al final, el salto del toro.',
+           'Koehl (1986, pp. 108-109) lee el ritón como la ilustración de las pruebas de un ciclo de iniciación de los varones aristocráticos, en el que el pugilato y el salto del toro demostraban el valor exigido al elegido. Es una de las lecturas posibles, y el juego la sigue para ordenar el recorrido. Si también saltaban mujeres es hoy una cuestión abierta (Younger, 2021, p. 58; Newman, 2017, pp. 229-232).'],
+       en:['You are a boy of the Cretan elite. You will walk through the palace of Knossos, learn about its culture and pass, from least to greatest severity, the trials shown by the Akrotiri fresco and the Hagia Triada rhyton: boxing and, at the end, bull-leaping.',
+           'Koehl (1986, pp. 108-109) reads the rhyton as the illustration of the trials of an initiation cycle for aristocratic males, in which boxing and bull-leaping demonstrated the courage required of the chosen youth. It is one possible reading, and the game follows it to order the journey. Whether women also leapt is an open question today (Younger, 2021, p. 58; Newman, 2017, pp. 229-232).']},
+    ficha:['el-riton-de-los-boxeadores', 'H3·09']},
+  stages:[
+    {t:{es:'Niño', en:'Boy'}, d:{es:'Cabeza rapada con mechones sueltos, como los niños púgiles de Akrotiri.', en:'Shaved head with loose locks, like the boy boxers of Akrotiri.'}},
+    {t:{es:'Muchacho', en:'Youth'}, d:{es:'Sin los mechones de la infancia, como los muchachos del fresco del pescador.', en:'Without the locks of childhood, like the youths of the Fisherman fresco.'}},
+    {t:{es:'Joven', en:'Young man'}, d:{es:'Con la melena hasta la cintura del varón aristocrático adulto.', en:'With the waist-length hair of the adult aristocratic male.'}}],
+  cambio:[null,
+    {t:{es:'El corte de los mechones', en:'Cutting the locks'},
+     p:{es:['Koehl (1986, p. 101) se fija en el peinado. Los niños púgiles llevan la cabeza rapada alrededor de mechones sueltos, y los muchachos del fresco del pescador, algo mayores, ya se han cortado esos mechones.', 'Koehl propone que el corte formara parte de la preparación para la etapa siguiente de un rito de paso. Ahora eres un muchacho.'],
+        en:['Koehl (1986, p. 101) attends to the hairstyle. The boy boxers have the head shaved around loose locks, and the youths of the Fisherman fresco, somewhat older, have already cut off those locks.', 'Koehl proposes that the cutting formed part of the preparation for the next stage of a rite of passage. You are now a youth.']},
+     ficha:['pugilato', 'H3·08']},
+    {t:{es:'La melena del adulto', en:'The hair of the adult'},
+     p:{es:['Los púgiles del ritón son adultos, esbeltos pero musculados, con la melena hasta la cintura del aristócrata minoico.', 'Koehl (1986, pp. 102-103) observa que es la misma melena de los saltadores del fresco de Cnoso y la identifica como el peinado del varón aristocrático en la plenitud de su vida adulta, dedicado al atletismo y a las fiestas del palacio. Te esperan las bandas del ritón.'],
+        en:['The boxers on the rhyton are adults, slender but muscular, with the waist-length hair of the Minoan aristocrat.', 'Koehl (1986, pp. 102-103) observes that it is the same hair as that of the leapers in the Knossos fresco and identifies it as the hairstyle of the aristocratic male in the fullness of adult life, devoted to athletics and the festivals of the palace. The bands of the rhyton await you.']},
+     ficha:['quienes-saltaban-y-como', 'H3·12']}],
+  pruebas:[
+    {t:{es:'Prueba I · Como los niños de Akrotiri', en:'Trial I · Like the boys of Akrotiri'},
+     p:{es:'Antes de entrar en el palacio, un combate de aprendizaje con un solo guante, sin intención de herir. Gana quien toque primero cinco veces.', en:'Before entering the palace, a practice bout with a single glove, without intent to injure. The first to land five touches wins.'},
+     gana:{es:'El collar, las pulseras y los pendientes del niño vencedor', en:'The necklace, bracelets and earrings of the victorious boy'}},
+    {t:{es:'Prueba II · La cuarta banda del ritón', en:'Trial II · The fourth band of the rhyton'},
+     p:{es:'Tu primer combate de adulto: sin casco y con las muñecas vendadas. Termina cuando uno de los dos queda en el suelo.', en:'Your first adult bout: no helmet and bandaged wrists. It ends when one of the two is left on the ground.'},
+     gana:{es:'Las vendas de las muñecas', en:'The wrist bandages'}},
+    {t:{es:'Prueba III · La tercera banda del ritón', en:'Trial III · The third band of the rhyton'},
+     p:{es:'Casco, protecciones en el antebrazo y manos acolchadas. Tu rival cubre mejor su guardia.', en:'Helmet, forearm protections and padded hands. Your rival keeps a sturdier guard.'},
+     gana:{es:'El casco, las protecciones del antebrazo y las manos acolchadas', en:'The helmet, the forearm protections and the padded hands'}},
+    {t:{es:'Prueba IV · La banda superior, junto a la columna', en:'Trial IV · The upper band, by the column'},
+     p:{es:'El combate más duro, junto a una columna de capitel cuadrado, ante el campeón que espera tus errores.', en:'The hardest bout, beside a column with a square capital, against the champion who waits for your mistakes.'},
+     gana:{es:'Las botas de los púgiles del ritón', en:'The boots of the rhyton boxers'}},
+    {t:{es:'Prueba V · La fiesta del toro', en:'Trial V · The bull festival'},
+     p:{es:'La última prueba del ciclo, en el patio central: tres toros. La comunidad mide tu valor con su aclamación.', en:'The last trial of the cycle, in the central court: three bulls. The community measures your courage with its acclaim.'},
+     gana:{es:'La aclamación del palacio', en:'The acclaim of the palace'}}]
+};
+
+/* CNOSO · guion del drama interactivo.
+   Los personajes y el hilo son inventados. Todo dato sobre Creta procede del texto de las fichas H3·03 a H3·17 del Tema 3
+   (Historiapp, tema03.json), que reproduce las diapositivas y las notas del orador. Los personajes solo dicen lo que podrían
+   saber desde dentro; lo que sabemos hoy, con sus autores, lo dice el diario (líneas {d}).
+   Formato de una línea:
+     ['quien', 'es', 'en']                     diálogo (quien: tu, mae, sac, esc, riv, dam) o narración (nar)
+     {d:['es','en'], f:['id-ficha','H3·xx']}   voz del diario, con su ficha
+     {q:[{es, en, p:'rit|ini|pod|atl', a:'mae|sac|esc|riv', r:[líneas]}]}   decisión
+     {act:'bout', i} {act:'stage', s} {act:'fig', f} {act:'qte'} {act:'lugar'} {act:'tec'} {act:'fiesta'} {act:'final'}
+     {if:'cond', then:[...], else:[...]}       variante según lo ocurrido */
+const PERS = {
+  tu:{es:'Tú', en:'You'}, mae:{es:'El Maestro', en:'The Master'}, sac:{es:'La Sacerdotisa', en:'The Priestess'},
+  esc:{es:'El Escriba', en:'The Scribe'}, riv:{es:'El Rival', en:'The Rival'}, dam:{es:'La Mujer de la tribuna', en:'The Woman in the stand'}
+};
+const F = {
+  intro:['introduccion-historica', 'H3·03'], soc:['sociedad-poder-y-economia', 'H3·04'], mujer:['la-mujer-minoica', 'H3·05'],
+  act:['actividades-fisico-deportivas-de-los-cre', 'H3·06'], pug:['pugilato', 'H3·08'], riton:['el-riton-de-los-boxeadores', 'H3·09'],
+  salto:['salto-del-toro', 'H3·11'], quien:['quienes-saltaban-y-como', 'H3·12'], picado:['el-salto-en-picado', 'H3·13'],
+  toro:['el-toro-de-la-captura-al-salto', 'H3·14'], sig:['que-significaba-el-salto-del-toro', 'H3·15'], esp:['espacios-ludico-deportivos', 'H3·16'],
+  fin:['el-fin-de-la-creta-minoica', 'H3·17']
+};
+const GUION = [
+/* ---------------- Capítulo 1 ---------------- */
+{cap:1, t:{es:'Llegada a Cnoso', en:'Arrival at Knossos'}, sub:{es:'La infancia', en:'Childhood'}, scenes:[
+ {id:'1.1', bg:['r_cnoso'], amb:'viento', t:{es:'La isla', en:'The island'}, lines:[
+  ['nar', 'Creta. Desde lo alto de una colina, un anciano y un niño miran hacia el valle.', 'Crete. From the top of a hill, an old man and a boy look down into the valley.'],
+  ['mae', 'Mira allí abajo. Aquel es el palacio de Cnoso, y a partir de hoy vivirás en él.', 'Look down there. That is the palace of Knossos, and from today you will live in it.'],
+  ['tu', '¿Es el único palacio de la isla?', 'Is it the only palace on the island?'],
+  ['mae', 'Hay otros, como Festo o Malia. Nuestras montañas separan unas tierras de otras, y cada una tiene su palacio.', 'There are others, such as Phaistos or Malia. Our mountains divide one land from another, and each has its palace.'],
+  {d:['La cultura minoica debe su nombre a Arthur Evans, el arqueólogo británico que excavó el palacio de Cnoso desde 1900 y la bautizó a partir del mito griego del rey Minos. Floreció en la Edad del Bronce, hacia 1950-1450 a. C. Creta es una isla montañosa, y su relieve fragmentado permitió que convivieran varios palacios, como Cnoso, Festo o Malia.',
+      'Minoan culture owes its name to Arthur Evans, the British archaeologist who excavated the palace of Knossos from 1900 and named it after the Greek myth of King Minos. It flourished in the Bronze Age, c. 1950–1450 BC. Crete is a mountainous island, and its broken relief allowed several palaces to coexist, such as Knossos, Phaistos or Malia.'], f:F.intro}
+ ]},
+ {id:'1.2', bg:['r_plano'], amb:'viento', t:{es:'Sin murallas', en:'No walls'}, lines:[
+  ['nar', 'Al acercarse, el niño busca una muralla y no la encuentra.', 'As they draw near, the boy looks for a wall and finds none.'],
+  ['tu', 'Maestro, ¿dónde están los muros? Todo se abre alrededor de un gran patio.', 'Master, where are the walls? Everything opens around a great court.'],
+  ['mae', 'Así se levantan nuestros palacios, en torno a su patio. Pregunta lo que quieras saber.', 'That is how our palaces are built, around their court. Ask what you want to know.'],
+  {q:[
+   {es:'¿Y si nos atacan?', en:'And if we are attacked?', p:'pod', r:[
+    ['mae', 'Las montañas nos guardan. Y no te equivoques, en esta isla también se forjan armas.', 'The mountains guard us. And make no mistake, weapons are forged on this island too.']]},
+   {es:'¿Quién vive dentro?', en:'Who lives inside?', p:'rit', r:[
+    ['mae', 'Viven las grandes casas, trabajan quienes dependen del palacio y se honra a la diosa. Ya lo verás.', 'The great houses live there, those who depend on the palace work there and the goddess is honoured there. You will see.']]}
+  ]},
+  {d:['Los palacios se organizan en torno a un gran patio central y carecen de murallas. Evans imaginó una «Pax Minoica», hipótesis que hoy debe matizarse, puesto que las primeras armas del Egeo son cretenses y había preparación para la guerra.',
+      'The palaces are arranged around a great central court and have no walls. Evans imagined a «Pax Minoica», a view that must now be qualified, since the earliest weapons of the Aegean are Cretan and there was preparation for war.'], f:F.intro}
+ ]},
+ {id:'1.3', bg:['r_disco'], amb:'interior', t:{es:'Las señales', en:'The signs'}, lines:[
+  ['nar', 'En una sala en penumbra, el niño encuentra un disco de barro con signos estampados en espiral.', 'In a dim room, the boy finds a clay disc with signs stamped in a spiral.'],
+  ['tu', '¿Qué dicen estas señales?', 'What do these signs say?'],
+  ['mae', 'No sé leerlas. Eso es cosa de escribas.', 'I cannot read them. That is a matter for scribes.'],
+  {d:['En Creta se usaron el jeroglífico cretense y el lineal A, que siguen sin descifrar, y el lineal B, que es griego micénico y se empleó sobre todo para la contabilidad del palacio. Ninguna de las tres ha dejado un solo texto sobre deporte, de ahí que todo lo que sabemos del deporte minoico proceda de imágenes. Tampoco conocemos ningún nombre minoico, y por eso los personajes de este juego llevan el nombre de su oficio. En la imagen, el disco de Festo (Museo de Heraclión).',
+      'Crete used Cretan hieroglyphic and Linear A, both still undeciphered, and Linear B, which is Mycenaean Greek and served mainly for palace accounting. None of the three has left a single text about sport, so all we know of Minoan sport comes from images. Nor do we know any Minoan name, which is why the characters of this game are named after their trade. In the image, the Phaistos Disc (Heraklion Museum).'], f:F.intro}
+ ]},
+ {id:'1.4', bg:['r_pugiles'], amb:'patio', fig:'ninos2', t:{es:'Prueba I', en:'Trial I'}, lines:[
+  ['nar', 'En el patio te espera otro niño de una gran casa, con un guante en la mano derecha.', 'In the court another boy of a great house is waiting for you, with a glove on his right hand.'],
+  ['riv', 'Dicen que el hijo de tu casa es rápido. Veamos si tocas antes que yo.', 'They say the son of your house is quick. Let us see if you touch before I do.'],
+  ['mae', 'Es un juego para aprender. Nadie quiere herir a nadie, y gana quien toque primero cinco veces.', 'It is a game for learning. Nobody wants to hurt anybody, and the first to land five touches wins.'],
+  {d:['En Akrotiri (Tera), sepultada por el volcán a finales del siglo XVII a. C., un fresco muestra a dos niños de entre seis y diez años que boxean con un solo guante en la mano derecha. Desconocemos las reglas, aunque los estudios coinciden en ver un ejercicio de aprendizaje sin intención de herir. El fresco es de Akrotiri, y el juego lo traslada a Cnoso como recurso narrativo.',
+      'At Akrotiri (Thera), buried by the volcano at the end of the 17th century BC, a fresco shows two boys aged six to ten boxing with a single glove on the right hand. We do not know the rules, although scholars agree in seeing a learning exercise without intent to injure. The fresco is from Akrotiri, and the game moves it to Knossos as a narrative device.'], f:F.pug},
+  {act:'bout', i:0},
+  {if:'b0', then:[
+    ['mae', 'Llevarás el collar, las pulseras y los pendientes del vencedor. Entre los hijos de las grandes casas, el juego ya dice quién es quién.', 'You will wear the necklace, bracelets and earrings of the victor. Among the sons of the great houses, the game already tells who is who.']],
+   else:[
+    ['mae', 'Hoy las joyas son para él. Habrá otros días, y él lo recordará tanto como tú.', 'Today the jewels are his. There will be other days, and he will remember it as much as you.']]},
+  {d:['El niño de la izquierda del fresco, con collar, pulseras y pendientes, es el vencedor, y su rival viste con sencillez. ¿Qué nos dice esa diferencia? Que el juego marcaba ya la jerarquía entre los hijos de la élite (Rutter, 2014, p. 41).',
+      'The boy on the left of the fresco, with necklace, bracelets and earrings, is the victor, and his rival is plainly dressed. What does that difference tell us? That the game already marked rank among the children of the elite (Rutter, 2014, p. 41).'], f:F.pug}
+ ]}
+]},
+/* ---------------- Capítulo 2 ---------------- */
+{cap:2, t:{es:'El corredor de la Procesión', en:'The Corridor of the Procession'}, sub:{es:'Los almacenes y las damas', en:'The stores and the ladies'}, scenes:[
+ {id:'2.1', bg:['r_procesion'], amb:'interior', t:{es:'La Procesión', en:'The Procession'}, lines:[
+  ['nar', 'El Maestro te deja a la entrada de un largo corredor, pintado con figuras que avanzan en fila. Allí te espera la Sacerdotisa.', 'The Master leaves you at the entrance of a long corridor, painted with figures walking in line. The Priestess is waiting for you there.'],
+  ['sac', 'Bienvenido, niño. Esta casa es la tuya, y es también la casa de la diosa.', 'Welcome, child. This house is yours, and it is also the house of the goddess.'],
+  ['tu', '¿No tiene la diosa un templo propio?', 'Does the goddess have no temple of her own?'],
+  ['sac', 'Su casa es esta. Aquí vivimos, aquí se guarda lo que da la tierra y aquí se la honra.', 'This is her house. Here we live, here what the earth gives is stored, and here she is honoured.'],
+  {d:['Creta no levantó templos monumentales, de ahí que el palacio fuera también el centro religioso de la comunidad, además de residencia y almacén. Hacia 1950 a. C. surgió una nueva clase dirigente, que se reconoce en el paso de los enterramientos colectivos a los individuales, y con ella un grupo estable de sacerdotes. En la imagen, el fresco de la Procesión de Cnoso, hacia 1450-1350 a. C.',
+      'Crete raised no monumental temples, so the palace was also the religious centre of the community, as well as a residence and a store. Around 1950 BC a new ruling class emerged, recognisable in the shift from collective to individual burials, and with it a stable group of priests. In the image, the Procession Fresco of Knossos, c. 1450–1350 BC.'], f:F.soc}
+ ]},
+ {id:'2.2', bg:['r_plano'], amb:'interior', t:{es:'Los almacenes', en:'The stores'}, lines:[
+  ['esc', '¿Tú eres el niño nuevo? Ven, te enseño lo que guardamos. Parte de lo que dan los campos llega aquí, se cuenta y sostiene a quienes dependen del palacio.', 'Are you the new boy? Come, I will show you what we keep. Part of what the fields give comes here, is counted and feeds those who depend on the palace.'],
+  {q:[
+   {es:'¿Quién manda aquí?', en:'Who rules here?', p:'pod', a:'esc', r:[
+    ['esc', 'Las grandes casas se disputan el palacio, y la tuya es una de ellas. Quien lo controla controla lo que aquí se guarda.', 'The great houses compete for the palace, and yours is one of them. Whoever controls it controls what is kept here.']]},
+   {es:'¿Qué apuntas en esas tablillas?', en:'What do you write on those tablets?', r:[
+    ['esc', 'Eso es cosa de escribas. Tú mira y aprende.', 'That is a matter for scribes. You look and learn.']]}
+  ]},
+  {d:['El palacio almacenaba y administraba parte de los excedentes agrícolas, con los que sostenía a quienes dependían de él. Hoy se descarta que repartiera toda la producción de la isla o controlara todo su comercio.',
+      'The palace stored and managed part of the agricultural surplus, with which it supported those who depended on it. It is now ruled out that it redistributed all the island\'s produce or controlled all its trade.'], f:F.soc}
+ ]},
+ {id:'2.3', bg:['r_procesion'], amb:'interior', t:{es:'¿Hay un rey?', en:'Is there a king?'}, lines:[
+  ['tu', '¿Y quién es el señor de todo esto? ¿Hay un rey?', 'And who is the lord of all this? Is there a king?'],
+  ['esc', 'Haces muchas preguntas para tu edad. Hay quien manda y hay quien cuenta. Yo cuento.', 'You ask a lot of questions for your age. Some rule and some count. I count.'],
+  {d:['Se discute si en Creta existieron reyes absolutos como los de Egipto o Mesopotamia, puesto que apenas se conservan representaciones regias que permitan afirmarlo. El arte minoico recoge, en cambio, escenas de un refinamiento notable, propias de una élite con medios para encargarlas y costearlas.',
+      'It is debated whether Crete had absolute kings like those of Egypt or Mesopotamia, since hardly any royal images survive to support it. Minoan art shows instead scenes of remarkable refinement, typical of an elite with the means to commission and pay for them.'], f:F.soc}
+ ]},
+ {id:'2.4', bg:['r_damas'], amb:'interior', t:{es:'Las damas', en:'The ladies'}, lines:[
+  ['nar', 'En una sala de paredes azules, una dama contempla las pinturas.', 'In a room with blue walls, a lady is looking at the paintings.'],
+  ['dam', '¿Sabes leer los colores? Fíjate en la piel. A nosotras nos pintan blancas, y a vosotros, rojos.', 'Can you read the colours? Look at the skin. They paint us white, and you red.'],
+  ['tu', '¿Y por qué salís vosotras en las paredes?', 'And why are you on the walls?'],
+  ['dam', 'Porque vamos a las fiestas, y a veces ocupamos los mejores sitios. Y porque la diosa es mujer.', 'Because we go to the festivals, and sometimes we have the best seats. And because the goddess is a woman.'],
+  {d:['Para reconocer a las mujeres hay que leer los códigos de esta pintura. El más evidente es el color de la piel, una convención heredada de Egipto que pinta en blanco a la mujer y en rojo al varón. Las mujeres aparecen con una visibilidad y una participación públicas notables. Como espectadoras, disfrutan de actividades públicas junto a los varones e incluso ocupan lugares de honor, y las principales divinidades minoicas eran femeninas.',
+      'To recognise women we must read the codes of this painting. The most obvious is skin colour, a convention inherited from Egypt that paints women white and men red. Women appear with a remarkable public visibility and participation. As spectators they enjoy public events alongside men and even occupy places of honour, and the main Minoan deities were female.'], f:F.mujer}
+ ]},
+ {id:'2.5', bg:['r_danza'], amb:'campo', t:{es:'La arboleda sagrada', en:'The sacred grove'}, lines:[
+  ['nar', 'En la arboleda sagrada, unas mujeres bailan ante la multitud.', 'In the sacred grove, women dance before the crowd.'],
+  ['sac', 'Bailan para la diosa, para la tierra y para todo lo que crece en ella.', 'They dance for the goddess, for the earth and for all that grows in it.'],
+  ['mae', 'Bailan también para dejar atrás una edad y entrar en otra. Cada danza es un paso.', 'They also dance to leave one age behind and enter another. Each dance is a step.'],
+  {q:[
+   {es:'Hacer caso a la Sacerdotisa', en:'Listen to the Priestess', p:'rit', a:'sac', r:[
+    ['sac', 'Escucha a la diosa y entenderás las fiestas del palacio.', 'Listen to the goddess and you will understand the festivals of the palace.']]},
+   {es:'Hacer caso al Maestro', en:'Listen to the Master', p:'ini', a:'mae', r:[
+    ['mae', 'En este palacio todo te va a pedir que crezcas. Recuérdalo.', 'In this palace everything will ask you to grow. Remember it.']]}
+  ]},
+  {d:['Hacia 1600 a. C. las mujeres bailan ante una multitud en la danza de la arboleda sagrada, un acto que los estudios vinculan al culto a la naturaleza, concebida como divinidad femenina, y a los ritos de iniciación.',
+      'Around 1600 BC women dance before a crowd in the dance in the sacred grove, an act that scholars link to the cult of nature, conceived as a female deity, and to initiation rites.'], f:F.mujer}
+ ]},
+ {id:'2.6', bg:['r_pescador'], amb:'mar', t:{es:'Los mechones', en:'The locks'}, lines:[
+  ['nar', 'Pasan las estaciones. Una mañana, junto al mar, el Maestro te corta los mechones de la infancia.', 'The seasons pass. One morning, by the sea, the Master cuts off your childhood locks.'],
+  {act:'stage', s:1},
+  {act:'fig', f:'pescador'},
+  ['mae', 'Ya no eres un niño. Desde hoy te verán como a un muchacho.', 'You are no longer a child. From today they will see you as a youth.'],
+  {d:['Koehl (1986, p. 101) se fija en el peinado. Los niños púgiles llevan la cabeza rapada alrededor de mechones sueltos, y los muchachos del fresco del pescador, algo mayores, ya se han cortado esos mechones. Koehl propone que el corte formara parte de la preparación para la etapa siguiente de un rito de paso. Es una propuesta suya, sin prueba directa en las fuentes.',
+      'Koehl (1986, p. 101) attends to the hairstyle. The boy boxers have the head shaved around loose locks, and the youths of the Fisherman fresco, somewhat older, have already cut off those locks. Koehl proposes that the cutting formed part of the preparation for the next stage of a rite of passage. It is his proposal, without direct proof in the sources.'], f:F.pug},
+  {act:'fig', f:null}
+ ]}
+]},
+/* ---------------- Capítulo 3 ---------------- */
+{cap:3, t:{es:'La sala de las imágenes', en:'The hall of images'}, sub:{es:'El pugilato', en:'Boxing'}, scenes:[
+ {id:'3.1', bg:['r_pugiles', 'r_riton', 'r_secuencia', 'r_tazas'], amb:'interior', t:{es:'Las imágenes', en:'The images'}, lines:[
+  ['mae', 'Mira estas imágenes. En el palacio, las hazañas se pintan en las paredes, se tallan en los vasos de piedra y se graban en los sellos.', 'Look at these images. In the palace, feats are painted on the walls, carved on stone vessels and engraved on seals.'],
+  ['tu', 'Casi todas muestran al toro.', 'Almost all of them show the bull.'],
+  ['mae', 'El toro, sí. Y algunas, hombres que luchan sin armas.', 'The bull, yes. And some, men fighting without weapons.'],
+  {d:['Todo lo que sabemos del deporte minoico procede de imágenes. Se conocen unos cien objetos con escenas deportivas (frescos, vasos de piedra y sellos) de hacia 1750-1450 a. C. Casi todos representan el salto del toro, y entre un 10 y un 20 % muestran combates sin armas.',
+      'All we know of Minoan sport comes from images. Some hundred objects with sporting scenes are known (frescoes, stone vessels and seals) from c. 1750–1450 BC. Almost all show bull-leaping, and between 10 and 20 % show unarmed combat.'], f:F.act}
+ ]},
+ {id:'3.2', bg:['r_riton'], amb:'interior', t:{es:'El ritón', en:'The rhyton'}, lines:[
+  ['nar', 'Junto a un vaso de piedra tallado en bandas te espera un muchacho al que ya conoces.', 'Beside a stone vessel carved in bands, a youth you already know is waiting for you.'],
+  {if:'b0', then:[['riv', '¿Te acuerdas de mí? Aquel día te llevaste las joyas. Mira este vaso: yo ya he luchado como los de la banda de arriba.', 'Do you remember me? That day you took the jewels. Look at this vessel: I have already fought like the men in the top band.']],
+   else:[['riv', '¿Te acuerdas de mí? Aquel día las joyas fueron para mí. Mira este vaso: yo ya he luchado como los de la banda de arriba.', 'Do you remember me? That day the jewels were mine. Look at this vessel: I have already fought like the men in the top band.']]},
+  ['tu', 'En cada banda llevan cosas distintas.', 'In each band they wear different things.'],
+  ['riv', 'Unos van con las muñecas vendadas y otros con casco. Se aprende banda a banda. ¿Te atreves?', 'Some have bandaged wrists and others helmets. You learn band by band. Do you dare?'],
+  {q:[
+   {es:'Aceptar el desafío enseguida', en:'Accept the challenge at once', a:'riv', r:[
+    ['riv', 'Así me gusta. Te espero junto a la columna.', 'That is what I like. I will wait for you by the column.']]},
+   {es:'Pedir al Maestro que te prepare', en:'Ask the Master to train you', a:'mae', r:[
+    ['mae', 'Bien pensado. Antes de pelear, aprende.', 'Well thought. Before you fight, learn.']]}
+  ]},
+  {d:['En Hagia Triada, hacia 1550-1500 a. C., un vaso de piedra de unos 46 cm para las libaciones, esto es, las ofrendas líquidas a los dioses, muestra en cuatro bandas púgiles adultos y el salto del toro. Sus cascos, guantes, botas y vendajes cambian de una banda a otra, señal de un entrenamiento sistemático con reglas. El vaso es de Hagia Triada, y el juego lo sitúa en Cnoso.',
+      'At Hagia Triada, c. 1550–1500 BC, a stone vessel some 46 cm tall used for libations, that is, liquid offerings to the gods, shows adult boxers and bull-leaping in four bands. Their helmets, gloves, boots and bindings change from band to band, a sign of systematic training with rules. The vessel is from Hagia Triada, and the game places it in Knossos.'], f:F.riton}
+ ]},
+ {id:'3.3', bg:['r_riton'], amb:'interior', t:{es:'La melena', en:'The long hair'}, lines:[
+  ['nar', 'Han pasado los años. El pelo te cae ya hasta la cintura.', 'Years have passed. Your hair now falls to your waist.'],
+  {act:'stage', s:2},
+  {act:'fig', f:'lirios'},
+  ['mae', 'Llevas la melena de los hombres de las grandes casas. Te esperan las bandas del vaso.', 'You wear the long hair of the men of the great houses. The bands of the vessel await you.'],
+  {d:['Los púgiles del ritón son adultos, esbeltos pero musculados, con la melena hasta la cintura del aristócrata minoico. Koehl (1986, pp. 102-103) observa que es la misma melena de los saltadores del fresco de Cnoso y la identifica como el peinado del varón aristocrático en la plenitud de su vida adulta.',
+      'The boxers on the rhyton are adults, slender but muscular, with the waist-length hair of the Minoan aristocrat. Koehl (1986, pp. 102-103) observes that it is the same hair as that of the leapers in the Knossos fresco and identifies it as the hairstyle of the aristocratic male in the fullness of adult life.'], f:F.quien},
+  {act:'fig', f:null}
+ ]},
+ {id:'3.4', bg:['r_riton'], amb:'patio', t:{es:'Pruebas II y III', en:'Trials II and III'}, lines:[
+  ['mae', 'Empezarás por la cuarta banda, sin casco y con las muñecas vendadas. El combate termina cuando uno de los dos queda en el suelo.', 'You will begin with the fourth band, without a helmet and with bandaged wrists. The bout ends when one of you is left on the ground.'],
+  {act:'bout', i:1},
+  ['mae', 'Ahora la tercera banda: casco, protecciones en el antebrazo y manos acolchadas.', 'Now the third band: helmet, forearm guards and padded hands.'],
+  {act:'bout', i:2},
+  {d:['Kyle (2015, pp. 38-39) describe las cuatro bandas del ritón. En la tercera hay cuatro hombres con casco, protecciones en el antebrazo y manos acolchadas, dos en pie y dos en el suelo; en la cuarta, figuras sin casco y con las muñecas vendadas, dos en guardia y dos derribadas.',
+      'Kyle (2015, pp. 38-39) describes the four bands of the rhyton. In the third are four men with helmets, forearm guards and padded hands, two standing and two on the ground; in the fourth, figures without helmets and with bandaged wrists, two on guard and two knocked down.'], f:F.riton}
+ ]},
+ {id:'3.5', bg:['r_riton'], amb:'patio', t:{es:'Prueba IV', en:'Trial IV'}, lines:[
+  ['riv', 'Junto a la columna, como en lo más alto del vaso. Esta vez no es un juego de niños.', 'By the column, as at the top of the vessel. This time it is no children\'s game.'],
+  {act:'bout', i:3},
+  {if:'win', then:[['riv', 'Me has dejado en el suelo. No lo olvidaré.', 'You have left me on the ground. I will not forget it.']],
+   else:[['riv', 'Levántate. El vaso también deja a los vencidos en el suelo.', 'Get up. The vessel also leaves the defeated on the ground.']]},
+  {d:['Las columnas de capitel cuadrado de la banda superior indican un contexto palacial, y Soar (2014, pp. 231-232) observa que en otras piezas los boxeadores aparecen junto a columnas, altares y árboles, lo que sugiere un marco oficial y quizá ceremonial. El vencedor se distingue siempre que la pieza lo permite, y los vencidos yacen en el suelo.',
+      'The square-capital columns of the top band indicate a palatial setting, and Soar (2014, pp. 231-232) notes that on other pieces boxers appear beside columns, altars and trees, which suggests an official and perhaps ceremonial setting. The victor stands out wherever the piece allows, and the defeated lie on the ground.'], f:F.riton}
+ ]},
+ {id:'3.6', bg:['r_riton'], amb:'interior', t:{es:'Sin premio', en:'No prize'}, lines:[
+  ['nar', 'Nadie se acerca con un regalo y nadie graba tu nombre.', 'No one comes with a gift and no one carves your name.'],
+  ['tu', '¿Y qué he ganado?', 'And what have I won?'],
+  ['mae', 'Que te hayan visto. ¿A quién ofreces lo que has hecho?', 'That you have been seen. To whom do you offer what you have done?'],
+  {q:[
+   {es:'A la diosa', en:'To the goddess', p:'rit', a:'sac', r:[['sac', 'Ella lo ha visto. Es suficiente.', 'She has seen it. That is enough.']]},
+   {es:'A mi casa', en:'To my house', p:'pod', a:'esc', r:[['esc', 'Tu casa lo anotará en la memoria del palacio.', 'Your house will set it down in the memory of the palace.']]},
+   {es:'Al Maestro', en:'To the Master', p:'ini', a:'mae', r:[['mae', 'No es mío. Es tuyo, y es el paso que te tocaba dar.', 'It is not mine. It is yours, and it is the step you had to take.']]},
+   {es:'A quienes miraban', en:'To those who watched', p:'atl', a:'riv', r:[['riv', 'Te han visto todos. Eso es lo que cuenta.', 'Everyone saw you. That is what counts.']]}
+  ]},
+  {d:['Ningún objeto representa un premio ni una lista de vencedores. El deporte servía para la iniciación de los jóvenes de la élite, expresaba la creencia religiosa y exhibía el prestigio de las grandes casas que se disputaban el palacio.',
+      'No object shows a prize or a list of winners. Sport served the initiation of young elite men, expressed religious belief and displayed the prestige of the great houses competing for the palace.'], f:F.act}
+ ]}
+]},
+/* ---------------- Capítulo 4 ---------------- */
+{cap:4, t:{es:'El santuario y el toro', en:'The shrine and the bull'}, sub:{es:'De la captura al salto', en:'From capture to leap'}, scenes:[
+ {id:'4.1', bg:['r_cabeza'], amb:'interior', t:{es:'El santuario', en:'The shrine'}, lines:[
+  ['sac', 'Mira este vaso con forma de cabeza de toro. Pronto saltarás sobre uno vivo.', 'Look at this vessel shaped like a bull\'s head. Soon you will leap over a living one.'],
+  ['tu', '¿Por qué el toro?', 'Why the bull?'],
+  ['sac', 'Porque es el más fuerte de los animales de esta tierra, y lo que se hace con él se hace ante la diosa.', 'Because it is the strongest of the animals of this land, and what is done with it is done before the goddess.'],
+  {d:['Ritón de esteatita en forma de cabeza de toro, del Pequeño Palacio de Cnoso, hacia 1550-1500 a. C. Evans vio en el salto una ofrenda a una diosa minoica, y McInerney (2011, pp. 6-8) reúne el contexto religioso del toro (cuernos de consagración, ritones, sacrificio). Shapland (2013, pp. 196-199) sostiene, en cambio, que esa lectura responde más a los presupuestos del siglo XIX que a las pruebas.',
+      'Steatite rhyton in the shape of a bull\'s head, from the Little Palace of Knossos, c. 1550–1500 BC. Evans saw the leap as an offering to a Minoan goddess, and McInerney (2011, pp. 6-8) assembles the religious context of the bull (horns of consecration, rhyta, sacrifice). Shapland (2013, pp. 196-199) maintains, however, that this reading owes more to nineteenth-century assumptions than to the evidence.'], f:F.sig}
+ ]},
+ {id:'4.2', bg:['r_tazasdib', 'r_tazas'], amb:'campo', t:{es:'La captura', en:'The capture'}, lines:[
+  ['nar', 'Al amanecer sales al campo con jóvenes de otras casas. Llevan una red y una vaca.', 'At dawn you go out into the countryside with young men of other houses. They carry a net and lead a cow.'],
+  ['riv', 'La vaca lo atraerá. Cuando entre en la red, tirad todos a la vez.', 'The cow will draw it in. When it enters the net, all pull at once.'],
+  {act:'qte'},
+  {if:'vafio', then:[['nar', 'La red se cierra y el toro queda preso entre las cuerdas.', 'The net closes and the bull is caught in the ropes.']],
+   else:[['nar', 'El toro rompe por un lado y escapa. Al atardecer, otro grupo vuelve con él atado.', 'The bull breaks through one side and escapes. At dusk, another group returns with it tied.']]},
+  {d:['El salto era solo la parte más vistosa de un ciclo que empezaba con la captura del toro, una empresa colectiva y peligrosa. En las tazas de oro de Vafio se ve a unos jóvenes que atrapan a un toro con una red y a otro al que atraen con una vaca como señuelo.',
+      'The leap was only the most spectacular part of a cycle that began with the capture of the bull, a dangerous collective enterprise. On the gold cups from Vapheio young men trap one bull in a net and lure another with a cow as a decoy.'], f:F.toro}
+ ]},
+ {id:'4.3', bg:['titulo'], amb:'interior', t:{es:'Los toros moteados', en:'The spotted bulls'}, lines:[
+  ['tu', '¿Morirá el toro después de la fiesta?', 'Will the bull die after the festival?'],
+  ['sac', 'Yo creo que la diosa lo recibirá. Pero eso no lo decido yo.', 'I believe the goddess will receive it. But that is not for me to decide.'],
+  {q:[
+   {es:'Creer a la Sacerdotisa', en:'Believe the Priestess', p:'rit', a:'sac', r:[['sac', 'Entonces mirarás la fiesta con otros ojos.', 'Then you will watch the festival with other eyes.']]},
+   {es:'Dudar', en:'Doubt', p:'atl', r:[['tu', 'Yo solo sé que mañana saltaré sobre él.', 'All I know is that tomorrow I will leap over it.']]}
+  ]},
+  {d:['Durante décadas se pensó que eran uros, el toro salvaje europeo. El pelaje moteado de los toros de Cnoso, sin embargo, solo se da en animales domésticos, de modo que no eran tan fieros como se ha propuesto. Se especula que el salto terminara en sacrificio y banquete, si bien las imágenes minoicas no unen el salto con la muerte del toro.',
+      'For decades they were thought to be aurochs, the wild European bull. The spotted coat of the Knossos bulls, however, occurs only in domestic animals, so they were not as fierce as has been claimed. It is speculated that the leap ended in sacrifice and a feast, although Minoan images do not link the leap with the death of the bull.'], f:F.toro}
+ ]},
+ {id:'4.4', bg:['r_tazasdib', 'r_secuencia', 'titulo'], amb:'interior', t:{es:'De la aldea al palacio', en:'From village to palace'}, lines:[
+  ['esc', 'En las aldeas, los hombres se agarran al toro entre muchos. Aquí el salto es otra cosa, porque pertenece al palacio.', 'In the villages, many men cling to the bull together. Here the leap is something else, because it belongs to the palace.'],
+  ['esc', 'Si quieres, tu casa puede contar conmigo para la fiesta.', 'If you wish, your house can count on me for the festival.'],
+  {q:[
+   {es:'Aceptar su apoyo', en:'Accept his support', p:'pod', a:'esc', r:[['esc', 'Bien. Quien salta en Cnoso salta para Cnoso.', 'Good. Whoever leaps in Knossos leaps for Knossos.']]},
+   {es:'Rechazarlo', en:'Refuse it', r:[['esc', 'Como quieras. Te estaré mirando.', 'As you wish. I will be watching you.']]}
+  ]},
+  {d:['Las imágenes más antiguas, muy anteriores a los palacios, muestran a varios hombres agarrados a un toro, como un juego colectivo de aldea. Con los palacios, el salto adquiere grandeza escénica y ritual. Casi todas sus imágenes proceden de Cnoso, de su fresco y de sus sellos oficiales, de modo que se convirtió en emblema del poder de este palacio.',
+      'The oldest images, long before the palaces, show several men clinging to a bull, like a collective village game. With the palaces the leap gained scenic and ritual grandeur. Almost all its images come from Knossos, from its fresco and its official seals, so it became an emblem of this palace\'s power.'], f:F.salto}
+ ]}
+]},
+/* ---------------- Capítulo 5 ---------------- */
+{cap:5, t:{es:'La fiesta del toro', en:'The bull festival'}, sub:{es:'El salto', en:'The leap'}, scenes:[
+ {id:'5.1', bg:['r_patio'], amb:'viento', t:{es:'¿Dónde?', en:'Where?'}, lines:[
+  ['mae', 'La fiesta debe hacerse en el gran patio, delante de todos.', 'The festival must be held in the great court, before everyone.'],
+  ['esc', '¿Sobre las losas? Ahí resbala el toro, y el saltador también. Mejor la tierra, junto al palacio.', 'On the paving? The bull slips there, and so does the leaper. Better the earth, beside the palace.'],
+  {act:'lugar'},
+  {d:['El patio central medía entre un cuarto y un tercio de estadio, la medida griega de unos 180-190 metros. En Malia o en Cnoso se conservan encajes para barreras de madera entre las columnas, y los balcones harían de palcos. Dónde se saltaba sigue en discusión. Evans lo situó en el patio, pero el enlosado era peligroso para el toro y para el saltador, y muchos estudios prefieren hoy un espacio de tierra junto al palacio (Kyle, 2015, pp. 41 y 43).',
+      'The central court measured between a quarter and a third of a stadion, the Greek measure of some 180–190 metres. At Malia and Knossos sockets for wooden barriers survive between the columns, and the balconies would serve as boxes. Where the leap took place is still debated. Evans placed it in the court, but the paving was dangerous for bull and leaper, and many scholars now prefer an earthen space beside the palace (Kyle, 2015, pp. 41 and 43).'], f:F.esp}
+ ]},
+ {id:'5.2', bg:['r_grada'], amb:'gentio', t:{es:'La tribuna', en:'The stand'}, lines:[
+  ['dam', 'Desde aquí se ve todo. Dime, ¿has visto saltar a alguna muchacha?', 'From here one sees everything. Tell me, have you seen any girl leap?'],
+  ['tu', 'En las paredes hay saltadores de piel blanca.', 'On the walls there are leapers with white skin.'],
+  ['dam', 'Y blancas nos pintan a nosotras. Piénsalo.', 'And it is us they paint white. Think about it.'],
+  {d:['Los saltadores de Cnoso son jóvenes de la élite, a juzgar por sus vestimentas, sus joyas y su melena larga. Nueve de los dieciséis conservados tienen la piel blanca que el arte egeo destinaba a las mujeres. Otras hipótesis ven en el color claro una marca de edad o de función social entre varones, de modo que hoy no puede afirmarse ni descartarse la presencia de mujeres.',
+      'The Knossos leapers are young members of the elite, judging by their dress, jewellery and long hair. Nine of the sixteen preserved have the white skin that Aegean art reserved for women. Other views see the pale colour as a mark of age or social role among men, so the presence of women can today be neither affirmed nor ruled out.'], f:F.quien}
+ ]},
+ {id:'5.3', bg:['r_secuencia'], amb:'gentio', t:{es:'Cómo saltar', en:'How to leap'}, lines:[
+  ['riv', 'Entra de cabeza sobre el cuello, apoya las manos en sus hombros y sal con una voltereta.', 'Go in head first over the neck, put your hands on its shoulders and come out with a somersault.'],
+  {if:'afRiv', then:[['riv', 'Yo estaré al otro lado para recibirte.', 'I will be on the other side to catch you.']]},
+  ['mae', 'Hay quien lo agarra por los cuernos y aprovecha su embestida. Es más difícil.', 'Some grasp it by the horns and use its charge. It is harder.'],
+  {if:'afMae', then:[['mae', 'Mírame antes de cada toro. Yo te daré la señal.', 'Look at me before each bull. I will give you the signal.']]},
+  {d:['Según Evans (1930), el saltador sujetaba los cuernos y aprovechaba la embestida para tomar impulso. Younger (1995) reúne una treintena de ejemplos del salto en picado, el esquema más frecuente, frente a las pocas imágenes, más antiguas, que encajan con Evans. En picado, el saltador entra de cabeza sobre el cuello, apoya las manos en los hombros del toro con las piernas arriba y sale con una voltereta hasta caer de pie, donde una figura con los brazos extendidos parece recibirle.',
+      'According to Evans (1930), the leaper grasped the horns and used the charge for momentum. Younger (1995) gathers some thirty examples of the diving leap, the most frequent scheme, against the few, older images that fit Evans. In the diving leap, the leaper goes in head first over the neck, puts the hands on the bull\'s shoulders with legs raised and comes out with a somersault to land standing, where a figure with outstretched arms seems to receive the leaper.'], f:F.picado},
+  {act:'tec'}
+ ]},
+ {id:'5.4', bg:['titulo'], amb:'gentio', t:{es:'La fiesta', en:'The festival'}, lines:[
+  {if:'patio', then:[['nar', 'La comunidad llena el patio central y se apiña tras las barreras de madera.', 'The community fills the central court and crowds behind the wooden barriers.']],
+   else:[['nar', 'La comunidad se reúne en la explanada de tierra, junto al palacio.', 'The community gathers on the earthen ground beside the palace.']]},
+  ['nar', 'Tres toros. Toda la comunidad te mira.', 'Three bulls. The whole community is watching you.'],
+  {act:'fiesta'}
+ ]},
+ {id:'5.5', bg:['titulo'], amb:'gentio', t:{es:'La aclamación', en:'The acclaim'}, lines:[
+  {if:'f3', then:[['nar', 'Has saltado los tres toros. El clamor llega hasta los balcones del palacio.', 'You have leapt all three bulls. The roar reaches the balconies of the palace.']],
+   else:[{if:'f1', then:[['nar', 'No todos tus saltos han salido limpios, pero la comunidad reconoce tu valor.', 'Not all your leaps were clean, but the community recognises your courage.']],
+          else:[['nar', 'Hoy los toros han podido más. La comunidad guarda silencio, y habrá otras fiestas.', 'Today the bulls were stronger. The community falls silent, and there will be other festivals.']]}]},
+  {d:['Ningún objeto minoico representa un premio. Lo que cuenta es la aclamación de la comunidad.', 'No Minoan object shows a prize. What counts is the acclaim of the community.'], f:F.act}
+ ]}
+]},
+/* ---------------- Capítulo 6 ---------------- */
+{cap:6, t:{es:'La sala del trono', en:'The throne room'}, sub:{es:'Los finales', en:'The endings'}, scenes:[
+ {id:'6.1', bg:['r_trono'], amb:'interior', t:{es:'La sala del trono', en:'The throne room'}, lines:[
+  ['nar', 'Tras la fiesta te llaman a la sala del trono. Una voz conocida te espera dentro.', 'After the festival you are called to the throne room. A familiar voice awaits you inside.'],
+  {act:'final'}
+ ]},
+ {id:'6.3', bg:['r_tera', 'r_trono'], amb:'mar', t:{es:'Lo que vino después', en:'What came after'}, lines:[
+  {d:['Durante décadas se atribuyó el fin de la Creta minoica a la erupción de Tera, pero se produjo hacia 1628 a. C., unos ciento cincuenta años antes del final de los palacios, y Creta se rehízo.', 'For decades the end of Minoan Crete was blamed on the eruption of Thera, but it happened c. 1628 BC, some hundred and fifty years before the end of the palaces, and Crete recovered.'], f:F.fin},
+  {d:['Hacia 1450 a. C. ardieron casi todos los palacios salvo el de Cnoso, que pasó a manos de los micénicos. Hacia 1375 a. C. ardió también Cnoso, y el salto del toro continuó en la Grecia continental hasta la caída de los palacios micénicos.', 'Around 1450 BC almost all the palaces burned except Knossos, which passed to the Mycenaeans. Around 1375 BC Knossos burned too, and bull-leaping continued in mainland Greece until the fall of the Mycenaean palaces.'], f:F.fin},
+  {act:'meaning'}
+ ]}
+]}
+];
+/* finales (6.2): quién lo cuenta, qué dice y qué añade el diario (H3·15) */
+const FINALES = {
+  rit:{who:'sac', t:{es:'Has saltado para la diosa. Ella ha visto tu valor, y también lo ha visto la comunidad que la honra.', en:'You have leapt for the goddess. She has seen your courage, and so has the community that honours her.'},
+    d:{es:'Lectura ritual. Evans vio en el salto una ofrenda a una diosa minoica, y McInerney (2011, pp. 6-8) reúne el contexto religioso del toro. Su punto débil es que Younger (1995, p. 518) admite que no hay pruebas de que el sacrificio siguiera al salto (citado en Shapland, 2013, p. 197).', en:'Ritual reading. Evans saw in the leap an offering to a Minoan goddess, and McInerney (2011, pp. 6-8) assembles the religious context of the bull. Its weak point is that Younger (1995, p. 518) admits there is no evidence that sacrifice followed the leap (cited in Shapland, 2013, p. 197).'}},
+  ini:{who:'mae', t:{es:'Has dejado de ser un muchacho. Las pruebas que empezaron con un guante de niño terminan hoy, delante de todos.', en:'You are no longer a youth. The trials that began with a child\'s glove end today, before everyone.'},
+    d:{es:'Lectura iniciática. Koehl (1986, p. 100) relaciona los peinados con grupos de edad y sugiere que las pruebas del ritón de los boxeadores, salto del toro incluido, formaban parte de un ciclo de iniciación aristocrático. Scanlon (2014, pp. 28-59) vincula los juegos del toro con cultos e iniciación.', en:'Initiatory reading. Koehl (1986, p. 100) relates the hairstyles to age groups and suggests that the trials on the Boxer Rhyton, bull-leaping included, formed part of an aristocratic initiation cycle. Scanlon (2014, pp. 28-59) links the bull games with cults and initiation.'}},
+  pod:{who:'esc', t:{es:'Tu casa y el palacio han mostrado su fuerza. Hoy todos saben de quién eres y a quién sirves.', en:'Your house and the palace have shown their strength. Today everyone knows whose you are and whom you serve.'},
+    d:{es:'Lectura de poder. Shapland (2022, p. 24) interpreta el salto y la caza de ganado como indicadores de la expansión del dominio de Cnoso, y Soar (2014) observa que las representaciones solo aparecen en Cnoso o en objetos de sus talleres y propone que fuera una actuación reservada a la facción dominante.', en:'Reading as power. Shapland (2022, p. 24) interprets leaping and cattle hunting as indicators of the expansion of Knossos\'s dominion, and Soar (2014) observes that the representations appear only at Knossos or on objects from its workshops and proposes that it was a performance reserved for the dominant faction.'}},
+  atl:{who:'riv', t:{es:'Has demostrado tu destreza ante todos. Eso no te lo quita nadie.', en:'You have shown your skill before everyone. No one can take that from you.'},
+    d:{es:'Lectura atlética. Younger (1995, p. 508) ordena las imágenes en un ciclo de actividades con toros, de la captura al salto, y McInerney (2011, p. 10) sostiene que la variedad de escenas solo se explica si representan actuaciones reales.', en:'Athletic reading. Younger (1995, p. 508) arranges the images in a cycle of activities with bulls, from capture to leap, and McInerney (2011, p. 10) maintains that the variety of scenes can be explained only if they represent real performances.'}}
+};
+const LECT = {rit:{es:'Ritual', en:'Ritual'}, ini:{es:'Iniciática', en:'Initiatory'}, pod:{es:'De poder', en:'Power'}, atl:{es:'Atlética', en:'Athletic'}};
+/* retratos: fragmentos recortados de frescos reales; Tú y el Rival cambian con la etapa */
+const RETR = {tu:['p_tu0', 'p_tu1', 'p_tu2'], riv:['p_riv0', 'p_riv1', 'p_riv2'], mae:'p_mae', sac:'p_sac', esc:'p_esc', dam:'p_dama'};
+const CRED_DRAMA = {
+  es:['Retratos y figuras recortados de fotografías de Wikimedia Commons: niños púgiles de Akrotiri (dominio público); pescador de Akrotiri (dominio público); Príncipe de los Lirios, Cnoso (CC0, Gsimonov); muchacho con cuenco, Akrotiri (CC BY-SA 4.0, Zde); Copero de la Procesión, Cnoso (CC BY-SA 4.0, ArchaiOptix); «La Parisina», Cnoso (CC BY-SA 4.0, Zde); Damas de azul, reproducción de Gilliéron (CC0, Metropolitan Museum); oferentes del sarcófago de Hagia Triada, hacia 1370-1320 a. C., posterior a los frescos de Cnoso (CC0, Jebulon).',
+      'Música y sonido ambiente generados en el navegador, sin grabaciones de terceros. Se inspiran en la lira y la flauta doble que tocan los músicos del sarcófago de Hagia Triada y no reconstruyen la música minoica, que desconocemos.'],
+  en:['Portraits and figures cut out from photographs on Wikimedia Commons: boxing boys of Akrotiri (public domain); fisherman of Akrotiri (public domain); Prince of the Lilies, Knossos (CC0, Gsimonov); boy with a bowl, Akrotiri (CC BY-SA 4.0, Zde); Cup-bearer of the Procession, Knossos (CC BY-SA 4.0, ArchaiOptix); «La Parisienne», Knossos (CC BY-SA 4.0, Zde); Ladies in Blue, reproduction by Gilliéron (CC0, Metropolitan Museum); offering bearers of the Hagia Triada sarcophagus, c. 1370–1320 BC, later than the Knossos frescoes (CC0, Jebulon).',
+      'Music and ambient sound generated in the browser, with no third-party recordings. They are inspired by the lyre and double pipe played by the musicians of the Hagia Triada sarcophagus and do not reconstruct Minoan music, which is unknown to us.']
+};
+
+</script>
+<script>
+/* CNOSO · El palacio (versión Phaser, piloto). © Diseñado y Creado por Alejandro Leiva Arcas.
+   Recorrido a pie por las salas del palacio con las piezas reales de las diapositivas del Tema 3.
+   Datos: ROOMS, LAYOUT y EPILOGO de Codigo/cnoso/datos.js; FINALES y LECT de Codigo/cnoso/guion.js.
+   Regla nueva (18-10-2026): las cuatro lecturas del salto del toro se abren según las pruebas que el alumno reúne. */
+'use strict';
+const W = 1280, H = 720, FLOOR = 692, HALL = 1280, KEY = 'cnosoP.v1';
+const $ = h => { const d = document.createElement('div'); d.innerHTML = h.trim(); return d.firstElementChild; };
+const st = document.getElementById('st');
+
+/* ---------- Historiapp ---------- */
+const HIST = {
+  inside: (() => { try { if (!/\/juegos\//.test(location.pathname)) return false; for (let i = 0; i < localStorage.length; i++) if (localStorage.key(i).startsWith('historiapp.')) return true; } catch (e) {} return false; })(),
+  xp(n){ if (!this.inside || !(n > 0)) return; try { const k = 'historiapp.progress'; const p = JSON.parse(localStorage.getItem(k)) || {xp:0, streak:0, lastDay:null, seen:{}, badges:{}, gl:{}, daily:{}}; p.xp = (p.xp || 0) + Math.round(n); localStorage.setItem(k, JSON.stringify(p)); } catch (e) { return; } toast('+' + Math.round(n) + ' XP'); },
+  back(){ save(); location.href = '../#t3'; },
+  ficha(id){ save(); location.href = '../#t3/f/' + encodeURIComponent(id); }
+};
+
+/* ---------- estado ---------- */
+const DEF = {lang:null, room:0, x:260, seen:{}, qok:{}, done:{}, ev:{}, sound:true, fin:false};
+let S = (() => { try { return Object.assign({}, DEF, JSON.parse(localStorage.getItem(KEY)) || {}); } catch (e) { return Object.assign({}, DEF); } })();
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+if (!S.lang){ let l = null; try { l = localStorage.getItem('historiapp.lang'); } catch (e) {} S.lang = l === 'en' || l === 'es' ? l : ((navigator.language || 'es').startsWith('es') ? 'es' : 'en'); }
+if (HIST.inside){ try { const l = localStorage.getItem('historiapp.lang'); if (l === 'en' || l === 'es') S.lang = l; } catch (e) {} }
+const L = o => o ? (o[S.lang] ?? o.es) : '';
+const UI = {
+  es:{play:'Entrar en el palacio', cont:'Seguir el recorrido', reset:'Empezar de nuevo', sub:'Un recorrido por el palacio de Cnoso · Tema 3', salir:'Guardar y salir', pruebas:'Pruebas', mirar:'Mirar',
+      falta:'Mira antes todas las marcas de esta sala.', preg:'Preguntas de la sala', ok:'Correcto', no:'No es así. La respuesta era', seguir:'Seguir', cerrar:'Cerrar', ficha:'Leer la ficha',
+      prueba:'Has reunido una prueba', sostiene:'Se ha usado para sostener la lectura', lect:'Las cuatro lecturas del salto', lectP:'Ningún texto dice qué significaba el salto del toro. Cada lectura se apoya en unas piezas concretas, y solo puedes defender las que tienen sus pruebas reunidas.',
+      abierta:'Puedes defenderla', cerrada:'Te faltan pruebas', faltan:'Te falta', fiesta:'La fiesta del toro', fiestaP:'Has recorrido el palacio. Las marcas doradas 🏺 de los cuadros son las pruebas; si te falta alguna, puedes volver a buscarla. El pugilato y el salto del toro siguen, por ahora, en el Cnoso clásico.', irClasico:'Ir al pugilato y al salto', verLect:'Ver las lecturas',
+      andar:'Toca el suelo o usa las flechas para andar. Acércate a las marcas para mirarlas; las doradas 🏺 son pruebas.', sala:'Sala', de:'de', snd:'Sonido', gira:'Gira el dispositivo para jugar', yaSala:'Sala completada', nuevo:'¿Empezar de nuevo? Se borrará el recorrido.'},
+  en:{play:'Enter the palace', cont:'Continue the walk', reset:'Start again', sub:'A walk through the palace of Knossos · Unit 3', salir:'Save and exit', pruebas:'Evidence', mirar:'Look',
+      falta:'First look at every mark in this room.', preg:'Questions on the room', ok:'Correct', no:'Not quite. The answer was', seguir:'Continue', cerrar:'Close', ficha:'Read the card',
+      prueba:'You have gathered a piece of evidence', sostiene:'It has been used to support the reading', lect:'The four readings of the leap', lectP:'No text tells us what bull-leaping meant. Each reading rests on particular pieces, and you can only defend those whose evidence you have gathered.',
+      abierta:'You can defend it', cerrada:'Evidence missing', faltan:'Missing', fiesta:'The bull festival', fiestaP:'You have walked through the palace. The gold marks 🏺 on the pictures are the evidence; if any is missing, you can go back and look for it. Boxing and the bull-leap are, for now, in classic Knossos.', irClasico:'Go to boxing and the leap', verLect:'See the readings',
+      andar:'Tap the floor or use the arrows to walk. Go near the marks to look at them; the gold ones 🏺 are evidence.', sala:'Room', de:'of', snd:'Sound', gira:'Rotate your device to play', yaSala:'Room completed', nuevo:'Start again? Your walk will be erased.'}
+};
+const t = k => UI[S.lang][k] ?? UI.es[k] ?? k;
+
+/* Pruebas de cada lectura: piezas en las que se apoyan los autores citados en FINALES (guion.js).
+   rit: contexto religioso del toro (McInerney 2011); ini: ritón de los boxeadores y peinados por edad (Koehl 1986);
+   pod: captura de ganado y obras de los talleres de Cnoso (Shapland 2022; Soar 2014); atl: ciclo de la captura al salto (Younger 1995). */
+const EVID = { r_cabeza:['rit'], r_procesion:['rit'], r_riton:['ini'], r_pugiles:['ini'], r_tazas:['pod'], r_tazasdib:['pod', 'atl'], r_secuencia:['atl'] };
+const NEED = 2;
+const ORDER = ['rit', 'ini', 'pod', 'atl'];
+
+/* ---------- sonido ---------- */
+let AC = null;
+function au(){ if (!S.sound) return null; try { if (!AC) AC = new (window.AudioContext || window.webkitAudioContext)(); if (AC.state === 'suspended') AC.resume(); return AC; } catch (e) { return null; } }
+function tone(f, d, vol, when){ const a = au(); if (!a) return; const o = a.createOscillator(), g = a.createGain(), t0 = a.currentTime + (when || 0); o.type = 'triangle'; o.frequency.value = f; g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(vol || .12, t0 + .01); g.gain.exponentialRampToValueAtTime(.0001, t0 + d); o.connect(g).connect(a.destination); o.start(t0); o.stop(t0 + d + .05); }
+const LYRE = [293.7, 329.6, 392, 440, 523.3, 587.3, 659.3];
+const SFX = { look(){ tone(LYRE[2], .5, .1); tone(LYRE[4], .6, .08, .09); }, ok(){ [0, 2, 4].forEach((n, i) => tone(LYRE[n + 2], .5, .1, i * .08)); }, no(){ tone(196, .45, .1); tone(185, .5, .08, .12); },
+  ev(){ [0, 2, 4, 6].forEach((n, i) => tone(LYRE[n], .7, .09, i * .1)); }, step(){ tone(90 + Math.random() * 20, .06, .03); } };
+
+/* ---------- interfaz DOM ---------- */
+let toastEl = null, toastTm = 0;
+function toast(m){ if (!toastEl){ toastEl = $('<div class="toast"></div>'); st.appendChild(toastEl); } toastEl.textContent = m; toastEl.classList.add('on'); clearTimeout(toastTm); toastTm = setTimeout(() => toastEl && toastEl.classList.remove('on'), 2200); }
+let modal = null;
+function closeCard(){ if (modal){ modal.remove(); modal = null; } }
+function card(html, cls){ closeCard(); const v = $(`<div class="veil"><div class="card ${cls || ''}"><div class="in">${html}</div></div></div>`); st.appendChild(v); modal = v; return v; }
+function fichaBtn(f){ return HIST.inside && f ? `<button class="btn" data-f="${f[0]}">📖 ${t('ficha')}</button>` : ''; }
+function bindFicha(el){ el.querySelectorAll('[data-f]').forEach(b => b.onclick = e => { e.stopPropagation(); HIST.ficha(b.dataset.f); }); }
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--){ const j = Math.random() * (i + 1) | 0; [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const evCount = k => Object.keys(S.ev).filter(img => (EVID[img] || []).includes(k)).length;
+const evTotal = k => Object.keys(EVID).filter(img => EVID[img].includes(k)).length;
+const imgCap = img => { for (const sc in LAYOUT) for (const p of LAYOUT[sc].panels) if (p.img === img) return L(p.cap); return img; };
+
+/* ---------- escenas ---------- */
+const GAME = { scene:null };
+
+class Boot extends Phaser.Scene {
+  constructor(){ super('boot'); }
+  preload(){
+    const imgs = new Set(['titulo', 'banda', 'sp_right', 'lirios']);
+    ROOMS.forEach(R => (LAYOUT[R.scene] || {panels:[]}).panels.forEach(p => imgs.add(p.img)));
+    const bar = this.add.rectangle(W / 2 - 200, H / 2, 0, 10, 0xb4472b).setOrigin(0, .5);
+    this.add.rectangle(W / 2, H / 2, 404, 14).setStrokeStyle(2, 0x231a14);
+    this.load.on('progress', v => bar.width = 400 * v);
+    imgs.forEach(k => this.load.image(k, (window.IMG_SRC && IMG_SRC[k]) || ('cnoso/' + k + '.webp')));
+  }
+  create(){ this.scene.start('title'); }
+}
+
+class Title extends Phaser.Scene {
+  constructor(){ super('title'); }
+  create(){
+    GAME.scene = this;
+    const bg = this.add.image(W / 2, H / 2, 'titulo'); bg.setScale(Math.max(W / bg.width, H / bg.height));
+    this.add.rectangle(W / 2, H / 2, W, H, 0x231a14, .25);
+    st.innerHTML = ''; toastEl = null;
+    const started = S.room > 0 || Object.keys(S.seen).length > 0;
+    const v = $(`<div class="title-ui"><h1>CNOSO</h1><p class="ts">${t('sub')}</p>
+      <div class="tbtns"><button class="btn pri" data-go>${started ? t('cont') : t('play')}</button>
+      ${started ? `<button class="btn" data-reset>${t('reset')}</button>` : ''}</div>
+      <div class="tbtns sm"><button class="chip ${S.lang === 'es' ? 'on' : ''}" data-l="es">ES</button><button class="chip ${S.lang === 'en' ? 'on' : ''}" data-l="en">EN</button>
+      <button class="chip ${S.sound ? 'on' : ''}" data-snd>♪ ${t('snd')}</button>${HIST.inside ? `<button class="chip" data-back>${t('salir')}</button>` : ''}</div></div>`);
+    st.appendChild(v);
+    v.querySelector('[data-go]').onclick = () => { au(); st.innerHTML = ''; this.scene.start('palace'); };
+    const r = v.querySelector('[data-reset]'); if (r) r.onclick = () => { if (confirmCard(t('nuevo'), () => { const l = S.lang, s = S.sound; S = Object.assign({}, DEF, {lang:l, sound:s}); save(); this.scene.restart(); })); };
+    v.querySelectorAll('[data-l]').forEach(b => b.onclick = () => { S.lang = b.dataset.l; save(); this.scene.restart(); });
+    v.querySelector('[data-snd]').onclick = () => { S.sound = !S.sound; save(); this.scene.restart(); };
+    const bk = v.querySelector('[data-back]'); if (bk) bk.onclick = () => HIST.back();
+    document.getElementById('rotT').textContent = t('gira');
+  }
+}
+function confirmCard(msg, yes){ const v = card(`<p>${msg}</p><div class="act"><button class="btn" data-n>✕</button><button class="btn pri" data-y>${t('reset')}</button></div>`); v.querySelector('[data-n]').onclick = closeCard; v.querySelector('[data-y]').onclick = () => { closeCard(); yes(); }; return false; }
+
+class Palace extends Phaser.Scene {
+  constructor(){ super('palace'); }
+  create(){
+    GAME.scene = this;
+    const NR = ROOMS.length, WW = NR * HALL + 200;
+    this.WW = WW;
+    this.cameras.main.setBounds(0, 0, WW, H);
+    this.makeWall(WW);
+    this.spots = [];
+    ROOMS.forEach((R, i) => this.buildHall(R, i));
+    this.doors = ROOMS.map((R, i) => this.buildDoor(i));
+    // jugador: saltador del fresco de la Taurocatapsia, animado como marioneta
+    this.pl = this.add.container(S.x, FLOOR).setDepth(20);
+    this.shadow = this.add.ellipse(0, 0, 120, 22, 0x231a14, .28);
+    const fig = this.add.image(0, 0, 'sp_right').setOrigin(.5, 1);
+    fig.setScale(330 / fig.height);
+    this.fig = fig; this.pl.add([this.shadow, fig]);
+    this.vx = 0; this.target = null; this.face = 1; this.walkT = 0; this.stepT = 0;
+    this.cameras.main.startFollow(this.pl, true, .12, .12, 0, 120);
+    // control
+    this.keys = this.input.keyboard.addKeys({L:'LEFT', R:'RIGHT', A:'A', D:'D', SP:'SPACE', EN:'ENTER'});
+    this.input.on('pointerdown', (p, over) => { if (modal || this.joyActive || (over && over.length)) return; this.target = Phaser.Math.Clamp(p.worldX, 80, this.limitX()); });
+    this.buildHud(); this.buildJoy();
+    this.events.once('shutdown', () => { st.innerHTML = ''; toastEl = null; });
+    if (!S.seen.__intro){ S.seen.__intro = 1; save(); this.time.delayedCall(400, () => toast(t('andar'))); }
+  }
+  makeWall(WW){
+    // yeso con textura, banda de frescos arriba y suelo de losas
+    const g = this.make.graphics({x:0, y:0, add:false});
+    g.fillStyle(0xefe2c4); g.fillRect(0, 0, 256, 256);
+    for (let i = 0; i < 900; i++){ const c = Phaser.Display.Color.GetColor(222 + Math.random() * 20 | 0, 206 + Math.random() * 18 | 0, 172 + Math.random() * 18 | 0); g.fillStyle(c, .5); g.fillRect(Math.random() * 256, Math.random() * 256, 1 + Math.random() * 3, 1 + Math.random() * 3); }
+    g.generateTexture('yeso', 256, 256); g.destroy();
+    this.add.tileSprite(0, 0, WW, H, 'yeso').setOrigin(0);
+    // zócalo y suelo
+    this.add.rectangle(0, 622, WW, 12, 0x231a14).setOrigin(0);
+    this.add.rectangle(0, 634, WW, 86, 0x86301b).setOrigin(0);
+    const fl = this.add.graphics(); fl.lineStyle(2, 0x231a14, .35);
+    for (let x = 0; x < WW; x += 96){ fl.lineBetween(x, 634, x - 40, 720); }
+    fl.lineBetween(0, 676, WW, 676);
+    const b = this.textures.get('banda').getSourceImage();
+    const band = this.add.tileSprite(0, 0, WW, 62, 'banda').setOrigin(0); band.tileScaleX = band.tileScaleY = 62 / b.height;
+    this.add.rectangle(0, 62, WW, 6, 0x231a14).setOrigin(0);
+  }
+  column(x){
+    // columna minoica: fuste rojo que se estrecha hacia abajo y capitel negro
+    const g = this.add.graphics().setDepth(5);
+    g.fillStyle(0x231a14); g.fillRect(x - 46, 68, 92, 22); g.fillEllipse(x, 100, 104, 30);
+    g.fillStyle(0xb4472b); g.beginPath(); g.moveTo(x - 34, 112); g.lineTo(x + 34, 112); g.lineTo(x + 24, 622); g.lineTo(x - 24, 622); g.closePath(); g.fillPath();
+    g.lineStyle(3, 0x231a14); g.strokePath();
+    g.fillStyle(0x231a14); g.fillRect(x - 30, 612, 60, 10);
+  }
+  buildHall(R, i){
+    const x0 = i * HALL + 100, LY = LAYOUT[R.scene];
+    this.column(x0);
+    // rótulo de la sala
+    const lab = this.add.text(x0 + HALL / 2, 92, L(R.t).toUpperCase(), {fontFamily:'Palatino Linotype, Palatino, Georgia, serif', fontSize:'26px', color:'#86301b', fontStyle:'bold'}).setOrigin(.5, 0);
+    lab.setLetterSpacing && lab.setLetterSpacing(3);
+    this.add.text(x0 + HALL / 2, 124, L(R.sub), {fontFamily:'Palatino Linotype, Palatino, Georgia, serif', fontSize:'16px', color:'#231a14'}).setOrigin(.5, 0).setAlpha(.8);
+    if (!LY) return;
+    const boxes = LY.panels.map(p => {
+      const [bx, by, bw, bh] = p.box, img = this.add.image(0, 0, p.img), sc = Math.min(bw / img.width, (bh - 30) * .82 / img.height);
+      const w = img.width * sc, h = img.height * sc, cx = x0 + bx + bw / 2, top = 150 + (by - 104) * .72;
+      img.setScale(sc).setPosition(cx, top + h / 2);
+      const fr = this.add.rectangle(cx, top + h / 2, w + 12, h + 12).setStrokeStyle(5, 0x231a14); fr.setDepth(1); img.setDepth(2);
+      this.add.rectangle(cx, top + h / 2 + 4, w + 16, h + 16, 0x231a14, .18).setDepth(0);
+      const cap = this.add.text(cx, top + h + 10, L(p.cap), {fontFamily:'Palatino Linotype, Palatino, Georgia, serif', fontSize:'13px', color:'#231a14', align:'center', wordWrap:{width:Math.max(180, w)}}).setOrigin(.5, 0).setDepth(2);
+      cap.setAlpha(.85);
+      return {x:cx - w / 2, y:top, w, h, img:p.img};
+    });
+    R.spots.forEach((sp, k) => {
+      const m = LY.spots[k] || [0, .5, .5], B = boxes[m[0]] || boxes[0];
+      const x = B.x + B.w * m[1], y = B.y + B.h * m[2];
+      const key = R.id + ':' + k, seen = !!S.seen[key];
+      const ring = this.add.circle(x, y, 20, 0xdca23a, .0).setStrokeStyle(4, 0x231a14).setDepth(6);
+      const dot = this.add.circle(x, y, 13, seen ? 0x8a7a5c : 0xb4472b).setStrokeStyle(3, 0xfff8ea).setDepth(7);
+      const num = this.add.text(x + 15, y - 26, String(k + 1), {fontFamily:'Georgia, serif', fontSize:'14px', color:'#f3e8cf', backgroundColor:seen ? '#2c6a96' : '#231a14', padding:{x:5, y:1}}).setDepth(8);
+      const glow = this.tweens.add({targets:ring, scale:{from:1, to:1.9}, alpha:{from:.9, to:0}, duration:1200, repeat:-1});
+      ring.setFillStyle(0xdca23a, .0); if (seen) glow.pause();
+      dot.setInteractive({useHandCursor:true}).on('pointerdown', (p, lx, ly, ev) => { ev.stopPropagation(); if (modal) return; this.target = Phaser.Math.Clamp(x, 80, this.limitX()); this.pending = {i, k, x}; });
+      this.spots.push({i, k, x, y, key, ring, dot, num, glow, img:B.img});
+    });
+    // piezas que sirven de prueba: marca dorada opcional en la esquina del cuadro (no hace falta para avanzar)
+    boxes.forEach(B => {
+      if (!EVID[B.img]) return;
+      const x = B.x + B.w - 6, y = B.y + 8, have = !!S.ev[B.img];
+      const ring = this.add.circle(x, y, 22, 0xdca23a, 0).setStrokeStyle(4, 0xdca23a).setDepth(6);
+      const dot = this.add.circle(x, y, 18, have ? 0x8a7a5c : 0xdca23a).setStrokeStyle(3, 0x231a14).setDepth(7);
+      const num = this.add.text(x, y, '🏺', {fontSize:'18px'}).setOrigin(.5).setDepth(8);
+      const glow = this.tweens.add({targets:ring, scale:{from:1, to:1.7}, alpha:{from:.9, to:0}, duration:1500, repeat:-1}); if (have) glow.pause();
+      dot.setInteractive({useHandCursor:true}).on('pointerdown', (p, lx, ly, ev) => { ev.stopPropagation(); if (modal) return; this.target = Phaser.Math.Clamp(x, 80, this.limitX()); this.pendingEv = B.img; });
+      this.spots.push({i, k:-1, ev:true, x, y, key:'ev:' + B.img, ring, dot, num, glow, img:B.img});
+    });
+  }
+  buildDoor(i){
+    // cortina que cierra el paso a la sala siguiente hasta completar esta
+    const x = (i + 1) * HALL + 100; if (i >= ROOMS.length - 1) return null;
+    const g = this.add.graphics().setDepth(4);
+    g.fillStyle(0x1d3c58, .92); g.fillRect(x - 70, 112, 140, 510);
+    g.fillStyle(0xdca23a); for (let y = 130; y < 610; y += 34) g.fillCircle(x, y, 6);
+    g.lineStyle(4, 0x231a14); g.strokeRect(x - 70, 112, 140, 510);
+    if (S.done[ROOMS[i].id]) g.setAlpha(0);
+    return g;
+  }
+  limitX(){ let r = 0; while (r < ROOMS.length - 1 && S.done[ROOMS[r].id]) r++; return (r + 1) * HALL + 100 - 90; }
+  roomAt(x){ return Phaser.Math.Clamp(Math.floor((x - 100) / HALL), 0, ROOMS.length - 1); }
+  buildHud(){
+    st.innerHTML = ''; toastEl = null;
+    const top = $(`<div class="top">${HIST.inside ? `<button class="chip" data-back>💾 ${t('salir')}</button>` : `<button class="chip" data-home>⌂</button>`}
+      <span class="rinfo"><b data-rn></b><small data-rs></small></span><span class="sp"></span>
+      <button class="chip" data-ev>🏺 ${t('pruebas')} <span data-evn></span></button></div>`);
+    st.appendChild(top);
+    const bk = top.querySelector('[data-back]'); if (bk) bk.onclick = () => { S.x = this.pl.x; HIST.back(); };
+    const hm = top.querySelector('[data-home]'); if (hm) hm.onclick = () => { S.x = this.pl.x; save(); this.scene.start('title'); };
+    top.querySelector('[data-ev]').onclick = () => this.readingsCard(false);
+    this.hudRn = top.querySelector('[data-rn]'); this.hudRs = top.querySelector('[data-rs]'); this.hudEv = top.querySelector('[data-evn]');
+    this.look = $(`<button class="btn pri lookbtn">👁 ${t('mirar')}</button>`); st.appendChild(this.look);
+    this.look.onclick = () => this.tryLook(true);
+    this.refreshHud();
+  }
+  refreshHud(){
+    const i = this.roomAt(this.pl.x), R = ROOMS[i], n = R.spots.length, s = R.spots.filter((_, k) => S.seen[R.id + ':' + k]).length;
+    this.hudRn.textContent = L(R.t); this.hudRs.textContent = `${t('sala')} ${i + 1} ${t('de')} ${ROOMS.length} · ${s}/${n}${S.done[R.id] ? ' · ✓' : ''}`;
+    this.hudEv.textContent = Object.keys(S.ev).length + '/' + Object.keys(EVID).length;
+  }
+  buildJoy(){
+    // joystick tipo DualShock (solo horizontal) para pantallas táctiles
+    if (!matchMedia('(hover: none)').matches) return;
+    const base = this.add.circle(150, 590, 64, 0x231a14, .25).setScrollFactor(0).setDepth(40).setStrokeStyle(3, 0x231a14, .5);
+    const knob = this.add.circle(150, 590, 30, 0xf3e8cf, .85).setScrollFactor(0).setDepth(41).setStrokeStyle(3, 0x231a14);
+    this.joy = {base, knob, id:null, dx:0};
+    this.input.addPointer(2);
+    this.input.on('pointerdown', p => { if (modal) return; if (p.x < 330 && p.y > 420){ this.joy.id = p.id; this.joyActive = true; } });
+    this.input.on('pointermove', p => { if (p.id !== this.joy.id) return; const dx = Phaser.Math.Clamp(p.x - 150, -56, 56); knob.x = 150 + dx; this.joy.dx = dx / 56; });
+    this.input.on('pointerup', p => { if (p.id !== this.joy.id) return; this.joy.id = null; this.joy.dx = 0; knob.x = 150; this.time.delayedCall(30, () => this.joyActive = false); });
+  }
+  nearSpot(){ let best = null, bd = 150; for (const s of this.spots){ if (s.i !== this.roomAt(this.pl.x)) continue; const d = Math.abs(s.x - this.pl.x); if (d < bd){ bd = d; best = s; } } return best; }
+  tryLook(user){
+    if (modal) return;
+    const s = this.nearSpot();
+    if (s){ this.openSpot(s); return; }
+    if (user) toast(t('andar'));
+  }
+  openSpot(s){
+    if (s.ev){ this.openEvidence(s); return; }
+    const R = ROOMS[s.i], sp = R.spots[s.k];
+    SFX.look();
+    const first = !S.seen[s.key];
+    S.seen[s.key] = 1; S.x = this.pl.x; save();
+    s.dot.setFillStyle(0x8a7a5c); s.num.setBackgroundColor('#2c6a96'); s.glow.pause(); s.ring.setAlpha(0);
+    const v = card(`<h2>${L(sp.t)}</h2><div class="sub">${imgCap(s.img)}</div>${L(sp.p).map(x => `<p>${x}</p>`).join('')}
+      <div class="act">${fichaBtn(sp.ficha)}<button class="btn pri" data-c>${t('seguir')}</button></div>`);
+    bindFicha(v);
+    v.querySelector('[data-c]').onclick = () => { closeCard(); if (first) this.afterSpot(s); };
+    this.refreshHud();
+  }
+  afterSpot(s){
+    const R = ROOMS[s.i]; if (!S.done[R.id] && R.spots.every((_, k) => S.seen[R.id + ':' + k])) this.time.delayedCall(250, () => this.askRoom(s.i));
+  }
+  openEvidence(s){
+    const first = !S.ev[s.img];
+    S.ev[s.img] = 1; S.x = this.pl.x; save(); SFX.ev();
+    s.dot.setFillStyle(0x8a7a5c); s.glow.pause(); s.ring.setAlpha(0); this.refreshHud();
+    const ls = EVID[s.img].map(k => `<b>${L(LECT[k])}</b> (${evCount(k)}/${evTotal(k)})`).join(' · ');
+    const v = card(`<h2>🏺 ${first ? t('prueba') : imgCap(s.img)}</h2>${first ? `<p>${imgCap(s.img)}</p>` : ''}<p>${t('sostiene')}: ${ls}.</p>
+      <div class="act"><button class="btn" data-l>${t('verLect')}</button><button class="btn pri" data-c>${t('seguir')}</button></div>`);
+    v.querySelector('[data-c]').onclick = closeCard;
+    v.querySelector('[data-l]').onclick = () => this.readingsCard(false);
+  }
+  askRoom(i){
+    const R = ROOMS[i], qs = R.qs || []; let n = 0, okN = 0;
+    const next = () => {
+      if (n >= qs.length){ S.done[R.id] = 1; save(); this.refreshHud();
+        const d = this.doors[i]; if (d) this.tweens.add({targets:d, alpha:0, duration:700});
+        toast(t('yaSala')); if (i === ROOMS.length - 1) this.time.delayedCall(700, () => this.finale()); return; }
+      const q = qs[n], opts = shuffle(L(q.o).map((s, j) => ({s, ok:j === 0})));
+      const v = card(`<div class="sub">${t('preg')} · ${n + 1}/${qs.length}</div><h2>${L(q.q)}</h2><div class="opts">${opts.map((o, j) => `<button class="btn opt" data-o="${j}">${o.s}</button>`).join('')}</div><div class="fb"></div>`);
+      v.querySelectorAll('[data-o]').forEach(b => b.onclick = () => {
+        const o = opts[+b.dataset.o]; v.querySelectorAll('[data-o]').forEach(x => x.disabled = true);
+        const qk = R.id + ':' + n, fb = v.querySelector('.fb');
+        if (o.ok){ SFX.ok(); b.classList.add('pri'); okN++; if (!S.qok[qk]){ S.qok[qk] = 1; save(); HIST.xp(10); } fb.innerHTML = `<p><b>✓ ${t('ok')}</b></p>`; }
+        else { SFX.no(); fb.innerHTML = `<p><b>✕ ${t('no')}:</b> ${opts.find(x => x.ok).s}</p>`; }
+        fb.insertAdjacentHTML('beforeend', `<div class="act"><button class="btn pri" data-n>${t('seguir')}</button></div>`);
+        fb.querySelector('[data-n]').onclick = () => { closeCard(); n++; next(); };
+      });
+    };
+    next();
+  }
+  readingsCard(final, then){
+    const rows = ORDER.map(k => {
+      const have = evCount(k), open = have >= NEED, F = FINALES[k];
+      const miss = Object.keys(EVID).filter(img => EVID[img].includes(k) && !S.ev[img]).map(imgCap);
+      return `<div class="lect ${open ? 'open' : ''}"><h3>${open ? '🔓' : '🔒'} ${L(LECT[k])} <small>${have}/${evTotal(k)}</small></h3>
+        ${open ? `<p class="sm">${L(F.d)}</p>` : `<p class="sm">${t('cerrada')}. ${t('faltan')}: ${miss.join('; ')}.</p>`}</div>`;
+    }).join('');
+    const v = card(`<h2>${final ? t('fiesta') : t('lect')}</h2>${final ? `<p>${t('fiestaP')}</p>` : ''}<p class="sm">${t('lectP')}</p>${rows}
+      <div class="act">${final ? `<button class="btn" data-k>${t('irClasico')}</button>` : ''}<button class="btn pri" data-c>${t('cerrar')}</button></div>`, 'wide');
+    v.querySelector('[data-c]').onclick = () => { closeCard(); if (then) then(); };
+    const k = v.querySelector('[data-k]'); if (k) k.onclick = () => { save(); location.href = 'cnoso.html'; };
+  }
+  finale(){ S.fin = true; save(); SFX.ev(); this.readingsCard(true); }
+  update(time, dt){
+    const d = dt / 1000, K = this.keys;
+    let dir = 0;
+    if (!modal){
+      if (K.L.isDown || K.A.isDown) dir = -1; else if (K.R.isDown || K.D.isDown) dir = 1;
+      if (this.joy && Math.abs(this.joy.dx) > .2) dir = this.joy.dx;
+      if (Phaser.Input.Keyboard.JustDown(K.SP) || Phaser.Input.Keyboard.JustDown(K.EN)) this.tryLook(true);
+      if (dir) { this.target = null; this.pending = null; this.pendingEv = null; }
+      else if (this.target != null){ const dx = this.target - this.pl.x; if (Math.abs(dx) < 8){ this.target = null; if (this.pendingEv){ const img = this.pendingEv; this.pendingEv = null; const s = this.spots.find(z => z.ev && z.img === img); if (s && Math.abs(s.x - this.pl.x) < 150) this.openSpot(s); } if (this.pending){ const p = this.pending; this.pending = null; const s = this.spots.find(z => z.i === p.i && z.k === p.k); if (s && Math.abs(s.x - this.pl.x) < 150) this.openSpot(s); } } else dir = Math.sign(dx); }
+    }
+    const lim = this.limitX(), sp = 330;
+    const nx = Phaser.Math.Clamp(this.pl.x + dir * sp * d, 80, lim);
+    if (dir > 0 && this.pl.x >= lim - 1 && !modal){ if (!this.blockT || time - this.blockT > 2500){ this.blockT = time; toast(t('falta')); } }
+    const moving = Math.abs(nx - this.pl.x) > .1;
+    this.pl.x = nx;
+    if (dir) this.face = dir > 0 ? 1 : -1;
+    this.fig.setFlipX(this.face < 0);
+    // marioneta: balanceo y paso
+    if (moving){ this.walkT += d * 9; this.stepT -= d; if (this.stepT <= 0){ this.stepT = .32; SFX.step(); } }
+    else this.walkT += (Math.round(this.walkT / Math.PI) * Math.PI - this.walkT) * Math.min(1, d * 8);
+    this.fig.y = -Math.abs(Math.sin(this.walkT)) * 10; this.fig.rotation = Math.sin(this.walkT) * .05;
+    this.shadow.scaleX = 1 - Math.abs(Math.sin(this.walkT)) * .15;
+    // botón Mirar visible cerca de una marca
+    const near = this.nearSpot();
+    this.look.classList.toggle('on', !!near && !modal);
+    if ((this.hudT = (this.hudT || 0) + d) > .25){ this.hudT = 0; this.refreshHud(); if (moving){ S.x = this.pl.x; } }
+    if ((this.saveT = (this.saveT || 0) + d) > 3){ this.saveT = 0; S.x = this.pl.x; save(); }
+  }
+}
+
+addEventListener('pagehide', () => { if (GAME.scene && GAME.scene.pl) S.x = GAME.scene.pl.x; save(); });
+document.getElementById('rotT').textContent = t('gira');
+new Phaser.Game({ type:Phaser.AUTO, parent:'game', width:W, height:H, backgroundColor:'#2a1d14',
+  scale:{ mode:Phaser.Scale.FIT, autoCenter:Phaser.Scale.CENTER_BOTH }, input:{ activePointers:3 },
+  scene:[Boot, Title, Palace] });
+
+</script>
+<div id="alacopy" role="contentinfo" style="position:fixed;right:max(8px,env(safe-area-inset-right));bottom:max(6px,env(safe-area-inset-bottom));z-index:2147482000;pointer-events:none;user-select:none;-webkit-user-select:none;font:500 11px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif;color:#fff;opacity:.6;text-shadow:0 1px 2px #000,0 0 4px #000;white-space:nowrap">© Diseñado y Creado por Alejandro Leiva Arcas</div>
+<script id="alacopy-en">(function(){try{var l=null;try{l=localStorage.getItem("historiapp.lang")}catch(e){}var en=l?l==="en":/^en/i.test(document.documentElement.lang||"");if(!en&&/-en\.html$/.test(location.pathname))en=true;var d=document.getElementById("alacopy");if(en&&d)d.textContent="© Designed and created by Alejandro Leiva Arcas"}catch(e){}})();</script>
+
+</body>
+</html>
