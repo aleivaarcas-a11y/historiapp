@@ -311,7 +311,8 @@ const $ = id => document.getElementById(id);
 const L = o => (o && (o[LANG] || o.es)) || '';
 const rnd = n => Math.floor(Math.random() * n);
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = rnd(i + 1);[a[i], a[j]] = [a[j], a[i]]; } return a; };
-const TURBO = /turbo/.test(location.hash) ? .04 : 1; // solo para pruebas automáticas
+let TURBO = /turbo/.test(location.hash) ? .04 : 1; // .04 en pruebas automáticas y mientras se avanza el turno de la máquina
+const TURBO0 = TURBO;
 const sleep = ms => new Promise(r => setTimeout(r, ms * TURBO));
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
@@ -925,10 +926,22 @@ function renderTop() {
 function famSwatch(k, sz = 30) { const f = FAMS[FI[k]]; return `<span class="sw" style="background:${f.col};width:${sz}px;height:${sz}px"><img src="${glyphURL(k)}" alt=""></span>`; }
 
 // ------------------------------------------------------------------ turno
+// Botón «Avanzar turno de la máquina» (18-10-2026): acelera la máquina hasta que vuelve a jugar una persona.
+function skipBtn(p) {
+  let b = document.getElementById('skipBot');
+  if (!b) {
+    b = document.createElement('button'); b.id = 'skipBot';
+    b.style.cssText = 'position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:9999;min-height:48px;padding:10px 22px;border-radius:24px;border:2px solid #f0d58c;background:#3a2a1a;color:#fff6d8;font:600 16px system-ui,sans-serif;box-shadow:0 4px 14px rgba(0,0,0,.45);cursor:pointer';
+    b.onclick = () => { TURBO = .04; b.style.display = 'none'; const c = document.querySelector('#qov.show #qrow button'); if (c) c.click(); };
+    document.body.appendChild(b);
+  }
+  b.textContent = LANG === 'es' ? '⏩ Avanzar turno de la máquina' : '⏩ Skip the computer\'s turn';
+  b.style.display = p.bot && TURBO === TURBO0 && G.players.some(o => !o.bot) ? 'block' : 'none';
+}
 async function turnStart() {
   if (!G || G.over) return;
   G.phase = 'roll'; renderPlayers(); saveNow(); S3.clearDest(); S3.focusPlayer(G.turn, G.players);
-  const p = cur();
+  const p = cur(); if (!p.bot) TURBO = TURBO0; skipBtn(p);
   setMsg(t('turnOf')(esc(p.name)) + (hasAll(p) && p.pos !== 0 ? `<br><small>${t('needHub')}</small>` : ''));
   if (p.bot) { setActs([]); await sleep(FAST() ? 350 : 800); doRoll(); }
   else setActs([btn('🎲 ' + t('roll'), 'gold big', doRoll)]);
@@ -958,7 +971,7 @@ async function move(id) {
 }
 async function landed(n) {
   const p = cur();
-  if (n.type === 'roll') { sfx.wedge(); toast(t('rollAgain'), '', 1100); await sleep(900); return turnStart(); }
+  if (n.type === 'roll') { sfx.wedge(); toast(t('rollAgain'), '', 1100); await sleep(900); return botTope(p) ? botCede(p) : turnStart(); }
   let fam = n.fam, final = false;
   if (n.type === 'hub') {
     if (hasAll(p)) { final = true; fam = await chooseFinalCat(p); }
@@ -969,11 +982,16 @@ async function landed(n) {
   if (ok) {
     if (final) return win(p);
     if (n.type === 'hq' && !p.w[fam]) { p.w[fam] = true; S3.setWedges(G.players); renderPlayers(); sfx.wedge(); toast(t('wedgeGot')(esc(p.name), famName(fam)), '', 1700); await sleep(1300); }
-    return turnStart();
+    return botTope(p) ? botCede(p) : turnStart();
   }
   nextPlayer();
 }
-function nextPlayer() { G.turn = (G.turn + 1) % G.players.length; if (G.turn === 0) G.round++; G.turns++; turnStart(); }
+// Tope de la máquina (18-10-2026): tras BOT_MAX jugadas seguidas (aciertos o casillas de «tira otra vez») cede el turno,
+// para que una racha de la máquina no deje a los jugadores mirando la pantalla. Solo se aplica si hay alguna persona en la partida.
+const BOT_MAX = 3;
+function botTope(p) { if (!p.bot || !G.players.some(o => !o.bot)) return false; G.chain = (G.chain || 0) + 1; return G.chain >= BOT_MAX; }
+async function botCede(p) { toast(LANG === 'es' ? 'La máquina cede el turno' : 'The computer passes the turn', LANG === 'es' ? `${esc(p.name)} ya ha jugado ${BOT_MAX} veces seguidas` : `${esc(p.name)} has played ${BOT_MAX} times in a row`, 1500); await sleep(1200 * TURBO); nextPlayer(); }
+function nextPlayer() { G.chain = 0; G.turn = (G.turn + 1) % G.players.length; if (G.turn === 0) G.round++; G.turns++; turnStart(); }
 
 // ------------------------------------------------------------------ elección de categoría
 function catPicker(title, exclude = []) {
@@ -1064,6 +1082,7 @@ function nearestMissingHQ(p, id) { let m = 99; N.forEach((n, j) => { if (n.type 
 
 // ------------------------------------------------------------------ final
 function win(p) {
+  TURBO = TURBO0; { const sb = document.getElementById('skipBot'); if (sb) sb.style.display = 'none'; }
   G.over = true; G.phase = 'over'; LS.del('partida'); lastSnap = null; renderPlayers(); sfx.fanfare(); $('act').classList.remove('show');
   let xp = 0; if (!p.bot) xp += addXP(G.players.some(o => o.bot) ? 100 : 30); else if (G.players.some(o => !o.bot)) xp += addXP(30);
   const c = $('dlgCard');
