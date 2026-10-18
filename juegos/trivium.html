@@ -986,12 +986,11 @@ async function landed(n) {
   }
   nextPlayer();
 }
-// Tope de la máquina (18-10-2026): tras BOT_MAX jugadas seguidas (aciertos o casillas de «tira otra vez») cede el turno,
-// para que una racha de la máquina no deje a los jugadores mirando la pantalla. Solo se aplica si hay alguna persona en la partida.
-const BOT_MAX = 3;
-function botTope(p) { if (!p.bot || !G.players.some(o => !o.bot)) return false; G.chain = (G.chain || 0) + 1; return G.chain >= BOT_MAX; }
-async function botCede(p) { toast(LANG === 'es' ? 'La máquina cede el turno' : 'The computer passes the turn', LANG === 'es' ? `${esc(p.name)} ya ha jugado ${BOT_MAX} veces seguidas` : `${esc(p.name)} has played ${BOT_MAX} times in a row`, 1500); await sleep(1200 * TURBO); nextPlayer(); }
-function nextPlayer() { G.chain = 0; G.turn = (G.turn + 1) % G.players.length; if (G.turn === 0) G.round++; G.turns++; turnStart(); }
+// Tope de la máquina (18-10-2026): en cada turno de la máquina se sortea un tope de 1 a 5 jugadas seguidas (aciertos o casillas
+// de «tira otra vez»); al alcanzarlo cede el turno, para que una racha no deje a los jugadores mirando. Solo si hay alguna persona.
+function botTope(p) { if (!p.bot || !G.players.some(o => !o.bot)) return false; if (!G.cap) G.cap = 1 + rnd(5); G.chain = (G.chain || 0) + 1; return G.chain >= G.cap; }
+async function botCede(p) { toast(LANG === 'es' ? 'La máquina cede el turno' : 'The computer passes the turn', '', 1500); await sleep(1200); nextPlayer(); }
+function nextPlayer() { G.chain = 0; G.cap = 0; G.turn = (G.turn + 1) % G.players.length; if (G.turn === 0) G.round++; G.turns++; turnStart(); }
 
 // ------------------------------------------------------------------ elección de categoría
 function catPicker(title, exclude = []) {
