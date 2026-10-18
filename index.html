@@ -1181,7 +1181,8 @@ async function renderTema(num){
     <div class="section-title">${t("badges")}</div><div class="badges" id="bd"></div>
     <p style="font-size:12px;color:var(--muted);margin:0 4px">${t("badgeHow")}</p></main>`;
   const g=document.getElementById("modes");
-  for(const gm of GAMES.filter(x=>x.temas.includes(+num))){ const gb=document.createElement("button"); gb.className="mode wide game"; gb.innerHTML=`<img class="gthumb" src="${gm.img}" alt="" loading="lazy" width="640" height="360"><em class="ggen">${esc(L(gm.gen))}</em><b>${esc(L(gm.title))}</b><span>${esc(L(gm.sub))}</span>`; gb.onclick=()=>{ location.href=gm.f; }; g.appendChild(gb); }
+  /* 18-10-2026: los juegos ya no se muestran dentro de cada tema; solo en el apartado Juegos. Para recuperarlos, quitar el if(false) de la línea siguiente */
+  if(false) for(const gm of GAMES.filter(x=>x.temas.includes(+num))){ const gb=document.createElement("button"); gb.className="mode wide game"; gb.innerHTML=`<img class="gthumb" src="${gm.img}" alt="" loading="lazy" width="640" height="360"><em class="ggen">${esc(L(gm.gen))}</em><b>${esc(L(gm.title))}</b><span>${esc(L(gm.sub))}</span>`; gb.onclick=()=>{ location.href=gm.f; }; g.appendChild(gb); }
   for(const m of MODES){
     const tot=modeTotal(tema,m), pct=modePct(tema,m);
     if(m==="podcast" && !tot) continue;
