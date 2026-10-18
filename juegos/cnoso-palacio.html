@@ -5,6 +5,166 @@
 <!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
 <meta name="author" content="Alejandro Leiva Arcas">
 <meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
+<!--HAPP-GUARDAR-->
+<script>window.HAPP_GS={volver:'../#t3', orient:'h', pos:{top:'max(8px, env(safe-area-inset-top))', left:'calc(50% + 36px)'}, visible:function(){return !!document.querySelector('iframe.pugframe')}};</script>
+<script>
+/* Guardar y salir a Historiapp. Común a todos los juegos de la app; lo inserta guardar_salir.py.
+   Configuración en window.HAPP_GS = { volver, pos, fijo, visible }.
+   - El juego define window.HAPP_GUARDAR() con lo que haya que guardar de la partida en curso.
+   - Se guarda al pulsar el botón y también al salir de la página por cualquier otra vía (pagehide y
+     visibilitychange), de modo que el progreso no se pierde aunque se cierre la app.
+   - window.HAPP_SALIR(href) guarda, avisa y vuelve a Historiapp; los botones propios del juego lo usan. */
+(function () {
+  'use strict';
+  var C = window.HAPP_GS || {};
+
+  /* ---------- Sonido y pausa (revisión del 13-10-2026) ----------
+     - Se anotan todos los AudioContext que crea el juego para poder despertarlos y dormirlos.
+     - En iPhone el sonido solo arranca dentro de un toque «completo» (touchend o click), y tras salir de la app
+       el contexto queda «interrumpido» y el juego ya no suena: se reanuda en cualquier toque posterior.
+     - Con audioSession 'playback' (iPhone con iOS 16.4 o posterior) el juego suena aunque el móvil esté en silencio.
+     - Al ocultar la app (bloquear el móvil, cambiar de app) se pausa el juego (HAPP_PAUSA o el evento blur que ya
+       escuchan los juegos), se duerme el sonido y se paran las músicas; al volver, se reanudan. */
+  var ctxs = [], oculto = false, dormidos = [], parados = [];
+  try {
+    var AC0 = window.AudioContext || window.webkitAudioContext;
+    if (AC0 && !AC0.__happ) {
+      var ACW = function (o) { var c = o === undefined ? new AC0() : new AC0(o); ctxs.push(c); return c; };
+      ACW.prototype = AC0.prototype; ACW.__happ = true;
+      window.AudioContext = ACW; if (window.webkitAudioContext) window.webkitAudioContext = ACW;
+    }
+  } catch (e) {}
+  try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) {}
+  function despertar() {
+    if (oculto) return;
+    ctxs.forEach(function (c) { try { if (c.state === 'suspended' || c.state === 'interrupted') c.resume(); } catch (e) {} });
+  }
+  ['touchend', 'click', 'pointerup', 'keydown'].forEach(function (ev) { addEventListener(ev, despertar, { capture: true, passive: true }); });
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'hidden') {
+      if (oculto) return; oculto = true;
+      try { if (typeof window.HAPP_PAUSA === 'function') window.HAPP_PAUSA(); else window.dispatchEvent(new Event('blur')); } catch (e) {}
+      ctxs.forEach(function (c) { try { if (c.state === 'running') { c.suspend(); dormidos.push(c); } } catch (e) {} });
+      try { document.querySelectorAll('audio,video').forEach(function (m) { if (!m.paused) { try { m.pause(); parados.push(m); } catch (e) {} } }); } catch (e) {}
+    } else {
+      oculto = false;
+      dormidos.splice(0).forEach(function (c) { try { c.resume(); } catch (e) {} });
+      parados.splice(0).forEach(function (m) { try { var r = m.play(); if (r && r.catch) r.catch(function () {}); } catch (e) {} });
+    }
+  });
+  var lang = null;
+  try { lang = localStorage.getItem('historiapp.lang'); } catch (e) {}
+  if (lang !== 'es' && lang !== 'en') lang = String(document.documentElement.lang || navigator.language || 'es').slice(0, 2) === 'en' ? 'en' : 'es';
+  var TX = lang === 'en'
+    ? { b: 'Save & exit', a: 'Save the game and go back to Historiapp', ok: 'Game saved' }
+    : { b: 'Guardar y salir', a: 'Guardar la partida y volver a Historiapp', ok: 'Partida guardada' };
+  window.HAPP_GS_TX = TX;
+  function guardar() { try { if (typeof window.HAPP_GUARDAR === 'function') window.HAPP_GUARDAR(); } catch (e) {} }
+  var yendo = false, aviso = null;
+  function salir(href) {
+    if (yendo) return; yendo = true;
+    guardar();
+    if (aviso) aviso.classList.add('on');
+    var v = href || (typeof C.volver === 'function' ? C.volver() : C.volver) || '../';
+    setTimeout(function () { location.href = v; }, 500);
+  }
+  window.HAPP_SALIR = salir;
+  addEventListener('pagehide', guardar);
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') guardar(); });
+  var css = '.hgs{position:fixed;z-index:2147482999;display:none;align-items:center;gap:6px;min-height:40px;margin:0;padding:0 13px;border-radius:20px;' +
+    'background:rgba(12,10,8,.76);color:#fff;border:1px solid rgba(255,255,255,.5);font:600 13px/1 system-ui,-apple-system,"Segoe UI",sans-serif;' +
+    'box-shadow:0 3px 10px rgba(0,0,0,.35);cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;white-space:nowrap}' +
+    '.hgs.on{display:inline-flex}.hgs:active{transform:translateY(1px)}' +
+    '.hgs-ok{position:fixed;left:50%;top:42%;transform:translate(-50%,-50%) scale(.9);opacity:0;z-index:2147483003;pointer-events:none;padding:12px 22px;border-radius:24px;' +
+    'background:#EDAB00;color:#1b1406;font:700 17px/1 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 6px 18px rgba(0,0,0,.45);transition:opacity .2s,transform .2s}' +
+    '.hgs-ok.on{opacity:1;transform:translate(-50%,-50%) scale(1)}';
+  function build() {
+    var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
+    aviso = document.createElement('div'); aviso.className = 'hgs-ok'; aviso.setAttribute('role', 'status'); aviso.textContent = '✓ ' + TX.ok; document.body.appendChild(aviso);
+    if (C.fijo === false) return;
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'hgs';
+    b.innerHTML = '<span aria-hidden="true">💾</span><span>' + TX.b + '</span>'; b.setAttribute('aria-label', TX.a); b.title = TX.a;
+    var pos = C.pos || { top: 'max(8px, env(safe-area-inset-top))', right: 'max(10px, env(safe-area-inset-right))' };
+    for (var k in pos) b.style[k] = pos[k];
+    ['pointerdown', 'touchstart', 'mousedown'].forEach(function (ev) { b.addEventListener(ev, function (e) { e.stopPropagation(); }, { passive: true }); });
+    b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); salir(); });
+    document.body.appendChild(b);
+    var ver = function () { var on = true; try { on = !C.visible || !!C.visible(); } catch (e) {} b.classList.toggle('on', on); };
+    ver(); setInterval(ver, 300);
+  }
+  if (document.body) build(); else document.addEventListener('DOMContentLoaded', build);
+
+  /* ---------- Giro de pantalla (13-10-2026) ----------
+     En algunos Android e iPhone el aviso de girar desaparece pero el juego queda mal dibujado o en blanco:
+     el navegador lanza el evento resize antes de dar las medidas definitivas y el juego se dibuja con las viejas.
+     1. Se limita la densidad de píxeles a 2 (en pantallas de 3 los lienzos ocupan más del doble de memoria
+        y algunos móviles recargan o cuelgan la página al girar).
+     2. Tras cada giro se vuelve a avisar al juego del cambio de tamaño cuando las medidas ya son las buenas.
+     3. Si el juego se abrió en la orientación equivocada (C.orient 'h' o 'v'), al ponerlo en la buena se recarga
+        una vez, con la partida guardada antes, para que arranque con las medidas correctas. */
+  try { if ((window.devicePixelRatio || 1) > 2) Object.defineProperty(window, 'devicePixelRatio', { get: function () { return 2; }, configurable: true }); } catch (e) {}
+  var portrait = function () { return window.innerHeight > window.innerWidth; };
+  var buena = function () { return !C.orient || (C.orient === 'h' ? !portrait() : portrait()); };
+  var malAlCargar = !!C.orient && !buena();
+  var avisando = false, giroT = [], ultimo = '';
+  function avisar() {
+    var m = window.innerWidth + 'x' + window.innerHeight;
+    avisando = true;
+    try { window.dispatchEvent(new Event('resize')); } catch (e) {}
+    try { if (window.visualViewport) window.visualViewport.dispatchEvent(new Event('resize')); } catch (e) {}
+    avisando = false;
+    ultimo = m;
+  }
+  function recargarSiHaceFalta() {
+    if (!malAlCargar || !buena()) return;
+    var k = 'happ.giro.' + location.pathname, ahora = Date.now(), antes = 0;
+    try { antes = +sessionStorage.getItem(k) || 0; } catch (e) {}
+    if (ahora - antes < 20000) return;
+    try { sessionStorage.setItem(k, String(ahora)); } catch (e) {}
+    malAlCargar = false; guardar(); location.reload();
+  }
+  function giro() {
+    if (avisando) return;
+    giroT.forEach(clearTimeout);
+    giroT = [120, 350, 700, 1200].map(function (t, i, a) {
+      return setTimeout(function () { avisar(); if (i === a.length - 1) recargarSiHaceFalta(); }, t);
+    });
+  }
+  addEventListener('orientationchange', giro);
+  addEventListener('resize', function () { if (!avisando) giro(); });
+  try { if (screen.orientation && screen.orientation.addEventListener) screen.orientation.addEventListener('change', giro); } catch (e) {}
+  addEventListener('pageshow', function (e) { if (e.persisted) giro(); });
+
+  /* ---------- Orientación bloqueada y zoom (13-10-2026) ----------
+     4. Historiapp instalada en Android hereda la orientación vertical de la app: aunque el alumno gire el móvil,
+        la pantalla no gira y el aviso de girar no se va. Dentro de la app instalada, el juego pide su orientación
+        con screen.orientation.lock (Android lo permite en apps instaladas; iPhone no lo necesita).
+     5. iPhone agranda la letra al poner el móvil en horizontal y amplía la pantalla al tocar un campo de texto
+        con letra de menos de 16 px; como los juegos no dejan pellizcar, la pantalla se quedaba grande.
+        Se fija el tamaño de letra, los campos pasan a 16 px y el zoom vuelve a 1 al salir del campo o al girar. */
+  function bloquear() {
+    if (!C.orient) return;
+    try { if (screen.orientation && screen.orientation.lock) screen.orientation.lock(C.orient === 'h' ? 'landscape' : 'portrait').catch(function () {}); } catch (e) {}
+  }
+  bloquear();
+  addEventListener('pointerdown', bloquear, { capture: true, passive: true, once: true });
+  addEventListener('pageshow', bloquear);
+  addEventListener('pagehide', function () { try { screen.orientation.unlock(); } catch (e) {} });
+  var vm = document.querySelector('meta[name="viewport"]'), vmBase = vm ? vm.getAttribute('content') : '';
+  function sinZoom() {
+    if (!vm || (window.visualViewport && Math.abs(window.visualViewport.scale - 1) < 0.01)) return;
+    vm.setAttribute('content', vmBase.replace(/,?\s*maximum-scale=[^,]*/g, '') + ',maximum-scale=1');
+    setTimeout(function () { vm.setAttribute('content', vmBase); }, 400);
+  }
+  document.addEventListener('focusout', function (e) { var t = e.target && e.target.tagName; if (t === 'INPUT' || t === 'SELECT' || t === 'TEXTAREA') setTimeout(sinZoom, 60); }, true);
+  addEventListener('orientationchange', function () { setTimeout(sinZoom, 400); });
+  var st2 = document.createElement('style');
+  st2.textContent = 'html{-webkit-text-size-adjust:100%!important;text-size-adjust:100%!important}@media (pointer:coarse){input,select,textarea{font-size:16px!important}}';
+  (document.head || document.documentElement).appendChild(st2);
+})();
+</script>
+<!--/HAPP-GUARDAR-->
+
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#2a1d14">
@@ -175,6 +335,16 @@ button{font-family:var(--serif);cursor:pointer;-webkit-appearance:none;appearanc
 .lect h3 small{font-size:13px;color:var(--negro);opacity:.7;margin-left:6px}
 .opt{text-align:left;width:100%}
 .fb p{margin:8px 0 0}
+/* diálogos del guion (v3): retrato recortado del fresco a la izquierda y caja de texto del Cnoso clásico (.dlg) */
+.dlgw{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,12,6,0) 35%,rgba(20,12,6,.6));z-index:7}
+.dlgw .por{position:absolute;left:2%;bottom:3%;height:min(66%,470px);max-width:24%;object-fit:contain;object-position:bottom;filter:drop-shadow(10px 14px 14px rgba(0,0,0,.6));pointer-events:none}
+.dlgw .por.in{animation:porIn .45s ease-out}
+@keyframes porIn{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:none}}
+.dlgw .skip{position:absolute;right:1.4%;top:5.2%}
+#st:has(.dlgw) .top,#st:has(.dlgw) .lookbtn{visibility:hidden}
+.dlgw .dlg .ops .opt{background:#f6ecd6;color:var(--negro)}
+@media (max-height:430px){.dlgw .dlg{padding:10px 16px 12px;min-height:30%}.dlgw .dlg .tx{font-size:16px;line-height:1.35;min-height:2.7em}.dlgw .dlg .nm{font-size:14px;top:-15px}.dlgw .por{height:72%}}
+@media (prefers-reduced-motion:reduce){.dlgw .por.in{animation:none}}
 </style>
 </head>
 <body>
@@ -183,6 +353,1811 @@ button{font-family:var(--serif);cursor:pointer;-webkit-appearance:none;appearanc
 <div class="rot" id="rot"><b>📱</b><span id="rotT">Gira el dispositivo para jugar</span></div>
 <script src="lib/phaser.min.js"></script>
 <script>
+
+/* Recompensas por nivel de Historiapp (14-10-2026). Fuente única: recompensas.json
+   (tabla de RECOMPENSAS-POR-NIVEL.md). Cada juego la incrusta con su build:
+   el marcador [
+ {
+  "lv": 2,
+  "game": "cuadrigas",
+  "k": "poner_nombre_a_los_caballos",
+  "es": "Poner nombre a los caballos",
+  "en": "Name your horses"
+ },
+ {
+  "lv": 2,
+  "game": "historiapp-arena",
+  "k": "leg_tutankamon",
+  "es": "Leyenda Tutankamón",
+  "en": "Tutankhamun legend"
+ },
+ {
+  "lv": 3,
+  "game": "kleos",
+  "k": "calipatira",
+  "es": "Calipátira",
+  "en": "Kallipateira"
+ },
+ {
+  "lv": 3,
+  "game": "historiapp-arena",
+  "k": "tt_hondero",
+  "es": "Hondero en las torres",
+  "en": "Slinger in the towers"
+ },
+ {
+  "lv": 4,
+  "game": "gladiatura",
+  "k": "apodo_de_arena",
+  "es": "Apodo de arena",
+  "en": "Arena nickname"
+ },
+ {
+  "lv": 5,
+  "game": "kleos",
+  "k": "ramses_ii",
+  "es": "Ramsés II",
+  "en": "Ramesses II"
+ },
+ {
+  "lv": 5,
+  "game": "historiapp-arena",
+  "k": "marco_bronce",
+  "es": "Marco de bronce",
+  "en": "Bronze frame"
+ },
+ {
+  "lv": 6,
+  "game": "monopoleis",
+  "k": "casco_espartano",
+  "es": "Casco espartano",
+  "en": "Spartan helmet"
+ },
+ {
+  "lv": 6,
+  "game": "historiapp-arena",
+  "k": "leg_amenofis",
+  "es": "Leyenda Amenofis II",
+  "en": "Amenhotep II legend"
+ },
+ {
+  "lv": 7,
+  "game": "senet",
+  "k": "fichas_de_lapislazuli",
+  "es": "Fichas de lapislázuli",
+  "en": "Lapis lazuli pieces"
+ },
+ {
+  "lv": 7,
+  "game": "historiapp-arena",
+  "k": "tt_jabalinero",
+  "es": "Lanzador de jabalina en las torres",
+  "en": "Javelin thrower in the towers"
+ },
+ {
+  "lv": 8,
+  "game": "kleos",
+  "k": "pilar_djed",
+  "es": "Pilar Djed",
+  "en": "Djed pillar"
+ },
+ {
+  "lv": 9,
+  "game": "agon",
+  "k": "estandarte_con_emblema_propio",
+  "es": "Estandarte con emblema propio",
+  "en": "Standard with your own emblem"
+ },
+ {
+  "lv": 9,
+  "game": "historiapp-arena",
+  "k": "leg_taharqa",
+  "es": "Leyenda Taharqa",
+  "en": "Taharqa legend"
+ },
+ {
+  "lv": 10,
+  "game": "kleos",
+  "k": "tutmosis_iii",
+  "es": "Tutmosis III",
+  "en": "Thutmose III"
+ },
+ {
+  "lv": 10,
+  "game": "historiapp-arena",
+  "k": "titulo_atleta",
+  "es": "Título «Atleta»",
+  "en": "«Athlete» title"
+ },
+ {
+  "lv": 11,
+  "game": "pentatlon",
+  "k": "pruebas_sueltas_sin_pasar_por_la",
+  "es": "Pruebas sueltas sin pasar por la carrera",
+  "en": "Single events without the career"
+ },
+ {
+  "lv": 11,
+  "game": "historiapp-arena",
+  "k": "tt_bumeranero",
+  "es": "Lanzador de bumerán en las torres",
+  "en": "Boomerang thrower in the towers"
+ },
+ {
+  "lv": 12,
+  "game": "kleos",
+  "k": "aquiles",
+  "es": "Aquiles",
+  "en": "Achilles"
+ },
+ {
+  "lv": 12,
+  "game": "historiapp-arena",
+  "k": "leg_nefertiti",
+  "es": "Leyenda Nefertiti",
+  "en": "Nefertiti legend"
+ },
+ {
+  "lv": 13,
+  "game": "cnoso",
+  "k": "repetir_cualquier_sala_del_palac",
+  "es": "Repetir cualquier sala del palacio",
+  "en": "Replay any room of the palace"
+ },
+ {
+  "lv": 14,
+  "game": "cuadrigas",
+  "k": "librea_del_auriga_con_bordado_de",
+  "es": "Librea del auriga con bordado de oro",
+  "en": "Charioteer's livery with gold embroidery"
+ },
+ {
+  "lv": 15,
+  "game": "kleos",
+  "k": "dedos",
+  "es": "«Dedos»",
+  "en": "\"Fingers\""
+ },
+ {
+  "lv": 15,
+  "game": "historiapp-arena",
+  "k": "leg_ramses",
+  "es": "Leyenda Ramsés II",
+  "en": "Ramesses II legend"
+ },
+ {
+  "lv": 16,
+  "game": "gladiatura",
+  "k": "emblema_de_laurel",
+  "es": "Emblema de laurel",
+  "en": "Laurel emblem"
+ },
+ {
+  "lv": 16,
+  "game": "historiapp-arena",
+  "k": "marco_plata",
+  "es": "Marco de plata",
+  "en": "Silver frame"
+ },
+ {
+  "lv": 17,
+  "game": "monopoleis",
+  "k": "escudo_de_hoplita",
+  "es": "Escudo de hoplita",
+  "en": "Hoplite shield"
+ },
+ {
+  "lv": 18,
+  "game": "kleos",
+  "k": "abbas_i",
+  "es": "Abbás I",
+  "en": "Abbas I"
+ },
+ {
+  "lv": 18,
+  "game": "historiapp-arena",
+  "k": "leg_dario",
+  "es": "Leyenda Darío I",
+  "en": "Darius I legend"
+ },
+ {
+  "lv": 19,
+  "game": "agon",
+  "k": "dados_de_hueso",
+  "es": "Dados de hueso",
+  "en": "Bone dice"
+ },
+ {
+  "lv": 20,
+  "game": "cuadrigas",
+  "k": "elegir_circuito_en_la_carrera_su",
+  "es": "Elegir circuito en la carrera suelta",
+  "en": "Choose the circuit in a single race"
+ },
+ {
+  "lv": 20,
+  "game": "historiapp-arena",
+  "k": "titulo_campeon",
+  "es": "Título «Campeón»",
+  "en": "«Champion» title"
+ },
+ {
+  "lv": 21,
+  "game": "kleos",
+  "k": "heracles_y_pelope",
+  "es": "Heracles y Pélope",
+  "en": "Heracles and Pelops"
+ },
+ {
+  "lv": 22,
+  "game": "gladiatura",
+  "k": "elegir_anfiteatro",
+  "es": "Elegir anfiteatro",
+  "en": "Choose the amphitheatre"
+ },
+ {
+  "lv": 22,
+  "game": "historiapp-arena",
+  "k": "leg_cinisca",
+  "es": "Leyenda Cinisca",
+  "en": "Cynisca legend"
+ },
+ {
+  "lv": 23,
+  "game": "agon",
+  "k": "mapa_de_pergamino",
+  "es": "Mapa de pergamino",
+  "en": "Parchment map"
+ },
+ {
+  "lv": 24,
+  "game": "monopoleis",
+  "k": "riton_de_los_boxeadores",
+  "es": "Ritón de los boxeadores",
+  "en": "Boxer Rhyton"
+ },
+ {
+  "lv": 25,
+  "game": "kleos",
+  "k": "anolimpiada",
+  "es": "Anolimpiada",
+  "en": "Anolympiad"
+ },
+ {
+  "lv": 26,
+  "game": "cuadrigas",
+  "k": "latigo_con_mango_de_marfil",
+  "es": "Látigo con mango de marfil",
+  "en": "Whip with an ivory handle"
+ },
+ {
+  "lv": 26,
+  "game": "historiapp-arena",
+  "k": "leg_jerjes",
+  "es": "Leyenda Jerjes",
+  "en": "Xerxes legend"
+ },
+ {
+  "lv": 27,
+  "game": "gladiatura",
+  "k": "emblema_del_rayo",
+  "es": "Emblema del rayo",
+  "en": "Thunderbolt emblem"
+ },
+ {
+  "lv": 28,
+  "game": "agon",
+  "k": "repetir_una_tirada_por_partida",
+  "es": "Repetir una tirada por partida",
+  "en": "Reroll one roll per game"
+ },
+ {
+  "lv": 28,
+  "game": "historiapp-arena",
+  "k": "marco_oro",
+  "es": "Marco de oro",
+  "en": "Gold frame"
+ },
+ {
+  "lv": 29,
+  "game": "cuadrigas",
+  "k": "ruedas_doradas",
+  "es": "Ruedas doradas",
+  "en": "Golden wheels"
+ },
+ {
+  "lv": 30,
+  "game": "gladiatura",
+  "k": "elegir_rival",
+  "es": "Elegir rival",
+  "en": "Choose your opponent"
+ },
+ {
+  "lv": 30,
+  "game": "historiapp-arena",
+  "k": "titulo_heroe",
+  "es": "Título «Héroe»",
+  "en": "«Hero» title"
+ },
+ {
+  "lv": 31,
+  "game": "monopoleis",
+  "k": "color_topacio",
+  "es": "Color topacio",
+  "en": "Topaz colour"
+ },
+ {
+  "lv": 31,
+  "game": "historiapp-arena",
+  "k": "leg_filipo",
+  "es": "Leyenda Filipo II",
+  "en": "Philip II legend"
+ },
+ {
+  "lv": 32,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_sicili",
+  "es": "Caballos de la yeguada de Sicilia",
+  "en": "Horses from the Sicilian stud"
+ },
+ {
+  "lv": 33,
+  "game": "agon",
+  "k": "dados_de_marfil",
+  "es": "Dados de marfil",
+  "en": "Ivory dice"
+ },
+ {
+  "lv": 34,
+  "game": "senet",
+  "k": "bastones_de_oro",
+  "es": "Bastones de oro",
+  "en": "Golden sticks"
+ },
+ {
+  "lv": 35,
+  "game": "gladiatura",
+  "k": "emblema_de_creciente_y_estrellas",
+  "es": "Emblema de creciente y estrellas",
+  "en": "Crescent and stars emblem"
+ },
+ {
+  "lv": 36,
+  "game": "monopoleis",
+  "k": "leon_del_coliseo",
+  "es": "León del Coliseo",
+  "en": "Lion of the Colosseum"
+ },
+ {
+  "lv": 36,
+  "game": "historiapp-arena",
+  "k": "leg_diocles",
+  "es": "Leyenda Diocles",
+  "en": "Diocles legend"
+ },
+ {
+  "lv": 37,
+  "game": "cuadrigas",
+  "k": "casco_de_cuero_repujado_del_auri",
+  "es": "Casco de cuero repujado del auriga",
+  "en": "Charioteer's embossed leather helmet"
+ },
+ {
+  "lv": 38,
+  "game": "agon",
+  "k": "tropas_con_armadura_dorada",
+  "es": "Tropas con armadura dorada",
+  "en": "Troops in golden armour"
+ },
+ {
+  "lv": 39,
+  "game": "gladiatura",
+  "k": "escudo_pintado",
+  "es": "Escudo pintado",
+  "en": "Painted shield"
+ },
+ {
+  "lv": 40,
+  "game": "pentatlon",
+  "k": "retrato_del_atleta_con_corona_de",
+  "es": "Retrato del atleta con corona de olivo",
+  "en": "Portrait of the athlete with an olive crown"
+ },
+ {
+  "lv": 40,
+  "game": "historiapp-arena",
+  "k": "marco_purpura",
+  "es": "Marco de púrpura",
+  "en": "Purple frame"
+ },
+ {
+  "lv": 41,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_tesali",
+  "es": "Caballos de la yeguada de Tesalia",
+  "en": "Horses from the Thessalian stud"
+ },
+ {
+  "lv": 42,
+  "game": "monopoleis",
+  "k": "tridente_del_reciario",
+  "es": "Tridente del reciario",
+  "en": "Retiarius trident"
+ },
+ {
+  "lv": 43,
+  "game": "agon",
+  "k": "una_tropa_de_mas_al_empezar",
+  "es": "Una tropa de más al empezar",
+  "en": "One extra troop at the start"
+ },
+ {
+  "lv": 43,
+  "game": "historiapp-arena",
+  "k": "leg_alejandro",
+  "es": "Leyenda Alejandro Magno",
+  "en": "Alexander the Great legend"
+ },
+ {
+  "lv": 44,
+  "game": "gladiatura",
+  "k": "yelmo_de_gala_dorado",
+  "es": "Yelmo de gala dorado",
+  "en": "Golden parade helmet"
+ },
+ {
+  "lv": 45,
+  "game": "cnoso",
+  "k": "fiesta_del_toro_al_atardecer",
+  "es": "Fiesta del toro al atardecer",
+  "en": "Bull festival at sunset"
+ },
+ {
+  "lv": 45,
+  "game": "historiapp-arena",
+  "k": "titulo_leyenda",
+  "es": "Título «Leyenda»",
+  "en": "«Legend» title"
+ },
+ {
+  "lv": 46,
+  "game": "cuadrigas",
+  "k": "carro_de_bronce_repujado",
+  "es": "Carro de bronce repujado",
+  "en": "Embossed bronze chariot"
+ },
+ {
+  "lv": 47,
+  "game": "agon",
+  "k": "dados_de_cristal_de_roca",
+  "es": "Dados de cristal de roca",
+  "en": "Rock crystal dice"
+ },
+ {
+  "lv": 48,
+  "game": "gladiatura",
+  "k": "grebas_decoradas",
+  "es": "Grebas decoradas",
+  "en": "Decorated greaves"
+ },
+ {
+  "lv": 49,
+  "game": "monopoleis",
+  "k": "casco_de_secutor",
+  "es": "Casco de secutor",
+  "en": "Secutor helmet"
+ },
+ {
+  "lv": 50,
+  "game": "cuadrigas",
+  "k": "caballo_legendario_hirpino",
+  "es": "Caballo legendario Hirpino",
+  "en": "Legendary horse Hirpinus"
+ },
+ {
+  "lv": 50,
+  "game": "historiapp-arena",
+  "k": "leg_flamma",
+  "es": "Leyenda Flamma",
+  "en": "Flamma legend"
+ },
+ {
+  "lv": 51,
+  "game": "gladiatura",
+  "k": "munus_de_exhibicion_tres_combate",
+  "es": "Munus de exhibición, tres combates seguidos",
+  "en": "Exhibition munus, three fights in a row"
+ },
+ {
+  "lv": 52,
+  "game": "agon",
+  "k": "ver_la_siguiente_carta_de_mision",
+  "es": "Ver la siguiente carta de misión",
+  "en": "See the next mission card"
+ },
+ {
+  "lv": 53,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_hispan",
+  "es": "Caballos de la yeguada de Hispania",
+  "en": "Horses from the Hispanic stud"
+ },
+ {
+  "lv": 54,
+  "game": "monopoleis",
+  "k": "dados_de_oro",
+  "es": "Dados de oro",
+  "en": "Golden dice"
+ },
+ {
+  "lv": 55,
+  "game": "senet",
+  "k": "fichas_holograficas",
+  "es": "Fichas holográficas",
+  "en": "Holographic pieces"
+ },
+ {
+  "lv": 55,
+  "game": "historiapp-arena",
+  "k": "marco_laurel",
+  "es": "Marco de laurel",
+  "en": "Laurel frame"
+ },
+ {
+  "lv": 56,
+  "game": "gladiatura",
+  "k": "emblema_de_la_palma",
+  "es": "Emblema de la palma",
+  "en": "Palm emblem"
+ },
+ {
+  "lv": 57,
+  "game": "agon",
+  "k": "cartas_con_marco_dorado",
+  "es": "Cartas con marco dorado",
+  "en": "Gold-framed cards"
+ },
+ {
+  "lv": 58,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_pom",
+  "es": "Correr contra el fantasma de Pompeyo Musclosus",
+  "en": "Race against the ghost of Pompeius Musclosus"
+ },
+ {
+  "lv": 59,
+  "game": "monopoleis",
+  "k": "mesa_de_marmol_veteado",
+  "es": "Mesa de mármol veteado",
+  "en": "Veined marble table"
+ },
+ {
+  "lv": 60,
+  "game": "gladiatura",
+  "k": "cartel_del_munus_con_tu_nombre",
+  "es": "Cartel del munus con tu nombre",
+  "en": "Munus poster with your name"
+ },
+ {
+  "lv": 60,
+  "game": "historiapp-arena",
+  "k": "titulo_inmortal",
+  "es": "Título «Inmortal»",
+  "en": "«Immortal» title"
+ },
+ {
+  "lv": 61,
+  "game": "agon",
+  "k": "fortificar_un_yacimiento_durante",
+  "es": "Fortificar un yacimiento durante un turno",
+  "en": "Fortify a site for one turn"
+ },
+ {
+  "lv": 62,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_capado",
+  "es": "Caballos de la yeguada de Capadocia",
+  "en": "Horses from the Cappadocian stud"
+ },
+ {
+  "lv": 63,
+  "game": "gladiatura",
+  "k": "manica_dorada",
+  "es": "Manica dorada",
+  "en": "Golden manica"
+ },
+ {
+  "lv": 64,
+  "game": "monopoleis",
+  "k": "cambiar_una_pregunta_por_partida",
+  "es": "Cambiar una pregunta por partida",
+  "en": "Swap one question per game"
+ },
+ {
+  "lv": 65,
+  "game": "cuadrigas",
+  "k": "carro_de_plata",
+  "es": "Carro de plata",
+  "en": "Silver chariot"
+ },
+ {
+  "lv": 66,
+  "game": "agon",
+  "k": "dados_de_bronce",
+  "es": "Dados de bronce",
+  "en": "Bronze dice"
+ },
+ {
+  "lv": 67,
+  "game": "gladiatura",
+  "k": "combate_de_noche_con_antorchas",
+  "es": "Combate de noche con antorchas",
+  "en": "Night fight by torchlight"
+ },
+ {
+  "lv": 68,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_del_norte",
+  "es": "Caballos de la yeguada del norte de África",
+  "en": "Horses from the North African stud"
+ },
+ {
+  "lv": 68,
+  "game": "historiapp-arena",
+  "k": "marco_imperial",
+  "es": "Marco imperial",
+  "en": "Imperial frame"
+ },
+ {
+  "lv": 69,
+  "game": "agon",
+  "k": "segunda_repeticion_de_tirada_por",
+  "es": "Segunda repetición de tirada por partida",
+  "en": "Second reroll per game"
+ },
+ {
+  "lv": 70,
+  "game": "monopoleis",
+  "k": "villas_de_marmol",
+  "es": "Villas de mármol",
+  "en": "Marble villas"
+ },
+ {
+  "lv": 71,
+  "game": "cuadrigas",
+  "k": "monumento_del_auriga_en_la_cuadr",
+  "es": "Monumento del auriga en la cuadra",
+  "en": "Charioteer's monument in the stable"
+ },
+ {
+  "lv": 72,
+  "game": "gladiatura",
+  "k": "armadura_de_gala_completa",
+  "es": "Armadura de gala completa",
+  "en": "Full parade armour"
+ },
+ {
+  "lv": 73,
+  "game": "agon",
+  "k": "dados_de_plata",
+  "es": "Dados de plata",
+  "en": "Silver dice"
+ },
+ {
+  "lv": 74,
+  "game": "monopoleis",
+  "k": "partida_de_noche_con_lucernas",
+  "es": "Partida de noche con lucernas",
+  "en": "Night game by oil lamps"
+ },
+ {
+  "lv": 75,
+  "game": "cuadrigas",
+  "k": "caballo_legendario_aquilon",
+  "es": "Caballo legendario Aquilón",
+  "en": "Legendary horse Aquilo"
+ },
+ {
+  "lv": 76,
+  "game": "senet",
+  "k": "tablero_holografico",
+  "es": "Tablero holográfico",
+  "en": "Holographic board"
+ },
+ {
+  "lv": 77,
+  "game": "gladiatura",
+  "k": "corona_de_la_victoria_en_el_retr",
+  "es": "Corona de la victoria en el retrato",
+  "en": "Victory crown on the portrait"
+ },
+ {
+  "lv": 78,
+  "game": "agon",
+  "k": "carta_de_mision_adicional",
+  "es": "Carta de misión adicional",
+  "en": "Extra mission card"
+ },
+ {
+  "lv": 79,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_pompeyo_musc",
+  "es": "Carro legendario de Pompeyo Musclosus",
+  "en": "Legendary chariot of Pompeius Musclosus"
+ },
+ {
+  "lv": 80,
+  "game": "gladiatura",
+  "k": "emblema_de_flamma",
+  "es": "Emblema de Flamma",
+  "en": "Flamma emblem"
+ },
+ {
+  "lv": 81,
+  "game": "monopoleis",
+  "k": "palacios_dorados",
+  "es": "Palacios dorados",
+  "en": "Golden palaces"
+ },
+ {
+  "lv": 82,
+  "game": "agon",
+  "k": "dados_de_oro",
+  "es": "Dados de oro",
+  "en": "Golden dice"
+ },
+ {
+  "lv": 83,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_guta_calpurn",
+  "es": "Carro legendario de Guta Calpurniano",
+  "en": "Legendary chariot of Gutta Calpurnianus"
+ },
+ {
+  "lv": 84,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_bronce",
+  "es": "Gladiador legendario de bronce",
+  "en": "Legendary bronze gladiator"
+ },
+ {
+  "lv": 85,
+  "game": "monopoleis",
+  "k": "empezar_con_una_carta_de_curacio",
+  "es": "Empezar con una carta de curación",
+  "en": "Start with a healing card"
+ },
+ {
+  "lv": 86,
+  "game": "agon",
+  "k": "refuerzo_doble_en_el_primer_turn",
+  "es": "Refuerzo doble en el primer turno",
+  "en": "Double reinforcements on the first turn"
+ },
+ {
+  "lv": 87,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_esc",
+  "es": "Correr contra el fantasma de Escorpo",
+  "en": "Race against the ghost of Scorpus"
+ },
+ {
+  "lv": 88,
+  "game": "gladiatura",
+  "k": "yelmo_legendario_de_flamma",
+  "es": "Yelmo legendario de Flamma",
+  "en": "Legendary helmet of Flamma"
+ },
+ {
+  "lv": 89,
+  "game": "agon",
+  "k": "dados_legendarios_de_lapislazuli",
+  "es": "Dados legendarios de lapislázuli",
+  "en": "Legendary lapis lazuli dice"
+ },
+ {
+  "lv": 90,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_crescens",
+  "es": "Carro legendario de Crescens",
+  "en": "Legendary chariot of Crescens"
+ },
+ {
+  "lv": 91,
+  "game": "monopoleis",
+  "k": "tablero_de_oro_y_lapislazuli",
+  "es": "Tablero de oro y lapislázuli",
+  "en": "Gold and lapis lazuli board"
+ },
+ {
+  "lv": 92,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_plata",
+  "es": "Gladiador legendario de plata",
+  "en": "Legendary silver gladiator"
+ },
+ {
+  "lv": 93,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_escorpo",
+  "es": "Carro legendario de Escorpo",
+  "en": "Legendary chariot of Scorpus"
+ },
+ {
+  "lv": 94,
+  "game": "agon",
+  "k": "estandarte_legendario",
+  "es": "Estandarte legendario",
+  "en": "Legendary standard"
+ },
+ {
+  "lv": 95,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_oro",
+  "es": "Gladiador legendario de oro",
+  "en": "Legendary golden gladiator"
+ },
+ {
+  "lv": 96,
+  "game": "monopoleis",
+  "k": "ficha_legendaria_holografica",
+  "es": "Ficha legendaria holográfica",
+  "en": "Legendary holographic piece"
+ },
+ {
+  "lv": 97,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_dio",
+  "es": "Correr contra el fantasma de Diocles",
+  "en": "Race against the ghost of Diocles"
+ },
+ {
+  "lv": 98,
+  "game": "agon",
+  "k": "dados_legendarios_holograficos",
+  "es": "Dados legendarios holográficos",
+  "en": "Legendary holographic dice"
+ },
+ {
+  "lv": 99,
+  "game": "gladiatura",
+  "k": "rudis_de_la_libertad",
+  "es": "Rudis de la libertad",
+  "en": "Rudis of freedom"
+ },
+ {
+  "lv": 100,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_diocles",
+  "es": "Carro legendario de Diocles",
+  "en": "Legendary chariot of Diocles"
+ }
+] se sustituye por el contenido de recompensas.json.
+   Uso: HAPP_RW.level() -> {lv,xp,next} o null fuera de la app;
+        HAPP_RW.list('cuadrigas') -> recompensas del juego;  HAPP_RW.has('cuadrigas','ruedas_doradas')
+        HAPP_RW.nuevas('cuadrigas') -> recompensas ganadas desde la última vez (y las marca vistas). */
+var HAPP_RW=(function(){
+  var ALL=[
+ {
+  "lv": 2,
+  "game": "cuadrigas",
+  "k": "poner_nombre_a_los_caballos",
+  "es": "Poner nombre a los caballos",
+  "en": "Name your horses"
+ },
+ {
+  "lv": 2,
+  "game": "historiapp-arena",
+  "k": "leg_tutankamon",
+  "es": "Leyenda Tutankamón",
+  "en": "Tutankhamun legend"
+ },
+ {
+  "lv": 3,
+  "game": "kleos",
+  "k": "calipatira",
+  "es": "Calipátira",
+  "en": "Kallipateira"
+ },
+ {
+  "lv": 3,
+  "game": "historiapp-arena",
+  "k": "tt_hondero",
+  "es": "Hondero en las torres",
+  "en": "Slinger in the towers"
+ },
+ {
+  "lv": 4,
+  "game": "gladiatura",
+  "k": "apodo_de_arena",
+  "es": "Apodo de arena",
+  "en": "Arena nickname"
+ },
+ {
+  "lv": 5,
+  "game": "kleos",
+  "k": "ramses_ii",
+  "es": "Ramsés II",
+  "en": "Ramesses II"
+ },
+ {
+  "lv": 5,
+  "game": "historiapp-arena",
+  "k": "marco_bronce",
+  "es": "Marco de bronce",
+  "en": "Bronze frame"
+ },
+ {
+  "lv": 6,
+  "game": "monopoleis",
+  "k": "casco_espartano",
+  "es": "Casco espartano",
+  "en": "Spartan helmet"
+ },
+ {
+  "lv": 6,
+  "game": "historiapp-arena",
+  "k": "leg_amenofis",
+  "es": "Leyenda Amenofis II",
+  "en": "Amenhotep II legend"
+ },
+ {
+  "lv": 7,
+  "game": "senet",
+  "k": "fichas_de_lapislazuli",
+  "es": "Fichas de lapislázuli",
+  "en": "Lapis lazuli pieces"
+ },
+ {
+  "lv": 7,
+  "game": "historiapp-arena",
+  "k": "tt_jabalinero",
+  "es": "Lanzador de jabalina en las torres",
+  "en": "Javelin thrower in the towers"
+ },
+ {
+  "lv": 8,
+  "game": "kleos",
+  "k": "pilar_djed",
+  "es": "Pilar Djed",
+  "en": "Djed pillar"
+ },
+ {
+  "lv": 9,
+  "game": "agon",
+  "k": "estandarte_con_emblema_propio",
+  "es": "Estandarte con emblema propio",
+  "en": "Standard with your own emblem"
+ },
+ {
+  "lv": 9,
+  "game": "historiapp-arena",
+  "k": "leg_taharqa",
+  "es": "Leyenda Taharqa",
+  "en": "Taharqa legend"
+ },
+ {
+  "lv": 10,
+  "game": "kleos",
+  "k": "tutmosis_iii",
+  "es": "Tutmosis III",
+  "en": "Thutmose III"
+ },
+ {
+  "lv": 10,
+  "game": "historiapp-arena",
+  "k": "titulo_atleta",
+  "es": "Título «Atleta»",
+  "en": "«Athlete» title"
+ },
+ {
+  "lv": 11,
+  "game": "pentatlon",
+  "k": "pruebas_sueltas_sin_pasar_por_la",
+  "es": "Pruebas sueltas sin pasar por la carrera",
+  "en": "Single events without the career"
+ },
+ {
+  "lv": 11,
+  "game": "historiapp-arena",
+  "k": "tt_bumeranero",
+  "es": "Lanzador de bumerán en las torres",
+  "en": "Boomerang thrower in the towers"
+ },
+ {
+  "lv": 12,
+  "game": "kleos",
+  "k": "aquiles",
+  "es": "Aquiles",
+  "en": "Achilles"
+ },
+ {
+  "lv": 12,
+  "game": "historiapp-arena",
+  "k": "leg_nefertiti",
+  "es": "Leyenda Nefertiti",
+  "en": "Nefertiti legend"
+ },
+ {
+  "lv": 13,
+  "game": "cnoso",
+  "k": "repetir_cualquier_sala_del_palac",
+  "es": "Repetir cualquier sala del palacio",
+  "en": "Replay any room of the palace"
+ },
+ {
+  "lv": 14,
+  "game": "cuadrigas",
+  "k": "librea_del_auriga_con_bordado_de",
+  "es": "Librea del auriga con bordado de oro",
+  "en": "Charioteer's livery with gold embroidery"
+ },
+ {
+  "lv": 15,
+  "game": "kleos",
+  "k": "dedos",
+  "es": "«Dedos»",
+  "en": "\"Fingers\""
+ },
+ {
+  "lv": 15,
+  "game": "historiapp-arena",
+  "k": "leg_ramses",
+  "es": "Leyenda Ramsés II",
+  "en": "Ramesses II legend"
+ },
+ {
+  "lv": 16,
+  "game": "gladiatura",
+  "k": "emblema_de_laurel",
+  "es": "Emblema de laurel",
+  "en": "Laurel emblem"
+ },
+ {
+  "lv": 16,
+  "game": "historiapp-arena",
+  "k": "marco_plata",
+  "es": "Marco de plata",
+  "en": "Silver frame"
+ },
+ {
+  "lv": 17,
+  "game": "monopoleis",
+  "k": "escudo_de_hoplita",
+  "es": "Escudo de hoplita",
+  "en": "Hoplite shield"
+ },
+ {
+  "lv": 18,
+  "game": "kleos",
+  "k": "abbas_i",
+  "es": "Abbás I",
+  "en": "Abbas I"
+ },
+ {
+  "lv": 18,
+  "game": "historiapp-arena",
+  "k": "leg_dario",
+  "es": "Leyenda Darío I",
+  "en": "Darius I legend"
+ },
+ {
+  "lv": 19,
+  "game": "agon",
+  "k": "dados_de_hueso",
+  "es": "Dados de hueso",
+  "en": "Bone dice"
+ },
+ {
+  "lv": 20,
+  "game": "cuadrigas",
+  "k": "elegir_circuito_en_la_carrera_su",
+  "es": "Elegir circuito en la carrera suelta",
+  "en": "Choose the circuit in a single race"
+ },
+ {
+  "lv": 20,
+  "game": "historiapp-arena",
+  "k": "titulo_campeon",
+  "es": "Título «Campeón»",
+  "en": "«Champion» title"
+ },
+ {
+  "lv": 21,
+  "game": "kleos",
+  "k": "heracles_y_pelope",
+  "es": "Heracles y Pélope",
+  "en": "Heracles and Pelops"
+ },
+ {
+  "lv": 22,
+  "game": "gladiatura",
+  "k": "elegir_anfiteatro",
+  "es": "Elegir anfiteatro",
+  "en": "Choose the amphitheatre"
+ },
+ {
+  "lv": 22,
+  "game": "historiapp-arena",
+  "k": "leg_cinisca",
+  "es": "Leyenda Cinisca",
+  "en": "Cynisca legend"
+ },
+ {
+  "lv": 23,
+  "game": "agon",
+  "k": "mapa_de_pergamino",
+  "es": "Mapa de pergamino",
+  "en": "Parchment map"
+ },
+ {
+  "lv": 24,
+  "game": "monopoleis",
+  "k": "riton_de_los_boxeadores",
+  "es": "Ritón de los boxeadores",
+  "en": "Boxer Rhyton"
+ },
+ {
+  "lv": 25,
+  "game": "kleos",
+  "k": "anolimpiada",
+  "es": "Anolimpiada",
+  "en": "Anolympiad"
+ },
+ {
+  "lv": 26,
+  "game": "cuadrigas",
+  "k": "latigo_con_mango_de_marfil",
+  "es": "Látigo con mango de marfil",
+  "en": "Whip with an ivory handle"
+ },
+ {
+  "lv": 26,
+  "game": "historiapp-arena",
+  "k": "leg_jerjes",
+  "es": "Leyenda Jerjes",
+  "en": "Xerxes legend"
+ },
+ {
+  "lv": 27,
+  "game": "gladiatura",
+  "k": "emblema_del_rayo",
+  "es": "Emblema del rayo",
+  "en": "Thunderbolt emblem"
+ },
+ {
+  "lv": 28,
+  "game": "agon",
+  "k": "repetir_una_tirada_por_partida",
+  "es": "Repetir una tirada por partida",
+  "en": "Reroll one roll per game"
+ },
+ {
+  "lv": 28,
+  "game": "historiapp-arena",
+  "k": "marco_oro",
+  "es": "Marco de oro",
+  "en": "Gold frame"
+ },
+ {
+  "lv": 29,
+  "game": "cuadrigas",
+  "k": "ruedas_doradas",
+  "es": "Ruedas doradas",
+  "en": "Golden wheels"
+ },
+ {
+  "lv": 30,
+  "game": "gladiatura",
+  "k": "elegir_rival",
+  "es": "Elegir rival",
+  "en": "Choose your opponent"
+ },
+ {
+  "lv": 30,
+  "game": "historiapp-arena",
+  "k": "titulo_heroe",
+  "es": "Título «Héroe»",
+  "en": "«Hero» title"
+ },
+ {
+  "lv": 31,
+  "game": "monopoleis",
+  "k": "color_topacio",
+  "es": "Color topacio",
+  "en": "Topaz colour"
+ },
+ {
+  "lv": 31,
+  "game": "historiapp-arena",
+  "k": "leg_filipo",
+  "es": "Leyenda Filipo II",
+  "en": "Philip II legend"
+ },
+ {
+  "lv": 32,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_sicili",
+  "es": "Caballos de la yeguada de Sicilia",
+  "en": "Horses from the Sicilian stud"
+ },
+ {
+  "lv": 33,
+  "game": "agon",
+  "k": "dados_de_marfil",
+  "es": "Dados de marfil",
+  "en": "Ivory dice"
+ },
+ {
+  "lv": 34,
+  "game": "senet",
+  "k": "bastones_de_oro",
+  "es": "Bastones de oro",
+  "en": "Golden sticks"
+ },
+ {
+  "lv": 35,
+  "game": "gladiatura",
+  "k": "emblema_de_creciente_y_estrellas",
+  "es": "Emblema de creciente y estrellas",
+  "en": "Crescent and stars emblem"
+ },
+ {
+  "lv": 36,
+  "game": "monopoleis",
+  "k": "leon_del_coliseo",
+  "es": "León del Coliseo",
+  "en": "Lion of the Colosseum"
+ },
+ {
+  "lv": 36,
+  "game": "historiapp-arena",
+  "k": "leg_diocles",
+  "es": "Leyenda Diocles",
+  "en": "Diocles legend"
+ },
+ {
+  "lv": 37,
+  "game": "cuadrigas",
+  "k": "casco_de_cuero_repujado_del_auri",
+  "es": "Casco de cuero repujado del auriga",
+  "en": "Charioteer's embossed leather helmet"
+ },
+ {
+  "lv": 38,
+  "game": "agon",
+  "k": "tropas_con_armadura_dorada",
+  "es": "Tropas con armadura dorada",
+  "en": "Troops in golden armour"
+ },
+ {
+  "lv": 39,
+  "game": "gladiatura",
+  "k": "escudo_pintado",
+  "es": "Escudo pintado",
+  "en": "Painted shield"
+ },
+ {
+  "lv": 40,
+  "game": "pentatlon",
+  "k": "retrato_del_atleta_con_corona_de",
+  "es": "Retrato del atleta con corona de olivo",
+  "en": "Portrait of the athlete with an olive crown"
+ },
+ {
+  "lv": 40,
+  "game": "historiapp-arena",
+  "k": "marco_purpura",
+  "es": "Marco de púrpura",
+  "en": "Purple frame"
+ },
+ {
+  "lv": 41,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_tesali",
+  "es": "Caballos de la yeguada de Tesalia",
+  "en": "Horses from the Thessalian stud"
+ },
+ {
+  "lv": 42,
+  "game": "monopoleis",
+  "k": "tridente_del_reciario",
+  "es": "Tridente del reciario",
+  "en": "Retiarius trident"
+ },
+ {
+  "lv": 43,
+  "game": "agon",
+  "k": "una_tropa_de_mas_al_empezar",
+  "es": "Una tropa de más al empezar",
+  "en": "One extra troop at the start"
+ },
+ {
+  "lv": 43,
+  "game": "historiapp-arena",
+  "k": "leg_alejandro",
+  "es": "Leyenda Alejandro Magno",
+  "en": "Alexander the Great legend"
+ },
+ {
+  "lv": 44,
+  "game": "gladiatura",
+  "k": "yelmo_de_gala_dorado",
+  "es": "Yelmo de gala dorado",
+  "en": "Golden parade helmet"
+ },
+ {
+  "lv": 45,
+  "game": "cnoso",
+  "k": "fiesta_del_toro_al_atardecer",
+  "es": "Fiesta del toro al atardecer",
+  "en": "Bull festival at sunset"
+ },
+ {
+  "lv": 45,
+  "game": "historiapp-arena",
+  "k": "titulo_leyenda",
+  "es": "Título «Leyenda»",
+  "en": "«Legend» title"
+ },
+ {
+  "lv": 46,
+  "game": "cuadrigas",
+  "k": "carro_de_bronce_repujado",
+  "es": "Carro de bronce repujado",
+  "en": "Embossed bronze chariot"
+ },
+ {
+  "lv": 47,
+  "game": "agon",
+  "k": "dados_de_cristal_de_roca",
+  "es": "Dados de cristal de roca",
+  "en": "Rock crystal dice"
+ },
+ {
+  "lv": 48,
+  "game": "gladiatura",
+  "k": "grebas_decoradas",
+  "es": "Grebas decoradas",
+  "en": "Decorated greaves"
+ },
+ {
+  "lv": 49,
+  "game": "monopoleis",
+  "k": "casco_de_secutor",
+  "es": "Casco de secutor",
+  "en": "Secutor helmet"
+ },
+ {
+  "lv": 50,
+  "game": "cuadrigas",
+  "k": "caballo_legendario_hirpino",
+  "es": "Caballo legendario Hirpino",
+  "en": "Legendary horse Hirpinus"
+ },
+ {
+  "lv": 50,
+  "game": "historiapp-arena",
+  "k": "leg_flamma",
+  "es": "Leyenda Flamma",
+  "en": "Flamma legend"
+ },
+ {
+  "lv": 51,
+  "game": "gladiatura",
+  "k": "munus_de_exhibicion_tres_combate",
+  "es": "Munus de exhibición, tres combates seguidos",
+  "en": "Exhibition munus, three fights in a row"
+ },
+ {
+  "lv": 52,
+  "game": "agon",
+  "k": "ver_la_siguiente_carta_de_mision",
+  "es": "Ver la siguiente carta de misión",
+  "en": "See the next mission card"
+ },
+ {
+  "lv": 53,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_hispan",
+  "es": "Caballos de la yeguada de Hispania",
+  "en": "Horses from the Hispanic stud"
+ },
+ {
+  "lv": 54,
+  "game": "monopoleis",
+  "k": "dados_de_oro",
+  "es": "Dados de oro",
+  "en": "Golden dice"
+ },
+ {
+  "lv": 55,
+  "game": "senet",
+  "k": "fichas_holograficas",
+  "es": "Fichas holográficas",
+  "en": "Holographic pieces"
+ },
+ {
+  "lv": 55,
+  "game": "historiapp-arena",
+  "k": "marco_laurel",
+  "es": "Marco de laurel",
+  "en": "Laurel frame"
+ },
+ {
+  "lv": 56,
+  "game": "gladiatura",
+  "k": "emblema_de_la_palma",
+  "es": "Emblema de la palma",
+  "en": "Palm emblem"
+ },
+ {
+  "lv": 57,
+  "game": "agon",
+  "k": "cartas_con_marco_dorado",
+  "es": "Cartas con marco dorado",
+  "en": "Gold-framed cards"
+ },
+ {
+  "lv": 58,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_pom",
+  "es": "Correr contra el fantasma de Pompeyo Musclosus",
+  "en": "Race against the ghost of Pompeius Musclosus"
+ },
+ {
+  "lv": 59,
+  "game": "monopoleis",
+  "k": "mesa_de_marmol_veteado",
+  "es": "Mesa de mármol veteado",
+  "en": "Veined marble table"
+ },
+ {
+  "lv": 60,
+  "game": "gladiatura",
+  "k": "cartel_del_munus_con_tu_nombre",
+  "es": "Cartel del munus con tu nombre",
+  "en": "Munus poster with your name"
+ },
+ {
+  "lv": 60,
+  "game": "historiapp-arena",
+  "k": "titulo_inmortal",
+  "es": "Título «Inmortal»",
+  "en": "«Immortal» title"
+ },
+ {
+  "lv": 61,
+  "game": "agon",
+  "k": "fortificar_un_yacimiento_durante",
+  "es": "Fortificar un yacimiento durante un turno",
+  "en": "Fortify a site for one turn"
+ },
+ {
+  "lv": 62,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_de_capado",
+  "es": "Caballos de la yeguada de Capadocia",
+  "en": "Horses from the Cappadocian stud"
+ },
+ {
+  "lv": 63,
+  "game": "gladiatura",
+  "k": "manica_dorada",
+  "es": "Manica dorada",
+  "en": "Golden manica"
+ },
+ {
+  "lv": 64,
+  "game": "monopoleis",
+  "k": "cambiar_una_pregunta_por_partida",
+  "es": "Cambiar una pregunta por partida",
+  "en": "Swap one question per game"
+ },
+ {
+  "lv": 65,
+  "game": "cuadrigas",
+  "k": "carro_de_plata",
+  "es": "Carro de plata",
+  "en": "Silver chariot"
+ },
+ {
+  "lv": 66,
+  "game": "agon",
+  "k": "dados_de_bronce",
+  "es": "Dados de bronce",
+  "en": "Bronze dice"
+ },
+ {
+  "lv": 67,
+  "game": "gladiatura",
+  "k": "combate_de_noche_con_antorchas",
+  "es": "Combate de noche con antorchas",
+  "en": "Night fight by torchlight"
+ },
+ {
+  "lv": 68,
+  "game": "cuadrigas",
+  "k": "caballos_de_la_yeguada_del_norte",
+  "es": "Caballos de la yeguada del norte de África",
+  "en": "Horses from the North African stud"
+ },
+ {
+  "lv": 68,
+  "game": "historiapp-arena",
+  "k": "marco_imperial",
+  "es": "Marco imperial",
+  "en": "Imperial frame"
+ },
+ {
+  "lv": 69,
+  "game": "agon",
+  "k": "segunda_repeticion_de_tirada_por",
+  "es": "Segunda repetición de tirada por partida",
+  "en": "Second reroll per game"
+ },
+ {
+  "lv": 70,
+  "game": "monopoleis",
+  "k": "villas_de_marmol",
+  "es": "Villas de mármol",
+  "en": "Marble villas"
+ },
+ {
+  "lv": 71,
+  "game": "cuadrigas",
+  "k": "monumento_del_auriga_en_la_cuadr",
+  "es": "Monumento del auriga en la cuadra",
+  "en": "Charioteer's monument in the stable"
+ },
+ {
+  "lv": 72,
+  "game": "gladiatura",
+  "k": "armadura_de_gala_completa",
+  "es": "Armadura de gala completa",
+  "en": "Full parade armour"
+ },
+ {
+  "lv": 73,
+  "game": "agon",
+  "k": "dados_de_plata",
+  "es": "Dados de plata",
+  "en": "Silver dice"
+ },
+ {
+  "lv": 74,
+  "game": "monopoleis",
+  "k": "partida_de_noche_con_lucernas",
+  "es": "Partida de noche con lucernas",
+  "en": "Night game by oil lamps"
+ },
+ {
+  "lv": 75,
+  "game": "cuadrigas",
+  "k": "caballo_legendario_aquilon",
+  "es": "Caballo legendario Aquilón",
+  "en": "Legendary horse Aquilo"
+ },
+ {
+  "lv": 76,
+  "game": "senet",
+  "k": "tablero_holografico",
+  "es": "Tablero holográfico",
+  "en": "Holographic board"
+ },
+ {
+  "lv": 77,
+  "game": "gladiatura",
+  "k": "corona_de_la_victoria_en_el_retr",
+  "es": "Corona de la victoria en el retrato",
+  "en": "Victory crown on the portrait"
+ },
+ {
+  "lv": 78,
+  "game": "agon",
+  "k": "carta_de_mision_adicional",
+  "es": "Carta de misión adicional",
+  "en": "Extra mission card"
+ },
+ {
+  "lv": 79,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_pompeyo_musc",
+  "es": "Carro legendario de Pompeyo Musclosus",
+  "en": "Legendary chariot of Pompeius Musclosus"
+ },
+ {
+  "lv": 80,
+  "game": "gladiatura",
+  "k": "emblema_de_flamma",
+  "es": "Emblema de Flamma",
+  "en": "Flamma emblem"
+ },
+ {
+  "lv": 81,
+  "game": "monopoleis",
+  "k": "palacios_dorados",
+  "es": "Palacios dorados",
+  "en": "Golden palaces"
+ },
+ {
+  "lv": 82,
+  "game": "agon",
+  "k": "dados_de_oro",
+  "es": "Dados de oro",
+  "en": "Golden dice"
+ },
+ {
+  "lv": 83,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_guta_calpurn",
+  "es": "Carro legendario de Guta Calpurniano",
+  "en": "Legendary chariot of Gutta Calpurnianus"
+ },
+ {
+  "lv": 84,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_bronce",
+  "es": "Gladiador legendario de bronce",
+  "en": "Legendary bronze gladiator"
+ },
+ {
+  "lv": 85,
+  "game": "monopoleis",
+  "k": "empezar_con_una_carta_de_curacio",
+  "es": "Empezar con una carta de curación",
+  "en": "Start with a healing card"
+ },
+ {
+  "lv": 86,
+  "game": "agon",
+  "k": "refuerzo_doble_en_el_primer_turn",
+  "es": "Refuerzo doble en el primer turno",
+  "en": "Double reinforcements on the first turn"
+ },
+ {
+  "lv": 87,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_esc",
+  "es": "Correr contra el fantasma de Escorpo",
+  "en": "Race against the ghost of Scorpus"
+ },
+ {
+  "lv": 88,
+  "game": "gladiatura",
+  "k": "yelmo_legendario_de_flamma",
+  "es": "Yelmo legendario de Flamma",
+  "en": "Legendary helmet of Flamma"
+ },
+ {
+  "lv": 89,
+  "game": "agon",
+  "k": "dados_legendarios_de_lapislazuli",
+  "es": "Dados legendarios de lapislázuli",
+  "en": "Legendary lapis lazuli dice"
+ },
+ {
+  "lv": 90,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_crescens",
+  "es": "Carro legendario de Crescens",
+  "en": "Legendary chariot of Crescens"
+ },
+ {
+  "lv": 91,
+  "game": "monopoleis",
+  "k": "tablero_de_oro_y_lapislazuli",
+  "es": "Tablero de oro y lapislázuli",
+  "en": "Gold and lapis lazuli board"
+ },
+ {
+  "lv": 92,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_plata",
+  "es": "Gladiador legendario de plata",
+  "en": "Legendary silver gladiator"
+ },
+ {
+  "lv": 93,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_escorpo",
+  "es": "Carro legendario de Escorpo",
+  "en": "Legendary chariot of Scorpus"
+ },
+ {
+  "lv": 94,
+  "game": "agon",
+  "k": "estandarte_legendario",
+  "es": "Estandarte legendario",
+  "en": "Legendary standard"
+ },
+ {
+  "lv": 95,
+  "game": "gladiatura",
+  "k": "gladiador_legendario_de_oro",
+  "es": "Gladiador legendario de oro",
+  "en": "Legendary golden gladiator"
+ },
+ {
+  "lv": 96,
+  "game": "monopoleis",
+  "k": "ficha_legendaria_holografica",
+  "es": "Ficha legendaria holográfica",
+  "en": "Legendary holographic piece"
+ },
+ {
+  "lv": 97,
+  "game": "cuadrigas",
+  "k": "correr_contra_el_fantasma_de_dio",
+  "es": "Correr contra el fantasma de Diocles",
+  "en": "Race against the ghost of Diocles"
+ },
+ {
+  "lv": 98,
+  "game": "agon",
+  "k": "dados_legendarios_holograficos",
+  "es": "Dados legendarios holográficos",
+  "en": "Legendary holographic dice"
+ },
+ {
+  "lv": 99,
+  "game": "gladiatura",
+  "k": "rudis_de_la_libertad",
+  "es": "Rudis de la libertad",
+  "en": "Rudis of freedom"
+ },
+ {
+  "lv": 100,
+  "game": "cuadrigas",
+  "k": "carro_legendario_de_diocles",
+  "es": "Carro legendario de Diocles",
+  "en": "Legendary chariot of Diocles"
+ }
+];
+  var LEVEL_XP=(function(){var a=[0,100,250,450,700,1000,1400,1900,2500,3300];for(var i=1;i<=90;i++)a.push(a[a.length-1]+Math.round((400+(i-1)*240/89)/10)*10);return a})(); // misma tabla que index.html
+  function inApp(){ try{ return /\/juegos\//.test(location.pathname) && !!localStorage.getItem('historiapp.progress'); }catch(e){ return false; } }
+  function level(){ try{ if(!inApp()) return null; var p=JSON.parse(localStorage.getItem('historiapp.progress')); var xp=(p&&p.xp)||0, l=0; for(var i=0;i<LEVEL_XP.length;i++) if(xp>=LEVEL_XP[i]) l=i; return {lv:l+1,xp:xp,next:LEVEL_XP[l+1]||null,nextLv:l+2}; }catch(e){ return null; } }
+  function list(g){ return ALL.filter(function(r){return r.game===g;}); }
+  function has(g,k){ var L=level(); var r=ALL.find(function(x){return x.game===g&&x.k===k;}); return !!(L&&r&&L.lv>=r.lv); }
+  function nuevas(g){ var L=level(); if(!L) return []; var key=g+'.rw_vistas', seen=[]; try{ seen=JSON.parse(localStorage.getItem(key))||[]; }catch(e){}
+    var n=list(g).filter(function(r){ return L.lv>=r.lv && seen.indexOf(r.k)<0; }); try{ localStorage.setItem(key,JSON.stringify(seen.concat(n.map(function(r){return r.k;})))); }catch(e){} return n; }
+  function proxima(g){ var L=level(); if(!L) return null; return list(g).find(function(r){return r.lv>L.lv;})||null; }
+  return {ALL:ALL,LEVEL_XP:LEVEL_XP,level:level,list:list,has:has,nuevas:nuevas,proxima:proxima,xpFor:function(lv){return LEVEL_XP[lv-1];}};
+})();
+
+/* HAPP_REPASO · memoria común de fallos de Historiapp (18-10-2026, plan de mejoras, apartado 4).
+   Todos los juegos comparten origen con la app, así que escriben en la misma clave del aparato: historiapp.repaso.
+   Cada pregunta fallada vuelve al día siguiente; si se acierta, a los 3, a los 7 y a los 21 días, y después sale del repaso.
+   Uso en un juego (solo actúa dentro de Historiapp):
+     HAPP_REPASO.fallo('cuadrigas', {es:'¿…?', en:'…?'}, {es:[correcta, …], en:[correcta, …]}, 'ficha-id', 4);
+     HAPP_REPASO.acierto({es:'¿…?', en:'…?'});
+   La opción correcta va SIEMPRE la primera; la app las baraja al preguntar. */
+window.HAPP_REPASO = (function(){
+  var K = 'historiapp.repaso', DAY = 864e5, GAPS = [1, 3, 7, 21], MAX = 400;
+  function inside(){ try { if (!/\/juegos\//.test(location.pathname)) return false; for (var i = 0; i < localStorage.length; i++) if (localStorage.key(i).indexOf('historiapp.') === 0) return true; } catch (e) {} return false; }
+  function load(){ try { var d = JSON.parse(localStorage.getItem(K)); if (d && d.items) return d; } catch (e) {} return {v:1, items:{}}; }
+  function save(d){ try { localStorage.setItem(K, JSON.stringify(d)); } catch (e) {} }
+  function idOf(q){ var s = String(q && (q.es || q) || ''), h = 0; for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return 'q' + (h >>> 0).toString(36); }
+  function norm(o){ if (Array.isArray(o)) return {es:o}; return o || {es:[]}; }
+  return {
+    activo: inside,
+    fallo: function(game, q, o, ficha, tema){
+      if (!inside() || !q) return; if (typeof q === 'string') q = {es:q};
+      var d = load(), id = idOf(q), it = d.items[id] || {g:game, q:q, o:norm(o), f:ficha || null, t:tema || null, box:0, n:0};
+      it.box = 0; it.n = (it.n || 0) + 1; it.due = Date.now() + DAY; it.g = game; it.last = Date.now(); d.items[id] = it;
+      var ids = Object.keys(d.items); if (ids.length > MAX){ ids.sort(function(a, b){ return (d.items[a].last || 0) - (d.items[b].last || 0); }); for (var i = 0; i < ids.length - MAX; i++) delete d.items[ids[i]]; }
+      save(d);
+    },
+    acierto: function(q){
+      if (!inside() || !q) return; if (typeof q === 'string') q = {es:q};
+      var d = load(), id = idOf(q), it = d.items[id]; if (!it || it.due > Date.now()) return;
+      it.box = (it.box || 0) + 1; if (it.box >= GAPS.length) delete d.items[id]; else it.due = Date.now() + GAPS[it.box] * DAY;
+      save(d);
+    },
+    pendientes: function(){ var d = load(), now = Date.now(), out = []; for (var k in d.items) if (d.items[k].due <= now) out.push(Object.assign({id:k}, d.items[k])); return out; },
+    total: function(){ return Object.keys(load().items).length; }
+  };
+})();
 
 /* Taurocatapsia · contenido. Todo procede del texto de pantalla de las fichas H3·01 a H3·17 del Tema 3 (Historiapp, tema03.json).
    En las preguntas, la primera opción es la correcta; el juego las baraja. */
@@ -235,7 +2210,10 @@ const ROOMS = [
         en:['A store and the religious centre of the community','A walled military fortress on the hill','A market with no religious role']}},
     {q:{es:'¿Qué cambio delata, hacia 1950 a. C., una nueva clase dirigente?',en:'What change reveals a new ruling class around 1950 BC?'},
      o:{es:['El paso de los enterramientos colectivos a los individuales','La construcción de murallas en todos los palacios de la isla','La aparición de la moneda'],
-        en:['The shift from collective to individual burials','The building of walls round every palace on the island','The appearance of coinage']}}
+        en:['The shift from collective to individual burials','The building of walls round every palace on the island','The appearance of coinage']}},
+    {q:{es:'¿Qué función tenía el deporte minoico para las grandes casas de la élite?',en:'What function did Minoan sport have for the great houses of the elite?'},
+     o:{es:['Exhibir el prestigio de quien lo patrocinaba','Ganar premios con que pagar a su guardia','Elegir cada año al rey entre los linajes de la isla'],
+        en:['To display the prestige of whoever sponsored it','To win prizes with which to pay their guard','To choose the king each year from the island\'s lineages']}}
    ]},
  { id:'damas', scene:'damas',
    t:{es:'El corredor de las damas',en:'The corridor of the ladies'},
@@ -292,7 +2270,10 @@ const ROOMS = [
         en:['No object shows a prize or a list of winners','The winners were always slaves and could receive nothing','The Linear B tablets forbid it']}},
     {q:{es:'¿Qué distingue al vencedor de los niños púgiles de Akrotiri?',en:'What marks the winner among the boxing boys of Akrotiri?'},
      o:{es:['Lleva collar, pulseras y pendientes','Lleva dos guantes','Es bastante mayor que su rival y más alto'],
-        en:['He wears a necklace, bracelets and earrings','He wears two gloves','He is clearly older and taller than his rival']}}
+        en:['He wears a necklace, bracelets and earrings','He wears two gloves','He is clearly older and taller than his rival']}},
+    {q:{es:'¿Para qué servía el deporte a los jóvenes de la élite minoica?',en:'What did sport do for the young men of the Minoan elite?'},
+     o:{es:['Para mostrar en público su valor y pasar a la edad adulta','Para ganar un puesto de mando en la flota del palacio de Cnoso','Para entrenar el pugilato de los banquetes del señor'],
+        en:['It let them show their courage in public and come of age','It won them a command in the fleet of the palace of Knossos','It trained them for the boxing at their lord\'s banquets']}}
    ]},
  { id:'toro', scene:'tazas',
    t:{es:'El toro',en:'The bull'},
@@ -754,6 +2735,9 @@ const CRED_DRAMA = {
    Datos: ROOMS, LAYOUT y EPILOGO de Codigo/cnoso/datos.js; FINALES y LECT de Codigo/cnoso/guion.js.
    Regla nueva (18-10-2026): las cuatro lecturas del salto del toro se abren según las pruebas que el alumno reúne. */
 'use strict';
+// Memoria común de fallos de Historiapp (19-10-2026): la pregunta fallada o acertada pasa a HAPP_REPASO, con la correcta primero.
+function repCnoso(R, Q, ok, game){ try { if (typeof HAPP_REPASO === 'undefined') return; const sp = (R.spots || []).find(x => x.ficha) || null;
+  if (ok) HAPP_REPASO.acierto(Q.q); else HAPP_REPASO.fallo(game, Q.q, Q.o, sp ? sp.ficha[0] : null, 3); } catch (e) {} }
 const W = 1280, H = 720, FLOOR = 692, HALL = 1280, KEY = 'cnosoP.v1';
 const $ = h => { const d = document.createElement('div'); d.innerHTML = h.trim(); return d.firstElementChild; };
 const st = document.getElementById('st');
@@ -762,13 +2746,20 @@ const st = document.getElementById('st');
 const HIST = {
   inside: (() => { try { if (!/\/juegos\//.test(location.pathname)) return false; for (let i = 0; i < localStorage.length; i++) if (localStorage.key(i).startsWith('historiapp.')) return true; } catch (e) {} return false; })(),
   xp(n){ if (!this.inside || !(n > 0)) return; try { const k = 'historiapp.progress'; const p = JSON.parse(localStorage.getItem(k)) || {xp:0, streak:0, lastDay:null, seen:{}, badges:{}, gl:{}, daily:{}}; p.xp = (p.xp || 0) + Math.round(n); localStorage.setItem(k, JSON.stringify(p)); } catch (e) { return; } toast('+' + Math.round(n) + ' XP'); },
-  back(){ save(); location.href = '../#t3'; },
-  ficha(id){ save(); location.href = '../#t3/f/' + encodeURIComponent(id); }
+  // «Guardar y salir» (v3): guardar.js, que inserta guardar_salir.py, define HAPP_SALIR (guarda, avisa y vuelve)
+  back(){ guardarPos(); save(); if (window.HAPP_SALIR) HAPP_SALIR('../#t3'); else location.href = '../#t3'; },
+  ficha(id){ guardarPos(); save(); location.href = '../#t3/f/' + encodeURIComponent(id); }
 };
+// posición del recorrido (no la de una sala repetida por la recompensa del nivel 13)
+function guardarPos(){ try { const sc = GAME.scene; if (sc && sc.pl && sc.replay == null) S.x = sc.pl.x; } catch (e) {} }
+window.HAPP_GUARDAR = () => { guardarPos(); save(); };
 
 /* ---------- estado ---------- */
-const DEF = {lang:null, room:0, x:60, seen:{}, qok:{}, done:{}, ev:{}, sound:true, fin:false, bouts:[0, 0, 0, 0], tec:'picado', fiesta:0, best:0, xpF:false};
-let S = (() => { try { return Object.assign({}, DEF, JSON.parse(localStorage.getItem(KEY)) || {}); } catch (e) { return Object.assign({}, DEF); } })();
+// dlg: tramos de diálogo ya oídos; af y pi: elecciones de los diálogos (como en el drama del Cnoso clásico); stage: etapa del personaje (retratos)
+const DEF = {lang:null, room:0, x:60, seen:{}, qok:{}, done:{}, ev:{}, sound:true, fin:false, bouts:[0, 0, 0, 0], tec:'picado', fiesta:0, best:0, xpF:false,
+  dlg:{}, af:{mae:0, sac:0, esc:0, riv:0}, pi:{rit:0, ini:0, pod:0, atl:0}, stage:0, tried:[0, 0, 0, 0], lastF:0, sunset:false};
+const fresh = () => JSON.parse(JSON.stringify(DEF)); // copia honda: DEF no se toca nunca
+let S = (() => { try { return Object.assign(fresh(), JSON.parse(localStorage.getItem(KEY)) || {}); } catch (e) { return fresh(); } })();
 function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
 if (!S.lang){ let l = null; try { l = localStorage.getItem('historiapp.lang'); } catch (e) {} S.lang = l === 'en' || l === 'es' ? l : ((navigator.language || 'es').startsWith('es') ? 'es' : 'en'); }
 if (HIST.inside){ try { const l = localStorage.getItem('historiapp.lang'); if (l === 'en' || l === 'es') S.lang = l; } catch (e) {} }
@@ -793,6 +2784,14 @@ const UI = {
       f1:'Entry', f2:'Push-off', f3:'Landing', f1e:'Grip', f2e:'Vault', otro:'Next bull', finF:'End of the festival', completo:'Complete leap', rodillas:'Complete leap, landing on the knees', fallido:'Failed leap',
       early:'Too early: the bull was not in place yet.', late:'Too late: the bull had already passed.', land0:'You land on your knees on the other side.', clean:'A clean leap.', fiestaRes:'You leapt {c} of 3 bulls, with {p} perfect phases.', repetir:'Repeat the festival', alPalacio:'Back to the palace', salto:'What did the leap mean?'}
 };
+Object.assign(UI.es, {saltar:'Saltar', saltarA:'Saltar el diálogo', toca:'Toca para seguir', pista:'Lectura',
+  salas:'Salas del palacio', salasT:'Elige una sala para volver a recorrerla', salasN:'Recorres la sala de nuevo: tu avance en el palacio no cambia.', salaSi:'Volver a las salas', salaFin:'Has vuelto a recorrer la sala.', menu:'Menú',
+  recomp:'Recompensas', nivel:'Nivel', tuNivel:'Tienes el nivel {a} en Historiapp ({b} XP).', proxima:'La próxima recompensa llega en el nivel {a}: {b}. Te faltan {c} XP.', todas:'Lo tienes todo desbloqueado.',
+  fueraApp:'Abre Cnoso desde Historiapp para desbloquear recompensas al subir de nivel en la app.', nuevas:'Nuevo en Cnoso por tu nivel de Historiapp:', atard:'Al atardecer', atardS:'La fiesta del toro, con el sol bajo sobre la arena.'});
+Object.assign(UI.en, {saltar:'Skip', saltarA:'Skip the dialogue', toca:'Tap to continue', pista:'Reading',
+  salas:'Rooms of the palace', salasT:'Choose a room to walk through it again', salasN:'You walk through the room again: your progress in the palace does not change.', salaSi:'Back to the rooms', salaFin:'You have walked through the room again.', menu:'Menu',
+  recomp:'Rewards', nivel:'Level', tuNivel:'You are level {a} in Historiapp ({b} XP).', proxima:'The next reward comes at level {a}: {b}. You need {c} more XP.', todas:'You have unlocked everything.',
+  fueraApp:'Open Cnoso from Historiapp to unlock rewards as you level up in the app.', nuevas:'New in Cnoso for your Historiapp level:', atard:'At sunset', atardS:'The bull festival, with the low sun over the arena.'});
 const t = (k, v) => { let x = UI[S.lang][k] ?? UI.es[k] ?? k; if (v) for (const q in v) x = x.replace('{' + q + '}', v[q]); return x; };
 
 /* Pruebas de cada lectura: piezas en las que se apoyan los autores citados en FINALES (guion.js).
@@ -827,7 +2826,7 @@ const SFX = { tap(){ tone(LYRE[3], .12, .08); }, whoosh(){ tone(520, .18, .05); 
 let toastEl = null, toastTm = 0;
 function toast(m){ if (!toastEl){ toastEl = $('<div class="toast"></div>'); st.appendChild(toastEl); } toastEl.textContent = m; toastEl.classList.add('on'); clearTimeout(toastTm); toastTm = setTimeout(() => toastEl && toastEl.classList.remove('on'), 2200); }
 let modal = null;
-function closeCard(){ if (modal){ modal.remove(); modal = null; } }
+function closeCard(){ if (DLG && DLG.el === modal) DLG.off(); if (modal){ modal.remove(); modal = null; } }
 function card(html, cls){ closeCard(); const v = $(`<div class="veil"><div class="card ${cls || ''}"><div class="in">${html}</div></div></div>`); st.appendChild(v); modal = v; return v; }
 function fichaBtn(f){ return HIST.inside && f ? `<button class="btn" data-f="${f[0]}">📖 ${t('ficha')}</button>` : ''; }
 function bindFicha(el){ el.querySelectorAll('[data-f]').forEach(b => b.onclick = e => { e.stopPropagation(); HIST.ficha(b.dataset.f); }); }
@@ -835,6 +2834,113 @@ const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--){ co
 const evCount = k => Object.keys(S.ev).filter(img => (EVID[img] || []).includes(k)).length;
 const evTotal = k => Object.keys(EVID).filter(img => EVID[img].includes(k)).length;
 const imgCap = img => { for (const sc in LAYOUT) for (const p of LAYOUT[sc].panels) if (p.img === img) return L(p.cap); return img; };
+
+/* ---------- diálogos del guion (v3): los personajes del Cnoso clásico hablan durante el recorrido ----------
+   Texto y orden de GUION (Codigo/cnoso/guion.js), sin añadir nada. Cada tramo junta escenas enteras o la parte de una
+   escena que queda antes, entre o después de sus combates ('1.4:a' antes del combate, '1.4:b' después).
+   Se dicen las líneas de los personajes y del narrador y las decisiones; las voces del diario {d} no se repiten aquí,
+   porque las marcas de cada sala ya dan ese contenido, y se omiten las acciones propias del drama clásico
+   (captura con red, lugar y técnica, que aquí se eligen en la tarjeta de la fiesta). La escena 3.4 junta los combates
+   2 y 3, que en el recorrido van antes de la sala del toro y antes del patio, de modo que el capítulo 4 se oye entre los dos. */
+const TRAMOS = {
+  r0:['1.1', '1.2', '1.3'], b0a:['1.4:a'], b0z:['1.4:b'],
+  r1:['2.1', '2.2', '2.3'], r2:['2.4', '2.5', '2.6'], r3:['3.1', '3.2', '3.3'],
+  b1a:['3.4:a'], r4:['4.1', '4.2', '4.3', '4.4'], b2a:['3.4:b'], r5:['5.1', '5.2'],
+  b3a:['3.5:a'], b3z:['3.5:b', '3.6'], fa:['5.3', '5.4'], fz:['5.5', '6.1']
+};
+const retrato = who => { const r = typeof RETR !== 'undefined' && RETR[who]; if (!r) return null; return Array.isArray(r) ? r[Math.min(2, S.stage || 0)] : r; };
+const imgSrc = k => (window.IMG_SRC && IMG_SRC[k]) || ('cnoso/' + k + '.webp');
+function sceneById(id){ for (const C of GUION) for (const sc of C.scenes) if (sc.id === id) return sc; return null; }
+function tramoLines(ids){
+  const out = [];
+  for (const id of ids){
+    const [sid, part] = id.split(':'), sc = sceneById(sid); if (!sc) continue;
+    if (!part){ out.push(...sc.lines.filter(l => !(l && l.act === 'bout'))); continue; }
+    const segs = [[]]; sc.lines.forEach(l => { if (l && l.act === 'bout') segs.push([]); else segs[segs.length - 1].push(l); });
+    out.push(...(segs['abc'.indexOf(part)] || []));
+  }
+  return out;
+}
+function cond(k){
+  return k === 'b0' ? !!S.bouts[0] : k === 'win' ? !!S.bouts[3] : k === 'afRiv' ? S.af.riv >= 2 : k === 'afMae' ? S.af.mae >= 2
+    : k === 'patio' ? true : k === 'f3' ? S.lastF >= 3 : k === 'f1' ? S.lastF >= 1 : null;   // null: depende de una acción omitida (la red de la captura)
+}
+let DLG = null;
+function dialogo(key, done, extra){
+  const fin = () => { if (done) done(); };
+  if (!TRAMOS[key] || S.dlg[key]) return fin();
+  const Q = tramoLines(TRAMOS[key]).concat(extra || []);
+  let el = null, por = null, box = null;
+  const off = () => { document.removeEventListener('keydown', onKey, true); DLG = null; };
+  const cerrar = () => { S.dlg[key] = 1; save(); const e0 = el; off(); if (e0){ if (modal === e0) modal = null; e0.remove(); }
+    try { const sc = GAME.scene; if (sc && sc.input && sc.input.keyboard) sc.input.keyboard.resetKeys(); } catch (e) {} fin(); };
+  const saltar = () => { for (const l of Q) if (l && l.act === 'stage') S.stage = l.s; Q.length = 0; SFX.tap(); cerrar(); };
+  const onKey = e => { if (!DLG || DLG.opts) return; if (e.key === ' ' || e.key === 'Enter' || e.key === 'ArrowRight'){ e.preventDefault(); e.stopPropagation(); paso(); } else if (e.key === 'Escape'){ e.preventDefault(); saltar(); } };
+  const montar = () => {
+    if (el) return; closeCard();
+    el = $(`<div class="dlgw" role="dialog" aria-live="polite"><img class="por" alt="" hidden><div class="dlg"><div class="nm"></div><div class="tx"></div><div class="ops"></div><i class="nx" aria-hidden="true">▾</i></div>
+      <button class="chip skip" aria-label="${t('saltarA')}">${t('saltar')} ⏭</button></div>`);
+    st.appendChild(el); modal = el; DLG = {opts:false, el, off};
+    por = el.querySelector('.por'); box = el.querySelector('.dlg');
+    box.addEventListener('click', e => { if (e.target.closest('button')) return; e.stopPropagation(); paso(); });
+    el.querySelector('.skip').addEventListener('click', e => { e.stopPropagation(); saltar(); });
+    document.addEventListener('keydown', onKey, true);
+  };
+  const decir = l => {
+    montar(); const who = l[0], r = who === 'nar' ? null : retrato(who);
+    DLG.opts = false; box.classList.remove('opts'); box.classList.toggle('narr', who === 'nar'); box.classList.toggle('wp', !!r);
+    if (r){ if (por.dataset.k !== r){ por.dataset.k = r; por.src = imgSrc(r); por.alt = L(PERS[who]); por.classList.remove('in'); void por.offsetWidth; por.classList.add('in'); } por.hidden = false; } else por.hidden = true;
+    box.querySelector('.nm').textContent = who === 'nar' ? '' : L(PERS[who]);
+    box.querySelector('.tx').textContent = S.lang === 'en' ? l[2] : l[1];
+    box.querySelector('.ops').innerHTML = ''; box.querySelector('.nx').style.opacity = 1;
+    if (who !== 'nar') SFX.tap();
+  };
+  const elegir = l => {
+    montar(); DLG.opts = true; box.classList.add('opts'); box.classList.remove('narr', 'wp'); por.hidden = true;
+    box.querySelector('.nm').textContent = ''; box.querySelector('.tx').textContent = ''; box.querySelector('.nx').style.opacity = 0;
+    const ops = box.querySelector('.ops'); ops.innerHTML = '';
+    l.q.forEach(o => { const b = $(`<button class="btn opt">› ${L(o)}</button>`); b.onclick = e => { e.stopPropagation(); SFX.ok();
+      const m = []; if (o.p){ S.pi[o.p]++; m.push(`✦ ${t('pista')} ${L(LECT[o.p]).toLowerCase()}`); } if (o.a){ S.af[o.a]++; m.push(`${L(PERS[o.a])} ↑`); }
+      save(); if (m.length) toast(m.join(' · ')); Q.unshift(...(o.r || [])); paso(); }; ops.appendChild(b); });
+  };
+  function paso(){
+    while (Q.length){
+      const l = Q.shift();
+      if (Array.isArray(l)) return decir(l);
+      if (!l) continue;
+      if (l.q) return elegir(l);
+      if (l.if){ const c = cond(l.if); if (c !== null) Q.unshift(...((c ? l.then : l.else) || [])); continue; }
+      if (l.act === 'stage'){ S.stage = l.s; save(); continue; }
+      // las voces del diario {d} y las demás acciones del drama clásico se omiten
+    }
+    cerrar();
+  }
+  paso();
+}
+// final del recorrido: habla quien sostiene la lectura con más pruebas reunidas (FINALES de guion.js)
+function finalLine(){ let best = ORDER[0], bn = -1; for (const k of ORDER){ const n = evCount(k); if (n > bn){ bn = n; best = k; } } const F0 = FINALES[best]; return [[F0.who, F0.t.es, F0.t.en]]; }
+
+/* ---------- recompensas por nivel de Historiapp (nivel 13, repetir salas; nivel 45, fiesta al atardecer), como en el Cnoso clásico ---------- */
+const RWK = {salas:'repetir_cualquier_sala_del_palac', sol:'fiesta_del_toro_al_atardecer'};
+const RWD = {
+  [RWK.salas]:{es:'Vuelve a recorrer cualquier sala del palacio, con sus marcas y sus preguntas, sin cambiar tu avance en el palacio.', en:'Walk through any room of the palace again, with its marks and its questions, without changing your progress in the palace.'},
+  [RWK.sol]:{es:'La fiesta del toro se celebra al atardecer, con el cielo y la arena teñidos de ocre y rosa. Se activa en la tarjeta de la fiesta.', en:'The bull festival takes place at sunset, with the sky and the arena tinted in ochre and pink. You switch it on from the festival card.'}};
+const rwOK = () => typeof HAPP_RW !== 'undefined';
+const rwHas = k => rwOK() && !!HAPP_RW.has('cnoso', k);
+const salaAbierta = i => i === 0 || !!S.done[ROOMS[i - 1].id];
+function roomsCard(scene){
+  const v = card(`<h2>${t('salas')}</h2><p class="sm">${t('salasT')}</p><div class="opts">${ROOMS.map((R, i) => salaAbierta(i) ? `<button class="btn opt" data-i="${i}"><b>${i + 1}. ${L(R.t)}</b><br><small>${L(R.sub)}</small></button>` : '').join('')}</div>
+    <p class="sm">${t('salasN')}</p><div class="act"><button class="btn pri" data-c>${t('cerrar')}</button></div>`, 'wide');
+  v.querySelectorAll('[data-i]').forEach(b => b.onclick = () => { au(); SFX.tap(); closeCard(); st.innerHTML = ''; toastEl = null; scene.scene.start('palace', {replay:+b.dataset.i}); });
+  v.querySelector('[data-c]').onclick = closeCard;
+}
+function rewardsCard(){
+  const Lv = HAPP_RW.level(), list = HAPP_RW.list('cnoso').slice().sort((a, b) => a.lv - b.lv), nx = HAPP_RW.proxima('cnoso');
+  const rows = list.map(r => { const ok = !!(Lv && Lv.lv >= r.lv); return `<p><b>${ok ? '✓' : '🔒'} ${t('nivel')} ${r.lv}</b> · ${L(r)}<br><small>${L(RWD[r.k])}</small></p>`; }).join('');
+  const msg = !Lv ? t('fueraApp') : `${t('tuNivel', {a:Lv.lv, b:Lv.xp})} ${nx ? t('proxima', {a:nx.lv, b:L(nx).toLowerCase(), c:Math.max(0, HAPP_RW.xpFor(nx.lv) - Lv.xp)}) : t('todas')}`;
+  const v = card(`<h2>${t('recomp')}</h2><p class="sm">${msg}</p>${rows}<div class="act"><button class="btn pri" data-c>${t('cerrar')}</button></div>`, 'wide');
+  v.querySelector('[data-c]').onclick = closeCard;
+}
 
 /* ---------- escenas ---------- */
 const GAME = { scene:null };
@@ -849,7 +2955,7 @@ class Boot extends Phaser.Scene {
     this.load.on('progress', v => bar.width = 400 * v);
     imgs.forEach(k => this.load.image(k, (window.IMG_SRC && IMG_SRC[k]) || ('cnoso/' + k + '.webp')));
   }
-  create(){ this.scene.start('title'); }
+  create(){ this.scene.start('title', {}); }
 }
 
 class Title extends Phaser.Scene {
@@ -864,15 +2970,21 @@ class Title extends Phaser.Scene {
       <div class="tbtns"><button class="btn pri" data-go>${started ? t('cont') : t('play')}</button>
       ${started ? `<button class="btn" data-reset>${t('reset')}</button>` : ''}</div>
       <div class="tbtns sm"><button class="chip ${S.lang === 'es' ? 'on' : ''}" data-l="es">ES</button><button class="chip ${S.lang === 'en' ? 'on' : ''}" data-l="en">EN</button>
-      <button class="chip ${S.sound ? 'on' : ''}" data-snd>♪ ${t('snd')}</button>${HIST.inside ? `<button class="chip" data-back>${t('salir')}</button>` : ''}</div></div>`);
+      <button class="chip ${S.sound ? 'on' : ''}" data-snd>♪ ${t('snd')}</button>${HIST.inside ? `<button class="chip" data-back>💾 ${t('salir')}</button>` : ''}</div>
+      ${rwHas(RWK.salas) || (rwOK() && HAPP_RW.level()) ? `<div class="tbtns sm">${rwHas(RWK.salas) ? `<button class="chip" data-salas>🏛 ${t('salas')}</button>` : ''}${rwOK() && HAPP_RW.level() ? `<button class="chip" data-rw>🎖 ${t('recomp')}</button>` : ''}</div>` : ''}</div>`);
     st.appendChild(v);
-    v.querySelector('[data-go]').onclick = () => { au(); st.innerHTML = ''; this.scene.start('palace'); };
-    const r = v.querySelector('[data-reset]'); if (r) r.onclick = () => { if (confirmCard(t('nuevo'), () => { const l = S.lang, s = S.sound; S = Object.assign({}, DEF, {lang:l, sound:s}); save(); this.scene.restart(); })); };
-    v.querySelectorAll('[data-l]').forEach(b => b.onclick = () => { S.lang = b.dataset.l; save(); this.scene.restart(); });
-    v.querySelector('[data-snd]').onclick = () => { S.sound = !S.sound; save(); this.scene.restart(); };
+    v.querySelector('[data-go]').onclick = () => { au(); st.innerHTML = ''; this.scene.start('palace', {}); };
+    const r = v.querySelector('[data-reset]'); if (r) r.onclick = () => { if (confirmCard(t('nuevo'), () => { const l = S.lang, s = S.sound; S = Object.assign(fresh(), {lang:l, sound:s}); save(); this.scene.restart({}); })); };
+    v.querySelectorAll('[data-l]').forEach(b => b.onclick = () => { S.lang = b.dataset.l; save(); this.scene.restart({}); });
+    v.querySelector('[data-snd]').onclick = () => { S.sound = !S.sound; save(); this.scene.restart({}); };
     const bk = v.querySelector('[data-back]'); if (bk) bk.onclick = () => HIST.back();
-    document.getElementById('rotT').textContent = t('gira');
+    const sb = v.querySelector('[data-salas]'); if (sb) sb.onclick = () => { SFX.tap(); roomsCard(this); };
+    const rb = v.querySelector('[data-rw]'); if (rb) rb.onclick = () => { SFX.tap(); rewardsCard(); };
+    document.getElementById('rotT').textContent = t('gira'); document.documentElement.lang = S.lang;
+    if (rwOK()){ const nv = HAPP_RW.nuevas('cnoso'); if (nv.length) this.time.delayedCall(700, () => toast(t('nuevas') + ' ' + nv.map(r => L(r)).join(', '))); }
+    if (this.rooms && rwHas(RWK.salas)){ this.rooms = false; roomsCard(this); }
   }
+  init(d){ this.rooms = !!(d && d.rooms); }
 }
 function confirmCard(msg, yes){ const v = card(`<p>${msg}</p><div class="act"><button class="btn" data-n>✕</button><button class="btn pri" data-y>${t('reset')}</button></div>`); v.querySelector('[data-n]').onclick = closeCard; v.querySelector('[data-y]').onclick = () => { closeCard(); yes(); }; return false; }
 
@@ -884,12 +2996,12 @@ class Palace extends Phaser.Scene {
     this.WW = WW;
     this.cameras.main.setBounds(0, 0, WW, H);
     this.makeWall(WW);
-    this.spots = [];
+    this.spots = []; this.rseen = {};
     ROOMS.forEach((R, i) => this.buildHall(R, i));
     this.doors = ROOMS.map((R, i) => this.buildDoor(i));
-    this.stations = STATIONS.map(d => this.buildStation(d));
+    this.stations = this.replay != null ? [] : STATIONS.map(d => this.buildStation(d));   // en una sala repetida no hay combates ni fiesta
     // jugador: saltador del fresco de la Taurocatapsia, animado como marioneta
-    this.pl = this.add.container(S.x, FLOOR).setDepth(20);
+    this.pl = this.add.container(this.replay != null ? this.replay * HALL + 100 + 160 : S.x, FLOOR).setDepth(20);
     this.shadow = this.add.ellipse(0, 0, 120, 22, 0x231a14, .28);
     const fig = this.add.image(0, 0, 'sp_right').setOrigin(.5, 1);
     fig.setScale(330 / fig.height);
@@ -898,11 +3010,13 @@ class Palace extends Phaser.Scene {
     this.cameras.main.startFollow(this.pl, true, .12, .12, 0, 120);
     // control
     this.keys = this.input.keyboard.addKeys({L:'LEFT', R:'RIGHT', A:'A', D:'D', SP:'SPACE', EN:'ENTER'});
-    this.input.on('pointerdown', (p, over) => { if (modal || this.joyActive || (over && over.length)) return; this.target = Phaser.Math.Clamp(p.worldX, 80, this.limitX()); });
+    this.input.on('pointerdown', (p, over) => { if (modal || this.joyActive || (over && over.length)) return; this.target = Phaser.Math.Clamp(p.worldX, this.minX(), this.limitX()); });
     this.buildHud(); this.buildJoy();
     this.events.once('shutdown', () => { st.innerHTML = ''; toastEl = null; });
-    if (!S.seen.__intro){ S.seen.__intro = 1; save(); this.time.delayedCall(400, () => toast(t('andar'))); }
+    if (this.replay != null){ this.time.delayedCall(300, () => toast(t('salasN'))); return; }
+    const intro = () => { if (!S.seen.__intro){ S.seen.__intro = 1; save(); toast(t('andar')); } };
     if (this.fromArena) this.time.delayedCall(300, () => this.finale());
+    else this.time.delayedCall(400, () => dialogo('r0', intro));
   }
   makeWall(WW){
     // yeso con textura, banda de frescos arriba y suelo de losas
@@ -950,13 +3064,13 @@ class Palace extends Phaser.Scene {
     R.spots.forEach((sp, k) => {
       const m = LY.spots[k] || [0, .5, .5], B = boxes[m[0]] || boxes[0];
       const x = B.x + B.w * m[1], y = B.y + B.h * m[2];
-      const key = R.id + ':' + k, seen = !!S.seen[key];
+      const key = R.id + ':' + k, seen = !!this.seenK(key);
       const ring = this.add.circle(x, y, 20, 0xdca23a, .0).setStrokeStyle(4, 0x231a14).setDepth(6);
       const dot = this.add.circle(x, y, 13, seen ? 0x8a7a5c : 0xb4472b).setStrokeStyle(3, 0xfff8ea).setDepth(7);
       const num = this.add.text(x + 15, y - 26, String(k + 1), {fontFamily:'Georgia, serif', fontSize:'14px', color:'#f3e8cf', backgroundColor:seen ? '#2c6a96' : '#231a14', padding:{x:5, y:1}}).setDepth(8);
       const glow = this.tweens.add({targets:ring, scale:{from:1, to:1.9}, alpha:{from:.9, to:0}, duration:1200, repeat:-1});
       ring.setFillStyle(0xdca23a, .0); if (seen) glow.pause();
-      dot.setInteractive({useHandCursor:true}).on('pointerdown', (p, lx, ly, ev) => { ev.stopPropagation(); if (modal) return; this.target = Phaser.Math.Clamp(x, 80, this.limitX()); this.pending = {i, k, x}; });
+      dot.setInteractive({useHandCursor:true}).on('pointerdown', (p, lx, ly, ev) => { ev.stopPropagation(); if (modal) return; this.target = Phaser.Math.Clamp(x, this.minX(), this.limitX()); this.pending = {i, k, x}; });
       this.spots.push({i, k, x, y, key, ring, dot, num, glow, img:B.img});
     });
     // piezas que sirven de prueba: marca dorada opcional en la esquina del cuadro (no hace falta para avanzar)
@@ -967,7 +3081,7 @@ class Palace extends Phaser.Scene {
       const dot = this.add.circle(x, y, 18, have ? 0x8a7a5c : 0xdca23a).setStrokeStyle(3, 0x231a14).setDepth(7);
       const num = this.add.text(x, y, '🏺', {fontSize:'18px'}).setOrigin(.5).setDepth(8);
       const glow = this.tweens.add({targets:ring, scale:{from:1, to:1.7}, alpha:{from:.9, to:0}, duration:1500, repeat:-1}); if (have) glow.pause();
-      dot.setInteractive({useHandCursor:true}).on('pointerdown', (p, lx, ly, ev) => { ev.stopPropagation(); if (modal) return; this.target = Phaser.Math.Clamp(x, 80, this.limitX()); this.pendingEv = B.img; });
+      dot.setInteractive({useHandCursor:true}).on('pointerdown', (p, lx, ly, ev) => { ev.stopPropagation(); if (modal) return; this.target = Phaser.Math.Clamp(x, this.minX(), this.limitX()); this.pendingEv = B.img; });
       this.spots.push({i, k:-1, ev:true, x, y, key:'ev:' + B.img, ring, dot, num, glow, img:B.img});
     });
   }
@@ -981,7 +3095,9 @@ class Palace extends Phaser.Scene {
     if (S.done[ROOMS[i].id]) g.setAlpha(0);
     return g;
   }
-  limitX(){ let r = 0; while (r < ROOMS.length - 1 && S.done[ROOMS[r].id]) r++; let lim = (r + 1) * HALL + 100 - 90;
+  seenK(k){ return this.replay != null ? this.rseen[k] : S.seen[k]; }
+  minX(){ return this.replay != null ? this.replay * HALL + 100 + 60 : 80; }
+  limitX(){ if (this.replay != null) return (this.replay + 1) * HALL + 100 - 90; let r = 0; while (r < ROOMS.length - 1 && S.done[ROOMS[r].id]) r++; let lim = (r + 1) * HALL + 100 - 90;
     for (const d of STATIONS) if (d.k === 'bout' && !S.bouts[d.i] && stX(d) + 30 < lim) lim = stX(d) + 30;
     return Math.min(lim, this.WW - 60); }
   buildStation(d){
@@ -994,13 +3110,15 @@ class Palace extends Phaser.Scene {
     c.add([im, pl, lab, ring]);
     const done = d.k === 'bout' ? !!S.bouts[d.i] : S.fiesta > 0;
     const glow = this.tweens.add({targets:ring, scale:{from:1, to:1.8}, alpha:{from:.9, to:0}, duration:1300, repeat:-1}); if (done) glow.pause();
-    pl.setInteractive({useHandCursor:true}).on('pointerdown', (p, lx, ly, ev) => { ev.stopPropagation(); if (modal) return; this.target = Phaser.Math.Clamp(x, 80, this.limitX()); this.pendingSt = d; });
+    pl.setInteractive({useHandCursor:true}).on('pointerdown', (p, lx, ly, ev) => { ev.stopPropagation(); if (modal) return; this.target = Phaser.Math.Clamp(x, this.minX(), this.limitX()); this.pendingSt = d; });
     const o = {st:d, x, i:d.room, glow, ring, c}; this.spots.push(o); return o;
   }
   openStation(o){
     const d = o.st;
     if (d.end && !S.done[ROOMS[5].id]){ toast(t('fiestaFalta')); return; }
     if (d.k === 'fiesta' && !S.bouts[3]){ toast(t('fiestaFalta')); return; }
+    if (d.k === 'bout' && !S.dlg['b' + d.i + 'a']){ dialogo('b' + d.i + 'a', () => this.openStation(o)); return; }
+    if (d.k === 'fiesta' && !S.dlg.fa){ dialogo('fa', () => this.openStation(o)); return; }
     if (d.k === 'bout'){
       const v = card(`<h2>${t('combate')} · ${t('combateN', {n:d.i + 1})}</h2><p>${t('combateP')}</p>${S.bouts[d.i] ? `<p><b>✓ ${t('ganado')}</b> ${'★'.repeat(S.bouts[d.i])}</p>` : ''}
         <div class="act"><button class="btn" data-c>${t('cerrar')}</button><button class="btn pri" data-go>${t('combatir')}</button></div>`);
@@ -1015,26 +3133,30 @@ class Palace extends Phaser.Scene {
       <div class="opts"><button class="btn opt" data-v="picado"><b>${L(ARENA.picado)}</b><br><small>${L(ARENA.picadoS)}</small></button>
       <button class="btn opt" data-v="evans"><b>${L(ARENA.evans)}</b><br><small>${L(ARENA.evansS)}</small></button></div>
       <p class="sm" data-n hidden>${L(ARENA.evansNota)}</p>
+      ${rwHas(RWK.sol) ? `<div class="opts"><button class="btn opt" data-sun><b>☀ ${t('atard')}</b><br><small>${t('atardS')}</small></button></div>` : ''}
       <div class="act"><button class="btn" data-c>${t('cerrar')}</button><button class="btn pri" data-go>${t('empezar')} ›</button></div>`, 'wide');
     const sync = () => { v.querySelectorAll('[data-v]').forEach(b => { const on = S.tec === b.dataset.v; b.classList.toggle('pri', on); b.setAttribute('aria-pressed', on); }); v.querySelector('[data-n]').hidden = S.tec !== 'evans'; };
     v.querySelectorAll('[data-v]').forEach(b => b.onclick = () => { SFX.tap(); S.tec = b.dataset.v; save(); sync(); }); sync();
+    const sun = v.querySelector('[data-sun]'); if (sun){ const sy = () => { sun.classList.toggle('pri', !!S.sunset); sun.setAttribute('aria-pressed', !!S.sunset); sun.querySelector('b').textContent = (S.sunset ? '✓ ' : '☀ ') + t('atard'); }; sy(); sun.onclick = () => { SFX.tap(); S.sunset = !S.sunset; save(); sy(); }; }
     v.querySelector('[data-c]').onclick = closeCard;
     v.querySelector('[data-go]').onclick = () => { closeCard(); S.x = this.pl.x; save(); au(); this.scene.start('arena', {f:Math.min(2, S.fiesta)}); };
   }
   afterBout(i){
     this.refreshHud();
     const o = this.stations.find(z => z.st.k === 'bout' && z.st.i === i); if (o && S.bouts[i]) o.glow.pause();
-    if (S.bouts[i]) toast(t('ganado'));
+    const ok = () => { if (S.bouts[i]) toast(t('ganado')); };
+    if (S.tried[i]) dialogo('b' + i + 'z', ok); else ok();   // lo que se dice después del combate, tras el primer intento (como en el drama clásico)
   }
   roomAt(x){ return Phaser.Math.Clamp(Math.floor((x - 100) / HALL), 0, ROOMS.length - 1); }
   buildHud(){
     st.innerHTML = ''; toastEl = null;
-    const top = $(`<div class="top">${HIST.inside ? `<button class="chip" data-back>💾 ${t('salir')}</button>` : `<button class="chip" data-home>⌂</button>`}
+    const top = $(`<div class="top">${this.replay != null ? `<button class="chip" data-salas>🏛 ${t('salaSi')}</button>` : HIST.inside ? `<button class="chip" data-back>💾 ${t('salir')}</button>` : `<button class="chip" data-home>⌂</button>`}
       <span class="rinfo"><b data-rn></b><small data-rs></small></span><span class="sp"></span>
       <button class="chip" data-ev>🏺 ${t('pruebas')} <span data-evn></span></button></div>`);
     st.appendChild(top);
     const bk = top.querySelector('[data-back]'); if (bk) bk.onclick = () => { S.x = this.pl.x; HIST.back(); };
-    const hm = top.querySelector('[data-home]'); if (hm) hm.onclick = () => { S.x = this.pl.x; save(); this.scene.start('title'); };
+    const sl = top.querySelector('[data-salas]'); if (sl) sl.onclick = () => { closeCard(); this.scene.start('title', {rooms:true}); };
+    const hm = top.querySelector('[data-home]'); if (hm) hm.onclick = () => { S.x = this.pl.x; save(); this.scene.start('title', {}); };
     top.querySelector('[data-ev]').onclick = () => this.readingsCard(false);
     this.hudRn = top.querySelector('[data-rn]'); this.hudRs = top.querySelector('[data-rs]'); this.hudEv = top.querySelector('[data-evn]');
     this.look = $(`<button class="btn pri lookbtn">👁 ${t('mirar')}</button>`); st.appendChild(this.look);
@@ -1042,8 +3164,8 @@ class Palace extends Phaser.Scene {
     this.refreshHud();
   }
   refreshHud(){
-    const i = this.roomAt(this.pl.x), R = ROOMS[i], n = R.spots.length, s = R.spots.filter((_, k) => S.seen[R.id + ':' + k]).length;
-    this.hudRn.textContent = L(R.t); this.hudRs.textContent = `${t('sala')} ${i + 1} ${t('de')} ${ROOMS.length} · ${s}/${n}${S.done[R.id] ? ' · ✓' : ''}`;
+    const i = this.roomAt(this.pl.x), R = ROOMS[i], n = R.spots.length, s = R.spots.filter((_, k) => this.seenK(R.id + ':' + k)).length;
+    this.hudRn.textContent = L(R.t); this.hudRs.textContent = `${t('sala')} ${i + 1} ${t('de')} ${ROOMS.length} · ${s}/${n}${S.done[R.id] && this.replay == null ? ' · ✓' : ''}`;
     this.hudEv.textContent = Object.keys(S.ev).length + '/' + Object.keys(EVID).length;
   }
   buildJoy(){
@@ -1069,8 +3191,8 @@ class Palace extends Phaser.Scene {
     if (s.ev){ this.openEvidence(s); return; }
     const R = ROOMS[s.i], sp = R.spots[s.k];
     SFX.look();
-    const first = !S.seen[s.key];
-    S.seen[s.key] = 1; S.x = this.pl.x; save();
+    const first = !this.seenK(s.key);
+    if (this.replay != null) this.rseen[s.key] = 1; else { S.seen[s.key] = 1; S.x = this.pl.x; } save();
     s.dot.setFillStyle(0x8a7a5c); s.num.setBackgroundColor('#2c6a96'); s.glow.pause(); s.ring.setAlpha(0);
     const v = card(`<h2>${L(sp.t)}</h2><div class="sub">${imgCap(s.img)}</div>${L(sp.p).map(x => `<p>${x}</p>`).join('')}
       <div class="act">${fichaBtn(sp.ficha)}<button class="btn pri" data-c>${t('seguir')}</button></div>`);
@@ -1079,11 +3201,11 @@ class Palace extends Phaser.Scene {
     this.refreshHud();
   }
   afterSpot(s){
-    const R = ROOMS[s.i]; if (!S.done[R.id] && R.spots.every((_, k) => S.seen[R.id + ':' + k])) this.time.delayedCall(250, () => this.askRoom(s.i));
+    const R = ROOMS[s.i]; if ((this.replay != null || !S.done[R.id]) && R.spots.every((_, k) => this.seenK(R.id + ':' + k))) this.time.delayedCall(250, () => this.askRoom(s.i));
   }
   openEvidence(s){
     const first = !S.ev[s.img];
-    S.ev[s.img] = 1; S.x = this.pl.x; save(); SFX.ev();
+    S.ev[s.img] = 1; if (this.replay == null) S.x = this.pl.x; save(); SFX.ev();
     s.dot.setFillStyle(0x8a7a5c); s.glow.pause(); s.ring.setAlpha(0); this.refreshHud();
     const ls = EVID[s.img].map(k => `<b>${L(LECT[k])}</b> (${evCount(k)}/${evTotal(k)})`).join(' · ');
     const v = card(`<h2>🏺 ${first ? t('prueba') : imgCap(s.img)}</h2>${first ? `<p>${imgCap(s.img)}</p>` : ''}<p>${t('sostiene')}: ${ls}.</p>
@@ -1094,6 +3216,8 @@ class Palace extends Phaser.Scene {
   askRoom(i){
     const R = ROOMS[i], qs = R.qs || []; let n = 0, okN = 0;
     const next = () => {
+      if (n >= qs.length && this.replay != null){ const v = card(`<h2>${L(R.t)}</h2><p>${t('salaFin')}</p><div class="act"><button class="btn" data-c>${t('cerrar')}</button><button class="btn pri" data-s>🏛 ${t('salaSi')}</button></div>`);
+        v.querySelector('[data-c]').onclick = closeCard; v.querySelector('[data-s]').onclick = () => { closeCard(); this.scene.start('title', {rooms:true}); }; return; }
       if (n >= qs.length){ S.done[R.id] = 1; save(); this.refreshHud();
         const d = this.doors[i]; if (d) this.tweens.add({targets:d, alpha:0, duration:700});
         toast(t('yaSala')); return; }
@@ -1101,7 +3225,7 @@ class Palace extends Phaser.Scene {
       const v = card(`<div class="sub">${t('preg')} · ${n + 1}/${qs.length}</div><h2>${L(q.q)}</h2><div class="opts">${opts.map((o, j) => `<button class="btn opt" data-o="${j}">${o.s}</button>`).join('')}</div><div class="fb"></div>`);
       v.querySelectorAll('[data-o]').forEach(b => b.onclick = () => {
         const o = opts[+b.dataset.o]; v.querySelectorAll('[data-o]').forEach(x => x.disabled = true);
-        const qk = R.id + ':' + n, fb = v.querySelector('.fb');
+        const qk = R.id + ':' + n, fb = v.querySelector('.fb'); repCnoso(R, q, o.ok, 'cnoso');
         if (o.ok){ SFX.ok(); b.classList.add('pri'); okN++; if (!S.qok[qk]){ S.qok[qk] = 1; save(); HIST.xp(10); } fb.innerHTML = `<p><b>✓ ${t('ok')}</b></p>`; }
         else { SFX.no(); fb.innerHTML = `<p><b>✕ ${t('no')}:</b> ${opts.find(x => x.ok).s}</p>`; }
         fb.insertAdjacentHTML('beforeend', `<div class="act"><button class="btn pri" data-n>${t('seguir')}</button></div>`);
@@ -1121,8 +3245,8 @@ class Palace extends Phaser.Scene {
       <div class="act"><button class="btn pri" data-c>${t('cerrar')}</button></div>`, 'wide');
     v.querySelector('[data-c]').onclick = () => { closeCard(); if (then) then(); };
   }
-  finale(){ S.fin = true; save(); SFX.ev(); this.readingsCard(true); }
-  init(data){ this.fromArena = data && data.fromArena; }
+  finale(){ const go = () => { S.fin = true; save(); SFX.ev(); this.readingsCard(true); }; if (S.dlg.fz) go(); else dialogo('fz', go, finalLine()); }
+  init(data){ this.fromArena = data && data.fromArena; this.replay = data && data.replay != null ? data.replay : null; }
   update(time, dt){
     const d = dt / 1000, K = this.keys;
     let dir = 0;
@@ -1134,7 +3258,7 @@ class Palace extends Phaser.Scene {
       else if (this.target != null){ const dx = this.target - this.pl.x; if (Math.abs(dx) < 8){ this.target = null; if (this.pendingSt){ const d = this.pendingSt; this.pendingSt = null; const o = this.stations.find(z => z.st === d); if (o && Math.abs(o.x - this.pl.x) < 150) this.openSpot(o); } if (this.pendingEv){ const img = this.pendingEv; this.pendingEv = null; const s = this.spots.find(z => z.ev && z.img === img); if (s && Math.abs(s.x - this.pl.x) < 150) this.openSpot(s); } if (this.pending){ const p = this.pending; this.pending = null; const s = this.spots.find(z => z.i === p.i && z.k === p.k); if (s && Math.abs(s.x - this.pl.x) < 150) this.openSpot(s); } } else dir = Math.sign(dx); }
     }
     const lim = this.limitX(), sp = 330;
-    const nx = Phaser.Math.Clamp(this.pl.x + dir * sp * d, 80, lim);
+    const nx = Phaser.Math.Clamp(this.pl.x + dir * sp * d, this.minX(), lim);
     if (dir > 0 && this.pl.x >= lim - 1 && !modal){ if (!this.blockT || time - this.blockT > 2500){ this.blockT = time; const b = STATIONS.find(d => d.k === 'bout' && !S.bouts[d.i] && Math.abs(stX(d) + 30 - lim) < 2); toast(b ? t('falta2') : t('falta')); } }
     const moving = Math.abs(nx - this.pl.x) > .1;
     this.pl.x = nx;
@@ -1148,8 +3272,13 @@ class Palace extends Phaser.Scene {
     // botón Mirar visible cerca de una marca
     const near = this.nearSpot();
     this.look.classList.toggle('on', !!near && !modal);
-    if ((this.hudT = (this.hudT || 0) + d) > .25){ this.hudT = 0; this.refreshHud(); if (moving){ S.x = this.pl.x; } }
+    if ((this.hudT = (this.hudT || 0) + d) > .25){ this.hudT = 0; this.refreshHud(); if (moving && this.replay == null){ S.x = this.pl.x; } }
+    if (this.replay != null) return;
     if ((this.saveT = (this.saveT || 0) + d) > 3){ this.saveT = 0; S.x = this.pl.x; save(); }
+    // diálogo al entrar en cada sala (en las salas del toro y del patio, después de ganar el combate que abre la sala)
+    if (!modal && !FRAME && S.dlg.r0){ const ri = this.roomAt(this.pl.x), k = 'r' + ri;
+      if (ri > 0 && !S.dlg[k]){ const b = STATIONS.find(z => z.k === 'bout' && !z.end && z.room === ri && z.i > 0);
+        if (!b || (S.bouts[b.i] && this.pl.x > stX(b) + 60)){ this.target = null; dialogo(k); } } }
   }
 }
 
@@ -1160,7 +3289,7 @@ function closeBout(){ if (FRAME){ FRAME.remove(); FRAME = null; } if (GAME.scene
 addEventListener('message', e => {
   if (!e.data || !e.data.cnoso || (e.origin !== location.origin && location.protocol !== 'file:')) return; const d = e.data;
   if (d.type === 'ficha'){ HIST.ficha(d.id); return; }
-  if (d.type === 'result'){ if (d.won){ const first = !S.bouts[d.i]; S.bouts[d.i] = Math.max(S.bouts[d.i] || 0, d.stars || 1); save(); if (first) HIST.xp(20); } return; }
+  if (d.type === 'result'){ S.tried[d.i] = 1; save(); if (d.won){ const first = !S.bouts[d.i]; S.bouts[d.i] = Math.max(S.bouts[d.i] || 0, d.stars || 1); save(); if (first) HIST.xp(20); } return; }
   if (d.type === 'bout' || d.type === 'quit'){ closeBout(); if (d.won && !S.bouts[d.i]){ S.bouts[d.i] = d.stars || 1; save(); } if (GAME.scene && GAME.scene.afterBout) GAME.scene.afterBout(d.i); }
 });
 
@@ -1171,15 +3300,25 @@ class Arena extends Phaser.Scene {
   create(){
     GAME.scene = this; st.innerHTML = ''; toastEl = null; closeCard();
     this.add.image(0, 0, 'arena').setOrigin(0).setDisplaySize(W, H);
-    this.add.rectangle(150, 138, 965, 418, 0x7096b4, .42).setOrigin(0);
+    this.sunset = !!(S.sunset && rwHas(RWK.sol));   // recompensa del nivel 45: la fiesta al atardecer (como arenaDraw del Cnoso clásico)
+    if (this.sunset){
+      if (!this.textures.exists('ocaso')){ const tx = this.textures.createCanvas('ocaso', 965, 418), c = tx.getContext();
+        const gs = c.createLinearGradient(0, 0, 0, 418); gs.addColorStop(0, 'rgba(120,76,128,.52)'); gs.addColorStop(.55, 'rgba(226,120,78,.48)'); gs.addColorStop(1, 'rgba(246,176,96,.42)'); c.fillStyle = gs; c.fillRect(0, 0, 965, 418);
+        const rg = c.createRadialGradient(780, 162, 8, 780, 162, 190); rg.addColorStop(0, 'rgba(255,236,170,.95)'); rg.addColorStop(.25, 'rgba(255,200,110,.55)'); rg.addColorStop(1, 'rgba(255,160,80,0)'); c.fillStyle = rg; c.fillRect(0, 0, 965, 418);
+        c.fillStyle = 'rgba(255,240,190,.95)'; c.beginPath(); c.arc(780, 162, 34, 0, 6.283); c.fill(); tx.refresh(); }
+      this.add.image(150, 138, 'ocaso').setOrigin(0);
+      this.add.rectangle(0, 0, W, H, 0xffbe8c, .38).setOrigin(0).setDepth(9).setBlendMode(Phaser.BlendModes.MULTIPLY);
+    } else this.add.rectangle(150, 138, 965, 418, 0x7096b4, .42).setOrigin(0);
     const mask = this.make.graphics({add:false}); mask.fillRect(150, 138, 965, 418); const M = mask.createGeometryMask();
     this.lay = this.add.container(0, 0).setMask(M);
     const mk = n => { const i = this.add.image(0, 0, 'sp_' + n).setDisplaySize(FR[n][2], FR[n][3]); i.preFX && i.preFX.addShadow(2, 3, .1, 1, 0x190e06, 6, .6); this.lay.add(i); return i; };
     this.iRight = mk('right'); this.iBull = mk('bull'); this.iGhost = mk('mid'); this.iLp = mk('mid');
     this.gr = this.add.graphics().setDepth(10);
     this.flashR = this.add.rectangle(0, 0, W, H, 0xfff8e6, 0).setOrigin(0).setDepth(11);
-    this.hud = $(`<div class="top"><span class="rinfo"><b data-h></b><small data-a></small></span><span class="sp"></span><button class="chip" data-m>⌂</button></div>`); st.appendChild(this.hud);
-    this.hud.querySelector('[data-m]').onclick = () => { this.scene.start('palace'); };
+    this.hud = $(`<div class="top"><span class="rinfo"><b data-h></b><small data-a></small></span><span class="sp"></span>${HIST.inside ? `<button class="chip" data-back>💾 ${t('salir')}</button>` : ''}<button class="chip" data-m>⌂</button></div>`); st.appendChild(this.hud);
+    const bk = this.hud.querySelector('[data-back]'); if (bk) bk.onclick = e => { e.stopPropagation(); HIST.back(); };
+    ['pointerdown', 'mousedown', 'touchstart'].forEach(ev => this.hud.addEventListener(ev, e => e.stopPropagation()));
+    this.hud.querySelector('[data-m]').onclick = () => { this.scene.start('palace', {}); };
     this.hintEl = $('<div class="hint"></div>'); st.appendChild(this.hintEl);
     this.bigEl = $('<div class="big"></div>'); st.appendChild(this.bigEl);
     this.A = {f:this.f, cfg:FIESTA[this.f], n:0, res:[], acl:0, firstEver:!S.fiesta};
@@ -1316,7 +3455,7 @@ class Arena extends Phaser.Scene {
   end(){
     const A = this.A; A.ph = 'end';
     const comp = A.res.filter(r => r.ok).length, perf = A.res.reduce((a, r) => a + r.perf, 0);
-    const first = !S.xpF; S.fiesta = Math.max(S.fiesta, A.f + 1); S.best = Math.max(S.best, Math.round(A.acl)); if (first){ S.xpF = true; HIST.xp(30 + perf * 5); } save();
+    const first = !S.xpF; S.lastF = comp; S.fiesta = Math.max(S.fiesta, A.f + 1); S.best = Math.max(S.best, Math.round(A.acl)); if (first){ S.xpF = true; HIST.xp(30 + perf * 5); } save();
     const v = card(`<h2>${t('finF')}</h2><div class="grades"><span><b>${comp}/3</b></span><span><b>${perf}</b> ★</span><span><b>${Math.round(A.acl)}</b> ${t('aclam')}</span></div>
       <p>${t('fiestaRes', {c:comp, p:perf})}</p><div class="act"><button class="btn" data-r>${t('repetir')}</button><button class="btn pri" data-p>${t('salto')} ›</button></div>`);
     v.querySelector('[data-r]').onclick = () => { closeCard(); this.scene.restart({f:Math.min(2, S.fiesta)}); };
@@ -1325,7 +3464,7 @@ class Arena extends Phaser.Scene {
   update(time, dt){ const d = Math.min(.05, dt / 1000); this.T += d; this.step(d); this.draw(); }
 }
 
-addEventListener('pagehide', () => { if (GAME.scene && GAME.scene.pl) S.x = GAME.scene.pl.x; save(); });
+addEventListener('pagehide', () => { guardarPos(); save(); });
 document.getElementById('rotT').textContent = t('gira');
 new Phaser.Game({ type:Phaser.AUTO, parent:'game', width:W, height:H, backgroundColor:'#2a1d14',
   scale:{ mode:Phaser.Scale.FIT, autoCenter:Phaser.Scale.CENTER_BOTH }, input:{ activePointers:3 },

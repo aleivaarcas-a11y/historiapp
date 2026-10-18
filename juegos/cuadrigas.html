@@ -2,9 +2,6 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
-<meta name="author" content="Alejandro Leiva Arcas">
-<meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
 <!--HAPP-GUARDAR-->
 <script>window.HAPP_GS={volver:function(){try{return appTema4()?'../#t4':'../'}catch(e){return '../'}}, pos:{right:'max(10px, env(safe-area-inset-right))', top:'20%'}};</script>
 <script>
@@ -165,6 +162,9 @@
 </script>
 <!--/HAPP-GUARDAR-->
 
+<!-- © Diseñado y Creado por Alejandro Leiva Arcas -->
+<meta name="author" content="Alejandro Leiva Arcas">
+<meta name="copyright" content="© Diseñado y Creado por Alejandro Leiva Arcas">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Cuadrigas</title>
@@ -445,6 +445,20 @@ tr.rwlock td{color:var(--muted);opacity:.75}
 .monu canvas{width:120px;height:156px;flex:0 0 auto;image-rendering:auto}
 .monu-t{flex:1 1 220px;min-width:0}
 .monu-t .ansata{font-size:15px;margin:6px 28px 6px 28px}
+/* temporada al estilo de PC Fútbol (19-10-2026): simulación, crónica, clasificación y reparto del premio */
+.simbar{height:12px;border:2px solid var(--ink);background:#fbf3df;margin:8px 0 10px}
+.simbar i{display:block;height:100%;width:0;background:repeating-linear-gradient(45deg,var(--ink) 0 6px,#8a6a44 6px 10px)}
+.cron p{margin:.25em 0;font-size:14.5px;line-height:1.35}.cron b,.cronica b{font-family:var(--mono);font-size:12.5px;margin-right:4px}
+.cronica p{margin:.2em 0}
+table.liga td,table.liga th,table.cal td,table.cal th{padding:4px 6px}
+tr.me td{font-weight:700}
+.premio .pbar{display:flex;height:22px;border:2px solid var(--ink);margin:6px 0 8px;background:#fff}
+.pbar i,.pk{display:block;height:100%}
+.pk{display:inline-block;width:18px;height:14px;border:1px solid var(--ink);vertical-align:-2px}
+.p1{background:repeating-linear-gradient(90deg,var(--ink) 0 3px,#f3ead6 3px 6px)}
+.p2{background:repeating-linear-gradient(45deg,#8a6a44 0 4px,#f3ead6 4px 8px)}
+.p3{background:radial-gradient(circle,var(--ink) 1.6px,#f3ead6 1.8px) 0 0/6px 6px}
+@media (max-width:900px){.tabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}.tabs button{flex:0 0 auto}}
 
 
 #rot{display:none;position:fixed;inset:0;background:#1d150d;color:#f3ead6;place-items:center;text-align:center;font:600 20px/1.4 "Cinzel",Georgia,serif;padding:24px;z-index:50}
@@ -464,6 +478,40 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
 <div id="rot"><div><b>⟳</b>Gira el móvil para correr<small>La carrera está en pausa · Rotate your phone to race</small></div></div>
 <script>
 'use strict';
+/* HAPP_REPASO · memoria común de fallos de Historiapp (18-10-2026, plan de mejoras, apartado 4).
+   Todos los juegos comparten origen con la app, así que escriben en la misma clave del aparato: historiapp.repaso.
+   Cada pregunta fallada vuelve al día siguiente; si se acierta, a los 3, a los 7 y a los 21 días, y después sale del repaso.
+   Uso en un juego (solo actúa dentro de Historiapp):
+     HAPP_REPASO.fallo('cuadrigas', {es:'¿…?', en:'…?'}, {es:[correcta, …], en:[correcta, …]}, 'ficha-id', 4);
+     HAPP_REPASO.acierto({es:'¿…?', en:'…?'});
+   La opción correcta va SIEMPRE la primera; la app las baraja al preguntar. */
+window.HAPP_REPASO = (function(){
+  var K = 'historiapp.repaso', DAY = 864e5, GAPS = [1, 3, 7, 21], MAX = 400;
+  function inside(){ try { if (!/\/juegos\//.test(location.pathname)) return false; for (var i = 0; i < localStorage.length; i++) if (localStorage.key(i).indexOf('historiapp.') === 0) return true; } catch (e) {} return false; }
+  function load(){ try { var d = JSON.parse(localStorage.getItem(K)); if (d && d.items) return d; } catch (e) {} return {v:1, items:{}}; }
+  function save(d){ try { localStorage.setItem(K, JSON.stringify(d)); } catch (e) {} }
+  function idOf(q){ var s = String(q && (q.es || q) || ''), h = 0; for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return 'q' + (h >>> 0).toString(36); }
+  function norm(o){ if (Array.isArray(o)) return {es:o}; return o || {es:[]}; }
+  return {
+    activo: inside,
+    fallo: function(game, q, o, ficha, tema){
+      if (!inside() || !q) return; if (typeof q === 'string') q = {es:q};
+      var d = load(), id = idOf(q), it = d.items[id] || {g:game, q:q, o:norm(o), f:ficha || null, t:tema || null, box:0, n:0};
+      it.box = 0; it.n = (it.n || 0) + 1; it.due = Date.now() + DAY; it.g = game; it.last = Date.now(); d.items[id] = it;
+      var ids = Object.keys(d.items); if (ids.length > MAX){ ids.sort(function(a, b){ return (d.items[a].last || 0) - (d.items[b].last || 0); }); for (var i = 0; i < ids.length - MAX; i++) delete d.items[ids[i]]; }
+      save(d);
+    },
+    acierto: function(q){
+      if (!inside() || !q) return; if (typeof q === 'string') q = {es:q};
+      var d = load(), id = idOf(q), it = d.items[id]; if (!it || it.due > Date.now()) return;
+      it.box = (it.box || 0) + 1; if (it.box >= GAPS.length) delete d.items[id]; else it.due = Date.now() + GAPS[it.box] * DAY;
+      save(d);
+    },
+    pendientes: function(){ var d = load(), now = Date.now(), out = []; for (var k in d.items) if (d.items[k].due <= now) out.push(Object.assign({id:k}, d.items[k])); return out; },
+    total: function(){ return Object.keys(load().items).length; }
+  };
+})();
+
 /* Recompensas por nivel de Historiapp (14-10-2026). Fuente única: recompensas.json
    (tabla de RECOMPENSAS-POR-NIVEL.md). Cada juego la incrusta con su build:
    el marcador [
@@ -475,11 +523,25 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "en": "Name your horses"
  },
  {
+  "lv": 2,
+  "game": "historiapp-arena",
+  "k": "leg_tutankamon",
+  "es": "Leyenda Tutankamón",
+  "en": "Tutankhamun legend"
+ },
+ {
   "lv": 3,
   "game": "kleos",
   "k": "calipatira",
   "es": "Calipátira",
   "en": "Kallipateira"
+ },
+ {
+  "lv": 3,
+  "game": "historiapp-arena",
+  "k": "tt_hondero",
+  "es": "Hondero en las torres",
+  "en": "Slinger in the towers"
  },
  {
   "lv": 4,
@@ -496,6 +558,13 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "en": "Ramesses II"
  },
  {
+  "lv": 5,
+  "game": "historiapp-arena",
+  "k": "marco_bronce",
+  "es": "Marco de bronce",
+  "en": "Bronze frame"
+ },
+ {
   "lv": 6,
   "game": "monopoleis",
   "k": "casco_espartano",
@@ -503,11 +572,25 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "en": "Spartan helmet"
  },
  {
+  "lv": 6,
+  "game": "historiapp-arena",
+  "k": "leg_amenofis",
+  "es": "Leyenda Amenofis II",
+  "en": "Amenhotep II legend"
+ },
+ {
   "lv": 7,
   "game": "senet",
   "k": "fichas_de_lapislazuli",
   "es": "Fichas de lapislázuli",
   "en": "Lapis lazuli pieces"
+ },
+ {
+  "lv": 7,
+  "game": "historiapp-arena",
+  "k": "tt_jabalinero",
+  "es": "Lanzador de jabalina en las torres",
+  "en": "Javelin thrower in the towers"
  },
  {
   "lv": 8,
@@ -524,6 +607,13 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "en": "Standard with your own emblem"
  },
  {
+  "lv": 9,
+  "game": "historiapp-arena",
+  "k": "leg_taharqa",
+  "es": "Leyenda Taharqa",
+  "en": "Taharqa legend"
+ },
+ {
   "lv": 10,
   "game": "kleos",
   "k": "tutmosis_iii",
@@ -531,11 +621,25 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "en": "Thutmose III"
  },
  {
+  "lv": 10,
+  "game": "historiapp-arena",
+  "k": "titulo_atleta",
+  "es": "Título «Atleta»",
+  "en": "«Athlete» title"
+ },
+ {
   "lv": 11,
   "game": "pentatlon",
   "k": "pruebas_sueltas_sin_pasar_por_la",
   "es": "Pruebas sueltas sin pasar por la carrera",
-  "en": "Pentathlon: single events without the career"
+  "en": "Single events without the career"
+ },
+ {
+  "lv": 11,
+  "game": "historiapp-arena",
+  "k": "tt_bumeranero",
+  "es": "Lanzador de bumerán en las torres",
+  "en": "Boomerang thrower in the towers"
  },
  {
   "lv": 12,
@@ -543,6 +647,13 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "k": "aquiles",
   "es": "Aquiles",
   "en": "Achilles"
+ },
+ {
+  "lv": 12,
+  "game": "historiapp-arena",
+  "k": "leg_nefertiti",
+  "es": "Leyenda Nefertiti",
+  "en": "Nefertiti legend"
  },
  {
   "lv": 13,
@@ -566,11 +677,25 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "en": "\"Fingers\""
  },
  {
+  "lv": 15,
+  "game": "historiapp-arena",
+  "k": "leg_ramses",
+  "es": "Leyenda Ramsés II",
+  "en": "Ramesses II legend"
+ },
+ {
   "lv": 16,
   "game": "gladiatura",
   "k": "emblema_de_laurel",
   "es": "Emblema de laurel",
   "en": "Laurel emblem"
+ },
+ {
+  "lv": 16,
+  "game": "historiapp-arena",
+  "k": "marco_plata",
+  "es": "Marco de plata",
+  "en": "Silver frame"
  },
  {
   "lv": 17,
@@ -587,6 +712,13 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "en": "Abbas I"
  },
  {
+  "lv": 18,
+  "game": "historiapp-arena",
+  "k": "leg_dario",
+  "es": "Leyenda Darío I",
+  "en": "Darius I legend"
+ },
+ {
   "lv": 19,
   "game": "agon",
   "k": "dados_de_hueso",
@@ -601,6 +733,13 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "en": "Choose the circuit in a single race"
  },
  {
+  "lv": 20,
+  "game": "historiapp-arena",
+  "k": "titulo_campeon",
+  "es": "Título «Campeón»",
+  "en": "«Champion» title"
+ },
+ {
   "lv": 21,
   "game": "kleos",
   "k": "heracles_y_pelope",
@@ -613,6 +752,13 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "k": "elegir_anfiteatro",
   "es": "Elegir anfiteatro",
   "en": "Choose the amphitheatre"
+ },
+ {
+  "lv": 22,
+  "game": "historiapp-arena",
+  "k": "leg_cinisca",
+  "es": "Leyenda Cinisca",
+  "en": "Cynisca legend"
  },
  {
   "lv": 23,
@@ -643,6 +789,13 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "en": "Whip with an ivory handle"
  },
  {
+  "lv": 26,
+  "game": "historiapp-arena",
+  "k": "leg_jerjes",
+  "es": "Leyenda Jerjes",
+  "en": "Xerxes legend"
+ },
+ {
   "lv": 27,
   "game": "gladiatura",
   "k": "emblema_del_rayo",
@@ -655,6 +808,13 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "k": "repetir_una_tirada_por_partida",
   "es": "Repetir una tirada por partida",
   "en": "Reroll one roll per game"
+ },
+ {
+  "lv": 28,
+  "game": "historiapp-arena",
+  "k": "marco_oro",
+  "es": "Marco de oro",
+  "en": "Gold frame"
  },
  {
   "lv": 29,
@@ -671,11 +831,25 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "en": "Choose your opponent"
  },
  {
+  "lv": 30,
+  "game": "historiapp-arena",
+  "k": "titulo_heroe",
+  "es": "Título «Héroe»",
+  "en": "«Hero» title"
+ },
+ {
   "lv": 31,
   "game": "monopoleis",
   "k": "color_topacio",
   "es": "Color topacio",
   "en": "Topaz colour"
+ },
+ {
+  "lv": 31,
+  "game": "historiapp-arena",
+  "k": "leg_filipo",
+  "es": "Leyenda Filipo II",
+  "en": "Philip II legend"
  },
  {
   "lv": 32,
@@ -713,6 +887,13 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "en": "Lion of the Colosseum"
  },
  {
+  "lv": 36,
+  "game": "historiapp-arena",
+  "k": "leg_diocles",
+  "es": "Leyenda Diocles",
+  "en": "Diocles legend"
+ },
+ {
   "lv": 37,
   "game": "cuadrigas",
   "k": "casco_de_cuero_repujado_del_auri",
@@ -741,6 +922,13 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "en": "Portrait of the athlete with an olive crown"
  },
  {
+  "lv": 40,
+  "game": "historiapp-arena",
+  "k": "marco_purpura",
+  "es": "Marco de púrpura",
+  "en": "Purple frame"
+ },
+ {
   "lv": 41,
   "game": "cuadrigas",
   "k": "caballos_de_la_yeguada_de_tesali",
@@ -762,6 +950,13 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "en": "One extra troop at the start"
  },
  {
+  "lv": 43,
+  "game": "historiapp-arena",
+  "k": "leg_alejandro",
+  "es": "Leyenda Alejandro Magno",
+  "en": "Alexander the Great legend"
+ },
+ {
   "lv": 44,
   "game": "gladiatura",
   "k": "yelmo_de_gala_dorado",
@@ -774,6 +969,13 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "k": "fiesta_del_toro_al_atardecer",
   "es": "Fiesta del toro al atardecer",
   "en": "Bull festival at sunset"
+ },
+ {
+  "lv": 45,
+  "game": "historiapp-arena",
+  "k": "titulo_leyenda",
+  "es": "Título «Leyenda»",
+  "en": "«Legend» title"
  },
  {
   "lv": 46,
@@ -811,6 +1013,13 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "en": "Legendary horse Hirpinus"
  },
  {
+  "lv": 50,
+  "game": "historiapp-arena",
+  "k": "leg_flamma",
+  "es": "Leyenda Flamma",
+  "en": "Flamma legend"
+ },
+ {
   "lv": 51,
   "game": "gladiatura",
   "k": "munus_de_exhibicion_tres_combate",
@@ -846,6 +1055,13 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "en": "Holographic pieces"
  },
  {
+  "lv": 55,
+  "game": "historiapp-arena",
+  "k": "marco_laurel",
+  "es": "Marco de laurel",
+  "en": "Laurel frame"
+ },
+ {
   "lv": 56,
   "game": "gladiatura",
   "k": "emblema_de_la_palma",
@@ -879,6 +1095,13 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "k": "cartel_del_munus_con_tu_nombre",
   "es": "Cartel del munus con tu nombre",
   "en": "Munus poster with your name"
+ },
+ {
+  "lv": 60,
+  "game": "historiapp-arena",
+  "k": "titulo_inmortal",
+  "es": "Título «Inmortal»",
+  "en": "«Immortal» title"
  },
  {
   "lv": 61,
@@ -935,6 +1158,13 @@ input,textarea,pre{-webkit-user-select:text;user-select:text}
   "k": "caballos_de_la_yeguada_del_norte",
   "es": "Caballos de la yeguada del norte de África",
   "en": "Horses from the North African stud"
+ },
+ {
+  "lv": 68,
+  "game": "historiapp-arena",
+  "k": "marco_imperial",
+  "es": "Marco imperial",
+  "en": "Imperial frame"
  },
  {
   "lv": 69,
@@ -1174,11 +1404,25 @@ var HAPP_RW=(function(){
   "en": "Name your horses"
  },
  {
+  "lv": 2,
+  "game": "historiapp-arena",
+  "k": "leg_tutankamon",
+  "es": "Leyenda Tutankamón",
+  "en": "Tutankhamun legend"
+ },
+ {
   "lv": 3,
   "game": "kleos",
   "k": "calipatira",
   "es": "Calipátira",
   "en": "Kallipateira"
+ },
+ {
+  "lv": 3,
+  "game": "historiapp-arena",
+  "k": "tt_hondero",
+  "es": "Hondero en las torres",
+  "en": "Slinger in the towers"
  },
  {
   "lv": 4,
@@ -1195,6 +1439,13 @@ var HAPP_RW=(function(){
   "en": "Ramesses II"
  },
  {
+  "lv": 5,
+  "game": "historiapp-arena",
+  "k": "marco_bronce",
+  "es": "Marco de bronce",
+  "en": "Bronze frame"
+ },
+ {
   "lv": 6,
   "game": "monopoleis",
   "k": "casco_espartano",
@@ -1202,11 +1453,25 @@ var HAPP_RW=(function(){
   "en": "Spartan helmet"
  },
  {
+  "lv": 6,
+  "game": "historiapp-arena",
+  "k": "leg_amenofis",
+  "es": "Leyenda Amenofis II",
+  "en": "Amenhotep II legend"
+ },
+ {
   "lv": 7,
   "game": "senet",
   "k": "fichas_de_lapislazuli",
   "es": "Fichas de lapislázuli",
   "en": "Lapis lazuli pieces"
+ },
+ {
+  "lv": 7,
+  "game": "historiapp-arena",
+  "k": "tt_jabalinero",
+  "es": "Lanzador de jabalina en las torres",
+  "en": "Javelin thrower in the towers"
  },
  {
   "lv": 8,
@@ -1223,6 +1488,13 @@ var HAPP_RW=(function(){
   "en": "Standard with your own emblem"
  },
  {
+  "lv": 9,
+  "game": "historiapp-arena",
+  "k": "leg_taharqa",
+  "es": "Leyenda Taharqa",
+  "en": "Taharqa legend"
+ },
+ {
   "lv": 10,
   "game": "kleos",
   "k": "tutmosis_iii",
@@ -1230,11 +1502,25 @@ var HAPP_RW=(function(){
   "en": "Thutmose III"
  },
  {
+  "lv": 10,
+  "game": "historiapp-arena",
+  "k": "titulo_atleta",
+  "es": "Título «Atleta»",
+  "en": "«Athlete» title"
+ },
+ {
   "lv": 11,
   "game": "pentatlon",
   "k": "pruebas_sueltas_sin_pasar_por_la",
   "es": "Pruebas sueltas sin pasar por la carrera",
-  "en": "Pentathlon: single events without the career"
+  "en": "Single events without the career"
+ },
+ {
+  "lv": 11,
+  "game": "historiapp-arena",
+  "k": "tt_bumeranero",
+  "es": "Lanzador de bumerán en las torres",
+  "en": "Boomerang thrower in the towers"
  },
  {
   "lv": 12,
@@ -1242,6 +1528,13 @@ var HAPP_RW=(function(){
   "k": "aquiles",
   "es": "Aquiles",
   "en": "Achilles"
+ },
+ {
+  "lv": 12,
+  "game": "historiapp-arena",
+  "k": "leg_nefertiti",
+  "es": "Leyenda Nefertiti",
+  "en": "Nefertiti legend"
  },
  {
   "lv": 13,
@@ -1265,11 +1558,25 @@ var HAPP_RW=(function(){
   "en": "\"Fingers\""
  },
  {
+  "lv": 15,
+  "game": "historiapp-arena",
+  "k": "leg_ramses",
+  "es": "Leyenda Ramsés II",
+  "en": "Ramesses II legend"
+ },
+ {
   "lv": 16,
   "game": "gladiatura",
   "k": "emblema_de_laurel",
   "es": "Emblema de laurel",
   "en": "Laurel emblem"
+ },
+ {
+  "lv": 16,
+  "game": "historiapp-arena",
+  "k": "marco_plata",
+  "es": "Marco de plata",
+  "en": "Silver frame"
  },
  {
   "lv": 17,
@@ -1286,6 +1593,13 @@ var HAPP_RW=(function(){
   "en": "Abbas I"
  },
  {
+  "lv": 18,
+  "game": "historiapp-arena",
+  "k": "leg_dario",
+  "es": "Leyenda Darío I",
+  "en": "Darius I legend"
+ },
+ {
   "lv": 19,
   "game": "agon",
   "k": "dados_de_hueso",
@@ -1300,6 +1614,13 @@ var HAPP_RW=(function(){
   "en": "Choose the circuit in a single race"
  },
  {
+  "lv": 20,
+  "game": "historiapp-arena",
+  "k": "titulo_campeon",
+  "es": "Título «Campeón»",
+  "en": "«Champion» title"
+ },
+ {
   "lv": 21,
   "game": "kleos",
   "k": "heracles_y_pelope",
@@ -1312,6 +1633,13 @@ var HAPP_RW=(function(){
   "k": "elegir_anfiteatro",
   "es": "Elegir anfiteatro",
   "en": "Choose the amphitheatre"
+ },
+ {
+  "lv": 22,
+  "game": "historiapp-arena",
+  "k": "leg_cinisca",
+  "es": "Leyenda Cinisca",
+  "en": "Cynisca legend"
  },
  {
   "lv": 23,
@@ -1342,6 +1670,13 @@ var HAPP_RW=(function(){
   "en": "Whip with an ivory handle"
  },
  {
+  "lv": 26,
+  "game": "historiapp-arena",
+  "k": "leg_jerjes",
+  "es": "Leyenda Jerjes",
+  "en": "Xerxes legend"
+ },
+ {
   "lv": 27,
   "game": "gladiatura",
   "k": "emblema_del_rayo",
@@ -1354,6 +1689,13 @@ var HAPP_RW=(function(){
   "k": "repetir_una_tirada_por_partida",
   "es": "Repetir una tirada por partida",
   "en": "Reroll one roll per game"
+ },
+ {
+  "lv": 28,
+  "game": "historiapp-arena",
+  "k": "marco_oro",
+  "es": "Marco de oro",
+  "en": "Gold frame"
  },
  {
   "lv": 29,
@@ -1370,11 +1712,25 @@ var HAPP_RW=(function(){
   "en": "Choose your opponent"
  },
  {
+  "lv": 30,
+  "game": "historiapp-arena",
+  "k": "titulo_heroe",
+  "es": "Título «Héroe»",
+  "en": "«Hero» title"
+ },
+ {
   "lv": 31,
   "game": "monopoleis",
   "k": "color_topacio",
   "es": "Color topacio",
   "en": "Topaz colour"
+ },
+ {
+  "lv": 31,
+  "game": "historiapp-arena",
+  "k": "leg_filipo",
+  "es": "Leyenda Filipo II",
+  "en": "Philip II legend"
  },
  {
   "lv": 32,
@@ -1412,6 +1768,13 @@ var HAPP_RW=(function(){
   "en": "Lion of the Colosseum"
  },
  {
+  "lv": 36,
+  "game": "historiapp-arena",
+  "k": "leg_diocles",
+  "es": "Leyenda Diocles",
+  "en": "Diocles legend"
+ },
+ {
   "lv": 37,
   "game": "cuadrigas",
   "k": "casco_de_cuero_repujado_del_auri",
@@ -1440,6 +1803,13 @@ var HAPP_RW=(function(){
   "en": "Portrait of the athlete with an olive crown"
  },
  {
+  "lv": 40,
+  "game": "historiapp-arena",
+  "k": "marco_purpura",
+  "es": "Marco de púrpura",
+  "en": "Purple frame"
+ },
+ {
   "lv": 41,
   "game": "cuadrigas",
   "k": "caballos_de_la_yeguada_de_tesali",
@@ -1461,6 +1831,13 @@ var HAPP_RW=(function(){
   "en": "One extra troop at the start"
  },
  {
+  "lv": 43,
+  "game": "historiapp-arena",
+  "k": "leg_alejandro",
+  "es": "Leyenda Alejandro Magno",
+  "en": "Alexander the Great legend"
+ },
+ {
   "lv": 44,
   "game": "gladiatura",
   "k": "yelmo_de_gala_dorado",
@@ -1473,6 +1850,13 @@ var HAPP_RW=(function(){
   "k": "fiesta_del_toro_al_atardecer",
   "es": "Fiesta del toro al atardecer",
   "en": "Bull festival at sunset"
+ },
+ {
+  "lv": 45,
+  "game": "historiapp-arena",
+  "k": "titulo_leyenda",
+  "es": "Título «Leyenda»",
+  "en": "«Legend» title"
  },
  {
   "lv": 46,
@@ -1510,6 +1894,13 @@ var HAPP_RW=(function(){
   "en": "Legendary horse Hirpinus"
  },
  {
+  "lv": 50,
+  "game": "historiapp-arena",
+  "k": "leg_flamma",
+  "es": "Leyenda Flamma",
+  "en": "Flamma legend"
+ },
+ {
   "lv": 51,
   "game": "gladiatura",
   "k": "munus_de_exhibicion_tres_combate",
@@ -1545,6 +1936,13 @@ var HAPP_RW=(function(){
   "en": "Holographic pieces"
  },
  {
+  "lv": 55,
+  "game": "historiapp-arena",
+  "k": "marco_laurel",
+  "es": "Marco de laurel",
+  "en": "Laurel frame"
+ },
+ {
   "lv": 56,
   "game": "gladiatura",
   "k": "emblema_de_la_palma",
@@ -1578,6 +1976,13 @@ var HAPP_RW=(function(){
   "k": "cartel_del_munus_con_tu_nombre",
   "es": "Cartel del munus con tu nombre",
   "en": "Munus poster with your name"
+ },
+ {
+  "lv": 60,
+  "game": "historiapp-arena",
+  "k": "titulo_inmortal",
+  "es": "Título «Inmortal»",
+  "en": "«Immortal» title"
  },
  {
   "lv": 61,
@@ -1634,6 +2039,13 @@ var HAPP_RW=(function(){
   "k": "caballos_de_la_yeguada_del_norte",
   "es": "Caballos de la yeguada del norte de África",
   "en": "Horses from the North African stud"
+ },
+ {
+  "lv": 68,
+  "game": "historiapp-arena",
+  "k": "marco_imperial",
+  "es": "Marco imperial",
+  "en": "Imperial frame"
  },
  {
   "lv": 69,
@@ -2405,6 +2817,52 @@ Object.assign(CODEX_EN,{
 });
 Object.assign(GLOSS,{latigo:['El látigo','Cada golpe gasta aguante: en las rectas rinde, en la curva abre la caja (convención del juego).','cAguante'],roce:['Rozar la meta','Ceñirse a la meta acortaba el viraje, pero allí ocurrían casi todos los accidentes (Bell, 2020, p. 13).','cRoce']});
 Object.assign(GLOSS_EN,{latigo:['The whip','Every stroke costs stamina: it pays on the straights and swings the car out in the turn (game convention).'],roce:['Hugging the post','Hugging the post shortened the turn, but almost all accidents happened there (Bell, 2020, p. 13).']});
+
+/* ---------- Preguntas de función (19-10-2026): por qué y para qué servía cada cosa ----------
+   Todas salen del texto de pantalla del Tema 4 (versión del 19-10-2026, «TEMA 4. Etruria y Roma - 19 OCT.pptx»),
+   nunca de las notas del orador. La primera opción es la correcta; el juego baraja.
+   Diapositivas: 1 S65 · 2 S62 · 3-4 S37 · 5 S104 · 6 S107 · 7-8 S67 · 9 S63 · 10 S66 · 11 S101 · 12 S112 ·
+   13 S113 · 14 S13 · 15 S18 · 16-17 S109 · 18 S64 */
+QUIZ.push(
+ ['¿Por qué un rico pagaba de su bolsillo unos juegos para el pueblo?',['Porque a cambio recibía reconocimiento, el evergetismo','Porque la ley le devolvía el doble de lo gastado al año siguiente','Porque así quedaba libre de pagar impuestos durante su cargo'],'editor'],
+ ['¿Para qué ofrecía la élite espectáculos regulares y gratuitos a la plebe?',['Para atraer a un gran público y ganarse su favor','Para recaudar con las entradas el dinero de las legiones','Para elegir entre el público a los mejores jinetes del ejército'],'ludiMunera'],
+ ['Según la política de «pan y circo», ¿para qué daba el poder alimentos y entretenimientos al pueblo?',['Para ganarse su favor con comida asequible y espectáculos','Para preparar físicamente a los ciudadanos para servir en las legiones','Para que los esclavos pudieran comprar su libertad con lo ganado'],'panem'],
+ ['¿Por qué la frase de Juvenal sobre el pan y las carreras era un reproche?',['Porque la plebe, que antes repartía mandos, ya solo quería pan y carreras','Porque los emperadores gastaban en el circo el grano destinado a las legiones','Porque los cristianos condenaban el circo como un lugar dedicado a los ídolos'],'panem'],
+ ['¿Para qué servían las facciones al magistrado que organizaba unos juegos?',['Le alquilaban los caballos, los aurigas y el material','Le votaban en bloque en las elecciones de cada año','Le vendían a los aficionados las entradas de la grada'],'facciones'],
+ ['¿Por qué Diocles no se quedó con los casi 36 millones de sestercios que ganó en premios?',['Porque una gran parte de los premios era para su facción','Porque los perdió apostando en la grada de sus propias carreras','Porque el emperador confiscaba los premios de los aurigas libertos'],'fortuna'],
+ ['¿Para qué aprovechaba el público la presencia del emperador en la grada?',['Para reclamarle a gritos, por ejemplo, una rebaja de impuestos','Para votar a mano alzada a los cónsules del año siguiente','Para entregarle en persona las coronas de los aurigas vencedores'],'peticion'],
+ ['¿Para qué exhibieron Tito y Trajano a los delatores en el anfiteatro?',['Para ganarse al pueblo ante todos los grupos sociales','Para que los gladiadores los ejecutaran en el turno del mediodía','Para obligarlos a pagar como castigo los juegos de aquel año'],'peticion'],
+ ['¿Por qué importa distinguir entre los ludi y el munus?',['Porque cada uno tenía su origen, su calendario y su pagador','Porque los ludi se celebraban solo en Roma y el munus, en provincias','Porque en los ludi competían ciudadanos libres y en el munus, esclavos'],'ludiMunera'],
+ ['¿Para qué servía la lex Iulia theatralis en el anfiteatro?',['Para que la grada reprodujera la jerarquía de la ciudad','Para separar a los seguidores de cada facción y evitar peleas','Para reservar a la plebe las filas más cercanas a la arena'],'gradaOrdenada'],
+ ['¿Por qué los cristianos condenaron el circo como un lugar de idolatría?',['Porque cada adorno de la pista estaba consagrado a un dios','Porque allí se ejecutaba a los cristianos ante las fieras','Porque las facciones adoraban cada una a su propio dios de color'],'consualia'],
+ ['¿Por qué la Iglesia no pudo cerrar los espectáculos?',['Porque su crítica se dirigía a los fieles y no mandaba en los recintos','Porque los obispos cobraban una parte de las ganancias de cada carrera','Porque Tertuliano defendía las carreras y solo condenaba la arena'],'tertuliano'],
+ ['¿Por qué desaparecieron los gladiadores antes que las carreras, según Jiménez Sánchez?',['Porque la gladiatura era el espectáculo más caro','Porque una ley de Constantino los prohibió en todo el Imperio','Porque el público prefería ya las carreras a los combates'],'finOccidente'],
+ ['¿Por qué una carrera de carros etrusca exhibía la riqueza de quien la costeaba?',['Porque mantener caballos y aurigas era muy caro','Porque el vencedor entregaba su premio al rey de la ciudad','Porque solo corrían los hijos de las familias aristocráticas'],'etrCarros'],
+ ['¿Por qué los ciudadanos romanos, como los etruscos, miraban desde la grada en lugar de competir?',['Porque se habrían avergonzado de actuar en público como profesionales','Porque la ley les prohibía montar a caballo antes de cumplir los treinta','Porque los sacerdotes reservaban las carreras a los reyes y a los dioses'],'etrHerencia'],
+ ['¿Para qué llevaban los aficionados anillos y amuletos con su auriga?',['Para atraer la suerte sobre su auriga y su facción','Para entrar gratis en la grada reservada a su facción','Para votar al mejor auriga al final de cada temporada'],'nica'],
+ ['¿Para qué servían las tablillas de maldición (defixiones)?',['Para pedir a los demonios que lisiaran a un auriga rival o a sus caballos','Para registrar ante un magistrado las apuestas hechas en la grada del circo','Para proteger a los caballos propios de las enfermedades de la cuadra'],'apuestas'],
+ ['¿Por qué el tema traduce los precios a años de paga de un legionario?',['Porque es la mejor vara de medir el valor de un sestercio','Porque los legionarios eran los únicos que cobraban en sestercios','Porque así lo hacían las inscripciones de los propios aurigas'],'sestercio']
+);
+QUIZ_EN.push(
+ ['Why would a rich man pay for games for the people out of his own pocket?',['Because he received recognition in return, euergetism','Because the law paid him back twice what he spent the next year','Because it freed him from paying taxes while he held office']],
+ ['Why did the elite offer regular, free spectacles to the plebs?',['To draw large crowds and win their favour','To raise money for the legions from ticket sales','To pick the best riders for the army from the crowd']],
+ ['Under the policy of “bread and circuses”, why did those in power give the people food and entertainment?',['To win their favour with affordable food and shows','To train citizens physically for service in the legions','So that slaves could buy their freedom with their winnings']],
+ ['Why was Juvenal’s line about bread and races a reproach?',['Because the plebs, once givers of commands, now wanted only bread and races','Because the emperors spent on the circus all the grain meant for the legions','Because the Christians condemned the circus as a place devoted to pagan idols']],
+ ['What did the factions provide for the magistrate who organised the games?',['They hired out horses, charioteers and equipment to him','They voted for him as a bloc in each year’s elections','They sold seats in the stands to the fans on his behalf']],
+ ['Why did Diocles not keep the almost 36 million sesterces he won in prizes?',['Because a large part of the prizes went to his faction','Because he lost it betting in the stands on his own races','Because the emperor confiscated the prizes of freedman charioteers']],
+ ['What did the crowd use the emperor’s presence in the stands for?',['To shout demands at him, such as a tax cut','To elect next year’s consuls by a show of hands','To hand him the wreaths of the winning charioteers']],
+ ['Why did Titus and Trajan parade the informers in the amphitheatre?',['To win over the people before every social group','So that gladiators would execute them in the midday slot','To make them pay for that year’s games as a punishment']],
+ ['Why does it matter to tell the ludi apart from the munus?',['Because each had its own origin, calendar and payer','Because the ludi were held only in Rome and the munus in the provinces','Because free citizens competed in the ludi and slaves in the munus']],
+ ['What was the lex Iulia theatralis for in the amphitheatre?',['To make the stands mirror the hierarchy of the city','To keep each faction’s supporters apart and prevent fights','To reserve the rows nearest the arena for the plebs']],
+ ['Why did the Christians condemn the circus as a place of idolatry?',['Because every ornament of the track belonged to a god','Because Christians were executed there before wild beasts','Because each faction worshipped its own god of its colour']],
+ ['Why could the Church not close down the spectacles?',['Because it addressed the faithful and had no power over the venues','Because the bishops took a share of the takings from every single race','Because Tertullian defended the races and condemned only the arena']],
+ ['Why did gladiators disappear before the races, according to Jiménez Sánchez?',['Because gladiatorial games were the most expensive spectacle','Because a law of Constantine banned them throughout the Empire','Because the public now preferred races to combats']],
+ ['Why did an Etruscan chariot race display the wealth of whoever paid for it?',['Because keeping horses and charioteers was very expensive','Because the winner handed his prize to the king of the city','Because only sons of aristocratic families took part']],
+ ['Why did Roman citizens, like the Etruscans, watch from the stands instead of competing?',['Because they would have been ashamed to perform as professionals','Because the law forbade them to ride a horse before the age of thirty','Because the priests reserved the races for the kings and the gods']],
+ ['Why did fans wear rings and amulets showing their charioteer?',['To bring luck to their charioteer and faction','To get free entry to their faction’s section of the stands','To vote for the best charioteer at the end of each season']],
+ ['What were curse tablets (defixiones) for?',['To ask demons to maim a rival charioteer or his horses','To register the bets made in the stands before a magistrate','To protect a stable’s own horses from disease in the stables']],
+ ['Why does the unit convert prices into years of a legionary’s pay?',['Because it is the best yardstick for the value of a sestertius','Because legionaries were the only people paid in sesterces','Because the charioteers’ own inscriptions measured prizes that way']]
+);
 
 /* ---------- base: idioma, ajustes, facciones, circuitos y utilidades ---------- */
 /* claves propias con el prefijo del juego; se migran las de la versión 2 */
@@ -3642,6 +4100,7 @@ function updateRace(dt){
   let lead=null;for(const c of r.cars){if(c.crashed)continue;if(!lead||c.unw>lead.unw)lead=c}
   if(r.order.length)lead=r.order[0];
   r.leader=lead;if(!r.leadFac&&lead&&r.started&&lead.unw>0)r.leadFac=lead.fac;
+  if(lead&&r.started&&lead!==r._ld){if(r._ld)r.leadCh=(r.leadCh||0)+1;r._ld=lead} // cambios en cabeza, para medir el espectáculo
   for(const p of r.players){
     if(!p.cutOpen)continue;p.cutT+=dt;
     if(p.inp.c){p.cutOpen=false;p.cut=true;r.flash(p,L('Riendas cortadas','Reins cut'),L('el auriga sale ileso','the charioteer is unhurt'));SFX.whip()}
@@ -4341,7 +4800,7 @@ function hito(id,txt){if(!G.hitos[id]){G.hitos[id]=txt;logG(L('Hito: ','Mileston
 function curAur(){return G.aurigas.find(a=>a.id===G.aurSel)||G.aurigas[0]}
 function horsePrice(h){const m=G?econ().horseMul:1;return Math.max(400,Math.round(((h.vel*1.3+h.agu+h.gui*1.1)*8-(h.age-5)*60)*m/50)*50)}
 function staffCost(){let s=0;for(const k in G.staff)if(G.staff[k])s+=STAFF[k].sal*econ().staffMul;return s}
-function upkeepCost(){return G.horses.length*econ().upkeep+G.aurigas.length*econ().aurUp+staffCost()}
+function upkeepCost(){return G.horses.length*econ().upkeep+G.aurigas.reduce((s,a)=>s+aurSal(a),0)+staffCost()} // sueldos de los aurigas: 09d_temporada.js
 function availHorses(){return G.horses.filter(h=>h.inj<=0&&h.age>=5)}
 function injRisk(h){if(h.fat<=55)return 0;return clamp((h.fat-55)/90*((h.traits||[]).includes('fragil')?1.8:1),0,0.9)}
 function canTiro(t,a){
@@ -4382,7 +4841,7 @@ function makeOffers(){
 function ensureMarket(){if(G.market&&G.market.length)return;const lv=econ().level+Math.min(6,G.stageSeason||1);G.market=[0,1,2].map(()=>makeHorse(lv,{age:5+Math.floor(R()*6)}))}
 function horseHist(H,t){H.hist=H.hist||[];H.hist.push(t);if(H.hist.length>6)H.hist.shift()}
 function applyResult(r,offer,aur){
-  const p=r.players[0],A=aur,E=econ();
+  ensureG4();const p=r.players[0],A=aur,E=econ();
   const pos=p.finished?r.order.indexOf(p)+1:0;
   const gross=pos&&pos<=3?Math.round(offer.prize*SHARE[pos-1]):0;
   const fee=offer.fee,facCut=Math.round((gross+fee)*(G.facCut||0.20)),pec=Math.round(gross*A.cut),up=upkeepCost();
@@ -4395,7 +4854,9 @@ function applyResult(r,offer,aur){
   const teamWin=r.order[0]&&r.order[0].fac===p.fac&&r.order[0]!==p;
   let teamBonus=0;if(teamWin){teamBonus=Math.round(offer.prize*0.1);G.money+=teamBonus;notes.push(L(`Ha ganado otro carro de los ${fName(G.fac)}: la facción reparte ${hs(teamBonus)} a tu cuadra.`,`Another ${fName(G.fac)} chariot won: the faction shares ${hs(teamBonus)} with your stable.`))}
   if(r.order[0])G.standings[r.order[0].fac]=(G.standings[r.order[0].fac]||0)+1;
-  if(G.stage==='roma')for(let i=0;i<5;i++){const f=pick(FACS);G.standings[f]++} // resto de carreras de la jornada
+  // clasificación de la temporada y resto de carreras de la jornada, calculadas con la habilidad de cada auriga (09d_temporada.js)
+  ligaRecord(r,A);for(const f of ligaBackground())G.standings[f]=(G.standings[f]||0)+1;
+  calPush({t:offer.title,tiro:offer.tiro,pos,sim:!!r.sim});
   let dp=pos===1?offer.prestige:pos===2?Math.round(offer.prestige/3):pos===3?1:0;
   if(p.crashed)dp-=2;dp+=0.5;G.prestige=clamp(G.prestige+dp,0,100);
   A.pericia=clamp(A.pericia+1.5+(pos===1?2:0),0,95);
@@ -4426,12 +4887,13 @@ function applyResult(r,offer,aur){
   if(A.wins>=50&&hito('miliario'+A.id,L(`${A.name}, miliario de la cuadra`,`${A.name}, the stable’s miliarius`))){H2.push(L(`${A.name} llega a cincuenta victorias, el «miliario» a escala del juego. Los miliarios reales pasaron de mil (Bell, 2020, p. 19).`,`${A.name} reaches fifty wins, the game’s scaled “miliarius”. The real miliarii passed a thousand (Bell, 2020, p. 19).`));unlock('miliarios');unlock('cMiliario')}
   if(G.money>=1000000&&hito('censo',L('Un millón de sestercios','One million sesterces')))H2.push(L('Tu cuadra reúne un millón de sestercios, el patrimonio mínimo de un senador (Tema 4).','Your stable holds a million sesterces, the minimum fortune of a senator (Tema 4).'));
   // favor del editor: le gusta la victoria y no le disgusta el naufragium, que gustaba a la grada (Bell, 2014, p. 495)
-  favorAdd(pos===1?3:pos?1:1);
+  // y además el favor de la plebe hacia el editor: los juegos le servían para ganarse a la plebe (09d_temporada.js)
+  const pl=plebeAfterRace(r,offer,pos,notes);favorAdd((pos===1?3:1)+pl.fav);
   nemesisAfterRace(r,pos,notes);
   objectiveAfterRace(pos,null,offer,p.crashed);
   logG(`${offer.title} (${tiroName(offer.tiro)}), ${A.name}: ${pos?ord(pos):'naufragium'}`);
   G.totalJ++;
-  return {pos,gross,fee,facCut,pec,up,teamBonus,notes,hitos:H2,dp};
+  return {pos,gross,fee,facCut,pec,up,teamBonus,notes,hitos:H2,dp,sp:pl.sp};
 }
 function advanceJornada(){
   applyTraining();
@@ -4452,7 +4914,7 @@ function endSeason(){
   if(G.staff.conditor){const p=makeHorse(econ().level+Math.min(6,G.stageSeason||1),{age:3});G.horses.push(p);s.born=p.name}
   // deudas: se venden caballos hasta cuadrar la caja
   if(G.money<0){const sorted=[...G.horses].sort((a,b)=>horsePrice(a)-horsePrice(b));while(G.money<0&&G.horses.length>2&&sorted.length){const h=sorted.shift();G.money+=Math.round(horsePrice(h)*0.6);G.horses=G.horses.filter(x=>x!==h);s.sold.push(h.name)}G.prestige=clamp(G.prestige-5,0,100)}
-  evaluateObjective(s);
+  evaluateObjective(s);seasonEndG4(s);
   if(G.stage==='roma'){s.champ=FACS.slice().sort((a,b)=>G.standings[b]-G.standings[a])[0]}
   G.standings={V:0,P:0,R:0,A:0};
   G.season++;G.stageSeason=(G.stageSeason||1)+1;G.jornada=1;G.season0={wins:0,races:0,money:G.money};
@@ -4485,7 +4947,7 @@ function queueEvents(){
    Nelis-Clément (2002, p. 267) para la negociación del dominus factionis y en Bell (2014, p. 495) para el personal. */
 
 /* favor del editor */
-const feeMul=()=>0.85+clamp(G.favor==null?50:G.favor,0,100)/333;
+const feeMul=()=>0.85+clamp(G.favor==null?50:G.favor,0,100)/333+(G.edBonus||0);
 function favorAdd(n){G.favor=clamp((G.favor==null?50:G.favor)+n,0,100)}
 function negotiate(i){
   const o=G.offers[i];if(!o||o.neg||o.withdrawn)return;o.neg=true;unlock('cEditor');unlock('editor');
@@ -4812,6 +5274,304 @@ function refGhostsHTML(){
     `<p class="muted">${L('El tiempo de referencia es del juego, calculado con el auriga automático de Cuadrigas. No es una marca histórica de estos aurigas.','The reference time is the game’s own, worked out with Cuadrigas’ automatic charioteer. It is not a historical record of these charioteers.')}</p>`;
 }
 
+/* ---------- Temporada al estilo de PC Fútbol (19-10-2026) ----------
+   Cada carrera de la carrera profesional se puede conducir en el arcade o simular. La simulación corre la carrera con el
+   mismo motor, las mismas estadísticas (caballos, cansancio, auriga, personal) y los mismos rivales, sin dibujarla, con la
+   cuadra conducida como lo haría un jugador medio, y da una crónica breve. Hay además clasificación de aurigas y de
+   facciones, calendario de la temporada, contratos y sueldos de los aurigas libertos y un mercado de aurigas.
+   La regla que enseña la idea del tema: el premio es de los dueños y no del auriga, y el editor paga los juegos para
+   ganarse el favor de la plebe (Tema 4, diapositivas 37, 62, 65, 104, 106 y 107 del 19-10-2026).
+   Puntos, sueldos, contratos, primas y la medida del favor son convenciones del juego (códice: cSimular, cPlebe, cDueno,
+   cContrato y cLiga). */
+
+/* ajuste de la simulación, medido con bots (Playwright) para que simular dé lo mismo que conducir a un jugador medio */
+/* tres conductores de referencia; la simulación usa el medio, con sus despistes al volante y al frenar en la meta */
+const HUMANO={torpe:{skill:0.5,steer:0.35,late:0.22,margin:0.0,cut:0.6},medio:{skill:0.62,steer:0.22,late:0.12,margin:0.04,cut:0.75},bueno:{skill:0.74,steer:0.12,late:0.05,margin:0.06,cut:0.9}};
+const SIMK={h:HUMANO.medio,R:12};
+{const base=aiControl;
+ aiControl=function(c,r){base(c,r);const h=c.ai&&c.ai.human;if(!h||c.crashed||c.finished)return;const inp=c.inp;
+  c._sn=(c._sn||0)*0.97+(R()-0.5)*h.steer*0.5;inp.s=clamp(inp.s+c._sn,-1,1);
+  if(inp.b){if(!c._brk){c._brk=true;c._skip=R()<h.late}if(c._skip)inp.b=0}else c._brk=false}}
+function humanDriver(P,r,h){const n=r.cars.length,g=r.g;const startR=lerp(g.spR+5.5,g.hw-5,n>1?P.startLane/(n-1):0.5);
+  P.ai=makeAI(h.skill,{startR,R:SIMK.R});P.ai.strat={whip:'smart',margin:h.margin};P.ai.aggr=0.3;P.ai.human=h}
+const LIGA_PTS=[5,3,2,1];
+
+/* estado nuevo de la partida (versión 4), compatible con las partidas guardadas */
+function ensureG4(){
+  if(!G)return;
+  if(!(G.v>=4)){G.v=4}
+  if(G.plebe==null)G.plebe=50;
+  if(G.edBonus==null)G.edBonus=0;
+  if(!G.cal)G.cal=[];
+  if(!G.ligaHist)G.ligaHist=[];
+  if(!G.liga||G.liga.season!==G.season)G.liga=newLiga();
+  if(!G.roster||G.roster.stage!==G.stage)G.roster=newRoster();
+  if(G.salStage!==G.stage){
+    const k=G.salStage?ECON[G.stage].aurUp/ECON[G.salStage].aurUp:1;
+    G.aurigas.forEach(a=>{if(a.sal)a.sal=Math.round(a.sal*k/5)*5});G.salStage=G.stage;
+  }
+  G.aurigas.forEach(a=>{if(a.status==='liberto'&&a.contrato==null){a.contrato=2;a.sal=Math.round(econ().aurUp*2/5)*5}});
+}
+function newLiga(){const fac={};FACS.forEach(f=>fac[f]={w:0,pts:0,c:0});return {season:G.season,stage:G.stage,aur:{},fac}}
+function newRoster(){
+  const ro={stage:G.stage};const mine=new Set(G.aurigas.map(a=>a.name));
+  for(const f of FACS)ro[f]=RIVAL_NAMES[f].filter(n=>!mine.has(n)).map(n=>({n,off:+((R()-0.5)*0.3).toFixed(3)}));
+  return ro;
+}
+function aurSal(A){return A.status==='liberto'?(A.sal||Math.round(econ().aurUp*2)):econ().aurUp}
+
+/* los rivales tienen nombre y nivel fijos durante la temporada, para que la clasificación tenga sentido */
+function rosterInject(r,o){
+  ensureG4();const ro=G.roster;const N=G.nemesis&&G.nemesis.stage===G.stage?G.nemesis.name:null;
+  for(const f of FACS){
+    const list=(ro[f]||[]).filter(x=>x.n!==N);const cars=r.cars.filter(c=>!c.isPlayer&&c.fac===f);
+    cars.forEach((c,i)=>{const e=list[i%Math.max(1,list.length)];if(!e)return;c.name=e.n;
+      const sk=clamp((o.skill||0.62)+e.off,0.35,0.97);c.ai=makeAI(sk,{startR:c.ai.startR,R:c.ai.R});c.pericia=lerp(30,85,sk);c.critMul=1+(c.pericia-50)/500;
+      if(c.traits){c.traits.hab=Math.round(sk*10);c.traits.agr=Math.round(c.ai.aggr*10);c.traits.cui=Math.round(c.ai.care*20)}});
+  }
+}
+
+/* clasificación: cada carrera, la tuya y las demás de la jornada, reparte puntos */
+function ligaAdd(key,name,fac,place,mine){
+  const L4=G.liga;const a=L4.aur[key]||(L4.aur[key]={n:name,f:fac,c:0,w:0,p:0,pts:0,mine:!!mine});
+  a.n=name;a.c++;const pts=place>0?(LIGA_PTS[place-1]||0):0;a.pts+=pts;if(place===1)a.w++;if(place>0&&place<=3)a.p++;
+  L4.fac[fac].pts+=pts;if(place===1)L4.fac[fac].w++;
+}
+function ligaRecord(r,A){
+  ensureG4();
+  for(const c of r.cars){const place=c.crashed?0:placeOf(r,c);
+    if(c.isPlayer)ligaAdd('me'+A.id,A.name,G.fac,place,true);else ligaAdd(c.fac+':'+c.name,c.name,c.fac,place,false)}
+  FACS.forEach(f=>{if(r.cars.some(c=>c.fac===f))G.liga.fac[f].c++});
+}
+/* las demás carreras de la jornada, que no corre tu cuadra, se calculan con la habilidad de cada auriga */
+function ligaBackground(){
+  ensureG4();const n=G.stage==='roma'?4:2,per=G.stage==='roma'?3:1;let wins=[];
+  for(let k=0;k<n;k++){
+    const field=[];for(const f of FACS){const ro=G.roster[f]||[];shuffle(ro).slice(0,per).forEach(e=>field.push({e,f,s:0.5+e.off+R()*0.55,crash:R()<0.06}))}
+    field.sort((a,b)=>(a.crash-b.crash)||(b.s-a.s));
+    field.forEach((x,i)=>ligaAdd(x.f+':'+x.e.n,x.e.n,x.f,x.crash?0:i+1,false));
+    FACS.forEach(f=>G.liga.fac[f].c++);
+    if(field[0]&&!field[0].crash)wins.push(field[0].f);
+  }
+  return wins;
+}
+
+/* el favor de la plebe: lo que el editor compraba con los juegos */
+function spectacle(r,offer){
+  let s=2;const nc=r.cars.filter(c=>c.crashed).length;s+=Math.min(3,nc*1.5);
+  const f=r.order;if(f.length>=2){const gap=f[1].finishT-f[0].finishT;s+=gap<0.6?3:gap<1.5?2:gap<3?1:0}
+  s+=Math.min(2,(r.leadCh||0)*0.5);if(offer.big)s+=1.5;
+  return Math.round(clamp(s,0,10));
+}
+function plebeAfterRace(r,offer,pos,notes){
+  ensureG4();const sp=spectacle(r,offer);const d=Math.round((sp-4)*1.5);G.plebe=clamp(G.plebe+d,0,100);
+  const P=r.players[0];const inFight=(pos&&pos<=3)||P.crashed;
+  const fav=sp>=6&&inFight?2:sp<=2?-1:0;
+  unlock('cPlebe');
+  notes.push(d>=0?L(`La grada aplaude al editor que ha pagado los juegos (espectáculo ${sp} de 10, favor de la plebe +${d}). Las élites ofrecían estos espectáculos para ganarse a la plebe (Tema 4)${fav>0?', y el editor agradece a tu cuadra que haya estado en la pelea (+2 de su favor)':''}.`,`The crowd cheers the editor who paid for the games (spectacle ${sp} out of 10, favour of the plebs +${d}). The elite offered these shows to win over the plebs (Tema 4)${fav>0?', and the editor thanks your stable for being in the fight (+2 of his favour)':''}.`)
+    :L(`La grada se aburre y el editor pierde el favor de la plebe que había pagado (espectáculo ${sp} de 10, ${d})${fav<0?'; el editor lo recordará al contratar (−1 de su favor)':''}.`,`The crowd is bored and the editor loses the favour of the plebs he had paid for (spectacle ${sp} out of 10, ${d})${fav<0?'; the editor will remember it when hiring (−1 of his favour)':''}.`));
+  return {sp,d,fav};
+}
+
+/* el calendario de la temporada */
+function fiestaOf(j){return G.stage==='roma'?ludiName(LUDI_ROMA[(j-1)%7]):L(...FIESTAS_TARRACO[(j-1)%6])}
+function calPush(o){ensureG4();G.cal.push(Object.assign({s:G.season,j:G.jornada,fi:fiestaOf(G.jornada)},o))}
+function calRest(){calPush({rest:true})}
+
+/* contratos de los aurigas libertos y mercado de aurigas */
+function ensureAurMarket(){
+  ensureG4();if(G.aurMarket&&G.aurMarket.season===G.season&&G.aurMarket.stage===G.stage)return;
+  const roma=G.stage==='roma',list=[];const used=new Set(G.aurigas.map(a=>a.name));
+  for(let i=0;i<2;i++){
+    const free=AURIGA_NAMES.filter(x=>!used.has(x));const name=pick(free.length?free:AURIGA_NAMES);used.add(name);
+    const per=Math.round(roma?55+R()*30:35+R()*30);
+    list.push({name,age:18+Math.floor(R()*12),per,sal:Math.round(econ().aurUp*(1.5+per/60)/5)*5,prima:Math.round(econ().freedom*(0.6+per/80)/10)*10,con:1+Math.floor(R()*3)});
+  }
+  G.aurMarket={season:G.season,stage:G.stage,list};
+}
+function signAur(i){
+  const m=G.aurMarket.list[i];if(!m||G.aurigas.length>=4||G.money<m.prima)return;
+  G.money-=m.prima;const n=newAuriga({name:m.name,age:m.age,pericia:m.per});n.status='liberto';n.cut=0.15;n.sal=m.sal;n.contrato=m.con;if(m.per>=65)n.rank='agitator';
+  G.aurigas.push(n);G.aurMarket.list.splice(i,1);unlock('cContrato');
+  logG(L(`Ficha a ${n.name}, liberto, por ${m.con} temporadas y ${hsTxt(m.sal)} por jornada`,`Signs ${n.name}, a freedman, for ${m.con} seasons at ${hsTxt(m.sal)} per day`));saveG();hub('mercado');
+}
+function releaseAur(id){
+  const A=G.aurigas.find(a=>a.id===id);if(!A||G.aurigas.length<2||A.status!=='liberto')return;
+  const cost=aurSal(A)*3;G.money-=cost;G.aurigas=G.aurigas.filter(a=>a!==A);if(G.aurSel===id)G.aurSel=G.aurigas[0].id;
+  logG(L(`Rescinde el contrato de ${A.name} (${hsTxt(cost)})`,`Ends ${A.name}’s contract (${hsTxt(cost)})`));saveG();hub('aurigas');
+}
+function contratoHTML(A){
+  ensureG4();
+  if(A.status!=='liberto')return `<p class="muted">${L('Esclavo de la cuadra, sin contrato. Su manutención cuesta','A slave of the stable, with no contract. His keep costs')} ${hs(aurSal(A))} ${L('por jornada','per day')}.</p>`;
+  return `<p>${L('Contrato','Contract')}: ${A.contrato} ${A.contrato===1?L('temporada','season'):L('temporadas','seasons')} · ${L('sueldo','wage')} ${hs(aurSal(A))} ${L('por jornada','per day')}</p>${G.aurigas.length>1?`<button onclick="releaseAur(${A.id})">${L('Rescindir el contrato','End the contract')} (${hsTxt(aurSal(A)*3)})</button>`:''}`;
+}
+function aurMarketHTML(){
+  ensureAurMarket();const full=G.aurigas.length>=4;
+  return `<h3>${L('Aurigas libertos sin facción','Freedman charioteers without a faction')}</h3><div class="row">`+G.aurMarket.list.map((m,i)=>`<div class="card"><h2>${esc(m.name)}</h2><p class="muted">${m.age} ${L('años','yrs')} · ${L('liberto','freedman')}${m.per>=65?' · agitator':''}</p>
+   <div class="stats"><span>${L('Pericia','Skill')}</span>${bar(m.per)}</div>
+   <p>${L('Prima de fichaje','Signing fee')} ${hs(m.prima)} · ${L('sueldo','wage')} ${hs(m.sal)} ${L('por jornada','per day')} · ${m.con} ${m.con===1?L('temporada','season'):L('temporadas','seasons')}</p>
+   <button ${!full&&G.money>=m.prima?'':'disabled'} onclick="signAur(${i})">${L('Fichar','Sign')}</button></div>`).join('')+`</div>
+   ${full?`<p class="muted">${L('La cuadra ya tiene cuatro aurigas.','The stable already has four charioteers.')}</p>`:''}
+   <p class="note">${L('Los aurigas eran esclavos, libertos o romanos de muy baja condición (Tema 4) y cambiaban de facción con frecuencia (Nelis-Clément, 2002, p. 275). Las primas, los sueldos y los contratos por temporadas son convenciones del juego.','Charioteers were slaves, freedmen or Romans of very low standing (Tema 4) and often changed faction (Nelis-Clément, 2002, p. 275). Signing fees, wages and contracts by season are game conventions.')}</p>`;
+}
+
+/* fin de temporada: contratos, campeones, balance del editor y nuevos rivales */
+function seasonEndG4(s){
+  ensureG4();
+  G.aurigas.forEach(a=>{if(a.status==='liberto'&&a.contrato!=null){a.contrato--;if(a.contrato<=0)G.events.push({k:'renovar',a:a.id})}});
+  const L4=G.liga;const top=Object.values(L4.aur).sort((a,b)=>b.pts-a.pts||b.w-a.w)[0];const fac=FACS.slice().sort((a,b)=>L4.fac[b].pts-L4.fac[a].pts)[0];
+  s.liga={aur:top?top.n:null,aurFac:top?top.f:null,mine:top?top.mine:false,fac};
+  G.ligaHist.push({season:L4.season,stage:L4.stage,aur:s.liga.aur,aurFac:s.liga.aurFac,fac});
+  if(top&&top.mine)hito('liga'+L4.season,L(`${top.n}, primero de la clasificación de aurigas`,`${top.n}, top of the charioteers’ table`));
+  s.plebe=Math.round(G.plebe);G.edBonus=clamp((G.plebe-50)/1000,-0.05,0.05);
+  s.editor=G.plebe>=60?L(`La plebe ha salido contenta de los juegos de esta temporada (favor ${s.plebe}). Los editores de la próxima, que buscan lo mismo, ofrecerán tarifas algo más altas a las cuadras que dan espectáculo.`,`The plebs left this season’s games happy (favour ${s.plebe}). Next season’s editors, who want the same, will offer slightly higher fees to stables that give a show.`)
+    :G.plebe<=40?L(`La plebe ha salido aburrida de los juegos de esta temporada (favor ${s.plebe}). Los editores de la próxima pagarán algo menos, porque unos juegos que no ganan a la plebe no les sirven.`,`The plebs left this season’s games bored (favour ${s.plebe}). Next season’s editors will pay a little less, because games that do not win over the plebs are of no use to them.`)
+    :L(`La plebe ha recibido los juegos de esta temporada sin entusiasmo ni enfado (favor ${s.plebe}).`,`The plebs received this season’s games with neither enthusiasm nor anger (favour ${s.plebe}).`);
+  G.plebe=50;G.cal=[];G.aurMarket=null;
+  for(const f of FACS)(G.roster[f]||[]).forEach(e=>e.off=+clamp(e.off+(R()-0.5)*0.06,-0.18,0.18).toFixed(3));
+  G.liga={season:G.season+1,stage:G.stage,aur:{},fac:Object.fromEntries(FACS.map(f=>[f,{w:0,pts:0,c:0}]))};
+}
+function seasonG4HTML(s){
+  let h='';
+  if(s.liga&&s.liga.aur)h+=`<p>${L(`Clasificación de la temporada: el primero de los aurigas ha sido ${esc(s.liga.aur)} (${fName(s.liga.aurFac)}${s.liga.mine?', de tu cuadra':''}) y la primera facción, los ${fName(s.liga.fac)}.`,`Season standings: the top charioteer was ${esc(s.liga.aur)} (${fName(s.liga.aurFac)}${s.liga.mine?', from your stable':''}) and the top faction, the ${fName(s.liga.fac)}.`)}</p>`;
+  if(s.editor)h+=`<p class="note">${esc(s.editor)} ${L('(Favor de la plebe y tarifas: convención del juego.)','(Favour of the plebs and fees: game convention.)')}</p>`;
+  return h;
+}
+function renovarHTML(e,A){
+  const nsal=Math.round(aurSal(A)*1.25/5)*5;
+  return `<div class="evh"><canvas data-ap="${A.id}" width="96" height="96"></canvas><h1>${L(`Termina el contrato de ${esc(A.name)}`,`${esc(A.name)}’s contract ends`)}</h1></div>
+  <p>${L(`${esc(A.name)} es liberto y puede irse a otra facción. Pide dos temporadas más con un sueldo de ${hs(nsal)} por jornada, en lugar de ${hs(aurSal(A))}.`,`${esc(A.name)} is a freedman and can leave for another faction. He asks for two more seasons at ${hs(nsal)} per day, instead of ${hs(aurSal(A))}.`)}</p>
+  <p class="act"><button class="big" onclick="evRenovar(true,${nsal})">${L('Renovar','Renew')}</button> <button onclick="evRenovar(false)">${L('Dejarlo marchar','Let him go')}</button></p>`;
+}
+function evRenovar(yes,nsal){
+  const e=G.events[0];const A=G.aurigas.find(a=>a.id===e.a);
+  if(A){if(yes){A.sal=nsal;A.contrato=2;logG(L(`Renueva a ${A.name} dos temporadas`,`Renews ${A.name} for two seasons`))}
+    else{G.aurigas=G.aurigas.filter(a=>a!==A);logG(L(`${A.name} se marcha al terminar su contrato`,`${A.name} leaves at the end of his contract`));
+      if(!G.aurigas.length)G.aurigas.push(newAuriga({age:14,pericia:30}));if(G.aurSel===A.id)G.aurSel=G.aurigas[0].id}}
+  unlock('cContrato');evNext();
+}
+
+/* pestañas nuevas del centro de la cuadra */
+function tabCalendario(){
+  ensureG4();const per=G.stage==='roma'?7:6;
+  let h=`<h3>${L('Calendario de la temporada','Season calendar')} ${G.season} · ${G.stage==='roma'?L('Roma','Rome'):'Tarraco'}</h3><table class="cal"><tr><th>${L('Jornada','Day')}</th><th>${L('Fiesta','Festival')}</th><th>${L('Tu cuadra','Your stable')}</th></tr>`;
+  for(let j=1;j<=per;j++){
+    const e=G.cal.filter(x=>x.s===G.season&&x.j===j).pop();
+    const st=e?(e.rest?L('descanso','rest'):`${esc(e.t)} · ${e.pos?ord(e.pos):'naufragium'}${e.sim?' · '+L('simulada','simulated'):' · '+L('conducida','driven')}`):j===G.jornada?`<b>► ${L('próxima jornada','next race day')}</b>`:j<G.jornada?L('sin carrera','no race'):L('pendiente','to come');
+    h+=`<tr class="${j===G.jornada?'me':''}"><td>${ROM(j)}</td><td>${esc(fiestaOf(j))}</td><td>${st}</td></tr>`;
+  }
+  h+=`</table>`;
+  h+=G.stage==='roma'?`<p class="note">${L('La temporada romana sigue, en su orden, las siete fiestas del calendario religioso con juegos circenses, de los Megalenses a los Plebeyos (Bell, 2020, p. 5). Los ludi eran juegos públicos con fecha fija, pagados en origen por el Estado (Tema 4), y a lo largo del Imperio los días de juegos se multiplicaron, con 65 bajo Augusto y 80 bajo Tiberio (Tema 4).','The Roman season follows, in order, the seven festivals of the religious calendar with circus games, from the Megalenses to the Plebeii (Bell, 2020, p. 5). The ludi were public games with fixed dates, paid for originally by the state (Tema 4), and under the Empire the days of games multiplied, with 65 under Augustus and 80 under Tiberius (Tema 4).')}</p>`
+    :`<p class="note">${L('Las fiestas de Tarraco son una convención del juego. En una colonia los magistrados pagaban parte de los juegos de su bolsillo, y la ley de la colonia de Urso, del 44 a. C., obligaba a sus dos duunviros a dar cada año cuatro días de espectáculos, con 2.000 sestercios públicos y otros 2.000 suyos (Tema 4).','The festivals of Tarraco are a game convention. In a colony the magistrates paid part of the games out of their own pocket, and the law of the colony of Urso, of 44 BC, obliged its two duoviri to give four days of spectacles every year, with 2,000 public sesterces and another 2,000 of their own (Tema 4).')}</p>`;
+  const past=G.cal.filter(x=>x.s<G.season);
+  if(G.ligaHist.length)h+=`<h3>${L('Temporadas anteriores','Previous seasons')}</h3>`+G.ligaHist.map(x=>`<p>${L('Temporada','Season')} ${x.season} (${x.stage==='roma'?L('Roma','Rome'):'Tarraco'}): ${L('primer auriga','top charioteer')} ${esc(x.aur||'?')}${x.aurFac?' ('+fName(x.aurFac)+')':''} · ${L('primera facción','top faction')} ${fName(x.fac)}</p>`).join('');
+  return h;
+}
+function tabClasif(){
+  ensureG4();const L4=G.liga;
+  const aur=Object.values(L4.aur).sort((a,b)=>b.pts-a.pts||b.w-a.w||a.c-b.c);
+  const facs=FACS.slice().sort((a,b)=>L4.fac[b].pts-L4.fac[a].pts||L4.fac[b].w-L4.fac[a].w);
+  let h=`<h3>${L('Clasificación de aurigas','Charioteers’ table')} · ${L('temporada','season')} ${G.season}</h3>`;
+  if(!aur.length)h+=`<p class="muted">${L('Todavía no se ha corrido ninguna carrera esta temporada.','No race has been run yet this season.')}</p>`;
+  else h+=`<table class="liga"><tr><th>#</th><th>${L('Auriga','Charioteer')}</th><th>${L('Facción','Faction')}</th><th>${L('Carreras','Races')}</th><th>${L('Victorias','Wins')}</th><th>${L('Podios','Podiums')}</th><th>${L('Puntos','Points')}</th></tr>`+
+    aur.slice(0,14).map((a,i)=>`<tr class="${a.mine?'me':''}"><td>${i+1}</td><td>${a.mine?'★ ':''}${esc(a.n)}${a.mine?L(' (tu cuadra)',' (your stable)'):''}</td><td>${facSwatch(a.f,14)} ${FAC[a.f].letter}</td><td>${a.c}</td><td>${a.w}</td><td>${a.p}</td><td><b>${a.pts}</b></td></tr>`).join('')+`</table>`;
+  const mine=aur.map((a,i)=>({a,i})).filter(x=>x.a.mine&&x.i>=14);
+  if(mine.length)h+=`<p>${mine.map(x=>`★ ${esc(x.a.n)}: ${x.i+1}.º, ${x.a.pts} ${L('puntos','points')}`).join(' · ')}</p>`;
+  h+=`<h3>${L('Clasificación de facciones','Factions’ table')}</h3><table class="liga"><tr><th>#</th><th>${L('Facción','Faction')}</th><th>${L('Victorias','Wins')}</th><th>${L('Puntos','Points')}</th></tr>`+
+    facs.map((f,i)=>`<tr class="${f===G.fac?'me':''}"><td>${i+1}</td><td>${facSwatch(f,16)} ${fName(f)} (${FAC[f].letter})${f===G.fac?L(' · la tuya',' · yours'):''}</td><td>${L4.fac[f].w}</td><td><b>${L4.fac[f].pts}</b></td></tr>`).join('')+`</table>`;
+  h+=`<p class="note">${L(`Puntúan las carreras de tu cuadra y las demás carreras de cada jornada, que se calculan con la habilidad de cada auriga. Cinco puntos al primero, tres al segundo, dos al tercero y uno al cuarto; el naufragium no puntúa. La tabla de puntos es una convención del juego, puesto que las fuentes cuentan victorias, como la inscripción de Diocles, con 1.462 en 4.257 carreras (Tema 4).`,`Your stable’s races count, and so do the other races of each day, which are calculated from each charioteer’s skill. Five points for first, three for second, two for third and one for fourth; a crash scores nothing. The points table is a game convention, since the sources count wins, like the inscription of Diocles, with 1,462 in 4,257 races (Tema 4).`)}</p>`;
+  return h;
+}
+
+/* el reparto del premio: la gloria es del auriga y el dinero, de los dueños */
+function premioHTML(res,A){
+  if(!res.gross)return `<p class="muted">${L('Esta vez no hay premio que repartir. Cuando lo hay, se lo quedan los dueños, y el auriga solo se lleva su peculio.','There is no prize to share this time. When there is one, the owners keep it, and the charioteer takes only his peculium.')}</p>`;
+  const dom=Math.round(res.gross*(G.facCut||0.20)),pec=res.pec,mine=Math.max(0,res.gross-dom-pec);
+  const pc=v=>Math.round(v*100/res.gross);
+  unlock('cDueno');
+  return `<div class="card premio"><h3>${L('¿De quién es el premio?','Whose prize is it?')}</h3>
+  <div class="pbar" role="img" aria-label="${esc(L(`Tu cuadra ${pc(mine)} %, dominus factionis ${pc(dom)} %, auriga ${pc(pec)} %`,`Your stable ${pc(mine)}%, dominus factionis ${pc(dom)}%, charioteer ${pc(pec)}%`))}"><i class="p1" style="width:${pc(mine)}%"></i><i class="p2" style="width:${pc(dom)}%"></i><i class="p3" style="width:${pc(pec)}%"></i></div>
+  <table><tr><td><span class="pk p1"></span> ${L('Tu cuadra, dueña de los caballos','Your stable, owner of the horses')}</td><td>${hs(mine)} · ${pc(mine)}${L(' %','%')}</td></tr>
+  <tr><td><span class="pk p2"></span> ${L('El dominus factionis','The dominus factionis')}</td><td>${hs(dom)} · ${pc(dom)}${L(' %','%')}</td></tr>
+  <tr><td><span class="pk p3"></span> ${esc(A.name)}, ${L('el auriga (peculio)','the charioteer (peculium)')}</td><td>${hs(pec)} · ${pc(pec)}${L(' %','%')}</td></tr></table>
+  <p>${L('La gloria es del auriga, que sube a recoger la palma, mientras que el dinero es de los dueños. Diocles sumó 35.863.120 sest. en premios y, descontada la parte de la facción, le quedaron al menos tres millones y medio (Tema 4).','The glory goes to the charioteer, who climbs up to take the palm, while the money goes to the owners. Diocles won 35,863,120 sest. in prizes and, once the faction’s share was deducted, kept at least three and a half million (Tema 4).')}</p></div>`;
+}
+
+/* la carrera simulada */
+let SIM=null;
+function cron(r,t){const tr=Math.max(0,r.t-r.goT);r.cronica.push({m:timeStr(tr),t})}
+const ctag=c=>`${esc(c.name)} (${FAC[c.fac].letter})`;
+function simStart(){
+  if(!race||MODE!=='prerace'||!pendingOffer)return;
+  if(pendingDefixio){G.money-=G.stage==='roma'?600:150;G._defixio=true;unlock('nica')}
+  const r=race,P=r.players[0];humanDriver(P,r,SIMK.h);
+  r.sim=true;r.cronica=[];unlock('cSimular');
+  MODE='sim';paused=false;SIM={r,fast:false,lastPaint:0,w:{lead:null,leadT:-99,crashes:new Set(),laps:0,started:false,first:false,mine:false}};
+  const o=pendingOffer;
+  show(`<h1>${esc(o.title)}</h1><p>${circName(o.circuit)} · ${tiroName(o.tiro)} · ${o.laps} ${L('vueltas','laps')} · ${L('conduce','driver')} ${esc(P.name)} · <span class="tag tc">${L('Carrera simulada','Simulated race')}</span></p>
+   <div class="simbar"><i id="simprog"></i></div><div class="row"><div class="col"><table id="simtab"></table></div><div class="col"><div class="cron" id="simcron"></div></div></div>
+   <p class="act"><button class="big" id="simfast" onclick="SIM&&(SIM.fast=true)">${L('Ir al resultado','Skip to the result')}</button></p>
+   <p class="muted">${L('La carrera se corre con el mismo motor que el arcade, con tus caballos, su cansancio, tu auriga, tu personal y los mismos rivales; tu cuadra la conduce la máquina como un jugador medio (convención del juego).','The race is run with the same engine as the arcade, with your horses, their fatigue, your charioteer, your staff and the same rivals; the machine drives your stable like an average player (game convention).')}</p>`);
+  requestAnimationFrame(simStep);
+}
+function simWatch(r){
+  const W=SIM.w,P=r.players[0],lap=c=>Math.min(r.laps,c.lapsDone+1);
+  if(!W.started&&r.started){W.started=true;cron(r,L(`Cae la mappa y se abren los carceres. ${esc(P.name)} sale desde la puerta ${P.startLane+1}.`,`The mappa falls and the gates open. ${esc(P.name)} starts from gate ${P.startLane+1}.`))}
+  if(!r.started)return;const tr=r.t-r.goT;
+  if(r.leader&&r.leader!==W.lead&&!r.order.length&&tr>9&&tr-W.leadT>8&&(W.nl=(W.nl||0))<5){W.nl++;W.lead=r.leader;W.leadT=tr;cron(r,r.leader===P?L(`${esc(P.name)} se pone en cabeza en la vuelta ${lap(P)}.`,`${esc(P.name)} takes the lead on lap ${lap(P)}.`):L(`${ctag(r.leader)} toma la cabeza en la vuelta ${lap(r.leader)}.`,`${ctag(r.leader)} takes the lead on lap ${lap(r.leader)}.`))}
+  for(const c of r.cars)if(c.crashed&&!W.crashes.has(c)){W.crashes.add(c);
+    if(c===P){P.cut=R()<SIMK.h.cut;cron(r,P.cut?L(`¡Naufragium de ${esc(P.name)}! Corta las riendas a tiempo y sale ileso.`,`${esc(P.name)} crashes! He cuts the reins in time and escapes unhurt.`):L(`¡Naufragium de ${esc(P.name)}! El tiro lo arrastra antes de que pueda cortar las riendas.`,`${esc(P.name)} crashes! The team drags him before he can cut the reins.`))}
+    else cron(r,L(`Naufragium de ${ctag(c)} en la vuelta ${lap(c)}. La grada se pone en pie.`,`${ctag(c)} crashes on lap ${lap(c)}. The crowd rises.`))}
+  if(P.lapsDone>W.laps&&!P.finished&&!P.crashed){W.laps=P.lapsDone;cron(r,L(`Bajan un huevo y un delfín: vuelta ${W.laps} de ${r.laps}, ${esc(P.name)} va ${ord(placeOf(r,P))}.`,`An egg and a dolphin come down: lap ${W.laps} of ${r.laps}, ${esc(P.name)} is ${ord(placeOf(r,P))}.`))}
+  if(r.order.length&&!W.first){W.first=true;const w=r.order[0];cron(r,w===P?L(`¡NICA! ${esc(P.name)} cruza el primero la línea blanca.`,`NICA! ${esc(P.name)} crosses the white line first.`):L(`${ctag(w)} gana la carrera.`,`${ctag(w)} wins the race.`))}
+  if(P.finished&&!W.mine&&r.order[0]!==P){W.mine=true;cron(r,L(`${esc(P.name)} entra ${ord(r.order.indexOf(P)+1)}.`,`${esc(P.name)} finishes ${ord(r.order.indexOf(P)+1)}.`))}
+}
+function simPaint(){
+  const r=SIM.r,P=r.players[0];const pr=document.getElementById('simprog');if(!pr)return;
+  const tot=r.laps*r.g.lap+r.g.sx;const lead=r.cars.reduce((m,c)=>Math.max(m,c.unw),0);pr.style.width=clamp(lead/tot*100,0,100)+'%';
+  const rows=[...r.cars].sort((a,b)=>placeOf(r,a)-placeOf(r,b)).slice(0,8);
+  document.getElementById('simtab').innerHTML=rows.map(c=>`<tr class="${c.isPlayer?'me':''}"><td>${c.crashed?L('fuera','out'):ord(placeOf(r,c))}</td><td>${FAC[c.fac].letter} · ${fName(c.fac)}</td><td>${c.isPlayer?'★ ':''}${esc(c.name)}</td></tr>`).join('');
+  document.getElementById('simcron').innerHTML=r.cronica.slice(-7).map(x=>`<p><b>${x.m}</b> ${x.t}</p>`).join('');
+}
+function simStep(){
+  if(!SIM||race!==SIM.r||MODE!=='sim')return;
+  const r=SIM.r,t0=performance.now(),budget=SIM.fast?5000:30;
+  while(!r.done&&performance.now()-t0<budget){updateRace(TUNING.dt);if(!SIM)return;simWatch(r)}
+  if(r.done||MODE!=='sim')return;
+  if(t0-SIM.lastPaint>200){SIM.lastPaint=t0;simPaint()}
+  requestAnimationFrame(simStep);
+}
+function cronicaHTML(r){
+  if(!r.sim||!r.cronica)return '';
+  return `<div class="card cronica"><h3>${L('Crónica de la carrera','Race report')} · <span class="tag tc">${L('simulada','simulated')}</span></h3>${r.cronica.slice(0,12).map(x=>`<p><b>${x.m}</b> ${x.t}</p>`).join('')}</div>`;
+}
+/* simular directamente desde la oferta, con el enganche automático */
+function quickSim(i){chooseOffer(i);if(!slots.every(x=>x))return;preRace();simStart()}
+
+/* códice: convenciones nuevas */
+Object.assign(CODEX,{
+ cSimular:{t:'Simular una carrera',k:'C',g:'Convenciones del juego',x:'La carrera simulada se corre con el mismo motor que el arcade, con tus caballos y su cansancio, tu auriga con su pericia, su ánimo y su miedo, tu personal y los mismos rivales, aunque sin dibujarla, y la conduce la máquina como lo haría un jugador medio. El resultado depende, por tanto, de las estadísticas y de tus decisiones de gestión. Se ha comprobado con bots que simular y conducir dan resultados parecidos a un jugador medio, para que simular no sea un atajo ni un castigo.'},
+ cPlebe:{t:'El favor de la plebe',k:'C',g:'Convenciones del juego',x:'Los espectáculos los ofrecía la élite política y económica a la plebe de forma regular y gratuita, y con ellos buscaba ganarse su favor (Tema 4). El editor recibía dinero público y solía añadir el suyo, y a cambio recibía reconocimiento, el intercambio que los historiadores llaman evergetismo (Tema 4). En el juego cada carrera da a la plebe un espectáculo, que se mide por los naufragios, por lo apretado de la llegada y por los cambios en cabeza, y el editor favorece a las cuadras que se lo dan. La medida y sus efectos sobre las tarifas son convenciones del juego.'},
+ cDueno:{t:'¿De quién es el premio?',k:'C',g:'Convenciones del juego',x:'En Roma se proclamaba vencedor al auriga (Tema 4), si bien el dinero quedaba en manos de los dueños. Las facciones alquilaban caballos, aurigas y material a quien pagaba los juegos, y al frente de cada una estaba el dominus factionis, que negociaba sus precios (Tema 4). Diocles sumó 35.863.120 sestercios en premios y, descontada la parte de la facción, le quedaron al menos tres millones y medio según Vamplew (Tema 4). En el juego el auriga se lleva su peculio, el dominus su parte y el resto es de tu cuadra; los porcentajes son convenciones del juego.'},
+ cContrato:{t:'Contratos y sueldos de los aurigas',k:'C',g:'Convenciones del juego',x:'Los aurigas eran esclavos, libertos o romanos de muy baja condición (Tema 4), y cambiaban de facción con frecuencia (Nelis-Clément, 2002, p. 275). Las fuentes de clase no dicen cómo se pagaba a un auriga liberto, de modo que los contratos por temporadas, los sueldos por jornada, las primas de fichaje y la manutención de los esclavos son convenciones del juego.'},
+ cLiga:{t:'La clasificación',k:'C',g:'Convenciones del juego',x:'Las fuentes cuentan victorias, como la inscripción de Diocles, con 1.462 en 4.257 carreras (Tema 4). La tabla de puntos (cinco al primero, tres al segundo, dos al tercero y uno al cuarto), los rivales fijos de cada temporada y las carreras de cada jornada que no corre tu cuadra, calculadas con la habilidad de cada auriga, son convenciones del juego.'}
+});
+Object.assign(CODEX_EN,{
+ cSimular:{t:'Simulating a race',x:'A simulated race is run with the same engine as the arcade, with your horses and their fatigue, your charioteer with his skill, spirit and fear, your staff and the same rivals, only without drawing it, and the machine drives it as an average player would. The result therefore depends on the statistics and on your management decisions. Bots have been used to check that simulating and driving give an average player similar results, so that simulating is neither a shortcut nor a penalty.'},
+ cPlebe:{t:'The favour of the plebs',x:'The political and economic elite offered spectacles to the plebs regularly and free of charge, seeking to win their favour (Tema 4). The editor received public money and usually added his own, and in return he received recognition, the exchange historians call euergetism (Tema 4). In the game each race gives the plebs a spectacle, measured by crashes, by how close the finish is and by changes of lead, and the editor favours the stables that provide it. The measure and its effect on fees are game conventions.'},
+ cDueno:{t:'Whose prize is it?',x:'In Rome the charioteer was proclaimed the winner (Tema 4), although the money stayed with the owners. The factions hired out horses, charioteers and equipment to whoever paid for the games, and each was headed by the dominus factionis, who negotiated its prices (Tema 4). Diocles won 35,863,120 sesterces in prizes and, once the faction’s share was deducted, kept at least three and a half million according to Vamplew (Tema 4). In the game the charioteer takes his peculium, the dominus his share and the rest is your stable’s; the percentages are game conventions.'},
+ cContrato:{t:'Charioteers’ contracts and wages',x:'Charioteers were slaves, freedmen or Romans of very low standing (Tema 4), and they often changed faction (Nelis-Clément, 2002, p. 275). Our class sources do not say how a freedman charioteer was paid, so contracts by season, wages per day, signing fees and the keep of slaves are game conventions.'},
+ cLiga:{t:'The standings',x:'The sources count wins, like the inscription of Diocles, with 1,462 in 4,257 races (Tema 4). The points table (five for first, three for second, two for third and one for fourth), the fixed rivals of each season and the other races of each day, which your stable does not run and are calculated from each charioteer’s skill, are game conventions.'}
+});
+
+/* memoria común de fallos de Historiapp (repaso.js): la correcta, siempre la primera */
+function repasoQ(i,ok){
+  try{if(typeof HAPP_REPASO==='undefined'||i==null||!QUIZ[i])return;
+    const es=QUIZ[i],en=(typeof QUIZ_EN!=='undefined'&&QUIZ_EN[i])||es;const q={es:es[0],en:en[0]};
+    if(ok)HAPP_REPASO.acierto(q);else HAPP_REPASO.fallo('cuadrigas',q,{es:es[1].slice(),en:en[1].slice()},FICHAS_T4[es[2]]||null,4);
+  }catch(e){}
+}
+
 /* ---------- pantallas ---------- */
 let MODE='title';
 const panel=document.getElementById('panel'),box=document.getElementById('box');
@@ -4868,6 +5628,7 @@ function beginCareer(){
   <p>${L('En Roma, las facciones eran empresas que alquilaban caballos, aurigas y material a quien pagaba los juegos (Nelis-Clément, 2002, p. 266). Tu cuadra cobra una tarifa del editor por cada carrera y, si gana, el premio, del que la facción se queda una parte y el auriga otra para su peculio.','In Rome the factions were businesses that hired out horses, charioteers and equipment to whoever paid for the games (Nelis-Clément, 2002, p. 266). Your stable earns a fee from the editor for each race and, if it wins, the prize, of which the faction keeps a share and the charioteer another for his peculium.')}</p>
   <p>${L(`${esc(A.name)} tiene quince años y es esclavo, como casi todos los aurigas: de unos 230 conocidos solo uno había nacido libre (Nelis-Clément, 2002, p. 274). Empieza con bigas, porque la cuadriga era el tiro de los cocheros de rango (Bell, 2020, p. 16).`,`${esc(A.name)} is fifteen and a slave, like almost all charioteers: of some 230 known, only one was freeborn (Nelis-Clément, 2002, p. 274). He starts with bigae, because the quadriga was the team of senior drivers (Bell, 2020, p. 16).`)}</p>
   <p>${L('Las cuentas van en sestercios (sest.), que los romanos abreviaban HS: cuatro sestercios hacían un denario de plata, y la paga de un legionario rondaba los 1.400 sest. al año en el siglo I d. C. (Tema 4). Junto a cada cifra puedes ver su equivalencia en años de paga de un legionario.','Accounts are kept in sesterces (sest.), which Romans abbreviated HS: four sesterces made a silver denarius, and a legionary’s pay was about 1,400 sest. a year in the 1st century AD (Tema 4). Next to each figure you can see what it equals in years of a legionary’s pay.')}</p>
+  <p>${L('Cada carrera la puedes conducir tú o simular, como en los juegos de gestión deportiva, y en la cuadra tienes el calendario de la temporada y la clasificación de aurigas y de facciones. Fíjate también en el favor de la plebe, porque el editor que paga los juegos lo hace para ganarse a la plebe a cambio de reconocimiento (Tema 4), y por eso contrata mejor a las cuadras que dan espectáculo.','You can drive each race yourself or simulate it, as in sports management games, and the stable has the season calendar and the charioteers’ and factions’ tables. Watch the favour of the plebs too, because the editor who pays for the games does so to win over the plebs in exchange for recognition (Tema 4), and so he hires the stables that give a show on better terms.')}</p>
   <p>${L('Cuida el dinero. El mantenimiento de caballos, aurigas y personal se paga cada jornada, y una cuadra en números rojos tiene que vender caballos al final de la temporada.','Watch the money. Upkeep for horses, charioteers and staff is paid every day, and a stable in the red has to sell horses at the end of the season.')}</p>
   <p class="act"><button class="big" onclick="hub('jornada')">${L('A la cuadra','To the stable')}</button></p>`);
 }
@@ -4880,20 +5641,22 @@ function hub(tab){
   if(tab)TAB=tab;if(!G)return titleScreen();
   if(G.pendingSeason)return seasonScreen();
   if(G.events&&G.events.length)return eventScreen();
-  ensureMarket();ensureObjective();if(!G.offers)G.offers=makeOffers();saveG();
+  ensureG4();ensureMarket();ensureObjective();if(!G.offers)G.offers=makeOffers();saveG();
   const A=curAur(),per=G.stage==='roma'?7:6;
-  const tabs=[['jornada',L('Jornada','Race day')],['establo',L('Establo','Stable')],['aurigas',L('Aurigas','Charioteers')],['personal',L('Personal','Staff')],['mercado',L('Mercado','Market')]];
+  const tabs=[['jornada',L('Jornada','Race day')],['calendario',L('Calendario','Calendar')],['clasif',L('Clasificación','Standings')],['establo',L('Establo','Stable')],['aurigas',L('Aurigas','Charioteers')],['personal',L('Personal','Staff')],['mercado',L('Mercado','Market')]];
   if(G.stage==='roma')tabs.push(['facciones',L('Facciones','Factions')]);
   tabs.push(['codice',L('Códice','Codex')],['registro',L('Registro','Record')]);
   const hb=document.getElementById('hubbody'),keep=hb&&hubTabShown===TAB?hb.scrollTop:0;hubTabShown=TAB;
   let h=`<div class="hub"><div class="hubside"><div class="hdr">${facSwatch(G.fac,36)}<div><h1>${L('Cuadra de los ','Stable of the ')}${fName(G.fac)} · ${G.stage==='roma'?L('Roma','Rome'):'Tarraco'}</h1>
   <div class="muted">${L('Temporada','Season')} ${G.season} · ${L('jornada','day')} ${G.jornada} ${L('de','of')} ${per} · ${esc(fiestaName())}</div></div>
-  <div class="kpis"><div><span>${L('Caja (sestercios)','Funds (sesterces)')}</span><b class="${G.money<0?'neg':''}">${hs(G.money)}</b></div><div><span>${L('Prestigio','Prestige')}</span><b>${Math.round(G.prestige)}</b></div><div><span>${L('Favor del editor','Editor’s favour')}</span><b>${Math.round(G.favor)}</b></div><div><span>${L('Gasto por jornada','Cost per day')}</span><b>${hs(upkeepCost())}</b></div></div></div>
+  <div class="kpis"><div><span>${L('Caja (sestercios)','Funds (sesterces)')}</span><b class="${G.money<0?'neg':''}">${hs(G.money)}</b></div><div><span>${L('Prestigio','Prestige')}</span><b>${Math.round(G.prestige)}</b></div><div><span>${L('Favor del editor','Editor’s favour')}</span><b>${Math.round(G.favor)}</b></div><div title="${esc(L('Lo que el editor compra con los juegos','What the editor buys with the games'))}"><span>${L('Favor de la plebe','Favour of the plebs')}</span><b>${Math.round(G.plebe)}</b></div><div><span>${L('Gasto por jornada','Cost per day')}</span><b>${hs(upkeepCost())}</b></div></div></div>
   <div class="hubexit"><button onclick="titleScreen()">${L('Portada','Title')}</button>${IN_APP?`<button onclick="backToApp()">Historiapp</button>`:''}<span class="lgs"><button class="${LANG==='es'?'on':''}" onclick="setLang('es');hub()">ES</button><button class="${LANG==='en'?'on':''}" onclick="setLang('en');hub()">EN</button></span></div></div>
   <div class="hubmain"><div class="tabs">${tabs.map(([k,l])=>`<button class="${TAB===k?'on':''}" onclick="hub('${k}')">${l}</button>`).join('')}</div><div class="hubbody" id="hubbody">`;
   const hsl=`<p class="hsleg">${L('<b>sest.</b> son sestercios, la moneda en que los romanos llevaban sus cuentas: cuatro sestercios hacían un denario de plata y un legionario cobraba unos 1.400 sest. al año (Tema 4). Toca cualquier cifra para ver cuántos años de paga de legionario supone.','<b>sest.</b> means sesterces, the coin Romans kept their accounts in: four sesterces made a silver denarius and a legionary earned about 1,400 sest. a year (Tema 4). Tap any figure to see how many years of a legionary’s pay it represents.')}</p>`;
   if(!phoneUI())h+=hsl;
   if(TAB==='jornada')h+=tabJornada();
+  if(TAB==='calendario')h+=tabCalendario();
+  if(TAB==='clasif')h+=tabClasif();
   if(TAB==='establo')h+=tabEstablo();
   if(TAB==='aurigas')h+=tabAurigas();
   if(TAB==='personal')h+=tabPersonal();
@@ -4917,8 +5680,8 @@ function tabJornada(){
   G.offers.forEach((o,i)=>{const T=TUNING.tiros[o.tiro];const nh=availHorses().length;const can=canTiro(o.tiro);const ok=can.ok&&nh>=T.n;
     h+=`<div class="offer ${offerSel===i?'sel':''}"><h2>${esc(o.title)}</h2><p>${tiroName(o.tiro)} · ${T.n} ${L('caballos','horses')} · ${o.laps} ${L('vueltas','laps')} · ${o.nPerFac*4} ${L('carros','chariots')}</p>
     <p>${L('Tarifa','Fee')} ${hs(o.fee)} · ${L('Premio','Prize')} ${hs(o.prize)}</p><p class="muted">${esc(o.desc)}</p>
-    ${o.withdrawn?`<p class="lock">${L('El editor se la ha dado a otra cuadra.','The editor gave it to another stable.')}</p>`:ok?`<button onclick="chooseOffer(${i})">${L('Elegir','Choose')}</button> ${o.neg?`<span class="muted">${o.negOk?L('tarifa negociada','fee negotiated'):''}</span>`:`<button onclick="negotiate(${i})" title="${esc(L('Puedes pedir más, aunque el editor puede ofenderse y dársela a otra cuadra.','You can ask for more, though the editor may take offence and give it to another stable.'))}">${L('Pedir más tarifa','Ask for a higher fee')}</button>`}`:`<p class="lock">${can.ok?L('Faltan caballos sanos.','Not enough fit horses.'):esc(can.why)}</p>`}</div>`});
-  h+=`</div><p class="muted">${L('Al pedir más tarifa, el editor acepta con más facilidad si tu cuadra tiene su favor y prestigio; si se ofende, retira la oferta y su favor baja. El favor sube al correr y, sobre todo, al ganar.','When you ask for a higher fee, the editor is more likely to agree if your stable has his favour and prestige; if offended, he withdraws the offer and his favour drops. Favour rises when you race and above all when you win.')}</p></div><p class="muted">${L('Mantenimiento de la jornada','Upkeep for the day')}: ${hs(upkeepCost())} · <button onclick="restDay()">${L('Descansar esta jornada','Rest this day')}</button></p>`;
+    ${o.withdrawn?`<p class="lock">${L('El editor se la ha dado a otra cuadra.','The editor gave it to another stable.')}</p>`:ok?`<button onclick="chooseOffer(${i})">${L('Elegir','Choose')}</button> <button onclick="quickSim(${i})" title="${esc(L('Enganche automático y carrera simulada','Auto harness and simulated race'))}">${L('Simular','Simulate')}</button> ${o.neg?`<span class="muted">${o.negOk?L('tarifa negociada','fee negotiated'):''}</span>`:`<button onclick="negotiate(${i})" title="${esc(L('Puedes pedir más, aunque el editor puede ofenderse y dársela a otra cuadra.','You can ask for more, though the editor may take offence and give it to another stable.'))}">${L('Pedir más tarifa','Ask for a higher fee')}</button>`}`:`<p class="lock">${can.ok?L('Faltan caballos sanos.','Not enough fit horses.'):esc(can.why)}</p>`}</div>`});
+  h+=`</div><p class="muted">${L('Al pedir más tarifa, el editor acepta con más facilidad si tu cuadra tiene su favor y prestigio; si se ofende, retira la oferta y su favor baja. El favor sube al correr y, sobre todo, al ganar.','When you ask for a higher fee, the editor is more likely to agree if your stable has his favour and prestige; if offended, he withdraws the offer and his favour drops. Favour rises when you race and above all when you win.')} ${L('El editor paga los juegos para ganarse a la plebe, así que valora también a las cuadras que dan espectáculo. Cada carrera se puede conducir o simular.','The editor pays for the games to win over the plebs, so he also values stables that give a show. Each race can be driven or simulated.')}</p></div><p class="muted">${L('Mantenimiento de la jornada','Upkeep for the day')}: ${hs(upkeepCost())} · <button onclick="restDay()">${L('Descansar esta jornada','Rest this day')}</button></p>`;
   if(offerSel!=null)h+=engancheHTML();
   return h;
 }
@@ -4977,6 +5740,7 @@ function preRace(){
   setupRace({circuit:o.circuit,tiro:o.tiro,laps:o.laps,nPerFac:o.nPerFac,level:o.level,skill:o.skill,label:o.title,type:o.type,alliance:alliancePairs(),rivalSparsor:o.rivalSparsor,
     humans:[{pl:1,fac:G.fac,name:A.name,tiro:o.tiro,horses,guide:gi,trigaSide,pericia:A.pericia,fear:A.miedo/100,whipMul:0.9+0.2*A.animo/100,staff:G.staff,hortator:G.staff.hortator}],
     onGloss:id=>{unlock(id);if(id==='ova')unlock('vueltas');saveG()},onEnd:careerRaceEnd});
+  rosterInject(race,o);
   if(o.type==='diversium'){
     const rv=race.cars.find(c=>!c.isPlayer);const own=availHorses().sort((a,b)=>(b.vel+b.agu-b.fat)-(a.vel+a.agu-a.fat)).slice(0,4);
     if(rv&&own.length===4){const nc=makeCar({tiro:'cuadriga',fac:rv.fac,name:rv.name,horses:own,guide:1,ai:rv.ai,x:rv.x,y:rv.y,pericia:60,delay:rv.startDelay,traits:rv.traits});nc.unw=rv.unw;nc.startLane=rv.startLane;race.cars[race.cars.indexOf(rv)]=nc;race.divRival=nc}
@@ -4992,7 +5756,7 @@ function preRace(){
   if(race.alliance)h+=`<p class="note">${L('Alianzas de esta carrera','Alliances in this race')}: ${race.alliance.map(p=>p.map(fName).join(L(' con ',' with '))).join(' · ')}. ${L('Tus aliados no te cierran el paso y van a por el enemigo que te aprieta.','Your allies will not block you and will go after an enemy who crowds you.')}</p>`;
   h+=`<table><tr><th>${L('Facción','Faction')}</th><th>${L('Auriga','Charioteer')}</th><th>${L('Habilidad','Skill')}</th><th>${L('Agresividad','Aggression')}</th><th>${L('Cuida a los caballos','Spares the horses')}</th></tr>`+rivals.map(c=>`<tr><td>${facSwatch(c.fac,16)} ${fName(c.fac)} (${FAC[c.fac].letter})${race.friends(race.players[0],c)?` <span class="tag">${L('aliado','ally')}</span>`:''}</td><td>${c.nemesis?'★ ':''}${esc(c.name)}</td><td>${bar(c.traits.hab*10)}</td><td>${bar(c.traits.agr*10)}</td><td>${bar(Math.min(100,c.traits.cui*5))}</td></tr>`).join('')+`</table>`;
   if(o.big)h+=`<p class="note">${L('Antes de las grandes carreras algunos aficionados encargaban tablillas de maldición contra el rival (Bell, 2020, p. 18).','Before big races some fans commissioned curse tablets against the rival (Bell, 2020, p. 18).')} <label><input type="checkbox" id="defx" onchange="pendingDefixio=this.checked"> ${L('Encargar una defixio contra el favorito','Commission a defixio against the favourite')} (${hs(G.stage==='roma'?600:150)})</label></p>`;
-  h+=`<p class="act"><button onclick="race=null;hub()">${L('Volver','Back')}</button> <button class="big" onclick="startCareerRace()">${L('A los carceres','To the starting gates')}</button></p>`;
+  h+=`<p class="act"><button onclick="race=null;hub()">${L('Volver','Back')}</button> <button onclick="simStart()">${L('Simular la carrera','Simulate the race')}</button> <button class="big" onclick="startCareerRace()">${L('A los carceres (conduces tú)','To the starting gates (you drive)')}</button></p><p class="muted">${L('Simular corre la carrera con las mismas estadísticas y te da la crónica y el resultado sin conducir.','Simulating runs the race with the same statistics and gives you the report and the result without driving.')}</p>`;
   show(h);
 }
 function startCareerRace(){
@@ -5002,7 +5766,7 @@ function startCareerRace(){
 let lastResult=null,resultQ=null;
 const QFRAMES=[['Un aficionado en la grada te pregunta','A fan in the stands asks you'],['El editor quiere saber','The editor wants to know'],['Un niño con una chaquetita verde te pregunta','A child in a little green jacket asks you'],['Un senador escéptico te pone a prueba','A sceptical senator tests you']];
 function careerRaceEnd(r){
-  MODE='result';rerender=()=>{};
+  MODE='result';rerender=()=>{};SIM=null;
   const o=pendingOffer,A=raceAur||curAur();const res=applyResult(r,o,A);lastResult=res;if(res.pos===1)hxp(20,L('victoria','win'));
   if(r.divRival)r.divRival.horses.forEach(h=>{const H=G.horses.find(x=>x.id===h.ref.id);if(H)H.fat=clamp(H.fat+22+(1-h.st)*30,0,100)});
   let defTxt='';
@@ -5019,8 +5783,8 @@ function careerRaceEnd(r){
   <div class="col"><div class="card"><h3>${L('Cuentas de la jornada, en sestercios (sest.)','Accounts for the day, in sesterces (sest.)')}</h3><table>
   <tr><td>${L('Tarifa del editor','Editor’s fee')}</td><td>${hs(res.fee)}</td></tr><tr><td>${L('Premio','Prize')}</td><td>${hs(res.gross)}</td></tr>
   ${res.teamBonus?`<tr><td>${L('Reparto de la facción','Faction share-out')}</td><td>${hs(res.teamBonus)}</td></tr>`:''}
-  <tr><td>${L('Parte de la facción (20 %)','Faction’s share (20%)')}</td><td>−${hs(res.facCut)}</td></tr><tr><td>${L('Peculio del auriga','Charioteer’s peculium')} (${Math.round(A.cut*100)} %)</td><td>−${hs(res.pec)}</td></tr>
-  <tr><td>${L('Mantenimiento y personal','Upkeep and staff')}</td><td>−${hs(res.up)}</td></tr><tr><td><b>${L('Caja de la cuadra','Stable funds')}</b></td><td><b class="${G.money<0?'neg':''}">${hs(G.money)}</b></td></tr></table></div></div></div>
+  <tr><td>${L('Parte del dominus factionis','Share of the dominus factionis')} (${Math.round((G.facCut||0.20)*100)} %)</td><td>−${hs(res.facCut)}</td></tr><tr><td>${L('Peculio del auriga','Charioteer’s peculium')} (${Math.round(A.cut*100)} %)</td><td>−${hs(res.pec)}</td></tr>
+  <tr><td>${L('Mantenimiento y personal','Upkeep and staff')}</td><td>−${hs(res.up)}</td></tr><tr><td><b>${L('Caja de la cuadra','Stable funds')}</b></td><td><b class="${G.money<0?'neg':''}">${hs(G.money)}</b></td></tr></table></div>${premioHTML(res,A)}</div></div>${cronicaHTML(r)}
   <div class="card"><h3>${L('Consecuencias','Consequences')}</h3>${res.notes.map(n=>`<p>${n}</p>`).join('')||`<p>${L('Los caballos que han corrido llegan cansados a la próxima jornada, según el aguante que les quedó.','The horses that raced arrive tired at the next day, depending on how much stamina they had left.')}</p>`}
   ${res.hitos.map(n=>`<p><b>${n}</b></p>`).join('')}${defTxt?`<p>${defTxt}</p>`:''}<p>${L('Prestigio','Prestige')} ${res.dp>=0?'+':''}${Math.round(res.dp)} → ${Math.round(G.prestige)}${G.money<0?` · <b class="neg">${L('La caja está en números rojos.','The stable is in the red.')}</b>`:''}</p>
   ${newCodex.length?`<p class="muted">${L('Nuevas entradas en el códice','New codex entries')}: ${newCodex.map(esc).join(', ')}.</p>`:''}</div>`;
@@ -5031,13 +5795,13 @@ function careerRaceEnd(r){
   show(h);
 }
 function answerResult(k){
-  const q=quizItem(resultQ),o=window._qopts[k];G.quiz.push({i:resultQ,ok:o.ok,j:G.totalJ});unlock(q[2]);
+  const q=quizItem(resultQ),o=window._qopts[k];if(G.quiz.some(x=>x.j===G.totalJ&&x.i===resultQ))return;G.quiz.push({i:resultQ,ok:o.ok,j:G.totalJ});unlock(q[2]);repasoQ(resultQ,o.ok);
   if(o.ok){G.prestige=clamp(G.prestige+2,0,100);hxp(10,L('pregunta acertada','correct answer'))}saveG();
   const C=codexEntry(q[2]);
   document.getElementById('ask').innerHTML=`<h3>${o.ok?L('Correcto: el público aplaude (+2 de prestigio)','Correct: the crowd applauds (+2 prestige)'):L('No es esa','Not quite')}</h3>${o.ok?'':`<p>${L('La respuesta es','The answer is')}: <b>${esc(q[1][0])}</b>.</p>`}<div class="cdx"><b>${esc(C.t)}</b> ${tagK(C.k)}<p>${esc(C.x)}</p></div>`;
 }
 function afterResult(){race=null;startAttract();hub('jornada')}
-function restDay(){favorAdd(-2);G.money-=upkeepCost();G.prestige=clamp(G.prestige-1,0,100);logG(L('Jornada de descanso','Rest day'));G.totalJ++;advanceJornada();saveG();offerSel=null;hub('jornada')}
+function restDay(){ensureG4();calRest();for(const f of ligaBackground())G.standings[f]=(G.standings[f]||0)+1;favorAdd(-2);G.money-=upkeepCost();G.prestige=clamp(G.prestige-1,0,100);logG(L('Jornada de descanso','Rest day'));G.totalJ++;advanceJornada();saveG();offerSel=null;hub('jornada')}
 function pickQuiz(n){
   const done=new Set(G.quiz.filter(q=>q.ok).map(q=>q.i));
   let pool=QUIZ.map((q,i)=>i).filter(i=>!done.has(i)&&G.codex[QUIZ[i][2]]);
@@ -5076,6 +5840,7 @@ function eventScreen(){
     h=`<h1>${L('La grada pide al emperador','The crowd petitions the emperor')}</h1><p>${L('Al terminar la gran carrera, la grada aprovecha que el emperador está en el pulvinar y le reclama a gritos una rebaja de impuestos. Él responde allí mismo, ante miles de testigos (Tema 4; Bell, 2020, pp. 7-9).','After the great race, the crowd seizes the moment while the emperor is in the pulvinar and shouts for a tax cut. He answers on the spot, before thousands of witnesses (Tema 4; Bell, 2020, pp. 7-9).')}</p><p class="act"><button class="big" onclick="evNext()">${L('Continuar','Continue')}</button></p>`}
   else if(e.k==='deuda'){
     h=`<h1>${L('Números rojos','In the red')}</h1><p>${L(`La caja de la cuadra está en ${hs(G.money)}. Si sigue así al final de la temporada, tendrás que vender caballos para pagar. Piensa en despedir personal, vender un caballo o aceptar carreras con tarifa segura.`,`The stable’s funds stand at ${hs(G.money)}. If this continues at the end of the season, you will have to sell horses to pay. Consider dismissing staff, selling a horse or taking races with a safe fee.`)}</p><p class="act"><button class="big" onclick="evNext()">${L('Entendido','Understood')}</button></p>`}
+  else if(e.k==='renovar'){if(!A){G.events.shift();return hub()}h=renovarHTML(e,A)}
   else{G.events.shift();return hub()}
   show(h,'narrow');
 }
@@ -5099,7 +5864,7 @@ function evFichaje(price){if(G.money<price)return evNext();G.money-=price;const 
 function seasonScreen(){
   rerender=seasonScreen;const s=G.pendingSeason;
   let h=`<h1>${L('Fin de la temporada','End of season')} ${s.season}</h1><div class="titulus">${titulus(curAur())}</div>
-  <p>${L(`Esta temporada: ${s.races} carreras y ${s.wins} victorias.`,`This season: ${s.races} races and ${s.wins} wins.`)} ${s.born?L(`Ha nacido el potro ${esc(s.born)}, que podrá correr a los cinco años (Bell, 2020, pp. 21-22).`,`The foal ${esc(s.born)} was born; he can race at five (Bell, 2020, pp. 21-22).`):''} ${s.retired.length?L(`Se retiran por edad: ${s.retired.map(esc).join(', ')}.`,`Retired through age: ${s.retired.map(esc).join(', ')}.`):''} ${s.sold.length?`<b>${L(`Para cubrir las deudas se han vendido: ${s.sold.map(esc).join(', ')}.`,`To cover debts these were sold: ${s.sold.map(esc).join(', ')}.`)}</b>`:''} ${s.champ?L(`Los ${fName(s.champ)} han dominado la temporada en el Circo Máximo.`,`The ${fName(s.champ)} dominated the season in the Circus Maximus.`):''}</p>${s.obj?`<p class="note">${esc(s.obj)}</p>`:''}`;
+  <p>${L(`Esta temporada: ${s.races} carreras y ${s.wins} victorias.`,`This season: ${s.races} races and ${s.wins} wins.`)} ${s.born?L(`Ha nacido el potro ${esc(s.born)}, que podrá correr a los cinco años (Bell, 2020, pp. 21-22).`,`The foal ${esc(s.born)} was born; he can race at five (Bell, 2020, pp. 21-22).`):''} ${s.retired.length?L(`Se retiran por edad: ${s.retired.map(esc).join(', ')}.`,`Retired through age: ${s.retired.map(esc).join(', ')}.`):''} ${s.sold.length?`<b>${L(`Para cubrir las deudas se han vendido: ${s.sold.map(esc).join(', ')}.`,`To cover debts these were sold: ${s.sold.map(esc).join(', ')}.`)}</b>`:''} ${s.champ?L(`Los ${fName(s.champ)} han dominado la temporada en el Circo Máximo.`,`The ${fName(s.champ)} dominated the season in the Circus Maximus.`):''}</p>${s.obj?`<p class="note">${esc(s.obj)}</p>`:''}${seasonG4HTML(s)}`;
   if(!s.sent){s.sent=true;const ok=G.quiz.filter(q=>q.ok).length;sendResult('temporada',`${fName(G.fac)} · ${s.stage==='roma'?'Roma':'Tarraco'} · T${s.season}: ${s.races} carreras, ${s.wins} victorias`,{puntos:Math.round(G.prestige),aciertos:ok,preguntas:G.quiz.length,codice:Object.keys(G.codex).filter(k=>CODEX[k]).length});saveG()}
   h+=sentNote();
   if(s.invite)h+=`<h2>${L('Una invitación de Roma','An invitation from Rome')}</h2><p>${L(`El dominus de los ${fName(G.fac)} en Roma, un hombre de negocios del orden ecuestre, ofrece contratar tu cuadra para los juegos del Circo Máximo. Allí correrás doce carros, tres por facción, con los colores aliados por parejas. Los autores no se ponen de acuerdo sobre qué parejas eran: ¿con qué lectura quieres correr?`,`The dominus of the ${fName(G.fac)} in Rome, a businessman of equestrian rank, offers to hire your stable for the games of the Circus Maximus. There you will race twelve chariots, three per faction, with the colours allied in pairs. Scholars disagree about which pairs: which reading do you want to race with?`)}</p>
@@ -5146,7 +5911,7 @@ function tabMercado(){
   return `<h3>${L('Caballos en venta esta jornada','Horses for sale today')}</h3><div class="hgrid">`+G.market.map((h,i)=>h.rw?'':card(h,i)).join('')+`</div>
   ${rwH.length?`<h3>${L('Yeguadas y caballos legendarios (recompensas de Historiapp)','Stud farms and legendary horses (Historiapp rewards)')}</h3><div class="hgrid">${rwH.map(x=>card(x.h,x.i)).join('')}</div>`:''}
   ${debt?`<p class="warn">${L('Con la caja en números rojos no puedes comprar.','You cannot buy while in the red.')}</p>`:''}
-  <p class="note">${L('Un día de juegos en Roma exigía de 700 a 800 caballos, traídos de yeguadas de Hispania, Sicilia, Tesalia, el norte de África y Capadocia (Bell, 2020, p. 21). Los precios son una convención del juego; la reventa paga el 60 %.','A day of games in Rome required 700 to 800 horses, brought from stud farms in Hispania, Sicily, Thessaly, North Africa and Cappadocia (Bell, 2020, p. 21). Prices are a game convention; resale pays 60%.')}</p>`;
+  <p class="note">${L('Un día de juegos en Roma exigía de 700 a 800 caballos, traídos de yeguadas de Hispania, Sicilia, Tesalia, el norte de África y Capadocia (Bell, 2020, p. 21). Los precios son una convención del juego; la reventa paga el 60 %.','A day of games in Rome required 700 to 800 horses, brought from stud farms in Hispania, Sicily, Thessaly, North Africa and Cappadocia (Bell, 2020, p. 21). Prices are a game convention; resale pays 60%.')}</p>`+aurMarketHTML();
 }
 function buyH(i){const h=G.market[i],p=horsePrice(h);if(G.money<p)return;G.money-=p;G.horses.push(h);G.market.splice(i,1);logG(L(`Compra a ${h.name} por ${hsTxt(p)}`,`Buys ${h.name} for ${hsTxt(p)}`));unlock('caballos');unlock('cYeguadas');unlock('cRasgos');if(h.legend)horseHist(h,L('Entra en la cuadra como caballo legendario','Joins the stable as a legendary horse'));saveG();hub('mercado')}
 function tabPersonal(){
@@ -5160,7 +5925,7 @@ function tabAurigas(){
   return `<div class="row">`+G.aurigas.map(A=>`<div class="card ${G.aurSel===A.id?'sel':''}"><div class="evh"><canvas data-ap="${A.id}" width="80" height="80"></canvas><div><h2>${esc(A.name)}</h2><p class="muted">${A.age} ${L('años','yrs')} · ${A.status==='liberto'?L('liberto','freedman'):L('esclavo','slave')} · ${A.rank}${A.inj?' · '+L('lesionado','injured'):''}</p></div></div>
   <p>${A.races} ${L('carreras','races')} · ${A.wins} ${L('victorias','wins')} · ${A.seconds} ${L('segundos','seconds')} · ${A.thirds} ${L('terceros','thirds')} · ${A.crashes} naufragios</p>
   <div class="stats"><span>${L('Pericia','Skill')}</span>${bar(A.pericia)}<span>${L('Ánimo','Spirit')}</span>${bar(A.animo)}<span>${L('Miedo','Fear')}</span>${bar(A.miedo,true)}</div>
-  ${A.status==='esclavo'?`<p>${L('Peculio','Peculium')} ${hs(A.peculio)} ${L('de','of')} ${hs(pr)} ${L('para la libertad','for freedom')}</p>`:`<p>${L('Se lleva el','Takes')} ${Math.round(A.cut*100)} % ${L('de los premios','of prizes')}</p>`}
+  ${A.status==='esclavo'?`<p>${L('Peculio','Peculium')} ${hs(A.peculio)} ${L('de','of')} ${hs(pr)} ${L('para la libertad','for freedom')}</p>`:`<p>${L('Se lleva el','Takes')} ${Math.round(A.cut*100)} % ${L('de los premios','of prizes')}</p>`}${contratoHTML(A)}
   ${A.hist.length?`<p class="muted">${A.hist.slice(-4).map(esc).join(' · ')}</p>`:''}
   ${G.aurSel===A.id?`<p><b>${L('Conduce en la próxima carrera','Drives in the next race')}</b></p>`:`<button onclick="G.aurSel=${A.id};saveG();hub('aurigas')">${L('Que conduzca él','Let him drive')}</button>`}</div>`).join('')+`</div>
   <p class="note">${L('La pericia hace que la caja aguante algo más antes de volcar, el ánimo hace que el látigo rinda más y el miedo, que deja un naufragium, resta fuerza al peso en los virajes. Son convenciones del juego. Diocles ganó un 34 % de sus carreras (Bell, 2020, pp. 18-19).','Skill lets the car swing a little further before overturning, spirit makes the whip more effective, and fear, left by a crash, weakens leaning into turns. These are game conventions. Diocles won 34% of his races (Bell, 2020, pp. 18-19).')}</p>
@@ -5369,7 +6134,7 @@ function campaignEnd(r){
   <p class="act"><button class="big" id="cnext" disabled onclick="campaignNext()">${CS.step<CAMP.length-1?L('Siguiente carrera','Next race'):L('Terminar','Finish')}</button> <button onclick="campaignRetry()">${L('Repetir esta carrera','Retry this race')}</button></p>`,'narrow');
 }
 function campaignAnswer(k){
-  const C=CAMP[CS.step],q=quizItem(C.q),o=window._qopts[k];if(CS.results[CS.step].ok!=null)return;CS.results[CS.step].ok=o.ok;store(KEY.campana,CS);if(o.ok)hxp(10,L('pregunta acertada','correct answer'));
+  const C=CAMP[CS.step],q=quizItem(C.q),o=window._qopts[k];if(CS.results[CS.step].ok!=null)return;CS.results[CS.step].ok=o.ok;store(KEY.campana,CS);repasoQ(C.q,o.ok);if(o.ok)hxp(10,L('pregunta acertada','correct answer'));
   const E=codexEntry(q[2]);
   document.getElementById('ask').innerHTML=`<h3>${o.ok?L('Correcto','Correct'):L('No es esa','Not quite')}</h3>${o.ok?'':`<p>${L('La respuesta es','The answer is')}: <b>${esc(q[1][0])}</b>.</p>`}<div class="cdx"><b>${esc(E.t)}</b> ${tagK(E.k)}<p>${esc(E.x)}</p></div>`;
   document.getElementById('cnext').disabled=false;
@@ -5438,11 +6203,54 @@ window.__cq={TUNING,CODEX,QUIZ,get race(){return race},get G(){return G},set G(v
     while(!ended&&t<(o.secs||600)){updateRace(TUNING.dt);t+=TUNING.dt;const p=r.players[0];if(p.lapsDone>prev){laps.push(+r.t.toFixed(1));prev=p.lapsDone}}
     return {ended:!!ended,laps,cars:r.cars.map(c=>({fac:c.fac,pl:c.pl,fin:c.finished,t:c.finished?+(c.finishT-r.goT).toFixed(1):null,crash:c.crashed,why:c.why||''}))};
   }};
+/* ganchos de prueba de la temporada (19-10-2026): bots que conducen como un jugador humano o simulan, para comparar.
+   No cambian nada del juego mientras no se llamen desde una prueba. */
+(function(){
+  const HUM=HUMANO;
+  function botDrive(level){const r=race,P=r.players[0],H=HUM[level];humanDriver(P,r,H);
+    let t=0,cutDone=false;while(race===r&&!r.done&&t<900){updateRace(TUNING.dt);t+=TUNING.dt;if(P.crashed&&!cutDone){cutDone=true;P.cut=R()<H.cut}}}
+  function resolveScreens(){
+    for(let k=0;k<30;k++){
+      if(!G)return;
+      if(G.pendingSeason){if(G.pendingSeason.invite)declineRoma();else{G.pendingSeason=null;saveG()}continue}
+      if(G.events&&G.events.length){const e=G.events[0];
+        if(e.k==='libertad')evLibertad(true);else if(e.k==='traspaso')evTraspaso(false,0,true);else if(e.k==='mozo')evMozo(true);else if(e.k==='renovar')evRenovar(true,aurSal(G.aurigas.find(a=>a.id===e.a)||G.aurigas[0]));else evNext();continue}
+      return;
+    }
+  }
+  /* una jornada completa por el flujo real: elige la oferta mejor pagada que se pueda correr, engancha y conduce o simula */
+  function jornada(mode,level,qok){
+    resolveScreens();hub('jornada');
+    const per=G.stage==='roma'?7:6;
+    const cands=G.offers.map((o,i)=>({o,i})).filter(x=>!x.o.withdrawn&&canTiro(x.o.tiro).ok&&availHorses().length>=TUNING.tiros[x.o.tiro].n);
+    if(!cands.length||!G.aurigas.some(a=>a.inj<=0)){restDay();return {rest:true}}
+    cands.sort((a,b)=>(b.o.prize+b.o.fee)-(a.o.prize+a.o.fee));
+    chooseOffer(cands[0].i);if(!slots.every(x=>x)){restDay();return {rest:true}}
+    preRace();const o=pendingOffer;let res=null;
+    if(mode==='sim'){simStart();SIM.fast=true;const r=race;let g=0;while(!r.done&&g++<200)simStep();res=lastResult}
+    else{startCareerRace();botDrive(level);res=lastResult}
+    const btn=document.querySelectorAll('#ask .qopts button');if(btn.length){const ok=window._qopts.findIndex(x=>x.ok);const k=R()<qok?ok:(ok+1)%btn.length;answerResult(k)}
+    const out={pos:res.pos,n:race?race.cars.length:0,tiro:o.tiro,id:o.id,money:G.money,plebe:G.plebe,sp:res.sp};
+    afterResult();return out;
+  }
+  Object.assign(window.__cq,{HUM,botDrive,
+    /* reloj fijo para que las dos modalidades partan de la misma cuadra y de los mismos rivales */
+    clock(seed){let t=1.79e12+hashStr('reloj'+seed)*977;Date.now=()=>(t+=1)}, // valores del tamaño de un Date.now real: las semillas pequeñas sesgan el generador
+    newCareer(seed,fac){this.clock(seed);setSeed(hashStr('c'+seed));newCareer({student:'bot',auriga:'Bot',fac:fac||'V'});setSeed(hashStr('n'+seed));saveG();return G.season},
+    jornada,
+    season(mode,level,qok=0.7){const s0=G.season,out=[];let g=0;while(G.season===s0&&g++<12)out.push(jornada(mode,level,qok));resolveScreens();return out},
+    /* comparación por carrera: la misma oferta, los mismos caballos y la misma semilla, conducida por el bot o simulada */
+    pair(seed,level){const out={};for(const mode of ['play','sim']){this.clock(seed);setSeed(hashStr('c'+seed));newCareer({student:'bot',auriga:'Bot',fac:'V'});G.aurigas[0].wins=4;G.aurigas[0].rank='agitator';
+      hub('jornada');const i=Math.floor(seed%G.offers.length);chooseOffer(i);preRace();setSeed(hashStr('r'+seed+mode)); // semillas distintas: muestras independientes
+      if(mode==='sim'){simStart();SIM.fast=true;const r=race;let g=0;while(!r.done&&g++<200)simStep()}else{startCareerRace();botDrive(level)}
+      out[mode]=lastResult.pos;out.n=race.cars.length;out.tiro=pendingOffer.tiro;afterResult()}return out}
+  });
+})();
 
 </script>
-<script>/* sonido desde la salida de la carrera, aunque aún no se haya tocado la pista */setInterval(function(){try{if(MODE==='race'&&!AC&&(!navigator.userActivation||navigator.userActivation.hasBeenActive))audioInit()}catch(e){}},400);</script>
 <div id="alacopy" role="contentinfo" style="position:fixed;right:max(8px,env(safe-area-inset-right));bottom:max(6px,env(safe-area-inset-bottom));z-index:2147482000;pointer-events:none;user-select:none;-webkit-user-select:none;font:500 11px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif;color:#fff;opacity:.6;text-shadow:0 1px 2px #000,0 0 4px #000;white-space:nowrap">© Diseñado y Creado por Alejandro Leiva Arcas</div>
 <script id="alacopy-en">(function(){try{var l=null;try{l=localStorage.getItem("historiapp.lang")}catch(e){}var en=l?l==="en":/^en/i.test(document.documentElement.lang||"");if(!en&&/-en\.html$/.test(location.pathname))en=true;var d=document.getElementById("alacopy");if(en&&d)d.textContent="© Designed and created by Alejandro Leiva Arcas"}catch(e){}})();</script>
 
+<script>/* sonido desde la salida de la carrera, aunque aún no se haya tocado la pista */setInterval(function(){try{if(MODE==='race'&&!AC&&(!navigator.userActivation||navigator.userActivation.hasBeenActive))audioInit()}catch(e){}},400);</script>
 </body>
 </html>

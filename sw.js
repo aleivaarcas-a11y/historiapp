@@ -1,7 +1,9 @@
 /* Historiapp service worker (12-10-2026): instalación ligera y respuestas que no se quedan esperando a la red. */
-const VERSION = "historiapp-v123";
+const VERSION = "historiapp-v124";
 // solo lo imprescindible para abrir la app; juegos, atlas, temas e imágenes se guardan la primera vez que se usan
-const SHELL = ["./", "./index.html", "./manifest.json", "./data/temas.json", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png", "./fonts/Carlito-Regular.woff2", "./fonts/Carlito-Bold.woff2", "./fonts/Carlito-Italic.woff2", "./fonts/Carlito-BoldItalic.woff2", "./icons/logo_oro.png", "./icons/emblema_blanco.png", "./icons/emblema_oro.png"];
+const SHELL = ["./", "./index.html", "./manifest.json", "./data/temas.json", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png", "./fonts/Carlito-Regular.woff2", "./fonts/Carlito-Bold.woff2", "./fonts/Carlito-Italic.woff2", "./fonts/Carlito-BoldItalic.woff2", "./icons/logo_oro.png", "./icons/emblema_blanco.png", "./icons/emblema_oro.png",
+  // 19-10-2026: motores compartidos de los juegos (una sola copia para Agón, Senet, Trivium, Monopoleis y los de Phaser)
+  "./juegos/lib/three.min.js", "./juegos/lib/phaser.min.js"];
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
 });
