@@ -886,6 +886,18 @@ const I18N = {
   }
 };
 /* Juegos de la asignatura (carpeta juegos/; versión para Historiapp de cada juego, ver Juegos web/HISTORIAPP-VERSION.md) */
+/* Repaso de fallos (18-10-2026): memoria común de los juegos y de los test de la app, clave historiapp.repaso (ver Juegos web/Codigo/historiapp/repaso.js) */
+Object.assign(I18N.es,{rpCard:"Repaso de tus fallos",rpDue:"{n} preguntas te esperan hoy",rpDue1:"1 pregunta te espera hoy",rpNone:"Nada pendiente hoy",rpNext:"{n} programadas · la próxima, {d}",rpEmpty:"Cuando falles una pregunta en un juego o en un test, volverá aquí al día siguiente. Si la aciertas, vuelve a los tres días, a la semana y a las tres semanas, y después sale del repaso.",rpTitle:"Repaso",rpOk:"La repasarás de nuevo dentro de {d} días",rpLast:"Dominada: sale del repaso",rpWrong:"Vuelve mañana",rpDone:"Repaso terminado",rpScore:"Has acertado {a} de {b}",rpFrom:"Fallada en {g}",rpHome:"Volver al inicio",rpTomorrow:"mañana",rpInDays:"dentro de {n} días"});
+Object.assign(I18N.en,{rpCard:"Review your mistakes",rpDue:"{n} questions are waiting today",rpDue1:"1 question is waiting today",rpNone:"Nothing due today",rpNext:"{n} scheduled · next one {d}",rpEmpty:"When you miss a question in a game or a quiz, it comes back here the next day. If you get it right, it returns after three days, a week and three weeks, and then leaves the review.",rpTitle:"Review",rpOk:"You will review it again in {d} days",rpLast:"Mastered: it leaves the review",rpWrong:"It comes back tomorrow",rpDone:"Review finished",rpScore:"You got {a} of {b} right",rpFrom:"Missed in {g}",rpHome:"Back to home",rpTomorrow:"tomorrow",rpInDays:"in {n} days"});
+const RP_K="historiapp.repaso", RP_GAPS=[1,3,7,21], RP_DAY=864e5;
+function rpLoad(){ try{ const d=JSON.parse(localStorage.getItem(RP_K)); if(d&&d.items) return d; }catch(e){} return {v:1,items:{}}; }
+function rpSave(d){ try{ localStorage.setItem(RP_K,JSON.stringify(d)); }catch(e){} }
+function rpId(q){ const s=String(q&&(q.es||q)||""); let h=0; for(let i=0;i<s.length;i++) h=(h*31+s.charCodeAt(i))|0; return "q"+(h>>>0).toString(36); }
+function rpFallo(g,q,o,f,tm){ const d=rpLoad(), id=rpId(q), it=d.items[id]||{g,q,o,f:f||null,t:tm||null,box:0,n:0}; it.box=0; it.n=(it.n||0)+1; it.due=Date.now()+RP_DAY; it.last=Date.now(); d.items[id]=it; rpSave(d); }
+function rpAcierto(q,id0){ const d=rpLoad(), id=id0||rpId(q), it=d.items[id]; if(!it||it.due>Date.now()) return null; it.box=(it.box||0)+1; let r; if(it.box>=RP_GAPS.length){ delete d.items[id]; r=0; } else { it.due=Date.now()+RP_GAPS[it.box]*RP_DAY; r=RP_GAPS[it.box]; } rpSave(d); return r; }
+function rpDue(){ const d=rpLoad(), now=Date.now(); return Object.keys(d.items).filter(k=>d.items[k].due<=now).map(k=>Object.assign({id:k},d.items[k])); }
+function rpWhen(ts){ const n=Math.max(1,Math.round((ts-Date.now())/RP_DAY)); return n<=1?t("rpTomorrow"):t("rpInDays",{n}); }
+const RP_GN={historiapp:"Historiapp",pentatlon:"Pentatlón",cuadrigas:"Cuadrigas",gladiatura:"Gladiatura",agon:"Agón",senet:"Senet",cnoso:"Cnoso",monopoleis:"Monopoleis",trivium:"Trivium","historiapp-arena":"Historiapp Arena"};
 const GAMES=[
   {f:"juegos/pentatlon.html", gen:{es:"Arcade deportivo con modo carrera RPG",en:"Sports arcade with an RPG career mode"}, img:"img/juegos/pentatlon.jpg", temas:[3], ic:"🏛️", n:{es:"Pentatlón",en:"Pentathlon"}, title:{es:"Pentatlón: de Élide a Olimpia",en:"Pentathlon: from Elis to Olympia"}, sub:{es:"Viaja a Élide, supera la prueba de acceso y compite en Olimpia",en:"Travel to Elis, pass the entry trial and compete at Olympia"}},
   {f:"juegos/cnoso.html", gen:{es:"RPG arcade sobre un rito de paso en el palacio minoico",en:"Arcade RPG about a coming-of-age rite in the Minoan palace"}, img:"img/juegos/cnoso.jpg", temas:[3], ic:"🐂", n:{es:"Cnoso",en:"Knossos"}, title:{es:"Cnoso, el ciclo de pruebas de un joven minoico",en:"Knossos, the trial cycle of a young Minoan"}, sub:{es:"Recorre el palacio sala a sala con el Maestro, la Sacerdotisa y el Escriba, crece de niño a adulto en cuatro combates de pugilato tomados de Akrotiri y del ritón de Hagia Triada, y termina con la fiesta del salto del toro",en:"Walk through the palace room by room with the Master, the Priestess and the Scribe, grow from boy to adult in four boxing bouts drawn from Akrotiri and the Hagia Triada rhyton, and end with the bull-leaping festival"}},
@@ -974,9 +986,9 @@ async function getTema(num){
 
 /* ============ rendering ============ */
 const app=document.getElementById("app");
-function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="ranking") return "ranking"; if(v.name==="linea") return "linea"; if(v.name==="atlas") return "atlas"; if(v.name==="pods") return "podcast"; if(v.name==="guia") return "guia"; if(v.name==="palabra") return "palabra"; if(v.name==="logros") return "logros"; if(v.name==="cur") return "curiosidades"; if(v.name==="daily") return "reto"; if(v.name==="exam") return "examen"; if(v.name==="search") return "buscar"; if(v.name==="temas") return "temas"; if(v.name==="juegos") return "juegos"; if(v.name==="efe") return v.d?"hoy/"+v.d:"hoy"; if(v.name==="enc") return v.id?"enciclopedia/"+encodeURIComponent(v.id):"enciclopedia"; if(v.name==="tema") return "t"+v.num;
+function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="ranking") return "ranking"; if(v.name==="linea") return "linea"; if(v.name==="atlas") return "atlas"; if(v.name==="pods") return "podcast"; if(v.name==="guia") return "guia"; if(v.name==="palabra") return "palabra"; if(v.name==="logros") return "logros"; if(v.name==="cur") return "curiosidades"; if(v.name==="daily") return "reto"; if(v.name==="repaso") return "repaso"; if(v.name==="exam") return "examen"; if(v.name==="search") return "buscar"; if(v.name==="temas") return "temas"; if(v.name==="juegos") return "juegos"; if(v.name==="efe") return v.d?"hoy/"+v.d:"hoy"; if(v.name==="enc") return v.id?"enciclopedia/"+encodeURIComponent(v.id):"enciclopedia"; if(v.name==="tema") return "t"+v.num;
   if(v.name==="mode"){ if(v.mode==="fichas") return v.f?`t${v.num}/f/${v.f}`:`t${v.num}/fichas`; return `t${v.num}/${v.mode}`+(v.sec?"/"+v.sec:""); } return ""; }
-function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="ranking") return {name:"ranking"}; if(h==="linea") return {name:"linea"}; if(h==="atlas") return {name:"home"}; /* Atlas en reserva (13-10-2026): ver ../Historiapp-reserva */ if(h==="podcast") return {name:"pods"}; if(h==="guia") return {name:"guia"}; if(h==="palabra") return {name:"palabra"}; if(h==="logros") return {name:"logros"}; if(h==="curiosidades") return {name:"cur"}; if(h==="reto") return {name:"daily"}; if(h==="examen") return {name:"exam"}; if(h==="buscar") return {name:"search"}; if(h==="temas") return {name:"temas"}; if(h==="juegos") return {name:"juegos"}; if(h==="hoy") return {name:"efe"}; if(h.startsWith("hoy/")) return {name:"efe",d:h.slice(4)}; if(h==="enciclopedia") return {name:"enc"}; if(h.startsWith("enciclopedia/")) return {name:"enc",id:decodeURIComponent(h.slice(13))};
+function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="ranking") return {name:"ranking"}; if(h==="repaso") return {name:"repaso"}; if(h==="linea") return {name:"linea"}; if(h==="atlas") return {name:"home"}; /* Atlas en reserva (13-10-2026): ver ../Historiapp-reserva */ if(h==="podcast") return {name:"pods"}; if(h==="guia") return {name:"guia"}; if(h==="palabra") return {name:"palabra"}; if(h==="logros") return {name:"logros"}; if(h==="curiosidades") return {name:"cur"}; if(h==="reto") return {name:"daily"}; if(h==="examen") return {name:"exam"}; if(h==="buscar") return {name:"search"}; if(h==="temas") return {name:"temas"}; if(h==="juegos") return {name:"juegos"}; if(h==="hoy") return {name:"efe"}; if(h.startsWith("hoy/")) return {name:"efe",d:h.slice(4)}; if(h==="enciclopedia") return {name:"enc"}; if(h.startsWith("enciclopedia/")) return {name:"enc",id:decodeURIComponent(h.slice(13))};
   const p=h.split("/"); const mt=/^t(\d+)$/.exec(p[0]); if(!mt) return {name:"home"}; const num=+mt[1];
   if(p.length===1) return {name:"tema",num}; if(p[1]==="f"&&p[2]) return {name:"mode",num,mode:"fichas",f:decodeURIComponent(p[2])};
   if(MODES.includes(p[1])) return {name:"mode",num,mode:p[1],sec:p[2]||undefined}; return {name:"tema",num}; }
@@ -999,6 +1011,7 @@ function render(){
   if(v.name==="settings") return renderSettings();
   if(v.name==="ranking") return renderRanking();
   if(v.name==="daily") return renderDaily();
+  if(v.name==="repaso") return renderRepaso();
   if(v.name==="exam") return renderExam();
   if(v.name==="guia") return renderGuia();
   if(v.name==="palabra") return renderPalabra();
@@ -1085,6 +1098,9 @@ async function renderHome(){
   const rc=document.createElement("button"); rc.className="card reto";
   rc.innerHTML=`<div class="ic" aria-hidden="true">${done?"✅":"☀️"}</div><div class="tx"><small>${t("dailyCard")}</small><b>${done?t("dailyScore",{a:d.correct,b:d.total}):t("dailyStart")}</b><span>${done?t("dailyBack"):t("dailySub")}</span></div><div class="xp">${done?"✓":"×2 XP"}</div>`;
   rc.onclick=()=>nav({name:"daily"}); hoy.appendChild(rc); rkHomeCard(hoy);
+  { const due=rpDue().length, tot=Object.keys(rpLoad().items).length; if(tot){ const rb=document.createElement("button"); rb.className="card reto"; const nx=Object.values(rpLoad().items).reduce((a,x)=>Math.min(a,x.due),Infinity);
+    rb.innerHTML=`<div class="ic" aria-hidden="true">${due?"🔁":"✅"}</div><div class="tx"><small>${t("rpCard")}</small><b>${due?(due===1?t("rpDue1"):t("rpDue",{n:due})):t("rpNone")}</b><span>${due?"":esc(t("rpNext",{n:tot,d:rpWhen(nx)}))}</span></div>`;
+    rb.onclick=()=>nav({name:"repaso"}); hoy.appendChild(rb); } }
   { const gc=document.createElement("button"); gc.className="card reto gbtn"; gc.innerHTML=`<div class="ic" aria-hidden="true">🎮</div><div class="tx"><small>${t("gamesT")}</small><b>${t("gamesCard")}</b><span>${t("gamesSub")}</span></div><div class="xp">${t("gamesN",{n:GAMES.length})}</div>`; gc.onclick=()=>nav({name:"juegos"}); hoy.appendChild(gc); }
   const slot=c=>{ const x=document.createElement("div"); x.className="card "+c; x.style.display="none"; hoy.appendChild(x); return x; };
   const sDep=slot("dep"), sEfe=slot("efe"), sWd=slot("wdc");
@@ -1697,6 +1713,7 @@ function modeChoice(tema,mode,m,opts={}){
     const finish=(chosen)=>{ if(done) return; done=true; clearInterval(timer);
       const ok=chosen===it.answer; m.querySelectorAll(".opt").forEach(b=>{ b.disabled=true; const i=+b.dataset.i; if(i===it.answer) b.classList.add("ok"); else if(i===chosen) b.classList.add("ko"); });
       markSeen(tema.id,mode,order[pos]); const xp=ok?(mode==="quiz"?15:10):2; addXP(xp); if(ok) correct++;
+      try{ const qq=mode==="sources"?it.question:it.q; if(ok) rpAcierto(qq); else rpFallo("historiapp",qq,(()=>{ const oo=[it.options[it.answer],...it.options.filter((_,i)=>i!==it.answer)]; return {es:oo.map(x=>x&&x.es||x),en:oo.map(x=>x&&(x.en||x.es)||x)}; })(),null,tema.num); }catch(_){}
       sheet(ok, ok?t("correct"):(chosen===-1?t("timeUp"):t("wrong")), L(it.explain), xp, ()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeChoice(tema,mode,m),opts); else draw(); }, L(mode==="sources"?it.question:it.q)); };
     m.querySelectorAll(".opt").forEach(b=>b.onclick=()=>finish(+b.dataset.i));
     if(mode==="quiz"){ let left=20; const bar=document.getElementById("tm"); bar.style.width="100%";
@@ -1880,6 +1897,25 @@ async function renderDaily(){
     fn(st.tema,st.mode,m,{order:[st.i],onDone:(c)=>{ if(S.view.name!=="daily") return; correct+=c; k++; S.prog.daily={date:todayKey(),done:false,k,correct,total:steps.length}; save(); step(); }});
   }
   step();
+}
+function renderRepaso(){
+  app.innerHTML=header(t("rpTitle"),true)+`<main id="m"></main>`; bindHeader(()=>nav({name:"home"}));
+  const m=document.getElementById("m"); const items=shuffle(rpDue()); let pos=0, correct=0;
+  if(!items.length){ const d=rpLoad(), tot=Object.keys(d.items).length, nx=Object.values(d.items).reduce((a,x)=>Math.min(a,x.due),Infinity);
+    m.innerHTML=`<div class="card result"><div class="big">🔁</div><h2>${t("rpNone")}</h2>${tot?`<p>${esc(t("rpNext",{n:tot,d:rpWhen(nx)}))}</p>`:""}<p style="font-size:14px;color:var(--muted)">${t("rpEmpty")}</p><button class="btn" id="rpH">${t("rpHome")}</button></div>`;
+    document.getElementById("rpH").onclick=()=>nav({name:"home"}); return; }
+  function draw(){
+    if(pos>=items.length){ m.innerHTML=`<div class="card result"><div class="big">${correct/items.length>=.8?"🏆":"📚"}</div><h2>${t("rpDone")}</h2><div class="score">${correct}/${items.length}</div><p>${t("rpScore",{a:correct,b:items.length})}</p><button class="btn" id="rpH">${t("rpHome")}</button></div>`;
+      if(correct) celebrate(); document.getElementById("rpH").onclick=()=>nav({name:"home"}); return; }
+    const it=items[pos], ops=(it.o&&(it.o[S.lang]||it.o.es))||[], ch=shuffle(ops.map((o,i)=>({o,i})));
+    m.innerHTML=`<div class="counter">${t("seen",{a:pos+1,b:items.length})} · ${esc(t("rpFrom",{g:RP_GN[it.g]||it.g}))}</div><div class="progress"><i style="width:${pos/items.length*100}%"></i></div>
+      <div class="card qtext">${esc(L(it.q))}</div><div class="opts">${ch.map((x,k)=>`<button class="opt" data-i="${x.i}"><span class="k">${"ABCDE"[k]}</span><span>${esc(x.o)}</span></button>`).join("")}</div>`;
+    m.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ const i=+b.dataset.i, ok=i===0;
+      m.querySelectorAll(".opt").forEach(x=>{ x.disabled=true; const j=+x.dataset.i; if(j===0) x.classList.add("ok"); else if(j===i) x.classList.add("ko"); });
+      let msg; if(ok){ correct++; const r=rpAcierto(it.q,it.id); msg=r===0?t("rpLast"):t("rpOk",{d:r}); } else { rpFallo(it.g,it.q,it.o,it.f,it.t); msg=t("rpWrong"); }
+      const xp=ok?10:2; addXP(xp); sheet(ok, ok?t("correct"):t("wrong"), msg, xp, ()=>{ pos++; draw(); }, L(it.q)); });
+  }
+  draw();
 }
 function dailyResult(m,correct,total){
   S.xpMult=1;

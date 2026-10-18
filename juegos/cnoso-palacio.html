@@ -767,7 +767,7 @@ const HIST = {
 };
 
 /* ---------- estado ---------- */
-const DEF = {lang:null, room:0, x:260, seen:{}, qok:{}, done:{}, ev:{}, sound:true, fin:false};
+const DEF = {lang:null, room:0, x:60, seen:{}, qok:{}, done:{}, ev:{}, sound:true, fin:false, bouts:[0, 0, 0, 0], tec:'picado', fiesta:0, best:0, xpF:false};
 let S = (() => { try { return Object.assign({}, DEF, JSON.parse(localStorage.getItem(KEY)) || {}); } catch (e) { return Object.assign({}, DEF); } })();
 function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
 if (!S.lang){ let l = null; try { l = localStorage.getItem('historiapp.lang'); } catch (e) {} S.lang = l === 'en' || l === 'es' ? l : ((navigator.language || 'es').startsWith('es') ? 'es' : 'en'); }
@@ -777,15 +777,23 @@ const UI = {
   es:{play:'Entrar en el palacio', cont:'Seguir el recorrido', reset:'Empezar de nuevo', sub:'Un recorrido por el palacio de Cnoso · Tema 3', salir:'Guardar y salir', pruebas:'Pruebas', mirar:'Mirar',
       falta:'Mira antes todas las marcas de esta sala.', preg:'Preguntas de la sala', ok:'Correcto', no:'No es así. La respuesta era', seguir:'Seguir', cerrar:'Cerrar', ficha:'Leer la ficha',
       prueba:'Has reunido una prueba', sostiene:'Se ha usado para sostener la lectura', lect:'Las cuatro lecturas del salto', lectP:'Ningún texto dice qué significaba el salto del toro. Cada lectura se apoya en unas piezas concretas, y solo puedes defender las que tienen sus pruebas reunidas.',
-      abierta:'Puedes defenderla', cerrada:'Te faltan pruebas', faltan:'Te falta', fiesta:'La fiesta del toro', fiestaP:'Has recorrido el palacio. Las marcas doradas 🏺 de los cuadros son las pruebas; si te falta alguna, puedes volver a buscarla. El pugilato y el salto del toro siguen, por ahora, en el Cnoso clásico.', irClasico:'Ir al pugilato y al salto', verLect:'Ver las lecturas',
-      andar:'Toca el suelo o usa las flechas para andar. Acércate a las marcas para mirarlas; las doradas 🏺 son pruebas.', sala:'Sala', de:'de', snd:'Sonido', gira:'Gira el dispositivo para jugar', yaSala:'Sala completada', nuevo:'¿Empezar de nuevo? Se borrará el recorrido.'},
+      abierta:'Puedes defenderla', cerrada:'Te faltan pruebas', faltan:'Te falta', fiesta:'La fiesta del toro', fiestaP:'Has saltado ante la comunidad. Las marcas doradas 🏺 de los cuadros son las pruebas; si te falta alguna, puedes volver a buscarla por el palacio.', irClasico:'Ir al pugilato y al salto', verLect:'Ver las lecturas',
+      andar:'Toca el suelo o usa las flechas para andar. Acércate a las marcas para mirarlas; las doradas 🏺 son pruebas.', sala:'Sala', de:'de', snd:'Sonido', gira:'Gira el dispositivo para jugar', yaSala:'Sala completada', nuevo:'¿Empezar de nuevo? Se borrará el recorrido.',
+      combate:'Pugilato', combateN:'Combate {n} de 4', combateP:'Las pruebas empiezan con el guante de niño, como en el fresco de Akrotiri, y se endurecen a medida que creces. Gana el combate para seguir por el palacio.', combatir:'Combatir', ganado:'Combate ganado', falta2:'Antes tienes que ganar el combate de pugilato.',
+      fiestaG:'Ir a la fiesta del toro', fiestaFalta:'Antes completa el patio y gana el último combate.', empezar:'Empezar', toroN:'Toro {n} de 3', aclam:'Aclamación', perf:'¡Perfecto!', good:'¡Bien!', fail:'¡Fallo!', tap:'Toca cuando el anillo se cierre', tapK:'Pulsa Espacio o toca cuando el anillo se cierre',
+      f1:'Entrada', f2:'Impulso', f3:'Caída', f1e:'Agarre', f2e:'Volteo', otro:'Siguiente toro', finF:'Fin de la fiesta', completo:'Salto completo', rodillas:'Salto completo, caída de rodillas', fallido:'Salto fallido',
+      early:'Demasiado pronto: el toro aún no estaba en su sitio.', late:'Demasiado tarde: el toro ya había pasado.', land0:'Caes de rodillas al otro lado.', clean:'Un salto limpio.', fiestaRes:'Saltaste {c} de 3 toros, con {p} fases perfectas.', repetir:'Repetir la fiesta', alPalacio:'Volver al palacio', salto:'¿Qué significaba el salto?'},
   en:{play:'Enter the palace', cont:'Continue the walk', reset:'Start again', sub:'A walk through the palace of Knossos · Unit 3', salir:'Save and exit', pruebas:'Evidence', mirar:'Look',
       falta:'First look at every mark in this room.', preg:'Questions on the room', ok:'Correct', no:'Not quite. The answer was', seguir:'Continue', cerrar:'Close', ficha:'Read the card',
       prueba:'You have gathered a piece of evidence', sostiene:'It has been used to support the reading', lect:'The four readings of the leap', lectP:'No text tells us what bull-leaping meant. Each reading rests on particular pieces, and you can only defend those whose evidence you have gathered.',
-      abierta:'You can defend it', cerrada:'Evidence missing', faltan:'Missing', fiesta:'The bull festival', fiestaP:'You have walked through the palace. The gold marks 🏺 on the pictures are the evidence; if any is missing, you can go back and look for it. Boxing and the bull-leap are, for now, in classic Knossos.', irClasico:'Go to boxing and the leap', verLect:'See the readings',
-      andar:'Tap the floor or use the arrows to walk. Go near the marks to look at them; the gold ones 🏺 are evidence.', sala:'Room', de:'of', snd:'Sound', gira:'Rotate your device to play', yaSala:'Room completed', nuevo:'Start again? Your walk will be erased.'}
+      abierta:'You can defend it', cerrada:'Evidence missing', faltan:'Missing', fiesta:'The bull festival', fiestaP:'You have leapt before the community. The gold marks 🏺 on the pictures are the evidence; if any is missing, you can go back through the palace and look for it.', irClasico:'Go to boxing and the leap', verLect:'See the readings',
+      andar:'Tap the floor or use the arrows to walk. Go near the marks to look at them; the gold ones 🏺 are evidence.', sala:'Room', de:'of', snd:'Sound', gira:'Rotate your device to play', yaSala:'Room completed', nuevo:'Start again? Your walk will be erased.',
+      combate:'Boxing', combateN:'Bout {n} of 4', combateP:'The trials begin with a child\'s glove, as in the Akrotiri fresco, and grow harder as you grow up. Win the bout to go on through the palace.', combatir:'Fight', ganado:'Bout won', falta2:'First you must win the boxing bout.',
+      fiestaG:'Go to the bull festival', fiestaFalta:'First complete the court and win the last bout.', empezar:'Start', toroN:'Bull {n} of 3', aclam:'Acclaim', perf:'Perfect!', good:'Good!', fail:'Miss!', tap:'Tap when the ring closes', tapK:'Press Space or tap when the ring closes',
+      f1:'Entry', f2:'Push-off', f3:'Landing', f1e:'Grip', f2e:'Vault', otro:'Next bull', finF:'End of the festival', completo:'Complete leap', rodillas:'Complete leap, landing on the knees', fallido:'Failed leap',
+      early:'Too early: the bull was not in place yet.', late:'Too late: the bull had already passed.', land0:'You land on your knees on the other side.', clean:'A clean leap.', fiestaRes:'You leapt {c} of 3 bulls, with {p} perfect phases.', repetir:'Repeat the festival', alPalacio:'Back to the palace', salto:'What did the leap mean?'}
 };
-const t = k => UI[S.lang][k] ?? UI.es[k] ?? k;
+const t = (k, v) => { let x = UI[S.lang][k] ?? UI.es[k] ?? k; if (v) for (const q in v) x = x.replace('{' + q + '}', v[q]); return x; };
 
 /* Pruebas de cada lectura: piezas en las que se apoyan los autores citados en FINALES (guion.js).
    rit: contexto religioso del toro (McInerney 2011); ini: ritón de los boxeadores y peinados por edad (Koehl 1986);
@@ -794,12 +802,25 @@ const EVID = { r_cabeza:['rit'], r_procesion:['rit'], r_riton:['ini'], r_pugiles
 const NEED = 2;
 const ORDER = ['rit', 'ini', 'pod', 'atl'];
 
+/* ---------- el fresco del salto (unidades de la escena 1280 × 720), como en el Cnoso clásico (arte.js) ---------- */
+const GY = 545;
+const FR = { bull:[277.4, 202.6, 693.6, 292.0], mid:[610.4, 171.6, 200.5, 248.8], left:[198.7, 205.1, 91.2, 212.6], right:[886.0, 206.5, 166.0, 338.6] };
+const OFF = { mid:[FR.mid[0] - FR.bull[0], FR.mid[1] - FR.bull[1]], left:[FR.left[0] - FR.bull[0], FR.left[1] - FR.bull[1]] };
+const HAND = { mid:[22, 244], left:[82, 30] };
+const LAND = { picado:[FR.right[0] - 150, GY], evans:[FR.right[0], GY] };
+const FIESTA = [{v:330, good:.21, perf:.085, vary:0}, {v:400, good:.17, perf:.07, vary:.14}, {v:470, good:.14, perf:.058, vary:.22}];
+const ease = k => k < .5 ? 2*k*k : 1 - Math.pow(-2*k + 2, 2)/2;
+/* pruebas de pugilato en el recorrido, en el orden del ciclo del Cnoso clásico (CICLO en datos.js):
+   combate 1 antes de la entrada, 2 antes de la sala del toro, 3 antes del patio y 4 al final del patio, antes de la fiesta */
+const STATIONS = [{k:'bout', i:0, room:0}, {k:'bout', i:1, room:4}, {k:'bout', i:2, room:5}, {k:'bout', i:3, room:5, end:true, dx:-300}, {k:'fiesta', room:5, end:true, dx:-120}];
+const stX = s => s.end ? (s.room + 1) * HALL + 100 + s.dx : s.room * HALL + 100 + 110;
+
 /* ---------- sonido ---------- */
 let AC = null;
 function au(){ if (!S.sound) return null; try { if (!AC) AC = new (window.AudioContext || window.webkitAudioContext)(); if (AC.state === 'suspended') AC.resume(); return AC; } catch (e) { return null; } }
 function tone(f, d, vol, when){ const a = au(); if (!a) return; const o = a.createOscillator(), g = a.createGain(), t0 = a.currentTime + (when || 0); o.type = 'triangle'; o.frequency.value = f; g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(vol || .12, t0 + .01); g.gain.exponentialRampToValueAtTime(.0001, t0 + d); o.connect(g).connect(a.destination); o.start(t0); o.stop(t0 + d + .05); }
 const LYRE = [293.7, 329.6, 392, 440, 523.3, 587.3, 659.3];
-const SFX = { look(){ tone(LYRE[2], .5, .1); tone(LYRE[4], .6, .08, .09); }, ok(){ [0, 2, 4].forEach((n, i) => tone(LYRE[n + 2], .5, .1, i * .08)); }, no(){ tone(196, .45, .1); tone(185, .5, .08, .12); },
+const SFX = { tap(){ tone(LYRE[3], .12, .08); }, whoosh(){ tone(520, .18, .05); tone(780, .14, .04, .05); }, crowd(v){ for (let i = 0; i < 6 * (v || .5); i++) tone(200 + Math.random() * 300, .25, .02, Math.random() * .4); }, land(){ tone(110, .2, .12); }, look(){ tone(LYRE[2], .5, .1); tone(LYRE[4], .6, .08, .09); }, ok(){ [0, 2, 4].forEach((n, i) => tone(LYRE[n + 2], .5, .1, i * .08)); }, no(){ tone(196, .45, .1); tone(185, .5, .08, .12); },
   ev(){ [0, 2, 4, 6].forEach((n, i) => tone(LYRE[n], .7, .09, i * .1)); }, step(){ tone(90 + Math.random() * 20, .06, .03); } };
 
 /* ---------- interfaz DOM ---------- */
@@ -821,7 +842,7 @@ const GAME = { scene:null };
 class Boot extends Phaser.Scene {
   constructor(){ super('boot'); }
   preload(){
-    const imgs = new Set(['titulo', 'banda', 'sp_right', 'lirios']);
+    const imgs = new Set(['titulo', 'banda', 'sp_right', 'lirios', 'arena', 'sp_bull', 'sp_mid', 'sp_left', 'ninos2']);
     ROOMS.forEach(R => (LAYOUT[R.scene] || {panels:[]}).panels.forEach(p => imgs.add(p.img)));
     const bar = this.add.rectangle(W / 2 - 200, H / 2, 0, 10, 0xb4472b).setOrigin(0, .5);
     this.add.rectangle(W / 2, H / 2, 404, 14).setStrokeStyle(2, 0x231a14);
@@ -866,6 +887,7 @@ class Palace extends Phaser.Scene {
     this.spots = [];
     ROOMS.forEach((R, i) => this.buildHall(R, i));
     this.doors = ROOMS.map((R, i) => this.buildDoor(i));
+    this.stations = STATIONS.map(d => this.buildStation(d));
     // jugador: saltador del fresco de la Taurocatapsia, animado como marioneta
     this.pl = this.add.container(S.x, FLOOR).setDepth(20);
     this.shadow = this.add.ellipse(0, 0, 120, 22, 0x231a14, .28);
@@ -880,6 +902,7 @@ class Palace extends Phaser.Scene {
     this.buildHud(); this.buildJoy();
     this.events.once('shutdown', () => { st.innerHTML = ''; toastEl = null; });
     if (!S.seen.__intro){ S.seen.__intro = 1; save(); this.time.delayedCall(400, () => toast(t('andar'))); }
+    if (this.fromArena) this.time.delayedCall(300, () => this.finale());
   }
   makeWall(WW){
     // yeso con textura, banda de frescos arriba y suelo de losas
@@ -958,7 +981,51 @@ class Palace extends Phaser.Scene {
     if (S.done[ROOMS[i].id]) g.setAlpha(0);
     return g;
   }
-  limitX(){ let r = 0; while (r < ROOMS.length - 1 && S.done[ROOMS[r].id]) r++; return (r + 1) * HALL + 100 - 90; }
+  limitX(){ let r = 0; while (r < ROOMS.length - 1 && S.done[ROOMS[r].id]) r++; let lim = (r + 1) * HALL + 100 - 90;
+    for (const d of STATIONS) if (d.k === 'bout' && !S.bouts[d.i] && stX(d) + 30 < lim) lim = stX(d) + 30;
+    return Math.min(lim, this.WW - 60); }
+  buildStation(d){
+    const x = stX(d), c = this.add.container(x, FLOOR).setDepth(9);
+    const pl = this.add.rectangle(0, -40, 150, 80, 0x231a14).setStrokeStyle(3, 0xdca23a);
+    const im = this.add.image(0, -84, d.k === 'bout' ? 'ninos2' : 'sp_bull').setOrigin(.5, 1);
+    im.setScale(d.k === 'bout' ? 190 / im.height : 150 / im.width);
+    const lab = this.add.text(0, -42, d.k === 'bout' ? t('combateN', {n:d.i + 1}) : t('fiesta'), {fontFamily:'Palatino Linotype, Palatino, Georgia, serif', fontSize:'15px', color:'#f3e8cf', align:'center', wordWrap:{width:140}}).setOrigin(.5);
+    const ring = this.add.circle(0, -150, 26, 0xdca23a, 0).setStrokeStyle(4, 0xdca23a);
+    c.add([im, pl, lab, ring]);
+    const done = d.k === 'bout' ? !!S.bouts[d.i] : S.fiesta > 0;
+    const glow = this.tweens.add({targets:ring, scale:{from:1, to:1.8}, alpha:{from:.9, to:0}, duration:1300, repeat:-1}); if (done) glow.pause();
+    pl.setInteractive({useHandCursor:true}).on('pointerdown', (p, lx, ly, ev) => { ev.stopPropagation(); if (modal) return; this.target = Phaser.Math.Clamp(x, 80, this.limitX()); this.pendingSt = d; });
+    const o = {st:d, x, i:d.room, glow, ring, c}; this.spots.push(o); return o;
+  }
+  openStation(o){
+    const d = o.st;
+    if (d.end && !S.done[ROOMS[5].id]){ toast(t('fiestaFalta')); return; }
+    if (d.k === 'fiesta' && !S.bouts[3]){ toast(t('fiestaFalta')); return; }
+    if (d.k === 'bout'){
+      const v = card(`<h2>${t('combate')} · ${t('combateN', {n:d.i + 1})}</h2><p>${t('combateP')}</p>${S.bouts[d.i] ? `<p><b>✓ ${t('ganado')}</b> ${'★'.repeat(S.bouts[d.i])}</p>` : ''}
+        <div class="act"><button class="btn" data-c>${t('cerrar')}</button><button class="btn pri" data-go>${t('combatir')}</button></div>`);
+      v.querySelector('[data-c]').onclick = closeCard;
+      v.querySelector('[data-go]').onclick = () => { closeCard(); S.x = this.pl.x; save(); openBout(d.i); };
+      return;
+    }
+    this.fiestaCard();
+  }
+  fiestaCard(){
+    const v = card(`<h2>${t('fiesta')}</h2><p class="sm">${L(ARENA.intro)}</p><div class="sub">${L(ARENA.tec)}</div>
+      <div class="opts"><button class="btn opt" data-v="picado"><b>${L(ARENA.picado)}</b><br><small>${L(ARENA.picadoS)}</small></button>
+      <button class="btn opt" data-v="evans"><b>${L(ARENA.evans)}</b><br><small>${L(ARENA.evansS)}</small></button></div>
+      <p class="sm" data-n hidden>${L(ARENA.evansNota)}</p>
+      <div class="act"><button class="btn" data-c>${t('cerrar')}</button><button class="btn pri" data-go>${t('empezar')} ›</button></div>`, 'wide');
+    const sync = () => { v.querySelectorAll('[data-v]').forEach(b => { const on = S.tec === b.dataset.v; b.classList.toggle('pri', on); b.setAttribute('aria-pressed', on); }); v.querySelector('[data-n]').hidden = S.tec !== 'evans'; };
+    v.querySelectorAll('[data-v]').forEach(b => b.onclick = () => { SFX.tap(); S.tec = b.dataset.v; save(); sync(); }); sync();
+    v.querySelector('[data-c]').onclick = closeCard;
+    v.querySelector('[data-go]').onclick = () => { closeCard(); S.x = this.pl.x; save(); au(); this.scene.start('arena', {f:Math.min(2, S.fiesta)}); };
+  }
+  afterBout(i){
+    this.refreshHud();
+    const o = this.stations.find(z => z.st.k === 'bout' && z.st.i === i); if (o && S.bouts[i]) o.glow.pause();
+    if (S.bouts[i]) toast(t('ganado'));
+  }
   roomAt(x){ return Phaser.Math.Clamp(Math.floor((x - 100) / HALL), 0, ROOMS.length - 1); }
   buildHud(){
     st.innerHTML = ''; toastEl = null;
@@ -998,6 +1065,7 @@ class Palace extends Phaser.Scene {
     if (user) toast(t('andar'));
   }
   openSpot(s){
+    if (s.st){ this.openStation(s); return; }
     if (s.ev){ this.openEvidence(s); return; }
     const R = ROOMS[s.i], sp = R.spots[s.k];
     SFX.look();
@@ -1028,7 +1096,7 @@ class Palace extends Phaser.Scene {
     const next = () => {
       if (n >= qs.length){ S.done[R.id] = 1; save(); this.refreshHud();
         const d = this.doors[i]; if (d) this.tweens.add({targets:d, alpha:0, duration:700});
-        toast(t('yaSala')); if (i === ROOMS.length - 1) this.time.delayedCall(700, () => this.finale()); return; }
+        toast(t('yaSala')); return; }
       const q = qs[n], opts = shuffle(L(q.o).map((s, j) => ({s, ok:j === 0})));
       const v = card(`<div class="sub">${t('preg')} · ${n + 1}/${qs.length}</div><h2>${L(q.q)}</h2><div class="opts">${opts.map((o, j) => `<button class="btn opt" data-o="${j}">${o.s}</button>`).join('')}</div><div class="fb"></div>`);
       v.querySelectorAll('[data-o]').forEach(b => b.onclick = () => {
@@ -1049,12 +1117,12 @@ class Palace extends Phaser.Scene {
       return `<div class="lect ${open ? 'open' : ''}"><h3>${open ? '🔓' : '🔒'} ${L(LECT[k])} <small>${have}/${evTotal(k)}</small></h3>
         ${open ? `<p class="sm">${L(F.d)}</p>` : `<p class="sm">${t('cerrada')}. ${t('faltan')}: ${miss.join('; ')}.</p>`}</div>`;
     }).join('');
-    const v = card(`<h2>${final ? t('fiesta') : t('lect')}</h2>${final ? `<p>${t('fiestaP')}</p>` : ''}<p class="sm">${t('lectP')}</p>${rows}
-      <div class="act">${final ? `<button class="btn" data-k>${t('irClasico')}</button>` : ''}<button class="btn pri" data-c>${t('cerrar')}</button></div>`, 'wide');
+    const v = card(`<h2>${final ? t('salto') : t('lect')}</h2>${final ? `<p>${t('fiestaP')}</p>` : ''}<p class="sm">${t('lectP')}</p>${rows}
+      <div class="act"><button class="btn pri" data-c>${t('cerrar')}</button></div>`, 'wide');
     v.querySelector('[data-c]').onclick = () => { closeCard(); if (then) then(); };
-    const k = v.querySelector('[data-k]'); if (k) k.onclick = () => { save(); location.href = 'cnoso.html'; };
   }
   finale(){ S.fin = true; save(); SFX.ev(); this.readingsCard(true); }
+  init(data){ this.fromArena = data && data.fromArena; }
   update(time, dt){
     const d = dt / 1000, K = this.keys;
     let dir = 0;
@@ -1062,12 +1130,12 @@ class Palace extends Phaser.Scene {
       if (K.L.isDown || K.A.isDown) dir = -1; else if (K.R.isDown || K.D.isDown) dir = 1;
       if (this.joy && Math.abs(this.joy.dx) > .2) dir = this.joy.dx;
       if (Phaser.Input.Keyboard.JustDown(K.SP) || Phaser.Input.Keyboard.JustDown(K.EN)) this.tryLook(true);
-      if (dir) { this.target = null; this.pending = null; this.pendingEv = null; }
-      else if (this.target != null){ const dx = this.target - this.pl.x; if (Math.abs(dx) < 8){ this.target = null; if (this.pendingEv){ const img = this.pendingEv; this.pendingEv = null; const s = this.spots.find(z => z.ev && z.img === img); if (s && Math.abs(s.x - this.pl.x) < 150) this.openSpot(s); } if (this.pending){ const p = this.pending; this.pending = null; const s = this.spots.find(z => z.i === p.i && z.k === p.k); if (s && Math.abs(s.x - this.pl.x) < 150) this.openSpot(s); } } else dir = Math.sign(dx); }
+      if (dir) { this.target = null; this.pending = null; this.pendingEv = null; this.pendingSt = null; }
+      else if (this.target != null){ const dx = this.target - this.pl.x; if (Math.abs(dx) < 8){ this.target = null; if (this.pendingSt){ const d = this.pendingSt; this.pendingSt = null; const o = this.stations.find(z => z.st === d); if (o && Math.abs(o.x - this.pl.x) < 150) this.openSpot(o); } if (this.pendingEv){ const img = this.pendingEv; this.pendingEv = null; const s = this.spots.find(z => z.ev && z.img === img); if (s && Math.abs(s.x - this.pl.x) < 150) this.openSpot(s); } if (this.pending){ const p = this.pending; this.pending = null; const s = this.spots.find(z => z.i === p.i && z.k === p.k); if (s && Math.abs(s.x - this.pl.x) < 150) this.openSpot(s); } } else dir = Math.sign(dx); }
     }
     const lim = this.limitX(), sp = 330;
     const nx = Phaser.Math.Clamp(this.pl.x + dir * sp * d, 80, lim);
-    if (dir > 0 && this.pl.x >= lim - 1 && !modal){ if (!this.blockT || time - this.blockT > 2500){ this.blockT = time; toast(t('falta')); } }
+    if (dir > 0 && this.pl.x >= lim - 1 && !modal){ if (!this.blockT || time - this.blockT > 2500){ this.blockT = time; const b = STATIONS.find(d => d.k === 'bout' && !S.bouts[d.i] && Math.abs(stX(d) + 30 - lim) < 2); toast(b ? t('falta2') : t('falta')); } }
     const moving = Math.abs(nx - this.pl.x) > .1;
     this.pl.x = nx;
     if (dir) this.face = dir > 0 ? 1 : -1;
@@ -1085,11 +1153,183 @@ class Palace extends Phaser.Scene {
   }
 }
 
+/* ---------- pugilato: el juego de Púgiles del Cnoso clásico, en un marco ---------- */
+let FRAME = null;
+function openBout(i){ closeBout(); FRAME = document.createElement('iframe'); FRAME.className = 'pugframe'; FRAME.title = t('combate'); FRAME.src = `cnoso/pugilato.html?b=${i}&lang=${S.lang}`; document.body.appendChild(FRAME); try { FRAME.focus(); } catch (e) {} if (GAME.scene && GAME.scene.input) GAME.scene.input.enabled = false; }
+function closeBout(){ if (FRAME){ FRAME.remove(); FRAME = null; } if (GAME.scene && GAME.scene.input) GAME.scene.input.enabled = true; }
+addEventListener('message', e => {
+  if (!e.data || !e.data.cnoso || (e.origin !== location.origin && location.protocol !== 'file:')) return; const d = e.data;
+  if (d.type === 'ficha'){ HIST.ficha(d.id); return; }
+  if (d.type === 'result'){ if (d.won){ const first = !S.bouts[d.i]; S.bouts[d.i] = Math.max(S.bouts[d.i] || 0, d.stars || 1); save(); if (first) HIST.xp(20); } return; }
+  if (d.type === 'bout' || d.type === 'quit'){ closeBout(); if (d.won && !S.bouts[d.i]){ S.bouts[d.i] = d.stars || 1; save(); } if (GAME.scene && GAME.scene.afterBout) GAME.scene.afterBout(d.i); }
+});
+
+/* ---------- la fiesta del toro: el fresco cobra vida (adaptación del Cnoso clásico a Phaser) ---------- */
+class Arena extends Phaser.Scene {
+  constructor(){ super('arena'); }
+  init(d){ this.f = d && d.f || 0; }
+  create(){
+    GAME.scene = this; st.innerHTML = ''; toastEl = null; closeCard();
+    this.add.image(0, 0, 'arena').setOrigin(0).setDisplaySize(W, H);
+    this.add.rectangle(150, 138, 965, 418, 0x7096b4, .42).setOrigin(0);
+    const mask = this.make.graphics({add:false}); mask.fillRect(150, 138, 965, 418); const M = mask.createGeometryMask();
+    this.lay = this.add.container(0, 0).setMask(M);
+    const mk = n => { const i = this.add.image(0, 0, 'sp_' + n).setDisplaySize(FR[n][2], FR[n][3]); i.preFX && i.preFX.addShadow(2, 3, .1, 1, 0x190e06, 6, .6); this.lay.add(i); return i; };
+    this.iRight = mk('right'); this.iBull = mk('bull'); this.iGhost = mk('mid'); this.iLp = mk('mid');
+    this.gr = this.add.graphics().setDepth(10);
+    this.flashR = this.add.rectangle(0, 0, W, H, 0xfff8e6, 0).setOrigin(0).setDepth(11);
+    this.hud = $(`<div class="top"><span class="rinfo"><b data-h></b><small data-a></small></span><span class="sp"></span><button class="chip" data-m>⌂</button></div>`); st.appendChild(this.hud);
+    this.hud.querySelector('[data-m]').onclick = () => { this.scene.start('palace'); };
+    this.hintEl = $('<div class="hint"></div>'); st.appendChild(this.hintEl);
+    this.bigEl = $('<div class="big"></div>'); st.appendChild(this.bigEl);
+    this.A = {f:this.f, cfg:FIESTA[this.f], n:0, res:[], acl:0, firstEver:!S.fiesta};
+    this.input.on('pointerdown', () => this.tap());
+    this.input.keyboard.on('keydown-SPACE', () => this.tap()); this.input.keyboard.on('keydown-ENTER', () => this.tap());
+    this.events.once('shutdown', () => { st.innerHTML = ''; toastEl = null; });
+    this.T = 0; this.newBull();
+  }
+  hudUp(){ const A = this.A; this.hud.querySelector('[data-h]').textContent = t('fiesta') + ' · ' + t('toroN', {n:A.n + 1}); this.hud.querySelector('[data-a]').textContent = t('aclam') + ' ' + Math.round(A.acl); }
+  big(sx){ this.bigEl.textContent = sx; this.bigEl.classList.add('on'); clearTimeout(this.bigT); this.bigT = setTimeout(() => this.bigEl.classList.remove('on'), 650); }
+  hint(on){ this.hintEl.textContent = matchMedia('(hover: hover)').matches ? t('tapK') : t('tap'); this.hintEl.classList.toggle('on', !!on); }
+  newBull(){
+    const A = this.A, c = A.cfg, ev = S.tec === 'evans';
+    Object.assign(A, {ph:'approach', t:0, g:[null, null, null], msg:'', flash:0, hitstop:0, knees:false, dusted:0, ghost:null, fall:null});
+    A.bull = {x:1500, v:c.v * (1 + (Math.random() - .5) * c.vary), rate:11 + c.v / 70, gone:false};
+    A.lp = ev ? {spr:'left', x:FR.left[0], y:FR.left[1], rot:0, a:1} : {spr:'mid', x:180, y:150, rot:-.55, a:1};
+    A.ring = null; A.tmul = ev ? .66 : 1; A.firstHint = A.firstEver && A.n === 0;
+    A.good = c.good * A.tmul * (A.firstHint ? 1.3 : 1); A.perf = c.perf * A.tmul * (A.firstHint ? 1.3 : 1);
+    A.ts = 1; A.hintShown = 0; A.fl = null; this.hudUp(); SFX.crowd(.2);
+  }
+  tap(){
+    const A = this.A; if (modal) return;
+    if (A.ph === 'result' || A.ph === 'end') return;
+    const r = A.ring; if (!r || r.done) return;
+    const e = r.due - A.t; SFX.tap();
+    if (Math.abs(e) <= A.good) this.judge(r.k, Math.abs(e) <= A.perf ? 2 : 1);
+    else if (e > A.good) this.fail(r.k, 'early');
+  }
+  judge(k, q){
+    const A = this.A; A.g[k] = q; A.ring.done = true; A.hitstop = .035; A.flash = 1;
+    this.big(q === 2 ? t('perf') : t('good')); (q === 2 ? SFX.ok : SFX.look)(); this.cameras.main.shake(120, q === 2 ? .006 : .003);
+    if (k === 0){ A.ph = 'entry'; A.t0 = A.t; SFX.whoosh(); A.e0 = {x:A.lp.x, y:A.lp.y, rot:A.lp.rot}; }
+    else if (k === 1){ A.ph = S.tec === 'evans' ? 'swap' : 'flight'; A.t0 = A.t; SFX.whoosh(); A.fl = {x0:A.lp.x, y0:A.lp.y}; }
+    else { A.ph = 'landed'; A.t0 = A.t; SFX.land(); }
+  }
+  fail(k, why){
+    const A = this.A; A.g[k] = 0; if (A.ring) A.ring.done = true; SFX.no(); this.big(t('fail'));
+    A.fall = {x:A.lp.x, y:A.lp.y, rot:A.lp.rot, vx:why === 'early' ? 60 : -40, vr:why === 'early' ? 2.2 : -2};
+    if (k === 0){ A.msg = why === 'early' ? t('early') : t('late'); A.ph = 'fall'; A.t0 = A.t; }
+    else if (k === 1){ A.msg = why === 'early' ? t('early') : t('late'); A.ph = 'fall'; A.t0 = A.t; A.fall.vx = -90; }
+    else { A.msg = t('land0'); A.ph = 'landed'; A.t0 = A.t; A.knees = true; SFX.land(); }
+  }
+  step(dt){
+    const A = this.A; if (A.hitstop > 0){ A.hitstop -= dt; return; }
+    const r = A.ring, near = r && !r.done ? Math.max(0, r.due - A.t) : 9, want = near < .75 ? .45 : 1; A.ts += (want - A.ts) * Math.min(1, dt * 8);
+    const d = dt * A.ts; A.t += d; const B = A.bull, ev = S.tec === 'evans', lp = A.lp, bob = Math.sin(this.T * B.rate) * 4;
+    if (!B.gone) B.x -= B.v * d; if (B.x < -900) B.gone = true;
+    const att = spr => { const o = OFF[spr]; return [B.x + o[0], FR.bull[1] + o[1] + bob]; };
+    const sz = n => [FR[n][2], FR[n][3]];
+    switch (A.ph){
+      case 'approach': {
+        const lead = ev ? 0 : .32, due = A.t + (B.x - FR.bull[0]) / B.v - lead;
+        const hp = ev ? [FR.left[0] + HAND.left[0], FR.left[1] + HAND.left[1]] : [FR.mid[0] + HAND.mid[0], FR.mid[1] + HAND.mid[1]];
+        if (!A.ring) A.ring = {k:0, due, x:hp[0], y:hp[1], done:false}; else A.ring.due = due;
+        if (!ev){ lp.y = 150 + Math.sin(A.t * 2.4) * 5; lp.rot = -.55 + Math.sin(A.t * 2.4) * .03; }
+        if (A.firstHint && A.ring.due - A.t < 1.2) this.hint(true);
+        if (A.t - A.ring.due > A.good){ this.hint(false); this.fail(0, 'late'); }
+        break; }
+      case 'entry': {
+        this.hint(false);
+        if (!ev){ const k = Math.min(1, (A.t - A.t0) / .32), e = ease(k), p = att('mid');
+          lp.x = A.e0.x + (p[0] - A.e0.x) * e; lp.y = A.e0.y + (p[1] - A.e0.y) * e - Math.sin(k * Math.PI) * 30; lp.rot = A.e0.rot * (1 - e);
+          if (k >= 1){ A.ph = 'support'; A.t0 = A.t; A.ring = {k:1, due:A.t + .62 + Math.random() * .25, done:false}; } }
+        else { const p = att('left'); lp.x = p[0]; lp.y = p[1]; A.ph = 'support'; A.t0 = A.t; A.ring = {k:1, due:A.t + .55 + Math.random() * .2, done:false}; }
+        break; }
+      case 'support': {
+        if (!ev){ const p = att('mid'); lp.x = p[0]; lp.y = p[1]; lp.rot = Math.sin((A.t - A.t0) * 7) * .035; A.ring.x = lp.x + HAND.mid[0]; A.ring.y = lp.y + HAND.mid[1]; }
+        else { const p = att('left'), u = Math.min(1, (A.t - A.t0) / Math.max(.1, A.ring.due - A.t0)); lp.x = p[0]; lp.y = p[1] - u * 46; lp.rot = -u * .22; A.ring.x = lp.x + HAND.left[0]; A.ring.y = lp.y + HAND.left[1]; }
+        if (A.firstHint && !A.hintShown){ this.hint(true); A.hintShown = 1; }
+        if (A.t - A.ring.due > A.good){ this.hint(false); this.fail(1, 'late'); }
+        break; }
+      case 'swap': {
+        const k = Math.min(1, (A.t - A.t0) / .22), p = att('mid');
+        if (lp.spr !== 'mid'){ A.ghost = {spr:'left', x:lp.x, y:lp.y, rot:lp.rot, a:1}; lp.spr = 'mid'; lp.a = 0; }
+        lp.x = p[0]; lp.y = p[1] - 20 * (1 - k); lp.rot = 0; lp.a = k; if (A.ghost) A.ghost.a = 1 - k;
+        if (k >= 1){ A.ghost = null; A.ph = 'flight'; A.t0 = A.t; A.fl = {x0:lp.x, y0:lp.y}; }
+        break; }
+      case 'flight': {
+        this.hint(false);
+        const dur = ev ? .9 : .82, k = Math.min(1, (A.t - A.t0) / dur), [w, h] = sz('mid'), L0 = LAND[ev ? 'evans' : 'picado'];
+        const xe = L0[0] + (ev ? (FR.right[2] - w) / 2 : 0), ye = ev ? GY - h : FR.right[1] - 20, top = Math.min(A.fl.y0, ye) - (ev ? 120 : 80);
+        lp.x = A.fl.x0 + (xe - A.fl.x0) * ease(k); lp.y = (1 - k) * (1 - k) * A.fl.y0 + 2 * (1 - k) * k * top + k * k * ye; lp.rot = Math.PI * ease(k);
+        if (A.ring.k !== 2){ A.ring = {k:2, due:A.t0 + dur, x:ev ? xe + w / 2 : FR.right[0] + 6, y:ev ? GY - 18 : FR.right[1] + 40, done:false}; if (A.firstHint) this.hint(true); }
+        if (k >= 1 && !A.ring.done && A.t - A.ring.due > A.good) this.fail(2, 'late');
+        break; }
+      case 'landed': {
+        this.hint(false); const k = Math.min(1, (A.t - A.t0) / .55);
+        if (ev && !A.knees && lp.spr !== 'right'){ A.ghost = {spr:lp.spr, x:lp.x, y:lp.y, rot:lp.rot, a:1}; lp.spr = 'right'; lp.x = FR.right[0]; lp.y = FR.right[1]; lp.rot = 0; lp.a = 0; }
+        if (A.ghost){ A.ghost.a = Math.max(0, 1 - k * 2.2); lp.a = Math.min(1, k * 2.2); }
+        if (A.knees) lp.rot = Math.PI + .35 * ease(k);
+        else if (!ev){ lp.y = FR.right[1] - 20 + 30 * ease(k); lp.rot = Math.PI - .12 * ease(k); }
+        if (k >= 1){ A.ghost = null; this.toResult(); }
+        break; }
+      case 'fall': {
+        const f = A.fall, k = A.t - A.t0;
+        f.x += f.vx * d; f.y += (60 + 900 * k) * d; f.rot += f.vr * d; lp.x = f.x; lp.y = Math.min(f.y, GY - 40); lp.rot = f.rot; lp.a = Math.max(0, 1 - Math.max(0, k - .7) * 2);
+        if (f.y > GY - 60 && !A.dusted){ A.dusted = 1; SFX.land(); this.cameras.main.shake(150, .005); }
+        if (k > 1.5) this.toResult();
+        break; }
+    }
+  }
+  draw(){
+    const A = this.A, ev = S.tec === 'evans', B = A.bull, bob = Math.sin(this.T * B.rate) * 4;
+    const put = (im, spr, x, y, rot, a) => { if (im.texture.key !== 'sp_' + spr) im.setTexture('sp_' + spr); const [w, h] = [FR[spr][2], FR[spr][3]]; im.setDisplaySize(w, h).setPosition(x + w / 2, y + h / 2).setRotation(rot || 0).setAlpha(a == null ? 1 : a).setVisible(true); };
+    this.iRight.setVisible(!ev); if (!ev) put(this.iRight, 'right', FR.right[0], FR.right[1]);
+    this.iBull.setVisible(!B.gone); if (!B.gone) put(this.iBull, 'bull', B.x, FR.bull[1] + bob, Math.sin(this.T * B.rate) * .012);
+    if (A.ghost) put(this.iGhost, A.ghost.spr, A.ghost.x, A.ghost.y, A.ghost.rot, A.ghost.a); else this.iGhost.setVisible(false);
+    const lp = A.lp; put(this.iLp, lp.spr, lp.x, lp.y, lp.rot, lp.a);
+    const front = ['entry', 'support', 'swap', 'flight', 'landed', 'fall'].includes(A.ph);
+    this.lay.bringToTop(front ? this.iLp : this.iBull); if (A.ghost) this.lay.bringToTop(this.iGhost);
+    const g = this.gr; g.clear(); const r = A.ring;
+    if (r && !r.done && A.ph !== 'result' && r.x != null){
+      const dtt = r.due - A.t, R0 = 24, rr = R0 + Math.min(120, Math.max(0, dtt) * 150);
+      g.lineStyle(4, 0x231a14); g.strokeCircle(r.x, r.y, R0); g.lineStyle(2, 0xfff8ea); g.strokeCircle(r.x, r.y, R0 - 3);
+      if (dtt > -A.good){ const inw = Math.abs(dtt) <= A.good; g.lineStyle(inw ? 7 : 4, inw ? 0xdca23a : 0xfff8ea); g.strokeCircle(r.x, r.y, rr); }
+      g.fillStyle(0xb4472b); for (let i = 0; i < 8; i++){ const a = i * Math.PI / 4; g.fillCircle(r.x + Math.cos(a) * 6, r.y + Math.sin(a) * 6, 3.2); } g.fillStyle(0xdca23a); g.fillCircle(r.x, r.y, 3);
+    }
+    this.flashR.setAlpha(A.flash * .3); A.flash = Math.max(0, A.flash - .08);
+  }
+  toResult(){
+    const A = this.A; if (A.ph === 'result') return;
+    A.ph = 'result'; A.ring = null; this.hint(false);
+    const q = A.g.map(x => x || 0), sum = q.reduce((a, b) => a + b, 0), ev = S.tec === 'evans';
+    const gain = sum * 10 * [1, 1.5, 2][A.f] * (ev ? 1.4 : 1); A.acl += gain; A.res.push({ok:A.g[2] != null && A.g[2] > 0, perf:q.filter(x => x === 2).length});
+    if (sum >= 3) SFX.crowd(sum >= 5 ? 1 : .5); this.hudUp();
+    const names = ev ? [t('f1e'), t('f2e'), t('f3')] : [t('f1'), t('f2'), t('f3')], sym = x => x === 2 ? '★' : x === 1 ? '✓' : x === 0 ? '✗' : '–';
+    const head = A.g[2] > 0 ? t('completo') : A.g[2] === 0 ? t('rodillas') : t('fallido');
+    const v = card(`<div class="sub">${t('fiesta')} · ${t('toroN', {n:A.n + 1})}</div><h2>${head}</h2><div class="grades">${names.map((n, i) => `<span><b>${sym(A.g[i])}</b><br>${n}</span>`).join('')}</div>
+      <p>${A.msg || t('clean')}</p>${ev ? `<p class="sm">${L(ARENA.evansNota)}</p>` : ''}<p><b>${t('aclam')}: +${Math.round(gain)}</b></p>
+      <div class="act"><button class="btn pri" data-n>${A.n < 2 ? t('otro') : t('finF')} ›</button></div>`);
+    v.style.background = 'rgba(35,26,20,.15)';
+    v.querySelector('[data-n]').onclick = e => { e.stopPropagation(); closeCard(); if (A.n < 2){ A.n++; this.newBull(); } else this.end(); };
+  }
+  end(){
+    const A = this.A; A.ph = 'end';
+    const comp = A.res.filter(r => r.ok).length, perf = A.res.reduce((a, r) => a + r.perf, 0);
+    const first = !S.xpF; S.fiesta = Math.max(S.fiesta, A.f + 1); S.best = Math.max(S.best, Math.round(A.acl)); if (first){ S.xpF = true; HIST.xp(30 + perf * 5); } save();
+    const v = card(`<h2>${t('finF')}</h2><div class="grades"><span><b>${comp}/3</b></span><span><b>${perf}</b> ★</span><span><b>${Math.round(A.acl)}</b> ${t('aclam')}</span></div>
+      <p>${t('fiestaRes', {c:comp, p:perf})}</p><div class="act"><button class="btn" data-r>${t('repetir')}</button><button class="btn pri" data-p>${t('salto')} ›</button></div>`);
+    v.querySelector('[data-r]').onclick = () => { closeCard(); this.scene.restart({f:Math.min(2, S.fiesta)}); };
+    v.querySelector('[data-p]').onclick = () => { closeCard(); this.scene.start('palace', {fromArena:true}); };
+  }
+  update(time, dt){ const d = Math.min(.05, dt / 1000); this.T += d; this.step(d); this.draw(); }
+}
+
 addEventListener('pagehide', () => { if (GAME.scene && GAME.scene.pl) S.x = GAME.scene.pl.x; save(); });
 document.getElementById('rotT').textContent = t('gira');
 new Phaser.Game({ type:Phaser.AUTO, parent:'game', width:W, height:H, backgroundColor:'#2a1d14',
   scale:{ mode:Phaser.Scale.FIT, autoCenter:Phaser.Scale.CENTER_BOTH }, input:{ activePointers:3 },
-  scene:[Boot, Title, Palace] });
+  scene:[Boot, Title, Palace, Arena] });
 
 </script>
 <div id="alacopy" role="contentinfo" style="position:fixed;right:max(8px,env(safe-area-inset-right));bottom:max(6px,env(safe-area-inset-bottom));z-index:2147482000;pointer-events:none;user-select:none;-webkit-user-select:none;font:500 11px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif;color:#fff;opacity:.6;text-shadow:0 1px 2px #000,0 0 4px #000;white-space:nowrap">© Diseñado y Creado por Alejandro Leiva Arcas</div>
