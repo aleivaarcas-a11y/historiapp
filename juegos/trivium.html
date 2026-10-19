@@ -337,7 +337,7 @@ const TX = {
     rolled: (n, v) => `<b>${n}</b> saca un <b>${v}</b>. Elige casilla.`, botRolled: (n, v) => `<b>${n}</b> saca un <b>${v}</b>…`, moving: n => `<b>${n}</b> avanza…`,
     hub: 'Centro', hq: 'Quesito', rollSq: 'Tira otra vez', wedge: 'Quesito', wedgeGot: (n, f) => `${n} gana el quesito de ${f}`,
     chooseCat: 'Elige la categoría', chooseCatHub: n => `${n} está en el centro: elige la categoría de la pregunta`,
-    finalPick: n => `Pregunta final de ${n}. Los rivales eligen la categoría`, finalQ: '¡Pregunta final!', needHub: 'Con los seis quesitos, entra en el centro con la tirada exacta.',
+    finalPick: n => `Pregunta final de ${n}. Los rivales eligen la categoría`, finalQ: '¡Pregunta final!', needHub: 'Ya tienes los seis quesitos. Para ganar, entra en el centro (basta con que la tirada llegue) y acierta la pregunta final.',
     ok: '¡Correcto!', ko: 'Incorrecto', theAns: 'La respuesta correcta es', cont2: 'Continuar', show: 'Ver la respuesta', didOk: '¿Ha acertado?', yes: 'Sí, acertó', no: 'No',
     vf: '¿Verdadero o falso?', v: 'Verdadero', f: 'Falso', answers: n => `Responde ${n}`, botThinks: n => `${n} está pensando…`, src: 'Fuente',
     win: n => `¡${n} gana la partida!`, winSub: 'Ha reunido los seis quesitos y ha acertado la pregunta final.', again: 'Nueva partida', menu: 'Menú', close: 'Cerrar',
@@ -351,7 +351,7 @@ const TX = {
 <li>Las seis casillas grandes del anillo son las de los quesitos. Acertar en ellas da el quesito de su color (si todavía no se tiene) y otra tirada.</li>
 <li>Las casillas con un dado obligan a tirar otra vez.</li>
 <li>Si se cae en el centro sin tener los seis quesitos, el jugador elige la familia de la pregunta.</li></ul>
-<h3>La pregunta final</h3><p>Con los seis quesitos hay que llegar al centro con la tirada exacta. Allí los rivales eligen la familia de la última pregunta. Si se acierta, se gana la partida; si se falla, en el turno siguiente se sale del centro y hay que volver a entrar.</p>
+<h3>La pregunta final</h3><p>Reunir los seis quesitos todavía no da la victoria. Con ellos hay que llegar al centro, y basta con que la tirada alcance para entrar, sin necesidad de que sea exacta. Allí los rivales eligen la familia de la última pregunta. Si se acierta, se gana la partida; si se falla, en el turno siguiente se sale del centro y hay que volver a entrar.</p>
 <h3>Modos de respuesta</h3><p><b>Con opciones</b>: la pregunta trae sus respuestas posibles, o verdadero y falso. <b>Clásico</b>: como en el juego de mesa, se responde en voz alta, se descubre la respuesta y los demás jugadores dicen si vale.</p>
 <h3>Las familias</h3>`,
     creditsHtml: `<p>Trivium es una adaptación para la asignatura Historia del Deporte (Grado en CAFD, UCAM) del juego original Trivial Pursuit, creado por Chris Haney y Scott Abbott (1979-1981) y hoy propiedad de Hasbro. Se usa solo con fines docentes.</p>
@@ -365,7 +365,7 @@ const TX = {
     rolled: (n, v) => `<b>${n}</b> rolls a <b>${v}</b>. Choose a square.`, botRolled: (n, v) => `<b>${n}</b> rolls a <b>${v}</b>…`, moving: n => `<b>${n}</b> moves…`,
     hub: 'Hub', hq: 'Wedge', rollSq: 'Roll again', wedge: 'Wedge', wedgeGot: (n, f) => `${n} wins the ${f} wedge`,
     chooseCat: 'Choose the category', chooseCatHub: n => `${n} is on the hub: choose the category of the question`,
-    finalPick: n => `${n}’s final question. The opponents choose the category`, finalQ: 'Final question!', needHub: 'With all six wedges, enter the hub with the exact roll.',
+    finalPick: n => `${n}’s final question. The opponents choose the category`, finalQ: 'Final question!', needHub: 'You have all six wedges. To win, reach the hub (any roll long enough will do) and answer the final question.',
     ok: 'Correct!', ko: 'Wrong', theAns: 'The correct answer is', cont2: 'Continue', show: 'Show the answer', didOk: 'Was it right?', yes: 'Yes, right', no: 'No',
     vf: 'True or false?', v: 'True', f: 'False', answers: n => `${n} answers`, botThinks: n => `${n} is thinking…`, src: 'Source',
     win: n => `${n} wins the game!`, winSub: 'All six wedges collected and the final question answered.', again: 'New game', menu: 'Menu', close: 'Close',
@@ -379,7 +379,7 @@ const TX = {
 <li>The six large squares on the ring are the wedge squares. A right answer there wins the wedge of that colour (if you do not have it yet) and another roll.</li>
 <li>Squares with dice mean roll again.</li>
 <li>Landing on the hub without all six wedges lets the player choose the family of the question.</li></ul>
-<h3>The final question</h3><p>With all six wedges you must reach the hub with the exact roll. There the opponents choose the family of the last question. A right answer wins the game; a wrong one means leaving the hub next turn and coming back.</p>
+<h3>The final question</h3><p>Collecting the six wedges does not win the game yet. You must then reach the hub, and any roll long enough gets you in; it need not be exact. There the opponents choose the family of the last question. A right answer wins the game; a wrong one means leaving the hub next turn and coming back.</p>
 <h3>Answer modes</h3><p><b>Multiple choice</b>: each question comes with its possible answers, or true and false. <b>Classic</b>: as in the board game, answer aloud, reveal the answer and the other players decide whether it counts.</p>
 <h3>The families</h3>`,
     creditsHtml: `<p>Trivium is an adaptation, for the course History of Sport (Degree in Physical Activity and Sport Sciences, UCAM), of the original game Trivial Pursuit, created by Chris Haney and Scott Abbott (1979-1981) and now owned by Hasbro. It is used for teaching purposes only.</p>
@@ -942,6 +942,8 @@ async function doRoll() {
   if (G.phase !== 'roll') return; G.phase = 'rolling'; setActs([]);
   const v = 1 + rnd(6); await S3.rollDie(v); G.roll = v; const p = cur();
   const dests = destinations(p.pos, v); G.dests = dests;
+  // 19-10-2026: con los seis quesitos se entra en el centro con cualquier tirada que llegue, sin exigir la exacta (aviso de una alumna)
+  if (hasAll(p) && p.pos !== 0 && !dests.has(0) && hubDist(p.pos) <= v) { const path = [p.pos]; let x = p.pos; while (x !== 0) { x = ADJ[x].find(y => DIST[y][0] === DIST[x][0] - 1); path.push(x); } dests.set(0, path); }
   if (p.bot) { setMsg(t('botRolled')(esc(p.name), v)); await sleep(FAST() ? 250 : 650); move(botPick(p, dests)); return; }
   G.phase = 'choose'; setMsg(t('rolled')(esc(p.name), v)); S3.showDest([...dests.keys()]);
   const items = [...dests.keys()].map(id => ({ id, n: N[id] })).sort((a, b) => destRank(p, b.n) - destRank(p, a.n));
@@ -973,7 +975,8 @@ async function landed(n) {
   const ok = await ask(p, fam, { final, hq: n.type === 'hq' });
   if (ok) {
     if (final) return win(p);
-    if (n.type === 'hq' && !p.w[fam]) { p.w[fam] = true; S3.setWedges(G.players); renderPlayers(); sfx.wedge(); toast(t('wedgeGot')(esc(p.name), famName(fam)), '', 1700); await sleep(1300); }
+    if (n.type === 'hq' && !p.w[fam]) { p.w[fam] = true; S3.setWedges(G.players); renderPlayers(); sfx.wedge(); toast(t('wedgeGot')(esc(p.name), famName(fam)), '', 1700); await sleep(1300);
+      if (hasAll(p)) { toast(LANG === 'es' ? '¡Seis quesitos!' : 'Six wedges!', LANG === 'es' ? 'Aún no has ganado: entra en el centro y acierta la pregunta final.' : 'Not won yet: reach the hub and answer the final question.', 3200); await sleep(2600); } }
     return botTope(p) ? botCede(p) : turnStart();
   }
   nextPlayer();
