@@ -244,8 +244,8 @@
  "3.2.1": {
   "es": [
    {
-    "k": "ejemplo",
-    "v": "Heracles y Pélope eran los fundadores más repetidos; un viajero del siglo II d. C. llegó a contar ocho."
+    "k": "concepto",
+    "v": "Fechas propuestas para los primeros Juegos: 884 (tradición), 776 (lista de vencedores) y 704 a. C. (arqueología)."
    },
    {
     "k": "concepto",
@@ -257,13 +257,13 @@
    },
    {
     "k": "ejemplo",
-    "v": "En 420 a. C. Élide multó a Esparta con 200.000 dracmas por violar la tregua."
+    "v": "En 420 a. C. Élide multó a Esparta con 200.000 dracmas por violar la tregua, y en 364 a. C. se combatió dentro del santuario."
    }
   ],
   "en": [
    {
-    "k": "ejemplo",
-    "v": "Heracles and Pelops were the most repeated founders; a second-century AD traveller counted eight."
+    "k": "concepto",
+    "v": "Proposed dates for the first Games: 884 (tradition), 776 (list of victors) and 704 BC (archaeology)."
    },
    {
     "k": "concepto",
@@ -275,45 +275,45 @@
    },
    {
     "k": "ejemplo",
-    "v": "In 420 BC Elis fined Sparta 200,000 drachmas for violating the truce."
+    "v": "In 420 BC Elis fined Sparta 200,000 drachmas for violating the truce, and in 364 BC there was fighting inside the sanctuary."
    }
   ]
  },
  "3.2.2": {
   "es": [
    {
+    "k": "concepto",
+    "v": "El santuario nació junto a un túmulo prehistórico que seguía a la vista a finales del siglo XI a. C."
+   },
+   {
     "k": "fecha",
     "v": "El culto empieza a finales del siglo XI a. C. y el primer estadio se levanta hacia 700 a. C."
    },
    {
-    "k": "concepto",
-    "v": "Fechas propuestas para los primeros Juegos: 884 (leyenda), 776 (lista tardía) y 704 a. C. (arqueología)."
+    "k": "ejemplo",
+    "v": "Corebo de Élide abre en 776 a. C. la lista de vencedores que Hipias compiló hacia 400 a. C."
    },
    {
     "k": "autor",
-    "v": "Patay-Horváth (2020) propone una hipótesis minoritaria de la caza frente a la funeraria y la iniciática."
-   },
-   {
-    "k": "ejemplo",
-    "v": "Corebo de Élide, primer vencedor registrado del stádion en 776 a. C."
+    "v": "Mallwitz (1988) fechó el primer estadio por la disposición de los primeros pozos del santuario."
    }
   ],
   "en": [
+   {
+    "k": "concepto",
+    "v": "The sanctuary arose beside a prehistoric tumulus that was still visible at the end of the 11th century BC."
+   },
    {
     "k": "fecha",
     "v": "The cult begins at the end of the 11th century BC and the first stadium is built c. 700 BC."
    },
    {
-    "k": "concepto",
-    "v": "Proposed dates for the first Games: 884 (legend), 776 (late list) and 704 BC (archaeology)."
+    "k": "ejemplo",
+    "v": "Koroibos of Elis opens in 776 BC the list of victors that Hippias compiled c. 400 BC."
    },
    {
     "k": "autor",
-    "v": "Patay-Horváth (2020) proposes a minority hunting hypothesis against the funerary and initiatory ones."
-   },
-   {
-    "k": "ejemplo",
-    "v": "Koroibos of Elis, first recorded winner of the stadion in 776 BC."
+    "v": "Mallwitz (1988) dated the first stadium by the layout of the sanctuary's first wells."
    }
   ]
  },
