@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#2a1606">
+<title>Gens · Historiapp</title>
+<style>
+/* Gens · mapa a pantalla completa, barra de recursos arriba y panel de decisiones (abajo en vertical, a la derecha en horizontal).
+   Correcto en azul y error en naranja, siempre con símbolo o texto (daltonismo). */
+:root{--gold:#ffd85c;--gold2:#f0a91c;--goldD:#a8650c;--ink:#2a1606;--blue:#2f6fd6;--ok:#2f6fd6;--ko:#d9700f;
+  --pbg:#f6ecd2;--ptx:#3a2410;--pmu:#7a6040;--pedge:#c79a3a;--card:#fffaf0;--hbg:rgba(42,22,6,.92);--htx:#fff6e3;
+  --st:env(safe-area-inset-top,0px);--sb:env(safe-area-inset-bottom,0px);--sl:env(safe-area-inset-left,0px);--sr:env(safe-area-inset-right,0px)}
+html.dark{--pbg:#1f170f;--ptx:#fff6e3;--pmu:#cdbb98;--pedge:#8a6a2a;--card:#2c2117;--ok:#5a9cf0;--ko:#f39a3c;--hbg:rgba(14,9,5,.94)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;overflow:hidden;background:#a9c9db;color:var(--ptx);font-family:"Avenir Next","Trebuchet MS","Segoe UI",system-ui,sans-serif;-webkit-text-size-adjust:100%;text-size-adjust:100%;overscroll-behavior:none}
+html.dark,html.dark body{background:#16293a}
+button{font:inherit;color:inherit;border:0;cursor:pointer;background:none}
+button[disabled]{opacity:.45;cursor:not-allowed}
+#map{position:fixed;inset:0;touch-action:none;user-select:none;-webkit-user-select:none}
+#map svg{width:100%;height:100%;display:block}
+.node{cursor:pointer}
+.lbl{font-weight:800;fill:#2a1606;paint-order:stroke;stroke:#fffaf0;stroke-linejoin:round;pointer-events:none}
+html.dark .lbl{fill:#fff6e3;stroke:#140e0a}
+.node.sel .lbl{fill:#7a1f2b}html.dark .node.sel .lbl{fill:var(--gold)}
+/* barra */
+#hud{position:fixed;top:0;left:0;right:0;z-index:5;background:var(--hbg);color:var(--htx);padding:calc(var(--st) + 6px) calc(var(--sr) + 10px) 6px calc(var(--sl) + 10px);border-bottom:2px solid var(--goldD);box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.hrow{display:flex;align-items:center;gap:8px;min-height:36px}
+.hrow.era b{font-family:Georgia,serif;font-size:15px;color:var(--gold);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:46vw}
+.hrow .yr{font-size:13px;font-weight:700;opacity:.85;white-space:nowrap}
+.sp{flex:1}
+.apb{color:var(--gold);font-size:18px;letter-spacing:2px}.apb i{font-style:normal;opacity:.25}
+.ib{min-width:38px;height:36px;border-radius:10px;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,216,92,.4);font-weight:800;padding:0 8px}
+.ib.wide{padding:0 12px}
+.hrow.res{gap:4px;justify-content:space-between}
+.r{display:flex;flex-direction:column;align-items:flex-start;min-width:0;flex:1;line-height:1.1}
+.r small{font-size:10px;letter-spacing:.06em;text-transform:uppercase;opacity:.75;font-weight:800}
+.r b{font-size:17px;font-variant-numeric:tabular-nums;color:#fff}
+.r em{font-style:normal;font-size:10px;color:var(--gold);font-weight:800}
+.r:first-child{flex:1.5}
+.mini{display:block;width:90%;max-width:70px;height:4px;border-radius:3px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:2px}
+.mini i{display:block;height:100%;background:var(--gold)}.mini.p i{background:#8fc0ff}
+.menu{display:none;gap:8px;padding:8px 0 4px;flex-wrap:wrap}.menu.on{display:flex}.menu .btn{flex:1;min-width:120px;margin:0}
+.pulse{animation:pu .5s}@keyframes pu{50%{transform:scale(1.25)}}
+/* panel */
+#panel{position:fixed;z-index:4;left:0;right:0;bottom:0;max-height:52vh;overflow:auto;-webkit-overflow-scrolling:touch;background:var(--pbg);color:var(--ptx);
+  border-top:3px solid var(--pedge);border-radius:18px 18px 0 0;padding:16px calc(var(--sr) + 16px) calc(var(--sb) + 14px) calc(var(--sl) + 16px);box-shadow:0 -8px 28px rgba(0,0,0,.35);transition:transform .28s ease;overscroll-behavior:contain}
+#panel.tall{max-height:70vh}#panel.short{max-height:40vh}
+#panel.out{transform:translateY(110%)}
+@media (min-width:700px) and (orientation:landscape){
+  #panel,#panel.tall,#panel.short{left:auto;top:var(--hudH,92px);width:400px;max-height:none;border-top:0;border-left:3px solid var(--pedge);border-radius:18px 0 0 0}
+  #panel.out{transform:translateX(110%)}
+}
+@media (min-width:1000px) and (orientation:landscape){#panel,#panel.tall,#panel.short{width:440px}}
+#panel h2{font-family:Georgia,"Times New Roman",serif;font-size:22px;margin:4px 0 8px;line-height:1.15}
+#panel h3{font-size:16px;margin:12px 0 8px}
+#panel p{font-size:15px;line-height:1.45;margin:0 0 10px}
+.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--pmu);border:1.5px solid var(--pedge);border-radius:999px;padding:2px 9px}
+.src,#panel p.src{font-size:12.5px;color:var(--pmu);line-height:1.4}
+.note,#panel p.note{background:var(--card);border-left:4px solid var(--gold2);border-radius:8px;padding:8px 10px;font-size:14px}
+.logo{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:50px;letter-spacing:.2em;color:var(--gold2);text-shadow:0 3px 0 #6a3a0a;text-align:center;line-height:1;margin:2px 0 4px}
+.tl{text-align:center;font-weight:700;color:var(--pmu)}
+details{margin-top:8px;font-size:14px}summary{cursor:pointer;font-weight:800;color:var(--pmu);padding:6px 0}
+.btn{display:block;width:100%;margin:8px 0;padding:13px 14px;border-radius:14px;font-weight:900;font-size:16px;color:var(--ink);background:linear-gradient(#ffe48a,var(--gold2));border:2px solid var(--goldD);box-shadow:0 4px 0 var(--goldD);text-align:center}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--goldD)}
+.btn.dark{background:#3a2a1a;color:#fff6e3;border-color:#1b120a;box-shadow:0 4px 0 #1b120a}
+.btn.blue{background:linear-gradient(#5a95ef,var(--blue));color:#fff;border-color:#1f4a99;box-shadow:0 4px 0 #1f4a99}
+.btn.hint{animation:gl 1.6s infinite}@keyframes gl{50%{box-shadow:0 4px 0 var(--goldD),0 0 0 6px rgba(255,216,92,.45)}}
+.row{display:flex;gap:10px}.row>*{flex:1}
+.stick{position:sticky;bottom:calc(-14px - var(--sb));background:linear-gradient(transparent,var(--pbg) 30%);padding:12px 0 2px;margin-top:4px}
+.opt{display:block;width:100%;text-align:left;margin:8px 0;padding:12px 14px;border-radius:12px;background:var(--card);border:2px solid var(--pedge);font-size:15px;line-height:1.35;color:var(--ptx)}
+.opt b{display:block}.opt small{display:block;font-size:12.5px;color:var(--pmu);margin-top:3px}
+.opt.act{font-weight:800}
+.opt.ok{border-color:var(--ok);box-shadow:inset 0 0 0 2px var(--ok)}.opt.ok::before{content:"✔ ";color:var(--ok)}
+.opt.ko{border-color:var(--ko);box-shadow:inset 0 0 0 2px var(--ko)}.opt.ko::before{content:"✖ ";color:var(--ko)}
+.opt.dim{opacity:.5}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.grid2 .opt{text-align:center;margin:0;padding:16px 8px;font-family:Georgia,serif;font-size:17px}
+.fb{border-radius:12px;padding:10px 12px;margin:10px 0;font-size:14.5px;line-height:1.4;background:var(--card)}
+.fb.ok{border:2px solid var(--ok)}.fb.ko{border:2px solid var(--ko)}
+.kv{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed var(--pedge);font-size:15px}
+.seg{display:flex;gap:6px;margin:8px 0}.sg{flex:1;padding:8px 4px;border-radius:12px;border:2px solid var(--pedge);background:var(--card);text-align:center;color:var(--ptx)}
+.sg b{display:block;font-size:15px}.sg small{display:block;font-size:11px;color:var(--pmu);line-height:1.2;margin-top:2px}
+.sg.on{background:linear-gradient(#ffe48a,var(--gold2));color:var(--ink);border-color:var(--goldD)}.sg.on small{color:#5a3a10}
+.stepper{display:flex;align-items:center;justify-content:center;gap:18px;margin:10px 0}
+.stepper button{width:48px;height:48px;border-radius:50%;font-size:26px;font-weight:900;background:var(--card);border:2px solid var(--pedge);color:var(--ptx)}
+.stepper .n{font-size:34px;font-weight:900;font-variant-numeric:tabular-nums;display:block;text-align:center;line-height:1}.stepper .u{font-size:12px;color:var(--pmu);font-weight:800}
+.money{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;background:var(--card);border-radius:12px;padding:10px 12px;font-size:14.5px;align-items:center}
+.money b{text-align:right;font-variant-numeric:tabular-nums}.money .y{grid-column:1/-1;text-align:right;font-size:12px;color:var(--pmu)}
+.delta{font-weight:900;white-space:nowrap}.delta.up{color:var(--ok)}.delta.dn{color:var(--ko)}.delta.z{color:var(--pmu)}
+.shout{text-align:center;font-family:Georgia,serif;font-size:28px;font-weight:700;margin:4px 0 10px}
+.dec{flex:1;border-radius:14px;padding:12px 8px;text-align:center;border:2px solid;background:var(--card);color:var(--ptx)}
+.dec.mis{border-color:var(--ok)}.dec.iug{border-color:var(--ko)}
+.dec .t{font-size:18px;font-weight:900}.dec .s{font-size:12px;color:var(--pmu);margin-bottom:6px}.dec .c{font-size:13px;line-height:1.45}
+.verdict{text-align:center;font-family:Georgia,serif;font-size:34px;font-weight:700;margin:6px 0}
+.chron{padding-left:18px;margin:6px 0 12px;font-size:14px;line-height:1.45}.chron li{margin-bottom:4px}.chron b{color:var(--pmu)}
+.quote{font-family:Georgia,serif;font-style:italic;font-size:15px;line-height:1.45;border-left:3px solid var(--gold2);padding:4px 0 4px 12px;margin:10px 0}
+/* cartel y aviso */
+#banner{position:fixed;z-index:6;left:50%;top:42%;transform:translate(-50%,-50%) scale(.8);opacity:0;pointer-events:none;text-align:center;background:rgba(42,22,6,.92);color:var(--gold);border:2px solid var(--gold2);border-radius:18px;padding:14px 26px;max-width:88vw}
+#banner b{display:block;font-family:Georgia,serif;font-size:30px;letter-spacing:.08em}#banner small{display:block;color:#fff6e3;font-weight:700;margin-top:4px}
+#banner.on{animation:bn 2.2s ease forwards}
+@keyframes bn{0%{opacity:0;transform:translate(-50%,-50%) scale(.8)}12%{opacity:1;transform:translate(-50%,-50%) scale(1.05)}20%{transform:translate(-50%,-50%) scale(1)}80%{opacity:1}100%{opacity:0;transform:translate(-50%,-50%) scale(1)}}
+#toast{position:fixed;z-index:7;left:50%;top:calc(var(--st) + 100px);transform:translateX(-50%) translateY(-10px);opacity:0;transition:.25s;background:#140e0a;color:#fff6e3;border:1.5px solid var(--gold2);border-radius:999px;padding:8px 16px;font-weight:800;font-size:14px;pointer-events:none;max-width:90vw;text-align:center}
+#toast.on{opacity:1;transform:translateX(-50%)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="map" aria-label="Mapa del Mediterráneo"></div>
+<div id="hud"></div>
+<div id="banner"></div>
+<div id="panel" class="out"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>// ===== Gens · base.js =====
+// ===== Editor · enlace con Historiapp y utilidades =====
+const IN_APP = (function () { try { if (!/\/juegos\//.test(location.pathname)) return false; for (let i = 0; i < localStorage.length; i++) { if (String(localStorage.key(i)).indexOf('historiapp.') === 0) return true; } } catch (e) {} return false; })();
+function lsGet(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } }
+function lsSet(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+function appLang() { try { const v = localStorage.getItem('historiapp.lang'); if (v) { const s = v.replace(/"/g, ''); if (s === 'es' || s === 'en') return s; } } catch (e) {} return null; }
+let LANG = (IN_APP ? appLang() : lsGet('gens.lang', null)) || appLang() || (/^es/i.test(navigator.language || 'es') ? 'es' : 'en');
+function addXP(n) { if (!IN_APP || !(n > 0)) return; try { const k = 'historiapp.progress'; const p = JSON.parse(localStorage.getItem(k)) || { xp: 0, streak: 0, lastDay: null, seen: {}, badges: {}, gl: {}, daily: {} }; p.xp = (p.xp || 0) + n; localStorage.setItem(k, JSON.stringify(p)); } catch (e) { return; } toast('+' + n + ' XP'); }
+function track(path) { try { if (window.goatcounter && goatcounter.count) goatcounter.count({ path: '/juego/gens/' + path, event: true }); } catch (e) {} }
+function fmtN(n) { const s = String(Math.round(Math.abs(n))); const r = s.replace(/\B(?=(\d{3})+(?!\d))/g, LANG === 'es' ? '.' : ','); return (n < 0 ? '−' : '') + r; }
+function HS(n) { return fmtN(n) + ' HS'; }
+function yrs(hs) { let s = (Math.round(hs / 1400 * 10) / 10).toFixed(1); if (s.endsWith('.0')) s = s.slice(0, -2); if (LANG === 'es') s = s.replace('.', ','); return s; }
+function yTxt(hs) { const s = yrs(hs); const one = s === '1'; return LANG === 'es' ? ('= ' + s + (one ? ' año' : ' años') + ' de legionario') : ('= ' + s + (one ? ' year' : ' years') + " of a legionary's pay"); }
+function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+function L(o) { return o ? (o[LANG] || o.es) : ''; }
+function md(s) { return String(s).replace(/\*([^*]+)\*/g, '<em>$1</em>'); }
+function dl(n) { return '<span class="delta ' + (n > 0 ? 'up' : n < 0 ? 'dn' : 'z') + '">' + (n > 0 ? '▲ +' : n < 0 ? '▼ ' : '= ') + n + '</span>'; }
+let toastT = null; function toast(s) { const t = document.getElementById('toast'); if (!t) return; t.textContent = s; t.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('on'), 1900); }
+function buzz(ms) { try { if (navigator.vibrate) navigator.vibrate(ms); } catch (e) {} }
+
+// ===== Gens · sound.js =====
+// ===== Editor · sonido sintetizado (sin archivos) =====
+/* Sonido sintetizado, sin archivos; nada suena hasta el primer toque */
+const SND={on:lsGet("gens.sound",true),ctx:null};
+function ac(){if(!SND.on)return null;try{if(!SND.ctx)SND.ctx=new (window.AudioContext||window.webkitAudioContext)();if(SND.ctx.state==="suspended")SND.ctx.resume();return SND.ctx}catch(e){return null}}
+function tone(f,d,type,vol,when,slide){const c=ac();if(!c)return;const t=c.currentTime+(when||0);const o=c.createOscillator(),g=c.createGain();o.type=type||"sine";o.frequency.setValueAtTime(f,t);if(slide)o.frequency.exponentialRampToValueAtTime(slide,t+d);g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(vol||.15,t+.02);g.gain.exponentialRampToValueAtTime(0.0001,t+d);o.connect(g).connect(c.destination);o.start(t);o.stop(t+d+.05)}
+function noise(d,vol,freq,q,when){const c=ac();if(!c)return;const t=c.currentTime+(when||0);const len=Math.floor(c.sampleRate*d);const b=c.createBuffer(1,len,c.sampleRate);const x=b.getChannelData(0);for(let i=0;i<len;i++)x[i]=(Math.random()*2-1);const s=c.createBufferSource();s.buffer=b;const f=c.createBiquadFilter();f.type="bandpass";f.frequency.value=freq||900;f.Q.value=q||.7;const g=c.createGain();g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(vol||.2,t+d*.25);g.gain.exponentialRampToValueAtTime(0.0001,t+d);s.connect(f).connect(g).connect(c.destination);s.start(t)}
+const SFX={
+ tap(){tone(660,.06,"triangle",.06)},
+ coin(){tone(1320,.08,"square",.05);tone(1760,.12,"square",.04,.07)},
+ good(){tone(523,.12,"triangle",.12);tone(659,.12,"triangle",.12,.1);tone(784,.2,"triangle",.12,.2)},
+ bad(){tone(330,.18,"sawtooth",.07,0,250);tone(247,.28,"sawtooth",.06,.16,180)},
+ cheer(){noise(1.4,.22,1100,.5);noise(1.1,.12,2400,1,.2)},
+ boo(){noise(1.2,.18,380,.9);tone(140,.9,"sawtooth",.04,0,110)},
+ tuba(){[196,196,262,330].forEach((f,i)=>tone(f,.22,"sawtooth",.07,i*.2))},
+ hoof(){for(let i=0;i<14;i++)noise(.06,.08,300,2,i*.12)},
+ fanfare(){[392,523,659,784,1047].forEach((f,i)=>tone(f,.25,"triangle",.11,i*.13))}
+};
+
+
+/* Ambiente de grada: ruido filtrado en bucle, con volumen según el ánimo */
+const AMB={g:null,src:null,set(level){const c=ac();if(!c)return;if(!AMB.g){const len=c.sampleRate*2,b=c.createBuffer(1,len,c.sampleRate),x=b.getChannelData(0);let last=0;for(let i=0;i<len;i++){last=last*.97+(Math.random()*2-1)*.03;x[i]=last*6+(Math.random()*2-1)*.04}const s=c.createBufferSource();s.buffer=b;s.loop=true;const f=c.createBiquadFilter();f.type='bandpass';f.frequency.value=700;f.Q.value=.4;const g=c.createGain();g.gain.value=0;s.connect(f).connect(g).connect(c.destination);s.start();AMB.g=g;AMB.src=s}AMB.g.gain.setTargetAtTime(SND.on?level:0,c.currentTime,.4)}};
+
+// ===== Gens · data.js =====
+// ===== Gens · datos, épocas, sucesos y textos (castellano e inglés) =====
+// Regla: solo datos que están en pantalla en «TEMA 4. Etruria y Roma - 21 OCT» (Dnn = diapositiva).
+// Lo que no está en el tema es convención del juego y se dice en pantalla (CONV).
+const CFG = {
+  pay: 1400,                              // D36: paga anual de un legionario
+  census: 1000000,                        // D84, D115: patrimonio mínimo de un senador
+  tier: { s: 2000, m: 7500, c: 50000 },   // D37: día de munus en ciudad pequeña, media (punto medio de 5.000-10.000, CONV) y capital
+  glad: { cond: 600, vol: 2000, vet: 12000, top: 15000 }, // D55: precios máximos de 177 d. C.
+  // CONV (convenciones del juego)
+  start: 400000, rent: 60000, manage: 60000, decay: .85, ap: 2,
+  build: { amph: 600000, therm: 150000 },
+  fav: { munus: 6, venat: 4, ludi: 5, amphBonus: 3, beasts: 3, mY: 6, mN: -8, iY: 8, iN: -4, sI: 3, sM: 0 },
+  glo: { edil: 6, consul: 12, senate: 8, duo: 4, amph: 10, therm: 4, quiz: 3, bigGames: 2 },
+  elect: { edil: 35, consul: 55, consulPre: 30 },
+  crowdBag: ['m', 'm', 'm', 'i', 'i', 'i', 's', 's'],
+  gladBag: ['vol', 'vol', 'vol', 'vet', 'vet', 'vet', 'top', 'top']
+};
+
+/* Ciudades y lugares. tier: s/m/c (coste del día de juegos); g: se pueden dar juegos; r: recurso. lon/lat aproximados. */
+const CITIES = [
+  { id: 'roma', lon: 12.5, lat: 41.9, tier: 'c', g: true, b: { circ: 1 }, n: { es: 'Roma', en: 'Rome' }, src: 'D76, D98' },
+  { id: 'capua', lon: 14.25, lat: 41.08, tier: 'm', g: true, r: 'ludus', n: { es: 'Capua', en: 'Capua' }, src: 'D53' },
+  { id: 'pompeya', lon: 14.48, lat: 40.75, tier: 's', g: true, b: { amph: 1 }, n: { es: 'Pompeya', en: 'Pompeii' }, src: 'D44, D53' },
+  { id: 'fucino', lon: 13.55, lat: 42.0, n: { es: 'Lago Fucino', en: 'Lake Fucinus' }, src: 'D72' },
+  { id: 'urso', lon: -5.1, lat: 37.24, tier: 's', g: true, n: { es: 'Urso (Osuna)', en: 'Urso (Osuna)' }, src: 'D37' },
+  { id: 'italica', lon: -6.04, lat: 37.44, tier: 'm', g: true, n: { es: 'Itálica', en: 'Italica' }, src: 'D44, D73' },
+  { id: 'merida', lon: -6.34, lat: 38.92, tier: 'm', g: true, r: 'horses', n: { es: 'Mérida (Lusitania)', en: 'Mérida (Lusitania)' }, src: 'D80, D84' },
+  { id: 'cartago', lon: -0.99, lat: 37.6, tier: 'm', g: true, n: { es: 'Carthago Nova', en: 'Carthago Nova' }, src: 'D73' },
+  { id: 'eldjem', lon: 10.7, lat: 35.3, tier: 'm', g: true, n: { es: 'El Djem', en: 'El Djem' }, src: 'D44, D73' },
+  { id: 'pula', lon: 13.85, lat: 44.87, tier: 'm', g: true, n: { es: 'Pula', en: 'Pula' }, src: 'D44' },
+  { id: 'efeso', lon: 27.34, lat: 37.94, tier: 'm', g: true, n: { es: 'Éfeso', en: 'Ephesus' }, src: 'D64' },
+  { id: 'halic', lon: 27.42, lat: 37.04, tier: 'm', g: true, n: { es: 'Halicarnaso', en: 'Halicarnassus' }, src: 'D67' },
+  { id: 'mauri', lon: -5.5, lat: 34.0, r: 'beasts', n: { es: 'Mauritania', en: 'Mauretania' }, src: 'D71' },
+  { id: 'egipto', lon: 30.0, lat: 30.6, r: 'beasts', n: { es: 'Egipto', en: 'Egypt' }, src: 'D71' },
+  { id: 'sicilia', lon: 14.1, lat: 37.5, r: 'horses', n: { es: 'Sicilia', en: 'Sicily' }, src: 'D81' },
+  { id: 'tesalia', lon: 22.3, lat: 39.6, r: 'horses', n: { es: 'Tesalia', en: 'Thessaly' }, src: 'D81' },
+  { id: 'capadocia', lon: 35.0, lat: 38.7, r: 'horses', n: { es: 'Capadocia', en: 'Cappadocia' }, src: 'D81' },
+  { id: 'olimpia', lon: 21.63, lat: 37.64, n: { es: 'Olimpia', en: 'Olympia' }, src: 'D105' },
+  { id: 'constan', lon: 28.97, lat: 41.01, tier: 'c', n: { es: 'Constantinopla', en: 'Constantinople' }, src: 'D114' }
+];
+
+/* Épocas. turns: años jugables; rules: tarjeta de reglas al empezar (se anuncia antes de castigar). */
+const ERAS = [
+  { id: 1, turns: 2, years: ['264 a. C.', '250 a. C.'], focus: 'roma',
+    t: { es: 'I. Los primeros munera', en: 'I. The first munera' },
+    rules: { es: 'El primer combate de gladiadores documentado en Roma se fecha en 264 a. C., cuando tres parejas de esclavos combatieron en el Foro Boario, el mercado de ganado junto al Tíber, en el *munus* de un padre difunto. El *munus* era la obligación de un hijo con su padre muerto, mientras que los *ludi* del calendario religioso los pagaba el Estado. En esta época solo puedes dar juegos en Roma.',
+             en: 'The first documented gladiatorial combat in Rome dates from 264 BC, when three pairs of slaves fought in the Forum Boarium, the cattle market by the Tiber, at the *munus* of a dead father. The *munus* was a son\'s obligation to his dead father, while the *ludi* of the religious calendar were paid for by the State. In this period you can only give games in Rome.' },
+    src: 'D34, D47' },
+  { id: 2, turns: 4, years: ['105 a. C.', '73 a. C.', '65 a. C.', '44 a. C.'], focus: 'roma',
+    t: { es: 'II. La República de los ediles', en: 'II. The Republic of the aediles' },
+    rules: { es: 'Los magistrados se elegían cada año, no cobraban y formaban una carrera, el *cursus honorum*, cuyo grado más alto eran los dos cónsules. Los juegos del calendario corrían a cargo de los ediles, que solían añadir su dinero, y para ellos eran una «ocasión extraordinaria de propaganda electoral», ya que el pueblo que los disfrutaba era el mismo que les votaba. Ahora puedes presentarte a edil y después a cónsul.',
+             en: 'Magistrates were elected every year, were unpaid and formed a career, the *cursus honorum*, whose highest rank was the two consuls. The calendar games were the responsibility of the aediles, who usually added their own money, and for them they were an “extraordinary opportunity for electoral propaganda”, since the people who enjoyed them were the same people who voted for them. You can now stand for aedile and then for consul.' },
+    src: 'D25 (Roldán, 1990); D35' },
+  { id: 3, turns: 3, years: ['27 a. C.', '11 d. C.', '14 d. C.'], focus: 'all',
+    t: { es: 'III. Augusto', en: 'III. Augustus' },
+    rules: { es: 'Augusto mantuvo las instituciones, aunque las dejó sin poder real, y los magistrados conservaron únicamente el prestigio del título. El emperador se convirtió en el gran patrocinador y en Roma buscó reservarse los grandes espectáculos, mientras en las provincias siguieron pagándolos los magistrados de cada ciudad. Desde ahora no puedes dar juegos en Roma, los cargos solo dan prestigio y tu carrera sigue en las provincias.',
+             en: 'Augustus kept the institutions, although he left them without real power, and the magistrates kept only the prestige of the title. The emperor became the great sponsor and in Rome he sought to keep the great shows for himself, while in the provinces the magistrates of each town went on paying for them. From now on you cannot give games in Rome, offices only bring prestige and your career continues in the provinces.' },
+    src: 'D25 (Woolf, 2012); D35 (Scheidel et al., 2007)' },
+  { id: 4, turns: 4, years: ['52 d. C.', '80 d. C.', '107 d. C.', '177 d. C.'], focus: 'all',
+    t: { es: 'IV. El Alto Imperio', en: 'IV. The High Empire' },
+    rules: { es: 'Es el apogeo de los combates, con la construcción del Coliseo. En Occidente cualquier ciudad de cierta entidad quería su anfiteatro, pagado por sus élites locales, y por eso fue uno de los símbolos más reconocibles de la romanización. En Roma, en cambio, los grandes espectáculos acabaron en manos del poder imperial, y un particular necesitaba permiso para dar juegos.',
+             en: 'This is the heyday of the fights, with the building of the Colosseum. In the West any town of some standing wanted its amphitheatre, paid for by its local elites, which is why it became one of the most recognisable symbols of Romanisation. In Rome, by contrast, the great shows ended up in the hands of imperial power, and a private individual needed permission to give games.' },
+    src: 'D44 (Toner, 2014); D47; D52' },
+  { id: 5, turns: 3, years: ['200 d. C.', 'siglo IV', 'hacia 440'], yearsEn: ['AD 200', '4th century', 'around 440'], focus: 'all',
+    t: { es: 'V. El final en Occidente', en: 'V. The end in the West' },
+    rules: { es: 'Los espectáculos romanos no se prohibieron en un año concreto, y cada uno siguió su propia cronología. Los combates de gladiadores fueron los primeros en desaparecer, y Jiménez Sánchez (2002) pone por delante el coste, dado que la gladiatura era el espectáculo más caro. En esta época los juegos te cuestan más y, en el último turno, ya no habrá *munus*.',
+             en: 'Roman shows were not banned in any particular year, and each followed its own chronology. Gladiatorial fights were the first to disappear, and Jiménez Sánchez (2002) puts cost first, since gladiatorial combat was the most expensive show. In this period games cost you more and, in the last turn, there will be no more *munus*.' },
+    src: 'D113' }
+];
+
+/* Sucesos: uno por turno, en orden cronológico. eff: pat (HS), fav, pre, glo, set (marcas). ok: la opción acorde con el tema. */
+const EVENTS = {
+  1: [
+    { id: 'funeral', t: { es: 'La muerte de tu padre', en: 'Your father\'s death' },
+      x: { es: 'Tu padre ha muerto. La palabra *munus* significaba a la vez «deber» y «regalo», y en origen era la obligación de un hijo con su padre muerto, al que honraba con un combate de gladiadores.', en: 'Your father has died. The word *munus* meant both “duty” and “gift”, and originally it was a son\'s obligation to his dead father, whom he honoured with a gladiatorial combat.' },
+      o: [{ t: { es: 'Ofrecer un munus con tres parejas en su honor', en: 'Offer a munus with three pairs in his honour' }, ok: true, eff: { pat: -20000, fav: 6, pre: 8, glo: 2 }, fb: { es: 'Cumples con el deber del hijo, como en el primer combate documentado, el de 264 a. C. El coste es una convención del juego.', en: 'You fulfil the son\'s duty, as in the first documented fight, that of 264 BC. The cost is a game convention.' } },
+          { t: { es: 'Enterrarlo sin juegos', en: 'Bury him without games' }, ok: false, eff: { pre: -6 }, fb: { es: 'La familia ahorra, pero falta a la obligación del hijo con su padre muerto.', en: 'The family saves money, but fails in the son\'s obligation to his dead father.' } }],
+      src: 'D34 (Dunkle, 2013); D47' },
+    { id: 'ludi', t: { es: 'Los ludi del calendario', en: 'The calendar ludi' },
+      x: { es: 'Llegan las fiestas del calendario religioso, ofrecidas a los dioses, con carreras de carros en el circo y representaciones teatrales. El pueblo pregunta si las pagas tú.', en: 'The festivals of the religious calendar arrive, offered to the gods, with chariot races in the circus and theatre performances. The people ask whether you are paying for them.' },
+      o: [{ t: { es: 'No, los ludi los paga el Estado', en: 'No, the State pays for the ludi' }, ok: true, eff: { pre: 3 }, fb: { es: 'Así es. Los *ludi* eran juegos públicos pagados en origen por el Estado, con fecha fija, mientras que el *munus* dependía de la voluntad y del bolsillo de quien lo ofrecía.', en: 'Correct. The *ludi* were public games originally paid for by the State, with a fixed date, while the *munus* depended on the will and the purse of whoever offered it.' } },
+          { t: { es: 'Sí, cada familia paga sus ludi', en: 'Yes, each family pays for its ludi' }, ok: false, eff: { pre: -2 }, fb: { es: 'En origen los *ludi* los pagaba el Estado; lo que dependía del bolsillo de un particular era el *munus*.', en: 'Originally the *ludi* were paid for by the State; what depended on a private purse was the *munus*.' } }],
+      src: 'D34' }
+  ],
+  2: [
+    { id: 'capua', t: { es: '105 a. C. · Maestros de esgrima', en: '105 BC · Fencing masters' },
+      x: { es: 'Los cónsules han llevado maestros de una escuela de gladiadores para adiestrar a sus soldados, y la escuela de Capua funciona ya este año. Muchos políticos financian gladiadores para su autopromoción.', en: 'The consuls have brought masters from a gladiatorial school to train their soldiers, and the school at Capua is already running this year. Many politicians fund gladiators for their self-promotion.' },
+      o: [{ t: { es: 'Contratar una tropa al lanista de Capua', en: 'Hire a troupe from the lanista at Capua' }, ok: true, eff: { pat: -40000, set: { troupe: 1 } }, fb: { es: 'Tienes tropa propia en Capua: tus *munera* rinden más favor. Coste de convención del juego.', en: 'You have your own troupe at Capua: your *munera* bring more favour. Game-convention cost.' } },
+          { t: { es: 'Esperar', en: 'Wait' }, ok: true, eff: {}, fb: { es: 'Guardas el dinero para más adelante.', en: 'You keep the money for later.' } }],
+      src: 'D47; D53' },
+    { id: 'espartaco', t: { es: '73 a. C. · La fuga de Capua', en: '73 BC · The escape from Capua' },
+      x: { es: 'De la escuela de Capua se ha fugado Espartaco. Las escuelas encerraban a hombres armados, y una revuelta o una baja ponían en riesgo la inversión.', en: 'Spartacus has escaped from the school at Capua. The schools held armed men, and a revolt or a loss put the investment at risk.' },
+      o: [{ t: { es: 'Asumir las pérdidas', en: 'Accept the losses' }, ok: true, eff: { lose: 'troupe' }, fb: { es: 'Si tenías tropa en Capua, la has perdido.', en: 'If you had a troupe at Capua, you have lost it.' } }],
+      src: 'D53; D55' },
+    { id: 'cesar', t: { es: '65 a. C. · 320 parejas', en: '65 BC · 320 pairs' },
+      x: { es: 'A César se le atribuyen 320 parejas de gladiadores en 65 a. C. Un rival político ha dado unos juegos enormes y el pueblo compara.', en: '320 pairs of gladiators are attributed to Caesar in 65 BC. A political rival has given enormous games and the people are comparing.' },
+      o: [{ t: { es: 'Responder con unos juegos mayores', en: 'Respond with bigger games' }, ok: true, eff: { pat: -100000, fav: 8 }, fb: { es: 'Mantienes el favor del pueblo, a un precio alto (convención del juego).', en: 'You keep the people\'s favour, at a high price (game convention).' } },
+          { t: { es: 'No competir', en: 'Do not compete' }, ok: true, eff: { fav: -8 }, fb: { es: 'El pueblo que disfrutaba los juegos era el mismo que votaba, y se acuerda de quién se los dio.', en: 'The people who enjoyed the games were the same people who voted, and they remember who gave them.' } }],
+      src: 'D47' },
+    { id: 'urso', t: { es: '44 a. C. · La ley de Urso', en: '44 BC · The law of Urso' },
+      x: { es: 'La colonia de Urso, la actual Osuna, te ofrece ser uno de sus dos duunviros. Su ley obliga a dar cada año cuatro días de espectáculos con 2.000 sestercios públicos y otros 2.000 del bolsillo del magistrado.', en: 'The colony of Urso, today Osuna, offers you a post as one of its two duumviri. Its law requires four days of shows every year with 2,000 sesterces of public money and another 2,000 from the magistrate\'s pocket.' },
+      o: [{ t: { es: 'Aceptar el cargo y dar los cuatro días', en: 'Accept the office and give the four days' }, ok: true, eff: { pat: -2000, pre: 4, glo: 4, fav: 3, set: { duo: 1 } }, fb: { es: 'Pones los 2.000 sestercios que fija la ley y la colonia te lo reconoce.', en: 'You put in the 2,000 sesterces set by the law and the colony acknowledges it.' } },
+          { t: { es: 'Rechazarlo', en: 'Turn it down' }, ok: true, eff: {}, fb: { es: 'Sigues centrado en Roma.', en: 'You stay focused on Rome.' } }],
+      src: 'D37 (Ceballos Hornero, 2007)' }
+  ],
+  3: [
+    { id: 'grada', t: { es: 'La lex Iulia theatralis', en: 'The lex Iulia theatralis' },
+      x: { es: 'Una ley de Augusto reparte los asientos de teatros y anfiteatros por grupos sociales, de modo que la grada reproduce la jerarquía de la ciudad. Los acomodadores te preguntan dónde van las mujeres.', en: 'A law of Augustus allocates the seats of theatres and amphitheatres by social group, so that the stands reproduce the hierarchy of the city. The ushers ask you where the women go.' },
+      o: [{ t: { es: 'En lo más alto, en el graderío de madera', en: 'At the top, in the wooden seating' }, ok: true, eff: { pre: 4 }, fb: { es: 'Las mujeres quedaban en lo alto; las vestales eran la única excepción femenina. En el Coliseo, según Bomgardner (2000), tenían el 19 % de los asientos.', en: 'Women sat high up; the Vestals were the only female exception. In the Colosseum, according to Bomgardner (2000), they had 19% of the seats.' } },
+          { t: { es: 'En el podio, junto a la arena', en: 'On the podium, by the arena' }, ok: false, eff: { pre: -4 }, fb: { es: 'El podio era del emperador, los senadores y las vestales. Ir a los juegos era ver y ser visto, cada uno en su sitio.', en: 'The podium belonged to the emperor, the senators and the Vestals. Going to the games meant seeing and being seen, each in his or her place.' } }],
+      src: 'D38, D39 (Bomgardner, 2000)' },
+    { id: 'joven', t: { es: '11 d. C. · Una joven quiere salir a la arena', en: 'AD 11 · A young woman wants to enter the arena' },
+      x: { es: 'Una joven libre de tu familia, de diecisiete años, quiere exhibirse en la arena. Una norma de este año veta la arena a las mujeres libres menores de veinte años, y los autores antiguos solo condenan a las de familia senatorial o ecuestre.', en: 'A free young woman of your family, seventeen years old, wants to perform in the arena. A rule of this year bans free women under twenty from the arena, and ancient authors only condemn those of senatorial or equestrian family.' },
+      o: [{ t: { es: 'Impedirlo, como manda la norma', en: 'Prevent it, as the rule requires' }, ok: true, eff: { pre: 3 }, fb: { es: 'Lo que escandalizaba a los romanos era, según Coleman (2000), el rango antes que el sexo.', en: 'What scandalised the Romans was, according to Coleman (2000), rank rather than sex.' } },
+          { t: { es: 'Permitirlo', en: 'Allow it' }, ok: false, eff: { pre: -10 }, fb: { es: 'Incumples la norma de 11 d. C., y una familia de tu rango queda en entredicho.', en: 'You break the rule of AD 11, and a family of your rank falls into disrepute.' } }],
+      src: 'D67' },
+    { id: 'griego', t: { es: 'El certamen de Augusto', en: 'Augustus\'s contest' },
+      x: { es: 'Augusto celebra desde 28 a. C. un certamen gímnico cada cuatro años en un estadio de madera del Campo de Marte. Tu hijo quiere competir desnudo, como los atletas griegos.', en: 'Since 28 BC Augustus has held a gymnastic contest every four years in a wooden stadium on the Campus Martius. Your son wants to compete naked, like the Greek athletes.' },
+      o: [{ t: { es: 'Que mire desde la grada', en: 'He should watch from the stands' }, ok: true, eff: { pre: 3 }, fb: { es: 'El ciudadano romano miraba desde la grada. Un escritor del siglo I a. C. recordó que vencer en Olimpia era en Grecia el mayor honor y en Roma traía deshonra.', en: 'The Roman citizen watched from the stands. A 1st-century BC writer recalled that winning at Olympia was the greatest honour in Greece and brought dishonour in Rome.' } },
+          { t: { es: 'Que compita', en: 'Let him compete' }, ok: false, eff: { pre: -6 }, fb: { es: 'Para el poeta Ennio, desnudarse entre ciudadanos era el principio del vicio, y los romanos se ejercitaban con taparrabos.', en: 'For the poet Ennius, stripping among citizens was the beginning of vice, and Romans exercised in loincloths.' } }],
+      src: 'D105; D106' }
+  ],
+  4: [
+    { id: 'fucino', t: { es: '52 d. C. · La naumaquia del Fucino', en: 'AD 52 · The naumachia on the Fucinus' },
+      x: { es: 'Claudio ofrece en el lago Fucino una batalla naval con 19.000 hombres. Su enorme coste reservaba las naumaquias para ocasiones excepcionales, en las que se mostraba un poder capaz de dominar el agua y de disponer de miles de vidas.', en: 'Claudius stages a naval battle with 19,000 men on Lake Fucinus. Their enormous cost kept naumachiae for exceptional occasions, which displayed a power able to master water and to dispose of thousands of lives.' },
+      o: [{ t: { es: 'Asistir como invitado', en: 'Attend as a guest' }, ok: true, eff: { pre: 2 }, fb: { es: 'Ningún particular podía igualar algo así: el gran espectáculo era ya cosa del emperador.', en: 'No private individual could match such a thing: great spectacle now belonged to the emperor.' } }],
+      src: 'D72 (Coleman, 1993; Taylor, 1997)' },
+    { id: 'coliseo', t: { es: '80 d. C. · El Coliseo', en: 'AD 80 · The Colosseum' },
+      x: { es: 'Tito inaugura el Anfiteatro Flavio con cien días de juegos. Tenía capacidad para más de 50.000 espectadores, y los restos de su inscripción apuntan a que se pagó con el botín de la guerra de Judea, de ahí que fuera a la vez un monumento de victoria y un regalo al pueblo.', en: 'Titus inaugurates the Flavian Amphitheatre with a hundred days of games. It held more than 50,000 spectators, and the remains of its inscription suggest it was paid for with the spoils of the Judaean war, so that it was both a victory monument and a gift to the people.' },
+      o: [{ t: { es: 'Llevar tu evergetismo a las provincias', en: 'Take your euergetism to the provinces' }, ok: true, eff: { pre: 2 }, fb: { es: 'En provincias siguieron pagando los magistrados de cada ciudad, y allí tu dinero todavía cuenta.', en: 'In the provinces the magistrates of each town went on paying, and there your money still counts.' } }],
+      src: 'D45 (Bomgardner, 2000); D35' },
+    { id: 'trajano', t: { es: '107 d. C. · Los juegos de Trajano', en: 'AD 107 · Trajan\'s games' },
+      x: { es: 'Los juegos de Trajano por su victoria en la Dacia duran 123 días y reúnen a unos diez mil gladiadores, y en ellos mueren unos 11.000 animales. Tu ciudad te pide algo a la altura.', en: 'Trajan\'s games for his victory in Dacia last 123 days and bring together some ten thousand gladiators, and some 11,000 animals die in them. Your town asks you for something to match.' },
+      o: [{ t: { es: 'Dar juegos en tu ciudad, a tu escala', en: 'Give games in your town, on your scale' }, ok: true, eff: { fav: 4, pat: -30000 }, fb: { es: 'El rico pagaba por divertir a los demás porque a cambio recibía reconocimiento (Ceballos Hornero, 2007; Lomas y Cornell, 2003). Coste de convención.', en: 'The rich man paid to entertain others because he received recognition in return (Ceballos Hornero, 2007; Lomas & Cornell, 2003). Convention cost.' } },
+          { t: { es: 'No hacer nada', en: 'Do nothing' }, ok: true, eff: { fav: -6 }, fb: { es: 'Tu ciudad compara y tu favor baja.', en: 'Your town compares and your favour falls.' } }],
+      src: 'D47; D48; D69' },
+    { id: 'diocles', t: { es: 'Diocles, el auriga', en: 'Diocles, the charioteer' },
+      x: { es: 'Diocles, un liberto de Lusitania, corrió veinticuatro años, de 122 a 146 d. C., y su inscripción suma 35.863.120 sestercios en premios. ¿Cuántas veces el censo senatorial de un millón reunió?', en: 'Diocles, a freedman from Lusitania, raced for twenty-four years, from AD 122 to 146, and his inscription adds up to 35,863,120 sesterces in prizes. How many times the senatorial census of one million did he amass?' },
+      o: [{ t: { es: 'Casi treinta y seis veces', en: 'Almost thirty-six times' }, ok: true, eff: { pre: 3 }, fb: { es: 'Así es, el sueldo de más de 25.000 años de un legionario. Bell (2020) lo compara con Tiger Woods.', en: 'Correct, more than 25,000 years of a legionary\'s pay. Bell (2020) compares him with Tiger Woods.' } },
+          { t: { es: 'Unas tres veces', en: 'About three times' }, ok: false, eff: {}, fb: { es: 'Fueron casi treinta y seis veces el censo senatorial.', en: 'It was almost thirty-six times the senatorial census.' } }],
+      src: 'D84 (Vamplew, 2023)' }
+  ],
+  5: [
+    { id: 'decreto', t: { es: '200 d. C. · El decreto imperial', en: 'AD 200 · The imperial decree' },
+      x: { es: 'Un lanista te ofrece dos mujeres armadas como gladiadores, como Amazona y Achillia en el relieve de Halicarnaso. Este año, un decreto imperial prohíbe combatir a todas las mujeres.', en: 'A lanista offers you two women armed as gladiators, like Amazon and Achillia on the Halicarnassus relief. This year an imperial decree forbids all women to fight.' },
+      o: [{ t: { es: 'Rechazarlas, como manda el decreto', en: 'Turn them down, as the decree requires' }, ok: true, eff: { pre: 2 }, fb: { es: 'Las fuentes literarias las mencionan menos de diez veces hasta el año 200, y desde entonces quedaron prohibidas.', en: 'Literary sources mention them fewer than ten times up to the year 200, and from then on they were banned.' } },
+          { t: { es: 'Anunciarlas en tu munus', en: 'Announce them in your munus' }, ok: false, eff: { pre: -8 }, fb: { es: 'Incumples el decreto imperial del año 200.', en: 'You break the imperial decree of the year 200.' } }],
+      src: 'D67' },
+    { id: 'calendario', t: { es: 'Siglo IV · 176 días de juegos', en: '4th century · 176 days of games' },
+      x: { es: 'Los días de juegos se han multiplicado, desde 65 bajo Augusto y 80 bajo Tiberio hasta 176, aunque solo 10 son de gladiadores en el calendario oficial. ¿Por qué tan pocos?', en: 'The days of games have multiplied, from 65 under Augustus and 80 under Tiberius to 176, although only 10 are gladiatorial days in the official calendar. Why so few?' },
+      o: [{ t: { es: 'Porque la gladiatura era el espectáculo más caro', en: 'Because gladiatorial combat was the most expensive show' }, ok: true, eff: { pre: 3 }, fb: { es: 'Jiménez Sánchez (2002) pone el coste por delante de la crítica cristiana para explicar su final.', en: 'Jiménez Sánchez (2002) puts cost ahead of Christian criticism to explain its end.' } },
+          { t: { es: 'Porque una ley los prohibió', en: 'Because a law banned them' }, ok: false, eff: {}, fb: { es: 'En Occidente ninguna ley les puso fin.', en: 'In the West no law put an end to them.' } }],
+      src: 'D33; D113' },
+    { id: 'convoy', t: { es: '417 d. C. · Los convoyes de fieras', en: 'AD 417 · The convoys of beasts' },
+      x: { es: 'Un edicto obliga a las ciudades de paso a alimentar a los convoyes de fieras. La captura de animales tenía costes, y bajo Augusto ya se notaba la escasez de fieras en el norte de África.', en: 'An edict obliges the towns along the way to feed the convoys of beasts. Capturing animals had its costs, and under Augustus the shortage of beasts in North Africa was already noticeable.' },
+      o: [{ t: { es: 'Pagar la parte de tu ciudad', en: 'Pay your town\'s share' }, ok: true, eff: { pat: -20000, pre: 2 }, fb: { es: 'Las fieras siguen llegando, a un precio mayor (coste de convención).', en: 'The beasts keep arriving, at a higher price (convention cost).' } }],
+      src: 'D71 (Bomgardner, 1992)' }
+  ]
+};
+
+/* Pregunta de cierre de cada época (gloria si se acierta). La correcta es la primera. */
+const ERA_Q = {
+  1: { q: { es: '¿Qué significaba munus?', en: 'What did munus mean?' }, a: [{ es: 'A la vez «deber» y «regalo»', en: 'Both “duty” and “gift”' }, { es: 'Carrera de carros', en: 'Chariot race' }, { es: 'Escuela de gladiadores', en: 'Gladiatorial school' }], x: 'D34' },
+  2: { q: { es: '¿Por qué los ediles pagaban juegos?', en: 'Why did the aediles pay for games?' }, a: [{ es: 'El pueblo que los disfrutaba era el que les votaba', en: 'The people who enjoyed them were those who voted' }, { es: 'La entrada les daba beneficios', en: 'Tickets brought them a profit' }, { es: 'Se lo ordenaba el emperador', en: 'The emperor ordered them to' }], x: 'D35' },
+  3: { q: { es: '¿Qué hizo la lex Iulia theatralis?', en: 'What did the lex Iulia theatralis do?' }, a: [{ es: 'Repartir los asientos por grupos sociales', en: 'Allocate seats by social group' }, { es: 'Prohibir los combates', en: 'Ban the fights' }, { es: 'Fijar el precio de los gladiadores', en: 'Set the price of gladiators' }], x: 'D38' },
+  4: { q: { es: '¿Qué necesitaba un particular para dar juegos en Roma?', en: 'What did a private individual need to give games in Rome?' }, a: [{ es: 'Permiso del poder imperial', en: 'Permission from imperial power' }, { es: 'Ser auriga', en: 'To be a charioteer' }, { es: 'Nada, eran libres', en: 'Nothing, they were free' }], x: 'D52' },
+  5: { q: { es: '¿Qué espectáculo desapareció primero en Occidente?', en: 'Which show disappeared first in the West?' }, a: [{ es: 'Los combates de gladiadores', en: 'Gladiatorial combat' }, { es: 'Las carreras de carros', en: 'Chariot racing' }, { es: 'Las cacerías', en: 'The hunts' }], x: 'D113' }
+};
+
+const EPILOGUE = {
+  t: { es: 'Epílogo · Constantinopla, 532', en: 'Epilogue · Constantinople, 532' },
+  x: { es: 'Mientras Occidente perdía sus juegos, en Constantinopla las carreras continuaron durante siglos, con los Azules y los Verdes como facciones principales, y el hipódromo era, tras el palacio y la gran iglesia de Santa Sofía, el tercer centro de la vida política, donde el pueblo pedía y aclamaba. En 532 la revuelta Nika («vence») unió a Azules y Verdes, que incendiaron buena parte de la ciudad y aclamaron a otro emperador, y la represión terminó con unos treinta mil muertos en el propio hipódromo.',
+       en: 'While the West was losing its games, in Constantinople the races went on for centuries, with the Blues and the Greens as the main factions, and the hippodrome was, after the palace and the great church of Hagia Sophia, the third centre of political life, where the people petitioned and acclaimed. In 532 the Nika (“win”) revolt united Blues and Greens, who burned much of the city and acclaimed another emperor, and the repression ended with some thirty thousand dead in the hippodrome itself.' },
+  src: 'D114 (Parnell, 2014)'
+};
+
+const CLOSE = [
+  { es: 'Era la política de «pan y circo» (*panem et circenses*), por la que el poder ofrecía al pueblo alimentos asequibles y entretenimientos públicos para ganarse su favor (Wiedemann, 2014; Toner, 2014).', en: 'This was the policy of “bread and circuses” (*panem et circenses*), by which those in power offered the people affordable food and public entertainment to win their favour (Wiedemann, 2014; Toner, 2014).' },
+  { es: 'El rico pagaba por divertir a los demás porque a cambio recibía reconocimiento, y ese intercambio, que los historiadores llaman evergetismo, tuvo en el *munus* una de sus formas más costosas (Ceballos Hornero, 2007; Lomas y Cornell, 2003).', en: 'The rich man paid to entertain others because he received recognition in return, and this exchange, which historians call euergetism, found in the *munus* one of its most expensive forms (Ceballos Hornero, 2007; Lomas & Cornell, 2003).' },
+  { es: 'Las asambleas desaparecieron en el siglo I d. C., y desde entonces el pueblo solo pudo hacerse oír en el circo, el teatro y el anfiteatro (Woolf, 2012).', en: 'The assemblies disappeared in the 1st century AD, and from then on the people could only make themselves heard in the circus, the theatre and the amphitheatre (Woolf, 2012).' },
+  { es: 'El espectáculo dependía de quien lo pagaba, y en Occidente se apagó cuando la élite dejó de costearlo.', en: 'The spectacle depended on whoever paid for it, and in the West it faded away when the elite stopped paying for it.' }
+];
+
+// ===== Gens · map.js =====
+// ===== Gens · mapa del Mediterráneo en SVG (dibujo propio, costas simplificadas) =====
+const MAP = (() => {
+  const W = 1000, LON0 = -10, LAT0 = 47.5, K = 20; // 20 px por grado
+  const px = (lon, lat) => [((lon - LON0) * K).toFixed(1), ((LAT0 - lat) * K * 1.22).toFixed(1)];
+  const H = Math.round((LAT0 - 28.5) * K * 1.22);
+  const poly = pts => pts.map(p => px(p[0], p[1]).join(',')).join(' ');
+  // Europa (Hispania, Galia, Italia, Balcanes, Grecia, Tracia)
+  const EU = [[-10, 47.5], [-10, 43.6], [-9.3, 43.0], [-8.9, 42.0], [-8.8, 41.0], [-9.5, 38.8], [-8.9, 37.0], [-7.4, 37.2], [-6.3, 36.8], [-5.6, 36.0], [-4.5, 36.7], [-2.2, 36.8], [-1.6, 37.6], [-0.7, 37.6], [-0.3, 38.4], [0.2, 38.8], [-0.3, 39.5], [0.6, 40.6], [1.0, 41.0], [2.2, 41.4], [3.2, 42.0], [3.0, 42.5], [3.1, 43.1], [4.0, 43.5], [4.9, 43.4], [6.2, 43.1], [7.4, 43.7], [8.8, 44.4], [10.2, 43.9], [10.5, 42.9], [11.6, 42.3], [12.6, 41.4], [13.7, 41.2], [14.5, 40.6], [15.6, 40.1], [15.7, 39.0], [15.6, 38.0], [16.1, 38.0], [16.6, 38.4], [17.1, 39.0], [16.5, 39.8], [17.2, 40.4], [18.5, 40.1], [18.0, 40.6], [16.9, 41.2], [15.9, 41.6], [16.1, 41.9], [14.6, 42.2], [13.6, 43.5], [12.4, 44.2], [12.3, 45.4], [13.7, 45.7], [13.5, 45.3], [13.6, 44.75], [14.05, 44.8], [14.3, 45.2], [15.2, 44.2], [16.4, 43.5], [17.6, 43.0], [18.5, 42.4], [19.4, 41.8], [19.4, 40.6], [20.0, 39.6], [20.7, 38.9], [21.1, 38.3], [21.6, 37.0], [22.5, 36.4], [23.2, 36.5], [22.8, 37.6], [24.0, 37.7], [23.4, 38.3], [22.6, 38.9], [23.0, 39.6], [22.6, 40.5], [23.8, 40.4], [24.4, 40.9], [26.0, 40.8], [26.6, 40.4], [27.0, 41.0], [29.0, 41.1], [28.0, 41.6], [28.0, 43.0], [28.6, 44.3], [29.6, 45.2], [30.5, 46.3], [31.5, 46.6], [33.0, 46.0], [35.5, 45.3], [37.5, 47.0], [40.0, 47.2], [40, 47.5]];
+  // África y Asia (Mauritania a Egipto, Levante, Asia Menor)
+  const AF = [[-10, 28.5], [-10, 29.5], [-9.6, 30.5], [-9.8, 32.0], [-8.5, 33.3], [-6.8, 34.0], [-6.0, 35.5], [-5.3, 35.9], [-3.0, 35.3], [-2.0, 35.1], [-0.6, 35.8], [1.0, 36.5], [3.0, 36.8], [5.0, 36.7], [6.9, 37.0], [8.6, 36.9], [9.8, 37.3], [10.2, 37.2], [11.0, 37.0], [10.4, 36.4], [11.1, 35.6], [10.9, 35.0], [10.3, 33.7], [11.5, 33.1], [13.1, 32.9], [15.2, 32.3], [16.0, 31.3], [18.0, 30.7], [19.0, 30.3], [20.0, 30.9], [20.1, 32.2], [21.0, 32.9], [23.1, 32.6], [25.2, 31.6], [29.0, 30.9], [30.0, 31.3], [31.0, 31.5], [32.3, 31.2], [34.2, 31.3], [34.5, 31.6], [35.0, 32.8], [35.5, 33.8], [35.9, 34.6], [35.8, 35.5], [36.0, 36.7], [34.6, 36.8], [32.8, 36.1], [31.5, 36.8], [30.5, 36.5], [29.6, 36.2], [28.0, 36.6], [27.2, 37.0], [27.3, 37.9], [26.3, 38.2], [26.9, 38.4], [26.1, 39.5], [26.6, 40.1], [26.7, 40.4], [27.5, 40.4], [29.0, 40.9], [29.2, 41.2], [31.4, 41.2], [33.3, 42.0], [35.2, 42.0], [36.9, 41.3], [38.4, 40.9], [40, 41.0], [40, 28.5]];
+  const ISL = [
+    [[12.4, 38.1], [13.4, 38.2], [15.6, 38.3], [15.1, 37.0], [14.3, 36.8], [12.5, 37.6]],
+    [[8.4, 39.0], [9.6, 39.1], [9.8, 40.9], [9.2, 41.2], [8.2, 40.9], [8.4, 39.9]],
+    [[8.6, 41.4], [9.4, 41.4], [9.5, 42.8], [8.6, 42.4]],
+    [[23.5, 35.3], [26.3, 35.1], [26.2, 35.3], [24.0, 35.6]],
+    [[32.3, 34.7], [34.0, 34.9], [34.6, 35.6], [32.9, 35.3]],
+    [[2.4, 39.6], [3.4, 39.8], [3.1, 39.3]]
+  ];
+  const regions = [['HISPANIA', -4.2, 40.2], ['GALLIA', 3.0, 46.0], ['ITALIA', 11.6, 43.2], ['AFRICA', 9.0, 31.2], ['GRAECIA', 21.6, 39.2], ['ASIA', 31.5, 39.0], ['AEGYPTUS', 27.5, 29.5], ['MARE NOSTRUM', 18.0, 35.0]];
+  function svg(dark) {
+    const sea = dark ? '#16293a' : '#a9c9db', land = dark ? '#3b3427' : '#ecdfc0', edge = dark ? '#6b5a3e' : '#b39a6a', lab = dark ? 'rgba(255,230,180,.25)' : 'rgba(90,60,20,.28)';
+    let s = '<svg id="mapsvg" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Mapa">';
+    s += '<defs><pattern id="waves" width="40" height="16" patternUnits="userSpaceOnUse"><path d="M0 8 Q10 3 20 8 T40 8" fill="none" stroke="' + (dark ? 'rgba(255,255,255,.05)' : 'rgba(255,255,255,.35)') + '" stroke-width="1.2"/></pattern>';
+    s += '<filter id="sh" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity=".25"/></filter></defs>';
+    s += '<rect width="' + W + '" height="' + H + '" fill="' + sea + '"/><rect width="' + W + '" height="' + H + '" fill="url(#waves)"/>';
+    s += '<g filter="url(#sh)" fill="' + land + '" stroke="' + edge + '" stroke-width="2" stroke-linejoin="round"><polygon points="' + poly(EU) + '"/><polygon points="' + poly(AF) + '"/>' + ISL.map(i => '<polygon points="' + poly(i) + '"/>').join('') + '</g>';
+    s += '<g font-family="Georgia,serif" font-size="22" letter-spacing="6" fill="' + lab + '" text-anchor="middle">' + regions.map(r => { const p = px(r[1], r[2]); return '<text x="' + p[0] + '" y="' + p[1] + '"' + (r[0] === 'MARE NOSTRUM' ? ' font-style="italic" font-size="20"' : '') + '>' + r[0] + '</text>'; }).join('') + '</g>';
+    s += '<g id="routes"></g><g id="nodes"></g></svg>';
+    return s;
+  }
+  return { W, H, px, svg };
+})();
+
+// ===== Gens · game.js =====
+// ===== Gens · lógica e interfaz =====
+const TX = {
+  es: {
+    title: 'Gens', sub: 'Una familia romana y sus juegos, de 264 a. C. a Constantinopla',
+    intro: 'Diriges una familia de la élite romana durante siete siglos. Cada heredero continúa la carrera del anterior y usa los espectáculos para ganar votos, prestigio y el favor del poder, mientras las reglas cambian como cambian en el Tema 4.',
+    play: 'Nueva partida', resume: 'Continuar la partida', aula: 'Cómo se juega', app: '‹ Historiapp',
+    howTxt: 'Cada turno es un año con dos acciones. Toca una ciudad del mapa para dar juegos, levantar un edificio, conseguir fieras o gladiadores, y abre «Familia» para gestionar el patrimonio o presentarte a un cargo. Al final del año llega un suceso de la época. Los datos históricos salen de las diapositivas del tema; las rentas, el coste de los edificios y los puntos son convenciones del juego.',
+    chooseGens: 'Elige el nombre de tu familia', gensNames: ['Cornelia', 'Valeria', 'Fabia', 'Aemilia'],
+    pat: 'Patrimonio', fav: 'Favor', pre: 'Prestigio', glo: 'Gloria', ap: 'Acciones', year: 'Año',
+    begin: 'Comenzar la época', next: 'Siguiente', endYear: 'Terminar el año', family: 'Familia', back: 'Cerrar',
+    noAp: 'No te quedan acciones este año.', poor: 'No tienes patrimonio suficiente.',
+    games: 'Dar juegos', munus: 'Munus', venat: 'Cacería', ludi: 'Ludi', days: 'días',
+    munusD: 'combates de gladiadores', venatD: 'fieras por la mañana', ludiD: 'carreras en el Circo Máximo',
+    cost: 'Coste', give: 'Dar los juegos', ownMoney: 'de tu bolsillo',
+    tierS: 'ciudad pequeña, 2.000 HS por día', tierM: 'ciudad media, 7.500 HS por día (punto medio de 5.000-10.000, convención)', tierC: 'capital, 50.000 HS por día',
+    tierSrc: 'Coste por día de Ceballos Hornero (2007), diapositiva 37.',
+    romaC: 'El juego aplica a Roma el coste de una capital (convención).',
+    build: 'Levantar', amph: 'Anfiteatro', therm: 'Termas', built: 'Ya tiene', buildConv: 'El tema no da el coste de los edificios: es una convención del juego.',
+    amphTx: 'En Occidente cualquier ciudad de cierta entidad quería su anfiteatro, pagado por sus élites locales (Toner, 2014). Tus juegos aquí rendirán más favor.',
+    thermTx: 'Las termas eran casas de baño en las que también se practicaban ejercicios, y la entrada costaba un cuadrante, de modo que cualquiera podía pagarla (Crowther, 2007).',
+    beasts: 'Conseguir fieras', troupe: 'Contratar gladiadores',
+    beastsA: 'Pedir leones a un aliado', beastsAx: 'En la República las fieras llegaban gracias a los aliados del magistrado, como el rey de Mauritania que envió cien leones a Sila (Epplett, 2001b).',
+    beastsRes: 'El emperador se reservó el elefante y la caza del león.', beastsLocal: 'Fieras del país (osos, jabalíes y ciervos)', beastsLocalx: 'En Hispania solo constan osos, jabalíes y ciervos del país (Epplett, 2001b). Coste de convención.',
+    troupeTx: 'Los gladiadores vivían y entrenaban en el ludus, una escuela a cargo de un lanista; la de Capua funcionaba ya en 105 a. C. Con tropa propia tus munera rinden más favor (convención).',
+    pompeyaTx: 'En Pompeya, tras el terremoto de 62 d. C., el cuartel pasó de una casa para quince o veinte hombres a un pórtico para unos cien.',
+    horsesTx: 'Los caballos del circo llegaban de yeguadas privadas e imperiales de Hispania, Sicilia, Tesalia, el norte de África y Capadocia, y las facciones los alquilaban al organizador (Nelis-Clément, 2002).',
+    olimpiaTx: 'Vencer en Olimpia era en Grecia el mayor honor y en Roma traía deshonra, según un escritor del siglo I a. C.; Roma patrocinó el atletismo griego sin apenas practicarlo (Lee, 2014).',
+    fucinoTx: 'Claudio ofreció aquí una naumaquia con 19.000 hombres en 52 d. C.; su coste las reservaba para ocasiones excepcionales (Coleman, 1993).',
+    efesoTx: 'Cerca del estadio de Éfeso apareció un cementerio de gladiadores de los siglos II y III d. C., cuyos huesos se han analizado (Lösch et al., 2014).',
+    halicTx: 'Aquí apareció el relieve de dos mujeres armadas como gladiadores, Amazona y Achillia, que fueron indultadas (Coleman, 2000).',
+    constanTx: 'La capital de Oriente, donde las carreras continuaron durante siglos (Parnell, 2014).',
+    romaLocked3: 'Desde Augusto, el emperador se reserva los grandes espectáculos de Roma.', romaPermit: 'En Roma necesitas permiso del poder imperial para dar juegos.', askPermit: 'Pedir permiso al emperador', permitOk: 'Tienes permiso imperial para este año.',
+    era1Only: 'En esta época solo se dan juegos en Roma.', noGames: 'Aquí no se dan juegos.',
+    manage: 'Administrar el patrimonio', manageTx: 'Dedicas el año a tus tierras y negocios (convención del juego).',
+    stand: 'Presentarte a', edil: 'edil', consul: 'cónsul', candidate: 'Eres candidato a {o}; la elección será al final del año.',
+    edilReq: 'Hace falta favor {n}.', consulReq: 'Hace falta haber sido edil, favor {n} y prestigio {p}.',
+    senate: 'Entrar en el Senado', senateTx: 'El Senado reunía de por vida a unos 300 antiguos magistrados; el patrimonio mínimo de un senador era de un millón de sestercios.', senateReq: 'Hace falta haber ocupado un cargo y un millón de sestercios.',
+    honor: 'Aceptar un cargo honorífico', honorTx: 'Con Augusto los magistrados conservaron únicamente el prestigio del título.',
+    elected: 'Elegido {o}', defeated: 'Derrotado en la elección a {o}', electTx: 'El pueblo que disfrutaba los juegos era el mismo que votaba.',
+    yearEnd: 'Balance del año', rent: 'Rentas de la familia (convención)', decay: 'El pueblo olvida parte del favor (convención)',
+    crowd: 'La grada grita', cMis: '¡Missio!', cIug: '¡Iugula!', cSplit: 'La grada está dividida', mis: 'Missio', iug: 'Iugula', misS: 'indulto', iugS: 'degüello',
+    rentNote: 'Lo alquilaste al lanista: si lo indultas, está pagado; si muere, pagas el gladiador entero (Vamplew, 2022).',
+    vMisOk: 'La grada aplaude tu clemencia.', vMisKo: 'La grada pedía sangre y te silba.', vIugOk: 'La grada ha tenido lo que pedía.', vIugKo: 'La grada pedía clemencia y se vuelve contra ti.', vSplitM: 'La grada, dividida, apenas reacciona.', vSplitI: 'Una parte de la grada celebra tu decisión.',
+    priceNote: 'Precios máximos de 177 d. C., los únicos del tema (Ceballos Hornero, 2007; Ville, 1981).',
+    G: { vol: 'Voluntario en formación', vet: 'Veterano que vuelve al oficio', top: 'Gladiador de primera categoría' },
+    gamesDone: 'Juegos de {d} días en {c}', noMunus: 'Ya no hay combates de gladiadores.',
+    quizT: 'Lo que deja esta época', heir: 'El heredero', heirTx: 'Tu hijo hereda el patrimonio y la gloria de la gens. El favor del pueblo se reduce a la mitad, porque el pueblo vota a personas (convención).',
+    end: 'La crónica de la gens', finalGlo: 'Gloria final', again: 'Volver a jugar', toApp: 'Volver a Historiapp',
+    ranks: ['Una familia olvidada', 'Una familia respetada', 'Una gran familia de evergetas', 'Una gens que el pueblo recuerda'],
+    conv: 'convención del juego', ok: 'Correcto', ko: 'Incorrecto', src: 'Fuente',
+    soundOn: 'Sonido activado', soundOff: 'Sonido desactivado', save: '💾 Guardar y salir', lang: 'English',
+    turnOf: 'Año {i} de {n} de la época', chronicle: 'Crónica', closeT: 'La función política del espectáculo',
+    ruinDeath: 'te deja sin patrimonio', leftAfter: 'te quedarían {n}', selectCity: 'Toca una ciudad del mapa para actuar.',
+    yrs: 'años de legionario', provFav: 'Fuera de Roma el favor cuenta la mitad, porque quien vota en Roma es el pueblo de Roma (convención).'
+  },
+  en: {
+    title: 'Gens', sub: 'A Roman family and its games, from 264 BC to Constantinople',
+    intro: 'You lead a family of the Roman elite for seven centuries. Each heir continues the career of the one before and uses the shows to win votes, prestige and the favour of power, while the rules change as they do in Unit 4.',
+    play: 'New game', resume: 'Continue the game', aula: 'How to play', app: '‹ Historiapp',
+    howTxt: 'Each turn is a year with two actions. Tap a town on the map to give games, put up a building, obtain beasts or gladiators, and open “Family” to manage the estate or stand for office. At the end of the year an event of the period arrives. The historical data come from the unit\'s slides; the income, the cost of buildings and the points are game conventions.',
+    chooseGens: 'Choose your family\'s name', gensNames: ['Cornelia', 'Valeria', 'Fabia', 'Aemilia'],
+    pat: 'Estate', fav: 'Favour', pre: 'Prestige', glo: 'Glory', ap: 'Actions', year: 'Year',
+    begin: 'Begin the period', next: 'Next', endYear: 'End the year', family: 'Family', back: 'Close',
+    noAp: 'You have no actions left this year.', poor: 'You do not have enough wealth.',
+    games: 'Give games', munus: 'Munus', venat: 'Hunt', ludi: 'Ludi', days: 'days',
+    munusD: 'gladiatorial fights', venatD: 'beasts in the morning', ludiD: 'races in the Circus Maximus',
+    cost: 'Cost', give: 'Give the games', ownMoney: 'from your pocket',
+    tierS: 'small town, 2,000 HS a day', tierM: 'medium-sized town, 7,500 HS a day (midpoint of 5,000-10,000, convention)', tierC: 'capital, 50,000 HS a day',
+    tierSrc: 'Cost per day from Ceballos Hornero (2007), slide 37.',
+    romaC: 'The game applies the cost of a capital to Rome (convention).',
+    build: 'Build', amph: 'Amphitheatre', therm: 'Baths', built: 'Already has', buildConv: 'The unit does not give the cost of buildings: it is a game convention.',
+    amphTx: 'In the West any town of some standing wanted its amphitheatre, paid for by its local elites (Toner, 2014). Your games here will bring more favour.',
+    thermTx: 'The baths were bathhouses where exercise was also practised, and admission cost a quadrans, so that anyone could pay it (Crowther, 2007).',
+    beasts: 'Obtain beasts', troupe: 'Hire gladiators',
+    beastsA: 'Ask an ally for lions', beastsAx: 'Under the Republic, beasts arrived thanks to the magistrate\'s allies, such as the king of Mauretania who sent a hundred lions to Sulla (Epplett, 2001b).',
+    beastsRes: 'The emperor reserved the elephant and lion hunting for himself.', beastsLocal: 'Local beasts (bears, boars and deer)', beastsLocalx: 'In Hispania only local bears, boars and deer are recorded (Epplett, 2001b). Convention cost.',
+    troupeTx: 'Gladiators lived and trained in the ludus, a school run by a lanista; the one at Capua was already running in 105 BC. With your own troupe your munera bring more favour (convention).',
+    pompeyaTx: 'In Pompeii, after the earthquake of AD 62, the barracks went from a house for fifteen or twenty men to a portico for about a hundred.',
+    horsesTx: 'Circus horses came from private and imperial studs in Hispania, Sicily, Thessaly, North Africa and Cappadocia, and the factions hired them out to the organiser (Nelis-Clément, 2002).',
+    olimpiaTx: 'Winning at Olympia was the greatest honour in Greece and brought dishonour in Rome, according to a 1st-century BC writer; Rome sponsored Greek athletics while hardly practising them (Lee, 2014).',
+    fucinoTx: 'Claudius staged a naumachia with 19,000 men here in AD 52; their cost kept them for exceptional occasions (Coleman, 1993).',
+    efesoTx: 'Near the stadium of Ephesus a gladiators\' cemetery of the 2nd and 3rd centuries AD was found, and their bones have been analysed (Lösch et al., 2014).',
+    halicTx: 'This is where the relief of two women armed as gladiators, Amazon and Achillia, who were spared, was found (Coleman, 2000).',
+    constanTx: 'The capital of the East, where the races went on for centuries (Parnell, 2014).',
+    romaLocked3: 'Since Augustus, the emperor keeps the great shows in Rome for himself.', romaPermit: 'In Rome you need permission from imperial power to give games.', askPermit: 'Ask the emperor for permission', permitOk: 'You have imperial permission for this year.',
+    era1Only: 'In this period games are only given in Rome.', noGames: 'No games are given here.',
+    manage: 'Manage the estate', manageTx: 'You devote the year to your lands and business (game convention).',
+    stand: 'Stand for', edil: 'aedile', consul: 'consul', candidate: 'You are a candidate for {o}; the election will be at the end of the year.',
+    edilReq: 'You need favour {n}.', consulReq: 'You need to have been aedile, favour {n} and prestige {p}.',
+    senate: 'Enter the Senate', senateTx: 'The Senate brought together for life some 300 former magistrates; a senator\'s minimum wealth was one million sesterces.', senateReq: 'You need to have held an office and one million sesterces.',
+    honor: 'Accept an honorary office', honorTx: 'Under Augustus the magistrates kept only the prestige of the title.',
+    elected: 'Elected {o}', defeated: 'Defeated in the election for {o}', electTx: 'The people who enjoyed the games were the same people who voted.',
+    yearEnd: 'The year\'s balance', rent: 'Family income (convention)', decay: 'The people forget part of their favour (convention)',
+    crowd: 'The crowd shouts', cMis: 'Missio!', cIug: 'Iugula!', cSplit: 'The crowd is divided', mis: 'Missio', iug: 'Iugula', misS: 'reprieve', iugS: 'death blow',
+    rentNote: 'You hired him from the lanista: if you spare him, the hire covers it; if he dies, you pay for the whole gladiator (Vamplew, 2022).',
+    vMisOk: 'The crowd applauds your clemency.', vMisKo: 'The crowd wanted blood and hisses at you.', vIugOk: 'The crowd got what it asked for.', vIugKo: 'The crowd asked for mercy and turns against you.', vSplitM: 'The divided crowd barely reacts.', vSplitI: 'Part of the crowd cheers your decision.',
+    priceNote: 'Maximum prices of AD 177, the only ones in the unit (Ceballos Hornero, 2007; Ville, 1981).',
+    G: { vol: 'Volunteer in training', vet: 'Veteran returning to the trade', top: 'First-class gladiator' },
+    gamesDone: 'Games of {d} days in {c}', noMunus: 'There are no more gladiatorial fights.',
+    quizT: 'What this period leaves', heir: 'The heir', heirTx: 'Your son inherits the estate and the glory of the gens. The people\'s favour is halved, because the people vote for persons (convention).',
+    end: 'The chronicle of the gens', finalGlo: 'Final glory', again: 'Play again', toApp: 'Back to Historiapp',
+    ranks: ['A forgotten family', 'A respected family', 'A great family of benefactors', 'A gens the people remember'],
+    conv: 'game convention', ok: 'Correct', ko: 'Wrong', src: 'Source',
+    soundOn: 'Sound on', soundOff: 'Sound off', save: '💾 Save and exit', lang: 'Español',
+    turnOf: 'Year {i} of {n} of the period', chronicle: 'Chronicle', closeT: 'The political function of the spectacle',
+    ruinDeath: 'leaves you without wealth', leftAfter: '{n} would be left', selectCity: 'Tap a town on the map to act.',
+    yrs: 'years of a legionary\'s pay', provFav: 'Outside Rome favour counts half, because those who vote in Rome are the people of Rome (convention).'
+  }
+};
+function T(k, v) { let s = TX[LANG][k]; if (s == null) s = TX.es[k]; if (v && typeof s === 'string') for (const x in v) s = s.split('{' + x + '}').join(v[x]); return s; }
+const $ = id => document.getElementById(id);
+const CITY = Object.fromEntries(CITIES.map(c => [c.id, c]));
+
+/* ---------------- estado ---------------- */
+let S = null;
+function fresh(name) {
+  return { v: 1, gens: name, era: 1, turn: 0, ap: CFG.ap, pat: CFG.start, fav: 10, pre: 10, glo: 0,
+    off: {}, everOff: false, cand: null, f: {}, builds: {}, beasts: 0, permit: false, honored: {}, ans: {}, quiz: {},
+    log: [], phase: 'rules', sel: null, crowdBag: shuffle(CFG.crowdBag), gladBag: shuffle(CFG.gladBag), gi: 0,
+    stats: { games: 0, days: 0, deaths: 0, spent: 0 } };
+}
+const ERA = () => ERAS[S.era - 1];
+const toEn = y => String(y).replace(/([0-9]+) a\. C\./, '$1 BC').replace(/([0-9]+) d\. C\./, 'AD $1');
+const yearEs = () => ERA().years[S.turn] || '', yearEn = () => (ERA().yearsEn || [])[S.turn] || toEn(yearEs());
+const yearLbl = () => LANG === 'en' ? yearEn() : yearEs();
+const yLog = l => LANG === 'en' ? (l.yen || toEn(l.y)) : l.y;
+function save() { if (S) lsSet('gens.partida', S); }
+function clr() { try { localStorage.removeItem('gens.partida'); } catch (e) {} }
+function apply(eff) {
+  if (!eff) return;
+  if (eff.pat) S.pat += eff.pat; if (eff.fav) S.fav = clamp(S.fav + eff.fav); if (eff.pre) S.pre = clamp(S.pre + eff.pre); if (eff.glo) S.glo += eff.glo;
+  if (eff.set) Object.assign(S.f, eff.set); if (eff.lose) delete S.f[eff.lose];
+  if (eff.pat && eff.pat < 0) S.stats.spent -= eff.pat;
+}
+const clamp = n => Math.max(0, Math.min(100, Math.round(n)));
+function logC(es, en) { S.log.push({ era: S.era, y: yearEs(), yen: yearEn(), es, en }); }
+function lastTurnEra5() { return S.era === 5 && S.turn === ERA().turns - 1; }
+
+/* ---------------- interfaz: barra, mapa, panel ---------------- */
+function hud() {
+  if (!S || S.phase === 'end') { $('hud').innerHTML = '<div class="hrow">' + (IN_APP ? '<button class="ib wide" id="toapp">' + T('app') + '</button>' : '') + '<span class="sp"></span><button class="ib" id="snd">' + (SND.on ? '🔊' : '🔇') + '</button><button class="ib" id="lng">' + (LANG === 'es' ? 'EN' : 'ES') + '</button></div>'; wireHud(); return; }
+  const e = ERA();
+  let h = '<div class="hrow era"><b>' + L(e.t) + '</b><span class="yr">' + yearLbl() + '</span><span class="sp"></span><span class="apb" title="' + T('ap') + '">' + '⚑'.repeat(S.ap) + '<i>' + '⚑'.repeat(CFG.ap - S.ap) + '</i></span><button class="ib" id="menu">☰</button></div>';
+  h += '<div class="hrow res"><span class="r"><small>' + T('pat') + '</small><b id="rp">' + fmtN(S.pat) + '</b><em>HS</em></span><span class="r"><small>' + T('fav') + '</small><b id="rf">' + S.fav + '</b><span class="mini"><i style="width:' + S.fav + '%"></i></span></span><span class="r"><small>' + T('pre') + '</small><b id="rr">' + S.pre + '</b><span class="mini p"><i style="width:' + S.pre + '%"></i></span></span><span class="r"><small>' + T('glo') + '</small><b id="rg">' + S.glo + '</b><em>★</em></span></div>';
+  h += '<div class="menu" id="mnu"><button class="btn dark" id="sv">' + T('save') + '</button><button class="btn dark" id="snd">' + (SND.on ? '🔊 ' + T('soundOn') : '🔇 ' + T('soundOff')) + '</button><button class="btn dark" id="lng">' + T('lang') + '</button></div>';
+  $('hud').innerHTML = h; wireHud();
+  const m = $('menu'); if (m) m.onclick = () => { SFX.tap(); $('mnu').classList.toggle('on'); };
+}
+function wireHud() {
+  const ta = $('toapp'); if (ta) ta.onclick = () => { save(); location.href = '../'; };
+  const sv = $('sv'); if (sv) sv.onclick = () => { save(); if (IN_APP) location.href = '../'; else { S = null; home(); } };
+  $('snd').onclick = () => { SND.on = !SND.on; lsSet('gens.sound', SND.on); toast(SND.on ? T('soundOn') : T('soundOff')); if (SND.on) SFX.tap(); hud(); };
+  $('lng').onclick = () => { LANG = LANG === 'es' ? 'en' : 'es'; lsSet('gens.lang', LANG); document.documentElement.lang = LANG; hud(); drawMap(); rerender(); };
+}
+function pulse(id) { const e = $(id); if (e) { e.classList.remove('pulse'); void e.offsetWidth; e.classList.add('pulse'); } }
+function refresh() { hud(); drawNodes(); }
+let rerender = () => {};
+function panel(html, cls, after) { const p = $('panel'); p.className = cls || ''; p.innerHTML = html; p.scrollTop = 0; requestAnimationFrame(() => p.classList.remove('out')); if (after) after(p); }
+function hidePanel() { $('panel').classList.add('out'); }
+function banner(big, small) { const b = $('banner'); b.innerHTML = '<b>' + big + '</b>' + (small ? '<small>' + small + '</small>' : ''); b.classList.remove('on'); void b.offsetWidth; b.classList.add('on'); }
+const stick = h => '<div class="stick">' + h + '</div>';
+
+/* ---- mapa ---- */
+let VB = null;
+function drawMap() {
+  const dark = document.documentElement.classList.contains('dark');
+  $('map').innerHTML = MAP.svg(dark);
+  if (!VB) VB = { x: 0, y: 0, w: MAP.W, h: MAP.H };
+  setVB(); drawNodes(); wireMap();
+}
+function setVB() { const s = $('mapsvg'); if (s) s.setAttribute('viewBox', VB.x + ' ' + VB.y + ' ' + VB.w + ' ' + VB.h); }
+function focusOn(id, zoom) {
+  const box = $('map').getBoundingClientRect(), bw = Math.max(1, box.width), bh = Math.max(1, box.height);
+  const side = bw >= 700 && bw > bh; const fx = side ? Math.max(.3, (bw - 420) / 2 / bw) : .5, fy = side ? .56 : .3;
+  const w = (side ? MAP.W * 1.02 : MAP.W * .62) / (zoom || 1), h = w * bh / bw;
+  let cx = side ? MAP.W / 2 : MAP.W * .47, cy = MAP.H / 2; if (id && CITY[id]) { const p = MAP.px(CITY[id].lon, CITY[id].lat); cx = +p[0]; cy = +p[1]; }
+  VB = { x: cx - fx * w, y: cy - fy * h, w, h }; setVB(); drawNodes();
+}
+function cityState(c) {
+  if (!S) return 'off';
+  if (c.id === 'constan') return 'info';
+  if (!c.g) return c.r ? 'res' : 'info';
+  if (S.era === 1 && c.id !== 'roma') return 'lock';
+  if (c.id === 'roma' && S.era === 3) return 'lock';
+  return 'ok';
+}
+function drawNodes() {
+  const g = document.getElementById('nodes'); if (!g) return;
+  const bw = Math.max(1, $('map').getBoundingClientRect().width), sc = VB.w / bw;
+  let s = '';
+  for (const c of CITIES) {
+    const p = MAP.px(c.lon, c.lat), st = cityState(c), sel = S && S.sel === c.id;
+    const b = (S && S.builds[c.id]) || {}; const base = c.b || {};
+    const r = (c.tier === 'c' ? 11 : c.g ? 9 : 7) * sc;
+    const fill = st === 'ok' ? '#7a1f2b' : st === 'res' ? '#2f5cc0' : st === 'lock' ? '#8c8c8c' : '#6b5636';
+    const shape = c.g ? '<circle r="' + r + '" fill="' + fill + '" stroke="' + (sel ? '#ffd85c' : '#fff') + '" stroke-width="' + (sel ? 4 : 2.2) * sc + '"/>' : '<rect x="' + (-r) + '" y="' + (-r) + '" width="' + 2 * r + '" height="' + 2 * r + '" transform="rotate(45)" fill="' + fill + '" stroke="' + (sel ? '#ffd85c' : '#fff') + '" stroke-width="' + (sel ? 4 : 2) * sc + '"/>';
+    const ic = (base.amph || b.amph ? '🏟' : '') + (b.therm ? '♨' : '') + (st === 'lock' ? '🔒' : '');
+    const dx = (c.id === 'fucino' || c.id === 'urso') ? 0 : 12 * sc, dy = c.id === 'fucino' ? -14 * sc : c.id === 'urso' ? 20 * sc : c.id === 'capua' ? -4 * sc : c.id === 'pompeya' ? 12 * sc : c.id === 'italica' ? 14 * sc : c.id === 'urso' ? -2 * sc : 5 * sc;
+    const anchor = (c.id === 'fucino' || c.id === 'urso') ? 'middle' : (c.id === 'italica' || c.id === 'merida' || c.id === 'roma') ? 'end' : 'start';
+    const tx = anchor === 'end' ? -dx : dx;
+    s += '<g class="node' + (sel ? ' sel' : '') + '" data-id="' + c.id + '" transform="translate(' + p[0] + ',' + p[1] + ')"><circle r="' + 22 * sc + '" fill="transparent"/>' + shape +
+      '<text x="' + tx + '" y="' + dy + '" font-size="' + 13 * sc + '" stroke-width="' + 3.2 * sc + '" text-anchor="' + anchor + '" class="lbl">' + L(c.n) + (ic ? ' ' + ic : '') + '</text></g>';
+  }
+  g.innerHTML = s;
+  g.querySelectorAll('.node').forEach(n => n.addEventListener('click', ev => { if (dragMoved) return; ev.stopPropagation(); selectCity(n.dataset.id); }));
+}
+let dragMoved = false;
+function wireMap() {
+  const el = $('map'); const pts = new Map(); let start = null;
+  el.onpointerdown = e => { el.setPointerCapture && el.setPointerCapture(e.pointerId); pts.set(e.pointerId, { x: e.clientX, y: e.clientY }); dragMoved = false; start = { vb: { ...VB }, pts: new Map(pts) }; };
+  el.onpointermove = e => {
+    if (!pts.has(e.pointerId) || !start) return; pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    const box = el.getBoundingClientRect(); const k = VB.w / box.width;
+    if (pts.size === 1) { const p0 = start.pts.get(e.pointerId); if (!p0) return; const dx = e.clientX - p0.x, dy = e.clientY - p0.y; if (Math.abs(dx) + Math.abs(dy) > 6) dragMoved = true; VB.x = start.vb.x - dx * (start.vb.w / box.width); VB.y = start.vb.y - dy * (start.vb.w / box.width); clampVB(); setVB(); }
+    else if (pts.size === 2) { const a = [...pts.values()], b = [...start.pts.values()]; if (b.length < 2) return; const d1 = Math.hypot(a[0].x - a[1].x, a[0].y - a[1].y), d0 = Math.hypot(b[0].x - b[1].x, b[0].y - b[1].y); zoomBy(d0 / Math.max(10, d1), start.vb); dragMoved = true; }
+  };
+  const up = e => { pts.delete(e.pointerId); start = pts.size ? { vb: { ...VB }, pts: new Map(pts) } : null; if (!pts.size) drawNodes(); };
+  el.onpointerup = up; el.onpointercancel = up;
+  el.onwheel = e => { e.preventDefault(); zoomBy(e.deltaY > 0 ? 1.15 : .87, { ...VB }); drawNodes(); };
+}
+function zoomBy(f, vb) { const cx = vb.x + vb.w / 2, cy = vb.y + vb.h / 2; const w = Math.max(220, Math.min(MAP.W * 1.15, vb.w * f)), h = w * vb.h / vb.w; VB = { x: cx - w / 2, y: cy - h / 2, w, h }; clampVB(); setVB(); }
+function clampVB() { const cl = (v, lo, hi) => lo > hi ? (lo + hi) / 2 : Math.max(lo, Math.min(hi, v)); VB.x = cl(VB.x, -MAP.W * .3, MAP.W * 1.3 - VB.w); VB.y = cl(VB.y, -MAP.H * .8, MAP.H * 1.8 - VB.h); }
+
+/* ---------------- pantallas ---------------- */
+function home() {
+  S = null; hud(); VB = null; drawMap(); focusOn(null, 1); rerender = home;
+  const saved = lsGet('gens.partida', null), best = lsGet('gens.best', null);
+  let h = '<div class="logo">GENS</div><p class="tl">' + T('sub') + '</p><p>' + md(T('intro')) + '</p>';
+  if (saved && saved.v === 1 && saved.phase !== 'end') h += '<button class="btn blue" id="res">' + T('resume') + '</button>';
+  h += '<button class="btn hint" id="go">▶ ' + T('play') + '</button>';
+  if (best) h += '<p class="src" style="text-align:center">' + T('finalGlo') + ': ★ ' + best.glo + ' · gens ' + best.gens + '</p>';
+  h += '<details><summary>' + T('aula') + '</summary><p>' + md(T('howTxt')) + '</p></details>';
+  panel(h, '', () => {
+    const r = $('res'); if (r) r.onclick = () => { SFX.tap(); S = saved; drawMap(); route(); };
+    $('go').onclick = () => { SFX.tuba(); chooseGens(); };
+  });
+}
+function chooseGens() {
+  rerender = chooseGens;
+  let h = '<h2>' + T('chooseGens') + '</h2><div class="grid2">' + T('gensNames').map(n => '<button class="opt" data-n="' + n + '"><b>gens ' + n + '</b></button>').join('') + '</div><button class="btn dark" id="bk">‹ ' + T('back') + '</button>';
+  panel(h, '', p => { p.querySelectorAll('.opt').forEach(b => b.onclick = () => { SFX.tap(); clr(); S = fresh(b.dataset.n); track('nueva'); route(); }); $('bk').onclick = home; });
+}
+function route() {
+  save(); refresh();
+  const ph = S.phase;
+  if (ph === 'rules') return rulesCard();
+  if (ph === 'turn') return turnView();
+  if (ph === 'event') return eventCard();
+  if (ph === 'yearEnd') return yearEnd();
+  if (ph === 'quiz') return eraQuiz();
+  if (ph === 'heir') return heirCard();
+  if (ph === 'epilogue') return epilogue();
+  if (ph === 'end') return endView();
+  home();
+}
+function rulesCard() {
+  rerender = rulesCard; const e = ERA();
+  focusOn(e.focus === 'roma' ? 'roma' : null, e.focus === 'roma' ? 2.2 : 1);
+  banner(L(e.t).split('. ')[1] || L(e.t), yearLbl());
+  panel('<span class="tag">' + L(e.t) + '</span><h2>' + yearLbl() + '</h2><p>' + md(L(e.rules)) + '</p><p class="src">' + e.src + '</p>' + stick('<button class="btn hint" id="go">' + T('begin') + ' ›</button>'), 'tall', () => {
+    $('go').onclick = () => { SFX.tuba(); S.phase = 'turn'; S.ap = CFG.ap; S.permit = false; S.sel = null; route(); };
+  });
+}
+function turnView() {
+  rerender = turnView;
+  if (S.sel) return cityPanel(S.sel);
+  let h = '<span class="tag">' + T('turnOf', { i: S.turn + 1, n: ERA().turns }) + '</span><h2>' + yearLbl() + '</h2><p>' + T('selectCity') + '</p>';
+  if (S.cand) h += '<p class="note">🗳️ ' + T('candidate', { o: T(S.cand) }) + '</p>';
+  if (S.permit) h += '<p class="note">📜 ' + T('permitOk') + '</p>';
+  h += '<div class="row"><button class="btn dark" id="fam">🏛️ ' + T('family') + '</button><button class="btn' + (S.ap === 0 ? ' hint' : ' blue') + '" id="ey">' + T('endYear') + ' ›</button></div>';
+  panel(h, 'short', () => { $('fam').onclick = () => { SFX.tap(); familyPanel(); }; $('ey').onclick = () => { SFX.tap(); endYearStart(); }; });
+}
+function needAp() { if (S.ap <= 0) { SFX.bad(); toast(T('noAp')); return false; } return true; }
+function spendAp() { S.ap--; save(); refresh(); }
+function selectCity(id) { if (!S || S.phase !== 'turn') { const c = CITY[id]; toast(L(c.n)); return; } SFX.tap(); S.sel = id; drawNodes(); cityPanel(id); }
+function closeCity() { S.sel = null; drawNodes(); turnView(); }
+function infoTx(id) { return { fucino: T('fucinoTx'), olimpia: T('olimpiaTx'), efeso: T('efesoTx'), halic: T('halicTx'), constan: T('constanTx') }[id]; }
+function cityPanel(id) {
+  rerender = () => cityPanel(id); const c = CITY[id], st = cityState(c), b = S.builds[id] || {}, base = c.b || {};
+  let h = '<span class="tag">' + yearLbl() + ' · ⚑ ' + S.ap + '</span><h2>' + L(c.n) + '</h2>';
+  if (c.tier) h += '<p class="src">' + T(c.tier === 's' ? 'tierS' : c.tier === 'm' ? 'tierM' : 'tierC') + (id === 'roma' ? ' · ' + T('romaC') : '') + '</p>';
+  const it = infoTx(id); if (it) h += '<p>' + md(it) + '</p>';
+  if (c.r === 'horses') h += '<p>' + md(T('horsesTx')) + '</p>';
+  const acts = [];
+  if (c.g) {
+    if (st === 'lock') h += '<p class="note">🔒 ' + (S.era === 1 ? T('era1Only') : T('romaLocked3')) + '</p>';
+    else if (id === 'roma' && S.era >= 4 && !S.permit) { h += '<p class="note">📜 ' + T('romaPermit') + '</p>'; acts.push(['permit', '📜 ' + T('askPermit')]); }
+    else acts.push(['games', '🎭 ' + T('games')]);
+    if (st === 'ok' && id !== 'roma' && S.era >= 2) { if (!base.amph && !b.amph) acts.push(['amph', '🏟 ' + T('build') + ' · ' + T('amph') + ' · ' + HS(CFG.build.amph)]); if (!b.therm) acts.push(['therm', '♨ ' + T('build') + ' · ' + T('therm') + ' · ' + HS(CFG.build.therm)]); }
+    if (id === 'capua' && S.era >= 2 && !S.f.troupe) acts.push(['troupe', '⚔️ ' + T('troupe') + ' · ' + HS(40000)]);
+    if (id === 'pompeya' && S.era >= 4 && !S.f.troupe) acts.push(['troupe', '⚔️ ' + T('troupe') + ' · ' + HS(40000)]);
+    if (['urso', 'italica', 'merida', 'cartago'].includes(id) && S.era >= 3) acts.push(['local', '🐻 ' + T('beastsLocal') + ' · ' + HS(20000)]);
+  }
+  if (id === 'mauri') { if (S.era === 2) acts.push(['ally', '🦁 ' + T('beastsA')]); else if (S.era >= 3) h += '<p class="note">🔒 ' + T('beastsRes') + '</p>'; if (S.era === 2) h += '<p class="src">' + T('beastsAx') + '</p>'; }
+  if (id === 'egipto' && S.era >= 3) h += '<p class="note">🔒 ' + T('beastsRes') + '</p>';
+  if (id === 'capua') h += '<p class="src">' + md(T('troupeTx')) + '</p>';
+  if (id === 'pompeya' && S.era >= 4) h += '<p class="src">' + md(T('pompeyaTx')) + '</p>';
+  if (b.amph || base.amph) h += '<p class="src">🏟 ' + T('built') + ' ' + T('amph').toLowerCase() + '</p>';
+  if (S.beasts) h += '<p class="src">🐾 × ' + S.beasts + '</p>';
+  if (S.f.troupe) h += '<p class="src">⚔️ ' + T('troupe') + ' ✔</p>';
+  h += acts.map(a => '<button class="opt act" data-a="' + a[0] + '">' + a[1] + '</button>').join('');
+  if (!acts.length && !it && !c.r) h += '<p class="src">' + T('noGames') + '</p>';
+  h += '<div class="row"><button class="btn dark" id="cl">‹ ' + T('back') + '</button><button class="btn' + (S.ap === 0 ? ' hint' : ' blue') + '" id="ey">' + T('endYear') + ' ›</button></div>';
+  panel(h, '', p => {
+    $('cl').onclick = () => { SFX.tap(); closeCity(); }; $('ey').onclick = () => { SFX.tap(); endYearStart(); };
+    p.querySelectorAll('.act').forEach(bt => bt.onclick = () => doAct(id, bt.dataset.a));
+  });
+}
+function doAct(id, a) {
+  if (!needAp()) return; const c = CITY[id];
+  if (a === 'games') return gamesPanel(id);
+  if (a === 'permit') { spendAp(); S.permit = true; SFX.good(); toast(T('permitOk')); logC('Pidió permiso al emperador para dar juegos en Roma.', 'Asked the emperor for permission to give games in Rome.'); return cityPanel(id); }
+  if (a === 'amph' || a === 'therm') {
+    const cost = CFG.build[a]; if (S.pat < cost) { SFX.bad(); return toast(T('poor')); }
+    spendAp(); apply({ pat: -cost, glo: CFG.glo[a], pre: a === 'amph' ? 8 : 3 }); S.builds[id] = Object.assign(S.builds[id] || {}, { [a]: 1 });
+    SFX.fanfare(); banner(a === 'amph' ? '🏟' : '♨', T(a) + ' · ' + L(c.n));
+    logC((a === 'amph' ? 'Levantó un anfiteatro en ' : 'Levantó unas termas en ') + c.n.es + '.', (a === 'amph' ? 'Built an amphitheatre in ' : 'Built baths in ') + c.n.en + '.');
+    panel('<h2>' + T(a) + ' · ' + L(c.n) + '</h2><p>' + md(T(a + 'Tx')) + '</p><p class="src">' + T('buildConv') + '</p><div class="fb ok">' + dl(CFG.glo[a]) + ' ★ · ' + dl(a === 'amph' ? 8 : 3) + ' ' + T('pre') + '</div>' + stick('<button class="btn" id="ok">' + T('next') + ' ›</button>'), '', () => { $('ok').onclick = () => cityPanel(id); });
+    return;
+  }
+  if (a === 'troupe') { if (S.pat < 40000) { SFX.bad(); return toast(T('poor')); } spendAp(); apply({ pat: -40000, set: { troupe: 1 } }); SFX.coin(); toast('⚔️ ' + T('troupe') + ' ✔'); logC('Contrató una tropa de gladiadores.', 'Hired a troupe of gladiators.'); return cityPanel(id); }
+  if (a === 'ally') { spendAp(); S.beasts = Math.min(3, S.beasts + 2); apply({ pre: 1 }); SFX.good(); toast('🦁 +2'); logC('Consiguió leones de un aliado.', 'Obtained lions from an ally.'); return cityPanel(id); }
+  if (a === 'local') { if (S.pat < 20000) { SFX.bad(); return toast(T('poor')); } spendAp(); apply({ pat: -20000 }); S.beasts = Math.min(3, S.beasts + 1); SFX.coin(); toast('🐻 +1'); return cityPanel(id); }
+}
+function dayCost(id) { const c = CITY[id]; let d = CFG.tier[c.tier]; if (S.era === 5) d = Math.round(d * 1.5); return d; }
+function gamesPanel(id, st) {
+  const c = CITY[id]; st = st || { type: (lastTurnEra5() ? 'venat' : 'munus'), days: 2 };
+  rerender = () => gamesPanel(id, st);
+  const types = ['munus', 'venat'].concat(id === 'roma' && S.off.edil ? ['ludi'] : []);
+  const dc = dayCost(id), cost = dc * st.days, pub = st.type === 'ludi' ? Math.round(cost / 2) : 0, own = cost - pub;
+  const b = S.builds[id] || {}, base = c.b || {};
+  let per = st.type === 'munus' ? CFG.fav.munus + (S.f.troupe ? 2 : 0) : st.type === 'venat' ? CFG.fav.venat + (S.beasts ? CFG.fav.beasts : 0) : CFG.fav.ludi;
+  if ((b.amph || base.amph) && st.type !== 'ludi') per += CFG.fav.amphBonus;
+  const gain = Math.round(per * st.days * (id === 'roma' ? 1 : .5)), pre = Math.max(1, Math.round(own / 25000));
+  let h = '<span class="tag">' + L(c.n) + ' · ' + yearLbl() + '</span><h2>' + T('games') + '</h2><div class="seg">' + types.map(t => '<button class="sg' + (st.type === t ? ' on' : '') + '" data-t="' + t + '"' + (t === 'munus' && lastTurnEra5() ? ' disabled' : '') + '><b><em>' + T(t) + '</em></b><small>' + T(t + 'D') + '</small></button>').join('') + '</div>';
+  if (lastTurnEra5()) h += '<p class="note">' + T('noMunus') + '</p>';
+  h += '<div class="stepper"><button id="mn">−</button><div><span class="n">' + st.days + '</span><span class="u">' + T('days') + '</span></div><button id="pl">+</button></div>';
+  h += '<div class="money"><span>' + T('cost') + '</span><b>' + HS(cost) + '</b><span>' + T('ownMoney') + '</span><b>' + HS(own) + '</b><span class="y">' + yTxt(own) + '</span><span>' + T('fav') + '</span><b>' + dl(gain) + '</b><span>' + T('pre') + '</span><b>' + dl(pre) + '</b></div>';
+  h += '<p class="src">' + T('tierSrc') + (id !== 'roma' ? ' ' + T('provFav') : '') + (st.type === 'ludi' ? ' ' + (LANG === 'es' ? 'Como edil, la mitad la paga el dinero público (convención; D35).' : 'As aedile, half is paid with public money (convention; D35).') : '') + (S.era === 5 ? ' ' + (LANG === 'es' ? 'En esta época los juegos cuestan un 50 % más (convención; D113).' : 'In this period games cost 50% more (convention; D113).') : '') + '</p>';
+  h += stick('<div class="row"><button class="btn dark" id="cl">‹ ' + T('back') + '</button><button class="btn hint" id="go"' + (S.pat < own ? ' disabled' : '') + '>' + T('give') + '</button></div>');
+  panel(h, 'tall', p => {
+    p.querySelectorAll('.sg').forEach(bt => bt.onclick = () => { st.type = bt.dataset.t; SFX.tap(); gamesPanel(id, st); });
+    $('mn').onclick = () => { if (st.days > 1) { st.days--; SFX.tap(); gamesPanel(id, st); } };
+    $('pl').onclick = () => { if (st.days < 4) { st.days++; SFX.coin(); gamesPanel(id, st); } };
+    $('cl').onclick = () => cityPanel(id);
+    $('go').onclick = () => {
+      if (!needAp()) return; if (S.pat < own) { SFX.bad(); return toast(T('poor')); }
+      spendAp(); apply({ pat: -own, fav: gain, pre }); if (st.type === 'venat' && S.beasts) S.beasts--;
+      S.stats.games++; S.stats.days += st.days; if (st.days >= 3) apply({ glo: CFG.glo.bigGames });
+      SFX.cheer(); banner(T(st.type).toUpperCase(), T('gamesDone', { d: st.days, c: L(c.n) }));
+      logC('Juegos de ' + st.days + ' días (' + T(st.type).toLowerCase() + ') en ' + c.n.es + '.', st.days + '-day games (' + TX.en[st.type].toLowerCase() + ') in ' + c.n.en + '.');
+      if (st.type === 'munus') return verdict(id);
+      cityPanel(id);
+    };
+  });
+}
+function verdict(id) {
+  const k = S.gi++ % 8, cr = S.crowdBag[k], gk = S.gladBag[k], price = CFG.glad[gk], F = CFG.fav;
+  const fm = cr === 'm' ? F.mY : cr === 'i' ? F.iN : F.sM, fi = cr === 'm' ? F.mN : cr === 'i' ? F.iY : F.sI, left = S.pat - price;
+  rerender = () => verdict2();
+  function verdict2() {
+    let h = '<p class="src" style="text-align:center;margin:0">' + T('crowd') + '</p><div class="shout">' + (cr === 'm' ? '✋ ' + T('cMis') : cr === 'i' ? '🗡️ ' + T('cIug') : '⚖️ ' + T('cSplit')) + '</div>';
+    h += '<div class="kv"><span>' + T('G')[gk] + '</span><b>' + HS(price) + '</b></div><p class="src">' + T('rentNote') + '</p>';
+    h += '<div class="row"><button class="dec mis" id="bm"><div class="t">✋ ' + T('mis') + '</div><div class="s">' + T('misS') + '</div><div class="c">' + dl(fm) + '<br><b>0 HS</b></div></button><button class="dec iug" id="bi"><div class="t">🗡️ ' + T('iug') + '</div><div class="s">' + T('iugS') + '</div><div class="c">' + dl(fi) + '<br><b>' + HS(price) + '</b><br>' + yTxt(price) + '<br>' + (left < 0 ? '⚠ ' + T('ruinDeath') : T('leftAfter', { n: HS(left) })) + '</div></button></div><p class="src">' + T('priceNote') + '</p>';
+    panel(h, '', () => {
+      const go = iug => {
+        let f, mk, ok; if (cr === 'm') { f = iug ? F.mN : F.mY; mk = iug ? 'vIugKo' : 'vMisOk'; ok = !iug; } else if (cr === 'i') { f = iug ? F.iY : F.iN; mk = iug ? 'vIugOk' : 'vMisKo'; ok = iug; } else { f = iug ? F.sI : F.sM; mk = iug ? 'vSplitI' : 'vSplitM'; ok = true; }
+        if (iug && left < 0) { SFX.bad(); return toast(T('poor')); }
+        apply({ fav: f }); if (iug) { apply({ pat: -price }); S.stats.deaths++; }
+        (ok ? SFX.cheer : SFX.boo)(); refresh(); save();
+        panel('<div class="verdict">' + (iug ? '🗡️ <em>Iugula</em>' : '✋ <em>Missio</em>') + '</div><div class="fb ' + (ok ? 'ok' : 'ko') + '">' + T(mk) + ' ' + dl(f) + '</div><p class="src">' + (LANG === 'es' ? 'El veredicto del editor era también una decisión contable (Knapp, 2011; Vamplew, 2022; Ville, 1981).' : 'The editor\'s verdict was also an accounting decision (Knapp, 2011; Vamplew, 2022; Ville, 1981).') + '</p>' + stick('<button class="btn" id="ok">' + T('next') + ' ›</button>'), '', () => { $('ok').onclick = () => cityPanel(id); });
+      };
+      $('bm').onclick = () => go(false); $('bi').onclick = () => go(true);
+    });
+  }
+  verdict2();
+}
+function familyPanel() {
+  rerender = familyPanel; const acts = [];
+  acts.push(['manage', '🌾 ' + T('manage') + ' · +' + HS(CFG.manage), T('manageTx')]);
+  if (S.era === 2) {
+    if (!S.off.edil) acts.push(['edil', '🗳️ ' + T('stand') + ' ' + T('edil'), T('edilReq', { n: CFG.elect.edil })]);
+    else if (!S.off.consul) acts.push(['consul', '🗳️ ' + T('stand') + ' ' + T('consul'), T('consulReq', { n: CFG.elect.consul, p: CFG.elect.consulPre })]);
+  }
+  if (S.era >= 3 && !S.honored[S.era]) acts.push(['honor', '🎖️ ' + T('honor'), T('honorTx')]);
+  if (S.era >= 2 && !S.off.senate) acts.push(['senate', '🏛️ ' + T('senate'), T('senateTx') + ' ' + T('senateReq')]);
+  let h = '<span class="tag">gens ' + S.gens + '</span><h2>' + T('family') + '</h2>';
+  const offs = Object.keys(S.off).filter(k => S.off[k]); if (offs.length) h += '<p class="note">' + offs.map(o => '🏅 ' + (o === 'duo' ? (LANG === 'es' ? 'duunviro' : 'duovir') : o === 'senate' ? (LANG === 'es' ? 'senador' : 'senator') : T(o))).join(' · ') + '</p>';
+  h += acts.map(a => '<button class="opt act" data-a="' + a[0] + '"' + (S.cand && (a[0] === 'edil' || a[0] === 'consul') ? ' disabled' : '') + '><b>' + a[1] + '</b><small>' + a[2] + '</small></button>').join('');
+  h += '<div class="row"><button class="btn dark" id="cl">‹ ' + T('back') + '</button><button class="btn' + (S.ap === 0 ? ' hint' : ' blue') + '" id="ey">' + T('endYear') + ' ›</button></div>';
+  panel(h, 'tall', p => {
+    $('cl').onclick = () => { SFX.tap(); turnView(); }; $('ey').onclick = () => { SFX.tap(); endYearStart(); };
+    p.querySelectorAll('.act').forEach(bt => bt.onclick = () => {
+      const a = bt.dataset.a; if (!needAp()) return;
+      if (a === 'manage') { spendAp(); apply({ pat: CFG.manage }); SFX.coin(); toast('+' + HS(CFG.manage)); return familyPanel(); }
+      if (a === 'edil' || a === 'consul') { spendAp(); S.cand = a; SFX.tap(); toast(T('candidate', { o: T(a) })); return familyPanel(); }
+      if (a === 'honor') { spendAp(); S.honored[S.era] = 1; S.everOff = true; apply({ pre: 6, glo: 2 }); SFX.good(); toast('🎖️ +6'); logC('Aceptó un cargo honorífico.', 'Accepted an honorary office.'); return familyPanel(); }
+      if (a === 'senate') {
+        if (!S.everOff || S.pat < CFG.census) { SFX.bad(); return toast(T('senateReq')); }
+        spendAp(); S.off.senate = 1; apply({ pre: 10, glo: CFG.glo.senate }); SFX.fanfare(); banner('SENATVS', 'gens ' + S.gens); logC('Entró en el Senado.', 'Entered the Senate.'); return familyPanel();
+      }
+    });
+  });
+}
+function endYearStart() {
+  S.sel = null; drawNodes();
+  const ev = (EVENTS[S.era] || [])[S.turn];
+  S.phase = ev ? 'event' : 'yearEnd'; route();
+}
+function eventCard() {
+  const ev = EVENTS[S.era][S.turn]; rerender = eventCard; const id = S.era + '-' + ev.id; const prev = S.ans[id];
+  let h = '<span class="tag">📜 ' + yearLbl() + '</span><h2>' + L(ev.t) + '</h2><p>' + md(L(ev.x)) + '</p>';
+  ev.o.forEach((o, i) => { let cl = ''; if (prev != null) cl = i === prev ? (o.ok ? ' ok' : ' ko') : ' dim'; h += '<button class="opt' + cl + '" data-i="' + i + '">' + md(L(o.t)) + '</button>'; });
+  const fbh = o => '<div class="fb ' + (o.ok ? 'ok' : 'ko') + '">' + (o.ok ? '✔ ' : '✖ ') + md(L(o.fb)) + effTxt(o.eff) + '</div>';
+  h += '<div id="fbx">' + (prev != null ? fbh(ev.o[prev]) : '') + '</div><p class="src">' + ev.src + '</p><div id="nxb">' + (prev != null ? stick('<button class="btn" id="nx">' + T('next') + ' ›</button>') : '') + '</div>';
+  panel(h, 'tall', p => {
+    const wire = () => { $('nx').onclick = () => { SFX.tap(); S.phase = 'yearEnd'; route(); }; };
+    if (prev != null) return wire();
+    p.querySelectorAll('.opt').forEach(b => b.onclick = () => {
+      if (S.ans[id] != null) return; const i = +b.dataset.i, o = ev.o[i]; S.ans[id] = i;
+      if (o.eff && o.eff.pat && S.pat + o.eff.pat < 0) o.eff = Object.assign({}, o.eff, { pat: -S.pat });
+      apply(o.eff); (o.ok ? SFX.good : SFX.bad)(); refresh();
+      const nt = t => t.replace(/^[0-9]+ (a\. C\.|d\. C\.|BC|AD) · /, ''); logC(nt(ev.t.es) + ': ' + o.t.es + '.', nt(ev.t.en) + ': ' + o.t.en + '.');
+      p.querySelectorAll('.opt').forEach((x, j) => x.classList.add(j === i ? (o.ok ? 'ok' : 'ko') : 'dim'));
+      $('fbx').innerHTML = fbh(o); $('nxb').innerHTML = stick('<button class="btn" id="nx">' + T('next') + ' ›</button>'); wire(); save();
+    });
+  });
+}
+function effTxt(e) { if (!e) return ''; const a = []; if (e.pat) a.push(dl(Math.round(e.pat / 1000)) + 'k HS'); if (e.fav) a.push(dl(e.fav) + ' ' + T('fav')); if (e.pre) a.push(dl(e.pre) + ' ' + T('pre')); if (e.glo) a.push(dl(e.glo) + ' ★'); return a.length ? '<br>' + a.join(' · ') : ''; }
+function yearEnd() {
+  rerender = yearEnd;
+  if (!S.yeDone) {
+    S.yeDone = { rent: CFG.rent, fav0: S.fav, el: null };
+    if (S.cand) {
+      const a = S.cand; let won = false;
+      if (a === 'edil') won = S.fav >= CFG.elect.edil; else won = S.off.edil && S.fav >= CFG.elect.consul && S.pre >= CFG.elect.consulPre;
+      if (won) { S.off[a] = 1; S.everOff = true; apply({ glo: CFG.glo[a], pre: a === 'edil' ? 5 : 8 }); logC('Elegido ' + a + '.', 'Elected ' + TX.en[a] + '.'); }
+      S.yeDone.el = { a, won }; S.cand = null;
+    }
+    if (S.f.duo) { S.everOff = true; S.off.duo = 1; }
+    S.pat += CFG.rent; S.fav = clamp(S.fav * CFG.decay); save();
+  }
+  const Y = S.yeDone;
+  let h = '<span class="tag">' + yearLbl() + '</span><h2>' + T('yearEnd') + '</h2>';
+  if (Y.el) { h += '<div class="fb ' + (Y.el.won ? 'ok' : 'ko') + '">🗳️ <b>' + T(Y.el.won ? 'elected' : 'defeated', { o: T(Y.el.a) }) + '</b><br>' + T('electTx') + ' (Roldán, 1990)</div>'; if (Y.el.won) { SFX.fanfare(); banner(T(Y.el.a).toUpperCase(), 'gens ' + S.gens); } }
+  h += '<div class="kv"><span>' + T('rent') + '</span><b>' + dl(Math.round(Y.rent / 1000)) + 'k HS</b></div><div class="kv"><span>' + T('decay') + '</span><b>' + Y.fav0 + ' → ' + S.fav + '</b></div>';
+  h += stick('<button class="btn" id="nx">' + T('next') + ' ›</button>');
+  panel(h, '', () => { $('nx').onclick = () => { SFX.tap(); delete S.yeDone; nextTurn(); }; });
+}
+function nextTurn() {
+  S.turn++; S.ap = CFG.ap; S.permit = false;
+  if (S.turn >= ERA().turns) { S.turn = ERA().turns - 1; S.phase = 'quiz'; }
+  else S.phase = 'turn';
+  route();
+}
+function eraQuiz() {
+  const Q = ERA_Q[S.era]; rerender = eraQuiz; const prev = S.quiz[S.era];
+  if (!S.qord) S.qord = {}; if (!S.qord[S.era]) S.qord[S.era] = shuffle([0, 1, 2]); const ord = S.qord[S.era];
+  let h = '<span class="tag">' + L(ERA().t) + '</span><h2>' + T('quizT') + '</h2><h3>' + L(Q.q) + '</h3>' + ord.map(j => { let cl = ''; if (prev != null) cl = j === 0 ? ' ok' : j === prev ? ' ko' : ' dim'; return '<button class="opt' + cl + '" data-j="' + j + '">' + L(Q.a[j]) + '</button>'; }).join('');
+  h += '<div id="fbx">' + (prev != null ? '<div class="fb ' + (prev === 0 ? 'ok' : 'ko') + '">' + (prev === 0 ? '✔ ' + T('ok') + ' ' + dl(CFG.glo.quiz) + ' ★' : '✖ ' + T('ko')) + ' · ' + Q.x + '</div>' : '') + '</div><div id="nxb">' + (prev != null ? stick('<button class="btn" id="nx">' + T('next') + ' ›</button>') : '') + '</div>';
+  panel(h, 'tall', p => {
+    const wire = () => { $('nx').onclick = () => { SFX.tap(); S.phase = 'heir'; route(); }; };
+    if (prev != null) return wire();
+    p.querySelectorAll('.opt').forEach(b => b.onclick = () => {
+      if (S.quiz[S.era] != null) return; const j = +b.dataset.j; S.quiz[S.era] = j; if (j === 0) { apply({ glo: CFG.glo.quiz }); SFX.good(); addXP(10); } else SFX.bad();
+      refresh(); eraQuiz();
+    });
+  });
+}
+function heirCard() {
+  rerender = heirCard; const last = S.era >= ERAS.length;
+  let h = '<span class="tag">' + L(ERA().t) + '</span><h2>' + (last ? L(EPILOGUE.t) : T('heir')) + '</h2>';
+  const lines = S.log.filter(l => l.era === S.era); h += '<h3>' + T('chronicle') + '</h3><ul class="chron">' + (lines.length ? lines.map(l => '<li><b>' + yLog(l) + '</b> ' + L(l) + '</li>').join('') : '<li>·</li>') + '</ul>';
+  if (!last) h += '<p>' + T('heirTx') + '</p>';
+  h += stick('<button class="btn hint" id="nx">' + T('next') + ' ›</button>');
+  panel(h, 'tall', () => {
+    $('nx').onclick = () => {
+      SFX.tuba();
+      if (last) { S.phase = 'epilogue'; return route(); }
+      S.era++; S.turn = 0; S.fav = clamp(S.fav * .5); S.off = {}; S.everOff = false; S.cand = null; delete S.f.duo; S.phase = 'rules'; route();
+    };
+  });
+}
+function epilogue() {
+  rerender = epilogue; focusOn('constan', 2.2); const c = CITY.constan; S.sel = 'constan'; drawNodes();
+  panel('<span class="tag">532</span><h2>' + L(EPILOGUE.t) + '</h2><p>' + md(L(EPILOGUE.x)) + '</p><p class="src">' + EPILOGUE.src + '</p>' + stick('<button class="btn hint" id="nx">' + T('end') + ' ›</button>'), 'tall', () => { $('nx').onclick = () => { SFX.tap(); S.phase = 'end'; route(); }; });
+}
+function endView() {
+  rerender = endView; S.sel = null; focusOn(null, 1); drawNodes();
+  const glo = S.glo + Math.floor(S.pre / 10); const rank = glo >= 70 ? 3 : glo >= 45 ? 2 : glo >= 25 ? 1 : 0;
+  if (!S.xp) { S.xp = 1; addXP(40 + rank * 10); const b = lsGet('gens.best', null); if (!b || glo > b.glo) lsSet('gens.best', { glo, gens: S.gens }); track('final/' + rank); SFX.fanfare(); save(); }
+  let h = '<span class="tag">gens ' + S.gens + '</span><h2>' + T('end') + '</h2><div class="verdict">★ ' + glo + '</div><p style="text-align:center;font-weight:800">' + T('ranks')[rank] + '</p>';
+  h += '<p class="src">' + T('finalGlo') + ' = ' + T('glo') + ' ' + S.glo + ' + ' + T('pre') + ' ' + S.pre + ' / 10 (' + T('conv') + ')</p>';
+  h += '<ul class="chron">' + S.log.map(l => '<li><b>' + yLog(l) + '</b> ' + L(l) + '</li>').join('') + '</ul>';
+  h += '<h3>' + T('closeT') + '</h3>' + CLOSE.map(q => '<div class="quote">' + md(L(q)) + '</div>').join('') + '<p class="src">' + (LANG === 'es' ? 'Frases de las diapositivas 25, 31, 37 y 117 del Tema 4.' : 'Sentences from slides 25, 31, 37 and 117 of Unit 4.') + '</p>';
+  h += stick('<div class="row"><button class="btn blue" id="ag">' + T('again') + '</button>' + (IN_APP ? '<button class="btn dark" id="ap">' + T('toApp') + '</button>' : '') + '</div>');
+  panel(h, 'tall', () => { $('ag').onclick = () => { clr(); chooseGens(); }; const ap = $('ap'); if (ap) ap.onclick = () => { clr(); location.href = '../'; }; });
+}
+
+/* ---------------- arranque ---------------- */
+function theme() { let th = 'auto'; try { const v = localStorage.getItem('historiapp.theme'); if (v) th = v.replace(/"/g, ''); } catch (e) {} let dk = th === 'dark'; if (th === 'auto') { try { dk = matchMedia('(prefers-color-scheme: dark)').matches; } catch (e) {} } document.documentElement.classList.toggle('dark', dk); }
+theme();
+document.documentElement.lang = LANG;
+addEventListener('pagehide', save); document.addEventListener('visibilitychange', () => { if (document.hidden) save(); });
+addEventListener('resize', () => { if (S) drawNodes(); });
+drawMap(); home(); window.GENS_READY = true;
+</script>
+<script>
+(function(){function f(){var h=document.getElementById('hud');if(h)document.documentElement.style.setProperty('--hudH',h.offsetHeight+'px');}new ResizeObserver(f).observe(document.getElementById('hud'));addEventListener('resize',f);f();})();
+</script>
+</body>
+</html>

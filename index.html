@@ -899,7 +899,7 @@ const RP_K="historiapp.repaso", RP_GAPS=[1,3,7,21], RP_DAY=864e5;
 function rpLoad(){ try{ const d=JSON.parse(localStorage.getItem(RP_K)); if(d&&d.items) return d; }catch(e){} return {v:1,items:{}}; }
 function rpSave(d){ try{ localStorage.setItem(RP_K,JSON.stringify(d)); }catch(e){} }
 function rpId(q){ const s=String(q&&(q.es||q)||""); let h=0; for(let i=0;i<s.length;i++) h=(h*31+s.charCodeAt(i))|0; return "q"+(h>>>0).toString(36); }
-function rpFallo(g,q,o,f,tm){ const d=rpLoad(), id=rpId(q), it=d.items[id]||{g,q,o,f:f||null,t:tm||null,box:0,n:0}; it.box=0; it.n=(it.n||0)+1; it.due=Date.now()+RP_DAY; it.last=Date.now(); d.items[id]=it; rpSave(d); }
+function rpFallo(g,q,o,f,tm,x){ const d=rpLoad(), id=rpId(q), it=d.items[id]||{g,q,o,f:f||null,t:tm||null,box:0,n:0}; if(x&&!it.x) it.x=x; it.box=0; it.n=(it.n||0)+1; it.due=Date.now()+RP_DAY; it.last=Date.now(); d.items[id]=it; rpSave(d); }
 function rpAcierto(q,id0){ const d=rpLoad(), id=id0||rpId(q), it=d.items[id]; if(!it||it.due>Date.now()) return null; it.box=(it.box||0)+1; let r; if(it.box>=RP_GAPS.length){ delete d.items[id]; r=0; } else { it.due=Date.now()+RP_GAPS[it.box]*RP_DAY; r=RP_GAPS[it.box]; } rpSave(d); return r; }
 function rpDue(){ const d=rpLoad(), now=Date.now(); return Object.keys(d.items).filter(k=>d.items[k].due<=now).map(k=>Object.assign({id:k},d.items[k])); }
 /* 19-10-2026: también van al repaso los fallos de mitos, glosario y relacionar (la correcta, la primera) */
@@ -916,6 +916,8 @@ const GAMES=[
   {f:"juegos/agon.html", gen:{es:"Estrategia por turnos al estilo Risk",en:"Turn-based strategy, Risk style"}, img:"img/juegos/agon.jpg", temas:[1,2,3], ic:"🗺️", n:{es:"Agón",en:"Agon"}, title:{es:"Agón: la conquista del deporte antiguo",en:"Agon: the conquest of ancient sport"}, sub:{es:"Conquista los yacimientos del temario respondiendo a su historia",en:"Conquer the sites of the syllabus by answering questions about them"}},
   {f:"juegos/cuadrigas.html", gen:{es:"Carreras arcade y gestión de la cuadra",en:"Arcade racing and stable management"}, img:"img/juegos/cuadrigas.jpg", temas:[4], ic:"🏇", n:{es:"Cuadrigas",en:"Chariots"}, title:{es:"Cuadrigas: de Tarraco al Circo Máximo",en:"Chariots: from Tarraco to the Circus Maximus"}, sub:{es:"Carreras de carros del Tema 4 y la clase de veinte minutos",en:"Unit 4 chariot races and the twenty-minute lesson"}},
   {f:"juegos/gladiatura.html", gen:{es:"Lucha arcade con modo carrera RPG",en:"Arcade fighting with an RPG career mode"}, img:"img/juegos/gladiatura.jpg", temas:[4], ic:"⚔️", n:{es:"Gladiatura",en:"Gladiatura"}, title:{es:"Gladiatura",en:"Gladiatura"}, sub:{es:"Del ludus de provincias al Anfiteatro Flavio",en:"From a provincial ludus to the Flavian Amphitheatre"}},
+  {f:"juegos/editor.html", gen:{es:"Decisión política en 3D: paga los juegos y juzga desde el palco",en:"3D political decision game: pay for the games and judge from the box"}, img:"img/juegos/editor.jpg", temas:[4], ic:"🗳️", n:{es:"Editor por un año",en:"Editor for a Year"}, title:{es:"Editor por un año",en:"Editor for a Year"}, sub:{es:"Paga los juegos con dinero público y propio y gánate al pueblo",en:"Pay for the games with public and private money and win over the people"}},
+  {f:"juegos/gens.html", gen:{es:"Estrategia sobre el mapa: una familia romana y sus juegos durante siete siglos",en:"Map strategy: a Roman family and its games over seven centuries"}, img:"img/juegos/gens.jpg", temas:[4], ic:"🏛️", n:{es:"Gens",en:"Gens"}, title:{es:"Gens",en:"Gens"}, sub:{es:"Haz carrera política con los espectáculos, de 264 a. C. a Constantinopla",en:"Build a political career with the shows, from 264 BC to Constantinople"}},
   {f:"juegos/monopoleis.html", gen:{es:"Juego de tablero en 3D con preguntas",en:"3D board game with questions"}, img:"img/juegos/monopoleis.jpg", temas:[3,4], ic:"🏛️", n:{es:"Monopoleis",en:"Monopoleis"}, title:{es:"Monopoleis",en:"Monopoleis"}, sub:{es:"Compra Grecia y Roma, con una pregunta en cada casilla",en:"Buy Greece and Rome, with a question on every square"}},
   {f:"juegos/trivium.html", gen:{es:"Trivial en 3D con preguntas de los temas",en:"3D trivia with questions from the units"}, img:"img/juegos/trivium.jpg", temas:[1,2,3,4], ic:"🎯", n:{es:"Trivium",en:"Trivium"}, title:{es:"Trivium",en:"Trivium"}, sub:{es:"Reúne los seis quesitos con preguntas de los temas 1 a 4",en:"Collect the six wedges with questions from Units 1 to 4"}},
   {f:"juegos/historiapp-arena.html", gen:{es:"Estrategia de cartas en tiempo real en 3D",en:"3D real-time card strategy"}, img:"img/juegos/historiapp-arena.jpg", temas:[1,2,3,4], ic:"🏟️", n:{es:"Historiapp Arena",en:"Historiapp Arena"}, title:{es:"Historiapp Arena",en:"Historiapp Arena"}, sub:{es:"Batallas de cartas de Historia del Deporte, de Schöningen al Circo Máximo",en:"History of Sport card battles, from Schöningen to the Circus Maximus"}},
@@ -1836,7 +1838,7 @@ function modeChoice(tema,mode,m,opts={}){
     const finish=(chosen)=>{ if(done) return; done=true; clearInterval(timer);
       const ok=chosen===it.answer; m.querySelectorAll(".opt").forEach(b=>{ b.disabled=true; const i=+b.dataset.i; if(i===it.answer) b.classList.add("ok"); else if(i===chosen) b.classList.add("ko"); });
       markSeen(tema.id,mode,order[pos]); const xp=ok?(mode==="quiz"?15:10):2; addXP(xp); if(ok) correct++;
-      try{ const qq=mode==="sources"?it.question:it.q; if(ok) rpAcierto(qq); else rpFallo("historiapp",qq,(()=>{ const oo=[it.options[it.answer],...it.options.filter((_,i)=>i!==it.answer)]; return {es:oo.map(x=>x&&x.es||x),en:oo.map(x=>x&&(x.en||x.es)||x)}; })(),null,tema.num); }catch(_){}
+      try{ const qq=mode==="sources"?it.question:it.q; if(ok) rpAcierto(qq); else rpFallo("historiapp",qq,(()=>{ const oo=[it.options[it.answer],...it.options.filter((_,i)=>i!==it.answer)]; return {es:oo.map(x=>x&&x.es||x),en:oo.map(x=>x&&(x.en||x.es)||x)}; })(),null,tema.num,mode==="sources"?it.text:null); }catch(_){}
       sheet(ok, ok?t("correct"):(chosen===-1?t("timeUp"):t("wrong")), L(it.explain), xp, ()=>{ pos++; if(pos>=order.length) finishRound(m,tema,mode,correct,order.length,()=>modeChoice(tema,mode,m),opts); else draw(); }, L(mode==="sources"?it.question:it.q)); };
     m.querySelectorAll(".opt").forEach(b=>b.onclick=()=>finish(+b.dataset.i));
     if(mode==="quiz"){ let left=20; const bar=document.getElementById("tm"); bar.style.width="100%";
@@ -2022,6 +2024,11 @@ async function renderDaily(){
   }
   step();
 }
+async function rpFillX(items){ const d=rpLoad(); let ch=false;
+  for(const it of items){ if(it.x||!it.t||!it.q||!it.q.es) continue;
+    try{ const tm=await getTema(it.t), hit=(tm.sources||[]).find(s=>s.question&&s.question.es===it.q.es&&s.text);
+      if(hit){ it.x=hit.text; if(d.items[it.id]){ d.items[it.id].x=hit.text; ch=true; } } }catch(_){} }
+  if(ch) rpSave(d); }
 function renderRepaso(){
   app.innerHTML=header(t("rpTitle"),true)+`<main id="m"></main>`; bindHeader(()=>nav({name:"home"}));
   const m=document.getElementById("m"); const items=shuffle(S.view.all?Object.keys(rpLoad().items).map(k=>Object.assign({id:k},rpLoad().items[k])):rpDue()); let pos=0, correct=0;
@@ -2033,13 +2040,13 @@ function renderRepaso(){
       if(correct) celebrate(); document.getElementById("rpH").onclick=()=>nav({name:"home"}); return; }
     const it=items[pos], ops=(it.o&&(it.o[S.lang]||it.o.es))||[], ch=shuffle(ops.map((o,i)=>({o,i})));
     m.innerHTML=`<div class="counter">${t("seen",{a:pos+1,b:items.length})} · ${esc(t("rpFrom",{g:RP_GN[it.g]||it.g}))}</div><div class="progress"><i style="width:${pos/items.length*100}%"></i></div>
-      <div class="card qtext">${esc(L(it.q))}</div><div class="opts">${ch.map((x,k)=>`<button class="opt" data-i="${x.i}"><span class="k">${"ABCDE"[k]}</span><span>${esc(x.o)}</span></button>`).join("")}</div>`;
+      ${it.x?`<div class="quote">${esc(L(it.x))}</div><div class="qtext">${esc(L(it.q))}</div>`:`<div class="card qtext">${esc(L(it.q))}</div>`}<div class="opts">${ch.map((x,k)=>`<button class="opt" data-i="${x.i}"><span class="k">${"ABCDE"[k]}</span><span>${esc(x.o)}</span></button>`).join("")}</div>`;
     m.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ const i=+b.dataset.i, ok=i===0;
       m.querySelectorAll(".opt").forEach(x=>{ x.disabled=true; const j=+x.dataset.i; if(j===0) x.classList.add("ok"); else if(j===i) x.classList.add("ko"); });
-      let msg; if(ok){ correct++; const r=rpAcierto(it.q,it.id); msg=r===0?t("rpLast"):t("rpOk",{d:r}); } else { rpFallo(it.g,it.q,it.o,it.f,it.t); msg=t("rpWrong"); }
+      let msg; if(ok){ correct++; const r=rpAcierto(it.q,it.id); msg=r===0?t("rpLast"):t("rpOk",{d:r}); } else { rpFallo(it.g,it.q,it.o,it.f,it.t,it.x); msg=t("rpWrong"); }
       const xp=ok?10:2; addXP(xp); sheet(ok, ok?t("correct"):t("wrong"), msg, xp, ()=>{ pos++; draw(); }, L(it.q)); });
   }
-  draw();
+  rpFillX(items).then(draw,draw);
 }
 function dailyResult(m,correct,total){
   S.xpMult=1;
