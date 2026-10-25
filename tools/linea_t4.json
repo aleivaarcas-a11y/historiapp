@@ -1,0 +1,1230 @@
+{
+ "civs": [
+  {
+   "id": "etr",
+   "name": {
+    "es": "Etruria",
+    "en": "Etruria"
+   }
+  },
+  {
+   "id": "rom",
+   "name": {
+    "es": "Roma",
+    "en": "Rome"
+   }
+  }
+ ],
+ "eras": [
+  {
+   "tema": 4,
+   "civ": "etr",
+   "from": -900,
+   "to": -720,
+   "n": {
+    "es": "Villanoviano",
+    "en": "Villanovan"
+   },
+   "f": {
+    "es": "h. 900-720 a. C.",
+    "en": "c. 900-720 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 4,
+   "civ": "etr",
+   "from": -720,
+   "to": -575,
+   "n": {
+    "es": "Orientalizante",
+    "en": "Orientalising"
+   },
+   "f": {
+    "es": "h. 720-575 a. C.",
+    "en": "c. 720-575 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 4,
+   "civ": "etr",
+   "from": -575,
+   "to": -480,
+   "n": {
+    "es": "Arcaico",
+    "en": "Archaic"
+   },
+   "f": {
+    "es": "h. 575-480 a. C.",
+    "en": "c. 575-480 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 4,
+   "civ": "etr",
+   "from": -480,
+   "to": -300,
+   "n": {
+    "es": "Clásico",
+    "en": "Classical"
+   },
+   "f": {
+    "es": "h. 480-300 a. C.",
+    "en": "c. 480-300 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 4,
+   "civ": "etr",
+   "from": -300,
+   "to": -100,
+   "n": {
+    "es": "Romano-etrusco",
+    "en": "Romano-Etruscan"
+   },
+   "f": {
+    "es": "h. 300-100 a. C.",
+    "en": "c. 300-100 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 4,
+   "civ": "rom",
+   "from": -753,
+   "to": -509,
+   "n": {
+    "es": "Monarquía",
+    "en": "Monarchy"
+   },
+   "f": {
+    "es": "753-509 a. C.",
+    "en": "753-509 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 4,
+   "civ": "rom",
+   "from": -509,
+   "to": -27,
+   "n": {
+    "es": "República",
+    "en": "Republic"
+   },
+   "f": {
+    "es": "509-27 a. C.",
+    "en": "509-27 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 4,
+   "civ": "rom",
+   "from": -27,
+   "to": 476,
+   "n": {
+    "es": "Imperio",
+    "en": "Empire"
+   },
+   "f": {
+    "es": "27 a. C.-476 d. C.",
+    "en": "27 BC-AD 476"
+   },
+   "inter": 0
+  }
+ ],
+ "hitos": [
+  {
+   "id": "rom-fundacion",
+   "tema": 4,
+   "civ": "rom",
+   "k": "h",
+   "y": -753,
+   "sl": 24,
+   "es": {
+    "d": "753 a. C.",
+    "t": "Fundación de Roma según la tradición",
+    "x": "Según la tradición, Roma se fundó en 753 a. C. como una pequeña ciudad del Lacio, y su primer sistema de gobierno recayó en reyes. Con esa fecha arranca la Monarquía, la primera de las tres etapas en que suele dividirse su historia según quién ejercía el poder.",
+    "q": "¿En qué año sitúa la tradición la fundación de Roma?",
+    "o": [
+     "753 a. C.",
+     "616 a. C.",
+     "509 a. C.",
+     "264 a. C."
+    ]
+   },
+   "en": {
+    "d": "753 BC",
+    "t": "Foundation of Rome according to tradition",
+    "x": "According to tradition, Rome was founded in 753 BC as a small city in Latium, and its first system of government lay with kings. That date opens the Monarchy, the first of the three stages into which its history is usually divided according to who held power.",
+    "q": "In what year does tradition place the foundation of Rome?",
+    "o": [
+     "753 BC",
+     "616 BC",
+     "509 BC",
+     "264 BC"
+    ]
+   }
+  },
+  {
+   "id": "etr-griegos",
+   "tema": 4,
+   "civ": "etr",
+   "k": "d",
+   "y": -750,
+   "sl": 9,
+   "es": {
+    "d": "Mediados del siglo VIII a. C.",
+    "t": "Los griegos fundan ciudades en el sur de Italia",
+    "x": "Desde mediados del siglo VIII a. C. los griegos fundaron ciudades en el sur de Italia y en Sicilia, y en ellas se entrenaba y se competía como en Grecia. Por esa vía llegó el deporte griego a Etruria, junto con objetos de lujo como las ánforas panatenaicas, que eran los premios de los juegos de Atenas.",
+    "q": "¿Por dónde llegó el deporte griego a Italia?",
+    "o": [
+     "Por el sur, con las ciudades fundadas por los griegos",
+     "Por el norte, con los pueblos del Danubio",
+     "Por mar desde Egipto, con los comerciantes fenicios",
+     "Desde Roma, que lo difundió entre los etruscos"
+    ]
+   },
+   "en": {
+    "d": "Mid-8th century BC",
+    "t": "The Greeks found cities in southern Italy",
+    "x": "From the mid-8th century BC the Greeks founded cities in southern Italy and in Sicily, and in them people trained and competed as in Greece. Greek sport reached Etruria by this route, together with luxury objects such as Panathenaic amphorae, which were the prizes of the games of Athens.",
+    "q": "By what route did Greek sport reach Italy?",
+    "o": [
+     "From the south, through the cities founded by the Greeks",
+     "From the north, through the peoples of the Danube",
+     "By sea from Egypt, with Phoenician merchants",
+     "From Rome, which spread it among the Etruscans"
+    ]
+   }
+  },
+  {
+   "id": "etr-olpe",
+   "tema": 4,
+   "civ": "etr",
+   "k": "d",
+   "y": -630,
+   "sl": 12,
+   "es": {
+    "d": "h. 630 a. C.",
+    "t": "Olpe de bucchero con un combate de pugilato",
+    "x": "La olpe de bucchero de Cerveteri, de hacia 630 a. C., muestra un combate de pugilato y confirma que ya había púgiles etruscos en el siglo VII a. C. El pugilato fue el deporte favorito de los etruscos y casi siempre aparece acompañado de un flautista, que según Thuillier (2013) marcaba el ritmo del combate.",
+    "q": "¿Qué deporte muestra la olpe de bucchero de Cerveteri?",
+    "o": [
+     "El pugilato",
+     "La carrera de carros",
+     "El lanzamiento de disco",
+     "El salto con pértiga"
+    ]
+   },
+   "en": {
+    "d": "c. 630 BC",
+    "t": "Bucchero olpe with a boxing match",
+    "x": "The bucchero olpe from Cerveteri, of c. 630 BC, shows a boxing match and confirms that there were already Etruscan boxers in the 7th century BC. Boxing was the favourite sport of the Etruscans and it almost always appears accompanied by a flute player, who according to Thuillier (2013) set the rhythm of the fight.",
+    "q": "Which sport does the bucchero olpe from Cerveteri show?",
+    "o": [
+     "Boxing",
+     "Chariot racing",
+     "Discus throwing",
+     "Pole vaulting"
+    ]
+   }
+  },
+  {
+   "id": "etr-reyes",
+   "tema": 4,
+   "civ": "etr",
+   "k": "h",
+   "y": -616,
+   "sl": 4,
+   "es": {
+    "d": "616-509 a. C.",
+    "t": "Reyes etruscos en Roma",
+    "x": "El dominio etrusco sobre los primitivos romanos duró un siglo, entre 616 y 509 a. C., y terminó cuando la aristocracia expulsó al último rey, Tarquinio el Soberbio. Los tres últimos reyes de Roma fueron etruscos, y de su deporte heredó Roma, ante todo, la preferencia de la nobleza por asistir como espectadora.",
+    "q": "¿Cuánto duró el dominio etrusco sobre los primitivos romanos?",
+    "o": [
+     "Un siglo",
+     "Unos cincuenta años",
+     "Unos dos siglos",
+     "Unos tres siglos"
+    ]
+   },
+   "en": {
+    "d": "616-509 BC",
+    "t": "Etruscan kings in Rome",
+    "x": "Etruscan rule over the early Romans lasted a century, between 616 and 509 BC, and ended when the aristocracy expelled the last king, Tarquinius Superbus. The last three kings of Rome were Etruscans, and from their sport Rome inherited, above all, the preference of the nobility for attending as spectators.",
+    "q": "How long did Etruscan rule over the early Romans last?",
+    "o": [
+     "A century",
+     "About fifty years",
+     "About two centuries",
+     "About three centuries"
+    ]
+   }
+  },
+  {
+   "id": "etr-murlo",
+   "tema": 4,
+   "civ": "etr",
+   "k": "d",
+   "y": -600,
+   "sl": 16,
+   "es": {
+    "d": "h. 600 a. C.",
+    "t": "Carreras de caballos en las placas de Murlo",
+    "x": "Las carreras de caballos con jinete se documentan sobre todo en las placas de terracota de Murlo, de hacia 600 a. C., y después apenas vuelven a representarse. Su lugar lo ocuparon los desultores, jinetes acróbatas que saltaban de un caballo a otro en plena carrera, de modo que la hípica etrusca pasó de la carrera a la acrobacia.",
+    "q": "¿Quiénes ocuparon el lugar de las carreras de caballos con jinete?",
+    "o": [
+     "Los desultores, jinetes acróbatas",
+     "Los aurigas de cuadriga",
+     "Los gladiadores ecuestres",
+     "Los jinetes de la caballería romana"
+    ]
+   },
+   "en": {
+    "d": "c. 600 BC",
+    "t": "Horse races on the plaques of Murlo",
+    "x": "Horse races with riders are documented above all on the terracotta plaques of Murlo, of c. 600 BC, and afterwards they are hardly ever depicted again. Their place was taken by the desultores, acrobatic riders who leapt from one horse to another in mid-race, so Etruscan horsemanship moved from racing to acrobatics.",
+    "q": "Who took the place of the horse races with riders?",
+    "o": [
+     "The desultores, acrobatic riders",
+     "The charioteers of the quadriga",
+     "Mounted gladiators",
+     "The riders of the Roman cavalry"
+    ]
+   }
+  },
+  {
+   "id": "etr-tumbas",
+   "tema": 4,
+   "civ": "etr",
+   "k": "d",
+   "y": -530,
+   "sl": 6,
+   "es": {
+    "d": "530-450 a. C.",
+    "t": "Tumbas pintadas con juegos deportivos",
+    "x": "Entre Tarquinia y Chiusi apenas diecisiete tumbas, fechadas entre 530 y 450 a. C., muestran juegos deportivos, puesto que decorar una tumba estaba al alcance de muy pocas familias. Los estudios coinciden en que las pinturas representan los juegos funerarios celebrados en honor del noble difunto, y pintarlos en la pared servía para que el rito se repitiera para siempre.",
+    "q": "¿Qué representan las pinturas deportivas de las tumbas etruscas, según coinciden los estudios?",
+    "o": [
+     "Los juegos funerarios en honor del noble difunto",
+     "Las competiciones de los grandes festivales griegos",
+     "El entrenamiento militar de la aristocracia",
+     "Los juegos que ofrecían los magistrados al pueblo"
+    ]
+   },
+   "en": {
+    "d": "530-450 BC",
+    "t": "Tombs painted with sporting games",
+    "x": "Barely seventeen tombs between Tarquinia and Chiusi, dated between 530 and 450 BC, show sporting games, since decorating a tomb was within the reach of very few families. Studies agree that the paintings depict the funeral games held in honour of the noble deceased, and painting them on the wall ensured that the rite was repeated for ever.",
+    "q": "What do the sporting paintings in Etruscan tombs depict, as studies agree?",
+    "o": [
+     "Funeral games in honour of the noble deceased",
+     "Competitions at the great Greek festivals",
+     "The military training of the aristocracy",
+     "Games offered by magistrates to the people"
+    ]
+   }
+  },
+  {
+   "id": "etr-augures",
+   "tema": 4,
+   "civ": "etr",
+   "k": "d",
+   "y": -530,
+   "sl": 17,
+   "es": {
+    "d": "h. 530 a. C.",
+    "t": "Tumba de los Augures y el juego del phersu",
+    "x": "La Tumba de los Augures de Tarquinia muestra a un enmascarado, el phersu, que azuza un perro contra un hombre encapuchado con una porra, al que la cuerda que sujeta el enmascarado impide salvar la vida. Durante mucho tiempo se tuvo por precedente directo de los juegos de gladiadores, pero ninguna de las diecisiete pinturas de juegos fúnebres muestra un solo gladiador, de modo que el phersu queda, como mucho, como precursor de los combates con fieras.",
+    "q": "¿De qué puede ser el phersu, como mucho, un precursor?",
+    "o": [
+     "De los combates con fieras",
+     "De los combates de gladiadores",
+     "De las carreras de carros",
+     "De las naumaquias"
+    ]
+   },
+   "en": {
+    "d": "c. 530 BC",
+    "t": "Tomb of the Augurs and the phersu game",
+    "x": "The Tomb of the Augurs at Tarquinia shows a masked figure, the phersu, who sets a dog on a hooded man with a club, whom the rope held by the masked figure prevents from saving his life. For a long time it was regarded as the direct precedent of gladiatorial games, but none of the seventeen paintings of funeral games shows a single gladiator, so the phersu remains, at most, a forerunner of the combats with wild beasts.",
+    "q": "Of what can the phersu be, at most, a forerunner?",
+    "o": [
+     "The combats with wild beasts",
+     "Gladiatorial combats",
+     "Chariot races",
+     "Naumachiae"
+    ]
+   }
+  },
+  {
+   "id": "rom-republica",
+   "tema": 4,
+   "civ": "rom",
+   "k": "h",
+   "y": -509,
+   "sl": 24,
+   "es": {
+    "d": "509 a. C.",
+    "t": "Expulsión de Tarquinio el Soberbio y fin de la Monarquía",
+    "x": "En 509 a. C. la aristocracia expulsó al último rey, Tarquinio el Soberbio, en una reacción de los grandes linajes para recuperar el poder que los reyes les habían recortado. El poder del rey pasó a dos cónsules elegidos cada año, que podían vetarse entre sí, de modo que nadie volviera a gobernar solo.",
+    "q": "¿A quién pasó el poder del rey tras su expulsión?",
+    "o": [
+     "A dos cónsules elegidos cada año",
+     "A un dictador perpetuo",
+     "A un princeps de por vida",
+     "A los tribunos de la plebe"
+    ]
+   },
+   "en": {
+    "d": "509 BC",
+    "t": "Expulsion of Tarquinius Superbus and the end of the Monarchy",
+    "x": "In 509 BC the aristocracy expelled the last king, Tarquinius Superbus, in a reaction by the great lineages to recover the power that the kings had taken from them. The king's power passed to two consuls elected every year, who could veto each other, so that no one would ever again rule alone.",
+    "q": "To whom did the king's power pass after his expulsion?",
+    "o": [
+     "Two consuls elected every year",
+     "A dictator for life",
+     "A princeps for life",
+     "The tribunes of the plebs"
+    ]
+   }
+  },
+  {
+   "id": "etr-bigas",
+   "tema": 4,
+   "civ": "etr",
+   "k": "d",
+   "y": -500,
+   "sl": 7,
+   "es": {
+    "d": "h. 500 a. C.",
+    "t": "Tumba de las Bigas, mujeres en la grada",
+    "x": "La Tumba de las Bigas de Tarquinia muestra a los espectadores nobles sentados en gradas de madera cubiertas con toldos, hombres y mujeres mezclados, mientras los carros desfilan ante ellos antes de la carrera. La mujer etrusca acudía como espectadora a los eventos deportivos, aunque no consta que compitiera en el deporte reglado.",
+    "q": "¿Qué muestra la Tumba de las Bigas sobre el público de las carreras?",
+    "o": [
+     "Nobles, hombres y mujeres mezclados, en gradas de madera con toldos",
+     "Solo hombres, en gradas de piedra",
+     "Mujeres separadas de los hombres en un palco propio",
+     "Una multitud de esclavos de pie en las laderas"
+    ]
+   },
+   "en": {
+    "d": "c. 500 BC",
+    "t": "Tomb of the Bigae, women in the stands",
+    "x": "The Tomb of the Bigae at Tarquinia shows noble spectators seated on wooden stands covered with awnings, men and women together, while the chariots parade before them ahead of the race. The Etruscan woman attended sporting events as a spectator, although there is no evidence that she competed in organised sport.",
+    "q": "What does the Tomb of the Bigae show about the audience at the races?",
+    "o": [
+     "Nobles, men and women mixed together, on wooden stands with awnings",
+     "Only men, on stone stands",
+     "Women separated from the men in a box of their own",
+     "A crowd of slaves standing on the slopes"
+    ]
+   }
+  },
+  {
+   "id": "etr-fin-juegos",
+   "tema": 4,
+   "civ": "etr",
+   "k": "d",
+   "y": -400,
+   "sl": 20,
+   "es": {
+    "d": "h. 400 a. C.",
+    "t": "Los juegos desaparecen de las tumbas etruscas",
+    "x": "Las escenas de juegos desaparecen de las tumbas a finales del siglo V a. C., y la última es la de la Tumba del Guerrero, de hacia 400 a. C. La causa probable fue el coste de mantener atletas y aurigas, que la aristocracia, ya empobrecida, no podía asumir.",
+    "q": "¿Cuál es la causa probable de que los juegos desaparecieran de las tumbas etruscas?",
+    "o": [
+     "El coste de mantener atletas y aurigas, con una aristocracia empobrecida",
+     "Una prohibición de los juegos impuesta por Roma",
+     "Un cambio en las creencias funerarias",
+     "El rechazo de la aristocracia a los modelos griegos"
+    ]
+   },
+   "en": {
+    "d": "c. 400 BC",
+    "t": "The games disappear from Etruscan tombs",
+    "x": "Scenes of games disappear from the tombs at the end of the 5th century BC, and the last is that of the Tomb of the Warrior, of c. 400 BC. The probable cause was the cost of keeping athletes and charioteers, which the aristocracy, by then poorer, could not meet.",
+    "q": "What is the probable cause of the games disappearing from Etruscan tombs?",
+    "o": [
+     "The cost of keeping athletes and charioteers, with an impoverished aristocracy",
+     "A ban on the games imposed by Rome",
+     "A change in funerary beliefs",
+     "The aristocracy's rejection of Greek models"
+    ]
+   }
+  },
+  {
+   "id": "etr-independencia",
+   "tema": 4,
+   "civ": "etr",
+   "k": "h",
+   "y": -264,
+   "sl": 4,
+   "es": {
+    "d": "264 a. C.",
+    "t": "Fin de la independencia etrusca",
+    "x": "Roma absorbió las ciudades etruscas, y la independencia de Etruria terminó en 264 a. C., año en que Roma destruyó Volsinii. Los etruscos nunca habían formado un Estado unitario, ya que se organizaban en doce ciudades-estado.",
+    "q": "¿Cuándo terminó la independencia de Etruria?",
+    "o": [
+     "264 a. C.",
+     "509 a. C.",
+     "616 a. C.",
+     "186 a. C."
+    ]
+   },
+   "en": {
+    "d": "264 BC",
+    "t": "End of Etruscan independence",
+    "x": "Rome absorbed the Etruscan cities, and the independence of Etruria ended in 264 BC, the year in which Rome destroyed Volsinii. The Etruscans had never formed a unitary state, since they were organised into twelve city-states.",
+    "q": "When did the independence of Etruria end?",
+    "o": [
+     "264 BC",
+     "509 BC",
+     "616 BC",
+     "186 BC"
+    ]
+   }
+  },
+  {
+   "id": "rom-munus",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": -264,
+   "sl": 45,
+   "es": {
+    "d": "264 a. C.",
+    "t": "Primer combate de gladiadores documentado en Roma",
+    "x": "Los combates de gladiadores llegaron a Roma desde Campania, donde formaban parte de los funerales de la aristocracia. En 264 a. C. los hijos de un noble ofrecieron un munus en honor de su padre difunto y enfrentaron a tres parejas de esclavos en el Foro Boario, el mercado de ganado junto al Tíber.",
+    "q": "¿En honor de quién se ofreció el primer munus documentado en Roma?",
+    "o": [
+     "De un noble difunto, padre de quienes lo ofrecieron",
+     "Del emperador reinante",
+     "De un general victorioso",
+     "De la diosa Vesta"
+    ]
+   },
+   "en": {
+    "d": "264 BC",
+    "t": "First gladiatorial combat documented in Rome",
+    "x": "Gladiatorial combats reached Rome from Campania, where they were part of the funerals of the aristocracy. In 264 BC the sons of a nobleman offered a munus in honour of their dead father and set three pairs of slaves against each other in the Forum Boarium, the cattle market beside the Tiber.",
+    "q": "In whose honour was the first documented munus in Rome offered?",
+    "o": [
+     "A dead nobleman, father of those who offered it",
+     "The reigning emperor",
+     "A victorious general",
+     "The goddess Vesta"
+    ]
+   }
+  },
+  {
+   "id": "rom-atletas",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": -186,
+   "sl": 80,
+   "es": {
+    "d": "186 a. C.",
+    "t": "Primer certamen de atletas griegos en Roma",
+    "x": "Según Livio, en 186 a. C. un general victorioso ofreció el primer certamen de atletas traídos de Grecia, junto a una cacería de leones y panteras. Durante la República el atletismo fue una exhibición suelta que el romano miraba desde la grada, puesto que desnudarse ante sus conciudadanos se tenía por vergonzoso.",
+    "q": "¿Por qué el romano de la República miraba el atletismo desde la grada?",
+    "o": [
+     "Porque desnudarse ante sus conciudadanos se tenía por vergonzoso",
+     "Porque la ley prohibía competir a los ciudadanos libres",
+     "Porque solo se celebraba en el Circo Máximo",
+     "Porque los atletas griegos competían solo entre sí"
+    ]
+   },
+   "en": {
+    "d": "186 BC",
+    "t": "First contest of Greek athletes in Rome",
+    "x": "According to Livy, in 186 BC a victorious general offered the first contest of athletes brought from Greece, together with a hunt of lions and panthers. During the Republic athletics was an occasional display that the Roman watched from the stands, since undressing before one's fellow citizens was considered shameful.",
+    "q": "Why did the Roman of the Republic watch athletics from the stands?",
+    "o": [
+     "Because undressing before his fellow citizens was considered shameful",
+     "Because the law forbade free citizens to compete",
+     "Because it was held only in the Circus Maximus",
+     "Because Greek athletes competed only among themselves"
+    ]
+   }
+  },
+  {
+   "id": "rom-cesar-edil",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": -65,
+   "sl": 45,
+   "es": {
+    "d": "65 a. C.",
+    "t": "César presenta 320 parejas de gladiadores",
+    "x": "Durante la República los combates crecieron al ritmo de la competencia política, y los aspirantes a los cargos fueron aumentando el número de parejas para ganarse al pueblo. Julio César presentó 320 parejas siendo edil, en 65 a. C., y el Senado, alarmado por la cantidad de hombres armados que había reunido en la ciudad, limitó el número de gladiadores que podía tener un particular.",
+    "q": "¿Cómo respondió el Senado a las 320 parejas de César?",
+    "o": [
+     "Limitó el número de gladiadores que podía tener un particular",
+     "Prohibió los munera durante la República",
+     "Confiscó las armas de la escuela de gladiadores",
+     "Obligó a César a dimitir como edil"
+    ]
+   },
+   "en": {
+    "d": "65 BC",
+    "t": "Caesar presents 320 pairs of gladiators",
+    "x": "During the Republic the combats grew at the pace of political competition, and candidates for office kept increasing the number of pairs to win over the people. Julius Caesar presented 320 pairs as aedile, in 65 BC, and the Senate, alarmed by the number of armed men he had gathered in the city, limited the number of gladiators a private individual could own.",
+    "q": "How did the Senate respond to Caesar's 320 pairs?",
+    "o": [
+     "It limited the number of gladiators a private individual could own",
+     "It banned the munera during the Republic",
+     "It confiscated the weapons of the gladiatorial school",
+     "It forced Caesar to resign as aedile"
+    ]
+   }
+  },
+  {
+   "id": "rom-naumaquia-cesar",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": -46,
+   "sl": 62,
+   "es": {
+    "d": "46 a. C.",
+    "t": "La primera naumaquia, la de Julio César",
+    "x": "Las naumaquias eran combates navales con barcos de guerra y miles de combatientes, casi siempre condenados, en lagos o en cuencas excavadas para la ocasión. La primera la organizó Julio César en 46 a. C., junto al Tíber, y su enorme coste las reservó para ocasiones excepcionales, como un triunfo o la inauguración de un edificio.",
+    "q": "¿Quién organizó la primera naumaquia, en 46 a. C.?",
+    "o": [
+     "Julio César",
+     "Augusto",
+     "Claudio",
+     "Vespasiano"
+    ]
+   },
+   "en": {
+    "d": "46 BC",
+    "t": "The first naumachia, that of Julius Caesar",
+    "x": "Naumachiae were naval battles staged with warships and thousands of combatants, almost always condemned men, on lakes or in basins dug for the occasion. The first was organised by Julius Caesar in 46 BC, beside the Tiber, and their enormous cost reserved them for exceptional occasions, such as a triumph or the inauguration of a building.",
+    "q": "Who organised the first naumachia, in 46 BC?",
+    "o": [
+     "Julius Caesar",
+     "Augustus",
+     "Claudius",
+     "Vespasian"
+    ]
+   }
+  },
+  {
+   "id": "rom-circomaximo",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": -46,
+   "sl": 65,
+   "es": {
+    "d": "46 a. C.",
+    "t": "César amplía el Circo Máximo",
+    "x": "El Circo Máximo ocupaba el valle entre el Aventino y el Palatino, y la tradición atribuye a los reyes etruscos sus primeras gradas, que eran de madera. Julio César lo amplió en 46 a. C., Augusto levantó en la spina un obelisco egipcio y Trajano lo reconstruyó en piedra a comienzos del siglo II d. C., y en época imperial su aforo era de 150.000 espectadores según Dionisio de Halicarnaso.",
+    "q": "¿A quiénes atribuye la tradición las primeras gradas del Circo Máximo?",
+    "o": [
+     "A los reyes etruscos",
+     "A Julio César",
+     "A Augusto",
+     "A Trajano"
+    ]
+   },
+   "en": {
+    "d": "46 BC",
+    "t": "Caesar enlarges the Circus Maximus",
+    "x": "The Circus Maximus occupied the valley between the Aventine and the Palatine, and tradition attributes to the Etruscan kings its first stands, which were made of wood. Julius Caesar enlarged it in 46 BC, Augustus raised an Egyptian obelisk on the spina and Trajan rebuilt it in stone at the beginning of the 2nd century AD, and in imperial times its capacity was 150,000 spectators according to Dionysius of Halicarnassus.",
+    "q": "To whom does tradition attribute the first stands of the Circus Maximus?",
+    "o": [
+     "The Etruscan kings",
+     "Julius Caesar",
+     "Augustus",
+     "Trajan"
+    ]
+   }
+  },
+  {
+   "id": "rom-asesinato-cesar",
+   "tema": 4,
+   "civ": "rom",
+   "k": "h",
+   "y": -44,
+   "sl": 24,
+   "es": {
+    "d": "44 a. C.",
+    "t": "Asesinato de Julio César",
+    "x": "Las guerras civiles del siglo I a. C., en las que se enfrentaron generales al frente de ejércitos propios, acabaron con el sistema republicano. El más poderoso de ellos, Julio César, se hizo nombrar dictador perpetuo y fue asesinado en 44 a. C., y el Imperio comenzaría después con Augusto, sobrino nieto e hijo adoptivo de César.",
+    "q": "¿Qué cargo se hizo dar Julio César antes de ser asesinado en 44 a. C.?",
+    "o": [
+     "Dictador perpetuo",
+     "Cónsul vitalicio",
+     "Rey de Roma",
+     "Tribuno de la plebe"
+    ]
+   },
+   "en": {
+    "d": "44 BC",
+    "t": "Assassination of Julius Caesar",
+    "x": "The civil wars of the 1st century BC, in which generals at the head of their own armies fought one another, brought the republican system to an end. The most powerful of them, Julius Caesar, had himself appointed dictator for life and was assassinated in 44 BC, and the Empire would begin afterwards with Augustus, Caesar's great-nephew and adopted son.",
+    "q": "What office did Julius Caesar have himself appointed to before his assassination in 44 BC?",
+    "o": [
+     "Dictator for life",
+     "Consul for life",
+     "King of Rome",
+     "Tribune of the plebs"
+    ]
+   }
+  },
+  {
+   "id": "rom-augusto",
+   "tema": 4,
+   "civ": "rom",
+   "k": "h",
+   "y": -27,
+   "sl": 24,
+   "es": {
+    "d": "27 a. C.",
+    "t": "Augusto, primer emperador",
+    "x": "Augusto, sobrino nieto e hijo adoptivo de César, concentró todo el poder sin abolir las instituciones republicanas y fue el primero de más de setenta emperadores. Ocupó el centro como princeps, «primer ciudadano», de por vida, y como las asambleas desaparecieron en el siglo I d. C., el pueblo solo pudo hacerse oír en el circo, el teatro y el anfiteatro.",
+    "q": "¿Qué título adoptó Augusto en el centro del gobierno de Roma?",
+    "o": [
+     "Princeps, «primer ciudadano»",
+     "Rex, «rey»",
+     "Cónsul de cada año",
+     "Dictador perpetuo"
+    ]
+   },
+   "en": {
+    "d": "27 BC",
+    "t": "Augustus, the first emperor",
+    "x": "Augustus, Caesar's great-nephew and adopted son, concentrated all power without abolishing the republican institutions and was the first of more than seventy emperors. He occupied the centre as princeps, «first citizen», for life, and since the assemblies disappeared in the 1st century AD, the people could make itself heard only in the circus, the theatre and the amphitheatre.",
+    "q": "What title did Augustus adopt at the centre of the government of Rome?",
+    "o": [
+     "Princeps, «first citizen»",
+     "Rex, «king»",
+     "Consul of each year",
+     "Dictator for life"
+    ]
+   }
+  },
+  {
+   "id": "rom-lex-iulia",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": -26,
+   "sl": 43,
+   "es": {
+    "d": "Desde Augusto",
+    "t": "La lex Iulia theatralis ordena la grada",
+    "x": "La lex Iulia theatralis, una ley de Augusto, repartía los asientos de teatros y anfiteatros por grupos sociales, de modo que la grada reproducía la jerarquía de la ciudad. El emperador ocupaba su palco, los senadores las primeras filas junto a la arena y los caballeros las siguientes, mientras que las mujeres, los esclavos y los extranjeros quedaban en lo más alto.",
+    "q": "¿Dónde se sentaban las mujeres, los esclavos y los extranjeros en el anfiteatro?",
+    "o": [
+     "En lo más alto de la grada",
+     "En las primeras filas junto a la arena",
+     "En el palco del emperador",
+     "Junto a los senadores"
+    ]
+   },
+   "en": {
+    "d": "From Augustus onwards",
+    "t": "The lex Iulia theatralis orders the stands",
+    "x": "The lex Iulia theatralis, a law of Augustus, allocated the seats of theatres and amphitheatres by social group, so that the stands reproduced the hierarchy of the city. The emperor occupied his box, the senators the front rows next to the arena and the equites the following ones, while women, slaves and foreigners were left at the very top.",
+    "q": "Where were women, slaves and foreigners seated in the amphitheatre?",
+    "o": [
+     "At the very top of the stands",
+     "In the front rows next to the arena",
+     "In the emperor's box",
+     "Next to the senators"
+    ]
+   }
+  },
+  {
+   "id": "rom-naumaquia-augusto",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": -2,
+   "sl": 62,
+   "es": {
+    "d": "2 a. C.",
+    "t": "La naumaquia de Augusto",
+    "x": "La naumaquia de Augusto, en 2 a. C., se realizó en un estanque de 533 por 355 metros en la otra orilla del Tíber, una superficie equivalente, salvando las distancias, a unos veinticinco campos de fútbol. Los combates recreaban batallas históricas entre griegos, persas, fenicios o egipcios, y ninguna de las conocidas fue protagonizada por una flota romana.",
+    "q": "¿Qué recreaban los combates de las naumaquias?",
+    "o": [
+     "Batallas históricas entre griegos, persas, fenicios o egipcios",
+     "Victorias de la flota romana sobre Cartago",
+     "Las campañas de César en Britania",
+     "Escenas del mito de Troya"
+    ]
+   },
+   "en": {
+    "d": "2 BC",
+    "t": "The naumachia of Augustus",
+    "x": "The naumachia of Augustus, in 2 BC, was held in a pool of 533 by 355 metres on the other bank of the Tiber, an area equivalent, allowing for the differences, to some twenty-five football pitches. The combats recreated historical battles between Greeks, Persians, Phoenicians or Egyptians, and none of the known ones featured a Roman fleet.",
+    "q": "What did the combats of the naumachiae recreate?",
+    "o": [
+     "Historical battles between Greeks, Persians, Phoenicians or Egyptians",
+     "Victories of the Roman fleet over Carthage",
+     "Caesar's campaigns in Britain",
+     "Scenes from the myth of Troy"
+    ]
+   }
+  },
+  {
+   "id": "rom-norma-11",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": 11,
+   "sl": 58,
+   "es": {
+    "d": "11 d. C.",
+    "t": "Una norma veta la arena a las mujeres libres jóvenes",
+    "x": "Una norma del año 11 d. C. vetó la arena a las mujeres libres menores de veinte años, y los autores antiguos solo condenan a las de familia senatorial o ecuestre, de modo que lo que escandalizaba a los romanos era, según Coleman (2000), el rango antes que el sexo. En el año 200 un decreto imperial prohibió combatir a todas las mujeres.",
+    "q": "¿A quiénes vetó la arena la norma del año 11 d. C.?",
+    "o": [
+     "A las mujeres libres menores de veinte años",
+     "A todos los hombres libres menores de veinte años",
+     "A los senadores y caballeros",
+     "A las vestales"
+    ]
+   },
+   "en": {
+    "d": "AD 11",
+    "t": "A rule bars young free women from the arena",
+    "x": "A rule of AD 11 barred free women under the age of twenty from the arena, and ancient authors condemn only those of senatorial or equestrian family, so what scandalised the Romans was, according to Coleman (2000), rank rather than sex. In the year 200 an imperial decree prohibited all women from fighting.",
+    "q": "Whom did the rule of AD 11 bar from the arena?",
+    "o": [
+     "Free women under the age of twenty",
+     "All free men under the age of twenty",
+     "Senators and equites",
+     "The Vestals"
+    ]
+   }
+  },
+  {
+   "id": "rom-decreto-19",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": 19,
+   "sl": 46,
+   "es": {
+    "d": "19 d. C.",
+    "t": "Decreto del Senado contra senadores y caballeros en la arena",
+    "x": "Todos los gladiadores compartían la infamia, una mancha legal y moral que el derecho imponía a quienes vendían o exhibían su cuerpo para el disfrute de otros. El infame no podía votar, ocupar una magistratura, testificar en un juicio ni contraer un matrimonio legal, y por eso en 19 d. C. un decreto del Senado castigó a los senadores y caballeros que quisieran luchar en la arena.",
+    "q": "¿Qué castigó el decreto del Senado de 19 d. C.?",
+    "o": [
+     "Que senadores y caballeros quisieran luchar en la arena",
+     "Que los esclavos presenciaran los combates",
+     "Que las mujeres libres asistieran a los juegos",
+     "Que los magistrados ofrecieran más de dos combates al año"
+    ]
+   },
+   "en": {
+    "d": "AD 19",
+    "t": "Senate decree against senators and equites in the arena",
+    "x": "All gladiators shared infamia, a legal and moral stain that the law imposed on those who sold or displayed their bodies for the enjoyment of others. The infamis could not vote, hold a magistracy, testify in a trial or contract a legal marriage, and for this reason in AD 19 a decree of the Senate punished senators and equites who sought to fight in the arena.",
+    "q": "What did the Senate decree of AD 19 punish?",
+    "o": [
+     "Senators and equites seeking to fight in the arena",
+     "Slaves watching the combats",
+     "Free women attending the games",
+     "Magistrates offering more than two combats a year"
+    ]
+   }
+  },
+  {
+   "id": "rom-fucino",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": 52,
+   "sl": 62,
+   "es": {
+    "d": "52 d. C.",
+    "t": "Naumaquia de Claudio en el lago Fucino",
+    "x": "La mayor naumaquia registrada fue la de Claudio en el lago Fucino, en el centro de Italia, en 52 d. C., con 19.000 hombres. Se hacían con barcos de guerra y casi siempre con condenados, y su enorme coste las reservaba para ocasiones excepcionales, de modo que se celebraron muy pocas.",
+    "q": "¿Cuántos hombres participaron en la naumaquia de Claudio en el Fucino?",
+    "o": [
+     "19.000",
+     "3.000",
+     "10.000",
+     "5.000"
+    ]
+   },
+   "en": {
+    "d": "AD 52",
+    "t": "Claudius's naumachia on Lake Fucinus",
+    "x": "The largest naumachia on record was that of Claudius on Lake Fucinus, in central Italy, in AD 52, with 19,000 men. They were staged with warships and almost always with condemned men, and their enormous cost reserved them for exceptional occasions, so very few were held.",
+    "q": "How many men took part in Claudius's naumachia on Lake Fucinus?",
+    "o": [
+     "19,000",
+     "3,000",
+     "10,000",
+     "5,000"
+    ]
+   }
+  },
+  {
+   "id": "rom-coliseo",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": 72,
+   "sl": 40,
+   "es": {
+    "d": "72-80 d. C.",
+    "t": "Se construye el Anfiteatro Flavio, el Coliseo",
+    "x": "El Anfiteatro Flavio se construyó entre 72 y 80 d. C. bajo la familia Flavia, y los restos de su inscripción apuntan a que se pagó con el botín de la guerra de Judea, de ahí que fuera a la vez un monumento de victoria y un regalo al pueblo. Su inauguración, en 80 d. C., trajo cien días de juegos, la muerte de 5.000 animales en un solo día y una naumaquia con barcos a escala.",
+    "q": "¿Con qué se pagó el Coliseo, según apuntan los restos de su inscripción?",
+    "o": [
+     "Con el botín de la guerra de Judea",
+     "Con la summa honoraria de los magistrados",
+     "Con el grano público",
+     "Con los impuestos de Hispania"
+    ]
+   },
+   "en": {
+    "d": "AD 72-80",
+    "t": "The Flavian Amphitheatre, the Colosseum, is built",
+    "x": "The Flavian Amphitheatre was built between AD 72 and 80 under the Flavian dynasty, and the remains of its inscription suggest that it was paid for with the spoils of the Judaean war, which is why it was at once a victory monument and a gift to the people. Its inauguration, in AD 80, brought a hundred days of games, the death of 5,000 animals in a single day and a naumachia with scale-model ships.",
+    "q": "What was the Colosseum paid for with, according to the remains of its inscription?",
+    "o": [
+     "The spoils of the Judaean war",
+     "The summa honoraria of the magistrates",
+     "The public grain",
+     "The taxes of Hispania"
+    ]
+   }
+  },
+  {
+   "id": "rom-capitolinos",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": 86,
+   "sl": 80,
+   "es": {
+    "d": "86 d. C.",
+    "t": "Domiciano instituye los Juegos Capitolinos",
+    "x": "En 86 d. C. el emperador Domiciano instituyó los Juegos Capitolinos, un certamen a la griega que se celebraba cada cuatro años y que, según Suetonio, incluyó una carrera de muchachas. Para ellos se levantó el primer estadio permanente de Roma, con unos 30.000 espectadores, cuyo solar ocupa hoy la Plaza Navona.",
+    "q": "¿Cada cuánto se celebraban los Juegos Capitolinos?",
+    "o": [
+     "Cada cuatro años",
+     "Cada año",
+     "Cada dos años",
+     "Cada cinco años"
+    ]
+   },
+   "en": {
+    "d": "AD 86",
+    "t": "Domitian institutes the Capitoline Games",
+    "x": "In AD 86 the emperor Domitian instituted the Capitoline Games, a Greek-style contest held every four years that, according to Suetonius, included a girls' race. The first permanent stadium in Rome was built for them, with some 30,000 spectators, and its site is now occupied by Piazza Navona.",
+    "q": "How often were the Capitoline Games held?",
+    "o": [
+     "Every four years",
+     "Every year",
+     "Every two years",
+     "Every five years"
+    ]
+   }
+  },
+  {
+   "id": "rom-trajano",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": 107,
+   "sl": 45,
+   "es": {
+    "d": "107 d. C.",
+    "t": "Juegos de Trajano por la victoria en la Dacia",
+    "x": "Los juegos de Trajano por su victoria en la Dacia (actual Rumanía), en 107 d. C., duraron 123 días y reunieron a unos diez mil gladiadores, y en ellos murieron unos 11.000 animales. Con el Imperio el emperador había tomado el control de los combates en Roma, y Augusto había limitado los que ofrecían los magistrados a dos al año y a 120 gladiadores cada uno.",
+    "q": "¿Cuántos días duraron los juegos de Trajano de 107 d. C.?",
+    "o": [
+     "123",
+     "100",
+     "80",
+     "176"
+    ]
+   },
+   "en": {
+    "d": "AD 107",
+    "t": "Games of Trajan for the victory in Dacia",
+    "x": "The games of Trajan for his victory in Dacia (present-day Romania), in AD 107, lasted 123 days and brought together some ten thousand gladiators, and some 11,000 animals died in them. With the Empire the emperor had taken control of the combats in Rome, and Augustus had limited those offered by the magistrates to two a year and to 120 gladiators each.",
+    "q": "How many days did the games of Trajan of AD 107 last?",
+    "o": [
+     "123",
+     "100",
+     "80",
+     "176"
+    ]
+   }
+  },
+  {
+   "id": "rom-diocles",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": 122,
+   "sl": 70,
+   "es": {
+    "d": "122-146 d. C.",
+    "t": "Diocles, el auriga mejor pagado",
+    "x": "Diocles, un liberto de Lusitania, corrió veinticuatro años, de 122 a 146 d. C., en 4.257 carreras, con 1.462 victorias, y se retiró a los cuarenta y dos años. Su inscripción suma 35.863.120 sestercios en premios, si bien los cobraba la facción y a él le quedó, según Vamplew (2023), una décima parte, y aun así Bell (2014) lo considera quizá el deportista mejor pagado de la historia.",
+    "q": "¿Cuántas victorias registra la inscripción de Diocles?",
+    "o": [
+     "1.462",
+     "4.257",
+     "1.000",
+     "2.000"
+    ]
+   },
+   "en": {
+    "d": "AD 122-146",
+    "t": "Diocles, the best-paid charioteer",
+    "x": "Diocles, a freedman from Lusitania, raced for twenty-four years, from AD 122 to 146, in 4,257 races, with 1,462 victories, and retired at the age of forty-two. His inscription adds up to 35,863,120 sesterces in prizes, although the faction collected them and he kept, according to Vamplew (2023), a tenth, and even so Bell (2014) considers him perhaps the best-paid sportsman in history.",
+    "q": "How many victories does the inscription of Diocles record?",
+    "o": [
+     "1,462",
+     "4,257",
+     "1,000",
+     "2,000"
+    ]
+   }
+  },
+  {
+   "id": "rom-ley-177",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": 177,
+   "sl": 47,
+   "es": {
+    "d": "177 d. C.",
+    "t": "Ley de Marco Aurelio y Cómodo sobre los gladiadores",
+    "x": "Una ley de 177 d. C. fijó que el gladiador recibiera la cuarta parte de lo que el lanista cobraba por su combate si era libre y la quinta parte si era esclavo, puesto que la relación con el lanista era, ante todo, económica. Ese año una ley de Marco Aurelio y Cómodo fijó también los precios máximos de los gladiadores y del gasto por día de juegos según el tamaño de la ciudad.",
+    "q": "¿Qué parte de lo que cobraba el lanista recibía el gladiador libre según la ley de 177 d. C.?",
+    "o": [
+     "La cuarta parte",
+     "La quinta parte",
+     "La mitad",
+     "La décima parte"
+    ]
+   },
+   "en": {
+    "d": "AD 177",
+    "t": "Law of Marcus Aurelius and Commodus on gladiators",
+    "x": "A law of AD 177 laid down that the gladiator should receive a quarter of what the lanista was paid for his fight if he was free and a fifth if he was a slave, since the relationship with the lanista was, above all, economic. That year a law of Marcus Aurelius and Commodus also fixed the maximum prices of gladiators and of the daily expenditure on games according to the size of the city.",
+    "q": "What share of what the lanista was paid did a free gladiator receive under the law of AD 177?",
+    "o": [
+     "A quarter",
+     "A fifth",
+     "A half",
+     "A tenth"
+    ]
+   }
+  },
+  {
+   "id": "rom-tertuliano",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": 197,
+   "sl": 84,
+   "es": {
+    "d": "197-200 d. C.",
+    "t": "Tertuliano escribe Sobre los espectáculos",
+    "x": "Entre 197 y 200 d. C. Tertuliano escribió Sobre los espectáculos, donde recordó que todo en ellos estaba consagrado a los dioses paganos y llamó al cortejo inicial «cortejo de Satán» (pompa diaboli). Los escritores cristianos atacaron los juegos por idolatría, mientras que la crítica pagana de Cicerón y Séneca apuntaba a la violencia contra quien no podía defenderse.",
+    "q": "¿Por qué atacaron los escritores cristianos los juegos?",
+    "o": [
+     "Por idolatría",
+     "Por su coste para las ciudades",
+     "Por la desnudez de los atletas",
+     "Por el desprecio al trabajo manual"
+    ]
+   },
+   "en": {
+    "d": "AD 197-200",
+    "t": "Tertullian writes De spectaculis",
+    "x": "Between AD 197 and 200 Tertullian wrote De spectaculis, in which he recalled that everything in the games was consecrated to the pagan gods and called the opening procession the «procession of Satan» (pompa diaboli). Christian writers attacked the games for idolatry, whereas the pagan criticism of Cicero and Seneca was aimed at violence against those who could not defend themselves.",
+    "q": "Why did Christian writers attack the games?",
+    "o": [
+     "For idolatry",
+     "For their cost to the cities",
+     "For the nudity of the athletes",
+     "For their contempt for manual labour"
+    ]
+   }
+  },
+  {
+   "id": "rom-calendario-354",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": 354,
+   "sl": 33,
+   "es": {
+    "d": "354 d. C.",
+    "t": "El calendario de 354 recoge 176 días de juegos",
+    "x": "Los días de juegos públicos se multiplicaron a lo largo del Imperio, desde 65 en época de Augusto y 80 en la de Tiberio hasta 176 en el calendario de 354 d. C., que reunía las fiestas acumuladas durante siglos. De ellos, unos 102 eran de teatro, 64 de carreras en el circo y solo 10 de gladiadores.",
+    "q": "¿Cuántos de los 176 días de juegos del calendario de 354 d. C. eran de gladiadores?",
+    "o": [
+     "10",
+     "64",
+     "102",
+     "65"
+    ]
+   },
+   "en": {
+    "d": "AD 354",
+    "t": "The calendar of 354 records 176 days of games",
+    "x": "The days of public games multiplied over the course of the Empire, from 65 in the age of Augustus and 80 in that of Tiberius to 176 in the calendar of AD 354, which brought together the festivals accumulated over centuries. Of these, some 102 were for theatre, 64 for races in the circus and only 10 for gladiators.",
+    "q": "How many of the 176 days of games in the calendar of AD 354 were for gladiators?",
+    "o": [
+     "10",
+     "64",
+     "102",
+     "65"
+    ]
+   }
+  },
+  {
+   "id": "rom-teodosio",
+   "tema": 4,
+   "civ": "rom",
+   "k": "h",
+   "y": 395,
+   "sl": 24,
+   "es": {
+    "d": "395 d. C.",
+    "t": "Muerte de Teodosio y división del Imperio",
+    "x": "A la muerte de Teodosio, en 395 d. C., el Imperio quedó repartido entre sus dos hijos, Arcadio en Oriente y Honorio en Occidente, porque un territorio tan extenso resultaba muy difícil de gobernar desde un solo centro. La mitad oriental, con capital en Constantinopla, siguió en pie casi mil años más.",
+    "q": "¿Entre quiénes se repartió el Imperio a la muerte de Teodosio?",
+    "o": [
+     "Sus dos hijos, Arcadio y Honorio",
+     "Su hijo Honorio solo, con el Senado como regente",
+     "Dos generales nombrados por el Senado",
+     "Dos cónsules elegidos cada año"
+    ]
+   },
+   "en": {
+    "d": "AD 395",
+    "t": "Death of Theodosius and division of the Empire",
+    "x": "On the death of Theodosius, in AD 395, the Empire was divided between his two sons, Arcadius in the East and Honorius in the West, because such a vast territory was very difficult to govern from a single centre. The eastern half, with its capital at Constantinople, survived for almost a thousand years more.",
+    "q": "Between whom was the Empire divided on the death of Theodosius?",
+    "o": [
+     "His two sons, Arcadius and Honorius",
+     "His son Honorius alone, with the Senate as regent",
+     "Two generals appointed by the Senate",
+     "Two consuls elected every year"
+    ]
+   }
+  },
+  {
+   "id": "rom-ultimo-gladiadores",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": 440,
+   "sl": 85,
+   "es": {
+    "d": "h. 440 d. C.",
+    "t": "Último combate de gladiadores",
+    "x": "Los espectáculos romanos no se prohibieron en un año concreto, y en Occidente ninguna ley les puso fin. Los combates de gladiadores fueron los primeros en desaparecer, pues a finales del siglo IV solo ocupaban en Roma diez días de diciembre y el último se celebró probablemente hacia 440, sobre todo por el dinero, dado que la gladiatura era el espectáculo más caro.",
+    "q": "¿Cuál fue la causa principal del final de los espectáculos en Occidente?",
+    "o": [
+     "El dinero, porque las ciudades se empobrecieron",
+     "Una ley imperial que los prohibió en un año concreto",
+     "La condena de Tertuliano y Agustín",
+     "El saqueo de Roma por los visigodos"
+    ]
+   },
+   "en": {
+    "d": "c. AD 440",
+    "t": "The last gladiatorial combat",
+    "x": "Roman spectacles were not banned in any particular year, and in the West no law put an end to them. Gladiatorial combats were the first to disappear, since by the end of the 4th century they took up in Rome only ten days in December and the last was probably held c. AD 440, above all because of money, given that gladiatorial combat was the most expensive spectacle.",
+    "q": "What was the main cause of the end of the spectacles in the West?",
+    "o": [
+     "Money, since the cities grew poorer",
+     "An imperial law that banned them in a particular year",
+     "The condemnation of Tertullian and Augustine",
+     "The sack of Rome by the Visigoths"
+    ]
+   }
+  },
+  {
+   "id": "rom-caida-476",
+   "tema": 4,
+   "civ": "rom",
+   "k": "h",
+   "y": 476,
+   "sl": 24,
+   "es": {
+    "d": "476 d. C.",
+    "t": "Caída del Imperio de Occidente",
+    "x": "El Imperio de Occidente cayó en 476 d. C., cuando un jefe germano, Odoacro, depuso al último emperador, después de sufrir desde el siglo III la presión de los pueblos germánicos que cruzaban sus fronteras y el saqueo de Roma por los visigodos en 410 d. C. Los reyes germánicos de Italia mantuvieron después los juegos.",
+    "q": "¿Quién depuso al último emperador de Occidente en 476 d. C.?",
+    "o": [
+     "Odoacro, un jefe germano",
+     "Honorio, hijo de Teodosio",
+     "Un cónsul elegido por el Senado",
+     "El emperador de Oriente"
+    ]
+   },
+   "en": {
+    "d": "AD 476",
+    "t": "Fall of the Western Empire",
+    "x": "The Western Empire fell in AD 476, when a Germanic chieftain, Odoacer, deposed the last emperor, after suffering from the 3rd century onwards the pressure of the Germanic peoples crossing its frontiers and the sack of Rome by the Visigoths in AD 410. The Germanic kings of Italy then kept up the games.",
+    "q": "Who deposed the last Western emperor in AD 476?",
+    "o": [
+     "Odoacer, a Germanic chieftain",
+     "Honorius, son of Theodosius",
+     "A consul chosen by the Senate",
+     "The emperor of the East"
+    ]
+   }
+  },
+  {
+   "id": "rom-ultimos-espectaculos",
+   "tema": 4,
+   "civ": "rom",
+   "k": "d",
+   "y": 523,
+   "sl": 85,
+   "es": {
+    "d": "523 y 549 d. C.",
+    "t": "La última cacería y la última carrera en Italia",
+    "x": "Tras la caída del Imperio de Occidente, los reyes germánicos de Italia mantuvieron los juegos, y allí la última cacería documentada es de 523 d. C. y la última carrera, de 549 d. C. Las cacerías y las carreras, más baratas y populares que la gladiatura, duraron más, y en Oriente el emperador siguió pagando, de modo que el hipódromo de Constantinopla mantuvo las carreras y las facciones durante siglos.",
+    "q": "¿En qué año se documenta la última carrera en Italia?",
+    "o": [
+     "549 d. C.",
+     "523 d. C.",
+     "476 d. C.",
+     "440 d. C."
+    ]
+   },
+   "en": {
+    "d": "AD 523 and 549",
+    "t": "The last hunt and the last race in Italy",
+    "x": "After the fall of the Western Empire, the Germanic kings of Italy kept up the games, and there the last documented hunt dates from AD 523 and the last race from AD 549. Hunts and races, cheaper and more popular than gladiatorial combat, lasted longer, and in the East the emperor went on paying, so the hippodrome of Constantinople kept up the races and the factions for centuries.",
+    "q": "In what year is the last race in Italy documented?",
+    "o": [
+     "AD 549",
+     "AD 523",
+     "AD 476",
+     "AD 440"
+    ]
+   }
+  }
+ ]
+}

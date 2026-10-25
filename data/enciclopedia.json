@@ -448,6 +448,22 @@
       "es": "El pentatlón",
       "en": "The pentathlon"
      }
+    },
+    {
+     "num": 4,
+     "f": "atletismo-lucha-y-pugilato",
+     "t": {
+      "es": "Atletismo, lucha y pugilato",
+      "en": "Athletics, wrestling and boxing"
+     }
+    },
+    {
+     "num": 4,
+     "f": "el-atletismo-en-roma",
+     "t": {
+      "es": "El atletismo en Roma",
+      "en": "Athletics in Rome"
+     }
     }
    ],
    "img": {
@@ -6062,6 +6078,14 @@
       "es": "La caza real y el paradeisos",
       "en": "The royal hunt and the paradeisos"
      }
+    },
+    {
+     "num": 4,
+     "f": "venationes",
+     "t": {
+      "es": "Venationes",
+      "en": "Venationes"
+     }
     }
    ],
    "img": {
@@ -6483,6 +6507,22 @@
       "es": "El pugilato",
       "en": "Boxing"
      }
+    },
+    {
+     "num": 4,
+     "f": "atletismo-lucha-y-pugilato",
+     "t": {
+      "es": "Atletismo, lucha y pugilato",
+      "en": "Athletics, wrestling and boxing"
+     }
+    },
+    {
+     "num": 4,
+     "f": "pugiles-luchadores-y-saltadores-etruscos",
+     "t": {
+      "es": "Púgiles, luchadores y saltadores etruscos",
+      "en": "Etruscan boxers, wrestlers and jumpers"
+     }
     }
    ],
    "img": {
@@ -6563,6 +6603,14 @@
      "t": {
       "es": "La lucha",
       "en": "Wrestling"
+     }
+    },
+    {
+     "num": 4,
+     "f": "atletismo-lucha-y-pugilato",
+     "t": {
+      "es": "Atletismo, lucha y pugilato",
+      "en": "Athletics, wrestling and boxing"
      }
     }
    ],
@@ -6645,6 +6693,14 @@
      "t": {
       "es": "La lucha",
       "en": "Wrestling"
+     }
+    },
+    {
+     "num": 4,
+     "f": "atletismo-lucha-y-pugilato",
+     "t": {
+      "es": "Atletismo, lucha y pugilato",
+      "en": "Athletics, wrestling and boxing"
      }
     }
    ],
@@ -10238,6 +10294,14 @@
       "es": "La hípica",
       "en": "Equestrian events"
      }
+    },
+    {
+     "num": 4,
+     "f": "carreras-de-caballos-y-la-troia",
+     "t": {
+      "es": "Carreras de caballos y la troia",
+      "en": "Horse racing and the troia"
+     }
     }
    ],
    "img": {
@@ -10591,6 +10655,14 @@
       "es": "La educación cortesana y la natación",
       "en": "Court education and swimming"
      }
+    },
+    {
+     "num": 4,
+     "f": "actividades-acuaticas",
+     "t": {
+      "es": "Actividades acuáticas",
+      "en": "Aquatic activities"
+     }
     }
    ],
    "img": {
@@ -10703,7 +10775,16 @@
      "Diving entered the Olympic programme at St. Louis in 1904, and women competed for the first time at Stockholm in 1912 (Crawford, 1999, p. 107). From 1908 its governance was tied to FINA, today World Aquatics, which added synchronised diving to the Sydney 2000 Games and high diving to the Barcelona 2013 World Championships (World Aquatics, n.d.). Vamplew (2021, p. 199) stresses that this dependence on swimming has weighed on the discipline, which has more in common with gymnastics, since divers have often felt that swimming officials did not understand their needs, and swimming federations have resisted granting it its own governance."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 4,
+     "f": "actividades-acuaticas",
+     "t": {
+      "es": "Actividades acuáticas",
+      "en": "Aquatic activities"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/saltos.jpg",
     "pie": {
@@ -15732,6 +15813,14 @@
       "es": "Carros y caballos",
       "en": "Chariots and horses"
      }
+    },
+    {
+     "num": 4,
+     "f": "carreras-de-caballos-y-la-troia",
+     "t": {
+      "es": "Carreras de caballos y la troia",
+      "en": "Horse racing and the troia"
+     }
     }
    ],
    "img": {
@@ -17525,6 +17614,46 @@
       "es": "Los juegos fúnebres de Patroclo",
       "en": "The funeral games of Patroclus"
      }
+    },
+    {
+     "num": 4,
+     "f": "carreras-de-carros-etruscas",
+     "t": {
+      "es": "Carreras de carros etruscas",
+      "en": "Etruscan chariot racing"
+     }
+    },
+    {
+     "num": 4,
+     "f": "carreras-de-carros",
+     "t": {
+      "es": "Carreras de carros",
+      "en": "Chariot racing"
+     }
+    },
+    {
+     "num": 4,
+     "f": "circo-maximo",
+     "t": {
+      "es": "Circo Máximo",
+      "en": "Circus Maximus"
+     }
+    },
+    {
+     "num": 4,
+     "f": "las-facciones-del-circo",
+     "t": {
+      "es": "Las facciones del circo",
+      "en": "The circus factions"
+     }
+    },
+    {
+     "num": 4,
+     "f": "los-aurigas-y-su-fortuna",
+     "t": {
+      "es": "Los aurigas y su fortuna",
+      "en": "Charioteers and their fortunes"
+     }
     }
    ],
    "img": {
@@ -17581,7 +17710,40 @@
      "There were also female gladiators, such as the two named Amazon and Achillia on a relief from Halicarnassus, until Septimius Severus banned their participation in AD 200, although an inscription from Ostia shows that they were still fighting in the 3rd century (Crowther, 2007, pp. 152-153). The disappearance of the combats was slow. Constantine sought in 325 to abolish the sentence of fighting in the arena rather than the shows themselves, and Honorius closed the schools of Rome in 399 and banned the combats in 404, with little effect outside the capital, so gladiatorial games died out gradually through economic shortage and Christian condemnation, with no definitive edict known (Kyle, 2015, p. 336). The story of the monk Telemachus, stoned for interrupting a fight, is now considered a legend (Kyle, 2015, p. 336)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 4,
+     "f": "combates-de-gladiadores",
+     "t": {
+      "es": "Combates de gladiadores",
+      "en": "Gladiatorial combats"
+     }
+    },
+    {
+     "num": 4,
+     "f": "los-gladiadores-y-la-infamia",
+     "t": {
+      "es": "Los gladiadores y la infamia",
+      "en": "Gladiators and infamia"
+     }
+    },
+    {
+     "num": 4,
+     "f": "tipos-de-gladiadores",
+     "t": {
+      "es": "Tipos de gladiadores",
+      "en": "Types of gladiator"
+     }
+    },
+    {
+     "num": 4,
+     "f": "los-combates",
+     "t": {
+      "es": "Los combates",
+      "en": "The combats"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/combates-de-gladiadores.jpg",
     "pie": {
@@ -17893,7 +18055,16 @@
      "Ball games were never part of the Greek and Roman competitive festivals (Golden, 2004, p. 25), and *harpastum* had no venues of its own, no leagues and no large crowds (Crowther, 2007, p. 159). Nor was it rejected by Christian authors, who condemned gladiatorial combat and chariot racing, so ball play survived into late antiquity, and Sidonius Apollinaris describes in the 5th century a game at a friend's villa (Crowther, 2007, p. 159). Its legacy is above all that of an antecedent sought by historians of football and rugby, although attempts to find a game like football in the Greco-Roman world have had little success, since the sources barely document the use of the foot to strike the ball (Crowther, 2007, p. 159)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 4,
+     "f": "trigon-y-harpastum",
+     "t": {
+      "es": "Trigón y harpastum",
+      "en": "Trigon and harpastum"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/harpastum.jpg",
     "pie": {
@@ -18009,7 +18180,32 @@
      "Roman ball games were recreational, without large crowds, leagues or purpose-built venues, and the words victory and defeat hardly appear in the texts before the Christian era (Crowther, 2007, pp. 158-159). Women played them too, as the 4th-century AD mosaic from the villa at Piazza Armerina in Sicily shows, where young women throw a small ball alongside others who run or throw the discus (Crowther, 2007, p. 159). Christian authors did not condemn them, unlike the shows of the amphitheatre and the circus, and in the 5th century Sidonius Apollinaris still describes a game at a friend's villa (Crowther, 2007, p. 159). Their legacy is debated, since some authors see in a variant of *paganica* played with a curved stick a forerunner of golf (Crowther, 2007, p. 158)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 4,
+     "f": "las-pelotas-romanas",
+     "t": {
+      "es": "Las pelotas romanas",
+      "en": "Roman balls"
+     }
+    },
+    {
+     "num": 4,
+     "f": "trigon-y-harpastum",
+     "t": {
+      "es": "Trigón y harpastum",
+      "en": "Trigon and harpastum"
+     }
+    },
+    {
+     "num": 4,
+     "f": "las-salas-de-las-termas",
+     "t": {
+      "es": "Las salas de las termas",
+      "en": "The rooms of the baths"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/juegos-de-pelota-romanos.jpg",
     "pie": {

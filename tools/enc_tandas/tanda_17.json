@@ -185,6 +185,14 @@
      "es": "La educación cortesana y la natación",
      "en": "Court education and swimming"
     }
+   },
+   {
+    "num": 4,
+    "f": "actividades-acuaticas",
+    "t": {
+     "es": "Actividades acuáticas",
+     "en": "Aquatic activities"
+    }
    }
   ],
   "img": {
@@ -295,7 +303,16 @@
     "Diving entered the Olympic programme at St. Louis in 1904, and women competed for the first time at Stockholm in 1912 (Crawford, 1999, p. 107). From 1908 its governance was tied to FINA, today World Aquatics, which added synchronised diving to the Sydney 2000 Games and high diving to the Barcelona 2013 World Championships (World Aquatics, n.d.). Vamplew (2021, p. 199) stresses that this dependence on swimming has weighed on the discipline, which has more in common with gymnastics, since divers have often felt that swimming officials did not understand their needs, and swimming federations have resisted granting it its own governance."
    ]
   },
-  "tema": [],
+  "tema": [
+   {
+    "num": 4,
+    "f": "actividades-acuaticas",
+    "t": {
+     "es": "Actividades acuáticas",
+     "en": "Aquatic activities"
+    }
+   }
+  ],
   "img": {
    "src": "img/enc/saltos.jpg",
    "pie": {

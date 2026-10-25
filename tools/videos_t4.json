@@ -1,0 +1,674 @@
+[
+ {
+  "id": "t4_01",
+  "sec": "4.1",
+  "title": {
+   "es": "Diecisiete tumbas",
+   "en": "Seventeen tombs"
+  },
+  "src": {
+   "es": "videos/t4/t4_01_es.mp4?m=t4a",
+   "en": "videos/t4/t4_01_en.mp4?m=t4a"
+  },
+  "poster": {
+   "es": "videos/t4/t4_01_es.jpg?m=t4a",
+   "en": "videos/t4/t4_01_en.jpg?m=t4a"
+  },
+  "more": {
+   "es": "Lo que sabemos del deporte etrusco procede de unos pocos textos griegos y latinos, de algunas inscripciones escasas y, sobre todo, de las imágenes, que son la fuente principal. Las tumbas pintadas con escenas deportivas son algo muy poco frecuente en la Edad Antigua fuera de Egipto. Según coinciden los estudios, representan los juegos funerarios celebrados en honor del noble difunto, como los de los funerales de Patroclo en la Ilíada.",
+   "en": "What we know about Etruscan sport comes from a few Greek and Latin texts, from a handful of inscriptions and, above all, from images, which are the main source. Tombs painted with sporting scenes are very rare in Antiquity outside Egypt. As studies agree, they depict the funeral games held in honour of the noble deceased, like those at the funeral of Patroclus in the Iliad."
+  },
+  "q": {
+   "es": {
+    "q": "¿Cuál es la fuente principal para conocer el deporte etrusco?",
+    "opts": [
+     "Las imágenes, sobre todo las tumbas pintadas",
+     "Los tratados de los autores etruscos",
+     "Las listas de vencedores de Tarquinia",
+     "Las leyes de las doce ciudades"
+    ],
+    "a": 0
+   },
+   "en": {
+    "q": "What is the main source for Etruscan sport?",
+    "opts": [
+     "Images, above all the painted tombs",
+     "The treatises of Etruscan authors",
+     "The victor lists of Tarquinia",
+     "The laws of the twelve cities"
+    ],
+    "a": 0
+   }
+  }
+ },
+ {
+  "id": "t4_02",
+  "sec": "4.1",
+  "title": {
+   "es": "Púgiles con flauta",
+   "en": "Boxers with flutes"
+  },
+  "src": {
+   "es": "videos/t4/t4_02_es.mp4?m=t4a",
+   "en": "videos/t4/t4_02_en.mp4?m=t4a"
+  },
+  "poster": {
+   "es": "videos/t4/t4_02_es.jpg?m=t4a",
+   "en": "videos/t4/t4_02_en.jpg?m=t4a"
+  },
+  "more": {
+   "es": "Los etruscos recibieron buena parte de las pruebas griegas e hicieron con ellas cosas distintas. En el atletismo (carrera, disco, jabalina y salto de longitud con halteras) la forma de las pruebas se mantuvo casi intacta, mientras que en la lucha y el pugilato lo griego se sumó a una tradición propia. Una figura de la Tumba de las Bigas se ha leído además como un salto con pértiga.",
+   "en": "The Etruscans took over a good part of the Greek events and did different things with them. In athletics (running, discus, javelin and the long jump with halteres) the form of the events remained almost intact, whereas in wrestling and boxing the Greek element was added to a tradition of their own. A figure in the Tomb of the Bigae has also been read as a pole vault."
+  },
+  "q": {
+   "es": {
+    "q": "¿Qué acompaña casi siempre al pugilato en las imágenes etruscas?",
+    "opts": [
+     "Un juez con vara larga",
+     "Un auriga",
+     "Un flautista",
+     "Un perro"
+    ],
+    "a": 2
+   },
+   "en": {
+    "q": "What almost always accompanies boxing in Etruscan images?",
+    "opts": [
+     "A judge with a long rod",
+     "A charioteer",
+     "A flute player",
+     "A dog"
+    ],
+    "a": 2
+   }
+  }
+ },
+ {
+  "id": "t4_03",
+  "sec": "4.1",
+  "title": {
+   "es": "Riendas a la cintura",
+   "en": "Reins around the waist"
+  },
+  "src": {
+   "es": "videos/t4/t4_03_es.mp4?m=t4a",
+   "en": "videos/t4/t4_03_en.mp4?m=t4a"
+  },
+  "poster": {
+   "es": "videos/t4/t4_03_es.jpg?m=t4a",
+   "en": "videos/t4/t4_03_en.jpg?m=t4a"
+  },
+  "more": {
+   "es": "El origen social de los aurigas etruscos está discutido. Crowther y Kyle los consideran de origen servil (citados en Banducci, 2014) y Thuillier (1985), profesionales de bajo rango dependientes de un señor, aunque Banducci (2014) advierte de que no hay pruebas. El gusto por el accidente anticipa el gusto por la violencia en el deporte que heredarán los romanos.",
+   "en": "The social origin of the Etruscan charioteers is disputed. Crowther and Kyle consider them to be of servile origin (cited in Banducci, 2014) and Thuillier (1985), low-ranking professionals dependent on a lord, although Banducci (2014) warns that there is no proof. The taste for the crash anticipates the taste for violence in sport that the Romans would inherit."
+  },
+  "q": {
+   "es": {
+    "q": "¿En qué se distinguía el auriga etrusco del griego?",
+    "opts": [
+     "Corría desnudo",
+     "Se ataba las riendas a la cintura",
+     "Solo conducía cuadrigas",
+     "Era siempre el dueño de los caballos"
+    ],
+    "a": 1
+   },
+   "en": {
+    "q": "How did the Etruscan charioteer differ from the Greek one?",
+    "opts": [
+     "He raced naked",
+     "He tied the reins around his waist",
+     "He drove only quadrigae",
+     "He was always the owner of the horses"
+    ],
+    "a": 1
+   }
+  }
+ },
+ {
+  "id": "t4_04",
+  "sec": "4.1",
+  "title": {
+   "es": "¿El primer gladiador?",
+   "en": "The first gladiator?"
+  },
+  "src": {
+   "es": "videos/t4/t4_04_es.mp4?m=t4a",
+   "en": "videos/t4/t4_04_en.mp4?m=t4a"
+  },
+  "poster": {
+   "es": "videos/t4/t4_04_es.jpg?m=t4a",
+   "en": "videos/t4/t4_04_en.jpg?m=t4a"
+  },
+  "more": {
+   "es": "Durante mucho tiempo se tuvo la escena del phersu por el precedente directo de los juegos de gladiadores. Thuillier (1985) ve en el phersu a un verdugo, en un castigo más cercano a la condena a las fieras que a la gladiatura, mientras que Avramidou (2009) la interpreta como la escenificación de un rito órfico: Orfeo bajó al mundo de los muertos y Cérbero guardaba su entrada, de modo que la escena representaría el paso del alma del difunto al más allá.",
+   "en": "For a long time the phersu scene was regarded as the direct precedent of gladiatorial games. Thuillier (1985) sees the phersu as an executioner, in a punishment closer to condemnation to the beasts than to gladiatorial combat, whereas Avramidou (2009) interprets it as the staging of an Orphic rite: Orpheus went down to the world of the dead and Cerberus guarded its entrance, so the scene would represent the passage of the soul of the deceased to the afterlife."
+  },
+  "q": {
+   "es": {
+    "q": "¿Por qué el phersu no se considera hoy el origen de los gladiadores?",
+    "opts": [
+     "Porque la escena es una falsificación moderna",
+     "Porque procede de Grecia",
+     "Porque los gladiadores nacieron en Egipto",
+     "Porque ninguna pintura de juegos fúnebres etrusca muestra un gladiador"
+    ],
+    "a": 3
+   },
+   "en": {
+    "q": "Why is the phersu no longer considered the origin of gladiators?",
+    "opts": [
+     "Because the scene is a modern forgery",
+     "Because it comes from Greece",
+     "Because gladiators originated in Egypt",
+     "Because no Etruscan painting of funeral games shows a gladiator"
+    ],
+    "a": 3
+   }
+  }
+ },
+ {
+  "id": "t4_05",
+  "sec": "4.2.2",
+  "title": {
+   "es": "Pan y circo",
+   "en": "Bread and circuses"
+  },
+  "src": {
+   "es": "videos/t4/t4_05_es.mp4?m=t4a",
+   "en": "videos/t4/t4_05_en.mp4?m=t4a"
+  },
+  "poster": {
+   "es": "videos/t4/t4_05_es.jpg?m=t4a",
+   "en": "videos/t4/t4_05_en.jpg?m=t4a"
+  },
+  "more": {
+   "es": "Para celebrar los espectáculos, las autoridades invirtieron una gran cantidad de recursos en construir espacios capaces de albergar grandes eventos. Juvenal usó la expresión en el siglo II d. C. como reproche a una plebe que antes repartía mandos y legiones. El calendario de 354 reunía las fiestas acumuladas durante siglos; cada espectáculo descansaba sobre un mismo sistema, quién lo pagaba, quién competía y quién miraba.",
+   "en": "To stage the spectacles, the authorities invested a great amount of resources in building spaces capable of hosting major events. Juvenal used the phrase in the 2nd century AD as a reproach to a plebs that once handed out commands and legions. The calendar of AD 354 brought together the festivals accumulated over centuries; each spectacle rested on the same system, who paid for it, who competed and who watched."
+  },
+  "q": {
+   "es": {
+    "q": "En el calendario de 354 d. C., ¿qué espectáculo tenía menos días?",
+    "opts": [
+     "El teatro",
+     "Los gladiadores",
+     "Las carreras del circo",
+     "Todos tenían los mismos días"
+    ],
+    "a": 1
+   },
+   "en": {
+    "q": "In the calendar of AD 354, which spectacle had the fewest days?",
+    "opts": [
+     "Theatre",
+     "Gladiators",
+     "Circus races",
+     "All had the same number of days"
+    ],
+    "a": 1
+   }
+  }
+ },
+ {
+  "id": "t4_06",
+  "sec": "4.2.2",
+  "title": {
+   "es": "Gratis para el público",
+   "en": "Free for the public"
+  },
+  "src": {
+   "es": "videos/t4/t4_06_es.mp4?m=t4a",
+   "en": "videos/t4/t4_06_en.mp4?m=t4a"
+  },
+  "poster": {
+   "es": "videos/t4/t4_06_es.jpg?m=t4a",
+   "en": "videos/t4/t4_06_en.jpg?m=t4a"
+  },
+  "more": {
+   "es": "En la República los juegos eran para los ediles una «ocasión extraordinaria de propaganda electoral» (Roldán, 1990). En el Imperio, el emperador buscó reservarse los grandes espectáculos en Roma, mientras en las provincias siguieron pagándolos los magistrados de cada ciudad (Scheidel et al., 2007). El emperador respondía allí mismo ante decenas de miles de testigos, de modo que cada respuesta reforzaba o desgastaba su prestigio.",
+   "en": "Under the Republic the games were for the aediles an «extraordinary opportunity for electoral propaganda» (Roldán, 1990). Under the Empire, the emperor sought to reserve the great spectacles in Rome for himself, while in the provinces they continued to be paid for by the magistrates of each city (Scheidel et al., 2007). The emperor answered there and then before tens of thousands of witnesses, so each answer strengthened or wore down his prestige."
+  },
+  "q": {
+   "es": {
+    "q": "¿Quién pagaba los juegos del calendario en la República?",
+    "opts": [
+     "Los magistrados, sobre todo los ediles",
+     "El público, con la entrada",
+     "Las facciones del circo",
+     "Los sacerdotes de Júpiter"
+    ],
+    "a": 0
+   },
+   "en": {
+    "q": "Who paid for the calendar games under the Republic?",
+    "opts": [
+     "The magistrates, above all the aediles",
+     "The public, through tickets",
+     "The circus factions",
+     "The priests of Jupiter"
+    ],
+    "a": 0
+   }
+  }
+ },
+ {
+  "id": "t4_07",
+  "sec": "4.2.3",
+  "title": {
+   "es": "La grada ordenada",
+   "en": "The ordered stands"
+  },
+  "src": {
+   "es": "videos/t4/t4_07_es.mp4?m=t4a",
+   "en": "videos/t4/t4_07_en.mp4?m=t4a"
+  },
+  "poster": {
+   "es": "videos/t4/t4_07_es.jpg?m=t4a",
+   "en": "videos/t4/t4_07_en.jpg?m=t4a"
+  },
+  "more": {
+   "es": "El reparto iba de abajo arriba: el emperador en su palco, los senadores en las primeras filas junto a la arena, los caballeros en las siguientes y detrás el resto de ciudadanos con toga, mientras que las mujeres, los esclavos y los extranjeros quedaban en lo más alto. Bomgardner (2000) estima que senadores, caballeros y ciudadanos con toga reunían el 62 % de los asientos, las mujeres el 19 % y los pobres, esclavos, libertos y extranjeros el 18 %, que eran los peores.",
+   "en": "The allocation ran from bottom to top: the emperor in his box, the senators in the front rows next to the arena, the equites in the following ones and behind them the rest of the citizens in togas, while women, slaves and foreigners were left at the very top. Bomgardner (2000) estimates that senators, equites and citizens in togas held 62% of the seats, women 19% and the poor, slaves, freedmen and foreigners 18%, which were the worst."
+  },
+  "q": {
+   "es": {
+    "q": "Según la lex Iulia theatralis, ¿dónde se sentaban las mujeres en el anfiteatro?",
+    "opts": [
+     "En las primeras filas",
+     "Junto al palco del emperador",
+     "En lo más alto de la grada, salvo las vestales",
+     "No podían entrar"
+    ],
+    "a": 2
+   },
+   "en": {
+    "q": "Under the lex Iulia theatralis, where did women sit in the amphitheatre?",
+    "opts": [
+     "In the front rows",
+     "Next to the emperor’s box",
+     "At the very top of the stands, except the Vestals",
+     "They could not enter"
+    ],
+    "a": 2
+   }
+  }
+ },
+ {
+  "id": "t4_08",
+  "sec": "4.2.3",
+  "title": {
+   "es": "El Coliseo",
+   "en": "The Colosseum"
+  },
+  "src": {
+   "es": "videos/t4/t4_08_es.mp4?m=t4a",
+   "en": "videos/t4/t4_08_en.mp4?m=t4a"
+  },
+  "poster": {
+   "es": "videos/t4/t4_08_es.jpg?m=t4a",
+   "en": "videos/t4/t4_08_en.jpg?m=t4a"
+  },
+  "more": {
+   "es": "El Anfiteatro Flavio se construyó entre 72 y 80 d. C. bajo la familia Flavia. Sus cuatro gradas rodeaban una arena de unos 80 por 54 metros, y su diseño inspiró a muchos anfiteatros posteriores. En su inauguración murieron 5.000 animales en un solo día y se inundó la arena para una naumaquia, con barcos a escala y un número menor de participantes.",
+   "en": "The Flavian Amphitheatre was built between AD 72 and 80 under the Flavian dynasty. Its four tiers of stands surrounded an arena of some 80 by 54 metres, and its design inspired many later amphitheatres. At its inauguration 5,000 animals died in a single day and the arena was flooded for a naumachia, with scale-model ships and fewer participants."
+  },
+  "q": {
+   "es": {
+    "q": "¿Con qué se pagó el Anfiteatro Flavio, según los restos de su inscripción?",
+    "opts": [
+     "Con las entradas del público",
+     "Con el botín de la guerra de Judea",
+     "Con un impuesto sobre el grano",
+     "Con las multas a los gladiadores"
+    ],
+    "a": 1
+   },
+   "en": {
+    "q": "What paid for the Flavian Amphitheatre, according to the remains of its inscription?",
+    "opts": [
+     "With the public’s entrance fees",
+     "With the spoils of the Judaean war",
+     "With a tax on grain",
+     "With fines on gladiators"
+    ],
+    "a": 1
+   }
+  }
+ },
+ {
+  "id": "t4_09",
+  "sec": "4.2.3",
+  "title": {
+   "es": "Famoso e infame",
+   "en": "Famous and infamous"
+  },
+  "src": {
+   "es": "videos/t4/t4_09_es.mp4?m=t4a",
+   "en": "videos/t4/t4_09_en.mp4?m=t4a"
+  },
+  "poster": {
+   "es": "videos/t4/t4_09_es.jpg?m=t4a",
+   "en": "videos/t4/t4_09_en.jpg?m=t4a"
+  },
+  "more": {
+   "es": "Los esclavos eran comprados para la arena o alquilados por sus dueños, y los condenados podían serlo ad gladium, para morir en la arena, o ad ludum, para ir a la escuela y aprender el oficio. La infamia era una mancha legal y moral que el derecho imponía a quienes vendían o exhibían su cuerpo para el disfrute de otros. El pueblo trataba al gladiador como a un héroe «a la vez famoso e infame» (Bell, 2020).",
+   "en": "Slaves were bought for the arena or hired out by their owners, and the condemned could be sentenced ad gladium, to die in the arena, or ad ludum, to go to the school and learn the trade. Infamia was a legal and moral stain that the law imposed on those who sold or displayed their bodies for the enjoyment of others. The people treated the gladiator as a hero «at once famous and infamous» (Bell, 2020)."
+  },
+  "q": {
+   "es": {
+    "q": "¿Qué causaba la infamia del gladiador, según el derecho romano?",
+    "opts": [
+     "Haber nacido esclavo",
+     "Perder un combate",
+     "Matar a un rival",
+     "Exhibir su cuerpo por dinero"
+    ],
+    "a": 3
+   },
+   "en": {
+    "q": "What caused the gladiator’s infamia under Roman law?",
+    "opts": [
+     "Having been born a slave",
+     "Losing a fight",
+     "Killing an opponent",
+     "Displaying his body for money"
+    ],
+    "a": 3
+   }
+  }
+ },
+ {
+  "id": "t4_10",
+  "sec": "4.2.3",
+  "title": {
+   "es": "Reciario contra secutor",
+   "en": "Retiarius against secutor"
+  },
+  "src": {
+   "es": "videos/t4/t4_10_es.mp4?m=t4a",
+   "en": "videos/t4/t4_10_en.mp4?m=t4a"
+  },
+  "poster": {
+   "es": "videos/t4/t4_10_es.jpg?m=t4a",
+   "en": "videos/t4/t4_10_en.jpg?m=t4a"
+  },
+  "more": {
+   "es": "Cada gladiador recibía una identidad de combate (armatura), con unas armas determinadas. El secutor debía su nombre a sequor, «seguir». El epitafio de Flamma, un secutor sirio, registra 34 combates, con 21 victorias. El scissor, con la mano izquierda en un cono metálico acabado en una hoja de media luna, servía para cortar la red, aunque es un tipo mal conocido.",
+   "en": "Each gladiator received a combat identity (armatura), with a specific set of weapons. The secutor owed his name to sequor, «to follow». The epitaph of Flamma, a Syrian secutor, records 34 fights, with 21 victories. The scissor, with his left hand in a metal cone ending in a half-moon blade, served to cut the net, although it is a poorly known type."
+  },
+  "q": {
+   "es": {
+    "q": "¿Por qué se llamaba secutor?",
+    "opts": [
+     "Porque perseguía al reciario",
+     "Porque luchaba sentado",
+     "Porque llevaba una red",
+     "Porque procedía de Secia"
+    ],
+    "a": 0
+   },
+   "en": {
+    "q": "Why was he called secutor?",
+    "opts": [
+     "Because he pursued the retiarius",
+     "Because he fought seated",
+     "Because he carried a net",
+     "Because he came from Secia"
+    ],
+    "a": 0
+   }
+  }
+ },
+ {
+  "id": "t4_11",
+  "sec": "4.2.3",
+  "title": {
+   "es": "El cuerpo del gladiador",
+   "en": "The gladiator’s body"
+  },
+  "src": {
+   "es": "videos/t4/t4_11_es.mp4?m=t4a",
+   "en": "videos/t4/t4_11_en.mp4?m=t4a"
+  },
+  "poster": {
+   "es": "videos/t4/t4_11_es.jpg?m=t4a",
+   "en": "videos/t4/t4_11_en.jpg?m=t4a"
+  },
+  "more": {
+   "es": "El cementerio de gladiadores de Éfeso, en la actual Turquía, reúne al menos 68 individuos. Lösch et al. (2014) atribuyen la alta relación entre estroncio y calcio a un suplemento de calcio. Uno de los cráneos con heridas curadas presenta signos de intervención quirúrgica. La cifra de mortalidad de Ville (1981) corresponde al siglo I d. C.",
+   "en": "The gladiators’ cemetery at Ephesus, in present-day Turkey, contains at least 68 individuals. Lösch et al. (2014) attribute the high strontium-calcium ratio to a calcium supplement. One of the skulls with healed wounds shows signs of surgical intervention. Ville’s (1981) mortality figure refers to the 1st century AD."
+  },
+  "q": {
+   "es": {
+    "q": "¿Qué indica que el 15 % de los cráneos de Éfeso tenga una sola herida mortal?",
+    "opts": [
+     "Que comían poca carne",
+     "Que luchaban sin casco",
+     "Que había reglas estrictas en el combate",
+     "Que eran muy jóvenes"
+    ],
+    "a": 2
+   },
+   "en": {
+    "q": "What does it suggest that 15% of the Ephesus skulls have a single fatal wound?",
+    "opts": [
+     "That they ate little meat",
+     "That they fought without helmets",
+     "That there were strict rules in combat",
+     "That they were very young"
+    ],
+    "a": 2
+   }
+  }
+ },
+ {
+  "id": "t4_12",
+  "sec": "4.2.3",
+  "title": {
+   "es": "Amazona y Achillia",
+   "en": "Amazon and Achillia"
+  },
+  "src": {
+   "es": "videos/t4/t4_12_es.mp4?m=t4a",
+   "en": "videos/t4/t4_12_en.mp4?m=t4a"
+  },
+  "poster": {
+   "es": "videos/t4/t4_12_es.jpg?m=t4a",
+   "en": "videos/t4/t4_12_en.jpg?m=t4a"
+  },
+  "more": {
+   "es": "Ver actuar a una mujer en público resultaba tan chocante para los romanos que cada una se exhibía como una rareza. Según Coleman (2000), lo que escandalizaba era el rango antes que el sexo: los autores antiguos solo condenan a las de familia senatorial o ecuestre. Las cazadoras de fieras fueron mejor aceptadas según Mañas (2026).",
+   "en": "Seeing a woman perform in public was so shocking for the Romans that each one was exhibited as a curiosity. According to Coleman (2000), what scandalised was rank rather than sex: ancient authors condemn only those of senatorial or equestrian family. Female beast hunters were better accepted according to Mañas (2026)."
+  },
+  "q": {
+   "es": {
+    "q": "¿Qué dice la inscripción del relieve de Halicarnaso sobre Amazona y Achillia?",
+    "opts": [
+     "Que Amazona mató a Achillia",
+     "Que ambas fueron indultadas",
+     "Que eran senadoras",
+     "Que lucharon contra fieras"
+    ],
+    "a": 1
+   },
+   "en": {
+    "q": "What does the inscription on the Halicarnassus relief say about Amazon and Achillia?",
+    "opts": [
+     "That Amazon killed Achillia",
+     "That both were reprieved",
+     "That they were senators",
+     "That they fought wild beasts"
+    ],
+    "a": 1
+   }
+  }
+ },
+ {
+  "id": "t4_13",
+  "sec": "4.2.4",
+  "title": {
+   "es": "Diocles, el auriga millonario",
+   "en": "Diocles, the millionaire charioteer"
+  },
+  "src": {
+   "es": "videos/t4/t4_13_es.mp4?m=t4a",
+   "en": "videos/t4/t4_13_en.mp4?m=t4a"
+  },
+  "poster": {
+   "es": "videos/t4/t4_13_es.jpg?m=t4a",
+   "en": "videos/t4/t4_13_en.jpg?m=t4a"
+  },
+  "more": {
+   "es": "Los aurigas eran esclavos, libertos o romanos de muy baja condición, y de los más de doscientos que se conocen por sus inscripciones solo uno consta como nacido libre. Diocles se retiró a los cuarenta y dos años. El auriga recibía solo una parte del premio, que en el caso de un esclavo podía ahorrar para comprar su libertad. Otros no llegaron a disfrutar su fortuna: Escorpo murió a los veintisiete tras más de dos mil victorias.",
+   "en": "Charioteers were slaves, freedmen or Romans of very low status, and of the more than two hundred known from their inscriptions only one is recorded as freeborn. Diocles retired at forty-two. The charioteer received only a share of the prize, which a slave could save to buy his freedom. Others did not live to enjoy their fortune: Scorpus died at twenty-seven after more than two thousand victories."
+  },
+  "q": {
+   "es": {
+    "q": "¿Quién cobraba los premios de las carreras que ganaba Diocles?",
+    "opts": [
+     "El propio Diocles, íntegros",
+     "El emperador",
+     "Los apostantes de la grada",
+     "La facción, que le daba una parte"
+    ],
+    "a": 3
+   },
+   "en": {
+    "q": "Who collected the prizes for the races Diocles won?",
+    "opts": [
+     "Diocles himself, in full",
+     "The emperor",
+     "The bettors in the stands",
+     "The faction, which gave him a share"
+    ],
+    "a": 3
+   }
+  }
+ },
+ {
+  "id": "t4_14",
+  "sec": "4.2.4",
+  "title": {
+   "es": "Maldecir al auriga",
+   "en": "Cursing the charioteer"
+  },
+  "src": {
+   "es": "videos/t4/t4_14_es.mp4?m=t4a",
+   "en": "videos/t4/t4_14_en.mp4?m=t4a"
+  },
+  "poster": {
+   "es": "videos/t4/t4_14_es.jpg?m=t4a",
+   "en": "videos/t4/t4_14_en.jpg?m=t4a"
+  },
+  "more": {
+   "es": "Una tablilla del norte de África pide que los caballos rivales «no puedan correr, ni obedecer al freno, ni moverse», y que sus aurigas «no sujeten las riendas ni vean a sus adversarios». Los aficionados intentaban también atraer la suerte sobre su auriga con anillos y amuletos que llevaban su imagen o el color de su facción.",
+   "en": "A tablet from North Africa asks that the rival horses «may not be able to run, nor obey the bit, nor move», and that their charioteers «may not hold the reins nor see their opponents». Fans also tried to draw luck towards their charioteer with rings and amulets bearing his image or the colour of his faction."
+  },
+  "q": {
+   "es": {
+    "q": "¿Dónde se depositaban casi siempre las tablillas de maldición?",
+    "opts": [
+     "En las tumbas",
+     "En la spina del circo",
+     "En los templos de Júpiter",
+     "En las cuadras de las facciones"
+    ],
+    "a": 0
+   },
+   "en": {
+    "q": "Where were curse tablets almost always deposited?",
+    "opts": [
+     "In tombs",
+     "On the spina of the circus",
+     "In the temples of Jupiter",
+     "In the faction stables"
+    ],
+    "a": 0
+   }
+  }
+ },
+ {
+  "id": "t4_15",
+  "sec": "4.2.5",
+  "title": {
+   "es": "La mejor actividad, según Galeno",
+   "en": "The best exercise, according to Galen"
+  },
+  "src": {
+   "es": "videos/t4/t4_15_es.mp4?m=t4a",
+   "en": "videos/t4/t4_15_en.mp4?m=t4a"
+  },
+  "poster": {
+   "es": "videos/t4/t4_15_es.jpg?m=t4a",
+   "en": "videos/t4/t4_15_en.jpg?m=t4a"
+  },
+  "more": {
+   "es": "La entrada a las termas costaba un cuadrante, la moneda más pequeña, de modo que cualquiera podía pagarla. Galeno (siglo II d. C.) dedicó un tratado entero, Sobre el ejercicio con la pelota pequeña, a defender este juego como la mejor actividad corporal. El follis era una pelota más grande, de piel inflada y muy ligera, propia de niños y ancianos, y en el trigón tres jugadores en triángulo se pasaban una bola pequeña con fuerza.",
+   "en": "Entry to the baths cost a quadrans, the smallest coin, so anyone could afford it. Galen (2nd century AD) devoted an entire treatise, De parvae pilae exercitio, to defending this game as the best bodily activity. The follis was a larger ball of inflated skin, very light and suited to children and the elderly, and in the trigon three players in a triangle passed a small ball hard to one another."
+  },
+  "q": {
+   "es": {
+    "q": "Según Galeno, ¿qué ventaja tenía la pelota pequeña frente a la lucha?",
+    "opts": [
+     "Que se jugaba en el circo",
+     "Que daba premios en dinero",
+     "Que entrenaba también la mente",
+     "Que solo la practicaban los senadores"
+    ],
+    "a": 2
+   },
+   "en": {
+    "q": "According to Galen, what advantage did the small ball have over wrestling?",
+    "opts": [
+     "That it was played in the circus",
+     "That it gave cash prizes",
+     "That it also trained the mind",
+     "That only senators played it"
+    ],
+    "a": 2
+   }
+  }
+ },
+ {
+  "id": "t4_16",
+  "sec": "4.2.6",
+  "title": {
+   "es": "Nadie prohibió los juegos",
+   "en": "Nobody banned the games"
+  },
+  "src": {
+   "es": "videos/t4/t4_16_es.mp4?m=t4a",
+   "en": "videos/t4/t4_16_en.mp4?m=t4a"
+  },
+  "poster": {
+   "es": "videos/t4/t4_16_es.jpg?m=t4a",
+   "en": "videos/t4/t4_16_en.jpg?m=t4a"
+  },
+  "more": {
+   "es": "A finales del siglo IV los combates de gladiadores solo ocupaban en Roma diez días de diciembre. El cristianismo rechazaba la violencia de la arena, aunque Jiménez Sánchez (2002) juzga exagerado su peso y Stocking (2021) coincide en que no fue la causa principal. Tras la caída del Imperio de Occidente en 476, los reyes germánicos de Italia mantuvieron los juegos.",
+   "en": "By the end of the 4th century gladiatorial combats took up in Rome only ten days in December. Christianity rejected the violence of the arena, although Jiménez Sánchez (2002) considers its weight exaggerated and Stocking (2021) agrees that it was not the main cause. After the fall of the Western Empire in 476, the Germanic kings of Italy kept up the games."
+  },
+  "q": {
+   "es": {
+    "q": "¿Cuál fue la causa principal del fin de los espectáculos en Occidente?",
+    "opts": [
+     "Una ley de Teodosio que los prohibió",
+     "La falta de dinero de ciudades y ricos",
+     "La desaparición de los caballos",
+     "Una epidemia en Roma"
+    ],
+    "a": 1
+   },
+   "en": {
+    "q": "What was the main cause of the end of the spectacles in the West?",
+    "opts": [
+     "A law of Theodosius banning them",
+     "The lack of money of cities and the rich",
+     "The disappearance of horses",
+     "An epidemic in Rome"
+    ],
+    "a": 1
+   }
+  }
+ }
+]

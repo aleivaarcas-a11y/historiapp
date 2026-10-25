@@ -70,5 +70,29 @@
     "en": 4258
    }
   }
+ ],
+ "4": [
+  {
+   "id": "t4_ep1",
+   "sec": "4",
+   "lang": "es",
+   "dur": 1582,
+   "src": {
+    "es": "audio/t4_ep1.m4a?v=1",
+    "en": "audio/t4_ep1_en.m4a?v=1"
+   },
+   "title": {
+    "es": "Púgiles con flauta, aurigas millonarios y una grada ordenada",
+    "en": "Boxers with Flutes, Millionaire Charioteers and Ordered Stands"
+   },
+   "desc": {
+    "es": "Repaso del Tema 4 en forma de conversación y en el mismo orden que las clases, desde las tumbas pintadas de Etruria, con el pugilato al son de la flauta, las carreras de carros y el phersu, hasta el final de los espectáculos romanos, pasando por ludi y munera, quién pagaba los juegos, la grada ordenada del anfiteatro, los gladiadores, el circo y sus facciones, Diocles, las termas y los juegos de pelota.",
+    "en": "A conversational review of Unit 4 that follows the order of the lectures, from the painted tombs of Etruria, with boxing to the flute, chariot racing and the phersu, to the end of the Roman spectacles, by way of ludi and munera, who paid for the games, the ordered stands of the amphitheatre, gladiators, the circus and its factions, Diocles, the baths and ball games."
+   },
+   "durs": {
+    "es": 1582,
+    "en": 1762
+   }
+  }
  ]
 }
