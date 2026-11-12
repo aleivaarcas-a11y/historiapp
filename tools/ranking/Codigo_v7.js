@@ -274,6 +274,7 @@ const RP_SLOTS = 240;
 function rpSala_(x){ return String(x||"").replace(/[^A-Za-z0-9_-]/g,"").slice(0,30); }
 function rpHash_(s){ let h=0; for(let i=0;i<s.length;i++){ h=(h*31+s.charCodeAt(i))|0; } return Math.abs(h)%RP_SLOTS; }
 function rpPost_(b){
+  if(b.accion==="rp_abrir"){ const sl=rpSala_(b.sala); if(!sl) return {ok:false}; CacheService.getScriptCache().put("rp_"+sl+"_st",JSON.stringify({r:Number(b.r)||0,ts:Date.now()}),21600); return {ok:true}; }   // el profesor abre una ronda
   const sala=rpSala_(b.sala), uid=String(b.uid||"").replace(/[^a-z0-9]/g,"").slice(0,40);
   if(!sala || uid.length<8) return {ok:false};
   const c=CacheService.getScriptCache(), k="rp_"+sala+"_"+rpHash_(uid);
@@ -286,6 +287,7 @@ function rpPost_(b){
 }
 function rpGet_(p){
   const sala=rpSala_(p.sala), c=CacheService.getScriptCache(), keys=[];
+  if(p.accion==="rp_st"){ let st={r:-1}; try{ st=JSON.parse(c.get("rp_"+sala+"_st")||'{"r":-1}'); }catch(x){} return {ok:true,st:st}; }   // los móviles preguntan qué ronda está abierta
   for(let i=0;i<RP_SLOTS;i++) keys.push("rp_"+sala+"_"+i);
   const all=c.getAll(keys), j=[];
   Object.keys(all).forEach(k=>{ try{ const m=JSON.parse(all[k]); Object.keys(m).forEach(u=>j.push(m[u])); }catch(x){} });
