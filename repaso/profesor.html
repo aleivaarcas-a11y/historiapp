@@ -113,7 +113,7 @@ const Q=new URLSearchParams(location.search),PRUEBA=Q.get('prueba')==='alex';
 const RK_URL="https://script.google.com/macros/s/AKfycbzjxo9QvXjWabkFGm3MtbgTJWV1OMT372TAD7n-iTSoSR7av2KMpYBb3LhRfXvWt36GeA/exec",SALA=PRUEBA?"PRUEBA":"HD2627";
 const URLJ='https://aleivaarcas-a11y.github.io/historiapp/repaso/jugar.html';
 const NR=8,RDUR=[210,360,180,240,300,240,240,90];
-let L='es',PIN='';try{PIN=localStorage.getItem('rpPin')||''}catch(e){}
+let L='es',PIN='7319';   // el PIN va dentro de la página: el profesor no tiene que escribirlo
 const T={es:{title:'Del clan a la arena',sub:'Clase de repaso · Temas 1-4',next:'Siguiente ▶',round:'Ronda',
  open:'▶ Abrir la sala',openS:'Los alumnos podrán entrar en cuanto abras la sala. Cada vez que la abres empieza una partida nueva y desaparecen los jugadores anteriores.',reset:'Empezar una partida nueva',close:'Cerrar la sala',closed:'Sala cerrada. Gracias por jugar.',
  join:'Para entrar',steps:['Abre <b>Historiapp</b> o escanea el código.','Toca la tarjeta dorada <b>«Clase de repaso»</b>.','Escribe tu nombre o alias y espera.','Cada ronda empieza cuando el profesor la abre.'],
