@@ -74,7 +74,7 @@ canvas#conf{position:fixed;inset:0;pointer-events:none;z-index:30}
 <canvas id="conf"></canvas>
 <script>
 const QRIMG='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdQAAAHUAQAAAACrXOTBAAAD30lEQVR4Xu2dUW7kIAyGk6rvmRv0/sfqDZoTsILfNs6oK9mhEp3yf5qHbAoCHMsytmH3st3lfLvbc9s29o1DWcV5287dkG5489j2fd9O/YFLY8o5DmUVZ1RWBXzJiPtj245mto+yf+jDo73ffOPRce/CceOsJqutfNVfVVQ8HF2xSxFlrn9SnXeNV5MV1xvnd8kKClz9jaOUz+qHwCe5rud3zTkG5xznj8hq/yjwLqopPqtKwwMxh0T5I+sNw/XGmSqrozoTtuMTx+Os1hgqXf961h0inGptPHXON+Gc47yqrCS+ge0ebDIejFOVXB2P1vhV13sXrjfOLFnpRs+2ewrssH9/eVPjIbPmzHHjrCarHt+wWByE5SN4hhlt6nOS1fRq1npbUA57PRhk72bAVTZD3YIeNTTdfrTPGWZ939XGFX8DCRRs9C4uh0anpQG0HY3pbyRYTa9mrVdCzeZgPPnMPqXSdb7Zc+pzhlnfd7VxnU2GO4GInLoW4oFo+tvHPajPGVbTq1nrdTpszrO4x/q5usOszra43LPmzHHjrCari4MhxrkhWu32g+Y503/Os5pezVqvxOUQ3/DORs8Ymo8NQ927zJozx42znqxahUbV0k95qLQ6Zx+dQzESapOQQGR+MMN6enWfEVm5vLZE4ZzbrNkWRO36JlHKSkfGZd84lFUCy2gLmluRUAb2hvCoEXnWQjvGNzJQJ+OMyKobXksUXuxwo9vnS2H/yLjsG4eySvCsxvBALOBsseieFhSFp33OQJ2MMyIrp8+IP6sX/XT8yvznHsqjfU4w8o3YN847mu7tV45at2//rLYa/gbaHGU/vuTM1bkXyjkBdTLOiKz+U33kYs6w2xfrjbIl2ucEI9+IfRP4GlEfxxA11qPfz/4z65FyUCfjjMhK7yhAgtunC+2o4Hf1z6znTzLyjdg3gZXV+Qer7e/l/Yh4WP0S/Y0c1Mk4I7Jy5600NGeexqUwSfOG9pL+c4aRb8S+CSxXIlh1qFXWIYin9tmaUZ8zUCfjjMjqm/Pd/u4v2wZ2691PGo6My75xKKsE/gBsj2m4Gn7vS3tjTvucgToZZ0RWmrxGkNnlB2X3565qfI5C0z4nGPlG7Bun5QfPetuRpAKltrlS37ScoGUMkRwsNTnI+ucU1Mk4PykrXMNYr31G7vvcpYZfr62DDed9X0l+8htlWG1cqd8wyvmoRhjX8kvNRtsh4lI7q7Jj/UaO1fRq6nrtylB/shsv4X74oyvdIZk655twznFeUVbX+IaW68uaryew7CSLbhJfcb2cc5xXlBV2drfg/2+V4BV14xXn/A/g6bdlr7ulLwAAAABJRU5ErkJggg==';
-const RK_URL="https://script.google.com/macros/s/AKfycbzjxo9QvXjWabkFGm3MtbgTJWV1OMT372TAD7n-iTSoSR7av2KMpYBb3LhRfXvWt36GeA/exec",SALA="HD1A-20261112";
+const RK_URL="https://script.google.com/macros/s/AKfycbzjxo9QvXjWabkFGm3MtbgTJWV1OMT372TAD7n-iTSoSR7av2KMpYBb3LhRfXvWt36GeA/exec",SALA=new URLSearchParams(location.search).get('prueba')==='alex'?"PRUEBA":"HD1A-20261112";
 let DATA=null,ERR=0;
 function poll(){fetch(RK_URL+'?accion=rp_get&sala='+SALA+'&_='+Date.now()).then(r=>r.json()).then(d=>{if(d&&d.ok){DATA=d;ERR=0;live()}}).catch(()=>{ERR++;live()})}
 setInterval(poll,3000);setTimeout(poll,300);
@@ -94,6 +94,7 @@ function live(){const el=document.getElementById('live');if(!el)return;const J=(
  if(P===8){const tt=topN(J,x=>x.t,3);el.innerHTML=`<div class="podium">${[tt[1],tt[0],tt[2]].map((x,j)=>x?`<div class="pod p${[2,1,3][j]}"><div class="aa" style="font-size:3.4vh;font-weight:700">${esc(x.a)}</div><div style="font-family:Cinzel,serif;color:var(--oro2);font-size:3.6vh;font-weight:900">${x.t.toLocaleString(L)}</div><div class="blk" style="height:${[15,22,10][j]}vh">${[2,1,3][j]}</div></div>`:'').join('')}</div>`;return}
 }
 const URLJ='https://aleivaarcas-a11y.github.io/historiapp/repaso/jugar.html';
+const URLJQ=URLJ+(SALA==='PRUEBA'?'?prueba=alex':'');
 let L='es';
 const T={es:{title:'Del clan a la arena',sub:'Clase de repaso · Temas 1-4',next:'Siguiente ▶',round:'Ronda',
  join:'Para entrar',steps:['Abre <b>Historiapp</b> en el móvil.','Toca la tarjeta dorada <b>«Clase de repaso»</b> o escanea el código.','Escribe tu alias y espera en la primera ronda.','Cada ronda empieza en tu móvil cuando el profesor la abre.'],
