@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Del clan a la arena · Pantalla del profesor</title>
+<link rel="icon" href="../icons/icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:Carlito;src:url(../fonts/Carlito-Regular.woff2) format("woff2");font-weight:400}
+@font-face{font-family:Carlito;src:url(../fonts/Carlito-Bold.woff2) format("woff2");font-weight:700}
+:root{--bg:#07102a;--azul:#004379;--oro:#EDAB00;--oro2:#FBC93D;--txt:#f4f1e8;--mut:#9fb0cf;--card:rgba(255,255,255,.06);--line:rgba(237,171,0,.35)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden}
+body{background:radial-gradient(ellipse at 50% -10%,#1b3a7a 0%,#0d1f4a 35%,var(--bg) 75%);color:var(--txt);font-family:Calibri,Carlito,"Segoe UI",sans-serif;font-size:2.3vh;user-select:none}
+.cz{font-family:Cinzel,Georgia,serif;letter-spacing:.04em}
+#top{position:fixed;top:0;left:0;right:0;height:7vh;display:flex;align-items:center;justify-content:space-between;padding:0 2.5vw;border-bottom:1px solid var(--line);background:rgba(0,0,0,.25)}
+#top img{height:4.6vh;vertical-align:middle;margin-right:1vw}
+#top .t{color:var(--oro);font-size:2.4vh}
+#pips{display:flex;gap:.6vw}.pip{width:1.4vh;height:1.4vh;border-radius:50%;border:2px solid var(--oro);opacity:.5}.pip.on{background:var(--oro);opacity:1}.pip.done{background:var(--oro);opacity:.4}
+#st{position:fixed;top:7vh;bottom:9vh;left:0;right:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2vh 5vw;text-align:center}
+#nav{position:fixed;bottom:0;left:0;right:0;height:9vh;display:flex;align-items:center;justify-content:space-between;padding:0 2.5vw;border-top:1px solid var(--line);background:rgba(0,0,0,.3)}
+.b{font-family:Cinzel,serif;font-weight:900;font-size:2.3vh;padding:1.2vh 1.8vw;border-radius:1vh;border:2px solid var(--oro);background:rgba(0,0,0,.4);color:var(--oro);cursor:pointer}
+.b.f{background:var(--oro);color:#1a1200}
+.k{color:var(--mut);text-transform:uppercase;letter-spacing:.3em;font-size:1.9vh;margin-bottom:1.2vh}
+h1{font-size:9vh;color:var(--oro);line-height:1.05;text-shadow:0 .6vh 3vh rgba(0,0,0,.6)}
+.lead{font-size:3vh;max-width:74vw;line-height:1.35;margin:2vh auto;color:#e9e4d6}
+.rules{display:flex;gap:1.6vw;justify-content:center;flex-wrap:wrap;max-width:88vw;margin-top:1vh}
+.rule{background:var(--card);border:1px solid var(--line);border-radius:1.2vh;padding:1.4vh 1.4vw;font-size:2.3vh;max-width:28vw;line-height:1.3;text-align:left}
+.rule b{color:var(--oro2);display:block;font-family:Cinzel,serif;margin-bottom:.4vh}
+.tip{margin-top:2vh;max-width:74vw;font-size:2.6vh;line-height:1.35;background:rgba(0,67,121,.45);border:2px solid #5aa3e6;border-radius:1.2vh;padding:1.4vh 1.6vw;text-align:left}
+.tip b{color:#9cc8f2;font-family:Cinzel,serif}
+.key{margin-top:2.4vh;display:flex;align-items:center;gap:2vw;justify-content:center}
+.kv{font-family:Cinzel,serif;font-weight:900;font-size:12vh;color:var(--oro2);letter-spacing:.15em;text-shadow:0 0 4vh rgba(237,171,0,.5);animation:pop .6s}
+.kh{font-family:Cinzel,serif;font-size:4vh;color:var(--mut);border:2px dashed var(--line);border-radius:1.4vh;padding:1.4vh 3vw;cursor:pointer}
+.em{font-size:9vh;line-height:1}
+#qr{background:#fff;padding:1.4vh;border-radius:1.4vh;display:inline-block}
+#qr img,#qr canvas{width:30vh!important;height:30vh!important;display:block}
+.row{display:flex;gap:4vw;align-items:center;justify-content:center;margin-top:2vh}
+.url{font-size:2.2vh;color:var(--oro2);margin-top:1vh;word-break:break-all}
+.steps{text-align:left;font-size:2.8vh;line-height:1.6;max-width:44vw}
+.steps b{color:var(--oro2)}
+.clock{font-family:Cinzel,serif;font-weight:900;font-size:3vh;color:var(--mut);margin-top:1.4vh}
+.thr{font-family:Cinzel,serif;font-weight:900;font-size:16vh;color:var(--oro2);line-height:1;animation:pop .6s}
+@keyframes pop{0%{transform:scale(.4);opacity:0}70%{transform:scale(1.12)}100%{transform:scale(1);opacity:1}}
+@keyframes rise{from{opacity:0;transform:translateY(3vh)}to{opacity:1;transform:none}}
+.rise{animation:rise .55s both}
+canvas#conf{position:fixed;inset:0;pointer-events:none;z-index:30}
+</style>
+</head>
+<body>
+<div id="top"><div><img src="../icons/emblema_oro.png" alt=""><span class="t cz" id="tt"></span></div><div id="pips"></div></div>
+<div id="st"></div>
+<div id="nav"><button class="b" id="prev">◀</button><div><button class="b" id="fsb">⛶</button> <button class="b" id="lng">EN</button></div><button class="b f" id="next"></button></div>
+<canvas id="conf"></canvas>
+<script>
+const QRIMG='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdQAAAHUAQAAAACrXOTBAAAD30lEQVR4Xu2dUW7kIAyGk6rvmRv0/sfqDZoTsILfNs6oK9mhEp3yf5qHbAoCHMsytmH3st3lfLvbc9s29o1DWcV5287dkG5489j2fd9O/YFLY8o5DmUVZ1RWBXzJiPtj245mto+yf+jDo73ffOPRce/CceOsJqutfNVfVVQ8HF2xSxFlrn9SnXeNV5MV1xvnd8kKClz9jaOUz+qHwCe5rud3zTkG5xznj8hq/yjwLqopPqtKwwMxh0T5I+sNw/XGmSqrozoTtuMTx+Os1hgqXf961h0inGptPHXON+Gc47yqrCS+ge0ebDIejFOVXB2P1vhV13sXrjfOLFnpRs+2ewrssH9/eVPjIbPmzHHjrCarHt+wWByE5SN4hhlt6nOS1fRq1npbUA57PRhk72bAVTZD3YIeNTTdfrTPGWZ939XGFX8DCRRs9C4uh0anpQG0HY3pbyRYTa9mrVdCzeZgPPnMPqXSdb7Zc+pzhlnfd7VxnU2GO4GInLoW4oFo+tvHPajPGVbTq1nrdTpszrO4x/q5usOszra43LPmzHHjrCari4MhxrkhWu32g+Y503/Os5pezVqvxOUQ3/DORs8Ymo8NQ927zJozx42znqxahUbV0k95qLQ6Zx+dQzESapOQQGR+MMN6enWfEVm5vLZE4ZzbrNkWRO36JlHKSkfGZd84lFUCy2gLmluRUAb2hvCoEXnWQjvGNzJQJ+OMyKobXksUXuxwo9vnS2H/yLjsG4eySvCsxvBALOBsseieFhSFp33OQJ2MMyIrp8+IP6sX/XT8yvznHsqjfU4w8o3YN847mu7tV45at2//rLYa/gbaHGU/vuTM1bkXyjkBdTLOiKz+U33kYs6w2xfrjbIl2ucEI9+IfRP4GlEfxxA11qPfz/4z65FyUCfjjMhK7yhAgtunC+2o4Hf1z6znTzLyjdg3gZXV+Qer7e/l/Yh4WP0S/Y0c1Mk4I7Jy5600NGeexqUwSfOG9pL+c4aRb8S+CSxXIlh1qFXWIYin9tmaUZ8zUCfjjMjqm/Pd/u4v2wZ2691PGo6My75xKKsE/gBsj2m4Gn7vS3tjTvucgToZZ0RWmrxGkNnlB2X3565qfI5C0z4nGPlG7Bun5QfPetuRpAKltrlS37ScoGUMkRwsNTnI+ucU1Mk4PykrXMNYr31G7vvcpYZfr62DDed9X0l+8htlWG1cqd8wyvmoRhjX8kvNRtsh4lI7q7Jj/UaO1fRq6nrtylB/shsv4X74oyvdIZk655twznFeUVbX+IaW68uaryew7CSLbhJfcb2cc5xXlBV2drfg/2+V4BV14xXn/A/g6bdlr7ulLwAAAABJRU5ErkJggg==';
+const URLJ='https://aleivaarcas-a11y.github.io/historiapp/repaso/jugar.html';
+let L='es';
+const T={es:{title:'Del clan a la arena',sub:'Clase de repaso · Temas 1-4',next:'Siguiente ▶',round:'Ronda',
+ join:'Para entrar',steps:['Abre <b>Historiapp</b> en el móvil.','Toca la tarjeta dorada <b>«Clase de repaso»</b> o escanea el código.','Escribe tu alias y espera en la primera ronda.','Cada ronda se abre con una <b>clave</b> que saldrá en esta pantalla.'],
+ showKey:'Mostrar la clave',key:'Clave',tipK:'Para el examen',since:'Ronda en juego',
+ stand:'¡Todos en pie!',standS:'Munus: la ronda se juega de pie. Quien pierda sus tres vidas, se sienta.',
+ cer:'La ceremonia',cerS:'Todos en pie con el móvil en la mano. Cuando aparezca una cifra, siéntate si tu puntuación es menor.',sit:'Siéntate si tienes menos de',pts:'puntos',
+ last:'¿Quién sigue en pie?',lastS:'Decid vuestra puntuación en voz alta. La más alta se lleva la corona de olivo.',thanks:'Suerte en el parcial',
+ r:[{n:'El origen',t:'Tema 1',e:'🔥',d:'Calentamiento con el Tema 1, con las mismas reglas que el test del examen.',rules:[['Como en el examen','Acierto +300, fallo −100 y en blanco 0.'],['Racha','Desde el segundo acierto seguido, +100 por pregunta.']],tip:'En el test, tres fallos restan un acierto. Si dudas entre varias opciones, dejar la pregunta en blanco no resta nada.'},
+ {n:'El yacimiento',t:'Comentario de imagen · Temas 2-4',e:'⛏️',d:'Una imagen sale de la tierra loseta a loseta. Después, el comentario: ¿la imagen lo documenta (C2) o no permite concluirlo (C3)?',rules:[['Excavación','De 500 a 100 puntos, según las losetas que necesites.'],['C2 o C3','Dos afirmaciones por imagen, 200 puntos cada una.']],tip:'En la parte C, primero se describe lo que se ve sin interpretarlo (C1), después se explica lo que la imagen documenta (C2) y, por último, se señala una conclusión que la imagen no permite sacar (C3).'},
+ {n:'La carrera del Heb-Sed',t:'Tema 2',e:'🏃',d:'Como el faraón en su jubileo, cada acierto del Tema 2 os acerca a la meta.',rules:[['Como en el examen','Acierto +300, fallo −100 y en blanco 0.'],['Foto finish','La última prueba es una imagen del Tema 2.']],tip:'En el test, lee las cuatro opciones antes de marcar: los distractores son de la misma familia que la respuesta correcta.'},
+ {n:'Pentatlón',t:'Tema 3',e:'🏅',d:'Cinco pruebas distintas sobre el Tema 3, como el pentatlón de Olimpia.',rules:[['Cinco pruebas','Mito o realidad, relaciona, ordena en el tiempo, la fuente habla e imagen relámpago.']],tip:'En las preguntas de desarrollo, cada práctica se explica con tres ideas: quién la practicaba, para qué se practicaba y qué significado tenía.'},
+ {n:'Munus',t:'Tema 4',e:'⚔️',d:'Toda la clase en pie. Preguntas de 15 segundos y tres vidas. Quien las pierde, se sienta y pasa a la grada.',rules:[['Vidas','Cada fallo o tiempo agotado cuesta una.'],['En blanco','No quita vida, pero tampoco suma.'],['Gloria','Quien siga en pie al final gana 500 puntos.']],tip:'En la parte B eliges entre dos preguntas, una de un tema y otra transversal. Léelas las dos antes de empezar a escribir.'},
+ {n:'El relevo',t:'Temas 1-4',e:'🏁',d:'Prueba final: ordenar cinco momentos de la historia del deporte, de la Prehistoria a Roma.',rules:[['Premio','500 puntos si el orden es perfecto y 200 con tres posiciones bien.']],tip:'Las preguntas transversales piden seguir una práctica de una cultura a la siguiente. Esta prueba entrena justo eso.'}]},
+en:{title:'From the Clan to the Arena',sub:'Review class · Topics 1-4',next:'Next ▶',round:'Round',
+ join:'How to join',steps:['Open <b>Historiapp</b> on your phone.','Tap the golden <b>“Review class”</b> card or scan the code.','Type your nickname and wait at the first round.','Each round opens with a <b>key</b> that will appear on this screen.'],
+ showKey:'Show the key',key:'Key',tipK:'For the exam',since:'Round in play',
+ stand:'Everyone stand up!',standS:'Munus: this round is played standing. Lose your three lives and you sit down.',
+ cer:'The ceremony',cerS:'Everyone stand up with your phone in hand. When a number appears, sit down if your score is lower.',sit:'Sit down if you have fewer than',pts:'points',
+ last:'Who is still standing?',lastS:'Say your score out loud. The highest takes the olive crown.',thanks:'Good luck in the exam',
+ r:[{n:'The Origin',t:'Topic 1',e:'🔥',d:'Warm-up on Topic 1, with the same rules as the exam test.',rules:[['Like the exam','Right +300, wrong −100, blank 0.'],['Streak','From the second right answer in a row, +100 per question.']],tip:'In the test, three wrong answers cancel one right answer. If you are unsure, leaving it blank costs nothing.'},
+ {n:'The Excavation',t:'Image commentary · Topics 2-4',e:'⛏️',d:'An image comes out of the soil tile by tile. Then the commentary: does the image document it (C2) or not allow that conclusion (C3)?',rules:[['Digging','From 500 down to 100 points, depending on the tiles you need.'],['C2 or C3','Two statements per image, 200 points each.']],tip:'In part C, first describe what you see without interpreting it (C1), then explain what the image documents (C2) and, finally, point out a conclusion the image does not allow (C3).'},
+ {n:'The Heb-Sed Race',t:'Topic 2',e:'🏃',d:'Like the pharaoh at his jubilee, every right answer on Topic 2 brings you closer to the finish.',rules:[['Like the exam','Right +300, wrong −100, blank 0.'],['Photo finish','The last challenge is an image from Topic 2.']],tip:'In the test, read all four options before choosing: the distractors belong to the same family as the right answer.'},
+ {n:'Pentathlon',t:'Topic 3',e:'🏅',d:'Five different events on Topic 3, like the pentathlon at Olympia.',rules:[['Five events','Myth or fact, match, put in order, the source speaks and flash image.']],tip:'In essay questions, explain each practice with three ideas: who practised it, what it was for and what it meant.'},
+ {n:'Munus',t:'Topic 4',e:'⚔️',d:'The whole class stands up. 15-second questions and three lives. Lose them and you sit down in the stands.',rules:[['Lives','Every mistake or timeout costs one.'],['Blank','Costs no life, but scores nothing.'],['Glory','Anyone still standing at the end earns 500 points.']],tip:'In part B you choose between two questions, one on a topic and one cross-topic. Read both before you start writing.'},
+ {n:'The Relay',t:'Topics 1-4',e:'🏁',d:'Final challenge: put five moments in the history of sport in order, from Prehistory to Rome.',rules:[['Prize','500 points for a perfect order and 200 with three positions right.']],tip:'Cross-topic questions ask you to follow a practice from one culture to the next. This challenge trains exactly that.'}]}};
+const KEYS=['ORIGEN','TIERRA','NILO','OLIVO','ARENA','RELEVO'];
+const THR=[1000,2000,3000,4000,5000,6000,7000,8000,9000,10000];
+const t=k=>T[L][k];
+const $=id=>document.getElementById(id);
+// pantallas: 0 portada · 1-6 rondas · 7 ceremonia (umbral 0..n) · 8 último
+let P=0,thr=-1,shown={},clk=null,t0=0;
+function beep(f,d,v=.12,w=0){try{window.AC=window.AC||new AudioContext();const o=AC.createOscillator(),g=AC.createGain();o.type='triangle';o.frequency.value=f;g.gain.setValueAtTime(v,AC.currentTime+w);g.gain.exponentialRampToValueAtTime(.001,AC.currentTime+w+d);o.connect(g);g.connect(AC.destination);o.start(AC.currentTime+w);o.stop(AC.currentTime+w+d+.05)}catch(e){}}
+function render(){
+ clearInterval(clk);const s=$('st');$('tt').textContent=t('title');$('next').textContent=t('next');$('lng').textContent=L==='es'?'EN':'ES';
+ $('pips').innerHTML=Array.from({length:6},(_,i)=>`<div class="pip ${P-1>i?'done':P-1===i?'on':''}"></div>`).join('');
+ if(P===0){
+  s.innerHTML=`<div class="k rise">${t('sub')}</div><h1 class="cz rise">${t('title')}</h1><div class="row rise"><div><div id="qr"></div><div class="url">${URLJ.replace('https://','')}</div></div><div class="steps"><div class="k" style="text-align:left">${t('join')}</div>${t('steps').map((x,i)=>`<div>${i+1}. ${x}</div>`).join('')}</div></div>`;
+  $('qr').innerHTML='<img src="'+QRIMG+'" alt="QR">'
+  return}
+ if(P>=1&&P<=6){const i=P-1,R=T[L].r[i];
+  s.innerHTML=(i===4?`<div class="k rise" style="color:var(--oro2);font-size:3vh;letter-spacing:.15em">🧍 ${t('stand')} 🧍</div>`:'')+`<div class="k rise">${t('round')} ${i+1} · ${R.t}</div><div class="em rise">${R.e}</div><h1 class="cz rise">${R.n}</h1><p class="lead rise">${R.d}</p><div class="rules rise">${R.rules.map(r=>`<div class="rule"><b>${r[0]}</b>${r[1]}</div>`).join('')}</div><div class="tip rise"><b>📝 ${t('tipK')}.</b> ${R.tip}</div>
+  <div class="key" id="kb">${shown[i]?`<div class="k" style="margin:0">🔑 ${t('key')}</div><div class="kv">${KEYS[i]}</div>`:`<div class="kh" id="kh">🔑 ${t('showKey')}</div>`}</div><div class="clock" id="clk"></div>`;
+  if(!shown[i])$('kh').onclick=()=>reveal(i);else tick();
+  return}
+ if(P===7){
+  if(thr<0)s.innerHTML=`<div class="em rise">🏛️</div><h1 class="cz rise">${t('cer')}</h1><p class="lead rise">${t('cerS')}</p>`;
+  else s.innerHTML=`<div class="k rise" style="font-size:3vh">${t('sit')}</div><div class="thr">${THR[thr].toLocaleString(L)}</div><div class="k">${t('pts')}</div>`;
+  return}
+ if(P===8){s.innerHTML=`<div class="em rise">🌿👑🌿</div><h1 class="cz rise">${t('last')}</h1><p class="lead rise">${t('lastS')}</p><div class="k rise" style="color:var(--oro2);margin-top:3vh;font-size:2.6vh">${t('thanks')}</div>`;[523,659,784,1047].forEach((f,i)=>beep(f,.3,.14,i*.15));confetti();return}
+}
+function reveal(i){shown[i]=Date.now();[392,523,659,784].forEach((f,k)=>beep(f,.2,.1,k*.1));render()}
+function tick(){const i=P-1;const f=()=>{const e=Math.floor((Date.now()-shown[i])/1000);$('clk')&&($('clk').textContent=`⏱ ${t('since')} · ${Math.floor(e/60)}:${String(e%60).padStart(2,'0')}`)};f();clk=setInterval(f,1000)}
+function next(){if(P===7){if(thr<THR.length-1){thr++;beep(300+thr*60,.2);render();return}P=8;render();return}if(P<8){P++;if(P===7)thr=-1;render()}}
+function prev(){if(P===7&&thr>=0){thr--;render();return}if(P>0){P--;if(P===7)thr=-1;render()}}
+$('next').onclick=next;$('prev').onclick=prev;
+$('lng').onclick=()=>{L=L==='es'?'en':'es';render()};
+$('fsb').onclick=()=>{const d=document.documentElement;if(!document.fullscreenElement)d.requestFullscreen&&d.requestFullscreen();else document.exitFullscreen()};
+document.addEventListener('keydown',e=>{if(e.key===' '||e.key==='ArrowRight'||e.key==='PageDown'){e.preventDefault();next()}else if(e.key==='ArrowLeft'||e.key==='PageUp')prev();else if((e.key==='c'||e.key==='C')&&P>=1&&P<=6&&!shown[P-1])reveal(P-1);else if(e.key==='f'||e.key==='F')$('fsb').onclick()});
+function confetti(){const c=$('conf'),x=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;const Pp=Array.from({length:260},()=>({x:Math.random()*c.width,y:-Math.random()*c.height,v:2+Math.random()*4,r:Math.random()*6,s:7+Math.random()*9,c:['#EDAB00','#FBC93D','#5aa3e6','#f2efe6'][Math.random()*4|0]}));let f=0;(function a(){x.clearRect(0,0,c.width,c.height);Pp.forEach(p=>{p.y+=p.v;p.x+=Math.sin(p.y/40);p.r+=.05;x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle=p.c;x.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);x.restore()});if(++f<480)requestAnimationFrame(a);else x.clearRect(0,0,c.width,c.height)})()}
+render();
+</script>
+</body>
+</html>

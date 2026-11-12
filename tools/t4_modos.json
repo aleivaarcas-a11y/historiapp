@@ -256,23 +256,6 @@
    "sec": "4.2.1"
   },
   {
-   "img": "img/t4/pollice_verso.jpg",
-   "caption": {
-    "es": "Pollice verso, de Jean-Léon Gérôme, 1872, Museo de Arte de Phoenix",
-    "en": "Pollice verso, by Jean-Léon Gérôme, 1872, Phoenix Art Museum"
-   },
-   "claim": {
-    "es": "La imagen que hoy se tiene del espectáculo de gladiadores debe mucho a cuadros del siglo XIX como este.",
-    "en": "The image we have today of the gladiatorial spectacle owes much to 19th-century paintings such as this one."
-   },
-   "answer": true,
-   "explain": {
-    "es": "El cuadro de Gérôme es de 1872, de modo que refleja la mirada del siglo XIX. En Roma el ludus era el juego ofrecido al público, y primaba el espectáculo por encima de la competición, a diferencia del agón griego.",
-    "en": "Gérôme's painting dates from 1872, so it reflects a 19th-century view. In Rome the ludus was the game offered to the public, and spectacle took precedence over competition, unlike the Greek agon."
-   },
-   "sec": "4.2.2"
-  },
-  {
    "img": "img/t4/mosaico_magerius.jpg",
    "caption": {
     "es": "Mosaico de Magerius, siglo III d. C., Museo de Sousse (Túnez)",
@@ -318,8 +301,8 @@
    },
    "answer": true,
    "explain": {
-    "es": "Como el pueblo ya no votaba, la grada era el lugar donde podía pedir, por ejemplo una rebaja de impuestos. El emperador respondía allí mismo ante decenas de miles de testigos, y cada respuesta reforzaba o desgastaba su prestigio.",
-    "en": "As the people no longer voted, the stands were the place where they could make demands, for example a reduction in taxes. The emperor answered there and then before tens of thousands of witnesses, and each answer strengthened or wore down his prestige."
+    "es": "El público aprovechaba su presencia para reclamar a gritos lo que necesitaba, como una rebaja del precio del grano o de los impuestos, y el emperador tenía que responder allí mismo ante decenas de miles de testigos, de modo que cada respuesta reforzaba o desgastaba su prestigio.",
+    "en": "The public took advantage of his presence to clamour for what it needed, such as a reduction in the price of grain or in taxes, and the emperor had to answer there and then before tens of thousands of witnesses, so each answer strengthened or wore down his prestige."
    },
    "sec": "4.2.2"
   },
@@ -420,8 +403,8 @@
    },
    "answer": false,
    "explain": {
-    "es": "En 264 a. C. los hijos de un noble ofrecieron un munus en honor de su padre difunto y enfrentaron a tres parejas de esclavos en el Foro Boario, el mercado de ganado junto al Tíber. Los combates habían llegado desde Campania, donde formaban parte de los funerales de la aristocracia.",
-    "en": "In 264 BC the sons of a nobleman offered a munus in honour of their dead father and set three pairs of slaves against each other in the Forum Boarium, the cattle market beside the Tiber. The combats had come from Campania, where they were part of the funerals of the aristocracy."
+    "es": "En un principio el combate era un acto privado y religioso que organizaba la familia del difunto como munus, la obligación de un hijo con su padre muerto, y su fin era honrar al muerto, de ahí su escala reducida, con solo tres parejas en el primero celebrado en Roma, en 264 a. C.",
+    "en": "At first the combat was a private and religious act organised by the family of the deceased as a munus, a son's obligation to his dead father, and its purpose was to honour the dead, hence its small scale, with only three pairs in the first one held in Rome, in 264 BC."
    },
    "sec": "4.2.3"
   },
@@ -454,8 +437,8 @@
    },
    "answer": true,
    "explain": {
-    "es": "Tenía una pequeña arena para entrenar rodeada de gradas y, al parecer, estaba comunicada con el anfiteatro por un pasadizo subterráneo. En el ludus vivían y entrenaban los gladiadores a cargo de un lanista.",
-    "en": "It had a small arena for training surrounded by stands and, apparently, was connected to the amphitheatre by an underground passage. In the ludus the gladiators lived and trained under a lanista."
+    "es": "En Roma las grandes escuelas pasaron a ser imperiales, mientras que las privadas pertenecían a un lanista, el empresario que compraba, entrenaba y alquilaba gladiadores, un oficio despreciado porque se lucraba con el cuerpo de otros.",
+    "en": "In Rome the great schools became imperial, while private schools belonged to a lanista, the entrepreneur who bought, trained and hired out gladiators, a despised trade because he profited from the bodies of others."
    },
    "sec": "4.2.3"
   },
@@ -466,13 +449,13 @@
     "en": "Gladiatorial combat, mosaic from the villa at Nennig, 2nd century AD, Germany"
    },
    "claim": {
-    "es": "En un combate como el del mosaico de Nennig, un árbitro, el summa rudis, vigilaba las reglas y separaba a los combatientes con una vara.",
-    "en": "In a combat like the one in the Nennig mosaic, a referee, the summa rudis, enforced the rules and separated the fighters with a rod."
+    "es": "En un combate como el del mosaico de Nennig, un árbitro, el summa rudis, vigilaba el duelo.",
+    "en": "In a combat like the one in the Nennig mosaic, a referee, the summa rudis, watched over the duel."
    },
    "answer": true,
    "explain": {
-    "es": "El duelo duraba entre 10 y 15 minutos según los ensayos de Junkelmann (2000) con réplicas del equipo. Algunos veteranos acababan como árbitros, y el summa rudis tenía como ayudante al secunda rudis.",
-    "en": "The duel lasted between 10 and 15 minutes according to Junkelmann's (2000) tests with replicas of the equipment. Some veterans ended up as referees, and the summa rudis had the secunda rudis as his assistant."
+    "es": "El duelo duraba entre 10 y 15 minutos según los ensayos de Junkelmann (2000) con réplicas del equipo, y el gladiador que mostraba pasividad o cobardía podía ser azotado o quemado con un hierro al rojo vivo por los incitadores.",
+    "en": "The duel lasted between 10 and 15 minutes according to Junkelmann's (2000) tests with replicas of the equipment, and a gladiator who showed passivity or cowardice could be whipped or burnt with a red-hot iron by the attendants who urged them on."
    },
    "sec": "4.2.3"
   },
@@ -607,8 +590,8 @@
    },
    "answer": true,
    "explain": {
-    "es": "En el mismo cuartel se conservan además espadas de tipo gladius y una greba alta de tracio. Las armas de combate se guardaban en el armamentarium y solo se entregaban para el combate.",
-    "en": "The same barracks also preserved swords of the type known as gladius and the high greave of a Thracian. Combat weapons were kept in the armamentarium and were handed out only for combat."
+    "es": "En el mismo cuartel se conservan además espadas de tipo gladius y una greba alta de tracio.",
+    "en": "The same barracks also preserved swords of the gladius type and a high greave of a Thracian."
    },
    "sec": "4.2.3"
   },
@@ -636,13 +619,13 @@
     "en": "Relief of the female gladiators Amazon and Achillia, Halicarnassus (Bodrum, Turkey), 2nd century AD, British Museum, London"
    },
    "claim": {
-    "es": "La inscripción del relieve de Halicarnaso dice que las dos gladiadoras fueron indultadas, un final tan raro que merecía recordarse.",
-    "en": "The inscription on the Halicarnassus relief says that both female gladiators were reprieved, an ending so rare that it deserved to be remembered."
+    "es": "La inscripción del relieve de Halicarnaso recuerda que las dos gladiadoras fueron indultadas.",
+    "en": "The inscription on the Halicarnassus relief records that the two female gladiators were reprieved."
    },
    "answer": true,
    "explain": {
-    "es": "Amazona y Achillia se enfrentan a cara descubierta. El término gladiatrix es moderno, y en el año 200 un decreto imperial prohibió combatir a todas las mujeres.",
-    "en": "Amazon and Achillia face each other bare-faced. The term gladiatrix is modern, and in the year 200 an imperial decree forbade all women to fight."
+    "es": "Amazona y Achillia luchan a cara descubierta, de modo que el público sabía que eran mujeres, y en el año 200 un decreto imperial prohibió combatir a todas las mujeres.",
+    "en": "Amazon and Achillia fight bare-headed, so the public knew they were women, and in AD 200 an imperial decree forbade all women to fight."
    },
    "sec": "4.2.3"
   },
@@ -658,8 +641,8 @@
    },
    "answer": false,
    "explain": {
-    "es": "Los venatores eran hombres armados que cazaban a las fieras o luchaban contra ellas. Quienes morían en la arena eran los condenados a las fieras (damnati ad bestias), otra de las cuatro modalidades de venatio.",
-    "en": "The venatores were armed men who hunted the beasts or fought against them. Those who died in the arena were those condemned to the beasts (damnati ad bestias), another of the four forms of venatio."
+    "es": "Los venatores eran cazadores profesionales y bien equipados que abatían a las fieras. Quienes morían en la arena eran los condenados a las fieras (damnati ad bestias), siempre humildes, otra de las cuatro modalidades de venatio.",
+    "en": "The venatores were professional, well-equipped hunters who killed the beasts. Those who died in the arena were the men condemned to the beasts (damnati ad bestias), always humble people, another of the four forms of venatio."
    },
    "sec": "4.2.3"
   },
@@ -777,8 +760,8 @@
    },
    "answer": true,
    "explain": {
-    "es": "Había también bigas, de dos caballos, y trigas, de tres, y se conocen carreras con hasta diez caballos. Cada carro corría con el color de su equipo.",
-    "en": "There were also bigae, with two horses, and trigae, with three, and races with up to ten horses are known. Each chariot raced in the colour of its team."
+    "es": "Había también bigas, de dos caballos, y trigas, de tres, y se conocen carreras con hasta diez caballos.",
+    "en": "There were also bigae, with two horses, and trigae, with three, and races with up to ten horses are known."
    },
    "sec": "4.2.4"
   },
@@ -794,8 +777,8 @@
    },
    "answer": false,
    "explain": {
-    "es": "La factio era la empresa que organizaba un equipo de carreras, identificada por un color (blanco, rojo, verde o azul) y por sus cuadras. Domiciano añadió durante un tiempo el dorado y el púrpura.",
-    "en": "The factio was the company that organised a racing team, identified by a colour (white, red, green or blue) and by its stables. Domitian added for a time gold and purple."
+    "es": "Las facciones (factiones) eran las empresas que organizaban los equipos de carreras, cada una identificada con un color (blanco, rojo, verde o azul) que vestían sus aurigas. Domiciano añadió durante un tiempo el dorado y el púrpura.",
+    "en": "The factions (factiones) were the companies that organised the racing teams, each identified with a colour (white, red, green or blue) worn by its charioteers. Domitian added for a time gold and purple."
    },
    "sec": "4.2.4"
   },
@@ -813,23 +796,6 @@
    "explain": {
     "es": "El premio lo cobraba la facción, dueña de los caballos y del carro, y el auriga recibía solo una parte. Vamplew (2023) calcula que a Diocles le quedaron al menos tres millones y medio, una décima parte del total.",
     "en": "The prize was collected by the faction, owner of the horses and the chariot, and the charioteer received only a share. Vamplew (2023) calculates that Diocles kept at least three and a half million, a tenth of the total."
-   },
-   "sec": "4.2.4"
-  },
-  {
-   "img": "img/t4/defixio_plomo.jpg",
-   "caption": {
-    "es": "Maldición en griego sobre plomo, Roma, siglos IV-V d. C.",
-    "en": "Curse in Greek on lead, Rome, 4th-5th centuries AD"
-   },
-   "claim": {
-    "es": "Las tablillas de maldición eran láminas de plomo con las que los aficionados pedían la desgracia de los caballos y aurigas rivales.",
-    "en": "Curse tablets were lead sheets with which fans asked for misfortune to befall the rival horses and charioteers."
-   },
-   "answer": true,
-   "explain": {
-    "es": "Se depositaban casi siempre en tumbas, porque se creía que el difunto llevaba la petición a los dioses del más allá. La única hallada en Hispania, en Écija y del siglo I d. C., maldice a trece carros de los Azules y los Rojos.",
-    "en": "They were almost always deposited in tombs, because it was believed that the dead carried the request to the gods of the underworld. The only one found in Hispania, at Écija and dating from the 1st century AD, curses thirteen chariots of the Blues and the Reds."
    },
    "sec": "4.2.4"
   },
@@ -896,8 +862,8 @@
    },
    "answer": true,
    "explain": {
-    "es": "Las muchachas corren, lanzan el disco, juegan a la pelota o preparan el salto con halteras, y las vencedoras reciben la palma y la corona. Sus pruebas eran las del atletismo griego, que Roma conocía desde hacía siglos.",
-    "en": "The girls run, throw the discus, play ball or prepare for the jump with halteres, and the winners receive the palm and the crown. Their events were those of Greek athletics, which Rome had known for centuries."
+    "es": "Junto a la carrera de muchachas de los Juegos Capitolinos y a las luchadoras de la arena, muestra que las mujeres sí compitieron en Roma, aunque casi siempre en contextos privados o como rareza del programa, y con las pruebas del atletismo griego, la carrera, el salto y el disco.",
+    "en": "Together with the girls' race at the Capitoline Games and the female fighters of the arena, it shows that women did compete in Rome, although almost always in private settings or as a rarity on the programme, and in the events of Greek athletics, the foot race, the jump and the discus."
    },
    "sec": "4.2.5"
   },
@@ -917,23 +883,6 @@
     "en": "It was the first permanent stadium in Rome, with some 30,000 spectators and a track of some 192 metres, the length of the Greek stadium. Its site is now occupied by Piazza Navona, which preserves its shape."
    },
    "sec": "4.2.5"
-  },
-  {
-   "img": "img/t4/criticas_espectaculos.jpg",
-   "caption": {
-    "es": "La crítica a los espectáculos, de los moralistas paganos a los escritores cristianos",
-    "en": "The criticism of the spectacles, from pagan moralists to Christian writers"
-   },
-   "claim": {
-    "es": "Los moralistas paganos condenaban la violencia contra quien no podía defenderse y los cristianos la idolatría, y ninguna de las dos críticas cerró los espectáculos.",
-    "en": "Pagan moralists condemned violence against those who could not defend themselves and Christians condemned idolatry, and neither criticism closed down the spectacles."
-   },
-   "answer": true,
-   "explain": {
-    "es": "La crítica pagana solo pretendía apartar de la grada al hombre culto, y la Iglesia hablaba a sus fieles sin poder alguno sobre los recintos. Tertuliano llamó «cortejo de Satán» (pompa diaboli) al cortejo inicial.",
-    "en": "The pagan criticism sought only to keep the cultivated man away from the stands, and the Church spoke to its faithful without any power over the venues. Tertullian called the opening procession the «procession of Satan» (pompa diaboli)."
-   },
-   "sec": "4.2.6"
   },
   {
    "img": "img/t4/panvinio_hipodromo.jpg",
@@ -1209,17 +1158,6 @@
   },
   {
    "term": {
-    "es": "Auctoramentum",
-    "en": "Auctoramentum"
-   },
-   "def": {
-    "es": "Contrato por el que los hombres libres se vendían a un lanista y juraban aceptar «ser quemados, encadenados, azotados y muertos a espada».",
-    "en": "Contract by which free men sold themselves to a lanista and swore to accept 'being burned, chained, beaten and killed by the sword'."
-   },
-   "sec": "4.2.3"
-  },
-  {
-   "term": {
     "es": "Infamia",
     "en": "Infamia"
    },
@@ -1312,8 +1250,19 @@
     "en": "Summa rudis"
    },
    "def": {
-    "es": "Árbitro principal del combate, puesto al que llegaban algunos veteranos, que con su ayudante, el secunda rudis, vigilaba las reglas y separaba a los combatientes con una vara.",
-    "en": "Chief referee of the combat, a post that some veterans reached, who with his assistant, the secunda rudis, enforced the rules and separated the fighters with a rod."
+    "es": "Árbitro del combate de gladiadores, que vigilaba el duelo.",
+    "en": "Referee of the gladiatorial combat, who watched over the duel."
+   },
+   "sec": "4.2.3"
+  },
+  {
+   "term": {
+    "es": "Rudis",
+    "en": "Rudis"
+   },
+   "def": {
+    "es": "Espada de madera que simbolizaba la licencia del gladiador que se retiraba.",
+    "en": "Wooden sword that symbolised the discharge of a retiring gladiator."
    },
    "sec": "4.2.3"
   },
@@ -1325,17 +1274,6 @@
    "def": {
     "es": "Espada de madera que servía para entrenar y que simbolizaba la licencia del gladiador, eximido desde entonces de combatir.",
     "en": "Wooden sword used for training, which symbolised the gladiator's discharge, after which he was exempted from fighting."
-   },
-   "sec": "4.2.3"
-  },
-  {
-   "term": {
-    "es": "Rudiarius",
-    "en": "Rudiarius"
-   },
-   "def": {
-    "es": "Gladiador que recibía la rudis y quedaba eximido de combatir, aunque si era esclavo seguía siéndolo y podía quedarse en la escuela.",
-    "en": "Gladiator who received the rudis and was exempted from fighting, although if he was a slave he remained one and could stay on at the school."
    },
    "sec": "4.2.3"
   },
@@ -1473,23 +1411,12 @@
   },
   {
    "term": {
-    "es": "Naufragia",
-    "en": "Naufragia"
-   },
-   "def": {
-    "es": "Choques de carros, llamados «naufragios», que se producían cuando un auriga se ceñía demasiado a las metas o chocaba con otro carro.",
-    "en": "Chariot crashes, called 'shipwrecks', caused when a charioteer hugged the metae too closely or collided with another chariot."
-   },
-   "sec": "4.2.4"
-  },
-  {
-   "term": {
     "es": "Factio",
     "en": "Factio (faction)"
    },
    "def": {
-    "es": "Empresa que organizaba un equipo de carreras, identificada con un color (blanco, rojo, verde o azul), y palabra con la que se designaba ese color y las cuadras del equipo.",
-    "en": "Company that organised a racing team, identified with a colour (white, red, green or blue), and the word used to designate that colour and the stables of the team."
+    "es": "Empresa que organizaba un equipo de carreras, identificada con un color (blanco, rojo, verde o azul) que vestían sus aurigas.",
+    "en": "Company that organised a racing team, identified with a colour (white, red, green or blue) worn by its charioteers."
    },
    "sec": "4.2.4"
   },
@@ -1512,28 +1439,6 @@
    "def": {
     "es": "Aurigas que alcanzaron las mil victorias, un grupo del que apenas se conocen cuatro nombres.",
     "en": "Charioteers who reached a thousand victories, a group of which barely four names are known."
-   },
-   "sec": "4.2.4"
-  },
-  {
-   "term": {
-    "es": "Defixio (tablilla de maldición)",
-    "en": "Defixio (curse tablet)"
-   },
-   "def": {
-    "es": "Lámina de plomo grabada por magos y depositada casi siempre en una tumba, con la que se pedía a los dioses del más allá la desgracia de los aurigas o los caballos rivales.",
-    "en": "Lead sheet inscribed by magicians and almost always deposited in a tomb, with which the gods of the underworld were asked to bring misfortune on rival charioteers or horses."
-   },
-   "sec": "4.2.4"
-  },
-  {
-   "term": {
-    "es": "NICA",
-    "en": "NICA"
-   },
-   "def": {
-    "es": "Grito de la grada, «¡vence!», que figuraba en anillos y amuletos con la imagen del auriga o el color de su facción para atraer la suerte sobre él.",
-    "en": "Cry of the stands, 'win!', which appeared on rings and amulets bearing the image of the charioteer or the colour of his faction to draw luck towards him."
    },
    "sec": "4.2.4"
   },
@@ -1832,8 +1737,8 @@
     },
     {
      "label": {
-      "es": "Muerte de Teodosio y división del Imperio entre Arcadio y Honorio",
-      "en": "Death of Theodosius and division of the Empire between Arcadius and Honorius"
+      "es": "Muerte de Teodosio y división del Imperio en Oriente y Occidente",
+      "en": "Death of Theodosius and division of the Empire into East and West"
      },
      "year": 395,
      "date": {
@@ -1843,19 +1748,8 @@
     },
     {
      "label": {
-      "es": "Saqueo de Roma por los visigodos",
-      "en": "Sack of Rome by the Visigoths"
-     },
-     "year": 410,
-     "date": {
-      "es": "410 d. C.",
-      "en": "AD 410"
-     }
-    },
-    {
-     "label": {
-      "es": "Odoacro depone al último emperador y cae el Imperio de Occidente",
-      "en": "Odoacer deposes the last emperor and the Western Empire falls"
+      "es": "Un jefe germano depone al último emperador y cae el Imperio de Occidente",
+      "en": "A Germanic chieftain deposes the last emperor and the Western Empire falls"
      },
      "year": 476,
      "date": {
@@ -1874,8 +1768,8 @@
    "items": [
     {
      "label": {
-      "es": "Primer combate de gladiadores documentado en Roma, en el Foro Boario",
-      "en": "First gladiatorial combat documented in Rome, in the Forum Boarium"
+      "es": "Primer combate de gladiadores celebrado en Roma, con tres parejas",
+      "en": "First gladiatorial combat held in Rome, with three pairs"
      },
      "year": -264,
      "date": {
@@ -1896,19 +1790,8 @@
     },
     {
      "label": {
-      "es": "Julio César presenta 320 parejas de gladiadores siendo edil",
-      "en": "Julius Caesar presents 320 pairs of gladiators as aedile"
-     },
-     "year": -65,
-     "date": {
-      "es": "65 a. C.",
-      "en": "65 BC"
-     }
-    },
-    {
-     "label": {
-      "es": "Primera naumaquia, organizada por Julio César junto al Tíber",
-      "en": "First naumachia, organised by Julius Caesar beside the Tiber"
+      "es": "Primera naumaquia, la de Julio César",
+      "en": "First naumachia, that of Julius Caesar"
      },
      "year": -46,
      "date": {
@@ -1940,17 +1823,6 @@
     },
     {
      "label": {
-      "es": "Juegos de Trajano por su victoria en la Dacia, con 123 días de duración",
-      "en": "Games of Trajan for his victory in Dacia, lasting 123 days"
-     },
-     "year": 107,
-     "date": {
-      "es": "107 d. C.",
-      "en": "AD 107"
-     }
-    },
-    {
-     "label": {
       "es": "Ley de Marco Aurelio y Cómodo que fija los precios máximos de los gladiadores",
       "en": "Law of Marcus Aurelius and Commodus that sets the maximum prices of gladiators"
      },
@@ -1969,17 +1841,6 @@
    },
    "sec": "4.2.6",
    "items": [
-    {
-     "label": {
-      "es": "Tertuliano escribe Sobre los espectáculos",
-      "en": "Tertullian writes De spectaculis"
-     },
-     "year": 197,
-     "date": {
-      "es": "197-200 d. C.",
-      "en": "AD 197-200"
-     }
-    },
     {
      "label": {
       "es": "Calendario con 176 días de juegos públicos",
@@ -2120,35 +1981,35 @@
   },
   {
    "text": {
-    "es": "«ser quemados, encadenados, azotados y muertos a espada»",
-    "en": "'being burned, chained, beaten and killed by the sword'"
+    "es": "«hordearii» («comedores de cebada»)",
+    "en": "'hordearii' ('barley-eaters')"
    },
    "question": {
-    "es": "¿Quiénes juraban aceptar esto y mediante qué contrato?",
-    "en": "Who swore to accept this, and by means of what contract?"
+    "es": "¿A quiénes se llamaba así y por qué?",
+    "en": "Who were called this, and why?"
    },
    "options": [
     {
-     "es": "Los hombres libres que se vendían a un lanista, mediante el auctoramentum",
-     "en": "Free men who sold themselves to a lanista, by means of the auctoramentum"
+     "es": "A los gladiadores, por su dieta de cebada y legumbres, barata y rica en energía",
+     "en": "Gladiators, because of their diet of barley and pulses, cheap and rich in energy"
     },
     {
-     "es": "Los condenados ad gladium, al ser enviados a morir en la arena",
-     "en": "Men sentenced ad gladium, when sent to die in the arena"
+     "es": "A los aurigas, por la ración que les daba su facción",
+     "en": "Charioteers, because of the ration their faction gave them"
     },
     {
-     "es": "Los esclavos que el lanista compraba para la arena, al ingresar en el ludus",
-     "en": "Slaves whom the lanista bought for the arena, on entering the ludus"
+     "es": "A los legionarios, porque cobraban parte de la paga en grano",
+     "en": "Legionaries, because part of their pay was in grain"
     },
     {
-     "es": "Los gladiadores de la escuela de Capua, antes de cada combate",
-     "en": "The gladiators of the school at Capua, before each combat"
+     "es": "A la plebe de Roma, por el grano público que recibía",
+     "en": "The plebs of Rome, because of the public grain it received"
     }
    ],
    "answer": 0,
    "explain": {
-    "es": "Los hombres libres se vendían a un lanista, el empresario que compraba, entrenaba y alquilaba gladiadores, y con ese juramento aceptaban el castigo extremo, y, como el resto de los gladiadores, quedaban marcados por la infamia.",
-    "en": "Free men sold themselves to a lanista, the entrepreneur who bought, trained and hired out gladiators, and with that oath they accepted the extreme penalty, so that, like all the other gladiators, they were branded with infamia."
+    "es": "La dieta de los gladiadores se basaba en cebada y legumbres, con poca carne, y los huesos del cementerio de gladiadores de Éfeso la confirman y revelan un aporte de calcio superior al del resto de la ciudad (Lösch et al., 2014).",
+    "en": "The gladiators' diet was based on barley and pulses, with little meat, and the bones from the gladiator cemetery at Ephesus confirm it and reveal a calcium intake higher than that of the rest of the city (Lösch et al., 2014)."
    },
    "sec": "4.2.3"
   },
@@ -2185,108 +2046,6 @@
     "en": "Epitaphs present the gladiator with the courage, the prestige and the comradeship of the champion, so that infamia, the legal and moral stain on whoever displayed himself for money, coexisted with admiration."
    },
    "sec": "4.2.3"
-  },
-  {
-   "text": {
-    "es": "«no puedan correr, ni obedecer al freno, ni moverse»",
-    "en": "'may not be able to run, nor obey the bit, nor move'"
-   },
-   "question": {
-    "es": "¿Qué tipo de documento contiene este texto y con qué fin se escribió?",
-    "en": "What kind of document contains this text, and for what purpose was it written?"
-   },
-   "options": [
-    {
-     "es": "Una tablilla de maldición, para dañar a los caballos de un rival del circo",
-     "en": "A curse tablet, to harm the horses of a rival in the circus"
-    },
-    {
-     "es": "Una inscripción funeraria, para recordar la última carrera de un auriga",
-     "en": "A funerary inscription, to commemorate a charioteer's last race"
-    },
-    {
-     "es": "Un cartel pintado en la pared, para anunciar una jornada de carreras",
-     "en": "A notice painted on a wall, to announce a day of races"
-    },
-    {
-     "es": "Un amuleto con la imagen del auriga, para atraer la suerte sobre su facción",
-     "en": "An amulet bearing the charioteer's image, to bring luck to his faction"
-    }
-   ],
-   "answer": 0,
-   "explain": {
-    "es": "Es una de las tablillas de maldición (defixiones), láminas de plomo grabadas por magos que se depositaban casi siempre en tumbas, porque se creía que el difunto llevaba la petición a los dioses del más allá, y esta, del norte de África, pide además que los aurigas rivales no sujeten las riendas ni vean a sus adversarios.",
-    "en": "It is one of the curse tablets (defixiones), lead sheets inscribed by magicians that were almost always deposited in tombs, because it was believed that the dead carried the request to the gods of the underworld, and this one, from North Africa, also asks that the rival charioteers may not hold the reins nor see their opponents."
-   },
-   "sec": "4.2.4"
-  },
-  {
-   "text": {
-    "es": "«NICA» («¡vence!»)",
-    "en": "'NICA' ('win!')"
-   },
-   "question": {
-    "es": "¿Dónde aparecía este grito y con qué fin?",
-    "en": "Where did this cry appear, and to what end?"
-   },
-   "options": [
-    {
-     "es": "En anillos y amuletos de los aficionados, para atraer la suerte sobre su auriga",
-     "en": "On the rings and amulets of fans, to draw luck towards their charioteer"
-    },
-    {
-     "es": "En los carteles que anunciaban las carreras, para convocar al público",
-     "en": "On the notices that announced the races, to summon the public"
-    },
-    {
-     "es": "En la mappa que daba la salida, para saludar al organizador",
-     "en": "On the mappa that gave the start, to greet the organiser"
-    },
-    {
-     "es": "En las cocheras de salida, para animar a los caballos",
-     "en": "On the starting gates, to encourage the horses"
-    }
-   ],
-   "answer": 0,
-   "explain": {
-    "es": "Los aficionados intentaban atraer la suerte sobre su auriga con anillos y amuletos que llevaban su imagen o el color de su facción, a veces con el grito de la grada, NICA, que significa «¡vence!».",
-    "en": "Fans tried to draw luck towards their charioteer with rings and amulets bearing his image or the colour of his faction, sometimes with the cry of the stands, NICA, meaning 'win!'."
-   },
-   "sec": "4.2.4"
-  },
-  {
-   "text": {
-    "es": "«¡Mátalo, azótalo, quémalo!»",
-    "en": "'Kill him, flog him, burn him!'"
-   },
-   "question": {
-    "es": "Según Séneca, ¿quién gritaba esto, a quién y en qué momento de la jornada?",
-    "en": "According to Seneca, who shouted this, at whom, and at what point in the day?"
-   },
-   "options": [
-    {
-     "es": "Los espectadores que quedaban en la grada, al condenado, en el turno del mediodía",
-     "en": "The spectators left in the stands, at the condemned man, in the midday session"
-    },
-    {
-     "es": "Los gladiadores veteranos, a los novatos, durante el entrenamiento en el ludus",
-     "en": "Veteran gladiators, at the novices, during training in the ludus"
-    },
-    {
-     "es": "El editor, al gladiador vencido, al decidir el veredicto",
-     "en": "The editor, at the defeated gladiator, when deciding the verdict"
-    },
-    {
-     "es": "Los aficionados del circo, al auriga rival, antes de la salida",
-     "en": "The circus fans, at the rival charioteer, before the start"
-    }
-   ],
-   "answer": 0,
-   "explain": {
-    "es": "Séneca describe el turno del mediodía, el de la ejecución de los condenados, y su queja apuntaba a la violencia contra quien no podía defenderse, ya que él aceptaba la arena como castigo, y se dirigía al hombre culto para que no se dejara arrastrar por el gusto de la masa.",
-    "en": "Seneca describes the midday session, that of the execution of the condemned, and his complaint was aimed at violence against those who could not defend themselves, since he accepted the arena as a punishment, and it was addressed to the cultivated man so that he would not be carried away by the taste of the masses."
-   },
-   "sec": "4.2.6"
   }
  ],
  "match": [
@@ -2339,12 +2098,12 @@
     },
     {
      "a": {
-      "es": "Edicta munerum",
-      "en": "Edicta munerum"
+      "es": "Munera gladiatoria",
+      "en": "Munera gladiatoria"
      },
      "b": {
-      "es": "Carteles pintados en las paredes que anunciaban el munus",
-      "en": "Painted notices on the walls that announced the munus"
+      "es": "Nombre que acabaron recibiendo todos los combates de gladiadores en los anfiteatros",
+      "en": "Name eventually given to all gladiatorial combats in the amphitheatres"
      }
     }
    ]
@@ -2427,12 +2186,12 @@
     },
     {
      "a": {
-      "es": "Auctoramentum",
-      "en": "Auctoramentum"
+      "es": "Ludus",
+      "en": "Ludus"
      },
      "b": {
-      "es": "Contrato por el que un hombre libre se vendía a un lanista",
-      "en": "Contract by which a free man sold himself to a lanista"
+      "es": "Escuela de gladiadores, a la vez cuartel, centro de entrenamiento y negocio",
+      "en": "Gladiatorial school, at once barracks, training centre and business"
      }
     },
     {
@@ -2506,81 +2265,81 @@
     },
     {
      "a": {
-      "es": "Mappa",
-      "en": "Mappa"
+      "es": "Porta triumphalis",
+      "en": "Porta triumphalis"
      },
      "b": {
-      "es": "Pañuelo blanco con el que se daba la salida",
-      "en": "White cloth with which the start was given"
+      "es": "Puerta triunfal, en el extremo curvo",
+      "en": "Triumphal gate, at the curved end"
      }
     },
     {
      "a": {
-      "es": "Naufragia",
-      "en": "Naufragia"
+      "es": "Cuadriga",
+      "en": "Quadriga"
      },
      "b": {
-      "es": "Choques de carros, o «naufragios»",
-      "en": "Chariot crashes, or «shipwrecks»"
+      "es": "Carro de cuatro caballos, el más habitual en las carreras",
+      "en": "Four-horse chariot, the most common in the races"
      }
     }
    ]
   },
   {
    "title": {
-    "es": "Los oficios de una facción del circo",
-    "en": "The trades of a circus faction"
+    "es": "Las facciones y sus aurigas",
+    "en": "The factions and their charioteers"
    },
    "sec": "4.2.4",
    "pairs": [
     {
      "a": {
-      "es": "Conditor",
-      "en": "Conditor"
+      "es": "Factiones",
+      "en": "Factiones"
      },
      "b": {
-      "es": "Cuidaba y alimentaba a los caballos",
-      "en": "Looked after and fed the horses"
+      "es": "Empresas que organizaban los equipos de carreras",
+      "en": "Companies that organised the racing teams"
      }
     },
     {
      "a": {
-      "es": "Morator",
-      "en": "Morator"
+      "es": "Dominus factionis",
+      "en": "Dominus factionis"
      },
      "b": {
-      "es": "Sujetaba a los caballos en la salida",
-      "en": "Held the horses at the start"
+      "es": "Dueño de la facción, un caballero con cientos de empleados",
+      "en": "Owner of the faction, an eques with hundreds of employees"
      }
     },
     {
      "a": {
-      "es": "Sparsor",
-      "en": "Sparsor"
+      "es": "Stabula",
+      "en": "Stabula"
      },
      "b": {
-      "es": "Refrescaba a los caballos durante la carrera",
-      "en": "Cooled the horses down during the race"
+      "es": "Cuadras de la facción en Roma",
+      "en": "The faction's stables in Rome"
      }
     },
     {
      "a": {
-      "es": "Medicus",
-      "en": "Medicus"
+      "es": "Miliarios",
+      "en": "Miliarii"
      },
      "b": {
-      "es": "Era el médico",
-      "en": "Was the doctor"
+      "es": "Aurigas que alcanzaron las mil victorias",
+      "en": "Charioteers who reached a thousand victories"
      }
     },
     {
      "a": {
-      "es": "Sutor",
-      "en": "Sutor"
+      "es": "Diocles",
+      "en": "Diocles"
      },
      "b": {
-      "es": "Era el zapatero",
-      "en": "Was the shoemaker"
+      "es": "Liberto de Lusitania, quizá el deportista mejor pagado de la historia",
+      "en": "Freedman from Lusitania, perhaps the best-paid sportsman in history"
      }
     }
    ]
@@ -2720,13 +2479,13 @@
   },
   {
    "claim": {
-    "es": "Tito y Trajano exhibieron en la arena a los delatores, a los que el pueblo odiaba, para dar al público lo que pedía.",
-    "en": "Titus and Trajan exhibited the delatores in the arena, whom the people hated, to give the public what it asked for."
+    "es": "El emperador evitaba asistir a los juegos que pagaba y los dejaba en manos de los magistrados.",
+    "en": "The emperor avoided attending the games he paid for and left them in the hands of the magistrates."
    },
-   "answer": true,
+   "answer": false,
    "explain": {
-    "es": "Los delatores eran los denunciantes profesionales, y lo que el emperador ofrecía en la arena servía al mismo fin que su presencia en el palco, que era mostrarse como quien daba los juegos y concedía lo que se le pedía.",
-    "en": "The delatores were the professional informers, and what the emperor offered in the arena served the same end as his presence in the imperial box, which was to show himself as the one who gave the games and granted what was asked of him."
+    "es": "El emperador asistía en persona a los juegos que pagaba, y desde el palco ejercía tres papeles, el de editor, el de intermediario entre la ciudad y los dioses y el de árbitro que concedía o negaba lo que se le pedía, de modo que los juegos fueron el principal lugar en el que emperador y pueblo se encontraban cara a cara.",
+    "en": "The emperor attended in person the games he paid for, and from the imperial box he played three roles, that of editor, that of intermediary between the city and the gods and that of arbiter who granted or refused what was asked of him, so the games were the main place where emperor and people met face to face."
    },
    "sec": "4.2.2"
   },
@@ -2737,8 +2496,8 @@
    },
    "answer": false,
    "explain": {
-    "es": "Los gladiadores procedían de tres grupos, pues junto a los esclavos, comprados o alquilados por sus dueños, había condenados, ad gladium o ad ludum, y hombres libres que se vendían a un lanista mediante el auctoramentum.",
-    "en": "Gladiators came from three groups, since besides the slaves, bought or hired out by their owners, there were the condemned, ad gladium or ad ludum, and free men who sold themselves to a lanista by means of the auctoramentum."
+    "es": "Los gladiadores procedían de tres grupos, pues junto a los esclavos, comprados o alquilados por sus dueños, había condenados, ad gladium o ad ludum, y hombres libres que se vendían voluntariamente a un lanista, empujados por las deudas o la desesperación.",
+    "en": "Gladiators came from three groups, since alongside slaves, bought or hired out by their owners, there were the condemned, ad gladium or ad ludum, and free men who sold themselves voluntarily to a lanista, driven by debt or despair."
    },
    "sec": "4.2.3"
   },
@@ -2749,20 +2508,20 @@
    },
    "answer": false,
    "explain": {
-    "es": "Los epitafios dan de media de diez a quince combates por gladiador y, para el siglo I d. C., Ville (1981) calcula unas diecinueve muertes por cada cien combates. A ello se suma que el gladiador podía obtener la licencia o la libertad, y los licenciados no siempre se retiraban.",
-    "en": "The epitaphs give an average of ten to fifteen fights per gladiator and, for the 1st century AD, Ville (1981) calculates some nineteen deaths per hundred fights. A gladiator could also obtain discharge or freedom, and those discharged did not always retire."
+    "es": "Los epitafios dan de media de diez a quince combates por gladiador y, para el siglo I d. C., Ville (1981) calcula unas diecinueve muertes por cada cien combates. La retirada llegaba con la rudis, que simbolizaba la licencia, o con la libertad, y algunos veteranos, atraídos por la fama y el dinero, volvían a combatir.",
+    "en": "Epitaphs give an average of ten to fifteen combats per gladiator and, for the 1st century AD, Ville (1981) calculates some nineteen deaths per hundred combats. Retirement came with the rudis, which symbolised discharge, or with freedom, and some veterans, drawn by fame and money, returned to fight."
    },
    "sec": "4.2.3"
   },
   {
    "claim": {
-    "es": "El término gladiatrix se usaba ya en la Antigüedad para designar a las gladiadoras.",
-    "en": "The term gladiatrix was already used in Antiquity to refer to female gladiators."
+    "es": "Las mujeres no llegaron a combatir nunca en la arena romana.",
+    "en": "Women never fought in the Roman arena."
    },
    "answer": false,
    "explain": {
-    "es": "El término es moderno, y las fuentes literarias mencionan a las mujeres de la arena menos de diez veces hasta el año 200 d. C., puesto que su presencia fue escasa y cada una se exhibía como una rareza.",
-    "en": "The term is modern, and literary sources mention women in the arena fewer than ten times up to the year AD 200, since their presence was rare and each one was exhibited as a curiosity."
+    "es": "Las mujeres humildes sí llegaron a combatir, aunque siempre como una rareza del programa, ya que las fuentes literarias las mencionan menos de diez veces hasta el año 200 d. C., y el relieve de Halicarnaso muestra a Amazona y Achillia luchando a cara descubierta.",
+    "en": "Humble women did fight, although always as a rarity on the programme, since the literary sources mention them fewer than ten times up to AD 200, and the Halicarnassus relief shows Amazon and Achillia fighting bare-headed."
    },
    "sec": "4.2.3"
   },
@@ -2773,8 +2532,8 @@
    },
    "answer": true,
    "explain": {
-    "es": "En Hispania, un 40 % de los gladiadores fallecidos conocidos tenía mujer, la mitad de condición libre o liberta, y las lápidas los recuerdan con las mismas fórmulas que a cualquier familia romana.",
-    "en": "In Hispania, some 40% of the known dead gladiators had a wife, half of them freeborn or freed, and the tombstones remember them with the same formulae as any Roman family."
+    "es": "A pesar del impedimento legal de contraer matrimonio, en Hispania un 40 % de los gladiadores fallecidos conocidos tenía mujer, cuya procedencia en la mayoría de los casos era libre o liberta.",
+    "en": "Despite the legal bar on marriage, in Hispania 40% of the known dead gladiators had a wife, who in most cases was freeborn or a freedwoman."
    },
    "sec": "4.2.3"
   },
@@ -2809,8 +2568,8 @@
    },
    "answer": true,
    "explain": {
-    "es": "Las muchachas juegan a la pelota, corren, lanzan el disco o preparan el salto con halteras, y las vencedoras reciben la palma y la corona, y la escena se lee hoy como una competición atlética (Pensabene y Gallocchio, 2011) y apunta a un acceso más abierto de las mujeres de clase alta a la práctica deportiva en contextos privados.",
-    "en": "The girls play ball, run, throw the discus or prepare for the jump with halteres, and the winners receive the palm and the crown, so the scene is read today as an athletic competition (Pensabene & Gallocchio, 2011) and points to a more open access of upper-class women to sporting practice in private settings."
+    "es": "La escena se lee hoy como una competición atlética (Pensabene y Gallocchio, 2011) y, junto a la carrera de muchachas de los Juegos Capitolinos y a las luchadoras de la arena, muestra que las mujeres sí compitieron en Roma, aunque casi siempre en contextos privados o como rareza del programa.",
+    "en": "The scene is read today as an athletic competition (Pensabene & Gallocchio, 2011) and, together with the girls' race at the Capitoline Games and the female fighters of the arena, it shows that women did compete in Rome, although almost always in private settings or as a rarity on the programme."
    },
    "sec": "4.2.5"
   },
@@ -3262,13 +3021,13 @@
   },
   {
    "q": {
-    "es": "¿Qué hacía el público ante el emperador cuando el pueblo ya no votaba?",
-    "en": "What did the public do in front of the emperor once the people no longer voted?"
+    "es": "¿Qué hacía el público aprovechando la presencia del emperador en los juegos?",
+    "en": "What did the public do, taking advantage of the emperor's presence at the games?"
    },
    "options": [
     {
-     "es": "Reclamar a gritos medidas como una rebaja de impuestos",
-     "en": "Clamour for measures such as a reduction in taxes"
+     "es": "Reclamar a gritos lo que necesitaba, como una rebaja del precio del grano o de los impuestos",
+     "en": "Clamour for what it needed, such as a reduction in the price of grain or in taxes"
     },
     {
      "es": "Votar a mano alzada las propuestas del Senado",
@@ -3285,8 +3044,8 @@
    ],
    "answer": 0,
    "explain": {
-    "es": "La grada era el sitio donde el pueblo podía pedir, y el emperador respondía allí mismo ante decenas de miles de testigos, por lo que cada respuesta reforzaba o desgastaba su prestigio.",
-    "en": "The stands were the place where the people could make demands, and the emperor answered there and then before tens of thousands of witnesses, so each answer strengthened or wore down his prestige."
+    "es": "El emperador tenía que responder allí mismo ante decenas de miles de testigos, y cada respuesta reforzaba o desgastaba su prestigio, de modo que los juegos se convirtieron en un espacio de comunicación política entre el emperador y el pueblo.",
+    "en": "The emperor had to answer there and then before tens of thousands of witnesses, and each answer strengthened or wore down his prestige, so the games became a space of political communication between the emperor and the people."
    },
    "sec": "4.2.2"
   },
@@ -3322,31 +3081,31 @@
   },
   {
    "q": {
-    "es": "¿De dónde llegaron a Roma los combates de gladiadores y en qué contexto se celebraban?",
-    "en": "Where did gladiatorial combats come to Rome from, and in what context were they held?"
+    "es": "¿Qué carácter tuvieron en un principio los combates de gladiadores en Roma?",
+    "en": "What was the original character of gladiatorial combats in Rome?"
    },
    "options": [
     {
-     "es": "De Campania, como parte de los funerales de la aristocracia",
-     "en": "From Campania, as part of aristocratic funerals"
+     "es": "Un acto privado y religioso, organizado por la familia del difunto para honrarlo",
+     "en": "A private and religious act, organised by the family of the deceased to honour him"
     },
     {
-     "es": "De Grecia, como una prueba de los grandes festivales",
-     "en": "From Greece, as an event of the great festivals"
+     "es": "Un espectáculo del emperador para celebrar las victorias militares",
+     "en": "A spectacle given by the emperor to celebrate military victories"
     },
     {
-     "es": "De Cartago, como un castigo para los prisioneros de las guerras púnicas",
-     "en": "From Carthage, as a punishment for the prisoners of the Punic Wars"
+     "es": "Un arma electoral de los candidatos a las magistraturas",
+     "en": "An electoral weapon of the candidates for office"
     },
     {
-     "es": "De Britania, como un espectáculo de las legiones",
-     "en": "From Britain, as a spectacle of the legions"
+     "es": "Un entrenamiento de las legiones abierto al público",
+     "en": "Training for the legions open to the public"
     }
    ],
    "answer": 0,
    "explain": {
-    "es": "El primer combate documentado en la ciudad se fecha en 264 a. C., cuando los hijos de un noble ofrecieron un munus en honor de su padre difunto y enfrentaron a tres parejas de esclavos en el Foro Boario.",
-    "en": "The first combat documented in the city dates from 264 BC, when the sons of a nobleman offered a munus in honour of their dead father and set three pairs of slaves against each other in the Forum Boarium."
+    "es": "Lo organizaba la familia del difunto como munus, la obligación de un hijo con su padre muerto, de ahí su escala reducida, como muestran las tres parejas del primer combate celebrado en Roma, en 264 a. C. Después pasó a exhibir el prestigio del linaje, fue arma electoral en el siglo I a. C. y, con el Imperio, competencia exclusiva del emperador.",
+    "en": "It was organised by the family of the deceased as a munus, a son's obligation to his dead father, hence its small scale, as the three pairs of the first combat held in Rome, in 264 BC, show. Later it came to display the prestige of the lineage, was an electoral weapon in the 1st century BC and, under the Empire, the exclusive preserve of the emperor."
    },
    "sec": "4.2.3"
   },
@@ -3375,68 +3134,68 @@
    ],
    "answer": 0,
    "explain": {
-    "es": "La infamia era una mancha legal y moral que el derecho imponía a quienes vendían o exhibían su cuerpo para el disfrute de otros, y lo que manchaba era exhibirse por dinero, por lo que en 19 d. C. un decreto del Senado castigó a los senadores y caballeros que quisieran luchar en la arena.",
-    "en": "Infamia was a legal and moral stain that the law imposed on those who sold or displayed their bodies for the enjoyment of others, and what stained was displaying oneself for money, which is why in AD 19 a decree of the Senate punished senators and equites who sought to fight in the arena."
+    "es": "La infamia era una mancha legal y moral que el derecho imponía a quienes vendían o exhibían su cuerpo para el disfrute de otros, aunque no estaba reñida con la admiración popular, y el pueblo trataba al gladiador como a un héroe «a la vez famoso e infame» (Bell, 2020).",
+    "en": "Infamia was a legal and moral stain that the law imposed on those who sold or displayed their bodies for the enjoyment of others, although it was not at odds with popular admiration, and the people treated the gladiator as a hero 'at once famous and infamous' (Bell, 2020)."
    },
    "sec": "4.2.3"
   },
   {
    "q": {
-    "es": "¿Cómo era la relación económica entre el gladiador y su lanista?",
-    "en": "What was the economic relationship between the gladiator and his lanista?"
+    "es": "Según la ley de 177 d. C., ¿qué parte de lo que cobraba el lanista por un combate correspondía al gladiador?",
+    "en": "Under the law of AD 177, what share of what the lanista was paid for a combat went to the gladiator?"
    },
    "options": [
     {
-     "es": "El lanista costeaba su comida, su alojamiento y su entrenamiento, y se quedaba con la mayor parte de lo que ganaba",
-     "en": "The lanista paid for his food, lodging and training, and kept most of what he earned"
+     "es": "La cuarta parte si era libre y la quinta si era esclavo",
+     "en": "A quarter if he was free and a fifth if he was a slave"
     },
     {
-     "es": "El gladiador pagaba su manutención y conservaba íntegras sus ganancias",
-     "en": "The gladiator paid for his own keep and kept all his earnings"
+     "es": "La mitad, fuera libre o esclavo",
+     "en": "Half, whether he was free or a slave"
     },
     {
-     "es": "El Estado mantenía la escuela y el lanista cobraba un sueldo público",
-     "en": "The State maintained the school and the lanista received a public salary"
+     "es": "Nada, porque todo el dinero era del lanista",
+     "en": "Nothing, because all the money belonged to the lanista"
     },
     {
-     "es": "El editor del munus pagaba al gladiador un salario fijo por cada jornada",
-     "en": "The editor of the munus paid the gladiator a fixed wage for each day"
+     "es": "Todo, porque el lanista cobraba aparte del editor",
+     "en": "All of it, because the lanista was paid separately by the editor"
     }
    ],
    "answer": 0,
    "explain": {
-    "es": "Una ley de 177 d. C. fijó que el gladiador recibiera la cuarta parte de lo que el lanista cobraba por su combate si era libre y la quinta parte si era esclavo.",
-    "en": "A law of AD 177 laid down that the gladiator should receive a quarter of what the lanista was paid for his fight if he was free and a fifth if he was a slave."
+    "es": "Si volvía vivo, el editor pagaba al lanista solo un alquiler, en torno a una quinta parte de lo que valía el gladiador, y de ese dinero la ley reservaba al gladiador la cuarta parte si era libre y la quinta si era esclavo, unos 600-750 sestercios por combate en el caso de uno de primera.",
+    "en": "If he came back alive, the editor paid the lanista only a hire fee, around a fifth of what the gladiator was worth, and of that money the law reserved for the gladiator a quarter if he was free and a fifth if he was a slave, some 600-750 sesterces per combat in the case of a first-class gladiator."
    },
    "sec": "4.2.3"
   },
   {
    "q": {
-    "es": "¿Por qué pagaba un rico el coste de un munus?",
-    "en": "Why did a rich man pay the cost of a munus?"
+    "es": "¿Con qué fin último pagaba el editor el coste de un munus?",
+    "en": "What was the ultimate aim of the editor in paying for a munus?"
    },
    "options": [
     {
-     "es": "Porque a cambio recibía reconocimiento, en un intercambio que los historiadores llaman evergetismo",
-     "en": "Because in return he received recognition, in an exchange that historians call euergetism"
+     "es": "Lograr el reconocimiento del público ofreciéndole ocio y distracción gratuitos",
+     "en": "To win the recognition of the public by offering it free leisure and entertainment"
     },
     {
-     "es": "Porque el Estado le devolvía todo el gasto con los impuestos de las provincias",
-     "en": "Because the State repaid him the whole expense out of provincial taxes"
+     "es": "Recuperar el gasto con los impuestos de las provincias",
+     "en": "To recover the outlay through provincial taxes"
     },
     {
-     "es": "Porque los gladiadores le pagaban una parte de sus premios",
-     "en": "Because the gladiators paid him a share of their prizes"
+     "es": "Cobrar una parte de los premios de los gladiadores",
+     "en": "To collect a share of the gladiators' prizes"
     },
     {
-     "es": "Porque la ley le obligaba a ofrecer juegos cada año a toda la plebe",
-     "en": "Because the law required him to give games every year to the whole plebs"
+     "es": "Cumplir una ley que le obligaba a dar juegos cada año a toda la plebe",
+     "en": "To comply with a law obliging him to give games to the whole plebs every year"
     }
    ],
    "answer": 0,
    "explain": {
-    "es": "El dinero salía de la summa honoraria, la cuota que pagaba quien estrenaba un cargo, de lo que el editor añadía de su bolsillo y de los fondos de la ciudad, y el munus fue una de las formas más costosas de ese intercambio.",
-    "en": "The money came from the summa honoraria, the fee paid by whoever took up an office, from what the editor added out of his own pocket and from the city's funds, and the munus was one of the costliest forms of that exchange."
+    "es": "El dinero salía de la summa honoraria, la cantidad fija que cada magistrado entregaba a la ciudad al tomar posesión de su cargo y que solía gastarse en juegos, de lo que el editor ponía de su bolsillo y, a veces, de los fondos públicos.",
+    "en": "The money came from the summa honoraria, the fixed sum that each magistrate paid to the city on taking up office and that was usually spent on games, from what the editor added out of his own pocket and, at times, from public funds."
    },
    "sec": "4.2.3"
   },
@@ -3495,8 +3254,8 @@
    ],
    "answer": 0,
    "explain": {
-    "es": "El rudiarius quedaba eximido de combatir, aunque si era esclavo seguía siéndolo. La libertad, en cambio, era la manumissio, que cambiaba su condición jurídica y lo convertía en liberto sin librarlo de la infamia.",
-    "en": "The rudiarius was exempted from fighting, although if he was a slave he remained one, whereas freedom was manumissio, which changed his legal status and made him a freedman without freeing him from infamia."
+    "es": "La retirada llegaba con la rudis, que simbolizaba la licencia, o con la libertad, y algunos veteranos siguieron en el mundo de la arena como árbitros, instructores o incluso lanistas, mientras que otros, atraídos por la fama y el dinero, volvían a combatir.",
+    "en": "Retirement came with the rudis, which symbolised discharge, or with freedom, and some veterans remained in the world of the arena as referees, instructors or even lanistae, while others, drawn by fame and money, returned to fight."
    },
    "sec": "4.2.3"
   },
@@ -3537,8 +3296,8 @@
    },
    "options": [
     {
-     "es": "Con el botín de la guerra de Judea y el saqueo del templo de Salomón",
-     "en": "With the spoils of the Judaean war and the plunder of the Temple of Solomon"
+     "es": "Con el botín de la guerra de Judea y el saqueo del templo de Jerusalén",
+     "en": "With the spoils of the Judaean war and the plunder of the Temple in Jerusalem"
     },
     {
      "es": "Con el botín de la conquista de la Dacia",
@@ -3615,38 +3374,38 @@
    ],
    "answer": 0,
    "explain": {
-    "es": "La palabra factio designaba el color y sus cuadras, no a los grupos de aficionados, y al frente de cada facción estaba su dueño, el dominus factionis, un hombre de negocios del orden de los caballeros.",
-    "en": "The word factio designated the colour and its stables, not the groups of fans, and at the head of each faction was its owner, the dominus factionis, a businessman of the order of the equites."
+    "es": "Cada facción se identificaba con un color que vestían sus aurigas, y al frente estaba su dueño, el dominus factionis, un caballero que dirigía a varios cientos de empleados.",
+    "en": "Each faction was identified with a colour worn by its charioteers, and at its head was its owner, the dominus factionis, an eques who ran several hundred employees."
    },
    "sec": "4.2.4"
   },
   {
    "q": {
-    "es": "¿Por qué los dueños de las facciones llegaron a imponer sus condiciones a quienes pagaban los juegos?",
-    "en": "Why did the owners of the factions come to impose their terms on those who paid for the games?"
+    "es": "¿Cómo competía una facción en la pista?",
+    "en": "How did a faction compete on the track?"
    },
    "options": [
     {
-     "es": "Porque solo había cuatro facciones y ningún organizador podía dar juegos sin ellas",
-     "en": "Because there were only four factions and no organiser could give games without them"
+     "es": "Como un equipo, con hasta tres carros por carrera que se ayudaban entre sí",
+     "en": "As a team, with up to three chariots per race that helped one another"
     },
     {
-     "es": "Porque eran senadores con poder para vetar los juegos",
-     "en": "Because they were senators with the power to veto the games"
+     "es": "Con un solo carro por carrera, sorteado entre sus aurigas",
+     "en": "With a single chariot per race, drawn by lot among its charioteers"
     },
     {
-     "es": "Porque poseían el circo y cobraban la entrada a los espectadores",
-     "en": "Because they owned the circus and charged spectators for entry"
+     "es": "Con aurigas alquilados a las otras facciones",
+     "en": "With charioteers hired from the other factions"
     },
     {
-     "es": "Porque el emperador les había concedido el monopolio de los caballos",
-     "en": "Because the emperor had granted them a monopoly on horses"
+     "es": "Con carros de colores distintos para confundir a los rivales",
+     "en": "With chariots of different colours to confuse its rivals"
     }
    ],
    "answer": 0,
    "explain": {
-    "es": "Bajo Nerón se negaron a alquilar los equipos salvo por jornadas completas, y el organizador tenía que pagar el día entero aunque quisiera menos carreras (Cameron, 1976).",
-    "en": "Under Nero they refused to hire out the teams except for whole days, so the organiser had to pay for the entire day even if he wanted fewer races (Cameron, 1976)."
+    "es": "Uno de los carros buscaba la victoria y los otros le marcaban el ritmo o cerraban el paso a los rivales en la cuerda y en los giros, y por eso las inscripciones de los aurigas distinguen entre ganar en cabeza, remontar desde atrás o arrebatar la victoria en la última recta.",
+    "en": "One of the chariots went for victory and the others set the pace for him or blocked the rivals on the inside line and at the turns, which is why the charioteers' inscriptions distinguish between winning from the front, coming from behind or snatching victory in the final straight."
    },
    "sec": "4.2.4"
   },

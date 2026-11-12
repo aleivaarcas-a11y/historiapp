@@ -420,48 +420,6 @@
   }
  },
  {
-  "id": "t4_11",
-  "sec": "4.2.3",
-  "title": {
-   "es": "El cuerpo del gladiador",
-   "en": "The gladiator’s body"
-  },
-  "src": {
-   "es": "videos/t4/t4_11_es.mp4?m=t4a",
-   "en": "videos/t4/t4_11_en.mp4?m=t4a"
-  },
-  "poster": {
-   "es": "videos/t4/t4_11_es.jpg?m=t4a",
-   "en": "videos/t4/t4_11_en.jpg?m=t4a"
-  },
-  "more": {
-   "es": "El cementerio de gladiadores de Éfeso, en la actual Turquía, reúne al menos 68 individuos. Lösch et al. (2014) atribuyen la alta relación entre estroncio y calcio a un suplemento de calcio. Uno de los cráneos con heridas curadas presenta signos de intervención quirúrgica. La cifra de mortalidad de Ville (1981) corresponde al siglo I d. C.",
-   "en": "The gladiators’ cemetery at Ephesus, in present-day Turkey, contains at least 68 individuals. Lösch et al. (2014) attribute the high strontium-calcium ratio to a calcium supplement. One of the skulls with healed wounds shows signs of surgical intervention. Ville’s (1981) mortality figure refers to the 1st century AD."
-  },
-  "q": {
-   "es": {
-    "q": "¿Qué indica que el 15 % de los cráneos de Éfeso tenga una sola herida mortal?",
-    "opts": [
-     "Que comían poca carne",
-     "Que luchaban sin casco",
-     "Que había reglas estrictas en el combate",
-     "Que eran muy jóvenes"
-    ],
-    "a": 2
-   },
-   "en": {
-    "q": "What does it suggest that 15% of the Ephesus skulls have a single fatal wound?",
-    "opts": [
-     "That they ate little meat",
-     "That they fought without helmets",
-     "That there were strict rules in combat",
-     "That they were very young"
-    ],
-    "a": 2
-   }
-  }
- },
- {
   "id": "t4_12",
   "sec": "4.2.3",
   "title": {
@@ -542,48 +500,6 @@
      "The faction, which gave him a share"
     ],
     "a": 3
-   }
-  }
- },
- {
-  "id": "t4_14",
-  "sec": "4.2.4",
-  "title": {
-   "es": "Maldecir al auriga",
-   "en": "Cursing the charioteer"
-  },
-  "src": {
-   "es": "videos/t4/t4_14_es.mp4?m=t4a",
-   "en": "videos/t4/t4_14_en.mp4?m=t4a"
-  },
-  "poster": {
-   "es": "videos/t4/t4_14_es.jpg?m=t4a",
-   "en": "videos/t4/t4_14_en.jpg?m=t4a"
-  },
-  "more": {
-   "es": "Una tablilla del norte de África pide que los caballos rivales «no puedan correr, ni obedecer al freno, ni moverse», y que sus aurigas «no sujeten las riendas ni vean a sus adversarios». Los aficionados intentaban también atraer la suerte sobre su auriga con anillos y amuletos que llevaban su imagen o el color de su facción.",
-   "en": "A tablet from North Africa asks that the rival horses «may not be able to run, nor obey the bit, nor move», and that their charioteers «may not hold the reins nor see their opponents». Fans also tried to draw luck towards their charioteer with rings and amulets bearing his image or the colour of his faction."
-  },
-  "q": {
-   "es": {
-    "q": "¿Dónde se depositaban casi siempre las tablillas de maldición?",
-    "opts": [
-     "En las tumbas",
-     "En la spina del circo",
-     "En los templos de Júpiter",
-     "En las cuadras de las facciones"
-    ],
-    "a": 0
-   },
-   "en": {
-    "q": "Where were curse tablets almost always deposited?",
-    "opts": [
-     "In tombs",
-     "On the spina of the circus",
-     "In the temples of Jupiter",
-     "In the faction stables"
-    ],
-    "a": 0
    }
   }
  },

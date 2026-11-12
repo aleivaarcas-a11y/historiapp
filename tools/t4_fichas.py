@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Tema 4 (Etruria y Roma) en Historiapp, 25-10-2026: fichas ES/EN desde el texto de pantalla.
-Cuerpo en castellano: texto de las diapositivas de «TEMAS NUEVOS/TEMA 4. Etruria y Roma.pptx» (95, 22-10).
+Cuerpo en castellano: texto de las diapositivas de «TEMAS NUEVOS/TEMA 4. Etruria y Roma.pptx» (95, 04-11; antes 22-10).
 Cuerpo en inglés: texto de las mismas diapositivas en «NEW TOPICS/Topic 4. Etruria and Rome.pptx».
 No se usan las notas del orador. Imágenes en img/t4 (tools/t4_imgsel.json); infografías con versión ES y EN.
 Uso: python3 tools/t4_fichas.py"""
@@ -33,7 +33,8 @@ KW = {'bailarines_triclinio': 'Bailarines', 'tumba_bigas_espectadores': 'Mujeres
       'cuartel_pompeya_patio': 'Patio porticado', 'cuartel_pompeya_portico': 'Pórtico y puerta', 'ben_hur': 'Ben-Hur, de', 'ben_hur_rodaje': 'Rodaje',
       'pila_paganica': 'paganica', 'follis_dibujo': 'follis', 'jugadores_pelota': 'Jugadores de pelota', 'circo_maximo': 'Reconstrucción histórica', 'circo_maximo_bell': 'según Bell',
       'saltador_caza_pesca': 'Caza y la Pesca', 'tumba_nadador': 'Tumba del Nadador', 'zliten_venationes': 'Zliten', 'venator_merida': 'Venator', 'estadio_domiciano_recon': 'Estadio de Domiciano',
-      'coliseo': 'conocido como Coliseo', 'phersu': 'phersu', 'muchachas_bikini': 'bikini'}
+      'coliseo': 'conocido como Coliseo', 'phersu': 'phersu', 'muchachas_bikini': 'bikini',
+      'arles_toros': 'Toros', 'nimes_concierto': 'Concierto', 'mancuerna_marmol': 'Mancuerna', 'entrenamiento_poste': 'poste'}
 CAP = re.compile(r'\s·\s')
 def limpio(paras, title):
     out = []
@@ -74,7 +75,9 @@ for f in d['fichas']:
             if int(k[1:].split('_')[0]) == sn and k != 's05_1':
                 f['images'].append({'src': f'img/t4/{n}.jpg', 'caption': {}, 'lang': 'es'})
                 f['images'].append({'src': f'img/t4/{n}_en.jpg', 'caption': {}, 'lang': 'en'})
-CAPX = {'anfiteatro_pula': ('Anfiteatro de Pula, Croacia', 'Amphitheatre of Pula, Croatia'), 'anfiteatro_el_djem': ('Anfiteatro de El Djem, Túnez', 'Amphitheatre of El Djem, Tunisia'),
+CAPX = {'arles_toros': ('Toros en el Anfiteatro de Arlés, Francia', 'Bullfighting in the Amphitheatre of Arles, France'), 'nimes_concierto': ('Concierto en el Anfiteatro de Nimes, Francia', 'Concert in the Amphitheatre of Nîmes, France'),
+        'entrenamiento_poste': ('Recreación del entrenamiento contra el poste con espada de madera', 'Recreation of training against the post with a wooden sword'),
+        'anfiteatro_pula': ('Anfiteatro de Pula, Croacia', 'Amphitheatre of Pula, Croatia'), 'anfiteatro_el_djem': ('Anfiteatro de El Djem, Túnez', 'Amphitheatre of El Djem, Tunisia'),
         'anfiteatro_pompeya': ('Anfiteatro de Pompeya, Italia', 'Amphitheatre of Pompeii, Italy'), 'anfiteatro_italica': ('Anfiteatro de Itálica, España', 'Amphitheatre of Italica, Spain'),
         'anfiteatro_madera': ('Reconstrucción del primer anfiteatro en el Foro Romano según Mañas Bastida (2011)', 'Reconstruction of the first amphitheatre in the Roman Forum after Mañas Bastida (2011)'),
         'gladiador_kourion': ('Gladiador, mosaico de la casa de los gladiadores · Siglo III d. C. · Kourion (Chipre)', 'Gladiator, mosaic from the House of the Gladiators · 3rd century AD · Kourion (Cyprus)'),
@@ -96,9 +99,7 @@ if not any(5 in f['slides'] for f in d['fichas']):
         'source': 'diapositiva', 'essay': {'es': [], 'en': []}, 'body': {'es': [], 'en': []}, 'slide': {'es': [], 'en': []},
         'refs': [p for p in es[5]['paras'] if CF.is_ref(p)]})
 # el gráfico final del relevo (diap. 87, sin título) va con las funciones del deporte romano
-for f in d['fichas']:
-    if 86 in f['slides']:
-        f['images'] += [{'src': 'img/t4/relevo_creta_roma.jpg', 'caption': {}, 'lang': 'es'}, {'src': 'img/t4/relevo_creta_roma_en.jpg', 'caption': {}, 'lang': 'en'}]
+# 04-11: el gráfico del relevo Creta-Roma ya no está en el PPT y deja de añadirse a la ficha 86
 for f in d['fichas']:
     if f['id'] == 'tipos-de-gladiadores-i': f['id'] = 'tipos-de-gladiadores'; f['title'] = {'es': 'Tipos de gladiadores', 'en': 'Types of gladiator'}
 for k, f in enumerate(d['fichas'], 1): f['code'] = f"H4·{k:02d}"
@@ -111,7 +112,7 @@ def tipos(paras):
         out.append((head + '. ' + p) if head else p); head = None
     return out
 for f in d['fichas']:
-    if 52 in f['slides']:
+    if 55 in f['slides']:
         f['body'] = {'es': sum((tipos(es[n]['paras']) for n in f['slides']), []), 'en': sum((tipos(en[n]['paras']) for n in f['slides']), [])}
         for x in f['images']:
             nm = x['src'].split('/')[-1][:-4]

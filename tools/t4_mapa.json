@@ -247,7 +247,7 @@
      },
      "f": "lo-que-roma-heredo-de-etruria",
      "fs": [
-      "el-phersu-y-los-gladiadores",
+      "el-phersu",
       "lo-que-roma-heredo-de-etruria"
      ],
      "sec": "4.1",
@@ -333,7 +333,7 @@
        },
        {
         "k": "concepto",
-        "v": "En 395 d. C. el Imperio se repartió entre Arcadio, en Oriente, y Honorio, en Occidente, y la mitad occidental cayó en 476 d. C., mientras que la oriental, con capital en Constantinopla, siguió en pie casi mil años más."
+        "v": "A la muerte de Teodosio, en 395 d. C., el Imperio quedó dividido en Oriente y Occidente, porque un territorio tan extenso resultaba muy difícil de gobernar desde un solo centro, y la mitad occidental cayó en 476 d. C., mientras que la oriental, con capital en Constantinopla, siguió en pie casi mil años más."
        }
       ],
       "en": [
@@ -351,7 +351,7 @@
        },
        {
         "k": "concepto",
-        "v": "In AD 395 the Empire was divided between Arcadius in the East and Honorius in the West, and the western half fell in AD 476, while the eastern half, with its capital at Constantinople, survived for almost a thousand years more."
+        "v": "On the death of Theodosius, in AD 395, the Empire was divided into East and West, because such a vast territory was very difficult to govern from a single centre, and the western half fell in AD 476, while the eastern half, with its capital at Constantinople, survived for almost a thousand years more."
        }
       ]
      }
@@ -601,10 +601,6 @@
        {
         "k": "concepto",
         "v": "Las principales instalaciones fueron el anfiteatro, el circo, las termas y el estadio."
-       },
-       {
-        "k": "ejemplo",
-        "v": "La imagen que hoy se tiene del espectáculo debe mucho a cuadros del siglo XIX como el Pollice verso de Gérôme (1872)."
        }
       ],
       "en": [
@@ -619,10 +615,6 @@
        {
         "k": "concepto",
         "v": "The main facilities were the amphitheatre, the circus, the baths and the stadium."
-       },
-       {
-        "k": "ejemplo",
-        "v": "The image of the spectacle we have today owes much to 19th-century paintings such as Gérôme's Pollice verso (1872)."
        }
       ]
      }
@@ -785,8 +777,8 @@
       "en": "The emperor in the stands"
      },
      "d": {
-      "es": "La presencia del emperador formaba parte del espectáculo, porque desde el palco se mostraba como quien daba los juegos, intermediario con los dioses y árbitro, y la grada era el único lugar donde un pueblo que ya no votaba podía pedir.",
-      "en": "The emperor's presence was part of the spectacle, because from the imperial box he showed himself as the one who gave the games, intermediary with the gods and arbiter, and the stands were the only place where a people who no longer voted could make demands."
+      "es": "La presencia del emperador formaba parte del espectáculo, porque desde el palco ejercía tres papeles, el de editor, el de intermediario entre la ciudad y los dioses y el de árbitro, y los juegos se convirtieron en el principal lugar en el que emperador y pueblo se encontraban cara a cara.",
+      "en": "The emperor's presence was part of the spectacle, because from the imperial box he played three roles, that of editor, that of intermediary between the city and the gods and that of arbiter, and the games became the main place where emperor and people met face to face."
      },
      "f": "el-emperador-en-la-grada",
      "fs": [
@@ -797,11 +789,11 @@
       "es": [
        {
         "k": "concepto",
-        "v": "El público aprovechaba la presencia del emperador para reclamar a gritos, por ejemplo, una rebaja de impuestos, y él respondía allí mismo ante decenas de miles de testigos."
+        "v": "El público aprovechaba la presencia del emperador para reclamar a gritos lo que necesitaba, como una rebaja del precio del grano o de los impuestos, y él tenía que responder allí mismo ante decenas de miles de testigos."
        },
        {
-        "k": "ejemplo",
-        "v": "Tito y Trajano exhibieron en la arena a los delatores, los denunciantes profesionales que el pueblo odiaba."
+        "k": "concepto",
+        "v": "Cada respuesta reforzaba o desgastaba su prestigio, de modo que los juegos fueron un espacio de comunicación política entre el emperador y el pueblo."
        },
        {
         "k": "ejemplo",
@@ -811,11 +803,11 @@
       "en": [
        {
         "k": "concepto",
-        "v": "The public took advantage of the emperor's presence to clamour for, for example, a reduction in taxes, and he answered there and then before tens of thousands of witnesses."
+        "v": "The public took advantage of the emperor's presence to clamour for what it needed, such as a reduction in the price of grain or in taxes, and he had to answer there and then before tens of thousands of witnesses."
        },
        {
-        "k": "ejemplo",
-        "v": "Titus and Trajan exhibited in the arena the delatores, the professional informers whom the people hated."
+        "k": "concepto",
+        "v": "Each answer strengthened or wore down his prestige, so the games were a space of political communication between the emperor and the people."
        },
        {
         "k": "ejemplo",
@@ -953,8 +945,8 @@
       "en": "From aristocratic funeral to imperial spectacle"
      },
      "d": {
-      "es": "Los combates llegaron de Campania, donde formaban parte de los funerales de la aristocracia, crecieron durante la República al ritmo de la competencia política y con el Imperio los grandes munera de Roma quedaron en manos del emperador, mientras que en las ciudades se pagaban con la summa honoraria, el bolsillo del editor y los fondos de la ciudad.",
-      "en": "Gladiatorial combats reached Rome from Campania, where they were part of aristocratic funerals, grew during the Republic at the pace of political competition and under the Empire the great munera of Rome passed into the emperor's hands, while in the cities they were paid for from the summa honoraria, the editor's own pocket and the city's funds."
+      "es": "Los combates de gladiadores pasaron de ser un acto privado y religioso de la familia del difunto a exhibir el prestigio del linaje, fueron arma electoral en el siglo I a. C. y, con el Imperio, competencia exclusiva del emperador, que los usó para celebrar sus victorias.",
+      "en": "Gladiatorial combats went from being a private and religious act of the family of the deceased to displaying the prestige of the lineage, were an electoral weapon in the 1st century BC and, under the Empire, became the exclusive preserve of the emperor, who used them to celebrate his victories."
      },
      "f": "combates-de-gladiadores",
      "fs": [
@@ -966,37 +958,37 @@
       "es": [
        {
         "k": "ejemplo",
-        "v": "El primer combate documentado en Roma (264 a. C.) lo ofrecieron los hijos de un noble en honor de su padre difunto, con tres parejas de esclavos en el Foro Boario."
-       },
-       {
-        "k": "ejemplo",
-        "v": "Julio César presentó 320 parejas siendo edil, en 65 a. C., y el Senado, alarmado por la cantidad de hombres armados, limitó el número de gladiadores que podía tener un particular."
+        "v": "El primer combate celebrado en Roma, en 264 a. C., tuvo solo tres parejas, porque su fin era honrar al muerto."
        },
        {
         "k": "concepto",
-        "v": "Augusto limitó los combates de los magistrados a dos al año y a 120 gladiadores cada uno, de modo que los grandes munera quedaron en manos del emperador, y los juegos de Trajano por la Dacia (107 d. C.) duraron 123 días con unos diez mil gladiadores."
+        "v": "Los herederos aplazaban y agrandaban los munera, ya que un funeral espectacular mostraba a toda la ciudad la riqueza y el rango de la familia."
        },
        {
         "k": "concepto",
-        "v": "El rico pagaba por divertir a los demás porque a cambio recibía reconocimiento, un intercambio que los historiadores llaman evergetismo y que tuvo en el munus una de sus formas más costosas."
+        "v": "En el siglo I a. C. los magistrados y los candidatos los financiaban para ganarse el voto, y el Senado tuvo que limitar el número de gladiadores y prohibir los combates en vísperas de las elecciones."
+       },
+       {
+        "k": "concepto",
+        "v": "Una vez que el pueblo dejó de votar, los grandes combates fueron competencia exclusiva del emperador y celebraban las victorias militares y los acontecimientos de la dinastía."
        }
       ],
       "en": [
        {
         "k": "ejemplo",
-        "v": "The first combat documented in Rome (264 BC) was offered by the sons of a nobleman in honour of their dead father, with three pairs of slaves in the Forum Boarium."
-       },
-       {
-        "k": "ejemplo",
-        "v": "Julius Caesar presented 320 pairs as aedile, in 65 BC, and the Senate, alarmed by the number of armed men, limited the number of gladiators a private individual could own."
+        "v": "The first combat held in Rome, in 264 BC, had only three pairs, because its purpose was to honour the dead."
        },
        {
         "k": "concepto",
-        "v": "Augustus limited the combats offered by the magistrates to two a year and 120 gladiators each, so that the great munera remained in the emperor's hands, and the games of Trajan for Dacia (AD 107) lasted 123 days with some ten thousand gladiators."
+        "v": "Heirs postponed the munera and made them bigger, since a spectacular funeral showed the whole city the wealth and rank of the family."
        },
        {
         "k": "concepto",
-        "v": "The rich man paid to entertain others because in return he received recognition, an exchange that historians call euergetism and which had in the munus one of its costliest forms."
+        "v": "In the 1st century BC magistrates and candidates paid for them to win votes, and the Senate had to limit the number of gladiators and forbid combats on the eve of elections."
+       },
+       {
+        "k": "concepto",
+        "v": "Once the people no longer voted, the great combats became the exclusive preserve of the emperor and celebrated military victories and the events of the dynasty."
        }
       ]
      }
@@ -1007,22 +999,21 @@
       "en": "Who the gladiators were"
      },
      "d": {
-      "es": "Esclavos, condenados y hombres libres que se vendían a un lanista compartían la infamia, una mancha legal y moral que convivía con la admiración del pueblo, y vivían en una escuela cuyo sustento corría a cargo del lanista a cambio de quedarse este con la mayor parte de sus ganancias.",
-      "en": "Slaves, the condemned and free men who sold themselves to a lanista shared infamia, a legal and moral stain that coexisted with the admiration of the people, and lived in a school whose upkeep was borne by the lanista in return for his keeping most of their earnings."
+      "es": "Esclavos, condenados y hombres libres que se vendían a un lanista compartían la infamia, una mancha legal y moral que no estaba reñida con la admiración popular, y vivían y entrenaban en el ludus, una escuela que era a la vez cuartel, centro de entrenamiento y negocio.",
+      "en": "Slaves, the condemned and free men who sold themselves to a lanista shared infamia, a legal and moral stain that was not at odds with popular admiration, and lived and trained in the ludus, a school that was at once barracks, training centre and business."
      },
      "f": "los-gladiadores-y-la-infamia",
      "fs": [
       "los-gladiadores-y-la-infamia",
       "la-vida-de-los-gladiadores",
-      "esposas-hijos-y-companeros",
-      "el-cuerpo-del-gladiador"
+      "esposas-companeros-y-retirada"
      ],
      "sec": "4.2.3",
      "x": {
       "es": [
        {
         "k": "concepto",
-        "v": "El infame no podía votar, ocupar una magistratura, testificar en un juicio ni contraer un matrimonio legal, y lo que manchaba era exhibirse por dinero, por lo que en 19 d. C. un decreto del Senado castigó a los senadores y caballeros que quisieran luchar en la arena."
+        "v": "El infame no podía votar, ocupar una magistratura, testificar en un juicio ni contraer un matrimonio legal."
        },
        {
         "k": "concepto",
@@ -1030,7 +1021,7 @@
        },
        {
         "k": "ejemplo",
-        "v": "En Hispania, un 40 % de los gladiadores fallecidos conocidos tenía mujer, y las lápidas los recuerdan con las mismas fórmulas que a cualquier familia romana."
+        "v": "En Hispania, un 40 % de los gladiadores fallecidos conocidos tenía mujer, en la mayoría de los casos libre o liberta."
        },
        {
         "k": "ejemplo",
@@ -1040,7 +1031,7 @@
       "en": [
        {
         "k": "concepto",
-        "v": "The infamis could not vote, hold a magistracy, testify in a trial or contract a legal marriage, and what stained was displaying oneself for money, which is why in AD 19 a decree of the Senate punished senators and equites who sought to fight in the arena."
+        "v": "The infamis could not vote, hold a magistracy, testify in a trial or contract a legal marriage."
        },
        {
         "k": "concepto",
@@ -1048,7 +1039,7 @@
        },
        {
         "k": "ejemplo",
-        "v": "In Hispania, some 40% of the known dead gladiators had a wife, and tombstones remember them with the same formulae as any Roman family."
+        "v": "In Hispania, 40% of the known dead gladiators had a wife, in most cases freeborn or a freedwoman."
        },
        {
         "k": "ejemplo",
@@ -1069,7 +1060,6 @@
      "f": "los-combates",
      "fs": [
       "los-combates",
-      "la-espada-de-madera",
       "tipos-de-gladiadores",
       "emparejamientos",
       "armas-reales-de-la-arena"
@@ -1091,7 +1081,7 @@
        },
        {
         "k": "concepto",
-        "v": "La licencia se simbolizaba con la rudis, una espada de madera, y la libertad (manumissio) hacía liberto al gladiador sin librarlo de la infamia, y según Ulpiano los condenados a la escuela obtenían la licencia a los tres años y la libertad a los cinco."
+        "v": "La retirada llegaba con la rudis, la espada de madera que simbolizaba la licencia, o con la libertad, y algunos veteranos siguieron como árbitros, instructores o incluso lanistas."
        }
       ],
       "en": [
@@ -1109,7 +1099,7 @@
        },
        {
         "k": "concepto",
-        "v": "Discharge was symbolised by the rudis, a wooden sword, and freedom (manumissio) made the gladiator a freedman without freeing him from infamia, and according to Ulpian those condemned to the school obtained discharge after three years and freedom after five."
+        "v": "Retirement came with the rudis, the wooden sword that symbolised discharge, or with freedom, and some veterans carried on as referees, instructors or even lanistae."
        }
       ]
      }
@@ -1139,7 +1129,7 @@
        },
        {
         "k": "ejemplo",
-        "v": "En la inauguración del Coliseo, en 80 d. C., murieron 5.000 animales en un solo día, y en los juegos de Trajano de 107 d. C., unos 11.000."
+        "v": "En la inauguración del Coliseo, en 80 d. C., murieron 5.000 animales en un solo día."
        },
        {
         "k": "autor",
@@ -1147,7 +1137,7 @@
        },
        {
         "k": "ejemplo",
-        "v": "La mayor naumaquia fue la de Claudio en el lago Fucino (52 d. C.), con 19.000 hombres, y ninguna de las conocidas fue protagonizada por una flota romana, algo que Coleman (1993) atribuye al riesgo de que el resultado no fuera el previsto."
+        "v": "En la naumaquia de Claudio en el lago Fucino (52 d. C.) lucharon 19.000 hombres, y en ninguna de las conocidas combatió una flota romana, algo que Coleman (1993) atribuye al riesgo de que Roma perdiera, aunque fuera de mentira."
        }
       ],
       "en": [
@@ -1157,7 +1147,7 @@
        },
        {
         "k": "ejemplo",
-        "v": "At the inauguration of the Colosseum, in AD 80, 5,000 animals died in a single day, and in the games of Trajan in AD 107, some 11,000."
+        "v": "At the inauguration of the Colosseum, in AD 80, 5,000 animals died in a single day."
        },
        {
         "k": "autor",
@@ -1165,7 +1155,7 @@
        },
        {
         "k": "ejemplo",
-        "v": "The largest naumachia was that of Claudius on Lake Fucinus (AD 52), with 19,000 men, and none of the known ones featured a Roman fleet, something Coleman (1993) attributes to the risk that the outcome might not be the expected one."
+        "v": "In Claudius' naumachia on the Fucine Lake (AD 52) 19,000 men fought, and in none of the known ones did a Roman fleet fight, something Coleman (1993) attributes to the risk that Rome might lose, even in make-believe."
        }
       ]
      }
@@ -1201,8 +1191,8 @@
      "x": {
       "es": [
        {
-        "k": "autor",
-        "v": "Según Humphrey (1986), para ese público surgió un edificio nuevo, ya que el hipódromo griego, incluso en Olimpia, era una explanada con taludes de tierra y el circo rodeó la pista con un graderío construido."
+        "k": "concepto",
+        "v": "Fuera de Roma se conocen menos de sesenta circos, y junto al anfiteatro y al teatro formaba la tríada de grandes edificios que una ciudad importante debía tener para entretener al pueblo."
        },
        {
         "k": "concepto",
@@ -1219,8 +1209,8 @@
       ],
       "en": [
        {
-        "k": "autor",
-        "v": "According to Humphrey (1986), a new building arose for that public, since the Greek hippodrome, even at Olympia, was an esplanade with earth embankments and the circus surrounded the track with built stands."
+        "k": "concepto",
+        "v": "Fewer than sixty circuses are known outside Rome, and together with the amphitheatre and the theatre the circus formed the triad of great buildings that an important city had to have to entertain the people."
        },
        {
         "k": "concepto",
@@ -1256,15 +1246,15 @@
       "es": [
        {
         "k": "concepto",
-        "v": "El auriga conducía con las riendas atadas a la cintura y con el riesgo de ser arrastrado si volcaba, por lo que llevaba un cuchillo para cortarlas, un casco acolchado, una túnica gruesa con bandas de cuero y vendas en las piernas."
+        "v": "El auriga conducía con las riendas atadas a la cintura, de modo que dominaba el carro con el peso del cuerpo, y llevaba un cuchillo para cortarlas si volcaba, además de un casco acolchado, una túnica con bandas de cuero en el pecho, vendas en las piernas y botas altas de cuero."
        },
        {
         "k": "ejemplo",
-        "v": "Quien pagaba los juegos daba la salida dejando caer la mappa, un pañuelo blanco, desde una tribuna sobre las carceres, dispuestas en arco para que ningún carro partiera con ventaja."
+        "v": "Quien pagaba los juegos daba la salida dejando caer un pañuelo blanco desde una tribuna sobre las carceres, dispuestas en arco para que ningún carro partiera con ventaja."
        },
        {
-        "k": "autor",
-        "v": "Según Bell (2020), se daban siete vueltas, con trece virajes y unos 5 km, en ocho o nueve minutos y a unos 35 km/h."
+        "k": "concepto",
+        "v": "Se daban siete vueltas, unos 5 km, en ocho o nueve minutos, y las bigas alcanzarían 40-45 km/h y las cuadrigas hasta 60 km/h."
        },
        {
         "k": "concepto",
@@ -1274,15 +1264,15 @@
       "en": [
        {
         "k": "concepto",
-        "v": "The charioteer drove with the reins tied around his waist and ran the risk of being dragged if the chariot overturned, so he carried a knife to cut the reins, a padded helmet, a thick tunic with leather bands and bandages on the legs."
+        "v": "The charioteer drove with the reins tied round his waist, so that he controlled the chariot with the weight of his body, and carried a knife to cut them if he overturned, as well as a padded helmet, a tunic with leather bands across the chest, bandages on the legs and high leather boots."
        },
        {
         "k": "ejemplo",
-        "v": "Whoever paid for the games gave the start by dropping the mappa, a white cloth, from a platform above the carceres, which were arranged in an arc so that no chariot started with an advantage."
+        "v": "Whoever paid for the games gave the start by dropping a white cloth from a platform above the carceres, which were arranged in an arc so that no chariot started with an advantage."
        },
        {
-        "k": "autor",
-        "v": "According to Bell (2020), the race ran seven laps, with thirteen turns and some 5 km, in eight or nine minutes and at some 35 km/h."
+        "k": "concepto",
+        "v": "The race was seven laps, some 5 km, in eight or nine minutes, and bigae would reach 40-45 km/h and quadrigae up to 60 km/h."
        },
        {
         "k": "concepto",
@@ -1297,8 +1287,8 @@
       "en": "The factions"
      },
      "d": {
-      "es": "Las facciones eran empresas identificadas con un color que organizaban los equipos, y como solo había cuatro y ningún organizador podía dar juegos sin ellas, sus dueños llegaron a imponer sus condiciones.",
-      "en": "The factions were companies identified with a colour that organised the teams, and since there were only four and no organiser could give games without them, their owners came to impose their own terms."
+      "es": "Las facciones eran empresas identificadas con un color que organizaban los equipos de carreras, dirigidas por un caballero con varios cientos de empleados, y en la pista competían como un equipo.",
+      "en": "The factions were companies identified with a colour that organised the racing teams, run by an eques with several hundred employees, and on the track they competed as a team."
      },
      "f": "las-facciones-del-circo",
      "fs": [
@@ -1310,37 +1300,37 @@
       "es": [
        {
         "k": "concepto",
-        "v": "Cada facción se identificaba con el blanco, el rojo, el verde o el azul, a los que Domiciano añadió durante un tiempo el dorado y el púrpura."
+        "v": "Cada facción se identificaba con el blanco, el rojo, el verde o el azul, que vestían sus aurigas, y Domiciano añadió durante un tiempo el dorado y el púrpura."
        },
        {
         "k": "concepto",
-        "v": "Al frente estaba el dominus factionis, un hombre de negocios del orden de los caballeros, y cada facción mantenía a varios cientos de empleados, con oficios como el conditor, el morator, el sparsor, el medicus y el sutor."
-       },
-       {
-        "k": "concepto",
-        "v": "Quien pagaba los juegos negociaba con el dominus factionis el precio de cada jornada, y la facción le alquilaba los caballos, los aurigas y el material, mientras que el organizador corría además con los premios, de unos 20.000 sestercios por victoria en cuadriga."
+        "v": "Al frente estaba el dominus factionis, un caballero que dirigía a varios cientos de empleados, desde quienes cuidaban, sujetaban o alimentaban a los caballos hasta veterinarios, mecánicos y carpinteros."
        },
        {
         "k": "ejemplo",
-        "v": "Bajo Nerón las facciones se negaron a alquilar los equipos salvo por jornadas completas, y ante la amenaza de hacer correr perros los Rojos y los Blancos cedieron, mientras que los Azules y los Verdes resistieron hasta que el emperador pagó los premios (Cameron, 1976)."
+        "v": "La facción mantenía sus cuadras (stabula) en Roma, abastecidas por yeguadas de Hispania, Sicilia, Tesalia, el norte de África y Capadocia, y en los últimos siglos del Imperio pasó al control del emperador."
+       },
+       {
+        "k": "concepto",
+        "v": "Cada facción podía inscribir hasta tres carros por carrera, de modo que uno buscaba la victoria y los otros le marcaban el ritmo o cerraban el paso a los rivales."
        }
       ],
       "en": [
        {
         "k": "concepto",
-        "v": "Each faction was identified with white, red, green or blue, to which Domitian added for a time gold and purple."
+        "v": "Each faction was identified with white, red, green or blue, worn by its charioteers, and Domitian added for a time gold and purple."
        },
        {
         "k": "concepto",
-        "v": "At the head was the dominus factionis, a businessman of the order of the equites, and each faction maintained several hundred employees, with trades such as the conditor, the morator, the sparsor, the medicus and the sutor."
-       },
-       {
-        "k": "concepto",
-        "v": "Whoever paid for the games negotiated with the dominus factionis the price of each day, and the faction hired out to him the horses, the charioteers and the equipment, while the organiser also bore the prizes, of some 20,000 sesterces per quadriga victory."
+        "v": "At the head was the dominus factionis, an eques who ran several hundred employees, from those who looked after, held or fed the horses to vets, mechanics and carpenters."
        },
        {
         "k": "ejemplo",
-        "v": "Under Nero the factions refused to hire out the teams except for whole days, and faced with the threat of racing dogs the Reds and the Whites gave in, while the Blues and the Greens held out until the emperor paid the prizes (Cameron, 1976)."
+        "v": "The faction kept its stables (stabula) in Rome, supplied by stud farms in Hispania, Sicily, Thessaly, North Africa and Cappadocia, and in the last centuries of the Empire it came under the control of the emperor."
+       },
+       {
+        "k": "concepto",
+        "v": "Each faction could enter up to three chariots in a race, so that one went for victory and the others set the pace for him or blocked the rivals."
        }
       ]
      }
@@ -1367,15 +1357,15 @@
        },
        {
         "k": "ejemplo",
-        "v": "Diocles, un liberto de Lusitania, corrió de 122 a 146 d. C. en 4.257 carreras, con 1.462 victorias, y su inscripción suma 35.863.120 sestercios en premios."
+        "v": "Diocles, un liberto de Lusitania, corrió de 122 a 146 d. C. en 4.257 carreras, con 1.462 victorias, y su inscripción recoge que gracias a él su facción ganó 35.863.120 sestercios en premios."
        },
        {
         "k": "autor",
-        "v": "Vamplew (2023) calcula que a Diocles le quedaron al menos tres millones y medio, una décima parte del total, y Bell (2014) lo considera quizá el deportista mejor pagado de la historia."
+        "v": "A Diocles le llegó una décima parte, unos tres millones y medio (Vamplew, 2023), casi 3.000 años de paga de un legionario, y Bell (2014) lo considera quizá el deportista mejor pagado de la historia."
        },
        {
         "k": "ejemplo",
-        "v": "Crescens ganó su primera carrera con trece años y Escorpo murió a los veintisiete tras más de dos mil victorias."
+        "v": "Crescens ganó su primera carrera a los trece años y murió a los veintidós, y Escorpo murió a los veintisiete con más de dos mil victorias."
        }
       ],
       "en": [
@@ -1385,68 +1375,15 @@
        },
        {
         "k": "ejemplo",
-        "v": "Diocles, a freedman from Lusitania, raced from AD 122 to 146 in 4,257 races, with 1,462 victories, and his inscription adds up to 35,863,120 sesterces in prizes."
+        "v": "Diocles, a freedman from Lusitania, raced from AD 122 to 146 in 4,257 races, with 1,462 victories, and his inscription records that thanks to him his faction won 35,863,120 sesterces in prizes."
        },
        {
         "k": "autor",
-        "v": "Vamplew (2023) calculates that Diocles kept at least three and a half million, a tenth of the total, and Bell (2014) considers him perhaps the best-paid sportsman in history."
+        "v": "Diocles received a tenth of it, some three and a half million (Vamplew, 2023), almost 3,000 years of a legionary's pay, and Bell (2014) considers him perhaps the best-paid sportsman in history."
        },
        {
         "k": "ejemplo",
-        "v": "Crescens won his first race at thirteen, and Scorpus died at twenty-seven after more than two thousand victories."
-       }
-      ]
-     }
-    },
-    {
-     "t": {
-      "es": "Apostar y maldecir",
-      "en": "Betting and cursing"
-     },
-     "d": {
-      "es": "La pasión por el circo se medía en dinero y en superstición, con apuestas en la grada, amuletos para atraer la suerte sobre el auriga propio y tablillas de maldición contra el rival.",
-      "en": "Passion for the circus was measured in money and in superstition, with bets in the stands, amulets to draw luck towards one's own charioteer and curse tablets against the rival."
-     },
-     "f": "apostar-y-maldecir",
-     "fs": [
-      "apostar-y-maldecir"
-     ],
-     "sec": "4.2.4",
-     "x": {
-      "es": [
-       {
-        "k": "ejemplo",
-        "v": "Juvenal censura a un magistrado que perdió su fortuna apostando en los mismos juegos que organizaba."
-       },
-       {
-        "k": "concepto",
-        "v": "Anillos y amuletos llevaban la imagen del auriga o el color de su facción, a veces con el grito de la grada, NICA, «¡vence!»."
-       },
-       {
-        "k": "concepto",
-        "v": "Las defixiones eran láminas de plomo grabadas por magos que se depositaban casi siempre en tumbas, porque se creía que el difunto llevaba la petición a los dioses del más allá."
-       },
-       {
-        "k": "ejemplo",
-        "v": "La única defixio hallada en Hispania, en Écija y del siglo I d. C., maldice uno por uno a trece carros de los Azules y los Rojos (Sánchez Natalías, 2022)."
-       }
-      ],
-      "en": [
-       {
-        "k": "ejemplo",
-        "v": "Juvenal censures a magistrate who lost his fortune betting at the very games he was organising."
-       },
-       {
-        "k": "concepto",
-        "v": "Rings and amulets bore the image of the charioteer or the colour of his faction, sometimes with the cry of the stands, NICA, 'win!'."
-       },
-       {
-        "k": "concepto",
-        "v": "The defixiones were lead sheets inscribed by magicians that were almost always deposited in tombs, because it was believed that the dead carried the request to the gods of the underworld."
-       },
-       {
-        "k": "ejemplo",
-        "v": "The only one found in Hispania, at Écija and dating from the 1st century AD, curses one by one thirteen chariots of the Blues and the Reds (Sánchez Natalías, 2022)."
+        "v": "Crescens won his first race at thirteen and died at twenty-two, and Scorpus died at twenty-seven after more than two thousand victories."
        }
       ]
      }
@@ -1523,8 +1460,8 @@
       "en": "The bather's route"
      },
      "d": {
-      "es": "El bañista dejaba la ropa en el apodyterium, hacía ejercicio en la palestra, sudaba en el laconicum y pasaba por el caldarium, el tepidarium y el frigidarium, y las grandes termas tenían además salas de lectura.",
-      "en": "The bather left his clothes in the apodyterium, exercised in the palaestra, sweated in the laconicum and passed through the caldarium, the tepidarium and the frigidarium, and the great baths also had reading rooms."
+      "es": "El bañista dejaba la ropa en el apodyterium, hacía ejercicio en la palestra, sudaba en el laconicum y pasaba por el caldarium, el tepidarium y el frigidarium.",
+      "en": "The bather left his clothes in the apodyterium, exercised in the palaestra, sweated in the laconicum and went through the caldarium, the tepidarium and the frigidarium."
      },
      "f": "las-salas-de-las-termas",
      "fs": [
@@ -1535,7 +1472,7 @@
       "es": [
        {
         "k": "concepto",
-        "v": "La ropa se dejaba en pequeños nichos del apodyterium vigilados por un esclavo, porque el robo de ropa era el problema más frecuente de las termas."
+        "v": "La ropa se dejaba en pequeños nichos del apodyterium, el vestuario, vigilados por un esclavo."
        },
        {
         "k": "concepto",
@@ -1553,7 +1490,7 @@
       "en": [
        {
         "k": "concepto",
-        "v": "Clothes were left in small niches of the apodyterium watched over by a slave, because the theft of clothes was the most frequent problem of the baths."
+        "v": "Clothes were left in small niches in the apodyterium, the changing room, watched over by a slave."
        },
        {
         "k": "concepto",
@@ -1630,8 +1567,8 @@
       "en": "Women's sport"
      },
      "d": {
-      "es": "El ejercicio de la mujer fuera de casa se tenía por impropio, y el mosaico de las «muchachas en bikini» de Piazza Armerina muestra que en época tardía las mujeres de clase alta tuvieron un acceso más abierto a la práctica deportiva, sobre todo en contextos privados.",
-      "en": "A woman exercising outside the home was considered improper, and the mosaic of the 'bikini girls' at Piazza Armerina shows that in the late imperial period upper-class women had more open access to sporting practice, essentially in private settings."
+      "es": "El ejercicio de la mujer fuera de casa se tenía por impropio, y el mosaico de las «muchachas en bikini» de Piazza Armerina, junto a la carrera de muchachas de los Juegos Capitolinos y a las luchadoras de la arena, muestra que las mujeres sí compitieron en Roma, aunque casi siempre en contextos privados o como rareza del programa.",
+      "en": "Women's exercise outside the home was considered improper, and the «girls in bikinis» mosaic at Piazza Armerina, together with the girls' race at the Capitoline Games and the female fighters of the arena, shows that women did compete in Rome, although almost always in private settings or as a rarity on the programme."
      },
      "f": "deporte-femenino",
      "fs": [
@@ -1650,7 +1587,7 @@
        },
        {
         "k": "concepto",
-        "v": "Sus pruebas eran las del atletismo griego, la carrera, el salto y el disco, que Roma conocía desde hacía siglos."
+        "v": "Sus pruebas eran las del atletismo griego, la carrera, el salto y el disco."
        }
       ],
       "en": [
@@ -1664,7 +1601,7 @@
        },
        {
         "k": "concepto",
-        "v": "Their events were those of Greek athletics, the foot race, the jump and the discus, which Rome had known for centuries."
+        "v": "Their events were those of Greek athletics, the foot race, the jump and the discus."
        }
       ]
      }
@@ -1737,53 +1674,45 @@
    "nodos": [
     {
      "t": {
-      "es": "Dos críticas",
-      "en": "Two criticisms"
+      "es": "Los críticos de los espectáculos",
+      "en": "The critics of the spectacles"
      },
      "d": {
-      "es": "La crítica de los moralistas paganos, nacida en la élite, apuntaba a la violencia contra quien no podía defenderse, y la de los escritores cristianos a la idolatría, pero ninguna cerró los espectáculos.",
-      "en": "The criticism of the pagan moralists, born within the elite, was aimed at violence against those who could not defend themselves, and that of the Christian writers at idolatry, but neither closed down the spectacles."
+      "es": "Los moralistas paganos, como Cicerón y Séneca, condenaban la crueldad con quien no podía defenderse y pedían al hombre culto que no se dejara arrastrar por la masa, y los escritores cristianos, como Tertuliano, rechazaban los espectáculos por idolatría.",
+      "en": "Pagan moralists, such as Cicero and Seneca, condemned cruelty towards those who could not defend themselves and urged the educated man not to let himself be carried away by the crowd, and Christian writers, such as Tertullian, rejected the spectacles as idolatry."
      },
-     "f": "la-critica-a-los-espectaculos",
+     "f": "como-se-apagaron-los-espectaculos",
      "fs": [
-      "la-critica-a-los-espectaculos"
+      "como-se-apagaron-los-espectaculos"
      ],
      "sec": "4.2.6",
      "x": {
       "es": [
        {
         "k": "concepto",
-        "v": "Cicerón se preguntaba qué placer podía encontrar un hombre culto en las cacerías de fieras, y Séneca describe el turno del mediodía, cuando la grada gritaba al condenado «¡Mátalo, azótalo, quémalo!»."
+        "v": "Los moralistas paganos condenaban la crueldad con quien no podía defenderse y pedían al hombre culto que no se dejara arrastrar por la masa."
        },
        {
         "k": "concepto",
-        "v": "Séneca aceptaba la arena como castigo y se dirigía al hombre culto para que no se dejara arrastrar por el gusto de la masa."
+        "v": "Los escritores cristianos los rechazaban por idolatría, ya que todo en ellos estaba consagrado a los dioses paganos."
        },
        {
-        "k": "ejemplo",
-        "v": "Tertuliano escribió entre 197 y 200 d. C. Sobre los espectáculos, donde llamó al cortejo inicial «cortejo de Satán» (pompa diaboli) y reprochó al público las apuestas y la euforia por el auriga vencedor."
-       },
-       {
-        "k": "ejemplo",
-        "v": "Agustín de Hipona, dos siglos después, mantuvo la condena, aunque admitía que un cristiano entrara en el anfiteatro si con ello liberaba a un gladiador."
+        "k": "autor",
+        "v": "Jiménez Sánchez (2002) juzga exagerado el peso del cristianismo en el final de los espectáculos y pone por delante el coste, y Stocking (2021) coincide en que no fue la causa principal."
        }
       ],
       "en": [
        {
         "k": "concepto",
-        "v": "Cicero wondered what pleasure a cultivated man could find in wild-beast hunts, and Seneca describes the midday session, when those in the stands shouted at the condemned man 'Kill him, flog him, burn him!'."
+        "v": "Pagan moralists condemned cruelty towards those who could not defend themselves and urged the educated man not to let himself be carried away by the crowd."
        },
        {
         "k": "concepto",
-        "v": "Seneca accepted the arena as a punishment and addressed the cultivated man so that he would not be carried away by the taste of the masses."
+        "v": "Christian writers rejected them as idolatry, since everything in them was consecrated to the pagan gods."
        },
        {
-        "k": "ejemplo",
-        "v": "Tertullian wrote De spectaculis between AD 197 and 200, in which he called the opening procession the 'procession of Satan' (pompa diaboli) and reproached the public for their betting and their euphoria over the winning charioteer."
-       },
-       {
-        "k": "ejemplo",
-        "v": "Augustine of Hippo, two centuries later, maintained the condemnation, although he admitted that a Christian might enter the amphitheatre if by doing so he freed a gladiator."
+        "k": "autor",
+        "v": "Jiménez Sánchez (2002) considers the weight of Christianity in the end of the spectacles exaggerated and puts cost first, and Stocking (2021) agrees that it was not the main cause."
        }
       ]
      }
@@ -1859,7 +1788,7 @@
       "es": [
        {
         "k": "concepto",
-        "v": "Servía al poder porque la élite ofrecía los juegos gratuitos a la plebe para ganarse su favor, el rico recibía reconocimiento (evergetismo) y el emperador se mostraba en la grada como quien daba los juegos."
+        "v": "Servía al poder porque la élite ofrecía los juegos gratuitos a la plebe para ganarse su favor, el rico recibía reconocimiento y el emperador se mostraba en la grada como quien daba los juegos."
        },
        {
         "k": "concepto",
@@ -1867,7 +1796,7 @@
        },
        {
         "k": "concepto",
-        "v": "Era un rito, puesto que los ludi pertenecían al calendario religioso y el circo siguió siendo un espacio sagrado, y el ejercicio cotidiano servía a la salud en las termas, en los juegos de pelota y en las asociaciones de jóvenes."
+        "v": "Era un rito, puesto que los ludi pertenecían al calendario religioso y el circo siguió siendo un espacio sagrado, y el ejercicio cotidiano servía a la salud en las termas, abiertas a cualquiera por un precio simbólico, y en los juegos de pelota, cuyos beneficios defendió Galeno."
        },
        {
         "k": "ejemplo",
@@ -1877,7 +1806,7 @@
       "en": [
        {
         "k": "concepto",
-        "v": "It served power because the elite offered free games to the plebs to win its favour, the rich man received recognition (euergetism) and the emperor showed himself in the stands as the one who gave the games."
+        "v": "It served power because the elite offered free games to the plebs to win its favour, the rich man received recognition and the emperor showed himself in the stands as the one who gave the games."
        },
        {
         "k": "concepto",
@@ -1885,7 +1814,7 @@
        },
        {
         "k": "concepto",
-        "v": "It was a rite, since the ludi belonged to the religious calendar and the circus remained a sacred space, and daily exercise served health in the baths, in ball games and in youth associations."
+        "v": "It was a rite, since the ludi belonged to the religious calendar and the circus remained a sacred space, and everyday exercise served health in the baths, open to anyone for a token price, and in ball games, whose benefits Galen defended."
        },
        {
         "k": "ejemplo",
