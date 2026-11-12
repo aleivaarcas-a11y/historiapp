@@ -1108,10 +1108,10 @@ async function renderHome(){
   bindHeader();
   document.getElementById("stripBtn").onclick=()=>nav({name:"logros",back:{name:"home"}});
   const hoy=document.getElementById("hoy");
-  /* 12-11-2026: clase de repaso del 1.º A («Del clan a la arena»); el acceso solo aparece durante esa clase y después desaparece */
-  { const CR={ini:"2026-11-12T16:15:00+01:00",fin:"2026-11-12T18:35:00+01:00"}, n=Date.now();
-    if(n>=Date.parse(CR.ini)&&n<=Date.parse(CR.fin)){ const en=document.documentElement.lang==="en"; const cb=document.createElement("button"); cb.className="card reto"; cb.style.cssText="border:2px solid #EDAB00;box-shadow:0 0 18px rgba(237,171,0,.45)";
-      cb.innerHTML=`<div class="ic" aria-hidden="true">🏛️</div><div class="tx"><small>${en?"Review class · 1.º A":"Clase de repaso · 1.º A"}</small><b>${en?"From the Clan to the Arena":"Del clan a la arena"}</b><span>${en?"Only today, during class":"Solo hoy, durante la clase"}</span></div><div class="xp">${en?"Play":"Jugar"}</div>`;
+  /* 12-11-2026: clase de repaso «Del clan a la arena»; el acceso solo aparece en las franjas de clase de CRS y después desaparece */
+  { const CRS=[["2026-11-12T16:15:00+01:00","2026-11-12T18:35:00+01:00"],["2026-11-13T10:15:00+01:00","2026-11-13T14:35:00+01:00"]], n=Date.now();   // franjas de clase en que se ve la tarjeta
+    if(CRS.some(w=>n>=Date.parse(w[0])&&n<=Date.parse(w[1]))){ const en=document.documentElement.lang==="en"; const cb=document.createElement("button"); cb.className="card reto"; cb.style.cssText="border:2px solid #EDAB00;box-shadow:0 0 18px rgba(237,171,0,.45)";
+      cb.innerHTML=`<div class="ic" aria-hidden="true">🏛️</div><div class="tx"><small>${en?"Review class":"Clase de repaso"}</small><b>${en?"From the Clan to the Arena":"Del clan a la arena"}</b><span>${en?"Only today, during class":"Solo hoy, durante la clase"}</span></div><div class="xp">${en?"Play":"Jugar"}</div>`;
       cb.onclick=()=>{ location.href="repaso/jugar.html"; }; hoy.appendChild(cb); } }
   const d=S.prog.daily||{}; const done=d.date===todayKey()&&d.done;
   const rc=document.createElement("button"); rc.className="card reto";
