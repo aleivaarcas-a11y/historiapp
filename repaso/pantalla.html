@@ -38,7 +38,7 @@ body{background:radial-gradient(ellipse at 50% -10%,#1b3a7a 0%,#0d1f4a 42%,var(-
 .opts.tf{grid-template-columns:1fr 1fr}
 .opt{position:relative;display:flex;align-items:center;gap:1.2vw;border-radius:1.6vh;padding:1.8vh 1.4vw;font-size:3.5vh;font-weight:700;line-height:1.15;min-height:11.5vh;color:#fff;box-shadow:0 .6vh 0 rgba(0,0,0,.35);transition:opacity .4s,transform .4s}
 .opt .sh{flex:none;width:7.6vh;height:7.6vh;border-radius:1.2vh;background:rgba(255,255,255,.18);display:grid;place-items:center;font-size:3.6vh;line-height:1}
-.opt .sh small{display:block;font-size:2.3vh;margin-top:.2vh}
+.opt .sh small{display:block;font-size:3vh;font-weight:700;margin-top:.2vh;line-height:1}
 .opt .tx{flex:1}
 .opt .n{flex:none;font-size:3.4vh;min-width:6vh;text-align:right;opacity:0}
 .o0{background:var(--oA)}.o1{background:var(--oB)}.o2{background:var(--oC)}.o3{background:var(--oD)}
@@ -55,7 +55,7 @@ body{background:radial-gradient(ellipse at 50% -10%,#1b3a7a 0%,#0d1f4a 42%,var(-
 .pic{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:0}
 .pic img,.pic canvas{max-width:100%;max-height:58vh;border-radius:1.2vh;box-shadow:0 1.4vh 3vh rgba(0,0,0,.5);background:#000}
 .pic .cap{margin-top:1vh;font-size:2.2vh;color:var(--mut);text-align:center;max-width:44vw}
-.ex{margin-top:1.8vh;font-size:2.9vh;line-height:1.3;background:rgba(255,255,255,.08);border-left:.8vh solid var(--nar);border-radius:1vh;padding:1.4vh 1.4vw}
+.ex{margin-top:1.8vh;font-size:3.6vh;line-height:1.3;background:rgba(255,255,255,.08);border-left:.8vh solid var(--nar);border-radius:1vh;padding:1.4vh 1.4vw}
 .ex b{color:var(--oro2)}
 .foot{display:flex;align-items:center;gap:1.2vw;margin-top:1.4vh;font-size:2.4vh;color:var(--mut);min-height:4.4vh}
 .foot .top5{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -74,7 +74,7 @@ h2{font-family:Cinzel,Georgia,serif;font-size:6vh;color:var(--oro2);line-height:
 .rule.ex2{border-color:var(--nar)}
 .lobby{flex:1;display:grid;grid-template-columns:auto 1fr;gap:3vw;align-items:center}
 .qr{background:#fff;padding:1.4vh;border-radius:1.6vh;display:inline-block}
-.qr img{width:34vh;height:34vh;display:block}
+.qr img{width:42vh;height:42vh;display:block}
 .url{margin-top:1vh;font-size:2.2vh;color:var(--mut);text-align:center}
 .names{display:flex;flex-wrap:wrap;gap:.8vh .6vw;margin-top:2vh;max-height:34vh;overflow:hidden}
 .nm{background:rgba(255,255,255,.1);border:1px solid var(--line);border-radius:99px;padding:.6vh 1.1vw;font-size:2.6vh;cursor:pointer}
@@ -122,7 +122,7 @@ canvas#conf{position:fixed;inset:0;pointer-events:none;z-index:8}
 <div id="menu"><div class="box" id="mbox"></div></div>
 <div id="net">⚠ Connection to the server lost, retrying…</div>
 <canvas id="conf"></canvas>
-<script src="clase_en_data.js?v=1"></script>
+<script src="clase_en_data.js?v=3"></script>
 <script>
 /* Clase de repaso en pantalla (15-11-2026) · 1.º Inglés · Temas 1-3.
    La pantalla del proyector manda: abre la sala, abre cada pregunta (rp_abrir con r) y muestra resultados.
@@ -134,16 +134,19 @@ const URL_M='https://aleivaarcas-a11y.github.io/historiapp/repaso/mando.html'+(P
 const TEST=QS.get('test')==='1',READ=TEST?700:5000,READ_IMG=TEST?700:6000,IMG='../';
 if(TEST)STEPS.forEach(s=>s.sec=Math.max(2.5,s.sec*.15));   // solo para las pruebas automáticas
 const SHAPES=['▲','◆','●','■'],LET='ABCD';
-let L=QS.get('lang')==='es'?'es':'en',PIN='7319',SND=true;
-let ST={sid:'',r:-1,rts:0,open:false,ban:[]},OFF=0,J=[],ERR=0,BUSY=false,AUTO=false,STAT={},DEL={};
+const SVGS=['<polygon points="50,8 95,90 5,90"/>','<polygon points="50,4 96,50 50,96 4,50"/>','<circle cx="50" cy="50" r="44"/>','<rect x="8" y="8" width="84" height="84"/>'];
+const svg=(i,sz)=>`<svg viewBox="0 0 100 100" style="width:${sz};height:${sz};fill:#fff;display:block;margin:0 auto">${SVGS[i]}</svg>`;
+
+let L=QS.get('lang')==='es'?'es':'en',PIN='',SND=true;try{PIN=localStorage.getItem('rpPinEN')||''}catch(e){}
+let ST={sid:'',r:-1,rts:0,open:false,ban:[]},OFF=0,J=[],ERR=0,BUSY=false,AUTO=false,STAT={},DEL={},STSID='';
 const $=id=>document.getElementById(id);
 const tx=o=>o==null?'':(typeof o==='string'?o:(o[L]||o.en||o.es||''));
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const md=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
 const snow=()=>Date.now()+OFF;
 const fmt=n=>Math.round(n).toLocaleString(L==='es'?'es-ES':'en-GB');
-const T={en:{title:'Review class',sub:'History of Sport · Topics 1-3',join:'Join from your phone',steps:['Scan the code or open Historiapp','Tap the review class card','Type your name and wait'],players:'players',open:'Open the room',start:'Start the game',newg:'New game',newgQ:'Start a new game? The current scores will be lost.',closed:'The room is closed',q:'Question',of:'of',ans:'answers',ready:'Get ready',read:'Read the question',time:'Time!',next:'Next ▶',rules:'Scoring',speedR:[['Correct','≤ 1,000','more points if you are fast'],['Streak','+100','per right answer in a row']],examR:[['Correct','+900',''],['Wrong','−300',''],['Blank','0','do not tap anything']],finalR:[['Correct','+1,800',''],['Wrong','−600',''],['Blank','0',''],['Relay','+450','per event in place']],wordR:[['Correct','≤ 1,000','more points if you answer early'],['Letters','+1','every few seconds']],examTip:'As in the exam test, three wrong answers cancel a right one. If you are not sure, leave it blank.',stand:'Standings after',end:'Final standings',weak:'Worth revising tonight',weakS:'The questions the class found hardest:',pct:'correct',good:'Good luck in the exam!',tf:['True','False'],nobody:'Nobody has joined yet',menu:'Menu',jump:'Go to round',skip:'Skip this question',close:'Close the room',back:'Back to the game',lang:'ES',net:'⚠ Connection to the server lost, retrying…',top:'Top',reveal:'Show answer',relayOk:'got the order right',kick:'Tap a name twice to remove it',img:'Image'},
- es:{title:'Clase de repaso',sub:'Historia del Deporte · Temas 1-3',join:'Entra desde el móvil',steps:['Escanea el código o abre Historiapp','Toca la tarjeta de la clase de repaso','Escribe tu nombre y espera'],players:'jugadores',open:'Abrir la sala',start:'Empezar',newg:'Partida nueva',newgQ:'¿Empezar una partida nueva? Se pierden las puntuaciones actuales.',closed:'La sala está cerrada',q:'Pregunta',of:'de',ans:'respuestas',ready:'Atentos',read:'Lee la pregunta',time:'¡Tiempo!',next:'Siguiente ▶',rules:'Puntuación',speedR:[['Acierto','≤ 1.000','más puntos cuanto antes'],['Racha','+100','por acierto seguido']],examR:[['Acierto','+900',''],['Fallo','−300',''],['En blanco','0','no toques nada']],finalR:[['Acierto','+1.800',''],['Fallo','−600',''],['En blanco','0',''],['Relevo','+450','por suceso en su sitio']],wordR:[['Acierto','≤ 1.000','más puntos cuanto antes'],['Letras','+1','cada pocos segundos']],examTip:'Como en el test del examen, tres fallos restan un acierto. Si dudas, déjala en blanco.',stand:'Clasificación tras',end:'Clasificación final',weak:'Para repasar esta noche',weakS:'Las preguntas que más le han costado a la clase:',pct:'de acierto',good:'¡Suerte en el examen!',tf:['Verdadero','Falso'],nobody:'Todavía no ha entrado nadie',menu:'Menú',jump:'Ir a la ronda',skip:'Saltar esta pregunta',close:'Cerrar la sala',back:'Volver al juego',lang:'EN',net:'⚠ Sin conexión con el servidor, reintentando…',top:'Primeros',reveal:'Ver solución',relayOk:'ha acertado el orden',kick:'Toca dos veces un nombre para retirarlo',img:'Imagen'}};
+const T={en:{title:'Review class',sub:'History of Sport · Topics 1-3',join:'Join from your phone',steps:['Scan the code with your phone camera','Or open Historiapp and tap the review class card','Type your name and wait'],players:'players',open:'Open the room',start:'Start the game',newg:'New game',newgQ:'Start a new game? The current scores will be lost.',closed:'The room is closed',q:'Question',of:'of',ans:'answers',ready:'Get ready',read:'Read the question',time:'Time!',next:'Next ▶',rules:'Scoring',speedR:[['Correct','≤ 1,000','more points if you are fast'],['Streak','+100 → +500','grows with each right answer in a row']],examR:[['Correct','+900',''],['Wrong','−300',''],['Blank','0','do not tap anything']],finalR:[['Correct','+1,800',''],['Wrong','−600',''],['Blank','0',''],['Relay','+450','per event in place']],wordR:[['Correct','≤ 1,000','more points if you answer early'],['Letters','+1','every few seconds']],examTip:'As in the exam test, three wrong answers cancel a right one. If you are not sure, leave it blank.',stand:'Standings after',end:'Final standings',weak:'Worth revising tonight',weakS:'The questions the class found hardest:',pct:'correct',good:'Good luck in the exam!',tf:['True','False'],nobody:'Nobody has joined yet',menu:'Menu',jump:'Go to round',skip:'Skip this question',close:'Close the room',back:'Back to the game',lang:'ES',net:'⚠ Connection to the server lost, retrying…',top:'Top',reveal:'Show answer',order:'Correct order',relayOk:'got the order right',kick:'Tap a name twice to remove it',img:'Image'},
+ es:{title:'Clase de repaso',sub:'Historia del Deporte · Temas 1-3',join:'Entra desde el móvil',steps:['Escanea el código con la cámara del móvil','O abre Historiapp y toca la tarjeta de la clase de repaso','Escribe tu nombre y espera'],players:'jugadores',open:'Abrir la sala',start:'Empezar',newg:'Partida nueva',newgQ:'¿Empezar una partida nueva? Se pierden las puntuaciones actuales.',closed:'La sala está cerrada',q:'Pregunta',of:'de',ans:'respuestas',ready:'Atentos',read:'Lee la pregunta',time:'¡Tiempo!',next:'Siguiente ▶',rules:'Puntuación',speedR:[['Acierto','≤ 1.000','más puntos cuanto antes'],['Racha','+100 → +500','crece con cada acierto seguido']],examR:[['Acierto','+900',''],['Fallo','−300',''],['En blanco','0','no toques nada']],finalR:[['Acierto','+1.800',''],['Fallo','−600',''],['En blanco','0',''],['Relevo','+450','por suceso en su sitio']],wordR:[['Acierto','≤ 1.000','más puntos cuanto antes'],['Letras','+1','cada pocos segundos']],examTip:'Como en el test del examen, tres fallos restan un acierto. Si dudas, déjala en blanco.',stand:'Clasificación tras',end:'Clasificación final',weak:'Para repasar esta noche',weakS:'Las preguntas que más le han costado a la clase:',pct:'de acierto',good:'¡Suerte en el examen!',tf:['Verdadero','Falso'],nobody:'Todavía no ha entrado nadie',menu:'Menú',jump:'Ir a la ronda',skip:'Saltar esta pregunta',close:'Cerrar la sala',back:'Volver al juego',lang:'EN',net:'⚠ Sin conexión con el servidor, reintentando…',top:'Primeros',reveal:'Ver solución',order:'Orden correcto',relayOk:'ha acertado el orden',kick:'Toca dos veces un nombre para retirarlo',img:'Imagen'}};
 const t=k=>T[L][k];
 
 /* ---------- sonido ---------- */
@@ -152,8 +155,8 @@ const sGo=()=>[392,523,659].forEach((f,i)=>beep(f,.18,'triangle',.1,i*.09)),sRev
 
 /* ---------- servidor ---------- */
 function ft(u,o,ms){const c=new AbortController(),h=setTimeout(()=>c.abort(),ms||8000);return fetch(u,Object.assign({signal:c.signal},o||{})).finally(()=>clearTimeout(h))}
-async function act(accion,extra){try{const t0=Date.now();const d=await (await ft(RK_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(Object.assign({accion,sala:SALA,pin:PIN},extra||{}))})).json();if(d&&d.ok){ST=d.st;OFF=d.now-Math.round((t0+Date.now())/2);ERR=0;net();return d}if(d&&d.err==='pin')alert('PIN');}catch(e){ERR++;net()}return null}
-async function poll(){try{const t0=Date.now();const d=await (await ft(RK_URL+'?accion=rp_get&sala='+SALA+'&_='+t0,null,7000)).json();if(d&&d.ok){const r0=ST.r;ST=d.st;OFF=d.now-Math.round((t0+Date.now())/2);const n0=J.length;J=(d.j||[]).filter(x=>x&&x.u);if(J.length>n0&&ST.r===-1)sJoin();ERR=0;net();if(ST.r!==r0&&!BUSY)render();else live()}}catch(e){ERR++;net()}}
+async function act(accion,extra){if(!PIN){PIN=(prompt(L==='es'?'PIN del profesor':'Teacher PIN')||'').trim();if(!PIN)return null;try{localStorage.setItem('rpPinEN',PIN)}catch(e){}}try{const t0=Date.now();const d=await (await ft(RK_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(Object.assign({accion,sala:SALA,pin:PIN},extra||{}))})).json();if(d&&d.ok){ST=d.st;OFF=d.now-Math.round((t0+Date.now())/2);ERR=0;net();return d}if(d&&d.err==='pin'){PIN='';try{localStorage.removeItem('rpPinEN')}catch(e){}alert(L==='es'?'PIN incorrecto':'Wrong PIN')}}catch(e){ERR++;net()}return null}
+async function poll(){try{const t0=Date.now();const d=await (await ft(RK_URL+'?accion=rp_get&sala='+SALA+'&_='+t0,null,7000)).json();if(d&&d.ok){const r0=ST.r;ST=d.st;if(ST.sid&&STSID!==ST.sid){STSID=ST.sid;try{STAT=JSON.parse(localStorage.getItem('rpENstat_'+ST.sid)||'{}')}catch(e){STAT={}}}OFF=d.now-Math.round((t0+Date.now())/2);const n0=J.length;J=(d.j||[]).filter(x=>x&&x.u);if(J.length>n0&&ST.r===-1)sJoin();ERR=0;net();if(ST.r!==r0&&!BUSY)render();else live()}}catch(e){ERR++;net()}}
 function net(){$('net').style.display=ERR>=2?'block':'none';$('net').textContent=t('net')}
 async function setR(r){if(BUSY)return;BUSY=true;AUTO=false;let d=await act('rp_abrir',{r});if(!d)d=await act('rp_abrir',{r});BUSY=false;if(d){render();if(isQ(r))sGo();if(isRev(r))sRev()}}
 function pollLoop(){poll().finally(()=>setTimeout(pollLoop,isQ(ST.r)?1200:(ST.r===-1?2500:3500)))}
@@ -162,7 +165,7 @@ function pollLoop(){poll().finally(()=>setTimeout(pollLoop,isQ(ST.r)?1200:(ST.r=
 const isQ=r=>r>=0&&r%2===0,isRev=r=>r>=0&&r%2===1,stepOf=r=>Math.floor(r/2);
 const firstOf=i=>STEPS.findIndex(s=>s.r===i),NRND=ROUNDS.length;
 function nextR(r){
- if(r===-1)return -100;
+ if(r===-1){let p=null;try{p=JSON.parse(localStorage.getItem('rpENprev')||'null')}catch(e){}try{localStorage.removeItem('rpENprev')}catch(e){}if(p&&p.sid===ST.sid&&p.r!==-1)return isQ(p.r)?p.r+1:p.r;return -100}
  if(r<=-100&&r>-200){const i=-100-r;return 2*firstOf(i)}
  if(isQ(r))return r+1;
  if(isRev(r)){const s=stepOf(r);if(s+1<STEPS.length&&STEPS[s+1].r===STEPS[s].r)return 2*(s+1);return -200-STEPS[s].r}
@@ -174,14 +177,14 @@ const answersFor=s=>players().filter(j=>j.r===2*s);
 const ranked=()=>players().slice().sort((a,b)=>(b.t||0)-(a.t||0)||(a.a||'').localeCompare(b.a||''));
 
 /* ---------- pintar ---------- */
-function shape(i,big){return `<div class="sh">${SHAPES[i]}<small>${LET[i]}</small></div>`}
+function shape(i,big){return `<div class="sh">${svg(i,'3.4vh')}<small>${LET[i]}</small></div>`}
 function topBar(s){const R=ROUNDS[s.r],mode=R.mode,nr=STEPS.filter(x=>x.r===s.r),k=nr.indexOf(s)+1;
- return `<div class="top"><span style="font-size:4vh">${R.icon}</span><span class="rn">${tx(R.n)}</span><span class="pill">${t('q')} <b>${k}</b> ${t('of')} ${nr.length}</span>${mode==='exam'||mode==='final'?`<span class="pill ex">${mode==='final'?'×2 · ':''}${L==='es'?'Reglas del examen':'Exam rules'}</span>`:''}<span class="sp"></span><span class="pill">📱 <b id="nans">0</b> / <span id="nply">${players().length}</span> ${t('ans')}</span><div class="clock" id="clk"><span id="clkn">${s.sec}</span></div></div><div class="bar"><i id="pbar"></i></div>`}
+ return `<div class="top"><span style="font-size:4vh">${R.icon}</span><span class="rn">${tx(R.n)}</span><span class="pill">${t('q')} <b>${k}</b> ${t('of')} ${nr.length}</span>${(mode==='exam'||mode==='final')&&s.k!=='ord'?`<span class="pill ex">${mode==='final'?'×2 · ':''}${L==='es'?'Reglas del examen':'Exam rules'}</span>`:''}<span class="sp"></span><span class="pill">📱 <b id="nans">0</b> / <span id="nply">${players().length}</span> ${t('ans')}</span><div class="clock" id="clk"><span id="clkn">${s.sec}</span></div></div><div class="bar"><i id="pbar"></i></div>`}
 function optsHTML(s,rev){
- if(s.k==='tf')return `<div class="opts tf">${[0,1].map(i=>`<div class="opt o${i===0?0:1} ${rev?(i===s.ans?'ok':'no'):''}" data-i="${i}">${`<div class="sh">${i===0?'✓':'✗'}<small>${LET[i]}</small></div>`}<div class="tx">${t('tf')[i]}</div><div class="n" id="n${i}"></div></div>`).join('')}</div>`;
+ if(s.k==='tf')return `<div class="opts tf">${[0,1].map(i=>`<div class="opt o${i===0?0:1} ${rev?(i===s.ans?'ok':'no'):''}" data-i="${i}"${rev?'':' style="opacity:0"'}>${`<div class="sh">${i===0?'✓':'✗'}<small>${LET[i]}</small></div>`}<div class="tx">${t('tf')[i]}</div><div class="n" id="n${i}"></div></div>`).join('')}</div>`;
  const one=!!s.img;
  return `<div class="opts${one?' one':''}">${s.opts.map((o,i)=>{let lab=tx(o);if(s.k==='word'&&!rev)lab=`<span class="wd" data-i="${i}">${maskWord(s,i,0)}</span>`;else lab=esc(lab);
-  const cls=rev&&s.k!=='ord'?(i===s.ans?'ok':'no'):'';return `<div class="opt o${i} ${cls}" data-i="${i}">${shape(i)}<div class="tx">${lab}</div><div class="n" id="n${i}"></div></div>`}).join('')}</div>`}
+  const cls=rev&&s.k!=='ord'?(i===s.ans?'ok':'no'):'';return `<div class="opt o${i} ${cls}" data-i="${i}"${rev?'':` style="opacity:${s.k==='det'||s.k==='word'?.85:0}"`}>${shape(i)}<div class="tx">${lab}</div><div class="n" id="n${i}"></div></div>`}).join('')}</div>`}
 function render(){const r=ST.r,a=$('app');a.onclick=null;
  if(!ST.open)return renderClosed();
  if(r===-1)return renderLobby();
@@ -201,19 +204,19 @@ function renderLobby(){const ps=players();
  $('bgo').onclick=()=>{unlock();setR(-100)};$('bnew').onclick=async()=>{if(!confirm(t('newgQ')))return;const d=await act('rp_sesion');if(d){J=[];STAT={};DEL={};render()}};live()}
 function rulesOf(mode){return mode==='exam'?t('examR'):mode==='final'?t('finalR'):mode==='word'?t('wordR'):t('speedR')}
 function renderIntro(i){const R=ROUNDS[i],rk=ranked().slice(0,3),mode=R.mode;
- $('app').innerHTML=`<div class="center"><div class="k rise">${L==='es'?'Ronda':'Round'} ${i+1} ${t('of')} ${NRND} · ${tx(R.t)}</div><div style="font-size:12vh" class="pop">${R.icon}</div><h1 class="rise">${tx(R.n)}</h1><p class="lead rise">${tx(R.d)}</p>
+ $('app').innerHTML=`<div class="center"><div class="k rise">${tx(R.t)} · ${i+1} ${t('of')} ${NRND}</div><div style="font-size:12vh" class="pop">${R.icon}</div><h1 class="rise">${tx(R.n)}</h1><p class="lead rise">${tx(R.d)}</p>
  <div class="rules rise">${rulesOf(mode).map(x=>`<div class="rule ${mode==='exam'||mode==='final'?'ex2':''}"><b>${x[1]}</b>${x[0]}${x[2]?`<div style="font-size:2.2vh;color:var(--mut);margin-top:.4vh">${x[2]}</div>`:''}</div>`).join('')}</div>
  ${mode==='exam'||mode==='final'?`<p class="lead rise" style="color:#ffd3ad">${t('examTip')}</p>`:''}
  ${rk.length&&i>0?`<div class="foot" style="justify-content:center">${t('top')}: ${rk.map((x,k)=>`<b style="color:var(--oro2)">${k+1}. ${esc(x.a)}</b> ${fmt(x.t||0)}`).join(' · ')}</div>`:''}</div>`}
 function renderQ(s,rev){const si=STEPS.indexOf(s);
  let body='';
- const q=`<div class="q rise">${esc(tx(s.q))}</div>`;
+ const q=`<div class="q rise">${esc(tx(s.q))}</div>${rev?'':'<div class="k" id="rdl" style="text-align:center;margin:-1vh 0 1.2vh;min-height:3vh"></div>'}`;
  const quote=s.quote?`<div class="quote rise">${s.k==='mcq'&&s.r===6?esc(tx(s.quote)):esc(tx(s.quote))}</div>`:'';
- if(s.img){const cap=(rev||s.k!=='det')&&s.cap?`<div class="cap">${esc(tx(s.cap))}</div>`:'';
+ if(s.img){const cap=rev&&s.cap?`<div class="cap">${esc(tx(s.cap))}</div>`:'';
   const pic=s.k==='det'?`<canvas id="cv"></canvas>`:`<img src="${IMG+s.img}" alt="">`;
   body=`${q}<div class="split"><div class="pic">${pic}${cap}</div><div style="display:flex;flex-direction:column;min-height:0">${quote}<div id="ow" style="display:contents">${optsHTML(s,rev)}</div></div></div>`}
  else body=`${q}${quote}<div id="ow" style="display:contents">${optsHTML(s,rev)}</div>`;
- const ex=rev?`<div class="ex rise">${s.k==='ord'?`<b>${t('reveal')}:</b> `:''}${md(tx(s.ex))}</div>`:'';
+ const ex=rev?`<div class="ex rise">${s.k==='ord'?`<b>${t('order')}:</b> `:''}${md(tx(s.ex))}</div>`:'';
  $('app').innerHTML=`${topBar(s)}<div id="stage" class="${rev?'rev':''}${s.img?'':' txt'}">${body}${ex}<div class="foot"><span id="relay" style="color:var(--oro2)"></span><span class="top5" id="top5"></span></div></div>`;
  if(s.k==='det'){const im=new Image();im.onload=()=>{CV.img=im;drawDet(s,rev?1:0)};im.src=IMG+s.img}
  if(!rev){const ow=$('ow');ow.style.visibility='visible';}
@@ -222,7 +225,7 @@ function renderQ(s,rev){const si=STEPS.indexOf(s);
 /* recuentos y estadística de la clase */
 function statFor(s,si){const A=answersFor(si);let ok=0;
  A.forEach(j=>{if(s.k==='ord'){if(j.q===s.ans)ok++}else if(j.q===s.ans)ok++});
- const np=players().length;STAT[si]={ok,n:A.length,np}}
+ const np=players().length;const old=STAT[si];if(old&&old.n>A.length)return;STAT[si]={ok,n:A.length,np};try{localStorage.setItem('rpENstat_'+ST.sid,JSON.stringify(STAT))}catch(e){}}
 function showCounts(s,si){const A=answersFor(si);
  if(s.k==='ord'){const ok=A.filter(j=>j.q===s.ans).length,e=$('relay'),d=String(s.ans);if(e)e.textContent=`🏁 ${ok} ${t('relayOk')}`;for(let i=0;i<4;i++){const n=$('n'+i);if(n)n.textContent='#'+(d.indexOf(String(i+1))+1)}return}
  const n=(s.k==='tf'?2:4);for(let i=0;i<n;i++){const e=$('n'+i);if(e)e.textContent=A.filter(j=>j.q===i).length}}
@@ -230,16 +233,17 @@ function showCounts(s,si){const A=answersFor(si);
 function live(){const r=ST.r;
  if(r===-1){const np=$('np'),nm=$('names');if(np){np.textContent=players().length;nm.innerHTML=players().slice(-60).map(j=>`<span class="nm${DEL[j.u]===1?' del':''}" data-u="${j.u}">${esc(j.a)}</span>`).join('')||`<span style="color:var(--mut);font-size:2.6vh">${t('nobody')}</span>`;
    nm.querySelectorAll('.nm').forEach(e=>e.onclick=async()=>{const u=e.dataset.u;if(DEL[u]===1){DEL[u]=2;await act('rp_ban',{u});J=J.filter(x=>x.u!==u);live()}else{DEL[u]=1;e.classList.add('del');setTimeout(()=>{if(DEL[u]===1){delete DEL[u];live()}},2500)}})}return}
- if(r<0)return;const si=stepOf(r),s=STEPS[si];
+ if(r<0)return;const si=stepOf(r),s=STEPS[si];if(isRev(r)&&s){statFor(s,si);showCounts(s,si)}
  const na=$('nans'),npl=$('nply');if(na){na.textContent=answersFor(si).length;npl.textContent=players().length}
  const rk=ranked().slice(0,5),tp=$('top5');if(tp&&isRev(r))tp.innerHTML=rk.length?`${t('top')}: `+rk.map((x,k)=>`<b>${k+1}. ${esc(x.a)}</b> ${fmt(x.t||0)}`).join(' &nbsp; '):''}
 function tick(){const r=ST.r;if(!ST.open||!isQ(r)&&!isRev(r))return;const si=stepOf(r),s=STEPS[si];if(!s)return;
  const now=snow(),t0=ST.rts+readMs(s),t1=endAt(s),clk=$('clk'),cn=$('clkn'),pb=$('pbar');
  if(isRev(r)){if(clk){clk.style.setProperty('--p','0%');cn.textContent='0'}if(pb)pb.style.width='100%';return}
  const ow=$('ow');
- if(now<t0){const left=Math.ceil((t0-now)/1000);if(cn)cn.textContent=s.sec;if(pb)pb.style.width='0';
+ const rl=$('rdl');if(now<t0){const left=Math.ceil((t0-now)/1000);if(rl)rl.textContent=(L==='es'?'Leed la pregunta · respuestas en ':'Read the question · answers open in ')+left+' s';if(cn)cn.textContent=s.sec;if(pb)pb.style.width='0';
   if(ow&&!ow.dataset.rd){ow.dataset.rd=1;ow.querySelectorAll('.opt').forEach(e=>e.style.opacity=s.k==='det'||s.k==='word'?.85:.0)}
   if(s.k==='det')drawDet(s,0);return}
+ if(rl&&rl.textContent)rl.textContent='';
  if(ow&&ow.dataset.rd!=='2'){ow.dataset.rd='2';ow.querySelectorAll('.opt').forEach((e,i)=>{e.style.opacity=1;e.classList.add('pop');e.style.animationDelay=(i*.07)+'s'})}
  const frac=Math.min(1,(now-t0)/(s.sec*1000)),left=Math.max(0,Math.ceil((t1-now)/1000));
  if(clk){clk.style.setProperty('--p',((1-frac)*100)+'%');clk.classList.toggle('low',left<=5);if(cn.textContent!==String(left)){cn.textContent=left;if(left<=5&&left>0)sTick()}}
@@ -247,7 +251,7 @@ function tick(){const r=ST.r;if(!ST.open||!isQ(r)&&!isRev(r))return;const si=ste
  if(s.k==='det')drawDet(s,Math.min(1,frac/.85));
  if(s.k==='word')document.querySelectorAll('.wd').forEach(e=>{const h=maskWord(s,+e.dataset.i,frac);if(e.textContent!==h)e.textContent=h});
  const np=players().length,na=answersFor(si).length;
- if(!AUTO&&!BUSY&&(now>=t1+600||(np>0&&na>=np&&now>t0+1500))){AUTO=true;setTimeout(()=>{if(ST.r===r){if(BUSY)AUTO=false;else setR(r+1)}},now>=t1?0:900)}}
+ if(!AUTO&&!BUSY&&(now>=t1+1800||(np>0&&na>=np&&now>t0+1500))){AUTO=true;setTimeout(()=>{if(ST.r===r){if(BUSY)AUTO=false;else setR(r+1)}},now>=t1?0:900)}}
 setInterval(tick,150);
 /* palabra oculta: letras que aparecen con el tiempo, mismo orden en cada opción */
 function seeded(n){let x=n*9301+49297;return()=>((x=(x*9301+49297)%233280)/233280)}
@@ -276,7 +280,9 @@ function confetti(){const c=$('conf'),g=c.getContext('2d');c.width=innerWidth;c.
 
 /* ---------- mandos del profesor ---------- */
 function unlock(){try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();AC.resume()}catch(e){}}
-function goNext(){unlock();if(!ST.open||BUSY)return;const r=ST.r;if(r===-300)return;setR(nextR(r))}
+let ARM=0;function goNext(){unlock();if(!ST.open||BUSY)return;const r=ST.r;if(r===-300)return;
+ if(isQ(r)&&Date.now()-ARM>1500){ARM=Date.now();const n=$('cNext');n.textContent=L==='es'?'Pulsa otra vez para ver la solución':'Press again to reveal';setTimeout(()=>{n.textContent=t('next')},1500);return}
+ setR(nextR(r))}
 $('cNext').onclick=goNext;
 $('cSnd').onclick=()=>{SND=!SND;$('cSnd').textContent=SND?'🔊':'🔇'};
 $('cFull').onclick=()=>{try{document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}catch(e){}};
@@ -288,6 +294,7 @@ function openMenu(){const m=$('menu');m.style.display='flex';
  $('mbox').querySelectorAll('button').forEach(b=>b.onclick=async()=>{m.style.display='none';if(b.dataset.x)return;
   if(b.dataset.cl){if(confirm(t('close')+'?')){await act('rp_cerrar');render()}return}
   if(b.dataset.sk){const r=ST.r;const s=stepOf(r);const nx=isQ(r)?nextR(r+1):nextR(r);setR(nx);return}
+  if(+b.dataset.r===-1){try{localStorage.setItem('rpENprev',JSON.stringify({sid:ST.sid,r:ST.r}))}catch(e){}}
   setR(+b.dataset.r)})}
 document.addEventListener('keydown',e=>{if(e.target.tagName==='INPUT')return;
  if(e.key===' '||e.key==='ArrowRight'||e.key==='PageDown'||e.key==='Enter'){e.preventDefault();goNext()}

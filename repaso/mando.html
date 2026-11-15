@@ -57,13 +57,15 @@ input{width:100%;font:inherit;font-size:20px;padding:14px;border-radius:12px;bor
 <body>
 <div id="app"></div>
 <div class="net" id="net"></div>
-<script src="clase_en_data.js?v=1"></script>
+<script src="clase_en_data.js?v=3"></script>
 <script>
 /* Mando del móvil para la clase de repaso en pantalla (15-11-2026). El móvil no enseña la pregunta: solo los botones.
    Lee el estado de la sala (rp_st) cada 1,5 s; al responder calcula sus puntos y los manda (rp_post). */
 const RK_URL="https://script.google.com/macros/s/AKfycbzjxo9QvXjWabkFGm3MtbgTJWV1OMT372TAD7n-iTSoSR7av2KMpYBb3LhRfXvWt36GeA/exec";
 const QS=new URLSearchParams(location.search),PRUEBA=QS.get('prueba')==='alex',SALA=PRUEBA?'PRUEBAEN':'HDEN',SAVE='historiapp.repasoEN';
 const TEST=QS.get('test')==='1',READ=TEST?700:5000,READ_IMG=TEST?700:6000,GRACE=1500,SHAPES=['▲','◆','●','■'],LET='ABCD';
+const SVGS=['<polygon points="50,8 95,90 5,90"/>','<polygon points="50,4 96,50 50,96 4,50"/>','<circle cx="50" cy="50" r="44"/>','<rect x="8" y="8" width="84" height="84"/>'];
+const svg=(i,sz)=>`<svg viewBox="0 0 100 100" style="width:${sz};height:${sz};fill:#fff;display:block;margin:0 auto">${SVGS[i]}</svg>`;
 if(TEST)STEPS.forEach(s=>s.sec=Math.max(2.5,s.sec*.15));   // solo para las pruebas automáticas
 let L=QS.get('lang')==='es'?'es':'en';
 let UID='';try{const r=JSON.parse(localStorage.getItem('historiapp.ranking')||'null');UID=(r&&r.uid)||localStorage.getItem('historiapp.repasoUid')||'';if(!UID){UID=Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>(b%36).toString(36)).join('');localStorage.setItem('historiapp.repasoUid',UID)}}catch(e){UID=UID||(Math.random().toString(36).slice(2)+Math.random().toString(36).slice(2)).replace(/[^a-z0-9]/g,'')}
@@ -92,7 +94,7 @@ async function getST(){try{const t0=Date.now();const d=await (await ft(RK_URL+'?
 function post(extra,tries=0){const b=Object.assign({accion:'rp_post',sala:SALA,sid:G.sid,uid:UID,alias:G.name,r:-1,q:0,nq:0,t:G.t,v:G.streak,f:[G.c,G.w,G.b],rs:G.rs,x:[]},extra||{});
  return ft(RK_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(b)},9000).then(r=>r.json()).then(d=>{if(d&&d.err==='ban'){ST.ban=[UID];render()}if(!d||!d.ok){if(d&&d.err==='sid')return d;throw 0}return d}).catch(()=>{if(tries<4)return new Promise(res=>setTimeout(res,700+tries*900)).then(()=>post(extra,tries+1))})}
 async function rankNow(){try{const d=await (await fetch(RK_URL+'?accion=rp_get&sala='+SALA+'&_='+Date.now())).json();if(d&&d.ok){const j=(d.j||[]).slice().sort((a,b)=>(b.t||0)-(a.t||0));const i=j.findIndex(x=>x.u===UID);RANK=i>=0?{p:i+1,n:j.length}:null;const e=$('rank');if(e&&RANK)e.innerHTML=`${t('rank')} <b>#${RANK.p}</b> ${t('of')} ${RANK.n}`}}catch(e){}}
-function net(){const n=$('net');n.textContent=t('net');n.style.display=ERR>=3?'block':'none'}
+function net(){const n=$('net');n.textContent=t('net');n.style.display=(ERR>=3||(ERR>=1&&ST.r>=0&&ST.r%2===0))?'block':'none'}
 
 /* ---------- puntos ---------- */
 const readMs=s=>(s.img?READ_IMG:READ);
@@ -126,13 +128,13 @@ function renderName(){const a=$('app');
 function renderLook(){$('app').innerHTML=`${hd()}<div class="main"><div style="font-size:64px" class="pop">👀</div><h2>${t('in')}</h2><p class="lead">${t('lookS')}</p><div class="rank" id="rank"></div><button class="btn sec" id="chg" style="margin-top:20px">${t('change')}</button></div>`;
  $('chg').onclick=()=>{G.joined=false;save();render()};if(ST.r<=-200)rankNow()}
 function modeLine(R){return R.mode==='exam'?`<div class="ex">${t('exam')}</div>`:R.mode==='final'?`<div class="ex">${t('final')}</div>`:`<div class="info">${t('speed')}</div>`}
-function renderIntro(i){const R=ROUNDS[i];$('app').innerHTML=`${hd()}<div class="main"><div class="k">${t('round')} ${i+1} ${t('of')} ${ROUNDS.length}</div><div style="font-size:64px" class="pop">${R.icon}</div><h1>${tx(R.n)}</h1><p class="lead">${tx(R.d)}</p>${modeLine(R)}<div class="rank" id="rank"></div></div>`;if(i>0)rankNow()}
+function renderIntro(i){const R=ROUNDS[i];$('app').innerHTML=`${hd()}<div class="main"><div class="k">${tx(R.t)}</div><div style="font-size:64px" class="pop">${R.icon}</div><h1>${tx(R.n)}</h1><p class="lead">${tx(R.d)}</p>${modeLine(R)}<div class="rank" id="rank"></div></div>`;if(i>0)rankNow()}
 function renderQ(s,si){const a=$('app'),R=ROUNDS[s.r];
- if(G.A[si]){a.innerHTML=`${hd()}<div class="main"><div style="font-size:64px" class="pop">📨</div><h2>${t('locked')}</h2><p class="lead">${t('lockedS')}</p>${G.A[si].k==='ord'?'':`<div class="b o${G.A[si].c}" style="min-height:90px;max-width:160px;margin:10px auto;width:100%"><div class="sh">${s.k==='tf'?(G.A[si].c===0?'✓':'✗'):SHAPES[G.A[si].c]}</div><div class="lt">${s.k==='tf'?t('tf')[G.A[si].c]:LET[G.A[si].c]}</div></div>`}</div>`;return}
+ if(G.A[si]){a.innerHTML=`${hd()}<div class="main"><div style="font-size:64px" class="pop">📨</div><h2>${t('locked')}</h2><p class="lead">${t('lockedS')}</p>${G.A[si].k==='ord'?'':`<div class="b o${G.A[si].c}" style="min-height:90px;max-width:160px;margin:10px auto;width:100%"><div class="sh">${s.k==='tf'?(G.A[si].c===0?'✓':'✗'):svg(G.A[si].c,'48px')}</div><div class="lt">${s.k==='tf'?t('tf')[G.A[si].c]:LET[G.A[si].c]}</div></div>`}</div>`;return}
  const t0=ST.rts+readMs(s),t1=t0+s.sec*1000+GRACE;
  if(snow()>t1)return renderLate();
  const n=s.k==='tf'?2:4;ORD=[];
- const btn=i=>s.k==='tf'?`<button class="b o${i}" data-i="${i}" disabled><div class="sh">${i===0?'✓':'✗'}</div><div class="lt">${t('tf')[i]}</div></button>`:`<button class="b o${i}" data-i="${i}" disabled><span class="ordn"></span><div class="sh">${SHAPES[i]}</div><div class="lt">${LET[i]}</div></button>`;
+ const btn=i=>s.k==='tf'?`<button class="b o${i}" data-i="${i}" disabled><div class="sh">${i===0?'✓':'✗'}</div><div class="lt">${t('tf')[i]}</div></button>`:`<button class="b o${i}" data-i="${i}" disabled><span class="ordn"></span><div class="sh">${svg(i,'52px')}</div><div class="lt">${LET[i]}</div></button>`;
  a.innerHTML=`${hd()}<div class="info" id="st">${t('read')}</div><div class="bar"><i id="pb"></i></div>${s.k==='ord'?`<div class="info">${t('ordT')}</div>`:modeLine(R)}<div class="grid${s.k==='tf'?' tf':''}">${Array.from({length:n},(_,i)=>btn(i)).join('')}</div>${s.k==='ord'?`<button class="btn sec" id="undo" style="margin-top:10px">${t('undo')}</button>`:''}`;
  const bs=[...a.querySelectorAll('.b')];
  bs.forEach(b=>b.onclick=()=>{const i=+b.dataset.i;
@@ -146,7 +148,7 @@ function renderQ(s,si){const a=$('app'),R=ROUNDS[s.r];
   if(now>t1){clearInterval(ENH);renderLate()}};
  upd();ENH=setInterval(upd,100)}
 function renderLate(){$('app').innerHTML=`${hd()}<div class="main"><div style="font-size:60px">⌛</div><h2>${t('late')}</h2><p class="lead">${t('lookS')}</p></div>`}
-function answer(s,si,choice){if(G.A[si])return;const t0=ST.rts+readMs(s),now=snow();if(now<t0||now>t0+s.sec*1000+GRACE)return;
+function answer(s,si,choice){if(G.A[si]||ST.r!==2*si)return;const t0=ST.rts+readMs(s),now=snow();if(now<t0||now>t0+s.sec*1000+GRACE)return;
  const el=now-t0,sc=score(s,choice,el);let p=sc.p,bonus=0;
  if(sc.speed){G.streak++;if(G.streak>=2){bonus=100*Math.min(G.streak-1,5);p+=bonus}}else if(s.k!=='ord'&&ROUNDS[s.r].mode!=='exam'&&ROUNDS[s.r].mode!=='final'){G.streak=0}
  if(ROUNDS[s.r].mode==='exam'||ROUNDS[s.r].mode==='final'){if(sc.ok)G.streak++;else G.streak=0}
@@ -158,11 +160,11 @@ function renderRev(s,si){const a=G.A[si],R=ROUNDS[s.r];
  let h;
  if(!a)h=`<div class="res">⏺</div><h2>${t('blank')}</h2><p class="lead">${R.mode==='exam'||R.mode==='final'?t('blankS'):''}</p>`;
  else if(s.k==='ord')h=`<div class="res">${a.ok?'🏁':'🔀'}</div><h2>${a.part}/4</h2><div class="pts pos">+${fmt(a.p)} ${t('pts')}</div>`;
- else h=`<div class="res">${a.ok?'✅':'❌'}</div><h2>${a.ok?t('ok'):t('no')}</h2><div class="pts ${a.p<0?'neg':'pos'}">${a.p>0?'+':''}${fmt(a.p)} ${t('pts')}</div>${a.bonus?`<div class="info">🔥 ${t('streak')} ${G.streak} · +${a.bonus}</div>`:''}`;
+ else h=`<div class="res">${a.ok?'✅':'❌'}</div><h2>${a.ok?t('ok'):t('no')}</h2><div class="pts ${a.p<0?'neg':a.p>0?'pos':''}">${a.p>0?'+':''}${fmt(a.p)} ${t('pts')}</div>${a.bonus?`<div class="info">🔥 ${t('streak')} ${G.streak} · +${a.bonus}</div>`:''}`;
  G.shown=G.t;save();
  if(a&&!a.ok)beep(160,.3,'sawtooth',.05);else if(a)beep(784,.15,'triangle',.07);
  $('app').innerHTML=`${hd()}<div class="main pop">${h}<div class="rank" id="rank">${RANK?`${t('rank')} <b>#${RANK.p}</b> ${t('of')} ${RANK.n}`:''}</div><div class="info">${t('lookS')}</div></div>`;
- setTimeout(rankNow,300+Math.random()*2500)}
+ setTimeout(rankNow,500+Math.random()*5500)}
 function renderEnd(){let w=-1,wp=2;ROUNDS.forEach((R,i)=>{if(G.n[i]){const p=G.ok[i]/G.n[i];if(p<wp){wp=p;w=i}}});
  $('app').innerHTML=`${hd()}<div class="main"><div style="font-size:64px" class="pop">🏆</div><h1>${t('endT')}</h1><div class="rank" id="rank"></div><div class="pts">${fmt(G.t)} ${t('pts')}</div>
  <div class="card">${ROUNDS.map((R,i)=>G.n[i]?`<div>${R.icon} ${tx(R.n)}: <b>${G.ok[i]}/${G.n[i]}</b></div>`:'').join('')}${w>=0?`<div style="margin-top:8px">📝 ${t('planS')} <b>${tx(ROUNDS[w].n)}</b> (${tx(ROUNDS[w].t)}).</div>`:''}</div>
@@ -173,7 +175,7 @@ let lastKey='';
 async function loop(){await getST();const key=[ST.open,ST.sid,ST.r,ST.rts,(ST.ban||[]).indexOf(UID)>=0].join('|');
  if(G&&ST.sid&&G.sid!==ST.sid)G=null;
  if(key!==lastKey){lastKey=key;if(!G||!$('nm'))render()}
- const r=ST.r,fast=r>=0&&r%2===0;setTimeout(loop,(fast?1300:1900)+Math.random()*500)}
+ const r=ST.r,fast=r>=0&&r%2===0;setTimeout(loop,(fast?1700:2500)+Math.random()*700)}
 window.render_game_to_text=()=>JSON.stringify({r:ST.r,open:ST.open,joined:!!(G&&G.joined),t:G?G.t:0,answered:G?Object.keys(G.A).length:0});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden){lastKey='';}});
 $('app').innerHTML=`<div class="main"><div class="k">Historiapp</div><h2>…</h2></div>`;
