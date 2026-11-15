@@ -137,7 +137,7 @@ const SHAPES=['▲','◆','●','■'],LET='ABCD';
 const SVGS=['<polygon points="50,8 95,90 5,90"/>','<polygon points="50,4 96,50 50,96 4,50"/>','<circle cx="50" cy="50" r="44"/>','<rect x="8" y="8" width="84" height="84"/>'];
 const svg=(i,sz)=>`<svg viewBox="0 0 100 100" style="width:${sz};height:${sz};fill:#fff;display:block;margin:0 auto">${SVGS[i]}</svg>`;
 
-let L=QS.get('lang')==='es'?'es':'en',PIN='',SND=true;try{PIN=localStorage.getItem('rpPinEN')||''}catch(e){}
+let L=QS.get('lang')==='es'?'es':'en',PIN='7319',SND=true;   // el PIN va dentro de la página (petición de Alex, 15-11-2026): el profesor no escribe nada
 let ST={sid:'',r:-1,rts:0,open:false,ban:[]},OFF=0,J=[],ERR=0,BUSY=false,AUTO=false,STAT={},DEL={},STSID='';
 const $=id=>document.getElementById(id);
 const tx=o=>o==null?'':(typeof o==='string'?o:(o[L]||o.en||o.es||''));
