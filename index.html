@@ -1113,6 +1113,11 @@ async function renderHome(){
     if(CRS.some(w=>n>=Date.parse(w[0])&&n<=Date.parse(w[1]))){ const en=document.documentElement.lang==="en"; const cb=document.createElement("button"); cb.className="card reto"; cb.style.cssText="border:2px solid #EDAB00;box-shadow:0 0 18px rgba(237,171,0,.45)";
       cb.innerHTML=`<div class="ic" aria-hidden="true">🏛️</div><div class="tx"><small>${en?"Review class":"Clase de repaso"}</small><b>${en?"From the Clan to the Arena":"Del clan a la arena"}</b><span>${en?"Only today, during class":"Solo hoy, durante la clase"}</span></div><div class="xp">${en?"Play":"Jugar"}</div>`;
       cb.onclick=()=>{ location.href="repaso/jugar.html"; }; hoy.appendChild(cb); } }
+  /* 15-11-2026: clase de repaso en pantalla para 1.º Inglés (temas 1-3): el móvil es el mando; la tarjeta solo se ve en la franja de clase */
+  { const EN1=[["2026-11-16T13:40:00+01:00","2026-11-16T15:20:00+01:00"]], n=Date.now();
+    if(EN1.some(w=>n>=Date.parse(w[0])&&n<=Date.parse(w[1]))){ const en=document.documentElement.lang!=="es"; const cb=document.createElement("button"); cb.className="card reto"; cb.style.cssText="border:2px solid #EDAB00;box-shadow:0 0 18px rgba(237,171,0,.45)";
+      cb.innerHTML=`<div class="ic" aria-hidden="true">📱</div><div class="tx"><small>${en?"Review class":"Clase de repaso"}</small><b>${en?"Topics 1-3 · Join the game":"Temas 1-3 · Entra en la partida"}</b><span>${en?"Only today, during class":"Solo hoy, durante la clase"}</span></div><div class="xp">${en?"Play":"Jugar"}</div>`;
+      cb.onclick=()=>{ location.href="repaso/mando.html"; }; hoy.appendChild(cb); } }
   const d=S.prog.daily||{}; const done=d.date===todayKey()&&d.done;
   const rc=document.createElement("button"); rc.className="card reto";
   rc.innerHTML=`<div class="ic" aria-hidden="true">${done?"✅":"☀️"}</div><div class="tx"><small>${t("dailyCard")}</small><b>${done?t("dailyScore",{a:d.correct,b:d.total}):t("dailyStart")}</b><span>${done?t("dailyBack"):t("dailySub")}</span></div><div class="xp">${done?"✓":"×2 XP"}</div>`;

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#0d1f4a">
+<title>Historiapp · Review class</title>
+<link rel="icon" href="../icons/icon-192.png">
+<style>
+@font-face{font-family:Carlito;src:url(../fonts/Carlito-Regular.woff2) format("woff2")}
+@font-face{font-family:Carlito;font-weight:700;src:url(../fonts/Carlito-Bold.woff2) format("woff2")}
+:root{--bg:#07102a;--oro:#EDAB00;--oro2:#FBC93D;--nar:#E8710A;--txt:#f4f1e8;--mut:#a9b8d6;--line:rgba(237,171,0,.35);--oA:#2563c9;--oB:#d9660b;--oC:#7346b8;--oD:#3b4d6b}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{background:radial-gradient(ellipse at 50% -10%,#1b3a7a 0%,#0d1f4a 45%,var(--bg) 85%) fixed;color:var(--txt);font-family:Calibri,Carlito,"Segoe UI",sans-serif;user-select:none;-webkit-user-select:none;overscroll-behavior:none}
+#app{min-height:100%;display:flex;flex-direction:column;padding:max(12px,env(safe-area-inset-top)) 14px max(14px,env(safe-area-inset-bottom))}
+.hd{display:flex;align-items:center;gap:10px;font-size:15px;color:var(--mut);min-height:40px}
+.hd b{color:#fff}
+.hd .sc{margin-left:auto;font-size:20px;font-weight:700;color:var(--oro2)}
+.main{flex:1;display:flex;flex-direction:column;justify-content:center;text-align:center;gap:14px}
+h1{font-family:Cinzel,Georgia,serif;font-size:30px;color:var(--oro);line-height:1.1}
+h2{font-size:26px;line-height:1.2}
+.lead{font-size:17px;line-height:1.4;color:#e3dccb}
+.k{color:var(--mut);text-transform:uppercase;letter-spacing:.2em;font-size:12px}
+input{width:100%;font:inherit;font-size:20px;padding:14px;border-radius:12px;border:2px solid var(--line);background:rgba(255,255,255,.08);color:#fff;text-align:center}
+.btn{display:block;width:100%;border:none;border-radius:14px;background:var(--oro);color:#1a1200;font-weight:700;font-size:20px;padding:16px;box-shadow:0 5px 0 #9a6f00}
+.btn:active{transform:translateY(3px);box-shadow:none}
+.btn.sec{background:transparent;color:var(--txt);border:2px solid var(--line);box-shadow:none;font-size:16px;padding:12px}
+.grid{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
+.grid.tf{grid-template-columns:1fr}
+.b{position:relative;border:none;border-radius:18px;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:120px;box-shadow:0 6px 0 rgba(0,0,0,.35);transition:transform .08s,opacity .2s}
+.b .sh{font-size:54px;line-height:1}
+.b .lt{font-size:22px;font-weight:700}
+.b:active{transform:translateY(4px);box-shadow:none}
+.b[disabled]{opacity:.35}
+.b .ordn{position:absolute;top:8px;right:10px;width:34px;height:34px;border-radius:50%;background:#fff;color:#0d1f4a;font-weight:700;font-size:20px;display:none;align-items:center;justify-content:center}
+.b.sel .ordn{display:flex}
+.b.sel{opacity:.55}
+.o0{background:var(--oA)}.o1{background:var(--oB)}.o2{background:var(--oC)}.o3{background:var(--oD)}
+.info{font-size:15px;color:var(--mut);min-height:22px}
+.info b{color:var(--oro2)}
+.ex{border:1px solid var(--nar);border-radius:10px;padding:6px 10px;color:#ffd3ad;font-size:14px}
+.res{font-size:72px;line-height:1}
+.pts{font-size:34px;font-weight:700}
+.pts.neg{color:#ffb38a}.pts.pos{color:#9df0b0}
+.rank{font-size:20px}
+.rank b{color:var(--oro2);font-size:28px}
+.bar{height:8px;border-radius:9px;background:rgba(255,255,255,.12);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--oro);transition:width .2s linear}
+.card{border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.06);padding:14px;text-align:left;font-size:15px;line-height:1.4}
+.card b{color:var(--oro2)}
+.net{position:fixed;left:0;right:0;bottom:0;background:#7a1f1f;color:#fff;font-size:13px;text-align:center;padding:6px;display:none}
+@keyframes pop{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+.pop{animation:pop .3s both}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div class="net" id="net"></div>
+<script src="clase_en_data.js?v=1"></script>
+<script>
+/* Mando del móvil para la clase de repaso en pantalla (15-11-2026). El móvil no enseña la pregunta: solo los botones.
+   Lee el estado de la sala (rp_st) cada 1,5 s; al responder calcula sus puntos y los manda (rp_post). */
+const RK_URL="https://script.google.com/macros/s/AKfycbzjxo9QvXjWabkFGm3MtbgTJWV1OMT372TAD7n-iTSoSR7av2KMpYBb3LhRfXvWt36GeA/exec";
+const QS=new URLSearchParams(location.search),PRUEBA=QS.get('prueba')==='alex',SALA=PRUEBA?'PRUEBAEN':'HDEN',SAVE='historiapp.repasoEN';
+const TEST=QS.get('test')==='1',READ=TEST?700:5000,READ_IMG=TEST?700:6000,GRACE=1500,SHAPES=['▲','◆','●','■'],LET='ABCD';
+if(TEST)STEPS.forEach(s=>s.sec=Math.max(2.5,s.sec*.15));   // solo para las pruebas automáticas
+let L=QS.get('lang')==='es'?'es':'en';
+let UID='';try{const r=JSON.parse(localStorage.getItem('historiapp.ranking')||'null');UID=(r&&r.uid)||localStorage.getItem('historiapp.repasoUid')||'';if(!UID){UID=Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>(b%36).toString(36)).join('');localStorage.setItem('historiapp.repasoUid',UID)}}catch(e){UID=UID||(Math.random().toString(36).slice(2)+Math.random().toString(36).slice(2)).replace(/[^a-z0-9]/g,'')}
+let ST={sid:'',r:-99,rts:0,open:false,ban:[]},OFF=0,ERR=0,SHOWN=null,ORD=[],RANK=null,ENH=null;
+let G=null;
+const $=id=>document.getElementById(id);
+const tx=o=>o==null?'':(typeof o==='string'?o:(o[L]||o.en||''));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const snow=()=>Date.now()+OFF;
+const fmt=n=>Math.round(n).toLocaleString(L==='es'?'es-ES':'en-GB');
+const T={en:{title:'Review class',closed:'The room is closed',closedS:'It opens when the teacher starts the review class. This screen updates by itself.',name:'Your name for the scoreboard',join:'Join the game',in:'You are in!',look:'Look at the screen',lookS:'The questions appear on the screen. Your phone is the controller.',read:'Read the question on the screen…',go:'Answer!',locked:'Answer locked in',lockedS:'Wait for the others…',ok:'Correct!',no:'Wrong',blank:'No answer',blankS:'Blank: no points won or lost',late:'Time is up for this question',pts:'points',streak:'Streak',rank:'You are',of:'of',round:'Round',exam:'Exam rules: +900 · −300 · blank 0. Not sure? Do not tap.',final:'Double points: +1,800 · −600 · blank 0.',speed:'The faster you answer, the more you score.',ordT:'Tap the events in order, oldest first',undo:'Undo',banned:'You have been removed from this game',endT:'Game over',endS:'Your result',plan:'Revise tonight',planS:'Your weakest round was',tf:['True','False'],net:'No connection, retrying…',change:'Not you? Change name',total:'Total'},
+ es:{title:'Clase de repaso',closed:'La sala está cerrada',closedS:'Se abrirá cuando el profesor empiece la clase de repaso. Esta pantalla se actualiza sola.',name:'Tu nombre para el marcador',join:'Entrar',in:'¡Ya estás dentro!',look:'Mira la pantalla',lookS:'Las preguntas salen en la pantalla. Tu móvil es el mando.',read:'Lee la pregunta en la pantalla…',go:'¡Responde!',locked:'Respuesta enviada',lockedS:'Espera a los demás…',ok:'¡Correcto!',no:'Fallo',blank:'Sin respuesta',blankS:'En blanco: ni sumas ni restas',late:'Se acabó el tiempo de esta pregunta',pts:'puntos',streak:'Racha',rank:'Vas',of:'de',round:'Ronda',exam:'Reglas del examen: +900 · −300 · en blanco 0. ¿Dudas? No toques.',final:'Puntos dobles: +1.800 · −600 · en blanco 0.',speed:'Cuanto antes respondas, más puntos.',ordT:'Toca los sucesos en orden, del más antiguo al más reciente',undo:'Deshacer',banned:'Te han retirado de esta partida',endT:'Fin de la partida',endS:'Tu resultado',plan:'Para repasar esta noche',planS:'Tu ronda más floja ha sido',tf:['Verdadero','Falso'],net:'Sin conexión, reintentando…',change:'¿No eres tú? Cambia el nombre',total:'Total'}};
+const t=k=>T[L][k];
+const vib=p=>{try{navigator.vibrate&&navigator.vibrate(p)}catch(e){}};
+let AC=null;function beep(f,d,ty='sine',v=.1,w=0){try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain();o.type=ty;o.frequency.value=f;g.gain.setValueAtTime(v,AC.currentTime+w);g.gain.exponentialRampToValueAtTime(.001,AC.currentTime+w+d);o.connect(g);g.connect(AC.destination);o.start(AC.currentTime+w);o.stop(AC.currentTime+w+d+.05)}catch(e){}}
+
+/* ---------- estado guardado (para volver si se cierra el navegador) ---------- */
+function fresh(sid){return {sid,name:(G&&G.name)||loadName(),t:0,shown:0,streak:0,A:{},rs:Array(ROUNDS.length).fill(0),ok:Array(ROUNDS.length).fill(0),n:Array(ROUNDS.length).fill(0),c:0,w:0,b:0,joined:false}}
+function loadName(){try{return localStorage.getItem('historiapp.repasoName')||''}catch(e){return ''}}
+function save(){try{localStorage.setItem(SAVE,JSON.stringify(G))}catch(e){}}
+function load(sid){try{const g=JSON.parse(localStorage.getItem(SAVE)||'null');if(g&&g.sid===sid)return g}catch(e){}return fresh(sid)}
+
+/* ---------- servidor ---------- */
+function ft(u,o,ms){const c=new AbortController(),h=setTimeout(()=>c.abort(),ms||8000);return fetch(u,Object.assign({signal:c.signal},o||{})).finally(()=>clearTimeout(h))}
+async function getST(){try{const t0=Date.now();const d=await (await ft(RK_URL+'?accion=rp_st&sala='+SALA+'&_='+t0,null,6000)).json();if(d&&d.ok){ST=d.st;OFF=d.now-Math.round((t0+Date.now())/2);ERR=0;net();return true}}catch(e){}ERR++;net();return false}
+function post(extra,tries=0){const b=Object.assign({accion:'rp_post',sala:SALA,sid:G.sid,uid:UID,alias:G.name,r:-1,q:0,nq:0,t:G.t,v:G.streak,f:[G.c,G.w,G.b],rs:G.rs,x:[]},extra||{});
+ return ft(RK_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(b)},9000).then(r=>r.json()).then(d=>{if(d&&d.err==='ban'){ST.ban=[UID];render()}if(!d||!d.ok){if(d&&d.err==='sid')return d;throw 0}return d}).catch(()=>{if(tries<4)return new Promise(res=>setTimeout(res,700+tries*900)).then(()=>post(extra,tries+1))})}
+async function rankNow(){try{const d=await (await fetch(RK_URL+'?accion=rp_get&sala='+SALA+'&_='+Date.now())).json();if(d&&d.ok){const j=(d.j||[]).slice().sort((a,b)=>(b.t||0)-(a.t||0));const i=j.findIndex(x=>x.u===UID);RANK=i>=0?{p:i+1,n:j.length}:null;const e=$('rank');if(e&&RANK)e.innerHTML=`${t('rank')} <b>#${RANK.p}</b> ${t('of')} ${RANK.n}`}}catch(e){}}
+function net(){const n=$('net');n.textContent=t('net');n.style.display=ERR>=3?'block':'none'}
+
+/* ---------- puntos ---------- */
+const readMs=s=>(s.img?READ_IMG:READ);
+function score(s,choice,el){const R=ROUNDS[s.r],mode=R.mode;
+ if(s.k==='ord'){const d=String(s.ans),c=String(choice);let k=0;for(let i=0;i<4;i++)if(d[i]===c[i])k++;return {ok:k===4,p:k*450,part:k}}
+ const ok=choice===s.ans,f=Math.min(1,Math.max(0,el/(s.sec*1000)));
+ if(mode==='exam')return {ok,p:ok?900:-300};
+ if(mode==='final')return {ok,p:ok?1800:-600};
+ if(!ok)return {ok,p:0};
+ let p=mode==='word'?Math.round(1000-700*f):Math.round(1000-500*f);
+ return {ok,p,speed:true}}
+
+/* ---------- pantallas ---------- */
+function hd(){return `<div class="hd"><span>📱 <b>${esc(G.name||'')}</b></span><span class="sc" id="sc">${fmt(G.shown==null?G.t:G.shown)}</span></div>`}
+function render(){const a=$('app');clearInterval(ENH);
+ if(ST.ban&&ST.ban.indexOf(UID)>=0){a.innerHTML=`<div class="main"><div style="font-size:60px">🚫</div><h2>${t('banned')}</h2></div>`;return}
+ if(!ST.open){a.innerHTML=`<div class="main"><img src="../icons/emblema_oro.png" style="height:80px;margin:0 auto" alt=""><div class="k">Historiapp</div><h1>${t('title')}</h1><div style="font-size:48px">🔒</div><h2>${t('closed')}</h2><p class="lead">${t('closedS')}</p></div>`;return}
+ if(!G||G.sid!==ST.sid){G=load(ST.sid)}
+ if(!G.joined)return renderName();
+ const r=ST.r;
+ if(r>=0){const si=Math.floor(r/2),s=STEPS[si];if(!s)return renderLook();
+  if(r%2===0)return renderQ(s,si);return renderRev(s,si)}
+ if(r<=-100&&r>-200)return renderIntro(-100-r);
+ if(r===-300)return renderEnd();
+ return renderLook()}
+function renderName(){const a=$('app');
+ a.innerHTML=`<div class="main"><img src="../icons/emblema_oro.png" style="height:80px;margin:0 auto" alt=""><div class="k">Historiapp · History of Sport</div><h1>${t('title')}</h1><p class="lead">${t('name')}</p><input id="nm" maxlength="18" autocomplete="off" value="${esc(G.name||'')}"><button class="btn" id="go">${t('join')}</button></div>`;
+ $('go').onclick=async()=>{const v=$('nm').value.replace(/[<>&"]/g,'').trim().slice(0,18);if(!v){$('nm').focus();return}
+  try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();AC.resume()}catch(e){}
+  G.name=v;try{localStorage.setItem('historiapp.repasoName',v)}catch(e){}G.joined=true;save();$('go').disabled=true;await post({r:-1});render()}}
+function renderLook(){$('app').innerHTML=`${hd()}<div class="main"><div style="font-size:64px" class="pop">👀</div><h2>${t('in')}</h2><p class="lead">${t('lookS')}</p><div class="rank" id="rank"></div><button class="btn sec" id="chg" style="margin-top:20px">${t('change')}</button></div>`;
+ $('chg').onclick=()=>{G.joined=false;save();render()};if(ST.r<=-200)rankNow()}
+function modeLine(R){return R.mode==='exam'?`<div class="ex">${t('exam')}</div>`:R.mode==='final'?`<div class="ex">${t('final')}</div>`:`<div class="info">${t('speed')}</div>`}
+function renderIntro(i){const R=ROUNDS[i];$('app').innerHTML=`${hd()}<div class="main"><div class="k">${t('round')} ${i+1} ${t('of')} ${ROUNDS.length}</div><div style="font-size:64px" class="pop">${R.icon}</div><h1>${tx(R.n)}</h1><p class="lead">${tx(R.d)}</p>${modeLine(R)}<div class="rank" id="rank"></div></div>`;if(i>0)rankNow()}
+function renderQ(s,si){const a=$('app'),R=ROUNDS[s.r];
+ if(G.A[si]){a.innerHTML=`${hd()}<div class="main"><div style="font-size:64px" class="pop">📨</div><h2>${t('locked')}</h2><p class="lead">${t('lockedS')}</p>${G.A[si].k==='ord'?'':`<div class="b o${G.A[si].c}" style="min-height:90px;max-width:160px;margin:10px auto;width:100%"><div class="sh">${s.k==='tf'?(G.A[si].c===0?'✓':'✗'):SHAPES[G.A[si].c]}</div><div class="lt">${s.k==='tf'?t('tf')[G.A[si].c]:LET[G.A[si].c]}</div></div>`}</div>`;return}
+ const t0=ST.rts+readMs(s),t1=t0+s.sec*1000+GRACE;
+ if(snow()>t1)return renderLate();
+ const n=s.k==='tf'?2:4;ORD=[];
+ const btn=i=>s.k==='tf'?`<button class="b o${i}" data-i="${i}" disabled><div class="sh">${i===0?'✓':'✗'}</div><div class="lt">${t('tf')[i]}</div></button>`:`<button class="b o${i}" data-i="${i}" disabled><span class="ordn"></span><div class="sh">${SHAPES[i]}</div><div class="lt">${LET[i]}</div></button>`;
+ a.innerHTML=`${hd()}<div class="info" id="st">${t('read')}</div><div class="bar"><i id="pb"></i></div>${s.k==='ord'?`<div class="info">${t('ordT')}</div>`:modeLine(R)}<div class="grid${s.k==='tf'?' tf':''}">${Array.from({length:n},(_,i)=>btn(i)).join('')}</div>${s.k==='ord'?`<button class="btn sec" id="undo" style="margin-top:10px">${t('undo')}</button>`:''}`;
+ const bs=[...a.querySelectorAll('.b')];
+ bs.forEach(b=>b.onclick=()=>{const i=+b.dataset.i;
+  if(s.k==='ord'){if(ORD.includes(i))return;ORD.push(i);b.classList.add('sel');b.querySelector('.ordn').textContent=ORD.length;vib(15);if(ORD.length===4)answer(s,si,+ORD.map(x=>x+1).join(''));return}
+  answer(s,si,i)});
+ if($('undo'))$('undo').onclick=()=>{const i=ORD.pop();if(i==null)return;const b=bs[i];b.classList.remove('sel')};
+ const upd=()=>{const now=snow();if(ST.r!==2*si)return;
+  if(now<t0){$('st').textContent=t('read');$('pb').style.width='0';return}
+  if(bs[0].disabled){bs.forEach(b=>b.disabled=false);$('st').innerHTML=`<b>${t('go')}</b>`;vib(30)}
+  const f=Math.min(1,(now-t0)/(s.sec*1000));$('pb').style.width=(f*100)+'%';
+  if(now>t1){clearInterval(ENH);renderLate()}};
+ upd();ENH=setInterval(upd,100)}
+function renderLate(){$('app').innerHTML=`${hd()}<div class="main"><div style="font-size:60px">⌛</div><h2>${t('late')}</h2><p class="lead">${t('lookS')}</p></div>`}
+function answer(s,si,choice){if(G.A[si])return;const t0=ST.rts+readMs(s),now=snow();if(now<t0||now>t0+s.sec*1000+GRACE)return;
+ const el=now-t0,sc=score(s,choice,el);let p=sc.p,bonus=0;
+ if(sc.speed){G.streak++;if(G.streak>=2){bonus=100*Math.min(G.streak-1,5);p+=bonus}}else if(s.k!=='ord'&&ROUNDS[s.r].mode!=='exam'&&ROUNDS[s.r].mode!=='final'){G.streak=0}
+ if(ROUNDS[s.r].mode==='exam'||ROUNDS[s.r].mode==='final'){if(sc.ok)G.streak++;else G.streak=0}
+ G.A[si]={c:choice,ok:sc.ok,p,bonus,el,k:s.k,part:sc.part};G.t+=p;G.rs[s.r]+=p;G.n[s.r]++;if(sc.ok){G.ok[s.r]++;G.c++}else G.w++;save();
+ vib(40);beep(660,.08,'triangle',.06);
+ post({r:2*si,q:choice,nq:Math.round(el),x:[p,si]});render()}
+function renderRev(s,si){const a=G.A[si],R=ROUNDS[s.r];
+ if(!a&&!G['b'+si]){G['b'+si]=1;G.b++;G.n[s.r]++;if(R.mode!=='exam'&&R.mode!=='final')G.streak=0;save()}
+ let h;
+ if(!a)h=`<div class="res">⏺</div><h2>${t('blank')}</h2><p class="lead">${R.mode==='exam'||R.mode==='final'?t('blankS'):''}</p>`;
+ else if(s.k==='ord')h=`<div class="res">${a.ok?'🏁':'🔀'}</div><h2>${a.part}/4</h2><div class="pts pos">+${fmt(a.p)} ${t('pts')}</div>`;
+ else h=`<div class="res">${a.ok?'✅':'❌'}</div><h2>${a.ok?t('ok'):t('no')}</h2><div class="pts ${a.p<0?'neg':'pos'}">${a.p>0?'+':''}${fmt(a.p)} ${t('pts')}</div>${a.bonus?`<div class="info">🔥 ${t('streak')} ${G.streak} · +${a.bonus}</div>`:''}`;
+ G.shown=G.t;save();
+ if(a&&!a.ok)beep(160,.3,'sawtooth',.05);else if(a)beep(784,.15,'triangle',.07);
+ $('app').innerHTML=`${hd()}<div class="main pop">${h}<div class="rank" id="rank">${RANK?`${t('rank')} <b>#${RANK.p}</b> ${t('of')} ${RANK.n}`:''}</div><div class="info">${t('lookS')}</div></div>`;
+ setTimeout(rankNow,300+Math.random()*2500)}
+function renderEnd(){let w=-1,wp=2;ROUNDS.forEach((R,i)=>{if(G.n[i]){const p=G.ok[i]/G.n[i];if(p<wp){wp=p;w=i}}});
+ $('app').innerHTML=`${hd()}<div class="main"><div style="font-size:64px" class="pop">🏆</div><h1>${t('endT')}</h1><div class="rank" id="rank"></div><div class="pts">${fmt(G.t)} ${t('pts')}</div>
+ <div class="card">${ROUNDS.map((R,i)=>G.n[i]?`<div>${R.icon} ${tx(R.n)}: <b>${G.ok[i]}/${G.n[i]}</b></div>`:'').join('')}${w>=0?`<div style="margin-top:8px">📝 ${t('planS')} <b>${tx(ROUNDS[w].n)}</b> (${tx(ROUNDS[w].t)}).</div>`:''}</div>
+ <a class="btn sec" href="../" style="text-decoration:none;text-align:center">Historiapp ›</a></div>`;rankNow()}
+
+/* ---------- bucle ---------- */
+let lastKey='';
+async function loop(){await getST();const key=[ST.open,ST.sid,ST.r,ST.rts,(ST.ban||[]).indexOf(UID)>=0].join('|');
+ if(G&&ST.sid&&G.sid!==ST.sid)G=null;
+ if(key!==lastKey){lastKey=key;if(!G||!$('nm'))render()}
+ const r=ST.r,fast=r>=0&&r%2===0;setTimeout(loop,(fast?1300:1900)+Math.random()*500)}
+window.render_game_to_text=()=>JSON.stringify({r:ST.r,open:ST.open,joined:!!(G&&G.joined),t:G?G.t:0,answered:G?Object.keys(G.A).length:0});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden){lastKey='';}});
+$('app').innerHTML=`<div class="main"><div class="k">Historiapp</div><h2>…</h2></div>`;
+loop();
+</script>
+</body>
+</html>
