@@ -17,12 +17,12 @@ def bi(en, es): return {'en': en, 'es': es}
 
 ROUNDS = [
  {'icon': '🔥', 't': bi('Topic 1', 'Tema 1'), 'mode': 'speed', 'd': bi('Warm-up with Topic 1: concepts, theories, sources and Prehistory.', 'Calentamiento con el Tema 1: conceptos, teorías, fuentes y Prehistoria.')},
- {'icon': '⚖️', 't': bi('Topics 1-3', 'Temas 1-3'), 'mode': 'speed', 'd': bi('True or false? Some questions come with an image.', '¿Verdadero o falso? Algunas preguntas llevan imagen.')},
+ {'icon': '⚖️', 't': bi('Topics 1-3', 'Temas 1-3'), 'mode': 'speed', 'balance': True, 'd': bi('True or false? The whole class against the game: if most of you get a question right, the balance tips towards the class. Some questions come with an image.', '¿Verdadero o falso? Toda la clase contra el juego: si la mayoría acierta una pregunta, la balanza se inclina hacia la clase. Algunas preguntas llevan imagen.')},
  {'icon': '🔍', 't': bi('Topics 2-3', 'Temas 2-3'), 'mode': 'speed', 'd': bi('A detail from an exam image. The picture zooms out second by second: the sooner you answer, the more you score.', 'Un detalle de una imagen del examen. La imagen se abre segundo a segundo: cuanto antes respondas, más puntos.')},
  {'icon': '🔤', 't': bi('Glossary 1-3', 'Glosario 1-3'), 'mode': 'word', 'd': bi('A definition from the glossary and four hidden terms. Letters appear every few seconds.', 'Una definición del glosario y cuatro términos ocultos. Cada pocos segundos aparece una letra.')},
- {'icon': '🏺', 't': bi('Exam part C', 'Parte C del examen'), 'mode': 'speed', 'd': bi('Four exam images, three questions each: what it is, how to describe it and what it cannot prove.', 'Cuatro imágenes del examen y tres preguntas por imagen: qué es, cómo se describe y qué no permite afirmar.')},
- {'icon': '🐂', 't': bi('Topic 2', 'Tema 2'), 'mode': 'exam', 'd': bi('Egypt, Persia and Phoenicia with the rules of the exam test.', 'Egipto, Persia y Fenicia con las reglas del test del examen.')},
- {'icon': '🏛️', 't': bi('Topic 3', 'Tema 3'), 'mode': 'exam', 'd': bi('Crete and Greece with the rules of the exam test.', 'Creta y Grecia con las reglas del test del examen.')},
+ {'icon': '🏺', 't': bi('Exam part C', 'Parte C del examen'), 'mode': 'speed', 'dig': {'img': 'repaso/img/I3-n13.jpg', 'cols': 6, 'rows': 6}, 'd': bi('Exam images, three questions each: what it is, how to describe it and what it cannot prove. Every question the class gets right lifts squares of earth over a hidden piece of Topic 3: at the end, guess what it is.', 'Imágenes del examen y tres preguntas por imagen: qué es, cómo se describe y qué no permite afirmar. Cada pregunta que acierta la clase levanta cuadrículas de tierra sobre una pieza escondida del Tema 3: al final, adivina cuál es.')},
+ {'icon': '🐂', 't': bi('Topic 2', 'Tema 2'), 'mode': 'exam', 'race': True, 'd': bi('The Heb-Sed race: like the pharaoh in his jubilee, each right answer moves you three markers ahead and each wrong answer one back. Exam rules.', 'La carrera del Heb-Sed: como el faraón en su jubileo, cada acierto te adelanta tres mojones y cada fallo te hace retroceder uno. Reglas del examen.')},
+ {'icon': '🏛️', 't': bi('Topic 3', 'Tema 3'), 'mode': 'exam', 'stand': True, 'd': bi('Everyone stand up! Like a Greek boxer, each wrong answer is a blow: three blows and you sit down. A blank does not hit you. Exam rules.', '¡Todos en pie! Como un púgil griego, cada fallo es un golpe: con tres golpes te sientas. Dejarla en blanco no te golpea. Reglas del examen.')},
  {'icon': '🏆', 't': bi('Topics 1-3', 'Temas 1-3'), 'mode': 'final', 'd': bi('Double points and exam rules. It ends with the relay: put the events in order.', 'Puntos dobles y reglas del examen. Se cierra con el relevo: ordena los sucesos.')},
 ]
 for i, R in enumerate(ROUNDS): R['n'] = bi('Round %d' % (i + 1), 'Ronda %d' % (i + 1))
@@ -211,6 +211,13 @@ for e in EYE:
     for qq, opts, ex in e['qs']:
         add(4, qq, opts, 0, ex, img=e['img'], cap=e['cap'], sec=30, eye=True)
 
+# excavación: pregunta final de la ronda sobre la pieza escondida (el Discóbolo, que ya no sale como imagen de la ronda)
+add(4, bi('Excavation: which piece was hidden under the earth?', 'Excavación: ¿qué pieza estaba bajo la tierra?'),
+    [bi("A Roman copy of Myron's Discobolus", 'Una copia romana del Discóbolo de Mirón'), bi('Milo of Croton, the sculpture by Pierre Puget', 'Milón de Crotona, la escultura de Pierre Puget'),
+     bi('A statue attributed to Koroibos of Elis', 'Una estatua atribuida a Corebo de Élide'), bi('A copy of the statue of Zeus at Olympia', 'Una copia de la estatua de Zeus de Olimpia')], 0,
+    bi("Roman copy of Myron's Discobolus, c. AD 140, National Roman Museum. The discus throw was one of the five events of the pentathlon.", 'Copia romana del Discóbolo de Mirón, hacia 140 d. C., Museo Nacional Romano. El lanzamiento de disco era una de las cinco pruebas del pentatlón.'),
+    img='repaso/img/I3-n13.jpg', cap=bi("Roman copy of Myron's Discobolus, c. AD 140. National Roman Museum", 'Copia romana del Discóbolo de Mirón, hacia 140 d. C. Museo Nacional Romano'), sec=20, digq=True)
+
 # ---------- Ronda 6 · Tema 2 (reglas del examen) ----------
 q2 = D['t2quiz']
 bank(5, q2[0])
@@ -289,7 +296,7 @@ DROPQ = {'Record', 'Chovgan', 'Ethnographic analogy', 'Bipedalism', 'Zurkhaneh',
 def keep(x):
     if x['q']['en'] in DROP: return False
     if x['k'] == 'tf' and x['q']['en'].startswith('In Egyptian iconography ball games'): return False
-    if x.get('img') in ('repaso/img/I3-n13.jpg', 'repaso/img/I3-n15.jpg'): return False
+    if x.get('img') in ('repaso/img/I3-n13.jpg', 'repaso/img/I3-n15.jpg') and not x.get('digq'): return False
     if x['k'] in ('mcq', 'word') and x.get('opts') and x['opts'][x['ans']]['en'] in DROPQ: return False
     return True
 S = [x for x in S if keep(x)]

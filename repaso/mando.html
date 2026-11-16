@@ -57,7 +57,7 @@ input{width:100%;font:inherit;font-size:20px;padding:14px;border-radius:12px;bor
 <body>
 <div id="app"></div>
 <div class="net" id="net"></div>
-<script src="clase_en_data.js?v=4"></script>
+<script src="clase_en_data.js?v=7"></script>
 <script>
 /* Mando del móvil para la clase de repaso en pantalla (15-11-2026). El móvil no enseña la pregunta: solo los botones.
    Lee el estado de la sala (rp_st) cada 1,5 s; al responder calcula sus puntos y los manda (rp_post). */
@@ -83,7 +83,7 @@ const vib=p=>{try{navigator.vibrate&&navigator.vibrate(p)}catch(e){}};
 let AC=null;function beep(f,d,ty='sine',v=.1,w=0){try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain();o.type=ty;o.frequency.value=f;g.gain.setValueAtTime(v,AC.currentTime+w);g.gain.exponentialRampToValueAtTime(.001,AC.currentTime+w+d);o.connect(g);g.connect(AC.destination);o.start(AC.currentTime+w);o.stop(AC.currentTime+w+d+.05)}catch(e){}}
 
 /* ---------- estado guardado (para volver si se cierra el navegador) ---------- */
-function fresh(sid){return {sid,name:(G&&G.name)||loadName(),t:0,shown:0,streak:0,A:{},rs:Array(ROUNDS.length).fill(0),ok:Array(ROUNDS.length).fill(0),n:Array(ROUNDS.length).fill(0),c:0,w:0,b:0,joined:false}}
+function fresh(sid){return {sid,name:(G&&G.name)||loadName(),t:0,shown:0,pos:0,lives:3,streak:0,A:{},rs:Array(ROUNDS.length).fill(0),ok:Array(ROUNDS.length).fill(0),n:Array(ROUNDS.length).fill(0),c:0,w:0,b:0,joined:false}}
 function loadName(){try{return localStorage.getItem('historiapp.repasoName')||''}catch(e){return ''}}
 function save(){try{localStorage.setItem(SAVE,JSON.stringify(G))}catch(e){}}
 function load(sid){try{const g=JSON.parse(localStorage.getItem(SAVE)||'null');if(g&&g.sid===sid)return g}catch(e){}return fresh(sid)}
@@ -127,15 +127,17 @@ function renderName(){const a=$('app');
   G.name=v;try{localStorage.setItem('historiapp.repasoName',v)}catch(e){}G.joined=true;save();$('go').disabled=true;await post({r:-1});render()}}
 function renderLook(){$('app').innerHTML=`${hd()}<div class="main"><div style="font-size:64px" class="pop">👀</div><h2>${t('in')}</h2><p class="lead">${t('lookS')}</p><div class="rank" id="rank"></div><button class="btn sec" id="chg" style="margin-top:20px">${t('change')}</button></div>`;
  $('chg').onclick=()=>{G.joined=false;save();render()};if(ST.r<=-200)rankNow()}
+function extraLine(R){const L3=G.lives==null?3:G.lives;if(R.race){const goal=3*STEPS.filter(x=>x.r===ROUNDS.indexOf(R)).length;return `<div class="info">🏃 ${L==='es'?'Mojón':'Marker'} <b>${G.pos||0}</b> / ${goal}</div>`}
+ if(R.stand)return L3>0?`<div class="info" style="font-size:22px">${'🧍'.repeat(1)} ${'❤️'.repeat(L3)}${'🖤'.repeat(3-L3)}</div>`:`<div class="info" style="font-size:18px">🪑 <b>${L==='es'?'Estás sentado: tus puntos siguen contando':'You are sitting down: your points still count'}</b></div>`;return ''}
 function modeLine(R){return R.mode==='exam'?`<div class="ex">${t('exam')}</div>`:R.mode==='final'?`<div class="ex">${t('final')}</div>`:`<div class="info">${t('speed')}</div>`}
-function renderIntro(i){const R=ROUNDS[i];$('app').innerHTML=`${hd()}<div class="main"><div class="k">${tx(R.t)}</div><div style="font-size:64px" class="pop">${R.icon}</div><h1>${tx(R.n)}</h1><p class="lead">${tx(R.d)}</p>${modeLine(R)}<div class="rank" id="rank"></div></div>`;if(i>0)rankNow()}
+function renderIntro(i){const R=ROUNDS[i];$('app').innerHTML=`${hd()}<div class="main"><div class="k">${tx(R.t)}</div><div style="font-size:64px" class="pop">${R.icon}</div><h1>${tx(R.n)}</h1><p class="lead">${tx(R.d)}</p>${R.stand?`<h2 style="color:var(--oro2)">🧍 ${L==='es'?'¡Ponte de pie!':'Stand up!'} 🧍</h2>`:''}${modeLine(R)}${extraLine(R)}<div class="rank" id="rank"></div></div>`;if(i>0)rankNow()}
 function renderQ(s,si){const a=$('app'),R=ROUNDS[s.r];
  if(G.A[si]){a.innerHTML=`${hd()}<div class="main"><div style="font-size:64px" class="pop">📨</div><h2>${t('locked')}</h2><p class="lead">${t('lockedS')}</p>${G.A[si].k==='ord'?'':`<div class="b o${G.A[si].c}" style="min-height:90px;max-width:160px;margin:10px auto;width:100%"><div class="sh">${s.k==='tf'?(G.A[si].c===0?'✓':'✗'):svg(G.A[si].c,'48px')}</div><div class="lt">${s.k==='tf'?t('tf')[G.A[si].c]:LET[G.A[si].c]}</div></div>`}</div>`;return}
  const t0=ST.rts+readMs(s),t1=t0+s.sec*1000+GRACE;
  if(snow()>t1)return renderLate();
  const n=s.k==='tf'?2:4;ORD=[];
  const btn=i=>s.k==='tf'?`<button class="b o${i}" data-i="${i}" disabled><div class="sh">${i===0?'✓':'✗'}</div><div class="lt">${t('tf')[i]}</div></button>`:`<button class="b o${i}" data-i="${i}" disabled><span class="ordn"></span><div class="sh">${svg(i,'52px')}</div><div class="lt">${LET[i]}</div></button>`;
- a.innerHTML=`${hd()}<div class="info" id="st">${t('read')}</div><div class="bar"><i id="pb"></i></div>${s.k==='ord'?`<div class="info">${t('ordT')}</div>`:modeLine(R)}<div class="grid${s.k==='tf'?' tf':''}">${Array.from({length:n},(_,i)=>btn(i)).join('')}</div>${s.k==='ord'?`<button class="btn sec" id="undo" style="margin-top:10px">${t('undo')}</button>`:''}`;
+ a.innerHTML=`${hd()}<div class="info" id="st">${t('read')}</div><div class="bar"><i id="pb"></i></div>${s.k==='ord'?`<div class="info">${t('ordT')}</div>`:modeLine(R)}${extraLine(R)}<div class="grid${s.k==='tf'?' tf':''}">${Array.from({length:n},(_,i)=>btn(i)).join('')}</div>${s.k==='ord'?`<button class="btn sec" id="undo" style="margin-top:10px">${t('undo')}</button>`:''}`;
  const bs=[...a.querySelectorAll('.b')];
  bs.forEach(b=>b.onclick=()=>{const i=+b.dataset.i;
   if(s.k==='ord'){if(ORD.includes(i))return;ORD.push(i);b.classList.add('sel');b.querySelector('.ordn').textContent=ORD.length;vib(15);if(ORD.length===4)answer(s,si,+ORD.map(x=>x+1).join(''));return}
@@ -152,9 +154,11 @@ function answer(s,si,choice){if(G.A[si]||ST.r!==2*si)return;const t0=ST.rts+read
  const el=now-t0,sc=score(s,choice,el);let p=sc.p,bonus=0;
  if(sc.speed){G.streak++;if(G.streak>=2){bonus=100*Math.min(G.streak-1,5);p+=bonus}}else if(s.k!=='ord'&&ROUNDS[s.r].mode!=='exam'&&ROUNDS[s.r].mode!=='final'){G.streak=0}
  if(ROUNDS[s.r].mode==='exam'||ROUNDS[s.r].mode==='final'){if(sc.ok)G.streak++;else G.streak=0}
+ if(ROUNDS[s.r].race)G.pos=Math.max(0,(G.pos||0)+(sc.ok?3:-1));
+ if(ROUNDS[s.r].stand&&!sc.ok){G.lives=Math.max(0,(G.lives==null?3:G.lives)-1);if(G.lives===0&&G.satAt==null)G.satAt=si}
  G.A[si]={c:choice,ok:sc.ok,p,bonus,el,k:s.k,part:sc.part};G.t+=p;G.rs[s.r]+=p;G.n[s.r]++;if(sc.ok){G.ok[s.r]++;G.c++}else G.w++;save();
  vib(40);beep(660,.08,'triangle',.06);
- post({r:2*si,q:choice,nq:Math.round(el),x:[p,si]});render()}
+ post({r:2*si,q:choice,nq:Math.round(el),x:[p,si,G.lives==null?3:G.lives,G.pos||0]});render()}
 function renderRev(s,si){const a=G.A[si],R=ROUNDS[s.r];
  if(!a&&!G['b'+si]){G['b'+si]=1;G.b++;G.n[s.r]++;if(R.mode!=='exam'&&R.mode!=='final')G.streak=0;save()}
  let h;
@@ -162,6 +166,8 @@ function renderRev(s,si){const a=G.A[si],R=ROUNDS[s.r];
  else if(s.k==='ord')h=`<div class="res">${a.ok?'🏁':'🔀'}</div><h2>${a.part}/4</h2><div class="pts pos">+${fmt(a.p)} ${t('pts')}</div>`;
  else h=`<div class="res">${a.ok?'✅':'❌'}</div><h2>${a.ok?t('ok'):t('no')}</h2><div class="pts ${a.p<0?'neg':a.p>0?'pos':''}">${a.p>0?'+':''}${fmt(a.p)} ${t('pts')}</div>${a.bonus?`<div class="info">🔥 ${t('streak')} ${G.streak} · +${a.bonus}</div>`:''}`;
  G.shown=G.t;save();
+ if(R.race)h+=`<div class="rank">🏃 ${L==='es'?'Mojón':'Marker'} <b>${G.pos||0}</b> / ${3*STEPS.filter(x=>x.r===s.r).length}</div>`;
+ if(R.stand){const L3=G.lives==null?3:G.lives;h+=L3>0?`<div style="font-size:30px">${'❤️'.repeat(L3)}${'🖤'.repeat(3-L3)}</div>`:(G.satAt===si?`<h2 style="color:#ffb38a">🪑 ${L==='es'?'¡Siéntate!':'Sit down!'}</h2>`:`<div class="info">🪑 ${L==='es'?'Sentado':'Sitting down'}</div>`)}
  if(a&&!a.ok)beep(160,.3,'sawtooth',.05);else if(a)beep(784,.15,'triangle',.07);
  $('app').innerHTML=`${hd()}<div class="main pop">${h}<div class="rank" id="rank">${RANK?`${t('rank')} <b>#${RANK.p}</b> ${t('of')} ${RANK.n}`:''}</div><div class="info">${t('lookS')}</div></div>`;
  setTimeout(rankNow,500+Math.random()*5500)}

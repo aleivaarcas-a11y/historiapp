@@ -21,7 +21,7 @@ body{background:radial-gradient(ellipse at 50% -10%,#1b3a7a 0%,#0d1f4a 42%,var(-
 .top .sp{flex:1}
 .pill{border:1px solid var(--line);border-radius:99px;padding:.5vh 1.3vw;background:rgba(255,255,255,.05);white-space:nowrap}
 .pill b{color:#fff}
-.pill.ex{border-color:var(--nar);color:#ffd3ad}
+.pill.exr{border-color:var(--nar);color:#ffd3ad}
 .clock{width:9vh;height:9vh;border-radius:50%;display:grid;place-items:center;font-size:4.4vh;font-weight:700;color:#fff;background:conic-gradient(var(--oro) var(--p,100%),rgba(255,255,255,.12) 0)}
 .clock span{width:7.4vh;height:7.4vh;border-radius:50%;display:grid;place-items:center;background:#0d1f4a}
 .clock.low{background:conic-gradient(var(--nar) var(--p,100%),rgba(255,255,255,.12) 0)}
@@ -103,6 +103,27 @@ table.lb td:last-child{text-align:right;font-weight:700}
 #menu button{display:block;width:100%;text-align:left;margin:.8vh 0;background:rgba(255,255,255,.07);border:1px solid var(--line);color:#fff;border-radius:1vh;font-size:2.6vh;padding:1.2vh 1.2vw;cursor:pointer}
 #net{position:fixed;left:1.2vw;bottom:1.2vh;font-size:2vh;color:#ffb3b3;display:none}
 canvas#conf{position:fixed;inset:0;pointer-events:none;z-index:8}
+.rpanel{margin-top:1.2vh;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:1.2vh;padding:.8vh 1.2vw}
+.rpanel .hd2{font-size:2.4vh;color:var(--oro2);margin-bottom:.6vh;display:flex;gap:1.4vw;align-items:baseline}
+.track{position:relative;height:12vh;border-left:2px solid var(--line);border-right:.5vh dashed var(--oro);background:repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 2px,transparent 2px var(--step,5%))}
+.chip{position:absolute;transform:translateX(-50%);font-size:1.8vh;font-weight:700;background:#2563c9;color:#fff;border-radius:99px;padding:.15vh .55vw;white-space:nowrap;transition:left .8s ease}
+.chip.lead{background:var(--oro);color:#1a1200}
+.chips{display:flex;flex-wrap:wrap;gap:.5vh .4vw;max-height:9vh;overflow:hidden}
+.chips span{font-size:1.9vh;background:rgba(255,255,255,.12);border-radius:99px;padding:.2vh .6vw}
+.standing{font-size:12vh;line-height:1}
+.dig{position:relative;display:inline-block;line-height:0}
+.dig img{height:100%;width:auto;max-height:none!important;border-radius:1vh;box-shadow:none}
+.dgrid{position:absolute;inset:0;display:grid}
+.dgrid i{background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.1) 0 18%,transparent 19%),#5b4326;border:1px solid rgba(0,0,0,.35);transition:opacity .9s,transform .9s}
+.dgrid i.up{opacity:0;transform:translateY(-1.5vh)}
+
+.split .opts.tf .opt{min-height:12vh;font-size:4vh}
+.split .opts.tf .opt .sh{width:8vh;height:8vh;font-size:4.6vh}
+#stage.haspan .pic img,#stage.haspan .pic canvas{max-height:34vh}
+#stage.haspan .split .opt{min-height:7vh;font-size:2.6vh;padding:1vh 1.2vw}
+#stage.haspan .split .opt .sh{width:5.2vh;height:5.2vh}
+#stage.haspan .split .opts{gap:1vh}
+#stage.haspan .ex{font-size:3vh;padding:1vh 1.4vw;margin-top:1.2vh}
 @keyframes rise{from{opacity:0;transform:translateY(2vh)}to{opacity:1;transform:none}}
 .rise{animation:rise .5s both}
 @keyframes pop{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
@@ -123,7 +144,7 @@ canvas#conf{position:fixed;inset:0;pointer-events:none;z-index:8}
 <div id="menu"><div class="box" id="mbox"></div></div>
 <div id="net">⚠ Connection to the server lost, retrying…</div>
 <canvas id="conf"></canvas>
-<script src="clase_en_data.js?v=4"></script>
+<script src="clase_en_data.js?v=7"></script>
 <script>
 /* Clase de repaso en pantalla (15-11-2026) · 1.º Inglés · Temas 1-3.
    La pantalla del proyector manda: abre la sala, abre cada pregunta (rp_abrir con r) y muestra resultados.
@@ -189,7 +210,7 @@ const ranked=()=>players().slice().sort((a,b)=>(b.t||0)-(a.t||0)||(a.a||'').loca
 /* ---------- pintar ---------- */
 function shape(i,big){return `<div class="sh">${svg(i,'3.4vh')}<small>${LET[i]}</small></div>`}
 function topBar(s){const R=ROUNDS[s.r],mode=R.mode,nr=STEPS.filter(x=>x.r===s.r),k=nr.indexOf(s)+1;
- return `<div class="top"><span style="font-size:4vh">${R.icon}</span><span class="rn">${tx(R.n)}</span><span class="pill">${t('q')} <b>${k}</b> ${t('of')} ${nr.length}</span>${(mode==='exam'||mode==='final')&&s.k!=='ord'?`<span class="pill ex">${mode==='final'?'×2 · ':''}${L==='es'?'Reglas del examen':'Exam rules'}</span>`:''}<span class="sp"></span><span class="pill">📱 <b id="nans">0</b> / <span id="nply">${players().length}</span> ${t('ans')}</span><div class="clock" id="clk"><span id="clkn">${s.sec}</span></div></div><div class="bar"><i id="pbar"></i></div>`}
+ return `<div class="top"><span style="font-size:4vh">${R.icon}</span><span class="rn">${tx(R.n)}</span><span class="pill">${t('q')} <b>${k}</b> ${t('of')} ${nr.length}</span>${(mode==='exam'||mode==='final')&&s.k!=='ord'?`<span class="pill exr">${mode==='final'?'×2 · ':''}${L==='es'?'Reglas del examen':'Exam rules'}</span>`:''}<span class="sp"></span><span class="pill">📱 <b id="nans">0</b> / <span id="nply">${players().length}</span> ${t('ans')}</span><div class="clock" id="clk"><span id="clkn">${s.sec}</span></div></div><div class="bar"><i id="pbar"></i></div>`}
 function optsHTML(s,rev){
  if(s.k==='tf')return `<div class="opts tf">${[0,1].map(i=>`<div class="opt o${i===0?0:1} ${rev?(i===s.ans?'ok':'no'):''}" data-i="${i}"${rev?'':' style="opacity:0"'}>${`<div class="sh">${i===0?'✓':'✗'}<small>${LET[i]}</small></div>`}<div class="tx">${t('tf')[i]}</div><div class="n" id="n${i}"></div></div>`).join('')}</div>`;
  const one=!!s.img;
@@ -214,7 +235,7 @@ function renderLobby(){const ps=players();
  $('bgo').onclick=()=>{unlock();setR(-100)};$('bnew').onclick=async()=>{if(!confirm(t('newgQ')))return;const d=await act('rp_sesion');if(d){J=[];STAT={};DEL={};render()}};live()}
 function rulesOf(mode){return mode==='exam'?t('examR'):mode==='final'?t('finalR'):mode==='word'?t('wordR'):t('speedR')}
 function renderIntro(i){const R=ROUNDS[i],rk=ranked().slice(0,3),mode=R.mode;
- $('app').innerHTML=`<div class="center"><div class="k rise">${tx(R.t)} · ${i+1} ${t('of')} ${NRND}</div><div style="font-size:12vh" class="pop">${R.icon}</div><h1 class="rise">${tx(R.n)}</h1><p class="lead rise">${tx(R.d)}</p>
+ $('app').innerHTML=`<div class="center">${R.stand?`<div class="cz pop" style="color:var(--oro2);font-size:5vh;margin-bottom:1vh">🧍 ${L==='es'?'¡Todos en pie!':'Everyone stand up!'} 🧍</div>`:''}<div class="k rise">${tx(R.t)} · ${i+1} ${t('of')} ${NRND}</div><div style="font-size:12vh" class="pop">${R.icon}</div><h1 class="rise">${tx(R.n)}</h1><p class="lead rise">${tx(R.d)}</p>
  <div class="rules rise">${rulesOf(mode).map(x=>`<div class="rule ${mode==='exam'||mode==='final'?'ex2':''}"><b>${x[1]}</b>${x[0]}${x[2]?`<div style="font-size:2.2vh;color:var(--mut);margin-top:.4vh">${x[2]}</div>`:''}</div>`).join('')}</div>
  ${mode==='exam'||mode==='final'?`<p class="lead rise" style="color:#ffd3ad">${t('examTip')}</p>`:''}
  ${rk.length&&i>0?`<div class="foot" style="justify-content:center">${t('top')}: ${rk.map((x,k)=>`<b style="color:var(--oro2)">${k+1}. ${esc(x.a)}</b> ${fmt(x.t||0)}`).join(' · ')}</div>`:''}</div>`}
@@ -223,11 +244,12 @@ function renderQ(s,rev){const si=STEPS.indexOf(s);
  const q=`<div class="q rise">${esc(tx(s.q))}</div>${rev?'':'<div class="k" id="rdl" style="text-align:center;margin:-1vh 0 1.2vh;min-height:3vh"></div>'}`;
  const quote=s.quote?`<div class="quote rise">${s.k==='mcq'&&s.r===6?esc(tx(s.quote)):esc(tx(s.quote))}</div>`:'';
  if(s.img){const cap=rev&&s.cap?`<div class="cap">${esc(tx(s.cap))}</div>`:'';
-  const pic=s.k==='det'?`<canvas id="cv"></canvas>`:`<img src="${IMG+s.img}" alt="">`;
+  const pic=s.k==='det'?`<canvas id="cv"></canvas>`:s.digq?digHTML('52vh',rev?999:digLifted(STEPS.indexOf(s)-1)):`<img src="${IMG+s.img}" alt="">`;
   body=`${q}<div class="split"><div class="pic">${pic}${cap}</div><div style="display:flex;flex-direction:column;min-height:0">${quote}<div id="ow" style="display:contents">${optsHTML(s,rev)}</div></div></div>`}
  else body=`${q}${quote}<div id="ow" style="display:contents">${optsHTML(s,rev)}</div>`;
+ const RP=ROUNDS[s.r],pan=rev&&(RP.race||RP.stand||RP.balance||(RP.dig&&!s.digq))?'<div class="rpanel" id="rpanel"></div>':'';
  const ex=rev?`<div class="ex rise">${s.k==='ord'?`<b>${t('order')}:</b> `:''}${md(tx(s.ex))}</div>`:'';
- $('app').innerHTML=`${topBar(s)}<div id="stage" class="${rev?'rev':''}${s.img?'':' txt'}">${body}${ex}<div class="foot"><span id="relay" style="color:var(--oro2)"></span><span class="top5" id="top5"></span></div></div>`;
+ $('app').innerHTML=`${topBar(s)}<div id="stage" class="${rev?'rev':''}${s.img?'':' txt'}${pan?' haspan':''}">${body}${ex}${pan}<div class="foot"><span id="relay" style="color:var(--oro2)"></span><span class="top5" id="top5"></span></div></div>`;
  if(s.k==='det'){const im=new Image();im.onload=()=>{CV.img=im;drawDet(s,rev?1:0)};im.src=IMG+s.img}
  if(!rev){const ow=$('ow');ow.style.visibility='visible';}
  if(rev){statFor(s,si);showCounts(s,si)}
@@ -245,6 +267,7 @@ function live(){const r=ST.r;
    nm.querySelectorAll('.nm').forEach(e=>e.onclick=async()=>{const u=e.dataset.u;if(DEL[u]===1){DEL[u]=2;await act('rp_ban',{u});J=J.filter(x=>x.u!==u);live()}else{DEL[u]=1;e.classList.add('del');setTimeout(()=>{if(DEL[u]===1){delete DEL[u];live()}},2500)}})}return}
  if(r<0)return;const si=stepOf(r),s=STEPS[si];if(isRev(r)&&s){statFor(s,si);showCounts(s,si)}
  const na=$('nans'),npl=$('nply');if(na){na.textContent=answersFor(si).length;npl.textContent=Math.max(activeFor(si).length,answersFor(si).length)}
+ racePanel(s);
  const rk=ranked().slice(0,5),tp=$('top5');if(tp&&isRev(r))tp.innerHTML=rk.length?`${t('top')}: `+rk.map((x,k)=>`<b>${k+1}. ${esc(x.a)}</b> ${fmt(x.t||0)}`).join(' &nbsp; '):''}
 function tick(){const r=ST.r;if(!ST.open||!isQ(r)&&!isRev(r))return;const si=stepOf(r),s=STEPS[si];if(!s)return;
  const now=snow(),t0=ST.rts+readMs(s),t1=endAt(s),clk=$('clk'),cn=$('clkn'),pb=$('pbar');
@@ -285,6 +308,28 @@ function renderEnd(){const rk=ranked(),cols=['#FBC93D','#d5dbe6','#e09a5b'],hs=[
  <div class="podium">${ord.map(k=>rk[k]?`<div class="pod rise" style="animation-delay:${.3+k*.4}s"><div class="nm2">${esc(rk[k].a)}</div><div class="blk" style="height:${hs[k]};background:${cols[k]}">${k+1}</div><div class="pt">${fmt(rk[k].t||0)}</div></div>`:'').join('')}</div>
  ${weak.length?`<div class="weak rise" style="animation-delay:1.6s"><div class="k" style="margin-bottom:1vh">📝 ${t('weak')}</div>${t('weakS')}<ul style="margin-left:2vw">${weak.map(w=>{const s=STEPS[w.k];return `<li>${ROUNDS[s.r].icon} ${esc(s.quote?tx(s.quote).slice(0,90)+'…':tx(s.q))} → <b style="color:var(--oro2)">${esc(s.k==='tf'?t('tf')[s.ans]:s.k==='ord'?t('reveal'):tx(s.opts[s.ans]))}</b> <span style="color:var(--mut)">(${Math.round(w.p*100)} % ${t('pct')})</span></li>`}).join('')}</ul></div>`:''}</div>`;
  confetti()}
+
+/* carrera del Heb-Sed (mojones: +3 por acierto, −1 por fallo) y ronda en pie (tres golpes y te sientas); datos que manda cada móvil en x = [puntos, pregunta, vidas, mojón] */
+function racePanel(s){const e=$('rpanel');if(!e)return;const R=ROUNDS[s.r],ps=players();
+ if(R.dig){const si=STEPS.indexOf(s),now=digLifted(si),before=digLifted(si-1),tot=R.dig.cols*R.dig.rows;
+  e.innerHTML=`<div style="display:flex;align-items:center;gap:2vw">${digHTML('12vh',now)}<div><div class="hd2">⛏️ ${L==='es'?'Excavación':'Excavation'}: <b style="font-size:3.4vh">${Math.min(now,tot)}</b> / ${tot} ${L==='es'?'cuadrículas a la vista':'squares uncovered'}</div><div style="font-size:2.8vh;font-weight:700">${now>before?`+${now-before} ${L==='es'?'gracias a la clase':'thanks to the class'}`:(L==='es'?'Esta vez no se levanta tierra':'No earth lifted this time')}</div><div style="font-size:1.9vh;color:var(--mut)">${L==='es'?'Cuantos más acertáis, más tierra se levanta. Al final, ¿qué pieza es?':'The more of you get it right, the more earth is lifted. At the end: what is the piece?'}</div></div></div>`;return}
+ if(R.balance){const idx=STEPS.map((x,i)=>i).filter(i=>STEPS[i].r===s.r&&i<=STEPS.indexOf(s)&&STAT[i]&&STAT[i].n>0);let cw=0,gw=0;
+  idx.forEach(i=>{if(STAT[i].ok*2>=STAT[i].n)cw++;else gw++});const tot=STEPS.filter(x=>x.r===s.r).length,last=STEPS.indexOf(s)===STEPS.map(x=>x.r).lastIndexOf(s.r);
+  const ang=Math.max(-16,Math.min(16,(gw-cw)*4)),cur=STAT[STEPS.indexOf(s)],won=cur&&cur.n?cur.ok*2>=cur.n:null;
+  const msg=last?(cw>gw?(L==='es'?'¡La clase gana al juego!':'The class beats the game!'):cw<gw?(L==='es'?'El juego gana esta vez':'The game wins this time'):(L==='es'?'Empate':'A draw')):(won==null?'':won?(L==='es'?'Esta pregunta, para la clase':'This one goes to the class'):(L==='es'?'Esta pregunta, para el juego':'This one goes to the game'));
+  e.innerHTML=`<div style="display:flex;align-items:center;gap:2vw"><svg viewBox="0 0 220 104" style="height:12vh;flex:none"><polygon points="104,100 116,100 110,26" fill="#EDAB00"/><g style="transform:rotate(${ang}deg);transform-origin:110px 24px;transition:transform 1s"><line x1="20" y1="24" x2="200" y2="24" stroke="#EDAB00" stroke-width="4"/><path d="M20 24 L6 52 L34 52 Z" fill="none" stroke="#f4f1e8" stroke-width="2"/><path d="M200 24 L186 52 L214 52 Z" fill="none" stroke="#f4f1e8" stroke-width="2"/><text x="20" y="72" fill="#fff" font-size="15" text-anchor="middle" font-weight="700">${L==='es'?'Clase':'Class'}</text><text x="200" y="72" fill="#fff" font-size="15" text-anchor="middle" font-weight="700">${L==='es'?'Juego':'Game'}</text></g></svg>
+  <div><div class="hd2">⚖️ ${L==='es'?'La clase':'The class'} <b style="font-size:3.4vh">${cw}</b> – <b style="font-size:3.4vh">${gw}</b> ${L==='es'?'el juego':'the game'} <span style="color:var(--mut);font-size:2vh">(${idx.length}/${tot})</span></div><div style="font-size:2.8vh;font-weight:700;color:${last?'var(--oro2)':'#fff'}">${msg}</div><div style="font-size:1.9vh;color:var(--mut)">${L==='es'?'La pregunta es para la clase si acierta la mitad o más':'A question goes to the class if half of you or more get it right'}</div></div></div>`;return}
+ if(R.race){const goal=3*STEPS.filter(x=>x.r===s.r).length,pos=j=>Math.min(goal,Math.max(0,(j.x&&j.x.length>3)?j.x[3]:0));
+  const arr=ps.slice().sort((a,b)=>pos(b)-pos(a)),top=arr.length?pos(arr[0]):0,lvl={};
+  e.innerHTML=`<div class="hd2">🏃 ${L==='es'?'La carrera del Heb-Sed':'The Heb-Sed race'} <span style="color:var(--mut);font-size:2vh">+3 / −1 · ${L==='es'?'meta':'finish'} ${goal}</span></div><div class="track" style="--step:${100/goal}%">${arr.map(j=>{const p=pos(j),k=(lvl[p]=(lvl[p]||0)+1)-1;return `<span class="chip${p===top&&top>0?' lead':''}" style="left:${3+p/goal*94}%;top:${.3+(k%5)*2.4}vh">${esc(String(j.a).slice(0,10))}</span>`}).join('')}</div>`;return}
+ if(R.stand){const lv=j=>(j.x&&j.x.length>2)?j.x[2]:3,up=ps.filter(j=>lv(j)>0),down=ps.length-up.length;
+  e.innerHTML=`<div class="hd2">🧍 ${L==='es'?'Siguen en pie':'Still standing'}: <b style="font-size:3.2vh">${up.length}</b> / ${ps.length} <span style="color:var(--mut)">🪑 ${down}</span></div><div class="chips">${up.map(j=>`<span>${esc(String(j.a).slice(0,12))} ${'❤️'.repeat(Math.max(0,lv(j)))}</span>`).join('')}</div>`}}
+
+/* excavación de la ronda 5: cada pregunta levanta hasta 3 cuadrículas según el porcentaje de acierto de la clase (vale igual para 30 que para 40 alumnos) */
+function digInfo(){const r=ROUNDS.findIndex(R=>R.dig);return r<0?null:Object.assign({r},ROUNDS[r].dig)}
+function digLifted(upto){const d=digInfo();if(!d)return 0;let n=0;STEPS.forEach((x,i)=>{if(x.r===d.r&&!x.digq&&i<=upto&&STAT[i]&&STAT[i].n>0)n+=Math.round(3*STAT[i].ok/STAT[i].n)});return Math.min(n,d.cols*d.rows)}
+function digHTML(h,lifted){const d=digInfo(),tot=d.cols*d.rows,rr=seeded(99),ord=Array.from({length:tot},(_,i)=>i).sort(()=>rr()-.5),up=new Set(ord.slice(0,lifted));
+ return `<div class="dig" style="height:${h}"><img src="${IMG+d.img}" alt=""><div class="dgrid" style="grid-template-columns:repeat(${d.cols},1fr);grid-template-rows:repeat(${d.rows},1fr)">${Array.from({length:tot},(_,i)=>`<i class="${up.has(i)?'up':''}"></i>`).join('')}</div></div>`}
 /* confeti */
 function confetti(){const c=$('conf'),g=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;const P=Array.from({length:160},()=>({x:Math.random()*c.width,y:-Math.random()*c.height,v:2+Math.random()*4,s:4+Math.random()*6,c:['#EDAB00','#fff','#E8710A','#5b8def'][Math.random()*4|0],r:Math.random()*6}));let n=0;(function f(){g.clearRect(0,0,c.width,c.height);P.forEach(p=>{p.y+=p.v;p.x+=Math.sin((p.y+p.r)/30);g.fillStyle=p.c;g.fillRect(p.x,p.y,p.s,p.s*.6)});if(++n<400)requestAnimationFrame(f);else g.clearRect(0,0,c.width,c.height)})()}
 
