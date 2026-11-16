@@ -277,6 +277,22 @@ S.append({'r': 7, 'k': 'ord', 'q': bi('The relay: tap the four events in chronol
           'ex': bi('Schöningen spears (c. 200,000 BC) → desert kites (%s) → eruption of Thera (c. 1628 BC) → pentathlon and wrestling at Olympia (708 BC).' % desert['date']['en'],
                    'Lanzas de Schöningen (h. 200.000 a. C.) → cometas del desierto (%s) → erupción de Tera (h. 1628 a. C.) → pentatlón y lucha en Olimpia (708 a. C.).' % desert['date']['es']), 'sec': 40})
 
+# ---------- recorte a unos 45 minutos de clase (16-11-2026, petición de Alex): 58 preguntas ----------
+DROP = {
+ 'What is the subject of study of History?', 'The approach that studies a society at one specific moment of its development is called…',
+ "For Huizinga, play is a product of society.", 'Regulated sport existed in Prehistory.', 'The Greeks measured and recorded the marks in the jump, javelin and discus.',
+ 'How often was the Heb-Sed repeated after the first jubilee?', 'What was the kap?', 'Who built Naqsh-e Jahan square in Isfahan as a chovgan field?',
+ 'Which Cretan script corresponds to Mycenaean Greek?', 'What was the tetrad?', 'Which pankratiast died in the Olympic final and was crowned as victor?',
+ 'Where does this text come from?', 'Whom did Aristotle call this?', "Why were the Phoenician ships in Sargon II's reliefs called hippoi?",
+}
+DROPQ = {'Record', 'Chovgan', 'Ethnographic analogy', 'Bipedalism', 'Zurkhaneh', 'Arete'}   # respuestas de glosario y palabra oculta que salen
+def keep(x):
+    if x['q']['en'] in DROP: return False
+    if x['k'] == 'tf' and x['q']['en'].startswith('In Egyptian iconography ball games'): return False
+    if x.get('img') in ('repaso/img/I3-n13.jpg', 'repaso/img/I3-n15.jpg'): return False
+    if x['k'] in ('mcq', 'word') and x.get('opts') and x['opts'][x['ans']]['en'] in DROPQ: return False
+    return True
+S = [x for x in S if keep(x)]
 # ---------- comprobaciones y salida ----------
 S.sort(key=lambda x: x['r'])
 for st in S:
