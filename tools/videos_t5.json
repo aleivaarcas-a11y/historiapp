@@ -1,0 +1,590 @@
+[
+ {
+  "id": "t5_01",
+  "sec": "5.1.2",
+  "title": {
+   "es": "Cuarenta y cuatro figuras",
+   "en": "Forty-four figures"
+  },
+  "src": {
+   "es": "videos/t5/t5_01_es.mp4?m=t5a",
+   "en": "videos/t5/t5_01_en.mp4?m=t5a"
+  },
+  "poster": {
+   "es": "videos/t5/t5_01_es.jpg?m=t5a",
+   "en": "videos/t5/t5_01_en.jpg?m=t5a"
+  },
+  "more": {
+   "es": "Ante cualquier malestar, según la biografía de Hua Tuo, había que practicar uno de los animales hasta sudar, y con ello el cuerpo se aligeraba y recuperaba el apetito. Los cinco animales se practican todavía hoy como parte del qigong, «trabajo de la energía», un nombre que se generalizó en el siglo XX d. C. para reunir estos ejercicios de salud tradicionales.",
+   "en": "According to the biography of Hua Tuo, at any ailment one had to practise one of the animals until sweating, and the body then felt lighter and the appetite returned. The five animals are still practised today as part of qigong, ‘work on energy’, a name that became widespread in the 20th century AD to bring together these traditional health exercises."
+  },
+  "q": {
+   "es": {
+    "q": "¿Cuántas figuras tiene la pintura de la tumba de Mawangdui?",
+    "opts": [
+     "24",
+     "44",
+     "68",
+     "104"
+    ],
+    "a": 1
+   },
+   "en": {
+    "q": "How many figures does the painting in the Mawangdui tomb have?",
+    "opts": [
+     "24",
+     "44",
+     "68",
+     "104"
+    ],
+    "a": 1
+   }
+  }
+ },
+ {
+  "id": "t5_02",
+  "sec": "5.1.2",
+  "title": {
+   "es": "Un mito de 1624",
+   "en": "A myth from 1624"
+  },
+  "src": {
+   "es": "videos/t5/t5_02_es.mp4?m=t5a",
+   "en": "videos/t5/t5_02_en.mp4?m=t5a"
+  },
+  "poster": {
+   "es": "videos/t5/t5_02_es.jpg?m=t5a",
+   "en": "videos/t5/t5_02_en.jpg?m=t5a"
+  },
+  "more": {
+   "es": "Kung-fu, en chino gongfu, significa «habilidad lograda con esfuerzo», y en el siglo XX d. C. se generalizó en Occidente para nombrar las artes marciales chinas. El combate sin armas de Shaolin unió la lucha con la gimnasia de salud y la respiración, de modo que reúne las dos caras de la cultura física china. Desde que el cine lo hizo famoso, a su alrededor han crecido escuelas con miles de alumnos y compañías que actúan por todo el mundo (Shahar, 2008).",
+   "en": "Kung fu, in Chinese gongfu, means ‘skill achieved through effort’, and in the 20th century AD it became widespread in the West as a name for the Chinese martial arts. Shaolin’s unarmed combat joined wrestling with health gymnastics and breathing, so it brings together the two faces of Chinese physical culture. Since cinema made it famous, schools with thousands of pupils and companies that perform all over the world have grown up around it (Shahar, 2008)."
+  },
+  "q": {
+   "es": {
+    "q": "¿De dónde procede la leyenda que atribuye el kung-fu a Bodhidharma?",
+    "opts": [
+     "De un manual de 1624 con un prefacio falso",
+     "De las inscripciones del siglo VII del monasterio",
+     "De los textos de la tumba de Mawangdui",
+     "De la biografía del médico Hua Tuo"
+    ],
+    "a": 0
+   },
+   "en": {
+    "q": "Where does the legend that attributes kung fu to Bodhidharma come from?",
+    "opts": [
+     "A manual of 1624 with a false preface",
+     "The 7th-century inscriptions of the monastery",
+     "The texts of the Mawangdui tomb",
+     "The biography of the physician Hua Tuo"
+    ],
+    "a": 0
+   }
+  }
+ },
+ {
+  "id": "t5_03",
+  "sec": "5.1.3",
+  "title": {
+   "es": "El cuerpo y los exámenes",
+   "en": "The body and the examinations"
+  },
+  "src": {
+   "es": "videos/t5/t5_03_es.mp4?m=t5a",
+   "en": "videos/t5/t5_03_en.mp4?m=t5a"
+  },
+  "poster": {
+   "es": "videos/t5/t5_03_es.jpg?m=t5a",
+   "en": "videos/t5/t5_03_en.jpg?m=t5a"
+  },
+  "more": {
+   "es": "La doctrina confuciana ordenaba la sociedad en cuatro ocupaciones por debajo del emperador. Los letrados, instruidos en los clásicos, podían ser mandarines si aprobaban los exámenes imperiales, y como prepararse exigía años de estudio, solo podían hacerlo las familias con tierras. Los militares quedaban fuera de la escala, con poco prestigio entre los letrados, y de este orden dependía el acceso al ejercicio, puesto que caballos, armas y tiempo libre quedaban en manos de la corte, la élite y el ejército.",
+   "en": "Confucian doctrine arranged society into four occupations below the emperor. The scholars, trained in the classics, could become mandarins if they passed the imperial examinations, and since preparing took years of study, only families with land could do so. The military stood outside the scale, with little prestige among the scholars, and access to exercise depended on this order, since horses, weapons and free time were in the hands of the court, the elite and the army."
+  },
+  "q": {
+   "es": {
+    "q": "¿Qué se evaluaba en el examen civil desde el siglo VII d. C.?",
+    "opts": [
+     "El tiro con arco a caballo",
+     "El manejo de la lanza",
+     "Los clásicos, sin pruebas físicas",
+     "La fuerza con el cerrojo de una puerta"
+    ],
+    "a": 2
+   },
+   "en": {
+    "q": "What was assessed in the civil examination from the 7th century AD?",
+    "opts": [
+     "Archery on horseback",
+     "The handling of the lance",
+     "The classics, with no physical tests",
+     "Strength with the bolt of a gate"
+    ],
+    "a": 2
+   }
+  }
+ },
+ {
+  "id": "t5_04",
+  "sec": "5.1.3",
+  "title": {
+   "es": "Polo con banda militar",
+   "en": "Polo with a military band"
+  },
+  "src": {
+   "es": "videos/t5/t5_04_es.mp4?m=t5a",
+   "en": "videos/t5/t5_04_en.mp4?m=t5a"
+  },
+  "poster": {
+   "es": "videos/t5/t5_04_es.jpg?m=t5a",
+   "en": "videos/t5/t5_04_en.jpg?m=t5a"
+  },
+  "more": {
+   "es": "El jiju llegó probablemente desde Persia, aunque no hay una prueba segura. Las figurillas que se enterraban con los nobles prueban su prestigio, y los huesos de asno hallados en la tumba de una dama del siglo IX d. C. muestran que esos animales se criaban para el juego (Hu et al., 2020). Hacia 1187 d. C., nueve de cada diez funcionarios de la corte ni siquiera montaban a caballo (Liu, 1985).",
+   "en": "Jiju probably reached China from Persia, although there is no firm proof. The figurines buried with the nobles attest to its prestige, and the donkey bones found in the tomb of a lady of the 9th century AD show that these animals were bred for the game (Hu et al., 2020). Around AD 1187, nine out of ten court officials did not even ride (Liu, 1985)."
+  },
+  "q": {
+   "es": {
+    "q": "¿Qué función cumplía el jiju para el ejército?",
+    "opts": [
+     "Seleccionar a los funcionarios",
+     "Celebrar las cosechas",
+     "Honrar a los difuntos",
+     "Entrenar a la caballería"
+    ],
+    "a": 3
+   },
+   "en": {
+    "q": "What function did jiju serve for the army?",
+    "opts": [
+     "Selecting officials",
+     "Celebrating harvests",
+     "Honouring the dead",
+     "Training the cavalry"
+    ],
+    "a": 3
+   }
+  }
+ },
+ {
+  "id": "t5_05",
+  "sec": "5.1.3",
+  "title": {
+   "es": "Traspasos y pruebas de nivel",
+   "en": "Transfers and trials"
+  },
+  "src": {
+   "es": "videos/t5/t5_05_es.mp4?m=t5a",
+   "en": "videos/t5/t5_05_en.mp4?m=t5a"
+  },
+  "poster": {
+   "es": "videos/t5/t5_05_es.jpg?m=t5a",
+   "en": "videos/t5/t5_05_en.jpg?m=t5a"
+  },
+  "more": {
+   "es": "Existieron tres modalidades principales, con dos porterías en campo abierto, con doce porterías semicirculares en campo cerrado, y con una sola portería, la baida. Al principio el balón era de cuero relleno de pelo o de plumas, pesado y poco botador, y más tarde se fabricó con varias piezas de cuero cosidas y una vejiga de animal hinchada de aire, más ligera, lo que permitió lanzarlo a gran altura.",
+   "en": "There were three main forms, with two goals on open ground, with twelve semicircular goals on an enclosed pitch, and with a single goal, the baida. At first the ball was leather stuffed with hair or feathers, heavy and hardly bouncy, and later it was made from several pieces of stitched leather with an animal bladder inflated with air inside, which was lighter and could be thrown high."
+  },
+  "q": {
+   "es": {
+    "q": "¿Qué prueba de nivel se pedía para entrar en un equipo de cuju?",
+    "opts": [
+     "Marcar cien tantos en un partido",
+     "Dar cien toques seguidos sin que el balón cayera",
+     "Aprobar un examen sobre los clásicos",
+     "Vencer a un jugador profesional"
+    ],
+    "a": 1
+   },
+   "en": {
+    "q": "What trial was required to join a cuju team?",
+    "opts": [
+     "Scoring a hundred points in a match",
+     "Keeping the ball up a hundred times in a row without it falling",
+     "Passing an examination on the classics",
+     "Beating a professional player"
+    ],
+    "a": 1
+   }
+  }
+ },
+ {
+  "id": "t5_06",
+  "sec": "5.2.2",
+  "title": {
+   "es": "Un balón con rango",
+   "en": "A ball with a court rank"
+  },
+  "src": {
+   "es": "videos/t5/t5_06_es.mp4?m=t5a",
+   "en": "videos/t5/t5_06_en.mp4?m=t5a"
+  },
+  "poster": {
+   "es": "videos/t5/t5_06_es.jpg?m=t5a",
+   "en": "videos/t5/t5_06_en.jpg?m=t5a"
+  },
+  "more": {
+   "es": "Los jugadores visten kimonos tradicionales y zapatos en forma de «pico de pato», y la manera correcta de golpear el balón es con el cuerpo recto, moviendo únicamente las piernas. Es un juego que busca la abstracción, la relajación y la desconexión de la mente, y en ocasiones se cuentan los golpes dados consecutivamente.",
+   "en": "The players wear traditional kimonos and shoes shaped like a ‘duck’s beak’, and the correct way to strike the ball is with the body upright, moving only the legs. It is a game that seeks abstraction, relaxation and a disconnection of the mind, and on occasion the consecutive kicks are counted."
+  },
+  "q": {
+   "es": {
+    "q": "¿A quién se reservaba el pino en el campo de kemari?",
+    "opts": [
+     "A los jugadores más jóvenes",
+     "A los árbitros",
+     "A los jugadores de mayor rango",
+     "A los espectadores del emperador"
+    ],
+    "a": 2
+   },
+   "en": {
+    "q": "For whom was the pine tree reserved on the kemari court?",
+    "opts": [
+     "The youngest players",
+     "The referees",
+     "The players of highest rank",
+     "The emperor’s spectators"
+    ],
+    "a": 2
+   }
+  }
+ },
+ {
+  "id": "t5_07",
+  "sec": "5.2.3",
+  "title": {
+   "es": "Las dos espadas",
+   "en": "The two swords"
+  },
+  "src": {
+   "es": "videos/t5/t5_07_es.mp4?m=t5a",
+   "en": "videos/t5/t5_07_en.mp4?m=t5a"
+  },
+  "poster": {
+   "es": "videos/t5/t5_07_es.jpg?m=t5a",
+   "en": "videos/t5/t5_07_en.jpg?m=t5a"
+  },
+  "more": {
+   "es": "Los samuráis surgieron entre los siglos X y XI d. C. de familias de provincias con tierras que se armaron para defender sus dominios, y su condición se volvió hereditaria. Su código, el bushidō («camino del guerrero»), establecía los deberes del samurái, entre ellos la lealtad a su señor. La armadura, de láminas de hierro o de cuero lacado, podía pesar en torno a los treinta kilos.",
+   "en": "The samurai emerged between the 10th and 11th centuries AD from landed provincial families who took up arms to defend their estates, and their status became hereditary. Their code, bushidō (‘the way of the warrior’), set out the samurai’s duties, among them loyalty to his lord. The armour, of iron plates or lacquered leather, could weigh around thirty kilos."
+  },
+  "q": {
+   "es": {
+    "q": "¿Qué distinguía a un samurái de la época Edo del resto de la población?",
+    "opts": [
+     "Llevar dos espadas",
+     "Llevar armadura de hierro",
+     "Montar a caballo",
+     "Practicar el zen"
+    ],
+    "a": 0
+   },
+   "en": {
+    "q": "What set a samurai of the Edo period apart from the rest of the population?",
+    "opts": [
+     "Carrying two swords",
+     "Wearing iron armour",
+     "Riding a horse",
+     "Practising Zen"
+    ],
+    "a": 0
+   }
+  }
+ },
+ {
+  "id": "t5_08",
+  "sec": "5.2.3",
+  "title": {
+   "es": "8.133 flechas",
+   "en": "8,133 arrows"
+  },
+  "src": {
+   "es": "videos/t5/t5_08_es.mp4?m=t5a",
+   "en": "videos/t5/t5_08_en.mp4?m=t5a"
+  },
+  "poster": {
+   "es": "videos/t5/t5_08_es.jpg?m=t5a",
+   "en": "videos/t5/t5_08_en.jpg?m=t5a"
+  },
+  "more": {
+   "es": "El tōshiya («flechas que pasan») exigía que cada flecha volara casi en línea recta, y los jueces de escuelas rivales señalaban los aciertos con banderas. El kyūdō, «camino del arco», se ha convertido en un ritual que busca la maestría mediante la autodisciplina, y hoy lo practican hombres y mujeres que buscan el equilibrio y la relajación espiritual.",
+   "en": "Tōshiya (‘arrows that pass through’) required every arrow to fly almost in a straight line, and judges from rival schools signalled the hits with flags. Kyūdō, ‘the way of the bow’, has become a ritual that seeks mastery through self-discipline, and today it is practised by men and women who seek balance and spiritual relaxation."
+  },
+  "q": {
+   "es": {
+    "q": "¿Dónde se celebraba el tōshiya?",
+    "opts": [
+     "En el castillo de Edo",
+     "En el santuario de Nara",
+     "En el puerto de Nagasaki",
+     "En la galería del templo Sanjūsangendō"
+    ],
+    "a": 3
+   },
+   "en": {
+    "q": "Where was tōshiya held?",
+    "opts": [
+     "In Edo Castle",
+     "In the shrine at Nara",
+     "In the port of Nagasaki",
+     "In the gallery of the Sanjūsangendō temple"
+    ],
+    "a": 3
+   }
+  }
+ },
+ {
+  "id": "t5_09",
+  "sec": "5.2.4",
+  "title": {
+   "es": "Una tradición inventada",
+   "en": "An invented tradition"
+  },
+  "src": {
+   "es": "videos/t5/t5_09_es.mp4?m=t5a",
+   "en": "videos/t5/t5_09_en.mp4?m=t5a"
+  },
+  "poster": {
+   "es": "videos/t5/t5_09_es.jpg?m=t5a",
+   "en": "videos/t5/t5_09_en.jpg?m=t5a"
+  },
+  "more": {
+   "es": "El objetivo es derribar o expulsar al rival del dohyō, un círculo de arcilla de unos 4,5 metros cubierto de arena, y el combate lo dirige el gyōji, que viste un traje de corte de la época Heian y da la salida con el gunbai, un abanico de guerra con el que los generales samuráis daban órdenes. Guttmann y Thompson (2001) presentan el sumo como una tradición inventada, y Thompson (1998) muestra lo mismo con el yokozuna, que la tradición remonta al siglo XVII d. C.",
+   "en": "The aim is to throw or push the opponent out of the dohyō, a clay ring of about 4.5 metres covered in sand, and the bout is run by the gyōji, who wears a court costume of the Heian period and gives the start with the gunbai, a war fan with which samurai generals gave orders. Guttmann and Thompson (2001) present sumo as an invented tradition, and Thompson (1998) shows the same for the yokozuna, which tradition traces back to the 17th century AD."
+  },
+  "q": {
+   "es": {
+    "q": "¿Cuánto pesa de media un rikishi profesional?",
+    "opts": [
+     "100 kg",
+     "150 kg",
+     "200 kg",
+     "250 kg"
+    ],
+    "a": 1
+   },
+   "en": {
+    "q": "What is the average weight of a professional rikishi?",
+    "opts": [
+     "100 kg",
+     "150 kg",
+     "200 kg",
+     "250 kg"
+    ],
+    "a": 1
+   }
+  }
+ },
+ {
+  "id": "t5_10",
+  "sec": "5.2.5",
+  "title": {
+   "es": "El camino suave",
+   "en": "The gentle way"
+  },
+  "src": {
+   "es": "videos/t5/t5_10_es.mp4?m=t5a",
+   "en": "videos/t5/t5_10_en.mp4?m=t5a"
+  },
+  "poster": {
+   "es": "videos/t5/t5_10_es.jpg?m=t5a",
+   "en": "videos/t5/t5_10_en.jpg?m=t5a"
+  },
+  "more": {
+   "es": "Kanō resumió el judo en dos principios. El primero, seiryoku zen'yō, «máxima eficacia con el mínimo esfuerzo», consiste en usar la fuerza del rival en lugar de oponerle la propia. El segundo, jita kyōei, «prosperidad y beneficio mutuos», enseña que el practicante progresa junto al compañero y no a su costa. En 1926 d. C. creó además una división femenina oficial en el Kodokan.",
+   "en": "Kanō summed up judo in two principles. The first, seiryoku zen'yō, ‘maximum efficiency with minimum effort’, consists in using the opponent's force instead of opposing it with one's own. The second, jita kyōei, ‘mutual prosperity and benefit’, teaches that the practitioner progresses alongside his partner and not at his expense. In AD 1926 he also created an official women's division at the Kodokan."
+  },
+  "q": {
+   "es": {
+    "q": "¿Qué sufijo eligió Kanō para nombrar su método?",
+    "opts": [
+     "-jutsu, «técnica»",
+     "-ryū, «escuela»",
+     "-dō, «camino»",
+     "-kata, «forma»"
+    ],
+    "a": 2
+   },
+   "en": {
+    "q": "Which suffix did Kanō choose to name his method?",
+    "opts": [
+     "-jutsu, ‘technique’",
+     "-ryū, ‘school’",
+     "-dō, ‘way’",
+     "-kata, ‘form’"
+    ],
+    "a": 2
+   }
+  }
+ },
+ {
+  "id": "t5_11",
+  "sec": "5.3.3",
+  "title": {
+   "es": "Gama en Londres",
+   "en": "Gama in London"
+  },
+  "src": {
+   "es": "videos/t5/t5_11_es.mp4?m=t5a",
+   "en": "videos/t5/t5_11_en.mp4?m=t5a"
+  },
+  "poster": {
+   "es": "videos/t5/t5_11_es.jpg?m=t5a",
+   "en": "videos/t5/t5_11_en.jpg?m=t5a"
+  },
+  "more": {
+   "es": "El kushti es la lucha tradicional del norte de la India y se realiza sobre un foso de tierra humedecido con aceite, suero de mantequilla y especias. Antiguamente los combates duraban hasta que un oponente se rendía, y hoy basta con derribar una vez al adversario, por lo que suelen durar entre 5 y 10 minutos. Alter (1992) lo presenta como una forma de vida más que como un deporte.",
+   "en": "Kushti is the traditional wrestling of northern India and is fought in an earthen pit moistened with oil, buttermilk and spices. In the past bouts lasted until one opponent surrendered, and today a single throw is enough, so they usually last between 5 and 10 minutes. Alter (1992) presents it as a way of life rather than a sport."
+  },
+  "q": {
+   "es": {
+    "q": "¿Qué simbolizó para el nacionalismo indio la victoria de Gama en Londres?",
+    "opts": [
+     "Que el cuerpo indio podía vencer al del colonizador",
+     "Que los británicos debían abandonar el akhara",
+     "Que la lucha debía reservarse a los chatrias",
+     "Que el kushti era un deporte olímpico"
+    ],
+    "a": 0
+   },
+   "en": {
+    "q": "What did Gama's victory in London symbolise for Indian nationalism?",
+    "opts": [
+     "That the Indian body could beat that of the colonizer",
+     "That the British must leave the akhara",
+     "That wrestling should be reserved for the kshatriyas",
+     "That kushti was an Olympic sport"
+    ],
+    "a": 0
+   }
+  }
+ },
+ {
+  "id": "t5_12",
+  "sec": "5.3.3",
+  "title": {
+   "es": "Mazas indias en Europa",
+   "en": "Indian clubs in Europe"
+  },
+  "src": {
+   "es": "videos/t5/t5_12_es.mp4?m=t5a",
+   "en": "videos/t5/t5_12_en.mp4?m=t5a"
+  },
+  "poster": {
+   "es": "videos/t5/t5_12_es.jpg?m=t5a",
+   "en": "videos/t5/t5_12_en.jpg?m=t5a"
+  },
+  "more": {
+   "es": "En el akhara las mazas se usan también por pares, el jori, que en las competiciones llegaba a unos setenta kilos (Alter, 2005). El mallakhamb se ha querido remontar al siglo XII d. C. (Roy, 2017), aunque Ganneri (2013) atribuye su creación al siglo XIX d. C. Hoy es un deporte de competición, con modalidades sobre el poste y sobre una cuerda.",
+   "en": "In the akhara the clubs are also used in pairs, the jori, which in competitions reached about seventy kilos (Alter, 2005). Mallakhamb has been traced back to the 12th century AD (Roy, 2017), although Ganneri (2013) attributes its creation to the 19th century AD. Today it is a competitive sport, with events on the pole and on a rope."
+  },
+  "q": {
+   "es": {
+    "q": "¿Con qué nombre llegaron las mazas indias a Europa en el siglo XIX d. C.?",
+    "opts": [
+     "Gadas",
+     "Jori",
+     "Mallakhamb",
+     "Indian clubs"
+    ],
+    "a": 3
+   },
+   "en": {
+    "q": "Under what name did Indian clubs reach Europe in the 19th century AD?",
+    "opts": [
+     "Gadas",
+     "Jori",
+     "Mallakhamb",
+     "Indian clubs"
+    ],
+    "a": 3
+   }
+  }
+ },
+ {
+  "id": "t5_13",
+  "sec": "5.3.4",
+  "title": {
+   "es": "Kabaddi en Berlín",
+   "en": "Kabaddi in Berlin"
+  },
+  "src": {
+   "es": "videos/t5/t5_13_es.mp4?m=t5a",
+   "en": "videos/t5/t5_13_en.mp4?m=t5a"
+  },
+  "poster": {
+   "es": "videos/t5/t5_13_es.jpg?m=t5a",
+   "en": "videos/t5/t5_13_en.jpg?m=t5a"
+  },
+  "more": {
+   "es": "Hoy el kabaddi es un deporte profesional con dos equipos de siete jugadores, en un campo de unos 13 × 10 metros, y cada incursión dura 30 segundos. El yubi lakpi, «robo del coco», es un juego de siete jugadores por equipo de Manipur que recuerda ligeramente al rugby, y se anota un tanto cuando se lleva el coco a la meta rival (Mills, 2005).",
+   "en": "Today kabaddi is a professional sport with two teams of seven players, on a court of about 13 × 10 metres, and each raid lasts 30 seconds. Yubi lakpi, ‘coconut snatching’, is a game for seven players per team from Manipur that slightly recalls rugby, and a point is scored when the coconut is carried to the opposing goal (Mills, 2005)."
+  },
+  "q": {
+   "es": {
+    "q": "¿Dónde exhibieron grupos nacionalistas indios el kabaddi como deporte nacional?",
+    "opts": [
+     "En los Juegos de Londres de 1908",
+     "En los Juegos de Berlín de 1936",
+     "En los Juegos de Tokio de 1964",
+     "En los Juegos de Roma de 1960"
+    ],
+    "a": 1
+   },
+   "en": {
+    "q": "Where did Indian nationalist groups exhibit kabaddi as a national sport?",
+    "opts": [
+     "At the London Games of 1908",
+     "At the Berlin Games of 1936",
+     "At the Tokyo Games of 1964",
+     "At the Rome Games of 1960"
+    ],
+    "a": 1
+   }
+  }
+ },
+ {
+  "id": "t5_14",
+  "sec": "5.3.4",
+  "title": {
+   "es": "Cuatro divisiones",
+   "en": "Four divisions"
+  },
+  "src": {
+   "es": "videos/t5/t5_14_es.mp4?m=t5a",
+   "en": "videos/t5/t5_14_en.mp4?m=t5a"
+  },
+  "poster": {
+   "es": "videos/t5/t5_14_es.jpg?m=t5a",
+   "en": "videos/t5/t5_14_en.jpg?m=t5a"
+  },
+  "more": {
+   "es": "Las piezas eran los peones, los caballos, los elefantes (los alfiles), los carros (las torres) y el rey. La palabra «jaque» viene del persa shāh, «rey», y «mate» de shāh māt, «el rey está indefenso». Se desconocen con exactitud las reglas, y los musulmanes lo difundieron desde al-Ándalus por Europa (Murray, 1913).",
+   "en": "The pieces were the pawns, the horses, the elephants (the bishops), the chariots (the rooks) and the king. The word ‘check’ comes from the Persian shāh, ‘king’, and ‘mate’ from shāh māt, ‘the king is helpless’. The rules are not known exactly, and the Muslims spread it from al-Andalus across Europe (Murray, 1913)."
+  },
+  "q": {
+   "es": {
+    "q": "¿Qué reproducía el chaturanga con sus piezas?",
+    "opts": [
+     "Las cuatro castas de la sociedad india",
+     "Los cuatro Vedas",
+     "Las cuatro divisiones del ejército indio",
+     "Las cuatro estaciones del año"
+    ],
+    "a": 2
+   },
+   "en": {
+    "q": "What did the chaturanga pieces reproduce?",
+    "opts": [
+     "The four castes of Indian society",
+     "The four Vedas",
+     "The four divisions of the Indian army",
+     "The four seasons of the year"
+    ],
+    "a": 2
+   }
+  }
+ }
+]

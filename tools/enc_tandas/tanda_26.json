@@ -296,7 +296,16 @@
     "Despite this dispersion, the sporting form was organised from Europe, where in 1977 Germany, Italy and Sweden promoted the European Ju Jitsu Federation, which in 1987 extended its scope worldwide as the International Ju Jitsu Federation; this body obtained GAISF recognition in 1993, took part in the World Games for the first time in 1997 and in 1998 adopted the name Ju Jitsu International Federation (JJIF) (Ju-Jitsu European Union, n.d.), and in 2018 ju-jitsu entered the Asian Games (Ju-Jitsu International Federation, n.d.)."
    ]
   },
-  "tema": [],
+  "tema": [
+   {
+    "num": 5,
+    "f": "jujutsu",
+    "t": {
+     "es": "Jūjutsu",
+     "en": "Jūjutsu"
+    }
+   }
+  ],
   "img": {
    "src": "img/enc/jiu-jitsu.jpg",
    "pie": {
@@ -354,7 +363,24 @@
     "The International Wushu Federation was founded on 3 October 1990, organised the first world championship in Beijing in 1991, joined GAISF in 1994 and obtained recognition from the International Olympic Committee at its 113th Session, in 2002; in 2008 a wushu tournament was held in Beijing in conjunction with the Olympic Games, and in 2020 wushu was included as an official sport in the programme of the 2026 Youth Olympic Games in Dakar (International Wushu Federation, n.d.). Its worldwide diffusion owes much to Bruce Lee's films of the 1970s, which popularised the very expression «martial arts», although *wushu* has not entered the Olympic programme (Sánchez García, 2019, p. 2)."
    ]
   },
-  "tema": [],
+  "tema": [
+   {
+    "num": 5,
+    "f": "bodhidharma-y-shaolin",
+    "t": {
+     "es": "Bodhidharma y Shaolin",
+     "en": "Bodhidharma and Shaolin"
+    }
+   },
+   {
+    "num": 5,
+    "f": "deportes-de-combate",
+    "t": {
+     "es": "Deportes de combate",
+     "en": "Combat sports"
+    }
+   }
+  ],
   "img": {
    "src": "img/enc/kung-fu-wushu.jpg",
    "pie": {

@@ -49,6 +49,27 @@
     "es": "Roma",
     "en": "Rome"
    }
+  },
+  {
+   "id": "chn",
+   "name": {
+    "es": "China",
+    "en": "China"
+   }
+  },
+  {
+   "id": "jap",
+   "name": {
+    "es": "Japón",
+    "en": "Japan"
+   }
+  },
+  {
+   "id": "ind",
+   "name": {
+    "es": "India",
+    "en": "India"
+   }
   }
  ],
  "eras": [
@@ -589,6 +610,231 @@
    "f": {
     "es": "27 a. C.-476 d. C.",
     "en": "27 BC-AD 476"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 5,
+   "civ": "chn",
+   "from": -1600,
+   "to": -221,
+   "n": {
+    "es": "Antigüedad",
+    "en": "Antiquity"
+   },
+   "f": {
+    "es": "h. 1600-221 a. C.",
+    "en": "c. 1600-221 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 5,
+   "civ": "chn",
+   "from": -221,
+   "to": 1911,
+   "n": {
+    "es": "Imperio",
+    "en": "Empire"
+   },
+   "f": {
+    "es": "221 a. C.-1911 d. C.",
+    "en": "221 BC-AD 1911"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 5,
+   "civ": "chn",
+   "from": 1912,
+   "to": 1949,
+   "n": {
+    "es": "República de China",
+    "en": "Republic of China"
+   },
+   "f": {
+    "es": "1912-1949 d. C.",
+    "en": "AD 1912-1949"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 5,
+   "civ": "chn",
+   "from": 1949,
+   "to": 2026,
+   "n": {
+    "es": "República Popular China",
+    "en": "People's Republic of China"
+   },
+   "f": {
+    "es": "desde 1949 d. C.",
+    "en": "since AD 1949"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 5,
+   "civ": "jap",
+   "from": -300,
+   "to": 710,
+   "n": {
+    "es": "Orígenes",
+    "en": "Origins"
+   },
+   "f": {
+    "es": "hasta 710 d. C.",
+    "en": "to AD 710"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 5,
+   "civ": "jap",
+   "from": 710,
+   "to": 1185,
+   "n": {
+    "es": "Época clásica",
+    "en": "Classical period"
+   },
+   "f": {
+    "es": "710-1185 d. C.",
+    "en": "AD 710-1185"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 5,
+   "civ": "jap",
+   "from": 1185,
+   "to": 1603,
+   "n": {
+    "es": "Época de los guerreros",
+    "en": "Age of the warriors"
+   },
+   "f": {
+    "es": "1185-1603 d. C.",
+    "en": "AD 1185-1603"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 5,
+   "civ": "jap",
+   "from": 1603,
+   "to": 1868,
+   "n": {
+    "es": "Época Edo",
+    "en": "Edo period"
+   },
+   "f": {
+    "es": "1603-1868 d. C.",
+    "en": "AD 1603-1868"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 5,
+   "civ": "jap",
+   "from": 1868,
+   "to": 2026,
+   "n": {
+    "es": "Japón moderno",
+    "en": "Modern Japan"
+   },
+   "f": {
+    "es": "desde 1868 d. C.",
+    "en": "since AD 1868"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 5,
+   "civ": "ind",
+   "from": -2600,
+   "to": -1700,
+   "n": {
+    "es": "Civilización del Indo",
+    "en": "Indus civilisation"
+   },
+   "f": {
+    "es": "h. 2600-1700 a. C.",
+    "en": "c. 2600-1700 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 5,
+   "civ": "ind",
+   "from": -1400,
+   "to": -500,
+   "n": {
+    "es": "Época védica",
+    "en": "Vedic period"
+   },
+   "f": {
+    "es": "h. 1400-500 a. C.",
+    "en": "c. 1400-500 BC"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 5,
+   "civ": "ind",
+   "from": -320,
+   "to": 500,
+   "n": {
+    "es": "Grandes imperios",
+    "en": "Great empires"
+   },
+   "f": {
+    "es": "h. 320 a. C.-500 d. C.",
+    "en": "c. 320 BC-AD 500"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 5,
+   "civ": "ind",
+   "from": 500,
+   "to": 1526,
+   "n": {
+    "es": "Reinos y sultanatos",
+    "en": "Kingdoms and sultanates"
+   },
+   "f": {
+    "es": "500-1526 d. C.",
+    "en": "AD 500-1526"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 5,
+   "civ": "ind",
+   "from": 1526,
+   "to": 1757,
+   "n": {
+    "es": "Imperio mogol",
+    "en": "Mughal Empire"
+   },
+   "f": {
+    "es": "1526-1858 d. C.",
+    "en": "AD 1526-1858"
+   },
+   "inter": 0
+  },
+  {
+   "tema": 5,
+   "civ": "ind",
+   "from": 1757,
+   "to": 1947,
+   "n": {
+    "es": "Dominio británico",
+    "en": "British rule"
+   },
+   "f": {
+    "es": "1757-1947 d. C.",
+    "en": "AD 1757-1947"
    },
    "inter": 0
   }
@@ -3944,6 +4190,765 @@
     ]
    },
    "s": "Giatsis (2000); Jiménez Sánchez (2002); Lo Giudice (2008); Parnell (2014); Stocking (2021)"
+  },
+  {
+   "id": "chn-shang",
+   "tema": 5,
+   "civ": "chn",
+   "k": "h",
+   "y": -1600,
+   "sl": 6,
+   "es": {
+    "d": "h. 1600 a. C.",
+    "t": "Comienza la dinastía Shang",
+    "x": "La tradición situaba el comienzo de los Shang en 1766 a. C., y hoy se fecha hacia 1600 a. C. Con ellos empieza una historia de más de tres mil años en la que China estuvo gobernada por emperadores hasta 1911 d. C. y que suele contarse por dinastías, las familias que ocuparon el trono.",
+    "q": "¿Cómo suele contarse la historia de China?",
+    "o": [
+     "Por dinastías, las familias que ocuparon el trono",
+     "Por olimpiadas, como la griega",
+     "Por los reinados de los papas",
+     "Por los siglos de la era budista"
+    ]
+   },
+   "en": {
+    "d": "c. 1600 BC",
+    "t": "The Shang dynasty begins",
+    "x": "Tradition placed the beginning of the Shang in 1766 BC, and today it is dated to c. 1600 BC. With them begins a history of more than three thousand years in which China was ruled by emperors until AD 1911, and which is usually told by dynasties, the families that held the throne.",
+    "q": "How is the history of China usually told?",
+    "o": [
+     "By dynasties, the families that held the throne",
+     "By Olympiads, like Greek history",
+     "By the reigns of the popes",
+     "By the centuries of the Buddhist era"
+    ]
+   },
+   "s": "Ebrey (2010); Fairbank y Goldman (2006)"
+  },
+  {
+   "id": "chn-qin",
+   "tema": 5,
+   "civ": "chn",
+   "k": "h",
+   "y": -221,
+   "sl": 6,
+   "es": {
+    "d": "221 a. C.",
+    "t": "Los Qin unifican China bajo un emperador",
+    "x": "En 221 a. C. los Qin unificaron el país bajo un emperador, soberano absoluto que gobernaba como «Hijo del Cielo». Poco después los Han (206 a. C.-220 d. C.) hicieron del confucianismo la doctrina del Estado.",
+    "q": "¿Qué dinastía hizo del confucianismo la doctrina del Estado?",
+    "o": [
+     "Los Han",
+     "Los Qin",
+     "Los Ming",
+     "Los Qing"
+    ]
+   },
+   "en": {
+    "d": "221 BC",
+    "t": "The Qin unify China under an emperor",
+    "x": "In 221 BC the Qin unified the country under an emperor, an absolute ruler who governed as the 'Son of Heaven'. Shortly afterwards the Han (206 BC-AD 220) made Confucianism the doctrine of the state.",
+    "q": "Which dynasty made Confucianism the doctrine of the state?",
+    "o": [
+     "The Han",
+     "The Qin",
+     "The Ming",
+     "The Qing"
+    ]
+   },
+   "s": "Ebrey (2010); Fairbank y Goldman (2006)"
+  },
+  {
+   "id": "chn-mawangdui",
+   "tema": 5,
+   "civ": "chn",
+   "k": "d",
+   "y": -168,
+   "sl": 12,
+   "es": {
+    "d": "168 a. C.",
+    "t": "Se cierra la tumba de Mawangdui con el Daoyin tu",
+    "x": "La imagen más antigua de la gimnasia de salud china, el daoyin («guiar y estirar»), es una pintura sobre seda de una tumba de Mawangdui, cerrada en 168 a. C., con 44 figuras en posturas de estiramiento y respiración, la mitad de ellas mujeres según Speak (1999a).",
+    "q": "¿Cuántas figuras tiene la pintura de Mawangdui?",
+    "o": [
+     "44",
+     "5",
+     "12",
+     "120"
+    ]
+   },
+   "en": {
+    "d": "168 BC",
+    "t": "The Mawangdui tomb is sealed with the Daoyin tu",
+    "x": "The oldest image of Chinese health gymnastics, daoyin ('guiding and stretching'), is a painting on silk from a tomb at Mawangdui, sealed in 168 BC, with 44 figures in stretching and breathing postures, half of them women according to Speak (1999a).",
+    "q": "How many figures are there in the Mawangdui painting?",
+    "o": [
+     "44",
+     "5",
+     "12",
+     "120"
+    ]
+   },
+   "s": "Kohn (2008); Speak (1999a)"
+  },
+  {
+   "id": "chn-huatuo",
+   "tema": 5,
+   "civ": "chn",
+   "k": "d",
+   "y": 200,
+   "sl": 12,
+   "es": {
+    "d": "Siglos II-III d. C.",
+    "t": "Hua Tuo y el juego de los cinco animales",
+    "x": "El médico Hua Tuo ordenó los ejercicios de daoyin en el juego de los cinco animales, que imita al tigre, el ciervo, el oso, el mono y el pájaro. Según su biografía, el cuerpo necesitaba moverse para asimilar los alimentos, hacer circular la sangre y evitar las enfermedades.",
+    "q": "¿Qué animal no forma parte del juego de Hua Tuo?",
+    "o": [
+     "El dragón",
+     "El tigre",
+     "El oso",
+     "El mono"
+    ]
+   },
+   "en": {
+    "d": "2nd-3rd centuries AD",
+    "t": "Hua Tuo and the five animals frolic",
+    "x": "The physician Hua Tuo arranged the daoyin exercises into the five animals frolic, which imitates the tiger, the deer, the bear, the monkey and the bird. According to his biography, the body needed to move in order to digest food, circulate the blood and avoid illness.",
+    "q": "Which animal is not part of Hua Tuo's frolic?",
+    "o": [
+     "The dragon",
+     "The tiger",
+     "The bear",
+     "The monkey"
+    ]
+   },
+   "s": "Kohn (2008); Speak (1999a)"
+  },
+  {
+   "id": "chn-bodhidharma",
+   "tema": 5,
+   "civ": "chn",
+   "k": "d",
+   "y": 480,
+   "sl": 15,
+   "es": {
+    "d": "h. 480 d. C.",
+    "t": "Bodhidharma y el mito de Shaolin",
+    "x": "El mito atribuye el kung-fu a Bodhidharma, un monje indio llegado hacia 480 d. C. que habría enseñado ejercicios a los monjes agotados por la meditación. Las inscripciones del monasterio cuentan otra historia, porque en el siglo VII d. C. sus monjes combatían como cualquier tropa, sin un arte propio.",
+    "q": "¿Qué dicen las inscripciones de Shaolin sobre sus monjes del siglo VII d. C.?",
+    "o": [
+     "Que combatían como cualquier tropa, sin un arte propio",
+     "Que ya practicaban el kung-fu de Bodhidharma",
+     "Que tenían prohibido tocar las armas",
+     "Que solo hacían gimnasia de salud"
+    ]
+   },
+   "en": {
+    "d": "c. AD 480",
+    "t": "Bodhidharma and the Shaolin myth",
+    "x": "The myth credits kung fu to Bodhidharma, an Indian monk who arrived c. AD 480 and supposedly taught exercises to monks exhausted by meditation. The monastery's inscriptions tell another story, since in the 7th century AD its monks fought like any other troops, without an art of their own.",
+    "q": "What do the Shaolin inscriptions say about its 7th-century monks?",
+    "o": [
+     "That they fought like any other troops, without an art of their own",
+     "That they already practised Bodhidharma's kung fu",
+     "That they were forbidden to touch weapons",
+     "That they only did health gymnastics"
+    ]
+   },
+   "s": "Shahar (2008)"
+  },
+  {
+   "id": "chn-examen",
+   "tema": 5,
+   "civ": "chn",
+   "k": "d",
+   "y": 702,
+   "sl": 17,
+   "es": {
+    "d": "702 d. C.",
+    "t": "Se crea el examen militar",
+    "x": "Desde el siglo VII d. C. los cargos del Estado se ganaban con pruebas sobre los clásicos, sin ninguna prueba física. Desde 702 d. C. el examen militar pidió tirar con arco a pie y a caballo, manejar la lanza montado y probar la fuerza, aunque el título militar nunca tuvo el prestigio del civil.",
+    "q": "¿Qué pedía el examen militar chino?",
+    "o": [
+     "Tirar con arco, manejar la lanza a caballo y probar la fuerza",
+     "Recitar los clásicos de Confucio",
+     "Jugar un partido de cuju ante el emperador",
+     "Superar a un luchador del campamento imperial"
+    ]
+   },
+   "en": {
+    "d": "AD 702",
+    "t": "The military examination is created",
+    "x": "From the 7th century AD state posts were won through tests on the classics, with no physical test at all. From AD 702 the military examination required archery on foot and on horseback, handling the lance while mounted and proving one's strength, although the military title never had the prestige of the civil one.",
+    "q": "What did the Chinese military examination require?",
+    "o": [
+     "Archery, handling the lance on horseback and a test of strength",
+     "Reciting the Confucian classics",
+     "Playing a game of cuju before the emperor",
+     "Beating a wrestler from the imperial camp"
+    ]
+   },
+   "s": "Crowther (2007); Ebrey (2010); Lorge (2012)"
+  },
+  {
+   "id": "chn-xuande",
+   "tema": 5,
+   "civ": "chn",
+   "k": "d",
+   "y": 1425,
+   "sl": 20,
+   "es": {
+    "d": "1425-1435 d. C.",
+    "t": "El emperador Xuande juega al chuiwan",
+    "x": "El chuiwan («golpear la bola») consistía en llevar una bola de madera hasta unos hoyos con palos de madera y bambú. Era un pasatiempo de la élite, con categorías según el nivel y apuestas, y llegó a la corte, como muestra la pintura de Xuande jugando, de 1425-1435 d. C.",
+    "q": "¿Con qué deporte actual se ha comparado a menudo el chuiwan?",
+    "o": [
+     "El golf",
+     "El hockey",
+     "El críquet",
+     "El polo"
+    ]
+   },
+   "en": {
+    "d": "AD 1425-1435",
+    "t": "The Xuande Emperor plays chuiwan",
+    "x": "Chuiwan ('hitting the ball') consisted of driving a wooden ball into holes with clubs of wood and bamboo. It was an elite pastime, with categories by level and with betting, and it reached the court, as the painting of Xuande playing, of AD 1425-1435, shows.",
+    "q": "Which present-day sport has chuiwan often been compared to?",
+    "o": [
+     "Golf",
+     "Hockey",
+     "Cricket",
+     "Polo"
+    ]
+   },
+   "s": "Crowther (2007); Cui (2017); Guttmann (2004); Speak (1999b)"
+  },
+  {
+   "id": "chn-1911",
+   "tema": 5,
+   "civ": "chn",
+   "k": "h",
+   "y": 1911,
+   "sl": 6,
+   "es": {
+    "d": "1911 d. C.",
+    "t": "La revolución derroca al último emperador",
+    "x": "En el siglo XIX d. C. las derrotas ante las potencias europeas y Japón y las grandes revueltas internas debilitaron a los Qing, la dinastía manchú, hasta que la revolución de 1911 d. C. derrocó al último emperador.",
+    "q": "¿Qué dinastía gobernaba China cuando cayó el último emperador?",
+    "o": [
+     "Los Qing, de origen manchú",
+     "Los Ming",
+     "Los Song",
+     "Los Han"
+    ]
+   },
+   "en": {
+    "d": "AD 1911",
+    "t": "The revolution overthrows the last emperor",
+    "x": "In the 19th century AD defeats by the European powers and Japan and great internal revolts weakened the Qing, the Manchu dynasty, until the revolution of AD 1911 overthrew the last emperor.",
+    "q": "Which dynasty ruled China when the last emperor fell?",
+    "o": [
+     "The Qing, of Manchu origin",
+     "The Ming",
+     "The Song",
+     "The Han"
+    ]
+   },
+   "s": "Ebrey (2010); Fairbank y Goldman (2006)"
+  },
+  {
+   "id": "jap-kemari",
+   "tema": 5,
+   "civ": "jap",
+   "k": "d",
+   "y": 644,
+   "sl": 33,
+   "es": {
+    "d": "644 d. C.",
+    "t": "Primera noticia del kemari",
+    "x": "El kemari, un juego en el que entre 6 y 12 jugadores en círculo golpean con el pie una pelota de piel de ciervo para que no caiga al suelo, tiene su primera noticia en 644 d. C. y es una evolución del cuju chino. Reproducía la jerarquía de la corte, con el pino del campo reservado a los jugadores de mayor rango.",
+    "q": "¿De qué juego chino deriva el kemari?",
+    "o": [
+     "Del cuju",
+     "Del chuiwan",
+     "Del jiju",
+     "Del jiaodi"
+    ]
+   },
+   "en": {
+    "d": "AD 644",
+    "t": "First record of kemari",
+    "x": "Kemari, a game in which 6 to 12 players in a circle kick a deerskin ball to keep it from touching the ground, is first recorded in AD 644 and is an evolution of Chinese cuju. It reproduced the hierarchy of the court, with the pine tree on the field reserved for the highest-ranking players.",
+    "q": "From which Chinese game does kemari derive?",
+    "o": [
+     "Cuju",
+     "Chuiwan",
+     "Jiju",
+     "Jiaodi"
+    ]
+   },
+   "s": "Guttmann y Thompson (2001)"
+  },
+  {
+   "id": "jap-nara",
+   "tema": 5,
+   "civ": "jap",
+   "k": "h",
+   "y": 710,
+   "sl": 28,
+   "es": {
+    "d": "710 d. C.",
+    "t": "Nara, capital del Estado centralizado",
+    "x": "En el siglo VII d. C. se implantó en Japón un Estado centralizado al modo chino, con capital en Nara desde 710 d. C. y en Heian, la actual Kioto, desde 794 d. C. Allí gobernó una aristocracia de corte que tomó de China sus juegos refinados.",
+    "q": "¿De dónde tomó la corte japonesa de la época clásica sus juegos refinados?",
+    "o": [
+     "De China",
+     "De la India",
+     "De Corea, sin pasar por China",
+     "De los comerciantes holandeses"
+    ]
+   },
+   "en": {
+    "d": "AD 710",
+    "t": "Nara, capital of the centralised state",
+    "x": "In the 7th century AD a centralised state on the Chinese model was established in Japan, with its capital at Nara from AD 710 and at Heian, present-day Kyoto, from AD 794. There a court aristocracy ruled that took its refined games from China.",
+    "q": "Where did the Japanese court of the classical period take its refined games from?",
+    "o": [
+     "From China",
+     "From India",
+     "From Korea, not through China",
+     "From Dutch merchants"
+    ]
+   },
+   "s": "Gordon (2003); Mason y Caiger (1997)"
+  },
+  {
+   "id": "jap-sumo734",
+   "tema": 5,
+   "civ": "jap",
+   "k": "d",
+   "y": 734,
+   "sl": 42,
+   "es": {
+    "d": "734 d. C.",
+    "t": "Primer sumo de corte anual",
+    "x": "Las crónicas sitúan el origen del sumo en un combate legendario ante el emperador, aunque su primer testimonio fiable es un sumo de corte celebrado cada año desde 734 d. C., para el que las provincias enviaban luchadores como tributo (Guttmann y Thompson, 2001).",
+    "q": "¿Cómo llegaban los luchadores al sumo de corte?",
+    "o": [
+     "Las provincias los enviaban como tributo",
+     "Se inscribían libremente en Kioto",
+     "Los elegía un examen militar",
+     "Eran monjes de los templos budistas"
+    ]
+   },
+   "en": {
+    "d": "AD 734",
+    "t": "First annual court sumo",
+    "x": "The chronicles place the origin of sumo in a legendary bout before the emperor, although its first reliable record is a court sumo held every year from AD 734, for which the provinces sent wrestlers as tribute (Guttmann & Thompson, 2001).",
+    "q": "How did the wrestlers reach the court sumo?",
+    "o": [
+     "The provinces sent them as tribute",
+     "They registered freely in Kyoto",
+     "A military examination chose them",
+     "They were monks from Buddhist temples"
+    ]
+   },
+   "s": "Light y Kinnaird (2002); Thompson (1998); Yamaguchi (1998)"
+  },
+  {
+   "id": "jap-shogun",
+   "tema": 5,
+   "civ": "jap",
+   "k": "h",
+   "y": 1185,
+   "sl": 28,
+   "es": {
+    "d": "1185 d. C.",
+    "t": "Comienza el gobierno del shogún",
+    "x": "Desde 1185 d. C. gobernó el shogún, un jefe militar que actuaba en nombre del emperador apoyado en los daimios, señores de la tierra, y en una clase guerrera, los samuráis, que se entrenaba con el arco, la espada y la lucha.",
+    "q": "¿Quién gobernaba Japón en la época de los guerreros?",
+    "o": [
+     "El shogún, en nombre del emperador",
+     "El emperador, sin intermediarios",
+     "Una asamblea de daimios elegida cada año",
+     "Los monjes budistas de Kioto"
+    ]
+   },
+   "en": {
+    "d": "AD 1185",
+    "t": "Rule by the shogun begins",
+    "x": "From AD 1185 the shogun ruled, a military leader who acted in the emperor's name supported by the daimyo, lords of the land, and by a warrior class, the samurai, who trained with the bow, the sword and wrestling.",
+    "q": "Who ruled Japan in the age of the warriors?",
+    "o": [
+     "The shogun, in the emperor's name",
+     "The emperor, without intermediaries",
+     "An assembly of daimyo elected every year",
+     "The Buddhist monks of Kyoto"
+    ]
+   },
+   "s": "Gordon (2003); Mason y Caiger (1997)"
+  },
+  {
+   "id": "jap-toshiya",
+   "tema": 5,
+   "civ": "jap",
+   "k": "d",
+   "y": 1686,
+   "sl": 38,
+   "es": {
+    "d": "1686 d. C.",
+    "t": "8.133 aciertos en el tōshiya",
+    "x": "El tōshiya, la competición de tiro con arco de la galería del Sanjūsangendō de Kioto (1606-1861 d. C.), tenía una prueba de 24 horas. En 1686 d. C. un arquero logró 8.133 aciertos, y como el resultado se anotaba con exactitud, el tōshiya muestra ya un rasgo del deporte moderno, la búsqueda del récord.",
+    "q": "¿Qué rasgo del deporte moderno muestra el tōshiya?",
+    "o": [
+     "La búsqueda del récord",
+     "El reglamento escrito internacional",
+     "La división por categorías de peso",
+     "El profesionalismo de los arqueros"
+    ]
+   },
+   "en": {
+    "d": "AD 1686",
+    "t": "8,133 hits at the tōshiya",
+    "x": "The tōshiya, the archery competition held in the gallery of the Sanjūsangendō in Kyoto (AD 1606-1861), had a 24-hour event. In AD 1686 an archer scored 8,133 hits, and since the result was recorded exactly, the tōshiya already shows a feature of modern sport, the quest for the record.",
+    "q": "Which feature of modern sport does the tōshiya show?",
+    "o": [
+     "The quest for the record",
+     "A written international rulebook",
+     "Weight categories",
+     "Professional archers"
+    ]
+   },
+   "s": "Guttmann y Thompson (2001)"
+  },
+  {
+   "id": "jap-meiji",
+   "tema": 5,
+   "civ": "jap",
+   "k": "h",
+   "y": 1868,
+   "sl": 28,
+   "es": {
+    "d": "1868 d. C.",
+    "t": "Restauración Meiji",
+    "x": "La llegada de la flota del comodoro Perry en 1853 d. C. obligó a abrir el país y precipitó la Restauración Meiji de 1868 d. C., que devolvió el poder al emperador, abolió los privilegios de los samuráis e industrializó el país, mientras los profesores extranjeros introducían el béisbol, el fútbol o el remo.",
+    "q": "¿Qué hizo la Restauración Meiji con los samuráis?",
+    "o": [
+     "Abolió sus privilegios",
+     "Los convirtió en la nueva nobleza de corte",
+     "Les devolvió el gobierno del país",
+     "Les prohibió practicar cualquier arte marcial"
+    ]
+   },
+   "en": {
+    "d": "AD 1868",
+    "t": "Meiji Restoration",
+    "x": "The arrival of Commodore Perry's fleet in AD 1853 forced the country to open and precipitated the Meiji Restoration of AD 1868, which returned power to the emperor, abolished the privileges of the samurai and industrialised the country, while foreign teachers introduced baseball, football and rowing.",
+    "q": "What did the Meiji Restoration do with the samurai?",
+    "o": [
+     "It abolished their privileges",
+     "It turned them into the new court nobility",
+     "It gave them back the government of the country",
+     "It banned them from practising any martial art"
+    ]
+   },
+   "s": "Gordon (2003); Mason y Caiger (1997)"
+  },
+  {
+   "id": "jap-judo",
+   "tema": 5,
+   "civ": "jap",
+   "k": "d",
+   "y": 1882,
+   "sl": 45,
+   "es": {
+    "d": "1882 d. C.",
+    "t": "Kanō Jigorō crea el judo",
+    "x": "Kanō Jigorō creó el judo en 1882 d. C. a partir del jūjutsu, como un método de educación integral. Eligió el sufijo -dō, «camino», en lugar de -jutsu, «técnica», y lo resumió en dos principios, la máxima eficacia con el mínimo esfuerzo y la prosperidad y el beneficio mutuos.",
+    "q": "¿Por qué eligió Kanō el sufijo -dō?",
+    "o": [
+     "Porque el judo era ante todo un camino de educación",
+     "Porque así se llamaba su maestro de jūjutsu",
+     "Porque era el nombre del Kodokan",
+     "Porque lo exigía el reglamento olímpico"
+    ]
+   },
+   "en": {
+    "d": "AD 1882",
+    "t": "Kanō Jigorō creates judo",
+    "x": "Kanō Jigorō created judo in AD 1882 from jūjutsu, as a method of all-round education. He chose the suffix -dō, 'way', instead of -jutsu, 'technique', and summed it up in two principles, maximum efficiency with minimum effort and mutual welfare and benefit.",
+    "q": "Why did Kanō choose the suffix -dō?",
+    "o": [
+     "Because judo was above all a way of education",
+     "Because that was his jūjutsu master's name",
+     "Because it was the name of the Kodokan",
+     "Because the Olympic rules required it"
+    ]
+   },
+   "s": "Espartero Casado y Villamón (2009); Espartero (2021); Inoue (1998); Niehaus (2024)"
+  },
+  {
+   "id": "jap-karate",
+   "tema": 5,
+   "civ": "jap",
+   "k": "d",
+   "y": 1922,
+   "sl": 47,
+   "es": {
+    "d": "1922 d. C.",
+    "t": "Funakoshi Gichin lleva el karate a Tokio",
+    "x": "El karate nació en Okinawa, donde el te local se unió al boxeo chino. Tras la anexión de la isla a Japón en 1879 d. C. entró en sus escuelas, y en 1922 d. C. Funakoshi Gichin lo llevó a Tokio, donde se japonizó y tomó del judo el uniforme, los cinturones y los grados.",
+    "q": "¿Dónde nació el karate?",
+    "o": [
+     "En Okinawa, en el reino de Ryūkyū",
+     "En Kioto, en la corte imperial",
+     "En el monasterio de Shaolin",
+     "En Edo, entre los samuráis"
+    ]
+   },
+   "en": {
+    "d": "AD 1922",
+    "t": "Funakoshi Gichin takes karate to Tokyo",
+    "x": "Karate was born in Okinawa, where the local te merged with Chinese boxing. After the island was annexed by Japan in AD 1879 it entered its schools, and in AD 1922 Funakoshi Gichin took it to Tokyo, where it was Japanised and adopted the uniform, belts and grades of judo.",
+    "q": "Where was karate born?",
+    "o": [
+     "In Okinawa, in the kingdom of Ryūkyū",
+     "In Kyoto, at the imperial court",
+     "In the Shaolin monastery",
+     "In Edo, among the samurai"
+    ]
+   },
+   "s": "Guttmann y Thompson (2001); Levinson et al. (1999); Martins y Kanashiro (2010)"
+  },
+  {
+   "id": "ind-indo",
+   "tema": 5,
+   "civ": "ind",
+   "k": "h",
+   "y": -2600,
+   "sl": 51,
+   "es": {
+    "d": "h. 2600 a. C.",
+    "t": "Las ciudades del valle del Indo",
+    "x": "Hacia 2600 a. C. surgieron en el valle del Indo las primeras grandes ciudades de la India, cuya escritura todavía no se ha descifrado. Su declive, quizá por cambios en el clima y en el curso de los ríos, dejó el norte en manos de pueblos ganaderos.",
+    "q": "¿Qué rasgo de la civilización del Indo sigue sin resolverse?",
+    "o": [
+     "Su escritura, que no se ha descifrado",
+     "El lugar donde estaban sus ciudades",
+     "La fecha de la independencia",
+     "El nombre de su primer emperador"
+    ]
+   },
+   "en": {
+    "d": "c. 2600 BC",
+    "t": "The cities of the Indus valley",
+    "x": "Around 2600 BC the first great cities of India arose in the Indus valley, whose script has still not been deciphered. Their decline, perhaps because of changes in the climate and in the course of the rivers, left the north in the hands of pastoral peoples.",
+    "q": "Which feature of the Indus civilisation remains unresolved?",
+    "o": [
+     "Its script, which has not been deciphered",
+     "Where its cities were",
+     "The date of independence",
+     "The name of its first emperor"
+    ]
+   },
+   "s": "Asher y Talbot (2006); Kulke y Rothermund (2004); Sen (2015)"
+  },
+  {
+   "id": "ind-ashoka",
+   "tema": 5,
+   "civ": "ind",
+   "k": "h",
+   "y": -268,
+   "sl": 51,
+   "es": {
+    "d": "268-233 a. C.",
+    "t": "Ashoka difunde el budismo",
+    "x": "El Imperio maurya, el primero que unificó casi toda la India, tuvo su emperador más célebre en Ashoka (268-233 a. C.), que difundió el budismo por Asia. Tras su caída, el Imperio gupta dio a la India su época clásica.",
+    "q": "¿Qué religión difundió Ashoka por Asia?",
+    "o": [
+     "El budismo",
+     "El islam",
+     "El confucianismo",
+     "El sintoísmo"
+    ]
+   },
+   "en": {
+    "d": "268-233 BC",
+    "t": "Ashoka spreads Buddhism",
+    "x": "The Maurya Empire, the first to unify almost the whole of India, had its most famous emperor in Ashoka (268-233 BC), who spread Buddhism across Asia. After its fall, the Gupta Empire gave India its classical age.",
+    "q": "Which religion did Ashoka spread across Asia?",
+    "o": [
+     "Buddhism",
+     "Islam",
+     "Confucianism",
+     "Shinto"
+    ]
+   },
+   "s": "Asher y Talbot (2006); Kulke y Rothermund (2004); Sen (2015)"
+  },
+  {
+   "id": "ind-kalari",
+   "tema": 5,
+   "civ": "ind",
+   "k": "d",
+   "y": 1150,
+   "sl": 58,
+   "es": {
+    "d": "Siglo XII d. C.",
+    "t": "Primeros testimonios seguros del kalarippayattu",
+    "x": "El kalarippayattu, lucha danzada con armas reales de Kerala, se presenta a menudo como el arte marcial más antiguo de Asia, aunque las fuentes solo permiten documentarlo con seguridad desde el siglo XII d. C. Su nombre une kalari, el foso que era a la vez gimnasio y templo, y payattu, «práctica».",
+    "q": "¿Qué era el kalari?",
+    "o": [
+     "El foso de tierra que servía de gimnasio y de templo",
+     "La espada-látigo flexible",
+     "El maestro que dirigía la formación",
+     "La primera fase del entrenamiento"
+    ]
+   },
+   "en": {
+    "d": "12th century AD",
+    "t": "First secure records of kalarippayattu",
+    "x": "Kalarippayattu, a danced combat with real weapons from Kerala, is often presented as the oldest martial art in Asia, although the sources only allow it to be documented with certainty from the 12th century AD. Its name joins kalari, the earthen pit that was both gymnasium and temple, and payattu, 'practice'.",
+    "q": "What was the kalari?",
+    "o": [
+     "The earthen pit that served as gymnasium and temple",
+     "The flexible whip-sword",
+     "The master who directed the training",
+     "The first stage of training"
+    ]
+   },
+   "s": "Zarrilli (1998)"
+  },
+  {
+   "id": "ind-delhi",
+   "tema": 5,
+   "civ": "ind",
+   "k": "h",
+   "y": 1206,
+   "sl": 51,
+   "es": {
+    "d": "1206 d. C.",
+    "t": "Se funda el sultanato de Delhi",
+    "x": "Sin un poder central, la India se dividió en reinos regionales, lo que facilitó la llegada de conquistadores musulmanes desde Afganistán, que en 1206 d. C. fundaron el sultanato de Delhi e introdujeron en la corte el islam y la cultura persa.",
+    "q": "¿De dónde llegaron los fundadores del sultanato de Delhi?",
+    "o": [
+     "De Afganistán",
+     "De Persia por mar",
+     "Del sur de la India",
+     "De Asia central, con Babur"
+    ]
+   },
+   "en": {
+    "d": "AD 1206",
+    "t": "The Delhi Sultanate is founded",
+    "x": "Without a central power, India split into regional kingdoms, which made it easier for Muslim conquerors from Afghanistan to arrive; in AD 1206 they founded the Delhi Sultanate and brought Islam and Persian culture to the court.",
+    "q": "Where did the founders of the Delhi Sultanate come from?",
+    "o": [
+     "From Afghanistan",
+     "From Persia by sea",
+     "From southern India",
+     "From Central Asia, with Babur"
+    ]
+   },
+   "s": "Asher y Talbot (2006); Kulke y Rothermund (2004); Sen (2015)"
+  },
+  {
+   "id": "ind-gama",
+   "tema": 5,
+   "civ": "ind",
+   "k": "d",
+   "y": 1910,
+   "sl": 59,
+   "es": {
+    "d": "1910 d. C.",
+    "t": "Gama vence en Londres",
+    "x": "El luchador Gama venció en Londres en 1910 d. C. a los mejores luchadores occidentales y se retiró invicto, de modo que el nacionalismo indio lo convirtió en símbolo de que un cuerpo indio podía vencer al del colonizador (Sen, 2015).",
+    "q": "¿En qué se convirtió Gama para el nacionalismo indio?",
+    "o": [
+     "En el símbolo de que un cuerpo indio podía vencer al del colonizador",
+     "En el creador del kabaddi moderno",
+     "En el primer campeón olímpico de la India",
+     "En el maestro del primer akhara británico"
+    ]
+   },
+   "en": {
+    "d": "AD 1910",
+    "t": "Gama wins in London",
+    "x": "The wrestler Gama defeated the best Western wrestlers in London in AD 1910 and retired undefeated, so Indian nationalism made him a symbol that an Indian body could beat that of the coloniser (Sen, 2015).",
+    "q": "What did Gama become for Indian nationalism?",
+    "o": [
+     "A symbol that an Indian body could beat that of the coloniser",
+     "The creator of modern kabaddi",
+     "India's first Olympic champion",
+     "The master of the first British akhara"
+    ]
+   },
+   "s": "Alter (1992); Sen (2015)"
+  },
+  {
+   "id": "ind-berlin",
+   "tema": 5,
+   "civ": "ind",
+   "k": "d",
+   "y": 1936,
+   "sl": 62,
+   "es": {
+    "d": "1936 d. C.",
+    "t": "El kabaddi, en los Juegos de Berlín",
+    "x": "El kabaddi lo jugaban niños y jóvenes en las aldeas, con nombres y reglas distintos en cada región, hasta que grupos nacionalistas de clase media lo codificaron y lo exhibieron en los Juegos de Berlín de 1936 d. C. como deporte nacional (Alter, 2000).",
+    "q": "¿Quién codificó el kabaddi?",
+    "o": [
+     "Grupos nacionalistas de clase media",
+     "Los oficiales del ejército británico",
+     "Los reyes de Manipur",
+     "El Comité Olímpico Internacional"
+    ]
+   },
+   "en": {
+    "d": "AD 1936",
+    "t": "Kabaddi at the Berlin Games",
+    "x": "Kabaddi was played by children and young people in the villages, with different names and rules in each region, until nationalist middle-class groups codified it and showed it at the Berlin Games of AD 1936 as a national sport (Alter, 2000).",
+    "q": "Who codified kabaddi?",
+    "o": [
+     "Nationalist middle-class groups",
+     "Officers of the British army",
+     "The kings of Manipur",
+     "The International Olympic Committee"
+    ]
+   },
+   "s": "Alter (2000); Mills (2005)"
+  },
+  {
+   "id": "ind-1947",
+   "tema": 5,
+   "civ": "ind",
+   "k": "h",
+   "y": 1947,
+   "sl": 51,
+   "es": {
+    "d": "1947 d. C.",
+    "t": "Independencia de la India",
+    "x": "Los británicos llevaron a la India el críquet y el hockey y despreciaron muchas prácticas indias, hasta que un largo movimiento nacionalista, encabezado por Gandhi, logró la independencia en 1947 d. C., con el país dividido en la India y Pakistán.",
+    "q": "¿Qué deportes llevaron los británicos a la India?",
+    "o": [
+     "El críquet y el hockey",
+     "El kabaddi y el kushti",
+     "El polo y el yoga",
+     "El béisbol y el remo"
+    ]
+   },
+   "en": {
+    "d": "AD 1947",
+    "t": "Indian independence",
+    "x": "The British brought cricket and hockey to India and despised many Indian practices, until a long nationalist movement, led by Gandhi, won independence in AD 1947, with the country divided into India and Pakistan.",
+    "q": "Which sports did the British bring to India?",
+    "o": [
+     "Cricket and hockey",
+     "Kabaddi and kushti",
+     "Polo and yoga",
+     "Baseball and rowing"
+    ]
+   },
+   "s": "Asher y Talbot (2006); Kulke y Rothermund (2004); Sen (2015)"
   }
  ]
 }

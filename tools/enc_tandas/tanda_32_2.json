@@ -42,6 +42,22 @@
      "es": "El tiro con arco sobre dianas de cobre",
      "en": "Archery at copper targets"
     }
+   },
+   {
+    "num": 5,
+    "f": "entrenamiento-samurai-arco",
+    "t": {
+     "es": "Entrenamiento samurái (arco)",
+     "en": "Samurai training (archery)"
+    }
+   },
+   {
+    "num": 5,
+    "f": "toshiya",
+    "t": {
+     "es": "Tōshiya",
+     "en": "Tōshiya"
+    }
    }
   ],
   "img": {

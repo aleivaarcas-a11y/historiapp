@@ -97,6 +97,14 @@
       "es": "Chovgan",
       "en": "Chovgan"
      }
+    },
+    {
+     "num": 5,
+     "f": "jiju",
+     "t": {
+      "es": "Jiju",
+      "en": "Jiju"
+     }
     }
    ],
    "img": {
@@ -231,6 +239,22 @@
      "t": {
       "es": "El tiro con arco sobre dianas de cobre",
       "en": "Archery at copper targets"
+     }
+    },
+    {
+     "num": 5,
+     "f": "entrenamiento-samurai-arco",
+     "t": {
+      "es": "Entrenamiento samurái (arco)",
+      "en": "Samurai training (archery)"
+     }
+    },
+    {
+     "num": 5,
+     "f": "toshiya",
+     "t": {
+      "es": "Tōshiya",
+      "en": "Tōshiya"
      }
     }
    ],
@@ -961,7 +985,16 @@
      "After independence, kabaddi became an emblem of indigenous sport as opposed to colonial sport. The All-India Kabaddi Federation was founded in 1950, in 1951 it was the only demonstration sport at the Asian Games in Delhi, and Nehru praised it as a game that built «sturdy men» (Sen, 2015, chap. 9). In 1978 India promoted the Asian Amateur Kabaddi Federation, kabaddi was again a demonstration sport at the 1982 Asian Games in Delhi, entered the official programme in 1990, and the women's competition was added in 2010 (Sen, 2015, chap. 12). One textbook presents it as a demonstration sport at the 1936 Berlin Olympic Games (Fernández Truan, n.d., p. 143), whereas what took place was that demonstration outside the official programme."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "deportes-de-equipo",
+     "t": {
+      "es": "Deportes de equipo",
+      "en": "Team sports"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/kabaddi.jpg",
     "pie": {
@@ -1591,7 +1624,16 @@
      "Football soon became a working-class spectacle and a business. The Football Association legalised professionalism on 20 July 1885, and the Football League kicked off in September 1888 under commercial criteria (Collins, 2019, pp. 58, 61). On 21 May 1904 representatives of seven European countries founded FIFA in Paris, with Robert Guérin as its first president (FIFA, 2024), and in 1930 the federation organised its own world championship because its professionalism clashed with Olympic amateurism (Collins, 2019, pp. 170, 173). Women's football, very popular during the First World War, was banned from club grounds by the Football Association on 5 December 1921 (Collins, 2019, pp. 69-71). The view that football was born in the public schools and later filtered down to the popular classes is now contested by historians who document its continuous practice outside those schools (Swain, 2020, introduction)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "cuju",
+     "t": {
+      "es": "Cuju",
+      "en": "Cuju"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/futbol.jpg",
     "pie": {
@@ -5045,7 +5087,16 @@
      "The society of golfers at St Andrews was founded on 14 May 1754 with the first competition for the Silver Club and from the late nineteenth century came to be regarded as the game's governing authority (The R&A, n.d.-a); it set up its rules committee in 1897 and in 1952 issued the first unified code with the USGA (The R&A, n.d.-b). Golf kept a strong character of social distinction, and although men helped to found the Ladies' Golf Union in 1893, the St Andrews club refused it permission to hold its tournament there in 1901 and gave way only seven years later, reserving the lockers and the lounge for men (Guttmann, 1991, pp. 121-122). It was Olympic in 1900, with a women's event, and in 1904, and the International Olympic Committee restored it in 2009 for the 2016 Games (International Golf Federation, n.d.)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "chuiwan-un-juego-de-palo-y-bola",
+     "t": {
+      "es": "Chuiwan, un juego de palo y bola",
+      "en": "Chuiwan, a stick-and-ball game"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/golf.jpg",
     "pie": {
@@ -5986,7 +6037,24 @@
      "The term *kyūdō*, \"the way of the bow\", is a modern coinage (Guttmann & Thompson, 2001, p. 61). In 1919 the Dai Nippon Butokukai replaced *kyūjutsu* with *kyūdō*, as it did with the other martial arts, to stress character-building linked to patriotism and to discourage competition and the mere pursuit of technical skill (Sánchez García, 2019, p. 150). In those years the master Awa Kenzō linked archery to Zen, and this reading spread in the West through *Zen in the Art of Archery* by his German pupil Eugen Herrigel, whose influence has been critically reassessed (Sánchez García, 2019, pp. 152, 156-157). In 1931 budō became compulsory in secondary schools, and girls had to practise kyūdō or *naginata* (Sánchez García, 2019, p. 167); after the war the Japan Kyūdō Federation was formed in 1949 and held its own national tournament from 1950 (Guttmann & Thompson, 2001, p. 177)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "entrenamiento-samurai-arco",
+     "t": {
+      "es": "Entrenamiento samurái (arco)",
+      "en": "Samurai training (archery)"
+     }
+    },
+    {
+     "num": 5,
+     "f": "toshiya",
+     "t": {
+      "es": "Tōshiya",
+      "en": "Tōshiya"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/kyudo.jpg",
     "pie": {
@@ -6201,7 +6269,16 @@
      "The school turned kendo into an instrument of national identity, since from 1911 and 1913 it was taught as a regular subject to boys in secondary schools (Sánchez García, 2019, p. 124), and its association with militarism explains why the occupation authorities banned it in 1945. It was reborn as a sport with the founding of the All Japan Kendo Federation in 1952, and in 1970 the International Kendo Federation was created (All Japan Kendo Federation, n.d.), with fifteen founding countries and a world championship every three years (Sakaue, 1999, p. 217). Women's practice grew after the war, to the point that from 1978 around forty per cent of the members of high-school kendo clubs were female, and Japan has opposed entry into the Olympic Games for fear that the rules would be transformed as happened with judo (Sakaue, 1999, pp. 216-217)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "entrenamiento-samurai-combate",
+     "t": {
+      "es": "Entrenamiento samurái (combate)",
+      "en": "Samurai training (combat)"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/kendo.jpg",
     "pie": {
@@ -6319,7 +6396,24 @@
      "After the ban on martial arts during the occupation, practice resumed in 1955, the year the All Japan Naginata Federation was founded, which commissioned a committee to devise a style suitable for public schools. The result, *atarashii naginata* (\"new naginata\"), was written in the phonetic syllabary instead of Chinese characters and without the suffix *dō*, to distance it from pre-war militarist ideology (Sánchez García, 2019, p. 203). The International Naginata Federation was founded in 1990 and the first world championship was held in Japan in 1995. In the early twenty-first century some forty thousand people practised it in Japan, the vast majority of them women, although the number of men is growing, especially outside the country (Sánchez García, 2019, pp. 214-215)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "armamento-de-los-samurais",
+     "t": {
+      "es": "Armamento de los samuráis",
+      "en": "Samurai weapons"
+     }
+    },
+    {
+     "num": 5,
+     "f": "la-mujer-japonesa",
+     "t": {
+      "es": "La mujer japonesa",
+      "en": "Japanese women"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/naginata.jpg",
     "pie": {
@@ -6820,7 +6914,16 @@
      "The Kōdōkan admitted women from its early years (Guttmann & Thompson, 2001, p. 102), although its women's section of 1926 kept grades and insignia different from those of men (Sánchez García, 2019, p. 148). In international competition, the first women's world championship was held in New York in 1980, women's judo was a demonstration sport at the 1988 Seoul Games, and since Barcelona 1992 both men's and women's events have formed part of the Olympic programme (International Judo Federation, n.d.)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "judo",
+     "t": {
+      "es": "Judo",
+      "en": "Judo"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/judo.jpg",
     "pie": {
@@ -6880,7 +6983,16 @@
      "The international organisation was born in Tokyo on 10 October 1970 as the World Union of Karate-Do Organizations (WUKO), and that same year it held its first world championship in Tokyo with thirty-three countries; on 20 December 1992 it adopted the name World Karate Federation (WKF), which the International Olympic Committee recognised in 1999 as the sole governing body of sport karate (World Karate Federation, n.d.). Karate appeared for the first time at the Olympic Games in Tokyo 2020 (Bureau of Tokyo 2020 Olympic and Paralympic Games Preparation, n.d.)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "karate",
+     "t": {
+      "es": "Karate",
+      "en": "Karate"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/karate.jpg",
     "pie": {
@@ -6983,7 +7095,16 @@
      "In the early Meiji years sumo seemed a feudal relic, and its promoters responded by modernising it while stressing its link with the past (Guttmann & Thompson, 2001, p. 108). In 1909 the Kokugikan was opened, a roofed hall that freed tournaments from the rain, and in 1926 the national federation of professional sumo was born, today the Japan Sumō Association; college wrestlers had organised in 1920 and the amateur federation was founded in 1946 (Guttmann & Thompson, 2001, p. 109). The rank of *yokozuna*, presented as the symbol of a two-thousand-year history, was recognised by the association in 1909 and by the Yoshida family in 1951, which makes sumo a clear case of invented tradition (Guttmann & Thompson, 2001, p. 145)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "sumo",
+     "t": {
+      "es": "Sumo",
+      "en": "Sumo"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/sumo.jpg",
     "pie": {
@@ -7091,7 +7212,16 @@
      "Despite this dispersion, the sporting form was organised from Europe, where in 1977 Germany, Italy and Sweden promoted the European Ju Jitsu Federation, which in 1987 extended its scope worldwide as the International Ju Jitsu Federation; this body obtained GAISF recognition in 1993, took part in the World Games for the first time in 1997 and in 1998 adopted the name Ju Jitsu International Federation (JJIF) (Ju-Jitsu European Union, n.d.), and in 2018 ju-jitsu entered the Asian Games (Ju-Jitsu International Federation, n.d.)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "jujutsu",
+     "t": {
+      "es": "Jūjutsu",
+      "en": "Jūjutsu"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/jiu-jitsu.jpg",
     "pie": {
@@ -7212,7 +7342,24 @@
      "The International Wushu Federation was founded on 3 October 1990, organised the first world championship in Beijing in 1991, joined GAISF in 1994 and obtained recognition from the International Olympic Committee at its 113th Session, in 2002; in 2008 a wushu tournament was held in Beijing in conjunction with the Olympic Games, and in 2020 wushu was included as an official sport in the programme of the 2026 Youth Olympic Games in Dakar (International Wushu Federation, n.d.). Its worldwide diffusion owes much to Bruce Lee's films of the 1970s, which popularised the very expression «martial arts», although *wushu* has not entered the Olympic programme (Sánchez García, 2019, p. 2)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "bodhidharma-y-shaolin",
+     "t": {
+      "es": "Bodhidharma y Shaolin",
+      "en": "Bodhidharma and Shaolin"
+     }
+    },
+    {
+     "num": 5,
+     "f": "deportes-de-combate",
+     "t": {
+      "es": "Deportes de combate",
+      "en": "Combat sports"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/kung-fu-wushu.jpg",
     "pie": {
@@ -7284,7 +7431,16 @@
      "During the Cultural Revolution *taijiquan* came under political attack in the People's Republic, and later it was rehabilitated as a national treasure and a distinctly Chinese form of art and sport; it is taught publicly in parks and form competitions are held frequently (Davis, 1999, p. 389). Its dominant social function is hygienic, since the slow and soft Yang style is practised by the elderly and by people with disabilities to strengthen the constitution and prolong life (Davis, 1999, p. 389), and in 1990s China, together with *qigong*, it was among the few physical activities built into the daily life of the population (Jones, 1999, p. 14). In the West it is one of the few Chinese disciplines distinguished by its own name within the generic term *kung fu* (Sánchez García, 2019, p. 2)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "deporte-tradicional-chino",
+     "t": {
+      "es": "Deporte tradicional chino",
+      "en": "Traditional Chinese sport"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/tai-chi-chuan.jpg",
     "pie": {
@@ -8935,7 +9091,16 @@
      "Its conversion into a modern sport began in 1958 with the founding of the Kerala Kalarippayattu Association within the Kerala State Sports Council, which grouped the neighbouring Tamil forms under the name of southern style and called *kalarippayattu* proper the northern style; since then annual district and state championships have been held, in which a panel of masters judges solo or paired weapon forms (Zarrilli, 1999, p. 240). Competition plays a larger role in it than in traditional Indian wrestling (Guttmann, 2004, p. 219), and India's Sports Ministry approved its inclusion, together with *gatka*, in the Khelo India Youth Games 2021, held in Haryana (Press Trust of India, 2023)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "kalarippayattu",
+     "t": {
+      "es": "Kalarippayattu",
+      "en": "Kalarippayattu"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/kalaripayattu.jpg",
     "pie": {
@@ -8995,7 +9160,16 @@
      "At the beginning of the twentieth century *kushti* joined nationalism and physical culture. In 1910 a Bengali millionaire paid for Gama and three other wrestlers to travel to London for a world tournament; Gama defeated the American B. F. Roller and in September faced the Pole Stanislaus Zbyszko before 12,000 spectators in a bout that ended without a winner (Sen, 2015, chap. 8). Today traditional wrestling is still alive in the *akharas* of northern India, almost always presided over by a shrine to Hanuman, and in the rural tournaments or *dangals*, nominally overseen by the Indian Style Wrestling Association, separate from the Wrestling Federation of India, which is in charge of Olympic wrestling, while international rules and mats are slowly transforming the world of *kushti* (Sen, 2015, chap. 12)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "lucha-kushti",
+     "t": {
+      "es": "Lucha (kushti)",
+      "en": "Wrestling (kushti)"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/kushti.jpg",
     "pie": {
@@ -14575,6 +14749,14 @@
       "es": "¿Cuáles son los límites del deporte?",
       "en": "Where are the limits of sport?"
      }
+    },
+    {
+     "num": 5,
+     "f": "chaturanga",
+     "t": {
+      "es": "Chaturanga",
+      "en": "Chaturanga"
+     }
     }
    ],
    "img": {
@@ -16504,7 +16686,16 @@
      "Institutionalisation is recent, given that the Mallakhamb Federation of India was founded in 1987 and its secretary, Uday Deshpande, travelled across the states to create and affiliate regional associations (Chitnis, 2024). The first world championship was held in February 2019 at Shivaji Park in Mumbai with participants from fifteen countries, and the sport now has an international federation, the Vishwa Mallakhamb Federation, to which national federations such as that of the United States are affiliated (Chitnis, 2024; Mallakhamb Federation USA, n.d.). Women's participation on the pole, reserved for decades to men while women practised on the rope, was formalised in 2016 (Chitnis, 2024), a change that shows how an exercise for training wrestlers has become a gymnastic discipline open to both sexes."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "metodos-de-entrenamiento-de-fuerza",
+     "t": {
+      "es": "Métodos de entrenamiento de fuerza",
+      "en": "Strength training methods"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/mallakhamb.jpg",
     "pie": {
@@ -16564,7 +16755,16 @@
      "International competition began in Los Angeles with the Bishnu Charan Ghosh Cup, held every year between 2003 and 2014, and the International Yoga Sports Federation was established in Lausanne in 2013 and registered in 2014, with biennial championships in London, Italy, China and India and with the declared aim of bringing yoga sport onto the Olympic programme (IYSF, n.d.). Sen (2015, chap. 12) dates the federation to 2003, the year the organisation itself assigns to the first Ghosh Cup, and compares the case of yoga with that of Chinese *wushu*, two practices of ancient origin reorganised in recent times as competitive sports with Olympic aspirations, so that a religious and philosophical body of knowledge has ended up subject to rules, judges and rankings."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "yoga",
+     "t": {
+      "es": "Yoga",
+      "en": "Yoga"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/yoga.jpg",
     "pie": {
@@ -17478,7 +17678,24 @@
      "Cuju was popular among courtiers, soldiers, scholars and women, as shown by Song-period bronze mirrors and Ming-dynasty paintings (Speak, 1999b, p. 56; FIFA Museum, n.d.). Under the Ming it continued to evolve, and although some emperors prohibited it, many generals, high officials and rulers played it (Speak, 1999b, p. 57); the FIFA Museum attributes to the first Ming emperor a ban that would have put an end to the playing societies (FIFA Museum, n.d.). Under the Qing, as Confucianism gained ground, the game lost its appeal (Guttmann, 2004, p. 41). Its recovery is recent, since academic research on *cuju* began at Chinese universities in the 1980s and since 2015 Linzi has had a museum devoted to the game, which China claims as a forerunner of football (FIFA Museum, n.d.)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "cuju",
+     "t": {
+      "es": "Cuju",
+      "en": "Cuju"
+     }
+    },
+    {
+     "num": 5,
+     "f": "cuju-sus-modalidades",
+     "t": {
+      "es": "Cuju, sus modalidades",
+      "en": "Cuju and its forms"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/cuju.jpg",
     "pie": {
@@ -17537,7 +17754,16 @@
      "The opening of the Meiji era nearly made it extinct. A small group of Kyoto aristocrats kept it alive, Emperor Meiji expressed in 1877 his wish that it be preserved and, after a first society dissolved in 1895, the Kemari Preservation Society was born in February 1903, and that same year it gave a demonstration at the National Industrial Exhibition in Osaka (Guttmann & Thompson, 2001, pp. 96-97). It chose the patronage of the Imperial Household and refused to modernise balls, costumes or rules, so that it remained a circle almost reserved to the nobility, and it suspended its activities in April 1945 (Guttmann & Thompson, 2001, pp. 98-99). Today *kemari* survives as a ceremonial exhibition, such as the one held every June at the Fujinomori shrine in Kyoto, with players dressed as courtiers (Guttmann & Thompson, 2001, p. 1)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "kemari",
+     "t": {
+      "es": "Kemari",
+      "en": "Kemari"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/kemari.jpg",
     "pie": {
@@ -19442,7 +19668,16 @@
      "The last recorded regular performance dates from 1484, and the long Tokugawa peace left it almost in disuse, to the point that the Dutchman Hendrick Hagenaer found it «strange and incomprehensible» in 1636 (Guttmann & Thompson, 2001, pp. 50-51). The shogun Tokugawa Yoshimune revived it entrusted its teaching to Ogasawara Tsuneharu in 1724 and, three years after a first trial, organised a full ceremony with forty-six archers, because he regretted the loss of the ancient rite and wished to test his retainers (Guttmann & Thompson, 2001, pp. 51-52). In the Meiji era it survived as a cultural relic at a few shrines (Guttmann & Thompson, 2001, p. 108), and today disciples of the Ogasawara school perform it every September at Tsurugaoka Hachimangū, dressed in the hunting robes of Kamakura samurai (Public Relations Office, Government of Japan, 2022)."
     ]
    },
-   "tema": [],
+   "tema": [
+    {
+     "num": 5,
+     "f": "entrenamiento-samurai-arco",
+     "t": {
+      "es": "Entrenamiento samurái (arco)",
+      "en": "Samurai training (archery)"
+     }
+    }
+   ],
    "img": {
     "src": "img/enc/yabusame.jpg",
     "pie": {
@@ -22597,6 +22832,14 @@
      "t": {
       "es": "Educación física persa",
       "en": "Persian physical education"
+     }
+    },
+    {
+     "num": 5,
+     "f": "entrenamiento-samurai-arco",
+     "t": {
+      "es": "Entrenamiento samurái (arco)",
+      "en": "Samurai training (archery)"
      }
     }
    ],

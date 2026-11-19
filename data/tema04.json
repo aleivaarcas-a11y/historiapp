@@ -1940,8 +1940,8 @@
      "en": "For the emperors, because the games replaced the assemblies in which the people no longer voted"
     },
     {
-     "es": "Para los dueños de las facciones, porque los organizadores dependían de sus caballos y aurigas",
-     "en": "For the owners of the factions, because the organisers depended on their horses and charioteers"
+     "es": "Para los dueños de las facciones del circo, porque los magistrados que organizaban los juegos dependían por completo de sus caballos, sus carros y sus aurigas",
+     "en": "For the owners of the circus factions, because the magistrates who organised the games depended entirely on their horses, their chariots and their charioteers"
     },
     {
      "es": "Para los lanistas, porque los gladiadores les aseguraban el favor del Senado",
@@ -1978,8 +1978,8 @@
      "en": "The historian Tacitus, as praise for the generosity of the emperors"
     },
     {
-     "es": "Del filósofo Séneca, como denuncia de la crueldad de la arena",
-     "en": "The philosopher Seneca, as a denunciation of the cruelty of the arena"
+     "es": "Del filósofo Séneca, en una de sus cartas a Lucilio, como denuncia de la crueldad de la arena y de los espectadores que la aplaudían",
+     "en": "The philosopher Seneca, in one of his letters to Lucilius, as a denunciation of the cruelty of the arena and of the spectators who applauded it"
     }
    ],
    "answer": 0,
@@ -2012,8 +2012,8 @@
      "en": "Legionaries, because part of their pay was in grain"
     },
     {
-     "es": "A la plebe de Roma, por el grano público que recibía",
-     "en": "The plebs of Rome, because of the public grain it received"
+     "es": "A la plebe de Roma, por el grano público que recibía cada mes de manos del Estado",
+     "en": "The plebs of Rome, because of the public grain it received from the State each month"
     }
    ],
    "answer": 0,
@@ -2046,8 +2046,8 @@
      "en": "The lanista, the entrepreneur who grew rich from the combats"
     },
     {
-     "es": "Al editor del munus, que ganaba aplausos pero se arruinaba",
-     "en": "The editor of the munus, who won applause but was ruined"
+     "es": "Al editor del munus, que se ganaba los aplausos del público pero acababa arruinado",
+     "en": "The editor of the munus, who won the applause of the public but ended up ruined"
     }
    ],
    "answer": 0,
@@ -2651,7 +2651,7 @@
     },
     {
      "es": "Los entrenamientos de los jóvenes de la aristocracia en el gimnasio",
-     "en": "The training of aristocratic youths in the gymnasium"
+     "en": "The training of the young aristocrats in the city's gymnasium"
     },
     {
      "es": "Los festivales griegos a los que acudían los etruscos",
@@ -2710,16 +2710,16 @@
      "en": "Because Greek sport reached Italy from the south, with the colonies and trade"
     },
     {
-     "es": "Porque los etruscos conquistaron las ciudades griegas del sur de Italia",
-     "en": "Because the Etruscans conquered the Greek cities of southern Italy"
+     "es": "Porque los etruscos conquistaron las ciudades griegas del sur de Italia y adoptaron sus festivales",
+     "en": "Because the Etruscans conquered the Greek cities of southern Italy and adopted their festivals"
     },
     {
      "es": "Porque Roma transmitió a Etruria el programa de los juegos griegos",
      "en": "Because Rome passed on the programme of the Greek games to Etruria"
     },
     {
-     "es": "Porque los atletas etruscos competían habitualmente en Olimpia",
-     "en": "Because Etruscan athletes regularly competed at Olympia"
+     "es": "Porque los atletas etruscos competían habitualmente en Olimpia y copiaban lo que veían",
+     "en": "Because Etruscan athletes regularly competed at Olympia and copied what they saw"
     }
    ],
    "answer": 0,
@@ -2770,12 +2770,12 @@
      "en": "The nobility's preference for watching while paid professionals competed"
     },
     {
-     "es": "La costumbre de que los nobles compitieran en persona para ganar prestigio",
-     "en": "The custom of nobles competing in person to win prestige"
+     "es": "La costumbre de que los nobles compitieran en persona ante el pueblo para ganar prestigio",
+     "en": "The custom of nobles competing in person before the people to win prestige"
     },
     {
-     "es": "La organización de los festivales por ciudades que se turnaban cada cuatro años",
-     "en": "The organisation of festivals by cities taking turns every four years"
+     "es": "La organización de los festivales por ciudades vecinas que se turnaban cada cuatro años",
+     "en": "The organisation of festivals by neighbouring cities that took turns every four years"
     },
     {
      "es": "La educación física obligatoria de los jóvenes de la élite",
@@ -2800,16 +2800,16 @@
      "en": "In twelve city-states, without ever forming a unitary state"
     },
     {
-     "es": "En un reino unitario con capital en Tarquinia",
-     "en": "In a unitary kingdom with its capital at Tarquinia"
+     "es": "En un reino unitario con capital en Tarquinia y un solo rey para todo el territorio",
+     "en": "In a unitary kingdom with its capital at Tarquinia and a single king for the whole land"
     },
     {
      "es": "En una república con dos cónsules elegidos cada año",
      "en": "In a republic with two consuls elected every year"
     },
     {
-     "es": "En una confederación de colonias griegas del sur de Italia",
-     "en": "In a confederation of Greek colonies in southern Italy"
+     "es": "En una confederación de colonias griegas del sur de Italia, con un rey común",
+     "en": "In a confederation of Greek colonies in southern Italy, under a common king"
     }
    ],
    "answer": 0,
@@ -2864,12 +2864,12 @@
      "en": "To allocate seats in the theatres and amphitheatres"
     },
     {
-     "es": "Para decidir quién podía votar en las asambleas",
-     "en": "To decide who could vote in the assemblies"
+     "es": "Para decidir quién podía votar en las asambleas populares y quién quedaba excluido de ellas",
+     "en": "To decide who could vote in the popular assemblies and who was shut out of them altogether"
     },
     {
-     "es": "Para fijar quién debía pagar los juegos",
-     "en": "To determine who had to pay for the games"
+     "es": "Para fijar quién debía pagar los juegos de la ciudad y en qué cuantía según su fortuna",
+     "en": "To determine who had to pay for the city's games and how much, according to their wealth"
     }
    ],
    "answer": 0,
@@ -2890,8 +2890,8 @@
      "en": "Because almost all their authors belonged to the elite and wrote to criticise the spectacles"
     },
     {
-     "es": "Porque fueron escritos siglos después de los hechos y son poco fiables",
-     "en": "Because they were written centuries after the events and are unreliable"
+     "es": "Porque fueron escritos muchos siglos después de los hechos que cuentan y por eso son poco fiables",
+     "en": "Because they were written many centuries after the events they describe and are therefore unreliable"
     },
     {
      "es": "Porque la mayoría de los textos son anónimos y no están fechados",
@@ -2921,7 +2921,7 @@
     },
     {
      "es": "El ludus era una competición entre aristócratas y el agón, un espectáculo para la plebe",
-     "en": "The ludus was a competition between aristocrats and the agon, a spectacle for the plebs"
+     "en": "The ludus was a competition between aristocrats and the agon, a spectacle put on for the plebs"
     },
     {
      "es": "El ludus se celebraba solo en honor de los muertos y el agón, en honor de los dioses",
@@ -2954,8 +2954,8 @@
      "en": "The ludi were gladiatorial combats and the munera were chariot races"
     },
     {
-     "es": "Los ludi los pagaba un particular y los munera, el Estado",
-     "en": "The ludi were paid for by a private individual and the munera by the State"
+     "es": "Los ludi los pagaba un particular de su propio bolsillo y los munera, el Estado con el dinero público de las arcas de la ciudad",
+     "en": "The ludi were paid for by a private individual out of his own purse and the munera by the State with public money from the city's treasury"
     },
     {
      "es": "Los ludi se ofrecían a los muertos y los munera, a los dioses",
@@ -3040,8 +3040,8 @@
      "en": "Clamour for what it needed, such as a reduction in the price of grain or in taxes"
     },
     {
-     "es": "Votar a mano alzada las propuestas del Senado",
-     "en": "Vote by show of hands on the proposals of the Senate"
+     "es": "Votar a mano alzada las propuestas que el Senado presentaba ante el pueblo reunido en el circo",
+     "en": "Vote by show of hands on the proposals that the Senate put to the people gathered in the circus"
     },
     {
      "es": "Elegir a los magistrados de la ciudad",
@@ -3070,8 +3070,8 @@
      "en": "By social group, so that the stands reproduced the hierarchy of the city"
     },
     {
-     "es": "Por el precio de la entrada que pagaba cada espectador",
-     "en": "By the price of the ticket each spectator paid"
+     "es": "Por el precio de la entrada que pagaba cada espectador, más caro cuanto más cerca de la arena",
+     "en": "By the price of the ticket each spectator paid, dearer the closer to the arena"
     },
     {
      "es": "Por el barrio de residencia de cada espectador",
@@ -3100,8 +3100,8 @@
      "en": "A private and religious act, organised by the family of the deceased to honour him"
     },
     {
-     "es": "Un espectáculo del emperador para celebrar las victorias militares",
-     "en": "A spectacle given by the emperor to celebrate military victories"
+     "es": "Un espectáculo que daba el emperador para celebrar en público las victorias militares de Roma",
+     "en": "A spectacle given by the emperor to celebrate Rome's military victories before the people"
     },
     {
      "es": "Un arma electoral de los candidatos a las magistraturas",
@@ -3130,8 +3130,8 @@
      "en": "They could not vote, hold a magistracy, testify in a trial or contract a legal marriage"
     },
     {
-     "es": "Perdían la ciudadanía y pasaban a ser propiedad del lanista",
-     "en": "They lost their citizenship and became the property of the lanista"
+     "es": "Perdían la ciudadanía romana para siempre y pasaban a ser propiedad personal del lanista que los compraba",
+     "en": "They lost their Roman citizenship for ever and became the personal property of the lanista who bought them"
     },
     {
      "es": "Debían combatir con la cara cubierta y sin derecho a indulto",
@@ -3168,8 +3168,8 @@
      "en": "Nothing, because all the money belonged to the lanista"
     },
     {
-     "es": "Todo, porque el lanista cobraba aparte del editor",
-     "en": "All of it, because the lanista was paid separately by the editor"
+     "es": "Todo, porque el lanista cobraba su parte aparte, directamente del editor",
+     "en": "All of it, because the lanista was paid his own share separately by the editor"
     }
    ],
    "answer": 0,
@@ -3198,8 +3198,8 @@
      "en": "To collect a share of the gladiators' prizes"
     },
     {
-     "es": "Cumplir una ley que le obligaba a dar juegos cada año a toda la plebe",
-     "en": "To comply with a law obliging him to give games to the whole plebs every year"
+     "es": "Cumplir una ley que le obligaba a ofrecer juegos cada año a toda la plebe de su ciudad",
+     "en": "To comply with a law obliging him to offer games every year to the whole plebs of his city"
     }
    ],
    "answer": 0,
@@ -3280,8 +3280,8 @@
      "en": "Rank rather than sex, since ancient authors condemn only those of senatorial or equestrian family"
     },
     {
-     "es": "El sexo antes que el rango, ya que ninguna mujer libre podía aparecer en público",
-     "en": "Sex rather than rank, since no free woman could appear in public"
+     "es": "El sexo antes que el rango, ya que ninguna mujer libre, fuera cual fuera su familia, podía aparecer en público en la arena",
+     "en": "Sex rather than rank, since no free woman, whatever her family or her fortune, could ever appear in the arena"
     },
     {
      "es": "La violencia de sus combates, que superaba la de los hombres",
@@ -3318,8 +3318,8 @@
      "en": "With the taxes of the Hispanic provinces"
     },
     {
-     "es": "Con las cuotas de los magistrados que estrenaban un cargo",
-     "en": "With the fees of the magistrates taking up an office"
+     "es": "Con las cuotas que pagaban los magistrados al estrenar su cargo en la ciudad de Roma",
+     "en": "With the fees that the magistrates paid on taking up an office in the city of Rome"
     }
    ],
    "answer": 0,
@@ -3340,8 +3340,8 @@
      "en": "From a competition between aristocrats they became a spectacle offered by those in power to the people, with professional charioteers"
     },
     {
-     "es": "De espectáculo público pasaron a competición reservada a aristócratas, con dueños que conducían sus propios caballos",
-     "en": "From a public spectacle they became a competition reserved for aristocrats, with owners driving their own horses"
+     "es": "De espectáculo público pasaron a competición reservada a aristócratas, con dueños ricos que conducían ellos mismos sus caballos y sus carros",
+     "en": "From a public spectacle they became a competition reserved for aristocrats, with wealthy owners driving their own horses and chariots themselves"
     },
     {
      "es": "Dejaron de celebrarse en recintos construidos y volvieron a las explanadas con taludes de tierra",
@@ -3370,8 +3370,8 @@
      "en": "Companies that organised the racing teams, each with its own colour"
     },
     {
-     "es": "Grupos de aficionados que apoyaban a cada color en la grada",
-     "en": "Groups of fans who supported each colour in the stands"
+     "es": "Grupos de aficionados que animaban a cada color desde las gradas del circo de su ciudad",
+     "en": "Groups of fans who cheered each colour from the stands of their city's circus"
     },
     {
      "es": "Gremios de aurigas libres que negociaban sus premios",
@@ -3400,8 +3400,8 @@
      "en": "As a team, with up to three chariots per race that helped one another"
     },
     {
-     "es": "Con un solo carro por carrera, sorteado entre sus aurigas",
-     "en": "With a single chariot per race, drawn by lot among its charioteers"
+     "es": "Con un solo carro por carrera, que se sorteaba cada vez entre todos sus aurigas",
+     "en": "With a single chariot per race, drawn by lot each time among all its charioteers"
     },
     {
      "es": "Con aurigas alquilados a las otras facciones",
@@ -3430,8 +3430,8 @@
      "en": "The faction, owner of the horses and the chariot, and the charioteer only a share"
     },
     {
-     "es": "El auriga, que luego pagaba a la facción por alquilar el equipo",
-     "en": "The charioteer, who then paid the faction for hiring the equipment"
+     "es": "El auriga, que luego pagaba a la facción por alquilarle los caballos y el carro",
+     "en": "The charioteer, who then paid the faction for hiring him the horses and the chariot"
     },
     {
      "es": "El organizador de los juegos, que pagaba al auriga un sueldo fijo",
@@ -3520,8 +3520,8 @@
      "en": "That ball play was the best bodily activity, within the reach even of the poor"
     },
     {
-     "es": "Que la lucha era la mejor actividad corporal, porque entrenaba también la mente",
-     "en": "That wrestling was the best bodily activity, because it also trained the mind"
+     "es": "Que la lucha era la mejor actividad corporal, porque entrenaba también la mente del atleta",
+     "en": "That wrestling was the best bodily activity, because it also trained the athlete's mind"
     },
     {
      "es": "Que los juegos de pelota debían reservarse a los niños y a los ancianos",
@@ -3558,8 +3558,8 @@
      "en": "The condemnation of the Church, which forced the venues to close"
     },
     {
-     "es": "La caída del Imperio de Occidente en 476 d. C., que acabó con todos los juegos",
-     "en": "The fall of the Western Empire in AD 476, which ended all the games"
+     "es": "La caída del Imperio de Occidente en 476 d. C., que acabó de golpe con todos los juegos públicos",
+     "en": "The fall of the Western Empire in AD 476, which put a sudden end to all the public games"
     }
    ],
    "answer": 0,

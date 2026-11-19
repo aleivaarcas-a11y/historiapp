@@ -175,7 +175,16 @@
     "In the early Meiji years sumo seemed a feudal relic, and its promoters responded by modernising it while stressing its link with the past (Guttmann & Thompson, 2001, p. 108). In 1909 the Kokugikan was opened, a roofed hall that freed tournaments from the rain, and in 1926 the national federation of professional sumo was born, today the Japan Sumō Association; college wrestlers had organised in 1920 and the amateur federation was founded in 1946 (Guttmann & Thompson, 2001, p. 109). The rank of *yokozuna*, presented as the symbol of a two-thousand-year history, was recognised by the association in 1909 and by the Yoshida family in 1951, which makes sumo a clear case of invented tradition (Guttmann & Thompson, 2001, p. 145)."
    ]
   },
-  "tema": [],
+  "tema": [
+   {
+    "num": 5,
+    "f": "sumo",
+    "t": {
+     "es": "Sumo",
+     "en": "Sumo"
+    }
+   }
+  ],
   "img": {
    "src": "img/enc/sumo.jpg",
    "pie": {
@@ -443,7 +452,16 @@
     "During the Cultural Revolution *taijiquan* came under political attack in the People's Republic, and later it was rehabilitated as a national treasure and a distinctly Chinese form of art and sport; it is taught publicly in parks and form competitions are held frequently (Davis, 1999, p. 389). Its dominant social function is hygienic, since the slow and soft Yang style is practised by the elderly and by people with disabilities to strengthen the constitution and prolong life (Davis, 1999, p. 389), and in 1990s China, together with *qigong*, it was among the few physical activities built into the daily life of the population (Jones, 1999, p. 14). In the West it is one of the few Chinese disciplines distinguished by its own name within the generic term *kung fu* (Sánchez García, 2019, p. 2)."
    ]
   },
-  "tema": [],
+  "tema": [
+   {
+    "num": 5,
+    "f": "deporte-tradicional-chino",
+    "t": {
+     "es": "Deporte tradicional chino",
+     "en": "Traditional Chinese sport"
+    }
+   }
+  ],
   "img": {
    "src": "img/enc/tai-chi-chuan.jpg",
    "pie": {

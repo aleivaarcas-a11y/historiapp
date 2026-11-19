@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-25",
+  "version": "2026-11-19",
   "temas": [
     {
       "num": 1,
@@ -40,7 +40,7 @@
     {
       "num": 5,
       "file": "data/tema05.json",
-      "available": false,
+      "available": true,
       "title": {
         "es": "China, Japón e India",
         "en": "China, Japan and India"

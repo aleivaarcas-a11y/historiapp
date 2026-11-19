@@ -458,7 +458,24 @@
     "Cuju was popular among courtiers, soldiers, scholars and women, as shown by Song-period bronze mirrors and Ming-dynasty paintings (Speak, 1999b, p. 56; FIFA Museum, n.d.). Under the Ming it continued to evolve, and although some emperors prohibited it, many generals, high officials and rulers played it (Speak, 1999b, p. 57); the FIFA Museum attributes to the first Ming emperor a ban that would have put an end to the playing societies (FIFA Museum, n.d.). Under the Qing, as Confucianism gained ground, the game lost its appeal (Guttmann, 2004, p. 41). Its recovery is recent, since academic research on *cuju* began at Chinese universities in the 1980s and since 2015 Linzi has had a museum devoted to the game, which China claims as a forerunner of football (FIFA Museum, n.d.)."
    ]
   },
-  "tema": [],
+  "tema": [
+   {
+    "num": 5,
+    "f": "cuju",
+    "t": {
+     "es": "Cuju",
+     "en": "Cuju"
+    }
+   },
+   {
+    "num": 5,
+    "f": "cuju-sus-modalidades",
+    "t": {
+     "es": "Cuju, sus modalidades",
+     "en": "Cuju and its forms"
+    }
+   }
+  ],
   "img": {
    "src": "img/enc/cuju.jpg",
    "pie": {
@@ -512,7 +529,16 @@
     "The opening of the Meiji era nearly made it extinct. A small group of Kyoto aristocrats kept it alive, Emperor Meiji expressed in 1877 his wish that it be preserved and, after a first society dissolved in 1895, the Kemari Preservation Society was born in February 1903, and that same year it gave a demonstration at the National Industrial Exhibition in Osaka (Guttmann & Thompson, 2001, pp. 96-97). It chose the patronage of the Imperial Household and refused to modernise balls, costumes or rules, so that it remained a circle almost reserved to the nobility, and it suspended its activities in April 1945 (Guttmann & Thompson, 2001, pp. 98-99). Today *kemari* survives as a ceremonial exhibition, such as the one held every June at the Fujinomori shrine in Kyoto, with players dressed as courtiers (Guttmann & Thompson, 2001, p. 1)."
    ]
   },
-  "tema": [],
+  "tema": [
+   {
+    "num": 5,
+    "f": "kemari",
+    "t": {
+     "es": "Kemari",
+     "en": "Kemari"
+    }
+   }
+  ],
   "img": {
    "src": "img/enc/kemari.jpg",
    "pie": {

@@ -26,7 +26,16 @@
     "The school turned kendo into an instrument of national identity, since from 1911 and 1913 it was taught as a regular subject to boys in secondary schools (Sánchez García, 2019, p. 124), and its association with militarism explains why the occupation authorities banned it in 1945. It was reborn as a sport with the founding of the All Japan Kendo Federation in 1952, and in 1970 the International Kendo Federation was created (All Japan Kendo Federation, n.d.), with fifteen founding countries and a world championship every three years (Sakaue, 1999, p. 217). Women's practice grew after the war, to the point that from 1978 around forty per cent of the members of high-school kendo clubs were female, and Japan has opposed entry into the Olympic Games for fear that the rules would be transformed as happened with judo (Sakaue, 1999, pp. 216-217)."
    ]
   },
-  "tema": [],
+  "tema": [
+   {
+    "num": 5,
+    "f": "entrenamiento-samurai-combate",
+    "t": {
+     "es": "Entrenamiento samurái (combate)",
+     "en": "Samurai training (combat)"
+    }
+   }
+  ],
   "img": {
    "src": "img/enc/kendo.jpg",
    "pie": {
@@ -134,7 +143,24 @@
     "After the ban on martial arts during the occupation, practice resumed in 1955, the year the All Japan Naginata Federation was founded, which commissioned a committee to devise a style suitable for public schools. The result, *atarashii naginata* (\"new naginata\"), was written in the phonetic syllabary instead of Chinese characters and without the suffix *dō*, to distance it from pre-war militarist ideology (Sánchez García, 2019, p. 203). The International Naginata Federation was founded in 1990 and the first world championship was held in Japan in 1995. In the early twenty-first century some forty thousand people practised it in Japan, the vast majority of them women, although the number of men is growing, especially outside the country (Sánchez García, 2019, pp. 214-215)."
    ]
   },
-  "tema": [],
+  "tema": [
+   {
+    "num": 5,
+    "f": "armamento-de-los-samurais",
+    "t": {
+     "es": "Armamento de los samuráis",
+     "en": "Samurai weapons"
+    }
+   },
+   {
+    "num": 5,
+    "f": "la-mujer-japonesa",
+    "t": {
+     "es": "La mujer japonesa",
+     "en": "Japanese women"
+    }
+   }
+  ],
   "img": {
    "src": "img/enc/naginata.jpg",
    "pie": {
