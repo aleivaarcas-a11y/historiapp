@@ -238,6 +238,51 @@ main>*{flex-shrink:0}
 .nodo.open .nd{display:block}
 .nd .acts{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
 .nd .acts button{font-size:12.5px;font-weight:700;border-radius:999px;padding:7px 12px;background:var(--ok-bg);color:var(--tp)}
+/* simulacro de test (20-11-2026) */
+.smlead{font-size:14.5px;line-height:1.5;margin-top:6px}
+.smchips{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.smchip{background:var(--paper);border:2px solid var(--line);border-radius:14px;padding:10px 12px;text-align:left;display:flex;flex-direction:column;gap:2px;position:relative}
+.smchip b{font-size:20px;color:var(--muted)}
+.smchip span{font-size:13.5px;font-weight:700;line-height:1.25;padding-right:20px}
+.smchip small{font-size:12px;color:var(--muted)}
+.smchip.on{border-color:var(--primary);background:var(--warm)}
+.smchip.on b{color:var(--tp)}
+.smchip.on:after{content:"✓";position:absolute;top:8px;right:10px;width:22px;height:22px;border-radius:50%;background:var(--primary);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.smchip:disabled{opacity:.45}
+.smseg button{flex:1}
+.smmodes{display:flex;flex-direction:column;gap:10px}
+.smmode{background:var(--paper);border:2px solid var(--line);border-radius:14px;padding:12px 14px;text-align:left;display:flex;flex-direction:column;gap:3px}
+.smmode b{font-size:15.5px}
+.smmode span{font-size:13px;color:var(--muted);line-height:1.35}
+.smmode.on{border-color:var(--primary);background:var(--warm)}
+.smhist{padding:6px 14px}
+.smhist div{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.smhist div:last-child{border-bottom:0}
+.smhist span:nth-child(2){flex:1;color:var(--muted)}
+.smhist b{color:var(--tp);font-size:15px}
+.smbar{position:sticky;top:-16px;z-index:6;margin:-16px -16px 0;padding:10px 16px;background:var(--bg);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;font-weight:700;font-size:14px}
+.smbar span{flex:1}
+.smbar button{background:var(--primary);color:#fff;font-weight:700;padding:9px 16px;border-radius:12px}
+.smrule{font-size:13px;color:var(--muted);line-height:1.45;margin:0 4px}
+.smq{display:flex;flex-direction:column;gap:10px}
+.smqh{display:flex;align-items:center;gap:8px}
+.smqh b{width:28px;height:28px;border-radius:8px;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px}
+.smqh small{color:var(--muted);font-size:12px;font-weight:600}
+.smqh em{margin-left:auto;font-style:normal;font-weight:800;font-size:13px}
+.smq.ok .smqh em{color:var(--ok)}
+.smq.ko .smqh em{color:var(--ko)}
+.smq.bl .smqh em{color:var(--muted)}
+.smq .qtext{font-size:16px}
+.opt.sel{border-color:var(--primary);background:var(--warm)}
+.opt.sel .k{background:var(--primary);color:#fff}
+.smexp{font-size:13.5px;line-height:1.5;background:var(--warm);border-radius:10px;padding:10px 12px}
+.smsum{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;font-weight:700;font-size:14px}
+.smcalc{font-size:13px;color:var(--muted);line-height:1.45}
+.smtem{display:flex;flex-direction:column;gap:8px;padding:12px 14px}
+.smtem div{display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:600}
+.smtem div span:first-child{width:64px}
+.smtem i{flex:1;height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.smtem i b{display:block;height:100%;background:var(--tp)}
 /* examen */
 .xsec{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
 .xsec>summary{list-style:none;display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;font-weight:800;font-size:16px;color:var(--tp2)}
@@ -895,6 +940,9 @@ const I18N = {
 /* Repaso de fallos (18-10-2026): memoria común de los juegos y de los test de la app, clave historiapp.repaso (ver Juegos web/Codigo/historiapp/repaso.js) */
 Object.assign(I18N.es,{rpCard:"Repaso de tus fallos",rpZero:"Aún no tienes fallos",rpZeroSub:"Las preguntas que falles en los tests y en los juegos vendrán aquí para que vuelvas a ellas",rpDueSub:"Las preguntas que fallaste, listas para repasar",rpAll:"Repasar ya todas ({n})",rpDue:"{n} preguntas te esperan hoy",rpDue1:"1 pregunta te espera hoy",rpNone:"Nada pendiente hoy",rpNext:"{n} programadas · la próxima, {d}",rpEmpty:"Cuando falles una pregunta en un juego o en un test, volverá aquí al día siguiente. Si la aciertas, vuelve a los tres días, a la semana y a las tres semanas, y después sale del repaso.",rpTitle:"Repaso",rpOk:"La repasarás de nuevo dentro de {d} días",rpLast:"Dominada: sale del repaso",rpWrong:"Vuelve mañana",rpDone:"Repaso terminado",rpScore:"Has acertado {a} de {b}",rpFrom:"Fallada en {g}",rpHome:"Volver al inicio",rpTomorrow:"mañana",rpInDays:"dentro de {n} días"});
 Object.assign(I18N.en,{rpCard:"Review your mistakes",rpZero:"No mistakes yet",rpZeroSub:"Questions you miss in quizzes and games will come here so you can go back to them",rpDueSub:"The questions you missed, ready to review",rpAll:"Review all now ({n})",rpDue:"{n} questions are waiting today",rpDue1:"1 question is waiting today",rpNone:"Nothing due today",rpNext:"{n} scheduled · next one {d}",rpEmpty:"When you miss a question in a game or a quiz, it comes back here the next day. If you get it right, it returns after three days, a week and three weeks, and then leaves the review.",rpTitle:"Review",rpOk:"You will review it again in {d} days",rpLast:"Mastered: it leaves the review",rpWrong:"It comes back tomorrow",rpDone:"Review finished",rpScore:"You got {a} of {b} right",rpFrom:"Missed in {g}",rpHome:"Back to home",rpTomorrow:"tomorrow",rpInDays:"in {n} days"});
+/* 20-11-2026: simulacro de test */
+Object.assign(I18N.es,{"smCardS": "Simulacro de test", "smCardB": "Hazte un examen tipo test", "smCardSub": "Con las preguntas de los temas que elijas y la nota calculada como en el examen", "smTitle": "Simulacro de test", "smLead": "Elige los temas que entran, cuántas preguntas quieres y cómo quieres hacerlo. Las preguntas se reparten por igual entre los temas elegidos.", "smTemas": "Temas", "smNq": "{n} preguntas", "smAllT": "Marcar todos", "smNone": "Quitar todos", "smHowMany": "Número de preguntas", "smTodas": "Todas", "smModo": "Modo", "smExam": "Examen", "smExamSub": "Como el test real, con penalización por fallo y sin ver las soluciones hasta que entregas", "smPrac": "Práctica", "smPracSub": "Una pregunta cada vez, con 20 segundos y la corrección al momento", "smStart": "Empezar ({n} preguntas)", "smPick": "Elige al menos un tema", "smHist": "Tus últimos simulacros", "smHistT": "Temas {t} · {n} preg.", "smRule": "Funciona como el test del examen, con cuatro opciones y una sola correcta, de modo que cada tres fallos se descuenta un acierto y las preguntas en blanco ni suman ni restan. Si vuelves a tocar la opción marcada, la pregunta queda en blanco. Las soluciones aparecen al entregar.", "smAns": "Respondidas {a} de {b}", "smSend": "Entregar", "smBlank1": "Queda 1 pregunta en blanco. ¿Entregas el examen?", "smBlankN": "Quedan {n} preguntas en blanco. ¿Entregas el examen?", "smLeave": "Si sales ahora, se pierde este simulacro. ¿Quieres salir?", "smDone": "Simulacro terminado", "smOver10": "Nota sobre 10", "smA": "{n} aciertos", "smF": "{n} fallos", "smB": "{n} en blanco", "smA1": "1 acierto", "smF1": "1 fallo", "smCalc": "Se calcula como en el examen, restando a los aciertos un tercio de los fallos y dividiendo entre el número de preguntas.", "smReal": "En el examen real, el test te daría {x} de sus 5 puntos.", "smAgain": "Otro simulacro con los mismos temas", "smToRp": "Repasar mis fallos", "smChange": "Cambiar temas o modo", "smReview": "Corrección", "smBl": "En blanco"});
+Object.assign(I18N.en,{"smCardS": "Practice test", "smCardB": "Take a multiple-choice test", "smCardSub": "With questions from the units you choose and the mark worked out as in the exam", "smTitle": "Practice test", "smLead": "Choose the units, how many questions you want and how you want to take it. The questions are shared out evenly among the units you choose.", "smTemas": "Units", "smNq": "{n} questions", "smAllT": "Select all", "smNone": "Clear all", "smHowMany": "Number of questions", "smTodas": "All", "smModo": "Mode", "smExam": "Exam", "smExamSub": "Like the real test, with a penalty for wrong answers and no solutions until you hand it in", "smPrac": "Practice", "smPracSub": "One question at a time, 20 seconds each, marked straight away", "smStart": "Start ({n} questions)", "smPick": "Choose at least one unit", "smHist": "Your last practice tests", "smHistT": "Units {t} · {n} q.", "smRule": "It works like the exam test, with four options and only one correct, so every three wrong answers cancel one correct answer and blank questions neither add nor subtract. Tap the chosen option again to leave the question blank. The solutions appear when you hand it in.", "smAns": "{a} of {b} answered", "smSend": "Hand in", "smBlank1": "1 question is blank. Hand in the test?", "smBlankN": "{n} questions are blank. Hand in the test?", "smLeave": "If you leave now, this practice test will be lost. Leave?", "smDone": "Practice test finished", "smOver10": "Mark out of 10", "smA": "{n} correct", "smF": "{n} wrong", "smB": "{n} blank", "smA1": "1 correct", "smF1": "1 wrong", "smCalc": "Worked out as in the exam, taking a third of the wrong answers off the correct ones and dividing by the number of questions.", "smReal": "In the real exam, the test would give you {x} of its 5 points.", "smAgain": "Another test with the same units", "smToRp": "Review my mistakes", "smChange": "Change units or mode", "smReview": "Answers", "smBl": "Blank"});
 const RP_K="historiapp.repaso", RP_GAPS=[1,3,7,21], RP_DAY=864e5;
 function rpLoad(){ try{ const d=JSON.parse(localStorage.getItem(RP_K)); if(d&&d.items) return d; }catch(e){} return {v:1,items:{}}; }
 function rpSave(d){ try{ localStorage.setItem(RP_K,JSON.stringify(d)); }catch(e){} }
@@ -925,7 +973,7 @@ const GAMES=[
   {f:"juegos/sumo.html", gen:{es:"Lucha arcade en 3D con modo carrera",en:"3D arcade wrestling with a career mode"}, img:"img/juegos/sumo.jpg", temas:[5], ic:"🤼", n:{es:"Sumo",en:"Sumo"}, title:{es:"Sumo: el camino del dohyō",en:"Sumo: the way of the dohyō"}, sub:{es:"Del sumo de los templos al combate de los rikishi ante el público de Edo",en:"From temple sumo to rikishi bouts before the crowds of Edo"}},
   {f:"juegos/kyudo.html", gen:{es:"Tiro con arco en 3D con preguntas",en:"3D archery with questions"}, img:"img/juegos/kyudo.jpg", temas:[5], ic:"🏹", n:{es:"Kyūdō",en:"Kyūdō"}, title:{es:"Kyūdō: el camino del arco",en:"Kyūdō: the way of the bow"}, sub:{es:"Del dōjō al tōshiya del Sanjūsangendō y al yabusame a caballo",en:"From the dōjō to the tōshiya of the Sanjūsangendō and mounted yabusame"}},
   {f:"juegos/chaturanga.html", gen:{es:"Juego de tablero en 3D con preguntas",en:"3D board game with questions"}, img:"img/juegos/chaturanga.jpg", temas:[5], ic:"♟️", n:{es:"Chaturanga",en:"Chaturanga"}, title:{es:"Chaturanga: los cuatro miembros del ejército",en:"Chaturanga: the four members of the army"}, sub:{es:"El antecesor del ajedrez, de la India a Persia y Europa",en:"The ancestor of chess, from India to Persia and Europe"}},
-  {f:"juegos/cuju.html", gen:{es:"Habilidad y ritmo en 3D con preguntas",en:"3D skill and rhythm game with questions"}, img:"img/juegos/cuju.jpg", temas:[5], ic:"⚽", n:{es:"Cuju",en:"Cuju"}, title:{es:"Cuju: la prueba de los cien toques",en:"Cuju: the hundred-touch test"}, sub:{es:"Mantén el balón en el aire, entra en el equipo y juega la baida",en:"Keep the ball in the air, join the team and play baida"}}
+  {f:"juegos/cuju-chapas.html", gen:{es:"Fútbol de chapas en 3D con preguntas",en:"3D table football with caps and questions"}, img:"img/juegos/cuju-chapas.jpg", temas:[5], ic:"🥏", n:{es:"Cuju",en:"Cuju"}, title:{es:"Cuju: las doce porterías",en:"Cuju: the twelve goals"}, sub:{es:"La modalidad de doce porterías semicirculares, contra la máquina o entre dos",en:"The twelve semicircular goals variant, against the computer or two players"}}
 ];
 /* Recompensas por nivel en los juegos (14-10-2026; copia de Juegos web/Codigo/historiapp/recompensas.json, que es la fuente) */
 const GAME_RW=[[2,"cuadrigas","Poner nombre a los caballos","Name your horses"],[2,"historiapp-arena","Leyenda Tutankamón","Tutankhamun legend"],[2,"historiapp-brawl","Leyenda Tutankamón","Tutankhamun legend"],[3,"historiapp-arena","Hondero en las torres","Slinger in the towers"],[3,"historiapp-ciudades","Leyenda Corebo de Élide","Koroibos of Elis legend"],[4,"gladiatura","Apodo de arena","Arena nickname"],[5,"historiapp-arena","Marco de bronce","Bronze frame"],[6,"monopoleis","Casco espartano","Spartan helmet"],[6,"historiapp-arena","Leyenda Amenofis II","Amenhotep II legend"],[6,"historiapp-brawl","Leyenda Amenofis II","Amenhotep II legend"],[6,"historiapp-ciudades","Zanes, estatuas de las multas","Zanes, statues paid with fines"],[7,"senet","Fichas de lapislázuli","Lapis lazuli pieces"],[7,"historiapp-arena","Lanzador de jabalina en las torres","Javelin thrower in the towers"],[8,"historiapp-ciudades","Leyenda Milón de Crotona","Milo of Croton legend"],[9,"agon","Estandarte con emblema propio","Standard with your own emblem"],[9,"historiapp-arena","Leyenda Taharqa","Taharqa legend"],[9,"historiapp-brawl","Leyenda Taharqa","Taharqa legend"],[10,"historiapp-arena","Título «Atleta»","«Athlete» title"],[10,"historiapp-ciudades","Tercer constructor","Third builder"],[11,"pentatlon","Pruebas sueltas sin pasar por la carrera","Single events without the career"],[11,"historiapp-arena","Lanzador de bumerán en las torres","Boomerang thrower in the towers"],[12,"historiapp-arena","Leyenda Nefertiti","Nefertiti legend"],[12,"historiapp-brawl","Leyenda Nefertiti","Nefertiti legend"],[12,"historiapp-ciudades","Leyenda Eutélidas de Esparta","Eutelidas of Sparta legend"],[13,"cnoso","Repetir cualquier sala del palacio","Replay any room of the palace"],[14,"cuadrigas","Librea del auriga con bordado de oro","Charioteer's livery with gold embroidery"],[15,"historiapp-arena","Leyenda Ramsés II","Ramesses II legend"],[15,"historiapp-brawl","Leyenda Ramsés II","Ramesses II legend"],[15,"historiapp-ciudades","Leyenda «Dedos»","\"Fingers\" legend"],[16,"gladiatura","Emblema de laurel","Laurel emblem"],[16,"historiapp-arena","Marco de plata","Silver frame"],[17,"monopoleis","Escudo de hoplita","Hoplite shield"],[18,"historiapp-arena","Leyenda Darío I","Darius I legend"],[18,"historiapp-brawl","Leyenda Darío I","Darius I legend"],[18,"historiapp-ciudades","Leyenda Cinisca","Kyniska legend"],[19,"agon","Dados de hueso","Bone dice"],[20,"cuadrigas","Elegir circuito en la carrera suelta","Choose the circuit in a single race"],[20,"historiapp-arena","Título «Campeón»","«Champion» title"],[22,"gladiatura","Elegir anfiteatro","Choose the amphitheatre"],[22,"historiapp-arena","Leyenda Cinisca","Cynisca legend"],[22,"historiapp-brawl","Leyenda Cinisca","Cynisca legend"],[22,"historiapp-ciudades","Ninfeo de Herodes Ático","Nymphaeum of Herodes Atticus"],[23,"agon","Mapa de pergamino","Parchment map"],[24,"monopoleis","Ritón de los boxeadores","Boxer Rhyton"],[25,"historiapp-ciudades","Leyenda Tiberio","Tiberius legend"],[26,"cuadrigas","Látigo con mango de marfil","Whip with an ivory handle"],[26,"historiapp-arena","Leyenda Jerjes","Xerxes legend"],[26,"historiapp-brawl","Leyenda Jerjes","Xerxes legend"],[27,"gladiatura","Emblema del rayo","Thunderbolt emblem"],[28,"agon","Repetir una tirada por partida","Reroll one roll per game"],[28,"historiapp-arena","Marco de oro","Gold frame"],[29,"cuadrigas","Ruedas doradas","Golden wheels"],[30,"gladiatura","Elegir rival","Choose your opponent"],[30,"historiapp-arena","Título «Héroe»","«Hero» title"],[31,"monopoleis","Color topacio","Topaz colour"],[31,"historiapp-arena","Leyenda Filipo II","Philip II legend"],[31,"historiapp-brawl","Leyenda Filipo II","Philip II legend"],[32,"cuadrigas","Caballos de la yeguada de Sicilia","Horses from the Sicilian stud"],[33,"agon","Dados de marfil","Ivory dice"],[34,"senet","Bastones de oro","Golden sticks"],[35,"gladiatura","Emblema de creciente y estrellas","Crescent and stars emblem"],[36,"monopoleis","León del Coliseo","Lion of the Colosseum"],[36,"historiapp-arena","Leyenda Diocles","Diocles legend"],[36,"historiapp-brawl","Leyenda Diocles","Diocles legend"],[37,"cuadrigas","Casco de cuero repujado del auriga","Charioteer's embossed leather helmet"],[38,"agon","Tropas con armadura dorada","Troops in golden armour"],[39,"gladiatura","Escudo pintado","Painted shield"],[40,"pentatlon","Retrato del atleta con corona de olivo","Portrait of the athlete with an olive crown"],[40,"historiapp-arena","Marco de púrpura","Purple frame"],[41,"cuadrigas","Caballos de la yeguada de Tesalia","Horses from the Thessalian stud"],[42,"monopoleis","Tridente del reciario","Retiarius trident"],[43,"agon","Una tropa de más al empezar","One extra troop at the start"],[43,"historiapp-arena","Leyenda Alejandro Magno","Alexander the Great legend"],[43,"historiapp-brawl","Leyenda Alejandro","Alexander legend"],[44,"gladiatura","Yelmo de gala dorado","Golden parade helmet"],[45,"cnoso","Fiesta del toro al atardecer","Bull festival at sunset"],[45,"historiapp-arena","Título «Leyenda»","«Legend» title"],[46,"cuadrigas","Carro de bronce repujado","Embossed bronze chariot"],[47,"agon","Dados de cristal de roca","Rock crystal dice"],[48,"gladiatura","Grebas decoradas","Decorated greaves"],[49,"monopoleis","Casco de secutor","Secutor helmet"],[50,"cuadrigas","Caballo legendario Hirpino","Legendary horse Hirpinus"],[50,"historiapp-arena","Leyenda Flamma","Flamma legend"],[50,"historiapp-brawl","Leyenda Flamma","Flamma legend"],[51,"gladiatura","Munus de exhibición, tres combates seguidos","Exhibition munus, three fights in a row"],[52,"agon","Ver la siguiente carta de misión","See the next mission card"],[53,"cuadrigas","Caballos de la yeguada de Hispania","Horses from the Hispanic stud"],[54,"monopoleis","Dados de oro","Golden dice"],[55,"senet","Fichas holográficas","Holographic pieces"],[55,"historiapp-arena","Marco de laurel","Laurel frame"],[55,"historiapp-brawl","Leyenda Nerón","Nero legend"],[56,"gladiatura","Emblema de la palma","Palm emblem"],[57,"agon","Cartas con marco dorado","Gold-framed cards"],[58,"cuadrigas","Correr contra el fantasma de Pompeyo Musclosus","Race against the ghost of Pompeius Musclosus"],[58,"historiapp-brawl","Leyenda Augusto","Augustus legend"],[59,"monopoleis","Mesa de mármol veteado","Veined marble table"],[60,"gladiatura","Cartel del munus con tu nombre","Munus poster with your name"],[60,"historiapp-arena","Título «Inmortal»","«Immortal» title"],[61,"agon","Fortificar un yacimiento durante un turno","Fortify a site for one turn"],[62,"cuadrigas","Caballos de la yeguada de Capadocia","Horses from the Cappadocian stud"],[62,"historiapp-brawl","Leyenda Tutmosis III","Thutmose III legend"],[63,"gladiatura","Manica dorada","Golden manica"],[64,"monopoleis","Cambiar una pregunta por partida","Swap one question per game"],[65,"cuadrigas","Carro de plata","Silver chariot"],[66,"agon","Dados de bronce","Bronze dice"],[66,"historiapp-brawl","Leyenda Ciro II","Cyrus II legend"],[67,"gladiatura","Combate de noche con antorchas","Night fight by torchlight"],[68,"cuadrigas","Caballos de la yeguada del norte de África","Horses from the North African stud"],[68,"historiapp-arena","Marco imperial","Imperial frame"],[69,"agon","Segunda repetición de tirada por partida","Second reroll per game"],[70,"monopoleis","Villas de mármol","Marble villas"],[70,"historiapp-brawl","Leyenda Hatshepsut","Hatshepsut legend"],[71,"cuadrigas","Monumento del auriga en la cuadra","Charioteer's monument in the stable"],[72,"gladiatura","Armadura de gala completa","Full parade armour"],[73,"agon","Dados de plata","Silver dice"],[74,"monopoleis","Partida de noche con lucernas","Night game by oil lamps"],[75,"cuadrigas","Caballo legendario Aquilón","Legendary horse Aquilo"],[76,"senet","Tablero holográfico","Holographic board"],[77,"gladiatura","Corona de la victoria en el retrato","Victory crown on the portrait"],[78,"agon","Carta de misión adicional","Extra mission card"],[79,"cuadrigas","Carro legendario de Pompeyo Musclosus","Legendary chariot of Pompeius Musclosus"],[80,"gladiatura","Emblema de Flamma","Flamma emblem"],[81,"monopoleis","Palacios dorados","Golden palaces"],[82,"agon","Dados de oro","Golden dice"],[83,"cuadrigas","Carro legendario de Guta Calpurniano","Legendary chariot of Gutta Calpurnianus"],[84,"gladiatura","Gladiador legendario de bronce","Legendary bronze gladiator"],[85,"monopoleis","Empezar con una carta de curación","Start with a healing card"],[86,"agon","Refuerzo doble en el primer turno","Double reinforcements on the first turn"],[87,"cuadrigas","Correr contra el fantasma de Escorpo","Race against the ghost of Scorpus"],[88,"gladiatura","Yelmo legendario de Flamma","Legendary helmet of Flamma"],[89,"agon","Dados legendarios de lapislázuli","Legendary lapis lazuli dice"],[90,"cuadrigas","Carro legendario de Crescens","Legendary chariot of Crescens"],[91,"monopoleis","Tablero de oro y lapislázuli","Gold and lapis lazuli board"],[92,"gladiatura","Gladiador legendario de plata","Legendary silver gladiator"],[93,"cuadrigas","Carro legendario de Escorpo","Legendary chariot of Scorpus"],[94,"agon","Estandarte legendario","Legendary standard"],[95,"gladiatura","Gladiador legendario de oro","Legendary golden gladiator"],[96,"monopoleis","Ficha legendaria holográfica","Legendary holographic piece"],[97,"cuadrigas","Correr contra el fantasma de Diocles","Race against the ghost of Diocles"],[98,"agon","Dados legendarios holográficos","Legendary holographic dice"],[99,"gladiatura","Rudis de la libertad","Rudis of freedom"],[100,"cuadrigas","Carro legendario de Diocles","Legendary chariot of Diocles"]];
@@ -1004,9 +1052,9 @@ async function getTema(num){
 
 /* ============ rendering ============ */
 const app=document.getElementById("app");
-function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="ranking") return "ranking"; if(v.name==="linea") return "linea"; if(v.name==="atlas") return "atlas"; if(v.name==="pods") return "podcast"; if(v.name==="guia") return "guia"; if(v.name==="palabra") return "palabra"; if(v.name==="logros") return "logros"; if(v.name==="cur") return "curiosidades"; if(v.name==="daily") return "reto"; if(v.name==="repaso") return "repaso"; if(v.name==="exam") return "examen"; if(v.name==="search") return "buscar"; if(v.name==="temas") return "temas"; if(v.name==="juegos") return "juegos"; if(v.name==="efe") return v.d?"hoy/"+v.d:"hoy"; if(v.name==="enc") return v.id?"enciclopedia/"+encodeURIComponent(v.id):"enciclopedia"; if(v.name==="tema") return "t"+v.num;
+function viewToHash(v){ if(!v||v.name==="home"||v.name==="gate") return ""; if(v.name==="settings") return "ajustes"; if(v.name==="ranking") return "ranking"; if(v.name==="linea") return "linea"; if(v.name==="atlas") return "atlas"; if(v.name==="pods") return "podcast"; if(v.name==="guia") return "guia"; if(v.name==="palabra") return "palabra"; if(v.name==="logros") return "logros"; if(v.name==="cur") return "curiosidades"; if(v.name==="daily") return "reto"; if(v.name==="repaso") return "repaso"; if(v.name==="exam") return "examen"; if(v.name==="simu") return "simulacro"; if(v.name==="search") return "buscar"; if(v.name==="temas") return "temas"; if(v.name==="juegos") return "juegos"; if(v.name==="efe") return v.d?"hoy/"+v.d:"hoy"; if(v.name==="enc") return v.id?"enciclopedia/"+encodeURIComponent(v.id):"enciclopedia"; if(v.name==="tema") return "t"+v.num;
   if(v.name==="mode"){ if(v.mode==="fichas") return v.f?`t${v.num}/f/${v.f}`:`t${v.num}/fichas`; return `t${v.num}/${v.mode}`+(v.sec?"/"+v.sec:""); } return ""; }
-function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="ranking") return {name:"ranking"}; if(h==="repaso") return {name:"repaso"}; if(h==="linea") return {name:"linea"}; if(h==="atlas") return {name:"home"}; /* Atlas en reserva (13-10-2026): ver ../Historiapp-reserva */ if(h==="podcast") return {name:"pods"}; if(h==="guia") return {name:"guia"}; if(h==="palabra") return {name:"palabra"}; if(h==="logros") return {name:"logros"}; if(h==="curiosidades") return {name:"cur"}; if(h==="reto") return {name:"daily"}; if(h==="examen") return {name:"exam"}; if(h==="buscar") return {name:"search"}; if(h==="temas") return {name:"temas"}; if(h==="juegos") return {name:"juegos"}; if(h==="hoy") return {name:"efe"}; if(h.startsWith("hoy/")) return {name:"efe",d:h.slice(4)}; if(h==="enciclopedia") return {name:"enc"}; if(h.startsWith("enciclopedia/")) return {name:"enc",id:decodeURIComponent(h.slice(13))};
+function hashToView(h){ h=(h||"").replace(/^#\/?/,""); if(!h) return {name:"home"}; if(h==="ajustes") return {name:"settings"}; if(h==="ranking") return {name:"ranking"}; if(h==="repaso") return {name:"repaso"}; if(h==="linea") return {name:"linea"}; if(h==="atlas") return {name:"home"}; /* Atlas en reserva (13-10-2026): ver ../Historiapp-reserva */ if(h==="podcast") return {name:"pods"}; if(h==="guia") return {name:"guia"}; if(h==="palabra") return {name:"palabra"}; if(h==="logros") return {name:"logros"}; if(h==="curiosidades") return {name:"cur"}; if(h==="reto") return {name:"daily"}; if(h==="examen") return {name:"exam"}; if(h==="simulacro") return {name:"simu"}; if(h==="buscar") return {name:"search"}; if(h==="temas") return {name:"temas"}; if(h==="juegos") return {name:"juegos"}; if(h==="hoy") return {name:"efe"}; if(h.startsWith("hoy/")) return {name:"efe",d:h.slice(4)}; if(h==="enciclopedia") return {name:"enc"}; if(h.startsWith("enciclopedia/")) return {name:"enc",id:decodeURIComponent(h.slice(13))};
   const p=h.split("/"); const mt=/^t(\d+)$/.exec(p[0]); if(!mt) return {name:"home"}; const num=+mt[1];
   if(p.length===1) return {name:"tema",num}; if(p[1]==="f"&&p[2]) return {name:"mode",num,mode:"fichas",f:decodeURIComponent(p[2])};
   if(MODES.includes(p[1])) return {name:"mode",num,mode:p[1],sec:p[2]||undefined}; return {name:"tema",num}; }
@@ -1031,6 +1079,7 @@ function render(){
   if(v.name==="daily") return renderDaily();
   if(v.name==="repaso") return renderRepaso();
   if(v.name==="exam") return renderExam();
+  if(v.name==="simu") return renderSimu();
   if(v.name==="guia") return renderGuia();
   if(v.name==="palabra") return renderPalabra();
   if(v.name==="logros") return renderLogros();
@@ -1072,7 +1121,7 @@ function setLang(l){ S.lang=l; try{localStorage.setItem("historiapp.lang",l)}cat
 function scrollTop0(){ const m=document.querySelector("#app main"); if(m) m.scrollTo(0,0); }
 function celebrate(){ try{ if(matchMedia("(prefers-reduced-motion: reduce)").matches) return; const c=document.createElement("div"); c.className="confetti"; const col=["#004379","#EDAB00","#FBAE40","#002060","#7fb2e5"]; for(let i=0;i<26;i++){ const e=document.createElement("i"); e.style.left=(Math.random()*100)+"%"; e.style.background=col[i%col.length]; e.style.animationDelay=(Math.random()*.35)+"s"; e.style.transform="rotate("+(Math.random()*180)+"deg)"; c.appendChild(e); } document.body.appendChild(c); setTimeout(()=>c.remove(),2100); }catch(e){} }
 const TABS=[["home","🏠","tabHome"],["temas","📚","tabTemas"],["videos","▶️","tabVid"],["linea","🕰️","tabLine"],["pods","🎧","tabPod"],["search","🔎","tabSearch"],["enc","📖","tabEncS"],["cur","✨","tabCur"],["exam","🎓","tabExam"]];
-function tabOf(v){ const n=(v||{}).name; if(n==="linea") return "linea"; if(n==="atlas") return "atlas"; if(n==="pods") return "pods"; if(n==="tema"||n==="mode"||n==="temas") return "temas"; if(n==="enc") return "enc"; if(n==="cur") return "cur"; if(n==="exam") return "exam"; if(n==="search") return "search"; if(n==="settings"||n==="guia") return "settings"; return "home"; }
+function tabOf(v){ const n=(v||{}).name; if(n==="linea") return "linea"; if(n==="atlas") return "atlas"; if(n==="pods") return "pods"; if(n==="tema"||n==="mode"||n==="temas") return "temas"; if(n==="enc") return "enc"; if(n==="cur") return "cur"; if(n==="exam"||n==="simu") return "exam"; if(n==="search") return "search"; if(n==="settings"||n==="guia") return "settings"; return "home"; }
 function updateTabbar(){ let tb=document.getElementById("tabbar"); if(!tb){ tb=document.createElement("nav"); tb.id="tabbar"; document.body.appendChild(tb); }
   const cur=tabOf(S.view); tb.innerHTML=TABS.map(([k,i,l])=>`<button data-k="${k}" class="${k===cur?"on":""}" aria-current="${k===cur?"page":"false"}"><span class="i">${i}</span>${esc(t(l))}</button>`).join("");
   tb.querySelectorAll("button").forEach(b=>b.onclick=()=>{ const k=b.dataset.k; if(k==="videos"){ openMixFeed(); return; } nav(k==="settings"?{name:"settings",from:{name:"home"}}:{name:k}); }); }
@@ -1125,7 +1174,12 @@ async function renderHome(){
   const d=S.prog.daily||{}; const done=d.date===todayKey()&&d.done;
   const rc=document.createElement("button"); rc.className="card reto";
   rc.innerHTML=`<div class="ic" aria-hidden="true">${done?"✅":"☀️"}</div><div class="tx"><small>${t("dailyCard")}</small><b>${done?t("dailyScore",{a:d.correct,b:d.total}):t("dailyStart")}</b><span>${done?t("dailyBack"):t("dailySub")}</span></div><div class="xp">${done?"✓":"×2 XP"}</div>`;
-  rc.onclick=()=>nav({name:"daily"}); hoy.appendChild(rc); rkHomeCard(hoy);
+  rc.onclick=()=>nav({name:"daily"}); hoy.appendChild(rc);
+  /* 20-11-2026: simulacro de test, petición de los alumnos; segunda tarjeta de «Hoy», tras el reto del día */
+  { const hs=S.prog.simuHist||[], last=hs[hs.length-1]; const sc=document.createElement("button"); sc.className="card reto";
+    sc.innerHTML=`<div class="ic" aria-hidden="true">📝</div><div class="tx"><small>${t("smCardS")}</small><b>${t("smCardB")}</b><span>${t("smCardSub")}</span></div><div class="xp">${last?smNota(last.nota):"›"}</div>`;
+    sc.onclick=()=>nav({name:"simu",back:{name:"home"}}); hoy.appendChild(sc); }
+  rkHomeCard(hoy);
   { const gc=document.createElement("button"); gc.className="card reto gbtn"; gc.innerHTML=`<div class="ic" aria-hidden="true">🎮</div><div class="tx"><small>${t("gamesT")}</small><b>${t("gamesCard")}</b><span>${t("gamesSub")}</span></div><div class="xp">${t("gamesN",{n:GAMES.length})}</div>`; gc.onclick=()=>nav({name:"juegos"}); hoy.appendChild(gc); }
   /* 19-10-2026: repaso de fallos, cuarto botón grande de la portada, siempre a la vista (petición de Alex) */
   { const it=Object.values(rpLoad().items), due=rpDue().length, tot=it.length, nx=it.reduce((a,x)=>Math.min(a,x.due),Infinity);
@@ -1258,6 +1312,7 @@ es:[
  ["🔎","Buscar","Busca a la vez en las fichas, la Enciclopedia, el glosario, la cronología y los vídeos. Basta con escribir tres letras; al tocar un resultado vas directamente a él."],
  ["📖","Enciclopedia","Recoge el origen y la historia de más de cuatrocientos deportes, de los olímpicos a los tradicionales y los más raros. Puedes buscar por nombre, saltar por letra con el índice de la derecha o pedir un deporte al azar con el dado. En cada deporte hay una foto, una breve explicación de qué es en los menos conocidos, cuándo y dónde nace, su historia, las fuentes y, si aparece en la asignatura, el enlace al tema. Los botones A− y A+ cambian el tamaño de la letra."],
  ["🎓","Examen","Explica cómo es el examen y cómo prepararlo, con indicaciones para el test, la pregunta de desarrollo y el comentario de imagen."],
+ ["📝","Simulacro de test","Desde la portada eliges los temas, el número de preguntas y el modo. En el modo examen respondes como en el test real, con la misma penalización por fallo, y al entregar ves la nota y la corrección de cada pregunta. En el modo práctica cada pregunta se corrige al momento. Las preguntas que fallas pasan al repaso de fallos."],
  ["⭐","Puntos, racha y niveles","Cada acierto suma puntos de experiencia, y el reto del día los duplica. La racha cuenta los días seguidos que entras a estudiar. Con los puntos subes de nivel, del 1 al 100, y al completar cada modo de un tema ganas su medalla."],
  ["⚙️","Ajustes","Se abre con la rueda de la cabecera. Desde aquí cambias el idioma, instalas la app en el móvil y cierras la sesión, que borra el progreso guardado en ese dispositivo. Si encuentras un error en una ficha o en la Enciclopedia, el botón «Avisar de un error» prepara un correo para el profesor."]
 ],
@@ -1270,6 +1325,7 @@ en:[
  ["🔎","Search","It searches the study sheets, the Encyclopedia, the glossary, the timeline and the videos at once. Three letters are enough; tapping a result takes you straight to it."],
  ["📖","Encyclopedia","It covers the origin and history of more than four hundred sports, from Olympic ones to traditional and rare ones. You can search by name, jump by letter with the index on the right or ask for a random sport with the dice. Each sport has a photo, a short explanation of what it is for the less known ones, when and where it began, its history, the sources and, if it appears in the course, a link to the unit. The A− and A+ buttons change the text size."],
  ["🎓","Exam","It explains what the exam is like and how to prepare it, with guidance for the multiple-choice test, the essay question and the image commentary."],
+ ["📝","Practice test","From the home screen you choose the units, the number of questions and the mode. In exam mode you answer as in the real test, with the same penalty for wrong answers, and when you hand it in you see your mark and the answer to every question. In practice mode each question is marked straight away. The questions you miss go to the mistakes review."],
  ["⭐","Points, streak and levels","Every correct answer adds experience points, and the daily challenge doubles them. The streak counts the consecutive days you come in to study. Points take you up the levels, from 1 to 100, and completing each mode of a unit earns its badge."],
  ["⚙️","Settings","Open it with the gear in the header. Here you change the language, install the app on your phone and log out, which deletes the progress saved on that device. If you find a mistake in a study sheet or in the Encyclopedia, the «Report a mistake» button prepares an email to the lecturer."]
 ]};
@@ -2382,6 +2438,127 @@ function modeMapa(tema,m,v){
   document.getElementById("mNone").onclick=()=>m.querySelectorAll(".rama,.nodo").forEach(r=>r.classList.remove("open"));
 }
 
+/* --- simulacro de test (20-11-2026, petición de los alumnos): preguntas de los temas que se elijan, desde la portada --- */
+const SIMU_N=[10,20,30,0];
+function smNota(x){ return (Math.round(x*100)/100).toFixed(2).replace(".",S.lang==="en"?".":","); }
+async function renderSimu(){
+  const v=S.view; let running=false, answered=()=>0;
+  app.innerHTML=header(t("smTitle"),true)+`<main><div class="empty">…</div></main>`;
+  bindHeader(()=>{ if(running&&answered()>0&&!confirm(t("smLeave"))) return; nav(v.back||{name:"home"}); });
+  const main=app.querySelector("main");
+  let idx; try{ idx=await getIndex(); }catch(e){ main.innerHTML=`<div class="empty">${t("loadError")}</div>`; return; }
+  const av=idx.temas.filter(m=>m.available), temas={};
+  await Promise.all(av.map(m=>getTema(m.num).then(tm=>{ temas[m.num]=tm; }).catch(()=>{})));
+  if(!main.isConnected) return;
+  const cnt=n=>((temas[n]||{}).quiz||[]).length;
+  const cfg=S.prog.simuCfg||{};
+  let sel=new Set((cfg.temas||[]).filter(n=>av.some(m=>m.num===n)&&cnt(n)));
+  if(!sel.size) av.forEach(m=>{ if(cnt(m.num)) sel.add(m.num); });
+  let nq=SIMU_N.includes(cfg.n)?cfg.n:20, modo=cfg.modo==="prac"?"prac":"exam";
+  const keep=()=>{ S.prog.simuCfg={temas:[...sel],n:nq,modo}; save(); };
+
+  function setup(){
+    running=false; scrollTop0();
+    const pool=[...sel].reduce((a,n)=>a+cnt(n),0), go=nq?Math.min(nq,pool):pool;
+    const hist=(S.prog.simuHist||[]).slice(-5).reverse(), dl=S.lang==="en"?"en-GB":"es-ES";
+    main.innerHTML=`<div class="card" style="padding:14px 16px"><h2 style="font-size:20px">${t("smTitle")}</h2><p class="smlead">${t("smLead")}</p></div>
+      <div class="section-title">${t("smTemas")}</div>
+      <div class="smchips">${av.map(m=>`<button class="smchip ${sel.has(m.num)?"on":""}" data-n="${m.num}" ${cnt(m.num)?"":"disabled"}><b>${m.num}</b><span>${esc(L(m.title))}</span><small>${t("smNq",{n:cnt(m.num)})}</small></button>`).join("")}</div>
+      <button class="btn ghost" id="smAll" style="padding:6px">${sel.size===av.filter(m=>cnt(m.num)).length?t("smNone"):t("smAllT")}</button>
+      <div class="section-title">${t("smHowMany")}</div>
+      <div class="seg smseg">${SIMU_N.map(n=>`<button class="${nq===n?"on":""}" data-q="${n}">${n||t("smTodas")}</button>`).join("")}</div>
+      <div class="section-title">${t("smModo")}</div>
+      <div class="smmodes">
+        <button class="smmode ${modo==="exam"?"on":""}" data-m="exam"><b>🎓 ${t("smExam")}</b><span>${t("smExamSub")}</span></button>
+        <button class="smmode ${modo==="prac"?"on":""}" data-m="prac"><b>⚡ ${t("smPrac")}</b><span>${t("smPracSub")}</span></button>
+      </div>
+      <button class="btn" id="smGo" ${pool?"":"disabled"}>${pool?t("smStart",{n:go}):t("smPick")}</button>
+      ${hist.length?`<div class="section-title">${t("smHist")}</div><div class="card smhist">${hist.map(h=>`<div><span>${h.m==="prac"?"⚡":"🎓"} ${esc(new Date(h.d).toLocaleDateString(dl,{day:"numeric",month:"short"}))}</span><span>${t("smHistT",{t:h.t.join(", "),n:h.n})}</span><b>${smNota(h.nota)}</b></div>`).join("")}</div>`:""}`;
+    main.querySelectorAll(".smchip").forEach(b=>b.onclick=()=>{ const n=+b.dataset.n; sel.has(n)?sel.delete(n):sel.add(n); keep(); setup(); });
+    document.getElementById("smAll").onclick=()=>{ const all=av.filter(m=>cnt(m.num)); if(sel.size===all.length) sel.clear(); else all.forEach(m=>sel.add(m.num)); keep(); setup(); };
+    main.querySelectorAll(".smseg button").forEach(b=>b.onclick=()=>{ nq=+b.dataset.q; keep(); setup(); });
+    main.querySelectorAll(".smmode").forEach(b=>b.onclick=()=>{ modo=b.dataset.m; keep(); setup(); });
+    document.getElementById("smGo").onclick=()=>{ if(!pool) return; keep(); start(); };
+  }
+
+  // reparto equilibrado entre los temas elegidos, para que un tema con muchas preguntas no se coma el examen
+  function pick(){
+    const per=[...sel].sort((a,b)=>a-b).map(n=>shuffle(((temas[n]||{}).quiz||[]).map((q,i)=>({n,i,q}))));
+    const total=per.reduce((a,x)=>a+x.length,0), want=nq?Math.min(nq,total):total, out=[];
+    let k=0; while(out.length<want){ const l=per[k%per.length]; if(l.length) out.push(l.pop()); k++; }
+    return shuffle(out);
+  }
+
+  function start(){
+    const list=pick(), ans=list.map(()=>-1), ord=list.map(x=>shuffle(x.q.options.map((o,i)=>i)));
+    running=true; answered=()=>ans.filter(a=>a>=0).length;
+    track("simulacro/"+modo+"/"+list.length,"Simulacro",true);
+    if(modo==="prac") return prac(list,ans,ord);
+    scrollTop0();
+    main.innerHTML=`<div class="smbar"><span id="smCount"></span><button id="smSend">${t("smSend")}</button></div>
+      <p class="smrule">${t("smRule")}</p>
+      ${list.map((x,j)=>`<div class="card smq"><div class="smqh"><b>${j+1}</b><small>${t("tema")} ${x.n}</small></div><div class="qtext">${esc(L(x.q.q))}</div>
+        <div class="opts">${ord[j].map((oi,k)=>`<button class="opt" data-j="${j}" data-i="${oi}"><span class="k">${"abcd"[k]}</span><span>${esc(L(x.q.options[oi]))}</span></button>`).join("")}</div></div>`).join("")}
+      <button class="btn" id="smSend2">${t("smSend")}</button>`;
+    const upd=()=>{ document.getElementById("smCount").textContent=t("smAns",{a:answered(),b:list.length}); };
+    main.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ const j=+b.dataset.j, i=+b.dataset.i; ans[j]=ans[j]===i?-1:i;
+      main.querySelectorAll(`.opt[data-j="${j}"]`).forEach(o=>o.classList.toggle("sel",+o.dataset.i===ans[j])); upd(); });
+    const send=()=>{ const bl=list.length-answered(); if(bl&&!confirm(bl===1?t("smBlank1"):t("smBlankN",{n:bl}))) return; finish(list,ans,ord); };
+    document.getElementById("smSend").onclick=send; document.getElementById("smSend2").onclick=send; upd();
+  }
+
+  // modo práctica: una pregunta cada vez, con 20 segundos y la corrección al momento, como en Preguntas rápidas
+  function prac(list,ans,ord){
+    let pos=0, timer=null;
+    const draw=()=>{ scrollTop0(); const x=list[pos], it=x.q;
+      main.innerHTML=`<div class="counter">${t("seen",{a:pos+1,b:list.length})} · ${t("tema")} ${x.n}</div><div class="progress"><i style="width:${pos/list.length*100}%"></i></div>
+        <div class="timer"><i id="tm"></i></div><div class="card qtext">${esc(L(it.q))}</div>
+        <div class="opts">${ord[pos].map((oi,k)=>`<button class="opt" data-i="${oi}"><span class="k">${"ABCD"[k]}</span><span>${esc(L(it.options[oi]))}</span></button>`).join("")}</div>`;
+      let done=false;
+      const fin=ch=>{ if(done) return; done=true; clearInterval(timer); ans[pos]=ch; const ok=ch===it.answer; if(ok) addXP(15);
+        main.querySelectorAll(".opt").forEach(b=>{ b.disabled=true; const i=+b.dataset.i; if(i===it.answer) b.classList.add("ok"); else if(i===ch) b.classList.add("ko"); });
+        note(x,ch);
+        sheet(ok, ok?t("correct"):(ch===-1?t("timeUp"):t("wrong")), L(it.explain), ok?15:0, ()=>{ pos++; if(pos>=list.length) finish(list,ans,ord,true); else draw(); }, L(it.q)); };
+      main.querySelectorAll(".opt").forEach(b=>b.onclick=()=>fin(+b.dataset.i));
+      let left=20; const bar=document.getElementById("tm"); bar.style.width="100%";
+      timer=setInterval(()=>{ if(!bar.isConnected){ clearInterval(timer); return; } left--; bar.style.width=(left/20*100)+"%"; if(left<=0) fin(-1); },1000); };
+    draw();
+  }
+
+  // apunta la pregunta como vista en el tema y la manda al repaso de fallos si se ha fallado
+  function note(x,ch){ const it=x.q, tm=temas[x.n]; if(ch<0) return;
+    try{ markSeen(tm.id,"quiz",x.i); }catch(_){}
+    try{ if(ch===it.answer) rpAcierto(it.q); else { const oo=[it.options[it.answer],...it.options.filter((_,i)=>i!==it.answer)]; rpFallo("historiapp",it.q,{es:oo.map(o=>o&&o.es||o),en:oo.map(o=>o&&(o.en||o.es)||o)},null,x.n,null); } }catch(_){} }
+
+  function finish(list,ans,ord,noted){
+    running=false; scrollTop0();
+    let A=0,F=0,B=0; const byT={};
+    list.forEach((x,j)=>{ const r=byT[x.n]||(byT[x.n]={a:0,n:0}); r.n++; if(ans[j]<0) B++; else if(ans[j]===x.q.answer){ A++; r.a++; } else F++; if(!noted) note(x,ans[j]); });
+    const nota=Math.max(0,A-F/3)/list.length*10;
+    if(!noted) addXP(A*15);
+    const h=S.prog.simuHist||(S.prog.simuHist=[]); h.push({d:Date.now(),m:modo,t:Object.keys(byT).map(Number).sort((a,b)=>a-b),n:list.length,a:A,f:F,b:B,nota:Math.round(nota*100)/100}); if(h.length>30) h.splice(0,h.length-30); save();
+    track("simulacro/fin/"+modo+"/"+(Math.round(nota)*10)+"%","Simulacro",true);
+    const lt="abcd";
+    main.innerHTML=`<div class="card result"><div class="big">${nota>=8?"🏆":nota>=5?"👍":"📚"}</div><h2>${t("smDone")}</h2>
+        <div class="score">${smNota(nota)}</div><p>${t("smOver10")}</p>
+        <div class="smsum"><span>✓ ${t(A===1?"smA1":"smA",{n:A})}</span><span>✗ ${t(F===1?"smF1":"smF",{n:F})}</span><span>○ ${t("smB",{n:B})}</span></div>
+        <p class="smcalc">${t("smCalc")}${list.length===20?" "+t("smReal",{x:smNota(nota/2)}):""}</p></div>
+      ${Object.keys(byT).length>1?`<div class="card smtem">${Object.entries(byT).map(([n,r])=>`<div><span>${t("tema")} ${n}</span><i><b style="width:${r.a/r.n*100}%"></b></i><span>${r.a}/${r.n}</span></div>`).join("")}</div>`:""}
+      <button class="btn" id="smAgain">${t("smAgain")}</button>
+      ${F?`<button class="btn sec" id="smRp">${t("smToRp")}</button>`:""}
+      <button class="btn ghost" id="smCfg">${t("smChange")}</button>
+      <div class="section-title">${t("smReview")}</div>
+      ${list.map((x,j)=>{ const ok=ans[j]===x.q.answer, bl=ans[j]<0; return `<div class="card smq ${bl?"bl":ok?"ok":"ko"}"><div class="smqh"><b>${j+1}</b><small>${t("tema")} ${x.n}</small><em>${bl?"○ "+t("smBl"):ok?"✓ "+t("correct"):"✗ "+t("wrong")}</em></div><div class="qtext">${esc(L(x.q.q))}</div>
+        <div class="opts">${ord[j].map((oi,k)=>`<div class="opt ${oi===x.q.answer?"ok":oi===ans[j]?"ko":""}"><span class="k">${lt[k]}</span><span>${esc(L(x.q.options[oi]))}</span></div>`).join("")}</div>
+        ${L(x.q.explain)?`<p class="smexp">${md(L(x.q.explain))}</p>`:""}</div>`; }).join("")}`;
+    document.getElementById("smAgain").onclick=()=>start();
+    document.getElementById("smCfg").onclick=()=>setup();
+    const rp=document.getElementById("smRp"); if(rp) rp.onclick=()=>nav({name:"repaso"});
+    renderXP();
+  }
+  setup();
+}
+
 /* --- cómo preparar el examen --- */
 async function renderExam(){
   app.innerHTML=header(t("exam"),true)+`<main><div class="empty">…</div></main>`;
@@ -2399,8 +2576,10 @@ async function renderExam(){
     ${s.consejos?`<ul class="xtips">${s.consejos.map(c=>`<li>${md(c).replace(/<em>/g,"<b>").replace(/<\/em>/g,"</b>")}</li>`).join("")}</ul>`:""}
   </div></details>`;
   app.querySelector("main").innerHTML=`<div class="card" style="padding:14px 16px"><h2 style="font-size:20px">${esc(G.title)}</h2><p style="font-size:14.5px;line-height:1.55;margin-top:6px">${md(G.lead)}</p></div>
+    <div class="hoy"><button class="card reto" id="xSimu"><div class="ic" aria-hidden="true">📝</div><div class="tx"><small>${t("smCardS")}</small><b>${t("smCardB")}</b><span>${t("smCardSub")}</span></div><div class="xp">›</div></button></div>
     ${G.secciones.map(sec).join("")}
     <div class="card xcheck"><div class="section-title" style="margin:0 0 4px">${esc(G.check.h)}</div>${G.check.items.map((it,i)=>`<label><input type="checkbox" data-i="${i}" ${ck[i]?"checked":""}><span>${esc(it)}</span></label>`).join("")}</div>`;
+  document.getElementById("xSimu").onclick=()=>nav({name:"simu",back:{name:"exam"}});
   app.querySelectorAll(".xcheck input").forEach(c=>c.onchange=()=>{ ck[c.dataset.i]=c.checked?1:0; S.prog.examCheck=ck; save(); });
 }
 
