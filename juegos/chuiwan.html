@@ -62,7 +62,7 @@ button{font-family:var(--txt);cursor:pointer}
 #portada .sub{font:clamp(14px,2.6vh,18px)/1.38 var(--txt);color:#e8d6b0;margin:0 0 18px;max-width:460px}
 #portada .btn{min-height:50px;font-size:18px}
 #portada .btn.claro{color:var(--papel);box-shadow:inset 0 0 0 2px rgba(242,230,204,.7)}
-#esquina{position:fixed;top:max(10px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:30;display:flex;gap:8px}
+#esquina{position:fixed;top:max(10px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:40;display:flex;gap:8px}
 .icono{min-width:46px;height:46px;border-radius:23px;border:1px solid rgba(242,230,204,.45);background:rgba(20,12,8,.62);color:var(--papel);font:700 15px/1 var(--txt);padding:0 12px;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
 #copy{position:fixed;left:max(12px,env(safe-area-inset-left));bottom:max(6px,env(safe-area-inset-bottom));z-index:21;font:12px var(--txt);color:rgba(242,230,204,.6);pointer-events:none}
 
@@ -815,6 +815,7 @@ const ESC = (() => {
     for (let i = 0; i < n; i++) {
       const lado = i % 2 ? 1 : -1, z = Lh.z0 + 1 + R() * (Lh.z1 - Lh.z0), x = lado > 0 ? Lh.x1 + 1 + R() * 1.6 : Lh.x0 - 1 - R() * 1.6;
       if (FIS.dentro(H.borde, x, z) || FIS.enAgua(H, x, z) || sitios.some(o => Math.hypot(o.x - x, o.z - z) < 1.4)) continue;
+      if (Math.hypot(x - H.salida[0], z - H.salida[1]) < 3.6) continue; // fuera del campo de la cámara de la salida
       if (Math.abs(x) > Math.abs(B.x0) + 30) continue;
       // nada encima de las rocas, árboles o casas del decorado
       if ((H.deco || []).some(d => Math.hypot(d.x - x, d.z - z) < (d.t === 'casa' ? 3.5 : d.t === 'pabellon' ? 4 : 1.2))) continue;
@@ -850,7 +851,9 @@ const ESC = (() => {
     const p = new THREE.Group(); p.add(o, f); g.add(p); g.userData.p = p; g.visible = false; return g;
   }
   function crearGuia(n) {
-    const m = new THREE.InstancedMesh(new THREE.SphereGeometry(.026, 10, 8), new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: .9, depthWrite: false, depthTest: false }), n);
+    const [c, g] = cv(64, 64); g.fillStyle = '#1b1612'; g.beginPath(); g.arc(32, 32, 30, 0, 7); g.fill(); g.fillStyle = '#ffffff'; g.beginPath(); g.arc(32, 32, 19, 0, 7); g.fill();
+    const geo = new THREE.PlaneGeometry(.075, .075); geo.rotateX(-Math.PI / 2); // discos planos sobre el suelo, blancos con borde oscuro
+    const m = new THREE.InstancedMesh(geo, new THREE.MeshBasicMaterial({ map: tex(c), transparent: true, depthWrite: false, depthTest: false }), n);
     m.count = 0; m.renderOrder = 3; m.frustumCulled = false; return m;
   }
   function animar(t, dt) {
@@ -1579,9 +1582,9 @@ const PALOS = (() => {
     g: 9.81, dt: 1 / 240,
     rBola: .042,            // bola de madera
     rHoyo: .095,            // hoyo algo generoso, como pide el manual (generosidad con la intención)
-    vCaptura: 1.9,          // por debajo de esta velocidad la bola cae
-    vLabio: 3.1,            // entre captura y labio, la bola roza el borde y se desvía
-    rozSuelo: 1.05,         // deceleración por rozamiento en tierra batida (m/s²)
+    vCaptura: 1.35,         // por debajo de esta velocidad la bola cae (menos si entra descentrada)
+    vLabio: 2.2,            // descentrada y por debajo de esto, la bola roza el borde y se desvía; si no, salta el hoyo
+    rozSuelo: .85,          // deceleración por rozamiento en tierra batida (m/s²); en pendientes de más del 12 % la bola vuelve a bajar
     rozHierba: 2.6,         // hierba alta y grava
     rodar: 5 / 7,           // factor de una esfera maciza que rueda en pendiente
     paradaV: .055, paradaA: .32,
@@ -1716,7 +1719,7 @@ const PALOS = (() => {
   /* ---------- estado y golpe ---------- */
   function nueva(H, x, z) { preparar(H); return { x, z, y: altura(H, x, z), vx: 0, vz: 0, vy: 0, aire: false, quieta: true, dentro: false, agua: false, t: 0, eventos: [] }; }
   function golpear(H, s, ang, pot, palo) {
-    const base = String(palo).split(':')[0], P = T.palos[base] || T.palos.mazo, v = P.vmax * Math.max(0, Math.min(1, pot));
+    const base = String(palo).split(':')[0], P = T.palos[base] || T.palos.mazo, v = P.vmax * Math.pow(Math.max(0, Math.min(1, pot)), .8); // curva suave: los golpes flojos llegan algo más lejos
     s.efecto = P.curva ? P.curva * (String(palo).split(':')[1] === 'I' ? -1 : 1) : 0; // con x a la derecha del mapa y la cámara detrás, la izquierda de quien juega es +x
     const vh = v * Math.cos(P.loft);
     s.vx = Math.sin(ang) * vh; s.vz = Math.cos(ang) * vh; s.vy = v * Math.sin(P.loft);
@@ -1791,18 +1794,23 @@ const PALOS = (() => {
       let u = L2 > 0 ? ((cx - px) * mx + (cz - pz) * mz) / L2 : 0; u = Math.max(0, Math.min(1, u));
       const qx = px + mx * u - cx, qz = pz + mz * u - cz, d = Math.hypot(qx, qz), v = Math.hypot(s.vx, s.vz);
       if (d < T.rHoyo - T.rBola * .35) {
-        if (v < T.vCaptura) { s.dentro = true; s.quieta = true; s.x = cx; s.z = cz; evento(s, 'hoyo', v / T.vCaptura); return s; }
-        if (v < T.vLabio && !s._labio) { // roza el borde: se desvía y frena
+        const off = d / T.rHoyo, vc = T.vCaptura * (1 - .45 * off * off);
+        if (v < vc) { s.dentro = true; s.quieta = true; s.x = cx; s.z = cz; evento(s, 'hoyo', v / T.vCaptura); return s; }
+        if (!s._labio) {
           s._labio = true;
-          const lado = (qx * s.vz - qz * s.vx) >= 0 ? 1 : -1, off = Math.min(1, d / T.rHoyo);
-          const a = lado * (.35 + .9 * off), c = Math.cos(a), sn = Math.sin(a);
-          const nvx = s.vx * c - s.vz * sn, nvz = s.vx * sn + s.vz * c;
-          s.vx = nvx * .62; s.vz = nvz * .62; evento(s, 'labio', .7);
+          if (off > .45 && v < T.vLabio) { // descentrada: roza el borde, se desvía y frena
+            const lado = (qx * s.vz - qz * s.vx) >= 0 ? 1 : -1;
+            const a = lado * (.35 + .9 * off), c = Math.cos(a), sn = Math.sin(a);
+            const nvx = s.vx * c - s.vz * sn, nvz = s.vx * sn + s.vz * c;
+            s.vx = nvx * .62; s.vz = nvz * .62; evento(s, 'labio', .7);
+          } else { // demasiado rápida: salta por encima del hoyo
+            s.aire = true; s.vy = .3 + .08 * v; s.vx *= .86; s.vz *= .86; evento(s, 'salta', .6);
+          }
         }
       } else if (d > T.rHoyo * 2) s._labio = false;
       if (H.agua && enAgua(H, s.x, s.z)) { s.agua = true; s.quieta = true; s.vx = s.vz = 0; evento(s, 'agua', 1); return s; }
-      const sp2 = Math.hypot(s.vx, s.vz), acc = Math.hypot(ax, az);
-      if (sp2 < T.paradaV && acc < T.paradaA) { s.vx = s.vz = 0; s.quieta = true; if (!dentro(H.borde, s.x, s.z)) { s.agua = true; s.fuera = true; evento(s, 'fuera', 1); } else evento(s, 'para', 0); }
+      const sp2 = Math.hypot(s.vx, s.vz), acc = Math.hypot(ax, az), rozB = enHierba(H, s.x, s.z) ? T.rozHierba : T.rozSuelo;
+      if (sp2 < T.paradaV && acc <= rozB) { s.vx = s.vz = 0; s.quieta = true; if (!dentro(H.borde, s.x, s.z)) { s.agua = true; s.fuera = true; evento(s, 'fuera', 1); } else evento(s, 'para', 0); }
     }
     if (s.t > T.maxT) { s.vx = s.vz = s.vy = 0; s.aire = false; s.quieta = true; s.y = altura(H, s.x, s.z); }
     return s;
@@ -1955,7 +1963,7 @@ const PALOS = (() => {
         { id: '1-2', par: 3, nombre: { es: 'La curva', en: 'The bend' },
           borde: CURVA, salida: [1, 1], hoyo: [7.1, 5.6],
           terreno: [{ t: 'peralte', c: [3.6, 3], r0: 2.3, r1: 3.6, h: .2, a0: 90, a1: 180 }, { t: 'cuenco', x: 7.1, z: 5.6, r: .6, h: .02 }],
-          deco: [{ t: 'pino', x: 4, z: 1.2 }, { t: 'roca', x: -1.8, z: 6, s: 1 }, { t: 'bambu', x: 3, z: 8.8 }],
+          deco: [{ t: 'pino', x: 7, z: 1 }, { t: 'roca', x: -1.8, z: 6, s: 1 }, { t: 'bambu', x: 3, z: 8.8 }],
           guia: { es: 'La curva está peraltada: la bola sube por el borde de fuera y vuelve al centro', en: 'The bend is banked: the ball rides up the outer edge and comes back to the middle' } },
         { id: '1-3', par: 3, nombre: { es: 'La cuesta', en: 'The slope' },
           borde: R(-1.4, 0, 1.4, 11), salida: [0, 1], hoyo: [-.3, 9.4],
@@ -1986,10 +1994,10 @@ const PALOS = (() => {
       hoyos: [
         { id: '2-1', par: 2, nombre: { es: 'Por encima del bordillo', en: 'Over the kerb' },
           borde: R(-2, 0, 2, 9), salida: [0, 1], hoyo: [-.8, 7.4],
-          muros: [{ p: [[-2, 4.5], [1.35, 4.5]], h: .11 }],
+          muros: [{ p: [[-2, 4.5], [2, 4.5]], h: .11 }],
           terreno: [{ t: 'rampa', a: [0, 5], b: [0, 7], h: .14 }, { t: 'cuenco', x: -.8, z: 7.4, r: .55, h: .02 }],
-          deco: [{ t: 'banderin', x: 1.4, z: 8.4 }, { t: 'pino', x: -3.2, z: 7 }],
-          guia: { es: 'La cuchara, de hoja curva, levanta la bola y salta los bordillos bajos', en: 'The spoon, with its curved blade, lifts the ball over low kerbs' } },
+          deco: [{ t: 'pino', x: -3.2, z: 7 }],
+          guia: { es: 'Elige la cuchara: su hoja curva levanta la bola y salta el bordillo', en: 'Choose the spoon: its curved blade lifts the ball over the kerb' } },
         { id: '2-2', par: 3, nombre: { es: 'La terraza', en: 'The terrace' },
           borde: R(-2.5, 0, 2.5, 11), salida: [0, 1], hoyo: [1, 9],
           terreno: [{ t: 'plataforma', x1: -2.6, z1: 5.6, x2: 2.6, z2: 11.2, h: .36, r: 1.7, lados: 's' }, { t: 'cuenco', x: 1, z: 9, r: .5, h: .015 }],
@@ -1999,26 +2007,26 @@ const PALOS = (() => {
           borde: R(-2.6, 0, 2.6, 11), salida: [0, 1], hoyo: [-.2, 9.6],
           postes: [[-1.4, 4], [0, 4], [1.4, 4], [-1.4, 6.6], [0, 6.6], [1.4, 6.6]].map(([x, z]) => ({ x, z, r: .15, h: 3, k: 'columna' })),
           terreno: [{ t: 'ondas', a: [0, 1.6], b: [0, 9], l: 2.4, h: .05 }, { t: 'inclinado', x1: -2.6, z1: 0, x2: 2.6, z2: 11, gx: -.02, gz: 0 }, { t: 'cuenco', x: -.2, z: 9.6, r: .5, h: .015 }],
-          deco: [{ t: 'tejado', x: 0, z: 5.3, w: 3.6, l: 3.4 }, { t: 'banderin', x: 2, z: 10.2 }],
+          deco: [{ t: 'tejado', x: 0, z: 5.3, w: 3.6, l: 3.4 }],
           guia: null },
         { id: '2-4', par: 3, nombre: { es: 'El paseo de la pintura', en: 'The painted walkway' },
           borde: PASEO, salida: [0, 1], hoyo: [6.9, 7],
           hierba: [sinRep([...arco(3, 4, 3.25, 180, 90), ...arco(3, 4, 4.05, 90, 180)])],
           terreno: [{ t: 'rampa', a: [3.5, 7], b: [7.4, 7], h: -.16 }, { t: 'cuenco', x: 6.9, z: 7, r: .55, h: .02 }],
-          deco: [{ t: 'banderin', x: 8, z: 8.6 }, { t: 'mesa', x: -2.6, z: 2.5 }, { t: 'pino', x: 3.6, z: 2 }],
+          deco: [{ t: 'mesa', x: -2.6, z: 2.5 }, { t: 'pino', x: 3.6, z: 2 }],
           guia: { es: 'La hierba alta del exterior de la curva frena la bola', en: 'The long grass on the outside of the bend slows the ball' } },
         { id: '2-5', par: 3, nombre: { es: 'La balaustrada', en: 'The balustrade' },
           borde: R(-2.2, 0, 2.2, 13), salida: [-1.2, 1], hoyo: [-1.3, 11.8],
           muros: [{ p: [[-2.2, 5.5], [.8, 7.8]], h: .9, k: 'balaustrada' }],
           terreno: [{ t: 'rampa', a: [0, 8.6], b: [0, 10.8], h: .26 }, { t: 'cuenco', x: -1.3, z: 11.8, r: .6, h: .02 }, { t: 'monte', x: 1.4, z: 9.6, r: .7, h: .08 }],
-          deco: [{ t: 'pino', x: 3.6, z: 5 }, { t: 'banderin', x: 2.6, z: 12.6 }],
+          deco: [{ t: 'pino', x: 3.6, z: 5 }],
           guia: { es: 'La balaustrada es alta: ni la cuchara la salta', en: 'The balustrade is tall: not even the spoon can clear it' } },
         { id: '2-6', par: 3, nombre: { es: 'Bajando de la terraza', en: 'Down from the terrace' },
           borde: R(-2.6, 0, 2.6, 13), salida: [0, 1.2], hoyo: [-1, 11.4],
           terreno: [{ t: 'plataforma', x1: -2.7, z1: -.2, x2: 2.7, z2: 4.2, h: .4, r: 2, lados: 'n' }, { t: 'cuenco', x: -1, z: 11.4, r: 1.2, h: .05 }],
           postes: [{ x: .6, z: 9.2, r: .35, k: 'pino' }, { x: -2, z: 8, r: .3, k: 'roca' }],
           agua: [R(1.2, 10.4, 2.6, 13)],
-          deco: [{ t: 'escalera', x: 0, z: 5.2, w: 5.2, l: 2, h: .4 }, { t: 'pabellon', x: 0, z: -3.8, s: 1 }, { t: 'banderin', x: -2.2, z: 12.6 }],
+          deco: [{ t: 'escalera', x: 0, z: 5.2, w: 5.2, l: 2, h: .4 }, { t: 'pabellon', x: 0, z: -3.8, s: 1 }],
           guia: null }
       ] },
     { id: 'pueblo', num: 'III', amb: 'pueblo', rival: 'jugadora', premio: ['lacado'], palos: ['mazo', 'pala', 'cuchara', 'largo', 'gancho'],
@@ -2069,7 +2077,7 @@ const PALOS = (() => {
 })(typeof window !== 'undefined' ? window : globalThis);
 
 /* Chuiwan · golpes del rival en cada hoyo: partidas simuladas con la física del juego (test/rival.js). */
-window.RIVAL = {"1-1":[2,1,2,2,1,2,3,2,3,1,2,2],"1-2":[7,3,2,3,2,2,1,2,2,2,2,5],"1-3":[1,2,2,3,1,2,2,3,2,2,2,2],"1-4":[2,2,3,3,4,2,6,4,5,1,2,3],"1-5":[4,2,3,3,4,2,2,4,2,4,2,2],"1-6":[5,3,2,3,2,2,4,3,3,2,2,3],"2-1":[2,2,3,2,2,2,2,2,2,2,2,2],"2-2":[2,3,3,2,1,2,2,3,3,1,2,2],"2-3":[1,1,2,3,1,2,3,3,3,2,2,2],"2-4":[2,3,3,3,2,2,2,3,2,2,2,1],"2-5":[2,2,3,2,2,2,3,2,3,2,1,2],"2-6":[1,1,2,2,2,2,3,3,3,3,2,4],"3-1":[4,2,2,3,1,2,3,3,3,1,2,2]};
+window.RIVAL = {"1-1":[1,1,3,2,1,2,3,3,2,1],"1-2":[1,3,5,2,1,2,2,3,4,2],"1-3":[3,3,2,2,1,2,2,2,3,3],"1-4":[4,2,3,6,4,2,4,5,3,4],"1-5":[3,3,2,4,3,2,4,3,3,3],"1-6":[3,3,2,2,1,2,3,2,3,4],"2-1":[1,2,2,2,1,2,2,2,2,3],"2-2":[1,3,3,2,2,2,2,2,3,1],"2-3":[3,2,2,5,2,2,3,4,3,4],"2-4":[3,1,2,4,2,2,2,1,2,2],"2-5":[1,3,2,2,2,2,3,3,3,2],"2-6":[1,1,2,2,1,2,2,3,3,1],"3-1":[2,2,3,3,2,2,2,2,5,3],"3-2":[1,1,1,2,1,2,3,2,1,1],"3-3":[3,2,1,3,4,2,2,2,2,2],"3-4":[4,2,2,2,2,2,2,3,3,3],"3-5":[2,3,2,2,3,2,2,5,3,3],"3-6":[3,5,3,2,3,2,3,3,3,3]};
 
 /* Chuiwan · sonido sintetizado (WebAudio), tomado del cuju: madera contra madera, rodadura, hoyo y agua. Nada suena hasta el primer toque. */
 const SND = (() => {
@@ -2161,6 +2169,8 @@ const SND = (() => {
     hito(n) { [0, 2, 4, 5, 7].slice(0, 2 + (n || 1)).forEach((k, i) => pulsar(ESCALA[k], .45, i * .1, 1.3)); },
     victoria() { [0, 1, 2, 3, 4, 5, 6, 8].forEach((k, i) => pulsar(ESCALA[k], .45, i * .12, 1.6)); setTimeout(() => A.gong(), 1100); },
     derrota() { [5, 4, 3, 1, 0].forEach((k, i) => pulsar(ESCALA[k] / 2, .4, i * .2, 2)); },
+    aplauso(v) { const n = 8 + (v || 1) * 10 | 0; for (let i = 0; i < n; i++) golpe(1500 + Math.random() * 1500, 1.2, .001, .05, .2 * (v || 1), 'bandpass', sfx, Math.random() * 1.2); },
+    ovacion(v) { for (let i = 0; i < 6; i++) golpe(700 + Math.random() * 900, .5, .15, 1.4, .2 * (v || 1), 'bandpass', sfx, i * .06); A.aplauso(v); },
     paso() { golpe(300, 1, .002, .06, .08, 'lowpass'); },
     petardos() { for (let i = 0; i < 14; i++) golpe(1200 + Math.random() * 2000, 1, .001, .06, .5, 'bandpass', sfx, i * .07 + Math.random() * .05); }
   };
@@ -2337,7 +2347,7 @@ const PREG = [
 
   const TXT = {
     titulo: { es: 'El juego de golpear la bola', en: 'The ball-striking game' },
-    subtitulo: { es: 'Lleva la bola de madera hasta el hoyo con los palos del chuiwan, sube de categoría y gana tus palos en tres recorridos: el jardín de un alto funcionario, los jardines de palacio y el barrio.', en: 'Drive the wooden ball into the hole with the chuiwan clubs, climb the categories and win your clubs on three courses: a high official’s garden, the palace gardens and the neighbourhood.' },
+    subtitulo: { es: 'Un minigolf de la China de los siglos X-XVII. Lleva la bola de madera hasta el hoyo con los palos del chuiwan, sube de categoría y gana tus palos en tres recorridos: el jardín de un alto funcionario, los jardines de palacio y el barrio.', en: 'A mini golf from 10th-17th century China. Drive the wooden ball into the hole with the chuiwan clubs, climb the categories and win your clubs on three courses: a high official’s garden, the palace gardens and the neighbourhood.' },
     jugar: { es: 'Jugar', en: 'Play' }, continuar: { es: 'Continuar', en: 'Continue' }, recorridos: { es: 'Recorridos', en: 'Courses' }, como: { es: 'Cómo se juega', en: 'How to play' }, pinturas: { es: 'Las imágenes', en: 'The images' },
     volver: { es: 'Volver', en: 'Back' }, seguir: { es: 'Seguir', en: 'Continue' }, empezar: { es: 'Empezar', en: 'Start' }, menu: { es: 'Salir al menú', en: 'Back to menu' }, saltar: { es: 'Saltar', en: 'Skip' },
     pausa: { es: 'Pausa', en: 'Paused' }, guardarSalir: { es: '💾 Guardar y salir', en: '💾 Save and exit' }, repetir: { es: 'Repetir el recorrido', en: 'Replay the course' }, repetirH: { es: 'Repetir el hoyo', en: 'Replay the hole' },
@@ -2398,7 +2408,7 @@ const PREG = [
     const dt = Math.min(DTMAX, (now - (tPrev || now)) / 1000); tPrev = now;
     if (!pausado) { tTot += dt; for (const f of tickers.slice()) f(dt); ESC.animar(tTot, dt); ESC.tickPublico(dt, tTot); }
     if (cam.modo === 'orbita' && ST.H) { cam.ang += dt * .06; const B = ESC.limites(ST.H), cx = (B.x0 + B.x1) / 2, cz = (B.z0 + B.z1) / 2, r = Math.max(B.x1 - B.x0, B.z1 - B.z0) * .75 + 5; cam.pObj.set(cx + Math.sin(cam.ang) * r, r * .85, cz + Math.cos(cam.ang) * r); cam.mObj.set(cx, 0, cz); }
-    const f = 1 - Math.exp(-cam.vel * dt);
+    const f = AR.on ? 0 : 1 - Math.exp(-cam.vel * dt); // la cámara no se mueve mientras se apunta
     cam.pos.lerp(cam.pObj, f); cam.mira.lerp(cam.mObj, f);
     camara.position.copy(cam.pos); camara.lookAt(cam.mira);
     if (Math.abs(camara.fov - cam.fov) > .01) { camara.fov += (cam.fov - camara.fov) * f; camara.updateProjectionMatrix(); }
@@ -2602,7 +2612,7 @@ const PREG = [
         SND.init(); const ok = +b.dataset.k === 0; sal.remove();
         ops.forEach(x => { x.disabled = true; if (+x.dataset.k === 0) x.classList.add('ok'); }); if (!ok) b.classList.add('mal');
         P.respondidas++; if (ok) { P.aciertos++; const iq = PREG.indexOf(q); if (P.acertadas.indexOf(iq) < 0) { P.acertadas.push(iq); xp(10); } SND.acierto(); } else SND.fallo(); guardar();
-        const e = $('expl'); e.innerHTML = `<b>${ok ? t('correcto') + (ST.calma < 3 ? (es() ? ' Calma +1.' : ' Calm +1.') : '') : t('noEsa')}</b> ${L(q.x)}`; e.classList.add('on');
+        const e = $('expl'); e.innerHTML = `<b>${ok ? t('correcto') + (ST.calma < 3 ? (es() ? ' Calma +1: la línea de puntos que adelanta el golpe se alarga.' : ' Calm +1: the dotted line that previews your stroke gets longer.') : '') : t('noEsa')}</b> ${L(q.x)}`; e.classList.add('on');
         const f = document.createElement('div'); f.className = 'fila';
         f.appendChild(boton(t('seguir'), 'rojo', () => { removeEventListener('keydown', tecla); cerrarPanel(); res(ok); })); h.appendChild(f); f.scrollIntoView({ block: 'nearest' });
       }));
@@ -2624,7 +2634,7 @@ const PREG = [
     f.appendChild(boton(t('volver'), 'claro', () => { mostrar('lamina', false); portada(); }));
     $('laminaTxt').appendChild(f); mostrar('lamina', true);
   }
-  const premioTxt = C => C.premio.map(k => k === 'lacado' ? L({ es: 'el palo lacado de honor y la túnica amarilla', en: 'the lacquered club of honour and the yellow robe' }) : L({ es: 'el ', en: 'the ' }) + L(PALOS.INFO[k].nombre).toLowerCase()).join(L({ es: ' y ', en: ' and ' }));
+  const premioTxt = C => C.premio.map(k => k === 'lacado' ? L({ es: 'el palo lacado de honor y la túnica amarilla', en: 'the lacquered club of honour and the yellow robe' }) : L({ es: (k === 'pala' || k === 'cuchara') ? 'la ' : 'el ', en: 'the ' }) + L(PALOS.INFO[k].nombre).toLowerCase()).join(L({ es: ' y ', en: ' and ' }));
 
   async function jugarCurso(ci, guardada) {
     token++; const tk = token, C = CURSOS[ci];
@@ -2670,7 +2680,7 @@ const PREG = [
       const gan = filas.filter(x => x.g < x.rv).length, per = filas.filter(x => x.g > x.rv).length;
       const tot = filas.reduce((a, x) => a + x.g, 0), parT = filas.reduce((a, x) => a + x.par, 0), rv = filas.reduce((a, x) => a + x.rv, 0);
       const est = r.golpes < r.rival ? L({ es: 'ganas el hoyo', en: 'you win the hole' }) : r.golpes > r.rival ? L({ es: 'el hoyo es del rival', en: 'the hole goes to your rival' }) : L({ es: 'hoyo empatado', en: 'hole halved' });
-      const h = panel(`<h3>${t('hoyo')} ${i + 1} / ${C.hoyos.length} · ${L(H.nombre)}</h3><h2>${calif(r.golpes, H.par)} · ${est}</h2>
+      const h = panel(`<h3>${t('hoyo')} ${i + 1} / ${C.hoyos.length} · ${L(H.nombre)}</h3><h2>${cap(calif(r.golpes, H.par))} · ${est}</h2>
         <p>${t('tu')}: <b>${r.golpes}</b> · ${L(m.rival)}: <b>${r.rival}</b> · ${t('par')} ${H.par}${r.ayuda ? ' · 💡' : ''}</p>
         ${tarjetaHTML(C, filas)}
         <p>${es() ? `Total ${tot} (${signo(tot - parT)}) · partido: ganas ${gan}, pierdes ${per}.` : `Total ${tot} (${signo(tot - parT)}) · match: you win ${gan}, lose ${per}.`}</p>`);
@@ -2680,6 +2690,7 @@ const PREG = [
       h.appendChild(f);
     });
   }
+  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
   const signo = d => d === 0 ? (es() ? 'al par' : 'level') : (d > 0 ? '+' + d : String(d));
   function tarjetaHTML(C, filas) {
     const n = C.hoyos.length;
@@ -2732,7 +2743,7 @@ const PREG = [
     await esperaToque(primero ? 900 : 1500); if (tk !== token) return {};
     // pregunta al empezar el hoyo (el primer golpe del juego va sin pregunta)
     if (!primero && ST.calma < 3) {
-      const ok = await preguntar(sacarPregunta(ST.i === 0), `${t('hoyo')} ${ST.i + 1} · ${t('pregunta')} · ${t('calma')} ${'◆'.repeat(ST.calma)}${'◇'.repeat(3 - ST.calma)}`);
+      const ok = await preguntar(sacarPregunta(true), `${t('hoyo')} ${ST.i + 1} · ${t('pregunta')} · ${t('calma')} ${'◆'.repeat(ST.calma)}${'◇'.repeat(3 - ST.calma)}`);
       if (tk !== token) return {};
       if (ok) ST.calma = Math.min(3, ST.calma + 1);
     }
@@ -2746,7 +2757,7 @@ const PREG = [
     controles(false); guia(''); mostrar('mano', false);
     const golpes = ST.golpes, rival = golpesRival(H);
     if (!ST.ayuda) { if (!P.mejor[H.id] || golpes < P.mejor[H.id]) P.mejor[H.id] = golpes; if (golpes <= H.par) hito('par-' + H.id, 5); }
-    if (golpes >= H.par + 2 && ST.calma > 0) { ST.calma--; aviso(L({ es: 'Pierdes la calma', en: 'You lose your calm' }), L({ es: 'Una pregunta acertada la devuelve', en: 'A correct answer brings it back' }), 1500); await esperaJuego(1100); }
+    if (golpes >= H.par + 2 && ST.calma > 0) { ST.calma--; hud(hudHTML()); aviso(L({ es: 'Pierdes la calma', en: 'You lose your calm' }), L({ es: 'En el chuiwan se pedía no enfadarse al fallar. La línea de puntos se acorta; una pregunta acertada la alarga', en: 'Chuiwan players were expected not to lose their temper. The dotted line gets shorter; a correct answer lengthens it' }), 2200); await esperaJuego(1100); }
     P.hitos.primerGolpe = 1; guardar();
     return { golpes, rival, ayuda: ST.ayuda };
   }
@@ -2790,8 +2801,9 @@ const PREG = [
   function camaraApunta() {
     const d = ST.dir, y = FIS.altura(ST.H, ST.x, ST.z), lejos = Math.hypot(ST.H.hoyo[0] - ST.x, ST.H.hoyo[1] - ST.z) > 9;
     const atras = lejos ? 3.6 : 3.1, alto = lejos ? 2.6 : 2.2;
-    cam.pObj.set(ST.x - d.x * atras, y + alto, ST.z - d.z * atras); cam.mObj.set(ST.x + d.x * 2.6, y, ST.z + d.z * 2.6);
-    cam.modo = 'fija'; cam.vel = 2.6; cam.fov = 46;
+    const fx = d.z, fz = -d.x; // lado contrario a donde está el jugador, para que no tape la calle
+    cam.pObj.set(ST.x - d.x * atras + fx * .55, y + alto, ST.z - d.z * atras + fz * .55); cam.mObj.set(ST.x + d.x * 2.6 + fx * .2, y, ST.z + d.z * 2.6 + fz * .2);
+    cam.modo = 'fija'; cam.vel = 5; cam.fov = 46;
   }
   function camaraCenital(rapida) {
     const B = ESC.limites(ST.H), cx = (B.x0 + B.x1) / 2, cz = (B.z0 + B.z1) / 2;
@@ -2804,7 +2816,7 @@ const PREG = [
     const s = ST.s, v = Math.hypot(s.vx, s.vz);
     if (v > .3) ST.dirS = (ST.dirS || new THREE.Vector3()).lerp(Vt.set(s.vx / v, 0, s.vz / v), Math.min(1, dt * 2)).normalize();
     const d = ST.dirS || ST.dir;
-    cam.pObj.set(s.x - d.x * 3.2, s.y + 2.4, s.z - d.z * 3.2); cam.mObj.set(s.x + d.x * 1.2, s.y, s.z + d.z * 1.2); cam.vel = 2.2;
+    cam.pObj.set(s.x - d.x * 2.6, s.y + 3.6, s.z - d.z * 2.6); cam.mObj.set(s.x + d.x * 1.4, s.y, s.z + d.z * 1.4); cam.vel = 2.4;
   }
   function esperaToque(ms) {
     return new Promise(res => { let tt = 0, ok = false; const fin = () => { if (ok) return; ok = true; st(); canvas.removeEventListener('pointerdown', fin); res(); }; const st = ticker(dt => { tt += dt * 1000; if (tt >= ms) fin(); }); canvas.addEventListener('pointerdown', fin); });
@@ -2829,7 +2841,7 @@ const PREG = [
       SND.init();
       if (MODO === 'hoyo' && ST.s && !ST.s.quieta && !ST.apuntando) { ST.acel = 3; guia(''); return; }
       if (!(MODO === 'hoyo' && ST.apuntando && !pausado)) return;
-      AR.on = true; AR.id = e.pointerId; AR.x0 = AR.x = e.clientX; AR.y0 = AR.y = e.clientY; ST.pot = 0; mostrar('mano', false); guia('');
+      AR.on = true; AR.tactil = e.pointerType === 'touch'; AR.id = e.pointerId; AR.x0 = AR.x = e.clientX; AR.y0 = AR.y = e.clientY; ST.pot = 0; mostrar('mano', false); guia('');
       try { canvas.setPointerCapture(e.pointerId); } catch (er) {}
     });
     canvas.addEventListener('pointermove', e => { if (!AR.on || e.pointerId !== AR.id) return; AR.x = e.clientX; AR.y = e.clientY; leerArrastre(); ST.cambio = true; });
@@ -2876,11 +2888,12 @@ const PREG = [
     const m = $('mano'); m.style.left = ((b.x + 1) / 2 * innerWidth + 10) + 'px'; m.style.top = ((1 - b.y) / 2 * innerHeight - 30) + 'px';
   }
   const paloId = () => ST.palo === 'gancho' ? 'gancho:' + ST.lado : ST.palo;
-  const LGUIA = [.7, 1.8, 3.4, 6];
+  const LGUIA = [.6, 1.5, 2.6, 4]; // la línea enseña el camino y el primer rebote, nunca el final junto al hoyo
   function actualizarApuntado() {
-    if (!(ST.apuntando && AR.on && ST.pot >= .04)) { flecha.visible = false; guiaM.count = 0; $('fuerza').style.display = 'none'; return; }
+    if (!(ST.apuntando && AR.on && ST.pot >= .04)) { flecha.visible = false; guiaM.count = 0; $('fuerza').style.display = 'none'; if (ST.apuntando && ST.swing) { ST.swing = null; yo.obj = 'apunta'; } return; }
     const yb = FIS.altura(ST.H, ST.x, ST.z), d = ST.dir;
     flecha.visible = true; flecha.position.set(ST.x, yb + .012, ST.z); flecha.rotation.y = Math.atan2(d.x, d.z);
+    ST.swing = { fi: -(.15 + ST.pot * 1.05) }; yo.obj = 'atras'; yo.vel = 12;
     const largo = .25 + ST.pot * 1.1; flecha.userData.p.scale.set(1 + ST.pot * .6, largo, 1);
     colocarYo();
     if (ST.cambio) { // la línea de puntos: el camino real de la bola, hasta donde da la calma
@@ -2889,6 +2902,7 @@ const PREG = [
       const max = LGUIA[ST.calma] * (ST.palo === 'cuchara' ? 1.4 : 1); let acum = 0, n = 0, prox = .14; const m4 = new THREE.Matrix4();
       for (let i = 1; i < tr.length && n < 90; i++) {
         const a = tr[i - 1], b = tr[i], seg = Math.hypot(b[0] - a[0], b[2] - a[2]);
+        if (Math.hypot(b[0] - ST.H.hoyo[0], b[2] - ST.H.hoyo[1]) < .7) break;
         while (acum + seg >= prox && n < 90 && prox <= max) { const u = (prox - acum) / (seg || 1); m4.makeTranslation(a[0] + (b[0] - a[0]) * u, a[1] + (b[1] - a[1]) * u + .03, a[2] + (b[2] - a[2]) * u); guiaM.setMatrixAt(n++, m4); prox += .14; }
         acum += seg; if (acum > max) break;
       }
@@ -2898,7 +2912,7 @@ const PREG = [
   function etiquetaFuerza() {
     const el = $('fuerza');
     if (!(AR.on && ST.apuntando && ST.pot >= .04)) { el.style.display = 'none'; return; }
-    el.style.display = 'block'; el.style.left = AR.x + 'px'; el.style.top = AR.y + 'px';
+    el.style.display = 'block'; el.style.left = (AR.x + (AR.tactil ? -70 : 0)) + 'px'; el.style.top = (AR.y + (AR.tactil ? -70 : 95)) + 'px';
     el.innerHTML = `${Math.round(ST.pot * 100)} %<i><b style="width:${Math.round(ST.pot * 100)}%"></b></i><small>${L(PALOS.INFO[ST.palo].nombre)}${ST.palo === 'gancho' ? (ST.lado === 'I' ? ' ↶' : ' ↷') : ''}</small>`;
   }
 
@@ -2908,14 +2922,13 @@ const PREG = [
     ST.previa = { x: ST.x, z: ST.z }; ST.golpes++; hud(hudHTML());
     const ang = Math.atan2(d.x, d.z), palo = paloId();
     // anticipación del golpe: el palo sube hacia atrás y baja; la bola sale en el impacto
-    const atras = .35 + pot * 1.05, tB = .2 + pot * .12, tD = .11, tF = .3;
-    ST.swing = { fi: 0, t: 0 }; yo.obj = 'atras'; yo.vel = 14;
+    const fi0 = ST.swing && ST.swing.fi ? ST.swing.fi : -(.15 + pot * 1.05), tB = 0, tD = .07, tF = .3;
+    ST.swing = { fi: fi0, t: 0 }; yo.obj = 'final'; yo.vel = 30;
     const st = ticker(dt => {
       const s = ST.swing; if (!s) { st(); return; } s.t += dt;
-      if (s.t < tB) s.fi = -atras * Math.sin(s.t / tB * Math.PI / 2);
-      else if (s.t < tB + tD) { s.fi = -atras * (1 - (s.t - tB) / tD); yo.obj = 'final'; yo.vel = 30; }
+      if (s.t < tD) s.fi = fi0 * (1 - s.t / tD);
       else {
-        if (!s.golpeado) { s.golpeado = true; ST.s = FIS.golpear(ST.H, FIS.nueva(ST.H, ST.x, ST.z), ang, pot, palo); ST.ev = 0; ST.acum = 0; ST.acel = 1; ST.dirS = d.clone(); SND.golpe(ST.palo, pot); ST.parada = .035; }
+        if (!s.golpeado) { s.golpeado = true; ST.s = FIS.golpear(ST.H, FIS.nueva(ST.H, ST.x, ST.z), ang, pot, palo); ST.ev = 0; ST.acum = 0; ST.acel = 1; ST.dirS = d.clone(); SND.golpe(ST.palo, pot); ST.parada = .03; vibrar(12); }
         const u = Math.min(1, (s.t - tB - tD) / tF); s.fi = (.4 + pot * .7) * Math.sin(u * Math.PI / 2);
         if (u >= 1) { st(); ST.rodando = true; }
       }
@@ -2950,17 +2963,20 @@ const PREG = [
     }
     if (s.quieta && ST.rodando) { ST.rodando = false; ST.tRod = 0; if (ST.avisoAcel) guia(''); ST.avisoAcel = false; SND.rodar(0); finGolpe(); }
   }
-  function sonarEvento(e) {
+  function vibrar(ms) { try { if (navigator.vibrate) navigator.vibrate(ms); } catch (e) {} }
+  function sonarEvento(e) { try { sonarEvento0(e); } catch (er) {} }
+  function sonarEvento0(e) {
     if (e.tipo === 'muro') SND.muro(e.k, e.f); else if (e.tipo === 'bote') SND.bote(e.f); else if (e.tipo === 'labio') { SND.labio(); aviso(L({ es: 'Por el borde', en: 'Lipped out' }), '', 700); }
-    else if (e.tipo === 'hoyo') SND.hoyo(); else if (e.tipo === 'agua') SND.agua(); else if (e.tipo === 'fuera') SND.seco();
+    else if (e.tipo === 'salta') { SND.bote(.6); aviso(L({ es: 'Demasiado fuerte', en: 'Too hard' }), L({ es: 'La bola salta el hoyo', en: 'The ball skips over the hole' }), 800); }
+    else if (e.tipo === 'hoyo') { SND.hoyo(); vibrar(30); } else if (e.tipo === 'agua') SND.agua(); else if (e.tipo === 'fuera') SND.seco();
   }
   async function finGolpe() {
     const s = ST.s, tk = ST.tk, res = ST.listo;
     if (s.dentro) {
       bola.visible = true; bola.position.y = s.y - .05; marca.visible = false;
       const g = ST.golpes, par = ST.H.par;
-      aviso(g === 1 ? L({ es: '¡Hoyo en uno!', en: 'Hole in one!' }) : t('dentro'), calif(g, par), 1600);
-      ESC.aplauso(g <= par ? 1 : .4); if (g <= par) publico.forEach((o, i) => { o.accion = i % 2 ? 'saludo' : 'victoria'; o.accT = .5 + i * .1; }); if (g <= par) SND.aplauso(g < par ? 1.2 : .8); if (g < par) SND.hito(2);
+      aviso(g === 1 ? L({ es: '¡Hoyo en uno!', en: 'Hole in one!' }) : t('dentro'), calif(g, par), g === 1 ? 2400 : 1600);
+      try { ESC.aplauso(g <= par ? 1 : .4); if (g <= par) publico.forEach((o, i) => { o.accion = i % 2 ? 'saludo' : 'victoria'; o.accT = .5 + i * .1; }); if (g === 1) SND.ovacion(1.3); else if (g <= par) SND.aplauso(g < par ? 1.2 : .8); if (g < par) SND.hito(g === 1 ? 4 : 2); } catch (e) {}
       yo.obj = 'mira'; rivalF.obj = 'saludo'; setTimeout(() => { if (rivalF) rivalF.obj = 'mira'; }, 900);
       await esperaJuego(1300); if (tk !== token) return; res('dentro'); return;
     }
