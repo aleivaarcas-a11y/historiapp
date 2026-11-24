@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Tema 5 (China, Japón, India) en Historiapp, 19-11-2026: fichas ES/EN desde el texto de pantalla.
 Cuerpo en castellano: texto de las diapositivas de «TEMAS NUEVOS/TEMA 5. China, Japón, India.pptx» (tools/fuentes/t5_slides.json).
-Cuerpo en inglés: traducción de ese mismo texto (tools/fuentes/t5_slides_en.json), porque todavía no hay Topic 5 en inglés.
+Cuerpo en inglés: traducción de ese mismo texto (tools/fuentes/t5_slides_en.json), desde el 24-11-2026 sale del Topic 5 en inglés (HISTORY OF SPORTS/NEW TOPICS).
 No se usan las notas del orador. Apartados según tools/secciones_t5.json; imágenes en img/t5 (tools/t5_imgsel.json).
 Uso: python3 tools/t5_fichas.py"""
 import json, os, re, sys, unicodedata
@@ -25,7 +25,7 @@ CIV = {'5.1': 'china', '5.2': 'japon', '5.3': 'india'}
 CAP = re.compile(r'\s·\s')
 
 def is_ref(p):
-    return CF.is_ref(p) or '(s. f.)' in p or '(Obra original' in p or p.startswith('Elaboración propia')
+    return CF.is_ref(p) or '(s. f.)' in p or '(n.d.)' in p or '(Obra original' in p or p.startswith(('Elaboración propia', "Author's elaboration")) or re.search(r'\(\d{4}\)\. [A-Z]', p) is not None
 def sec_of(n):
     best = ''
     for s in SECS:

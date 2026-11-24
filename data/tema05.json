@@ -153,8 +153,8 @@
     "en": "Bodhidharma, Tsukioka Yoshitoshi, print, Japan, 1887 AD"
    },
    "claim": {
-    "es": "Las inscripciones del monasterio de Shaolin confirman que el monje indio Bodhidharma enseñó el kung-fu a sus monjes hacia el año 480 d. C.",
-    "en": "The inscriptions of the Shaolin monastery confirm that the Indian monk Bodhidharma taught kung fu to its monks around AD 480."
+    "es": "Las inscripciones del monasterio de Shaolin confirman que el monje indio Bodhidharma enseñó el kung-fu a sus monjes a finales del siglo V d. C.",
+    "en": "The inscriptions of the Shaolin monastery confirm that the Indian monk Bodhidharma taught kung fu to its monks in the late 5th century AD."
    },
    "answer": false,
    "explain": {
@@ -515,8 +515,8 @@
    },
    "answer": true,
    "explain": {
-    "es": "Las crónicas sitúan el origen del sumo en un combate legendario ante el emperador, pero su primer testimonio fiable es el sumo de corte (Guttmann y Thompson, 2001). Los primeros combates datan del siglo VII d. C., dentro de rituales agrícolas para pedir buenas cosechas.",
-    "en": "The chronicles place the origin of sumo in a legendary bout before the emperor, but its first reliable testimony is the court sumo (Guttmann and Thompson, 2001). The first bouts date from the 7th century AD, within agricultural rituals to ask for good harvests."
+    "es": "Las crónicas sitúan el origen del sumo en un combate legendario ante el emperador, pero su primer testimonio fiable es el sumo de corte (Guttmann y Thompson, 2001). A la vez, el sumo formaba parte de los ritos de los santuarios para pedir buenas cosechas.",
+    "en": "The chronicles place the origin of sumo in a legendary bout before the emperor, but its first reliable testimony is the court sumo (Guttmann and Thompson, 2001). At the same time, sumo formed part of the shrine rites to ask for good harvests."
    },
    "sec": "5.2.4"
   },
@@ -532,8 +532,8 @@
    },
    "answer": true,
    "explain": {
-    "es": "Las palmadas, los pisotones del shiko y los puñados de sal se explican por tradición como una forma de expulsar a los malos espíritus. Thompson (1998) muestra lo mismo con el yokozuna, que la tradición remonta al siglo XVII d. C. y que no fue un rango oficial hasta 1909 d. C.",
-    "en": "The hand claps, the stamping of the shiko and the handfuls of salt are explained by tradition as a way of driving out evil spirits. Thompson (1998) shows the same with the yokozuna, which tradition traces back to the 17th century AD and which was not an official rank until AD 1909."
+    "es": "Las palmadas, los pisotones del shiko y los puñados de sal se explican por tradición como una forma de expulsar a los malos espíritus.",
+    "en": "The hand claps, the stamping of the shiko and the handfuls of salt are explained by tradition as a way of driving out evil spirits."
    },
    "sec": "5.2.4"
   },
@@ -1259,17 +1259,6 @@
   },
   {
    "term": {
-    "es": "Yokozuna",
-    "en": "Yokozuna"
-   },
-   "def": {
-    "es": "Rango supremo del sumo que la tradición remonta al siglo XVII d. C. y que no fue oficial hasta 1909 d. C., ejemplo de tradición inventada según Thompson (1998).",
-    "en": "Supreme rank of sumo that tradition traces back to the 17th century AD and which was not official until AD 1909, an example of invented tradition according to Thompson (1998)."
-   },
-   "sec": "5.2.4"
-  },
-  {
-   "term": {
     "es": "Judo",
     "en": "Judo"
    },
@@ -1900,13 +1889,13 @@
     },
     {
      "label": {
-      "es": "Bodhidharma, monje indio, llega a Shaolin según el mito",
-      "en": "Bodhidharma, an Indian monk, arrives at Shaolin according to the myth"
+      "es": "Se funda el monasterio budista de Shaolin",
+      "en": "The Buddhist monastery of Shaolin is founded"
      },
-     "year": 480,
+     "year": 495,
      "date": {
-      "es": "H. 480 d. C.",
-      "en": "c. AD 480"
+      "es": "H. 495 d. C.",
+      "en": "c. AD 495"
      }
     },
     {
@@ -2509,8 +2498,8 @@
  "myths": [
   {
    "claim": {
-    "es": "El monje indio Bodhidharma enseñó el kung-fu a los monjes de Shaolin hacia el año 480 d. C.",
-    "en": "The Indian monk Bodhidharma taught kung-fu to the Shaolin monks around AD 480."
+    "es": "El monje indio Bodhidharma enseñó el kung-fu a los monjes de Shaolin a finales del siglo V d. C.",
+    "en": "The Indian monk Bodhidharma taught kung-fu to the Shaolin monks in the late 5th century AD."
    },
    "answer": false,
    "explain": {
@@ -2634,8 +2623,8 @@
    },
    "answer": false,
    "explain": {
-    "es": "Buena parte de ese ritual se creó en la época Edo para dar prestigio a un espectáculo de pago, de ahí que Guttmann y Thompson (2001) presenten el sumo como una tradición inventada. Thompson (1998) muestra lo mismo con el yokozuna, que la tradición remonta al siglo XVII d. C. y que no fue un rango oficial hasta 1909 d. C.",
-    "en": "A good part of that ritual was created in the Edo period to give prestige to a paid spectacle, which is why Guttmann and Thompson (2001) present sumo as an invented tradition. Thompson (1998) shows the same with the yokozuna, which tradition traces back to the 17th century AD and which was not an official rank until AD 1909."
+    "es": "Buena parte de ese ritual se creó en la época Edo para dar prestigio a un espectáculo de pago, de ahí que Guttmann y Thompson (2001) presenten el sumo como una tradición inventada.",
+    "en": "A good part of that ritual was created in the Edo period to give prestige to a paid spectacle, which is why Guttmann and Thompson (2001) present sumo as an invented tradition."
    },
    "sec": "5.2.4"
   },
@@ -2952,8 +2941,8 @@
      "en": "From a manual of AD 1624 with a false preface, which gave an ancient and prestigious origin to more recent techniques"
     },
     {
-     "es": "De las inscripciones del monasterio, que recogen su llegada hacia el año 480 d. C. y su enseñanza a los monjes, y que se conservaban en el propio monasterio desde su fundación",
-     "en": "From the monastery's inscriptions, which record his arrival around AD 480 and his teaching of the monks, and which were kept in the monastery itself since its foundation"
+     "es": "De las inscripciones del monasterio, que recogen su llegada a finales del siglo V d. C. y su enseñanza a los monjes, y que se conservaban en el propio monasterio desde su fundación",
+     "en": "From the monastery's inscriptions, which record his arrival in the late 5th century AD and his teaching of the monks, and which were kept in the monastery itself since its foundation"
     },
     {
      "es": "De las crónicas de la dinastía Tang, que cuentan cómo ayudó al futuro emperador y le enseñó el combate",
@@ -3312,8 +3301,8 @@
      "en": "The provinces sent wrestlers as tribute, so that the bout was held before the court"
     },
     {
-     "es": "Servía para elegir al yokozuna, el rango más alto, que ya era oficial desde entonces",
-     "en": "It served to choose the yokozuna, the highest rank, which was already official by then"
+     "es": "Servía para elegir a los mejores soldados del ejército imperial, que después luchaban en la guardia de palacio",
+     "en": "It served to select the best soldiers of the imperial army, who then fought in the palace guard"
     },
     {
      "es": "Era un espectáculo de pago para los comerciantes de las ciudades, con apuestas y grabados",
@@ -4165,8 +4154,8 @@
     "en": "videos/t5/t5_09_en.jpg?m=t5a"
    },
    "more": {
-    "es": "El objetivo es derribar o expulsar al rival del dohyō, un círculo de arcilla de unos 4,5 metros cubierto de arena, y el combate lo dirige el gyōji, que viste un traje de corte de la época Heian y da la salida con el gunbai, un abanico de guerra con el que los generales samuráis daban órdenes. Guttmann y Thompson (2001) presentan el sumo como una tradición inventada, y Thompson (1998) muestra lo mismo con el yokozuna, que la tradición remonta al siglo XVII d. C.",
-    "en": "The aim is to throw or push the opponent out of the dohyō, a clay ring of about 4.5 metres covered in sand, and the bout is run by the gyōji, who wears a court costume of the Heian period and gives the start with the gunbai, a war fan with which samurai generals gave orders. Guttmann and Thompson (2001) present sumo as an invented tradition, and Thompson (1998) shows the same for the yokozuna, which tradition traces back to the 17th century AD."
+    "es": "El objetivo es derribar o expulsar al rival del dohyō, un círculo de arcilla de unos 4,5 metros cubierto de arena, y el combate lo dirige el gyōji, que viste un traje de corte de la época Heian y da la salida con el gunbai, un abanico de guerra con el que los generales samuráis daban órdenes. Guttmann y Thompson (2001) presentan el sumo como una tradición inventada",
+    "en": "The aim is to throw or push the opponent out of the dohyō, a clay ring of about 4.5 metres covered in sand, and the bout is run by the gyōji, who wears a court costume of the Heian period and gives the start with the gunbai, a war fan with which samurai generals gave orders. Guttmann and Thompson (2001) present sumo as an invented tradition."
    },
    "q": {
     "es": {
@@ -4606,7 +4595,13 @@
    "images": [
     {
      "src": "img/t5/s03_1.jpg",
-     "caption": {}
+     "caption": {},
+     "lang": "es"
+    },
+    {
+     "src": "img/t5/s03_1_en.jpg",
+     "caption": {},
+     "lang": "en"
     }
    ],
    "source": "diapositiva",
@@ -4627,7 +4622,8 @@
     "en": []
    },
    "refs": [],
-   "code": "H5·01"
+   "code": "H5·01",
+   "refs_en": []
   },
   {
    "id": "introduccion-historica-china",
@@ -4643,7 +4639,13 @@
    "images": [
     {
      "src": "img/t5/s05_1.jpg",
-     "caption": {}
+     "caption": {},
+     "lang": "es"
+    },
+    {
+     "src": "img/t5/s05_1_en.jpg",
+     "caption": {},
+     "lang": "en"
     },
     {
      "src": "img/t5/s06.jpg",
@@ -4682,7 +4684,11 @@
     "Ebrey, P. B. (2010). The Cambridge illustrated history of China (2.ª ed.). Cambridge University Press.",
     "Fairbank, J. K., y Goldman, M. (2006). China: A new history (2.ª ed. ampliada). Belknap Press of Harvard University Press."
    ],
-   "code": "H5·02"
+   "code": "H5·02",
+   "refs_en": [
+    "Ebrey, P. B. (2010). The Cambridge illustrated history of China (2nd ed.). Cambridge University Press.",
+    "Fairbank, J. K., & Goldman, M. (2006). China: A new history (2nd enl. ed.). Belknap Press of Harvard University Press."
+   ]
   },
   {
    "id": "la-sociedad-china",
@@ -4731,7 +4737,10 @@
    "refs": [
     "Ebrey, P. B. (2010). The Cambridge illustrated history of China (2.ª ed.). Cambridge University Press."
    ],
-   "code": "H5·03"
+   "code": "H5·03",
+   "refs_en": [
+    "Ebrey, P. B. (2010). The Cambridge illustrated history of China (2nd ed.). Cambridge University Press."
+   ]
   },
   {
    "id": "la-mujer-china-y-el-ejercicio",
@@ -4779,7 +4788,13 @@
     "Song, W. (2018). Chinese women and sport: An analysis on how gender and class affect their attitudes towards sport participation [Tesis doctoral, University of Nottingham].",
     "Speak, M. (1999a). Recreation and sport in Ancient China: Primitive society to AD 960. En J. Riordan y R. Jones (Eds.), Sport and physical education in China (pp. 20–44). E & FN Spon."
    ],
-   "code": "H5·04"
+   "code": "H5·04",
+   "refs_en": [
+    "Crowther, N. B. (2007). Sport in ancient times. Praeger.",
+    "Ebrey, P. B. (2010). The Cambridge illustrated history of China (2nd ed.). Cambridge University Press.",
+    "Song, W. (2018). Chinese women and sport: An analysis on how gender and class affect their attitudes towards sport participation [Tesis doctoral, University of Nottingham].",
+    "Speak, M. (1999a). Recreation and sport in Ancient China: Primitive society to AD 960. In J. Riordan & R. Jones (Eds.), Sport and physical education in China (pp. 20–44). E & FN Spon."
+   ]
   },
   {
    "id": "deporte-tradicional-chino",
@@ -4828,7 +4843,12 @@
     "Jiménez-Martín, P.-J. (2015). Visiones del cuerpo en China: Tai chi chuan y qigong. Ágora para la Educación Física y el Deporte, 17(2), 115–129.",
     "Kohn, L. (2008). Chinese healing exercises: The tradition of Daoyin. University of Hawai'i Press."
    ],
-   "code": "H5·05"
+   "code": "H5·05",
+   "refs_en": [
+    "Crowther, N. B. (2007). Sport in ancient times. Praeger.",
+    "Jiménez-Martín, P.-J. (2015). Visiones del cuerpo en China: Tai chi chuan y qigong. Ágora para la Educación Física y el Deporte, 17(2), 115–129.",
+    "Kohn, L. (2008). Chinese healing exercises: The tradition of Daoyin. University of Hawai'i Press."
+   ]
   },
   {
    "id": "hua-tuo-y-los-cinco-animales",
@@ -4892,7 +4912,11 @@
     "Kohn, L. (2008). Chinese healing exercises: The tradition of Daoyin. University of Hawai'i Press.",
     "Speak, M. (1999a). Recreation and sport in Ancient China: Primitive society to AD 960. En J. Riordan y R. Jones (Eds.), Sport and physical education in China (pp. 20–44). E & FN Spon."
    ],
-   "code": "H5·06"
+   "code": "H5·06",
+   "refs_en": [
+    "Kohn, L. (2008). Chinese healing exercises: The tradition of Daoyin. University of Hawai'i Press.",
+    "Speak, M. (1999a). Recreation and sport in Ancient China: Primitive society to AD 960. In J. Riordan & R. Jones (Eds.), Sport and physical education in China (pp. 20–44). E & FN Spon."
+   ]
   },
   {
    "id": "gimnasia-y-masaje",
@@ -4939,7 +4963,12 @@
     "Kohn, L. (2008). Chinese healing exercises: The tradition of Daoyin. University of Hawai'i Press.",
     "Speak, M. (1999b). The emergence of modern sport: 960–1840. En J. Riordan y R. Jones (Eds.), Sport and physical education in China (pp. 45–69). E & FN Spon."
    ],
-   "code": "H5·07"
+   "code": "H5·07",
+   "refs_en": [
+    "Despeux, C. (1989). Gymnastics: The ancient tradition. In L. Kohn (Ed.), Taoist meditation and longevity techniques (pp. 225–261). Center for Chinese Studies, The University of Michigan.",
+    "Kohn, L. (2008). Chinese healing exercises: The tradition of Daoyin. University of Hawai'i Press.",
+    "Speak, M. (1999b). The emergence of modern sport: 960–1840. In J. Riordan & R. Jones (Eds.), Sport and physical education in China (pp. 45–69). E & FN Spon."
+   ]
   },
   {
    "id": "bodhidharma-y-shaolin",
@@ -4967,16 +4996,16 @@
    },
    "body": {
     "es": [
-     "Shaolin pasa por ser la cuna del kung-fu, palabra que en chino (gongfu) significa «habilidad lograda con esfuerzo» y que en el siglo XX d. C. se generalizó en Occidente para nombrar las artes marciales chinas. El mito de su creación lo atribuye a Bodhidharma, un monje indio llegado hacia el año 480 d. C., que habría enseñado a los monjes, agotados por la meditación, unos ejercicios para fortalecer el cuerpo.",
-     "Las inscripciones del monasterio cuentan otra historia, ya que sus monjes combatían en el siglo VII d. C., cuando defendieron sus tierras y ayudaron a un futuro emperador, aunque luchaban como cualquier tropa, sin un arte propio.",
-     "Sus técnicas nacieron después, primero con el bastón, desde el siglo XII d. C., y en el XVII con el combate sin armas, que unió la lucha con la gimnasia de salud y la respiración. Por eso Shaolin reúne las dos caras de la cultura física china. La leyenda de Bodhidharma procede de un manual de 1624 d. C. con un prefacio falso, que dio a esas técnicas un origen antiguo y prestigioso (Shahar, 2008).",
+     "Shaolin es un monasterio budista fundado hacia 495 d. C. en el centro de China, y pasa por ser la cuna del kung-fu, palabra que en chino (gongfu) significa «habilidad lograda con esfuerzo» y que en el siglo XX d. C. se generalizó en Occidente para nombrar las artes marciales chinas. La tradición atribuye su creación a Bodhidharma (imagen derecha), un monje indio de finales del siglo V d. C. que habría enseñado a los monjes, agotados por la meditación, ejercicios para fortalecer el cuerpo.",
+     "El budismo prohíbe la violencia, si bien el monasterio poseía grandes tierras que había que proteger, y sus inscripciones cuentan que en el siglo VII d. C. sus monjes las defendieron y ayudaron a un futuro emperador, aunque entonces luchaban como cualquier tropa, sin un arte propio.",
+     "El arte de Shaolin nació cuando los monjes se especializaron, primero en el bastón, desde el siglo XII d. C., y en el XVII en el combate sin armas, que unió la lucha con la gimnasia de salud y la respiración y reunió así las dos caras de la cultura física china. La leyenda de Bodhidharma procede de un manual de 1624 d. C. con un prefacio falso, que dio a esas técnicas un origen antiguo y prestigioso (Shahar, 2008).",
      "Hoy Shaolin es a la vez un monasterio, un símbolo y un negocio. Viven en él unos 400 monjes, un centenar de ellos monjes guerreros, que tras más de una década de entrenamiento deben superar ante el abad un examen de técnica y de recitación de los textos budistas. Desde que el cine lo hizo famoso, a su alrededor han crecido escuelas con miles de alumnos y compañías que actúan por todo el mundo, de modo que su kung-fu es práctica religiosa, deporte y espectáculo."
     ],
     "en": [
-     "Shaolin is regarded as the cradle of kung fu, a word that in Chinese (gongfu) means 'skill achieved through effort' and that in the 20th century AD became widespread in the West as the name for the Chinese martial arts. The myth of its creation attributes it to Bodhidharma, an Indian monk who arrived around AD 480 and is said to have taught the monks, exhausted by meditation, exercises to strengthen the body.",
-     "The monastery's inscriptions tell another story, since its monks were fighting in the 7th century AD, when they defended their lands and helped a future emperor, although they fought like any other troop, without an art of their own.",
-     "Their techniques came later, first with the staff, from the 12th century AD, and in the 17th with unarmed combat, which joined fighting with health gymnastics and breathing. That is why Shaolin brings together the two faces of Chinese physical culture. The legend of Bodhidharma comes from a manual of AD 1624 with a forged preface, which gave those techniques an ancient and prestigious origin (Shahar, 2008).",
-     "Today Shaolin is at once a monastery, a symbol and a business. Some 400 monks live there, about a hundred of them warrior monks, who after more than a decade of training must pass, before the abbot, an examination in technique and in the recitation of the Buddhist texts. Since the cinema made it famous, schools with thousands of pupils and companies that perform all over the world have grown up around it, so that its kung fu is religious practice, sport and spectacle."
+     "Shaolin is a Buddhist monastery founded around AD 495 in central China, and it is regarded as the cradle of kung fu, a word that in Chinese (gongfu) means 'skill achieved through effort' and that in the 20th century AD spread in the West to name the Chinese martial arts. Tradition attributes its creation to Bodhidharma (right-hand image), an Indian monk of the late 5th century AD who is said to have taught the monks, exhausted by meditation, exercises to strengthen the body.",
+     "Buddhism forbids violence, although the monastery owned large estates that had to be protected, and its inscriptions record that in the 7th century AD its monks defended them and helped a future emperor, although at that time they fought like any other troops, without an art of their own.",
+     "The Shaolin art was born when the monks specialised, first in the staff, from the 12th century AD, and in the 17th century in unarmed combat, which joined fighting with health gymnastics and breathing and so brought together the two faces of Chinese physical culture. The legend of Bodhidharma comes from a manual of AD 1624 with a forged preface, which gave those techniques an ancient and prestigious origin (Shahar, 2008).",
+     "Today Shaolin is at once a monastery, a symbol and a business. Some 400 monks live there, about a hundred of them warrior monks, who after over a decade of training must pass an examination before the abbot in technique and in reciting the Buddhist texts. Since the cinema made it famous, schools with thousands of pupils and touring companies have grown up around it, so that its kung fu is religious practice, sport and spectacle."
     ]
    },
    "slide": {
@@ -4986,7 +5015,10 @@
    "refs": [
     "Shahar, M. (2008). The Shaolin Monastery: History, religion, and the Chinese martial arts. University of Hawai'i Press."
    ],
-   "code": "H5·08"
+   "code": "H5·08",
+   "refs_en": [
+    "Shahar, M. (2008). The Shaolin Monastery: History, religion, and the Chinese martial arts. University of Hawai'i Press."
+   ]
   },
   {
    "id": "educacion-fisica-y-examenes-en-china",
@@ -5028,7 +5060,13 @@
     "Ebrey, P. B. (2010). The Cambridge illustrated history of China (2.ª ed.). Cambridge University Press.",
     "Lorge, P. A. (2012). Chinese martial arts: From antiquity to the twenty-first century. Cambridge University Press."
    ],
-   "code": "H5·09"
+   "code": "H5·09",
+   "refs_en": [
+    "Crowther, N. B. (2007). Sport in ancient times. Praeger.",
+    "Du You. (n.d.). Tongdian [Comprehensive institutions], juan 15. Wikisource.",
+    "Ebrey, P. B. (2010). The Cambridge illustrated history of China (2nd ed.). Cambridge University Press.",
+    "Lorge, P. A. (2012). Chinese martial arts: From antiquity to the twenty-first century. Cambridge University Press."
+   ]
   },
   {
    "id": "deportes-de-combate",
@@ -5080,7 +5118,13 @@
     "Speak, M. (1999b). The emergence of modern sport: 960–1840. En J. Riordan y R. Jones (Eds.), Sport and physical education in China (pp. 45–69). E & FN Spon.",
     "Wang, X. (2015). 清代国家摔跤组织“善扑营”考略 [Estudio textual sobre el Shanpuying, organización estatal de lucha de la dinastía Qing]. 体育学刊, 22(2), 110–114."
    ],
-   "code": "H5·10"
+   "code": "H5·10",
+   "refs_en": [
+    "Crowther, N. B. (2007). Sport in ancient times. Praeger.",
+    "Speak, M. (1999a). Recreation and sport in Ancient China: Primitive society to AD 960. In J. Riordan & R. Jones (Eds.), Sport and physical education in China (pp. 20–44). E & FN Spon.",
+    "Speak, M. (1999b). The emergence of modern sport: 960–1840. In J. Riordan & R. Jones (Eds.), Sport and physical education in China (pp. 45–69). E & FN Spon.",
+    "Wang, X. (2015). 清代国家摔跤组织“善扑营”考略 [A textual study of the Shanpuying, the state wrestling organisation of the Qing dynasty]. 体育学刊, 22(2), 110–114."
+   ]
   },
   {
    "id": "jiju",
@@ -5137,7 +5181,13 @@
     "Liu, J. T. C. (1985). Polo and cultural change: From T'ang to Sung China. Harvard Journal of Asiatic Studies, 45(1), 203–224.",
     "Parkes, P. (2005). Indigenous polo in Northern Pakistan: Game and power on the periphery. En J. H. Mills (Ed.), Subaltern sports: Politics and sport in South Asia (pp. 61–82). Anthem Press."
    ],
-   "code": "H5·11"
+   "code": "H5·11",
+   "refs_en": [
+    "Chehabi, H. E., & Guttmann, A. (2002). From Iran to all of Asia: The origin and diffusion of polo. The International Journal of the History of Sport, 19(2-3), 384–400.",
+    "Hu, S., Hu, Y., Yang, J., Yang, M., Wei, P., Hou, Y., & Marshall, F. B. (2020). From pack animals to polo: Donkeys from the ninth-century Tang tomb of an elite lady in Xi'an, China. Antiquity, 94(374), 455–472.",
+    "Liu, J. T. C. (1985). Polo and cultural change: From T'ang to Sung China. Harvard Journal of Asiatic Studies, 45(1), 203–224.",
+    "Parkes, P. (2005). Indigenous polo in Northern Pakistan: Game and power on the periphery. In J. H. Mills (Ed.), Subaltern sports: Politics and sport in South Asia (pp. 61–82). Anthem Press."
+   ]
   },
   {
    "id": "chuiwan-un-juego-de-palo-y-bola",
@@ -5180,13 +5230,15 @@
    },
    "body": {
     "es": [
-     "El chuiwan («golpear la bola») consistía en llevar una bola de madera hasta unos hoyos golpeándola con palos de madera y bambú. No preparaba para la guerra: era un pasatiempo de la élite, en el que se ganaba prestigio y se apostaba.",
+     "El chuiwan («golpear la bola») consistía en llevar una bola de madera hasta unos hoyos marcados con banderas golpeándola con palos, y cada hoyo logrado en pocos golpes daba fichas, hasta que un jugador reunía diez o veinte y ganaba la partida. A diferencia del jiju, no tenía uso militar, ya que era un pasatiempo de la élite en el que se ganaba prestigio y se apostaba.",
+     "Su reglamento se conoce por el Wan jing («Clásico de la bola»), un tratado de 1282 d. C. El campo aprovechaba las cuestas y los obstáculos del terreno, y cada jugador usaba una decena de palos de mango de bambú y cabeza de madera, distintos según el golpe, de modo que el equipo resultaba costoso. Cada hoyo se jugaba desde una base (ji), un cuadrado de unos 30 cm situado de frente al hoyo, que una vez trazado no podía moverse, pisarse ni tocarse. Entre la base y el hoyo había desde unos 3 m hasta 50 o 60 pasos, nunca más de cien, y si alguien se acercaba a menos de metro y medio de la base, su grupo perdía.",
      "Los jugadores se clasificaban en categorías según su nivel, con premios distintos para cada una, y se pedía jugar con calma y buenos modales, sin enfadarse al fallar ni burlarse del rival. Por eso se ha comparado a menudo con el golf, aunque nada indica que uno derive del otro.",
      "Empezó entre los altos funcionarios y llegó a la corte, como muestra la pintura del emperador Xuande jugando en los jardines de palacio. Desde el siglo XIV d. C. se hizo muy popular entre las clases bajas, y otras imágenes muestran a niños y mujeres jugándolo."
     ],
     "en": [
-     "Chuiwan ('striking the ball') consisted of driving a wooden ball into holes by hitting it with sticks of wood and bamboo. It did not prepare for war: it was a pastime of the elite, in which prestige was won and bets were placed.",
-     "Players were ranked in categories according to their level, with different prizes for each, and they were expected to play calmly and with good manners, without losing their temper when they missed or mocking their opponent. That is why it has often been compared with golf, although nothing suggests that one derives from the other.",
+     "Chuiwan ('striking the ball') consisted in driving a wooden ball into holes marked with flags by striking it with clubs, and each hole made in few strokes earned counters, until one player gathered ten or twenty and won the game. Unlike jiju, it had no military use, since it was an elite pastime in which prestige was won and bets were placed.",
+     "Its rules are known from the Wan jing ('Classic of the Ball'), a treatise of AD 1282. The course made use of slopes and natural obstacles, and each player used about ten clubs with bamboo shafts and wooden heads, different for each stroke, so the equipment was costly. Each hole was played from a base (ji), a square of about 30 cm facing the hole, which once drawn could not be moved, stepped on or touched. Between the base and the hole there were from about 3 m up to 50 or 60 paces, never more than a hundred, and if anyone came closer than a metre and a half to the base, his group lost.",
+     "Players were ranked in categories according to their level, with different prizes for each, and they were expected to play with calm and good manners, without losing their temper when they missed or mocking their opponent. That is why it has often been compared with golf, although nothing suggests that one derives from the other.",
      "It began among high officials and reached the court, as the painting of the Xuande emperor playing in the palace gardens shows. From the 14th century AD it became very popular among the lower classes, and other images show children and women playing it."
     ]
    },
@@ -5200,7 +5252,13 @@
     "Guttmann, A. (2004). Sports: The first five millennia. University of Massachusetts Press.",
     "Speak, M. (1999b). The emergence of modern sport: 960–1840. En J. Riordan y R. Jones (Eds.), Sport and physical education in China (pp. 45–69). E & FN Spon."
    ],
-   "code": "H5·12"
+   "code": "H5·12",
+   "refs_en": [
+    "Crowther, N. B. (2007). Sport in ancient times. Praeger.",
+    "Cui, L. (2017). 中国古代捶丸发展与演变的考古学观察（兼及古代体育史有关研究方法的思考） [An archaeological view of the development and evolution of chuiwan in ancient China]. 体育学刊, 24(1), 58–63.",
+    "Guttmann, A. (2004). Sports: The first five millennia. University of Massachusetts Press.",
+    "Speak, M. (1999b). The emergence of modern sport: 960–1840. In J. Riordan & R. Jones (Eds.), Sport and physical education in China (pp. 45–69). E & FN Spon."
+   ]
   },
   {
    "id": "cuju",
@@ -5236,7 +5294,7 @@
     "en": [
      "Cuju or tsu-chu, from cu ('to kick') and ju ('ball'), is the oldest forerunner of football, and according to tradition it goes back to the third millennium BC. It is believed to have been a game devised to keep soldiers from suffering frostbite in their feet during winter campaigns.",
      "Over time matches were standardised and a set of rules was laid down that turned it into a structured sport much appreciated among the Chinese elites. Matches had a head referee and an assistant, and there were official teams, the oldest known of which was called yuanshe.",
-     "There were even player transfers and skill tests to join the teams, such as a hundred touches in a row without the ball touching the ground, and in some periods there was also women's cuju.",
+     "There were even player transfers and skill tests to join the teams, such as making a hundred touches in a row without the ball touching the ground, and in some periods there was also women's cuju.",
      "It was a prestigious game at court, where it was played by officials, soldiers and the sons of the rich, like those in the painting, in court robes and caps. The best players became professionals, who lived off the game and performed at festivals and in the cities."
     ]
    },
@@ -5250,7 +5308,13 @@
     "Speak, M. (1999b). The emergence of modern sport: 960–1840. En J. Riordan y R. Jones (Eds.), Sport and physical education in China (pp. 45–69). E & FN Spon.",
     "Zhang, S. (2009). 蹴鞠源考 [Estudio sobre el origen del cuju]. 体育学刊, 16(11), 90–96."
    ],
-   "code": "H5·13"
+   "code": "H5·13",
+   "refs_en": [
+    "Crowther, N. B. (2007). Sport in ancient times. Praeger.",
+    "Guttmann, A. (2004). Sports: The first five millennia. University of Massachusetts Press.",
+    "Speak, M. (1999b). The emergence of modern sport: 960–1840. In J. Riordan & R. Jones (Eds.), Sport and physical education in China (pp. 45–69). E & FN Spon.",
+    "Zhang, S. (2009). 蹴鞠源考 [A study of the origin of cuju]. 体育学刊, 16(11), 90–96."
+   ]
   },
   {
    "id": "cuju-sus-modalidades",
@@ -5312,7 +5376,7 @@
      "With two goals. A form played by large teams, generally in the open.",
      "With twelve semicircular goals. It was played on an enclosed field, with twelve players per team, six defenders and six forwards, and it was the most regulated form.",
      "With a single goal. In this form, called baida, the ball had to be 'shot' through a ring placed high up. It was played between the 12th and 18th centuries AD and, allowing for the differences, resembled today's volleyball.",
-     "The ball. At first it was a leather ball stuffed with hair or feathers, heavy and with little bounce. Later it was made of several stitched pieces of leather with an animal bladder inflated with air inside, which was lighter and made it possible to keep it in the air and kick it high."
+     "The ball. At first it was a ball of stuffed leather filled with hair or feathers, heavy and with little bounce. Later it was made of several stitched pieces of leather with an animal bladder inflated with air inside, which was lighter and made it possible to keep it in the air and kick it high."
     ]
    },
    "slide": {
@@ -5324,7 +5388,12 @@
     "Speak, M. (1999a). Recreation and sport in Ancient China: Primitive society to AD 960. En J. Riordan y R. Jones (Eds.), Sport and physical education in China (pp. 20–44). E & FN Spon.",
     "Zhang, S. (2009). 蹴鞠源考 [Estudio sobre el origen del cuju]. 体育学刊, 16(11), 90–96."
    ],
-   "code": "H5·14"
+   "code": "H5·14",
+   "refs_en": [
+    "Crowther, N. B. (2007). Sport in ancient times. Praeger.",
+    "Speak, M. (1999a). Recreation and sport in Ancient China: Primitive society to AD 960. In J. Riordan & R. Jones (Eds.), Sport and physical education in China (pp. 20–44). E & FN Spon.",
+    "Zhang, S. (2009). 蹴鞠源考 [A study of the origin of cuju]. 体育学刊, 16(11), 90–96."
+   ]
   },
   {
    "id": "introduccion-historica-japon",
@@ -5340,7 +5409,13 @@
    "images": [
     {
      "src": "img/t5/s27_1.jpg",
-     "caption": {}
+     "caption": {},
+     "lang": "es"
+    },
+    {
+     "src": "img/t5/s27_1_en.jpg",
+     "caption": {},
+     "lang": "en"
     },
     {
      "src": "img/t5/s28.jpg",
@@ -5379,7 +5454,11 @@
     "Gordon, A. (2003). A modern history of Japan: From Tokugawa times to the present. Oxford University Press.",
     "Mason, R. H. P., y Caiger, J. G. (1997). A history of Japan (ed. rev.). Tuttle."
    ],
-   "code": "H5·15"
+   "code": "H5·15",
+   "refs_en": [
+    "Gordon, A. (2003). A modern history of Japan: From Tokugawa times to the present. Oxford University Press.",
+    "Mason, R. H. P., & Caiger, J. G. (1997). A history of Japan (Rev. ed.). Tuttle."
+   ]
   },
   {
    "id": "la-sociedad-japonesa",
@@ -5414,9 +5493,9 @@
      "Fuera de la escala. Quedaban los monjes, los actores y los artistas, que podían gozar de respeto o de fama, y en el extremo opuesto los marginados, como los eta, que se ocupaban de entierros, ejecuciones y animales muertos. De este orden dependía el acceso al ejercicio, ya que la espada y el arco quedaban para los samuráis."
     ],
     "en": [
-     "Emperor and shogun. Authority came in theory from the emperor, who lived in Kyoto, although the shogun governed. In the Edo period he controlled the court and obliged the daimyo, lords of some 260 domains, to reside in Edo one year in two and to leave their families there.",
+     "Emperor and shogun. Authority came in theory from the emperor, who lived in Kyoto, although the shogun governed. In the Edo period the shogun controlled the court and obliged the daimyo, lords of some 260 domains, to reside in Edo one year in two and to leave their families there.",
      "Samurai (shi). They were the hereditary warrior class, between 6 and 7 % of the population, and the only ones entitled to carry two swords. With peace they moved to the castle towns, received a stipend from their lord and went from warriors to officials.",
-     "Peasants (nō) and artisans (kō). The peasants, about 80 % of the population, came second because the taxes came from their work, and these were levied on the whole village. After them came the artisans, who lived in the towns alongside the merchants.",
+     "Peasants (nō) and artisans (kō). The peasants, about 80 % of the population, came second because the taxes, which were levied on the whole village, came from their work. After them came the artisans, who lived in the towns alongside the merchants.",
      "Merchants (shō). They occupied the lowest rung of the official order, although many grew rich and filled Edo and Osaka with kabuki theatres, teahouses and pleasure quarters, such as the Yoshiwara in Edo.",
      "Outside the scale. There remained the monks, the actors and the artists, who could enjoy respect or fame, and at the opposite extreme the outcasts, such as the eta, who dealt with burials, executions and dead animals. Access to exercise depended on this order, since the sword and the bow were reserved for the samurai."
     ]
@@ -5431,7 +5510,13 @@
     "Ikegami, E. (1995). The taming of the samurai: Honorific individualism and the making of modern Japan. Harvard University Press.",
     "Mason, R. H. P., y Caiger, J. G. (1997). A history of Japan (ed. rev.). Tuttle."
    ],
-   "code": "H5·16"
+   "code": "H5·16",
+   "refs_en": [
+    "Gordon, A. (2003). A modern history of Japan: From Tokugawa times to the present. Oxford University Press.",
+    "Hane, M. (1991). Premodern Japan: A historical survey. Westview Press.",
+    "Ikegami, E. (1995). The taming of the samurai: Honorific individualism and the making of modern Japan. Harvard University Press.",
+    "Mason, R. H. P., & Caiger, J. G. (1997). A history of Japan (Rev. ed.). Tuttle."
+   ]
   },
   {
    "id": "la-mujer-japonesa",
@@ -5461,12 +5546,12 @@
     "es": [
      "La posición de la mujer japonesa empeoró con el tiempo. En los primeros siglos hubo reinas y emperatrices, como Himiko o Suiko (592-628 d. C.), y con el Estado centralizado del siglo VII d. C. la esposa conservaba sus bienes y la mujer recibía rangos de corte propios, aunque en las ceremonias de palacio asistía tras cortinas de bambú.",
      "En la época de los guerreros, la mujer de familia samurái podía heredar tierras y se le exigía el mismo temple que al hombre, de ahí que aprendiera a manejar la naginata para defender la casa. Desde el siglo XIV d. C. la herencia pasó a un solo hijo y perdió ese derecho.",
-     "En la época Edo se le exigió obedecer al padre, al marido y al hijo, sobre todo en las familias samuráis, ya que en las ciudades la vida de pareja era más libre. Allí el sumo femenino, documentado desde el siglo V d. C., fue un espectáculo de pago para un público masculino, que el gobierno Meiji prohibió en 1873 d. C."
+     "En la época Edo se le exigió obedecer al padre, al marido y al hijo, sobre todo en las familias samuráis, ya que en las ciudades la vida de pareja era más libre."
     ],
     "en": [
      "The position of Japanese women worsened over time. In the early centuries there were queens and empresses, such as Himiko or Suiko (AD 592-628), and with the centralised state of the 7th century AD a wife kept her own property and women received court ranks of their own, although at palace ceremonies they attended behind bamboo blinds.",
      "In the age of the warriors, a woman of a samurai family could inherit land and was expected to show the same mettle as a man, which is why she learned to wield the naginata to defend the house. From the 14th century AD inheritance passed to a single son and she lost that right.",
-     "In the Edo period she was required to obey her father, her husband and her son, above all in samurai families, since in the towns married life was freer. There women's sumo, documented since the 5th century AD, was a paid spectacle for a male audience, which the Meiji government banned in AD 1873."
+     "In the Edo period she was required to obey her father, her husband and her son, above all in samurai families, since in the towns married life was freer."
     ]
    },
    "slide": {
@@ -5474,12 +5559,14 @@
     "en": []
    },
    "refs": [
-    "Friday, K. F., y Seki, H. (1997). Legacies of the sword: The Kashima-Shinryū and samurai martial culture. University of Hawai'i Press.",
     "Gerhart, K. M. (Ed.). (2018). Women, rites, and ritual objects in premodern Japan. Brill.",
-    "Hane, M. (1991). Premodern Japan: A historical survey. Westview Press.",
     "Kaneda, E. (1999). Trends in traditional women's sumo in Japan. The International Journal of the History of Sport, 16(3), 113–119."
    ],
-   "code": "H5·17"
+   "code": "H5·17",
+   "refs_en": [
+    "Gerhart, K. M. (Ed.). (2018). Women, rites, and ritual objects in premodern Japan. Brill.",
+    "Kaneda, E. (1999). Trends in traditional women's sumo in Japan. The International Journal of the History of Sport, 16(3), 113–119."
+   ]
   },
   {
    "id": "el-deporte-japones",
@@ -5531,7 +5618,13 @@
     "Hurst, G. C., III. (1998). Armed martial arts of Japan: Swordsmanship and archery. Yale University Press.",
     "Inoue, S. (1998). The invention of the martial arts: Kanō Jigorō and Kōdōkan judo. En S. Vlastos (Ed.), Mirror of modernity: Invented traditions of modern Japan (pp. 163-173). University of California Press."
    ],
-   "code": "H5·18"
+   "code": "H5·18",
+   "refs_en": [
+    "Gainty, D. (2013). Martial arts and the body politic in Meiji Japan. Routledge.",
+    "Guttmann, A., & Thompson, L. (2001). Japanese sports: A history. University of Hawai'i Press.",
+    "Hurst, G. C., III. (1998). Armed martial arts of Japan: Swordsmanship and archery. Yale University Press.",
+    "Inoue, S. (1998). The invention of the martial arts: Kanō Jigorō and Kōdōkan judo. In S. Vlastos (Ed.), Mirror of modernity: Invented traditions of modern Japan (pp. 163-173). University of California Press."
+   ]
   },
   {
    "id": "kemari",
@@ -5579,7 +5672,11 @@
     "Guttmann, A., y Thompson, L. (2001). Japanese sports: A history. University of Hawai'i Press.",
     "Nihongi: Chronicles of Japan from the earliest times to A.D. 697 (W. G. Aston, Trad.; Vol. 2). (1896). Kegan Paul, Trench, Trübner. (Obra original publicada en 720)"
    ],
-   "code": "H5·19"
+   "code": "H5·19",
+   "refs_en": [
+    "Guttmann, A., & Thompson, L. (2001). Japanese sports: A history. University of Hawai'i Press.",
+    "Nihongi: Chronicles of Japan from the earliest times to A.D. 697 (Vol. 2). (1896). Kegan Paul, Trench, Trübner."
+   ]
   },
   {
    "id": "samurais",
@@ -5616,7 +5713,7 @@
      "Con la paz de la época Edo, los samuráis se convirtieron en una clase burocrática, alejada de su función guerrera, y fue entonces cuando pusieron por escrito este ideal del guerrero que ya no vivían en la batalla."
     ],
     "en": [
-     "The samurai (from saburau, 'to serve') arose between the 10th and 11th centuries AD. They came above all from provincial families with land, some lesser branches of the nobility far from the court, who armed themselves to defend their domains and served the great lords. Their status became hereditary, and they formed the warrior class in the service of a daimyo, to whom they were bound as vassals.",
+     "The samurai (from saburau, 'to serve') arose between the 10th and 11th centuries AD. They came above all from provincial families with land, some of them lesser branches of the nobility far from the court, who armed themselves to defend their domains and served the great lords. Their status became hereditary, and they formed the warrior class in the service of a daimyo, to whom they were bound by vassalage.",
      "Their code of conduct, bushidō ('way of the warrior'), set out the duties of the samurai.",
      "Elitism. It reinforced the idea that the samurai were an elite superior to the rest of the population.",
      "Loyalty. Every samurai was obliged to give military service to his lord whenever he called on him.",
@@ -5635,7 +5732,13 @@
     "Friday, K. F., y Seki, H. (1997). Legacies of the sword: The Kashima-Shinryū and samurai martial culture. University of Hawai'i Press.",
     "Ikegami, E. (1995). The taming of the samurai: Honorific individualism and the making of modern Japan. Harvard University Press."
    ],
-   "code": "H5·20"
+   "code": "H5·20",
+   "refs_en": [
+    "Benesch, O. (2014). Inventing the way of the samurai: Nationalism, internationalism, and bushidō in modern Japan. Oxford University Press.",
+    "Benesch, O. (2016). Reconsidering Zen, samurai, and the martial arts. The Asia-Pacific Journal: Japan Focus, 14(17), Article 7. https://apjjf.org/wp-content/uploads/2023/11/article-1333.pdf",
+    "Friday, K. F., & Seki, H. (1997). Legacies of the sword: The Kashima-Shinryū and samurai martial culture. University of Hawai'i Press.",
+    "Ikegami, E. (1995). The taming of the samurai: Honorific individualism and the making of modern Japan. Harvard University Press."
+   ]
   },
   {
    "id": "armamento-de-los-samurais",
@@ -5688,7 +5791,12 @@
     "Guttmann, A., y Thompson, L. (2001). Japanese sports: A history. University of Hawai'i Press.",
     "Hurst, G. C., III. (1998). Armed martial arts of Japan: Swordsmanship and archery. Yale University Press."
    ],
-   "code": "H5·21"
+   "code": "H5·21",
+   "refs_en": [
+    "Friday, K. F., & Seki, H. (1997). Legacies of the sword: The Kashima-Shinryū and samurai martial culture. University of Hawai'i Press.",
+    "Guttmann, A., & Thompson, L. (2001). Japanese sports: A history. University of Hawai'i Press.",
+    "Hurst, G. C., III. (1998). Armed martial arts of Japan: Swordsmanship and archery. Yale University Press."
+   ]
   },
   {
    "id": "entrenamiento-samurai-arco",
@@ -5728,7 +5836,7 @@
     ],
     "en": [
      "Kyūdō. The Japanese art of archery, literally 'way of the bow', practised with the yumi bow. It has become a ritual that seeks mastery through self-discipline, and each shot must follow a strict order. In samurai times training consisted of shooting 1,000 arrows a day, and today it is a sport practised by men and women who seek balance and spiritual relaxation.",
-     "Yabusame. Mounted archery in which three shots were fired at three wooden targets at the gallop, with blunt-tipped arrows. Yabusame was created to improve the riding skills of the samurai. Only the most prestigious warriors were allowed to train in it."
+     "Yabusame. Archery on horseback in which three shots were fired at three wooden targets at the gallop, with blunt-tipped arrows. Yabusame was created to improve the riding skills of the samurai. Only the most prestigious warriors were allowed to train in it."
     ]
    },
    "slide": {
@@ -5740,7 +5848,12 @@
     "Hurst, G. C., III. (1998). Armed martial arts of Japan: Swordsmanship and archery. Yale University Press.",
     "Levinson, D., y Christensen, K. (Eds.). (1999). Encyclopedia of world sport: From ancient times to the present. Oxford University Press."
    ],
-   "code": "H5·22"
+   "code": "H5·22",
+   "refs_en": [
+    "Guttmann, A., & Thompson, L. (2001). Japanese sports: A history. University of Hawai'i Press.",
+    "Hurst, G. C., III. (1998). Armed martial arts of Japan: Swordsmanship and archery. Yale University Press.",
+    "Levinson, D., & Christensen, K. (Eds.). (1999). Encyclopedia of world sport: From ancient times to the present. Oxford University Press."
+   ]
   },
   {
    "id": "toshiya",
@@ -5774,7 +5887,7 @@
     ],
     "en": [
      "The tōshiya ('passing arrows') was an archery contest born with the Tokugawa peace, when the bow was hardly used in war any more. It was held between AD 1606 and 1861 in the gallery of the Sanjūsangendō temple in Kyoto, 120 metres long.",
-     "From one end, the archer had to shoot the arrows from one end of the gallery to the other without touching the roof or the pillars, so each arrow had to fly almost in a straight line. Judges from rival schools marked each hit with flags, as the painting shows, with the archers in the foreground and the target at the far end of the gallery.",
+     "From one end, the archer had to shoot the arrows the whole length of the gallery without touching the roof or the pillars, so each arrow had to fly almost in a straight line. Judges from rival schools marked each hit with flags, as the painting shows, with the archers in the foreground and the target at the far end of the gallery.",
      "The most famous test lasted 24 hours without a break. In AD 1686 an archer scored 8,133 hits, more than five a minute, and the result was recorded exactly, so the tōshiya already shows a feature of modern sport: the pursuit of the record."
     ]
    },
@@ -5785,7 +5898,10 @@
    "refs": [
     "Guttmann, A., y Thompson, L. (2001). Japanese sports: A history. University of Hawai'i Press."
    ],
-   "code": "H5·23"
+   "code": "H5·23",
+   "refs_en": [
+    "Guttmann, A., & Thompson, L. (2001). Japanese sports: A history. University of Hawai'i Press."
+   ]
   },
   {
    "id": "entrenamiento-samurai-combate",
@@ -5819,8 +5935,8 @@
      "En la actualidad es un deporte competitivo con un sistema de rangos o danes, practicado tanto por hombres como por mujeres."
     ],
     "en": [
-     "Kendo, literally 'way of the sword', was created to train the samurai in the use of the katana. Calm, restraint and waiting for the right moment were the skills it sought to develop.",
-     "For centuries it was practised with wooden swords, which caused serious injuries and even deaths, so the schools only performed prearranged forms (kata). In the 18th century AD some introduced the hollow sword of bamboo slats and a black outfit that protected the body from head to foot, like that of the practitioner in the image, and full-contact strikes without injury became possible.",
+     "Kendo, literally 'way of the sword', was created for training the samurai in the use of the katana. Calm, restraint and waiting for the right moment were the skills it sought to develop.",
+     "For centuries it was practised with wooden swords, which caused serious injuries and even deaths, so the schools only performed prearranged forms (kata). In the 18th century AD some introduced the hollow sword of bamboo slats and a black outfit that protected the body from head to foot, like that of the practitioner in the image, and it became possible to strike at full contact without injury.",
      "The sword is held with both hands, and only strikes with the upper quarter of the sword to the torso, the head, the throat or the wrists are valid. After the Meiji Restoration kendo became a path of moral formation, compulsory in schools from AD 1931.",
      "Today it is a competitive sport with a system of ranks or dan, practised by both men and women."
     ]
@@ -5833,7 +5949,11 @@
     "Bennett, A. C. (2015). Kendo: Culture of the sword. University of California Press.",
     "Gainty, D. (2013). Martial arts and the body politic in Meiji Japan. Routledge."
    ],
-   "code": "H5·24"
+   "code": "H5·24",
+   "refs_en": [
+    "Bennett, A. C. (2015). Kendo: Culture of the sword. University of California Press.",
+    "Gainty, D. (2013). Martial arts and the body politic in Meiji Japan. Routledge."
+   ]
   },
   {
    "id": "jujutsu",
@@ -5868,9 +5988,9 @@
     ],
     "en": [
      "Jūjutsu (ju, 'gentle', and jutsu, 'technique') literally meant 'gentle art', and its principle was the triumph of agility over brute force. It uses the energy of the opponent's attack to defeat him through counterattacks, joint locks, strangles or holds, as in the print.",
-     "Contrary to what is often believed, it did not arise so that peasants could defeat the samurai, but as a resource of the warriors themselves when they lost their weapon on the battlefield and had to subdue an armoured enemy.",
+     "Contrary to what is often believed, it did not arise so that peasants could defeat the samurai; it was a resource of the warriors themselves when they lost their weapon on the battlefield and had to subdue an armoured enemy.",
      "The first schools appeared in the mid-16th century AD, and in the Edo period, without wars, they adapted the techniques to an unarmoured opponent and also taught them to guards, police and ordinary people. Hundreds of schools (ryū) came to exist, each with its secret techniques, and in the 19th century AD jūjutsu had a bad name, because many masters made a living from street fights and exhibitions.",
-     "Kanō Jigorō, who took it as the basis of judo, wanted to break away from that bad name."
+     "Kanō Jigorō, who took it as the basis of judo, wanted to distance himself from that bad name."
     ]
    },
    "slide": {
@@ -5882,7 +6002,12 @@
     "Levinson, D., y Christensen, K. (Eds.). (1999). Encyclopedia of world sport: From ancient times to the present. Oxford University Press.",
     "Sánchez García, R. (2019). The historical sociology of Japanese martial arts. Routledge."
    ],
-   "code": "H5·25"
+   "code": "H5·25",
+   "refs_en": [
+    "Guttmann, A., & Thompson, L. (2001). Japanese sports: A history. University of Hawai'i Press.",
+    "Levinson, D., & Christensen, K. (Eds.). (1999). Encyclopedia of world sport: From ancient times to the present. Oxford University Press.",
+    "Sánchez García, R. (2019). The historical sociology of Japanese martial arts. Routledge."
+   ]
   },
   {
    "id": "sumo",
@@ -5918,26 +6043,24 @@
    },
    "body": {
     "es": [
-     "Las crónicas sitúan el origen del sumo en un combate legendario ante el emperador, aunque su primer testimonio fiable es un sumo de corte celebrado cada año desde 734 d. C., para el que las provincias enviaban luchadores como tributo (Guttmann y Thompson, 2001).",
-     "El sumo es el deporte nacional japonés y símbolo de la cultura deportiva del país. Los primeros combates datan del siglo VII d. C., dentro de rituales agrícolas para pedir buenas cosechas, y posteriormente se convirtió en un arte marcial con 82 técnicas permitidas.",
+     "El sumo es el deporte nacional japonés. Las crónicas oficiales, escritas en 720 d. C., sitúan su origen en un combate legendario ante el emperador y recogen otros combates más antiguos, incluso entre mujeres de palacio, aunque el primer testimonio fiable es un sumo de corte celebrado cada año desde 734 d. C., para el que las provincias enviaban luchadores como tributo (Guttmann y Thompson, 2001). A la vez, el sumo formaba parte de los ritos de los santuarios para pedir buenas cosechas, un origen religioso que conserva todavía su ceremonia.",
      "El objetivo de los combates es derribar o expulsar al rival del círculo de combate, llamado dohyō, como en el torneo del grabado.",
      "En el sumo profesional actual, los luchadores (rikishi) deben completar una formación obligatoria de nueve años en un establo, esto es, un centro de entrenamiento. Están sometidos a un estricto régimen de vida, que incluye la obligación de seguir una dieta rica en grasas para alcanzar los 150 kg de media que pesa cada luchador.",
      "Ese peso tiene una explicación deportiva: como no hay categorías de peso y gana quien saca al rival del círculo, la masa da estabilidad y empuje, aunque los luchadores la combinan con fuerza, flexibilidad y explosividad.",
      "Los combates de sumo son breves e intensos. Por eso es muy importante la preparación previa, cargada de una gran ceremonialidad, que es incluso más larga que el propio combate y sirve al mismo tiempo para la activación y la focalización.",
      "El combate lo dirige el gyōji, el árbitro, que viste un traje de corte de la época Heian, como el de la imagen, y da la salida con el gunbai, un abanico de guerra de madera con el que los generales samuráis daban órdenes a sus tropas. Los luchadores se agachan frente a frente en el dohyō, un círculo de arcilla de unos 4,5 metros cubierto de arena, y la lucha empieza cuando ambos apoyan los puños en el suelo. Pierde quien sale del círculo o toca el suelo con algo que no sean los pies, y las decisiones dudosas las revisan jueces sentados alrededor.",
      "El levantamiento de pierna, o shiko, se explica por tradición como una forma de expulsar a los malos espíritus del círculo mediante fuertes pisotones en el suelo, y con el mismo fin se dan palmadas al aire o se arrojan puñados de sal.",
-     "Sin embargo, buena parte de ese ritual se creó en la época Edo para dar prestigio a un espectáculo de pago, de ahí que Guttmann y Thompson (2001) presenten el sumo como una tradición inventada. Thompson (1998) muestra lo mismo con el yokozuna, que la tradición remonta al siglo XVII d. C. y que no fue un rango oficial hasta 1909 d. C."
+     "Sin embargo, buena parte de ese ritual se creó en la época Edo para dar prestigio a un espectáculo de pago, de ahí que Guttmann y Thompson (2001) presenten el sumo como una tradición inventada."
     ],
     "en": [
-     "The chronicles place the origin of sumo in a legendary bout before the emperor, although its first reliable evidence is a court sumo held every year from AD 734, for which the provinces sent wrestlers as tribute (Guttmann and Thompson, 2001).",
-     "Sumo is the Japanese national sport and a symbol of the country's sporting culture. The first bouts date from the 7th century AD, within farming rituals to ask for good harvests, and it later became a martial art with 82 permitted techniques.",
+     "Sumo is Japan's national sport. The official chronicles, written in AD 720, place its origin in a legendary bout before the emperor and record other, older bouts, even between palace women, although the first reliable evidence is a court sumo held every year from AD 734, for which the provinces sent wrestlers as tribute (Guttmann & Thompson, 2001). At the same time, sumo formed part of the shrine rites to ask for good harvests, a religious origin that its ceremony still preserves.",
      "The aim of the bouts is to throw the opponent down or push him out of the fighting ring, called the dohyō, as in the tournament in the print.",
      "In today's professional sumo, the wrestlers (rikishi) must complete nine years of compulsory training in a stable, that is, a training centre. They are subject to a strict way of life, which includes the obligation to follow a high-fat diet to reach the average of 150 kg that each wrestler weighs.",
      "That weight has a sporting explanation: since there are no weight classes and whoever pushes the opponent out of the ring wins, mass gives stability and drive, although the wrestlers combine it with strength, flexibility and explosiveness.",
      "Sumo bouts are short and intense. That is why the preparation beforehand is very important, loaded with great ceremony, which is even longer than the bout itself and serves at the same time for activation and focus.",
      "The bout is directed by the gyōji, the referee, who wears a court costume of the Heian period, like the one in the image, and gives the start with the gunbai, a wooden war fan with which samurai generals gave orders to their troops. The wrestlers crouch face to face in the dohyō, a clay ring of about 4.5 metres covered with sand, and the fight begins when both put their fists on the ground. Whoever leaves the ring or touches the ground with anything other than the feet loses, and doubtful decisions are reviewed by judges seated around it.",
-     "The leg-raising, or shiko, is explained by tradition as a way of driving evil spirits out of the ring by stamping hard on the ground, and for the same purpose the wrestlers clap in the air or throw handfuls of salt.",
-     "However, much of that ritual was created in the Edo period to give prestige to a paid spectacle, which is why Guttmann and Thompson (2001) present sumo as an invented tradition. Thompson (1998) shows the same with the yokozuna, which tradition traces back to the 17th century AD and which was not an official rank until AD 1909."
+     "The leg-raising, or shiko, is explained by tradition as a way of driving evil spirits out of the ring by hard stamping on the ground, and for the same purpose the wrestlers clap in the air or throw handfuls of salt.",
+     "However, much of that ritual was created in the Edo period to lend prestige to a paying spectacle, which is why Guttmann and Thompson (2001) present sumo as an invented tradition."
     ]
    },
    "slide": {
@@ -5951,7 +6074,14 @@
     "Guttmann, A., y Thompson, L. (2001). Japanese sports: A history. University of Hawai'i Press.",
     "Tanigama, H. (2022). A study on the sports industry in Edo: Preface to a study of the history of the sports industry in early modern Japan. Japanese Society and Culture, 4(1), 45-60. https://doi.org/10.52882/2434-1738-0403"
    ],
-   "code": "H5·26"
+   "code": "H5·26",
+   "refs_en": [
+    "Light, R., & Kinnaird, L. (2002). Appeasing the gods: Shinto, sumo and 'true' Japanese spirit. In T. Magdalinski & T. J. L. Chandler (Eds.), With God on their side: Sport in the service of religion (pp. 139-159). Routledge. https://doi.org/10.4324/9780203995341-8",
+    "Thompson, L. A. (1998). The invention of the yokozuna and the championship system, or, Futahaguro's revenge. In S. Vlastos (Ed.), Mirror of modernity: Invented traditions of modern Japan (pp. 174-187). University of California Press.",
+    "Yamaguchi, M. (1998). Sumo in the popular culture of contemporary Japan. In D. P. Martinez (Ed.), The worlds of Japanese popular culture: Gender, shifting boundaries and global cultures (pp. 19-30). Cambridge University Press.",
+    "Guttmann, A., & Thompson, L. (2001). Japanese sports: A history. University of Hawai'i Press.",
+    "Tanigama, H. (2022). A study on the sports industry in Edo: Preface to a study of the history of the sports industry in early modern Japan. Japanese Society and Culture, 4(1), 45-60. https://doi.org/10.52882/2434-1738-0403"
+   ]
   },
   {
    "id": "judo",
@@ -6000,7 +6130,7 @@
      "Judo (ju, 'gentle', and dō, 'way') is a martial art derived directly from jūjutsu. It was created by the master Kanō Jigorō in AD 1882 and perfected by his disciple Mifune Kyūzō, who appear together in the image.",
      "For Kanō, judo was above all a method of all-round education, and victory was no more than a means for the physical, moral and intellectual formation of the practitioner. That is why he chose the suffix -dō, 'way', instead of -jutsu, 'technique', and based his teaching on science and rationalism, as against the secrecy with which the traditional schools guarded their techniques.",
      "He summed up judo in two principles. The first, seiryoku zen'yō, 'maximum efficiency with minimum effort', consists of using the opponent's strength instead of opposing one's own. The second, jita kyōei, 'mutual welfare and benefit', teaches that the practitioner progresses together with the partner and not at his expense, so the opponent is a collaborator rather than an enemy.",
-     "To avoid injuries, Kanō designed grips, throws, holds and strangles of great beauty and plasticity, ordered rank with the kyu and dan grades and created an official women's section at the Kodokan in AD 1926. His project, however, clashed with the nationalism of the time, which from the 1930s turned much of judo towards military ends."
+     "To avoid injuries, Kanō designed grips, throws, holds and strangles of great beauty and plasticity, ordered rank with the kyu and dan grades and in AD 1926 created an official women's section at the Kodokan. His project, however, clashed with the nationalism of the time, which from the 1930s turned much of judo towards military ends."
     ]
    },
    "slide": {
@@ -6013,7 +6143,13 @@
     "Inoue, S. (1998). The invention of the martial arts: Kanō Jigorō and Kōdōkan judo. En S. Vlastos (Ed.), Mirror of modernity: Invented traditions of modern Japan (pp. 163-173). University of California Press.",
     "Niehaus, A. (2024). Education and self-cultivation in early Kōdōkan judo. Journal of Martial Arts Research, 7, artículo 51."
    ],
-   "code": "H5·27"
+   "code": "H5·27",
+   "refs_en": [
+    "Espartero Casado, J., & Villamón, M. (2009). La utopía educativa de Jigoro Kano: el judo Kodokan. Recorde: Revista de História do Esporte, 2(1), 1-40.",
+    "Espartero, J. (2021). La conversión del judo en deporte olímpico: un espacio simbólico construido para la afirmación de la identidad nacional japonesa. Movimento, 27, e27059.",
+    "Inoue, S. (1998). The invention of the martial arts: Kanō Jigorō and Kōdōkan judo. In S. Vlastos (Ed.), Mirror of modernity: Invented traditions of modern Japan (pp. 163-173). University of California Press.",
+    "Niehaus, A. (2024). Education and self-cultivation in early Kōdōkan judo. Journal of Martial Arts Research, 7, Article 51."
+   ]
   },
   {
    "id": "karate",
@@ -6047,9 +6183,9 @@
      "Hoy se practica en dos modalidades, el kata, una secuencia de movimientos contra un rival imaginario, y el kumite, el combate con un rival real, y debutó como deporte olímpico en los Juegos de Tokio 2020."
     ],
     "en": [
-     "Karate (kara, 'empty', and te, 'hand') is the art of fighting without weapons, with strikes of the fist, leg, elbow and knee. Unlike judo, it was not born in the Japan of the samurai, but in Okinawa, the main island of the kingdom of Ryūkyū, an independent state between China and Japan until the 19th century AD.",
-     "There a local fighting art, te, merged with the Chinese boxing that arrived through trade, which is why it was at first called tōde, 'Chinese hand'. Tradition says it arose because the people were forbidden to carry weapons, although today this is considered a more legendary than historical explanation. It was taught in secret, from master to pupil, and without competition.",
-     "After the annexation of Okinawa to Japan in AD 1879, it entered the island's schools as physical education, and in AD 1922 the master Funakoshi Gichin took it to Tokyo. There it was Japanised: in the 1930s the writing of its name was changed from 'Chinese hand' to 'empty hand', in a time of nationalism, and it adopted from judo the uniform, the belts and the grades (dan).",
+     "Karate (kara, 'empty', and te, 'hand') is the art of fighting without weapons, with strikes of the fist, leg, elbow and knee. Unlike judo, it was not born in the Japan of the samurai; its home was Okinawa, the main island of the kingdom of Ryūkyū, an independent state between China and Japan until the 19th century AD.",
+     "There a local fighting art, te, merged with the Chinese boxing that arrived through trade, which is why it was at first called tōde, 'Chinese hand'. Tradition says it arose because the people were forbidden to carry weapons, an explanation now considered more legendary than historical. It was taught in secret, from master to pupil, and without competition.",
+     "After the annexation of Okinawa by Japan in AD 1879, it entered the island's schools as physical education, and in AD 1922 the master Funakoshi Gichin took it to Tokyo. There it was Japanised: in the 1930s, in a time of nationalism, its name was rewritten from 'Chinese hand' to 'empty hand', and it adopted from judo the uniform, the belts and the grades (dan).",
      "Today it is practised in two forms, kata, a sequence of movements against an imaginary opponent, and kumite, combat with a real opponent, and it made its Olympic debut at the Tokyo 2020 Games."
     ]
    },
@@ -6062,7 +6198,12 @@
     "Levinson, D., y Christensen, K. (Eds.). (1999). Encyclopedia of world sport: From ancient times to the present. Oxford University Press.",
     "Martins, C. J., y Kanashiro, C. (2010). Bujutsu, budô, esporte de luta. Motriz, 16(3), 638-648. https://doi.org/10.5016/1980-6574.2010v16n3p638"
    ],
-   "code": "H5·28"
+   "code": "H5·28",
+   "refs_en": [
+    "Guttmann, A., & Thompson, L. (2001). Japanese sports: A history. University of Hawai'i Press.",
+    "Levinson, D., & Christensen, K. (Eds.). (1999). Encyclopedia of world sport: From ancient times to the present. Oxford University Press.",
+    "Martins, C. J., & Kanashiro, C. (2010). Bujutsu, budô, esporte de luta. Motriz, 16(3), 638-648. https://doi.org/10.5016/1980-6574.2010v16n3p638"
+   ]
   },
   {
    "id": "bo-taoshi",
@@ -6108,7 +6249,10 @@
    "refs": [
     "Benesch, O. (2020). Olympic samurai: Japanese martial arts between sports and self-cultivation. Sport in History, 40(3), 328-355."
    ],
-   "code": "H5·29"
+   "code": "H5·29",
+   "refs_en": [
+    "Benesch, O. (2020). Olympic samurai: Japanese martial arts between sports and self-cultivation. Sport in History, 40(3), 328-355."
+   ]
   },
   {
    "id": "introduccion-historica-india",
@@ -6124,7 +6268,13 @@
    "images": [
     {
      "src": "img/t5/s50_1.jpg",
-     "caption": {}
+     "caption": {},
+     "lang": "es"
+    },
+    {
+     "src": "img/t5/s50_1_en.jpg",
+     "caption": {},
+     "lang": "en"
     },
     {
      "src": "img/t5/s51_1.jpg",
@@ -6152,9 +6302,9 @@
     "en": [
      "The history of India spans almost five millennia, from the civilisation of the Indus valley, the river that gives the country its name, to independence in AD 1947. The Indian subcontinent is usually divided into three great regions, the Himalayas, the plain of the Indus and the Ganges and the Deccan plateau, surrounded by coastal plains.",
      "Indus civilisation (c. 2600-1700 BC). The first great cities arose, whose script has still not been deciphered. Their decline, perhaps due to changes in the climate and in the course of the rivers, left the north in the hands of herding peoples.",
-     "Vedic period (c. 1400-500 BC). The Aryans then arrived from the north-west, speakers of an Indo-European language, whose sacred texts, the Vedas, laid the foundations of Hinduism and of the caste order. Over time they settled in the Ganges valley, where the first kingdoms and new religions, such as Buddhism, arose.",
+     "Vedic period (c. 1400-500 BC). The Aryans, speakers of an Indo-European language, then arrived from the north-west, and their sacred texts, the Vedas, laid the foundations of Hinduism and of the caste order. Over time they settled in the Ganges valley, where the first kingdoms and new religions, such as Buddhism, arose.",
      "Great empires (c. 320 BC-AD 500). From those kingdoms came the first empire, the Maurya, which unified almost the whole country and whose most famous emperor, Ashoka (268-233 BC), spread Buddhism across Asia. After its fall, the Gupta empire gave India its classical age, which ended with the invasions of the Huns in the 6th century AD.",
-     "Kingdoms and sultanates (AD 500-1526). Without a central power, the country split into regional kingdoms, which made it easier for Muslim conquerors from Afghanistan to arrive, who in AD 1206 founded the Delhi sultanate and brought Islam and Persian culture to the court.",
+     "Kingdoms and sultanates (AD 500-1526). Without a central power, the country split into regional kingdoms, which made it easier for Muslim conquerors to arrive from Afghanistan, and in AD 1206 they founded the Delhi sultanate and brought Islam and Persian culture to the court.",
      "Mughal empire (AD 1526-1858). In AD 1526 Babur, a prince from Central Asia, defeated the last sultan and founded the Mughal empire, which ruled almost all of India until, in the 18th century AD, it broke up into rival kingdoms.",
      "British rule (AD 1757-1947). That division was exploited by the East India Company, which gradually conquered the country, and after a great rebellion in AD 1857 India passed to the British Crown. The British brought cricket and hockey and despised many Indian practices, until a long nationalist movement, led by Gandhi, won independence in AD 1947, with the country divided into India and Pakistan."
     ]
@@ -6168,7 +6318,12 @@
     "Kulke, H., y Rothermund, D. (2004). A history of India (4.ª ed.). Routledge.",
     "Sen, R. (2015). Nation at play: A history of sport in India. Columbia University Press."
    ],
-   "code": "H5·30"
+   "code": "H5·30",
+   "refs_en": [
+    "Asher, C. B., & Talbot, C. (2006). India before Europe. Cambridge University Press.",
+    "Kulke, H., & Rothermund, D. (2004). A history of India (4th ed.). Routledge.",
+    "Sen, R. (2015). Nation at play: A history of sport in India. Columbia University Press."
+   ]
   },
   {
    "id": "la-sociedad-india",
@@ -6183,7 +6338,13 @@
    "images": [
     {
      "src": "img/t5/s52_1.jpg",
-     "caption": {}
+     "caption": {},
+     "lang": "es"
+    },
+    {
+     "src": "img/t5/s52_1_en.jpg",
+     "caption": {},
+     "lang": "en"
     }
    ],
    "source": "diapositiva",
@@ -6220,7 +6381,14 @@
     "Kulke, H., y Rothermund, D. (2004). A history of India (4.ª ed.). Routledge.",
     "Singh, U. (2008). A history of ancient and early medieval India: From the Stone Age to the 12th century. Pearson Longman."
    ],
-   "code": "H5·31"
+   "code": "H5·31",
+   "refs_en": [
+    "Bayly, S. (1999). Caste, society and politics in India from the eighteenth century to the modern age. Cambridge University Press.",
+    "Chakravarti, U. (2018). Gendering caste through a feminist lens (Rev. ed.). SAGE.",
+    "Dirks, N. B. (2001). Castes of mind: Colonialism and the making of modern India. Princeton University Press.",
+    "Kulke, H., & Rothermund, D. (2004). A history of India (4th ed.). Routledge.",
+    "Singh, U. (2008). A history of ancient and early medieval India: From the Stone Age to the 12th century. Pearson Longman."
+   ]
   },
   {
    "id": "la-mujer-india",
@@ -6269,7 +6437,12 @@
     "Jamison, S. W. (1996). Sacrificed wife/sacrificer's wife: Women, ritual, and hospitality in ancient India. Oxford University Press.",
     "Singh, U. (2008). A history of ancient and early medieval India: From the Stone Age to the 12th century. Pearson Longman."
    ],
-   "code": "H5·32"
+   "code": "H5·32",
+   "refs_en": [
+    "Chakravarti, U. (2018). Gendering caste through a feminist lens (Rev. ed.). SAGE.",
+    "Jamison, S. W. (1996). Sacrificed wife/sacrificer's wife: Women, ritual, and hospitality in ancient India. Oxford University Press.",
+    "Singh, U. (2008). A history of ancient and early medieval India: From the Stone Age to the 12th century. Pearson Longman."
+   ]
   },
   {
    "id": "el-deporte-indio",
@@ -6318,7 +6491,12 @@
     "Sen, R. (2015). Nation at play: A history of sport in India. Columbia University Press.",
     "Zarrilli, P. B. (1998). When the body becomes all eyes: Paradigms, discourses and practices of power in Kalarippayattu, a South Indian martial art. Oxford University Press."
    ],
-   "code": "H5·33"
+   "code": "H5·33",
+   "refs_en": [
+    "Alter, J. S. (1992). The wrestler's body: Identity and ideology in North India. University of California Press.",
+    "Sen, R. (2015). Nation at play: A history of sport in India. Columbia University Press.",
+    "Zarrilli, P. B. (1998). When the body becomes all eyes: Paradigms, discourses and practices of power in Kalarippayattu, a South Indian martial art. Oxford University Press."
+   ]
   },
   {
    "id": "yoga",
@@ -6366,7 +6544,11 @@
     "Flood, G. (1996). An introduction to Hinduism. Cambridge University Press.",
     "Singleton, M. (2010). Yoga body: The origins of modern posture practice. Oxford University Press."
    ],
-   "code": "H5·34"
+   "code": "H5·34",
+   "refs_en": [
+    "Flood, G. (1996). An introduction to Hinduism. Cambridge University Press.",
+    "Singleton, M. (2010). Yoga body: The origins of modern posture practice. Oxford University Press."
+   ]
   },
   {
    "id": "kalarippayattu",
@@ -6413,7 +6595,10 @@
    "refs": [
     "Zarrilli, P. B. (1998). When the body becomes all eyes: Paradigms, discourses and practices of power in Kalarippayattu, a South Indian martial art. Oxford University Press."
    ],
-   "code": "H5·35"
+   "code": "H5·35",
+   "refs_en": [
+    "Zarrilli, P. B. (1998). When the body becomes all eyes: Paradigms, discourses and practices of power in Kalarippayattu, a South Indian martial art. Oxford University Press."
+   ]
   },
   {
    "id": "lucha-kushti",
@@ -6463,7 +6648,11 @@
     "Alter, J. S. (1992). The wrestler's body: Identity and ideology in North India. University of California Press.",
     "Sen, R. (2015). Nation at play: A history of sport in India. Columbia University Press."
    ],
-   "code": "H5·36"
+   "code": "H5·36",
+   "refs_en": [
+    "Alter, J. S. (1992). The wrestler's body: Identity and ideology in North India. University of California Press.",
+    "Sen, R. (2015). Nation at play: A history of sport in India. Columbia University Press."
+   ]
   },
   {
    "id": "metodos-de-entrenamiento-de-fuerza",
@@ -6504,8 +6693,8 @@
      "Sin embargo, según Ganneri (2013), lo creó en el siglo XIX d. C. Balambhattadada Deodhar, un luchador de Pune protegido por el último gobernante maratha, que tras la derrota de su señor ante los británicos en 1818 d. C. abrió akharas por toda la India y lo enseñó a alumnos de todas las castas. Hoy es un deporte de competición, con modalidades sobre el poste y sobre una cuerda."
     ],
     "en": [
-     "Gadas. Maces shaped like a 'skittle' or with a long stick ending in a sphere, ranging from a few kilos to a hundred and made of different materials. Training consists of swinging the maces rhythmically and repeatedly around the body.",
-     "Indian maces, which the British saw in the army and in the akharas, reached Europe in the 19th century AD under the name of Indian clubs and were used in military and school gymnastics, as in the print in the upper image. In the akhara they are also used in pairs, the jori, which in competitions reached about seventy kilos (Alter, 2005).",
+     "Gadas. Maces shaped like a 'skittle' or with a long stick ending in a sphere, ranging from a few kilos up to a hundred and made of different materials. Training consists of swinging the maces rhythmically and repeatedly around the body.",
+     "Indian maces, which the British saw in the army and in the akharas, reached Europe in the 19th century AD under the name of Indian clubs and were used in military gymnastics and school gymnastics, as in the print in the upper image. In the akhara they are also used in pairs, the jori, which in competitions reached about seventy kilos (Alter, 2005).",
      "Mallakhamb ('the wrestler's pillar'). Gymnastic exercises on a greased wooden pole up to 3.6 metres high and 40 cm thick, like the one in the lower image. Participants must complete a routine that combines agility and physical strength. It has been traced back to the 12th century AD (Roy, 2017).",
      "However, according to Ganneri (2013), it was created in the 19th century AD by Balambhattadada Deodhar, a wrestler from Pune under the protection of the last Maratha ruler, who after his lord's defeat by the British in AD 1818 opened akharas all over India and taught it to pupils of every caste. Today it is a competitive sport, with events on the pole and on a rope."
     ]
@@ -6520,7 +6709,13 @@
     "Ganneri, N. R. (2013). The debate on 'revival' and the physical culture movement in Western India (1900–1950). En K. Bromber, B. Krawietz y J. Maguire (Eds.), Sport across Asia: Politics, cultures, and identities. Routledge.",
     "Roy, A. (2017). Games & sports in ancient India. International Education & Research Journal, 3(5), 607–609."
    ],
-   "code": "H5·37"
+   "code": "H5·37",
+   "refs_en": [
+    "Alter, J. S. (1992). The wrestler's body: Identity and ideology in North India. University of California Press.",
+    "Alter, J. S. (2005). Empowering yourself: Sport, sexuality and autoeroticism in North Indian jori swinging. In J. H. Mills (Ed.), Subaltern sports: Politics and sport in South Asia (pp. 47–59). Anthem Press.",
+    "Ganneri, N. R. (2013). The debate on 'revival' and the physical culture movement in Western India (1900–1950). In K. Bromber, B. Krawietz & J. Maguire (Eds.), Sport across Asia: Politics, cultures, and identities. Routledge.",
+    "Roy, A. (2017). Games & sports in ancient India. International Education & Research Journal, 3(5), 607–609."
+   ]
   },
   {
    "id": "deportes-de-equipo",
@@ -6550,7 +6745,13 @@
     },
     {
      "src": "img/t5/s63_1.jpg",
-     "caption": {}
+     "caption": {},
+     "lang": "es"
+    },
+    {
+     "src": "img/t5/s63_1_en.jpg",
+     "caption": {},
+     "lang": "en"
     }
    ],
    "source": "diapositiva",
@@ -6566,7 +6767,7 @@
      "Lo jugaban niños y jóvenes en las aldeas, con nombres y reglas distintos en cada región, hasta que grupos nacionalistas de clase media lo codificaron y lo exhibieron en los Juegos de Berlín de 1936 d. C. como deporte nacional (Alter, 2000). Hoy se juega en un campo de unos 13 × 10 metros y cada incursión dura 30 segundos."
     ],
     "en": [
-     "Yubi lakpi ('coconut snatching'). A game for seven players a side from Manipur, in north-east India, that slightly recalls rugby. The ball is a coconut greased with mustard oil and water, and sometimes the players also have their bodies greased, as in the upper image. A point is scored when the coconut is carried to the rival goal.",
+     "Yubi lakpi ('coconut snatching'). A game for seven players a side from Manipur, in north-east India, that slightly recalls rugby. The ball is a greased coconut, coated with mustard oil and water, and sometimes the players also have their bodies greased, as in the upper image. A point is scored when the coconut is carried to the rival goal.",
      "It belonged to the Meitei, the majority people of the valley, and was part of their ritual life, since it was played at the great festivals and the coconut won was then offered to the temple (Mills, 2005).",
      "Kabaddi. Today it is a professional sport with two teams of seven players. On each play, a team sends a 'raider' into the opposing half to catch a rival. The raider cannot breathe, so he must chant 'kabaddi' throughout the play, while the rivals form a human chain to try to tackle him, as in the lower image. Although tradition credits it with thousands of years, its first rules were fixed in the 1920s.",
      "It was played by children and young people in the villages, with different names and rules in each region, until middle-class nationalist groups codified it and displayed it at the 1936 Berlin Games as a national sport (Alter, 2000). Today it is played on a court of about 13 × 10 metres and each raid lasts 30 seconds."
@@ -6580,7 +6781,11 @@
     "Alter, J. S. (2000). Kabaddi, a national sport of India: The internationalism of nationalism and the foreignness of Indianness. En N. Dyck (Ed.), Games, sports and cultures (pp. 83–115). Berg.",
     "Mills, J. H. (2005). 'Nupilal': Women's war, football and the history of modern Manipur. En J. H. Mills (Ed.), Subaltern sports: Politics and sport in South Asia (pp. 173–190). Anthem Press."
    ],
-   "code": "H5·38"
+   "code": "H5·38",
+   "refs_en": [
+    "Alter, J. S. (2000). Kabaddi, a national sport of India: The internationalism of nationalism and the foreignness of Indianness. In N. Dyck (Ed.), Games, sports and cultures (pp. 83–115). Berg.",
+    "Mills, J. H. (2005). 'Nupilal': Women's war, football and the history of modern Manipur. In J. H. Mills (Ed.), Subaltern sports: Politics and sport in South Asia (pp. 173–190). Anthem Press."
+   ]
   },
   {
    "id": "carreras-de-bueyes",
@@ -6625,7 +6830,7 @@
      "Maramadi (Kerala). Carrera de bueyes en arrozales inundados, parecida a la kambala, que se celebra tras la cosecha. El corredor va descalzo, agarrado al yugo, ante una multitud que anima desde los márgenes, como en la imagen. En 2014 d. C. el Tribunal Supremo prohibió estas carreras por maltrato animal, y varios estados las autorizaron después con leyes propias."
     ],
     "en": [
-     "For farming families, ox races are a matter of prestige. The animals are raised and cared for all year round with a special diet, oil massages and rest, and they arrive at the race decorated with bells and ribbons. The winner receives cash prizes, trophies or valuables, and a champion ox later sells for a much higher price, so the race proves one's skill as a breeder and increases the family's wealth.",
+     "For farming families, ox races are a matter of prestige. The animals are raised and cared for all year round with a special diet, oil massages and rest, and they arrive at the race decorated with bells and ribbons. The winner receives prizes in cash, trophies or valuables, and a champion ox later sells for a much higher price, so the race proves the family's skill as breeders and increases its wealth.",
      "Bailgada sharyat (Maharashtra). Bullock-cart races in rural areas, during the village fairs (jatras), also called shankarpat. They are run in the dry season, and where space is short the race is against the clock, so the winner is whoever takes least time.",
      "Kambala (Karnataka). A buffalo race on a mud track on the coast, between November and March. It used to be run on a single track, the ontikare, and today on two parallel tracks of about 130 metres, with classes according to the tool the rider carries, such as a plough, a rope or a board.",
      "Maramadi (Kerala). An ox race in flooded paddy fields, similar to the kambala, held after the harvest. The runner goes barefoot, holding on to the yoke, before a crowd that cheers from the banks, as in the image. In AD 2014 the Supreme Court banned these races for animal cruelty, and several states later authorised them with laws of their own."
@@ -6638,7 +6843,10 @@
    "refs": [
     "Brara, R. (2016). Animal rights vs. bullfights: The horns of an Indian dilemma. Arcadia, (5). Rachel Carson Center for Environment and Society."
    ],
-   "code": "H5·39"
+   "code": "H5·39",
+   "refs_en": [
+    "Brara, R. (2016). Animal rights vs. bullfights: The horns of an Indian dilemma. Arcadia, (5). Rachel Carson Center for Environment and Society."
+   ]
   },
   {
    "id": "chaturanga",
@@ -6672,10 +6880,10 @@
      "Desde la India pasó a Persia en el siglo VI d. C. con el nombre de chatrang, y tras la conquista árabe los musulmanes lo llevaron por el Mediterráneo hasta al-Ándalus, desde donde se difundió por Europa. Por eso palabras como «jaque», del persa shāh, «rey», y «mate», de shāh māt, «el rey está indefenso», conservan todavía su origen persa."
     ],
     "en": [
-     "Chaturanga is a board game that is the direct forerunner of chess. Its name combines chatur ('four') and anga ('limbs'), because it reproduced the four divisions of the Indian army, that is, infantry, cavalry, elephants and chariots.",
-     "The pieces were the pawns, the horses, the elephants (the bishops), the chariots (the rooks) and the king, as on the board in the image. Later a four-player version with dice was also played, although Murray (1913) considers the two-player game to be the original.",
+     "Chaturanga is a board game that is the direct forerunner of chess. Its name combines chatur ('four') and anga ('limbs'), because it reproduced the four divisions of the army of India, that is, infantry, cavalry, elephants and chariots.",
+     "The pieces were the pawns, the horses, the elephants (the bishops), the chariots (the rooks) and the king, as on the board in the image. Later a version for four players with dice was also played, although Murray (1913) considers the two-player game to be the original.",
      "The rules are not known exactly, but according to later Persian sources there were two ways of winning: 'stifling the king', that is, checkmating him as in modern chess, and 'stripping the king', that is, capturing all the pieces except the monarch.",
-     "From India it passed to Persia in the 6th century AD under the name chatrang, and after the Arab conquest the Muslims carried it across the Mediterranean to al-Andalus, from where it spread through Europe. That is why words such as 'check', from the Persian shāh, 'king', and 'mate', from shāh māt, 'the king is helpless', still keep their Persian origin."
+     "From India it passed to Persia in the 6th century AD under the name chatrang, and after the Arab conquest the Muslims carried it across the Mediterranean to al-Andalus, in the Iberian Peninsula, from where it spread through Europe. That is why words such as 'check', from the Persian shāh, 'king', and 'mate', from shāh māt, 'the king is helpless', still keep their Persian origin."
     ]
    },
    "slide": {
@@ -6685,7 +6893,10 @@
    "refs": [
     "Murray, H. J. R. (1913). A history of chess. Clarendon Press."
    ],
-   "code": "H5·40"
+   "code": "H5·40",
+   "refs_en": [
+    "Murray, H. J. R. (1913). A history of chess. Clarendon Press."
+   ]
   }
  ],
  "mapa": {
@@ -7027,7 +7238,7 @@
        "es": [
         {
          "k": "concepto",
-         "v": "Según el mito, Bodhidharma, un monje indio llegado hacia el año 480 d. C., enseñó a los monjes, agotados por la meditación, unos ejercicios para fortalecer el cuerpo."
+         "v": "Según la tradición, Bodhidharma, un monje indio de finales del siglo V d. C., enseñó a los monjes, agotados por la meditación, unos ejercicios para fortalecer el cuerpo."
         },
         {
          "k": "concepto",
@@ -7045,7 +7256,7 @@
        "en": [
         {
          "k": "concepto",
-         "v": "According to the myth, Bodhidharma, an Indian monk who arrived around AD 480, taught the monks, exhausted by meditation, some exercises to strengthen the body."
+         "v": "According to tradition, Bodhidharma, an Indian monk of the late 5th century AD, taught the monks, exhausted by meditation, some exercises to strengthen the body."
         },
         {
          "k": "concepto",
@@ -7491,8 +7702,8 @@
        "en": "Japanese women"
       },
       "d": {
-       "es": "La posición de la mujer japonesa empeoró con el tiempo, desde las reinas y emperatrices de los primeros siglos hasta la obediencia al padre, al marido y al hijo exigida en la época Edo, y el sumo femenino se convirtió en un espectáculo de pago para un público masculino.",
-       "en": "The position of Japanese women worsened over time, from the queens and empresses of the first centuries to the obedience to father, husband and son demanded in the Edo period, and women's sumo became a paid spectacle for a male audience."
+       "es": "La posición de la mujer japonesa empeoró con el tiempo, desde las reinas y emperatrices de los primeros siglos hasta la obediencia al padre, al marido y al hijo exigida en la época Edo.",
+       "en": "The position of Japanese women worsened over time, from the queens and empresses of the first centuries to the obedience to father, husband and son demanded in the Edo period."
       },
       "f": "la-mujer-japonesa",
       "fs": [],
@@ -7510,10 +7721,6 @@
         {
          "k": "concepto",
          "v": "Desde el siglo XIV d. C. la herencia pasó a un solo hijo y la mujer perdió ese derecho, y en la época Edo se le exigió obedecer al padre, al marido y al hijo, sobre todo en las familias samuráis."
-        },
-        {
-         "k": "ejemplo",
-         "v": "En las ciudades el sumo femenino, documentado desde el siglo V d. C., fue un espectáculo de pago para un público masculino que el gobierno Meiji prohibió en 1873 d. C."
         }
        ],
        "en": [
@@ -7528,10 +7735,6 @@
         {
          "k": "concepto",
          "v": "From the 14th century AD inheritance passed to a single son and women lost that right, and in the Edo period they were required to obey father, husband and son, above all in samurai families."
-        },
-        {
-         "k": "ejemplo",
-         "v": "In the cities women's sumo, documented from the 5th century AD, was a paid spectacle for a male audience that the Meiji government banned in AD 1873."
         }
        ]
       }
@@ -7950,8 +8153,8 @@
        "en": "Sumo, the national sport"
       },
       "d": {
-       "es": "El sumo es el deporte nacional japonés, con origen en un sumo de corte celebrado cada año desde 734 d. C. y en rituales agrícolas, y se convirtió en un arte marcial de 82 técnicas cuyo fin es derribar o expulsar al rival del círculo.",
-       "en": "Sumo is the national sport of Japan, with its origin in a court sumo held every year from AD 734 and in agricultural rituals, and it became a martial art of 82 techniques whose aim is to throw or push the opponent out of the ring."
+       "es": "El sumo es el deporte nacional japonés, con origen en un sumo de corte celebrado cada año desde 734 d. C. y en los ritos de los santuarios, y su fin es derribar o expulsar al rival del círculo.",
+       "en": "Sumo is the national sport of Japan, with its origin in a court sumo held every year from AD 734 and in shrine rites, and its aim is to throw or push the opponent out of the ring."
       },
       "f": "sumo",
       "fs": [],
@@ -7964,7 +8167,7 @@
         },
         {
          "k": "concepto",
-         "v": "Los primeros combates datan del siglo VII d. C., dentro de rituales agrícolas para pedir buenas cosechas, y posteriormente se convirtió en un arte marcial con 82 técnicas permitidas."
+         "v": "Las crónicas oficiales, escritas en 720 d. C., sitúan su origen en un combate legendario ante el emperador, y a la vez el sumo formaba parte de los ritos de los santuarios para pedir buenas cosechas."
         },
         {
          "k": "concepto",
@@ -7982,7 +8185,7 @@
         },
         {
          "k": "concepto",
-         "v": "The first bouts date from the 7th century AD, within agricultural rituals to ask for good harvests, and it later became a martial art with 82 permitted techniques."
+         "v": "The official chronicles, written in AD 720, place its origin in a legendary bout before the emperor, and at the same time sumo formed part of the shrine rites to ask for good harvests."
         },
         {
          "k": "concepto",
@@ -8001,8 +8204,8 @@
        "en": "Sumo, an invented tradition"
       },
       "d": {
-       "es": "Buena parte del ritual del sumo se creó en la época Edo para dar prestigio a un espectáculo de pago, de ahí que se presente como una tradición inventada, y la misma lógica explica el yokozuna, que no fue un rango oficial hasta 1909 d. C.",
-       "en": "A good part of the ritual of sumo was created in the Edo period to give prestige to a paid spectacle, hence it is presented as an invented tradition, and the same logic explains the yokozuna, which was not an official rank until AD 1909."
+       "es": "Buena parte del ritual del sumo se creó en la época Edo para dar prestigio a un espectáculo de pago, de ahí que se presente como una tradición inventada",
+       "en": "A good part of the ritual of sumo was created in the Edo period to give prestige to a paid spectacle, hence it is presented as an invented tradition."
       },
       "f": "sumo",
       "fs": [],
@@ -8023,7 +8226,7 @@
         },
         {
          "k": "autor",
-         "v": "Buena parte de ese ritual se creó en la época Edo para dar prestigio a un espectáculo de pago, de ahí que Guttmann y Thompson (2001) presenten el sumo como una tradición inventada, y Thompson (1998) muestra lo mismo con el yokozuna, que la tradición remonta al siglo XVII d. C. y que no fue un rango oficial hasta 1909 d. C."
+         "v": "Buena parte de ese ritual se creó en la época Edo para dar prestigio a un espectáculo de pago, de ahí que Guttmann y Thompson (2001) presenten el sumo como una tradición inventada."
         }
        ],
        "en": [
@@ -8041,7 +8244,7 @@
         },
         {
          "k": "autor",
-         "v": "A good part of that ritual was created in the Edo period to give prestige to a paid spectacle, hence Guttmann and Thompson (2001) present sumo as an invented tradition, and Thompson (1998) shows the same with the yokozuna, which tradition traces back to the 17th century AD and which was not an official rank until AD 1909."
+         "v": "A good part of that ritual was created in the Edo period to give prestige to a paid spectacle, hence Guttmann and Thompson (2001) present sumo as an invented tradition."
         }
        ]
       }
